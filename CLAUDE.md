@@ -21,6 +21,7 @@ Les sessions Claude Code sur ce dépôt servent surtout aux discussions **8 — 
 6. Source principale des données et builds : slagate.com (autorisation de Sohoven obtenue). Autres sites seulement si l'info y manque ou est douteuse.
 7. Si une demande contredit `docs/CONTEXTE.md`, signale-le et demande avant d'agir.
 8. Une règle du skill à changer → section « Demandes de modif du skill » du SUIVI, sans modifier le skill toi-même.
+9. Si une demande relève d'une autre discussion (tableau « Aiguillage » de `docs/CONTEXTE.md`, section 7), ne la traite pas : indique la discussion à ouvrir et donne un message prêt à coller avec le contexte utile. Fais de même quand la session devient trop longue : conseille d'en ouvrir une neuve et fournis le prompt de démarrage + le dernier SUIVI.
 
 ## Git
 

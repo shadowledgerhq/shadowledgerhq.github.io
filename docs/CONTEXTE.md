@@ -154,6 +154,22 @@ Les discussions d'étape décident **quoi** faire ; la discussion Code décide *
 
 Les discussions 8 et 9 se font dans Claude Code (claude.ai/code), sur le dépôt `shadowledgerhq/shadowledgerhq.github.io` : elles lisent `CLAUDE.md` et le skill du dépôt. Les autres se font dans le Projet SLA sur claude.ai.
 
+### Aiguillage : quelle discussion pour quelle demande
+
+| Demande d'Alexis | Discussion |
+| --- | --- |
+| Règles de recherche YouTube, tris, calcul des scores, vérification d'un classement | 1 — Classements |
+| Éléments d'un build, statuts, PowerPoint, vérification d'un build | 2 — Builds |
+| Meilleure team, rotation, script ou storyboard d'une vidéo, voix off | 3 — Theorycraft & vidéos |
+| Logo, profils, posts, Discord, calendrier de publication, monétisation | 4 — Réseaux |
+| Pages, design, textes ou bugs d'affichage du site | 5 — Site |
+| Organisation du projet, CONTEXTE.md, instructions, skill, nouvelle règle | 6 — Prompt |
+| Contrôle automatique, rapports, horaires des passages | 7 — Tâche planifiée |
+| Écrire ou corriger un script, un workflow, une erreur technique, installation | 8 — Code (Claude Code) |
+| Données du jeu (chasseurs, armes, artefacts…), icônes, mise à jour après un patch | 9 — Base de données (Claude Code) |
+
+Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la traite pas. Il indique la discussion à ouvrir et donne un message prêt à coller, avec le contexte utile (fichiers, décisions, ce qui est attendu). Il le fait aussi quand une discussion devient trop longue : il conseille d'en ouvrir une neuve et fournit le prompt de démarrage + le dernier SUIVI à coller.
+
 ## 8. Ordre de réalisation
 
 1. **Mise en place** : dépôt GitHub, clé API YouTube en secret, skill installé, documents dans le projet. *Fait le 12/11/2026.*
