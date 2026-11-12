@@ -147,10 +147,12 @@ shadowledgerhq.github.io/
 | 5 | Étape 5 — Site | Contenu, design, pages |
 | 6 | Prompt | Architecture, contexte, instructions, skill |
 | 7 | Tâche planifiée | Contrôle automatique et rapports |
-| 8 | Code | Scripts Python, workflows GitHub Actions (idéalement dans Claude Code, inclus dans l'abonnement) |
-| 9 | Base de données | Base du jeu (3a) et banque d'icônes |
+| 8 | Code | Scripts Python, workflows GitHub Actions — **dans Claude Code** (écrit dans le dépôt) |
+| 9 | Base de données | Base du jeu (3a) et banque d'icônes — **dans Claude Code** (écrit dans le dépôt) |
 
 Les discussions d'étape décident **quoi** faire ; la discussion Code décide **comment** le coder.
+
+Les discussions 8 et 9 se font dans Claude Code (claude.ai/code), sur le dépôt `shadowledgerhq/shadowledgerhq.github.io` : elles lisent `CLAUDE.md` et le skill du dépôt. Les autres se font dans le Projet SLA sur claude.ai.
 
 ## 8. Ordre de réalisation
 
