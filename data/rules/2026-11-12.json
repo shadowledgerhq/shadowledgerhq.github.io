@@ -1,0 +1,12 @@
+{
+  "week": "2026-11-12",
+  "modes": {
+    "poc":  null,
+    "bot":  {"sjw": true, "sjw_skills": true, "blessings": true, "shadows": true, "successor": true},
+    "gb":   null,
+    "hotm": null
+  },
+  "source": "confirmation d'Alexis (captures BOT)",
+  "verified_at": "2026-11-12",
+  "notes": "null = règles du mode pas encore fournies"
+}

@@ -29,7 +29,7 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 
 - Reset de tous les modes : **jeudi 01h00, heure de Paris**.
 - Une **semaine** est identifiée par la date du jeudi où elle commence (ex. `2026-11-12`).
-- Éléments autorisés par mode (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : **à compléter** quand Alexis fournira les images de référence.
+- Éléments autorisés (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : **ils changent chaque semaine** (ex. semaine du 05/11/2026 : BOT sans Sung Jin Woo, compétences ni bénédictions, mais avec ombres et successeur). Ils sont enregistrés dans `data/rules/<semaine>.json`, un bloc par mode, avec source et date de vérification.
 
 ## 4. Les étapes
 
@@ -124,6 +124,7 @@ shadowledgerhq.github.io/
 ├── data/
 │   ├── db/                  base de données du jeu (un JSON par catégorie) + patches.json
 │   ├── icons/<categorie>/   banque d'icônes
+│   ├── rules/<semaine>.json éléments autorisés par mode et par semaine
 │   ├── runs/<semaine>/      un JSON par mode (classement)
 │   ├── builds/<semaine>/<mode>/   un JSON par build
 │   ├── rejected/<semaine>.json
