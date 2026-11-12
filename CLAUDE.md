@@ -25,8 +25,10 @@ Les sessions Claude Code sur ce dépôt servent surtout aux discussions **8 — 
 ## Git
 
 - Dépôt public : **aucun secret dans le code**. La clé YouTube est dans le secret GitHub `YOUTUBE_API_KEY`.
-- `data/`, `suivi/`, `docs/` : commits directs sur `main` autorisés.
-- `pipeline/`, `site/`, `.github/` : travailler sur une branche et ouvrir une pull request ; Alexis fusionne.
+- Choix d'Alexis : tout est automatique. Travaille sur ta branche `claude/…`, committe et **pousse** après chaque étape terminée. Le workflow `.github/workflows/auto-merge-claude.yml` (ajouté par Alexis) fusionne aussitôt la branche dans `main`. N'ouvre pas de pull request et ne demande pas à Alexis de fusionner.
+- Avant de modifier des fichiers, récupère `main` (`git pull origin main`).
+- Si la fusion automatique échoue (conflit), récupère `main`, résous le conflit sur ta branche et pousse à nouveau.
+- Ne laisse jamais de travail non poussé en fin de session.
 - Messages de commit en français, courts : `db: ajoute les sets d'artefacts`, `suivi: base de données`.
 
 ## Commandes
