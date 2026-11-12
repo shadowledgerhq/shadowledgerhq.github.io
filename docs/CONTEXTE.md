@@ -1,0 +1,179 @@
+# Projet SLA — Shadow Ledger : contexte de référence
+
+Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Mis à jour le 12/11/2026 (identifiant @shadowledger_hq).
+
+## 1. Le projet en une phrase
+
+**Shadow Ledger** recense chaque semaine les meilleures runs YouTube de *Solo Leveling: Arise* sur 4 modes, analyse les builds du top 10, publie un guide théorique par mode et diffuse le tout sur un site et sur les réseaux, en français et en anglais.
+
+## 2. Décisions prises
+
+| Sujet | Décision |
+| --- | --- |
+| Comptes Claude | Un seul compte (le compte payant). Le schéma à 8 comptes est abandonné. |
+| Exécution | Le travail répétitif est fait par des scripts Python, pas par Claude. Claude écrit le code, vérifie les résultats et rédige. |
+| Dépôt | Organisation GitHub gratuite `shadowledgerhq` (rattachée au compte perso d'Alexis), dépôt **public** `shadowledgerhq.github.io` (nécessaire pour GitHub Pages et GitHub Actions gratuits). Clés API en secrets GitHub, jamais dans le code. |
+| Langues | Français et anglais partout (site, vidéos, posts). |
+| Pseudo | Nom affiché « Shadow Ledger », identifiant **@shadowledger_hq** sur tous les réseaux (@shadowledgerhq était pris sur YouTube). GitHub reste `shadowledgerhq`. |
+| Source des builds | slagate.com (portail fan FR de Sohoven). **Autorisation obtenue.** Autres sites seulement si l'info manque ou est douteuse. |
+| Domaine | `shadowledgerhq.github.io` au début ; domaine personnel plus tard si le projet marche. |
+
+## 3. Les 4 modes
+
+| Mode | Nom complet | Critère de classement | Runs |
+| --- | --- | --- | --- |
+| POC | Power Of Calamity | Dégâts max (somme des 2 runs) | 2 |
+| BOT | Battlefield Of Time | Chrono le plus court | 1 |
+| GB | Guild Boss | Rage Count (RC) le plus élevé (somme des 2 runs) | 2 |
+| HOTM | Hall Of The Monarchs | Points les plus élevés | 1 |
+
+- Reset de tous les modes : **jeudi 01h00, heure de Paris**.
+- Une **semaine** est identifiée par la date du jeudi où elle commence (ex. `2026-11-12`).
+- Éléments autorisés par mode (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : **à compléter** quand Alexis fournira les images de référence.
+
+## 4. Les étapes
+
+### Étape 1 — Classements (automatisée)
+
+1. **Recherche** : YouTube Data API v3, vidéos publiées depuis le dernier reset. Quota ≈ 100 recherches/jour : requêtes ciblées.
+2. **Tri 1** : score dans le titre, la description ou les sous-titres (Whisper si commentaire oral). Score du titre = provisoire tant qu'il n'est pas confirmé à l'image.
+3. **Tri 2** : score lisible sur la miniature (OCR).
+4. **Tri 3** : images des 10 premières secondes et des 30 dernières, 1 image / 2 s (OCR).
+5. **Tri 4** : vidéo entière, 1 image / 10 s (OCR).
+6. Vidéo sans score après le tri 4 → liste `rejected` (identifiant + raison), jamais réanalysée.
+
+Règles :
+- Une ligne par joueur : sa meilleure vidéo de la semaine.
+- POC et GB : somme des 2 runs. Si une seule run est trouvée : statut `a_verifier`, pas de classement tant que la 2e manque.
+- Égalité : la vidéo publiée en premier passe devant.
+- Score arrondi (« 2.1B ») : provisoire ; on garde la valeur exacte dès qu'elle est lue à l'image.
+- Doublons : même run ré-uploadée ou postée en 2 langues → on garde la vidéo de la chaîne d'origine (la plus ancienne).
+- Vérifier le boss / la saison à l'écran : une vidéo publiée cette semaine peut montrer une run de la semaine précédente.
+- Toutes régions et langues (OCR multilingue, formats 1.2B / 억 / 万).
+- Champ `confiance` : `sur` ou `a_verifier`.
+
+### Étape 2 — Builds du top 10 (automatisée en grande partie)
+
+- Mêmes tris que l'étape 1, sur le **top 10 de chaque mode**. Une vidéo ne s'arrête pas quand une partie du stuff est trouvée : elle passe au tri suivant avec ce qui est déjà trouvé.
+- Éléments recherchés : persos, armes, 3 ombres (si le mode le permet), successeur (si le mode le permet), artefacts de chaque perso, skills et bénédictions (si Sung Jin Woo), noyaux, **stats principales** des persos.
+- Statut final : `build_complet`, `build_partiel` ou `pas_de_build`.
+- POC/GB : une vidéo avec 2 runs = 2 builds distincts.
+- Reconnaissance des objets : comparaison d'images (OpenCV) avec la **banque d'icônes** (à construire, cf. étape 3a).
+- Source unique : un JSON par build. Un **PowerPoint par vidéo du top 10** est généré automatiquement (1 slide par élément du build) ; il sert de base pour les vidéos.
+
+### Étape 3a — Base de données du jeu
+
+- Fichiers JSON découpés par catégorie : chasseurs, armes, sets d'artefacts, noyaux, bénédictions, ombres, successeurs, compétences de Sung Jin Woo, etc.
+- Chaque entrée : identifiant, nom **FR + EN** (+ coréen si possible), rareté, effets, passifs, conditions d'activation, valeurs par niveau, source, date de vérification, version du jeu.
+- Banque d'icônes : une image par objet, construite à partir de captures et de slagate (autorisé).
+- Mise à jour à chaque patch, à partir des notes des développeurs sur le forum officiel Netmarble.
+- La base sera aussi affichée sur le site (fiches).
+
+### Étape 3b — Theorycraft et vidéos
+
+- **4 vidéos par semaine**, une par mode, version **compte au maximum** uniquement (pas de F2P).
+- Alexis ne joue pas : vidéos **100 % schémas** (composition, stuff, rotation sur une timeline, timings, estimation des dégâts). Aucun extrait de gameplay de tiers.
+- Base de départ : les meilleures runs réelles du classement, améliorées ou remplacées par une équipe nouvelle.
+- Tout ce qui n'est pas observé dans une run réelle est présenté comme une **estimation calculée**, sources citées. Objectif : « le guide le plus optimisé connu à date ».
+- Chaque choix est justifié (pourquoi ce perso, ce set, cette rotation, ce timing).
+- Voix : **clone de la voix d'Alexis** (outil gratuit à licence commerciale, ex. Chatterbox ou OpenVoice ; licence à vérifier). Échantillon de voix fourni par Alexis.
+- Script rédigé en FR et en EN.
+
+### Étape 4 — Réseaux sociaux
+
+| Réseau | Format | Langue |
+| --- | --- | --- |
+| YouTube | 4 vidéos/semaine, une chaîne, 2 pistes audio (FR + EN) | FR + EN |
+| YouTube Shorts | Extraits verticaux | EN + sous-titres FR |
+| TikTok | Clips verticaux de **1 à 3 min** (rémunération > 1 min) | Voix EN + sous-titres FR |
+| Discord | Serveur communautaire, salon « classement de la semaine » | FR + EN |
+| X | Top 3 de chaque mode en image, **chaque mercredi** | FR + EN |
+| Instagram Reels | Optionnel, réutilise les verticaux | EN + sous-titres FR |
+
+- Même pseudo, même description, même photo de profil partout. Création des comptes : par Alexis.
+- Intro et outro ≤ 5 s, renvoyant vers les autres comptes et le site.
+- Classements publiés le **mercredi** (quasi définitifs avant le reset du jeudi 01h).
+- Risque connu : 4 vidéos/semaine au même gabarit = risque de démonétisation pour contenu « produit en série ». Chaque vidéo doit apporter une analyse réellement différente.
+- Seuils de monétisation : YouTube 1 000 abonnés + 4 000 h (8 000 h pour les candidatures dès le 01/02/2027) ou Shorts ; TikTok Creator Rewards 10 000 abonnés + 100 000 vues/30 j.
+- Cocher « contenu modifié ou synthétique » sur YouTube (voix clonée), par prudence.
+
+### Étape 5 — Site web
+
+- Site statique sur GitHub Pages, FR + EN, qui lit les JSON du dépôt.
+- Pages : classement par mode → page build du joueur → fiches de la base de données → liens vers les réseaux (sur toutes les pages) → vidéos.
+- Archives des semaines passées.
+- Crédit et lien vers la vidéo source de chaque joueur ; moyen de demander le retrait.
+- Mentions légales ; consentement cookies si statistiques ou publicité.
+- Visuels : uniquement officiels autorisés (fan kit Netmarble) ou originaux.
+
+## 5. Calendrier automatique (heure de Paris)
+
+| Quand | Quoi | Où |
+| --- | --- | --- |
+| Tous les jours 20h00 | Nouvelles vidéos : tris 1-2, puis tris 3-4, builds du top 10, mise à jour du site | GitHub Actions (tris 1-2, site) + PC d'Alexis (tris 3-4) |
+| Jeudi 01h00 | Passage final : classement de la semaine figé et archivé, nouvelle semaine ouverte | GitHub Actions + PC d'Alexis |
+| Mercredi | Posts du classement (X, Discord) ; vidéos de la semaine | Alexis / outil de programmation |
+| Après chaque passage | Contrôle des résultats + rapport court | Tâche planifiée Claude |
+
+Note technique : les horaires GitHub Actions sont en UTC ; gérer le passage heure d'été / heure d'hiver.
+
+## 6. Structure du dépôt GitHub
+
+```
+shadowledgerhq.github.io/
+├── data/
+│   ├── db/                  base de données du jeu (un JSON par catégorie) + patches.json
+│   ├── icons/<categorie>/   banque d'icônes
+│   ├── runs/<semaine>/      un JSON par mode (classement)
+│   ├── builds/<semaine>/<mode>/   un JSON par build
+│   ├── rejected/<semaine>.json
+│   └── processed.json       vidéos déjà traitées
+├── pipeline/                scripts Python
+├── exports/<semaine>/       Excel et PowerPoint générés
+├── videos/<semaine>/<mode>/ scripts FR/EN, storyboard
+├── site/                    site statique
+├── suivi/                   un SUIVI.md par discussion
+└── .github/workflows/       daily.yml (20h), weekly.yml (jeudi 01h)
+```
+
+## 7. Discussions du Projet SLA
+
+| # | Discussion | Rôle |
+| --- | --- | --- |
+| 1 | Étape 1 — Classements | Règles, contrôle des classements |
+| 2 | Étape 2 — Builds | Règles, contrôle des builds, PowerPoint |
+| 3 | Étape 3 — Theorycraft & vidéos | Analyses, scripts FR/EN, storyboards |
+| 4 | Étape 4 — Réseaux | Comptes, logo, posts, calendrier de publication |
+| 5 | Étape 5 — Site | Contenu, design, pages |
+| 6 | Prompt | Architecture, contexte, instructions, skill |
+| 7 | Tâche planifiée | Contrôle automatique et rapports |
+| 8 | Code | Scripts Python, workflows GitHub Actions (idéalement dans Claude Code, inclus dans l'abonnement) |
+| 9 | Base de données | Base du jeu (3a) et banque d'icônes |
+
+Les discussions d'étape décident **quoi** faire ; la discussion Code décide **comment** le coder.
+
+## 8. Ordre de réalisation
+
+1. **Mise en place** : dépôt GitHub, clé API YouTube en secret, skill installé, documents dans le projet. *Fait le 12/11/2026.*
+2. **Base de données + banque d'icônes** (discussion 9).
+3. **Pipeline étape 1** (discussions 1 et 8), avec les images de référence des scores.
+4. **Site v1** : classements (discussion 5).
+5. **Étape 2** : builds du top 10 + PowerPoint + pages builds.
+6. **Réseaux** : comptes, logo, échantillon de voix, premières vidéos (discussions 3 et 4).
+7. **Tâche planifiée** de contrôle (discussion 7).
+
+## 9. Ce qu'Alexis doit fournir
+
+- [ ] Images de référence : où lire le score, pour chaque mode.
+- [ ] Images de référence : où lire chaque élément du build.
+- [ ] Liste des éléments autorisés par mode (ombres, successeur, Sung Jin Woo…).
+- [x] Clé API YouTube Data v3, rangée dans le secret GitHub `YOUTUBE_API_KEY`.
+- [x] Organisation `shadowledgerhq` + dépôt public `shadowledgerhq.github.io` créés.
+- [x] Comptes réseaux créés le 12/11/2026 : YouTube, TikTok, X, Instagram (@shadowledger_hq) + compte et serveur Discord « Shadow Ledger ». Reste : nom TikTok à passer en « Shadow Ledger » à partir du 19/11/2026.
+- [ ] Échantillon de voix (1 à 2 min, propre, sans bruit).
+- [ ] Trace écrite de l'autorisation de Sohoven (à conserver).
+
+## 10. Points ouverts
+
+- Le boss de chaque mode change-t-il chaque jeudi ? Si oui, une vidéo-guide publiée le mercredi ne sert qu'un jour : il faudrait la publier en début de semaine (vendredi ou samedi). À confirmer.
+- Déclaration des revenus (statut micro-entrepreneur) quand les plateformes paieront.
