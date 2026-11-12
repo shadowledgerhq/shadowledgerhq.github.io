@@ -31,13 +31,20 @@ Valeur calculée et non lue dans le jeu : `"estimated": true`.
 | `weapons.json` | `hunter_id` (ou `null`), `weapon_type`, `element`, `base_stats`, `passive` |
 | `artifact_sets.json` | `pieces[]` (slot, nom FR/EN, icône), `bonuses` (paliers 2/4/8), `main_stat_options` |
 | `cores.json` | `slot`, `main_stat`, `effects`, `values_by_level` |
-| `shadows.json` | `skills[]`, `passives`, `values_by_level`, `allowed_modes` |
-| `successors.json` | `skills[]`, `passives`, `allowed_modes` |
-| `sjw_skills.json` | `type`, `cooldown`, `effects`, `values_by_level`, `allowed_modes` |
-| `blessings.json` | `effects`, `conditions`, `values_by_level`, `allowed_modes` |
+| `shadows.json` | `skills[]`, `passives`, `values_by_level` |
+| `successors.json` | `skills[]`, `passives` |
+| `sjw_skills.json` | `type`, `cooldown`, `effects`, `values_by_level` |
+| `blessings.json` | `effects`, `conditions`, `values_by_level` |
 | `patches.json` | `version`, `date`, `url` (notes Netmarble), `changes[]` (`category`, `id`, `change`) |
 
 Les champs sont à confirmer sur la source avant la saisie de chaque catégorie.
+
+## Éléments autorisés : par semaine, pas par objet
+
+Les règles changent chaque semaine (ex. semaine du 05/11/2026 : BOT sans Sung Jin Woo, donc sans ses compétences ni bénédictions, mais avec ombres et successeur). Il n'y a donc **pas** de champ `allowed_modes` dans la base.
+Proposition : `data/rules/<semaine>.json`, un bloc par mode :
+`{"bot": {"sjw": false, "sjw_skills": false, "blessings": false, "shadows": true, "successor": true}}`
+avec `source` et `verified_at`. À valider (voir SUIVI).
 
 ## Ordre de saisie
 

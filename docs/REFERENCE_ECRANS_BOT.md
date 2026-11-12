@@ -22,5 +22,5 @@ Seul ce qui est visible est noté ; rien n'est supposé.
 ## Conséquences pour la base de données
 - Le client est **japonais** : ajouter `ja` (facultatif) dans `name`, utile pour relier les icônes aux ids.
 - Les noms n'apparaissent pas sur la plupart des écrans : la reconnaissance se fait par **icônes** (banque d'icônes indispensable : artefacts, noyaux, compétences, armes, ombres, successeur).
-- Les 3 ombres et le successeur sont présents au BOT : à confirmer comme « autorisés » (une capture n'est pas une règle).
+- Semaine du 12/11/2026 (confirmé par Alexis) : BOT avec SJW, ombres et successeur. Les règles changent chaque semaine (semaine précédente : BOT sans SJW, ni compétences ni bénédictions, mais avec ombres et successeur).
 - Les stats principales des persos ne sont pas visibles ici : onglet à fournir.

@@ -12,6 +12,8 @@
 - Trace écrite de l'autorisation de Sohoven : son `robots.txt` indique `ai-train=no`. Confirmer que l'autorisation couvre la lecture automatisée de l'API et la reprise des icônes.
 - Méthode : (a) Sohoven fournit un export ou les routes à utiliser, (b) saisie à partir des pages publiques /builds, /guides, /tier-list, (c) captures d'écran fournies par toi.
 - Captures des 3 autres modes (POC, GB, HOTM) + onglet stats principales des persos.
-- Éléments autorisés par mode : confirmer pour le BOT (ombres et successeur visibles).
+- Autre vidéo BOT affichant les stats principales des persos (en cours de ton côté).
+## Contradiction à trancher (CONTEXTE.md §3)
+- Les éléments autorisés varient **chaque semaine** : la liste fixe par mode de §3 ne suffit pas. Proposition : `data/rules/<semaine>.json` ; champ `allowed_modes` retiré de la base. OK ?
 ## Demandes de modif du skill
 - Format « Objet de la base » : ajouter les champs par catégorie (voir `data/db/_schema.md`).
