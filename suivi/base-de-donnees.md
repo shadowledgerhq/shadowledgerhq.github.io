@@ -2,6 +2,7 @@
 ## Fait
 - Schémas validés par Alexis ; `data/db/_schema.md`, `stats.json` et `patches.json` (vides) créés.
 - Sondage de slagate.com : site SPA, données servies par api.slagate.com. Les routes `/api/codex/*` et `/api/game/hunters` testées renvoient 404 (non exploitables telles quelles).
+- Captures BOT lues : `docs/REFERENCE_ECRANS_BOT.md`. Champ `ja` ajouté au schéma.
 ## En cours
 - Choix de la méthode de récupération des données (voir « Besoin d'Alexis »).
 ## À faire
@@ -10,6 +11,7 @@
 ## Besoin d'Alexis
 - Trace écrite de l'autorisation de Sohoven : son `robots.txt` indique `ai-train=no`. Confirmer que l'autorisation couvre la lecture automatisée de l'API et la reprise des icônes.
 - Méthode : (a) Sohoven fournit un export ou les routes à utiliser, (b) saisie à partir des pages publiques /builds, /guides, /tier-list, (c) captures d'écran fournies par toi.
-- Liste des éléments autorisés par mode (pour `allowed_modes`).
+- Captures des 3 autres modes (POC, GB, HOTM) + onglet stats principales des persos.
+- Éléments autorisés par mode : confirmer pour le BOT (ombres et successeur visibles).
 ## Demandes de modif du skill
 - Format « Objet de la base » : ajouter les champs par catégorie (voir `data/db/_schema.md`).
