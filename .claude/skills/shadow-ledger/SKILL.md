@@ -14,7 +14,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md
 | POC | Power Of Calamity. Classement : dégâts max, somme des 2 runs. |
 | BOT | Battlefield Of Time. Classement : chrono le plus court (secondes). 1 run. |
 | GB | Guild Boss. Classement : Rage Count le plus élevé, somme des 2 runs. |
-| HOTM | Hall Of The Monarchs. Classement : points les plus élevés. 1 run. |
+| HOTM | Hall Of The Monarchs. Un classement **par porte** (제 n관문 / 第n関門) : points les plus élevés. 1 run par porte. |
 | RC | Rage Count, unité de score du GB. |
 | SJW | Sung Jin Woo. |
 | Reset | Jeudi 01h00, heure de Paris, pour les 4 modes. |
