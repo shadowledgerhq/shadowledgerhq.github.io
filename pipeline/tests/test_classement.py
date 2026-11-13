@@ -122,13 +122,14 @@ def test_boss_non_controle_et_gel():
     assert not (d2.data / "runs" / W / "hotm-gate-1.json").exists()
 
 
-def test_v3_gb_lu_mais_pas_classe():
-    lectures = [lec("g1", "UCG", "gb", 123456, exact=False, confidence="a_verifier"), lec("p1", "UCP", "poc", 100 * T, team=1)]
-    d = preparer(lectures)
-    (d.data / "runs" / W / "gb.json").write_text("[]")           # ancien fichier : retiré
+def test_v5_gb_classe_au_rage_count():
+    # GB (v5) : groupe 1 + groupe 2 ; deux runs d'un même groupe ne s'additionnent jamais
+    d = preparer([lec("g1", "UCG", "gb", 167, team=1, damage=17 * T), lec("g2", "UCG", "gb", 165, team=2, damage=15 * T),
+                  lec("g3", "UCG", "gb", 166, team=1, damage=16 * T), lec("p1", "UCP", "poc", 100 * T, team=1)])
     res = calculer(W, d, CONFIG, HORLOGE)
-    assert "gb" not in res["fichiers"] and not (d.data / "runs" / W / "gb.json").exists()
-    assert len(d.lectures(W)) == 2                                # lectures conservées
+    l = lire(d, "gb")[0]
+    assert "gb" in res["fichiers"] and l["score"] == {"total": 332, "runs": [167, 165], "unit": "rage_count"}
+    assert l["rank"] == 1 and l["runs_detail"][0]["damage"] == 17 * T and [x["team"] for x in l["runs_detail"]] == [1, 2]
 
 
 def test_v3_doublon_bot_hotm_note_sans_retrait():

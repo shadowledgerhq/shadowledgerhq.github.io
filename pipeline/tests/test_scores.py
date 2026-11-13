@@ -88,7 +88,8 @@ def test_extraire():
     assert extraire("HOTM 제 1관문 94,600pt 2026", "hotm", CONFIG)["valeur"] == 94600
     assert extraire("BOT 00:19.558 / 0:21", "bot", CONFIG)["valeur"] == 19.558
     assert extraire("BOT clear 3", "bot", CONFIG) is None  # hors plage / pas un chrono
-    assert extraire("GB 1,234 RC", "gb", CONFIG) == NON_GERE
+    assert extraire("GB 1,234 RC", "gb", CONFIG) is None                    # v5 : GB géré (plage 1-500 RC par run)
+    assert extraire("GB 165 RC", "gb", {**CONFIG, "plausible": {**CONFIG["plausible"], "gb": None}}) == NON_GERE
     assert extraire("POC 2.1B", "poc", CONFIG) is None  # hors plage plausible
 
 
@@ -167,6 +168,18 @@ def test_v3_mots_cles_de_mode_en_mot_entier():
     assert deviner_modes("my robot clear", CONFIG) == set() and deviner_modes("Bot clear", CONFIG) == {"bot"}
     assert deviner_modes("나혼렙POC 133T", CONFIG) == {"poc"}      # collé à du coréen
     assert deviner_modes("pocket guide", CONFIG) == set()
+
+
+def test_v5_rage_count():
+    for t, v in [("165 RC", 165), ("RC 167", 167), ("332RC", 332), ("Rage Count 165", 165), ("rage count: 165", 165), ("GB 165 rc", 165)]:
+        assert extraire(t, "gb", CONFIG)["valeur"] == v, t
+    assert extraire("RC 501", "gb", CONFIG) is None and extraire("0 RC", "gb", CONFIG) is None      # plage 1-500
+    assert extraire("RC 1,234", "gb", CONFIG) is None and extraire("15 763 121 797 048 dégâts", "gb", CONFIG) is None
+    assert extraire("GB 165 RC (Can 200 RC)", "gb", CONFIG)["autres"] == []                      # hypothèse exclue
+    assert extraire("GB 167 RC puis 165 RC", "gb", CONFIG)["autres"] == ["165 RC"]               # premier candidat
+    lec, _ = lectures_texte(meta("Giant Statue 332RC", ("gb",)), [("titre", "Giant Statue 332RC")], CONFIG)
+    assert lec[0]["mode"] == "gb" and lec[0]["score"] == 332 and lec[0]["exact"] is False
+    assert extraire("가나다 RC 165", "gb", {**CONFIG, "rage_count_mots": ["가나다"]})["valeur"] == 165
 
 
 if __name__ == "__main__":

@@ -1,0 +1,80 @@
+[
+  {
+    "run_id": "gb-2026-11-12-awb-GlVIa7Q",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "player": "Ahmad1195",
+    "channel": "Ahmad1195",
+    "video_id": "awb-GlVIa7Q",
+    "video_ids": [
+      "awb-GlVIa7Q"
+    ],
+    "published_at": "2026-11-12T02:07:38+01:00",
+    "lang": "en",
+    "score": {
+      "total": 189,
+      "runs": [
+        189
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 189 rc; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "awb-GlVIa7Q",
+        "published_at": "2026-11-12T02:07:38+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": true
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-12-nh2D7xZ7dOQ",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "player": "SlayOnLow",
+    "channel": "SlayOnLow",
+    "video_id": "nh2D7xZ7dOQ",
+    "video_ids": [
+      "nh2D7xZ7dOQ"
+    ],
+    "published_at": "2026-11-13T11:14:16+01:00",
+    "lang": "en",
+    "score": {
+      "total": 165,
+      "runs": [
+        165
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 165RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "nh2D7xZ7dOQ",
+        "published_at": "2026-11-13T11:14:16+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": true
+      }
+    ]
+  }
+]

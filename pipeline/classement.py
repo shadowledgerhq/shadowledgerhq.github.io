@@ -10,11 +10,13 @@ import sys
 from collections import defaultdict
 from datetime import timezone
 
+import gb
 from donnees import Donnees, ajouter_rejet, charger_config
-from semaine import id_semaine, iso_paris, maintenant, parse_iso, semaine_precedente
+from semaine import bornes, id_semaine, iso_paris, maintenant, parse_iso, semaine_precedente
 
 UNITES = {"poc": "damage", "bot": "seconds", "gb": "rage_count", "hotm": "points"}
-CLES_DETAIL = {"poc": ("sjw", "successor", "hunters"), "hotm": ("clear", "proof_bonus", "proof_level")}
+CLES_DETAIL = {"poc": ("sjw", "successor", "hunters"), "hotm": ("clear", "proof_bonus", "proof_level"),
+               "gb": ("total_score", "total_rage_count", "challenge_count", "time_left")}
 
 
 def cle_classement(lec, config):
@@ -36,12 +38,17 @@ def _pub(r):
     return parse_iso(r["published_at"])
 
 
+def _cle_score(r, mode):
+    """Clé de comparaison d'une run : score ; au GB (v5) RC puis dégâts."""
+    return gb.cle_run(r) if mode == "gb" else r["score"]
+
+
 def _meilleur(runs, mode):
-    return (min if mode == "bot" else max)(runs, key=lambda r: r["score"])
+    return (min if mode == "bot" else max)(runs, key=lambda r: _cle_score(r, mode))
 
 
 def _tri_score(runs, mode):
-    return sorted(runs, key=lambda r: r["score"], reverse=(mode != "bot"))
+    return sorted(runs, key=lambda r: _cle_score(r, mode), reverse=(mode != "bot"))
 
 
 # --- §4.4 doublons -------------------------------------------------------------
@@ -57,7 +64,7 @@ def dedoublonner(runs, config):
     # v3 : hors `doublon_modes` (BOT, HOTM), rien n'est retiré : simple note « doublon possible »
     possibles = defaultdict(list)
     for r in runs:
-        if r["exact"] and r["mode"] not in modes:
+        if r["exact"] and r["mode"] in ("bot", "hotm") and r["mode"] not in modes:
             possibles[(r["_cle"], r["score"])].append(r)
     for groupe in possibles.values():
         if len({r["channel_id"] for r in groupe}) >= 2:
@@ -114,13 +121,13 @@ def controler_boss(runs, cles, config, boss_prec):
 
 # --- §4.1 sélection des runs d'un joueur ---------------------------------------
 
-def _choisir_poc(runs):
-    """(runs choisies, ok). ok = une run de l'équipe 1 + une de l'équipe 2."""
-    par_equipe = {e: _tri_score([r for r in runs if r["team"] == e], "poc") for e in (1, 2)}
+def _choisir_poc(runs, mode="poc"):
+    """(runs choisies, ok). ok = une run de l'équipe (GB : groupe) 1 + une de l'équipe 2."""
+    par_equipe = {e: _tri_score([r for r in runs if r["team"] == e], mode) for e in (1, 2)}
     if par_equipe[1] and par_equipe[2]:
         return [par_equipe[1][0], par_equipe[2][0]], True
     choix, equipes = [], set()
-    for r in _tri_score(runs, "poc"):
+    for r in _tri_score(runs, mode):
         if r["team"] in (1, 2):
             if r["team"] in equipes:
                 continue  # deux runs de la même équipe ne s'additionnent jamais
@@ -134,14 +141,13 @@ def _choisir_poc(runs):
 def choisir_runs(runs, mode):
     if mode in ("bot", "hotm"):
         return [_meilleur(runs, mode)], True
-    if mode == "poc":
-        return _choisir_poc(runs)
-    choix = _tri_score(runs, mode)[:2]  # GB : notion d'équipe [EN ATTENTE]
-    return choix, len(choix) == 2
+    return _choisir_poc(runs, mode)  # POC : une run par équipe ; GB (v5) : une run par groupe
 
 
 def ligne_joueur(runs_j, cle, config):
     mode = runs_j[0]["mode"]
+    if mode == "gb":
+        runs_j = gb.rattacher_groupes(runs_j)  # §4.7 : Results rattachées au groupe du Personal Record
     exactes = [r for r in runs_j if r["exact"]]
     utiles = exactes or runs_j  # §4.3 : provisoire remplacé par toute run exacte
     sures = [r for r in utiles if r["confidence"] == "sur"]
@@ -153,8 +159,8 @@ def ligne_joueur(runs_j, cle, config):
     notes = []
     if mode in ("poc", "gb") and len(choix) < 2:
         notes.append("une seule run trouvée")
-    if mode == "poc" and len(choix) == 2 and not ok and any(r["team"] is None for r in choix):
-        notes.append("équipe illisible")
+    if mode in ("poc", "gb") and len(choix) == 2 and not ok and any(r["team"] is None for r in choix):
+        notes.append("équipe illisible" if mode == "poc" else "groupe illisible")
     if _inconnue(cle, config):
         notes.append("variante BOT illisible" if mode == "bot" else "porte HOTM illisible")
         ok = False
@@ -204,11 +210,17 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
         ligne["hunter_mode"] = principale.get("hunter_mode")
     if mode == "bot":
         ligne["bot_variant"] = principale.get("bot_variant")
+        ligne["player_ingame"] = principale.get("player_ingame")  # v4 : information seulement
+    if mode == "gb":
+        ligne["_degats"] = gb.somme_degats(choix)  # départage (retiré avant l'écriture)
     detail = []
     for r in choix:
         d = {"video_id": r["video_id"], "published_at": iso_paris(r["published_at"]), "t": r["t"],
              "stage": r["stage"], "team": r["team"], "score_source": r["score_source"],
              "exact": r["exact"]}
+        if mode == "gb":  # v5 : dégâts de la run (arrondis si lus sur le Personal Record)
+            d["damage"] = r.get("damage")
+            d["damage_exact"] = (r.get("detail") or {}).get("damage_exact", r.get("score_source") != "record")
         for k in CLES_DETAIL.get(mode, ()):
             if k in r.get("detail", {}):
                 d[k] = r["detail"][k]
@@ -219,11 +231,12 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
 
 
 def ordonner(lignes, mode):
-    """Runs classées par rang, puis runs rank null (§4.2, §5.1)."""
+    """Runs classées par rang, puis runs rank null (§4.2, §5.1). GB : à RC égal, somme des dégâts (§4.1)."""
     signe = 1 if mode == "bot" else -1
 
     def cle(l):
-        return (signe * l["score"]["total"], l["_fin"], l["channel_id"])
+        degats = -l.get("_degats", 0) if mode == "gb" else 0
+        return (signe * l["score"]["total"], degats, l["_fin"], l["channel_id"])
 
     classees = sorted((l for l in lignes if l["confidence"] == "sur"), key=cle)
     autres = sorted((l for l in lignes if l["confidence"] != "sur"), key=cle)
@@ -231,7 +244,29 @@ def ordonner(lignes, mode):
         l["rank"] = i
     for l in classees + autres:
         del l["_fin"]
+        l.pop("_degats", None)
     return classees + autres
+
+
+# --- §4.7 saison du Personal Record -------------------------------------------
+
+def controler_saison_record(runs, week, config):
+    """Time Left in Season : capture = prochain reset − temps restant. Après `published_at` -> record
+    de la saison précédente (rejeté, `semaine_precedente`). Illisible -> a_verifier."""
+    _, fin = bornes(week)
+    tol = config.get("gb", {}).get("record_tolerance_minutes", 60)
+    gardees, precedentes = [], []
+    for r in runs:
+        if r.get("score_source") == "record":
+            verdict = gb.saison_precedente((r.get("detail") or {}).get("time_left"), r["published_at"], fin, tol)
+            if verdict:
+                precedentes.append(r)
+                continue
+            if verdict is None:
+                r["confidence"] = "a_verifier"
+                r["notes"].append("saison illisible (Time Left in Season)")
+        gardees.append(r)
+    return gardees, precedentes
 
 
 # --- passage complet -----------------------------------------------------------
@@ -256,6 +291,7 @@ def calculer(week, d=None, config=None, horloge=None):
         runs.append(r)
     videos_avant = {r["video_id"] for r in runs}
 
+    runs, saisons_prec = controler_saison_record(runs, week, config)
     runs, doublons = dedoublonner(runs, config)
     cles = sorted({r["_cle"] for r in runs})
     boss, non_controle, precedentes, runs = controler_boss(
@@ -269,6 +305,9 @@ def calculer(week, d=None, config=None, horloge=None):
         motifs.setdefault(r["video_id"], ("doublon", origine, r))
     for r in precedentes:
         motifs.setdefault(r["video_id"], ("semaine_precedente", r["stage"], r))
+    for r in saisons_prec:
+        motifs.setdefault(r["video_id"], ("semaine_precedente",
+                                          f"Time Left in Season : {r['detail'].get('time_left')}", r))
     date = instant.astimezone(timezone.utc).date().isoformat()
     nouveaux_rejets, titres = [], d.videos(week)
     for vid, (raison, detail, r) in motifs.items():

@@ -4,6 +4,7 @@ Référence : docs/SPEC_ETAPE1.md §2.2. Bibliothèque standard uniquement.
 
 - nombres(texte)            -> scores sous forme de nombre (POC, HOTM, GB)
 - chronos(texte)            -> chronos en secondes (BOT)
+- rage_counts(texte, labels) -> Rage Count entiers (GB, v5) : `165 RC`, `RC 167`, `332RC`, `Rage Count 165`
 - candidats(texte, mode, plage) -> nombres ou chronos du mode, dans la plage plausible
 - extraire(texte, mode, config) -> meilleur candidat + autres, ou None ; NON_GERE si le
                                    mode n'a pas de plage (GB [EN ATTENTE])
@@ -226,14 +227,35 @@ def semaine_passee(texte, config):
     return any(_mot_present(m.lower(), bas) for m in (config or {}).get("semaine_passee_mots", []))
 
 
+RC_LIBELLES = ("rc", "rage count")  # + config.rage_count_mots (coréen, japonais : [À CONFIRMER])
+
+
+def rage_counts(texte, libelles=RC_LIBELLES):
+    """v5 : Rage Count du GB. Un entier de 1 à 3 chiffres collé à un libellé (RC, Rage Count…),
+    avant ou après : `165 RC`, `332RC`, `RC 167`, `Rage Count: 165`. `pos` = début de la lecture."""
+    labels = "|".join(sorted((re.escape(l) for l in libelles), key=len, reverse=True)).replace(r"\ ", r"\s*")
+    nombre = r"(?P<n>\d{1,3})(?![\d]|[.,]\d)"
+    apres = re.compile(rf"(?<![A-Za-z\d.,]){nombre}\s*(?:{labels})(?![A-Za-z])", re.IGNORECASE)
+    avant = re.compile(rf"(?<![A-Za-z])(?:{labels})\s*[:：=]?\s*{nombre}", re.IGNORECASE)
+    res = []
+    for rx in (apres, avant):
+        for m in rx.finditer(texte or ""):
+            res.append({"valeur": int(m.group("n")), "arrondi": False, "brut": m.group(0).strip(), "pos": m.start()})
+    return res
+
+
 def plage(mode, config):
     """(min, max) plausible du mode, ou None si non géré."""
     p = (config.get("plausible") or {}).get(mode)
     return tuple(p) if p else None
 
 
-def candidats(texte, mode, plage_mode):
-    trouves = chronos(texte) if mode == "bot" else nombres(texte)
+def candidats(texte, mode, plage_mode, config=None):
+    if mode == "gb":
+        libelles = RC_LIBELLES + tuple((config or {}).get("rage_count_mots", []))
+        trouves = rage_counts(texte, libelles)
+    else:
+        trouves = chronos(texte) if mode == "bot" else nombres(texte)
     lo, hi = plage_mode
     return [c for c in trouves if lo <= c["valeur"] <= hi]
 
@@ -262,7 +284,7 @@ def extraire(texte, mode, config, source=None):
         return NON_GERE
     texte = texte or ""
     lu = masquer_chapitres(texte, mode) if source == "description" else texte
-    cands = [c for c in candidats(lu, mode, p) if not est_hypothese(lu, c["pos"], c["pos"] + len(c["brut"]), config)]
+    cands = [c for c in candidats(lu, mode, p, config) if not est_hypothese(lu, c["pos"], c["pos"] + len(c["brut"]), config)]
     meilleur, autres = choisir(cands, mode)
     if meilleur is None:
         return None

@@ -19,6 +19,8 @@ def lecture_vide(meta, mode):
         "lang": meta.get("lang"),
         "mode": mode,
         "bot_variant": None,
+        "player_ingame": None,  # v4 : pseudo en jeu (BOT, bandeau du bas), information seulement
+        "damage": None,         # v5 : GB, `Final Score` (arrondi si lu sur le Personal Record)
         "gate": None,
         "hunter_mode": None,
         "t": None,

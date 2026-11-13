@@ -43,7 +43,7 @@
     "poc": [1e12, 1e16],
     "hotm": [1000, 200000],
     "bot": [5, 180],
-    "gb": null
+    "gb": [1, 500]
   },
   "hypothese_mots": ["can", "could", "possible", "up to", "max", "~", "가능", "可能", "目標", "target"],
   "semaine_passee_mots": ["last week", "저번 주", "지난주", "先週", "previous week", "저번주", "semaine passée", "semaine dernière", "上周"],
@@ -53,7 +53,10 @@
     "season_regex": ["S\\d+-\\d", "season \\d+", "시즌 \\d+", "シーズン\\d+"]
   },
   "doublon_modes": ["poc"],
-  "modes_classement": ["poc", "bot", "hotm"],
+  "modes_classement": ["poc", "bot", "gb", "hotm"],
+  "rage_count_mots": [],
+  "_rage_count_mots": "Libellés coréens et japonais du Rage Count en plus de « RC » et « Rage Count » : [À CONFIRMER] sur capture (SPEC §2.2).",
+  "gb": {"record_tolerance_minutes": 60, "_doc": "SPEC §4.7 : marge sur le moment estimé de la capture du Personal Record (Time Left en heures arrondies). [À CONFIRMER]"},
   "tri1_version": 3,
   "boss_min_videos": 3,
   "fichier_bot_variante_inconnue": "bot-variante-inconnue",

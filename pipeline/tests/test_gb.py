@@ -1,0 +1,152 @@
+import json
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ecrans
+from classement import calculer
+from donnees import charger_config
+from test_classement import HORLOGE, W, lec, lire, preparer
+
+CONFIG = charger_config()
+T = 10**12
+
+
+def meta(vid, jour=14, heure=10, titre="Giant Statue GB"):
+    return {"video_id": vid, "channel_id": "UCX", "channel_title": "Joueur X", "title": titre,
+            "published_at": f"2026-11-{jour:02d}T{heure:02d}:00:00Z", "lang": "en", "mode_guess": ["gb"]}
+
+
+RECORD = {"stage": "Giant Statue", "t": 5, "groups": {1: {"rage_count": 167, "damage": "17.28T"}, 2: {"rage_count": 165, "damage": "15.55T"}},
+          "total_rage_count": 332, "total_score": 32_842_054_460_310, "challenge_count": 12, "time_left": "6d 9h"}
+RESULTS = {"stage": "Giant Statue", "t": 40, "rage_count": 165, "final_score": 15_763_121_797_048, "player_score": 3_763_121_797_048,
+           "hunter_ranks": [2 * T] * 6, "play_time": "03:00", "new_record": True}
+
+
+def test_exemple_4_7_la_run_remplace_le_groupe_2():
+    """SPEC §4.7 : Personal Record 167 + 165 = 332, puis Results 165 RC / 15 763 121 797 048 : remplace le groupe 2, total 332."""
+    rec = ecrans.lectures_gb_record(meta("v1", heure=10), RECORD, CONFIG)
+    assert [(r["team"], r["score"], r["confidence"], r["exact"]) for r in rec] == [(1, 167, "sur", True), (2, 165, "sur", True)]
+    assert rec[0]["damage"] == 17_280_000_000_000 and rec[1]["damage"] == 15_550_000_000_000 and rec[1]["detail"]["damage_exact"] is False
+    res = ecrans.lecture_gb_results(meta("v2", heure=12), RESULTS, CONFIG)
+    assert res["confidence"] == "sur" and res["exact"] and res["damage"] == 15_763_121_797_048 and res["team"] is None
+    d = preparer(rec + [res])
+    calculer(W, d, CONFIG, HORLOGE)
+    gb = lire(d, "gb")
+    assert len(gb) == 1
+    l = gb[0]
+    assert l["score"] == {"total": 332, "runs": [167, 165], "unit": "rage_count"}
+    assert l["confidence"] == "sur" and l["rank"] == 1 and l["exact"] is True
+    assert sorted(l["video_ids"]) == ["v1", "v2"]
+    d1, d2 = l["runs_detail"]
+    assert (d1["team"], d1["video_id"], d1["score_source"], d1["damage_exact"]) == (1, "v1", "record", False)
+    assert (d2["team"], d2["video_id"], d2["damage"], d2["damage_exact"]) == (2, "v2", 15_763_121_797_048, True)  # la run Results a remplacé le groupe 2
+    assert "groupe 2 d'après le Personal Record" in l["notes"]
+
+
+def test_results_meme_run_que_le_record():
+    # même RC et mêmes dégâts arrondis (15.55T) : c'est la même run, rattachée au groupe 2
+    res = ecrans.lecture_gb_results(meta("v2", heure=12), {**RESULTS, "final_score": 15_551_000_000_000, "player_score": 3_551_000_000_000}, CONFIG)
+    d = preparer(ecrans.lectures_gb_record(meta("v1"), RECORD, CONFIG) + [res])
+    calculer(W, d, CONFIG, HORLOGE)
+    l = lire(d, "gb")[0]
+    assert l["score"]["total"] == 332 and l["runs_detail"][1]["damage"] == 15_551_000_000_000 and l["runs_detail"][1]["team"] == 2
+
+
+def test_controle_total_rage_count():
+    rec = ecrans.lectures_gb_record(meta("v1"), {**RECORD, "total_rage_count": 333}, CONFIG)
+    assert all(r["confidence"] == "a_verifier" and not r["exact"] for r in rec)
+    d = preparer(rec)
+    calculer(W, d, CONFIG, HORLOGE)
+    l = lire(d, "gb")[0]
+    assert l["rank"] is None and l["confidence"] == "a_verifier" and l["score"]["total"] == 332
+    assert ecrans.lectures_gb_record(meta("v1"), {**RECORD, "total_rage_count": None}, CONFIG)[0]["confidence"] == "a_verifier"   # illisible
+
+
+def test_saison_du_record():
+    # Time Left 1d 2h : capture estimée le 17/11 22:00Z, après la publication du 13/11 : saison précédente -> rejeté
+    rec = ecrans.lectures_gb_record(meta("v1", jour=13, heure=0), {**RECORD, "time_left": "1d 2h"}, CONFIG)
+    d = preparer(rec)
+    calculer(W, d, CONFIG, HORLOGE)
+    assert not (d.data / "runs" / W / "gb.json").exists()
+    assert [(r["video_id"], r["reason"]) for r in d.rejected(W)] == [("v1", "semaine_precedente")]
+    # temps restant illisible -> a_verifier, pas rejeté
+    d = preparer(ecrans.lectures_gb_record(meta("v1"), {**RECORD, "time_left": None}, CONFIG))
+    calculer(W, d, CONFIG, HORLOGE)
+    l = lire(d, "gb")[0]
+    assert l["rank"] is None and "saison illisible (Time Left in Season)" in l["notes"] and d.rejected(W) == []
+    # marge de 60 min : capture estimée 30 min après la publication -> gardé (publié 14/11 00:00Z ; reset 19/11 00:00Z − 4d 23h 30m)
+    d = preparer(ecrans.lectures_gb_record(meta("v1", jour=14, heure=0), {**RECORD, "time_left": "4d 23h 30m"}, CONFIG))
+    calculer(W, d, CONFIG, HORLOGE)
+    assert lire(d, "gb")[0]["rank"] == 1
+
+
+def test_gb_egalite_departagee_par_les_degats():
+    lectures = [lec("a1", "UCA", "gb", 167, team=1, damage=17 * T), lec("a2", "UCA", "gb", 165, team=2, damage=15 * T),
+                lec("b1", "UCB", "gb", 167, team=1, damage=18 * T), lec("b2", "UCB", "gb", 165, team=2, damage=16 * T, jour=12),
+                lec("c1", "UCC", "gb", 170, team=1, damage=1 * T), lec("c2", "UCC", "gb", 170, team=2, damage=1 * T)]
+    d = preparer(lectures)
+    calculer(W, d, CONFIG, HORLOGE)
+    assert [(l["channel_id"], l["score"]["total"], l["rank"]) for l in lire(d, "gb")] == [("UCC", 340, 1), ("UCB", 332, 2), ("UCA", 332, 3)]
+    # égalité de RC et de dégâts : published_at le plus récent le plus tôt (§4.2) ; `_degats` n'est jamais écrit
+    assert all("_degats" not in l for l in lire(d, "gb"))
+
+
+def test_gb_meme_groupe_jamais_additionne_et_groupe_illisible():
+    d = preparer([lec("a1", "UCA", "gb", 167, team=1, damage=17 * T), lec("a2", "UCA", "gb", 160, team=1, damage=16 * T)])
+    calculer(W, d, CONFIG, HORLOGE)
+    l = lire(d, "gb")[0]
+    assert l["score"]["total"] == 167 and l["rank"] is None and "une seule run trouvée" in l["notes"]
+    d = preparer([lec("b1", "UCB", "gb", 167, damage=17 * T), lec("b2", "UCB", "gb", 165, damage=15 * T)])
+    calculer(W, d, CONFIG, HORLOGE)
+    l = lire(d, "gb")[0]
+    assert l["score"]["total"] == 332 and l["rank"] is None and "groupe illisible" in l["notes"]
+
+
+def test_tie_break_avec_total_score_exact_du_record():
+    a = ecrans.lectures_gb_record(meta("v1"), {**RECORD, "total_score": 33 * T}, CONFIG)
+    b = [{**r, "channel_id": "UCY", "channel_title": "Joueur Y", "video_id": "w1", "detail": {**r["detail"], "total_score": 34 * T}} for r in
+         ecrans.lectures_gb_record(meta("w1"), RECORD, CONFIG)]
+    d = preparer(a + b)
+    calculer(W, d, CONFIG, HORLOGE)
+    gb = lire(d, "gb")
+    assert [l["channel_id"] for l in gb] == ["UCY", "UCX"] and gb[0]["runs_detail"][0]["video_id"] == "w1"   # Total Score 34T > 33T
+
+
+def test_controle_results_gb():
+    ok, pb = ecrans.controle_gb_results(3 * T, [T] * 6, 9 * T)
+    assert ok and not pb
+    ok, pb = ecrans.controle_gb_results(3 * T, [T] * 6, 9 * T + 1)
+    assert not ok and "≠ Final Score" in pb[0]
+    bad = ecrans.lecture_gb_results(meta("v2"), {**RESULTS, "final_score": 1}, CONFIG)
+    assert bad["confidence"] == "a_verifier" and bad["score"] == 165
+    assert ecrans.lecture_gb_results(meta("v2"), {**RESULTS, "rage_count": None}, CONFIG) is None
+
+
+# --- BOT (v4-v5) ------------------------------------------------------------------------------
+
+BOT = {"stage": "Baruka", "phases": [9.281, 14.986, 19.926], "chrono": 19.926, "play_time": 19, "player_ingame": "ThenaX", "armes_sjw": True, "t": 30}
+
+
+def test_bot_results_controles_et_variante():
+    m = {**meta("b1", titre="BOT 19.926"), "mode_guess": ["bot"]}
+    lecture = ecrans.lecture_bot(m, BOT, CONFIG)
+    assert lecture["score"] == 19.926 and lecture["confidence"] == "sur" and lecture["exact"] and lecture["player_ingame"] == "ThenaX"
+    assert lecture["bot_variant"] == "season" and any("armes de SJW" in n for n in lecture["notes"])
+    assert ecrans.lecture_bot(m, {**BOT, "armes_sjw": False}, CONFIG)["bot_variant"] == "challenge"
+    titre = ecrans.lecture_bot({**m, "title": "BOT challenge"}, {**BOT, "armes_sjw": None}, CONFIG)
+    assert titre["bot_variant"] == "challenge" and "variante d'après le titre" in titre["notes"]
+    conflit = ecrans.lecture_bot({**m, "title": "BOT challenge"}, BOT, CONFIG)
+    assert conflit["bot_variant"] == "season" and "titre : challenge" in conflit["notes"]          # l'écran prime
+    for mauvais in ({**BOT, "play_time": 20}, {**BOT, "chrono": 19.9}, {**BOT, "phases": [9.281, 9.281, 19.926]}, {**BOT, "play_time": None}):
+        assert ecrans.lecture_bot(m, mauvais, CONFIG)["confidence"] == "a_verifier"
+    d = preparer([{**lecture, "published_at": "2026-11-14T10:00:00Z"}])
+    calculer(W, d, CONFIG, HORLOGE)
+    l = lire(d, "bot-season")[0]
+    assert l["player_ingame"] == "ThenaX" and l["rank"] == 1 and l["score"]["total"] == 19.926 and l["bot_variant"] == "season"
+
+
+if __name__ == "__main__":
+    for nom, fn in list(globals().items()):
+        if nom.startswith("test_"):
+            fn(); print("ok", nom)
