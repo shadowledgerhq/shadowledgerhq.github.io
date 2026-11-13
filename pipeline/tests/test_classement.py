@@ -16,7 +16,7 @@ HORLOGE = datetime(2026, 11, 14, 19, 0, tzinfo=timezone.utc)
 def lec(vid, ch, mode, score, jour=13, **kw):
     base = {"video_id": vid, "channel_id": ch, "channel_title": ch.lower(),
             "published_at": f"2026-11-{jour:02d}T12:00:00Z", "lang": "ko", "mode": mode,
-            "bot_variant": None, "gate": None, "hunter_mode": None, "t": 10, "stage": None,
+            "gate": None, "hunter_mode": None, "t": 10, "stage": None,
             "team": None, "score": score, "score_source": "video-complete", "exact": True,
             "confidence": "sur", "detail": {}, "notes": []}
     base.update(kw)
@@ -74,24 +74,20 @@ def test_poc_equipe_illisible():
     assert l["rank"] is None and l["score"]["total"] == 19 * T and "équipe illisible" in l["notes"]
 
 
-def test_bot_variantes_et_hotm_portes():
+def test_bot_unique_et_hotm_portes():
     d = preparer([
-        lec("s1", "UC1", "bot", 19.558, bot_variant="season"),
-        lec("s2", "UC2", "bot", 18.0, bot_variant="season"),
-        lec("s3", "UC2", "bot", 25.0, bot_variant="season"),
-        lec("c1", "UC1", "bot", 30.1, bot_variant="challenge"),
-        lec("n1", "UC3", "bot", 10.0),
+        lec("s1", "UC1", "bot", 19.558),
+        lec("s2", "UC2", "bot", 18.0),
+        lec("s3", "UC2", "bot", 25.0),
         lec("h1", "UC1", "hotm", 94600, gate=3, hunter_mode=False,
             detail={"clear": 90000, "proof_bonus": 4600, "proof_level": 46}),
         lec("h2", "UC2", "hotm", 95000, gate=None),
     ])
     calculer(W, d, CONFIG, HORLOGE)
-    season = lire(d, "bot-season")
+    season = lire(d, "bot")
     assert [(l["channel_id"], l["rank"], l["score"]["total"]) for l in season] == [
         ("UC2", 1, 18.0), ("UC1", 2, 19.558)]
-    assert season[0]["bot_variant"] == "season" and season[0]["score"]["unit"] == "seconds"
-    assert lire(d, "bot-challenge")[0]["rank"] == 1
-    assert lire(d, "bot-variante-inconnue")[0]["rank"] is None
+    assert season[0]["score"]["unit"] == "seconds" and "bot_variant" not in season[0]
     h = lire(d, "hotm-gate-3")[0]
     assert h["gate"] == 3 and h["hunter_mode"] is False and h["runs_detail"][0]["proof_bonus"] == 4600
     assert "submode" not in h["runs_detail"][0]
@@ -135,12 +131,12 @@ def test_v5_gb_classe_au_rage_count():
 def test_v3_doublon_bot_hotm_note_sans_retrait():
     assert CONFIG["doublon_modes"] == ["poc"]
     lectures = [lec("h1", "UC1", "hotm", 94600, gate=1, jour=13), lec("h2", "UC2", "hotm", 94600, gate=1, jour=14),
-                lec("b1", "UC1", "bot", 19.558, bot_variant="season"), lec("b2", "UC2", "bot", 19.558, bot_variant="season", jour=14)]
+                lec("b1", "UC1", "bot", 19.558), lec("b2", "UC2", "bot", 19.558, jour=14)]
     d = preparer(lectures)
     res = calculer(W, d, CONFIG, HORLOGE)
     h = lire(d, "hotm-gate-1")
     assert len(h) == 2 and sorted(l["notes"].split("doublon possible : ")[1][:2] for l in h) == ["h1", "h2"]  # note avec le video_id de l'autre
-    assert len(lire(d, "bot-season")) == 2 and d.rejected(W) == []
+    assert len(lire(d, "bot")) == 2 and d.rejected(W) == []
     # POC : la run en trop est retirée ; la vidéo n'est rejetée que si elle n'a plus aucune run
     d = preparer([lec("a1", "UCA", "poc", 100 * T, team=1), lec("a2", "UCA", "poc", 50 * T, team=2),
                   lec("d1", "UCD", "poc", 100 * T, team=1, jour=14), lec("d1", "UCD", "poc", 40 * T, team=2, jour=14, t=60)])

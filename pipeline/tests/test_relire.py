@@ -10,7 +10,7 @@ W = "2026-11-12"
 
 def lec(vid, mode, score, source, notes=()):
     return {"video_id": vid, "channel_id": "UC" + vid, "channel_title": vid, "published_at": "2026-11-13T10:00:00Z", "lang": "en",
-            "mode": mode, "bot_variant": None, "gate": None, "hunter_mode": None, "t": None, "stage": None, "team": None,
+            "mode": mode, "gate": None, "hunter_mode": None, "t": None, "stage": None, "team": None,
             "score": score, "score_source": source, "exact": False, "confidence": "a_verifier", "detail": {}, "notes": list(notes)}
 
 
@@ -76,7 +76,7 @@ def test_v8_relecture_regles_et_cas_e4l():
     assert a_relire(d, config, W) == ["E4lHBPoZeKs"]
     r = relire(d, config, W, ApiE4L())
     (l,) = d.lectures(W)
-    assert l["score"] == 19.754 and l["bot_variant"] == "season" and l["regles"] == config["tri1_version"]    # plus de 00:32 (chapitre)
+    assert l["score"] == 19.754 and l["regles"] == config["tri1_version"]    # plus de 00:32 (chapitre)
     assert d.videos(W)["E4lHBPoZeKs"]["title"].startswith("BARUKA S20") and d.processed()["E4lHBPoZeKs"]["regles"] == config["tri1_version"]
     assert a_relire(d, config, W) == [] and r["changees"] == 1
     # une vidéo `termine` ou `rejete` n'est jamais relue
@@ -96,8 +96,8 @@ def test_v9_chapitres_dans_les_notes_sans_cle():
     assert a_relire(d, config, W) == ["a", "b", "c"] or "b" in a_relire(d, config, W)  # reste à relire avec la clé
 
 
-def test_v8_variante_du_titre_sans_cle():
-    """Sans clé : la description n'est pas relue, mais la variante BOT (titre) est rejouée sur la lecture gardée."""
+def test_v10_titre_rejoue_sans_cle():
+    """Sans clé : la description n'est pas relue, mais la semaine BOT (titre) est rejouée sur la lecture gardée."""
     d, config = Donnees(tempfile.mkdtemp()), charger_config()
     m = {"video_id": "E4lHBPoZeKs", "channel_id": "UCe", "channel_title": "Black Thunder X", "title": E4L["title"], "published_at": "2026-11-12T07:58:32Z",
          "lang": "en", "mode_guess": ["bot"]}
@@ -106,8 +106,8 @@ def test_v8_variante_du_titre_sans_cle():
     d.ecrire(f"runs/{W}/_lectures.json", [lec("E4lHBPoZeKs", "bot", 32.0, "description")])
     relire(d, config, W)
     (l,) = d.lectures(W)
-    assert l["bot_variant"] == "season" and "description non relue (règles v3)" in l["notes"] and a_relire(d, config, W) == ["E4lHBPoZeKs"]
+    assert "bot_variant" not in l and l["bot_season_week"] is None and "description non relue (règles v3)" in l["notes"] and a_relire(d, config, W) == ["E4lHBPoZeKs"]
 
 
 if __name__ == "__main__":
-    test_v8_variante_du_titre_sans_cle(); test_v9_chapitres_dans_les_notes_sans_cle(); test_relire_hors_ligne(); test_relire_avec_api(); test_v8_relecture_regles_et_cas_e4l(); print("OK")
+    test_v10_titre_rejoue_sans_cle(); test_v9_chapitres_dans_les_notes_sans_cle(); test_relire_hors_ligne(); test_relire_avec_api(); test_v8_relecture_regles_et_cas_e4l(); print("OK")

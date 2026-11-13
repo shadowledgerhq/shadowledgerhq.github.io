@@ -152,22 +152,19 @@ def test_controle_results_gb():
 BOT = {"stage": "Baruka", "phases": [9.281, 14.986, 19.926], "chrono": 19.926, "play_time": 19, "player_ingame": "ThenaX", "armes_sjw": True, "t": 30}
 
 
-def test_bot_results_controles_et_variante():
-    m = {**meta("b1", titre="BOT 19.926"), "mode_guess": ["bot"]}
+def test_bot_results_controles_et_challenge():
+    m = {**meta("b1", titre="BOT S20-4 19.926"), "mode_guess": ["bot"]}
     lecture = ecrans.lecture_bot(m, BOT, CONFIG)
     assert lecture["score"] == 19.926 and lecture["confidence"] == "sur" and lecture["exact"] and lecture["player_ingame"] == "ThenaX"
-    assert lecture["bot_variant"] == "season" and any("armes de SJW" in n for n in lecture["notes"])
-    assert ecrans.lecture_bot(m, {**BOT, "armes_sjw": False}, CONFIG)["bot_variant"] == "challenge"
-    titre = ecrans.lecture_bot({**m, "title": "BOT challenge"}, {**BOT, "armes_sjw": None}, CONFIG)
-    assert titre["bot_variant"] == "challenge" and "variante d'après le titre" in titre["notes"]
-    conflit = ecrans.lecture_bot({**m, "title": "BOT challenge"}, BOT, CONFIG)
-    assert conflit["bot_variant"] == "season" and "titre : challenge" in conflit["notes"]          # l'écran prime
+    assert lecture["bot_season_week"] == "S20-4" and "bot_variant" not in lecture   # v10 : plus de variante
+    ch = ecrans.lecture_bot({**m, "title": "BOT challenge"}, BOT, CONFIG)
+    assert "challenge ? (mode supprimé)" in ch["notes"]
     for mauvais in ({**BOT, "play_time": 20}, {**BOT, "chrono": 19.9}, {**BOT, "phases": [9.281, 9.281, 19.926]}, {**BOT, "play_time": None}):
         assert ecrans.lecture_bot(m, mauvais, CONFIG)["confidence"] == "a_verifier"
     d = preparer([{**lecture, "published_at": "2026-11-14T10:00:00Z"}])
     calculer(W, d, CONFIG, HORLOGE)
-    l = lire(d, "bot-season")[0]
-    assert l["player_ingame"] == "ThenaX" and l["rank"] == 1 and l["score"]["total"] == 19.926 and l["bot_variant"] == "season"
+    l = lire(d, "bot")[0]
+    assert l["player_ingame"] == "ThenaX" and l["rank"] == 1 and l["score"]["total"] == 19.926
 
 
 if __name__ == "__main__":

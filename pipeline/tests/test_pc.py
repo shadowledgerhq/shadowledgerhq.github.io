@@ -51,7 +51,7 @@ def monde(tmp):
                                     "updated_at": "2026-11-13", "last_tri": 1, "status": "en_cours", "modes": ["poc"], "pc_needed": True} for v in "abcd"})
     # `d` a déjà un score de titre (130T) : les sous-titres ne doivent pas doubler la lecture
     lec = {"video_id": "d", "channel_id": "UCd", "channel_title": "Ch d", "published_at": "2026-11-13T10:00:00Z", "lang": "ko", "mode": "poc",
-           "bot_variant": None, "gate": None, "hunter_mode": None, "t": None, "stage": None, "team": None, "score": 130 * 10**12,
+           "gate": None, "hunter_mode": None, "t": None, "stage": None, "team": None, "score": 130 * 10**12,
            "score_source": "titre", "exact": False, "confidence": "a_verifier", "detail": {}, "notes": ["score provisoire (titre) : 130T"]}
     d.ecrire(f"runs/{SEM}/_lectures.json", [lec])
     return d

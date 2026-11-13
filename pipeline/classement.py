@@ -1,7 +1,7 @@
 """Calcul des classements de la semaine (docs/SPEC_ETAPE1.md §4-5). Idempotent.
 
 Entrée : data/runs/<semaine>/_lectures.json (une entrée par score lu par les tris).
-Sorties : poc.json, bot-season.json, bot-challenge.json, hotm-gate-<n>.json,
+Sorties : poc.json, bot.json, hotm-gate-<n>.json,
 _boss.json ; mises à jour de rejected/<semaine>.json, processed.json, channels.json.
 
 Usage : python3 pipeline/classement.py [AAAA-MM-JJ]   (défaut : semaine en cours)
@@ -23,8 +23,7 @@ CLES_DETAIL = {"poc": ("sjw", "successor", "hunters"), "hotm": ("clear", "proof_
 def cle_classement(lec, config):
     mode = lec["mode"]
     if mode == "bot":
-        v = lec.get("bot_variant")
-        return f"bot-{v}" if v in ("season", "challenge") else config["fichier_bot_variante_inconnue"]
+        return "bot"  # v10 : un seul classement BOT
     if mode == "hotm":
         g = lec.get("gate")
         return f"hotm-gate-{g}" if isinstance(g, int) else config["fichier_hotm_porte_inconnue"]
@@ -32,7 +31,7 @@ def cle_classement(lec, config):
 
 
 def _inconnue(cle, config):
-    return cle in (config["fichier_bot_variante_inconnue"], config["fichier_hotm_porte_inconnue"])
+    return cle == config["fichier_hotm_porte_inconnue"]
 
 
 def _pub(r):
@@ -106,7 +105,7 @@ def controler_boss(runs, cles, config, boss_prec):
         ref = sorted(videos_par_stage.items(), key=lambda kv: (-len(kv[1]), kv[0]))[0][0]
         exemple = sures[0]
         boss.append({"classement": cle, "mode": exemple["mode"], "gate": exemple.get("gate"),
-                     "bot_variant": exemple.get("bot_variant"), "stage": ref,
+                     "stage": ref,
                      "videos": len(videos_par_stage[ref])})
         for r in runs:
             if r["_cle"] != cle or not r["stage"] or r["stage"] == ref:
@@ -163,7 +162,7 @@ def ligne_joueur(runs_j, cle, config):
     if mode in ("poc", "gb") and len(choix) == 2 and not ok and any(r["team"] is None for r in choix):
         notes.append("équipe illisible" if mode == "poc" else "groupe illisible")
     if _inconnue(cle, config):
-        notes.append("variante BOT illisible" if mode == "bot" else "porte HOTM illisible")
+        notes.append("porte HOTM illisible")
         ok = False
     sur = ok and all(r["confidence"] == "sur" for r in choix)
     return choix, sur, notes
@@ -210,7 +209,6 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
         ligne["gate"] = principale.get("gate")
         ligne["hunter_mode"] = principale.get("hunter_mode")
     if mode == "bot":
-        ligne["bot_variant"] = principale.get("bot_variant")
         ligne["bot_season_week"] = principale.get("bot_season_week")  # v9
         ligne["player_ingame"] = principale.get("player_ingame")  # v4 : information seulement
     if mode == "gb":

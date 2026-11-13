@@ -6,8 +6,7 @@
     "published_at": "2026-11-12T10:49:17Z",
     "lang": "ko",
     "mode": "poc",
-    "regles": 9,
-    "bot_variant": null,
+    "regles": 10,
     "bot_season_week": null,
     "player_ingame": null,
     "damage": null,
@@ -33,8 +32,7 @@
     "published_at": "2026-11-13T10:12:06Z",
     "lang": "zh",
     "mode": "bot",
-    "regles": 9,
-    "bot_variant": "season",
+    "regles": 10,
     "bot_season_week": "S20-4",
     "player_ingame": null,
     "damage": null,
@@ -49,8 +47,7 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 19.754s",
-      "variante d'après le titre"
+      "score provisoire (titre) : 19.754s"
     ]
   },
   {
@@ -60,8 +57,7 @@
     "published_at": "2026-11-13T05:44:18Z",
     "lang": "ko",
     "mode": "bot",
-    "regles": 9,
-    "bot_variant": "season",
+    "regles": 10,
     "bot_season_week": null,
     "player_ingame": null,
     "damage": null,
@@ -76,8 +72,7 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 28초",
-      "variante d'après le titre"
+      "score provisoire (titre) : 28초"
     ]
   },
   {
@@ -87,8 +82,7 @@
     "published_at": "2026-11-12T19:12:47Z",
     "lang": "en",
     "mode": "bot",
-    "regles": 9,
-    "bot_variant": "season",
+    "regles": 10,
     "bot_season_week": null,
     "player_ingame": null,
     "damage": null,
@@ -103,8 +97,7 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 23;223s",
-      "variante d'après le titre"
+      "score provisoire (titre) : 23;223s"
     ]
   },
   {
@@ -114,7 +107,6 @@
     "published_at": "2026-11-12T13:57:26Z",
     "lang": "en",
     "mode": "bot",
-    "bot_variant": null,
     "gate": null,
     "hunter_mode": null,
     "t": null,
@@ -139,8 +131,7 @@
     "published_at": "2026-11-12T12:01:40Z",
     "lang": "ja",
     "mode": "bot",
-    "regles": 9,
-    "bot_variant": "season",
+    "regles": 10,
     "bot_season_week": "S20-4",
     "player_ingame": null,
     "damage": null,
@@ -155,8 +146,7 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 19.558",
-      "variante d'après le titre"
+      "score provisoire (titre) : 19.558"
     ]
   },
   {
@@ -166,8 +156,7 @@
     "published_at": "2026-11-12T03:07:23Z",
     "lang": "en",
     "mode": "bot",
-    "regles": 9,
-    "bot_variant": "season",
+    "regles": 10,
     "bot_season_week": null,
     "player_ingame": null,
     "damage": null,
@@ -182,8 +171,7 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 19.9s",
-      "variante d'après le titre"
+      "score provisoire (titre) : 19.9s"
     ]
   },
   {
@@ -193,8 +181,7 @@
     "published_at": "2026-11-12T02:04:46Z",
     "lang": "ja",
     "mode": "bot",
-    "regles": 9,
-    "bot_variant": "season",
+    "regles": 10,
     "bot_season_week": null,
     "player_ingame": null,
     "damage": null,
@@ -210,8 +197,7 @@
     "detail": {},
     "notes": [
       "publiée juste après le reset : semaine précédente ?",
-      "score provisoire (titre) : 25.9s",
-      "variante d'après le titre"
+      "score provisoire (titre) : 25.9s"
     ]
   },
   {
@@ -221,8 +207,7 @@
     "published_at": "2026-11-12T01:50:30Z",
     "lang": "en",
     "mode": "bot",
-    "regles": 9,
-    "bot_variant": "season",
+    "regles": 10,
     "bot_season_week": null,
     "player_ingame": null,
     "damage": null,
@@ -238,8 +223,7 @@
     "detail": {},
     "notes": [
       "publiée juste après le reset : semaine précédente ?",
-      "score provisoire (titre) : 19s",
-      "variante d'après le titre"
+      "score provisoire (titre) : 19s"
     ]
   },
   {
@@ -249,8 +233,7 @@
     "published_at": "2026-11-13T05:13:05Z",
     "lang": "en",
     "mode": "bot",
-    "regles": 9,
-    "bot_variant": "season",
+    "regles": 10,
     "bot_season_week": null,
     "player_ingame": null,
     "damage": null,
@@ -265,8 +248,7 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 29s",
-      "variante d'après le titre"
+      "score provisoire (titre) : 29s"
     ]
   },
   {
@@ -276,8 +258,7 @@
     "published_at": "2026-11-13T10:14:16Z",
     "lang": "en",
     "mode": "gb",
-    "regles": 9,
-    "bot_variant": null,
+    "regles": 10,
     "bot_season_week": null,
     "player_ingame": null,
     "damage": null,
@@ -302,8 +283,7 @@
     "published_at": "2026-11-12T01:07:38Z",
     "lang": "en",
     "mode": "gb",
-    "regles": 9,
-    "bot_variant": null,
+    "regles": 10,
     "bot_season_week": null,
     "player_ingame": null,
     "damage": 64200000000000,

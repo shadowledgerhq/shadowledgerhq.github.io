@@ -4,7 +4,7 @@ La lecture des images (OCR, recadrages) est [EN ATTENTE] : ces fonctions reçoiv
 (dict `ecran`) et produisent les lectures que `classement.py` consomme. Une valeur illisible vaut None :
 la lecture reste `a_verifier`, jamais une valeur inventée.
 
-- lecture_bot(meta, ecran, config)          écran `Results` du BOT (v4) ; variante d'après les armes de SJW (v5)
+- lecture_bot(meta, ecran, config)          écran `Results` du BOT (v4) 
 - lecture_gb_results(meta, ecran, config)   écran `Results` du GB (v5)
 - lectures_gb_record(meta, ecran, config)   écran `Guild Boss` > `Personal Record` du GB (v6) : 2 lectures (groupes 1 et 2)
 - lecture_hotm(meta, ecran, config)         écran RESULT du HOTM : clear + preuve = total = 이번 기록
@@ -13,8 +13,8 @@ la lecture reste `a_verifier`, jamais une valeur inventée.
 import re
 
 from hotm_ecran import lire_porte
-from bot_saison import lire_saison_semaine
-from tri1 import lecture_vide, notes_alerte_reset, variante_bot
+from bot_saison import NOTE_CHALLENGE, lire_saison_semaine, titre_challenge
+from tri1 import lecture_vide, notes_alerte_reset
 
 
 def controle_bot(phases, chrono, play_time):
@@ -44,17 +44,9 @@ def lecture_bot(meta, ecran, config, source="video-complete"):
                stage=ecran.get("stage"), t=ecran.get("t"), player_ingame=ecran.get("player_ingame"),
                detail={"phases": phases, "play_time": ecran.get("play_time")})
     lec["notes"] += [f"contrôle BOT : {p}" for p in pb]
-    lec["bot_season_week"] = lire_saison_semaine(meta.get("title"))
-    titre = variante_bot(meta.get("title"), config)
-    armes = ecran.get("armes_sjw")  # True : armes de SJW dans le bandeau ; False : absentes ; None : illisible
-    if armes is not None:  # l'écran prime sur le titre (v5, indice [À CONFIRMER] sur une capture de challenge)
-        lec["bot_variant"] = "season" if armes else "challenge"
-        lec["notes"].append("variante d'après les armes de SJW [À CONFIRMER]")
-        if titre and titre != lec["bot_variant"]:
-            lec["notes"].append(f"titre : {titre}")
-    elif titre:
-        lec["bot_variant"] = titre
-        lec["notes"].append("variante d'après le titre")
+    lec["bot_season_week"] = lire_saison_semaine(meta.get("title"), config)
+    if titre_challenge(meta.get("title"), config):  # v10 : ancien mode supprimé
+        lec["notes"].append(NOTE_CHALLENGE)
     return lec
 
 
