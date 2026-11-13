@@ -9,6 +9,14 @@ Source : 5 captures fournies par Alexis le 13/11/2026 (une seule run). Les captu
 - Bas : boss niv. 150, 6 traits du boss, attribut recommandé (feu), puissance recommandée 12 530 000, « 제 1관문 » (porte 1) **94 600pt**.
 - Mêmes onglets que BOT et POC (équipe/armes, artefacts, compétences, compétences SJW, noyaux).
 
+## Onglets complémentaires (4 captures du 13/11/2026, même run)
+Structure identique au BOT et au POC ; rien de nouveau dans la mise en page.
+- **Noyaux** : 3 par personnage, tous niv. 25 MAX, cadenas ; une pastille d'élément colorée (vert, bleu, violet, rouge) en haut à gauche de chaque noyau. Les noyaux d'un même emplacement ne sont pas les mêmes d'un personnage à l'autre.
+- **Compétences de SJW** : 8 compétences, toutes « +5 ».
+- **Compétences** : SJW affiche 4 grandes icônes (trois « +5 », une « +2 », une icône orange sans niveau) ; chaque chasseur affiche 8 icônes hexagonales (première = « i », informations) avec une petite pastille d'élément/type.
+- **Artefacts** : 8 pièces par personnage, niv. 120 +20 ; pastilles en haut de chaque colonne : SJW 1·1, chasseur 1 : 2·2, chasseur 2 : 1·1, chasseur 3 : 2·2 (rouge pour « 2 », bleu pour « 1 ») : **sens non interprété**.
+- Aucun nom d'objet visible : la reconnaissance se fait par icône, d'où la priorité de la banque d'icônes (artefacts, noyaux, compétences, armes).
+
 ## Fenêtre « 단련의 증명 » (preuve d'entraînement) — nouvelle catégorie
 Le joueur choisit lui-même des handicaps qui rapportent des points. En-tête : niveau de preuve **931**, points acquis `94 600pt (+93 100pt)`, puissance prévue 12 530 000.
 Chaque ligne : effet, niveau choisi / maximum (ex. 5/5, 40/40), coût en niveau de preuve.

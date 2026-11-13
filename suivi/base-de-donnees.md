@@ -7,7 +7,7 @@
 - `stats.json` : 10 stats + 5 attributs obligatoires + puissance de combat (info) (noms coréens lus ; FR/EN vides, à vérifier).
 - Captures POC lues : `docs/REFERENCE_ECRANS_POC.md` ; catégorie `subjugation_support` et champ `role` ajoutés au schéma.
 - POC corrigé (SJW confirmé, composition libre, score équipe 1 confirmé) ; écran de résultat lu.
-- Captures HOTM lues : `docs/REFERENCE_ECRANS_HOTM.md` ; catégorie `proof_modifiers` ajoutée au schéma.
+- Captures HOTM (composition, onglets, résultat) lues : `docs/REFERENCE_ECRANS_HOTM.md` ; catégorie `proof_modifiers` ajoutée au schéma.
 ## En cours
 - Choix de la méthode de récupération des données (voir « Besoin d'Alexis »).
 ## À faire
