@@ -1,0 +1,2234 @@
+[
+  {
+    "id": "double-slash--full-moon-wheel",
+    "kind": "rune",
+    "parent_skill": "double-slash",
+    "name": {
+      "fr": "",
+      "en": "Full Moon Wheel",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo throws a dagger outward from himself like a top, allowing it to rotate in a wide circle around itself for a period of time."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 630-883-1230-1403% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・When this skill hits, it inflicts the [Airborne] effect. ・Damage dealt to Elite or Boss Monsters increases by 45-75-120-140%.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        630.0,
+        883.0,
+        1230.0,
+        1403.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "double-slash--multiply",
+    "kind": "rune",
+    "parent_skill": "double-slash",
+    "name": {
+      "fr": "",
+      "en": "Multiply",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 10.0,
+    "mp_cost": "30",
+    "text": {
+      "fr": "",
+      "en": "When this skill hits, the range is expanded and Jinwoo uses this skill on more time."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 546-598-734-802% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 30 ・When the final hit lands, it inflicts the [Airborne] effect. ・When this skill defeats an enemy, there is a 50-70-100-100% chance that this skill's cooldown will be reset. (Cooldown: 0.5 second(s)) ・When this skill hits an Elite or higher monster, there is a 50-60-70-80% chance that this skill's cooldown will be reset. (Cooldown: 0.5 second(s)) ・When Jinwoo uses this skill, it increases the damage of Mutilate by 10-20-30-35% for 10 second(s) (stacking up to 3 times).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        546.0,
+        598.0,
+        734.0,
+        802.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "double-slash--flame-slash",
+    "kind": "rune",
+    "parent_skill": "double-slash",
+    "name": {
+      "fr": "",
+      "en": "Flame Slash",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo crouches, collects fire energy, and performs a swift spin, then charges forward and slashes."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 551-737-1023-1166% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Fire elemental damage. ・When the final hit lands, it inflicts the [Airborne] effect. ・When this skill is used, increases Critical Hit Rate by 5-7-10-15% for 8 second(s).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        551.0,
+        737.0,
+        1023.0,
+        1166.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "double-slash--whirlwind-rush",
+    "kind": "rune",
+    "parent_skill": "double-slash",
+    "name": {
+      "fr": "",
+      "en": "Whirlwind Rush",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "After spinning forward quickly, Jinwoo crouches and charges to slash the target."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 344-487-640-742% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Wind elemental damage. ・When the final hit lands, it inflicts the [Airborne] effect. ・When this skill hits, it [Stuns] the target. When this skill hits, charges Dash 1-1-2-2 times. [Stun] <div style=\"margin-left: 20px;\">Immobilizes the target. Duration: 1-1.5-2-2.5 second(s)</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        344.0,
+        487.0,
+        640.0,
+        742.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "double-slash",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Double Slash",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "double-slash--full-moon-wheel",
+      "double-slash--multiply",
+      "double-slash--flame-slash",
+      "double-slash--whirlwind-rush"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "crushing-blow--chained-break",
+    "kind": "rune",
+    "parent_skill": "crushing-blow",
+    "name": {
+      "fr": "",
+      "en": "Chained Break",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "After moving forward, Jinwoo delivers multiple Crushing Blows."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 697-888-1280-1476% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Wind elemental damage. ・Deals medium Break damage. ・When the final hit lands, [Knock Down] the target. ・Increases Attack by 2-3-4-5% for 12 second(s) when this skill lands (stacking up to 2-3-4-4 times). [Shield] <div style=\"margin-left: 20px;\">Creates a [Shield] equal to 6-8-10-15% of the user's Max HP. Duration: 3 second(s)</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        697.0,
+        888.0,
+        1280.0,
+        1476.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "crushing-blow--enlightened-break",
+    "kind": "rune",
+    "parent_skill": "crushing-blow",
+    "name": {
+      "fr": "",
+      "en": "Enlightened Break",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo unleashes a light energy-infused Crushing Blow, then throws a light orb."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 530-655-945-1090% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Light elemental damage. ・Deals medium Break damage. ・When the final hit lands, it inflicts the [Airborne] effect. ・When this skill hits, it applies the [Light] effect to the target. [Light] <div style=\"margin-left: 20px;\">Deals damage equal to 20-40-60-80% of Attack every 3 second(s). Decreases Attack by 10-15-20-25%. Duration: 30 second(s)</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        530.0,
+        655.0,
+        945.0,
+        1090.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "crushing-blow--countering-break",
+    "kind": "rune",
+    "parent_skill": "crushing-blow",
+    "name": {
+      "fr": "",
+      "en": "Countering Break",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo is able to counterattack when performing a Crushing Blow. A successful counterattack will inflict great damage to the enemy."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 935-1528-2506-2995% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Dark elemental damage. ・Deals weak Break damage. ・When the final hit lands, it inflicts the [Airborne] effect. ・When this skill is used, it applies a [Shield] equal to 20% of Jinwoo's HP for 3 second(s). When using this skill, Jinwoo can Counterattack the target's attack. ・Deals heavy Break damage and [Stun] the target upon a successful Counterattack. [Stun] <div style=\"margin-left: 20px;\">Immobilizes the target. Duration: 3 second(s)</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        935.0,
+        1528.0,
+        2506.0,
+        2995.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "crushing-blow--ascension-break",
+    "kind": "rune",
+    "parent_skill": "crushing-blow",
+    "name": {
+      "fr": "",
+      "en": "Ascension Break",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "After launching the enemy into the air with a Crushing Blow, Jinwoo deals additional damage while the enemy is airborne."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 420-460-580-640% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Fire elemental damage. ・Deals medium Break damage. ・When the first hit lands, it inflicts the [Airborne] effect. ・When the final hit lands, [Knocks Down] the target. ・Charges Power Gauge by 10-20-30% and decreases the cooldown of the user's Ultimate Skill by 10-20-30-35 second(s) when the user uses this skill. (Cooldown: 30 second(s))",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        420.0,
+        460.0,
+        580.0,
+        640.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "crushing-blow",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Crushing Blow",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "crushing-blow--chained-break",
+      "crushing-blow--enlightened-break",
+      "crushing-blow--countering-break",
+      "crushing-blow--ascension-break"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "dagger-toss--detonation",
+    "kind": "rune",
+    "parent_skill": "dagger-toss",
+    "name": {
+      "fr": "",
+      "en": "Detonation",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo throws a handful of flame daggers that spread out in a fan shape in front of him."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 136-190-248-277% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Fire elemental damage. ・When this skill hits, it [Burns] effect on the target. [Burn] <div style=\"margin-left: 20px;\">Deals damage equal to 50-100-150-175% of Attack every 3 second(s) (stacking up to 1-2-3-3 times) Duration: 30 second(s)</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        136.0,
+        190.0,
+        248.0,
+        277.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "dagger-toss--electric-shock",
+    "kind": "rune",
+    "parent_skill": "dagger-toss",
+    "name": {
+      "fr": "",
+      "en": "Electric Shock",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "light",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo throws a dagger imbued with the energy of lightning and spreads an electric field in the path of the dagger."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 724-1084-1430-1603% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Light elemental damage. ・Every time this skill hits, applies the [Electric Shock] effect to the target. [Electric Shock] <div style=\"margin-left: 20px;\">Deals damage equal to 150-300-600-700% of Attack</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        724.0,
+        1084.0,
+        1430.0,
+        1603.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "dagger-toss--ascension",
+    "kind": "rune",
+    "parent_skill": "dagger-toss",
+    "name": {
+      "fr": "",
+      "en": "Ascension",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo jumps into the air and throws daggers consecutively while moving back."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 700-763-871-925% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Increases damage dealt to targets in a [Break] state by 70-150-250-300%.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        700.0,
+        763.0,
+        871.0,
+        925.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "dagger-toss--bombardment",
+    "kind": "rune",
+    "parent_skill": "dagger-toss",
+    "name": {
+      "fr": "",
+      "en": "Bombardment",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "When Jinwoo raises his dagger into the air, a zone is created within a certain range and multiple daggers fall on top of it."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 735-1028-1432-1634% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・When this skill hits, it [Knocks Down] the target. ・This skill's damage dealt is increased by 30-60-100-120% against enemies that are [Knocked Down].",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        735.0,
+        1028.0,
+        1432.0,
+        1634.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "dagger-toss",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Dagger Toss",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "dagger-toss--detonation",
+      "dagger-toss--electric-shock",
+      "dagger-toss--ascension",
+      "dagger-toss--bombardment"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "multistrike--rush",
+    "kind": "rune",
+    "parent_skill": "multistrike",
+    "name": {
+      "fr": "",
+      "en": "Rush",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo charges forward and throws a series of punches, followed by a spinning kick."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 624-786-1080-1227% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Water elemental damage. ・Deals medium Break damage. ・When the final hit lands, it inflicts the [Airborne] effect. ・When using This skill, [Crushing Blow]'s damage is increased by 10-20-30-35% for 10 second(s). ・When the final hit lands, it deals weak Break damage to the target every 3 second(s) for 9-12-15-15 second(s)",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        624.0,
+        786.0,
+        1080.0,
+        1227.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "multistrike--percussion",
+    "kind": "rune",
+    "parent_skill": "multistrike",
+    "name": {
+      "fr": "",
+      "en": "Percussion",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo charges forward and, after kicking the target into the air, throws a series of punches. Afterwards, he throws a powerful punch, causing an explosion."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 754-922-1136-1243% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Fire elemental damage. ・Deals medium Break damage. ・When this skill hit, it inflicts the [Airborne] effect. ・Damage dealt to Bosses and Elite Monsters increases by 30-60-100-120%.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        754.0,
+        922.0,
+        1136.0,
+        1243.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "multistrike--illusion",
+    "kind": "rune",
+    "parent_skill": "multistrike",
+    "name": {
+      "fr": "",
+      "en": "Illusion",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": 10.0,
+    "mp_cost": "80",
+    "text": {
+      "fr": "",
+      "en": "Clones appear as Jinwoo moves forward and attacks continuously."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 391-545-641-689% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 80 ・Deals Dark elemental damage. ・Deals medium Break damage. ・When the final hit lands, it inflicts the [Airborne] effect. ・Jinwoo becomes [Invincible] while using this skill ・Each time this skill hits, it increases Sung Jinwoo's damage by 9-10-11-12% (stacking up to 2-3-4-4 times). ・When this skill hits, it resets the cooldown of Dagger Toss (Cooldown: 30-30-20-20 second(s)).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        391.0,
+        545.0,
+        641.0,
+        689.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "multistrike--pummel",
+    "kind": "rune",
+    "parent_skill": "multistrike",
+    "name": {
+      "fr": "",
+      "en": "Pummel",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "light",
+    "cooldown": 10.0,
+    "mp_cost": "40",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo charges forward and unleashes a series of punches at incredible speed."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 545-776-953-1041% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 40 ・Deals Light elemental damage. ・Deals weak Break damage. ・When the final hit lands, it inflicts the [Airborne] effect. ・Jinwoo gains [Super Armor] while using this skill ・When this skill is used, it increases Critical Hit Rate by 3-4-5-7% for 8 second(s). ・When this skill hits, resets cooldown (Cooldown: 20-20-10-10 second(s)).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        545.0,
+        776.0,
+        953.0,
+        1041.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "multistrike",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Multistrike",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "multistrike--rush",
+      "multistrike--percussion",
+      "multistrike--illusion",
+      "multistrike--pummel"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "vertical-arts--sequent-explosions",
+    "kind": "rune",
+    "parent_skill": "vertical-arts",
+    "name": {
+      "fr": "",
+      "en": "Sequent Explosions",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo Leaps backward, and then lands to deal an area-of-effect attack. The area of effect explodes once more afterward."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 872-952-1126-1213% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Water elemental damage. ・When this skill hits, it [Knocks Down] the target. ・Increases damage dealt to targets in a [Break] state by 70-150-250-300%.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        872.0,
+        952.0,
+        1126.0,
+        1213.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "vertical-arts--crosshairs",
+    "kind": "rune",
+    "parent_skill": "vertical-arts",
+    "name": {
+      "fr": "",
+      "en": "Crosshairs",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo leaps backward, then leaps again. After, he fires X-shaped flame sword energy."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 330-372-416-438% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Fire elemental damage. ・When this skill hits, it inflicts the [Airborne] effect. ・Damage dealt to Bosses and Elite Monsters increases by 45-75-120-140%.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        330.0,
+        372.0,
+        416.0,
+        438.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "vertical-arts--reap",
+    "kind": "rune",
+    "parent_skill": "vertical-arts",
+    "name": {
+      "fr": "",
+      "en": "Reap",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": 10.0,
+    "mp_cost": "100",
+    "text": {
+      "fr": "",
+      "en": "If Jinwoo is attacked before leaping, he dodges the attack. After, his clone charges and unleashes a powerful attack."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 1136-1745-2454-2808% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 100 ・Deals Dark elemental damage. ・When this skill hits, it [Knocks Down] the target. ・When this skill is used, it applies a [Shield] equal to 20% of Jinwoo's HP for 2 second(s). ・When using this skill, Jinwoo can Counterattack the target's attack. ・Deals damage equal to 250-500-1000-1250% of Jinwoo's Attack and [Stuns] the target upon a successful Counterattack. ・Activates and resets the cooldown of Shadow Step upon a successful Counterattack. (Cooldown: 30-25-20-20 second(s)) [Stuns] <div style=\"margin-left: 20px;\">Immobilizes the target. Duration: 3 second(s)</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1136.0,
+        1745.0,
+        2454.0,
+        2808.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "vertical-arts--gale",
+    "kind": "rune",
+    "parent_skill": "vertical-arts",
+    "name": {
+      "fr": "",
+      "en": "Gale",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo creates a typhoon to pull in enemies. After, he inflicts a powerful area-of-effect attack."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 1000-1278-1564-1707% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Wind elemental damage. ・When this skill hits, it [Knocks Down] the target. ・Depending on the number of targets this skill hits, it increases the damage dealt to Normal Monsters by 10-15-20-25% (Up to 10 targets). (Always applies 10 stacks to Elite and Boss monsters)",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1000.0,
+        1278.0,
+        1564.0,
+        1707.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "vertical-arts",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Vertical Arts",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "vertical-arts--sequent-explosions",
+      "vertical-arts--crosshairs",
+      "vertical-arts--reap",
+      "vertical-arts--gale"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "cutting-rush--annihilation",
+    "kind": "rune",
+    "parent_skill": "cutting-rush",
+    "name": {
+      "fr": "",
+      "en": "Annihilation",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo plants his feet and unleashes a red blast of sword energy."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 1027-1147-1325-1414% of Jinwoo's Attack Cooldown: 20 sec MP Consumption: 200 ・When this skill hits, inflicts the [Airborne] effect. ・Increases damage dealt to targets in a [Break] state by 70-150-250-300%.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1027.0,
+        1147.0,
+        1325.0,
+        1414.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "cutting-rush--effulgence",
+    "kind": "rune",
+    "parent_skill": "cutting-rush",
+    "name": {
+      "fr": "",
+      "en": "Effulgence",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo teleports forward and deals a wide burst of area-of-effect damage."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 367-488-698-803% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・When this skill hits, it [Knocks Down] the target ・When this skill hits, resets the cooldown (Cooldown: 30-30-15-15 second(s)). When this skill is used, increases Critical Hit damage by 20-30-40-45% for 12 second(s).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        367.0,
+        488.0,
+        698.0,
+        803.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "cutting-rush--sunder",
+    "kind": "rune",
+    "parent_skill": "cutting-rush",
+    "name": {
+      "fr": "",
+      "en": "Sunder",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo gathers dark energy before performing Cutting Rush."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 828-1170-1626-1854% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Dark elemental damage. ・When the final hit lands, inflicts the [Airborne] effect. ・Jinwoo becomes [Invincible] while using this skill. ・When this skill is used, increases Critical Hit Rate by 7-10-15-17% for 12 second(s).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        828.0,
+        1170.0,
+        1626.0,
+        1854.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "cutting-rush--escalate",
+    "kind": "rune",
+    "parent_skill": "cutting-rush",
+    "name": {
+      "fr": "",
+      "en": "Escalate",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 10.0,
+    "mp_cost": "100",
+    "text": {
+      "fr": "",
+      "en": "After performing Cutting Rush, Jinwoo teleports behind the enemy and performs an upward slash."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 388-423-544-604% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 100 ・When the final hit lands, inflicts the [Airborne] effect. ・When landing a back attack, has a 20-40-60-65% chance to apply a 100% Critical Hit Rate on the next attack.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        388.0,
+        423.0,
+        544.0,
+        604.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "cutting-rush",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Cutting Rush",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "cutting-rush--annihilation",
+      "cutting-rush--effulgence",
+      "cutting-rush--sunder",
+      "cutting-rush--escalate"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "vital-strike--decimate",
+    "kind": "rune",
+    "parent_skill": "vital-strike",
+    "name": {
+      "fr": "",
+      "en": "Decimate",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "While staying in place, Jinwoo stabs the enemy in front of him continuously with his dual daggers."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 905-1324-1938-2245% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Jinwoo's Attack increases by 7-10-15-20% for 12 second(s) upon use.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        905.0,
+        1324.0,
+        1938.0,
+        2245.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "vital-strike--internal-wound",
+    "kind": "rune",
+    "parent_skill": "vital-strike",
+    "name": {
+      "fr": "",
+      "en": "Internal Wound",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "After charging forward, Jinwoo instantly gathers the power of flame and stabs the target. Explodes 1 more time when this skill hits."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 950-1335-2120-2512% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・When the final hit lands, it inflicts the [Airborne] effect. ・When this skill hits, it inflicts the [Defense Decrease] effect to the target. [Defense Decrease] <div style=\"margin-left: 20px;\">Decreases the target's Defense by 10-15-20-25%. Duration: 12 second(s).</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        950.0,
+        1335.0,
+        2120.0,
+        2512.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "vital-strike--hone-in",
+    "kind": "rune",
+    "parent_skill": "vital-strike",
+    "name": {
+      "fr": "",
+      "en": "Hone In",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo quickly stabs the enemy once, followed by continuous stabs."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 802-1043-1350-1503% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Damage dealt to Bosses and Elite Monsters increases by 45-75-120-140%.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        802.0,
+        1043.0,
+        1350.0,
+        1503.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "vital-strike--on-point",
+    "kind": "rune",
+    "parent_skill": "vital-strike",
+    "name": {
+      "fr": "",
+      "en": "On Point",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo delivers a mighty blow after gathering powerful water energy into the dagger."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 798-1143-1674-1939% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Water elemental damage. ・When the final hit lands, it [Knocks Down] the target. ・Applies a [Shield] when the user uses this skill. [Shield] <div style=\"margin-left: 20px;\">Creates a 5-7.5-10-12%. Duration: 12 second(s).</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        798.0,
+        1143.0,
+        1674.0,
+        1939.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "vital-strike",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Vital Strike",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "vital-strike--decimate",
+      "vital-strike--internal-wound",
+      "vital-strike--hone-in",
+      "vital-strike--on-point"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "mutilate--cold-storm",
+    "kind": "rune",
+    "parent_skill": "mutilate",
+    "name": {
+      "fr": "",
+      "en": "Cold Storm",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "While hiding, Jinwoo creates a cold storm, quickly cutting down the enemy in front of him."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 927-1394-2092-2441% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Water elemental damage. ・When this skill hits, it applies the [Frostbite] effect to the target. ・When this skill hits, it applies the [Freeze] effect to the target. [Frostbite] <div style=\"margin-left: 20px;\">Deals damage equal to 250-400-600-750% of the user's Attack every 3 second(s). Duration: 30 second(s).</div>[Freeze] <div style=\"margin-left: 20px;\">Interrupts the target. Duration: 2 second(s).</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        927.0,
+        1394.0,
+        2092.0,
+        2441.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "mutilate--phantom",
+    "kind": "rune",
+    "parent_skill": "mutilate",
+    "name": {
+      "fr": "",
+      "en": "Phantom",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 15.0,
+    "mp_cost": "60",
+    "text": {
+      "fr": "",
+      "en": "While hiding, Jinwoo summons multiple Shadows, quickly cutting down the enemy."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 629-768-1016-1140% of Jinwoo's Attack and 629-768-1016-1140% of Jinwoo's Max HP Cooldown: 15 sec MP Consumption: 60 ・This skill's cooldown is reset if it hits a target. (Cooldown: 30-30-15-15 second(S)}",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        629.0,
+        768.0,
+        1016.0,
+        1140.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "mutilate--strike",
+    "kind": "rune",
+    "parent_skill": "mutilate",
+    "name": {
+      "fr": "",
+      "en": "Strike",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "After slashing the target once, Jinwoo vanishes and makes a huge slice into the target while striking down like a thunderbolt."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 690-1012-1648-1966% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・When the final hit lands, it inflicts the [Airborne] effect. ・When this skill hits, it inflicts the [Attack Decrease] and [Defense Decrease] effect to the target. ・When this skill hits, it activates and resets the cooldown of Death, and increases the damage of Death by 10-20-30-35% for 5 second(s). (Cooldown: 15 second(s)) [Attack Decrease] <div style=\"margin-left: 20px;\">Decreases the target's Attack by 8-12-16-20%. Duration: 12 second(s).</div>[Defense Decrease] <div style=\"margin-left: 20px;\">Decreases the target's Defense by 8-12-16-20%. Duration: 12 second(s).</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        690.0,
+        1012.0,
+        1648.0,
+        1966.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "mutilate--stroke-of-lightning",
+    "kind": "rune",
+    "parent_skill": "mutilate",
+    "name": {
+      "fr": "",
+      "en": "Stroke of Lightning",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "While hiding, Jinwoo slashes multiple times using illusions and lightning, and then strikes."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 622-710-772-805% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Dark elemental damage. ・When the final hit lands, it [Knocks Down] the enemy. ・There is a 20-30-50-60% chance that the hunter will ignore 100% of the target's Defense.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        622.0,
+        710.0,
+        772.0,
+        805.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "mutilate",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Mutilate",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "mutilate--cold-storm",
+      "mutilate--phantom",
+      "mutilate--strike",
+      "mutilate--stroke-of-lightning"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "deaths-dance--earth-shock",
+    "kind": "rune",
+    "parent_skill": "deaths-dance",
+    "name": {
+      "fr": "",
+      "en": "Earth Shock",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "light",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo spins horizontally and, after attacking, he jumps and strikes the ground."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 367-525-746-856% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Light elemental damage. ・Deals heavy Break damage. ・When the final hit lands, [Knocks Down] the target. ・When this skill is used, increases Critical Hit damage by 20-30-50-60% for 8-10-12 second(s). ・When this skill hits, it resets the cooldown of The Commander's Touch (Cooldown: 45-45-30-30 second(s))",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        367.0,
+        525.0,
+        746.0,
+        856.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "deaths-dance--high-speed-rotation",
+    "kind": "rune",
+    "parent_skill": "deaths-dance",
+    "name": {
+      "fr": "",
+      "en": "High-speed Rotation",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": 5.0,
+    "mp_cost": "40",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo moves forward while performing 3 spinning attacks."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 330-405-525-585% of Jinwoo's Attack Cooldown: 5 sec MP Consumption: 40 ・Deals Wind elemental damage. ・Deals weak Break damage. ・This skill can be used up to 3 times. ・The Power Gauge is charged by 1-1.5-2.5-3% when you are hit. ・When your Attack hits an enemy that doesn’t have a Break Gauge, it increases the damage of High-speed Rotation by 90-160-240-280% for 7 second(s).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        330.0,
+        405.0,
+        525.0,
+        585.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "deaths-dance--eruption",
+    "kind": "rune",
+    "parent_skill": "deaths-dance",
+    "name": {
+      "fr": "",
+      "en": "Eruption",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo performs a spinning attack while moving forward. After, he rotates horizontally and strikes the ground, causing 3 explosions."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 995-1215-1466-1591% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Dark elemental damage. ・Deals heavy Break damage. ・When the final hit lands, it inflicts the [Airborne] effect. ・Damage dealt to Bosses and Elite monsters increases by 45-75-120-145%. ・When this skill hits it grants an effect on Sung Jinwoo that increases his Core Attack damage by 90-160-240-280% for 7 second(s).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        995.0,
+        1215.0,
+        1466.0,
+        1591.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "deaths-dance--wildfire",
+    "kind": "rune",
+    "parent_skill": "deaths-dance",
+    "name": {
+      "fr": "",
+      "en": "Wildfire",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo moves forward with the energy of the flame and performs a spinning attack. After, he jumps and strikes the ground powerfully."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 851-1174-1582-1786% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Deals Fire elemental damage. ・Deals heavy Break damage. ・When the final hit lands, it [Knocks Down] the enemy. ・The damage increases by 60-100-160-180% when attacking enemies with their elemental weakness.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        851.0,
+        1174.0,
+        1582.0,
+        1786.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "deaths-dance",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Death's Dance",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "deaths-dance--earth-shock",
+      "deaths-dance--high-speed-rotation",
+      "deaths-dance--eruption",
+      "deaths-dance--wildfire"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "the-commanders-touch--black-hole",
+    "kind": "rune",
+    "parent_skill": "the-commanders-touch",
+    "name": {
+      "fr": "",
+      "en": "Black Hole",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo creates a long-lasting black hole in front of him that draws enemies towards it center."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 30-37-50-60% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・Depending on the number of targets this skill hits, increases the damage dealt to Normal Monsters by 10-15-20-25% (Up to 10 targets).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        30.0,
+        37.0,
+        50.0,
+        60.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "the-commanders-touch--liberation",
+    "kind": "rune",
+    "parent_skill": "the-commanders-touch",
+    "name": {
+      "fr": "",
+      "en": "Liberation",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 10.0,
+    "mp_cost": "100",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo summons a large hand that slams down on enemies."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 586-820-1095-1232% of Jinwoo's Attack Cooldown: 10 sec MP Consumption: 100 ・When the final hit lands, it [Knocks Down] the target. ・This skill can be used up to 2 times. ・When this skill hits, it increases Jinwoo's Attack by 2-3-5-6% for 12 second(s) (stacking up to 2 times). ・When this skill hits, it activates and resets the cooldown of Collapse and increases the damage of Collapse by 10-20-30-35% for 5 second(s). (Cooldown: 20 second(s))",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        586.0,
+        820.0,
+        1095.0,
+        1232.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "the-commanders-touch--finisher",
+    "kind": "rune",
+    "parent_skill": "the-commanders-touch",
+    "name": {
+      "fr": "",
+      "en": "Finisher",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo gathers energy, then expands it across a wide area to inflict damage."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 1193-1591-2406-2813% of Jinwoo's Attack Cooldown: 20 sec MP Consumption: 200 ・When the final hit lands, it [Knocks Down] the target. ・When this skill hits, it inflicts the [Defense Down] effect to the target. [Defense Down] <div style=\"margin-left: 20px;\">Decreases the target's Defense by 10-15-20-25%. Duration: 12 second(s)</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1193.0,
+        1591.0,
+        2406.0,
+        2813.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "the-commanders-touch--absorption",
+    "kind": "rune",
+    "parent_skill": "the-commanders-touch",
+    "name": {
+      "fr": "",
+      "en": "Absorption",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": 15.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "After using The Commander's Touch skill, Jinwoo absorbs the enemy's mana."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 650-757-935-1024% of Jinwoo's Attack Cooldown: 15 sec MP Consumption: 150 ・When the first hit lands, inflicts the [Airborne] effect. ・When the final hit lands, [Knocks Down] the target. ・When this skill hits, the user recovers 3-5-7.5-10% of their MP and 3-5-7.5-10% of the Power Gauge (activating a maximum of 3 times).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        650.0,
+        757.0,
+        935.0,
+        1024.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "the-commanders-touch",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "The Commander's Touch",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "the-commanders-touch--black-hole",
+      "the-commanders-touch--liberation",
+      "the-commanders-touch--finisher",
+      "the-commanders-touch--absorption"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "armor-break--multishadow-strike",
+    "kind": "rune",
+    "parent_skill": "armor-break",
+    "name": {
+      "fr": "",
+      "en": "Multishadow Strike",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "light",
+    "cooldown": 20.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "After Jinwoo's clone throws punches from all sides, it appears in front of the enemy to deliver the final blow."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 643-910-1312-1513% of Jinwoo's Attack and 643-910-1312-1513% of Jinwoo's Defense Cooldown: 20 sec MP Consumption: 150 ・Deals Light elemental damage. ・Deals almighty Break damage. ・When the final hit lands, [Knocks Down] the target. ・Jinwoo becomes [Invincible]. ・When used, increases Defense by 10/15/20/24% for 30 second(s) (stacking up to 3/4/5/5 times).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        643.0,
+        910.0,
+        1312.0,
+        1513.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "armor-break--decimation",
+    "kind": "rune",
+    "parent_skill": "armor-break",
+    "name": {
+      "fr": "",
+      "en": "Decimation",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": 20.0,
+    "mp_cost": "200",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo gathers an extreme amount of energy of flame i nhis right fist and delivers a powerful blow."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 1026-1280-1628-1802% of Jinwoo's Attack Cooldown: 20 sec MP Consumption: 200 ・Deals Fire elemental damage. ・Deals almighty Break damage. ・When this skill hits, it inflicts the [Airborne] effect. ・When this skill is used, increases Critical Hit damage by 30/50/80/90% for 5 second(s).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1026.0,
+        1280.0,
+        1628.0,
+        1802.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "armor-break--vacuum-wave",
+    "kind": "rune",
+    "parent_skill": "armor-break",
+    "name": {
+      "fr": "",
+      "en": "Vacuum Wave",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": 20.0,
+    "mp_cost": "200",
+    "text": {
+      "fr": "",
+      "en": "After pulling enemies in front, Jinwoo punches them down."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 463-514-560-583% of Jinwoo's Attack Cooldown: 20 sec MP Consumption: 200 ・Deals Wind elemental damage. ・Deals almighty Break damage. ・When the final hit lands, [Knocks Down] the target. ・When this skill hits, increases the target's damage taken by 7/10/15/17% for 12 second(s). ・When using this skill, increases the damage of Vertical Arts by 10/20/30/35% for 10 second(s).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        463.0,
+        514.0,
+        560.0,
+        583.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "armor-break--iceberg",
+    "kind": "rune",
+    "parent_skill": "armor-break",
+    "name": {
+      "fr": "",
+      "en": "Iceberg",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": 20.0,
+    "mp_cost": "200",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo summons an Ice Pillar to pierce through enemies. After, he strikes the Ice Pillar to blow the enemies away."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 790-1253-2046-2442% of Jinwoo's Attack Cooldown: 20 sec MP Consumption: 200 ・Deals Water elemental damage. ・Deals almighty Break damage. ・When the final hit lands, [Knocks Down] the target. ・When this skill hits, it applies the [Freeze] effect to the target. [Freeze] <div style=\"margin-left: 20px;\">Interrupts the target. Duration 1/1.5/2/2.5 second(s)</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        790.0,
+        1253.0,
+        2046.0,
+        2442.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "armor-break",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Armor Break",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "armor-break--multishadow-strike",
+      "armor-break--decimation",
+      "armor-break--vacuum-wave",
+      "armor-break--iceberg"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "sonic-stream--double-down",
+    "kind": "rune",
+    "parent_skill": "sonic-stream",
+    "name": {
+      "fr": "",
+      "en": "Double Down",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "light",
+    "cooldown": 20.0,
+    "mp_cost": "150",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo randomly slashes at enemies in front of him, then slashes through the same trajectory once more."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 1013-1157-1332-1419% of Jinwoo's Attack and 643-910-1312-1513% of Jinwoo's Defense Cooldown: 20 sec MP Consumption: 150 ・Deals Light elemental damage. ・When your Attack hits an enemy that doens't have a Break Gauge, it increases the damage of Double Down by 90-160-240-280%. ・Double Down damage is increased by an additional 90-160-240-280% in [Team Fight] Mode.",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1013.0,
+        1157.0,
+        1332.0,
+        1419.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "sonic-stream--sonic-explosion",
+    "kind": "rune",
+    "parent_skill": "sonic-stream",
+    "name": {
+      "fr": "",
+      "en": "Sonic Explosion",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": 20.0,
+    "mp_cost": "200",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo slashes the area in front of himself in random motions with a flame energy-imbued dagger, then steps back and throws a dagger that detonates on impact to cause his enemies to explode."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 1103-1439-2295-2723% of Jinwoo's Attack Cooldown: 20 sec MP Consumption: 200 ・Deals Fire elemental damage. ・When the final hit lands, it inflicts the [Airborne] effect. ・When the final hit lands, it charges the user's Core Gauge to 100%. ・When the final hit lands, it increases the Sung Jinwoo's Core Attack damage by 90-160-240-280% for 7 second(s).",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1103.0,
+        1439.0,
+        2295.0,
+        2723.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "sonic-stream--wind-shroud",
+    "kind": "rune",
+    "parent_skill": "sonic-stream",
+    "name": {
+      "fr": "",
+      "en": "Wind Shroud",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": 20.0,
+    "mp_cost": "200",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo creates flame-imbued energy blasts in front of himself with a sword."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 815-998-1162-1244% of Jinwoo's Attack Cooldown: 20 sec MP Consumption: 200 ・Deals Wind elemental damage. ・Applies the Flow of the Wind effect with each hit. ・[Wind Shroud] is activated for each small blade that hits when thrown consecutievly, increasing the damage of the last blade by 25-35-50-55%. Duration 5 second(s) (stacking up to 6 times) [Flow of the Wind] <div style=\"margin-left: 20px;\">Increases Attack by 1.5/2/3/3.3%. Duration 10 second(s) (stacking up to 10 times)</div>",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        815.0,
+        998.0,
+        1162.0,
+        1244.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "sonic-stream--magnifying-slashes",
+    "kind": "rune",
+    "parent_skill": "sonic-stream",
+    "name": {
+      "fr": "",
+      "en": "Magnifying Slashes",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": 20.0,
+    "mp_cost": "200",
+    "text": {
+      "fr": "",
+      "en": "Jinwoo performs 3 increasingly powerful forward-facing slashes."
+    },
+    "effects": [],
+    "effects_text_en": "Damage: 348-372-390-400% of Jinwoo's Attack Cooldown: 20 sec MP Consumption: 200 ・Deals Dark elemental damage. ・When this skill is used in sequence with a Magnifying Slashes attack or at just the right time after a Dash, the damage of Magnifying Slashes increases by 100-160-250-275% for 3 second(s). ・When using Magnifying Slashes and a skill sequentially, the user recovers 80-140-200-230 of their MP. Category:Items Category:Rune",
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        348.0,
+        372.0,
+        390.0,
+        400.0
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+  },
+  {
+    "id": "sonic-stream",
+    "kind": "skill",
+    "name": {
+      "fr": "",
+      "en": "Sonic Stream",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "sonic-stream--double-down",
+      "sonic-stream--sonic-explosion",
+      "sonic-stream--wind-shroud",
+      "sonic-stream--magnifying-slashes"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
+    "wiki_revid": 17612,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  }
+]

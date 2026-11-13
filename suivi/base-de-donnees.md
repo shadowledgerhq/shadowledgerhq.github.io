@@ -10,13 +10,14 @@
 - `weapons.json` : 115 armes (55 de Sung Jin Woo, 60 de chasseurs ; `tools/parse_fandom_weapons.py`) ; 2 sans passif sur le wiki (Phantomblade, Zeke's Fragment) ; élément rempli pour toutes (cause des trous : préfixe `| |` et `}}` collés sur le wiki, corrigé dans les 3 scripts). Armes exclusives liées aux chasseurs par `hunter_id`.
 - Décision d'Alexis (13/11) : pas d'appels à l'API interne de slagate (Sohoven refuse). Sources : wiki Fandom + notes Netmarble ; slagate seulement en lecture de pages.
 - `shadows.json` : 15 ombres (`tools/parse_fandom_shadows.py`) : compétence de chef par rang (Common→General), 7 compétences, armement, obtention. Greed : page vide sur le wiki (0 compétence). Wiki de 2025 à juin 2026 : chefs rééquilibrés le 22/10 non reflétés.
+- `sjw_skills.json` : 12 compétences de SJW + 48 runes (`tools/parse_fandom_runes.py`, page Runes du wiki) : dégâts au niveau min. par rareté (Rare→Transcendent), cooldown, MP. Le wiki ne donne ni type (basique/QTE/ultime), ni niveau de base, ni forme des runes ; la compétence ultime Commander's Authority et les runes ajoutées en juin/octobre ne sont pas dedans.
 ## En cours
 - Rien d'engagé. Reste : contrôle des sets d'artefacts : le wiki date de mai 2026 (modèle du 16/05) ; sets ajoutés depuis et équilibrages du 17/09, 30/07, 22/10 non reflétés.
 ## À faire
 - Sets d'artefacts : wiki de mai 2026 ; compléter à partir des notes Netmarble ou du jeu (slagate : pas de page lisible, API exclue).
 - FR des sets, emplacements et icônes des pièces, `main_stat_options`, rareté : vides.
 - Hunters : 4 sans compétences sur le wiki (Go Gunhee SSR Water, Park Heejin, Song Chiyul, Yoo Jinho) ; 3 sans avancement. Noms FR, icônes, `weapon_type`, valeurs par niveau : vides. `role` (stacker/supporter/buster) rempli pour 23 ; les 43 Striker/Breaker restent `null` (type wiki dans `type_en`).
-- Saisir : sjw_skills → blessings → subjugation_support → proof_modifiers (successors : fait, 3 entrées).
+- Saisir : blessings → subjugation_support → proof_modifiers (successors : fait, 3 entrées).
 - Script de contrôle (ids uniques, FR+EN, source, date, icône) : à demander à la discussion 8.
 - Noms FR/EN officiels des stats. Les ids des `changes` de `patches.json` sont des slugs provisoires.
 ## Besoin d'Alexis
