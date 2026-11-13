@@ -36,6 +36,7 @@ Valeur calculée et non lue dans le jeu : `"estimated": true`.
 | `sjw_skills.json` | `type`, `cooldown`, `effects`, `values_by_level` |
 | `blessings.json` | `effects`, `conditions`, `values_by_level` |
 | `subjugation_support.json` | `column` (1-3), `effects`, `condition` (rôle requis), `recommended` ; sert au POC |
+| `proof_modifiers.json` | `effects`, `max_level`, `cost_per_level`, `boss` (si propre à un boss) ; sert au HOTM (« 단련의 증명 ») |
 | `patches.json` | `version`, `date`, `url` (notes Netmarble), `changes[]` (`category`, `id`, `change`) |
 
 Les champs sont à confirmer sur la source avant la saisie de chaque catégorie.
@@ -49,5 +50,5 @@ avec `source` et `verified_at`. À valider (voir SUIVI).
 
 ## Ordre de saisie
 
-stats → patches → artifact_sets → cores → hunters → weapons → shadows → successors → sjw_skills → blessings → subjugation_support.
+stats → patches → artifact_sets → cores → hunters → weapons → shadows → successors → sjw_skills → blessings → subjugation_support → proof_modifiers.
 Les icônes sont ajoutées avec chaque catégorie.
