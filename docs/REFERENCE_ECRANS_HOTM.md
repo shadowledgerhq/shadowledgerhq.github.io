@@ -13,7 +13,7 @@ Source : 5 captures fournies par Alexis le 13/11/2026 (une seule run). Les captu
 Structure identique au BOT et au POC ; rien de nouveau dans la mise en page.
 - **Noyaux** : 3 par personnage, tous niv. 25 MAX, cadenas ; une pastille d'élément colorée (vert, bleu, violet, rouge) en haut à gauche de chaque noyau. Les noyaux d'un même emplacement ne sont pas les mêmes d'un personnage à l'autre.
 - **Bénédictions de SJW** : 8, toutes « +5 » (correction d'Alexis : ce ne sont pas des compétences).
-- **Compétences** : SJW affiche 4 grandes icônes (trois « +5 », une « +2 », une icône orange sans niveau ; le « +2 » appartient aux compétences, confirmé par Alexis) ; chaque chasseur affiche 8 icônes hexagonales (première = « i », informations) avec une petite pastille d'élément/type.
+- **Compétences** : SJW a **6 emplacements** (confirmé par Alexis avec captures, 13/11/2026) : SKILL 01, SKILL 02, ULTIMATE SKILL, QTE 01, QTE 02, QTE 03. Niveaux lus : +5, +5, ultime +3, QTE 01 sans niveau, +5, +5. Les pastilles des icônes ne sont pas interprétées. Chaque chasseur affiche 8 icônes hexagonales (première = « i », informations) avec une petite pastille d'élément/type.
 - **Artefacts** : 8 pièces par personnage, niv. 120 +20 ; pastilles en haut de chaque colonne : SJW 1·1, chasseur 1 : 2·2, chasseur 2 : 1·1, chasseur 3 : 2·2 (rouge pour « 2 », bleu pour « 1 ») : **sens non interprété**.
 - Aucun nom d'objet visible : la reconnaissance se fait par icône, d'où la priorité de la banque d'icônes (artefacts, noyaux, compétences, armes).
 
