@@ -23,7 +23,7 @@
 - Script de contrôle (ids uniques, FR+EN, source, date, icône) : à demander à la discussion 8.
 - Noms FR/EN officiels des stats. Les ids des `changes` de `patches.json` sont des slugs provisoires.
 ## Besoin d'Alexis
-- Soutien de subjugation / preuves : une capture par semaine (effets changeants). Semaine 12/11 : soutien reçu ; preuves HOTM reçues pour la semaine du 05/11 seulement.
+- Soutien de subjugation / preuves : une capture par semaine (effets changeants). Semaine 12/11 : soutien reçu ; preuves HOTM : pas de capture pour la semaine du 12/11 (Alexis n'en a pas) ; seule la semaine du 05/11 est connue, à ne pas supposer valable pour 12/11.
 - Captures du GB ; règles POC/GB (05/11, 12/11) et HOTM 05/11 pour `data/rules/`.
 - Trace écrite de l'autorisation de Sohoven (`ai-train=no`) : couvre-t-elle lecture automatisée et icônes ?
 ## Demandes de modif du skill
