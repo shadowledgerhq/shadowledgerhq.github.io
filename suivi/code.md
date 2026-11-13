@@ -14,6 +14,7 @@
   - `ecrans.py` (OCR [EN ATTENTE], fonctions prêtes) : `lecture_bot` (phases croissantes, dernière phase = chrono, Play Time tronqué, `player_ingame`, variante d'après les armes de SJW, l'écran prime sur le titre), `lecture_gb_results` (Player's Score + 6 Hunter Rank = Final Score), `lectures_gb_record` (Total RC = G1 + G2).
   - `player_ingame` sur les lignes BOT ; « doublon possible » limité à BOT/HOTM. Semaine 2026-11-12 relue : `gb.json` (2 lignes provisoires).
   - Test de l'exemple §4.7 (167 + 165 = 332, puis Results 165 RC / 15 763 121 797 048 : remplace le groupe 2, total 332) : OK. 45 tests.
+- **Changements demandés pour la v7 (le document v7 n'est pas dans le dépôt : `docs/SPEC_ETAPE1.md` reste en v6, à remplacer)** : marge sur `Time Left in Season` selon la plus petite unité (heures 60 min, jours seuls 24 h, minutes 1 min ; `gb.record_tolerance_*` dans la config) ; rattachement au groupe validé tel quel ; mot-clé `gb` dans `mode_keywords.gb` en mot entier jamais après un chiffre (12GB, 128 GB exclus) ; `damage_exact` = null quand `damage` est null (`gb.json` régénéré). 54 tests.
 - **Tris 3-4 codés dans `pc.py`** (jamais lancés sur de vraies images : tesseract/yt-dlp absents ici, textes OCR synthétiques tirés de la spec) : `segments_tri` (tri 3 : 10 s + 30 s, 1 img/2 s ; tri 4 : 1 img/10 s), `Outils.telecharger/images/ocr` (yt-dlp 720p → ffmpeg → tesseract eng+kor+jpn, image entière), `ocr_ecrans.py` (détection des écrans BOT, GB Results/Record, HOTM, POC par leurs libellés → valeurs → `ecrans.py`), tri 4 seulement si le tri 3 ne suffit pas (BOT/HOTM 1 lecture sûre ; POC/GB 2), lectures d'écran remplaçant celles du texte, une lecture par écran distinct, idempotent. Au gel (`pc.geler`) : `pas_de_score` + « non vérifié ». `docs/PC_ALEXIS.md` à jour (Tesseract).
 - Tests v3 (vrais cas du 1er passage : « Last Week … 133T (Can 150T) », « 19.558 バルカ », « 23;223s », chapitres).
 - Non codé (v3) : critère « 5 nombres du détail identiques » du doublon POC (attend l'OCR) ; au gel avec OCR : `pas_de_score`, lignes provisoires archivées « non vérifié ».
@@ -24,5 +25,4 @@
 ## Besoin d'Alexis
 - Installer le PC (docs/PC_ALEXIS.md, avec Tesseract) et lancer `py -3 pipeline\\pc.py daily --no-git --max 2` ; me coller le début de `_lectures.json` ou une capture mal lue.
 ## Demandes de modif du skill
-- À valider par la discussion 1 (choix de Code, §4.7) : marge de 60 min sur `Time Left in Season` (`gb.record_tolerance_minutes`, le temps restant est arrondi à l'heure) ; une run Results se rattache au groupe de même RC si ses dégâts dépassent ceux du record (cas de l'exemple : 15,76T ≠ 15,55T arrondi).
-- `gb` n'est pas dans `mode_keywords` (« GB » = aussi gigaoctet) : à décider par la discussion 1 si le mot court `gb` doit servir d'indice.
+- rien

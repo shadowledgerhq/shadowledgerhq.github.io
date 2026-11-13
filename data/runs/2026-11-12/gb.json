@@ -34,7 +34,7 @@
         "score_source": "titre",
         "exact": false,
         "damage": null,
-        "damage_exact": true
+        "damage_exact": null
       }
     ]
   },
@@ -73,7 +73,7 @@
         "score_source": "titre",
         "exact": false,
         "damage": null,
-        "damage_exact": true
+        "damage_exact": null
       }
     ]
   }

@@ -220,7 +220,8 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
              "exact": r["exact"]}
         if mode == "gb":  # v5 : dégâts de la run (arrondis si lus sur le Personal Record)
             d["damage"] = r.get("damage")
-            d["damage_exact"] = (r.get("detail") or {}).get("damage_exact", r.get("score_source") != "record")
+            d["damage_exact"] = (None if r.get("damage") is None  # v7 : pas de dégâts lus -> pas d'exactitude
+                                 else (r.get("detail") or {}).get("damage_exact", r.get("score_source") != "record"))
         for k in CLES_DETAIL.get(mode, ()):
             if k in r.get("detail", {}):
                 d[k] = r["detail"][k]
@@ -254,11 +255,11 @@ def controler_saison_record(runs, week, config):
     """Time Left in Season : capture = prochain reset − temps restant. Après `published_at` -> record
     de la saison précédente (rejeté, `semaine_precedente`). Illisible -> a_verifier."""
     _, fin = bornes(week)
-    tol = config.get("gb", {}).get("record_tolerance_minutes", 60)
+    marges = gb.tolerances(config.get("gb"))
     gardees, precedentes = [], []
     for r in runs:
         if r.get("score_source") == "record":
-            verdict = gb.saison_precedente((r.get("detail") or {}).get("time_left"), r["published_at"], fin, tol)
+            verdict = gb.saison_precedente((r.get("detail") or {}).get("time_left"), r["published_at"], fin, marges)
             if verdict:
                 precedentes.append(r)
                 continue

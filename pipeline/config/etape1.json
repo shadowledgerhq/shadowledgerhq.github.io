@@ -32,10 +32,11 @@
     ]
   },
   "mode_keywords": {
+    "_sans_chiffre": ["gb"],
     "_doc": "Indices de mode (mode_guess) dans le titre/description des vidéos des chaînes suivies. Minuscules.",
     "poc": ["power of calamity", "poc", "재앙의 권좌", "재왕의 권좌", "災厄"],
     "bot": ["battlefield of time", "bot", "시간의 전장", "時の戦場"],
-    "gb": ["guild boss", "길드 보스", "ギルドボス"],
+    "gb": ["guild boss", "길드 보스", "ギルドボス", "gb"],
     "hotm": ["hall of the monarchs", "hotm", "군주의 회랑", "君主の回廊"]
   },
   "plausible": {
@@ -56,7 +57,12 @@
   "modes_classement": ["poc", "bot", "gb", "hotm"],
   "rage_count_mots": [],
   "_rage_count_mots": "Libellés coréens et japonais du Rage Count en plus de « RC » et « Rage Count » : [À CONFIRMER] sur capture (SPEC §2.2).",
-  "gb": {"record_tolerance_minutes": 60, "_doc": "SPEC §4.7 : marge sur le moment estimé de la capture du Personal Record (Time Left en heures arrondies). [À CONFIRMER]"},
+  "gb": {
+    "record_tolerance_minutes": 60,
+    "record_tolerance_jours_minutes": 1440,
+    "record_tolerance_min_minutes": 1,
+    "_doc": "SPEC §4.7 (v7) : marge sur le moment estimé de la capture du Personal Record, selon la plus petite unité de Time Left in Season : heures -> 60 min ; jours seulement -> 24 h ; minutes -> 1 min."
+  },
   "tri1_version": 3,
   "boss_min_videos": 3,
   "fichier_bot_variante_inconnue": "bot-variante-inconnue",

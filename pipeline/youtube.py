@@ -49,12 +49,15 @@ def deviner_modes(texte, config):
     """Indices de mode d'après les mots-clés de config.mode_keywords."""
     texte = (texte or "").lower()
     modes = set()
+    sans_chiffre = set(config.get("mode_keywords", {}).get("_sans_chiffre", []))  # v7 : « gb » jamais après un chiffre
     for mode, mots in config.get("mode_keywords", {}).items():
         if mode.startswith("_"):
             continue
         for mot in mots:
             # v3 : mot-clé latin = mot entier (« bot » n'est pas dans « robot »), même collé à du CJK
             motif = rf"(?<![a-z0-9]){re.escape(mot)}(?![a-z0-9])" if mot.isascii() else re.escape(mot)
+            if mot in sans_chiffre:  # exclut 12GB, 128 GB, 8\u00a0GB (gigaoctets)
+                motif = r"(?<!\d)(?<!\d )(?<!\d\u00a0)(?<!\d\u202f)" + motif
             if re.search(motif, texte):
                 modes.add(mode)
                 break

@@ -1,4 +1,4 @@
-# Rapport — semaine 2026-11-12 — passage relire — 2026-11-13 14:39 (Paris)
+# Rapport — semaine 2026-11-12 — passage classement — 2026-11-13 14:50 (Paris)
 
 - Semaine : 39 en cours (dont 39 pour le PC), 0 terminée(s), 4 rejetée(s)
 - Classements : bot-season 3, bot-variante-inconnue 6, gb 2, poc 1
@@ -24,5 +24,4 @@
 - poc : boss non contrôlé (< 3 vidéos)
 
 ## Erreurs et alertes
-- tri 1 relu : 11 vidéo(s) modifiée(s) sur 39
-- 2 lecture(s) de description non relue(s) (YOUTUBE_API_KEY absente) : relancer avec la clé ou attendre le prochain passage daily
+- rien

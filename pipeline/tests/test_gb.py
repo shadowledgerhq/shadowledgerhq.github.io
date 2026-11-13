@@ -4,6 +4,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ecrans
+import gb
 from classement import calculer
 from donnees import charger_config
 from test_classement import HORLOGE, W, lec, lire, preparer
@@ -75,10 +76,33 @@ def test_saison_du_record():
     calculer(W, d, CONFIG, HORLOGE)
     l = lire(d, "gb")[0]
     assert l["rank"] is None and "saison illisible (Time Left in Season)" in l["notes"] and d.rejected(W) == []
-    # marge de 60 min : capture estimée 30 min après la publication -> gardé (publié 14/11 00:00Z ; reset 19/11 00:00Z − 4d 23h 30m)
-    d = preparer(ecrans.lectures_gb_record(meta("v1", jour=14, heure=0), {**RECORD, "time_left": "4d 23h 30m"}, CONFIG))
+    # v7 : marge selon la plus petite unité affichée (reset 19/11 00:00Z ; publié 14/11 00:00Z)
+    def garde(time_left, jour=14, heure=0):
+        d = preparer(ecrans.lectures_gb_record(meta("v1", jour=jour, heure=heure), {**RECORD, "time_left": time_left}, CONFIG))
+        calculer(W, d, CONFIG, HORLOGE)
+        return (d.data / "runs" / W / "gb.json").exists()
+    assert garde("4d 23h") and not garde("4d 22h")                        # heures : 60 min (capture à +60 min gardée, +120 min rejetée)
+    assert garde("4d 23h 59m") and not garde("4d 23h 58m")                # minutes : 1 min
+    assert garde("5d", jour=13, heure=12) and not garde("5d", jour=12, heure=20)   # jours seulement : 24 h (capture à +12 h gardée, +28 h rejetée)
+    assert gb.plus_petite_unite("6d 9h") == "h" and gb.plus_petite_unite("6d") == "d" and gb.plus_petite_unite("6d 9h 20m") == "m"
+    assert gb.plus_petite_unite("") is None and gb.plus_petite_unite("bruit") is None
+    assert gb.tolerances({"record_tolerance_minutes": 90}) == {"d": 1440, "h": 90, "m": 1}
+
+
+def test_v7_damage_exact_null_sans_degats():
+    d = preparer([lec("g1", "UCG", "gb", 167, team=1), lec("g2", "UCG", "gb", 165, team=2, damage=15 * T)])
     calculer(W, d, CONFIG, HORLOGE)
-    assert lire(d, "gb")[0]["rank"] == 1
+    r1, r2 = lire(d, "gb")[0]["runs_detail"]
+    assert r1["damage"] is None and r1["damage_exact"] is None            # pas de dégâts lus -> null
+    assert r2["damage"] == 15 * T and r2["damage_exact"] is True
+
+
+def test_v7_mot_cle_gb():
+    from youtube import deviner_modes
+    for ok in ("GB 165 RC", "Giant Statue GB", "(GB) clear", "GB: 332RC", "Guild Boss"):
+        assert deviner_modes(ok, CONFIG) == {"gb"}, ok
+    for ko in ("12GB", "128 GB RAM", "8\u00a0GB", "gba", "gbp"):
+        assert deviner_modes(ko, CONFIG) == set(), ko
 
 
 def test_gb_egalite_departagee_par_les_degats():
