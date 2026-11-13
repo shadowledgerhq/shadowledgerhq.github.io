@@ -16,7 +16,7 @@
           "fr": "Casque bleu du concepteur",
           "en": "Helmet of The Architect's Blue Poison"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -24,7 +24,7 @@
           "fr": "Armure bleue du Concepteur",
           "en": "Body Armor of The Architect's Blue Poison"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -32,7 +32,7 @@
           "fr": "Gants bleus du Concepteur",
           "en": "Gloves of The Architect's Blue Poison"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--gloves.png"
       },
       {
         "slot": "boots",
@@ -40,7 +40,7 @@
           "fr": "Bottes bleues du Concepteur",
           "en": "Boots of The Architect's Blue Poison"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--boots.png"
       },
       {
         "slot": "necklace",
@@ -48,7 +48,7 @@
           "fr": "Collier bleu du Concepteur",
           "en": "Necklace of The Architect's Blue Poison"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -56,7 +56,7 @@
           "fr": "Bracelet bleu du Concepteur",
           "en": "Bracelet of The Architect's Blue Poison"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--bracelet.png"
       },
       {
         "slot": "ring",
@@ -64,7 +64,7 @@
           "fr": "Bague bleue du Concepteur",
           "en": "Ring of The Architect's Blue Poison"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--ring.png"
       },
       {
         "slot": "earrings",
@@ -72,7 +72,7 @@
           "fr": "Boucles d'oreilles bleues du Concepteur",
           "en": "Earrings of The Architect's Blue Poison"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--earrings.png"
       }
     ],
     "bonuses": {
@@ -86,7 +86,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -111,7 +111,7 @@
           "fr": "Casque de flammes de Surtur",
           "en": "Helmet of Surtur's Flame"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-surturs-flame--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -119,7 +119,7 @@
           "fr": "Armure de flammes de Surtur",
           "en": "Body Armor of Surtur's Flame"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-surturs-flame--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -127,7 +127,7 @@
           "fr": "Gants de flammes de Surtur",
           "en": "Gloves of Surtur's Flame"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-surturs-flame--gloves.png"
       },
       {
         "slot": "boots",
@@ -135,7 +135,7 @@
           "fr": "Bottes de flammes de Surtur",
           "en": "Boots of Surtur's Flame"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-surturs-flame--boots.png"
       },
       {
         "slot": "necklace",
@@ -143,7 +143,7 @@
           "fr": "Collier de flammes de Surtur",
           "en": "Necklace of Surtur's Flame"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-surturs-flame--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -151,7 +151,7 @@
           "fr": "Bracelet de flammes de Surtur",
           "en": "Bracelet of Surtur's Flame"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-surturs-flame--bracelet.png"
       },
       {
         "slot": "ring",
@@ -159,7 +159,7 @@
           "fr": "Bague de flammes de Surtur",
           "en": "Ring of Surtur's Flame"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-surturs-flame--ring.png"
       },
       {
         "slot": "earrings",
@@ -167,7 +167,7 @@
           "fr": "Boucles d'oreilles de flammes de Surtur",
           "en": "Earrings of Surtur's Flame"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-surturs-flame--earrings.png"
       }
     ],
     "bonuses": {
@@ -181,7 +181,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-surturs-flame--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -206,7 +206,7 @@
           "fr": "Casque glorieux de Valtair",
           "en": "Helmet of Glorious Arrogance"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-glorious-arrogance--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -214,7 +214,7 @@
           "fr": "Armure glorieuse de Valtair",
           "en": "Body Armor of Glorious Arrogance"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-glorious-arrogance--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -222,7 +222,7 @@
           "fr": "Gants glorieux de Valtair",
           "en": "Gloves of Glorious Arrogance"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-glorious-arrogance--gloves.png"
       },
       {
         "slot": "boots",
@@ -230,7 +230,7 @@
           "fr": "Bottes glorieuses de Valtair",
           "en": "Boots of Glorious Arrogance"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-glorious-arrogance--boots.png"
       },
       {
         "slot": "necklace",
@@ -238,7 +238,7 @@
           "fr": "Collier glorieux de Valtair",
           "en": "Necklace of Glorious Arrogance"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-glorious-arrogance--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -246,7 +246,7 @@
           "fr": "Bracelet glorieux de Valtair",
           "en": "Bracelet of Glorious Arrogance"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-glorious-arrogance--bracelet.png"
       },
       {
         "slot": "ring",
@@ -254,7 +254,7 @@
           "fr": "Bague glorieuse de Valtair",
           "en": "Ring of Glorious Arrogance"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-glorious-arrogance--ring.png"
       },
       {
         "slot": "earrings",
@@ -262,7 +262,7 @@
           "fr": "Boucles d'oreilles glorieuses de Valtair",
           "en": "Earrings of Glorious Arrogance"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-glorious-arrogance--earrings.png"
       }
     ],
     "bonuses": {
@@ -276,7 +276,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-glorious-arrogance--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -301,7 +301,7 @@
           "fr": "Casque noble de Rockpasa",
           "en": "Helmet of Noble Flesh"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-noble-flesh--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -309,7 +309,7 @@
           "fr": "Armure noble de Rockpasa",
           "en": "Body Armor of Noble Flesh"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-noble-flesh--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -317,7 +317,7 @@
           "fr": "Gants nobles de Rockpasa",
           "en": "Gloves of Noble Flesh"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-noble-flesh--gloves.png"
       },
       {
         "slot": "boots",
@@ -325,7 +325,7 @@
           "fr": "Bottes nobles de Rockpasa",
           "en": "Boots of Noble Flesh"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-noble-flesh--boots.png"
       },
       {
         "slot": "necklace",
@@ -333,7 +333,7 @@
           "fr": "Collier noble de Rockpasa",
           "en": "Necklace of Noble Flesh"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-noble-flesh--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -341,7 +341,7 @@
           "fr": "Bracelet noble de Rockpasa",
           "en": "Bracelet of Noble Flesh"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-noble-flesh--bracelet.png"
       },
       {
         "slot": "ring",
@@ -349,7 +349,7 @@
           "fr": "Bague noble de Rockpasa",
           "en": "Ring of Noble Flesh"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-noble-flesh--ring.png"
       },
       {
         "slot": "earrings",
@@ -357,7 +357,7 @@
           "fr": "Boucles d'oreilles nobles de Rockpasa",
           "en": "Earrings of Noble Flesh"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-noble-flesh--earrings.png"
       }
     ],
     "bonuses": {
@@ -371,7 +371,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-noble-flesh--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -396,7 +396,7 @@
           "fr": "Casque d'obsession de Kamish",
           "en": "Helmet of Kamish's Obession"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-kamishs-obession--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -404,7 +404,7 @@
           "fr": "Armure d'obsession de Kamish",
           "en": "Body Armor of Kamish's Obession"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-kamishs-obession--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -412,7 +412,7 @@
           "fr": "Gants d'obsession de Kamish",
           "en": "Gloves of Kamish's Obession"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-kamishs-obession--gloves.png"
       },
       {
         "slot": "boots",
@@ -420,7 +420,7 @@
           "fr": "Bottes d'obsession de Kamish",
           "en": "Boots of Kamish's Obession"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-kamishs-obession--boots.png"
       },
       {
         "slot": "necklace",
@@ -428,7 +428,7 @@
           "fr": "Collier d'obsession de Kamish",
           "en": "Necklace of Kamish's Obession"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-kamishs-obession--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -436,7 +436,7 @@
           "fr": "Bracelet d'obsession de Kamish",
           "en": "Bracelet of Kamish's Obession"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-kamishs-obession--bracelet.png"
       },
       {
         "slot": "ring",
@@ -444,7 +444,7 @@
           "fr": "Bague d'obsession de Kamish",
           "en": "Ring of Kamish's Obession"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-kamishs-obession--ring.png"
       },
       {
         "slot": "earrings",
@@ -452,7 +452,7 @@
           "fr": "Boucles d'oreilles d'obsession de Kamish",
           "en": "Earrings of Kamish's Obession"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-kamishs-obession--earrings.png"
       }
     ],
     "bonuses": {
@@ -466,7 +466,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-kamishs-obession--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -491,7 +491,7 @@
           "fr": "Casque de l'origine chaotique",
           "en": "Helmet of Chaotic Infamy"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-infamy--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -499,7 +499,7 @@
           "fr": "Robe de l'origine chaotique",
           "en": "Body Armor of Chaotic Infamy"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-infamy--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -507,7 +507,7 @@
           "fr": "Gants de l'origine chaotique",
           "en": "Gloves of Chaotic Infamy"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-infamy--gloves.png"
       },
       {
         "slot": "boots",
@@ -515,7 +515,7 @@
           "fr": "Bottes de l'origine chaotique",
           "en": "Boots of Chaotic Infamy"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-infamy--boots.png"
       },
       {
         "slot": "necklace",
@@ -523,7 +523,7 @@
           "fr": "Collier de l'origine chaotique",
           "en": "Necklace of Chaotic Infamy"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-infamy--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -531,7 +531,7 @@
           "fr": "Bracelet de l'origine chaotique",
           "en": "Bracelet of Chaotic Infamy"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-infamy--bracelet.png"
       },
       {
         "slot": "ring",
@@ -539,7 +539,7 @@
           "fr": "Bague de l'origine chaotique",
           "en": "Ring of Chaotic Infamy"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-infamy--ring.png"
       },
       {
         "slot": "earrings",
@@ -547,7 +547,7 @@
           "fr": "Boucles d'oreilles de l'origine chaotique",
           "en": "Earrings of Chaotic Infamy"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-infamy--earrings.png"
       }
     ],
     "bonuses": {
@@ -565,7 +565,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-chaotic-infamy--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -590,7 +590,7 @@
           "fr": "Casque du désir chaotique",
           "en": "Helmet of Chaotic Desire"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-desire--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -598,7 +598,7 @@
           "fr": "Armure du désir chaotique",
           "en": "Body Armor of Chaotic Desire"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-desire--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -606,7 +606,7 @@
           "fr": "Gants du désir chaotique",
           "en": "Gloves of Chaotic Desire"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-desire--gloves.png"
       },
       {
         "slot": "boots",
@@ -614,7 +614,7 @@
           "fr": "Bottes du désir chaotique",
           "en": "Boots of Chaotic Desire"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-desire--boots.png"
       },
       {
         "slot": "necklace",
@@ -622,7 +622,7 @@
           "fr": "Collier du désir chaotique",
           "en": "Necklace of Chaotic Desire"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-desire--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -630,7 +630,7 @@
           "fr": "Bracelet du désir chaotique",
           "en": "Bracelet of Chaotic Desire"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-desire--bracelet.png"
       },
       {
         "slot": "ring",
@@ -638,7 +638,7 @@
           "fr": "Bague du désir chaotique",
           "en": "Ring of Chaotic Desire"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-desire--ring.png"
       },
       {
         "slot": "earrings",
@@ -646,7 +646,7 @@
           "fr": "Boucles d'oreilles du désir chaotique",
           "en": "Earrings of Chaotic Desire"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-desire--earrings.png"
       }
     ],
     "bonuses": {
@@ -664,7 +664,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-chaotic-desire--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -689,7 +689,7 @@
           "fr": "Casque du Stigmate chaotique",
           "en": "Helmet of Chaotic Wish"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-wish--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -697,7 +697,7 @@
           "fr": "Armure du Stigmate chaotique",
           "en": "Body Armor of Chaotic Wish"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-wish--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -705,7 +705,7 @@
           "fr": "Gants du Stigmate chaotique",
           "en": "Gloves of Chaotic Wish"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-wish--gloves.png"
       },
       {
         "slot": "boots",
@@ -713,7 +713,7 @@
           "fr": "Bottes du Stigmate chaotique",
           "en": "Boots of Chaotic Wish"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-wish--boots.png"
       },
       {
         "slot": "necklace",
@@ -721,7 +721,7 @@
           "fr": "Collier du Stigmate chaotique",
           "en": "Necklace of Chaotic Wish"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-wish--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -729,7 +729,7 @@
           "fr": "Bracelet du Stigmate chaotique",
           "en": "Bracelet of Chaotic Wish"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-wish--bracelet.png"
       },
       {
         "slot": "ring",
@@ -737,7 +737,7 @@
           "fr": "Bague du Stigmate chaotique",
           "en": "Ring of Chaotic Wish"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-wish--ring.png"
       },
       {
         "slot": "earrings",
@@ -745,7 +745,7 @@
           "fr": "Boucles d'oreilles du Stigmate chaotique",
           "en": "Earrings of Chaotic Wish"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-chaotic-wish--earrings.png"
       }
     ],
     "bonuses": {
@@ -763,7 +763,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-chaotic-wish--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -788,7 +788,7 @@
           "fr": "Casque de malédiction ardente",
           "en": "Helmet of Burning Curse"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-curse--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -796,7 +796,7 @@
           "fr": "Armure de malédiction ardente",
           "en": "Body Armor of Burning Curse"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-curse--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -804,7 +804,7 @@
           "fr": "Gants de malédiction ardente",
           "en": "Gloves of Burning Curse"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-curse--gloves.png"
       },
       {
         "slot": "boots",
@@ -812,7 +812,7 @@
           "fr": "Bottes de malédiction ardente",
           "en": "Boots of Burning Curse"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-curse--boots.png"
       },
       {
         "slot": "necklace",
@@ -820,7 +820,7 @@
           "fr": "Collier de malédiction ardente",
           "en": "Necklace of Burning Curse"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-curse--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -828,7 +828,7 @@
           "fr": "Bracelet de malédiction ardente",
           "en": "Bracelet of Burning Curse"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-curse--bracelet.png"
       },
       {
         "slot": "ring",
@@ -836,7 +836,7 @@
           "fr": "Bague de malédiction ardente",
           "en": "Ring of Burning Curse"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-curse--ring.png"
       },
       {
         "slot": "earrings",
@@ -844,7 +844,7 @@
           "fr": "Boucles d’oreilles de malédiction ardente",
           "en": "Earrings of Burning Curse"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-curse--earrings.png"
       }
     ],
     "bonuses": {
@@ -862,7 +862,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-burning-curse--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -887,7 +887,7 @@
           "fr": "Casque de bénédiction ardente",
           "en": "Helmet of Burning Blessing"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-blessing--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -895,7 +895,7 @@
           "fr": "Armure de bénédiction ardente",
           "en": "Body Armor of Burning Blessing"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-blessing--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -903,7 +903,7 @@
           "fr": "Gants de bénédiction ardente",
           "en": "Gloves of Burning Blessing"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-blessing--gloves.png"
       },
       {
         "slot": "boots",
@@ -911,7 +911,7 @@
           "fr": "Bottes de bénédiction ardente",
           "en": "Boots of Burning Blessing"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-blessing--boots.png"
       },
       {
         "slot": "necklace",
@@ -919,7 +919,7 @@
           "fr": "Collier de bénédiction ardente",
           "en": "Necklace of Burning Blessing"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-blessing--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -927,7 +927,7 @@
           "fr": "Bracelet de bénédiction ardente",
           "en": "Bracelet of Burning Blessing"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-blessing--bracelet.png"
       },
       {
         "slot": "ring",
@@ -935,7 +935,7 @@
           "fr": "Bague de bénédiction ardente",
           "en": "Ring of Burning Blessing"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-blessing--ring.png"
       },
       {
         "slot": "earrings",
@@ -943,7 +943,7 @@
           "fr": "Boucles d’oreilles de bénédiction ardente",
           "en": "Earrings of Burning Blessing"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-blessing--earrings.png"
       }
     ],
     "bonuses": {
@@ -961,7 +961,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-burning-blessing--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -986,7 +986,7 @@
           "fr": "Casque d'avarice ardente",
           "en": "Helmet of Burning Greed"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-greed--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -994,7 +994,7 @@
           "fr": "Armure d'avarice ardente",
           "en": "Body Armor of Burning Greed"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-greed--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1002,7 +1002,7 @@
           "fr": "Gants d'avarice ardente",
           "en": "Gloves of Burning Greed"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-greed--gloves.png"
       },
       {
         "slot": "boots",
@@ -1010,7 +1010,7 @@
           "fr": "Bottes d'avarice ardente",
           "en": "Boots of Burning Greed"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-greed--boots.png"
       },
       {
         "slot": "necklace",
@@ -1018,7 +1018,7 @@
           "fr": "Collier d'avarice ardente",
           "en": "Necklace of Burning Greed"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-greed--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -1026,7 +1026,7 @@
           "fr": "Bracelet d'avarice ardente",
           "en": "Bracelet of Burning Greed"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-greed--bracelet.png"
       },
       {
         "slot": "ring",
@@ -1034,7 +1034,7 @@
           "fr": "Bague d'avarice ardente",
           "en": "Ring of Burning Greed"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-greed--ring.png"
       },
       {
         "slot": "earrings",
@@ -1042,7 +1042,7 @@
           "fr": "Boucles d’oreilles d'avarice ardente",
           "en": "Earrings of Burning Greed"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/set-of-burning-greed--earrings.png"
       }
     ],
     "bonuses": {
@@ -1060,7 +1060,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/set-of-burning-greed--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
@@ -1183,7 +1183,7 @@
           "fr": "Casque de la volonté de fer",
           "en": "Iron Will Helmet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/iron-will--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1191,7 +1191,7 @@
           "fr": "Armure de la volonté de fer",
           "en": "Iron Will Body Armor"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/iron-will--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1199,7 +1199,7 @@
           "fr": "Gants de la volonté de fer",
           "en": "Iron Will Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/iron-will--gloves.png"
       },
       {
         "slot": "boots",
@@ -1207,7 +1207,7 @@
           "fr": "Bottes de la volonté de fer",
           "en": "Iron Will Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/iron-will--boots.png"
       }
     ],
     "bonuses": {
@@ -1221,7 +1221,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/iron-will--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1246,7 +1246,7 @@
           "fr": "Heaume de chevalier sanglant",
           "en": "Crimson Knight's Helmet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/crimson-knights-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1254,7 +1254,7 @@
           "fr": "Armure de chevalier sanglant",
           "en": "Crimson Knight's Body Armor"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/crimson-knights-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1262,7 +1262,7 @@
           "fr": "Gants de chevalier sanglant",
           "en": "Crimson Knight's Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/crimson-knights-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1270,7 +1270,7 @@
           "fr": "Bottes de chevalier sanglant",
           "en": "Crimson Knight's Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/crimson-knights-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1284,7 +1284,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/crimson-knights-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1309,7 +1309,7 @@
           "fr": "Heaume de Démon de rang supérieur",
           "en": "High-ranking Demon's Helmet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/high-ranking-demons-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1317,7 +1317,7 @@
           "fr": "Armure de démon de rang supérieur",
           "en": "High-ranking Demon's Body Armor"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/high-ranking-demons-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1325,7 +1325,7 @@
           "fr": "Gants de démon de rang supérieur",
           "en": "High-ranking Demon's Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/high-ranking-demons-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1333,7 +1333,7 @@
           "fr": "Bottes de démon de rang supérieur",
           "en": "High-ranking Demon's Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/high-ranking-demons-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1347,7 +1347,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/high-ranking-demons-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1372,7 +1372,7 @@
           "fr": "Heaume de chevalier dragon",
           "en": "Dragon_Knight's_Helmet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/dragon-knights-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1380,7 +1380,7 @@
           "fr": "Armure de chevalier dragon",
           "en": "Dragon_Knight's_Body_Armor"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/dragon-knights-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1388,7 +1388,7 @@
           "fr": "Gants de chevalier dragon",
           "en": "Dragon_Knight's_Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/dragon-knights-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1396,7 +1396,7 @@
           "fr": "Bottes de chevalier dragon",
           "en": "Dragon_Knight's_Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/dragon-knights-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1410,7 +1410,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/dragon-knights-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1435,7 +1435,7 @@
           "fr": "Casque de lion noir",
           "en": "Black Lion's Helmet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/black-lions-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1443,7 +1443,7 @@
           "fr": "Armure de lion noir",
           "en": "Black Lion's Body Armor"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/black-lions-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1451,7 +1451,7 @@
           "fr": "Gants de lion noir",
           "en": "Black Lion's Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/black-lions-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1459,7 +1459,7 @@
           "fr": "Bottes de lion noir",
           "en": "Black Lion's Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/black-lions-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1473,7 +1473,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/black-lions-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1498,7 +1498,7 @@
           "fr": "Chapeau de grand enchanteur",
           "en": "Almighty_Kargalgan's_Hat"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/almighty-kargalgans-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1506,7 +1506,7 @@
           "fr": "Robe de grand enchanteur",
           "en": "Almighty_Kargalgan's_Robe"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/almighty-kargalgans-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1514,7 +1514,7 @@
           "fr": "Gants de grand enchanteur",
           "en": "Almighty_Kargalgan's_Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/almighty-kargalgans-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1522,7 +1522,7 @@
           "fr": "Bottes de grand enchanteur",
           "en": "Almighty_Kargalgan's_Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/almighty-kargalgans-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1536,7 +1536,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/almighty-kargalgans-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1561,7 +1561,7 @@
           "fr": "Chapeau sacré",
           "en": "Holy Hat"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/holy-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1569,7 +1569,7 @@
           "fr": "Robe sacrée",
           "en": "Holy Robe"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/holy-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1577,7 +1577,7 @@
           "fr": "Gants sacrés",
           "en": "Holy Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/holy-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1585,7 +1585,7 @@
           "fr": "Bottes sacrées",
           "en": "Holy Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/holy-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1599,7 +1599,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/holy-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1624,7 +1624,7 @@
           "fr": "Chapeau de prêtre",
           "en": "Cleric's Hat"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/clerics-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1632,7 +1632,7 @@
           "fr": "Robe de prêtre",
           "en": "Cleric's Robe"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/clerics-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1640,7 +1640,7 @@
           "fr": "Gants de prêtre",
           "en": "Cleric's Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/clerics-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1648,7 +1648,7 @@
           "fr": "Bottes de prêtre",
           "en": "Cleric's Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/clerics-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1662,7 +1662,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/clerics-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1687,7 +1687,7 @@
           "fr": "Casque de garde du palais",
           "en": "Palace_Guard's_Helmet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/palace-guards-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1695,7 +1695,7 @@
           "fr": "Armure de garde du palais",
           "en": "Palace_Guard's_Body_Armor"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/palace-guards-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1703,7 +1703,7 @@
           "fr": "Gants de garde du palais",
           "en": "Palace_Guard's_Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/palace-guards-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1711,7 +1711,7 @@
           "fr": "Bottes de garde du palais",
           "en": "Palace_Guard's_Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/palace-guards-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1725,7 +1725,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/palace-guards-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1750,7 +1750,7 @@
           "fr": "Casque de nouveau chasseur",
           "en": "New Hunter's Helmet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/new-hunters-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1758,7 +1758,7 @@
           "fr": "Armure de nouveau chasseur",
           "en": "New Hunter's Body Armor"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/new-hunters-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1766,7 +1766,7 @@
           "fr": "Gants de nouveau chasseur",
           "en": "New Hunter's Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/new-hunters-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1774,7 +1774,7 @@
           "fr": "Bottes de nouveau chasseur",
           "en": "New Hunter's Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/new-hunters-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1788,7 +1788,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/new-hunters-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -1813,7 +1813,7 @@
           "fr": "Casque en cuir rigide",
           "en": "Hard Leather Helmet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/hard-leather-set--helmet.png"
       },
       {
         "slot": "chestplate",
@@ -1821,7 +1821,7 @@
           "fr": "Armure en cuir rigide",
           "en": "Hard Leather Body Armor"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/hard-leather-set--chestplate.png"
       },
       {
         "slot": "gloves",
@@ -1829,7 +1829,7 @@
           "fr": "Gants en cuir rigide",
           "en": "Hard Leather Gloves"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/hard-leather-set--gloves.png"
       },
       {
         "slot": "boots",
@@ -1837,7 +1837,7 @@
           "fr": "Bottes en cuir rigide",
           "en": "Hard Leather Boots"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/hard-leather-set--boots.png"
       }
     ],
     "bonuses": {
@@ -1851,7 +1851,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/hard-leather-set--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
@@ -2124,7 +2124,7 @@
           "fr": "Collier de l'instinct destructeur",
           "en": "Destructive Instinct Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/destructive-instinct--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2132,7 +2132,7 @@
           "fr": "Bracelet de l'instinct destructeur",
           "en": "Destructive Instinct Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/destructive-instinct--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2140,7 +2140,7 @@
           "fr": "Bague de l'instinct destructeur",
           "en": "Destructive Instinct Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/destructive-instinct--ring.png"
       },
       {
         "slot": "earrings",
@@ -2148,7 +2148,7 @@
           "fr": "Boucles d'oreilles de l'instinct destructeur",
           "en": "Destructive Instinct Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/destructive-instinct--earrings.png"
       }
     ],
     "bonuses": {
@@ -2162,7 +2162,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/destructive-instinct--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
@@ -2187,7 +2187,7 @@
           "fr": "Collier de l'étoile étincelante",
           "en": "Shining Star Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/shining-star--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2195,7 +2195,7 @@
           "fr": "Bracelet de l'étoile étincelante",
           "en": "Shining Star Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/shining-star--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2203,7 +2203,7 @@
           "fr": "Bague de l'étoile étincelante",
           "en": "Shining Star Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/shining-star--ring.png"
       },
       {
         "slot": "earrings",
@@ -2211,7 +2211,7 @@
           "fr": "Boucles d'oreilles de l'étoile étincelante",
           "en": "Shining Star Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/shining-star--earrings.png"
       }
     ],
     "bonuses": {
@@ -2225,7 +2225,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/shining-star--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
@@ -2250,7 +2250,7 @@
           "fr": "Collier verdâtre",
           "en": "Viridescent Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/viridescent-set--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2258,7 +2258,7 @@
           "fr": "Bracelet verdâtre",
           "en": "Viridescent Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/viridescent-set--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2266,7 +2266,7 @@
           "fr": "Bague verdâtre",
           "en": "Viridescent Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/viridescent-set--ring.png"
       },
       {
         "slot": "earrings",
@@ -2274,7 +2274,7 @@
           "fr": "Boucles d’oreilles verdâtre",
           "en": "Viridescent Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/viridescent-set--earrings.png"
       }
     ],
     "bonuses": {
@@ -2288,7 +2288,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/viridescent-set--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
@@ -2313,7 +2313,7 @@
           "fr": "Collier en aigue-marine",
           "en": "Aquamarine Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/aquamarine-set--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2321,7 +2321,7 @@
           "fr": "Bracelet en aigue-marine",
           "en": "Aquamarine Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/aquamarine-set--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2329,7 +2329,7 @@
           "fr": "Bague en aigue-marine",
           "en": "Aquamarine Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/aquamarine-set--ring.png"
       },
       {
         "slot": "earrings",
@@ -2337,7 +2337,7 @@
           "fr": "Boucles d’oreilles en aigue-marine",
           "en": "Aquamarine Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/aquamarine-set--earrings.png"
       }
     ],
     "bonuses": {
@@ -2351,7 +2351,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/aquamarine-set--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
@@ -2376,7 +2376,7 @@
           "fr": "Collier de péridot",
           "en": "Peridot Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/peridot-set--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2384,7 +2384,7 @@
           "fr": "Bracelet en péridot",
           "en": "Peridot Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/peridot-set--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2392,7 +2392,7 @@
           "fr": "Bague en péridot",
           "en": "Peridot Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/peridot-set--ring.png"
       },
       {
         "slot": "earrings",
@@ -2400,7 +2400,7 @@
           "fr": "Boucles d’oreilles en péridot",
           "en": "Peridot Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/peridot-set--earrings.png"
       }
     ],
     "bonuses": {
@@ -2414,7 +2414,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/peridot-set--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
@@ -2439,7 +2439,7 @@
           "fr": "Collier de bête",
           "en": "Beast Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/beast-set--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2447,7 +2447,7 @@
           "fr": "Bracelet de bête",
           "en": "Beast Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/beast-set--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2455,7 +2455,7 @@
           "fr": "Bague de bête",
           "en": "Beast Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/beast-set--ring.png"
       },
       {
         "slot": "earrings",
@@ -2463,7 +2463,7 @@
           "fr": "Boucles d’oreilles de bête",
           "en": "Beast Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/beast-set--earrings.png"
       }
     ],
     "bonuses": {
@@ -2477,7 +2477,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/beast-set--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
@@ -2502,7 +2502,7 @@
           "fr": "Collier en obsidienne",
           "en": "Obsidian Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/obsidian-set--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2510,7 +2510,7 @@
           "fr": "Bracelet en obsidienne",
           "en": "Obsidian Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/obsidian-set--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2518,7 +2518,7 @@
           "fr": "Bague en obsidienne",
           "en": "Obsidian Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/obsidian-set--ring.png"
       },
       {
         "slot": "earrings",
@@ -2526,7 +2526,7 @@
           "fr": "Boucles d’oreilles en obsidienne",
           "en": "Obsidian Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/obsidian-set--earrings.png"
       }
     ],
     "bonuses": {
@@ -2540,7 +2540,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/obsidian-set--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
@@ -2565,7 +2565,7 @@
           "fr": "Collier de squelette",
           "en": "Skeleton Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/skeleton-set--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2573,7 +2573,7 @@
           "fr": "Bracelet de squelette",
           "en": "Skeleton Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/skeleton-set--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2581,7 +2581,7 @@
           "fr": "Bague de squelette",
           "en": "Skeleton Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/skeleton-set--ring.png"
       },
       {
         "slot": "earrings",
@@ -2589,7 +2589,7 @@
           "fr": "Boucles d’oreilles de squelette",
           "en": "Skeleton Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/skeleton-set--earrings.png"
       }
     ],
     "bonuses": {
@@ -2603,7 +2603,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/skeleton-set--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
@@ -2628,7 +2628,7 @@
           "fr": "Collier de béhémoth",
           "en": "Behemoth's Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/behemoth-set--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2636,7 +2636,7 @@
           "fr": "Bracelet de béhémoth",
           "en": "Behemoth's Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/behemoth-set--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2644,7 +2644,7 @@
           "fr": "Bague de béhémoth",
           "en": "Behemoth's Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/behemoth-set--ring.png"
       },
       {
         "slot": "earrings",
@@ -2652,7 +2652,7 @@
           "fr": "Boucles d’oreilles de béhémoth",
           "en": "Behemoth's Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/behemoth-set--earrings.png"
       }
     ],
     "bonuses": {
@@ -2666,7 +2666,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/behemoth-set--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
@@ -2691,7 +2691,7 @@
           "fr": "Collier à oeil rouge",
           "en": "Red-eyed Necklace"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/red-eyed-set--necklace.png"
       },
       {
         "slot": "bracelet",
@@ -2699,7 +2699,7 @@
           "fr": "Bracelet à oeil rouge",
           "en": "Red-eyed Bracelet"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/red-eyed-set--bracelet.png"
       },
       {
         "slot": "ring",
@@ -2707,7 +2707,7 @@
           "fr": "Bague à oeil rouge",
           "en": "Red-eyed Ring"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/red-eyed-set--ring.png"
       },
       {
         "slot": "earrings",
@@ -2715,7 +2715,7 @@
           "fr": "Boucles d’oreilles à oeil rouge",
           "en": "Red-eyed Earrings"
         },
-        "icon": null
+        "icon": "data/icons/artifact_pieces/red-eyed-set--earrings.png"
       }
     ],
     "bonuses": {
@@ -2729,7 +2729,7 @@
       }
     },
     "main_stat_options": null,
-    "icon": null,
+    "icon": "data/icons/artifact_pieces/red-eyed-set--necklace.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",

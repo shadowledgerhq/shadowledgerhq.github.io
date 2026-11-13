@@ -30,7 +30,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/lightning-speed.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -76,7 +76,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/first-strike-barrage.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -116,7 +116,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/irresistible-force.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -156,7 +156,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/crushing-attack.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -196,7 +196,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/sandbag.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -236,7 +236,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/desire.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -276,7 +276,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/intuit.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -322,7 +322,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/we-are-one.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -362,7 +362,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/swift-strike.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -395,7 +395,7 @@
     "values_by_level": {
       "values_by_rarity_rare_heroic_legendary_transcendent": []
     },
-    "icon": null,
+    "icon": "data/icons/blessings/assassins-proficiency.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -435,7 +435,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/fatal-strike.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -475,7 +475,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/weakness-detection.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -515,7 +515,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/swiftness.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -561,7 +561,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/double-edged-sword.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -607,7 +607,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/boss-slayer.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -647,7 +647,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/chains-of-blood.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -693,7 +693,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/title-demon-slayer.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -733,7 +733,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/title-conqueror-of-adversity.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -773,7 +773,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/title-wolf-assassin.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -819,7 +819,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/pulverize.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -865,7 +865,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/bloodlust.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -911,7 +911,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/sharp-perception.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -951,7 +951,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/reawakening.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -997,7 +997,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/mana-rampage.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1043,7 +1043,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/monarchs-domain.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1089,7 +1089,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/speed.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1129,7 +1129,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/advanced-dagger-technique.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1175,7 +1175,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/swift-restoration.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1221,7 +1221,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/irreversible-road.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1261,7 +1261,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/best-defense-is-a-good-offense.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1301,7 +1301,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/ravenous-instinct.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1341,7 +1341,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/aggressive-defense.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1381,7 +1381,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/solidify.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1421,7 +1421,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/mana-powered-shield.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1461,7 +1461,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/natural-disaster.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1501,7 +1501,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/penalty-quest-survival.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1541,7 +1541,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/life.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1587,7 +1587,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/hp-extraction.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1627,7 +1627,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/camouflage.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1667,7 +1667,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/daily-quest-completion.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1713,7 +1713,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/kasakas-steel-scales.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1759,7 +1759,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/tenacity.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1799,7 +1799,7 @@
         ]
       ]
     },
-    "icon": null,
+    "icon": "data/icons/blessings/kandiarus-blessing.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
@@ -1830,7 +1830,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/master-marksman.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
@@ -1860,7 +1860,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/do-or-die.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
@@ -1890,7 +1890,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/supercharge.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
@@ -1920,7 +1920,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/iron-stance.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
@@ -1950,7 +1950,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/architects-plan.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
@@ -1980,7 +1980,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/spring-of-life.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
@@ -2010,7 +2010,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/devour.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
@@ -2036,7 +2036,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/acrobat.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
@@ -2061,7 +2061,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/garde-double.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
@@ -2086,7 +2086,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/jugement-ultime.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
@@ -2111,7 +2111,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/la-vie-en-marche.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
@@ -2136,7 +2136,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/ricochet.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
@@ -2161,7 +2161,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/r-sonance-darme.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
@@ -2186,7 +2186,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/soutien-mutuel.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
@@ -2211,7 +2211,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/surpression.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
@@ -2236,7 +2236,7 @@
     "effects": [],
     "conditions": [],
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/blessings/finisher-touch.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",

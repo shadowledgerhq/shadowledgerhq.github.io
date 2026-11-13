@@ -146,7 +146,7 @@
       "passive2": "The Shadow's Healing Given increases by 90% and their Defense Penetration increases by 15%."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/beru.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Beru",
     "wiki_revid": 14990,
     "wiki_timestamp": "2026-02-27T05:33:44Z",
@@ -302,7 +302,7 @@
       "passive2": "The Shadow's Attack increases by 24% The Shadow's Basic Skill damage increases by 15%."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/beste.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Beste",
     "wiki_revid": 10640,
     "wiki_timestamp": "2025-03-28T09:19:00Z",
@@ -458,7 +458,7 @@
       "passive2": "When the Shadow is hit the target's Attack decreases by 15% for 5 second(s). When the Shadow is hit the attacker's Defense is decreased by 5% for 5 second(s)."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/bigrock.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Bigrock",
     "wiki_revid": 9523,
     "wiki_timestamp": "2025-03-14T22:31:35Z",
@@ -614,7 +614,7 @@
       "passive2": "The Shadow's Attack increases by 15% and their Defense Penetration increases by 15%."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/blades.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blades",
     "wiki_revid": 9522,
     "wiki_timestamp": "2025-03-14T22:28:28Z",
@@ -770,7 +770,7 @@
       "passive2": "The user's Critical Hit Rate and Critical Hit damage increases by 18%"
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/brute.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Brute",
     "wiki_revid": 16983,
     "wiki_timestamp": "2026-05-14T00:51:15Z",
@@ -926,7 +926,7 @@
       "passive2": "When Cerbie hits a target with the [Combustion] effect applied, his Skill Damage increases by 50% for 10 secon(s)."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/cerbie.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Cerbie",
     "wiki_revid": 9525,
     "wiki_timestamp": "2025-03-14T22:34:33Z",
@@ -950,7 +950,7 @@
     "passives": [],
     "armament_en": null,
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/greed.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Greed",
     "wiki_revid": 17777,
     "wiki_timestamp": "2026-07-18T19:12:26Z",
@@ -1106,7 +1106,7 @@
       "passive2": "The Shadow's Critical Hit Rate and Critical Hit damage increases by 15%."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/igris.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Igris",
     "wiki_revid": 16648,
     "wiki_timestamp": "2026-05-06T22:03:51Z",
@@ -1262,7 +1262,7 @@
       "passive2": "The Shadow's HP increases by 24%. The Shadow's Shield Acquisition Chance increases by 36%."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/iron.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Iron",
     "wiki_revid": 13181,
     "wiki_timestamp": "2025-08-08T23:44:53Z",
@@ -1418,7 +1418,7 @@
       "passive2": "When a [Shield] is activated, it triggers the [Attack Increase] effect. [Attack Increase] Increases Attack by 24% Duration: 15 second(s)"
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/jima.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Jima",
     "wiki_revid": 15020,
     "wiki_timestamp": "2026-02-27T22:43:12Z",
@@ -1574,7 +1574,7 @@
       "passive2": "The Shadow's Critical Hit Damage increases by 24% and their damage dealt to bosses increases by 30%."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/kaisel.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Kaisel",
     "wiki_revid": 13174,
     "wiki_timestamp": "2025-08-08T23:34:23Z",
@@ -1730,7 +1730,7 @@
       "passive2": "When attacking a target with Skull's [Death Flame], the user's damage dealt increases by 24% for 10 second(s)."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/skull.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Skull",
     "wiki_revid": 15015,
     "wiki_timestamp": "2026-02-27T22:38:57Z",
@@ -1886,7 +1886,7 @@
       "passive2": "The Shadow's Defense Penetration increases by 15%. The Shadow's damage dealt to Normal monsters increases by 50%."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/tank.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Tank",
     "wiki_revid": 13183,
     "wiki_timestamp": "2025-08-08T23:47:35Z",
@@ -2042,7 +2042,7 @@
       "passive2": "Enemies with 50% or less HP take 50% more damage when they are hit by the Shadow."
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/tusk.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Tusk",
     "wiki_revid": 11738,
     "wiki_timestamp": "2025-04-12T05:01:32Z",
@@ -2198,7 +2198,7 @@
       "passive2": "The user's Defense Penetration increases by 24%"
     },
     "values_by_level": {},
-    "icon": null,
+    "icon": "data/icons/shadows/uros.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Uros",
     "wiki_revid": 17570,
     "wiki_timestamp": "2026-06-05T22:58:15Z",

@@ -13,6 +13,7 @@
 - `sjw_skills.json` : 12 compétences de SJW + 48 runes (`tools/parse_fandom_runes.py`, page Runes du wiki) : dégâts au niveau min. par rareté (Rare→Transcendent), cooldown, MP. Le wiki ne donne ni type (basique/QTE/ultime), ni niveau de base, ni forme des runes ; la compétence ultime Commander's Authority et les runes ajoutées en juin/octobre ne sont pas dedans.
 - `blessings.json` : 43 pierres de bénédiction (27 Empowerment, 16 Survival ; `tools/parse_fandom_blessings.py`) : texte EN, valeurs Rare→Transcendent. +7 pierres du 17/09 ajoutées sans effets (Master Marksman, Do or Die, Supercharge, Iron Stance, Architect's Plan, Spring of Life, Devour) : ni wiki ni Netmarble ne les décrivent → total 50 ; effets à saisir depuis des captures du jeu. Coquille du wiki : Assassin's Proficiency « 24--29% ».
 - `subjugation_support.json` : 18 entrées (9 de la capture du 13/11 en 3 colonnes ; 9 d'une semaine antérieure du wiki, valeurs différentes : +15 % au lieu de +20 %). Nom officiel EN : « Conquest Support » (wiki, notes Netmarble) ; les effets changent chaque semaine, `week` = 2026-11-12 pour la capture (confirmé), null pour le wiki. `proof_modifiers.json` : 17 lignes de la capture HOTM (semaine du 05/11, prise ≈07/11) (somme des coûts = 931, vérifiée). Rien sur le wiki pour le HOTM.
+- Icônes (accord d'Alexis 13/11 : « tu peux prendre les icônes ») : 436 PNG 128×128 (11 Mo) via `tools/fetch_icons.py`, 0,5 s entre deux requêtes : chasseurs 66, noyaux 18, ombres 15, pierres 59, runes 77, armes de SJW 29, pièces d'artefacts 172 (champ `icon` renseigné ; icône d'un set = sa première pièce). Crédit Slagate : `data/icons/CREDITS.md`.
 ## En cours
 - Rien d'engagé. Reste : contrôle des sets d'artefacts : le wiki date de mai 2026 (modèle du 16/05) ; sets ajoutés depuis et équilibrages du 17/09, 30/07, 22/10 non reflétés.
 ## À faire
@@ -26,6 +27,6 @@
 ## Besoin d'Alexis
 - Soutien de subjugation / preuves : une capture par semaine (effets changeants). Semaine 12/11 : soutien reçu ; preuves HOTM : pas de capture pour la semaine du 12/11 (Alexis n'en a pas) ; seule la semaine du 05/11 est connue, à ne pas supposer valable pour 12/11.
 - Captures du GB ; règles POC/GB (05/11, 12/11) et HOTM 05/11 pour `data/rules/`.
-- Icônes : lecture de pages autorisée, mais téléchargement des images (api.slagate.com/cdn) et `ai-train=no` : à trancher.
+- Icônes manquantes : 86 armes de SJW et chasseurs, 8 sets d'événement (36 pièces), artefacts/armes hors API : pas d'image trouvée ; rien d'inventé.
 ## Demandes de modif du skill
 - rien

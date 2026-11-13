@@ -2604,7 +2604,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/allons-orb.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Allon%27s_Orb",
     "wiki_revid": 14594,
     "wiki_timestamp": "2026-02-14T00:03:00Z",
@@ -3147,7 +3147,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/demon-kings-daggers.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Demon_King%27s_Daggers",
     "wiki_revid": 13503,
     "wiki_timestamp": "2026-01-27T07:16:22Z",
@@ -3462,7 +3462,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/demonic-plum-flower-sword.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Demonic_Plum_Flower_Sword",
     "wiki_revid": 12099,
     "wiki_timestamp": "2025-04-27T20:47:20Z",
@@ -3577,7 +3577,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/divine-quarterstaff.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Divine_Quarterstaff",
     "wiki_revid": 14304,
     "wiki_timestamp": "2026-02-08T01:37:45Z",
@@ -3785,7 +3785,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/ennios-roar.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Ennio%27s_Roar",
     "wiki_revid": 17325,
     "wiki_timestamp": "2026-05-28T09:41:45Z",
@@ -3900,7 +3900,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/fan-of-the-fire-demon.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Fan_of_the_Fire_Demon",
     "wiki_revid": 14287,
     "wiki_timestamp": "2026-02-08T01:15:46Z",
@@ -3971,7 +3971,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/foress-wish.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Fores%27s_Wish",
     "wiki_revid": 12962,
     "wiki_timestamp": "2025-06-05T15:01:36Z",
@@ -4200,7 +4200,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/gold-tailed-fox.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Gold-tailed_Fox",
     "wiki_revid": 14288,
     "wiki_timestamp": "2026-02-08T01:16:16Z",
@@ -4408,7 +4408,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/heros-sword.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Hero%27s_Sword",
     "wiki_revid": 15066,
     "wiki_timestamp": "2026-03-01T02:38:49Z",
@@ -4637,7 +4637,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/juicy-grilled-skewer.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Juicy_Grilled_Skewer",
     "wiki_revid": 10478,
     "wiki_timestamp": "2025-03-25T20:57:35Z",
@@ -5501,7 +5501,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/moonlit-gale.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Moonlit_Gale",
     "wiki_revid": 17568,
     "wiki_timestamp": "2026-06-05T22:33:21Z",
@@ -5581,7 +5581,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/moonshadow.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Moonshadow",
     "wiki_revid": 10480,
     "wiki_timestamp": "2025-03-25T20:58:29Z",
@@ -5949,7 +5949,7 @@
     "passive": [],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/phantomblade.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Phantomblade",
     "wiki_revid": 14638,
     "wiki_timestamp": "2026-02-14T00:42:20Z",
@@ -6064,7 +6064,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/phoenix-soul.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Phoenix_Soul",
     "wiki_revid": 10476,
     "wiki_timestamp": "2025-03-25T20:56:46Z",
@@ -6172,7 +6172,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/radiru-clans-double-edged-spear.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Radiru_Clan%27s_Double-edged_Spear",
     "wiki_revid": 14592,
     "wiki_timestamp": "2026-02-13T23:55:05Z",
@@ -6843,7 +6843,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/shadow-scythe.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Shadow_Scythe",
     "wiki_revid": 17327,
     "wiki_timestamp": "2026-05-29T14:01:07Z",
@@ -6958,7 +6958,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/skadi.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Skadi",
     "wiki_revid": 14900,
     "wiki_timestamp": "2026-02-22T01:54:01Z",
@@ -7052,7 +7052,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/soma-and-asura.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Soma_%26_Asura",
     "wiki_revid": 17673,
     "wiki_timestamp": "2026-06-14T08:33:54Z",
@@ -7167,7 +7167,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/spooky-pumpkin.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Spooky_Pumpkin",
     "wiki_revid": 12967,
     "wiki_timestamp": "2025-06-05T15:04:43Z",
@@ -7282,7 +7282,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/stormbringer.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Stormbringer",
     "wiki_revid": 17999,
     "wiki_timestamp": "2026-10-31T14:19:36Z",
@@ -7369,7 +7369,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/the-huntsman.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/The_Huntsman",
     "wiki_revid": 17596,
     "wiki_timestamp": "2026-06-06T22:31:04Z",
@@ -7484,7 +7484,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/thetis-grimoire.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Thetis%27_Grimoire",
     "wiki_revid": 13335,
     "wiki_timestamp": "2025-11-11T14:42:24Z",
@@ -7578,7 +7578,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/transfiguration-key.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Transfiguration_Key",
     "wiki_revid": 15049,
     "wiki_timestamp": "2026-02-28T23:08:27Z",
@@ -7693,7 +7693,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/truth-demon-knights-spear.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Truth%3A_Demon_Knight%27s_Spear",
     "wiki_revid": 10474,
     "wiki_timestamp": "2025-03-25T20:55:16Z",
@@ -7808,7 +7808,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/truth-kasakas-venom-fang.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Truth%3A_Kasaka%27s_Venom_Fang",
     "wiki_revid": 14289,
     "wiki_timestamp": "2026-02-08T01:16:29Z",
@@ -7888,7 +7888,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/vulcans-rage.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Vulcan%27s_Rage",
     "wiki_revid": 14911,
     "wiki_timestamp": "2026-02-22T02:05:19Z",
@@ -8082,7 +8082,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/winchester-roke.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Winchester_Roke",
     "wiki_revid": 14923,
     "wiki_timestamp": "2026-02-22T15:47:22Z",
@@ -8197,7 +8197,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/winter-fang.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Winter_Fang",
     "wiki_revid": 16892,
     "wiki_timestamp": "2026-05-12T00:24:27Z",
@@ -8269,7 +8269,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/zekes-fragment.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Zeke%27s_Fragment",
     "wiki_revid": 10475,
     "wiki_timestamp": "2025-03-25T20:55:56Z",
