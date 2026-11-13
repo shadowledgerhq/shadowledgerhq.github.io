@@ -1,32 +1,23 @@
 # SUIVI — 9 Base de données — 2026-11-13
 ## Fait
-- Schémas validés, `stats.json` (noms coréens), écrans documentés, règles par semaine (`data/rules/`).
-- `patches.json` : 7 patchs détaillés (07/05 → 22/10/2026), URL Netmarble + version. Résumés extraits en lecture assistée : à contrôler sur l'URL.
-- Versions (Uptodown, Android, rapprochées par date, non confirmées par Netmarble) : 22/10=1.5.15 · 17/09=1.4.55 · 27/08=1.4.46 · 30/07=1.4.35 · 02/07=1.4.26 · 04/06=1.4.16 · 07/05=1.4.08. Plusieurs builds le même jour (1.4.45, 1.4.05/06, 1.4.17 du 10/06, 1.5.16 du 23/10) : on a pris le dernier du jour.
-- `artifact_sets.json` : 40 sets (12 complets, 15 armure, 13 bijoux) depuis le wiki Fandom (API MediaWiki, CC BY-SA), via `tools/parse_fandom_artifacts.py`.
-- Décision d'Alexis (13/11) : wiki Fandom accepté comme source provisoire des sets (EN, non vérifié en jeu).
-- `cores.json` : 18 noyaux (6 Mind, 6 Body, 6 Spirit) du wiki Fandom, via `tools/parse_fandom_cores.py` ; passif EN + 1re valeur par rareté (rare/heroic/legendary). FR, icônes, valeurs de stats par niveau vides. Niveau max 20 selon le wiki, 25 selon Netmarble (17/09).
-- `hunters.json` : 66 chasseurs (wiki Fandom, `tools/parse_fandom_hunters.py`) : rareté, élément, type, classe, arme exclusive, compétences (EN), passif, avancement A1–A5, stats lv1/max. `successors.json` : 3 successeurs (Myro, Velvet, Monarch of Shadows), même source. Pages de wiki de juin à novembre 2026 : certaines sont antérieures au rééquilibrage du 22/10.
-- `weapons.json` : 115 armes (55 de Sung Jin Woo, 60 de chasseurs ; `tools/parse_fandom_weapons.py`) ; 2 sans passif sur le wiki (Phantomblade, Zeke's Fragment) ; élément rempli pour toutes (cause des trous : préfixe `| |` et `}}` collés sur le wiki, corrigé dans les 3 scripts). Armes exclusives liées aux chasseurs par `hunter_id`.
-- Décision d'Alexis (13/11) : pas d'appels à l'API interne de slagate (Sohoven refuse). Sources : wiki Fandom + notes Netmarble ; slagate seulement en lecture de pages.
-- `shadows.json` : 15 ombres (`tools/parse_fandom_shadows.py`) : compétence de chef par rang (Common→General), 7 compétences, armement, obtention. Greed : page vide sur le wiki (0 compétence). Wiki de 2025 à juin 2026 : chefs rééquilibrés le 22/10 non reflétés.
-- `sjw_skills.json` : 12 compétences de SJW + 48 runes (`tools/parse_fandom_runes.py`, page Runes du wiki) : dégâts au niveau min. par rareté (Rare→Transcendent), cooldown, MP. Le wiki ne donne ni type (basique/QTE/ultime), ni niveau de base, ni forme des runes ; la compétence ultime Commander's Authority et les runes ajoutées en juin/octobre ne sont pas dedans.
-- `blessings.json` : 43 pierres de bénédiction (27 Empowerment, 16 Survival ; `tools/parse_fandom_blessings.py`) : texte EN, valeurs Rare→Transcendent. +7 pierres du 17/09 ajoutées sans effets (Master Marksman, Do or Die, Supercharge, Iron Stance, Architect's Plan, Spring of Life, Devour) : ni wiki ni Netmarble ne les décrivent → total 50 ; effets à saisir depuis des captures du jeu. Coquille du wiki : Assassin's Proficiency « 24--29% ».
-- `subjugation_support.json` : 18 entrées (9 de la capture du 13/11 en 3 colonnes ; 9 d'une semaine antérieure du wiki, valeurs différentes : +15 % au lieu de +20 %). Nom officiel EN : « Conquest Support » (wiki, notes Netmarble) ; les effets changent chaque semaine, `week` = 2026-11-12 pour la capture (confirmé), null pour le wiki. `proof_modifiers.json` : 17 lignes de la capture HOTM (semaine du 05/11, prise ≈07/11) (somme des coûts = 931, vérifiée). Rien sur le wiki pour le HOTM.
-- Icônes (accord d'Alexis 13/11 : « tu peux prendre les icônes ») : 436 PNG 128×128 (11 Mo) via `tools/fetch_icons.py`, 0,5 s entre deux requêtes : chasseurs 66, noyaux 18, ombres 15, pierres 59, runes 77, armes de SJW 29, pièces d'artefacts 172 (champ `icon` renseigné ; icône d'un set = sa première pièce). Crédit Slagate : `data/icons/CREDITS.md`.
+- Schémas, `stats.json` (noms coréens), écrans documentés, règles par semaine (`data/rules/`).
+- Les 12 catégories de `data/db/` existent. Sources : wiki Fandom (EN, CC BY-SA, non vérifié en jeu, scripts `tools/parse_fandom_*.py`), notes Netmarble, captures d'Alexis, slagate (voir décisions).
+- `patches.json` : 7 patchs (07/05→22/10) avec URL Netmarble ; versions Uptodown 1.4.08…1.5.15 rapprochées par date (non confirmées). Résumés en lecture assistée, à contrôler.
+- Effectifs : hunters 66, weapons 115, artifact_sets 40 (+pièces), cores 18, shadows 15, successors 3, sjw_skills 12+89 runes, blessings 59, subjugation_support 18, proof_modifiers 17.
+- Noms FR/KO/JA et icônes depuis slagate (`apply_fr_names*.py`, `fetch_icons.py`) : hunters 66/66, noyaux 18/18, ombres 15/15, runes 77, pierres 59/59, sets 32/40 (+172 pièces), armes de SJW 29/115. 436 PNG 128×128 (`data/icons/`, crédits dans `CREDITS.md`).
+- Décisions d'Alexis (13/11) : wiki Fandom accepté ; lecture de pages et routes GET publiques de slagate OK (pas `/api/query`, pas d'images en masse sauf icônes autorisées) ; icônes autorisées.
+- Soutien de subjugation : semaine 12/11 (capture) ; preuves HOTM : semaine 05/11 seulement.
 ## En cours
-- Rien d'engagé. Reste : contrôle des sets d'artefacts : le wiki date de mai 2026 (modèle du 16/05) ; sets ajoutés depuis et équilibrages du 17/09, 30/07, 22/10 non reflétés.
+- Rien d'engagé.
 ## À faire
-- Sets d'artefacts : wiki de mai 2026 ; compléter à partir des notes Netmarble ou du jeu (slagate : pas de page lisible, API exclue).
-- FR des sets, emplacements et icônes des pièces, `main_stat_options`, rareté : vides.
-- Hunters : 4 sans compétences sur le wiki (Go Gunhee SSR Water, Park Heejin, Song Chiyul, Yoo Jinho) ; 3 sans avancement. Noms FR, icônes, `weapon_type`, valeurs par niveau : vides. `role` (stacker/supporter/buster) rempli pour 23 ; les 43 Striker/Breaker restent `null` (type wiki dans `type_en`).
-- Les 12 catégories de l'ordre de saisie existent. Suite : combler les vides (FR, icônes, valeurs par niveau, éléments ajoutés depuis mai).
+- Wiki antérieur aux rééquilibrages (juin→22/10) : valeurs de sets, chasseurs, chefs d'ombre, pierres à recouper avec `patches.json`.
+- 7 pierres du 17/09 + 29 runes récentes : effets/valeurs à saisir (captures du jeu).
+- 6 rapprochements wiki↔slagate de chasseurs à confirmer : Jerim Yung, Baek Beast, Sian Halat (Igris), Holy Go Gun Hee, Lim Taegyu, Esil Radir. 6 pierres sans nom EN officiel.
+- 4 chasseurs sans compétences sur le wiki (Go Gunhee, Park Heejin, Song Chiyul, Yoo Jinho) ; 43 Striker/Breaker sans `role` (type dans `type_en`).
+- Vides : `main_stat_options` des sets, `weapon_type` des chasseurs, valeurs par niveau, stats FR/EN, 86 armes de SJW sans FR/icône, 8 sets d'événement.
 - Script de contrôle (ids uniques, FR+EN, source, date, icône) : à demander à la discussion 8.
-- Noms FR : accord d'Alexis (13/11) pour la lecture de pages ET les routes GET publiques de slagate (pas /api/query, pas de téléchargement d'images en masse). Une seule requête `GET api.slagate.com/api/references` donne tous les noms FR : `tools/apply_fr_names.py` (associations EN↔FR par traduction littérale). Faits : chasseurs 66/66 (6 rapprochements à confirmer : Jerim Yung, Baek Beast, Sian Halat (Igris), Holy Go Gun Hee, Lim Taegyu, Esil Radir), noyaux 18/18, ombres 15/15, runes 48/48, sets 32/40 + 172 pièces FR (les 8 sans FR sont des sets d'événement absents de l'API), pierres 43/50, armes de SJW 29/115.
-- Intégré (`tools/apply_fr_names2.py`) : pierres de bénédiction 59/59 avec nom FR et texte FR (rareté max ; l'API est plus récente que le wiki sur certaines valeurs) ; 9 pierres absentes du wiki ajoutées (nom EN : 3 connues par Netmarble, 6 à confirmer ; effets en FR seulement) ; runes : KO/JA pour les 48 + 29 runes absentes du wiki ajoutées (sans compétence parente ni valeurs). Catégorie pierre : 3 pierres où wiki ≠ API (Lightning Speed, Irresistible Force, Daily Quest Completion), wiki conservé.
 ## Besoin d'Alexis
-- Soutien de subjugation / preuves : une capture par semaine (effets changeants). Semaine 12/11 : soutien reçu ; preuves HOTM : pas de capture pour la semaine du 12/11 (Alexis n'en a pas) ; seule la semaine du 05/11 est connue, à ne pas supposer valable pour 12/11.
+- Une capture par semaine du soutien de subjugation et des preuves HOTM (pas de preuves 12/11 : Alexis n'en a pas).
 - Captures du GB ; règles POC/GB (05/11, 12/11) et HOTM 05/11 pour `data/rules/`.
-- Icônes manquantes : 86 armes de SJW et chasseurs, 8 sets d'événement (36 pièces), artefacts/armes hors API : pas d'image trouvée ; rien d'inventé.
 ## Demandes de modif du skill
 - rien
