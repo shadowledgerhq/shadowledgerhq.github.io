@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 2 — 13/11/2026 — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 3 — 13/11/2026 (après le 1er passage réel) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -46,7 +46,7 @@ Noms coréens et japonais : sources inven.co.kr et gamewith.jp/altema.jp (13/11/
 - Une chaîne qui obtient au moins une run classée est ajoutée automatiquement à `data/channels.json`.
 
 ### 1.5 Quota
-- Plafond codé : `config.quota_max_units = 6000` par passage, sur les 10 000 unités/jour de l'API. Le compteur d'unités est écrit dans le rapport (§5.4).
+- Plafond codé : `config.quota_max_units = 6000` par passage, sur les 10 000 unités/jour de l'API. Le compteur d'unités est écrit dans le rapport (§5.5).
 - Répartition indicative : 17 requêtes × 1 page = 1 700 unités, + pages 2 éventuelles ≤ 1 700, + playlists et détails < 100.
 - Erreur `quotaExceeded` : arrêter les recherches, continuer les autres étapes et signaler dans le rapport.
 
@@ -69,8 +69,15 @@ Noms coréens et japonais : sources inven.co.kr et gamewith.jp/altema.jp (13/11/
 
 - Une virgule ou un point suivi d'exactement 3 chiffres (et répété) = séparateur de milliers. Sinon = séparateur décimal.
 - **Nombres ignorés** : dates, années, `Lv.`/`niv.`, puissance (`CP`, `전투력`, `戦闘力`, `power`, `puissance`), numéros de porte, durées hors BOT.
-- **Plage plausible** par mode (`config.plausible`) : POC 1e12–1e16, HOTM 1 000–200 000, BOT 5–600 s, GB [EN ATTENTE]. Valeurs de départ **[À CONFIRMER]** ; un nombre hors plage est ignoré.
-- Plusieurs candidats plausibles : garder le plus fort (le plus court au BOT) comme provisoire et lister les autres dans `notes`.
+- **Plage plausible** par mode (`config.plausible`) : POC 1e12–1e16, HOTM 1 000–200 000, BOT 5–180 s (v3), GB [EN ATTENTE]. Valeurs de départ **[À CONFIRMER]** ; un nombre hors plage est ignoré.
+- **Choix du candidat (v3)** : priorité titre > description > sous-titres ; dans une même source, le **premier** candidat retenu (pas le plus fort). Les autres vont dans `notes`.
+- **Candidats exclus (v3)** :
+  - contexte hypothétique : nombre précédé de `can`, `could`, `possible`, `up to`, `max`, `~`, `가능`, `可能`, `目標`, `target` (liste `config.hypothese_mots`) ;
+  - chapitres de description : ligne qui commence par un horodatage (`0:12 …`), ou au moins 2 horodatages croissants dans la description ;
+  - au BOT, une durée en `m:ss` sans millisecondes trouvée dans la description (souvent un chapitre).
+- **Chrono BOT (v3)** : `\d{1,3}[.;:,]\d{3}` suivi ou non de `s` = secondes.millisecondes (`19.558`, `23;223s`) ; jamais lu comme un entier.
+- **Mots « semaine passée » (v3)** : `last week`, `저번 주`, `지난주`, `先週` dans le titre → note `semaine précédente ?`, la vidéo reste `a_verifier`.
+- **Mots-clés de mode (v3)** : mots courts (`bot`, `poc`, `gb`, `hotm`) seulement en mot entier.
 
 ### 2.3 Statut
 - Tout score du tri 1 est **provisoire** : `exact: false`, `confidence: a_verifier`, `score_source` = `titre` / `description` / `sous-titres`. Une légende de l'auteur (« Same strat get 132T ») est traitée de la même façon.
@@ -103,7 +110,7 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 - BOT : meilleur chrono (le plus court), **par variante** (§4.6). HOTM : meilleur score **par porte** (un fichier par porte).
 - POC et GB : total = **somme des 2 meilleures runs distinctes**, prises dans 1 ou 2 vidéos.
   - POC (confirmé par Alexis) : **une run = une équipe**. Total = meilleure run de l'équipe 1 (`1팀`) + meilleure run de l'équipe 2 (`2팀`). Si l'équipe n'est pas lisible : les 2 meilleures runs, en `a_verifier`. Deux runs de la même équipe ne s'additionnent jamais.
-  - GB : 2 meilleures runs distinctes ; notion d'équipe **[EN ATTENTE]**.
+  - GB : **désactivé dans le classement (v3)** tant que les écrans ne sont pas définis. Les lectures sont gardées dans `_lectures.json`, aucun fichier `gb.json`, les vidéos restent `en_cours`.
   - Une seule run trouvée → la ligne existe, `confidence: a_verifier`, `rank: null`.
 
 ### 4.2 Égalité
@@ -114,9 +121,11 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 - Un score provisoire est remplacé dès qu'une run exacte du même joueur est lue. Il n'est jamais additionné à une run exacte.
 
 ### 4.4 Doublons et ré-uploads
-- Même score exact, même mode (même porte au HOTM) = même run.
+- Règle appliquée seulement aux modes de `config.doublon_modes` = `["poc"]` (v3). Le score POC a 15 chiffres, et la règle est encore plus sûre si les 5 nombres du détail sont aussi identiques.
+- Mode concerné : même score exact, même mode = même run.
   - Même chaîne : compter la run une seule fois.
-  - Chaînes différentes : la run revient à la vidéo **la plus ancienne**. L'autre vidéo → `rejected`, raison `doublon`, avec `detail` = video_id d'origine.
+  - Chaînes différentes : la run revient à la vidéo **la plus ancienne**. La run en trop est retirée de l'autre vidéo. Cette vidéo n'est rejetée (`doublon`, `detail` = video_id d'origine) que si elle n'a plus aucune run.
+- BOT et HOTM (scores ronds ou chronos identiques possibles) : pas de dédoublonnage automatique. Même score sur 2 chaînes → les deux lignes sont gardées, note `doublon possible : <video_id>`, contrôle manuel (discussion 1).
 
 ### 4.5 Boss / semaine (option b : déduit des données)
 - Pour chaque mode (et chaque porte HOTM), lire le libellé du boss ou du stage (`stage`) sur l'écran.
@@ -127,8 +136,13 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 ### 4.6 BOT : deux variantes classées séparément (décision d'Alexis)
 - `season` : 時の戦場, saison de 49 jours, SJW autorisé. `challenge` : 時の戦場チャレンジ, 7 jours, mode chasseurs uniquement (source : altema.jp, à vérifier en jeu).
 - Les deux sont classées **chaque semaine**, dans deux fichiers séparés. On ne compare jamais une variante à l'autre.
-- Lecture de la variante sur l'écran : **[EN ATTENTE]** des écrans BOT. Indices utiles : libellé `チャレンジ` / équivalent coréen dans le titre ; absence de SJW = indice de `challenge`, mais pas une preuve.
-- Variante illisible → `a_verifier`, `rank: null`.
+- Lecture de la variante sur l'écran : **[EN ATTENTE]** des écrans BOT.
+- **Indice du titre (v3)** :
+  - `challenge`, `チャレンジ`, `챌린지` → `challenge` ;
+  - `S\d+-\d`, `season \d+`, `시즌 \d+`, `シーズン\d+` → `season`.
+  - Les deux indices ou aucun → variante inconnue. Indice accepté avec la note `variante d'après le titre` ; l'écran prime dès qu'il est lu.
+- Variante inconnue → `data/runs/<semaine>/bot-variante-inconnue.json`, `rank: null`, jamais publié sur le site.
+- HOTM, même principe : porte d'après le titre (`제 n관문`, `第n関門`, `gate n`) si l'écran est illisible ; sinon `hotm-gate-inconnue.json`, `rank: null`, jamais publié.
 
 ## 5. Fichiers de sortie
 
@@ -152,7 +166,12 @@ Une vidéo rejetée n'est jamais réanalysée.
 - `en_cours` : reprise au passage suivant, là où elle s'est arrêtée.
 - `termine` / `rejete` : jamais retraitée.
 
-### 5.4 Autres
+### 5.4 Fichiers internes (v3)
+- `data/runs/<semaine>/_lectures.json` : toutes les lectures de score des tris (entrée de `classement.py`).
+- `data/runs/<semaine>/_videos.json` : titre, chaîne, miniature, durée, `mode_guess`.
+- `processed.json[video].pc.sous_titres` : `fait` | `absent` | `erreur`.
+
+### 5.5 Autres
 - `data/channels.json` (nouveau) : `{"channel_id", "name", "uploads_playlist", "added_at", "source": "manuel | auto"}`.
 - `data/runs/<semaine>/_meta.json` : `{"week", "start_utc", "end_utc", "frozen": false, "frozen_at": null}`.
 - `data/runs/<semaine>/_rapport.md` : réécrit à chaque passage. Contenu : unités de quota, vidéos nouvelles / traitées / rejetées, runs `a_verifier`, alertes boss, erreurs. Lu par la tâche planifiée (discussion 7).
@@ -170,6 +189,7 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 
 - PC éteint : rien n'est perdu. Le passage suivant traite tout ce qui est `en_cours`. La semaine reste « en attente de gel » jusqu'au passage du PC, et le rapport du daily le signale.
 - Après le gel, une vidéo de la semaine gelée découverte en retard → `rejected`, raison `semaine_gelee`.
+- **Gel (v3)** : `pc.geler = false` tant que les tris 3-4 ne sont pas codés. On ne gèle jamais une semaine dont toutes les lignes sont provisoires. Une fois l'OCR en place : au gel, vidéo sans aucun score après le tri 4 → `pas_de_score` ; ligne seulement provisoire → archivée avec `rank: null` et la mention « non vérifié », jamais rejetée.
 - PC et Actions écrivent dans les mêmes fichiers : `git pull --rebase` avant chaque écriture, et une seule tentative de fusion automatique. En cas de conflit, arrêter et le signaler dans le rapport.
 
 ## 7. Points ouverts (ne bloquent pas le codage)

@@ -13,7 +13,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md
 | --- | --- |
 | POC | Power Of Calamity. Classement : dégâts max ; une run = une équipe, total = équipe 1 + équipe 2. |
 | BOT | Battlefield Of Time. Chrono le plus court (secondes). Deux classements : `season` (時の戦場, 49 j, SJW autorisé) et `challenge` (時の戦場チャレンジ, 7 j, chasseurs uniquement). |
-| GB | Guild Boss. Classement : Rage Count le plus élevé, somme des 2 runs. |
+| GB | Guild Boss. Classement : Rage Count le plus élevé, somme des 2 runs. Non classé tant que ses écrans ne sont pas définis. |
 | HOTM | Hall Of The Monarchs. Un classement **par porte** (제 n관문 / 第n関門) : points les plus élevés. 1 run par porte. |
 | RC | Rage Count, unité de score du GB. |
 | SJW | Sung Jin Woo. |
@@ -74,6 +74,21 @@ Champs supplémentaires :
   - POC, en plus : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
   - HOTM, en plus : `{"clear": 0, "proof_bonus": 0, "proof_level": null}` ; contrôle : clear + proof_bonus = score.
 - Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition.
+
+### Autres fichiers de l'étape 1 (détail : SPEC_ETAPE1.md §5)
+
+| Fichier | Contenu |
+| --- | --- |
+| `data/runs/<semaine>/bot-variante-inconnue.json`, `hotm-gate-inconnue.json` | Runs dont la variante BOT ou la porte HOTM est illisible ; `rank: null`, **jamais publiés** |
+| `data/runs/<semaine>/_lectures.json` | Toutes les lectures de score des tris ; entrée de `classement.py` |
+| `data/runs/<semaine>/_videos.json` | Par vidéo : titre, chaîne, miniature, durée, `mode_guess` |
+| `data/runs/<semaine>/_meta.json` | `{week, start_utc, end_utc, frozen, frozen_at}` |
+| `data/runs/<semaine>/_boss.json` | Boss / stage de référence déduit (mode, gate, libellé, nombre de vidéos) |
+| `data/runs/<semaine>/_rapport.md` | Rapport du dernier passage (quota, vidéos, `a_verifier`, alertes, erreurs) |
+| `data/processed.json` | Par video_id : état du traitement ; `pc.sous_titres` = `fait` \| `absent` \| `erreur` |
+| `data/channels.json` | `{channel_id, name, uploads_playlist, added_at, source: manuel \| auto}` |
+
+GB : **non classé** tant que ses écrans ne sont pas définis (lectures gardées dans `_lectures.json`, pas de `gb.json`).
 
 ### Build (data/builds/<semaine>/<mode>/<run_id>-<n>.json)
 
