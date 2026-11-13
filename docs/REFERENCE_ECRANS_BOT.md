@@ -24,3 +24,13 @@ Seul ce qui est visible est noté ; rien n'est supposé.
 - Les noms n'apparaissent pas sur la plupart des écrans : la reconnaissance se fait par **icônes** (banque d'icônes indispensable : artefacts, noyaux, compétences, armes, ombres, successeur).
 - Semaine du 12/11/2026 (confirmé par Alexis) : BOT avec SJW, ombres et successeur. Les règles changent chaque semaine (semaine précédente : BOT sans SJW, ni compétences ni bénédictions, mais avec ombres et successeur).
 - Les stats principales des persos ne sont pas visibles ici : onglet à fournir.
+
+## Écran de résultat (client anglais, capture du 13/11/2026)
+Source : 1 capture fournie par Alexis le 13/11/2026. Elle n'est pas copiée dans le dépôt (image de tiers). Seul ce qui est visible est noté ; rien n'est supposé.
+
+- **Titre et boss** : titre `Results`, nom du boss dessous (`Baruka`).
+- **Bloc gauche** : `Phase 1` 00:09.281 · `Phase 2` 00:14.986 · `Phase 3` 00:19.926 (en cyan). Ce sont des **temps cumulés**.
+- **Bandeau du bas** : losange « 1 » (sens inconnu), pseudo `ThenaX`, chrono 00:19.926, 3 icônes de chasseurs SSR + 2 icônes (sens inconnu).
+- **Haut droite** : `Play Time 00:19`.
+- **Score de la run** : chrono de la dernière phase (ici Phase 3), égal à celui du bandeau (00:19.926).
+- **Variante** : season ou challenge, non visible sur cet écran.
