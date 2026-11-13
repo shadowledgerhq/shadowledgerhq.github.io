@@ -7,9 +7,12 @@ la lecture reste `a_verifier`, jamais une valeur inventée.
 - lecture_bot(meta, ecran, config)          écran `Results` du BOT (v4) ; variante d'après les armes de SJW (v5)
 - lecture_gb_results(meta, ecran, config)   écran `Results` du GB (v5)
 - lectures_gb_record(meta, ecran, config)   écran `Guild Boss` > `Personal Record` du GB (v6) : 2 lectures (groupes 1 et 2)
+- lecture_hotm(meta, ecran, config)         écran RESULT du HOTM : clear + preuve = total = 이번 기록
+- lecture_poc(meta, ecran, config)          écran RESULT du POC : 이번 기록 (`sur` seulement si les 5 composants sont lus et égaux)
 """
 import re
 
+from hotm_ecran import lire_porte
 from tri1 import lecture_vide, variante_bot
 
 
@@ -110,3 +113,40 @@ def lectures_gb_record(meta, ecran, config, source="record"):
         lec["notes"] += [f"contrôle Personal Record : {p}" for p in pb]
         lectures.append(lec)
     return lectures
+
+
+def lecture_hotm(meta, ecran, config, source="video-complete"):
+    """SPEC §3.2 : `클리어` + `증명 보너스` = `합산 결과` = `이번 기록` -> sûr. `증명 보너스` = niveau × 100 :
+    alerte seulement. Jamais `기존 기록`. La porte vient du titre (l'écran de composition n'est pas lu ici)."""
+    clear, bonus, total, record = (ecran.get(k) for k in ("clear", "proof_bonus", "total", "record"))
+    score = record if record is not None else total
+    if score is None:
+        return None
+    ok = None not in (clear, bonus, total, record) and clear + bonus == total == record
+    lec = lecture_vide(meta, "hotm")
+    porte = lire_porte(meta.get("title") or "")
+    lec.update(score=score, score_source=source, exact=ok, confidence="sur" if ok else "a_verifier",
+               stage=ecran.get("stage"), t=ecran.get("t"), gate=porte["number"] if porte else None,
+               detail={"clear": clear, "proof_bonus": bonus, "proof_level": ecran.get("proof_level")})
+    if not ok:
+        lec["notes"].append("contrôle HOTM : clear + preuve ≠ total ≠ 이번 기록 (ou illisible)")
+    niveau = ecran.get("proof_level")
+    if ok and niveau is not None and bonus != niveau * 100:
+        lec["notes"].append(f"alerte : bonus de preuve {bonus} ≠ niveau {niveau} × 100")
+    return lec
+
+
+def lecture_poc(meta, ecran, config, source="video-complete"):
+    """SPEC §3.2 : `이번 기록` = SJW + successeur + chasseurs 1, 2 et 3. Sans les 5 composants lus : a_verifier."""
+    record = ecran.get("record")
+    if record is None:
+        return None
+    parts = [ecran.get("sjw"), ecran.get("successor"), *(ecran.get("hunters") or [])]
+    ok = len(parts) == 5 and None not in parts and sum(parts) == record
+    lec = lecture_vide(meta, "poc")
+    lec.update(score=record, score_source=source, exact=ok, confidence="sur" if ok else "a_verifier",
+               stage=ecran.get("stage"), t=ecran.get("t"), team=ecran.get("team"),
+               detail={"sjw": ecran.get("sjw"), "successor": ecran.get("successor"), "hunters": ecran.get("hunters")})
+    if not ok:
+        lec["notes"].append("contrôle POC non fait : composants (SJW, successeur, 3 chasseurs) non lus ou somme différente")
+    return lec

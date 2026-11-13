@@ -14,14 +14,15 @@
   - `ecrans.py` (OCR [EN ATTENTE], fonctions prêtes) : `lecture_bot` (phases croissantes, dernière phase = chrono, Play Time tronqué, `player_ingame`, variante d'après les armes de SJW, l'écran prime sur le titre), `lecture_gb_results` (Player's Score + 6 Hunter Rank = Final Score), `lectures_gb_record` (Total RC = G1 + G2).
   - `player_ingame` sur les lignes BOT ; « doublon possible » limité à BOT/HOTM. Semaine 2026-11-12 relue : `gb.json` (2 lignes provisoires).
   - Test de l'exemple §4.7 (167 + 165 = 332, puis Results 165 RC / 15 763 121 797 048 : remplace le groupe 2, total 332) : OK. 45 tests.
+- **Tris 3-4 codés dans `pc.py`** (jamais lancés sur de vraies images : tesseract/yt-dlp absents ici, textes OCR synthétiques tirés de la spec) : `segments_tri` (tri 3 : 10 s + 30 s, 1 img/2 s ; tri 4 : 1 img/10 s), `Outils.telecharger/images/ocr` (yt-dlp 720p → ffmpeg → tesseract eng+kor+jpn, image entière), `ocr_ecrans.py` (détection des écrans BOT, GB Results/Record, HOTM, POC par leurs libellés → valeurs → `ecrans.py`), tri 4 seulement si le tri 3 ne suffit pas (BOT/HOTM 1 lecture sûre ; POC/GB 2), lectures d'écran remplaçant celles du texte, une lecture par écran distinct, idempotent. Au gel (`pc.geler`) : `pas_de_score` + « non vérifié ». `docs/PC_ALEXIS.md` à jour (Tesseract).
 - Tests v3 (vrais cas du 1er passage : « Last Week … 133T (Can 150T) », « 19.558 バルカ », « 23;223s », chapitres).
 - Non codé (v3) : critère « 5 nombres du détail identiques » du doublon POC (attend l'OCR) ; au gel avec OCR : `pas_de_score`, lignes provisoires archivées « non vérifié ».
 ## En cours
 - 2 lectures de description (E4lHBPoZeKs « 00:32 », wFFdg1gcZpE « 35 sec ») non relues sans clé : le prochain `daily` (clé présente) les rejoue seul.
 ## À faire
-- Tris 3-4 (OCR) dans `pc.py` puis `pc.geler = true` ; tri 2 (miniatures). [EN ATTENTE] images BOT/GB, recadrages.
+- Essai réel des tris 3-4 sur le PC, puis recadrages par zone et `pc.geler = true` ; tri 2 (miniatures, daily). Pseudo en jeu et armes de SJW (BOT) : icônes, [EN ATTENTE]. POC : les 5 composants (3 chasseurs) non lus, donc jamais « sûr ».
 ## Besoin d'Alexis
-- Installer le PC (docs/PC_ALEXIS.md).
+- Installer le PC (docs/PC_ALEXIS.md, avec Tesseract) et lancer `py -3 pipeline\\pc.py daily --no-git --max 2` ; me coller le début de `_lectures.json` ou une capture mal lue.
 ## Demandes de modif du skill
 - À valider par la discussion 1 (choix de Code, §4.7) : marge de 60 min sur `Time Left in Season` (`gb.record_tolerance_minutes`, le temps restant est arrondi à l'heure) ; une run Results se rattache au groupe de même RC si ses dégâts dépassent ceux du record (cas de l'exemple : 15,76T ≠ 15,55T arrondi).
 - `gb` n'est pas dans `mode_keywords` (« GB » = aussi gigaoctet) : à décider par la discussion 1 si le mot court `gb` doit servir d'indice.

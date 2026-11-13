@@ -74,7 +74,21 @@
     "whisper_model": "small",
     "whisper_max_minutes": 15,
     "max_videos": 300,
-    "geler": false
+    "geler": false,
+    "images": {
+      "_doc": "Tris 3-4 (SPEC §3). OCR sur l'image ENTIÈRE : les recadrages par zone sont [EN ATTENTE] des images de référence. Langues tesseract à installer : eng, kor, jpn.",
+      "actif": true,
+      "format_video": "bv*[height<=720]/b[height<=720]",
+      "ffmpeg": "ffmpeg",
+      "tesseract": "tesseract",
+      "ocr_langues": "eng+kor+jpn",
+      "tri3_debut_s": 10,
+      "tri3_fin_s": 30,
+      "tri3_pas_s": 2,
+      "tri4_pas_s": 10,
+      "max_videos": 15,
+      "max_minutes": 30
+    }
   },
   "_a_confirmer": [
     "queries.poc « 俺アラ 災厄 » (nom japonais du POC)",

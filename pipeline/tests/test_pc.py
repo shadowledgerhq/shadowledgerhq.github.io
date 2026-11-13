@@ -22,6 +22,12 @@ INSTANT = datetime(2026, 11, 13, 19, 30, tzinfo=timezone.utc)   # vendredi 20:30
 JEUDI = datetime(2026, 11, 19, 0, 15, tzinfo=timezone.utc)      # jeudi 01:15 Paris : semaine du 12/11 écoulée
 
 
+def config_sans_images():
+    config = charger_config()
+    config["pc"]["images"]["actif"] = False   # tris 3-4 testés dans test_images
+    return config
+
+
 class FauxOutils:
     def __init__(self, textes, erreurs=()):
         self.textes, self.erreurs, self.appels = textes, set(erreurs), []
@@ -57,7 +63,7 @@ def test_vtt():
 
 
 def test_passage_daily_idempotent():
-    config = charger_config()
+    config = config_sans_images()
     with tempfile.TemporaryDirectory() as tmp:
         d = monde(tmp)
         o = FauxOutils({"a": VTT, "d": "même run 150T", "c": ""}, erreurs=["b"])
@@ -69,7 +75,7 @@ def test_passage_daily_idempotent():
         assert "sous-titres : 150T" in lec["d"]["notes"]
         p = d.processed()
         assert [p[v]["pc"]["sous_titres"] for v in "abcd"] == ["fait", "erreur", "absent", "fait"]
-        assert any("HTTP 429" in a for a in r["alertes"]) and any("non gérés [EN ATTENTE]" in a for a in r["alertes"])
+        assert any("HTTP 429" in a for a in r["alertes"]) and any("[EN ATTENTE]" in a for a in r["alertes"])
         assert "pc-daily" in (Path(tmp) / f"data/runs/{SEM}/_rapport.md").read_text(encoding="utf-8")
         # 2e passage : seule la vidéo en erreur est retentée, rien n'est doublé
         avant = json.dumps(d.lectures(SEM))
@@ -79,7 +85,7 @@ def test_passage_daily_idempotent():
 
 
 def test_weekly_gel_et_ouverture():
-    config = charger_config()
+    config = config_sans_images()
     with tempfile.TemporaryDirectory() as tmp:
         d = monde(tmp)
         r = pc.lancer("weekly", JEUDI, d, config, FauxOutils({}))
@@ -102,7 +108,7 @@ def test_weekly_gel_et_ouverture():
 
 
 def test_outil_absent():
-    config = charger_config()
+    config = config_sans_images()
     with tempfile.TemporaryDirectory() as tmp:
         d = monde(tmp)
         class Absent(FauxOutils):
