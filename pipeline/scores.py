@@ -32,14 +32,24 @@ _RE_NOMBRE = re.compile(
     re.IGNORECASE,
 )
 
-_RE_CHRONO = re.compile(
-    r"(?<![A-Za-z\d.,:])(?:"
-    r"(?P<m3>\d+)\s*(?:m|min|분|分)\s*(?P<s3>\d+)(?:[.,](?P<ms3>\d{1,3}))?\s*(?:s|sec|초|秒)"
-    r"|(?:(?P<h1>\d{1,2}):)?(?P<m1>\d{1,2}):(?P<s1>\d{2})(?:[.,](?P<ms1>\d{1,3}))?(?![\d:])"
-    r"|(?P<s2>\d+)(?:[.,](?P<ms2>\d{1,3}))?\s*(?:seconds?|secs?|s|초|秒)"
-    r")(?![a-z])",
-    re.IGNORECASE,
-)
+def _chrono(avec_millis):
+    """Regex des chronos. `avec_millis` (BOT) ajoute v3 : \\d{1,3}[.;:,]\\d{3} = secondes.millisecondes,
+    avec ou sans unité (19.558 / 23;223s) ; hors BOT cette forme est un nombre à milliers (131,449,789)."""
+    s4 = (r"|(?P<s4>\d{1,3})[.;:,](?P<ms4>\d{3})(?!\d|[.;:,]\d)(?:\s*(?:seconds?|secs?|s|초|秒))?"
+          if avec_millis else "")
+    return re.compile(
+        r"(?<![A-Za-z\d.,:;])(?:"
+        r"(?P<m3>\d+)\s*(?:m|min|분|分)\s*(?P<s3>\d+)(?:[.,](?P<ms3>\d{1,3}))?\s*(?:s|sec|초|秒)"
+        r"|(?:(?P<h1>\d{1,2}):)?(?P<m1>\d{1,2}):(?P<s1>\d{2})(?:[.,](?P<ms1>\d{1,3}))?(?![\d:])"
+        + s4 +
+        r"|(?P<s2>\d+)(?:[.,](?P<ms2>\d{1,3}))?\s*(?:seconds?|secs?|s|초|秒)"
+        r")(?![a-z])",
+        re.IGNORECASE,
+    )
+
+
+_RE_CHRONO = _chrono(True)
+_RE_CHRONO_STD = _chrono(False)
 
 _MOIS = (r"(?:jan|feb|fev|fév|mar|apr|avr|may|mai|jun|juin|jul|juil|aug|aoû|aou|sep|oct|nov|dec|déc)"
          r"[a-zéû]*\.?")
@@ -118,7 +128,7 @@ def _valeur_cjk(brut):
 def nombres(texte):
     """Scores sous forme de nombre (hors chronos, dates, niveaux, puissance, portes)."""
     texte = texte or ""
-    propre = _masquer(texte, _RE_DATES + [_RE_CHRONO])
+    propre = _masquer(texte, _RE_DATES + [_RE_CHRONO_STD])
     res = []
     for m in _RE_NOMBRE.finditer(propre):
         brut = m.group(0).rstrip()
@@ -153,6 +163,8 @@ def chronos(texte):
             h, mi, s, ms = 0, int(g["m3"]), int(g["s3"]), g["ms3"]
         elif g["s1"] is not None:
             h, mi, s, ms = int(g["h1"] or 0), int(g["m1"]), int(g["s1"]), g["ms1"]
+        elif g.get("s4") is not None:
+            h, mi, s, ms = 0, 0, int(g["s4"]), g["ms4"]
         else:
             h, mi, s, ms = 0, 0, int(g["s2"]), g["ms2"]
         if (g["s1"] is not None or g["s3"] is not None) and s >= 60:
@@ -162,6 +174,42 @@ def chronos(texte):
         res.append({"valeur": valeur, "arrondi": not ms or len(ms) < 3,
                     "brut": m.group(0).strip(), "pos": m.start()})
     return res
+
+
+_RE_CHAPITRE = re.compile(r"^[ \t\W_]{0,6}(?:\d{1,2}:)?\d{1,2}:\d{2}(?![\d.,:])(?=[ \t\-–—:|)\]]|$)[^\n]*", re.MULTILINE)
+
+
+def masquer_chapitres(description):
+    """v3 : les chapitres d'une description (lignes « 00:32 Titre », au moins 2) ne sont pas des scores."""
+    if len(_RE_CHAPITRE.findall(description or "")) < 2:
+        return description or ""
+    return _RE_CHAPITRE.sub(lambda m: " " * len(m.group(0)), description)
+
+
+def _mot_present(mot, texte):
+    if mot.isascii():
+        return re.search(rf"(?<![a-z0-9]){re.escape(mot)}(?![a-z0-9])", texte) is not None
+    return mot in texte
+
+
+def est_hypothese(texte, debut, fin, config):
+    """v3 : nombre précédé (écart <= 3 signes) ou suivi (mots CJK) d'un mot de config.hypothese_mots."""
+    bas = texte.lower()
+    avant = re.split(r"[\n!?|]|\.\s", bas[max(0, debut - 24):debut])[-1].rstrip(" \t(:：-–—[")
+    apres = bas[fin:fin + 8].lstrip(" ")
+    for mot in (config or {}).get("hypothese_mots", []):
+        mot = mot.lower()
+        if avant.endswith(mot) and (not mot.isascii() or not avant[:-len(mot)][-1:].isalnum()):
+            return True
+        if not mot.isascii() and apres.startswith(mot):
+            return True
+    return False
+
+
+def semaine_passee(texte, config):
+    """v3 : le texte parle de la semaine (ou saison) précédente -> note « semaine précédente ? »."""
+    bas = (texte or "").lower()
+    return any(_mot_present(m.lower(), bas) for m in (config or {}).get("semaine_passee_mots", []))
 
 
 def plage(mode, config):
@@ -177,26 +225,31 @@ def candidats(texte, mode, plage_mode):
 
 
 def choisir(cands, mode):
-    """(meilleur, autres) : le plus fort, ou le plus court au BOT. Doublons de valeur fusionnés."""
+    """v3 : (premier candidat du texte, autres). « Premier » = le plus tôt dans le texte (les valeurs
+    en double sont fusionnées) ; la priorité entre sources (titre > description > sous-titres) est
+    faite par l'appelant (tri1.lectures_texte)."""
     if not cands:
         return None, []
     vus, uniques = set(), []
-    for c in cands:
+    for c in sorted(cands, key=lambda c: c["pos"]):
         if c["valeur"] not in vus:
             vus.add(c["valeur"])
             uniques.append(c)
-    tri = sorted(uniques, key=lambda c: c["valeur"], reverse=(mode != "bot"))
-    return tri[0], tri[1:]
+    return uniques[0], uniques[1:]
 
 
-def extraire(texte, mode, config):
-    """Meilleur score provisoire du texte pour le mode.
+def extraire(texte, mode, config, source=None):
+    """Premier score provisoire du texte pour le mode (v3).
+    `source` = "description" : les chapitres sont ignorés.
     Retourne NON_GERE (mode sans plage), None (rien) ou
-    {"valeur", "arrondi", "brut", "autres": [bruts]}."""
+    {"valeur", "arrondi", "brut", "autres": [bruts], "semaine_passee": bool}."""
     p = plage(mode, config)
     if p is None:
         return NON_GERE
-    meilleur, autres = choisir(candidats(texte, mode, p), mode)
+    texte = texte or ""
+    lu = masquer_chapitres(texte) if source == "description" else texte
+    cands = [c for c in candidats(lu, mode, p) if not est_hypothese(lu, c["pos"], c["pos"] + len(c["brut"]), config)]
+    meilleur, autres = choisir(cands, mode)
     if meilleur is None:
         return None
-    return {**meilleur, "autres": [a["brut"] for a in autres]}
+    return {**meilleur, "autres": [a["brut"] for a in autres], "semaine_passee": semaine_passee(texte, config)}

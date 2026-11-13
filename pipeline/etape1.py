@@ -3,12 +3,15 @@
   python3 pipeline/etape1.py daily  [--force] [--maintenant ISO]   recherche + tri 1 + classement + rapport
   python3 pipeline/etape1.py weekly [--force] [--maintenant ISO]   dernière recherche de la semaine écoulée
   python3 pipeline/etape1.py classement [--semaine AAAA-MM-JJ]     recalcul seul + rapport
+  python3 pipeline/etape1.py relire [--semaine AAAA-MM-JJ]         relit les scores du texte avec les règles actuelles du tri 1,
+                                                                   puis recalcule (descriptions : clé API requise)
 
 Hors créneau (heure de Paris) ou passage du jour déjà fait : sort sans rien faire (sauf --force).
 Tri 2 (miniatures) : recadrages OCR [EN ATTENTE], les vidéos restent en_cours avec pc_needed.
 Le commit est fait par le workflow, pas par ce script.
 """
 import argparse
+import json
 import os
 
 import classement
@@ -80,6 +83,54 @@ def passage_recherche(d, config, week, debut, fin, gelee, instant):
     return resume
 
 
+def relire(d, config, week, api=None):
+    """Rejoue le tri 1 (titre, et description si `api`) sur les vidéos de la semaine avec les règles
+    actuelles (v3). Une lecture titre/description/sous-titres existante de la même vidéo et du même mode
+    est remplacée ; sans `api`, les lectures issues d'une description sont gardées (non rejouables
+    hors ligne) et marquées. Retourne un résumé pour le rapport."""
+    processed, videos, lectures = d.processed(), d.videos(week), d.lectures(week)
+    ids = [v for v in videos if processed.get(v, {}).get("status", "en_cours") != "rejete"]
+    descriptions, erreurs = {}, []
+    if api:
+        try:
+            for i in range(0, len(ids), 50):
+                r = api.appel("videos", part="snippet", id=",".join(ids[i:i + 50]))
+                for it in r.get("items", []):
+                    descriptions[it["id"]] = it.get("snippet", {}).get("description", "")
+        except Exception as e:  # quota ou réseau : on continue avec ce qu'on a
+            erreurs.append(f"relecture des descriptions interrompue : {e}")
+    res = {"videos": len(ids), "changees": 0, "descriptions_relues": len(descriptions),
+           "descriptions_non_relues": 0, "erreurs": erreurs}
+    sources = ("titre", "description", "sous-titres")
+    for vid in ids:
+        textes = [("titre", videos[vid]["title"])]
+        if vid in descriptions:
+            textes.append(("description", descriptions[vid]))
+        nouvelles, _ = lectures_texte(videos[vid], textes, config)
+        avant = [l for l in lectures if l["video_id"] == vid]
+        modes_nouveaux = {n["mode"] for n in nouvelles}
+        gardees = []
+        for l in avant:
+            src = l["score_source"]
+            if (src == "titre" or (src == "description" and (vid in descriptions or l["mode"] in modes_nouveaux))
+                    or (src == "sous-titres" and l["mode"] in modes_nouveaux)):
+                continue  # remplacée par la relecture (priorité titre > description > sous-titres)
+            if l["score_source"] == "description" and vid not in descriptions:
+                res["descriptions_non_relues"] += 1
+                if "description non relue (règles v3)" not in l["notes"]:
+                    l["notes"].append("description non relue (règles v3)")
+            gardees.append(l)
+        lectures = [l for l in lectures if l["video_id"] != vid] + gardees + nouvelles
+        if json.dumps(avant, sort_keys=True) != json.dumps(gardees + nouvelles, sort_keys=True):
+            res["changees"] += 1
+    d.ecrire(f"runs/{week}/_lectures.json", lectures)
+    meta = d.meta(week)
+    if meta is not None and not erreurs and (api or not res["descriptions_non_relues"]):
+        meta["tri1_version"] = config.get("tri1_version")
+        d.ecrire(f"runs/{week}/_meta.json", meta)
+    return res
+
+
 def ecrire_rapport(d, week, passage, instant, resume, res, alertes):
     proc = [p for p in d.processed().values() if p.get("week") == week]
     compte = {s: sum(1 for p in proc if p["status"] == s) for s in ("en_cours", "termine", "rejete")}
@@ -131,6 +182,11 @@ def lancer(passage, instant, force=False, semaine=None, d=None, config=None):
         debut, fin_semaine = bornes(week)
         fin = instant if passage == "daily" else fin_semaine
         resume = passage_recherche(d, config, week, debut, fin, meta.get("frozen"), instant)
+        if not meta.get("frozen") and meta.get("tri1_version") != config.get("tri1_version") and os.environ.get("YOUTUBE_API_KEY"):
+            # règles du tri 1 changées depuis la dernière lecture de la semaine : relecture automatique
+            r = relire(d, config, week, ApiYouTube(os.environ["YOUTUBE_API_KEY"], config["quota_max_units"]))
+            alertes.append(f"tri 1 relu (version {config.get('tri1_version')}) : {r['changees']} vidéo(s) modifiée(s)")
+            meta = d.meta(week)
         if passage == "daily":
             prec = d.meta(semaine_precedente(week))
             if prec and not prec.get("frozen"):
@@ -140,6 +196,14 @@ def lancer(passage, instant, force=False, semaine=None, d=None, config=None):
         d.ecrire(f"runs/{week}/_meta.json", meta)
     else:
         week = semaine or id_semaine(instant)
+        if passage == "relire":
+            r = relire(d, config, week, ApiYouTube(os.environ["YOUTUBE_API_KEY"], config["quota_max_units"])
+                       if os.environ.get("YOUTUBE_API_KEY") else None)
+            alertes.append(f"tri 1 relu : {r['changees']} vidéo(s) modifiée(s) sur {r['videos']}")
+            if r["descriptions_non_relues"]:
+                alertes.append(f"{r['descriptions_non_relues']} lecture(s) de description non relue(s) "
+                               "(YOUTUBE_API_KEY absente) : relancer avec la clé ou attendre le prochain passage daily")
+            alertes += r["erreurs"]
     res = classement.calculer(week, d, config, instant)
     ecrire_rapport(d, week, passage, instant, resume, res, alertes)
     print((d.data / "runs" / week / "_rapport.md").read_text(encoding="utf-8"))
@@ -147,7 +211,7 @@ def lancer(passage, instant, force=False, semaine=None, d=None, config=None):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("passage", choices=["daily", "weekly", "classement"])
+    ap.add_argument("passage", choices=["daily", "weekly", "classement", "relire"])
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--maintenant", help="instant simulé, ISO 8601 (tests)")
     ap.add_argument("--semaine")

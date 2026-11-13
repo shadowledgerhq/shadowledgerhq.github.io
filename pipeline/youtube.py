@@ -53,7 +53,8 @@ def deviner_modes(texte, config):
         if mode.startswith("_"):
             continue
         for mot in mots:
-            motif = rf"\b{re.escape(mot)}\b" if mot.isascii() else re.escape(mot)
+            # v3 : mot-clé latin = mot entier (« bot » n'est pas dans « robot »), même collé à du CJK
+            motif = rf"(?<![a-z0-9]){re.escape(mot)}(?![a-z0-9])" if mot.isascii() else re.escape(mot)
             if re.search(motif, texte):
                 modes.add(mode)
                 break

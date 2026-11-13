@@ -13,9 +13,9 @@
     "published_at": "2026-11-12T11:49:17+01:00",
     "lang": "ko",
     "score": {
-      "total": 150000000000000,
+      "total": 133000000000000,
       "runs": [
-        150000000000000
+        133000000000000
       ],
       "unit": "damage"
     },
@@ -23,7 +23,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 150T; autres candidats : 133T; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : 133T; semaine précédente ?; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "zFsAGI_xyOQ",

@@ -1,7 +1,7 @@
 """Calcul des classements de la semaine (docs/SPEC_ETAPE1.md §4-5). Idempotent.
 
 Entrée : data/runs/<semaine>/_lectures.json (une entrée par score lu par les tris).
-Sorties : poc.json, gb.json, bot-season.json, bot-challenge.json, hotm-gate-<n>.json,
+Sorties : poc.json, bot-season.json, bot-challenge.json, hotm-gate-<n>.json,
 _boss.json ; mises à jour de rejected/<semaine>.json, processed.json, channels.json.
 
 Usage : python3 pipeline/classement.py [AAAA-MM-JJ]   (défaut : semaine en cours)
@@ -48,12 +48,22 @@ def _tri_score(runs, mode):
 
 def dedoublonner(runs, config):
     """Retourne (runs gardées, doublons [(run, video_id d'origine)])."""
-    modes = config.get("doublon_modes", ["poc", "bot", "gb", "hotm"])
+    modes = config.get("doublon_modes", ["poc"])
     groupes = defaultdict(list)
     for r in runs:
         if r["exact"] and r["mode"] in modes:
             groupes[(r["_cle"], r["score"])].append(r)
     retires, doublons = set(), []
+    # v3 : hors `doublon_modes` (BOT, HOTM), rien n'est retiré : simple note « doublon possible »
+    possibles = defaultdict(list)
+    for r in runs:
+        if r["exact"] and r["mode"] not in modes:
+            possibles[(r["_cle"], r["score"])].append(r)
+    for groupe in possibles.values():
+        if len({r["channel_id"] for r in groupe}) >= 2:
+            for r in groupe:
+                if "doublon possible" not in r["notes"]:
+                    r["notes"].append("doublon possible")
     for groupe in groupes.values():
         if len(groupe) < 2:
             continue
@@ -234,8 +244,9 @@ def calculer(week, d=None, config=None, horloge=None):
 
     rejetes = d.tous_rejetes()
     runs = []
+    modes_classes = config.get("modes_classement", ["poc", "bot", "hotm"])  # v3 : GB lu mais pas classé
     for lec in d.lectures(week):
-        if lec["video_id"] in rejetes or lec.get("score") is None:
+        if lec["video_id"] in rejetes or lec.get("score") is None or lec["mode"] not in modes_classes:
             continue
         r = {**lec, "notes": list(lec.get("notes", []))}
         r["_cle"] = cle_classement(r, config)
@@ -289,7 +300,10 @@ def calculer(week, d=None, config=None, horloge=None):
     if dossier.exists():
         anciens = {p.stem for p in dossier.glob("*.json") if not p.stem.startswith("_")}
     for cle in sorted(anciens | set(fichiers)):
-        d.ecrire(f"runs/{week}/{cle}.json", fichiers.get(cle, []))
+        if cle in fichiers:
+            d.ecrire(f"runs/{week}/{cle}.json", fichiers[cle])
+        else:  # classement devenu vide (ou mode retiré du classement, ex. gb.json) : pas de fichier
+            (dossier / f"{cle}.json").unlink()
     d.ecrire(f"runs/{week}/_boss.json", boss)
     d.ecrire(f"rejected/{week}.json", rejected)
     d.ecrire("processed.json", processed)

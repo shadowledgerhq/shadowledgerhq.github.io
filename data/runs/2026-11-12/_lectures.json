@@ -12,14 +12,14 @@
     "t": null,
     "stage": null,
     "team": null,
-    "score": 150000000000000,
+    "score": 133000000000000,
     "score_source": "titre",
     "exact": false,
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 150T",
-      "autres candidats : 133T"
+      "score provisoire (titre) : 133T",
+      "semaine précédente ?"
     ]
   },
   {
@@ -41,8 +41,7 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 19.754s",
-      "description : 0:08"
+      "score provisoire (titre) : 19.754s"
     ]
   },
   {
@@ -52,7 +51,7 @@
     "published_at": "2026-11-13T05:44:18Z",
     "lang": "ko",
     "mode": "bot",
-    "bot_variant": null,
+    "bot_variant": "season",
     "gate": null,
     "hunter_mode": null,
     "t": null,
@@ -74,20 +73,19 @@
     "published_at": "2026-11-12T19:12:47Z",
     "lang": "en",
     "mode": "bot",
-    "bot_variant": null,
+    "bot_variant": "season",
     "gate": null,
     "hunter_mode": null,
     "t": null,
     "stage": null,
     "team": null,
-    "score": 223.0,
+    "score": 23.223,
     "score_source": "titre",
     "exact": false,
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 223s",
-      "description : 0:06"
+      "score provisoire (titre) : 23;223s"
     ]
   },
   {
@@ -109,7 +107,8 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (description) : 35 sec"
+      "score provisoire (description) : 35 sec",
+      "description non relue (règles v3)"
     ]
   },
   {
@@ -125,14 +124,13 @@
     "t": null,
     "stage": null,
     "team": null,
-    "score": 12.0,
-    "score_source": "description",
+    "score": 19.558,
+    "score_source": "titre",
     "exact": false,
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (description) : 0:12",
-      "autres candidats : 0:56"
+      "score provisoire (titre) : 19.558"
     ]
   },
   {
@@ -155,7 +153,8 @@
     "detail": {},
     "notes": [
       "score provisoire (description) : 00:32",
-      "autres candidats : 01:01, 01:45, 03:49"
+      "autres candidats : 01:01, 01:45, 03:49",
+      "description non relue (règles v3)"
     ]
   },
   {

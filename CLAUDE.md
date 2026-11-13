@@ -36,6 +36,6 @@ Les sessions Claude Code sur ce dépôt servent surtout aux discussions **8 — 
 
 - Contrôle de la base : `python3 pipeline/check_db.py` (ajouter `--verbose` pour lister tous les avertissements). Code de sortie 1 s'il y a une erreur bloquante ; écrase `data/db/_rapport.md`. Lancé aussi par `.github/workflows/check-db.yml` à chaque push touchant `data/db/` ou `data/icons/`.
 - Tests : `python3 -m pytest -q pipeline/tests` (ou chaque fichier `python3 pipeline/tests/test_<x>.py`).
-- Pipeline étape 1 (stdlib, Python ≥ 3.9) : `python3 pipeline/etape1.py daily|weekly [--force] [--maintenant ISO]` (recherche YouTube + tri 1 + classement + rapport ; clé dans la variable `YOUTUBE_API_KEY`) ; `python3 pipeline/etape1.py classement [--semaine AAAA-MM-JJ]` ou `python3 pipeline/classement.py [AAAA-MM-JJ]` (recalcul seul).
+- Pipeline étape 1 (stdlib, Python ≥ 3.9) : `python3 pipeline/etape1.py daily|weekly [--force] [--maintenant ISO]` (recherche YouTube + tri 1 + classement + rapport ; clé dans la variable `YOUTUBE_API_KEY`) ; `python3 pipeline/etape1.py classement [--semaine AAAA-MM-JJ]` ; `python3 pipeline/etape1.py relire [--semaine …]` (rejoue le tri 1 avec les règles actuelles, puis recalcule) ou `python3 pipeline/classement.py [AAAA-MM-JJ]` (recalcul seul).
 - Paramètres de l'étape 1 : `pipeline/config/etape1.json` (requêtes, plages plausibles, quota, créneaux).
 - Analyse porte × mode HOTM : `python3 pipeline/analyse_porte_mode.py`.

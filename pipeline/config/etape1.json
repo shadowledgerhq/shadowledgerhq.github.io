@@ -39,12 +39,25 @@
     "hotm": ["hall of the monarchs", "hotm", "군주의 회랑", "君主の回廊"]
   },
   "plausible": {
-    "_doc": "Plages plausibles du tri 1 (min, max inclus). null = mode non géré [EN ATTENTE].",
+    "_doc": "Plages plausibles du tri 1 (min, max inclus). null = mode non géré [EN ATTENTE]. v3 : BOT 5–180 s.",
     "poc": [1e12, 1e16],
     "hotm": [1000, 200000],
-    "bot": [5, 600],
+    "bot": [5, 180],
     "gb": null
   },
+  "hypothese_mots": ["can", "could", "maybe", "might", "if", "possible", "potentially", "target", "goal", "aiming", "expected", "theoretical", "estimated",
+                      "peut", "pourrait", "objectif", "théorique", "si",
+                      "가능", "예상", "목표", "이론상", "도전",
+                      "可能", "予想", "目標", "理論値", "目指", "预计", "目标", "理论"],
+  "semaine_passee_mots": ["last week", "previous week", "last season", "semaine passée", "semaine dernière", "semaine précédente",
+                           "지난주", "저번주", "지난 주", "先週", "上周", "上週"],
+  "bot_variante_mots": {
+    "challenge": ["challenge", "チャレンジ", "챌린지", "挑战"],
+    "season": ["season", "シーズン", "시즌", "赛季"]
+  },
+  "doublon_modes": ["poc"],
+  "modes_classement": ["poc", "bot", "hotm"],
+  "tri1_version": 3,
   "boss_min_videos": 3,
   "fichier_bot_variante_inconnue": "bot-variante-inconnue",
   "fichier_hotm_porte_inconnue": "hotm-gate-inconnue",
@@ -68,6 +81,7 @@
     "queries.gb « 俺アラ ギルドボス »",
     "queries.hotm « solo leveling arise hall of the monarchs » (nom anglais)",
     "plausible.* (valeurs de départ, à ajuster après les premières semaines)",
+    "hypothese_mots, semaine_passee_mots, bot_variante_mots : listes de départ écrites par Code (v3), à compléter par la discussion 1",
     "libellés RESULT en japonais et autres langues"
   ]
 }

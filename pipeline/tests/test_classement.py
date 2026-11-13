@@ -122,6 +122,34 @@ def test_boss_non_controle_et_gel():
     assert not (d2.data / "runs" / W / "hotm-gate-1.json").exists()
 
 
+def test_v3_gb_lu_mais_pas_classe():
+    lectures = [lec("g1", "UCG", "gb", 123456, exact=False, confidence="a_verifier"), lec("p1", "UCP", "poc", 100 * T, team=1)]
+    d = preparer(lectures)
+    (d.data / "runs" / W / "gb.json").write_text("[]")           # ancien fichier : retiré
+    res = calculer(W, d, CONFIG, HORLOGE)
+    assert "gb" not in res["fichiers"] and not (d.data / "runs" / W / "gb.json").exists()
+    assert len(d.lectures(W)) == 2                                # lectures conservées
+
+
+def test_v3_doublon_bot_hotm_note_sans_retrait():
+    assert CONFIG["doublon_modes"] == ["poc"]
+    lectures = [lec("h1", "UC1", "hotm", 94600, gate=1, jour=13), lec("h2", "UC2", "hotm", 94600, gate=1, jour=14),
+                lec("b1", "UC1", "bot", 19.558, bot_variant="season"), lec("b2", "UC2", "bot", 19.558, bot_variant="season", jour=14)]
+    d = preparer(lectures)
+    res = calculer(W, d, CONFIG, HORLOGE)
+    h = lire(d, "hotm-gate-1")
+    assert len(h) == 2 and all("doublon possible" in l["notes"] for l in h)   # les deux restent, classées
+    assert len(lire(d, "bot-season")) == 2 and d.rejected(W) == []
+    # POC : la run en trop est retirée ; la vidéo n'est rejetée que si elle n'a plus aucune run
+    d = preparer([lec("a1", "UCA", "poc", 100 * T, team=1), lec("a2", "UCA", "poc", 50 * T, team=2),
+                  lec("d1", "UCD", "poc", 100 * T, team=1, jour=14), lec("d1", "UCD", "poc", 40 * T, team=2, jour=14, t=60)])
+    calculer(W, d, CONFIG, HORLOGE)
+    assert d.rejected(W) == [] and lire(d, "poc")[1]["score"]["runs"] == [40 * T]  # run en trop retirée, vidéo gardée (il lui reste une run)
+    d = preparer([lec("a1", "UCA", "poc", 100 * T, team=1), lec("d1", "UCD", "poc", 100 * T, team=1, jour=14)])
+    calculer(W, d, CONFIG, HORLOGE)
+    assert [(r["video_id"], r["reason"]) for r in d.rejected(W)] == [("d1", "doublon")]  # plus aucune run : rejetée
+
+
 if __name__ == "__main__":
     for nom, f in list(globals().items()):
         if nom.startswith("test_"):
