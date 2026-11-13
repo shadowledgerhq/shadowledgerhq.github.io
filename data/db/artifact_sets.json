@@ -1,0 +1,2894 @@
+[
+  {
+    "id": "set-of-the-architects-blue-poison",
+    "name": {
+      "fr": "",
+      "en": "Set of The Architect's Blue Poison",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of The Architect's Blue Poison"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of The Architect's Blue Poison"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of The Architect's Blue Poison"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of The Architect's Blue Poison"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of The Architect's Blue Poison"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of The Architect's Blue Poison"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of The Architect's Blue Poison"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of The Architect's Blue Poison"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "4": {
+        "en": "Applies the [Poison] effect. [Poison] - Increases Core Attack, Basic Skill, and Ultimate Skill damage by 20%. - Increases Attack and Defense by 1% every 1 second(s) (stacking up to 30 times). - Duration: Permanent",
+        "fr": ""
+      },
+      "8": {
+        "en": "The [Poison] effect is enhanced to the [Blue Poison] effect. [Blue Poison] - Increases Defense Penetration by 20%. - Increases Core Attack, Basic Skill, and Ultimate Skill damage by 30%. - Increases Attack and Defense by 2.5% every 1 second(s) (stacks up to 30 times). - Duration: Permanent When equipped by [Sung Jinwoo] or a [Striker] class hunter, their damage dealt increases by 50%. [Poison] effect cannot be activated. Increases allies' damage dealt by 30% in [Team Fight] Mode (stacks up to 2 times).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-surturs-flame",
+    "name": {
+      "fr": "",
+      "en": "Set of Surtur's Flame",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Surtur's Flame"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Surtur's Flame"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Surtur's Flame"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Surtur's Flame"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Surtur's Flame"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Surtur's Flame"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Surtur's Flame"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Surtur's Flame"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "4": {
+        "en": "The [Blazing Annihilation] effect is applied. [Blazing Annihilation] - Increases the user's Attack and Defense by 20%. - A successful Overload increases the user's Burst damage by 20% (stacking up to 3 times). - Duration: Permanent",
+        "fr": ""
+      },
+      "8": {
+        "en": "The [Blazing Annihilation] effect is enhanced to the [Cataclysmic Blaze] effect. [Cataclysmic Blaze] - Increases the user's Attack and Defense by 50%. - A successful Overload increases the user's Burst damage by 20% (stacking up to 5 times). - Duration: Permanent When an Elemental Buster class hunter equips this, it increases their Overload damage dealt by 50%. [Blazing Annihilation] cannot be activated. Increases allies' Elemental Weakness damage by 30% in [Team Fight] Mode (stacks up to 2 times).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-glorious-arrogance",
+    "name": {
+      "fr": "",
+      "en": "Set of Glorious Arrogance",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Glorious Arrogance"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Glorious Arrogance"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Glorious Arrogance"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Glorious Arrogance"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Glorious Arrogance"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Glorious Arrogance"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Glorious Arrogance"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Glorious Arrogance"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "4": {
+        "en": "Applies the [Arrogance] effect. [Arrogance] - Increases the damage of skills with the [Break] effect by 30%. - When an attack that deals Break damage hits, the user and their team members' Critical Hit damage increases by 20%. - Duration: 40 second(s)",
+        "fr": ""
+      },
+      "8": {
+        "en": "The user's [Break] effectiveness increases by 30%. [Arrogance] is enhanced to [Glorious Arrogance]. [Glorious Arrogance] - Increases the damage of skills with the [Break] effect by 50%. - When an attack that deals Break damage hits, the user and the team members' Critical Hit damage increases by 35%. - Duration: 40 second(s) When [Sung Jinwoo] or a [Breaker] class hunter equips this, it increases their Critical Hit damage by 40%. When [Sung Jinwoo] or a [Breaker] class hunter uses their Support Skill or Ultimate Skill, the user and their team members' Critical Hit Rate increases by 15%. - Duration: 60 second(s) [Arrogance] effect cannot be activated. Increases allies' Critical Hit damage dealt by 15% in [Team Fight] Mode (stacks up to 2 times).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-noble-flesh",
+    "name": {
+      "fr": "",
+      "en": "Set of Noble Flesh",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Noble Flesh"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Noble Flesh"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Noble Flesh"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Noble Flesh"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Noble Flesh"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Noble Flesh"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Noble Flesh"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Noble Flesh"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "4": {
+        "en": "The [Fortification] effect is applied when a Basic Skill or Ultimate Skill hits. [Fortification] - Increases the user and the team members' Elemental Weakness damage by 15%. - Duration: 45 second(s) When tagging out or using a Support Skill or Ultimate Skill, the [Brilliant Light] effect is applied. [Brilliant Light] - Increases the user and the team members' damage dealt by 10%. - Duration: 20 second(s)",
+        "fr": ""
+      },
+      "8": {
+        "en": "The user recovers 10% of their MP when tagging out or using their Ultimate Skill (Cooldown: 20 second(s)). The [Fortification] effect is enhanced to become the [Iron Body] effect. The [Brilliant Light] effect is enhanced to become the [Glory] effect. [Iron Body] - Increases the user and the team members' Elemental Weakness damage by 25%. - Duration: 45 second(s) [Glory] - Increases the user and the team members' damage dealt by 20%. - Duration: 20 second(s) When [Sung Jinwoo] or a [Supporter] class hunter equips this, it increases the user and team members' Core Attack, Basic Skill, and Ultimate Skill damage by 30% and increases the user and the team members' Attack, Defense, and HP by 15%. When [Sung Jinwoo] or a [Supporter] class hunter uses their Support Skill or Ultimate Skill, they recover 2% of their HP every 1 second(s) (Cooldown: 30 second(s)). - Duration: 6 second(s) [Fortification] and [Brilliant Light] cannot be activated. Increases allies' Attack, Defense, and HP by 15% in [Team Fight] Mode (stacks up to 2 times).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-kamishs-obession",
+    "name": {
+      "fr": "",
+      "en": "Set of Kamish's Obession",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Kamish's Obession"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Kamish's Obession"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Kamish's Obession"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Kamish's Obession"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Kamish's Obession"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Kamish's Obession"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Kamish's Obession"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Kamish's Obession"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "4": {
+        "en": "The [Obession] effect is applied. [Obession] ・Increases the user and the team members' Overload damage by 15% ・Increases Basic Skill and Ultimate Skill damage by 25% when successfully inflicting Overload damage (Cooldown: 20 second(s)). ・Duration: 20 second(s)",
+        "fr": ""
+      },
+      "8": {
+        "en": "The [Obession] effect is enhanced to become the [Burning Obession] effect. [Burning Obession] ・Increases the user and the team members' Overload damage by 30% ・Increases Core Attack, Basic Skill, and Ultimate Skill damage by 40% when successfully inflicting Overload damage (Cooldown: 20 second(s)) ・Duration: 20 second(s) When [Sung Jinwoo] or an [Elemental Stacker] class hunter equips this, it increases their Overload damage by 50% and the user and the team members' Elemental Weakness damage by 20% The [Obession] effect cannot be activated Increases allies' Overload damage by 15% in [Team Fight] Mode (stacks up to 2 times).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-chaotic-infamy",
+    "name": {
+      "fr": "",
+      "en": "Set of Chaotic Infamy",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Chaotic Infamy"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Chaotic Infamy"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Chaotic Infamy"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Chaotic Infamy"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Chaotic Infamy"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Chaotic Infamy"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Chaotic Infamy"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Chaotic Infamy"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Using this skill grants the Infamy effect. ・Excludes Support Skills [Infamy] ・Increases Basic Skill damage by 1.5% (stacking up to 20 times). ・Increases the user's damage taken by 1% (stacking up to 20 times) ・Duration: Permanent",
+        "fr": ""
+      },
+      "4": {
+        "en": "Enhances the [Infamy] effect to Ehnahced Infamy. [Enhanced Infamy] ・Increases the user's Basic Skill damage by 2.5% (stacking up to 20%) ・Increases the user's damage taken by 1% (stacking up to 20 times) ・Duration: Permanent ・When the user uses their Basic Skill, they recover 5% of their MP (Cooldown: 30 second(s)). ・Unable to activate the Infamy effect.",
+        "fr": ""
+      },
+      "8": {
+        "en": "In [Team Fight] mode, the user's damage dealt increases by 40%. When the [Enhanced Infamy] effect has stacked 10 times, it becomes the [Chaotic Infamy] effect. [Chaotic Infamy] ・Increases the user's Basic Skill and Ultimate Skill damage by 100%. ・Duration: Permanent ・Removes the Damage Taken Increase effect on the user. ・The user regians 5% of their MP when using their Basic Skill (Cooldown: 30 second(s)) ・The user becomes unable to activate the [Infamy] and [Enhanced Infamy] effects.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-chaotic-desire",
+    "name": {
+      "fr": "",
+      "en": "Set of Chaotic Desire",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Chaotic Desire"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Chaotic Desire"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Chaotic Desire"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Chaotic Desire"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Chaotic Desire"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Chaotic Desire"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Chaotic Desire"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Chaotic Desire"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When an attack that deals [Break] damage hits, it triggers the [Desire] effect. [Desire] ・Increases the user's elemental damage by 0.5% (stacking up to 20 times). (Cooldown: 1.5 second(s)). ・Duration: Permanent",
+        "fr": ""
+      },
+      "4": {
+        "en": "When the [Desire] effect has stacked 20 times, it becomes the [Enhanced Desire] effect. [Enhanced Desire] ・Increases the damage of the user's skill with the [Break] effect by 30%. ・Increases the user's and team members' elemental damage by 20% ・Duration: Permanent ・The user becomes unable to activate the [Desire] effect.",
+        "fr": ""
+      },
+      "8": {
+        "en": "Attacking enemies that are at an elemental weakness increases the user's [Break] effectiveness by 30% The [Enhanced Desire] effect becomes the [Chaotic Desire] effect [Chaotic Desire] ・Increases the damage of the user's skill with the [Break] effect by 50%. ・The user and team members' elemental damage increases by 40% ・Duration: Permanent ・The user becomes unable to activate the [Desire] and [Enhanced Desire] effects.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-chaotic-wish",
+    "name": {
+      "fr": "",
+      "en": "Set of Chaotic Wish",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Chaotic Wish"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Chaotic Wish"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Chaotic Wish"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Chaotic Wish"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Chaotic Wish"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Chaotic Wish"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Chaotic Wish"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Chaotic Wish"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When the user uses their Ultimate Skill, it grants the [Wish] effect to both them user and their team members. ・Increases Attack by 8%. (Cooldown: 25 second(s)). ・Duration: 10 second(s)",
+        "fr": ""
+      },
+      "4": {
+        "en": "The [Wish] effect becomes the [Enhanced Wish] effect. [Enhanced Wish] ・Triggers when the user uses their Ultimate Skill or Support Skill. ・Increases the user's Attack and Defense by 10% ・Restores 0.2% of the user's HP every 1 second(s). (Cooldown: 25 second(s)) ・Duration: 10 second(s) ・The user becomes unable to activate the [Wish] effect.",
+        "fr": ""
+      },
+      "8": {
+        "en": "The skill's MP Consumption Rate increases by 20% but the cooldown of the user's Basic Skill decreases by 10% The [Enhanced Wish] effect becomes the [Chaotic Wish] effect. [Chaotic Wish] ・Activates when the user uses their Ultimate Skill, Support Skill, or Core Attack. ・Increases Attack, Defense, and HP by 15% ・Restores 0.2% of the user's HP every 1 second(s). (Cooldown: 25 second(s)) ・Duration: 20 second(s) ・The user becomes unable to activate the [Wish] and [Enhanced Wish] effects.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-burning-curse",
+    "name": {
+      "fr": "",
+      "en": "Set of Burning Curse",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Burning Curse"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Burning Curse"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Burning Curse"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Burning Curse"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Burning Curse"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Burning Curse"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Burning Curse"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Burning Curse"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Applies the [Curse] effect. ・Increases damage taken by 20%. ・Increases damage dealth by 10% and additionally increases damage dealt by 0.1% every 1 second(s) (stacking up to 100 times). ・Duration: Permanent",
+        "fr": ""
+      },
+      "4": {
+        "en": "The [Curse] effect becomes the [Enhanced Curse] effect [Enhanced Curse] ・Increases the user's Damage Taken by 20%. ・Increases the user's damage dealt by 20% and additionally increases damage dealt by 0.1% every 1 second(s) (stacking up to 100 times). ・Unable to activate the [Curse] effect. Applies the [Rescue] effect. ・If the user has 25% HP or less, they recover 25% of their HP. ・Activates only once per dungeon.",
+        "fr": ""
+      },
+      "8": {
+        "en": "The [Enhanced Curse] effect becomes the [Burning Curse] effect [Burning Curse] ・Increases the user's Damage Taken by 20%. ・Increases the user's damage dealt by 30% and additionally increases damage dealt by 0.2% every 1 second(s) (stacking up to 100 times). ・Unable to activate the [Curse] and [Enhanced Curse] effects. ・Duration: Permanent",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-burning-blessing",
+    "name": {
+      "fr": "",
+      "en": "Set of Burning Blessing",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Burning Blessing"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Burning Blessing"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Burning Blessing"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Burning Blessing"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Burning Blessing"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Burning Blessing"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Burning Blessing"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Burning Blessing"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When tagging out, the user applies the [Blessing] effect to themself and their team members. ・Increases the user's damage dealt by 8%. (Cooldown: 25 second(s)). ・Duration: 10 second(s)",
+        "fr": ""
+      },
+      "4": {
+        "en": "The [Blessing] effect is enhanced to [Enhanced Blessing]. [Enhanced Blessing] ・Activates when tagging out or using a Support Skill. ・Increases the user's damage dealt by 10% and recovers their HP by 0.2% every 1 second(s). (Cooldown: 25 second(s)) ・Unable to activate the [Blessing] effect. ・Duration: 10 second(s)",
+        "fr": ""
+      },
+      "8": {
+        "en": "The [Enhanced Blessing] effect becomes the [Burning Blessing] effect. [Burning Blessing] ・Activates when tagging out, using a Support Skill, or using an Ultimate Skill. ・Increases the user's damage dealt by 20% and restores 0.2% of their HP every 1 second(s).(Cooldown: 25 second(s)) ・Unable to activate the [Blessing] and [Enhanced Blessing] effects. ・Duration: 20 second(s)",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-burning-greed",
+    "name": {
+      "fr": "",
+      "en": "Set of Burning Greed",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Burning Greed"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Burning Greed"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Burning Greed"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Burning Greed"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Burning Greed"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Burning Greed"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Burning Greed"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Burning Greed"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When the user hits a target with an attack that deals [Break] damage, it applies the [Greed] effect. ・Increases the user's Critical Hit Rate by 1% (stacking up to 10 times). ・Cooldown: 1.5 second(s). ・Duration: Permanent",
+        "fr": ""
+      },
+      "4": {
+        "en": "When [Greed] effect stacks 10 times, it changes to [Enhanced Greed]. [Enhanced Greed] ・Increases the user and their team members' Critical Hit Rate by 10% and Critical Hit Damage by 15%. ・[Greed] becomes unavailable after [Enhanced Greed] has been activated. ・Duration: Permanent",
+        "fr": ""
+      },
+      "8": {
+        "en": "When attacking enemies that have elemental weakness, the [Break] effect increases by 30%. [Enhanced Greed] enhances to [Burning Greed]. [Burning Greed] ・Increases the user and their team members' Critical Hit Rate by 15% and Critical Hit Damage by 30%. ・[Greed] becomes unavailable after [Burning Greed] has been activated. ・[Enhanced Greed] becomes unavailable. ・Duration: Permanent",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "set-of-spooky",
+    "name": {
+      "fr": "",
+      "en": "Set of Spooky",
+      "ko": ""
+    },
+    "kind": "complete",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Helmet of Spooky"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Body Armor of Spooky"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Gloves of Spooky"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Boots of Spooky"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Necklace of Spooky"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Bracelet of Spooky"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ring of Spooky"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Earrings of Spooky"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Applies the [Curse] effect. ・Increases damage taken by 20%. ・Increases damage dealt by 10% and additionally increases damage dealt by 0.1% every 1 second(s) (stacking up to 100 times). ・Duration: Permanent",
+        "fr": ""
+      },
+      "4": {
+        "en": "The [Curse] effect becomes the [Enhanced Curse] effect. ・Increases the user's Damage Taken by 20%. ・Increases the user's damage dealt by 20% and additionally increases damage dealt by 0.1% every 1 second (stacking up to 100 times). ・Unable to activate the [Curse] effect. ・Duration: Permanent. Applies the [Rescue] effect. ・If the user has 25% HP or less, they recover 25% of their HP. ・Activates only once per dungeon.",
+        "fr": ""
+      },
+      "8": {
+        "en": "The [Enhanced Curse] effect becomes the [Burning Curse] effect. ・Increases the user's damage taken by 20%. ・Increases the user's damage dealt by 30% and additionally increases damage dealt by 0.2% every 1 second (stacking up to 100 times). ・Unable to activate the [Curse] and [Enhanced Curse] effects. ・Duration: Permanent |}",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
+    "wiki_revision": "2026-06-06T22:48:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "iron-will",
+    "name": {
+      "fr": "",
+      "en": "Iron Will",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Iron Will Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Iron Will Body Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Iron Will Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Iron Will Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases the user's Defense by 8%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "When the user's users their Ultimate Skill, it increase their Defense by 5% (stacking up to 5 times). ・Duration: Permanent Increases Ultimate Skill damage by 50%",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "crimson-knights-set",
+    "name": {
+      "fr": "",
+      "en": "Crimson Knight's Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Warmonger",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Crimson Knight's Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Crimson Knight's Body Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Crimson Knight's Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Crimson Knight's Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases the user's Attack and Defense by 4%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "When the user's attacks hit their Attack and Defense increases by 3% for 8 second(s). (Stacks up to 8 times.) (Cooldown: 0.5 second(s))",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "high-ranking-demons-set",
+    "name": {
+      "fr": "",
+      "en": "High-ranking Demon's Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Destroyer",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "High-ranking Demon's Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "High-ranking Demon's Body Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "High-ranking Demon's Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "High-ranking Demon's Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases Power Gauge Acquisition Rate by 20%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "When the battle starts, charges the user's Power Gauge by 50% and also increases the user and their team members' Power Gauge Acquisition Rate by an additional 20%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "dragon-knights-set",
+    "name": {
+      "fr": "",
+      "en": "Dragon Knight's Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Solid Foundation",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Dragon_Knight's_Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Dragon_Knight's_Body_Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Dragon_Knight's_Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Dragon_Knight's_Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases the user's Basic Attack damage by 18%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "Increases the user's Core Attack damage by 18%, and when an attack hits, charges the user's Core Gauge by 60.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "black-lions-set",
+    "name": {
+      "fr": "",
+      "en": "Black Lion's Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Armed",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Black Lion's Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Black Lion's Body Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Black Lion's Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Black Lion's Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases the user's Attack by 5%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "When attacking, the user ignores 18% of the target's Defense.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "almighty-kargalgans-set",
+    "name": {
+      "fr": "",
+      "en": "Almighty Kargalgan's Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "One-hit Kill",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Almighty_Kargalgan's_Hat"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Almighty_Kargalgan's_Robe"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Almighty_Kargalgan's_Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Almighty_Kargalgan's_Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases Ultimate Skill damage by 25%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "Decreases the Ultimate Skill cooldown by 40%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "holy-set",
+    "name": {
+      "fr": "",
+      "en": "Holy Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Noble Sacrifice",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Holy Hat"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Holy Robe"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Holy Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Holy Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "The user's HP increases by 8%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "Decreases the user's Attack by 8%, but increases their team members' Attack by 8%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "clerics-set",
+    "name": {
+      "fr": "",
+      "en": "Cleric's Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Angel in White",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Cleric's Hat"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Cleric's Robe"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Cleric's Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Cleric's Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "The user's HP increases by 8%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "Increases user's healing given by 8%. Increases the damage of the team member with the highest Total Power by 8%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "palace-guards-set",
+    "name": {
+      "fr": "",
+      "en": "Palace Guard's Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Guardian",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Palace_Guard's_Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Palace_Guard's_Body_Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Palace_Guard's_Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Palace_Guard's_Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "The user's [Shield] effects increase by 30%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "When a team member (including the user) activates a [Shield], it increases their individual damage dealt by 10% for 10 second(s).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "new-hunters-set",
+    "name": {
+      "fr": "",
+      "en": "New Hunter's Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Solid Analysis",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "New Hunter's Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "New Hunter's Body Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "New Hunter's Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "New Hunter's Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases [Break] effectiveness by 15%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "When attacking enemies that have elemental weakness, the [Break] effect increases by 30%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "hard-leather-set",
+    "name": {
+      "fr": "",
+      "en": "Hard Leather Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Toughness",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Hard Leather Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Hard Leather Body Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Hard Leather Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Hard Leather Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "The user's Critical Hit Rate increases by 8%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "The user's Critical Hit damage increases by 32%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "hot-summer-set",
+    "name": {
+      "fr": "",
+      "en": "Hot Summer Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Hot Summer",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Hot_Summer_Sunglasses"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Hot_Summer_Shirt"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Hot Summer Watch"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Hot_Summer_Sandals"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "The user's Critical Hit Rate increases by 8%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "The user's Critical Hit damage increases by 32%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "spring-cherry-blossom-set-armor",
+    "name": {
+      "fr": "",
+      "en": "Spring Cherry Blossom Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Spring Willow Tree",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Spring Cherry Blossom Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Spring Cherry Blossom Body Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Spring Cherry Blossom Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Spring Cherry Blossom Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "The user's Critical Hit Rate increases by 8%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "The user's Critical Hit damage increases by 32%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "merry-winter-set",
+    "name": {
+      "fr": "",
+      "en": "Merry Winter Set",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": "Holiday Party",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Merry Winter Helmet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Merry Winter Body Armor"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Merry Winter Gloves"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Merry Winter Boots"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases the user's Attack and Defense by 4%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "When the user's attacks hit, their Attack and Defense increase by 3% for 8 seconds. (Stacking up to 8 times) (Cooldown: 0.5 seconds)",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "journey-equipment",
+    "name": {
+      "fr": "",
+      "en": "Journey Equipment",
+      "ko": ""
+    },
+    "kind": "armor",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "1"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "2"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "3"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "4"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "The user's Critical Hit Rate increases by 8%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "The user's Critical Hit damage increases by 32%. |}",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Armor_Sets)",
+    "wiki_revision": "2026-05-16T05:36:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "destructive-instinct",
+    "name": {
+      "fr": "",
+      "en": "Destructive Instinct",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Destructive Instinct Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Destructive Instinct Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Destructive Instinct Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Destructive Instinct Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "The damage of user skills with the [Break] effect increases by 30%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "The Skill Damage Increase effect increases to 60%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "shining-star",
+    "name": {
+      "fr": "",
+      "en": "Shining Star",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": null,
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Shining Star Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Shining Star Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Shining Star Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Shining Star Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When the user or a team member tags in, it increases their Attack by 12% (Cooldown: 20 second(s)) ・Duration: 10 second(s)",
+        "fr": ""
+      },
+      "4": {
+        "en": "Increases Attack Increase effect to 28% and duration to 15 second(s).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "viridescent-set",
+    "name": {
+      "fr": "",
+      "en": "Viridescent Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Concentration of Firepower",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Viridescent Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Viridescent Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Viridescent Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Viridescent Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases the user's Skill MP Consumption Rate by 20%, but increases the user's damage dealt by 5% and decreases the user's Basic Skill Cooldown by 5%",
+        "fr": ""
+      },
+      "4": {
+        "en": "Increases Damage Increase effect to 18% and Cooldown Reduction effect of Basic Skills to 18%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "aquamarine-set",
+    "name": {
+      "fr": "",
+      "en": "Aquamarine Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Outstanding Connection",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Aquamarine Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Aquamarine Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Aquamarine Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Aquamarine Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When tagging out, increases the user and their team members' Attack by 12% for 10 second(s) (Cooldown: 20 second(s)).",
+        "fr": ""
+      },
+      "4": {
+        "en": "Increases Attack Increase effect to 28% and duration to 15 second(s).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "peridot-set",
+    "name": {
+      "fr": "",
+      "en": "Peridot Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Sylph's Blessing",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Peridot Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Peridot Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Peridot Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Peridot Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When the user uses their QTE Skills, Support Skills, or Ultimate Skill, it increases the user and their team's elemental weakness damage dealt by 5%. - Duration: 30 second(s)",
+        "fr": ""
+      },
+      "4": {
+        "en": "Increases the skill's duration to 60 second(s) and increases the Elemental Weakness Damage. Increases the effect stack maximum to 3 instances.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "beast-set",
+    "name": {
+      "fr": "",
+      "en": "Beast Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Expert",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Beast Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Beast Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Beast Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Beast Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When landing a Critical Hit, the user has a 25% chance to increase Attack by 0.8% (stacking up to 100 times) (Cooldown: 1 second(s)).",
+        "fr": ""
+      },
+      "4": {
+        "en": "Increases Activation Rate to 50% and Attack Increase effect to 1.6%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "obsidian-set",
+    "name": {
+      "fr": "",
+      "en": "Obsidian Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Outstanding Ability",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Obsidian Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Obsidian Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Obsidian Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Obsidian Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When the user has 70% or more of their MP, their damage dealt increases by 30%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "The Damage Dealt Increase effect potency increases to 60% and this effect now triggers when the user is at 40% or more of their maximum MP.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "skeleton-set",
+    "name": {
+      "fr": "",
+      "en": "Skeleton Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Berserker",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Skeleton Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Skeleton Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Skeleton Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Skeleton Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When the user has 50% HP or less, their damage dealt increases by 30%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "HP condition changes to 70% and Damage Dealt Increase effect increases to 60%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "behemoth-set",
+    "name": {
+      "fr": "",
+      "en": "Behemoth Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Executioner",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Behemoth's Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Behemoth's Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Behemoth's Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Behemoth's Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When attacking enemies with 40% or less HP. increases the user's damage dealt by 30%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "HP condition changes to 70% and Damage Increase effect increases to 60%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "red-eyed-set",
+    "name": {
+      "fr": "",
+      "en": "Red-eyed Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Champion on the Field",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Red-eyed Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Red-eyed Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Red-eyed Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Red-eyed Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases the user's Attack by 8% for 8 second(s) when landing a Critical Hit (Cooldown: 0.8 second(s)).",
+        "fr": ""
+      },
+      "4": {
+        "en": "The Attack Increase effect can now stack (limited to 6 instances max).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "romantic-seashell-set",
+    "name": {
+      "fr": "",
+      "en": "Romantic Seashell Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Seashell Romance",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Romantic Seashell Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Romantic Seashell Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Romantic Seashell Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Romantic Seashell Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When landing a Critical Hit, the user has 25% chance to increase Attack by 0.8% (stacking up to 100 times) (Cooldown: 1 second(s)).",
+        "fr": ""
+      },
+      "4": {
+        "en": "Increases Activation Rate to 50% and Attack Increase effect to 1.6%.",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "spring-cherry-blossom-set-jewelry",
+    "name": {
+      "fr": "",
+      "en": "Spring Cherry Blossom Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Gently Fluttering Cherry Blossoms",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Spring Cherry Blossom Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Spring Cherry Blossom Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Spring Cherry Blossom Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Spring Cherry Blossom Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "Increases the user's Attack by 8% for 8 seconds when landing a Critical Hit (Cooldown: 0.8 seconds)",
+        "fr": ""
+      },
+      "4": {
+        "en": "The Attack Increase effect can now stack (limited to 6 instances max).",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  },
+  {
+    "id": "ornament-set",
+    "name": {
+      "fr": "",
+      "en": "Ornament Set",
+      "ko": ""
+    },
+    "kind": "jewelry",
+    "rarity": null,
+    "nickname_en": "Happy Holidays",
+    "pieces": [
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ornament Necklace"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ornament Bracelet"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ornament Ring"
+        },
+        "icon": null
+      },
+      {
+        "slot": null,
+        "name": {
+          "fr": "",
+          "en": "Ornament Earrings"
+        },
+        "icon": null
+      }
+    ],
+    "bonuses": {
+      "2": {
+        "en": "When the user has 70% or more of their MP, their damage dealt increases by 30%.",
+        "fr": ""
+      },
+      "4": {
+        "en": "The Damage Dealt Increase effect potency increases to 60% and this effect now triggers when the user is at 40% or more of their maximum MP. |}",
+        "fr": ""
+      }
+    },
+    "main_stat_options": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Jewelry_Sets)",
+    "wiki_revision": "2026-05-16T05:19:55Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+  }
+]

@@ -1,7 +1,7 @@
 [
   {
     "id": "2026-10-22",
-    "version": null,
+    "version": "1.5.15",
     "date": "2026-10-22",
     "name": {
       "fr": "Mise à jour du 22/10/2026 (2,5e anniversaire)",
@@ -13,7 +13,7 @@
     ],
     "source": "https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-13",
-    "game_version": null,
+    "game_version": "1.5.15",
     "notes": "Numéro de version non indiqué dans les notes. Valeurs chiffrées des chasseurs/ombres : avis d'équilibrage 32/109983 (EN).",
     "changes": [
       {
@@ -156,11 +156,12 @@
         "id": "a-determiner",
         "change": "nouvelle saison HOTM le 05/11 (récompenses par score ajoutées) ; POC : boss Ennio, Conquest Support ; BOT : classement par groupes"
       }
-    ]
+    ],
+    "version_source": "https://solo-leveling-910785.en.uptodown.com/android/versions (Uptodown, client Android ; rapprochement par date de publication, non confirmé par Netmarble)"
   },
   {
     "id": "2026-09-17",
-    "version": null,
+    "version": "1.4.55",
     "date": "2026-09-17",
     "name": {
       "fr": "Mise à jour du 2026-09-17",
@@ -169,13 +170,65 @@
     "url": "https://forum.netmarble.com/slv_en/view/14/109279",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Entrée de liste seulement : notes non encore lues.",
-    "changes": []
+    "game_version": "1.4.55",
+    "notes": "Résumé extrait de la note (lecture assistée), à contrôler sur l'URL ; valeurs de sets non détaillées par Netmarble.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "diana-lopez",
+        "change": "ajout : SSR Wind Buster"
+      },
+      {
+        "category": "weapons",
+        "id": "ravage-and-revenge",
+        "change": "ajout : arme exclusive"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "a-determiner",
+        "change": "équilibrage d'effets de sets (détail non donné)"
+      },
+      {
+        "category": "cores",
+        "id": "core-level-cap",
+        "change": "niveau max des noyaux 20→25"
+      },
+      {
+        "category": "blessings",
+        "id": "master-marksman",
+        "change": "ajout (Empowerment) : Master Marksman, Do or Die, Supercharge, Iron Stance, Architect's Plan"
+      },
+      {
+        "category": "blessings",
+        "id": "spring-of-life",
+        "change": "ajout (Survival) : Spring of Life, Devour"
+      },
+      {
+        "category": "stats",
+        "id": "battle-class-cap",
+        "change": "Battle Class max 120→150"
+      },
+      {
+        "category": "proof_modifiers",
+        "id": "hotm-saison",
+        "change": "HOTM : nouvelle saison le 08/10 00:00 UTC ; récompenses de saison modifiées"
+      },
+      {
+        "category": "rules",
+        "id": "poc",
+        "change": "POC : boss Cthulli, éléments Wind+Dark, Subjugation Support appliqué"
+      },
+      {
+        "category": "rules",
+        "id": "gb",
+        "change": "GB : Manticore, Wind fixe puis Light, Dark, Fire, Water, Dark"
+      }
+    ],
+    "version_source": "https://solo-leveling-910785.en.uptodown.com/android/versions (Uptodown, client Android ; rapprochement par date de publication, non confirmé par Netmarble)"
   },
   {
     "id": "2026-08-27",
-    "version": null,
+    "version": "1.4.46",
     "date": "2026-08-27",
     "name": {
       "fr": "Mise à jour du 2026-08-27",
@@ -184,13 +237,40 @@
     "url": "https://forum.netmarble.com/slv_en/view/14/108721",
     "source": "https://forum.netmarble.com/slv_en/view/14/108721",
     "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Entrée de liste seulement : notes non encore lues.",
-    "changes": []
+    "game_version": "1.4.46",
+    "notes": "Résumé extrait de la note (lecture assistée), à contrôler sur l'URL ; valeurs de sets non détaillées par Netmarble.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "sian-halat",
+        "change": "Scarlet Domination : durée portée à 40 s"
+      },
+      {
+        "category": "rules",
+        "id": "poc",
+        "change": "POC : boss Kamish→Ennio, éléments Light+Water, Conquest Support"
+      },
+      {
+        "category": "rules",
+        "id": "bot",
+        "change": "BOT fermé cette saison (refonte du contenu)"
+      },
+      {
+        "category": "rules",
+        "id": "gb",
+        "change": "GB : Giant Statue, Light fixe puis Water, Dark, Fire"
+      },
+      {
+        "category": "proof_modifiers",
+        "id": "hotm",
+        "change": "HOTM : se débloque au palier 10 de l'Atelier de lumière (mode SJW) ; saison de 2 semaines ; 3 portes ; système de Preuve (contraintes pour plus de points)"
+      }
+    ],
+    "version_source": "https://solo-leveling-910785.en.uptodown.com/android/versions (Uptodown, client Android ; rapprochement par date de publication, non confirmé par Netmarble)"
   },
   {
     "id": "2026-07-30",
-    "version": null,
+    "version": "1.4.35",
     "date": "2026-07-30",
     "name": {
       "fr": "Mise à jour du 2026-07-30",
@@ -199,13 +279,55 @@
     "url": "https://forum.netmarble.com/slv_en/view/14/107953",
     "source": "https://forum.netmarble.com/slv_en/view/14/107953",
     "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Entrée de liste seulement : notes non encore lues.",
-    "changes": []
+    "game_version": "1.4.35",
+    "notes": "Résumé extrait de la note (lecture assistée), à contrôler sur l'URL ; valeurs de sets non détaillées par Netmarble.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "yerim-jung",
+        "change": "ajout : SSR Fire Supporter"
+      },
+      {
+        "category": "weapons",
+        "id": "radiant-seal",
+        "change": "ajout : arme exclusive ; armes d'événement Soma & Asura, Moonlit Gale"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "a-determiner",
+        "change": "équilibrage d'effets de sets (détail non donné)"
+      },
+      {
+        "category": "successors",
+        "id": "monarch-of-shadows",
+        "change": "ajout : Successeur Monarch of Shadows"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "job-change-vanquisher",
+        "change": "nouveau job change : Monarch of Shadows: Vanquisher"
+      },
+      {
+        "category": "stats",
+        "id": "level-cap",
+        "change": "SJW niv. max 150→160 ; Activity Funds 73→78 ; Gate 27→29 ; Réputation 150→200"
+      },
+      {
+        "category": "rules",
+        "id": "poc",
+        "change": "POC : boss Cthulli, éléments Dark+Fire, Conquest Support"
+      },
+      {
+        "category": "rules",
+        "id": "gb",
+        "change": "GB : Ant Queen, Dark fixe puis Fire, Water, Wind, Light ; refonte des compétences de guilde"
+      }
+    ],
+    "version_source": "https://solo-leveling-910785.en.uptodown.com/android/versions (Uptodown, client Android ; rapprochement par date de publication, non confirmé par Netmarble)"
   },
   {
     "id": "2026-07-02",
-    "version": null,
+    "version": "1.4.26",
     "date": "2026-07-02",
     "name": {
       "fr": "Mise à jour du 2026-07-02",
@@ -214,13 +336,45 @@
     "url": "https://forum.netmarble.com/slv_en/view/14/107225",
     "source": "https://forum.netmarble.com/slv_en/view/14/107225",
     "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Entrée de liste seulement : notes non encore lues.",
-    "changes": []
+    "game_version": "1.4.26",
+    "notes": "Résumé extrait de la note (lecture assistée), à contrôler sur l'URL ; valeurs de sets non détaillées par Netmarble.",
+    "changes": [
+      {
+        "category": "weapons",
+        "id": "weapon-level-cap",
+        "change": "niveau max des armes 120→130"
+      },
+      {
+        "category": "shadows",
+        "id": "shadow-level-cap",
+        "change": "niveau max de l'armée d'ombres → 195"
+      },
+      {
+        "category": "blessings",
+        "id": "amplification",
+        "change": "Amplification des runes/pierres Transcendent : palier 3→5"
+      },
+      {
+        "category": "rules",
+        "id": "poc",
+        "change": "POC : boss Ennio, éléments Wind+Dark, Extermination Support"
+      },
+      {
+        "category": "rules",
+        "id": "bot",
+        "change": "BOT : niveau 150, effet Fighting Spirit à 40 s, dégâts accrus en Break"
+      },
+      {
+        "category": "rules",
+        "id": "gb",
+        "change": "GB : Manticore, Dark fixe puis Wind, Water, Fire, Light"
+      }
+    ],
+    "version_source": "https://solo-leveling-910785.en.uptodown.com/android/versions (Uptodown, client Android ; rapprochement par date de publication, non confirmé par Netmarble)"
   },
   {
     "id": "2026-06-04",
-    "version": null,
+    "version": "1.4.16",
     "date": "2026-06-04",
     "name": {
       "fr": "Mise à jour du 2026-06-04",
@@ -229,13 +383,60 @@
     "url": "https://forum.netmarble.com/slv_en/view/14/106108",
     "source": "https://forum.netmarble.com/slv_en/view/14/106108",
     "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Entrée de liste seulement : notes non encore lues.",
-    "changes": []
+    "game_version": "1.4.16",
+    "notes": "Résumé extrait de la note (lecture assistée), à contrôler sur l'URL ; valeurs de sets non détaillées par Netmarble.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "liu-zhigang",
+        "change": "ajout : SSR Fire Buster ; arme exclusive Nightcleaver"
+      },
+      {
+        "category": "weapons",
+        "id": "soma-and-asura",
+        "change": "ajout : arme SJW SSR Wind ; Moonlit Gale"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-surturs-flame",
+        "change": "ajout : set complet (8 pièces)"
+      },
+      {
+        "category": "cores",
+        "id": "gem-slots",
+        "change": "Gemmes : page 2 ajoutée (20 emplacements)"
+      },
+      {
+        "category": "shadows",
+        "id": "shadow-soldiers",
+        "change": "soldats d'ombre retirés ; Butcher Brute : noms de compétences changés"
+      },
+      {
+        "category": "successors",
+        "id": "legia",
+        "change": "nouvelle puissance résiduelle Legia ; Convert Shard ; réinitialisation de succession"
+      },
+      {
+        "category": "stats",
+        "id": "reputation-cap",
+        "change": "Réputation max 100→150"
+      },
+      {
+        "category": "rules",
+        "id": "poc",
+        "change": "POC saison 2 : Cthulli, Fire+Wind, Extermination Support"
+      },
+      {
+        "category": "rules",
+        "id": "gb",
+        "change": "GB : Giant Statue, Fire+Wind"
+      }
+    ],
+    "version_source": "https://solo-leveling-910785.en.uptodown.com/android/versions (Uptodown, client Android ; rapprochement par date de publication, non confirmé par Netmarble)"
   },
   {
     "id": "2026-05-07",
-    "version": null,
+    "version": "1.4.08",
     "date": "2026-05-07",
     "name": {
       "fr": "Mise à jour du 2026-05-07",
@@ -244,8 +445,60 @@
     "url": "https://forum.netmarble.com/slv_en/view/14/104878",
     "source": "https://forum.netmarble.com/slv_en/view/14/104878",
     "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Entrée de liste seulement : notes non encore lues.",
-    "changes": []
+    "game_version": "1.4.08",
+    "notes": "Résumé extrait de la note (lecture assistée), à contrôler sur l'URL ; valeurs de sets non détaillées par Netmarble.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "antoine-martinez",
+        "change": "ajout : SSR Light Stacker ; arme exclusive Saint's Benediction"
+      },
+      {
+        "category": "successors",
+        "id": "myro",
+        "change": "ajout : système de Successeur ; Myro (Wind)"
+      },
+      {
+        "category": "weapons",
+        "id": "winchester-roke",
+        "change": "ajout : Winchester Roke, Transfiguration Key"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "unstable-dungeon-4-new",
+        "change": "Donjon instable : 4 nouveaux types d'artefacts au choix en récompense"
+      },
+      {
+        "category": "cores",
+        "id": "mind-rift",
+        "change": "Cores obtenus via le nouveau contenu Mind Rift"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "job-change-exterminator",
+        "change": "nouveau job change : Monarch of Shadows: Exterminator"
+      },
+      {
+        "category": "stats",
+        "id": "level-cap",
+        "change": "SJW niv. max 140→150 ; Activity Funds 68→73 ; Battle Class 100→120"
+      },
+      {
+        "category": "rules",
+        "id": "poc",
+        "change": "POC (ex-Power of Destruction) : saison de 4 semaines, classement mondial, Conquest Support"
+      },
+      {
+        "category": "rules",
+        "id": "bot",
+        "change": "BOT : saison de 4 semaines, 1 boss sur 4 par semaine, Challenge Mode retiré"
+      },
+      {
+        "category": "rules",
+        "id": "gb",
+        "change": "GB : Ant Queen, Wind+Light fixes"
+      }
+    ],
+    "version_source": "https://solo-leveling-910785.en.uptodown.com/android/versions (Uptodown, client Android ; rapprochement par date de publication, non confirmé par Netmarble)"
   }
 ]
