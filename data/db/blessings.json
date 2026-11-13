@@ -1721,5 +1721,201 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "master-marksman",
+    "name": {
+      "fr": "",
+      "en": "Master Marksman",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+    "verified_at": "2026-11-13",
+    "game_version": "1.4.55",
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+  },
+  {
+    "id": "do-or-die",
+    "name": {
+      "fr": "",
+      "en": "Do or Die",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+    "verified_at": "2026-11-13",
+    "game_version": "1.4.55",
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+  },
+  {
+    "id": "supercharge",
+    "name": {
+      "fr": "",
+      "en": "Supercharge",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+    "verified_at": "2026-11-13",
+    "game_version": "1.4.55",
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+  },
+  {
+    "id": "iron-stance",
+    "name": {
+      "fr": "",
+      "en": "Iron Stance",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+    "verified_at": "2026-11-13",
+    "game_version": "1.4.55",
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+  },
+  {
+    "id": "architects-plan",
+    "name": {
+      "fr": "",
+      "en": "Architect's Plan",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+    "verified_at": "2026-11-13",
+    "game_version": "1.4.55",
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+  },
+  {
+    "id": "spring-of-life",
+    "name": {
+      "fr": "",
+      "en": "Spring of Life",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+    "verified_at": "2026-11-13",
+    "game_version": "1.4.55",
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+  },
+  {
+    "id": "devour",
+    "name": {
+      "fr": "",
+      "en": "Devour",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+    "verified_at": "2026-11-13",
+    "game_version": "1.4.55",
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
   }
 ]
