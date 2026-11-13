@@ -2302,7 +2302,7 @@
         },
         "text": {
           "fr": "",
-          "en": ""
+          "en": "Diana fires a forward-facing laser to attack her enemies."
         },
         "cooldown": 12.0,
         "mp_cost": "150-198",
@@ -2331,17 +2331,34 @@
         "type": "support",
         "name": {
           "fr": "",
-          "en": "Heavy Caliber|support_des=Diana unleashes a barrage of shots at the enemy.",
+          "en": "Heavy Caliber",
           "ko": ""
         },
         "text": {
           "fr": "",
-          "en": ""
+          "en": "Diana unleashes a barrage of shots at the enemy."
         },
         "cooldown": 25.0,
         "mp_cost": null,
         "effects": [],
-        "effects_text_en": "Damage: 1270-2610.56% of the user's Defense Cooldown: 25 sec ・Deals Wind elemental damage ・When this skill hits it inflicts the [Airborne] effect|qte_name=Spin-up|qte_des=Diana suppresses the enemy with her gatling gun, then delivers a powerful finishing shot.|qte=Damage: 1060-1590% of the user's Defense Cooldown: 20 sec Usage Condition: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Bind] effects, or a Shadow Skill ・Deals Wind elemental damage ・When this skill hits it inflicts the [Airborne] effect ・When this skill hits inflicts the [Paralyze] effect on the target [Paralyze] Interrupts the target. Duration: 3 second(s)",
+        "effects_text_en": "Damage: 1270-2610.56% of the user's Defense Cooldown: 25 sec ・Deals Wind elemental damage ・When this skill hits it inflicts the [Airborne] effect",
+        "values_by_level": {}
+      },
+      {
+        "type": "qte",
+        "name": {
+          "fr": "",
+          "en": "Spin-up",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Diana suppresses the enemy with her gatling gun, then delivers a powerful finishing shot."
+        },
+        "cooldown": 20.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 1060-1590% of the user's Defense Cooldown: 20 sec Usage Condition: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Bind] effects, or a Shadow Skill ・Deals Wind elemental damage ・When this skill hits it inflicts the [Airborne] effect ・When this skill hits inflicts the [Paralyze] effect on the target [Paralyze] Interrupts the target. Duration: 3 second(s)",
         "values_by_level": {}
       },
       {
@@ -2379,7 +2396,7 @@
         "total_power": "121,927"
       },
       "max": {
-        "hp": "24,158}}\n\n{{Clear|both}}\n\n== Skills ==\n{{Hunter Skills",
+        "hp": "24,158",
         "attack": "11,645",
         "defense": "12,334",
         "total_power": "483,141"
@@ -2979,7 +2996,7 @@
         "tier": 0,
         "text": {
           "fr": "",
-          "en": "When Esil Radiru or an ally successfully puts a target in a [Break] state, it increasses the duration of the [Break] state by 3 second(s). When she uses Death's Rush, or Extreme Evasion is activated, it activates Lance Throw. When she uses Stabbing Spikes, Glorious Wounds, or Cascading Glory, she grants herself the [Enhanced Lance Throw] effect. When Lance Throw is activated, its potency increases based on the number of [Enhanced Lance Throw] instance applied. [Break] effectiveness in the [Workshop of Brilliant Light] increases by 200%. Lance Throw Esil throws a spear that pierces through magically created armor. She deals damage equal to 800% of her Attack. When her attack hits, she deals weak [Break] damage. When Lance Throw hits, it activates the [Prey] effect. The maximum number of [Prey] effects that can be applied through Lance Throw is 5. [Enhanced Lance Throw] Increases the damage of Lance Throw and [Break] effectiveness by 160% (stacking up to 5 times). After Lance Throw is activated, all effects of [Enhanced Lance Throw] are removed. Duration: {{Text Color|Type=Data|Infinite (stacking up to 5 times)}} [Prey] When Esil succesfully puts the enemy into a [Break] state, it gains a [Prey on the Weak] effect with potency based on the number of [Prey] effects previously applied. Duration: 60 second(s) (stacks up to 50 times) [Prey on the Weak] Increases the target's Fire damage taken by 0.3%. Increases the target's damage taken by 0.3%. Duration: 60 second(s) (stacks up to 50 times)"
+          "en": "When Esil Radiru or an ally successfully puts a target in a [Break] state, it increasses the duration of the [Break] state by 3 second(s). When she uses Death's Rush, or Extreme Evasion is activated, it activates Lance Throw. When she uses Stabbing Spikes, Glorious Wounds, or Cascading Glory, she grants herself the [Enhanced Lance Throw] effect. When Lance Throw is activated, its potency increases based on the number of [Enhanced Lance Throw] instance applied. [Break] effectiveness in the [Workshop of Brilliant Light] increases by 200%. Lance Throw Esil throws a spear that pierces through magically created armor. She deals damage equal to 800% of her Attack. When her attack hits, she deals weak [Break] damage. When Lance Throw hits, it activates the [Prey] effect. The maximum number of [Prey] effects that can be applied through Lance Throw is 5. [Enhanced Lance Throw] Increases the damage of Lance Throw and [Break] effectiveness by 160% (stacking up to 5 times). After Lance Throw is activated, all effects of [Enhanced Lance Throw] are removed. Duration: Infinite (stacking up to 5 times) [Prey] When Esil succesfully puts the enemy into a [Break] state, it gains a [Prey on the Weak] effect with potency based on the number of [Prey] effects previously applied. Duration: 60 second(s) (stacks up to 50 times) [Prey on the Weak] Increases the target's Fire damage taken by 0.3%. Increases the target's damage taken by 0.3%. Duration: 60 second(s) (stacks up to 50 times)"
         }
       }
     ],
@@ -4689,7 +4706,127 @@
     "weapon_type": null,
     "exclusive_weapon": "Foundation of Order",
     "release_date_en": "22 October 2026",
-    "skills": [],
+    "skills": [
+      {
+        "type": "basic_attack",
+        "name": {
+          "fr": "",
+          "en": "River Rush",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Gunhee unleashes a relentless barrage of punches and kicks."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Stage 1 Damage: 137202.5% of the user's Defense Stage 2 Damage: 160-240% of the user's Defense Stage 3 Damage: 177-265.5% of the user's Defense ・Deals Water elemental damage",
+        "values_by_level": {}
+      },
+      {
+        "type": "core_attack",
+        "name": {
+          "fr": "",
+          "en": "Mountainfall",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Gunhee jumps into the air, then crashes down with the full force of his weight."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 900-1350% of the user's Defense ・Deals Water elemental damage ・When this skill hits it [Knocks Down] the target",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_1",
+        "name": {
+          "fr": "",
+          "en": "Echoing Impact",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Gunhee channels the Black Tortoise's power to drive forward with a powerful shoulder strike."
+        },
+        "cooldown": 9.0,
+        "mp_cost": "90-118",
+        "effects": [],
+        "effects_text_en": "Damage: 1825-2737.5% of the user's Defense Cooldown: 9 sec MP Consumption: 90-118 ・Deals Water elemental damage ・When this skill hits it inflicts the [Airborne] effect",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_2",
+        "name": {
+          "fr": "",
+          "en": "Dragon Vortex",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Gunhee channels the Azure Dragon's power into a vortex and sends it surging forward."
+        },
+        "cooldown": 9.0,
+        "mp_cost": "100-132",
+        "effects": [],
+        "effects_text_en": "Damage: 1850-2775% of the user's Defense Cooldown: 9 sec MP Consumption: 100-132 ・Deals Water elemental damage ・When this skill hits it inflicts the [Airborne] effect",
+        "values_by_level": {}
+      },
+      {
+        "type": "support",
+        "name": {
+          "fr": "",
+          "en": "Stonebreaker",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Gunhee raises one leg high and slams it into the ground like a massive boulder crashing down."
+        },
+        "cooldown": 25.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 1120-2302.22% of the user's Defense Cooldown: 25 sec ・Deals Water elemental damage ・When this skill hits it inflicts the [Airborne] effect",
+        "values_by_level": {}
+      },
+      {
+        "type": "qte",
+        "name": {
+          "fr": "",
+          "en": "Rooted Strike",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Gunhee plants his lower body firmly as if rooted to the ground, raises one leg high, then slams it down."
+        },
+        "cooldown": 20.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 1216% of the user's Defense Cooldown: 20 sec Usage Condition: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Bind] effects, or a Shadow Skill ・Deals Water elemental damage ・When this skill hits it inflicts the [Airborne] effect|burst_name=Heavenbreaker Fist|burst_des=Gunhee crushes the surrounding area as if shattering space itself.|burst=Cooldown: 5 sec ・When this skill hits it inflicts the [Airborne] effect ・Burst damage equal to the damage accumulated during the Burst damage accumulation period is dealt",
+        "values_by_level": {}
+      },
+      {
+        "type": "ultimate",
+        "name": {
+          "fr": "",
+          "en": "Great Void: Primordial Force Release",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Gunhee draws the primordial energy within the dantian into a single point, then blasts it outward with explosive force."
+        },
+        "cooldown": 45.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 4263-6394.5% of the user's Defense Cooldown: 45 sec Power Gauge Consumption: 100% ・Deals Water elemental damage ・When this skill hits it inflicts the [Airborne] effect",
+        "values_by_level": {}
+      }
+    ],
     "passives": [
       {
         "tier": 0,
@@ -4709,7 +4846,7 @@
       "max": {
         "hp": "24,593",
         "attack": "12,601",
-        "defense": "11,191}}\n\n{{Clear|both}}\n\n==Skills==\n{{Hunter Skills|basic_name=River Rush|basic_des=Gunhee unleashes a relentless barrage of punches and kicks.|basic_attacks=Stage 1 Damage: {{Text Color|Type=Data|137202.5%}} of the user's Defense<br>Stage 2 Damage: {{Text Color|Type=Data|160-240%}} of the user's Defense<br>Stage 3 Damage: {{Text Color|Type=Data|177-265.5%}} of the user's Defense<br>・Deals {{Text Color|Type=Water|Water}} elemental damage|core_name=Mountainfall|core_des=Gunhee jumps into the air, then crashes down with the full force of his weight.|core_attack=Damage: {{Text Color|Type=Data|900-1350%}} of the user's Defense<br>・Deals {{Text Color|Type=Water|Water}} elemental damage<br>・When this skill hits it {{Text Color|Type=Effect|[Knocks Down]}} the target|core_mod=[[File:Holy Guardian Barrier Go Gunhee Arhat Four Divine Beast Arts.png|150px]]<br>Arhat: Four Divine Beast Arts|skill1_name=Echoing Impact|skill1_mod=[[File:Holy Guardian Barrier Go Gunhee Rising Heat.png|150px]]<br>Rising Heat|skill1_des=Gunhee channels the Black Tortoise's power to drive forward with a powerful shoulder strike.|skill1=Damage: {{Text Color|Type=Data|1825-2737.5%}} of the user's Defense<br>Cooldown: {{Text Color|Type=Data|9 sec}}<br>MP Consumption: {{Text Color|Type=Data|90-118}}<br>・Deals {{Text Color|Type=Water|Water}} elemental damage<br>・When this skill hits it inflicts the {{Text Color|Type=Effect|[Airborne]}} effect|skill2_name=Dragon Vortex|skill2_mod=[[File:Holy Guardian Barrier Go Gunhee Flurry.png|150px]]<br>Flurry|skill2_des=Gunhee channels the Azure Dragon's power into a vortex and sends it surging forward.|skill2=Damage: {{Text Color|Type=Data|1850-2775%}} of the user's Defense<br>Cooldown: {{Text Color|Type=Data|9 sec}}<br>MP Consumption: {{Text Color|Type=Data|100-132}}<br>・Deals {{Text Color|Type=Water|Water}} elemental damage<br>・When this skill hits it inflicts the {{Text Color|Type=Effect|[Airborne]}} effect|support_name=Stonebreaker|support_des=Gunhee raises one leg high and slams it into the ground like a massive boulder crashing down.|support=Damage: {{Text Color|Type=Data|1120-2302.22%}} of the user's Defense<br>Cooldown: {{Text Color|Type=Data|25 sec}}<br>・Deals {{Text Color|Type=Water|Water}} elemental damage<br>・When this skill hits it inflicts the {{Text Color|Type=Effect|[Airborne]}} effect|qte_name=Rooted Strike|qte_des=Gunhee plants his lower body firmly as if rooted to the ground, raises one leg high, then slams it down.|qte=Damage: {{Text Color|Type=Data|1216%}} of the user's Defense<br>Cooldown: {{Text Color|Type=Data|20 sec}}<br>Usage Condition: {{Text Color|Type=Skill|Extreme Evasion, Core Attack, Ultimate Skill}}, skills that inflict the {{Text Color|Type=Effect|[Stun]}} or {{Text Color|Type=Effect|[Bind]}} effects, or a {{Text Color|Type=Skill|Shadow Skill}}<br>・Deals {{Text Color|Type=Water|Water}} elemental damage<br>・When this skill hits it inflicts the {{Text Color|Type=Effect|[Airborne]}} effect|burst_name=Heavenbreaker Fist|burst_des=Gunhee crushes the surrounding area as if shattering space itself.|burst=Cooldown: {{Text Color|Type=Data|5 sec}}<br>・When this skill hits it inflicts the {{Text Color|Type=Effect|[Airborne]}} effect<br>・{{Text Color|Type=Break|Burst}} damage equal to the damage accumulated during the Burst damage accumulation period is dealt|ultimate_name=Great Void: Primordial Force Release|ultimate_des=Gunhee draws the primordial energy within the dantian into a single point, then blasts it outward with explosive force.|ultimate=Damage: {{Text Color|Type=Data|4263-6394.5%}} of the user's Defense<br>Cooldown: {{Text Color|Type=Data|45 sec}}<br>Power Gauge Consumption: {{Text Color|Type=Data|100%}}<br>・Deals {{Text Color|Type=Water|Water}} elemental damage<br>・When this skill hits it inflicts the {{Text Color|Type=Effect|[Airborne]}} effect",
+        "defense": "11,191",
         "total_power": "479,451"
       }
     },
@@ -4746,7 +4883,7 @@
         "tier": 5,
         "text": {
           "fr": "",
-          "en": "The [True Qi, Azure Scale, and White Tiger Fang] effects are enhanced. The [Four Guardians Formation] is enhanced. [Four Guardians Formation] The power of the Four Divine Beasts protects Holy Guardian Barrier Go Gunhee. Deals Water elemental damage equal to 400% of the user's Defense every 1 second(s) to targets within the zone. Targets within the zone take 40% increased Critical Hit damage from Holy Guardian Barrier Go Gunhee. When this skill hits, it activates the [Unrecoverable] effect. Counts as a Basic Skill. [True Qi] Increases Burst damage by 40%. Cannot activate Great Void: Primordial Force Release. Duration: 20 second(s) [Azure Scale] Increases Water damage by 40%. Duration: 20 second(s) [White Tiger Fang] Increases Water Overload damage by 40%. Duration: 20 second(s) [Unrecoverable] Inflicts HP Recovery Block on the target. Duration: 30 second(s) }} ==Gallery== <gallery> Holy Guardian Barrier Go Gunhee Icon.png|Holy Guardian Barrier Go Gunhee Profile Picture Holy Guardian Barrier Go Gunhee Age of Strife Full Body.png|Holy Guardian Barrier Go Gunhee Age of Strife Costume </gallery> ==External Links== *https://forum.netmarble.com/slv_en/view/46/110027 Holy Guardian Barrier Go Gunhee Hunter Origin Story Category:Characters Category:Male Category:SSR Hunters"
+          "en": "The [True Qi, Azure Scale, and White Tiger Fang] effects are enhanced. The [Four Guardians Formation] is enhanced. [Four Guardians Formation] The power of the Four Divine Beasts protects Holy Guardian Barrier Go Gunhee. Deals Water elemental damage equal to 400% of the user's Defense every 1 second(s) to targets within the zone. Targets within the zone take 40% increased Critical Hit damage from Holy Guardian Barrier Go Gunhee. When this skill hits, it activates the [Unrecoverable] effect. Counts as a Basic Skill. [True Qi] Increases Burst damage by 40%. Cannot activate Great Void: Primordial Force Release. Duration: 20 second(s) [Azure Scale] Increases Water damage by 40%. Duration: 20 second(s) [White Tiger Fang] Increases Water Overload damage by 40%. Duration: 20 second(s) [Unrecoverable] Inflicts HP Recovery Block on the target. Duration: 30 second(s) ==Gallery== <gallery> Holy Guardian Barrier Go Gunhee Icon.png|Holy Guardian Barrier Go Gunhee Profile Picture Holy Guardian Barrier Go Gunhee Age of Strife Full Body.png|Holy Guardian Barrier Go Gunhee Age of Strife Costume </gallery> ==External Links== *https://forum.netmarble.com/slv_en/view/46/110027 Holy Guardian Barrier Go Gunhee Hunter Origin Story Category:Characters Category:Male Category:SSR Hunters"
         }
       }
     ],
@@ -5117,7 +5254,7 @@
       "max": {
         "hp": "10,366",
         "attack": "4,350",
-        "defense": "4,410\n|}}\n<br style=\"clear:left;\" />\n\n==Skills==\n{{Hunter Skills",
+        "defense": "4,410",
         "total_power": "29,446"
       }
     },
@@ -5729,7 +5866,7 @@
       "max": {
         "hp": "23,587",
         "attack": "12,036",
-        "defense": "12,208}}\n\n{{Clear|both}}\n\n== Skills ==\n{{Hunter Skills",
+        "defense": "12,208",
         "total_power": "467,409"
       }
     },
@@ -6749,7 +6886,7 @@
       "max": {
         "hp": "10,562",
         "attack": "5,605",
-        "defense": "4,944\n|}}\n<br style=\"clear:left;\" />\n\n==Skills==\n{{Hunter Skills",
+        "defense": "4,944",
         "total_power": "43,405"
       }
     },
@@ -6953,7 +7090,7 @@
       "max": {
         "hp": "10,604",
         "attack": "4,419",
-        "defense": "4,229\n|}}\n<br style=\"clear:left;\" />\n==Skills==\n{{Hunter Skills",
+        "defense": "4,229",
         "total_power": "29,457"
       }
     },
@@ -7356,13 +7493,13 @@
         "hp": "1,495",
         "attack": "821",
         "defense": "829",
-        "total_power": "-3,980"
+        "total_power": null
       },
       "max": {
         "hp": "10,825",
         "attack": "5,495",
         "defense": "5,544",
-        "total_power": "-43,515"
+        "total_power": null
       }
     },
     "advancement": [
@@ -11113,8 +11250,8 @@
       "max": {
         "hp": null,
         "attack": "6,566",
-        "defense": "6,392}}\n<br style=\"clear:both\">\n\n== Skills ==\n{{Hunter Skills",
-        "total_power": "55,629|\nhp2=14,586"
+        "defense": "6,392",
+        "total_power": "55,629"
       }
     },
     "advancement": [
@@ -12337,7 +12474,7 @@
       "max": {
         "hp": "10,351",
         "attack": "5,009",
-        "defense": "5,640\n|}}\n<br style=\"clear:left;\"/>\n\n==Skills==\n{{Hunter Skills",
+        "defense": "5,640",
         "total_power": "43,391"
       }
     },

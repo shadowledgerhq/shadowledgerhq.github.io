@@ -13,6 +13,9 @@ def clean(s):
     s = re.sub(r"\{\{Res\|[^{}]*\}\}", "", s)
     s = re.sub(r"\{\{(?:Text[_ ]Color|Color)\|[^|}]*\|([^{}]*)\}\}", r"\1", s)
     s = re.sub(r"\{\{(?:SSR|SR|R|Class)\|?([^{}|]*)[^{}]*\}\}", lambda m: m.group(0) if False else (m.group(1) or ""), s)
+    s = re.sub(r"\{\{(?:Text[_ ]Color|Color)\|[^|}]*\|", "", s)  # modèles mal fermés sur le wiki
+    s = re.sub(r"\{\{[^{}]*\}\}", "", s)
+    s = s.replace("{{", "").replace("}}", "")
     s = re.sub(r"\[\[File:[^\]]*\]\]", "", s)
     s = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", s)
     s = re.sub(r"<div[^>]*>|</div>", " ", s)
@@ -31,6 +34,10 @@ def params(text):
 def first(pat, s, g=1):
     m = re.search(pat, s)
     return m.group(g) if m else None
+
+def num(v):
+    m = re.match(r"\s*([\d][\d,\.]*)", v or "")
+    return m.group(1) if m else None
 
 def nums(s):
     m = re.search(r"Data\|([\d.,]+)(?:-([\d.,]+))?", s or "")
@@ -55,6 +62,7 @@ for i in range(0, len(titles), 20):
         txt = r.get("slots", {}).get("main", {}).get("*", "")
         if not re.search(r"Hunter[_ ]Infobox2", txt): continue
         txt = re.sub(r"^\|\s*\|", "|", txt, flags=re.M)
+        txt = re.sub(r"\|((?:basic|core|skill1|skill2|support|qte|ultimate)(?:_name|_des|_attacks?|_mod)?|passive|a[1-5]|total_power[12]|hp[12]|attack[12]|defense[12])=", r"\n|\1=", txt)
         p = params(txt)
         name = clean(p.get("title1", pg["title"]))
         type_en = (first(r"\{\{Class\|([^}|]*)", p.get("type", "")) or clean(p.get("type", "")).split(" ")[0] or "").lower().strip() or None
@@ -67,8 +75,8 @@ for i in range(0, len(titles), 20):
                     "exclusive_weapon": clean(p.get("exclusive_weapon", "")) or None,
                     "release_date_en": clean(p.get("release_date", "")) or None,
                     "skills": [s for s in sk if s], "passives": [{"tier": 0, "text": {"fr": "", "en": clean(p["passive"])}}] if p.get("passive") else [],
-                    "base_stats": {"lv1": {"hp": p.get("hp1"), "attack": p.get("attack1"), "defense": p.get("defense1"), "total_power": p.get("total_power1")},
-                                   "max": {"hp": p.get("hp2"), "attack": p.get("attack2"), "defense": p.get("defense2"), "total_power": p.get("total_power2")}},
+                    "base_stats": {"lv1": {"hp": num(p.get("hp1")), "attack": num(p.get("attack1")), "defense": num(p.get("defense1")), "total_power": num(p.get("total_power1"))},
+                                   "max": {"hp": num(p.get("hp2")), "attack": num(p.get("attack2")), "defense": num(p.get("defense2")), "total_power": num(p.get("total_power2"))}},
                     "advancement": [{"tier": n, "text": {"fr": "", "en": clean(p[f"a{n}"])}} for n in range(1, 6) if p.get(f"a{n}")],
                     "icon": None, "source": WIKI + urllib.parse.quote(pg["title"].replace(" ", "_")), "wiki_revid": r.get("revid"),
                     "wiki_timestamp": r.get("timestamp"), "verified_at": "2026-11-13", "game_version": None,

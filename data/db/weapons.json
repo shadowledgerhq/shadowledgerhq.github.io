@@ -260,12 +260,29 @@
     },
     "rarity": "ssr",
     "kind": "hunter",
-    "hunter_id": null,
-    "exclusive_hunter_en": null,
-    "element": null,
+    "hunter_id": "amamiya-mirei",
+    "exclusive_hunter_en": "Amamiya Mirei",
+    "element": "wind",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "Attack"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "Charges the user's Power Gauge by 60% when the user enters the stage. Increases the Critical Hit Rate and Critical Hit damage of Kuroha's Sword Technique Type 3: Wings of Night and Kuroha's Sword Technique Type 4: Raven's Cry by 5%."
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "Charges the user's Power Gauge by 60% when the user enters the stage. Increases the Critical Hit Rate and Critical Hit damage of Kuroha's Sword Technique Type 3: Wings of Night and Kuroha's Sword Technique Type 4: Raven's Cry by 30%. Increases the user's Attack, Defense, and HP by 15%."
+        }
+      }
+    ],
     "skills": [],
     "effects": [],
     "icon": null,
@@ -369,12 +386,29 @@
     },
     "rarity": "ssr",
     "kind": "hunter",
-    "hunter_id": null,
-    "exclusive_hunter_en": null,
-    "element": null,
+    "hunter_id": "park-beom-shik",
+    "exclusive_hunter_en": "Park Beom-Shik",
+    "element": "wind",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "Defense"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "The user's Defense increases by 2%. When [Father's Determination] activates it grants an additional [Shield] equal to 2% of the user's Defense and increases the damage of their Basic Skills by 10%."
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "The user's Defense increases by 8%. When [Father's Determination] activates it grants an additional [Shield] equal to 8% of the user's Defense and increases the damage of their Basic Skills by 35%. Increases the user's Attack, Defense, and HP by 15%."
+        }
+      }
+    ],
     "skills": [],
     "effects": [],
     "icon": null,
@@ -650,8 +684,25 @@
     "exclusive_hunter_en": "Frieren",
     "element": "water",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "Defense"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "The user's Defense increases by 5% Team members' Basic Skill and Ultimate Skill damage increases by 5%"
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "The user's Defense increases by 50% Team members' Basic Skill and Ultimate Skill damage increases by 30% Attack, Defense, and HP increase by 15%"
+        }
+      }
+    ],
     "skills": [],
     "effects": [],
     "icon": null,
@@ -675,8 +726,25 @@
     "exclusive_hunter_en": "Esil Radiru",
     "element": "fire",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "Attack"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "The user's Attack increases by 4%. The Additional Attack of the team member with the highest Critical Hit Rate increases by 300 per 1000 of Esil Radiru's Additional Attack (The Max Additional Attack cap increases to 600.)"
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "The user's Attack increases by 12%. The Additional Attack of the team member with the highest Critical Hit Rate increases by 300 per 1000 of Esil Radiru's Additional Attack (The Max Additional Attack cap increases to 2400.) Increases the user's Attack, Defense, and HP by 15%."
+        }
+      }
+    ],
     "skills": [],
     "effects": [],
     "icon": null,
@@ -740,7 +808,7 @@
     "kind": "hunter",
     "hunter_id": "silver-mane-baek-yoonho",
     "exclusive_hunter_en": "Silver Mane Baek Yoonho",
-    "element": null,
+    "element": "dark",
     "weapon_type": null,
     "base_stats": {
       "stat_type": "Attack"
@@ -822,12 +890,29 @@
     },
     "rarity": "ssr",
     "kind": "hunter",
-    "hunter_id": null,
-    "exclusive_hunter_en": null,
-    "element": null,
+    "hunter_id": "lim-tae-gyu",
+    "exclusive_hunter_en": "Lim Tae-Gyu",
+    "element": "dark",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "Attack"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "Increases the user's Dark damage by 4%. When they use a Basic Attack within 10 second(s) after using Quick Attack: Typhoon Fire, it increases their attack by 8% for 30 second(s) (stacking up to 2 times)."
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "Increases the user's Dark damage by 12%. When they use a Basic Attack within 10 second(s) after using Quick Attack: Typhoon Fire, it increases their attack by 8% for 30 second(s) (stacking up to 8 times). Increases the user's Attack, Defense, and HP by 15%."
+        }
+      }
+    ],
     "skills": [],
     "effects": [],
     "icon": null,
@@ -1897,12 +1982,29 @@
     },
     "rarity": "ssr",
     "kind": "hunter",
-    "hunter_id": null,
-    "exclusive_hunter_en": null,
-    "element": null,
+    "hunter_id": "gina",
+    "exclusive_hunter_en": "Gina",
+    "element": "fire",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "Attack"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "The user's Attack increases by 4%. When [Mana Circulation] activates, all team members recover 50 mana. When [Mana Circulation] activates, it increases all attack and Fire damage by 1% (stacking up to 8 times). Duration: Infinite"
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "The user's Attack increases by 24%. When [Mana Circulation] activates, all team members recover 250 mana. When [Mana Circulation] activates, it increases all attack and Fire damage by 1% (stacking up to 20 times). Duration: Infinite Increases the user's Attack, Defense, and HP by 15%."
+        }
+      }
+    ],
     "skills": [],
     "effects": [],
     "icon": null,
@@ -2010,8 +2112,25 @@
     "exclusive_hunter_en": "Shimizu Akari",
     "element": "light",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "HP"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "Increases the user's HP by 10%. When the [Echo of Light] effect is activated on Light team members, increases the entire team's Light damage by 6% and Light Overload damage by 6% for 8 second(s)."
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "The user's HP increases by 50%. When the [Echo of Light] effect is activated on Light team members, the entire team's Light damage increases by 16% and Light Overload damage increases by 16% for 8 second(s). Increases Attack, Defense, and HP by 15%."
+        }
+      }
+    ],
     "skills": [],
     "effects": [],
     "icon": null,
@@ -2035,8 +2154,25 @@
     "exclusive_hunter_en": "Thomas Andre",
     "element": "light",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "Defense"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "Increases Defense by 4%. Increases Shield Acquisition Chance by 6%."
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "Increases Defense by 16%. Increases Shield Acquisition Chance by 24%. Increases the user's Attack, Defense, and HP by 15%."
+        }
+      }
+    ],
     "skills": [],
     "effects": [],
     "icon": null,
@@ -2144,8 +2280,25 @@
     "exclusive_hunter_en": "Isla Wright",
     "element": "dark",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "Defense"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "The user's Defense increases by 2%. The entire team's Defense increases by 1% for every Dark team member on the team. (In Guild Boss mode, the effect now stacks once per ally instead of once per team member.) For every Dark ally in the party Dark team members' Attack increases by 1%. Isla Wright's Ultimate Skill cooldown decreases by 4 second(s)."
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "The user's Defense increases by 12%. The entire team's Defense increases by 5% for every Dark team member on the team. (In Guild Boss mode, the effect now stacks once per ally instead of once per team member.) For every Dark ally in the party Dark team members' Attack increases by 5%. Isla Wright's Ultimate Skill cooldown decreases by 20 second(s). Increases the user's Attack, Defense, and HP by 15%."
+        }
+      }
+    ],
     "skills": [],
     "effects": [],
     "icon": null,
@@ -2400,27 +2553,6 @@
         "text": {
           "fr": "",
           "en": "The user's Water damage increases by 10%"
-        }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "The [Rolling Tide] effect is enhanced. The [Maelstrom] effect is enhanced. [Rolling Tide] Increases the user's damage dealt by 20%. Increases the user's Water damage by 20% When a Water weapon skill hits it, inflicts the [Maelstrom] effect on the target Duration: 20 seconds [Maelstrom] Increases the target's Water damage taken by 8%. Duration: 20 seconds (stacking up to 4 times)"
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "The cooldown of Dominion Storm decreases by 20%"
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "Changes to [Lunar Drift] to [Rising Ride]. When all the user's equipped weapons are Water weapons, it increases their Critical Hit Rate by 10% Rising Tide Increases the user's Water damage by 15%. Increases the damage of Water weapon skills by 60% Duration: Infinite"
         }
       }
     ],
@@ -2736,34 +2868,6 @@
           "fr": "",
           "en": "When Hunting Hawk is used, the cooldown of Shadow Step, Death, or Collapse is reset and activated. Reset Rate: 20% for Shadow Step, 40% for Death, 40% for Collapse"
         }
-      },
-      {
-        "tier": 2,
-        "text": {
-          "fr": "",
-          "en": "Increases Dark damage by 8%."
-        }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "The effect of Hunting Hawk change: It can be used up to 2 times."
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Decreases the cooldown of Hunting Hawk by 15%."
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "When Hunting Hawk is used, it applies the [Hawk Eye] effect. Hawk Eye <p style=\"margin-left: 20px;\">Increases the damage of Collapse, Death, and Shadow Step by 30%. Duration: 3 second(s)</p>"
-        }
       }
     ],
     "skills": [
@@ -3061,7 +3165,7 @@
     "kind": "sung_jinwoo",
     "hunter_id": null,
     "exclusive_hunter_en": null,
-    "element": null,
+    "element": "wind",
     "weapon_type": "Sword",
     "base_stats": {},
     "passive": [
@@ -3077,34 +3181,6 @@
         "text": {
           "fr": "",
           "en": "Inflicts the Stroke of Lightning effect to the same target every 5 attack(s). [Stroke of Lightning] Deals damage equal to 100% of Attack. Cooldown: 0.5 second(s)"
-        }
-      },
-      {
-        "tier": 2,
-        "text": {
-          "fr": "",
-          "en": "Increases Wind damage by 10%."
-        }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "When the user uses Lightning, it applies the [Storm of the White Flames] effect, regardless of whether or not the user performs a successful Counterattack. The damage of [Storm of White Flames] increases by 30%. Wind damage increases by 10% while [Storm of White Flames] is active."
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Decreases the cooldown of Lightning by 20%."
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "[Stroke of Lightning] is enhanced. Each time the user hits the same target 3 time(s), it applies the [Stroke of Lightning] effect on the target. Deals damage equal to 200% of the user's Attack. Cooldown: 0.3 second(s) When Lightning hits, it applies the [Benediction of the White Flames] effect and [Final Thunderbolt]. [Final Thunderbolt] effect. A large lightning bolt falls on the target dealing damage equal to 1600% of the user's Attack to nearby enemies. [Benediction of the White Flames] <p style=\"margin-left: 20px;\">Creates a [Shield] equal to 10% of the user's Max HP. When the user is it, it applies the [Stun] effect to the target for 2 second(s) (Activates only once per target). Cooldown: 10 second(s)</p>"
         }
       }
     ],
@@ -3655,27 +3731,6 @@
           "fr": "",
           "en": "The user's Fire damage increases by 10%"
         }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "When Pitch-black Rage hits and the [Burn] effect is active on the target it increases damage by an additional 25%. Enhances the [Burning Grudge] effect. [Burning Grudge] Increases damage taken by 5%. Increases Fire damage by 15%. Increases damage dealt to boss by 10%. Increases Pitch-black Rage damage by 100%. Duration: Infinite"
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Decreases Pitch-black Rage cooldown by 20%"
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "Using a Fire weapon skill increases the user's Fire weapon skill damage by 50% for 2.5 second(s) to targets with the [Burn] effect Increases Ennio's Rage damage Enhances the [Brand of Adversary] effect [Ennio's Rage] Summons a meteor from the sky to attack the target. Damage: 2000% of Attack [Brand of the Adversary] Increases Pitch-black Rage damage by 100%. Removes the effect when Pitch-black Rage hits. Duration: 3 second(s)"
-        }
       }
     ],
     "skills": [
@@ -3890,20 +3945,6 @@
           "fr": "",
           "en": "The [Wish] effect is enhanced. The user's Core Attack deals additional damage equal to 500% of their Attack to the first target [Wish] Increases damage dealt by 40%. When Wind Tree's Song hits, it activates the [Root Dispersion] effect which deals additional damage equal to 100% of the user's Attack to targets across a wide range. When [Root Dispersion] activates, it inflicts the [Poison] effect on the hit target. When Wind Tree's Song hits, it has a 100% chance to activate the user's Core Attack (Cooldown: 20 second(s)) When Wind Tree's Song hits, it removes the [Wish] effect. Duration: 20 second(s) [Poison] Deals damage equal to 50% of the user's Attack every 3 second(s). Decreaes the target's Recovery Rate by 70%. Duration: 30 second(s)"
         }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "The cooldown of Wind Tree's Song decreases by 20%."
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "Wind Tree's Song damage increases by 50%. The damage of [Root Dispersion] increases by 150%"
-        }
       }
     ],
     "skills": [
@@ -3919,36 +3960,6 @@
           "en": "Jinwoo rapidly fires arrows of wind."
         },
         "effects_text_en": "Stage 1 Damage: 145-179.36% of Jinwoo's Attack Stage 2 Damage: 150-185.54% of Jinwoo's Attack Stage 3 Damage: 156-192.96% of Jinwoo's Attack ・Deals Wind",
-        "effects": [],
-        "values_by_level": {}
-      },
-      {
-        "type": "core_attack",
-        "name": {
-          "fr": "",
-          "en": "",
-          "ko": ""
-        },
-        "text": {
-          "fr": "",
-          "en": "Jinwoo fires an arrow imbued with the power of the tress and the wind, dealing overwhelming damage."
-        },
-        "effects_text_en": "Damage: 475-587.54% of Jinwoo's Attack ・Deals Wind elemental damage.",
-        "effects": [],
-        "values_by_level": {}
-      },
-      {
-        "type": "skill",
-        "name": {
-          "fr": "",
-          "en": "Wind Tree's Song",
-          "ko": ""
-        },
-        "text": {
-          "fr": "",
-          "en": "Jinwoo creates a gust of wind centered on the hit target, dealing damage across a wide area with a powerful gust of wind."
-        },
-        "effects_text_en": "Damage: 794-1214.82% of Jinwoo's Attack Cooldown: 25 sec MP Consumption: 200-229 ・Deals Wind elemental damage ・When the first hit lands, it inflicts the [Airborne] effect ・When the final hit lands, it inflicts the [Knock Down] effect.",
         "effects": [],
         "values_by_level": {}
       }
@@ -4339,27 +4350,6 @@
           "fr": "",
           "en": "The user's Light damage increases by 10%"
         }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "The [Hero's Will] effect activates when the user enters a stage. When Peacebringer Sword hits a target with a [Shield], its damage dealt increases by 20% for 15 second(s). [Hero's Will] When Peacebringer Sword hits, it deals Heavy Break damage The user gains [Super Armor] while using Peacebringer Sword Duration: Infinite"
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Peacebringer Sword cooldown decreases by 20%"
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "Using the Peacebringer Sword slows down time for 2 second(s) and activates the [Demon King-slaying Sword] effect [Demon King-slaying Sword] Increases damage dealt to bosses by 50% Increases Light damage dealt by 35% Increases Ultimate Skill damage dealt by 50% Duration: 8 second(s)"
-        }
       }
     ],
     "skills": [
@@ -4543,7 +4533,7 @@
     "kind": "sung_jinwoo",
     "hunter_id": null,
     "exclusive_hunter_en": null,
-    "element": null,
+    "element": "fire",
     "weapon_type": "Sword",
     "base_stats": {},
     "passive": [
@@ -4673,34 +4663,6 @@
         "text": {
           "fr": "",
           "en": "When Core Attack or Villainous Sneak Attack hits, there is a 30% chance to [Paralyze] the target. [Paralyze] <p style=\"margin-left: 20px;\">This skill interrupts the target. Duration: 1 second(s)"
-        }
-      },
-      {
-        "tier": 2,
-        "text": {
-          "fr": "",
-          "en": "Increases Water damage by 8%."
-        }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "Adds the {{Text Color|Type=Effect[Kasaka's Venom]}} effect to Villainous Sneak Attack. [Kasaka's Venom] Creates a pool of venom on the ground for 5 second(s), dealing additional damage to enemies in the pool."
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Decreases the cooldown of Villainous Sneak Attack by 15%."
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "Applies the [Kasaka's Deadly Poison] effect to the targets when Villainous Sneak Attack hits. [Kasaka's Deadly Poison] <p style=\"margin-left: 20px;\">The user deals damage equal to 75% of Attack every 3 second(s). Decreases the target's HP Recovery Rate by 70%. Duration: 30 second(s)"
         }
       }
     ],
@@ -5479,27 +5441,6 @@
           "fr": "",
           "en": "Wind damage increases by 10%"
         }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "The [Spirit Fury] effect is enhanced. The [Viridian Breath] effect activates when entering a stage. [Spirit Fury] Increases Wind damage dealt by 3%. Increases Wind Weapon Skill damage dealt by 10%. Increases the user's Defense Penetration by 3%. Using a Wind Weapon Skill activates the [Spirit Fury] effect. When the effect has stacked the maximum number of times, and the [Spirit Fury] effect is removed, the [Spirit's Verdict] effect is activated. Duration: 15 second(s) (stacks up to 6 times) [Spirit's Verdict] Increases Wind damage dealt by 30%. Increases Wind Weapon Skill damage dealt by 80%. Increases the user's Defense Penetration by 20%. Cannot activate [Spirit Fury] while the effect is active. Duration: 10 second(s) [Viridian Breath] Decreaes MP Consumption by 20%. The user gains 50 MP when using a Wind Weapon Skill. Duration: Infinite"
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Lunar Wind's cooldown decreases by 20%"
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "The [Spirit Fury, Spirit's Verdict, and Genesis Pulse] effects are enhanced. [Spirit Fury] Increases Wind damage dealt by 5%. Increases Wind Weapon Skill damage dealt by 15%. Increases the user's Defense Penetration by 5%. Using a Wind Weapon Skill activates the [Spirit Fury] effect. When the effect has stacked the maximum number of times, and the [Spirit Fury] effect is removed, the [Spirit's Verdict] effect is activated. Duration: 15 second(s) (stacks up to 6 times) [Spirit's Verdict] Increases Wind damage dealt by 50%. Increases Wind Weapon Skill damage dealt by 100%. Increases the user's Defense Penetration by 35%. Cannot activate [Spirit Fury] while the effect is active. Duration: 10 second(s) [Genesis Pulse] Increases Wind Overload damage by 30% Increases the [Wind] Weapon Skill damage by 10% Duration: 15 second(s) (stacks up to 6 times)"
-        }
       }
     ],
     "skills": [
@@ -5569,7 +5510,7 @@
     "kind": "sung_jinwoo",
     "hunter_id": null,
     "exclusive_hunter_en": null,
-    "element": null,
+    "element": "dark",
     "weapon_type": "Dagger",
     "base_stats": {},
     "passive": [
@@ -5578,41 +5519,6 @@
         "text": {
           "fr": "",
           "en": "When Moonglow Shining in the Dark is used, it applies the [Full Moon] effect to targets on the moon. When the last attack of Moonglow Shining in the Dark hits, it slows down time for 3 second(s) and applies 1 instance of [Lunar Eclipse] to the target per instance of [Full Moon]. [Full Moon] <p style=\"margin-left: 20px;\">Duration: Infinite (stacking up to 1 times).</p> [Lunar Eclipse] <p style=\"margin-left: 20px;\">The target's damage taken increases by 10%. Increases Dark damage by 10%. Duration: 3 second(s)"
-        }
-      },
-      {
-        "tier": 1,
-        "text": {
-          "fr": "",
-          "en": "Enhances the effects of [Full Moon and Lunar Eclipse]. [Full Moon] <p style=\"margin-left: 20px;\">Duration: Infinite (stacking up to 3 times).</p> [Lunar Eclipse] <p style=\"margin-left: 20px;\">The target's damage taken increases by 15%. Increases Dark damage by 15%. Duration: 3 second(s)"
-        }
-      },
-      {
-        "tier": 2,
-        "text": {
-          "fr": "",
-          "en": "Increases Dark damage by 10%."
-        }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "When Shadow Step hits, it applies 1 instance of [Lunar Eclipse] per instance of [Full Moon]."
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Decreases the cooldown of Moonglow Shining in the Dark by 20%."
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "Increases the user and their team members' damage by 15% while the time slowing effect is active."
         }
       }
     ],
@@ -6050,7 +5956,7 @@
     "kind": "sung_jinwoo",
     "hunter_id": null,
     "exclusive_hunter_en": null,
-    "element": null,
+    "element": "fire",
     "weapon_type": "Bow",
     "base_stats": {},
     "passive": [
@@ -6202,13 +6108,6 @@
           "fr": "",
           "en": "Decreases Radish Clan's Support cooldown by 20%"
         }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "The attack range of Support Fire increases by 50%, and its cooldown becomes 5 second(s). When the user's Fire attack hits after equipping all Fire weapons, it activates an additional instance of [Morale]. (When this skill hits, it only activates 1 time) Enhances the [Morale] effect. [Morale] Increases damage dealt by 1.2%. Increases Fire Basic Skill damage by 0.5% and Weapon Skills damage by 1%, when all equipped weapons are Fire Duration: Infinite (stacks up to 30 times)"
-        }
       }
     ],
     "skills": [
@@ -6308,20 +6207,6 @@
         "text": {
           "fr": "",
           "en": "The effects of Flash of Light change: When the shockwave of Flash of Light hits, targets are knocked back 3m and [Stunned]. [Stun] <p style=\"margin-left: 20px;\">Immobilizes the target. Duration: 2 second(s)"
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Decreases the cooldown of Flash of Light by 15%."
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "Increases the damage of all Attacks by 25% to [Stunned] targets."
         }
       }
     ],
@@ -6734,7 +6619,7 @@
     "kind": "sung_jinwoo",
     "hunter_id": null,
     "exclusive_hunter_en": null,
-    "element": null,
+    "element": "water",
     "weapon_type": "Sword",
     "base_stats": {},
     "passive": [
@@ -7100,27 +6985,6 @@
           "fr": "",
           "en": "The user's Wind damage increases by 10%"
         }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "The maximum number of times [Twin Tempest and Hurricane Fever] can stack becomes 6 times. When Sung Jinwoo or an ally successfully inflicts Wind Overload damage, it now applies 6 instances of the [Twin Tempest] effect. (Cooldown: 15 second(s)) When [Hurricane Fever] has stacked 1, 3, or 5 times, the speed and range of Furious Storm increases at each interval. When [Hurricane Fever] has stacked 6 times, Soma and Asura's Core Attack changes and counts as a Basic Skill, summoning a lightning strike that deals additional damage equal to 500% of damage."
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "The user's Wind Overload damage increases 10%"
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "The [Eightfold Tempest] effect is inflicted on targets with 50 [Fourfold Tempest] instances applied. When Soma and Asura's Core Attack hits a target affected by Wind Overload, 6 [Twin Tempest] instances are applied. (Cooldown: 15 second(s)) [Eightfold Tempest] Increases the chance of receiving Wind Critical Hit damage by 10%. Increases Wind Critical Hit damaege by 20% Duration: Infinite"
-        }
       }
     ],
     "skills": [
@@ -7418,7 +7282,7 @@
     "kind": "sung_jinwoo",
     "hunter_id": null,
     "exclusive_hunter_en": null,
-    "element": null,
+    "element": "light",
     "weapon_type": "Pistol",
     "base_stats": {},
     "passive": [
@@ -7434,34 +7298,6 @@
         "text": {
           "fr": "",
           "en": "When the final hit of Judgment Time lands, inflicts the [Sunder] effect to the target. If a target is in a [Break] state while the [Sunder] effect is active, inflicts the [Destroy] effect to the target. [Sunder] <p style=\"margin-left: 20px;\">Increases [Break] effect by 25%. Increases the target's Light damage taken by 25%. Duration: 5 second(s)</p> [Destroy] <p style=\"margin-left: 20px;\">Increases damage taken increases by 8%. Duration: Infinite"
-        }
-      },
-      {
-        "tier": 2,
-        "text": {
-          "fr": "",
-          "en": "Increases Light damage by 10%."
-        }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "When the first hit of Judgment Time lands, it applies the [Halt] effect to the target. [Halt] <p style=\"margin-left: 20px;\">This skill interrupts the target. Duration: 2 second(s)"
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Decreases the cooldown of Judgment Time by 20%."
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "[Destroy] Effect Change <p style=\"margin-left: 20px;\">Increases damage taken by 16% (stacking up to 99 times). When Judgement Time hits it inflicts the [Judgment Overture] effect to the target. When [Judgment Overture] has stacked 3 times it becomes 1 instance of [Destroy] (Max: 1 time)."
         }
       }
     ],
@@ -7532,7 +7368,7 @@
     "kind": "sung_jinwoo",
     "hunter_id": null,
     "exclusive_hunter_en": null,
-    "element": null,
+    "element": "water",
     "weapon_type": "Magic",
     "base_stats": {},
     "passive": [
@@ -7649,7 +7485,29 @@
     "element": "dark",
     "weapon_type": "Magic",
     "base_stats": {},
-    "passive": [],
+    "passive": [
+      {
+        "tier": 0,
+        "text": {
+          "fr": "",
+          "en": "Using Morphbeast Strike restores 100% of the user's Core Gauge and activates the [Morphbeast Gaze] effect [Morphbeast's Erratic Flux] Deals Dark elemental damage equal to 900% of Jinwoo's attack Count's as a Core Attack [Morphbeast's Gaze] Using a Dark Core Attack activates [Morphbeast's Erratic Flux] in front of the user (Cooldown: 2 second(s)) Duration: 15 second(s)"
+        }
+      },
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "When all the user's equipped weapons are Dark-element weapons, the [Morphbeast's Essence] effect activates [Morphbeast's Essence] Increases Dark Overload Damage by 10% Increases the [Dark] [Elemental Accumulation] by 20% Duration: Infinite"
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "The user's Dark damage increases by 10%"
+        }
+      }
+    ],
     "skills": [
       {
         "type": "basic_attack",
@@ -7717,7 +7575,7 @@
     "kind": "sung_jinwoo",
     "hunter_id": null,
     "exclusive_hunter_en": null,
-    "element": null,
+    "element": "light",
     "weapon_type": "Polearm",
     "base_stats": {},
     "passive": [
@@ -7955,41 +7813,6 @@
           "fr": "",
           "en": "When the user uses Fire of Destruction it applies the [Vulcan's Blessing] effect. [Vulcan's Blessing] It creates a [Shield] equal to 10% of the user's Attack and applies the [Concentration] effect for every Basic Attack and Core Attack that hits the enemy. Duration: 10 second(s). [Concentration] When the duration ends or the effect is removed, [Vulcan's Blessing] explodes and deals damage equal to 400% of the user's Attack (stacking up to 20 times). When it explodes, it deals additional 20% damage per instance of [Concentration]. When [Vulcan's Blessing] is at 20 instances, [Vulcan's Blessing] instantly explodes and recreates [Shield] equal to 10% of the user's Attack. Duration: Infinite"
         }
-      },
-      {
-        "tier": 1,
-        "text": {
-          "fr": "",
-          "en": "When Vulcan's Blessing] explodes, applies [Rage]. [Rage] Increases the user's Attack by 12%. Increases Attack Speed by 6%. Duration: 15 second(s)"
-        }
-      },
-      {
-        "tier": 2,
-        "text": {
-          "fr": "",
-          "en": "Increases Light damage by 10%."
-        }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "Enhances [Rage] [Rage] Applies even when using Fire of Destruction. Increases the user's Attack by 20%. Increases Attack Speed by 10%. Duration: 15 second(s)"
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "Decreases the cooldown of Fire of Destruction by 20%."
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "While [Shield] is in effect, the damage of Fire of Destruction increases by 50%."
-        }
       }
     ],
     "skills": [
@@ -8183,41 +8006,6 @@
           "fr": "",
           "en": "Using [Doomsday] activates [Rotary Reload] [Rotary Reload] Activates the user's Core Attack Changes the Winchester Roke's Core Attack to Condemn and increases its damage by 20% Condemn can be used up to 2 times while the [Rotary Reload] effect is active Duration: 4 second(s)"
         }
-      },
-      {
-        "tier": 1,
-        "text": {
-          "fr": "",
-          "en": "The users [Doomsday] damage dealt to targets within a 5m range increases by 100% Enhances [Rotary Reload] [Rotary Reload] Activates the user's Core Attack Changes the Winchester Roke's Core Attack to Condemn and increases its damage by 40% Condemn can be used up to 3 times while the [Rotary Reload] effect is active Duration: 5 second(s)"
-        }
-      },
-      {
-        "tier": 2,
-        "text": {
-          "fr": "",
-          "en": "The user's Dark damage increases by 10%"
-        }
-      },
-      {
-        "tier": 3,
-        "text": {
-          "fr": "",
-          "en": "Using [Doomsday] activates [Ready or Not] [Ready or Not] Increases Condemn's Dark damage by 15% Increases Condemn's Critical Hit damage by 30% The user gains [Super Armor] Duration: 6 second(s)"
-        }
-      },
-      {
-        "tier": 4,
-        "text": {
-          "fr": "",
-          "en": "[Doomsday] skill cooldown decreases by 20%"
-        }
-      },
-      {
-        "tier": 5,
-        "text": {
-          "fr": "",
-          "en": "The [Rotary Reload and Ready or Not] skills are enhanced [Rotary Reload] Activates the user's Core Attack Changes the Winchester Roke's Core Attack to Condemn and increases its damage by 80% Increases Condemn's Overload damage by 70% Condemn can be used up to 4 times while the [Rotary Reload] effect is active Duration: 6 second(s) [Ready or Not] Increases Condemn's Dark damage by 30% Increases Condemn's Critical Hit damage by 60% The user gains [Super Armor] Duration: 6 second(s)"
-        }
       }
     ],
     "skills": [
@@ -8401,7 +8189,7 @@
     "kind": "sung_jinwoo",
     "hunter_id": null,
     "exclusive_hunter_en": null,
-    "element": null,
+    "element": "dark",
     "weapon_type": "Polearm",
     "base_stats": {},
     "passive": [],

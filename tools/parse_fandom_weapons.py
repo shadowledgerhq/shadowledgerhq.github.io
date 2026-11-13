@@ -11,6 +11,9 @@ def get(params):
 def clean(s):
     s = re.sub(r"\{\{Res\|[^{}]*\}\}", "", s or "")
     s = re.sub(r"\{\{(?:Text[_ ]Color|Color)\|[^|}]*\|([^{}]*)\}\}", r"\1", s)
+    s = re.sub(r"\{\{(?:Text[_ ]Color|Color)\|[^|}]*\|", "", s)  # modèles mal fermés sur le wiki
+    s = re.sub(r"\{\{[^{}]*\}\}", "", s)
+    s = s.replace("{{", "").replace("}}", "")
     s = re.sub(r"\[\[File:[^\]]*\]\]", "", s)
     s = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", s)
     s = re.sub(r"<div[^>]*>|</div>", " ", s)
@@ -26,8 +29,10 @@ def params(text):
     return d
 
 def tmpl(txt, name):
-    m = re.search(r"\{\{\s*" + name + r"[^|{}]*\n(.*?)^\}\}", txt, re.S | re.M)
-    return params(m.group(1)) if m else {}
+    m = re.search(r"\{\{\s*" + name + r"[^|{}]*\n(.*?)(?:^\}\}|\}\}[ \t]*(?=\n[ \t]*\n|\n==|\Z))", txt, re.S | re.M)
+    if not m: return {}
+    d = params(m.group(1) + "\n}}")
+    return {k: re.sub(r"\}\}\s*$", "", v) if v.count("{{") < v.count("}}") else v for k, v in d.items()}
 
 def tag(v):  # {{Fire}} / {{SSR}} / {{Player}}
     m = re.search(r"\{\{\s*([A-Za-z ]+?)\s*(?:\||\}\})", v or "")
@@ -42,6 +47,7 @@ for i in range(0, len(titles), 20):
         r = pg.get("revisions", [{}])[0]
         txt = r.get("slots", {}).get("main", {}).get("*", "")
         if not re.search(r"\{\{\s*Weapon\b", txt): continue
+        txt = re.sub(r"^\|\s*\|", "|", txt, flags=re.M)
         info = tmpl(txt, "Weapon")
         name = clean(info.get("title1", pg["title"]))
         kind = tag(info.get("type")) or ""
@@ -49,7 +55,7 @@ for i in range(0, len(titles), 20):
         eh = (_m.group(1).strip() if _m else clean(info.get("exclusive_hunter", "").split("}}")[0])) or None
         w = {"id": slug(name), "name": {"fr": "", "en": name, "ko": ""}, "rarity": (re.search(r"\b(SSR|SR|R)\b", info.get("rarity", "")) or re.search(r"Category:(SSR|SR|R) Weapons", txt) or [None, None])[1].lower() if (re.search(r"\b(SSR|SR|R)\b", info.get("rarity", "")) or re.search(r"Category:(SSR|SR|R) Weapons", txt)) else None,
              "kind": "sung_jinwoo" if (kind == "player" or "Category:Sung Jinwoo Weapons" in txt) else ("hunter" if (kind.startswith("hunter") or "Category:Hunter Weapons" in txt) else None),
-             "hunter_id": None, "exclusive_hunter_en": eh, "element": ((re.search(r"\b(Fire|Water|Wind|Light|Dark)\b", info.get("element", "")) or [None, None])[1] or "").lower() or None,
+             "hunter_id": None, "exclusive_hunter_en": eh, "element": ((re.search(r"\b(Fire|Water|Wind|Light|Dark)\b", info.get("element", "")) or re.search(r"Category:\s*(Fire|Water|Wind|Light|Dark) Element", txt) or [None, None])[1] or "").lower() or None,
              "weapon_type": None, "base_stats": {}, "passive": [], "skills": [], "effects": [],
              "icon": None, "source": WIKI + urllib.parse.quote(pg["title"].replace(" ", "_")), "wiki_revid": r.get("revid"),
              "wiki_timestamp": r.get("timestamp"), "verified_at": "2026-11-13", "game_version": None,
