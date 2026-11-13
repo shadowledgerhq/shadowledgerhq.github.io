@@ -1,27 +1,21 @@
-# SUIVI — 9 Base de données — 2026-11-12
+# SUIVI — 9 Base de données — 2026-11-13
 ## Fait
-- Schémas validés par Alexis ; `data/db/_schema.md`, `stats.json` et `patches.json` (vides) créés.
-- Sondage de slagate.com : site SPA, données servies par api.slagate.com. Les routes `/api/codex/*` et `/api/game/hunters` testées renvoient 404 (non exploitables telles quelles).
-- Captures BOT lues : `docs/REFERENCE_ECRANS_BOT.md`. Champ `ja` ajouté au schéma.
-- Alexis valide : `data/rules/<semaine>.json` créé (BOT 05/11 et 12/11), CONTEXTE §3 et §6 corrigés. Écran de stats lu : `docs/REFERENCE_ECRANS_STATS.md`.
-- `stats.json` : 10 stats + 5 attributs obligatoires + puissance de combat (info) (noms coréens lus ; FR/EN vides, à vérifier).
-- Captures POC lues : `docs/REFERENCE_ECRANS_POC.md` ; catégorie `subjugation_support` et champ `role` ajoutés au schéma.
-- POC corrigé (SJW confirmé, composition libre, score équipe 1 confirmé) ; écran de résultat lu.
-- Captures HOTM (composition, onglets, résultat) lues : `docs/REFERENCE_ECRANS_HOTM.md` ; catégorie `proof_modifiers` ajoutée au schéma.
-- Corrections d'Alexis : les 8 « +5 » = bénédictions, le « +2 » = compétences ; mode HOTM sans SJW lu (docs mis à jour).
-- `data/rules/2026-11-12.json` : HOTM sans restriction (confirmé par Alexis).
+- Schémas validés (`data/db/_schema.md`) : catégories hunters, weapons, artifact_sets, cores, shadows, successors, sjw_skills, blessings, subjugation_support (POC), proof_modifiers (HOTM), stats, patches ; champs `ja` et `role` ajoutés.
+- `stats.json` : 10 stats + 5 attributs (obligatoires) + puissance de combat (info). Noms coréens lus ; FR/EN vides.
+- Écrans lus : stats, BOT, POC, HOTM (avec et sans SJW) → `docs/REFERENCE_ECRANS_*.md`.
+- Règles par semaine : `data/rules/2026-11-05.json` (BOT) et `2026-11-12.json` (BOT, HOTM sans restriction). CONTEXTE §3 et §6 corrigés.
+- Sondage de slagate.com : SPA, données sur api.slagate.com ; routes `/api/codex/*` testées en 404. Pas d'export de Sohoven possible.
+- Décision : le lien porte ↔ mode avec/sans SJW au HOTM sera établi par les données du pipeline (messages donnés pour les discussions 8 et 2).
 ## En cours
-- Choix de la méthode de récupération des données (voir « Besoin d'Alexis »).
+- Rien d'engagé. Prochaine étape : `patches` (notes Netmarble), puis sets d'artefacts.
 ## À faire
-- Saisir `stats`, `patches`, puis `artifact_sets`, `cores`, `hunters`, `weapons`, `shadows`, `successors`, `sjw_skills`, `blessings`.
-- Script de contrôle (ids uniques, FR+EN, source, date, icône) à demander à la discussion 8.
-- Décision d'Alexis (13/11/2026) : le lien porte ↔ mode avec/sans SJW sera établi par les données du pipeline (porte + titre du mode relevés sur chaque vidéo HOTM). Messages envoyés aux discussions 8 et 2 par Alexis.
+- Saisir : patches → artifact_sets → cores → hunters → weapons → shadows → successors → sjw_skills → blessings → subjugation_support → proof_modifiers.
+- Script de contrôle (ids uniques, FR+EN, source, date, icône) : à demander à la discussion 8.
+- Noms FR/EN officiels des stats.
 ## Besoin d'Alexis
-- Trace écrite de l'autorisation de Sohoven : son `robots.txt` indique `ai-train=no`. Confirmer que l'autorisation couvre la lecture automatisée de l'API et la reprise des icônes.
-- Méthode : (a) Sohoven fournit un export ou les routes à utiliser, (b) saisie à partir des pages publiques /builds, /guides, /tier-list, (c) captures d'écran fournies par toi.
 - Captures du GB.
-- Règles de POC et GB (semaines du 05/11 et du 12/11), HOTM du 05/11 (à remplir dans `data/rules/`).
-- Noms FR/EN officiels des 10 stats (je les chercherai sur slagate quand j'y accède).
-
+- Règles de POC et GB (05/11 et 12/11) et HOTM du 05/11, pour `data/rules/`.
+- Trace écrite de l'autorisation de Sohoven (`robots.txt` : `ai-train=no`) : couvre-t-elle la lecture automatisée et les icônes ?
+- Source de données pour les sets d'artefacts : captures d'écran ou pages publiques de slagate.com.
 ## Demandes de modif du skill
 - Format « Objet de la base » : ajouter les champs par catégorie (voir `data/db/_schema.md`).
