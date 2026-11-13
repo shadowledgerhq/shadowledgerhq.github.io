@@ -27,7 +27,7 @@ Valeur calculée et non lue dans le jeu : `"estimated": true`.
 | Fichier | Champs |
 | --- | --- |
 | `stats.json` | `kind` (`flat`/`percent`), `scope` |
-| `hunters.json` | `element`, `class`, `weapon_type`, `skills[]` (`type`, `effects`, `cooldown`, `values_by_level`), `passives[]`, `base_stats`, `advancement` |
+| `hunters.json` | `role` (stacker/supporter/buster), `element`, `class`, `weapon_type`, `skills[]` (`type`, `effects`, `cooldown`, `values_by_level`), `passives[]`, `base_stats`, `advancement` |
 | `weapons.json` | `hunter_id` (ou `null`), `weapon_type`, `element`, `base_stats`, `passive` |
 | `artifact_sets.json` | `pieces[]` (slot, nom FR/EN, icône), `bonuses` (paliers 2/4/8), `main_stat_options` |
 | `cores.json` | `slot`, `main_stat`, `effects`, `values_by_level` |
@@ -35,6 +35,7 @@ Valeur calculée et non lue dans le jeu : `"estimated": true`.
 | `successors.json` | `skills[]`, `passives` |
 | `sjw_skills.json` | `type`, `cooldown`, `effects`, `values_by_level` |
 | `blessings.json` | `effects`, `conditions`, `values_by_level` |
+| `subjugation_support.json` | `column` (1-3), `effects`, `condition` (rôle requis), `recommended` ; sert au POC |
 | `patches.json` | `version`, `date`, `url` (notes Netmarble), `changes[]` (`category`, `id`, `change`) |
 
 Les champs sont à confirmer sur la source avant la saisie de chaque catégorie.
@@ -48,5 +49,5 @@ avec `source` et `verified_at`. À valider (voir SUIVI).
 
 ## Ordre de saisie
 
-stats → patches → artifact_sets → cores → hunters → weapons → shadows → successors → sjw_skills → blessings.
+stats → patches → artifact_sets → cores → hunters → weapons → shadows → successors → sjw_skills → blessings → subjugation_support.
 Les icônes sont ajoutées avec chaque catégorie.

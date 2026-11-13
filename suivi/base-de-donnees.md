@@ -5,6 +5,7 @@
 - Captures BOT lues : `docs/REFERENCE_ECRANS_BOT.md`. Champ `ja` ajouté au schéma.
 - Alexis valide : `data/rules/<semaine>.json` créé (BOT 05/11 et 12/11), CONTEXTE §3 et §6 corrigés. Écran de stats lu : `docs/REFERENCE_ECRANS_STATS.md`.
 - `stats.json` : 10 stats + 5 attributs obligatoires + puissance de combat (info) (noms coréens lus ; FR/EN vides, à vérifier).
+- Captures POC lues : `docs/REFERENCE_ECRANS_POC.md` ; catégorie `subjugation_support` et champ `role` ajoutés au schéma.
 ## En cours
 - Choix de la méthode de récupération des données (voir « Besoin d'Alexis »).
 ## À faire
