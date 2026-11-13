@@ -19,7 +19,8 @@
 - Trace écrite de l'autorisation de Sohoven : son `robots.txt` indique `ai-train=no`. Confirmer que l'autorisation couvre la lecture automatisée de l'API et la reprise des icônes.
 - Méthode : (a) Sohoven fournit un export ou les routes à utiliser, (b) saisie à partir des pages publiques /builds, /guides, /tier-list, (c) captures d'écran fournies par toi.
 - Captures du GB.
-- Règles de POC, GB, HOTM pour les semaines du 05/11 et du 12/11 (à remplir dans `data/rules/`).
+- Règles de POC et GB (semaines du 05/11 et du 12/11), HOTM du 05/11 (à remplir dans `data/rules/`).
 - Noms FR/EN officiels des 10 stats (je les chercherai sur slagate quand j'y accède).
+- HOTM : lien porte 1/2 ↔ mode avec/sans SJW non vérifié (Alexis ne joue pas). Pistes : question à Sohoven, ou relevé de la porte et du titre du mode sur les vidéos traitées par le pipeline.
 ## Demandes de modif du skill
 - Format « Objet de la base » : ajouter les champs par catégorie (voir `data/db/_schema.md`).
