@@ -15,12 +15,13 @@
 ## À faire
 - Saisir `stats`, `patches`, puis `artifact_sets`, `cores`, `hunters`, `weapons`, `shadows`, `successors`, `sjw_skills`, `blessings`.
 - Script de contrôle (ids uniques, FR+EN, source, date, icône) à demander à la discussion 8.
+- Décision d'Alexis (13/11/2026) : le lien porte ↔ mode avec/sans SJW sera établi par les données du pipeline (porte + titre du mode relevés sur chaque vidéo HOTM). Messages envoyés aux discussions 8 et 2 par Alexis.
 ## Besoin d'Alexis
 - Trace écrite de l'autorisation de Sohoven : son `robots.txt` indique `ai-train=no`. Confirmer que l'autorisation couvre la lecture automatisée de l'API et la reprise des icônes.
 - Méthode : (a) Sohoven fournit un export ou les routes à utiliser, (b) saisie à partir des pages publiques /builds, /guides, /tier-list, (c) captures d'écran fournies par toi.
 - Captures du GB.
 - Règles de POC et GB (semaines du 05/11 et du 12/11), HOTM du 05/11 (à remplir dans `data/rules/`).
 - Noms FR/EN officiels des 10 stats (je les chercherai sur slagate quand j'y accède).
-- HOTM : lien porte 1/2 ↔ mode avec/sans SJW non vérifié (Alexis ne joue pas). Pistes : question à Sohoven, ou relevé de la porte et du titre du mode sur les vidéos traitées par le pipeline.
+
 ## Demandes de modif du skill
 - Format « Objet de la base » : ajouter les champs par catégorie (voir `data/db/_schema.md`).

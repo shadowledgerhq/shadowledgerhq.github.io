@@ -63,3 +63,6 @@ Les libellés sont une lecture approximative des captures, pas une traduction of
 ## Conséquences pour la base
 - Nouvelle catégorie proposée : `proof_modifiers.json` (effet structuré, niveau max, coût par niveau, boss concerné éventuel). Ajoutée au schéma, saisie en dernier.
 - Ombres et successeur présents ; SJW présent. Règles HOTM de la semaine : à confirmer par Alexis avant `data/rules/`.
+
+## Vérification prévue (décision d'Alexis, 13/11/2026)
+L'hypothèse « porte ↔ mode avec/sans SJW » sera tranchée par les données : pour chaque vidéo HOTM traitée, le pipeline relève la **porte** (ex. 第1関門 / 제 1관문) et le **titre du mode** (플레이어 모드 / ハンターモード). Tant que ce n'est pas fait, l'hypothèse reste non vérifiée.
