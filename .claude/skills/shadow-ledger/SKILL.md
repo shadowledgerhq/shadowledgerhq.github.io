@@ -24,6 +24,8 @@ Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md
 
 ## 2. Fichiers et dossiers
 
+- Les documents du dépôt (`docs/`, `data/`, `suivi/`) ne ressortent pas dans la recherche du Projet SLA : dans une discussion claude.ai, les lire en clonant le dépôt public `https://github.com/shadowledgerhq/shadowledgerhq.github.io` (ou via la source GitHub synchronisée du projet).
+
 - Arborescence décrite dans `docs/CONTEXTE.md` (section 6).
 - Noms de fichiers en minuscules, sans accents ni espaces, mots séparés par `-`.
 - Codes de mode dans les fichiers : `poc`, `bot`, `gb`, `hotm`.
@@ -54,7 +56,13 @@ Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md
 
 Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 
-HOTM uniquement : ajouter `"gate": {"number": 1, "points": 94600}` et `"hunter_mode": false` (`true` = run sans SJW).
+Champs supplémentaires :
+- `"gate"` (HOTM uniquement) : numéro de la porte, entier (`3` pour 제 3관문 / 第3関門). Un fichier par porte : `data/runs/<semaine>/hotm-gate-<n>.json`.
+- `"hunter_mode"` (HOTM uniquement) : `false` par défaut, `true` = run sans SJW.
+- `"runs_detail"` (POC et HOTM) : liste d'un objet par run, dans le même ordre que `score.runs`.
+  - POC : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
+  - HOTM : `{"clear": 0, "proof_bonus": 0, "proof_level": null, "submode": ""}` ; contrôle : clear + proof_bonus = score.
+- Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition.
 
 ### Build (data/builds/<semaine>/<mode>/<run_id>-<n>.json)
 
