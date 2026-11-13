@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 9 — 13/11/2026 (BOT : contrôle de semaine par `S<saison>-<semaine>` du titre) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 10 — 13/11/2026 (BOT : un seul classement, Challenge supprimé du jeu ; saison = 4 semaines + 1 de calcul) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -81,7 +81,7 @@ Noms coréens et japonais : sources inven.co.kr et gamewith.jp/altema.jp (13/11/
 - **Mots-clés de mode (v3)** : mots courts (`bot`, `poc`, `gb`, `hotm`) seulement en mot entier. `GB` (v7) : ajouté, en mot entier et jamais précédé d'un chiffre (`12GB`, `128 GB` = gigaoctets).
 - **Relecture (v8)** : chaque lecture du tri 1 porte la version des règles (`regles`, ex. `9`). À chaque passage, une lecture faite avec une version plus ancienne est **refaite** (titre, description, variante BOT, porte HOTM, semaine BOT) tant que la vidéo est `en_cours` ; titre et description relus via `videos.list` (1 unité / 50 vidéos). La note `description non relue` disparaît. Cas vu le 13/11 : `E4lHBPoZeKs` garde `00:32` (chapitre, exclu depuis la v3) et une variante `null` malgré `SEASON 20` dans le titre.
 - **Dégâts GB du titre (v8)** : si un titre GB donne un RC et des dégâts (`64.2 T … 189 rc`), les dégâts vont dans `runs_detail[0].damage`, `exact: false` (provisoire, sert seulement au départage tant que l'écran n'est pas lu).
-- **Publication proche du reset (v8)** : vidéo publiée moins de `config.reset_alerte_heures` (= 3 h, décision de la discussion 1, à réajuster après 3 semaines) après le reset → note `publiée juste après le reset : semaine précédente ?`. Alerte seulement, jamais un motif de rejet ni un frein au classement. Au GB, le `Time Left in Season` du Personal Record (§4.7) tranche ; au BOT, `S<n>-<w>` du titre (§4.6) tranche s'il est présent.
+- **Publication proche du reset (v8)** : vidéo publiée moins de `config.reset_alerte_heures` (= 3 h **[À CONFIRMER]**) après le reset → note `publiée juste après le reset : semaine précédente ?`. Alerte seulement, jamais un motif de rejet ni un frein au classement. Au GB, le `Time Left in Season` du Personal Record (§4.7) tranche ; au BOT, `S<n>-<w>` du titre (§4.6) tranche s'il est présent.
 
 ### 2.3 Statut
 - Tout score du tri 1 est **provisoire** : `exact: false`, `confidence: a_verifier`, `score_source` = `titre` / `description` / `sous-titres`. Une légende de l'auteur (« Same strat get 132T ») est traitée de la même façon.
@@ -102,7 +102,7 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
   - Libellés coréens et japonais **[À CONFIRMER]**. Nombre de phases selon le boss **[À CONFIRMER]** : toujours prendre la dernière.
   - Jamais le « record » de l'écran de composition.
   - Bandeau du bas (confirmé par Alexis) : le losange « 1 » est un **rang** (ignoré) ; les 2 icônes après les 3 chasseurs sont les **armes de SJW**.
-  - **Indice de variante (v5)** : armes de SJW présentes dans le bandeau → `season` (le challenge se joue sans SJW, source altema.jp). Absentes → `challenge`. Indice **[À CONFIRMER]** sur une capture de challenge.
+  - (v10) Plus de variante à lire : les armes de SJW du bandeau ne servent plus au classement.
 - GB (v5, captures client anglais du 13/11/2026, boss `Giant Statue`) :
   - **Écran RESULT** : titre `Results` + nom du boss. `Player's Score` (SJW), `Hunter Rank` 1 à 6 (les 6 chasseurs, équipes A + B), `Final Score` (dégâts), `Rage Count` (RC), `Play Time 03:00`, bandeau éventuel `New Record Achieved!`.
   - **Une run = un groupe** (`Group 1` / `Group 2`) de 6 chasseurs (Team A + Team B) + SJW. 2 runs par semaine, comme le POC.
@@ -124,7 +124,7 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 ### 4.1 Une ligne par joueur
 - Clé : `channel_id` (+ `gate` au HOTM).
 - On rassemble toutes les runs `sur` du joueur dans la semaine, **toutes vidéos confondues**.
-- BOT : meilleur chrono (le plus court), **par variante** (§4.6). HOTM : meilleur score **par porte** (un fichier par porte).
+- BOT : meilleur chrono (le plus court), un seul classement (§4.6). HOTM : meilleur score **par porte** (un fichier par porte).
 - POC et GB : total = **somme des 2 meilleures runs distinctes**, prises dans 1 ou 2 vidéos.
   - POC (confirmé par Alexis) : **une run = une équipe**. Total = meilleure run de l'équipe 1 (`1팀`) + meilleure run de l'équipe 2 (`2팀`). Si l'équipe n'est pas lisible : les 2 meilleures runs, en `a_verifier`. Deux runs de la même équipe ne s'additionnent jamais.
   - GB (v5, réactivé) : classement au **Rage Count**. Total = RC de la meilleure run du groupe 1 + RC de la meilleure run du groupe 2, comme le POC. « Meilleure run » d'un groupe = RC le plus élevé, puis les dégâts (`Final Score`) en cas d'égalité. Groupe illisible : les 2 meilleures runs, en `a_verifier`. Deux runs du même groupe ne s'additionnent jamais.
@@ -152,22 +152,19 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 - Run avec un autre libellé → `a_verifier` + note `boss différent : <libellé>`. Si ce libellé est la référence de la semaine précédente → `rejected`, raison `semaine_precedente`.
 - Moins de 3 vidéos : pas de contrôle, note `boss non contrôlé`.
 
-### 4.6 BOT : deux variantes classées séparément (décision d'Alexis)
-- `season` : 時の戦場, saison de 49 jours, SJW autorisé. `challenge` : 時の戦場チャレンジ, 7 jours, mode chasseurs uniquement (source : altema.jp, à vérifier en jeu).
-- Les deux sont classées **chaque semaine**, dans deux fichiers séparés. On ne compare jamais une variante à l'autre.
-- Lecture de la variante sur l'écran : **[EN ATTENTE]** des écrans BOT.
-- **Indice du titre (v3, élargi en v8)** — casse indifférente, espace facultatif :
-  - `challenge`, `チャレンジ`, `챌린지` → `challenge` ;
-  - `S\d+` en mot entier, suivi ou non de `-\d+` (`S20`, `s20`, `S20-4`), `season\s*\d+`, `시즌\s*\d+`, `シーズン\s*\d+` → `season`. Titres du 13/11 concernés : `s20` (X SLA, PADWAE), `BOT S20` (Keos), `시즌20` (리히온), `SEASON 20` (Black Thunder X).
-  - Les deux indices ou aucun → variante inconnue. Indice accepté avec la note `variante d'après le titre` ; l'écran prime dès qu'il est lu.
-- **Contrôle de semaine par le titre (v9, confirmé par Alexis : `S20-4` = saison 20, semaine 4)** :
-  - Lecture : `S(\d+)-(\d)` en mot entier, casse indifférente → (saison n, semaine w), w de 1 à 7 (sinon ignoré).
-  - Référence : `config.bot.saison_ref = {"saison": 20, "semaine_saison": 4, "week": "2026-11-12"}` (déduite des titres `a-923ClD9Rc` et `Lt84IhMjBvM`, publiés dans la semaine 2026-11-12). Une saison = 7 semaines, saisons enchaînées sans pause **[À CONFIRMER]**. Semaine attendue (n, w) calculée à partir de la référence et de l'écart en semaines.
+### 4.6 BOT : un seul classement, saisons de 4 semaines (v10, décision d'Alexis)
+- **Challenge supprimé** : le mode `Battlefield of Time: Challenge` a été retiré du jeu à la mise à jour de mai 2026 (source : forum Netmarble, *Developer Note: 2nd Anniversary Eve* et *5/7 (Thu) Update Details*, lus le 13/11/2026). Un seul classement BOT par semaine : `data/runs/<semaine>/bot.json`. Plus de champ `bot_variant`, plus de fichier `bot-season.json`, `bot-challenge.json` ni `bot-variante-inconnue.json`.
+- Un titre contenant `challenge`, `チャレンジ` ou `챌린지` (ancienne vidéo, autre mode) → note `challenge ? (mode supprimé)`, `a_verifier`.
+- **Saison (source : *5/7 (Thu) Update Details*)** : 4 semaines de jeu, **1 boss par semaine** (4 boss différents), puis **1 semaine de calcul** sans classement. Cycle de 5 semaines.
+  - S20 : début le 22/10/2026 (mise à jour 2.5 du 22/10 ; cohérent avec `S20-4` = semaine 2026-11-12). Semaine de calcul attendue : 2026-11-19. S21-1 attendue : 2026-11-26. Ces dates sont **calculées**, à vérifier sur les vidéos de ces semaines.
+  - Paramètres : `config.bot.saison_ref = {"saison": 20, "semaine_saison": 1, "week": "2026-10-22"}`, `config.bot.semaines_jeu = 4`, `config.bot.semaines_calcul = 1`.
+  - Semaine de calcul : aucune run BOT attendue. Toute vidéo BOT publiée cette semaine-là est traitée normalement mais reçoit la note `semaine de calcul : run de la semaine précédente ?` et reste `a_verifier` ; le rapport le signale.
+- **Contrôle de semaine par le titre (v9, adapté v10)** : `S(\d+)-(\d)` en mot entier, casse indifférente → (saison n, semaine w), w de 1 à `semaines_jeu` (sinon ignoré). Semaine attendue calculée avec le cycle ci-dessus.
   - (n, w) = semaine attendue → note `semaine confirmée (titre)`, lève l'alerte « publiée juste après le reset ».
-  - (n, w) = semaine **précédente** attendue → `rejected`, raison `semaine_precedente`, `detail` = `S<n>-<w>`.
-  - Autre écart → `a_verifier` + note `semaine du titre incohérente : S<n>-<w>` (contrôle manuel, discussion 1). Le calendrier des saisons est peut-être faux : ne jamais rejeter dans ce cas.
-  - Le rapport (§5.5) signale toute semaine où au moins 2 vidéos donnent un même (n, w) différent de l'attendu : la référence est alors à corriger.
-- Variante inconnue → `data/runs/<semaine>/bot-variante-inconnue.json`, `rank: null`, jamais publié sur le site.
+  - (n, w) = dernière semaine de jeu précédente (y compris par-dessus une semaine de calcul) → `rejected`, raison `semaine_precedente`, `detail` = `S<n>-<w>`.
+  - Autre écart → `a_verifier` + note `semaine du titre incohérente : S<n>-<w>`, jamais de rejet. Le rapport signale ≥ 2 vidéos avec le même écart (référence à corriger).
+- Boss : un boss par semaine, le contrôle §4.5 s'applique tel quel.
+- Champ `bot_season_week` (`"S20-4"` ou `null`) gardé dans la run.
 - HOTM, même principe : porte d'après le titre (`제 n관문`, `第n関門`, `gate n`) si l'écran est illisible ; sinon `hotm-gate-inconnue.json`, `rank: null`, jamais publié.
 
 ### 4.7 GB : écran `Personal Record` (v6, décision d'Alexis)
@@ -183,13 +180,13 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 
 ## 5. Fichiers de sortie
 
-### 5.1 `data/runs/<semaine>/<mode>.json` (POC, GB), `bot-season.json`, `bot-challenge.json`, `hotm-gate-<n>.json`
+### 5.1 `data/runs/<semaine>/<mode>.json` (POC, GB), `bot.json` (v10), `hotm-gate-<n>.json`
 Format du skill §3, avec ces précisions :
 - `channel_id` (nouveau, clé du joueur) ; `player` = nom de la chaîne ; `channel` = idem.
 - `video_id` = vidéo de la meilleure run ; `video_ids` (nouveau) = toutes les vidéos utilisées.
 - `runs_detail` : un objet par run, dans l'ordre de `score.runs`, avec en plus `video_id`, `published_at`, `t` (secondes dans la vidéo), `stage`, `score_source`, `exact`, `team` (POC : 1, 2 ou `null`).
 - `gate` (HOTM) = **entier**. `hotm_ecran.py` renvoie `{"number", "points"}` : n'enregistrer que `number`. `points` est le score de l'écran de composition, jamais utilisé.
-- `bot_variant` (BOT) : `season` | `challenge` | `null`. `bot_season_week` (BOT, v9) : `"S20-4"` lu dans le titre, ou `null`.
+- `bot_season_week` (BOT, v9) : `"S20-4"` lu dans le titre, ou `null`. (v10) `bot_variant` supprimé.
 - `hunter_mode` (HOTM, booléen ou `null`) ; **supprimer `runs_detail.submode`** (doublon).
 - Liste triée : runs classées par rang, puis runs `rank: null`.
 
@@ -231,15 +228,15 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 
 ## 7. Points ouverts (ne bloquent pas le codage)
 1. POC équipe 1 + équipe 2 : **réglé** (§4.1).
-2. BOT deux variantes : **réglé** (§4.6) ; lecture de la variante à l'écran [EN ATTENTE].
-3. BOT : écran RESULT défini (v4) ; variante d'après les armes de SJW (v5) **[À CONFIRMER]** sur une capture de challenge. GB : écrans définis (v5).
+2. BOT : un seul classement (v10, Challenge supprimé du jeu).
+3. BOT : écran RESULT défini (v4). GB : écrans définis (v5).
 4. **[À CONFIRMER]** noms anglais des modes ; nom japonais du POC et du GB.
 5. Plages plausibles (§2.2) à ajuster après les premières semaines.
 6. GB : `Personal Record` accepté comme source (v6, §4.7).
-7. BOT : `S20-4` = saison 20, semaine 4 : **réglé** (v9, §4.6). Reste **[À CONFIRMER]** : 7 semaines par saison, saisons sans pause.
+7. BOT : `S20-4` = saison 20, semaine 4 (v9) ; cycle 4 + 1 semaines (v10, source Netmarble). À vérifier sur les vidéos du 19/11 (calcul) et du 26/11 (S21-1).
 
 ## 8. Corrections demandées à Code dans l'existant
 - `pipeline/analyse_porte_mode.py` lit `data/runs/*/hotm.json` → lire `data/runs/*/hotm-gate-*.json`.
 - `gate` : entier dans le JSON (voir §5.1).
 - Retirer `runs_detail.submode` (skill et code).
-- (v8) `docs/SPEC_ETAPE1.md` du dépôt est encore en v6 : le remplacer par la dernière version (v9).
+- (v10) Migration : fusionner `bot-season.json` et `bot-variante-inconnue.json` de la semaine 2026-11-12 dans `bot.json` ; supprimer les anciens fichiers BOT et le champ `bot_variant` (code, tests, site).
