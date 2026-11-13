@@ -1,18 +1,20 @@
 # SUIVI — 8 Code — 2026-11-13
 ## Fait
-- `pipeline/check_db.py` (stdlib) + `.github/workflows/check-db.yml` + `data/db/_rapport.md` : 1er passage = 0 erreur, 555 avertissements (icônes null 196, name.fr vide 170, pierres sans effets 59, sources non URL 42, slots vides 36, changes de patches 30). Erreurs testées sur copie (hunter_id, date, icône). CLAUDE.md « Commandes » mis à jour.
-- `pipeline/sjw.py` : 6 emplacements de compétences SJW (skill_1, skill_2, ultimate, qte_1-3), `level` null accepté, complétude = 6 emplacements + 8 bénédictions, grille 3+3 du PowerPoint. Test : `python3 pipeline/tests/test_sjw.py`.
-- `docs/REFERENCE_ECRANS_HOTM.md` : section Compétences corrigée (6 emplacements).
-- `pipeline/hotm_ecran.py` : lit la porte (제 N관문 / 第N関門 + points) et le titre du mode (플레이어 모드 = avec SJW, ハンターモード = sans SJW) dans le texte OCR. Renvoie `gate` {number, points} et `hunter_mode` (bool), `None` si illisible, plus des alertes pour `notes` (run en `a_verifier`).
-- `pipeline/analyse_porte_mode.py` : tableau porte × mode sur `data/runs/*/hotm.json`, pour trancher l'hypothèse.
-- Tests : `python3 pipeline/tests/test_hotm_ecran.py` (OK).
+- `docs/SPEC_ETAPE1.md` : déjà identique à la v2 du projet (rien à recopier).
+- `pipeline/scores.py` (+ `tests/test_scores.py`) : milliers (, . espaces), K/M/B/bn/T, 만/억/조, 万/億/亿/兆, chronos BOT, pt ; ignore dates, années, Lv, puissance, portes, 4K/fps, durées hors BOT ; plages de `config`.
+- `pipeline/config/etape1.json` : requêtes, mots-clés, plages, quota 6000, créneaux, [À CONFIRMER] listés.
+- `semaine.py` (zoneinfo, été/hiver testés), `youtube.py` (playlists, search ≤ 2 pages, videos.list, lives, plafond + réserve 100 u. pour les détails, quotaExceeded), `tri1.py`, `donnees.py`.
+- `classement.py` (+ tests) : POC équipe 1 + équipe 2 (jamais 2 runs d'une équipe), GB 2 meilleures, BOT `bot-season`/`bot-challenge`, HOTM `hotm-gate-<n>` (gate entier), égalité, provisoire remplacé, doublons, boss (`_boss.json`), rejets, `channels.json` auto. Idempotent, semaine gelée = rien.
+- `etape1.py daily|weekly|classement` : créneau Paris, passage du jour dans `_meta.json`, rapport `_rapport.md`.
+- §8 : `analyse_porte_mode.py` lit `hotm-gate-*.json` (gate entier) ; `submode` absent du code et du skill. `.gitignore` (pycache retirés du dépôt).
 ## En cours
-- Le pipeline (recherche, tris 1-4) n'existe pas encore : `hotm_ecran` n'est branché nulle part. À appeler dans le tri 3/4 HOTM avec le recadrage « titre » (haut) et « porte » (bas gauche) de l'image de composition.
+- rien
 ## À faire
-- Slide PowerPoint « Compétences SJW / SJW Skills » (grille 3+3) : à coder avec l'export PowerPoint (pas encore écrit).
-- Recadrages OCR (coordonnées) à fixer sur de vraies images.
-- Variantes anglaise/autres langues des titres : hypothèses non vérifiées (seuls ko et ja vus).
+- Workflows `daily.yml` / `weekly.yml` (2 crons UTC chacun, commit, `git pull --rebase`).
+- Script PC (yt-dlp sous-titres, Whisper, tris 3-4, gel, ouverture de semaine) + Planificateur Windows.
+- Tri 2 (miniatures) et OCR des tris 3-4 : [EN ATTENTE] recadrages ; BOT/GB écrans [EN ATTENTE] (vidéo reste en_cours).
 ## Besoin d'Alexis
-- Captures HOTM d'autres langues pour confirmer les libellés.
+- Rien pour ce code. Images de référence OCR toujours attendues.
 ## Demandes de modif du skill
-- rien (demandes intégrées au skill par 6 — Prompt le 13/11/2026)
+- Ajouter à §6 du CONTEXTE/skill les fichiers internes créés : `runs/<semaine>/_lectures.json` (scores lus par les tris, entrée du classement) et `_videos.json` (titre, chaîne, miniature).
+- À trancher en discussion 1 : BOT variante illisible → `bot-variante-inconnue.json`, HOTM porte illisible → `hotm-gate-inconnue.json` (rank null) ; doublon au HOTM sur score identique risqué (scores ronds) → désactivable via `config.doublon_modes` ; doublon = run retirée, vidéo rejetée seulement si plus aucune run.

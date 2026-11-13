@@ -1,0 +1,63 @@
+{
+  "_doc": "Paramètres du pipeline étape 1 (docs/SPEC_ETAPE1.md). Modifiables sans toucher au code. Les clés « _a_confirmer » listent les hypothèses [À CONFIRMER] de la spec.",
+  "fuseau": "Europe/Paris",
+  "reset": {"jour_semaine": 3, "heure": 1, "_doc": "jour_semaine : lundi = 0, jeudi = 3"},
+  "quota_max_units": 6000,
+  "pages_max_par_requete": 2,
+  "queries": {
+    "poc": [
+      "solo leveling arise power of calamity",
+      "solo leveling arise POC",
+      "나혼렙 재앙의 권좌",
+      "나 혼자만 레벨업 재앙의 권좌",
+      "재왕의 권좌",
+      "俺アラ 災厄"
+    ],
+    "bot": [
+      "solo leveling arise battlefield of time",
+      "solo leveling arise BOT",
+      "나혼렙 시간의 전장",
+      "俺アラ 時の戦場"
+    ],
+    "gb": [
+      "solo leveling arise guild boss",
+      "나혼렙 길드 보스",
+      "俺アラ ギルドボス"
+    ],
+    "hotm": [
+      "solo leveling arise hall of the monarchs",
+      "solo leveling arise HOTM",
+      "나혼렙 군주의 회랑",
+      "俺アラ 君主の回廊"
+    ]
+  },
+  "mode_keywords": {
+    "_doc": "Indices de mode (mode_guess) dans le titre/description des vidéos des chaînes suivies. Minuscules.",
+    "poc": ["power of calamity", "poc", "재앙의 권좌", "재왕의 권좌", "災厄"],
+    "bot": ["battlefield of time", "bot", "시간의 전장", "時の戦場"],
+    "gb": ["guild boss", "길드 보스", "ギルドボス"],
+    "hotm": ["hall of the monarchs", "hotm", "군주의 회랑", "君主の回廊"]
+  },
+  "plausible": {
+    "_doc": "Plages plausibles du tri 1 (min, max inclus). null = mode non géré [EN ATTENTE].",
+    "poc": [1e12, 1e16],
+    "hotm": [1000, 200000],
+    "bot": [5, 600],
+    "gb": null
+  },
+  "boss_min_videos": 3,
+  "fichier_bot_variante_inconnue": "bot-variante-inconnue",
+  "fichier_hotm_porte_inconnue": "hotm-gate-inconnue",
+  "ecrans_non_geres": ["bot", "gb"],
+  "creneaux": {
+    "daily": {"debut": "20:00", "fin": "23:59"},
+    "weekly": {"debut": "01:00", "fin": "04:59"}
+  },
+  "_a_confirmer": [
+    "queries.poc « 俺アラ 災厄 » (nom japonais du POC)",
+    "queries.gb « 俺アラ ギルドボス »",
+    "queries.hotm « solo leveling arise hall of the monarchs » (nom anglais)",
+    "plausible.* (valeurs de départ, à ajuster après les premières semaines)",
+    "libellés RESULT en japonais et autres langues"
+  ]
+}
