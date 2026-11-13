@@ -1,0 +1,39 @@
+[
+  {
+    "run_id": "poc-2026-11-12-zFsAGI_xyOQ",
+    "week": "2026-11-12",
+    "mode": "poc",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "player": "Willian",
+    "channel": "Willian",
+    "video_id": "zFsAGI_xyOQ",
+    "video_ids": [
+      "zFsAGI_xyOQ"
+    ],
+    "published_at": "2026-11-12T11:49:17+01:00",
+    "lang": "ko",
+    "score": {
+      "total": 150000000000000,
+      "runs": [
+        150000000000000
+      ],
+      "unit": "damage"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 150T; autres candidats : 133T; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "zFsAGI_xyOQ",
+        "published_at": "2026-11-12T11:49:17+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  }
+]

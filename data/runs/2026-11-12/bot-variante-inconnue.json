@@ -1,0 +1,344 @@
+[
+  {
+    "run_id": "bot-variante-inconnue-2026-11-12-a-923ClD9Rc",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCYNsWXOKkyjkkm-pFvt0vAQ",
+    "player": "aaaaaaaaaaaa",
+    "channel": "aaaaaaaaaaaa",
+    "video_id": "a-923ClD9Rc",
+    "video_ids": [
+      "a-923ClD9Rc"
+    ],
+    "published_at": "2026-11-12T13:01:40+01:00",
+    "lang": "ja",
+    "score": {
+      "total": 12.0,
+      "runs": [
+        12.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 0:12; autres candidats : 0:56; variante BOT illisible; boss non contrôlé",
+    "bot_variant": null,
+    "runs_detail": [
+      {
+        "video_id": "a-923ClD9Rc",
+        "published_at": "2026-11-12T13:01:40+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-variante-inconnue-2026-11-12-wJ9CwjKwyco",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
+    "player": "X SLA",
+    "channel": "X SLA",
+    "video_id": "wJ9CwjKwyco",
+    "video_ids": [
+      "wJ9CwjKwyco"
+    ],
+    "published_at": "2026-11-12T02:50:30+01:00",
+    "lang": "en",
+    "score": {
+      "total": 19.0,
+      "runs": [
+        19.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 19s; variante BOT illisible; boss non contrôlé",
+    "bot_variant": null,
+    "runs_detail": [
+      {
+        "video_id": "wJ9CwjKwyco",
+        "published_at": "2026-11-12T02:50:30+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-variante-inconnue-2026-11-12-Lt84IhMjBvM",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
+    "player": "𐐂露依Rui ルイ 𐐚",
+    "channel": "𐐂露依Rui ルイ 𐐚",
+    "video_id": "Lt84IhMjBvM",
+    "video_ids": [
+      "Lt84IhMjBvM"
+    ],
+    "published_at": "2026-11-13T11:12:06+01:00",
+    "lang": "zh",
+    "score": {
+      "total": 19.754,
+      "runs": [
+        19.754
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 19.754s; description : 0:08; variante BOT illisible; boss non contrôlé",
+    "bot_variant": null,
+    "runs_detail": [
+      {
+        "video_id": "Lt84IhMjBvM",
+        "published_at": "2026-11-13T11:12:06+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-variante-inconnue-2026-11-12-5MI-RLj7FSk",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
+    "player": "PADWAE",
+    "channel": "PADWAE",
+    "video_id": "5MI-RLj7FSk",
+    "video_ids": [
+      "5MI-RLj7FSk"
+    ],
+    "published_at": "2026-11-12T04:07:23+01:00",
+    "lang": "en",
+    "score": {
+      "total": 19.9,
+      "runs": [
+        19.9
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 19.9s; variante BOT illisible; boss non contrôlé",
+    "bot_variant": null,
+    "runs_detail": [
+      {
+        "video_id": "5MI-RLj7FSk",
+        "published_at": "2026-11-12T04:07:23+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-variante-inconnue-2026-11-12-uwJfPTJI8ZE",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCXTmMgefIJnkOksH7acBrXQ",
+    "player": "리히온",
+    "channel": "리히온",
+    "video_id": "uwJfPTJI8ZE",
+    "video_ids": [
+      "uwJfPTJI8ZE"
+    ],
+    "published_at": "2026-11-13T06:44:18+01:00",
+    "lang": "ko",
+    "score": {
+      "total": 28.0,
+      "runs": [
+        28.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 28초; variante BOT illisible; boss non contrôlé",
+    "bot_variant": null,
+    "runs_detail": [
+      {
+        "video_id": "uwJfPTJI8ZE",
+        "published_at": "2026-11-13T06:44:18+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-variante-inconnue-2026-11-12-duX8KmoDdYw",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCjHQXaVhgDfEYtZ_FgMhmUw",
+    "player": "Keos",
+    "channel": "Keos",
+    "video_id": "duX8KmoDdYw",
+    "video_ids": [
+      "duX8KmoDdYw"
+    ],
+    "published_at": "2026-11-13T06:13:05+01:00",
+    "lang": "en",
+    "score": {
+      "total": 29.0,
+      "runs": [
+        29.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 29s; variante BOT illisible; boss non contrôlé",
+    "bot_variant": null,
+    "runs_detail": [
+      {
+        "video_id": "duX8KmoDdYw",
+        "published_at": "2026-11-13T06:13:05+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-variante-inconnue-2026-11-12-E4lHBPoZeKs",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "player": "Black Thunder X",
+    "channel": "Black Thunder X",
+    "video_id": "E4lHBPoZeKs",
+    "video_ids": [
+      "E4lHBPoZeKs"
+    ],
+    "published_at": "2026-11-12T08:58:32+01:00",
+    "lang": "en",
+    "score": {
+      "total": 32.0,
+      "runs": [
+        32.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 00:32; autres candidats : 01:01, 01:45, 03:49; variante BOT illisible; boss non contrôlé",
+    "bot_variant": null,
+    "runs_detail": [
+      {
+        "video_id": "E4lHBPoZeKs",
+        "published_at": "2026-11-12T08:58:32+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-variante-inconnue-2026-11-12-wFFdg1gcZpE",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCUZMOC3aAvVNk3-oBZUtTsw",
+    "player": "Raksefon",
+    "channel": "Raksefon",
+    "video_id": "wFFdg1gcZpE",
+    "video_ids": [
+      "wFFdg1gcZpE"
+    ],
+    "published_at": "2026-11-12T14:57:26+01:00",
+    "lang": "en",
+    "score": {
+      "total": 35.0,
+      "runs": [
+        35.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 35 sec; variante BOT illisible; boss non contrôlé",
+    "bot_variant": null,
+    "runs_detail": [
+      {
+        "video_id": "wFFdg1gcZpE",
+        "published_at": "2026-11-12T14:57:26+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-variante-inconnue-2026-11-12-tOzRUlmZ2JI",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "tOzRUlmZ2JI",
+    "video_ids": [
+      "tOzRUlmZ2JI"
+    ],
+    "published_at": "2026-11-12T20:12:47+01:00",
+    "lang": "en",
+    "score": {
+      "total": 223.0,
+      "runs": [
+        223.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 223s; description : 0:06; variante BOT illisible; boss non contrôlé",
+    "bot_variant": null,
+    "runs_detail": [
+      {
+        "video_id": "tOzRUlmZ2JI",
+        "published_at": "2026-11-12T20:12:47+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  }
+]
