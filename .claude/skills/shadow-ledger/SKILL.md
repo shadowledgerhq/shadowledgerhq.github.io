@@ -1,19 +1,19 @@
 ---
-name: shadow-ledger
-description: Conventions du Projet SLA (Shadow Ledger, Solo Leveling: Arise) : glossaire, formats JSON, SUIVI.md, économie de crédits et checklists. À utiliser dans toute discussion du Projet SLA.
+name: "shadow-ledger"
+description: "Conventions du Projet SLA (Shadow Ledger, Solo Leveling: Arise) : glossaire, formats JSON, SUIVI.md, économie de crédits et checklists. À utiliser dans toute discussion du Projet SLA."
 ---
 
 # Shadow Ledger — conventions du Projet SLA
 
-Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md`. Ce skill donne les règles de forme communes à toutes les discussions.
+Le contexte complet (décisions, étapes, calendrier) est dans le document CONTEXTE.md du projet (copie dans `docs/CONTEXTE.md` du dépôt). Ce skill donne les règles de forme communes à toutes les discussions.
 
 ## 1. Glossaire
 
 | Terme | Sens |
 | --- | --- |
 | POC | Power Of Calamity. Classement : dégâts max ; une run = une équipe, total = équipe 1 + équipe 2. |
-| BOT | Battlefield Of Time. Chrono le plus court (secondes). Deux classements : `season` (時の戦場, 49 j, SJW autorisé) et `challenge` (時の戦場チャレンジ, 7 j, chasseurs uniquement). |
-| GB | Guild Boss. Classement : Rage Count le plus élevé, somme des 2 runs. Non classé tant que ses écrans ne sont pas définis. |
+| BOT | Battlefield Of Time. Chrono le plus court (secondes) = dernière phase de l'écran `Results`. Deux classements : `season` (時の戦場, 49 j, SJW autorisé) et `challenge` (時の戦場チャレンジ, 7 j, chasseurs uniquement). |
+| GB | Guild Boss. Classement : Rage Count le plus élevé ; une run = un groupe (6 chasseurs + SJW), total = groupe 1 + groupe 2 ; égalité départagée par la somme des dégâts. Écran `Personal Record` accepté comme source. |
 | HOTM | Hall Of The Monarchs. Un classement **par porte** (제 n관문 / 第n関門) : points les plus élevés. 1 run par porte. |
 | RC | Rage Count, unité de score du GB. |
 | SJW | Sung Jin Woo. |
@@ -26,8 +26,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md
 ## 2. Fichiers et dossiers
 
 - Les documents du dépôt (`docs/`, `data/`, `suivi/`) ne ressortent pas dans la recherche du Projet SLA : dans une discussion claude.ai, les lire en clonant le dépôt public `https://github.com/shadowledgerhq/shadowledgerhq.github.io` (ou via la source GitHub synchronisée du projet).
-
-- Arborescence décrite dans `docs/CONTEXTE.md` (section 6).
+- Arborescence décrite dans CONTEXTE.md (section 6). Spécification détaillée de l'étape 1 : SPEC_ETAPE1.md (projet et `docs/` du dépôt).
 - Noms de fichiers en minuscules, sans accents ni espaces, mots séparés par `-`.
 - Codes de mode dans les fichiers : `poc`, `bot`, `gb`, `hotm`.
 - Dates au format AAAA-MM-JJ ; heures en heure de Paris, sauf dans les workflows (UTC).
@@ -51,7 +50,7 @@ Fichiers : `poc.json`, `gb.json`, `bot-season.json`, `bot-challenge.json`, `hotm
   "published_at": "2026-11-13T18:02:00+01:00",
   "lang": "ko",
   "score": {"total": 4268000000, "runs": [2134000000, 2134000000], "unit": "damage"},
-  "score_source": "titre | description | sous-titres | miniature | debut-fin | video-complete",
+  "score_source": "titre | description | sous-titres | miniature | debut-fin | video-complete | record",
   "exact": true,
   "confidence": "sur | a_verifier",
   "rank": 1,
@@ -63,17 +62,20 @@ Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 
 - `channel_id` = clé du joueur. `video_id` = vidéo de la meilleure run ; `video_ids` = toutes les vidéos utilisées (les 2 runs POC/GB peuvent venir de 2 vidéos).
 - `rank` : seulement pour les lignes `confidence: sur` ; sinon `null`.
+- `score_source: record` = écran `Personal Record` du GB (seul cas où un écran autre que RESULT donne un score sûr).
 
 Champs supplémentaires :
 - `"gate"` (HOTM uniquement) : numéro de la porte, **entier** (`3` pour 제 3관문 / 第3関門).
 - `"hunter_mode"` (HOTM uniquement) : `false`, `true` (run sans SJW) ou `null`.
 - `"bot_variant"` (BOT uniquement) : `"season"`, `"challenge"` ou `null`.
+- `"player_ingame"` (BOT uniquement) : pseudo en jeu lu dans le bandeau du bas, à titre d'information.
 - `"runs_detail"` : liste d'un objet par run, dans le même ordre que `score.runs`. Champs communs :
   `{"video_id": "", "published_at": "", "t": 0, "stage": "", "team": null, "score_source": "", "exact": true}`
-  (`t` = secondes dans la vidéo ; `stage` = libellé du boss ou du stage lu à l'écran ; `team` = POC 1, 2 ou `null`).
+  (`t` = secondes dans la vidéo ; `stage` = libellé du boss ou du stage lu à l'écran ; `team` = POC : équipe 1, 2 ou `null` ; GB : groupe 1, 2 ou `null`).
   - POC, en plus : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
   - HOTM, en plus : `{"clear": 0, "proof_bonus": 0, "proof_level": null}` ; contrôle : clear + proof_bonus = score.
-- Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition.
+  - GB, en plus : `{"damage": 0}` (`Final Score` ; arrondi si lu sur le `Personal Record`, ex. 17.28T) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; contrôle Personal Record : `Total Rage Count` = RC groupe 1 + RC groupe 2.
+- Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition. Jamais le score de l'écran de composition, quel que soit le mode.
 
 ### Autres fichiers de l'étape 1 (détail : SPEC_ETAPE1.md §5)
 
@@ -87,8 +89,6 @@ Champs supplémentaires :
 | `data/runs/<semaine>/_rapport.md` | Rapport du dernier passage (quota, vidéos, `a_verifier`, alertes, erreurs) |
 | `data/processed.json` | Par video_id : état du traitement ; `pc.sous_titres` = `fait` \| `absent` \| `erreur` |
 | `data/channels.json` | `{channel_id, name, uploads_playlist, added_at, source: manuel \| auto}` |
-
-GB : **non classé** tant que ses écrans ne sont pas définis (lectures gardées dans `_lectures.json`, pas de `gb.json`).
 
 ### Build (data/builds/<semaine>/<mode>/<run_id>-<n>.json)
 
@@ -130,7 +130,7 @@ Les identifiants (`id`, `weapon`…) sont ceux de la base de données. Stats : p
 
 Un champ inconnu reste vide : ne jamais inventer une valeur de jeu.
 
-Champs propres à chaque catégorie : voir `data/db/_schema.md`, qui complète ce format commun.
+Champs propres à chaque catégorie : voir `data/db/_schema.md` dans le dépôt, qui complète ce format commun.
 
 ## 4. SUIVI.md
 
@@ -155,7 +155,7 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 ## 5. Reprise d'une discussion
 
 1. Ouvrir une discussion neuve quand l'actuelle devient longue.
-2. Envoyer le prompt de démarrage de la discussion (`docs/PROMPTS_DISCUSSIONS.md`) + le dernier SUIVI.md.
+2. Envoyer le prompt de démarrage de la discussion (PROMPTS_DISCUSSIONS.md) + le dernier SUIVI.md.
 3. Reprendre à « En cours », sans refaire « Fait ».
 
 ## 6. Économie de crédits
@@ -170,11 +170,12 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 
 ### Classements (étape 1)
 - [ ] Toutes les vidéos ont une date de publication postérieure au dernier reset.
-- [ ] Le boss / la saison visible correspond à la semaine.
+- [ ] Le boss / la saison visible correspond à la semaine (GB `Personal Record` : `Time Left in Season` cohérent avec la date de publication).
 - [ ] Une seule ligne par chaîne (HOTM : par porte ; BOT : par variante) ; pas de ré-upload en double.
-- [ ] POC et GB : 2 runs présentes, total = somme (POC : une run par équipe).
+- [ ] POC et GB : 2 runs présentes, total = somme (POC : une run par équipe ; GB : une run par groupe).
 - [ ] POC : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
-- [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas.
+- [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; `Total Rage Count` = groupe 1 + groupe 2.
+- [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas (GB : égalité de RC départagée par les dégâts).
 - [ ] Les scores `exact: false` ou `a_verifier` sont signalés.
 - [ ] Aucun écart improbable (ex. score 10 fois au-dessus du 2e) sans vérification.
 

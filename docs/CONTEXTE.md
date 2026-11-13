@@ -1,6 +1,6 @@
 # Projet SLA — Shadow Ledger : contexte de référence
 
-Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Mis à jour le 13/11/2026 (fichiers de l'étape 1, GB non classé ; SPEC_ETAPE1 v3).
+Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Mis à jour le 13/11/2026 (alignement sur SPEC_ETAPE1 v6 : GB classé au Rage Count, écran Personal Record accepté, contrôles BOT et GB).
 
 ## 1. Le projet en une phrase
 
@@ -24,7 +24,7 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 | --- | --- | --- | --- |
 | POC | Power Of Calamity | Dégâts max. Une run = une équipe : total = meilleure run de l'équipe 1 + meilleure run de l'équipe 2 | 2 (une par équipe) |
 | BOT | Battlefield Of Time | Chrono le plus court, **deux classements par semaine** : `season` (時の戦場, saison de 49 jours, SJW autorisé) et `challenge` (時の戦場チャレンジ, 7 jours, chasseurs uniquement) | 1 par variante |
-| GB | Guild Boss | Rage Count (RC) le plus élevé (somme des 2 runs). **Non classé tant que ses écrans ne sont pas définis** : lectures gardées, aucun `gb.json` publié | 2 |
+| GB | Guild Boss | Rage Count (RC) le plus élevé. Une run = un groupe (6 chasseurs, équipes A + B, + SJW) : total = meilleure run du groupe 1 + meilleure run du groupe 2. Égalité de RC : départage par la somme des dégâts. Écran *Personal Record* accepté comme source | 2 (une par groupe) |
 | HOTM | Hall Of The Monarchs | Points les plus élevés, **par porte** : un classement par porte (제 n관문 / 第n関門), pas de classement HOTM global | 1 par porte |
 
 - Reset de tous les modes : **jeudi 01h00, heure de Paris**.
@@ -43,21 +43,26 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 6. Vidéo sans score après le tri 4 → liste `rejected` (identifiant + raison), jamais réanalysée.
 
 Règles :
-- **Joueur = chaîne YouTube** (`channel_id`) ; le pseudo en jeu n'est pas lu. Une ligne par joueur (HOTM : par porte ; BOT : par variante), toutes vidéos de la semaine confondues.
+- **Joueur = chaîne YouTube** (`channel_id`) ; le pseudo en jeu n'est pas la clé (au BOT, il est seulement noté dans `player_ingame`). Une ligne par joueur (HOTM : par porte ; BOT : par variante), toutes vidéos de la semaine confondues.
 - Shorts inclus ; lives et rediffusions de live exclus.
-- POC et GB : somme des 2 meilleures runs distinctes, qui peuvent venir de **2 vidéos différentes** (POC : équipe 1 + équipe 2, jamais deux runs de la même équipe). Si une seule run est trouvée : statut `a_verifier`, pas de classement tant que la 2e manque.
-- Égalité : la vidéo publiée en premier passe devant.
+- POC et GB : somme des 2 meilleures runs distinctes, qui peuvent venir de **2 vidéos différentes** (POC : équipe 1 + équipe 2 ; GB : groupe 1 + groupe 2 ; jamais deux runs de la même équipe ou du même groupe). Si une seule run est trouvée : statut `a_verifier`, pas de classement tant que la 2e manque.
+- Égalité : la vidéo publiée en premier passe devant (GB : d'abord la somme des dégâts).
 - Score arrondi (« 2.1B ») : provisoire ; on garde la valeur exacte dès qu'elle est lue à l'image.
 - Doublons : même run ré-uploadée ou postée en 2 langues → on garde la vidéo de la chaîne d'origine (la plus ancienne).
 - Boss de la semaine **déduit des données** : libellé le plus fréquent parmi les runs sûres, à partir de 3 vidéos (`_boss.json`). Run avec un autre libellé → `a_verifier` ; libellé de la semaine précédente → `rejected`.
 - Toutes régions et langues (OCR multilingue, formats 1.2B / 억 / 万).
 - Champ `confiance` : `sur` ou `a_verifier`.
+- Seul l'écran RESULT donne un score sûr. **Exception GB** : l'écran *Personal Record* est accepté si `Total Rage Count` = RC du groupe 1 + RC du groupe 2 et si `Time Left in Season` prouve que la capture date de la semaine en cours (sinon `rejected`, raison `semaine_precedente`).
 - POC et HOTM : le score retenu est « 이번 기록 » (score de cette run) de l'écran RESULT, **jamais** « 기존 기록 » (ancien record) ni le score de l'écran de composition.
-- Contrôles de cohérence : POC, total = SJW + successeur + 3 chasseurs ; HOTM, total = 클리어 (clear) + 증명 보너스 (bonus de preuve).
+- BOT : score = chrono de la dernière phase de l'écran `Results` (= chrono du bandeau du bas). Variante : armes de SJW présentes dans le bandeau → `season`, absentes → `challenge` (indice à confirmer sur une capture de challenge).
+- Contrôles de cohérence :
+  - POC : total = SJW + successeur + 3 chasseurs ;
+  - HOTM : total = 클리어 (clear) + 증명 보너스 (bonus de preuve) ;
+  - BOT : phases cumulées croissantes, dernière phase = chrono du bandeau = `Play Time` tronqué à la seconde ;
+  - GB : `Player's Score` + les 6 `Hunter Rank` = `Final Score` (écran Results) ; `Total Rage Count` = groupe 1 + groupe 2 (Personal Record).
 - Légendes ajoutées par l'auteur de la vidéo (titre, texte incrusté) : au mieux un score provisoire, à confirmer sur l'écran RESULT.
 - HOTM : une ligne par joueur **et par porte** ; porte illisible (écran et titre) → `hotm-gate-inconnue.json`, jamais publié. BOT : variante illisible → `bot-variante-inconnue.json`, jamais publié.
-- GB : non classé tant que ses écrans ne sont pas définis.
-- *Décisions d'Alexis du 13/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` (aussi dans les documents du Projet SLA).
+- *Décisions d'Alexis du 13/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` v6 (aussi dans les documents du Projet SLA).
 
 ### Étape 2 — Builds du top 10 (automatisée en grande partie)
 
@@ -132,7 +137,7 @@ shadowledgerhq.github.io/
 │   ├── db/                  base de données du jeu (un JSON par catégorie) + patches.json
 │   ├── icons/<categorie>/   banque d'icônes
 │   ├── rules/<semaine>.json éléments autorisés par mode et par semaine
-│   ├── runs/<semaine>/      classements publiés : poc.json, gb.json (quand GB sera défini), bot-season.json, bot-challenge.json, hotm-gate-<n>.json
+│   ├── runs/<semaine>/      classements publiés : poc.json, gb.json, bot-season.json, bot-challenge.json, hotm-gate-<n>.json
 │   │                        non publiés (rank: null) : bot-variante-inconnue.json, hotm-gate-inconnue.json
 │   │                        internes : _lectures.json (lectures de score des tris, entrée de classement.py), _videos.json (titre, chaîne, miniature, durée, mode_guess),
 │   │                        _meta.json (fenêtre, gel), _boss.json (boss déduit), _rapport.md (rapport du passage)
@@ -194,7 +199,7 @@ Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la t
 
 ## 9. Ce qu'Alexis doit fournir
 
-- [ ] Images de référence : où lire le score, pour chaque mode.
+- [ ] Images de référence : où lire le score. *Fait pour BOT et GB (client anglais, 13/11/2026) et pour POC et HOTM (client coréen).* Reste : libellés coréens et japonais de BOT et GB, libellés japonais de POC et HOTM, capture d'un BOT challenge.
 - [ ] Images de référence : où lire chaque élément du build.
 - [ ] Liste des éléments autorisés par mode (ombres, successeur, Sung Jin Woo…).
 - [x] Clé API YouTube Data v3, rangée dans le secret GitHub `YOUTUBE_API_KEY`.

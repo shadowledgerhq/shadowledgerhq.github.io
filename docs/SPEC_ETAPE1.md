@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 3 — 13/11/2026 (après le 1er passage réel) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 6 — 13/11/2026 (GB : Personal Record accepté) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -9,7 +9,7 @@ Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable s
 ## 0. Principes
 
 - Une **semaine** = de jeudi 01h00 (Europe/Paris) au jeudi suivant 01h00 (exclu). Identifiant = date du jeudi de début (`2026-11-12`).
-- **Joueur = chaîne YouTube** (clé `channel_id`). Le pseudo en jeu n'est pas lu.
+- **Joueur = chaîne YouTube** (clé `channel_id`). Le pseudo en jeu, quand il est lisible (BOT), est seulement noté dans `player_ingame`.
 - Seul l'**écran RESULT** donne un score `exact: true`. Tout le reste (titre, description, sous-titres, légendes incrustées, miniature sans écran RESULT) = score provisoire, `exact: false`, `confidence: a_verifier`.
 - Seules les runs `confidence: sur` reçoivent un `rank`. Les autres figurent dans le fichier avec `rank: null`.
 - Tout paramètre réglable (requêtes, plages plausibles, budget, horaires) va dans `pipeline/config/etape1.json`, pas dans le code.
@@ -46,7 +46,7 @@ Noms coréens et japonais : sources inven.co.kr et gamewith.jp/altema.jp (13/11/
 - Une chaîne qui obtient au moins une run classée est ajoutée automatiquement à `data/channels.json`.
 
 ### 1.5 Quota
-- Plafond codé : `config.quota_max_units = 6000` par passage, sur les 10 000 unités/jour de l'API. Le compteur d'unités est écrit dans le rapport (§5.5).
+- Plafond codé : `config.quota_max_units = 6000` par passage, sur les 10 000 unités/jour de l'API. Le compteur d'unités est écrit dans le rapport (§5.4).
 - Répartition indicative : 17 requêtes × 1 page = 1 700 unités, + pages 2 éventuelles ≤ 1 700, + playlists et détails < 100.
 - Erreur `quotaExceeded` : arrêter les recherches, continuer les autres étapes et signaler dans le rapport.
 
@@ -66,10 +66,11 @@ Noms coréens et japonais : sources inven.co.kr et gamewith.jp/altema.jp (13/11/
 | Japonais / chinois | `万` 1e4 · `億`/`亿` 1e8 · `兆` 1e12, cumulables | idem |
 | Chrono (BOT) | `00:19.558` · `0:19` · `19.558s` · `19초` · `19秒` | secondes, 3 décimales |
 | Points (HOTM) | `94,600pt` · `94600 points` | entier |
+| Rage Count (GB, v5) | `165 RC` · `RC 167` · `332RC` · `Rage Count 165` ; libellés coréen et japonais **[À CONFIRMER]** | entier |
 
 - Une virgule ou un point suivi d'exactement 3 chiffres (et répété) = séparateur de milliers. Sinon = séparateur décimal.
 - **Nombres ignorés** : dates, années, `Lv.`/`niv.`, puissance (`CP`, `전투력`, `戦闘力`, `power`, `puissance`), numéros de porte, durées hors BOT.
-- **Plage plausible** par mode (`config.plausible`) : POC 1e12–1e16, HOTM 1 000–200 000, BOT 5–180 s (v3), GB [EN ATTENTE]. Valeurs de départ **[À CONFIRMER]** ; un nombre hors plage est ignoré.
+- **Plage plausible** par mode (`config.plausible`) : POC 1e12–1e16, HOTM 1 000–200 000, BOT 5–180 s (v3), GB 1–500 RC par run (v5). Valeurs de départ **[À CONFIRMER]** ; un nombre hors plage est ignoré.
 - **Choix du candidat (v3)** : priorité titre > description > sous-titres ; dans une même source, le **premier** candidat retenu (pas le plus fort). Les autres vont dans `notes`.
 - **Candidats exclus (v3)** :
   - contexte hypothétique : nombre précédé de `can`, `could`, `possible`, `up to`, `max`, `~`, `가능`, `可能`, `目標`, `target` (liste `config.hypothese_mots`) ;
@@ -93,13 +94,26 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 ### 3.1 Mode de l'écran
 - POC : titre RESULT `재앙의 권좌` (vu), libellés `플레이어 스코어`, `계승자 스코어`, `이번 기록`.
 - HOTM : libellés `클리어`, `증명 보너스`, `합산 결과` (le titre RESULT est le nom du stage, ex. `기만자의 무대`). Porte et `hunter_mode` lus sur l'écran de composition par `hotm_ecran.py`.
-- BOT : **[EN ATTENTE]** écran RESULT. Avant ça, ne jamais utiliser le « record » de l'écran de composition : run en `a_verifier`.
-- GB : **[EN ATTENTE]** tous les écrans.
+- BOT (v4, capture client anglais du 13/11/2026) : titre `Results` + nom du boss dessous (ex. `Baruka`). Bloc gauche : `Phase 1` / `Phase 2` / `Phase 3` avec des temps **cumulés** `mm:ss.mmm` (ex. 00:09.281 / 00:14.986 / 00:19.926, le dernier en cyan). Bandeau du bas : pseudo en jeu (ex. `ThenaX`), chrono final (00:19.926), icônes de l'équipe. Haut droite : `Play Time 00:19` (arrondi à la seconde).
+  - Score = chrono de la **dernière phase** = chrono du bandeau du bas.
+  - Libellés coréens et japonais **[À CONFIRMER]**. Nombre de phases selon le boss **[À CONFIRMER]** : toujours prendre la dernière.
+  - Jamais le « record » de l'écran de composition.
+  - Bandeau du bas (confirmé par Alexis) : le losange « 1 » est un **rang** (ignoré) ; les 2 icônes après les 3 chasseurs sont les **armes de SJW**.
+  - **Indice de variante (v5)** : armes de SJW présentes dans le bandeau → `season` (le challenge se joue sans SJW, source altema.jp). Absentes → `challenge`. Indice **[À CONFIRMER]** sur une capture de challenge.
+- GB (v5, captures client anglais du 13/11/2026, boss `Giant Statue`) :
+  - **Écran RESULT** : titre `Results` + nom du boss. `Player's Score` (SJW), `Hunter Rank` 1 à 6 (les 6 chasseurs, équipes A + B), `Final Score` (dégâts), `Rage Count` (RC), `Play Time 03:00`, bandeau éventuel `New Record Achieved!`.
+  - **Une run = un groupe** (`Group 1` / `Group 2`) de 6 chasseurs (Team A + Team B) + SJW. 2 runs par semaine, comme le POC.
+  - L'écran RESULT **n'indique pas le groupe**. On le retrouve avec l'écran `Guild Boss` / `Personal Record` s'il apparaît dans la vidéo (RC et dégâts arrondis par groupe) ; sinon groupe inconnu.
+  - **Écran `Guild Boss` → `Personal Record`** : `Total Score` (exact), `Challenge Count`, `Total Rage Count`, puis par groupe le RC et les dégâts arrondis (ex. `Group 1` 167 · 17.28T ; `Group 2` 165 · 15.55T ; total 332 = 167 + 165). C'est un record, mais **accepté comme source au GB (décision d'Alexis, v6)** : voir §4.7.
+  - Écran `Form Team` (`Guild Boss Mode`) : `Score` = total du record (ex. 32 842 054 460 310), jamais utilisé.
 - Japonais et autres langues : libellés RESULT **[À CONFIRMER]** (seul le coréen est vu pour POC et HOTM).
 
 ### 3.2 Contrôles
 - POC : `이번 기록` = SJW + successeur + chasseurs 1, 2 et 3. Si égal → `exact: true`, `sur`. Sinon ou illisible → `a_verifier`.
 - HOTM : `클리어` + `증명 보너스` = `합산 결과` = `이번 기록`. Si égal → `sur`. `증명 보너스` = niveau × 100 : contrôle d'alerte seulement (`notes`), jamais un motif de rejet.
+- BOT (v4) : dernière phase = chrono du bandeau, et `Play Time` = ce chrono tronqué à la seconde ; les phases doivent croître. Si tout concorde → `exact: true`, `sur`. Sinon ou illisible → `a_verifier`.
+- Pseudo en jeu (BOT, bandeau du bas) : à enregistrer dans `player_ingame` (nouveau champ) ; la clé du joueur reste `channel_id`.
+- GB (v5) : `Player's Score` + les 6 `Hunter Rank` = `Final Score` (vérifié sur la capture du 13/11 : 15 763 121 797 048, exact). Si égal → `exact: true`, `sur`. Le RC est lu à côté ; pas de contrôle arithmétique du RC.
 - Jamais `기존 기록`, jamais le score de l'écran de composition.
 
 ## 4. Calcul du classement (`pipeline/classement.py`, idempotent)
@@ -110,7 +124,9 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 - BOT : meilleur chrono (le plus court), **par variante** (§4.6). HOTM : meilleur score **par porte** (un fichier par porte).
 - POC et GB : total = **somme des 2 meilleures runs distinctes**, prises dans 1 ou 2 vidéos.
   - POC (confirmé par Alexis) : **une run = une équipe**. Total = meilleure run de l'équipe 1 (`1팀`) + meilleure run de l'équipe 2 (`2팀`). Si l'équipe n'est pas lisible : les 2 meilleures runs, en `a_verifier`. Deux runs de la même équipe ne s'additionnent jamais.
-  - GB : **désactivé dans le classement (v3)** tant que les écrans ne sont pas définis. Les lectures sont gardées dans `_lectures.json`, aucun fichier `gb.json`, les vidéos restent `en_cours`.
+  - GB (v5, réactivé) : classement au **Rage Count**. Total = RC de la meilleure run du groupe 1 + RC de la meilleure run du groupe 2, comme le POC. « Meilleure run » d'un groupe = RC le plus élevé, puis les dégâts (`Final Score`) en cas d'égalité. Groupe illisible : les 2 meilleures runs, en `a_verifier`. Deux runs du même groupe ne s'additionnent jamais.
+  - GB, égalité de RC total (fréquente, nombres entiers) : départage par la **somme des dégâts** des 2 runs, puis par §4.2.
+  - `score.total` et `score.runs` = RC (`unit: rage_count`) ; dégâts dans `runs_detail[i].damage` ; `team` = groupe (1, 2 ou `null`).
   - Une seule run trouvée → la ligne existe, `confidence: a_verifier`, `rank: null`.
 
 ### 4.2 Égalité
@@ -144,6 +160,13 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 - Variante inconnue → `data/runs/<semaine>/bot-variante-inconnue.json`, `rank: null`, jamais publié sur le site.
 - HOTM, même principe : porte d'après le titre (`제 n관문`, `第n関門`, `gate n`) si l'écran est illisible ; sinon `hotm-gate-inconnue.json`, `rank: null`, jamais publié.
 
+### 4.7 GB : écran `Personal Record` (v6, décision d'Alexis)
+- Un joueur qui ne filme que son `Personal Record` est **classé**. Une lecture de cet écran donne 2 runs : groupe 1 et groupe 2, chacune avec son RC (exact) et ses dégâts arrondis (`17.28T`, `exact: false` pour les dégâts).
+- **Contrôle** : `Total Rage Count` = RC du groupe 1 + RC du groupe 2. Si égal → RC `sur`, `score_source: record`. Sinon ou illisible → `a_verifier`. `Total Score` (exact) est gardé dans `runs_detail` et sert au départage des dégâts (§4.1).
+- **Bonne semaine** : lire `Time Left in Season` (ex. `6d 9h`). Moment de la capture = prochain reset − temps restant. S'il tombe **après** `published_at`, le record date de la saison précédente → `rejected`, raison `semaine_precedente`. Illisible → `a_verifier`. Contrôle du boss (§4.5) comme pour les autres écrans.
+- **Avec les écrans Results** de la même semaine : pour chaque groupe, garder la meilleure des runs (RC, puis dégâts). Une run Results est rattachée à un groupe si son RC et ses dégâts arrondis correspondent à ceux du Personal Record ; sinon `team: null`.
+- Exemple (captures du 13/11) : Personal Record 167 + 165 = 332 RC. Ensuite, une run Results à 165 RC et 15 763 121 797 048 de dégâts (`New Record Achieved!`). Elle remplace celle du groupe 2 (15,55T), car à RC égal elle a plus de dégâts. Total : 332 RC.
+
 ## 5. Fichiers de sortie
 
 ### 5.1 `data/runs/<semaine>/<mode>.json` (POC, GB), `bot-season.json`, `bot-challenge.json`, `hotm-gate-<n>.json`
@@ -158,7 +181,7 @@ Format du skill §3, avec ces précisions :
 
 ### 5.2 `data/rejected/<semaine>.json` (liste)
 `{"video_id", "channel_id", "title", "published_at", "mode_guess", "reason", "detail", "last_tri", "date"}`
-Codes `reason` : `hors_fenetre` · `live` · `pas_de_score` (après tri 4) · `semaine_precedente` · `doublon` · `hors_sujet` (pas Solo Leveling: Arise) · `semaine_gelee`.
+Codes `reason` (v6 : `semaine_precedente` couvre aussi un Personal Record de la saison précédente) : `hors_fenetre` · `live` · `pas_de_score` (après tri 4) · `semaine_precedente` · `doublon` · `hors_sujet` (pas Solo Leveling: Arise) · `semaine_gelee`.
 Une vidéo rejetée n'est jamais réanalysée.
 
 ### 5.3 `data/processed.json` (objet indexé par video_id, toutes semaines)
@@ -195,7 +218,8 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 ## 7. Points ouverts (ne bloquent pas le codage)
 1. POC équipe 1 + équipe 2 : **réglé** (§4.1).
 2. BOT deux variantes : **réglé** (§4.6) ; lecture de la variante à l'écran [EN ATTENTE].
-3. **[EN ATTENTE]** BOT : écran RESULT. GB : tous les écrans et le format du Rage Count.
+3. BOT : écran RESULT défini (v4) ; variante d'après les armes de SJW (v5) **[À CONFIRMER]** sur une capture de challenge. GB : écrans définis (v5).
+6. GB : `Personal Record` accepté comme source (v6, §4.7).
 4. **[À CONFIRMER]** noms anglais des modes ; nom japonais du POC et du GB.
 5. Plages plausibles (§2.2) à ajuster après les premières semaines.
 
