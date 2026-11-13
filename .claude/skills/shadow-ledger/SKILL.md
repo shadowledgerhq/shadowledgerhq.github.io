@@ -145,8 +145,9 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 ### Classements (étape 1)
 - [ ] Toutes les vidéos ont une date de publication postérieure au dernier reset.
 - [ ] Le boss / la saison visible correspond à la semaine.
-- [ ] Une seule ligne par joueur ; pas de ré-upload en double.
+- [ ] Une seule ligne par joueur (HOTM : par joueur et par porte) ; pas de ré-upload en double.
 - [ ] POC et GB : 2 runs présentes, total = somme.
+- [ ] POC : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
 - [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas.
 - [ ] Les scores `exact: false` ou `a_verifier` sont signalés.
 - [ ] Aucun écart improbable (ex. score 10 fois au-dessus du 2e) sans vérification.
