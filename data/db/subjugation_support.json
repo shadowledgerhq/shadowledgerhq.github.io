@@ -40,12 +40,13 @@
     },
     "condition": null,
     "recommended": null,
-    "week": null,
+    "week": "2026-11-12",
     "icon": null,
     "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine. Semaine 2026-11-12 (reset jeudi 12/11 01h Paris), confirmée par Alexis.",
+    "captured_at": "2026-11-13 (≈15 h avant la transmission)"
   },
   {
     "id": "poc-cap-c1-overload-dmg",
@@ -72,12 +73,13 @@
     },
     "condition": null,
     "recommended": null,
-    "week": null,
+    "week": "2026-11-12",
     "icon": null,
     "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine. Semaine 2026-11-12 (reset jeudi 12/11 01h Paris), confirmée par Alexis.",
+    "captured_at": "2026-11-13 (≈15 h avant la transmission)"
   },
   {
     "id": "poc-cap-c1-crit-dmg",
@@ -104,12 +106,13 @@
     },
     "condition": null,
     "recommended": null,
-    "week": null,
+    "week": "2026-11-12",
     "icon": null,
     "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine. Semaine 2026-11-12 (reset jeudi 12/11 01h Paris), confirmée par Alexis.",
+    "captured_at": "2026-11-13 (≈15 h avant la transmission)"
   },
   {
     "id": "poc-cap-c2-infusion",
@@ -136,12 +139,13 @@
     },
     "condition": "rôle requis : stacker / supporter / buster (lecture à préciser)",
     "recommended": null,
-    "week": null,
+    "week": "2026-11-12",
     "icon": null,
     "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine. Semaine 2026-11-12 (reset jeudi 12/11 01h Paris), confirmée par Alexis.",
+    "captured_at": "2026-11-13 (≈15 h avant la transmission)"
   },
   {
     "id": "poc-cap-c2-element-dmg",
@@ -168,12 +172,13 @@
     },
     "condition": "rôle requis : stacker / supporter / buster (lecture à préciser)",
     "recommended": null,
-    "week": null,
+    "week": "2026-11-12",
     "icon": null,
     "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine. Semaine 2026-11-12 (reset jeudi 12/11 01h Paris), confirmée par Alexis.",
+    "captured_at": "2026-11-13 (≈15 h avant la transmission)"
   },
   {
     "id": "poc-cap-c2-overload-dmg",
@@ -200,12 +205,13 @@
     },
     "condition": "rôle requis : stacker / supporter / buster (lecture à préciser)",
     "recommended": null,
-    "week": null,
+    "week": "2026-11-12",
     "icon": null,
     "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine. Semaine 2026-11-12 (reset jeudi 12/11 01h Paris), confirmée par Alexis.",
+    "captured_at": "2026-11-13 (≈15 h avant la transmission)"
   },
   {
     "id": "poc-cap-c3-successor-stats",
@@ -256,12 +262,13 @@
     },
     "condition": null,
     "recommended": null,
-    "week": null,
+    "week": "2026-11-12",
     "icon": null,
     "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine. Semaine 2026-11-12 (reset jeudi 12/11 01h Paris), confirmée par Alexis.",
+    "captured_at": "2026-11-13 (≈15 h avant la transmission)"
   },
   {
     "id": "poc-cap-c3-infusion-skills",
@@ -288,12 +295,13 @@
     },
     "condition": null,
     "recommended": null,
-    "week": null,
+    "week": "2026-11-12",
     "icon": null,
     "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine. Semaine 2026-11-12 (reset jeudi 12/11 01h Paris), confirmée par Alexis.",
+    "captured_at": "2026-11-13 (≈15 h avant la transmission)"
   },
   {
     "id": "poc-cap-c3-weapon-attacks",
@@ -336,12 +344,13 @@
     },
     "condition": null,
     "recommended": null,
-    "week": null,
+    "week": "2026-11-12",
     "icon": null,
     "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine. Semaine 2026-11-12 (reset jeudi 12/11 01h Paris), confirmée par Alexis.",
+    "captured_at": "2026-11-13 (≈15 h avant la transmission)"
   },
   {
     "id": "poc-wiki-c1-atk",
