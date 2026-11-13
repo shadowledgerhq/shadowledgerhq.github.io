@@ -12,10 +12,10 @@
 ## En cours
 - Rien d'engagé. Reste : contrôle des sets d'artefacts : le wiki date de mai 2026 (modèle du 16/05) ; sets ajoutés depuis et équilibrages du 17/09, 30/07, 22/10 non reflétés.
 ## À faire
-- Compléter/corriger les sets depuis slagate.com (pas de page lisible trouvée : /artefacts, /artifacts = 404 ; piste : API api.slagate.com) ou le jeu.
+- Sets d'artefacts : wiki de mai 2026 ; compléter à partir des notes Netmarble ou du jeu (slagate : pas de page lisible, API exclue).
 - FR des sets, emplacements et icônes des pièces, `main_stat_options`, rareté : vides.
 - Hunters : 4 sans compétences sur le wiki (Go Gunhee SSR Water, Park Heejin, Song Chiyul, Yoo Jinho) ; 3 sans avancement. Noms FR, icônes, `weapon_type`, valeurs par niveau : vides. `role` (stacker/supporter/buster) rempli pour 23 ; les 43 Striker/Breaker restent `null` (type wiki dans `type_en`).
-- Saisir : shadows → successors → sjw_skills → blessings → subjugation_support → proof_modifiers.
+- Saisir : shadows → sjw_skills → blessings → subjugation_support → proof_modifiers (successors : fait, 3 entrées).
 - Script de contrôle (ids uniques, FR+EN, source, date, icône) : à demander à la discussion 8.
 - Noms FR/EN officiels des stats. Les ids des `changes` de `patches.json` sont des slugs provisoires.
 ## Besoin d'Alexis
