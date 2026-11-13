@@ -1,0 +1,30 @@
+# Contrôle de la base de données à chaque push touchant data/db/ ou data/icons/.
+name: Contrôle de la base
+
+on:
+  push:
+    paths:
+      - "data/db/**"
+      - "data/icons/**"
+      - "pipeline/check_db.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-db:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Contrôle (échoue s'il y a une erreur bloquante)
+        run: |
+          set -o pipefail
+          python3 pipeline/check_db.py | tee check.txt
+      - name: Résumé du rapport
+        if: always()
+        run: |
+          [ -f data/db/_rapport.md ] && cat data/db/_rapport.md >> "$GITHUB_STEP_SUMMARY" || true

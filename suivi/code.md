@@ -1,5 +1,6 @@
 # SUIVI — 8 Code — 2026-11-13
 ## Fait
+- `pipeline/check_db.py` (stdlib) + `.github/workflows/check-db.yml` + `data/db/_rapport.md` : 1er passage = 0 erreur, 555 avertissements (icônes null 196, name.fr vide 170, pierres sans effets 59, sources non URL 42, slots vides 36, changes de patches 30). Erreurs testées sur copie (hunter_id, date, icône). CLAUDE.md « Commandes » mis à jour.
 - `pipeline/sjw.py` : 6 emplacements de compétences SJW (skill_1, skill_2, ultimate, qte_1-3), `level` null accepté, complétude = 6 emplacements + 8 bénédictions, grille 3+3 du PowerPoint. Test : `python3 pipeline/tests/test_sjw.py`.
 - `docs/REFERENCE_ECRANS_HOTM.md` : section Compétences corrigée (6 emplacements).
 - `pipeline/hotm_ecran.py` : lit la porte (제 N관문 / 第N関門 + points) et le titre du mode (플레이어 모드 = avec SJW, ハンターモード = sans SJW) dans le texte OCR. Renvoie `gate` {number, points} et `hunter_mode` (bool), `None` si illisible, plus des alertes pour `notes` (run en `a_verifier`).

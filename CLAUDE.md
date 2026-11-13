@@ -34,4 +34,6 @@ Les sessions Claude Code sur ce dépôt servent surtout aux discussions **8 — 
 
 ## Commandes
 
-Aucune pour l'instant. La discussion 8 (Code) les ajoutera ici (installation Python, lancement du pipeline, tests).
+- Contrôle de la base : `python3 pipeline/check_db.py` (ajouter `--verbose` pour lister tous les avertissements). Code de sortie 1 s'il y a une erreur bloquante ; écrase `data/db/_rapport.md`. Lancé aussi par `.github/workflows/check-db.yml` à chaque push touchant `data/db/` ou `data/icons/`.
+- Tests : `python3 pipeline/tests/test_hotm_ecran.py` et `python3 pipeline/tests/test_sjw.py`.
+- Autres commandes (installation, pipeline) : à ajouter par la discussion 8.
