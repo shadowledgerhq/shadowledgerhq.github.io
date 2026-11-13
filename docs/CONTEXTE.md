@@ -180,7 +180,7 @@ Les discussions 8 et 9 se font dans Claude Code (claude.ai/code), sur le dépôt
 | Écrire ou corriger un script, un workflow, une erreur technique, installation | 8 — Code (Claude Code) |
 | Données du jeu (chasseurs, armes, artefacts…), icônes, mise à jour après un patch | 9 — Base de données (Claude Code) |
 
-Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la traite pas. Il indique la discussion à ouvrir et donne **un seul message prêt à coller**, dans cet ordre : (1) la ligne de rôle de la discussion cible, reprise de `PROMPTS_DISCUSSIONS.md` ; (2) la demande, avec le contexte utile (fichiers, décisions, ce qui est attendu). Il le fait aussi quand une discussion devient trop longue : il conseille d'en ouvrir une neuve et fournit le prompt de démarrage + le dernier SUIVI à coller.
+Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la traite pas. Il indique la discussion à ouvrir et donne **un seul message prêt à coller**, dans cet ordre : (1) la ligne de rôle de la discussion cible, reprise de `PROMPTS_DISCUSSIONS.md` ; (2) la demande, avec le contexte utile (fichiers, décisions, ce qui est attendu). Il le fait aussi quand une discussion devient trop longue : **au 15e message d'Alexis** (puis à chaque nouveau message), il le signale en tête de réponse, recommande d'ouvrir une nouvelle discussion et donne un seul message prêt à coller : la ligne de rôle, le SUIVI à jour et la prochaine action précise.
 
 ## 8. Ordre de réalisation
 
