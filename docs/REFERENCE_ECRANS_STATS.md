@@ -4,7 +4,7 @@ Source : 1 capture fournie par Alexis le 12/11/2026 (client coréen, SJW niv. 17
 
 - Onglets : « 전체 » (tout), « 무기 » (arme), « 아티팩트 » (artefacts).
 - Format d'une ligne : `pourcentage (valeur brute)`, ex. `50% (19191)`. Certaines lignes sont brutes (PV, attaque).
-- Liste complète à conserver (confirmé par Alexis) : les 10 lignes du tableau ci-dessous. La dernière ligne est coupée par le bas de l'écran.
+- Liste complète à conserver (confirmé par Alexis) : les 10 lignes du tableau ci-dessous. « Augmentation des dégâts » est bien la dernière ligne (confirmé par Alexis).
 
 | Nom coréen | Sens probable | Valeur lue |
 | --- | --- | --- |
@@ -20,5 +20,6 @@ Source : 1 capture fournie par Alexis le 12/11/2026 (client coréen, SJW niv. 17
 | 피해량 증가 | Augmentation des dégâts | 21.42% (13627) |
 
 Les noms FR/EN ci-dessus sont des traductions probables, **à vérifier** sur la source avant d'alimenter `stats.json`.
-
-Zone gauche de l'écran (attributs de base, lecture probable) : force 697, 10, 10, intelligence 650, sens 17 ; zone droite : puissance de combat 3 405 259 avec PV, attaque et défense en résumé. Non retenues dans `stats.json` tant qu'Alexis ne les demande pas.
+ 
+Attributs de base (zone gauche, **obligatoires**) : force 697 (근력), vitalité 10 (libellé coréen peu lisible), agilité 10 (민첩), intelligence 650 (지능), perception 17 (감각) ; points non répartis 0.
+Puissance de combat (zone droite, **facultative**, information) : 3 405 259 (전투력).

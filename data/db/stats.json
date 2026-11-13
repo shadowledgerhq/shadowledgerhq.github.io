@@ -14,7 +14,9 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : PV. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : PV. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
   },
   {
     "id": "mana",
@@ -31,7 +33,9 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : Mana. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : Mana. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
   },
   {
     "id": "attack",
@@ -48,7 +52,9 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : Attaque. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : Attaque. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
   },
   {
     "id": "accuracy",
@@ -65,7 +71,9 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : Précision. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : Précision. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
   },
   {
     "id": "defense",
@@ -82,7 +90,9 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : Défense. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : Défense. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
   },
   {
     "id": "crit-rate",
@@ -99,7 +109,9 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : Taux de critique. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : Taux de critique. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
   },
   {
     "id": "crit-damage",
@@ -116,7 +128,9 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : Dégâts critiques. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : Dégâts critiques. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
   },
   {
     "id": "cooldown-reduction",
@@ -133,7 +147,9 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : Réduction de recharge. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : Réduction de recharge. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
   },
   {
     "id": "defense-penetration",
@@ -150,7 +166,9 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : Pénétration de défense. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : Pénétration de défense. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
   },
   {
     "id": "damage-increase",
@@ -167,6 +185,122 @@
     "source": "capture d'écran de stats fournie par Alexis (client coréen)",
     "verified_at": "2026-11-12",
     "game_version": "",
-    "notes": "Nom FR probable (non vérifié) : Augmentation des dégâts. Noms FR/EN officiels à confirmer."
+    "notes": "Nom FR probable (non vérifié) : Augmentation des dégâts. Noms FR/EN officiels à confirmer.",
+    "category": "stat",
+    "required": true
+  },
+  {
+    "id": "strength",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "근력"
+    },
+    "kind": "flat",
+    "display": "raw",
+    "order": 1,
+    "category": "attribute",
+    "required": true,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-13",
+    "game_version": "",
+    "notes": "Attribut de base (zone gauche de l'écran). Nom FR probable (non vérifié) : Force."
+  },
+  {
+    "id": "vitality",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "활력"
+    },
+    "kind": "flat",
+    "display": "raw",
+    "order": 2,
+    "category": "attribute",
+    "required": true,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-13",
+    "game_version": "",
+    "notes": "Attribut de base (zone gauche de l'écran). Nom FR probable (non vérifié) : Vitalité. Libellé coréen peu lisible sur la capture : à confirmer."
+  },
+  {
+    "id": "agility",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "민첩"
+    },
+    "kind": "flat",
+    "display": "raw",
+    "order": 3,
+    "category": "attribute",
+    "required": true,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-13",
+    "game_version": "",
+    "notes": "Attribut de base (zone gauche de l'écran). Nom FR probable (non vérifié) : Agilité."
+  },
+  {
+    "id": "intelligence",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "지능"
+    },
+    "kind": "flat",
+    "display": "raw",
+    "order": 4,
+    "category": "attribute",
+    "required": true,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-13",
+    "game_version": "",
+    "notes": "Attribut de base (zone gauche de l'écran). Nom FR probable (non vérifié) : Intelligence."
+  },
+  {
+    "id": "perception",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "감각"
+    },
+    "kind": "flat",
+    "display": "raw",
+    "order": 5,
+    "category": "attribute",
+    "required": true,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-13",
+    "game_version": "",
+    "notes": "Attribut de base (zone gauche de l'écran). Nom FR probable (non vérifié) : Perception."
+  },
+  {
+    "id": "combat-power",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "전투력"
+    },
+    "kind": "flat",
+    "display": "raw",
+    "order": 1,
+    "category": "info",
+    "required": false,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-13",
+    "game_version": "",
+    "notes": "Information facultative (zone droite). Nom FR probable (non vérifié)."
   }
 ]

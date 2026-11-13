@@ -4,7 +4,7 @@
 - Sondage de slagate.com : site SPA, données servies par api.slagate.com. Les routes `/api/codex/*` et `/api/game/hunters` testées renvoient 404 (non exploitables telles quelles).
 - Captures BOT lues : `docs/REFERENCE_ECRANS_BOT.md`. Champ `ja` ajouté au schéma.
 - Alexis valide : `data/rules/<semaine>.json` créé (BOT 05/11 et 12/11), CONTEXTE §3 et §6 corrigés. Écran de stats lu : `docs/REFERENCE_ECRANS_STATS.md`.
-- `stats.json` : 10 stats de l'écran (noms coréens lus ; FR/EN vides, à vérifier).
+- `stats.json` : 10 stats + 5 attributs obligatoires + puissance de combat (info) (noms coréens lus ; FR/EN vides, à vérifier).
 ## En cours
 - Choix de la méthode de récupération des données (voir « Besoin d'Alexis »).
 ## À faire
