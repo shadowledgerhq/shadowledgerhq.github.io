@@ -11,6 +11,7 @@ from collections import defaultdict
 from datetime import timezone
 
 import gb
+from bot_saison import controler_semaine_bot
 from donnees import Donnees, ajouter_rejet, charger_config
 from semaine import bornes, id_semaine, iso_paris, maintenant, parse_iso, semaine_precedente
 
@@ -210,6 +211,7 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
         ligne["hunter_mode"] = principale.get("hunter_mode")
     if mode == "bot":
         ligne["bot_variant"] = principale.get("bot_variant")
+        ligne["bot_season_week"] = principale.get("bot_season_week")  # v9
         ligne["player_ingame"] = principale.get("player_ingame")  # v4 : information seulement
     if mode == "gb":
         ligne["_degats"] = gb.somme_degats(choix)  # départage (retiré avant l'écriture)
@@ -293,6 +295,7 @@ def calculer(week, d=None, config=None, horloge=None):
     videos_avant = {r["video_id"] for r in runs}
 
     runs, saisons_prec = controler_saison_record(runs, week, config)
+    runs, semaines_prec, alertes_semaine_bot = controler_semaine_bot(runs, week, config)
     runs, doublons = dedoublonner(runs, config)
     cles = sorted({r["_cle"] for r in runs})
     boss, non_controle, precedentes, runs = controler_boss(
@@ -306,6 +309,8 @@ def calculer(week, d=None, config=None, horloge=None):
         motifs.setdefault(r["video_id"], ("doublon", origine, r))
     for r in precedentes:
         motifs.setdefault(r["video_id"], ("semaine_precedente", r["stage"], r))
+    for r in semaines_prec:  # v9 : titre S<n>-<w> de la semaine précédente
+        motifs.setdefault(r["video_id"], ("semaine_precedente", r["bot_season_week"], r))
     for r in saisons_prec:
         motifs.setdefault(r["video_id"], ("semaine_precedente",
                                           f"Time Left in Season : {r['detail'].get('time_left')}", r))
@@ -370,7 +375,7 @@ def calculer(week, d=None, config=None, horloge=None):
                      for r in runs if any(n.startswith("boss différent") for n in r["notes"])]
     return {"gelee": False, "week": week, "fichiers": {c: len(l) for c, l in fichiers.items()},
             "a_verifier": a_verifier, "rejets": nouveaux_rejets, "boss": boss,
-            "alertes_boss": alertes_boss}
+            "alertes_boss": alertes_boss, "alertes_semaine_bot": alertes_semaine_bot}
 
 
 if __name__ == "__main__":

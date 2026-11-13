@@ -48,6 +48,11 @@
   },
   "hypothese_mots": ["can", "could", "possible", "up to", "max", "~", "가능", "可能", "目標", "target"],
   "semaine_passee_mots": ["last week", "저번 주", "지난주", "先週", "previous week", "저번주", "semaine passée", "semaine dernière", "上周"],
+  "bot": {
+    "_doc": "SPEC §4.6 (v9) : S<n>-<w> du titre = saison n, semaine w. Référence déduite des titres a-923ClD9Rc et Lt84IhMjBvM. 7 semaines par saison, saisons sans pause [À CONFIRMER].",
+    "saison_ref": {"saison": 20, "semaine_saison": 4, "week": "2026-11-12"},
+    "semaines_par_saison": 7
+  },
   "bot_variante": {
     "_doc": "SPEC §4.6 : indice du titre. Les deux indices ou aucun = variante inconnue.",
     "challenge": ["challenge", "チャレンジ", "챌린지"],
@@ -63,7 +68,7 @@
     "record_tolerance_min_minutes": 1,
     "_doc": "SPEC §4.7 (v7) : marge sur le moment estimé de la capture du Personal Record, selon la plus petite unité de Time Left in Season : heures -> 60 min ; jours seulement -> 24 h ; minutes -> 1 min."
   },
-  "tri1_version": 4,
+  "tri1_version": 9,
   "reset_alerte_heures": 3,
   "plausible_degats_gb": [1000000000000, 1000000000000000],
   "boss_min_videos": 3,

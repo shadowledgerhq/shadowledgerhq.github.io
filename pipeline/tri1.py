@@ -5,6 +5,7 @@ import re
 
 from hotm_ecran import lire_porte
 from scores import NON_GERE, degats_gb, extraire
+from bot_saison import lire_saison_semaine
 from semaine import bornes, parse_iso, semaine_de
 
 SOURCES_TEXTE = ("titre", "description", "sous-titres")
@@ -21,6 +22,7 @@ def lecture_vide(meta, mode):
         "mode": mode,
         "regles": None,         # v8 : version des règles du tri 1 qui a produit la lecture (config.tri1_version)
         "bot_variant": None,
+        "bot_season_week": None,  # v9 : `S20-4` lu dans le titre (BOT), contrôle de semaine au classement
         "player_ingame": None,  # v4 : pseudo en jeu (BOT, bandeau du bas), information seulement
         "damage": None,         # v5 : GB, `Final Score` (arrondi si lu sur le Personal Record)
         "gate": None,
@@ -96,6 +98,7 @@ def lectures_texte(meta, textes, config):
                     porte = lire_porte(meta.get("title") or "")
                     lec["gate"] = porte["number"] if porte else None
                 if mode == "bot":  # v3 : variante d'après le titre
+                    lec["bot_season_week"] = lire_saison_semaine(meta.get("title"))
                     lec["bot_variant"] = variante_bot(meta.get("title"), config)
                     if lec["bot_variant"]:
                         lec["notes"].append("variante d'après le titre")

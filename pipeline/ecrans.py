@@ -13,6 +13,7 @@ la lecture reste `a_verifier`, jamais une valeur inventée.
 import re
 
 from hotm_ecran import lire_porte
+from bot_saison import lire_saison_semaine
 from tri1 import lecture_vide, notes_alerte_reset, variante_bot
 
 
@@ -43,6 +44,7 @@ def lecture_bot(meta, ecran, config, source="video-complete"):
                stage=ecran.get("stage"), t=ecran.get("t"), player_ingame=ecran.get("player_ingame"),
                detail={"phases": phases, "play_time": ecran.get("play_time")})
     lec["notes"] += [f"contrôle BOT : {p}" for p in pb]
+    lec["bot_season_week"] = lire_saison_semaine(meta.get("title"))
     titre = variante_bot(meta.get("title"), config)
     armes = ecran.get("armes_sjw")  # True : armes de SJW dans le bandeau ; False : absentes ; None : illisible
     if armes is not None:  # l'écran prime sur le titre (v5, indice [À CONFIRMER] sur une capture de challenge)

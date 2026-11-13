@@ -18,6 +18,7 @@ import classement
 from donnees import Donnees, ajouter_rejet, charger_config
 from semaine import (PARIS, bornes, dans_creneau, id_semaine, iso_utc, maintenant, parse_iso,
                      semaine_precedente)
+from bot_saison import lire_saison_semaine
 from hotm_ecran import lire_porte
 from tri1 import lectures_texte, remplacer_lectures, variante_bot
 from youtube import ApiYouTube, recherche
@@ -138,6 +139,8 @@ def relire(d, config, week, api=None, ids=None):
                     l["bot_variant"] = variante_bot(videos[vid].get("title"), config)
                     if l["bot_variant"] and "variante d'après le titre" not in l["notes"]:
                         l["notes"].append("variante d'après le titre")
+                if l["mode"] == "bot":
+                    l["bot_season_week"] = lire_saison_semaine(videos[vid].get("title"))
                 if l["mode"] == "hotm" and l.get("gate") is None:
                     porte = lire_porte(videos[vid].get("title") or "")
                     l["gate"] = porte["number"] if porte else None
@@ -149,6 +152,7 @@ def relire(d, config, week, api=None, ids=None):
         if vid in processed:
             processed[vid]["regles"] = config.get("tri1_version")
     for l in lectures:
+        l.setdefault("bot_season_week", None)
         l.setdefault("regles", None)  # v8 : champ présent partout (null = lue avant la v8)
     d.ecrire(f"runs/{week}/_lectures.json", lectures)
     d.ecrire(f"runs/{week}/_videos.json", videos)
@@ -183,6 +187,7 @@ def ecrire_rapport(d, week, passage, instant, resume, res, alertes):
         if len(av) > 50:
             l.append(f"- … et {len(av) - 50} autre(s)")
         l += ["", "## Alertes boss"] + [f"- {a}" for a in res["alertes_boss"] or ["rien"]]
+        l += ["", "## Semaine BOT (titre S<n>-<w>)"] + [f"- {a}" for a in res.get("alertes_semaine_bot") or ["rien"]]
     erreurs = (resume["erreurs"] if resume else []) + alertes
     l += ["", "## Erreurs et alertes"] + [f"- {e}" for e in erreurs or ["rien"]]
     d.ecrire(f"runs/{week}/_rapport.md", "\n".join(l) + "\n")

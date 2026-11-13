@@ -25,6 +25,7 @@
     "rank": null,
     "notes": "publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 19s; variante d'après le titre; boss non contrôlé",
     "bot_variant": "season",
+    "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
@@ -62,8 +63,9 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 19.558; variante d'après le titre; boss non contrôlé",
+    "notes": "score provisoire (titre) : 19.558; variante d'après le titre; semaine confirmée (titre); boss non contrôlé",
     "bot_variant": "season",
+    "bot_season_week": "S20-4",
     "player_ingame": null,
     "runs_detail": [
       {
@@ -101,8 +103,9 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 19.754s; variante d'après le titre; boss non contrôlé",
+    "notes": "score provisoire (titre) : 19.754s; variante d'après le titre; semaine confirmée (titre); boss non contrôlé",
     "bot_variant": "season",
+    "bot_season_week": "S20-4",
     "player_ingame": null,
     "runs_detail": [
       {
@@ -142,6 +145,7 @@
     "rank": null,
     "notes": "score provisoire (titre) : 19.9s; variante d'après le titre; boss non contrôlé",
     "bot_variant": "season",
+    "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
@@ -181,6 +185,7 @@
     "rank": null,
     "notes": "score provisoire (titre) : 23;223s; variante d'après le titre; boss non contrôlé",
     "bot_variant": "season",
+    "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
@@ -220,6 +225,7 @@
     "rank": null,
     "notes": "score provisoire (titre) : 28초; variante d'après le titre; boss non contrôlé",
     "bot_variant": "season",
+    "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
@@ -259,6 +265,7 @@
     "rank": null,
     "notes": "score provisoire (titre) : 29s; variante d'après le titre; boss non contrôlé",
     "bot_variant": "season",
+    "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
@@ -298,6 +305,7 @@
     "rank": null,
     "notes": "score provisoire (description) : 00:32; autres candidats : 01:01, 01:45, 03:49; description non relue (règles v3); variante d'après le titre; boss non contrôlé",
     "bot_variant": "season",
+    "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
