@@ -12,16 +12,18 @@
 - `shadows.json` : 15 ombres (`tools/parse_fandom_shadows.py`) : compétence de chef par rang (Common→General), 7 compétences, armement, obtention. Greed : page vide sur le wiki (0 compétence). Wiki de 2025 à juin 2026 : chefs rééquilibrés le 22/10 non reflétés.
 - `sjw_skills.json` : 12 compétences de SJW + 48 runes (`tools/parse_fandom_runes.py`, page Runes du wiki) : dégâts au niveau min. par rareté (Rare→Transcendent), cooldown, MP. Le wiki ne donne ni type (basique/QTE/ultime), ni niveau de base, ni forme des runes ; la compétence ultime Commander's Authority et les runes ajoutées en juin/octobre ne sont pas dedans.
 - `blessings.json` : 43 pierres de bénédiction (27 Empowerment, 16 Survival ; `tools/parse_fandom_blessings.py`) : texte EN, valeurs Rare→Transcendent. Absentes (ajoutées le 17/09) : Master Marksman, Do or Die, Supercharge, Iron Stance, Architect's Plan, Spring of Life, Devour. Coquille du wiki : Assassin's Proficiency « 24--29% ».
+- `subjugation_support.json` : 18 entrées (9 de la capture du 13/11 en 3 colonnes ; 9 d'une semaine antérieure du wiki, valeurs différentes : +15 % au lieu de +20 %). Nom officiel EN : « Conquest Support » (wiki, notes Netmarble) ; les effets changent chaque semaine, `week` à renseigner (null). `proof_modifiers.json` : 17 lignes de la capture HOTM (somme des coûts = 931, vérifiée). Rien sur le wiki pour le HOTM.
 ## En cours
 - Rien d'engagé. Reste : contrôle des sets d'artefacts : le wiki date de mai 2026 (modèle du 16/05) ; sets ajoutés depuis et équilibrages du 17/09, 30/07, 22/10 non reflétés.
 ## À faire
 - Sets d'artefacts : wiki de mai 2026 ; compléter à partir des notes Netmarble ou du jeu (slagate : pas de page lisible, API exclue).
 - FR des sets, emplacements et icônes des pièces, `main_stat_options`, rareté : vides.
 - Hunters : 4 sans compétences sur le wiki (Go Gunhee SSR Water, Park Heejin, Song Chiyul, Yoo Jinho) ; 3 sans avancement. Noms FR, icônes, `weapon_type`, valeurs par niveau : vides. `role` (stacker/supporter/buster) rempli pour 23 ; les 43 Striker/Breaker restent `null` (type wiki dans `type_en`).
-- Saisir : subjugation_support → proof_modifiers (successors : fait, 3 entrées).
+- Les 12 catégories de l'ordre de saisie existent. Suite : combler les vides (FR, icônes, valeurs par niveau, éléments ajoutés depuis mai).
 - Script de contrôle (ids uniques, FR+EN, source, date, icône) : à demander à la discussion 8.
 - Noms FR/EN officiels des stats. Les ids des `changes` de `patches.json` sont des slugs provisoires.
 ## Besoin d'Alexis
+- Soutien de subjugation / preuves : effets de la semaine en cours (une capture par semaine) ; semaine de la capture du 13/11 à confirmer.
 - Captures du GB ; règles POC/GB (05/11, 12/11) et HOTM 05/11 pour `data/rules/`.
 - Trace écrite de l'autorisation de Sohoven (`ai-train=no`) : couvre-t-elle lecture automatisée et icônes ?
 ## Demandes de modif du skill

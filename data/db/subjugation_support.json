@@ -1,0 +1,722 @@
+[
+  {
+    "id": "poc-cap-c1-atk-def-hp",
+    "name": {
+      "fr": "ATQ/DEF/PV +20 %",
+      "en": "Attack/Defense/Max HP +20%",
+      "ko": null
+    },
+    "rarity": "rare",
+    "column": 1,
+    "effects": [
+      {
+        "stat": "attack",
+        "value": 20,
+        "unit": "percent",
+        "target": "team",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "defense",
+        "value": 20,
+        "unit": "percent",
+        "target": "team",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "max_hp",
+        "value": 20,
+        "unit": "percent",
+        "target": "team",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "ATQ/DEF/PV +20 %",
+      "en": "Attack/Defense/Max HP +20%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+  },
+  {
+    "id": "poc-cap-c1-overload-dmg",
+    "name": {
+      "fr": "Dégâts sur [과부하] +10 %",
+      "en": "Damage dealt to [Overload] +10%",
+      "ko": "과부하"
+    },
+    "rarity": "rare",
+    "column": 1,
+    "effects": [
+      {
+        "stat": "overload_damage",
+        "value": 10,
+        "unit": "percent",
+        "target": "team",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "Dégâts sur [과부하] +10 %",
+      "en": "Damage dealt to [Overload] +10%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+  },
+  {
+    "id": "poc-cap-c1-crit-dmg",
+    "name": {
+      "fr": "Dégâts critiques +20 %",
+      "en": "Critical Hit damage +20%",
+      "ko": null
+    },
+    "rarity": "rare",
+    "column": 1,
+    "effects": [
+      {
+        "stat": "crit_damage",
+        "value": 20,
+        "unit": "percent",
+        "target": "team",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "Dégâts critiques +20 %",
+      "en": "Critical Hit damage +20%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+  },
+  {
+    "id": "poc-cap-c2-infusion",
+    "name": {
+      "fr": "Si un chasseur Stacker/Supporter/Buster est dans l'équipe : effet d'infusion d'attribut de [성진우, rôle] +200 %",
+      "en": "If a Stacker/Supporter/Buster hunter is on the team: element infusion effect of [Sung Jinwoo, role] +200%",
+      "ko": null
+    },
+    "rarity": "heroic",
+    "column": 2,
+    "effects": [
+      {
+        "stat": "element_infusion_effect",
+        "value": 200,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": "rôle présent dans l'équipe : stacker, supporter ou buster",
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "Si un chasseur Stacker/Supporter/Buster est dans l'équipe : effet d'infusion d'attribut de [성진우, rôle] +200 %",
+      "en": "If a Stacker/Supporter/Buster hunter is on the team: element infusion effect of [Sung Jinwoo, role] +200%"
+    },
+    "condition": "rôle requis : stacker / supporter / buster (lecture à préciser)",
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+  },
+  {
+    "id": "poc-cap-c2-element-dmg",
+    "name": {
+      "fr": "Si un chasseur Stacker/Supporter/Buster est dans l'équipe : dégâts d'attribut de [성진우, rôle] +100 %",
+      "en": "If a Stacker/Supporter/Buster hunter is on the team: elemental damage of [Sung Jinwoo, role] +100%",
+      "ko": null
+    },
+    "rarity": "heroic",
+    "column": 2,
+    "effects": [
+      {
+        "stat": "elemental_damage",
+        "value": 100,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": "rôle présent dans l'équipe",
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "Si un chasseur Stacker/Supporter/Buster est dans l'équipe : dégâts d'attribut de [성진우, rôle] +100 %",
+      "en": "If a Stacker/Supporter/Buster hunter is on the team: elemental damage of [Sung Jinwoo, role] +100%"
+    },
+    "condition": "rôle requis : stacker / supporter / buster (lecture à préciser)",
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+  },
+  {
+    "id": "poc-cap-c2-overload-dmg",
+    "name": {
+      "fr": "Si un chasseur Stacker/Supporter/Buster est dans l'équipe : dégâts [과부하] de [성진우, rôle] +100 %",
+      "en": "If a Stacker/Supporter/Buster hunter is on the team: [Overload] damage of [Sung Jinwoo, role] +100%",
+      "ko": "과부하"
+    },
+    "rarity": "heroic",
+    "column": 2,
+    "effects": [
+      {
+        "stat": "overload_damage",
+        "value": 100,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": "rôle présent dans l'équipe",
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "Si un chasseur Stacker/Supporter/Buster est dans l'équipe : dégâts [과부하] de [성진우, rôle] +100 %",
+      "en": "If a Stacker/Supporter/Buster hunter is on the team: [Overload] damage of [Sung Jinwoo, role] +100%"
+    },
+    "condition": "rôle requis : stacker / supporter / buster (lecture à préciser)",
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+  },
+  {
+    "id": "poc-cap-c3-successor-stats",
+    "name": {
+      "fr": "Successeur : ATQ/DEF/PV max +200 % et dégâts +200 %",
+      "en": "Successor: Attack/Defense/Max HP +200% and damage +200%",
+      "ko": null
+    },
+    "rarity": "legendary",
+    "column": 3,
+    "effects": [
+      {
+        "stat": "attack",
+        "value": 200,
+        "unit": "percent",
+        "target": "successor",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "defense",
+        "value": 200,
+        "unit": "percent",
+        "target": "successor",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "max_hp",
+        "value": 200,
+        "unit": "percent",
+        "target": "successor",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "damage_dealt",
+        "value": 200,
+        "unit": "percent",
+        "target": "successor",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "Successeur : ATQ/DEF/PV max +200 % et dégâts +200 %",
+      "en": "Successor: Attack/Defense/Max HP +200% and damage +200%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+  },
+  {
+    "id": "poc-cap-c3-infusion-skills",
+    "name": {
+      "fr": "Compétences avec infusion d'attribut de 성진우 : +500 %",
+      "en": "Sung Jinwoo's element-infusion skills +500%",
+      "ko": null
+    },
+    "rarity": "legendary",
+    "column": 3,
+    "effects": [
+      {
+        "stat": "skill_damage",
+        "value": 500,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": "compétences avec infusion d'attribut",
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "Compétences avec infusion d'attribut de 성진우 : +500 %",
+      "en": "Sung Jinwoo's element-infusion skills +500%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+  },
+  {
+    "id": "poc-cap-c3-weapon-attacks",
+    "name": {
+      "fr": "Attaque normale / attaque noyau / compétence d'arme de 성진우 : +500 %",
+      "en": "Sung Jinwoo's basic attack / core attack / weapon skill +500%",
+      "ko": null
+    },
+    "rarity": "legendary",
+    "column": 3,
+    "effects": [
+      {
+        "stat": "basic_attack_damage",
+        "value": 500,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "core_attack_damage",
+        "value": 500,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "weapon_skill_damage",
+        "value": 500,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "Attaque normale / attaque noyau / compétence d'arme de 성진우 : +500 %",
+      "en": "Sung Jinwoo's basic attack / core attack / weapon skill +500%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_POC.md",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Traduction descriptive, non officielle (client coréen) ; libellé officiel EN/FR à confirmer. Les effets proposés changent chaque semaine."
+  },
+  {
+    "id": "poc-wiki-c1-atk",
+    "name": {
+      "fr": "",
+      "en": "Increases Attack by 15%",
+      "ko": null
+    },
+    "rarity": "rare",
+    "column": 1,
+    "effects": [
+      {
+        "stat": "attack",
+        "value": 15,
+        "unit": "percent",
+        "target": "team",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "",
+      "en": "Increases Attack by 15%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Power_of_Calamity",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), page du 21/05/2026 : semaine non datée ; ces effets changent chaque semaine. Non vérifié en jeu."
+  },
+  {
+    "id": "poc-wiki-c1-def",
+    "name": {
+      "fr": "",
+      "en": "Increases Defense by 15%",
+      "ko": null
+    },
+    "rarity": "rare",
+    "column": 1,
+    "effects": [
+      {
+        "stat": "defense",
+        "value": 15,
+        "unit": "percent",
+        "target": "team",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "",
+      "en": "Increases Defense by 15%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Power_of_Calamity",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), page du 21/05/2026 : semaine non datée ; ces effets changent chaque semaine. Non vérifié en jeu."
+  },
+  {
+    "id": "poc-wiki-c1-hp",
+    "name": {
+      "fr": "",
+      "en": "Increases Max HP by 15%",
+      "ko": null
+    },
+    "rarity": "rare",
+    "column": 1,
+    "effects": [
+      {
+        "stat": "max_hp",
+        "value": 15,
+        "unit": "percent",
+        "target": "team",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "",
+      "en": "Increases Max HP by 15%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Power_of_Calamity",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), page du 21/05/2026 : semaine non datée ; ces effets changent chaque semaine. Non vérifié en jeu."
+  },
+  {
+    "id": "poc-wiki-c2-light-crit",
+    "name": {
+      "fr": "",
+      "en": "Increases Light hunter's Critical Hit Rate by 10% and Critical Hit damage by 20%",
+      "ko": null
+    },
+    "rarity": "heroic",
+    "column": 2,
+    "effects": [
+      {
+        "stat": "crit_rate",
+        "value": 10,
+        "unit": "percent",
+        "target": "light_hunters",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "crit_damage",
+        "value": 20,
+        "unit": "percent",
+        "target": "light_hunters",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "",
+      "en": "Increases Light hunter's Critical Hit Rate by 10% and Critical Hit damage by 20%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Power_of_Calamity",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), page du 21/05/2026 : semaine non datée ; ces effets changent chaque semaine. Non vérifié en jeu."
+  },
+  {
+    "id": "poc-wiki-c2-sjw-crit",
+    "name": {
+      "fr": "",
+      "en": "Increases Sung Jinwoo's Critical Hit Rate by 10% and Critical Hit damage by 20%",
+      "ko": null
+    },
+    "rarity": "heroic",
+    "column": 2,
+    "effects": [
+      {
+        "stat": "crit_rate",
+        "value": 10,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "crit_damage",
+        "value": 20,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "",
+      "en": "Increases Sung Jinwoo's Critical Hit Rate by 10% and Critical Hit damage by 20%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Power_of_Calamity",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), page du 21/05/2026 : semaine non datée ; ces effets changent chaque semaine. Non vérifié en jeu."
+  },
+  {
+    "id": "poc-wiki-c2-successor-element",
+    "name": {
+      "fr": "",
+      "en": "Increases the Successor's elemental damage by 15%",
+      "ko": null
+    },
+    "rarity": "heroic",
+    "column": 2,
+    "effects": [
+      {
+        "stat": "elemental_damage",
+        "value": 15,
+        "unit": "percent",
+        "target": "successor",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "",
+      "en": "Increases the Successor's elemental damage by 15%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Power_of_Calamity",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), page du 21/05/2026 : semaine non datée ; ces effets changent chaque semaine. Non vérifié en jeu."
+  },
+  {
+    "id": "poc-wiki-c3-sjw",
+    "name": {
+      "fr": "",
+      "en": "Increases Sung Jinwoo's Attack, Defense, and Max HP by 50% and damage dealt by 30%",
+      "ko": null
+    },
+    "rarity": "legendary",
+    "column": 3,
+    "effects": [
+      {
+        "stat": "attack",
+        "value": 50,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "defense",
+        "value": 50,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "max_hp",
+        "value": 50,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "damage_dealt",
+        "value": 30,
+        "unit": "percent",
+        "target": "sung_jinwoo",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "",
+      "en": "Increases Sung Jinwoo's Attack, Defense, and Max HP by 50% and damage dealt by 30%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Power_of_Calamity",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), page du 21/05/2026 : semaine non datée ; ces effets changent chaque semaine. Non vérifié en jeu."
+  },
+  {
+    "id": "poc-wiki-c3-light-hunter",
+    "name": {
+      "fr": "",
+      "en": "Increases a Light hunter's Attack, Defense, and Max HP by 50% and damage dealt by 30%",
+      "ko": null
+    },
+    "rarity": "legendary",
+    "column": 3,
+    "effects": [
+      {
+        "stat": "attack",
+        "value": 50,
+        "unit": "percent",
+        "target": "light_hunter",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "defense",
+        "value": 50,
+        "unit": "percent",
+        "target": "light_hunter",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "max_hp",
+        "value": 50,
+        "unit": "percent",
+        "target": "light_hunter",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "damage_dealt",
+        "value": 30,
+        "unit": "percent",
+        "target": "light_hunter",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "",
+      "en": "Increases a Light hunter's Attack, Defense, and Max HP by 50% and damage dealt by 30%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Power_of_Calamity",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), page du 21/05/2026 : semaine non datée ; ces effets changent chaque semaine. Non vérifié en jeu."
+  },
+  {
+    "id": "poc-wiki-c3-successor",
+    "name": {
+      "fr": "",
+      "en": "Increases the Successor's Attack, Defense, and Max HP by 75% and damage dealt by 50%",
+      "ko": null
+    },
+    "rarity": "legendary",
+    "column": 3,
+    "effects": [
+      {
+        "stat": "attack",
+        "value": 75,
+        "unit": "percent",
+        "target": "successor",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "defense",
+        "value": 75,
+        "unit": "percent",
+        "target": "successor",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "max_hp",
+        "value": 75,
+        "unit": "percent",
+        "target": "successor",
+        "condition": null,
+        "estimated": false
+      },
+      {
+        "stat": "damage_dealt",
+        "value": 50,
+        "unit": "percent",
+        "target": "successor",
+        "condition": null,
+        "estimated": false
+      }
+    ],
+    "text": {
+      "fr": "",
+      "en": "Increases the Successor's Attack, Defense, and Max HP by 75% and damage dealt by 50%"
+    },
+    "condition": null,
+    "recommended": null,
+    "week": null,
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Power_of_Calamity",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), page du 21/05/2026 : semaine non datée ; ces effets changent chaque semaine. Non vérifié en jeu."
+  }
+]

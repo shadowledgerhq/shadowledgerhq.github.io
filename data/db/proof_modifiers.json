@@ -1,0 +1,410 @@
+[
+  {
+    "id": "pm-start-hp-minus-70",
+    "name": {
+      "fr": "Début de combat : PV −70 % et soins alliés réduits",
+      "en": "Battle start: HP −70% and allied healing reduced",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Début de combat : PV −70 % et soins alliés réduits",
+      "en": "Battle start: HP −70% and allied healing reduced"
+    },
+    "max_level": 1,
+    "cost_per_level": 100,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 100,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-core-gauge-drain",
+    "name": {
+      "fr": "Consommation périodique de la jauge de noyau",
+      "en": "Periodic drain of the Core Gauge",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Consommation périodique de la jauge de noyau",
+      "en": "Periodic drain of the Core Gauge"
+    },
+    "max_level": 1,
+    "cost_per_level": 100,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 100,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-damage-no-weapon-skill",
+    "name": {
+      "fr": "Dégâts de toutes les attaques sauf compétences d'arme réduits",
+      "en": "Damage of all attacks except weapon skills reduced",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Dégâts de toutes les attaques sauf compétences d'arme réduits",
+      "en": "Damage of all attacks except weapon skills reduced"
+    },
+    "max_level": 1,
+    "cost_per_level": 100,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 100,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-boss-rage",
+    "name": {
+      "fr": "Le boss obtient périodiquement « furie » (arrêtable par compétence QTE)",
+      "en": "Boss periodically gains Rage (stoppable with a QTE skill)",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Le boss obtient périodiquement « furie » (arrêtable par compétence QTE)",
+      "en": "Boss periodically gains Rage (stoppable with a QTE skill)"
+    },
+    "max_level": 1,
+    "cost_per_level": 100,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 100,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-fewer-than-3-slow-element",
+    "name": {
+      "fr": "Si moins de 3 chasseurs [attribut lent] : dégâts infligés réduits, subis augmentés",
+      "en": "If fewer than 3 hunters of the [slow element]: damage dealt reduced, damage taken increased",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Si moins de 3 chasseurs [attribut lent] : dégâts infligés réduits, subis augmentés",
+      "en": "If fewer than 3 hunters of the [slow element]: damage dealt reduced, damage taken increased"
+    },
+    "max_level": 1,
+    "cost_per_level": 100,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 100,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-after-rush-damage-down",
+    "name": {
+      "fr": "Après usage de [ruée], dégâts réduits un temps (sauf [esquive extrême])",
+      "en": "After using [Rush], damage reduced for a time (except [Extreme Evasion])",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Après usage de [ruée], dégâts réduits un temps (sauf [esquive extrême])",
+      "en": "After using [Rush], damage reduced for a time (except [Extreme Evasion])"
+    },
+    "max_level": 1,
+    "cost_per_level": 100,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 100,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-boss-davorka-eye-orbs",
+    "name": {
+      "fr": "Effet lié au boss 다보르카 (œil / orbes, gain d'empilement)",
+      "en": "Boss-specific effect (eye / orbs, stack gain)",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Effet lié au boss 다보르카 (œil / orbes, gain d'empilement)",
+      "en": "Boss-specific effect (eye / orbs, stack gain)"
+    },
+    "max_level": 1,
+    "cost_per_level": 50,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 50,
+    "boss": "다보르카",
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-boss-davorka-daggers",
+    "name": {
+      "fr": "Effet lié au boss 다보르카 (poignards : dégâts et réduction de soin renforcés)",
+      "en": "Boss-specific effect (daggers: damage and healing reduction strengthened)",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Effet lié au boss 다보르카 (poignards : dégâts et réduction de soin renforcés)",
+      "en": "Boss-specific effect (daggers: damage and healing reduction strengthened)"
+    },
+    "max_level": 1,
+    "cost_per_level": 50,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 50,
+    "boss": "다보르카",
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-enemy-attack-up",
+    "name": {
+      "fr": "Attaque ennemie augmentée",
+      "en": "Enemy Attack increased",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Attaque ennemie augmentée",
+      "en": "Enemy Attack increased"
+    },
+    "max_level": 40,
+    "cost_per_level": 2,
+    "level_chosen_in_capture": 40,
+    "cost_in_capture": 80,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-enemy-hp-up",
+    "name": {
+      "fr": "PV ennemis augmentés",
+      "en": "Enemy HP increased",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "PV ennemis augmentés",
+      "en": "Enemy HP increased"
+    },
+    "max_level": 40,
+    "cost_per_level": 2,
+    "level_chosen_in_capture": 3,
+    "cost_in_capture": 6,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-ally-accuracy-down",
+    "name": {
+      "fr": "Précision alliée réduite",
+      "en": "Ally Accuracy reduced",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Précision alliée réduite",
+      "en": "Ally Accuracy reduced"
+    },
+    "max_level": 5,
+    "cost_per_level": 5,
+    "level_chosen_in_capture": 5,
+    "cost_in_capture": 25,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-enemy-crit-up",
+    "name": {
+      "fr": "Taux et dégâts critiques ennemis augmentés",
+      "en": "Enemy Critical Hit rate and damage increased",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Taux et dégâts critiques ennemis augmentés",
+      "en": "Enemy Critical Hit rate and damage increased"
+    },
+    "max_level": 5,
+    "cost_per_level": 5,
+    "level_chosen_in_capture": 5,
+    "cost_in_capture": 25,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-ally-hp-heal-down",
+    "name": {
+      "fr": "Effet [soin PV] allié réduit",
+      "en": "Ally [HP heal] effect reduced",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Effet [soin PV] allié réduit",
+      "en": "Ally [HP heal] effect reduced"
+    },
+    "max_level": 5,
+    "cost_per_level": 5,
+    "level_chosen_in_capture": 5,
+    "cost_in_capture": 25,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-ally-mana-heal-down",
+    "name": {
+      "fr": "Effet [soin mana] allié réduit",
+      "en": "Ally [mana heal] effect reduced",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Effet [soin mana] allié réduit",
+      "en": "Ally [mana heal] effect reduced"
+    },
+    "max_level": 5,
+    "cost_per_level": 5,
+    "level_chosen_in_capture": 5,
+    "cost_in_capture": 25,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-ally-shield-down",
+    "name": {
+      "fr": "Effet [bouclier] allié réduit",
+      "en": "Ally [shield] effect reduced",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Effet [bouclier] allié réduit",
+      "en": "Ally [shield] effect reduced"
+    },
+    "max_level": 5,
+    "cost_per_level": 5,
+    "level_chosen_in_capture": 5,
+    "cost_in_capture": 25,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-unavoidable-damage-300s",
+    "name": {
+      "fr": "Dégâts inévitables après 300 s",
+      "en": "Unavoidable damage after 300 s",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Dégâts inévitables après 300 s",
+      "en": "Unavoidable damage after 300 s"
+    },
+    "max_level": 1,
+    "cost_per_level": 10,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 10,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  },
+  {
+    "id": "pm-boss-unpredictable",
+    "name": {
+      "fr": "Comportement du boss plus imprévisible",
+      "en": "Boss behavior more unpredictable",
+      "ko": null
+    },
+    "rarity": null,
+    "effects": [],
+    "text": {
+      "fr": "Comportement du boss plus imprévisible",
+      "en": "Boss behavior more unpredictable"
+    },
+    "max_level": 1,
+    "cost_per_level": 10,
+    "level_chosen_in_capture": 1,
+    "cost_in_capture": 10,
+    "boss": null,
+    "icon": null,
+    "source": "capture d'écran fournie par Alexis (HOTM, client coréen, 13/11/2026), lue dans docs/REFERENCE_ECRANS_HOTM.md (fenêtre « 단련의 증명 »)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Libellé : lecture approximative de la capture, pas une traduction officielle (nom officiel FR/EN à confirmer). Coût par niveau déduit : coût affiché ÷ niveau choisi."
+  }
+]
