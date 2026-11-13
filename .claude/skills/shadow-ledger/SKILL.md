@@ -54,6 +54,8 @@ Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md
 
 Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 
+HOTM uniquement : ajouter `"gate": {"number": 1, "points": 94600}` et `"hunter_mode": false` (`true` = run sans SJW).
+
 ### Build (data/builds/<semaine>/<mode>/<run_id>-<n>.json)
 
 ```json
@@ -73,6 +75,8 @@ Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 
 Les identifiants (`id`, `weapon`…) sont ceux de la base de données. Stats : principales uniquement.
 
+`sjw.skills` = liste de 6 objets `{"slot": "", "id": "", "level": null}` (`level` peut rester `null`), slots : `skill_1`, `skill_2`, `ultimate`, `qte_1`, `qte_2`, `qte_3`.
+
 ### Objet de la base (data/db/<categorie>.json, liste)
 
 ```json
@@ -91,6 +95,8 @@ Les identifiants (`id`, `weapon`…) sont ceux de la base de données. Stats : p
 ```
 
 Un champ inconnu reste vide : ne jamais inventer une valeur de jeu.
+
+Champs propres à chaque catégorie : voir `data/db/_schema.md`, qui complète ce format commun.
 
 ## 4. SUIVI.md
 

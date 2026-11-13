@@ -18,4 +18,4 @@
 - Trace écrite de l'autorisation de Sohoven (`robots.txt` : `ai-train=no`) : couvre-t-elle la lecture automatisée et les icônes ?
 - Source de données pour les sets d'artefacts : captures d'écran ou pages publiques de slagate.com.
 ## Demandes de modif du skill
-- Format « Objet de la base » : ajouter les champs par catégorie (voir `data/db/_schema.md`).
+- rien (demandes intégrées au skill par 6 — Prompt le 13/11/2026)

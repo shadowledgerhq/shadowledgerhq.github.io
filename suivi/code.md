@@ -14,5 +14,4 @@
 ## Besoin d'Alexis
 - Captures HOTM d'autres langues pour confirmer les libellés.
 ## Demandes de modif du skill
-- Format « Build » : `sjw.skills` = liste de 6 objets {slot, id, level|null} (slots skill_1, skill_2, ultimate, qte_1, qte_2, qte_3).
-- Format « Run » : ajouter, HOTM seulement, `"gate": {"number": 1, "points": 94600}` et `"hunter_mode": false` (true = sans SJW).
+- rien (demandes intégrées au skill par 6 — Prompt le 13/11/2026)
