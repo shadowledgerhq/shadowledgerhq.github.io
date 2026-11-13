@@ -23,7 +23,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 189 rc; une seule run trouvée; boss non contrôlé",
+    "notes": "publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 189 rc; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "awb-GlVIa7Q",
@@ -33,8 +33,8 @@
         "team": null,
         "score_source": "titre",
         "exact": false,
-        "damage": null,
-        "damage_exact": null
+        "damage": 64200000000000,
+        "damage_exact": false
       }
     ]
   },

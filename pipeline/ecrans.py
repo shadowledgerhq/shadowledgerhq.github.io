@@ -13,7 +13,7 @@ la lecture reste `a_verifier`, jamais une valeur inventée.
 import re
 
 from hotm_ecran import lire_porte
-from tri1 import lecture_vide, variante_bot
+from tri1 import lecture_vide, notes_alerte_reset, variante_bot
 
 
 def controle_bot(phases, chrono, play_time):
@@ -38,6 +38,7 @@ def lecture_bot(meta, ecran, config, source="video-complete"):
     if score is None:
         return None
     lec = lecture_vide(meta, "bot")
+    lec["notes"] += notes_alerte_reset(meta, config)
     lec.update(score=round(score, 3), score_source=source, exact=ok, confidence="sur" if ok else "a_verifier",
                stage=ecran.get("stage"), t=ecran.get("t"), player_ingame=ecran.get("player_ingame"),
                detail={"phases": phases, "play_time": ecran.get("play_time")})
@@ -68,6 +69,7 @@ def lecture_gb_results(meta, ecran, config, source="video-complete"):
         return None
     ok, pb = controle_gb_results(ecran.get("player_score"), ecran.get("hunter_ranks"), ecran.get("final_score"))
     lec = lecture_vide(meta, "gb")
+    lec["notes"] += notes_alerte_reset(meta, config)
     lec.update(score=ecran["rage_count"], damage=ecran.get("final_score"), score_source=source, exact=ok,
                confidence="sur" if ok else "a_verifier", stage=ecran.get("stage"), t=ecran.get("t"), team=None,
                detail={"damage_exact": True, "play_time": ecran.get("play_time"),
@@ -105,6 +107,7 @@ def lectures_gb_record(meta, ecran, config, source="record"):
             continue
         deg, pas = degats_arrondis((groupes[g]).get("damage"))
         lec = lecture_vide(meta, "gb")
+        lec["notes"] += notes_alerte_reset(meta, config)
         lec.update(score=rc, damage=deg, score_source=source, exact=ok, confidence="sur" if ok else "a_verifier",
                    stage=ecran.get("stage"), t=ecran.get("t"), team=g,
                    detail={"damage_exact": False, "damage_step": pas, "total_score": ecran.get("total_score"),
@@ -124,6 +127,7 @@ def lecture_hotm(meta, ecran, config, source="video-complete"):
         return None
     ok = None not in (clear, bonus, total, record) and clear + bonus == total == record
     lec = lecture_vide(meta, "hotm")
+    lec["notes"] += notes_alerte_reset(meta, config)
     porte = lire_porte(meta.get("title") or "")
     lec.update(score=score, score_source=source, exact=ok, confidence="sur" if ok else "a_verifier",
                stage=ecran.get("stage"), t=ecran.get("t"), gate=porte["number"] if porte else None,
@@ -144,6 +148,7 @@ def lecture_poc(meta, ecran, config, source="video-complete"):
     parts = [ecran.get("sjw"), ecran.get("successor"), *(ecran.get("hunters") or [])]
     ok = len(parts) == 5 and None not in parts and sum(parts) == record
     lec = lecture_vide(meta, "poc")
+    lec["notes"] += notes_alerte_reset(meta, config)
     lec.update(score=record, score_source=source, exact=ok, confidence="sur" if ok else "a_verifier",
                stage=ecran.get("stage"), t=ecran.get("t"), team=ecran.get("team"),
                detail={"sjw": ecran.get("sjw"), "successor": ecran.get("successor"), "hunters": ecran.get("hunters")})

@@ -4,7 +4,8 @@ exact false, confidence a_verifier ; la vidéo continue aux tris suivants."""
 import re
 
 from hotm_ecran import lire_porte
-from scores import NON_GERE, extraire
+from scores import NON_GERE, degats_gb, extraire
+from semaine import bornes, parse_iso, semaine_de
 
 SOURCES_TEXTE = ("titre", "description", "sous-titres")
 
@@ -18,6 +19,7 @@ def lecture_vide(meta, mode):
         "published_at": meta["published_at"],
         "lang": meta.get("lang"),
         "mode": mode,
+        "regles": None,         # v8 : version des règles du tri 1 qui a produit la lecture (config.tri1_version)
         "bot_variant": None,
         "player_ingame": None,  # v4 : pseudo en jeu (BOT, bandeau du bas), information seulement
         "damage": None,         # v5 : GB, `Final Score` (arrondi si lu sur le Personal Record)
@@ -53,6 +55,16 @@ def _mot_entier(mot, texte):
     return mot in texte
 
 
+def notes_alerte_reset(meta, config):
+    """v8 §2.2 : vidéo publiée moins de `config.reset_alerte_heures` (3) après le reset de sa semaine : note
+    d'alerte, sans effet sur le statut. Retourne [] ou la note."""
+    heures = config.get("reset_alerte_heures")
+    if not heures or not meta.get("published_at"):
+        return []
+    ecart = parse_iso(meta["published_at"]) - bornes(semaine_de(meta["published_at"]))[0]
+    return ["publiée juste après le reset : semaine précédente ?"] if ecart.total_seconds() < heures * 3600 else []
+
+
 def lectures_texte(meta, textes, config):
     """`textes` : liste de (source, texte) dans l'ordre de priorité.
     Retourne (lectures, modes_non_geres). Une lecture au plus par mode : la première
@@ -69,7 +81,12 @@ def lectures_texte(meta, textes, config):
                 continue
             if lec is None:
                 lec = lecture_vide(meta, mode)
-                lec.update(score=r["valeur"], score_source=source)
+                lec.update(score=r["valeur"], score_source=source, regles=config.get("tri1_version"))
+                lec["notes"] += notes_alerte_reset(meta, config)
+                if mode == "gb":  # v8 : dégâts lus dans le même texte (arrondis : exact false)
+                    lec["damage"] = degats_gb(texte, config)
+                    if lec["damage"] is not None:
+                        lec["detail"]["damage_exact"] = False
                 lec["notes"].append(f"score provisoire ({source}) : {r['brut']}")
                 if r["autres"]:
                     lec["notes"].append("autres candidats : " + ", ".join(r["autres"]))

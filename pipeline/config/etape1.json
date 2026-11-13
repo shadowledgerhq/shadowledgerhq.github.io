@@ -51,7 +51,7 @@
   "bot_variante": {
     "_doc": "SPEC §4.6 : indice du titre. Les deux indices ou aucun = variante inconnue.",
     "challenge": ["challenge", "チャレンジ", "챌린지"],
-    "season_regex": ["S\\d+-\\d", "season \\d+", "시즌 \\d+", "シーズン\\d+"]
+    "season_regex": ["(?<![A-Za-z0-9])S\\d+(?:-\\d+)?(?![A-Za-z0-9])", "season\\s*\\d+", "시즌\\s*\\d+", "シーズン\\s*\\d+"]
   },
   "doublon_modes": ["poc"],
   "modes_classement": ["poc", "bot", "gb", "hotm"],
@@ -63,7 +63,9 @@
     "record_tolerance_min_minutes": 1,
     "_doc": "SPEC §4.7 (v7) : marge sur le moment estimé de la capture du Personal Record, selon la plus petite unité de Time Left in Season : heures -> 60 min ; jours seulement -> 24 h ; minutes -> 1 min."
   },
-  "tri1_version": 3,
+  "tri1_version": 4,
+  "reset_alerte_heures": 3,
+  "plausible_degats_gb": [1000000000000, 1000000000000000],
   "boss_min_videos": 3,
   "fichier_bot_variante_inconnue": "bot-variante-inconnue",
   "fichier_hotm_porte_inconnue": "hotm-gate-inconnue",

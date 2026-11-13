@@ -244,6 +244,18 @@ def rage_counts(texte, libelles=RC_LIBELLES):
     return res
 
 
+def degats_gb(texte, config):
+    """v8 §2.2 : dégâts du GB lus dans un texte (`64.2 T`, `17.28T`) : premier nombre dans
+    `config.plausible_degats_gb` (hors hypothèses). Valeur arrondie : `damage_exact` reste faux."""
+    lo, hi = (config or {}).get("plausible_degats_gb") or (None, None)
+    if lo is None:
+        return None
+    for c in sorted(nombres(texte), key=lambda c: c["pos"]):
+        if lo <= c["valeur"] <= hi and not est_hypothese(texte, c["pos"], c["pos"] + len(c["brut"]), config):
+            return c["valeur"]
+    return None
+
+
 def plage(mode, config):
     """(min, max) plausible du mode, ou None si non géré."""
     p = (config.get("plausible") or {}).get(mode)

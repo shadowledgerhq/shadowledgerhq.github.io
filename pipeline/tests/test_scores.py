@@ -7,6 +7,7 @@ from donnees import charger_config
 from tri1 import lectures_texte, variante_bot
 
 CONFIG = charger_config()  # réglages réels (v3 : plage BOT 5-180, mots d'hypothèse, semaine passée…)
+T = 10**12
 
 
 def vals(texte):
@@ -180,6 +181,44 @@ def test_v5_rage_count():
     lec, _ = lectures_texte(meta("Giant Statue 332RC", ("gb",)), [("titre", "Giant Statue 332RC")], CONFIG)
     assert lec[0]["mode"] == "gb" and lec[0]["score"] == 332 and lec[0]["exact"] is False
     assert extraire("가나다 RC 165", "gb", {**CONFIG, "rage_count_mots": ["가나다"]})["valeur"] == 165
+
+
+# --- v8 : vrais titres du 1er passage ----------------------------------------------------------
+
+def test_v8_variante_season_titres_reels():
+    for vid, titre in [("wJ9CwjKwyco", "19s Baruka Battlefield of Time s20 | Solo Leveling Arise"),
+                       ("5MI-RLj7FSk", "battlefield of time s20 Baruka 19.9s Solo Leveling Arise / 시간의 전장 s20 바루카 19.9초 나혼자만 레벨업 어라이즈"),
+                       ("duX8KmoDdYw", "29s BOT S20 Baruka | Solo Leveling Arise "),
+                       ("uwJfPTJI8ZE", "나혼자만레벨업)시간의전장 시즌20 바루카 28초│BATTLEFIELD OF TIME - Baruka [28] SOLO LEVELING : ARISE"),
+                       ("E4lHBPoZeKs", "BARUKA S20 BOT GUIDE WITHOUT S RANK FIGURES | BATTLEFIELD OF TIME SEASON 20 [SOLO LEVELING: ARISE]")]:
+        assert variante_bot(titre, CONFIG) == "season", vid
+    assert variante_bot("Battlefield of Time - Baruka #sololevelingarise #battlefieldoftime #baruka", CONFIG) is None   # wFFdg1gcZpE
+    for t in ("BOT S12-3", "BOT s 12", "bot S20-1 19s", "Season20", "season  7", "시즌 5", "시즌5", "シーズン 12", "シーズン12"):
+        assert variante_bot(t, CONFIG) == ("season" if not t.lower().startswith("bot s 12") else None), t   # « S 12 » : pas un indice
+    assert variante_bot("BOT S RANK", CONFIG) is None and variante_bot("PS5 BOT", CONFIG) is None and variante_bot("S20 challenge", CONFIG) is None
+
+
+def test_v8_degats_gb_dans_le_titre():
+    titre = "64.2 T Light team (Guild boss) -  189 rc guide !!"
+    lec, _ = lectures_texte(meta(titre, ("gb",), vid="awb-GlVIa7Q"), [("titre", titre)], CONFIG)
+    assert lec[0]["score"] == 189 and lec[0]["damage"] == 64.2 * T and lec[0]["detail"]["damage_exact"] is False
+    assert lec[0]["regles"] == CONFIG["tri1_version"]
+    lec, _ = lectures_texte(meta("Guild Boss 165RC! Best F2P", ("gb",)), [("titre", "Guild Boss 165RC! Best F2P")], CONFIG)
+    assert lec[0]["damage"] is None and "damage_exact" not in lec[0]["detail"]
+    lec, _ = lectures_texte(meta("RC 165 (can 80T) 17.28T", ("gb",)), [("titre", "RC 165 (can 80T) 17.28T")], CONFIG)
+    assert lec[0]["damage"] == 17_280_000_000_000                       # hypothèse exclue
+
+
+def test_v8_alerte_publiee_juste_apres_le_reset():
+    def notes(publie):
+        m = {**meta("BOT 19s", ("bot",)), "published_at": publie}
+        return lectures_texte(m, [("titre", "BOT 19s")], CONFIG)[0][0]["notes"]
+    note = "publiée juste après le reset : semaine précédente ?"
+    assert note in notes("2026-11-12T01:50:30Z") and note in notes("2026-11-12T02:59:59Z") and note in notes("2026-11-12T00:00:00Z")
+    assert note not in notes("2026-11-12T03:00:00Z") and note not in notes("2026-11-12T03:07:23Z") and note not in notes("2026-11-11T23:59:00Z")
+    # sans effet sur le statut
+    lec = lectures_texte({**meta("BOT 19s", ("bot",)), "published_at": "2026-11-12T01:00:00Z"}, [("titre", "BOT 19s")], CONFIG)[0][0]
+    assert lec["confidence"] == "a_verifier" and lec["score"] == 19
 
 
 if __name__ == "__main__":

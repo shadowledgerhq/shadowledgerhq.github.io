@@ -18,7 +18,8 @@ import classement
 from donnees import Donnees, ajouter_rejet, charger_config
 from semaine import (PARIS, bornes, dans_creneau, id_semaine, iso_utc, maintenant, parse_iso,
                      semaine_precedente)
-from tri1 import lectures_texte, remplacer_lectures
+from hotm_ecran import lire_porte
+from tri1 import lectures_texte, remplacer_lectures, variante_bot
 from youtube import ApiYouTube, recherche
 
 JEUDI = 3
@@ -74,7 +75,8 @@ def passage_recherche(d, config, week, debut, fin, gelee, instant):
             processed[vid] = {"week": week, "channel_id": m["channel_id"],
                               "published_at": m["published_at"], "first_seen": jour,
                               "updated_at": jour, "last_tri": 1, "status": "en_cours",
-                              "modes": m["mode_guess"], "pc_needed": True}
+                              "modes": m["mode_guess"], "pc_needed": True,
+                              "regles": config.get("tri1_version")}
             resume["nouvelles"] += 1
     d.ecrire(f"runs/{week}/_videos.json", videos)
     d.ecrire(f"runs/{week}/_lectures.json", lectures)
@@ -83,13 +85,23 @@ def passage_recherche(d, config, week, debut, fin, gelee, instant):
     return resume
 
 
-def relire(d, config, week, api=None):
-    """Rejoue le tri 1 (titre, et description si `api`) sur les vidéos de la semaine avec les règles
-    actuelles (v3). Une lecture titre/description/sous-titres existante de la même vidéo et du même mode
-    est remplacée ; sans `api`, les lectures issues d'une description sont gardées (non rejouables
-    hors ligne) et marquées. Retourne un résumé pour le rapport."""
+def a_relire(d, config, week):
+    """v8 §2.2 : vidéos `en_cours` de la semaine dont le tri 1 a été fait avec une version des règles plus
+    ancienne que `config.tri1_version` (`processed[vid].regles`, absent = très ancien)."""
+    version, processed = config.get("tri1_version") or 0, d.processed()
+    return [v for v in d.videos(week) if processed.get(v, {}).get("status", "en_cours") == "en_cours"
+            and (processed.get(v, {}).get("regles") or 0) < version]
+
+
+def relire(d, config, week, api=None, ids=None):
+    """Rejoue le tri 1 (score, variante BOT, porte HOTM) des vidéos `en_cours` lues avec une version plus
+    ancienne des règles (`a_relire`). Avec `api` : titre et description relus via videos.list (1 unité par
+    50 vidéos), puis la vidéo est marquée `regles` = version courante. Sans `api` : titres seulement ; les
+    lectures issues d'une description sont gardées (non rejouables hors ligne), marquées, et la vidéo reste
+    à relire. Une lecture titre/description/sous-titres existante de la même vidéo et du même mode est
+    remplacée. Retourne un résumé pour le rapport."""
     processed, videos, lectures = d.processed(), d.videos(week), d.lectures(week)
-    ids = [v for v in videos if processed.get(v, {}).get("status", "en_cours") != "rejete"]
+    ids = a_relire(d, config, week) if ids is None else ids
     descriptions, erreurs = {}, []
     if api:
         try:
@@ -97,6 +109,8 @@ def relire(d, config, week, api=None):
                 r = api.appel("videos", part="snippet", id=",".join(ids[i:i + 50]))
                 for it in r.get("items", []):
                     descriptions[it["id"]] = it.get("snippet", {}).get("description", "")
+                    if it.get("snippet", {}).get("title"):
+                        videos[it["id"]]["title"] = it["snippet"]["title"]  # titre relu aussi
         except Exception as e:  # quota ou réseau : on continue avec ce qu'on a
             erreurs.append(f"relecture des descriptions interrompue : {e}")
     res = {"videos": len(ids), "changees": 0, "descriptions_relues": len(descriptions),
@@ -119,15 +133,26 @@ def relire(d, config, week, api=None):
                 res["descriptions_non_relues"] += 1
                 if "description non relue (règles v3)" not in l["notes"]:
                     l["notes"].append("description non relue (règles v3)")
+                # variante BOT et porte HOTM viennent du titre : rejouées même sans relire la description
+                if l["mode"] == "bot" and l.get("bot_variant") is None:
+                    l["bot_variant"] = variante_bot(videos[vid].get("title"), config)
+                    if l["bot_variant"] and "variante d'après le titre" not in l["notes"]:
+                        l["notes"].append("variante d'après le titre")
+                if l["mode"] == "hotm" and l.get("gate") is None:
+                    porte = lire_porte(videos[vid].get("title") or "")
+                    l["gate"] = porte["number"] if porte else None
             gardees.append(l)
         lectures = [l for l in lectures if l["video_id"] != vid] + gardees + nouvelles
         if json.dumps(avant, sort_keys=True) != json.dumps(gardees + nouvelles, sort_keys=True):
             res["changees"] += 1
+    for vid in descriptions:  # lue avec la version courante des règles : plus à relire
+        if vid in processed:
+            processed[vid]["regles"] = config.get("tri1_version")
+    for l in lectures:
+        l.setdefault("regles", None)  # v8 : champ présent partout (null = lue avant la v8)
     d.ecrire(f"runs/{week}/_lectures.json", lectures)
-    meta = d.meta(week)
-    if meta is not None and not erreurs and (api or not res["descriptions_non_relues"]):
-        meta["tri1_version"] = config.get("tri1_version")
-        d.ecrire(f"runs/{week}/_meta.json", meta)
+    d.ecrire(f"runs/{week}/_videos.json", videos)
+    d.ecrire("processed.json", processed)
     return res
 
 
@@ -182,10 +207,12 @@ def lancer(passage, instant, force=False, semaine=None, d=None, config=None):
         debut, fin_semaine = bornes(week)
         fin = instant if passage == "daily" else fin_semaine
         resume = passage_recherche(d, config, week, debut, fin, meta.get("frozen"), instant)
-        if not meta.get("frozen") and meta.get("tri1_version") != config.get("tri1_version") and os.environ.get("YOUTUBE_API_KEY"):
-            # règles du tri 1 changées depuis la dernière lecture de la semaine : relecture automatique
-            r = relire(d, config, week, ApiYouTube(os.environ["YOUTUBE_API_KEY"], config["quota_max_units"]))
-            alertes.append(f"tri 1 relu (version {config.get('tri1_version')}) : {r['changees']} vidéo(s) modifiée(s)")
+        a_refaire = [] if meta.get("frozen") else a_relire(d, config, week)
+        if a_refaire and os.environ.get("YOUTUBE_API_KEY"):
+            # v8 : vidéos lues avec une version plus ancienne des règles : tri 1 refait, titre et description relus
+            r = relire(d, config, week, ApiYouTube(os.environ["YOUTUBE_API_KEY"], config["quota_max_units"]), a_refaire)
+            alertes.append(f"tri 1 relu (règles v{config.get('tri1_version')}) : {r['changees']} vidéo(s) modifiée(s) sur {len(a_refaire)}")
+            alertes += r["erreurs"]
             meta = d.meta(week)
         if passage == "daily":
             prec = d.meta(semaine_precedente(week))
