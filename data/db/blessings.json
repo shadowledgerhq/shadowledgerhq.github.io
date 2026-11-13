@@ -37,7 +37,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki). Catégorie : wiki (empowerment) ≠ type API slagate (survie) : celle du wiki est conservée, à vérifier dans le jeu.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        7.0
+      ],
+      "all_found_in_api_text": false,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "first-strike-barrage",
@@ -83,7 +90,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        35.0,
+        2.25
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "irresistible-force",
@@ -123,7 +138,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki). Catégorie : wiki (empowerment) ≠ type API slagate (survie) : celle du wiki est conservée, à vérifier dans le jeu.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        8.0
+      ],
+      "all_found_in_api_text": false,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "crushing-attack",
@@ -163,7 +185,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        40.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "sandbag",
@@ -203,7 +232,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        120.0
+      ],
+      "all_found_in_api_text": false,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "desire",
@@ -243,7 +279,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        28.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "intuit",
@@ -283,7 +326,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        7.0
+      ],
+      "all_found_in_api_text": false,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "we-are-one",
@@ -329,7 +379,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        6.5,
+        6.5
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "swift-strike",
@@ -369,7 +427,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        33.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "assassins-proficiency",
@@ -442,7 +507,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        6.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "weakness-detection",
@@ -482,7 +554,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        24.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "swiftness",
@@ -522,7 +601,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        36.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "double-edged-sword",
@@ -568,7 +654,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        4.5,
+        3.0
+      ],
+      "all_found_in_api_text": false,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "boss-slayer",
@@ -614,7 +708,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        29.0,
+        20.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "chains-of-blood",
@@ -654,7 +756,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        42.0
+      ],
+      "all_found_in_api_text": false,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "title-demon-slayer",
@@ -700,7 +809,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        1400.0,
+        6.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "title-conqueror-of-adversity",
@@ -740,7 +857,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        6.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "title-wolf-assassin",
@@ -780,7 +904,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        33.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "pulverize",
@@ -826,7 +957,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        36.0,
+        36.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "bloodlust",
@@ -872,7 +1011,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        14.0,
+        14.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "sharp-perception",
@@ -918,7 +1065,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        3.5,
+        7.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "reawakening",
@@ -958,7 +1113,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        24.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "mana-rampage",
@@ -1004,7 +1166,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        20.0,
+        12.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "monarchs-domain",
@@ -1050,7 +1220,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        120.0,
+        450.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "speed",
@@ -1096,7 +1274,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        24.0,
+        24.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "advanced-dagger-technique",
@@ -1136,7 +1322,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        24.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "swift-restoration",
@@ -1182,7 +1375,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        25.0,
+        4.5
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "irreversible-road",
@@ -1228,7 +1429,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        24.0,
+        24.0
+      ],
+      "all_found_in_api_text": false,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "best-defense-is-a-good-offense",
@@ -1268,7 +1477,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        35.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "ravenous-instinct",
@@ -1308,7 +1524,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        50.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "aggressive-defense",
@@ -1348,7 +1571,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        0.5
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "solidify",
@@ -1388,7 +1618,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        5.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "mana-powered-shield",
@@ -1428,7 +1665,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        12.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "natural-disaster",
@@ -1468,7 +1712,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        9.5
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "penalty-quest-survival",
@@ -1508,7 +1759,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        70.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "life",
@@ -1548,7 +1806,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        50.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "hp-extraction",
@@ -1594,7 +1859,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        2.5,
+        7.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "camouflage",
@@ -1634,7 +1907,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        6.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "daily-quest-completion",
@@ -1674,7 +1954,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki). Catégorie : wiki (survival) ≠ type API slagate (booster) : celle du wiki est conservée, à vérifier dans le jeu.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "value_check": {
+      "wiki_max_values": [
+        20.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "kasakas-steel-scales",
@@ -1720,7 +2007,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        15.0,
+        20.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "tenacity",
@@ -1766,7 +2061,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        50.0,
+        80.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "kandiarus-blessing",
@@ -1806,7 +2109,14 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "value_check": {
+      "wiki_max_values": [
+        24.0
+      ],
+      "all_found_in_api_text": true,
+      "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
+    }
   },
   {
     "id": "master-marksman",

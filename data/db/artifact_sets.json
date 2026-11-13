@@ -92,7 +92,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-surturs-flame",
@@ -187,7 +197,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-glorious-arrogance",
@@ -282,7 +302,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-noble-flesh",
@@ -377,7 +407,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-kamishs-obession",
@@ -472,7 +512,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-chaotic-infamy",
@@ -571,7 +621,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-chaotic-desire",
@@ -670,7 +730,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-chaotic-wish",
@@ -769,7 +839,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-burning-curse",
@@ -868,7 +948,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-burning-blessing",
@@ -967,7 +1057,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR déduit d'un nom de pièce (« Gants de bénédiction ardente »).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-burning-greed",
@@ -1066,7 +1166,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "set-of-spooky",
@@ -1164,7 +1274,17 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "iron-will",
@@ -1227,7 +1347,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "crimson-knights-set",
@@ -1290,7 +1420,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "high-ranking-demons-set",
@@ -1353,7 +1493,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "dragon-knights-set",
@@ -1416,7 +1566,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "black-lions-set",
@@ -1479,7 +1639,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "almighty-kargalgans-set",
@@ -1542,7 +1712,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "holy-set",
@@ -1605,7 +1785,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "clerics-set",
@@ -1668,7 +1858,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "palace-guards-set",
@@ -1731,7 +1931,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "new-hunters-set",
@@ -1794,7 +2004,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "hard-leather-set",
@@ -1857,7 +2077,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "hot-summer-set",
@@ -1919,7 +2149,17 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "spring-cherry-blossom-set-armor",
@@ -1981,7 +2221,17 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "merry-winter-set",
@@ -2043,7 +2293,17 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "journey-equipment",
@@ -2105,7 +2365,17 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "destructive-instinct",
@@ -2168,7 +2438,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "shining-star",
@@ -2231,7 +2511,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "viridescent-set",
@@ -2294,7 +2584,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "aquamarine-set",
@@ -2357,7 +2657,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "peridot-set",
@@ -2420,7 +2730,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "beast-set",
@@ -2483,7 +2803,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "obsidian-set",
@@ -2546,7 +2876,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "skeleton-set",
@@ -2609,7 +2949,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "behemoth-set",
@@ -2672,7 +3022,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "red-eyed-set",
@@ -2735,7 +3095,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "romantic-seashell-set",
@@ -2797,7 +3167,17 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "spring-cherry-blossom-set-jewelry",
@@ -2859,7 +3239,17 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   },
   {
     "id": "ornament-set",
@@ -2921,6 +3311,16 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "patch_adjustments_unknown": {
+      "patches": [
+        "2026-06-11?",
+        "2026-07-02",
+        "2026-07-30",
+        "2026-09-17",
+        "2026-10-22"
+      ],
+      "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
+    }
   }
 ]

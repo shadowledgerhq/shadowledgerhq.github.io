@@ -39,7 +39,12 @@
     "wiki_timestamp": "2026-05-07T17:26:00Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "a-gentle-touch",
@@ -81,7 +86,12 @@
     "wiki_timestamp": "2025-02-14T21:06:22Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "a-guardians-will",
@@ -123,7 +133,12 @@
     "wiki_timestamp": "2025-02-14T21:45:59Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "another-level",
@@ -165,7 +180,12 @@
     "wiki_timestamp": "2025-02-14T21:13:33Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "blazing-flash",
@@ -207,7 +227,12 @@
     "wiki_timestamp": "2026-05-15T22:54:30Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "blue-monsoon",
@@ -249,7 +274,12 @@
     "wiki_timestamp": "2026-01-31T22:57:53Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "bunny-bunbun",
@@ -291,7 +321,12 @@
     "wiki_timestamp": "2026-05-14T00:49:41Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "coming-of-age",
@@ -333,7 +368,12 @@
     "wiki_timestamp": "2026-09-24T14:42:08Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "crimson-shadow",
@@ -375,7 +415,12 @@
     "wiki_timestamp": "2026-06-25T20:54:57Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "decisions",
@@ -417,7 +462,12 @@
     "wiki_timestamp": "2025-02-14T21:34:13Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "distorted-dreams",
@@ -459,7 +509,12 @@
     "wiki_timestamp": "2026-09-24T14:19:11Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "equivalent-exchange",
@@ -501,7 +556,12 @@
     "wiki_timestamp": "2025-02-14T21:03:59Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "etched-to-the-bone",
@@ -543,7 +603,12 @@
     "wiki_timestamp": "2026-09-24T14:21:45Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "eternal-slumber",
@@ -585,7 +650,12 @@
     "wiki_timestamp": "2025-02-14T21:08:30Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "ferns-staff",
@@ -627,7 +697,12 @@
     "wiki_timestamp": "2026-03-21T23:39:20Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "first-bloom",
@@ -669,7 +744,12 @@
     "wiki_timestamp": "2025-02-14T21:17:28Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "frierens-staff",
@@ -711,7 +791,12 @@
     "wiki_timestamp": "2026-03-18T22:44:24Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "glorious-demise",
@@ -753,7 +838,12 @@
     "wiki_timestamp": "2025-06-05T15:31:33Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "hook-line-and-sinker",
@@ -795,7 +885,20 @@
     "wiki_timestamp": "2026-10-22T18:30:26Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Meilin Fisher (arme exclusive, base T5) : nouvel effet [Up!] ; durée Side Whip 12→32 s ; bonus max 16 %",
+        "wiki_reflects_patch": true
+      }
+    ],
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "howling-white-tigers-soul",
@@ -837,7 +940,12 @@
     "wiki_timestamp": "2026-02-08T01:05:41Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "ice-witch",
@@ -879,7 +987,12 @@
     "wiki_timestamp": "2025-02-14T21:02:00Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "intercept",
@@ -921,7 +1034,12 @@
     "wiki_timestamp": "2025-02-14T21:07:40Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "intuition",
@@ -963,7 +1081,12 @@
     "wiki_timestamp": "2025-02-14T21:42:15Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "iron-resolve",
@@ -1005,7 +1128,12 @@
     "wiki_timestamp": "2026-06-25T16:51:50Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "la-famiglia",
@@ -1047,7 +1175,12 @@
     "wiki_timestamp": "2026-07-07T01:42:40Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "lonely-wanderer",
@@ -1089,7 +1222,12 @@
     "wiki_timestamp": "2025-02-14T21:50:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "melody-of-iron-and-blood",
@@ -1131,7 +1269,20 @@
     "wiki_timestamp": "2026-10-22T18:14:50Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Seorin (arme exclusive, base T5) : PV de l'utilisateur 12→30 %",
+        "wiki_reflects_patch": true
+      }
+    ],
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "mischievous",
@@ -1173,7 +1324,12 @@
     "wiki_timestamp": "2025-02-14T21:00:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "nice-to-meet-you",
@@ -1215,7 +1371,12 @@
     "wiki_timestamp": "2025-07-18T06:43:23Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "night-cleaving-flash",
@@ -1257,7 +1418,12 @@
     "wiki_timestamp": "2026-10-26T20:05:23Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "night-thoughts",
@@ -1299,7 +1465,12 @@
     "wiki_timestamp": "2025-02-14T21:04:54Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "nightcleaver",
@@ -1341,7 +1512,12 @@
     "wiki_timestamp": "2026-08-21T15:52:15Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "overdrive",
@@ -1383,7 +1559,12 @@
     "wiki_timestamp": "2026-06-05T23:50:15Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "prankster",
@@ -1425,7 +1606,12 @@
     "wiki_timestamp": "2025-02-14T20:58:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "purple-butterflys-dream",
@@ -1467,7 +1653,12 @@
     "wiki_timestamp": "2026-05-15T22:09:58Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "saints-benediction",
@@ -1509,7 +1700,12 @@
     "wiki_timestamp": "2026-10-26T20:04:38Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "slayers-mercy",
@@ -1551,7 +1747,12 @@
     "wiki_timestamp": "2025-02-14T21:42:48Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "solid-logic",
@@ -1593,7 +1794,12 @@
     "wiki_timestamp": "2026-07-07T08:16:02Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "someones-downfall",
@@ -1635,7 +1841,12 @@
     "wiki_timestamp": "2025-02-14T21:42:59Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "soul-plunderer",
@@ -1677,7 +1888,12 @@
     "wiki_timestamp": "2025-02-14T21:49:10Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "starks-axe",
@@ -1719,7 +1935,12 @@
     "wiki_timestamp": "2026-03-21T23:46:22Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "still-got-it",
@@ -1761,7 +1982,12 @@
     "wiki_timestamp": "2025-02-14T21:41:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "strategy-for-victory",
@@ -1803,7 +2029,12 @@
     "wiki_timestamp": "2026-08-01T09:14:43Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "suppressed-white-tigers-soul",
@@ -1845,7 +2076,12 @@
     "wiki_timestamp": "2025-02-14T21:03:36Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "sweet-life",
@@ -1887,7 +2123,12 @@
     "wiki_timestamp": "2025-02-14T21:46:36Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "sword-of-light",
@@ -1929,7 +2170,12 @@
     "wiki_timestamp": "2026-08-21T15:50:18Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "the-battlefields-guiding-star",
@@ -1971,7 +2217,12 @@
     "wiki_timestamp": "2026-05-15T22:19:03Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "the-glamour-of-self-worth",
@@ -2013,7 +2264,12 @@
     "wiki_timestamp": "2026-06-06T22:09:02Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "the-path-a-hero-must-take",
@@ -2055,7 +2311,12 @@
     "wiki_timestamp": "2026-06-05T23:48:26Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "the-place-bathed-in-moonlight",
@@ -2097,7 +2358,12 @@
     "wiki_timestamp": "2026-05-15T22:34:34Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "the-price-of-a-promise",
@@ -2139,7 +2405,12 @@
     "wiki_timestamp": "2026-10-26T19:42:23Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "the-true-king",
@@ -2181,7 +2452,12 @@
     "wiki_timestamp": "2025-02-14T21:00:06Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "the-weight-of-responsibility",
@@ -2223,7 +2499,12 @@
     "wiki_timestamp": "2026-01-31T03:11:57Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "unbreakable-will",
@@ -2265,7 +2546,12 @@
     "wiki_timestamp": "2026-01-31T23:35:11Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "unexpected-luck",
@@ -2307,7 +2593,12 @@
     "wiki_timestamp": "2026-10-25T01:33:48Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "unparalleled-bravery",
@@ -2349,7 +2640,12 @@
     "wiki_timestamp": "2025-02-14T21:09:27Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "unstoppable-frenzy",
@@ -2391,7 +2687,12 @@
     "wiki_timestamp": "2025-02-14T21:46:25Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "valkyries-oath",
@@ -2433,7 +2734,12 @@
     "wiki_timestamp": "2026-10-27T14:47:36Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "what-never-was",
@@ -2475,7 +2781,12 @@
     "wiki_timestamp": "2025-02-14T21:32:57Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "winterbreaker",
@@ -2517,7 +2828,12 @@
     "wiki_timestamp": "2026-02-12T06:29:33Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "allons-orb",
@@ -2611,7 +2927,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "arachnids-hand-crossbow",
@@ -2725,7 +3046,12 @@
     "wiki_timestamp": "2025-06-05T15:23:21Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "barukas-dagger",
@@ -2839,7 +3165,12 @@
     "wiki_timestamp": "2025-05-08T19:31:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "black-falcon",
@@ -2925,7 +3256,12 @@
     "wiki_timestamp": "2026-02-22T01:54:14Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "burning-demons-grimoire",
@@ -3039,7 +3375,12 @@
     "wiki_timestamp": "2025-06-05T15:16:48Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "demon-kings-daggers",
@@ -3154,7 +3495,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "demon-kings-longsword",
@@ -3240,7 +3586,12 @@
     "wiki_timestamp": "2025-03-25T21:00:06Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "demon-knights-spear",
@@ -3354,7 +3705,12 @@
     "wiki_timestamp": "2025-06-05T15:08:05Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "demonic-plum-flower-sword",
@@ -3469,7 +3825,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "divine-quarterstaff",
@@ -3584,7 +3945,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "dragonscale-broadsword",
@@ -3698,7 +4064,12 @@
     "wiki_timestamp": "2026-02-22T02:04:42Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "ennios-roar",
@@ -3792,7 +4163,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "fan-of-the-fire-demon",
@@ -3907,7 +4283,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "foress-wish",
@@ -3978,7 +4359,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "frostbite-falchion",
@@ -4092,7 +4478,12 @@
     "wiki_timestamp": "2025-06-05T15:12:19Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "gold-tailed-fox",
@@ -4207,7 +4598,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "grave-keepers-scythe",
@@ -4321,7 +4717,12 @@
     "wiki_timestamp": "2025-06-05T15:18:19Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "heros-sword",
@@ -4415,7 +4816,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "ice-elfs-bow",
@@ -4529,7 +4935,12 @@
     "wiki_timestamp": "2025-06-05T15:21:17Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "juicy-grilled-skewer",
@@ -4644,7 +5055,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "kasakas-venom-fang",
@@ -4730,7 +5146,12 @@
     "wiki_timestamp": "2025-02-20T17:26:26Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "kim-sangshiks-sword",
@@ -4844,7 +5265,12 @@
     "wiki_timestamp": "2026-02-14T00:06:33Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "knight-killer",
@@ -4958,7 +5384,12 @@
     "wiki_timestamp": "2025-02-20T17:27:36Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "knights-sword",
@@ -5072,7 +5503,12 @@
     "wiki_timestamp": "2025-06-05T15:17:45Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "lizard-glaive",
@@ -5186,7 +5622,12 @@
     "wiki_timestamp": "2025-06-05T15:19:27Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "lustrous-dragon-sword",
@@ -5300,7 +5741,12 @@
     "wiki_timestamp": "2025-06-05T15:09:05Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "lycan-slayer",
@@ -5414,7 +5860,12 @@
     "wiki_timestamp": "2026-02-22T01:52:44Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "moonlit-gale",
@@ -5508,7 +5959,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "moonshadow",
@@ -5588,7 +6044,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "naga-guardian-dragons-trident",
@@ -5702,7 +6163,12 @@
     "wiki_timestamp": "2025-03-12T06:58:05Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "orb-of-avarice",
@@ -5816,7 +6282,12 @@
     "wiki_timestamp": "2025-06-05T15:13:50Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "orcs-broadsword",
@@ -5930,7 +6401,12 @@
     "wiki_timestamp": "2026-02-22T02:04:54Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "phantomblade",
@@ -5956,7 +6432,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "phoenix-soul",
@@ -6071,7 +6552,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "radiru-clans-double-edged-spear",
@@ -6179,7 +6665,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "radiru-familys-longbow",
@@ -6279,7 +6770,12 @@
     "wiki_timestamp": "2025-06-05T15:10:46Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "razans-blade",
@@ -6393,7 +6889,12 @@
     "wiki_timestamp": "2025-06-05T15:20:06Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "rock-golem-hammer",
@@ -6507,7 +7008,12 @@
     "wiki_timestamp": "2026-02-22T02:04:59Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "sandstorm-cube",
@@ -6621,7 +7127,12 @@
     "wiki_timestamp": "2025-06-05T15:18:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "secured-marlin-surfboard",
@@ -6735,7 +7246,12 @@
     "wiki_timestamp": "2025-03-25T20:57:11Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "shadow-scythe",
@@ -6850,7 +7366,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "skadi",
@@ -6965,7 +7486,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "soma-and-asura",
@@ -7059,7 +7585,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "spooky-pumpkin",
@@ -7174,7 +7705,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "stormbringer",
@@ -7289,7 +7825,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "the-huntsman",
@@ -7376,7 +7917,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "thetis-grimoire",
@@ -7491,7 +8037,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "transfiguration-key",
@@ -7585,7 +8136,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "truth-demon-knights-spear",
@@ -7700,7 +8256,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "truth-kasakas-venom-fang",
@@ -7815,7 +8376,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "vulcans-rage",
@@ -7895,7 +8461,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "west-wind",
@@ -8009,7 +8580,12 @@
     "wiki_timestamp": "2026-02-22T01:54:08Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "winchester-roke",
@@ -8089,7 +8665,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "winter-fang",
@@ -8204,7 +8785,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "zekes-fragment",
@@ -8276,6 +8862,11 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 130,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   }
 ]

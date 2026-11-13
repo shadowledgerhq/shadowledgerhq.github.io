@@ -42,7 +42,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "arrogant-rulers-reflection",
@@ -87,7 +93,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "hunger-of-the-crimson-apex",
@@ -132,7 +144,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "eyes-of-the-watcher",
@@ -177,7 +195,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "nameless-demons-deception",
@@ -222,7 +246,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "ancient-wraiths-obession",
@@ -267,7 +297,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "ferocious-protectors-armor",
@@ -312,7 +348,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "arrogant-rulers-will",
@@ -357,7 +399,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "desires-of-the-crimson-apex",
@@ -402,7 +450,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "limbs-of-the-watcher",
@@ -447,7 +501,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "nameless-demons-horn",
@@ -492,7 +552,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "ancient-wraiths-right-hand",
@@ -537,7 +603,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "ferocious-protectors-claw",
@@ -582,7 +654,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "arrogant-rulers-gaze",
@@ -627,7 +705,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "punishment-of-the-crimson-apex",
@@ -672,7 +756,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "teeth-of-the-watcher",
@@ -717,7 +807,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "nameless-demons-magisphere",
@@ -762,7 +858,13 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   },
   {
     "id": "ancient-wraiths-mana-power",
@@ -807,6 +909,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 25,
+      "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+      "patch": "2026-09-17",
+      "note": "20 selon le wiki, avant le patch"
+    }
   }
 ]

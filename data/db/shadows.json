@@ -28,7 +28,8 @@
       },
       "general": {
         "text": "All team members' Attack and Critical Hit damage increases by 5%.",
-        "value": null
+        "value": null,
+        "value_after_patch_22_10": 10
       }
     },
     "skills": [
@@ -153,7 +154,26 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "rank": "general",
+        "stat": "Attack and Critical Hit damage",
+        "before_netmarble": 5,
+        "after": 10,
+        "wiki_general_value": 5.0,
+        "wiki_matches_before": true,
+        "additional_effect": false,
+        "summary": "Attack and Critical Hit damage de l'équipe 5→10 % (rang General)"
+      }
+    ],
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "beste",
@@ -309,7 +329,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "bigrock",
@@ -340,7 +365,8 @@
       },
       "general": {
         "text": "All team members' Basic Skill Damage increases by 12%.",
-        "value": 12.0
+        "value": 12.0,
+        "value_after_patch_22_10": 24
       }
     },
     "skills": [
@@ -465,7 +491,26 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "rank": "general",
+        "stat": "Basic Skill damage",
+        "before_netmarble": 12,
+        "after": 24,
+        "wiki_general_value": 12.0,
+        "wiki_matches_before": true,
+        "additional_effect": false,
+        "summary": "Basic Skill damage de l'équipe 12→24 % (rang General)"
+      }
+    ],
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "blades",
@@ -496,7 +541,8 @@
       },
       "general": {
         "text": "All team members' Attack increases by 7%.",
-        "value": 7.0
+        "value": 7.0,
+        "value_after_patch_22_10": 18
       }
     },
     "skills": [
@@ -621,7 +667,26 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "rank": "general",
+        "stat": "Attack",
+        "before_netmarble": 7,
+        "after": 18,
+        "wiki_general_value": 7.0,
+        "wiki_matches_before": true,
+        "additional_effect": false,
+        "summary": "Attack de l'équipe 7→18 % (rang General)"
+      }
+    ],
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "brute",
@@ -777,7 +842,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "cerbie",
@@ -933,7 +1003,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "greed",
@@ -957,7 +1032,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "igris",
@@ -1113,7 +1193,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "iron",
@@ -1269,7 +1354,26 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "rank": "general",
+        "stat": "Defense",
+        "before_netmarble": null,
+        "after": 18,
+        "wiki_general_value": 12.0,
+        "wiki_matches_before": null,
+        "additional_effect": true,
+        "summary": "effet supplémentaire (rang General) : DEF de toute l'équipe +18 % ; l'effet PV max +12 % du wiki est conservé"
+      }
+    ],
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "jima",
@@ -1300,7 +1404,8 @@
       },
       "general": {
         "text": "Increases the entire team's Attack by 5% and Shield Acquisition Chance by 13%",
-        "value": 5.0
+        "value": 5.0,
+        "value_after_patch_22_10": 13
       }
     },
     "skills": [
@@ -1425,7 +1530,26 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "rank": "general",
+        "stat": "Attack",
+        "before_netmarble": 5,
+        "after": 13,
+        "wiki_general_value": 5.0,
+        "wiki_matches_before": true,
+        "additional_effect": false,
+        "summary": "Attack de l'équipe 5→13 % (rang General)"
+      }
+    ],
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "kaisel",
@@ -1456,7 +1580,8 @@
       },
       "general": {
         "text": "All team members' Ultimate Skill Damage increases by 9%.",
-        "value": 9.0
+        "value": 9.0,
+        "value_after_patch_22_10": 24
       }
     },
     "skills": [
@@ -1581,7 +1706,26 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "rank": "general",
+        "stat": "Ultimate Skill damage",
+        "before_netmarble": 9,
+        "after": 24,
+        "wiki_general_value": 9.0,
+        "wiki_matches_before": true,
+        "additional_effect": false,
+        "summary": "Ultimate Skill damage de l'équipe 9→24 % (rang General)"
+      }
+    ],
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "skull",
@@ -1612,7 +1756,8 @@
       },
       "general": {
         "text": "The entire team's MP increases by 12% The entire team's Skill Mana Consumption decreases by 5%",
-        "value": 12.0
+        "value": 12.0,
+        "value_after_patch_22_10": 24
       }
     },
     "skills": [
@@ -1737,7 +1882,26 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "rank": "general",
+        "stat": "Mana Power",
+        "before_netmarble": 12,
+        "after": 24,
+        "wiki_general_value": 12.0,
+        "wiki_matches_before": true,
+        "additional_effect": false,
+        "summary": "Mana Power de l'équipe 12→24 % (rang General)"
+      }
+    ],
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "tank",
@@ -1893,7 +2057,26 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "rank": "general",
+        "stat": "Max HP",
+        "before_netmarble": null,
+        "after": 18,
+        "wiki_general_value": 12.0,
+        "wiki_matches_before": null,
+        "additional_effect": true,
+        "summary": "effet supplémentaire (rang General) : PV max de toute l'équipe +18 % ; l'effet DEF +12 % du wiki est conservé"
+      }
+    ],
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "tusk",
@@ -1924,7 +2107,8 @@
       },
       "general": {
         "text": "All team members' Core Attack Damage increases by 40%.",
-        "value": 40.0
+        "value": 40.0,
+        "value_after_patch_22_10": 60
       }
     },
     "skills": [
@@ -2049,7 +2233,26 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "rank": "general",
+        "stat": "Core Attack skill damage",
+        "before_netmarble": 40,
+        "after": 60,
+        "wiki_general_value": 40.0,
+        "wiki_matches_before": true,
+        "additional_effect": false,
+        "summary": "Core Attack skill damage de l'équipe 40→60 % (rang General)"
+      }
+    ],
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   },
   {
     "id": "uros",
@@ -2205,6 +2408,11 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "max_level": {
+      "value": 195,
+      "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+      "patch": "2026-07-02"
+    }
   }
 ]

@@ -202,7 +202,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Il Bacio della Morte : portée fortement augmentée",
+        "wiki_reflects_patch": null,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "alicia-blanche",
@@ -1227,7 +1236,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026) ; rapprochement wiki/slagate par ressemblance de nom (slug baek-yunho), à confirmer.",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "White Flame Storm Kick : baisse de DEF 20→70 %, 12→25 s",
+        "wiki_reflects_patch": true,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "cha-hae-in",
@@ -1637,7 +1655,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Base 175→220 % ; T3 15→60 % et 170→200 % ; T4 7→8 % (GB : par allié, sans limite) ; T5 : Will of the Sword (nouveau), 60→100 %",
+        "wiki_reflects_patch": true,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "charlotte",
@@ -2047,7 +2074,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Fire Barrage : baisse de DEF 15→70 %, 15→25 s",
+        "wiki_reflects_patch": true,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "christopher-reed",
@@ -2457,7 +2493,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Chicxulub : portée fortement augmentée",
+        "wiki_reflects_patch": null,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "elena-renault",
@@ -2662,7 +2707,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "T5 : nouvel effet Insatiable Hunger (Burst +40 %, équipe Water Buster)",
+        "wiki_reflects_patch": true,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "emma-laurent",
@@ -2867,7 +2921,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Roaring Flames : Fire 15→20 % ; +30 % de dégâts sur cible [Break]",
+        "wiki_reflects_patch": true,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "esil-radiru",
@@ -7377,7 +7440,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Radiant Burst : portée fortement augmentée",
+        "wiki_reflects_patch": null,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "lennart-niermann",
@@ -7992,7 +8064,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Veiled Intent : portée fortement augmentée",
+        "wiki_reflects_patch": null,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "meilin-fisher",
@@ -8197,7 +8278,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Help! Berry! : nouvel effet SJW +16 % ; durées 30→32 s ; Basic 16→32 s ; T3 cumul 50→64 ; T4 PV 8→32 % ; T5 24→64 s",
+        "wiki_reflects_patch": true,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "meri-laine",
@@ -9878,7 +9968,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "Frozen Drift : Overdrive 20→60 s ; T3 : Black Tea? (nouveau) ; T5 : Subzero cumul 10→20",
+        "wiki_reflects_patch": true,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "shimizu-akari",
@@ -12830,7 +12929,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "patch_adjustments": [
+      {
+        "patch": "2026-10-22",
+        "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "summary": "T1 : Core Attack +200 % pendant 12 s (avant 6 s), Madness cooldown 6 s (avant 12 s) ; T2 : +12 % Fire par allié Fire ; T3 : Superstar (ATQ +60 %, crit +30 %, 16 s) ; T4 : ATQ +10 % par allié Fire",
+        "wiki_reflects_patch": true,
+        "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ]
   },
   {
     "id": "yuqi",
