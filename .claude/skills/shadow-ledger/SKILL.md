@@ -12,7 +12,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 | Terme | Sens |
 | --- | --- |
 | POC | Power Of Calamity. Classement : dégâts max ; une run = une équipe, total = équipe 1 + équipe 2. |
-| BOT | Battlefield Of Time. Chrono le plus court (secondes) = dernière phase de l'écran `Results`. Deux classements : `season` (時の戦場, 49 j, SJW autorisé) et `challenge` (時の戦場チャレンジ, 7 j, chasseurs uniquement). |
+| BOT | Battlefield Of Time. Chrono le plus court (secondes) = dernière phase de l'écran `Results`. **Un seul classement** par semaine (Challenge retiré du jeu en mai 2026). Saison = 4 semaines de jeu (1 boss/semaine) + 1 semaine de calcul sans classement ; semaine de saison notée `S<n>-<w>`. |
 | GB | Guild Boss. Classement : Rage Count le plus élevé ; une run = un groupe (6 chasseurs + SJW), total = groupe 1 + groupe 2 ; égalité départagée par la somme des dégâts. Écran `Personal Record` accepté comme source. |
 | HOTM | Hall Of The Monarchs. Un classement **par porte** (제 n관문 / 第n関門) : points les plus élevés. 1 run par porte. |
 | RC | Rage Count, unité de score du GB. |
@@ -27,6 +27,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 
 - Les documents du dépôt (`docs/`, `data/`, `suivi/`) ne ressortent pas dans la recherche du Projet SLA : dans une discussion claude.ai, les lire en clonant le dépôt public `https://github.com/shadowledgerhq/shadowledgerhq.github.io` (ou via la source GitHub synchronisée du projet).
 - Arborescence décrite dans CONTEXTE.md (section 6). Spécification détaillée de l'étape 1 : SPEC_ETAPE1.md (projet et `docs/` du dépôt).
+- Toute spécification est poussée dans `docs/` du dépôt **avant** d'être envoyée à la discussion Code. Code pousse toujours sur une branche `claude/…` (fusion automatique dans `main`).
 - Noms de fichiers en minuscules, sans accents ni espaces, mots séparés par `-`.
 - Codes de mode dans les fichiers : `poc`, `bot`, `gb`, `hotm`.
 - Dates au format AAAA-MM-JJ ; heures en heure de Paris, sauf dans les workflows (UTC).
@@ -35,7 +36,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 
 ### Run (data/runs/<semaine>/<classement>.json, liste)
 
-Fichiers : `poc.json`, `gb.json`, `bot-season.json`, `bot-challenge.json`, `hotm-gate-<n>.json`.
+Fichiers : `poc.json`, `gb.json`, `bot.json`, `hotm-gate-<n>.json`.
 
 ```json
 {
@@ -67,22 +68,22 @@ Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 Champs supplémentaires :
 - `"gate"` (HOTM uniquement) : numéro de la porte, **entier** (`3` pour 제 3관문 / 第3関門).
 - `"hunter_mode"` (HOTM uniquement) : `false`, `true` (run sans SJW) ou `null`.
-- `"bot_variant"` (BOT uniquement) : `"season"`, `"challenge"` ou `null`.
+- `"bot_season_week"` (BOT uniquement) : semaine de saison lue dans le titre (`"S20-4"`) ou `null`.
 - `"player_ingame"` (BOT uniquement) : pseudo en jeu lu dans le bandeau du bas, à titre d'information.
 - `"runs_detail"` : liste d'un objet par run, dans le même ordre que `score.runs`. Champs communs :
   `{"video_id": "", "published_at": "", "t": 0, "stage": "", "team": null, "score_source": "", "exact": true}`
   (`t` = secondes dans la vidéo ; `stage` = libellé du boss ou du stage lu à l'écran ; `team` = POC : équipe 1, 2 ou `null` ; GB : groupe 1, 2 ou `null`).
   - POC, en plus : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
   - HOTM, en plus : `{"clear": 0, "proof_bonus": 0, "proof_level": null}` ; contrôle : clear + proof_bonus = score.
-  - GB, en plus : `{"damage": 0}` (`Final Score` ; arrondi si lu sur le `Personal Record`, ex. 17.28T) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; contrôle Personal Record : `Total Rage Count` = RC groupe 1 + RC groupe 2.
+  - GB, en plus : `{"damage": 0, "damage_exact": true}` (`damage` = `Final Score` ; `damage_exact` = `false` si arrondi — `Personal Record` 17.28T ou titre — et `null` si aucun dégât lu ; `team` = groupe) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; contrôle Personal Record : `Total Rage Count` = RC groupe 1 + RC groupe 2.
 - Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition. Jamais le score de l'écran de composition, quel que soit le mode.
 
 ### Autres fichiers de l'étape 1 (détail : SPEC_ETAPE1.md §5)
 
 | Fichier | Contenu |
 | --- | --- |
-| `data/runs/<semaine>/bot-variante-inconnue.json`, `hotm-gate-inconnue.json` | Runs dont la variante BOT ou la porte HOTM est illisible ; `rank: null`, **jamais publiés** |
-| `data/runs/<semaine>/_lectures.json` | Toutes les lectures de score des tris ; entrée de `classement.py` |
+| `data/runs/<semaine>/hotm-gate-inconnue.json` | Runs dont la porte HOTM est illisible ; `rank: null`, **jamais publié** |
+| `data/runs/<semaine>/_lectures.json` | Toutes les lectures de score des tris, chacune avec `regles` (version des règles du tri 1 ; une lecture plus ancienne est refaite) ; entrée de `classement.py` |
 | `data/runs/<semaine>/_videos.json` | Par vidéo : titre, chaîne, miniature, durée, `mode_guess` |
 | `data/runs/<semaine>/_meta.json` | `{week, start_utc, end_utc, frozen, frozen_at}` |
 | `data/runs/<semaine>/_boss.json` | Boss / stage de référence déduit (mode, gate, libellé, nombre de vidéos) |
@@ -170,8 +171,8 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 
 ### Classements (étape 1)
 - [ ] Toutes les vidéos ont une date de publication postérieure au dernier reset.
-- [ ] Le boss / la saison visible correspond à la semaine (GB `Personal Record` : `Time Left in Season` cohérent avec la date de publication).
-- [ ] Une seule ligne par chaîne (HOTM : par porte ; BOT : par variante) ; pas de ré-upload en double.
+- [ ] Le boss / la saison visible correspond à la semaine (GB `Personal Record` : `Time Left in Season` cohérent avec la date de publication ; BOT : `S<n>-<w>` du titre = semaine attendue, aucune run classée en semaine de calcul).
+- [ ] Une seule ligne par chaîne (HOTM : par porte) ; pas de ré-upload en double.
 - [ ] POC et GB : 2 runs présentes, total = somme (POC : une run par équipe ; GB : une run par groupe).
 - [ ] POC : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
 - [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; `Total Rage Count` = groupe 1 + groupe 2.

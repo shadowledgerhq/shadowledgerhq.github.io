@@ -2,9 +2,8 @@
 ## Fait
 - Mise en place : GitHub (shadowledgerhq), clé API, réseaux @shadowledger_hq, Discord
 - Règles 9 (aiguillage) et 10 (nouvelle discussion au 15e message)
-- CONTEXTE.md aligné sur SPEC_ETAPE1 v6 (GB classé RC, Personal Record, contrôles BOT/GB) : projet + docs/
-- Skill shadow-ledger v6 : dépôt (.claude/skills) + proposition pour le compte
-- SPEC_ETAPE1 v6 copiée dans docs/
+- CONTEXTE.md + skill alignés sur SPEC_ETAPE1 v10 (BOT un seul classement, saison 4+1, bot.json, bot_season_week, regles, damage_exact, règle spec→docs/→Code)
+- Point ouvert « boss chaque jeudi » : oui pour le BOT
 ## En cours
 - rien
 ## À faire
@@ -12,11 +11,10 @@
 - Garder skill du dépôt et skill du compte identiques
 - TikTok : nom « Shadow Ledger » à partir du 19/11/2026
 ## Besoin d'Alexis
-- Enregistrer la proposition de skill (carte) pour le compte
-- Discussion 8 : coder la SPEC v6 (gb.json, Personal Record)
+- Enregistrer la proposition de skill v10 (carte) pour le compte
+- Revérifier l'exemple « BOT sans SJW » relevé le 05/11 (était noté challenge)
+- Boss chaque jeudi pour POC, GB, HOTM ?
 - Installer le PC (docs/PC_ALEXIS.md)
-- Capture BOT challenge (indice armes SJW) → discussion 1
-- Confirmer si le boss change chaque jeudi
 ## Demandes de modif du skill
 - rien
 
