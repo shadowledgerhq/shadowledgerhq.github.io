@@ -21,5 +21,5 @@ Source : 1 capture fournie par Alexis le 12/11/2026 (client coréen, SJW niv. 17
 
 Les noms FR/EN ci-dessus sont des traductions probables, **à vérifier** sur la source avant d'alimenter `stats.json`.
  
-Attributs de base (zone gauche, **obligatoires**) : force 697 (근력), vitalité 10 (libellé coréen peu lisible), agilité 10 (민첩), intelligence 650 (지능), perception 17 (감각) ; points non répartis 0.
+Attributs de base (zone gauche, **obligatoires**) : force 697 (근력), vitalité 10 (활력, confirmé sur capture nette), agilité 10 (민첩), intelligence 650 (지능), perception 17 (감각) ; points non répartis 0.
 Puissance de combat (zone droite, **facultative**, information) : 3 405 259 (전투력).
