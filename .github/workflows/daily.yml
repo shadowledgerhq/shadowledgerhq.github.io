@@ -1,0 +1,50 @@
+# Passage quotidien de l'étape 1 : 20h heure de Paris (docs/SPEC_ETAPE1.md §6).
+# Actions tourne en UTC : deux crons (heure d'été 18:00Z, heure d'hiver 19:00Z). Le script vérifie
+# le créneau Paris (20:00-23:59) et le passage du jour (_meta.json) : l'autre cron sort sans rien faire.
+name: Passage quotidien
+
+on:
+  schedule:
+    - cron: "0 18 * * *"
+    - cron: "0 19 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Ignorer le créneau et le passage déjà fait"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: etape1-donnees
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Passage quotidien
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          if [ "$FORCE" = "true" ]; then python3 pipeline/etape1.py daily --force
+          else python3 pipeline/etape1.py daily; fi
+      - name: Commit et push des données
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then echo "Rien à enregistrer."; exit 0; fi
+          git commit -m "données: passage quotidien $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin HEAD:main
