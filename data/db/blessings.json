@@ -1,0 +1,1725 @@
+[
+  {
+    "id": "lightning-speed",
+    "name": {
+      "fr": "",
+      "en": "Lightning Speed",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your Attack stat increases by 2-4-6-7 for every Agility points applied up to a maximum boost of 300-700-1200-1540."
+    },
+    "flavor_en": "It's all about landing a quicker, sharper punch.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          2.0,
+          4.0,
+          6.0,
+          7.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "first-strike-barrage",
+    "name": {
+      "fr": "",
+      "en": "First Strike Barrage",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Upon landing a hit 60-50-40-35 time(s), Jinwoo's Attack increases by 1-1.5-2-2.25% (Stacks up to 10 times)."
+    },
+    "flavor_en": "I don't float like a butterfly and sting like a bee: I become the swarm.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          60.0,
+          50.0,
+          40.0,
+          35.0
+        ],
+        [
+          1.0,
+          1.5,
+          2.0,
+          2.25
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "irresistible-force",
+    "name": {
+      "fr": "",
+      "en": "Irresistible Force",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When Jinwoo uses a skill with the [Break] effect his Attack increases by 3-5-7-8% for 6 second(s) (Stacks up to 3 times)"
+    },
+    "flavor_en": "I'll swing with hesitation and move forward.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          3.0,
+          5.0,
+          7.0,
+          8.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "crushing-attack",
+    "name": {
+      "fr": "",
+      "en": "Crushing Attack",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・The damage of Jinwoo's skill with the [Break] effect increases by 15-25-35-40%."
+    },
+    "flavor_en": "I'll just crush anything that stands in my way.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          15.0,
+          25.0,
+          35.0,
+          40.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "sandbag",
+    "name": {
+      "fr": "",
+      "en": "Sandbag",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Jinwoo's Attack will decrease by 10% for 180-150-130-120 second(s). ・Then his Attack increases by 40% for 120 second(s)."
+    },
+    "flavor_en": "The hardships of today are merely steeping stones to future success",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          180.0,
+          150.0,
+          130.0,
+          120.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "desire",
+    "name": {
+      "fr": "",
+      "en": "Desire",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・If Jinwoo's current MP is 60% or below, his Attack increases by 12-16-24-28%. ・Jinoo will start the battle with his current MP at 60%. ・If Sung Jinwoo gains the [MP Recovery] effect, [Desire] removes the Attack Increase effect for 10 second(s)."
+    },
+    "flavor_en": "Even at my most drained, my desire to reach the top fuels me to push onward.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          12.0,
+          16.0,
+          24.0,
+          28.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "intuit",
+    "name": {
+      "fr": "",
+      "en": "Intuit",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your Basic Attack increases by 2-4-6-7 for every 1 point of Intelligence you have. (Increasing up to a maximum of 300-700-1200-1540)"
+    },
+    "flavor_en": "His words helped you realize your destiny and the purpose of your powers.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          2.0,
+          4.0,
+          6.0,
+          7.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "we-are-one",
+    "name": {
+      "fr": "",
+      "en": "We Are One",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・If there are 2 support hunters with the same element on the team, it increases Sung Jinwoo and the support hunter's Attack, Defense, and HP by 2.5-3.5-5-6.5%. ・If there are 3 support hunters with the same element on the team, it increases Sung Jinwoo and the support hunter's Attack, Defense, and HP by an additional 2.5-3.5-5-6.5%."
+    },
+    "flavor_en": "Your abilities are enhanced when there are support hunters who share an element.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          2.5,
+          3.5,
+          5.0,
+          6.5
+        ],
+        [
+          2.5,
+          3.5,
+          5.0,
+          6.5
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "swift-strike",
+    "name": {
+      "fr": "",
+      "en": "Swift Strike",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When you use Extreme Evasion successfully, your damage increases by 11-18-28-33% for 5 second(s). (Cooldown: 10 second(s))"
+    },
+    "flavor_en": "Using Extreme Evasion enhances your abilities.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          11.0,
+          18.0,
+          28.0,
+          33.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "assassins-proficiency",
+    "name": {
+      "fr": "",
+      "en": "Assassin's Proficiency",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your back attack damage is increased by 9-14-24--29%."
+    },
+    "flavor_en": "Your assassin abilities are enhanced.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": []
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "fatal-strike",
+    "name": {
+      "fr": "",
+      "en": "Fatal Strike",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your target's [Break] Gauge instantly decreases by 2-3-5-6% when you land a Critical Hit (Cooldown: 2 second(s))."
+    },
+    "flavor_en": "You can quickly take down enemies with a fatal blow.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          2.0,
+          3.0,
+          5.0,
+          6.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "weakness-detection",
+    "name": {
+      "fr": "",
+      "en": "Weakness Detection",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your damage dealt to targets that have elemental weakness increases by 8-12-20-24%."
+    },
+    "flavor_en": "You can see your enemy's weaknesses.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          8.0,
+          12.0,
+          20.0,
+          24.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "swiftness",
+    "name": {
+      "fr": "",
+      "en": "Swiftness",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・You can now Dash 1 additional time. ・There is a 12-18-30-36% chance for your Dash cooldown to reset upon dashing."
+    },
+    "flavor_en": "You are able to move incredibly swiftly.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          12.0,
+          18.0,
+          30.0,
+          36.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "double-edged-sword",
+    "name": {
+      "fr": "",
+      "en": "Double-edged Sword",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When your attacks hit, your Attack increases by 2-3-4-4.5% for 10 second(s), but the Attack of the target that was hit also increases by 2-3-3-3% (stacking up to 4 times)."
+    },
+    "flavor_en": "As an Attack is enhanced, the danger you face increases as well.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          2.0,
+          3.0,
+          4.0,
+          4.5
+        ],
+        [
+          2.0,
+          3.0,
+          3.0,
+          3.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "boss-slayer",
+    "name": {
+      "fr": "",
+      "en": "Boss Slayer",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your damage dealt to Bosses increases by 9-14-24-29%, but the cooldown of your Dash increases by 15-20-20-20%."
+    },
+    "flavor_en": "You have specialized in Boss Hunting.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          9.0,
+          14.0,
+          24.0,
+          29.0
+        ],
+        [
+          15.0,
+          20.0,
+          20.0,
+          20.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "chains-of-blood",
+    "name": {
+      "fr": "",
+      "en": "Chains of Blood",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your Attack damage increases by 14-22-36-42% of your lost HP ratio, but your damage taken also increases by 10%."
+    },
+    "flavor_en": "You will be draped in chains of blood.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          14.0,
+          22.0,
+          36.0,
+          42.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "title-demon-slayer",
+    "name": {
+      "fr": "",
+      "en": "Title: Demon Slayer",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your MP increases by 500-700-1200-1400. ・You recover 3-4-5-6 of your MP every second."
+    },
+    "flavor_en": "You have obtained the Title: Demon Slayer.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          500.0,
+          700.0,
+          1200.0,
+          1400.0
+        ],
+        [
+          3.0,
+          4.0,
+          5.0,
+          6.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "title-conqueror-of-adversity",
+    "name": {
+      "fr": "",
+      "en": "Title: Conqueror of Adversity",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Every time your HP decreases by 25%, your Attack, Defense, and HP increase by 2-3-5-6% (stacking up to 3 time(s))."
+    },
+    "flavor_en": "You have obtained the Title: Conqueror of Adversity.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          2.0,
+          3.0,
+          5.0,
+          6.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "title-wolf-assassin",
+    "name": {
+      "fr": "",
+      "en": "Title: Wolf Assassin",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・The damage you deal to Normal Monsters increases by 11-18-28-33%."
+    },
+    "flavor_en": "You have obtained the Title: Wolf Assassin.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          11.0,
+          18.0,
+          28.0,
+          33.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "pulverize",
+    "name": {
+      "fr": "",
+      "en": "Pulverize",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・The power of the [Break] effects you apply to your enemies increase by 12-18-30-36%. ・The damage you deal to targets affected by the [Break] effect increases by 12-18-30-36%."
+    },
+    "flavor_en": "You pulverize your enemies.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          12.0,
+          18.0,
+          30.0,
+          36.0
+        ],
+        [
+          12.0,
+          18.0,
+          30.0,
+          36.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "bloodlust",
+    "name": {
+      "fr": "",
+      "en": "Bloodlust",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When you are hit, it decreases your attacker's Attack by 4-7-12-14% for 6 second(s). ・When you attack, it decreases your target's Defense by 4-7-12-14% for 6 second(s)."
+    },
+    "flavor_en": "Your powerful bloodlust weakens your enemies' abilities.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          4.0,
+          7.0,
+          12.0,
+          14.0
+        ],
+        [
+          4.0,
+          7.0,
+          12.0,
+          14.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "sharp-perception",
+    "name": {
+      "fr": "",
+      "en": "Sharp Perception",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your Critical Hit Rate will increase by 1-2-3-3.5% for 8 second(s) when your attacks hit (stacking up to 4-5-6-7 time(s))."
+    },
+    "flavor_en": "The instincts you honed as a low-ranking hunter have given you the ability to intuit your opponent's weaknesses.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          1.0,
+          2.0,
+          3.0,
+          3.5
+        ],
+        [
+          4.0,
+          5.0,
+          6.0,
+          7.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "reawakening",
+    "name": {
+      "fr": "",
+      "en": "Reawakening",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your skill cooldowns will all decrease by 8-12-20-24%."
+    },
+    "flavor_en": "You have completed the Secret Quest: Courage of the Weak.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          8.0,
+          12.0,
+          20.0,
+          24.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "mana-rampage",
+    "name": {
+      "fr": "",
+      "en": "Mana Rampage",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your Attack will increase by 6-9-16-20%, but your Skill Mana Consumption will also increase by 8-12-12-12%."
+    },
+    "flavor_en": "You have learned how to gain greater power by channeling a higher volume of mana.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          6.0,
+          9.0,
+          16.0,
+          20.0
+        ],
+        [
+          8.0,
+          12.0,
+          12.0,
+          12.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "monarchs-domain",
+    "name": {
+      "fr": "",
+      "en": "Monarch's Domain",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Shadows' Attack within the domain increases by 40-60-100-120%. ・The Shadow also deals damage equal to 200-300-400-450% of the value of your Attack every second to enemies within the domain. ・Duration: 8 second(s)"
+    },
+    "flavor_en": "When you summon a Shadow, [Monarch's Domain] activates.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          40.0,
+          60.0,
+          100.0,
+          120.0
+        ],
+        [
+          200.0,
+          300.0,
+          400.0,
+          450.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "speed",
+    "name": {
+      "fr": "",
+      "en": "Speed",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your Speed will increase by 8-12-20-24%. ・Your Dash cooldown will decrease by 8-12-20-24%."
+    },
+    "flavor_en": "Running had made your legs stronger.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          8.0,
+          12.0,
+          20.0,
+          24.0
+        ],
+        [
+          8.0,
+          12.0,
+          20.0,
+          24.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "advanced-dagger-technique",
+    "name": {
+      "fr": "",
+      "en": "Advanced Dagger Technique",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When attacking an enemy who has 70% or less of their HP, the damage you deal increases by 8-12-20-24%."
+    },
+    "flavor_en": "Due to your extensive use of daggers, yuou are now more proficient with them.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          8.0,
+          12.0,
+          20.0,
+          24.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "swift-restoration",
+    "name": {
+      "fr": "",
+      "en": "Swift Restoration",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Jinwoo's HP Recovery Rate increases by 10-16-22-25% ・Each time Jinwoo recovers HP, he regains an additional 2-3-4-4.5% of his HP (Cooldown: 15 second(s))"
+    },
+    "flavor_en": "An enemy's petty tricks are nothing more than annoyances now.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          10.0,
+          16.0,
+          22.0,
+          25.0
+        ],
+        [
+          2.0,
+          3.0,
+          4.0,
+          4.5
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "irreversible-road",
+    "name": {
+      "fr": "",
+      "en": "Irreversible Road",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Jinwoo's Defense increases by 4-12-20-24% If Jinwoo's equipped weapons are of the same element, his Defense increases by an additional 4-12-20-24%"
+    },
+    "flavor_en": "When powers synergize, they become stronger.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          4.0,
+          12.0,
+          20.0,
+          24.0
+        ],
+        [
+          4.0,
+          12.0,
+          20.0,
+          24.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "best-defense-is-a-good-offense",
+    "name": {
+      "fr": "",
+      "en": "Best Defense is a Good Offense",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When Jinwoo's Ultimate Skill is used, he gains a [Shield] equal to 10-20-30-35% of his Max HP for 15 second(s)"
+    },
+    "flavor_en": "The ultimate defense lies in making the enemy unwilling to attack.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          10.0,
+          20.0,
+          30.0,
+          35.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "ravenous-instinct",
+    "name": {
+      "fr": "",
+      "en": "Ravenous Instinct",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When Jinwoo's current MP is at 60% of below, their Defense increases by 10-26-42-50%%"
+    },
+    "flavor_en": "My survival instincts awaken in the midst of danger.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          10.0,
+          26.0,
+          42.0,
+          50.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "aggressive-defense",
+    "name": {
+      "fr": "",
+      "en": "Aggressive Defense",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When your Basic Attack hits you gain a [Shield] equal to 0.2-0.3-0.5-0.5% of your Max HP for 10 second(s). (stacks up to 10-10-10-12 times) ・Cooldown: 1 second(s)"
+    },
+    "flavor_en": "Offense is the best defense.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          0.2,
+          0.3,
+          0.5,
+          0.5
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "solidify",
+    "name": {
+      "fr": "",
+      "en": "Solidify",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your damage received decreases by 1% every 6-6-6-5 seconds (stacking up to 10-15-20-20 times)."
+    },
+    "flavor_en": "\"As time passed, I felt my body becoming stronger.\"",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          6.0,
+          6.0,
+          6.0,
+          5.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "mana-powered-shield",
+    "name": {
+      "fr": "",
+      "en": "Mana Powered Shield",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・You absorb 100% of your damage taken but consume MP equal to 20-17-14-12% of the damage you absorb. ・If you don't have enough MP left to absorb 100% of the damage, the remaining damage will be taken out of your HP ・Cooldown: 10 second(s)"
+    },
+    "flavor_en": "Shadows can regenerate indefinitely as long as they are supplied with mana.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          20.0,
+          17.0,
+          14.0,
+          12.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "natural-disaster",
+    "name": {
+      "fr": "",
+      "en": "Natural Disaster",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・In [Team Fight] mode, team members' damage taken decreases by 3-5-8-9.5%."
+    },
+    "flavor_en": "Magic beasts aren't the only danger lurking in the dungeon.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          3.0,
+          5.0,
+          8.0,
+          9.5
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "penalty-quest-survival",
+    "name": {
+      "fr": "",
+      "en": "Penalty Quest: Survival",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When you successfully use Extreme Evasion 5 times, your Defense will increase by 26-40-60-70%."
+    },
+    "flavor_en": "Goal: Survive for the allotted amount of time.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          26.0,
+          40.0,
+          60.0,
+          70.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "life",
+    "name": {
+      "fr": "",
+      "en": "Life",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When the user enters a stage, they gain a [Shield] equal to 10-20-35-50% of their Max HP for 60 second(s)."
+    },
+    "flavor_en": "\"I can't lose my life in a place like this.\"",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          10.0,
+          20.0,
+          35.0,
+          50.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "hp-extraction",
+    "name": {
+      "fr": "",
+      "en": "HP Extraction",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・You will recover 0.8-1.2-2-2.5% of your HP when defeating an enemy. ・You will recover 2.4-3.6-6-7% of your HP when hitting Elite or higher monsters. (Cooldown: 30 second(s))"
+    },
+    "flavor_en": "As the Monarch of Shadows, you can use your abilities to extract HP from your enemies.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          0.8,
+          1.2,
+          2.0,
+          2.5
+        ],
+        [
+          2.4,
+          3.6,
+          6.0,
+          7.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "camouflage",
+    "name": {
+      "fr": "",
+      "en": "Camouflage",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・When you receive damage exceeding 5% of your Max HP, you Camouflage for 3 second(s) and recover 2-3-5-6% of your HP every 1 second(s). (Cooldown: 30 second(s))"
+    },
+    "flavor_en": "When you are hit with the strength of a lightning bolt, you will vanish and recover just as quickly.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          2.0,
+          3.0,
+          5.0,
+          6.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "daily-quest-completion",
+    "name": {
+      "fr": "",
+      "en": "Daily Quest Completion",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・If your HP falls to 1, you become [Immortal] for 4 second(s). ・When the [Immortal] effect ends, you will recover 2000 HP, plus an additional 4-8-16-20% of your maximum HP. ・This effect will only activate once during battle."
+    },
+    "flavor_en": "You have completed the Daily Quest. Here is your reward.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          4.0,
+          8.0,
+          16.0,
+          20.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "kasakas-steel-scales",
+    "name": {
+      "fr": "",
+      "en": "Kasaka's Steel Scales",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your damage taken decreases by 6-9-15-15%. ・Increases received Shield effect by 6-9-15-20%."
+    },
+    "flavor_en": "Kasaka's Scale's effects strengthen your body like steel.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          6.0,
+          9.0,
+          15.0,
+          15.0
+        ],
+        [
+          6.0,
+          9.0,
+          15.0,
+          20.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "tenacity",
+    "name": {
+      "fr": "",
+      "en": "Tenacity",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・The damage you take will decrease by 20-30-50-50% and your Defense will increase by 20-30-50-80% when your HP is 30% or less."
+    },
+    "flavor_en": "You possess a tenacious spirit.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          20.0,
+          30.0,
+          50.0,
+          50.0
+        ],
+        [
+          20.0,
+          30.0,
+          50.0,
+          80.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  },
+  {
+    "id": "kandiarus-blessing",
+    "name": {
+      "fr": "",
+      "en": "Kandiaru's Blessing",
+      "ko": ""
+    },
+    "category": "survival",
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "text": {
+      "fr": "",
+      "en": "・Your maximum HP increases by 8-12-20-24%."
+    },
+    "flavor_en": "The Great Spellcaster Kandiaru has gifted you a special enhancement.",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          8.0,
+          12.0,
+          20.0,
+          24.0
+        ]
+      ]
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blessing_Stones",
+    "wiki_revid": 17129,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+  }
+]
