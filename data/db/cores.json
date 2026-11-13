@@ -1,0 +1,794 @@
+[
+  {
+    "id": "ferocious-protectors-desire",
+    "name": {
+      "fr": "",
+      "en": "Ferocious Protector's Desire",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "mind",
+    "main_stat": [
+      "Attack",
+      "Attack (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "The user's Critical Hit Rate increases by 6/8/10%."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        6,
+        8,
+        10
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "arrogant-rulers-reflection",
+    "name": {
+      "fr": "",
+      "en": "Arrogant Ruler's Reflection",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "mind",
+    "main_stat": [
+      "Attack",
+      "Attack (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "The user's Ultimate Skill damage increases by 15/20/25%."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        15,
+        20,
+        25
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "hunger-of-the-crimson-apex",
+    "name": {
+      "fr": "",
+      "en": "Hunger of the Crimson Apex",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "mind",
+    "main_stat": [
+      "Attack",
+      "Attack (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "Increases Attack by 4-5-6% when MP is 50% or below."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        4,
+        5,
+        6
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "eyes-of-the-watcher",
+    "name": {
+      "fr": "",
+      "en": "Eyes of the Watcher",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "mind",
+    "main_stat": [
+      "Attack",
+      "Attack (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "Increases the Critical Hit damage of Core Attacks by 6-12-20%."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        6,
+        12,
+        20
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "nameless-demons-deception",
+    "name": {
+      "fr": "",
+      "en": "Nameless Demon's Deception",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "mind",
+    "main_stat": [
+      "Attack",
+      "Attack (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "When the user uses their Ultimate Skill, it increases the Critical Hit Damage of their Basic Skill by 6-12-20% for 8 second(s)."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        6,
+        12,
+        20
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "ancient-wraiths-obession",
+    "name": {
+      "fr": "",
+      "en": "Ancient Wraith's Obession",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "mind",
+    "main_stat": [
+      "Attack",
+      "Attack (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "Increases the user's Attack by 2-3-5%."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        2,
+        3,
+        5
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "ferocious-protectors-armor",
+    "name": {
+      "fr": "",
+      "en": "Ferocious Protector's Armor",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "body",
+    "main_stat": [
+      "Defense",
+      "Defense (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "When the user has 30% of their HP or fewer, they recover HP equal to 10/15/20% of their Max HP. (Cooldown: 60 second(s))"
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        10,
+        15,
+        20
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "arrogant-rulers-will",
+    "name": {
+      "fr": "",
+      "en": "Arrogant Ruler's Will",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "body",
+    "main_stat": [
+      "Defense",
+      "Defense (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "Using the Basic Skill grants the user a Shield equal to 6/8/10% of their Attack for 10 second(s). (Cooldown: 45 second(s))"
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        6,
+        8,
+        10
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "desires-of-the-crimson-apex",
+    "name": {
+      "fr": "",
+      "en": "Desires of the Crimson Apex",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "body",
+    "main_stat": [
+      "Defense",
+      "Defense (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "Increases Defense by 4-5-6% when MP is 50% or below."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        4,
+        5,
+        6
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "limbs-of-the-watcher",
+    "name": {
+      "fr": "",
+      "en": "Limbs of the Watcher",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "body",
+    "main_stat": [
+      "Defense",
+      "Defense (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "Increases Defense by 4-5-6% at 70% or fewer HP."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        4,
+        5,
+        6
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "nameless-demons-horn",
+    "name": {
+      "fr": "",
+      "en": "Nameless Demon's Horn",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "body",
+    "main_stat": [
+      "Defense",
+      "Defense (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "When the user uses their Ultimate Skill, it grants a Shield equal to 3-6-10% by of their Max HP for 8 second(s)."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        3,
+        6,
+        10
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "ancient-wraiths-right-hand",
+    "name": {
+      "fr": "",
+      "en": "Ancient Wraith's Right Hand",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "body",
+    "main_stat": [
+      "Defense",
+      "Defense (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "When the user is hit, their damage reduction increases by 3-6-10% for 10 second(s). (Cooldown: 25 second(s))"
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        3,
+        6,
+        10
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "ferocious-protectors-claw",
+    "name": {
+      "fr": "",
+      "en": "Ferocious Protector's Claw",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "spirit",
+    "main_stat": [
+      "HP",
+      "HP (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "The user's healing given increases by 4/6/8%."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        4,
+        6,
+        8
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "arrogant-rulers-gaze",
+    "name": {
+      "fr": "",
+      "en": "Arrogant Ruler's Gaze",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "spirit",
+    "main_stat": [
+      "HP",
+      "HP (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "The user's [Break] effectiveness increases by 6/8/10%."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        6,
+        8,
+        10
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "punishment-of-the-crimson-apex",
+    "name": {
+      "fr": "",
+      "en": "Punishment of the Crimson Apex",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "spirit",
+    "main_stat": [
+      "HP",
+      "HP (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "When the user has 20% of their MP or less they recover MP equal to 20-25-30% of their maximum MP. This effect activates only once during combat."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        20,
+        25,
+        30
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "teeth-of-the-watcher",
+    "name": {
+      "fr": "",
+      "en": "Teeth of the Watcher",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "spirit",
+    "main_stat": [
+      "HP",
+      "HP (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "Decreases MP Recovery Rate by 10% and MP Consumption of Basic Skills by 6-9-12%."
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        6,
+        9,
+        12
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "nameless-demons-magisphere",
+    "name": {
+      "fr": "",
+      "en": "Nameless Demon's Magisphere",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "spirit",
+    "main_stat": [
+      "HP",
+      "HP (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "When the user uses their Ultimate Skill, it grants recovers MP equal to 2-3-5% by of their Max MP. (Cooldown: 20 second(s))"
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        2,
+        3,
+        5
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  },
+  {
+    "id": "ancient-wraiths-mana-power",
+    "name": {
+      "fr": "",
+      "en": "Ancient Wraith's Mana Power",
+      "ko": ""
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary"
+    ],
+    "slot": "spirit",
+    "main_stat": [
+      "HP",
+      "HP (%)"
+    ],
+    "sub_stat_options": null,
+    "effects": [],
+    "text": {
+      "fr": "",
+      "en": "When the user's Basic Attack hits 3 time(s), it restores 1-2-3% of their Power Gauge. (Cooldown: 10 second(s))"
+    },
+    "values_by_rarity": {
+      "rare_heroic_legendary_first_value": [
+        1,
+        2,
+        3
+      ]
+    },
+    "conditions": [
+      "condition d'activation aléatoire : élément du chasseur (Water/Wind/Fire/Light/Dark) ou Sung Jinwoo"
+    ],
+    "values_by_level": {
+      "max_level_wiki": 20,
+      "max_level_notes_netmarble": 25
+    },
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
+    "wiki_revid": 14829,
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter."
+  }
+]
