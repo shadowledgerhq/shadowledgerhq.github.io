@@ -1,1 +1,172 @@
-[]
+[
+  {
+    "id": "hp",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "체력"
+    },
+    "kind": "flat",
+    "display": "raw",
+    "order": 1,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : PV. Noms FR/EN officiels à confirmer."
+  },
+  {
+    "id": "mana",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "마력"
+    },
+    "kind": "flat",
+    "display": "raw",
+    "order": 2,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : Mana. Noms FR/EN officiels à confirmer."
+  },
+  {
+    "id": "attack",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "공격력"
+    },
+    "kind": "flat",
+    "display": "raw",
+    "order": 3,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : Attaque. Noms FR/EN officiels à confirmer."
+  },
+  {
+    "id": "accuracy",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "정밀도"
+    },
+    "kind": "percent",
+    "display": "percent_with_rating",
+    "order": 4,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : Précision. Noms FR/EN officiels à confirmer."
+  },
+  {
+    "id": "defense",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "방어력"
+    },
+    "kind": "percent",
+    "display": "percent_with_rating",
+    "order": 5,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : Défense. Noms FR/EN officiels à confirmer."
+  },
+  {
+    "id": "crit-rate",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "치명타 확률"
+    },
+    "kind": "percent",
+    "display": "percent_with_rating",
+    "order": 6,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : Taux de critique. Noms FR/EN officiels à confirmer."
+  },
+  {
+    "id": "crit-damage",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "치명타 피해"
+    },
+    "kind": "percent",
+    "display": "percent_with_rating",
+    "order": 7,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : Dégâts critiques. Noms FR/EN officiels à confirmer."
+  },
+  {
+    "id": "cooldown-reduction",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "재사용 대기시간 감소"
+    },
+    "kind": "percent",
+    "display": "percent_with_rating",
+    "order": 8,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : Réduction de recharge. Noms FR/EN officiels à confirmer."
+  },
+  {
+    "id": "defense-penetration",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "방어력 관통"
+    },
+    "kind": "percent",
+    "display": "percent_with_rating",
+    "order": 9,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : Pénétration de défense. Noms FR/EN officiels à confirmer."
+  },
+  {
+    "id": "damage-increase",
+    "name": {
+      "fr": "",
+      "en": "",
+      "ko": "피해량 증가"
+    },
+    "kind": "percent",
+    "display": "percent_with_rating",
+    "order": 10,
+    "scope": null,
+    "icon": null,
+    "source": "capture d'écran de stats fournie par Alexis (client coréen)",
+    "verified_at": "2026-11-12",
+    "game_version": "",
+    "notes": "Nom FR probable (non vérifié) : Augmentation des dégâts. Noms FR/EN officiels à confirmer."
+  }
+]
