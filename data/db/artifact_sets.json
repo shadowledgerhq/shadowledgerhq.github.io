@@ -96,7 +96,7 @@
   {
     "id": "set-of-surturs-flame",
     "name": {
-      "fr": "",
+      "fr": "Flammes de Surtur",
       "en": "Set of Surtur's Flame",
       "ko": ""
     },
@@ -105,65 +105,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque de flammes de Surtur",
           "en": "Helmet of Surtur's Flame"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de flammes de Surtur",
           "en": "Body Armor of Surtur's Flame"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de flammes de Surtur",
           "en": "Gloves of Surtur's Flame"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de flammes de Surtur",
           "en": "Boots of Surtur's Flame"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de flammes de Surtur",
           "en": "Necklace of Surtur's Flame"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet de flammes de Surtur",
           "en": "Bracelet of Surtur's Flame"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague de flammes de Surtur",
           "en": "Ring of Surtur's Flame"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles de flammes de Surtur",
           "en": "Earrings of Surtur's Flame"
         },
         "icon": null
@@ -185,7 +185,8 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
   },
   {
     "id": "set-of-glorious-arrogance",
@@ -766,7 +767,7 @@
   {
     "id": "set-of-burning-curse",
     "name": {
-      "fr": "",
+      "fr": "Malédiction ardente",
       "en": "Set of Burning Curse",
       "ko": ""
     },
@@ -859,12 +860,13 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
   },
   {
     "id": "set-of-burning-blessing",
     "name": {
-      "fr": "",
+      "fr": "Bénédiction ardente",
       "en": "Set of Burning Blessing",
       "ko": ""
     },
@@ -957,12 +959,13 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR déduit d'un nom de pièce (« Gants de bénédiction ardente »).",
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
   },
   {
     "id": "set-of-burning-greed",
     "name": {
-      "fr": "",
+      "fr": "Avarice ardente",
       "en": "Set of Burning Greed",
       "ko": ""
     },
@@ -971,65 +974,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque d'avarice ardente",
           "en": "Helmet of Burning Greed"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure d'avarice ardente",
           "en": "Body Armor of Burning Greed"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants d'avarice ardente",
           "en": "Gloves of Burning Greed"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes d'avarice ardente",
           "en": "Boots of Burning Greed"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier d'avarice ardente",
           "en": "Necklace of Burning Greed"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet d'avarice ardente",
           "en": "Bracelet of Burning Greed"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague d'avarice ardente",
           "en": "Ring of Burning Greed"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles d'avarice ardente",
           "en": "Earrings of Burning Greed"
         },
         "icon": null
@@ -1055,7 +1058,8 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
   },
   {
     "id": "set-of-spooky",
