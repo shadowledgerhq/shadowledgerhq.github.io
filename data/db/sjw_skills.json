@@ -4,7 +4,7 @@
     "kind": "rune",
     "parent_skill": "double-slash",
     "name": {
-      "fr": "",
+      "fr": "Roue de pleine lune",
       "en": "Full Moon Wheel",
       "ko": ""
     },
@@ -37,14 +37,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "double-slash--multiply",
     "kind": "rune",
     "parent_skill": "double-slash",
     "name": {
-      "fr": "",
+      "fr": "Multiple",
       "en": "Multiply",
       "ko": ""
     },
@@ -77,14 +78,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "double-slash--flame-slash",
     "kind": "rune",
     "parent_skill": "double-slash",
     "name": {
-      "fr": "",
+      "fr": "Entaille ardente",
       "en": "Flame Slash",
       "ko": ""
     },
@@ -117,14 +119,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "double-slash--whirlwind-rush",
     "kind": "rune",
     "parent_skill": "double-slash",
     "name": {
-      "fr": "",
+      "fr": "Ruée tourbillonnante",
       "en": "Whirlwind Rush",
       "ko": ""
     },
@@ -157,7 +160,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "double-slash",
@@ -190,7 +194,7 @@
     "kind": "rune",
     "parent_skill": "crushing-blow",
     "name": {
-      "fr": "",
+      "fr": "Bris à la chaîne",
       "en": "Chained Break",
       "ko": ""
     },
@@ -223,14 +227,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "crushing-blow--enlightened-break",
     "kind": "rune",
     "parent_skill": "crushing-blow",
     "name": {
-      "fr": "",
+      "fr": "Bris lumineux",
       "en": "Enlightened Break",
       "ko": ""
     },
@@ -263,14 +268,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "crushing-blow--countering-break",
     "kind": "rune",
     "parent_skill": "crushing-blow",
     "name": {
-      "fr": "",
+      "fr": "Bris de contre",
       "en": "Countering Break",
       "ko": ""
     },
@@ -303,14 +309,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "crushing-blow--ascension-break",
     "kind": "rune",
     "parent_skill": "crushing-blow",
     "name": {
-      "fr": "",
+      "fr": "Bris d'ascension",
       "en": "Ascension Break",
       "ko": ""
     },
@@ -343,7 +350,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "crushing-blow",
@@ -376,7 +384,7 @@
     "kind": "rune",
     "parent_skill": "dagger-toss",
     "name": {
-      "fr": "",
+      "fr": "Détonation",
       "en": "Detonation",
       "ko": ""
     },
@@ -409,14 +417,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "dagger-toss--electric-shock",
     "kind": "rune",
     "parent_skill": "dagger-toss",
     "name": {
-      "fr": "",
+      "fr": "Électrocution",
       "en": "Electric Shock",
       "ko": ""
     },
@@ -449,14 +458,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "dagger-toss--ascension",
     "kind": "rune",
     "parent_skill": "dagger-toss",
     "name": {
-      "fr": "",
+      "fr": "Ascension",
       "en": "Ascension",
       "ko": ""
     },
@@ -489,14 +499,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "dagger-toss--bombardment",
     "kind": "rune",
     "parent_skill": "dagger-toss",
     "name": {
-      "fr": "",
+      "fr": "Bombardement",
       "en": "Bombardment",
       "ko": ""
     },
@@ -529,7 +540,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "dagger-toss",
@@ -562,7 +574,7 @@
     "kind": "rune",
     "parent_skill": "multistrike",
     "name": {
-      "fr": "",
+      "fr": "Accablement",
       "en": "Rush",
       "ko": ""
     },
@@ -595,14 +607,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "multistrike--percussion",
     "kind": "rune",
     "parent_skill": "multistrike",
     "name": {
-      "fr": "",
+      "fr": "Percussion",
       "en": "Percussion",
       "ko": ""
     },
@@ -635,14 +648,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "multistrike--illusion",
     "kind": "rune",
     "parent_skill": "multistrike",
     "name": {
-      "fr": "",
+      "fr": "Illusion",
       "en": "Illusion",
       "ko": ""
     },
@@ -675,14 +689,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "multistrike--pummel",
     "kind": "rune",
     "parent_skill": "multistrike",
     "name": {
-      "fr": "",
+      "fr": "Déchaînement",
       "en": "Pummel",
       "ko": ""
     },
@@ -715,7 +730,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "multistrike",
@@ -748,7 +764,7 @@
     "kind": "rune",
     "parent_skill": "vertical-arts",
     "name": {
-      "fr": "",
+      "fr": "Explosions consécutives",
       "en": "Sequent Explosions",
       "ko": ""
     },
@@ -781,14 +797,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "vertical-arts--crosshairs",
     "kind": "rune",
     "parent_skill": "vertical-arts",
     "name": {
-      "fr": "",
+      "fr": "Onde croisée",
       "en": "Crosshairs",
       "ko": ""
     },
@@ -821,14 +838,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "vertical-arts--reap",
     "kind": "rune",
     "parent_skill": "vertical-arts",
     "name": {
-      "fr": "",
+      "fr": "Ombres",
       "en": "Reap",
       "ko": ""
     },
@@ -861,14 +879,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "vertical-arts--gale",
     "kind": "rune",
     "parent_skill": "vertical-arts",
     "name": {
-      "fr": "",
+      "fr": "Bourrasque",
       "en": "Gale",
       "ko": ""
     },
@@ -901,7 +920,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "vertical-arts",
@@ -934,7 +954,7 @@
     "kind": "rune",
     "parent_skill": "cutting-rush",
     "name": {
-      "fr": "",
+      "fr": "Annihilation",
       "en": "Annihilation",
       "ko": ""
     },
@@ -967,14 +987,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "cutting-rush--effulgence",
     "kind": "rune",
     "parent_skill": "cutting-rush",
     "name": {
-      "fr": "",
+      "fr": "Débordement",
       "en": "Effulgence",
       "ko": ""
     },
@@ -1007,14 +1028,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "cutting-rush--sunder",
     "kind": "rune",
     "parent_skill": "cutting-rush",
     "name": {
-      "fr": "",
+      "fr": "Scission",
       "en": "Sunder",
       "ko": ""
     },
@@ -1047,14 +1069,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "cutting-rush--escalate",
     "kind": "rune",
     "parent_skill": "cutting-rush",
     "name": {
-      "fr": "",
+      "fr": "Recrudescence",
       "en": "Escalate",
       "ko": ""
     },
@@ -1087,7 +1110,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "cutting-rush",
@@ -1120,7 +1144,7 @@
     "kind": "rune",
     "parent_skill": "vital-strike",
     "name": {
-      "fr": "",
+      "fr": "Extermination",
       "en": "Decimate",
       "ko": ""
     },
@@ -1153,14 +1177,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "vital-strike--internal-wound",
     "kind": "rune",
     "parent_skill": "vital-strike",
     "name": {
-      "fr": "",
+      "fr": "Lésion interne",
       "en": "Internal Wound",
       "ko": ""
     },
@@ -1193,14 +1218,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "vital-strike--hone-in",
     "kind": "rune",
     "parent_skill": "vital-strike",
     "name": {
-      "fr": "",
+      "fr": "Plantage",
       "en": "Hone In",
       "ko": ""
     },
@@ -1233,14 +1259,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "vital-strike--on-point",
     "kind": "rune",
     "parent_skill": "vital-strike",
     "name": {
-      "fr": "",
+      "fr": "À point",
       "en": "On Point",
       "ko": ""
     },
@@ -1273,7 +1300,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "vital-strike",
@@ -1306,7 +1334,7 @@
     "kind": "rune",
     "parent_skill": "mutilate",
     "name": {
-      "fr": "",
+      "fr": "Tempête glacée",
       "en": "Cold Storm",
       "ko": ""
     },
@@ -1339,14 +1367,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "mutilate--phantom",
     "kind": "rune",
     "parent_skill": "mutilate",
     "name": {
-      "fr": "",
+      "fr": "Fantôme",
       "en": "Phantom",
       "ko": ""
     },
@@ -1379,14 +1408,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "mutilate--strike",
     "kind": "rune",
     "parent_skill": "mutilate",
     "name": {
-      "fr": "",
+      "fr": "Frappe",
       "en": "Strike",
       "ko": ""
     },
@@ -1419,14 +1449,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "mutilate--stroke-of-lightning",
     "kind": "rune",
     "parent_skill": "mutilate",
     "name": {
-      "fr": "",
+      "fr": "Coup de tonnerre",
       "en": "Stroke of Lightning",
       "ko": ""
     },
@@ -1459,7 +1490,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "mutilate",
@@ -1492,7 +1524,7 @@
     "kind": "rune",
     "parent_skill": "deaths-dance",
     "name": {
-      "fr": "",
+      "fr": "Choc terrestre",
       "en": "Earth Shock",
       "ko": ""
     },
@@ -1525,14 +1557,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "deaths-dance--high-speed-rotation",
     "kind": "rune",
     "parent_skill": "deaths-dance",
     "name": {
-      "fr": "",
+      "fr": "Rotation fulgurante",
       "en": "High-speed Rotation",
       "ko": ""
     },
@@ -1565,14 +1598,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "deaths-dance--eruption",
     "kind": "rune",
     "parent_skill": "deaths-dance",
     "name": {
-      "fr": "",
+      "fr": "Éruption",
       "en": "Eruption",
       "ko": ""
     },
@@ -1605,14 +1639,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "deaths-dance--wildfire",
     "kind": "rune",
     "parent_skill": "deaths-dance",
     "name": {
-      "fr": "",
+      "fr": "Feu sauvage",
       "en": "Wildfire",
       "ko": ""
     },
@@ -1645,7 +1680,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "deaths-dance",
@@ -1678,7 +1714,7 @@
     "kind": "rune",
     "parent_skill": "the-commanders-touch",
     "name": {
-      "fr": "",
+      "fr": "Trou noir",
       "en": "Black Hole",
       "ko": ""
     },
@@ -1711,14 +1747,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "the-commanders-touch--liberation",
     "kind": "rune",
     "parent_skill": "the-commanders-touch",
     "name": {
-      "fr": "",
+      "fr": "Libération",
       "en": "Liberation",
       "ko": ""
     },
@@ -1751,14 +1788,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "the-commanders-touch--finisher",
     "kind": "rune",
     "parent_skill": "the-commanders-touch",
     "name": {
-      "fr": "",
+      "fr": "Attaque finale",
       "en": "Finisher",
       "ko": ""
     },
@@ -1791,14 +1829,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "the-commanders-touch--absorption",
     "kind": "rune",
     "parent_skill": "the-commanders-touch",
     "name": {
-      "fr": "",
+      "fr": "Absorption",
       "en": "Absorption",
       "ko": ""
     },
@@ -1831,7 +1870,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "the-commanders-touch",
@@ -1864,7 +1904,7 @@
     "kind": "rune",
     "parent_skill": "armor-break",
     "name": {
-      "fr": "",
+      "fr": "Frappe d'ombres multiples",
       "en": "Multishadow Strike",
       "ko": ""
     },
@@ -1897,14 +1937,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "armor-break--decimation",
     "kind": "rune",
     "parent_skill": "armor-break",
     "name": {
-      "fr": "",
+      "fr": "Décimation",
       "en": "Decimation",
       "ko": ""
     },
@@ -1937,14 +1978,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "armor-break--vacuum-wave",
     "kind": "rune",
     "parent_skill": "armor-break",
     "name": {
-      "fr": "",
+      "fr": "Onde de vide",
       "en": "Vacuum Wave",
       "ko": ""
     },
@@ -1977,14 +2019,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "armor-break--iceberg",
     "kind": "rune",
     "parent_skill": "armor-break",
     "name": {
-      "fr": "",
+      "fr": "Iceberg",
       "en": "Iceberg",
       "ko": ""
     },
@@ -2017,7 +2060,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "armor-break",
@@ -2050,7 +2094,7 @@
     "kind": "rune",
     "parent_skill": "sonic-stream",
     "name": {
-      "fr": "",
+      "fr": "Double attaque descendante",
       "en": "Double Down",
       "ko": ""
     },
@@ -2083,14 +2127,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "sonic-stream--sonic-explosion",
     "kind": "rune",
     "parent_skill": "sonic-stream",
     "name": {
-      "fr": "",
+      "fr": "Explosion sonique",
       "en": "Sonic Explosion",
       "ko": ""
     },
@@ -2123,14 +2168,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "sonic-stream--wind-shroud",
     "kind": "rune",
     "parent_skill": "sonic-stream",
     "name": {
-      "fr": "",
+      "fr": "Voile venteux",
       "en": "Wind Shroud",
       "ko": ""
     },
@@ -2163,14 +2209,15 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "sonic-stream--magnifying-slashes",
     "kind": "rune",
     "parent_skill": "sonic-stream",
     "name": {
-      "fr": "",
+      "fr": "Entailles croissantes",
       "en": "Magnifying Slashes",
       "ko": ""
     },
@@ -2203,7 +2250,8 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki."
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "sonic-stream",

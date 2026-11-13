@@ -2,7 +2,7 @@
   {
     "id": "lightning-speed",
     "name": {
-      "fr": "",
+      "fr": "Vitesse de l'éclair",
       "en": "Lightning Speed",
       "ko": ""
     },
@@ -35,12 +35,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "first-strike-barrage",
     "name": {
-      "fr": "",
+      "fr": "Barrage initial",
       "en": "First Strike Barrage",
       "ko": ""
     },
@@ -79,12 +80,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "irresistible-force",
     "name": {
-      "fr": "",
+      "fr": "Force irrésistible",
       "en": "Irresistible Force",
       "ko": ""
     },
@@ -117,7 +119,8 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "crushing-attack",
@@ -198,7 +201,7 @@
   {
     "id": "desire",
     "name": {
-      "fr": "",
+      "fr": "Désir",
       "en": "Desire",
       "ko": ""
     },
@@ -231,12 +234,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "intuit",
     "name": {
-      "fr": "",
+      "fr": "Intuition",
       "en": "Intuit",
       "ko": ""
     },
@@ -269,12 +273,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "we-are-one",
     "name": {
-      "fr": "",
+      "fr": "Nous ne faisons qu'un",
       "en": "We Are One",
       "ko": ""
     },
@@ -313,12 +318,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "swift-strike",
     "name": {
-      "fr": "",
+      "fr": "Frappe véloce",
       "en": "Swift Strike",
       "ko": ""
     },
@@ -351,12 +357,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "assassins-proficiency",
     "name": {
-      "fr": "",
+      "fr": "Maîtrise de l'assassinat",
       "en": "Assassin's Proficiency",
       "ko": ""
     },
@@ -382,12 +389,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "fatal-strike",
     "name": {
-      "fr": "",
+      "fr": "Frappe fatale",
       "en": "Fatal Strike",
       "ko": ""
     },
@@ -420,12 +428,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "weakness-detection",
     "name": {
-      "fr": "",
+      "fr": "Détection de faiblesse",
       "en": "Weakness Detection",
       "ko": ""
     },
@@ -458,12 +467,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "swiftness",
     "name": {
-      "fr": "",
+      "fr": "Rapidité",
       "en": "Swiftness",
       "ko": ""
     },
@@ -496,12 +506,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "double-edged-sword",
     "name": {
-      "fr": "",
+      "fr": "Épée à double tranchant",
       "en": "Double-edged Sword",
       "ko": ""
     },
@@ -540,12 +551,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "boss-slayer",
     "name": {
-      "fr": "",
+      "fr": "Chasseur de boss",
       "en": "Boss Slayer",
       "ko": ""
     },
@@ -584,12 +596,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "chains-of-blood",
     "name": {
-      "fr": "",
+      "fr": "Chaînes ensanglantées",
       "en": "Chains of Blood",
       "ko": ""
     },
@@ -622,12 +635,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "title-demon-slayer",
     "name": {
-      "fr": "",
+      "fr": "Titre : Chasseur de démons",
       "en": "Title: Demon Slayer",
       "ko": ""
     },
@@ -666,7 +680,8 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "title-conqueror-of-adversity",
@@ -747,7 +762,7 @@
   {
     "id": "pulverize",
     "name": {
-      "fr": "",
+      "fr": "Pulvérisation",
       "en": "Pulverize",
       "ko": ""
     },
@@ -786,7 +801,8 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "bloodlust",
@@ -835,7 +851,7 @@
   {
     "id": "sharp-perception",
     "name": {
-      "fr": "",
+      "fr": "Perception affûtée",
       "en": "Sharp Perception",
       "ko": ""
     },
@@ -874,12 +890,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "reawakening",
     "name": {
-      "fr": "",
+      "fr": "Ré-éveil",
       "en": "Reawakening",
       "ko": ""
     },
@@ -912,12 +929,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "mana-rampage",
     "name": {
-      "fr": "",
+      "fr": "Carnage de mana",
       "en": "Mana Rampage",
       "ko": ""
     },
@@ -956,12 +974,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "monarchs-domain",
     "name": {
-      "fr": "",
+      "fr": "Domaine du monarque",
       "en": "Monarch's Domain",
       "ko": ""
     },
@@ -1000,12 +1019,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "speed",
     "name": {
-      "fr": "",
+      "fr": "Vitesse",
       "en": "Speed",
       "ko": ""
     },
@@ -1044,12 +1064,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "advanced-dagger-technique",
     "name": {
-      "fr": "",
+      "fr": "Technique avancée de la dague",
       "en": "Advanced Dagger Technique",
       "ko": ""
     },
@@ -1082,12 +1103,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "swift-restoration",
     "name": {
-      "fr": "",
+      "fr": "Récupération rapide",
       "en": "Swift Restoration",
       "ko": ""
     },
@@ -1126,7 +1148,8 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "irreversible-road",
@@ -1175,7 +1198,7 @@
   {
     "id": "best-defense-is-a-good-offense",
     "name": {
-      "fr": "",
+      "fr": "Attaquer pour mieux défendre",
       "en": "Best Defense is a Good Offense",
       "ko": ""
     },
@@ -1208,7 +1231,8 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "ravenous-instinct",
@@ -1251,7 +1275,7 @@
   {
     "id": "aggressive-defense",
     "name": {
-      "fr": "",
+      "fr": "Défense agressive",
       "en": "Aggressive Defense",
       "ko": ""
     },
@@ -1284,12 +1308,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "solidify",
     "name": {
-      "fr": "",
+      "fr": "Solidification",
       "en": "Solidify",
       "ko": ""
     },
@@ -1322,12 +1347,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "mana-powered-shield",
     "name": {
-      "fr": "",
+      "fr": "Bouclier d'énergie de mana",
       "en": "Mana Powered Shield",
       "ko": ""
     },
@@ -1360,12 +1386,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "natural-disaster",
     "name": {
-      "fr": "",
+      "fr": "Catastrophe naturelle",
       "en": "Natural Disaster",
       "ko": ""
     },
@@ -1398,12 +1425,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "penalty-quest-survival",
     "name": {
-      "fr": "",
+      "fr": "Mission de la sanction : Survie",
       "en": "Penalty Quest: Survival",
       "ko": ""
     },
@@ -1436,12 +1464,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "life",
     "name": {
-      "fr": "",
+      "fr": "Vie",
       "en": "Life",
       "ko": ""
     },
@@ -1474,12 +1503,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "hp-extraction",
     "name": {
-      "fr": "",
+      "fr": "Extraction de PV",
       "en": "HP Extraction",
       "ko": ""
     },
@@ -1518,12 +1548,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "camouflage",
     "name": {
-      "fr": "",
+      "fr": "Camouflage",
       "en": "Camouflage",
       "ko": ""
     },
@@ -1556,12 +1587,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "daily-quest-completion",
     "name": {
-      "fr": "",
+      "fr": "Accomplissement de quête journalière",
       "en": "Daily Quest Completion",
       "ko": ""
     },
@@ -1594,12 +1626,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "kasakas-steel-scales",
     "name": {
-      "fr": "",
+      "fr": "Écailles d'acier de Kasaka",
       "en": "Kasaka's Steel Scales",
       "ko": ""
     },
@@ -1638,12 +1671,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "tenacity",
     "name": {
-      "fr": "",
+      "fr": "Ténacité",
       "en": "Tenacity",
       "ko": ""
     },
@@ -1682,12 +1716,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "kandiarus-blessing",
     "name": {
-      "fr": "",
+      "fr": "Bénédiction de Kandiaru",
       "en": "Kandiaru's Blessing",
       "ko": ""
     },
@@ -1720,12 +1755,13 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "master-marksman",
     "name": {
-      "fr": "",
+      "fr": "Maître tireur de précision",
       "en": "Master Marksman",
       "ko": ""
     },
@@ -1748,12 +1784,13 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "do-or-die",
     "name": {
-      "fr": "",
+      "fr": "Marche ou crève",
       "en": "Do or Die",
       "ko": ""
     },
@@ -1776,12 +1813,13 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "supercharge",
     "name": {
-      "fr": "",
+      "fr": "Surcharge de puissance",
       "en": "Supercharge",
       "ko": ""
     },
@@ -1804,12 +1842,13 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "iron-stance",
     "name": {
-      "fr": "",
+      "fr": "Posture de fer",
       "en": "Iron Stance",
       "ko": ""
     },
@@ -1832,12 +1871,13 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "architects-plan",
     "name": {
-      "fr": "",
+      "fr": "Plan du Concepteur",
       "en": "Architect's Plan",
       "ko": ""
     },
@@ -1860,12 +1900,13 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "spring-of-life",
     "name": {
-      "fr": "",
+      "fr": "Source de vie",
       "en": "Spring of Life",
       "ko": ""
     },
@@ -1888,12 +1929,13 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "devour",
     "name": {
-      "fr": "",
+      "fr": "Dévoration",
       "en": "Devour",
       "ko": ""
     },
@@ -1916,6 +1958,7 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé."
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   }
 ]

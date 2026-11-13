@@ -2522,7 +2522,7 @@
   {
     "id": "allons-orb",
     "name": {
-      "fr": "",
+      "fr": "Orbe d'Allon",
       "en": "Allon's Orb",
       "ko": ""
     },
@@ -2610,7 +2610,8 @@
     "wiki_timestamp": "2026-02-14T00:03:00Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "arachnids-hand-crossbow",
@@ -3043,7 +3044,7 @@
   {
     "id": "demon-kings-daggers",
     "name": {
-      "fr": "",
+      "fr": "Dagues du roi des démons",
       "en": "Demon King's Daggers",
       "ko": ""
     },
@@ -3152,7 +3153,8 @@
     "wiki_timestamp": "2026-01-27T07:16:22Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "demon-kings-longsword",
@@ -3357,7 +3359,7 @@
   {
     "id": "demonic-plum-flower-sword",
     "name": {
-      "fr": "",
+      "fr": "Epée démoniaque : Fleur de prunier",
       "en": "Demonic Plum Flower Sword",
       "ko": ""
     },
@@ -3466,12 +3468,13 @@
     "wiki_timestamp": "2025-04-27T20:47:20Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "divine-quarterstaff",
     "name": {
-      "fr": "",
+      "fr": "Bâton de combat divin",
       "en": "Divine Quarterstaff",
       "ko": ""
     },
@@ -3580,7 +3583,8 @@
     "wiki_timestamp": "2026-02-08T01:37:45Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "dragonscale-broadsword",
@@ -3699,7 +3703,7 @@
   {
     "id": "ennios-roar",
     "name": {
-      "fr": "",
+      "fr": "Rugissement d'Ennio",
       "en": "Ennio's Roar",
       "ko": ""
     },
@@ -3787,12 +3791,13 @@
     "wiki_timestamp": "2026-05-28T09:41:45Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "fan-of-the-fire-demon",
     "name": {
-      "fr": "",
+      "fr": "Éventail du Démon de feu",
       "en": "Fan of the Fire Demon",
       "ko": ""
     },
@@ -3901,12 +3906,13 @@
     "wiki_timestamp": "2026-02-08T01:15:46Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "foress-wish",
     "name": {
-      "fr": "",
+      "fr": "Vœu de Fores",
       "en": "Fores's Wish",
       "ko": ""
     },
@@ -3971,7 +3977,8 @@
     "wiki_timestamp": "2025-06-05T15:01:36Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "frostbite-falchion",
@@ -4090,7 +4097,7 @@
   {
     "id": "gold-tailed-fox",
     "name": {
-      "fr": "",
+      "fr": "Renard à queue dorée",
       "en": "Gold-tailed Fox",
       "ko": ""
     },
@@ -4199,7 +4206,8 @@
     "wiki_timestamp": "2026-02-08T01:16:16Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "grave-keepers-scythe",
@@ -4318,7 +4326,7 @@
   {
     "id": "heros-sword",
     "name": {
-      "fr": "",
+      "fr": "Épée du Héros",
       "en": "Hero's Sword",
       "ko": ""
     },
@@ -4406,7 +4414,8 @@
     "wiki_timestamp": "2026-03-01T02:38:49Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "ice-elfs-bow",
@@ -4525,7 +4534,7 @@
   {
     "id": "juicy-grilled-skewer",
     "name": {
-      "fr": "",
+      "fr": "Brochette grillée juteuse",
       "en": "Juicy Grilled Skewer",
       "ko": ""
     },
@@ -4634,7 +4643,8 @@
     "wiki_timestamp": "2025-03-25T20:57:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "kasakas-venom-fang",
@@ -5409,7 +5419,7 @@
   {
     "id": "moonlit-gale",
     "name": {
-      "fr": "",
+      "fr": "Bourrasque du clair de lune",
       "en": "Moonlit Gale",
       "ko": ""
     },
@@ -5497,12 +5507,13 @@
     "wiki_timestamp": "2026-06-05T22:33:21Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "moonshadow",
     "name": {
-      "fr": "",
+      "fr": "Ombre sélène",
       "en": "Moonshadow",
       "ko": ""
     },
@@ -5576,7 +5587,8 @@
     "wiki_timestamp": "2025-03-25T20:58:29Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "naga-guardian-dragons-trident",
@@ -5923,7 +5935,7 @@
   {
     "id": "phantomblade",
     "name": {
-      "fr": "",
+      "fr": "Lame fantôme",
       "en": "PhantomBlade",
       "ko": ""
     },
@@ -5943,12 +5955,13 @@
     "wiki_timestamp": "2026-02-14T00:42:20Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "phoenix-soul",
     "name": {
-      "fr": "",
+      "fr": "Âme de phénix",
       "en": "Phoenix Soul",
       "ko": ""
     },
@@ -6057,12 +6070,13 @@
     "wiki_timestamp": "2025-03-25T20:56:46Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "radiru-clans-double-edged-spear",
     "name": {
-      "fr": "",
+      "fr": "Lance à double lame du clan Radir",
       "en": "Radiru Clan's Double-edged Spear",
       "ko": ""
     },
@@ -6164,7 +6178,8 @@
     "wiki_timestamp": "2026-02-13T23:55:05Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "radiru-familys-longbow",
@@ -6725,7 +6740,7 @@
   {
     "id": "shadow-scythe",
     "name": {
-      "fr": "",
+      "fr": "Faux de l'ombre",
       "en": "Shadow Scythe",
       "ko": ""
     },
@@ -6834,12 +6849,13 @@
     "wiki_timestamp": "2026-05-29T14:01:07Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "skadi",
     "name": {
-      "fr": "",
+      "fr": "Skadi",
       "en": "Skadi",
       "ko": ""
     },
@@ -6948,12 +6964,13 @@
     "wiki_timestamp": "2026-02-22T01:54:01Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "soma-and-asura",
     "name": {
-      "fr": "",
+      "fr": "Soma et Asura",
       "en": "Soma and Asura",
       "ko": ""
     },
@@ -7041,12 +7058,13 @@
     "wiki_timestamp": "2026-06-14T08:33:54Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "spooky-pumpkin",
     "name": {
-      "fr": "",
+      "fr": "Citrouille effrayante",
       "en": "Spooky Pumpkin",
       "ko": ""
     },
@@ -7155,12 +7173,13 @@
     "wiki_timestamp": "2025-06-05T15:04:43Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "stormbringer",
     "name": {
-      "fr": "",
+      "fr": "Porte-tempête",
       "en": "Stormbringer",
       "ko": ""
     },
@@ -7269,12 +7288,13 @@
     "wiki_timestamp": "2026-10-31T14:19:36Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "the-huntsman",
     "name": {
-      "fr": "",
+      "fr": "Le traqueur",
       "en": "The Huntsman",
       "ko": ""
     },
@@ -7355,12 +7375,13 @@
     "wiki_timestamp": "2026-06-06T22:31:04Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "thetis-grimoire",
     "name": {
-      "fr": "",
+      "fr": "Grimoire de Thétis",
       "en": "Thetis' Grimoire",
       "ko": ""
     },
@@ -7469,12 +7490,13 @@
     "wiki_timestamp": "2025-11-11T14:42:24Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "transfiguration-key",
     "name": {
-      "fr": "",
+      "fr": "Clé de Transfiguration",
       "en": "Transfiguration Key",
       "ko": ""
     },
@@ -7562,12 +7584,13 @@
     "wiki_timestamp": "2026-02-28T23:08:27Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "truth-demon-knights-spear",
     "name": {
-      "fr": "",
+      "fr": "Vérité : Lance de chevalier démoniaque",
       "en": "Truth: Demon Knight's Spear",
       "ko": ""
     },
@@ -7676,12 +7699,13 @@
     "wiki_timestamp": "2025-03-25T20:55:16Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "truth-kasakas-venom-fang",
     "name": {
-      "fr": "",
+      "fr": "Vérité : Crochet venimeux de Kasaka",
       "en": "Truth: Kasaka's Venom Fang",
       "ko": ""
     },
@@ -7790,12 +7814,13 @@
     "wiki_timestamp": "2026-02-08T01:16:29Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "vulcans-rage",
     "name": {
-      "fr": "",
+      "fr": "Rage de Vulcan",
       "en": "Vulcan's Rage",
       "ko": ""
     },
@@ -7869,7 +7894,8 @@
     "wiki_timestamp": "2026-02-22T02:05:19Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "west-wind",
@@ -7988,7 +8014,7 @@
   {
     "id": "winchester-roke",
     "name": {
-      "fr": "",
+      "fr": "Winchester Roke",
       "en": "Winchester Roke",
       "ko": ""
     },
@@ -8062,12 +8088,13 @@
     "wiki_timestamp": "2026-02-22T15:47:22Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "winter-fang",
     "name": {
-      "fr": "",
+      "fr": "Croc du Frimas",
       "en": "Winter Fang",
       "ko": ""
     },
@@ -8176,12 +8203,13 @@
     "wiki_timestamp": "2026-05-12T00:24:27Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "zekes-fragment",
     "name": {
-      "fr": "",
+      "fr": "Fragment de Zeke",
       "en": "Zeke's Fragment",
       "ko": ""
     },
@@ -8247,6 +8275,7 @@
     "wiki_timestamp": "2025-03-25T20:55:56Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   }
 ]

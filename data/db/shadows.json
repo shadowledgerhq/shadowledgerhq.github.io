@@ -2,7 +2,7 @@
   {
     "id": "beru",
     "name": {
-      "fr": "",
+      "fr": "Beru",
       "en": "Beru",
       "ko": ""
     },
@@ -152,12 +152,13 @@
     "wiki_timestamp": "2026-02-27T05:33:44Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "beste",
     "name": {
-      "fr": "",
+      "fr": "Beste",
       "en": "Beste",
       "ko": ""
     },
@@ -307,12 +308,13 @@
     "wiki_timestamp": "2025-03-28T09:19:00Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "bigrock",
     "name": {
-      "fr": "",
+      "fr": "Bigrock",
       "en": "Bigrock",
       "ko": ""
     },
@@ -462,12 +464,13 @@
     "wiki_timestamp": "2025-03-14T22:31:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "blades",
     "name": {
-      "fr": "",
+      "fr": "Lames",
       "en": "Blades",
       "ko": ""
     },
@@ -617,12 +620,13 @@
     "wiki_timestamp": "2025-03-14T22:28:28Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "brute",
     "name": {
-      "fr": "",
+      "fr": "Brute",
       "en": "Brute",
       "ko": ""
     },
@@ -772,12 +776,13 @@
     "wiki_timestamp": "2026-05-14T00:51:15Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "cerbie",
     "name": {
-      "fr": "",
+      "fr": "Cerbie",
       "en": "Cerbie",
       "ko": ""
     },
@@ -927,12 +932,13 @@
     "wiki_timestamp": "2025-03-14T22:34:33Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "greed",
     "name": {
-      "fr": "",
+      "fr": "Avarice",
       "en": "Greed",
       "ko": ""
     },
@@ -950,12 +956,13 @@
     "wiki_timestamp": "2026-07-18T19:12:26Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "igris",
     "name": {
-      "fr": "",
+      "fr": "Igrit",
       "en": "Igris",
       "ko": ""
     },
@@ -1105,12 +1112,13 @@
     "wiki_timestamp": "2026-05-06T22:03:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "iron",
     "name": {
-      "fr": "",
+      "fr": "Iron",
       "en": "Iron",
       "ko": ""
     },
@@ -1260,12 +1268,13 @@
     "wiki_timestamp": "2025-08-08T23:44:53Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "jima",
     "name": {
-      "fr": "",
+      "fr": "Jima",
       "en": "Jima",
       "ko": ""
     },
@@ -1415,12 +1424,13 @@
     "wiki_timestamp": "2026-02-27T22:43:12Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "kaisel",
     "name": {
-      "fr": "",
+      "fr": "Kaisel",
       "en": "Kaisel",
       "ko": ""
     },
@@ -1570,12 +1580,13 @@
     "wiki_timestamp": "2025-08-08T23:34:23Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "skull",
     "name": {
-      "fr": "",
+      "fr": "Crâne",
       "en": "Skull",
       "ko": ""
     },
@@ -1725,12 +1736,13 @@
     "wiki_timestamp": "2026-02-27T22:38:57Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "tank",
     "name": {
-      "fr": "",
+      "fr": "Tank",
       "en": "Tank",
       "ko": ""
     },
@@ -1880,12 +1892,13 @@
     "wiki_timestamp": "2025-08-08T23:47:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "tusk",
     "name": {
-      "fr": "",
+      "fr": "Croc",
       "en": "Tusk",
       "ko": ""
     },
@@ -2035,12 +2048,13 @@
     "wiki_timestamp": "2025-04-12T05:01:32Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "uros",
     "name": {
-      "fr": "",
+      "fr": "Uros",
       "en": "Uros",
       "ko": ""
     },
@@ -2190,6 +2204,7 @@
     "wiki_timestamp": "2026-06-05T22:58:15Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   }
 ]

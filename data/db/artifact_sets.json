@@ -2,7 +2,7 @@
   {
     "id": "set-of-the-architects-blue-poison",
     "name": {
-      "fr": "",
+      "fr": "Poison bleu du Concepteur",
       "en": "Set of The Architect's Blue Poison",
       "ko": ""
     },
@@ -11,65 +11,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque bleu du concepteur",
           "en": "Helmet of The Architect's Blue Poison"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure bleue du Concepteur",
           "en": "Body Armor of The Architect's Blue Poison"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants bleus du Concepteur",
           "en": "Gloves of The Architect's Blue Poison"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes bleues du Concepteur",
           "en": "Boots of The Architect's Blue Poison"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier bleu du Concepteur",
           "en": "Necklace of The Architect's Blue Poison"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet bleu du Concepteur",
           "en": "Bracelet of The Architect's Blue Poison"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague bleue du Concepteur",
           "en": "Ring of The Architect's Blue Poison"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles bleues du Concepteur",
           "en": "Earrings of The Architect's Blue Poison"
         },
         "icon": null
@@ -91,7 +91,8 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-surturs-flame",
@@ -186,12 +187,12 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-glorious-arrogance",
     "name": {
-      "fr": "",
+      "fr": "Arrogance glorieuse",
       "en": "Set of Glorious Arrogance",
       "ko": ""
     },
@@ -200,65 +201,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque glorieux de Valtair",
           "en": "Helmet of Glorious Arrogance"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure glorieuse de Valtair",
           "en": "Body Armor of Glorious Arrogance"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants glorieux de Valtair",
           "en": "Gloves of Glorious Arrogance"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes glorieuses de Valtair",
           "en": "Boots of Glorious Arrogance"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier glorieux de Valtair",
           "en": "Necklace of Glorious Arrogance"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet glorieux de Valtair",
           "en": "Bracelet of Glorious Arrogance"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague glorieuse de Valtair",
           "en": "Ring of Glorious Arrogance"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles glorieuses de Valtair",
           "en": "Earrings of Glorious Arrogance"
         },
         "icon": null
@@ -280,12 +281,13 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-noble-flesh",
     "name": {
-      "fr": "",
+      "fr": "Chair noble",
       "en": "Set of Noble Flesh",
       "ko": ""
     },
@@ -294,65 +296,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque noble de Rockpasa",
           "en": "Helmet of Noble Flesh"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure noble de Rockpasa",
           "en": "Body Armor of Noble Flesh"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants nobles de Rockpasa",
           "en": "Gloves of Noble Flesh"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes nobles de Rockpasa",
           "en": "Boots of Noble Flesh"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier noble de Rockpasa",
           "en": "Necklace of Noble Flesh"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet noble de Rockpasa",
           "en": "Bracelet of Noble Flesh"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague noble de Rockpasa",
           "en": "Ring of Noble Flesh"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles nobles de Rockpasa",
           "en": "Earrings of Noble Flesh"
         },
         "icon": null
@@ -374,12 +376,13 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-kamishs-obession",
     "name": {
-      "fr": "",
+      "fr": "Obsession de Kamish",
       "en": "Set of Kamish's Obession",
       "ko": ""
     },
@@ -388,65 +391,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque d'obsession de Kamish",
           "en": "Helmet of Kamish's Obession"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure d'obsession de Kamish",
           "en": "Body Armor of Kamish's Obession"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants d'obsession de Kamish",
           "en": "Gloves of Kamish's Obession"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes d'obsession de Kamish",
           "en": "Boots of Kamish's Obession"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier d'obsession de Kamish",
           "en": "Necklace of Kamish's Obession"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet d'obsession de Kamish",
           "en": "Bracelet of Kamish's Obession"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague d'obsession de Kamish",
           "en": "Ring of Kamish's Obession"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles d'obsession de Kamish",
           "en": "Earrings of Kamish's Obession"
         },
         "icon": null
@@ -468,12 +471,13 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-chaotic-infamy",
     "name": {
-      "fr": "",
+      "fr": "Infamie chaotique",
       "en": "Set of Chaotic Infamy",
       "ko": ""
     },
@@ -482,65 +486,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque de l'origine chaotique",
           "en": "Helmet of Chaotic Infamy"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Robe de l'origine chaotique",
           "en": "Body Armor of Chaotic Infamy"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de l'origine chaotique",
           "en": "Gloves of Chaotic Infamy"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de l'origine chaotique",
           "en": "Boots of Chaotic Infamy"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de l'origine chaotique",
           "en": "Necklace of Chaotic Infamy"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet de l'origine chaotique",
           "en": "Bracelet of Chaotic Infamy"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague de l'origine chaotique",
           "en": "Ring of Chaotic Infamy"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles de l'origine chaotique",
           "en": "Earrings of Chaotic Infamy"
         },
         "icon": null
@@ -566,12 +570,13 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-chaotic-desire",
     "name": {
-      "fr": "",
+      "fr": "Désir chaotique",
       "en": "Set of Chaotic Desire",
       "ko": ""
     },
@@ -580,65 +585,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque du désir chaotique",
           "en": "Helmet of Chaotic Desire"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure du désir chaotique",
           "en": "Body Armor of Chaotic Desire"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants du désir chaotique",
           "en": "Gloves of Chaotic Desire"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes du désir chaotique",
           "en": "Boots of Chaotic Desire"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier du désir chaotique",
           "en": "Necklace of Chaotic Desire"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet du désir chaotique",
           "en": "Bracelet of Chaotic Desire"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague du désir chaotique",
           "en": "Ring of Chaotic Desire"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles du désir chaotique",
           "en": "Earrings of Chaotic Desire"
         },
         "icon": null
@@ -664,12 +669,13 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-chaotic-wish",
     "name": {
-      "fr": "",
+      "fr": "Vœu chaotique",
       "en": "Set of Chaotic Wish",
       "ko": ""
     },
@@ -678,65 +684,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque du Stigmate chaotique",
           "en": "Helmet of Chaotic Wish"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure du Stigmate chaotique",
           "en": "Body Armor of Chaotic Wish"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants du Stigmate chaotique",
           "en": "Gloves of Chaotic Wish"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes du Stigmate chaotique",
           "en": "Boots of Chaotic Wish"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier du Stigmate chaotique",
           "en": "Necklace of Chaotic Wish"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet du Stigmate chaotique",
           "en": "Bracelet of Chaotic Wish"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague du Stigmate chaotique",
           "en": "Ring of Chaotic Wish"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles du Stigmate chaotique",
           "en": "Earrings of Chaotic Wish"
         },
         "icon": null
@@ -762,7 +768,8 @@
     "wiki_revision": "2026-06-06T22:48:51Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-burning-curse",
@@ -776,65 +783,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque de malédiction ardente",
           "en": "Helmet of Burning Curse"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de malédiction ardente",
           "en": "Body Armor of Burning Curse"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de malédiction ardente",
           "en": "Gloves of Burning Curse"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de malédiction ardente",
           "en": "Boots of Burning Curse"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de malédiction ardente",
           "en": "Necklace of Burning Curse"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet de malédiction ardente",
           "en": "Bracelet of Burning Curse"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague de malédiction ardente",
           "en": "Ring of Burning Curse"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles de malédiction ardente",
           "en": "Earrings of Burning Curse"
         },
         "icon": null
@@ -861,7 +868,7 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-burning-blessing",
@@ -875,65 +882,65 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque de bénédiction ardente",
           "en": "Helmet of Burning Blessing"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de bénédiction ardente",
           "en": "Body Armor of Burning Blessing"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de bénédiction ardente",
           "en": "Gloves of Burning Blessing"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de bénédiction ardente",
           "en": "Boots of Burning Blessing"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de bénédiction ardente",
           "en": "Necklace of Burning Blessing"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet de bénédiction ardente",
           "en": "Bracelet of Burning Blessing"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague de bénédiction ardente",
           "en": "Ring of Burning Blessing"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles de bénédiction ardente",
           "en": "Earrings of Burning Blessing"
         },
         "icon": null
@@ -960,7 +967,7 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR déduit d'un nom de pièce (« Gants de bénédiction ardente »).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-burning-greed",
@@ -1059,7 +1066,7 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "set-of-spooky",
@@ -1162,7 +1169,7 @@
   {
     "id": "iron-will",
     "name": {
-      "fr": "",
+      "fr": "Volonté de fer",
       "en": "Iron Will",
       "ko": ""
     },
@@ -1171,33 +1178,33 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque de la volonté de fer",
           "en": "Iron Will Helmet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de la volonté de fer",
           "en": "Iron Will Body Armor"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de la volonté de fer",
           "en": "Iron Will Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de la volonté de fer",
           "en": "Iron Will Boots"
         },
         "icon": null
@@ -1219,12 +1226,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "crimson-knights-set",
     "name": {
-      "fr": "",
+      "fr": "Belliciste",
       "en": "Crimson Knight's Set",
       "ko": ""
     },
@@ -1233,33 +1241,33 @@
     "nickname_en": "Warmonger",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Heaume de chevalier sanglant",
           "en": "Crimson Knight's Helmet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de chevalier sanglant",
           "en": "Crimson Knight's Body Armor"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de chevalier sanglant",
           "en": "Crimson Knight's Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de chevalier sanglant",
           "en": "Crimson Knight's Boots"
         },
         "icon": null
@@ -1281,12 +1289,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "high-ranking-demons-set",
     "name": {
-      "fr": "",
+      "fr": "Destructeur",
       "en": "High-ranking Demon's Set",
       "ko": ""
     },
@@ -1295,33 +1304,33 @@
     "nickname_en": "Destroyer",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Heaume de Démon de rang supérieur",
           "en": "High-ranking Demon's Helmet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de démon de rang supérieur",
           "en": "High-ranking Demon's Body Armor"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de démon de rang supérieur",
           "en": "High-ranking Demon's Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de démon de rang supérieur",
           "en": "High-ranking Demon's Boots"
         },
         "icon": null
@@ -1343,12 +1352,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "dragon-knights-set",
     "name": {
-      "fr": "",
+      "fr": "Fondation solide",
       "en": "Dragon Knight's Set",
       "ko": ""
     },
@@ -1357,33 +1367,33 @@
     "nickname_en": "Solid Foundation",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Heaume de chevalier dragon",
           "en": "Dragon_Knight's_Helmet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de chevalier dragon",
           "en": "Dragon_Knight's_Body_Armor"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de chevalier dragon",
           "en": "Dragon_Knight's_Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de chevalier dragon",
           "en": "Dragon_Knight's_Boots"
         },
         "icon": null
@@ -1405,12 +1415,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "black-lions-set",
     "name": {
-      "fr": "",
+      "fr": "Armé",
       "en": "Black Lion's Set",
       "ko": ""
     },
@@ -1419,33 +1430,33 @@
     "nickname_en": "Armed",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque de lion noir",
           "en": "Black Lion's Helmet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de lion noir",
           "en": "Black Lion's Body Armor"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de lion noir",
           "en": "Black Lion's Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de lion noir",
           "en": "Black Lion's Boots"
         },
         "icon": null
@@ -1467,12 +1478,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "almighty-kargalgans-set",
     "name": {
-      "fr": "",
+      "fr": "Mort en un coup",
       "en": "Almighty Kargalgan's Set",
       "ko": ""
     },
@@ -1481,33 +1493,33 @@
     "nickname_en": "One-hit Kill",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Chapeau de grand enchanteur",
           "en": "Almighty_Kargalgan's_Hat"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Robe de grand enchanteur",
           "en": "Almighty_Kargalgan's_Robe"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de grand enchanteur",
           "en": "Almighty_Kargalgan's_Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de grand enchanteur",
           "en": "Almighty_Kargalgan's_Boots"
         },
         "icon": null
@@ -1529,12 +1541,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "holy-set",
     "name": {
-      "fr": "",
+      "fr": "Noble sacrifice",
       "en": "Holy Set",
       "ko": ""
     },
@@ -1543,33 +1556,33 @@
     "nickname_en": "Noble Sacrifice",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Chapeau sacré",
           "en": "Holy Hat"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Robe sacrée",
           "en": "Holy Robe"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants sacrés",
           "en": "Holy Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes sacrées",
           "en": "Holy Boots"
         },
         "icon": null
@@ -1591,12 +1604,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "clerics-set",
     "name": {
-      "fr": "",
+      "fr": "Ange en blanc",
       "en": "Cleric's Set",
       "ko": ""
     },
@@ -1605,33 +1619,33 @@
     "nickname_en": "Angel in White",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Chapeau de prêtre",
           "en": "Cleric's Hat"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Robe de prêtre",
           "en": "Cleric's Robe"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de prêtre",
           "en": "Cleric's Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de prêtre",
           "en": "Cleric's Boots"
         },
         "icon": null
@@ -1653,12 +1667,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "palace-guards-set",
     "name": {
-      "fr": "",
+      "fr": "Gardien",
       "en": "Palace Guard's Set",
       "ko": ""
     },
@@ -1667,33 +1682,33 @@
     "nickname_en": "Guardian",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque de garde du palais",
           "en": "Palace_Guard's_Helmet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de garde du palais",
           "en": "Palace_Guard's_Body_Armor"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de garde du palais",
           "en": "Palace_Guard's_Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de garde du palais",
           "en": "Palace_Guard's_Boots"
         },
         "icon": null
@@ -1715,12 +1730,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "new-hunters-set",
     "name": {
-      "fr": "",
+      "fr": "Analyse imparable",
       "en": "New Hunter's Set",
       "ko": ""
     },
@@ -1729,33 +1745,33 @@
     "nickname_en": "Solid Analysis",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque de nouveau chasseur",
           "en": "New Hunter's Helmet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure de nouveau chasseur",
           "en": "New Hunter's Body Armor"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants de nouveau chasseur",
           "en": "New Hunter's Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes de nouveau chasseur",
           "en": "New Hunter's Boots"
         },
         "icon": null
@@ -1777,12 +1793,13 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "hard-leather-set",
     "name": {
-      "fr": "",
+      "fr": "Ténacité",
       "en": "Hard Leather Set",
       "ko": ""
     },
@@ -1791,33 +1808,33 @@
     "nickname_en": "Toughness",
     "pieces": [
       {
-        "slot": null,
+        "slot": "helmet",
         "name": {
-          "fr": "",
+          "fr": "Casque en cuir rigide",
           "en": "Hard Leather Helmet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "chestplate",
         "name": {
-          "fr": "",
+          "fr": "Armure en cuir rigide",
           "en": "Hard Leather Body Armor"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "gloves",
         "name": {
-          "fr": "",
+          "fr": "Gants en cuir rigide",
           "en": "Hard Leather Gloves"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "boots",
         "name": {
-          "fr": "",
+          "fr": "Bottes en cuir rigide",
           "en": "Hard Leather Boots"
         },
         "icon": null
@@ -1839,7 +1856,8 @@
     "wiki_revision": "2026-05-16T05:36:35Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "hot-summer-set",
@@ -2092,7 +2110,7 @@
   {
     "id": "destructive-instinct",
     "name": {
-      "fr": "",
+      "fr": "Instinct destructeur",
       "en": "Destructive Instinct",
       "ko": ""
     },
@@ -2101,33 +2119,33 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de l'instinct destructeur",
           "en": "Destructive Instinct Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet de l'instinct destructeur",
           "en": "Destructive Instinct Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague de l'instinct destructeur",
           "en": "Destructive Instinct Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles de l'instinct destructeur",
           "en": "Destructive Instinct Earrings"
         },
         "icon": null
@@ -2149,12 +2167,13 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "shining-star",
     "name": {
-      "fr": "",
+      "fr": "Etoile étincelante",
       "en": "Shining Star",
       "ko": ""
     },
@@ -2163,33 +2182,33 @@
     "nickname_en": null,
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de l'étoile étincelante",
           "en": "Shining Star Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet de l'étoile étincelante",
           "en": "Shining Star Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague de l'étoile étincelante",
           "en": "Shining Star Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d'oreilles de l'étoile étincelante",
           "en": "Shining Star Earrings"
         },
         "icon": null
@@ -2211,12 +2230,13 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "viridescent-set",
     "name": {
-      "fr": "",
+      "fr": "Concentration de puissance de feu",
       "en": "Viridescent Set",
       "ko": ""
     },
@@ -2225,33 +2245,33 @@
     "nickname_en": "Concentration of Firepower",
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier verdâtre",
           "en": "Viridescent Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet verdâtre",
           "en": "Viridescent Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague verdâtre",
           "en": "Viridescent Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles verdâtre",
           "en": "Viridescent Earrings"
         },
         "icon": null
@@ -2273,12 +2293,13 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "aquamarine-set",
     "name": {
-      "fr": "",
+      "fr": "Connexion exceptionnelle",
       "en": "Aquamarine Set",
       "ko": ""
     },
@@ -2287,33 +2308,33 @@
     "nickname_en": "Outstanding Connection",
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier en aigue-marine",
           "en": "Aquamarine Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet en aigue-marine",
           "en": "Aquamarine Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague en aigue-marine",
           "en": "Aquamarine Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles en aigue-marine",
           "en": "Aquamarine Earrings"
         },
         "icon": null
@@ -2335,12 +2356,13 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "peridot-set",
     "name": {
-      "fr": "",
+      "fr": "Bénédiction de sylphe",
       "en": "Peridot Set",
       "ko": ""
     },
@@ -2349,33 +2371,33 @@
     "nickname_en": "Sylph's Blessing",
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de péridot",
           "en": "Peridot Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet en péridot",
           "en": "Peridot Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague en péridot",
           "en": "Peridot Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles en péridot",
           "en": "Peridot Earrings"
         },
         "icon": null
@@ -2397,12 +2419,13 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "beast-set",
     "name": {
-      "fr": "",
+      "fr": "Expert",
       "en": "Beast Set",
       "ko": ""
     },
@@ -2411,33 +2434,33 @@
     "nickname_en": "Expert",
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de bête",
           "en": "Beast Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet de bête",
           "en": "Beast Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague de bête",
           "en": "Beast Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles de bête",
           "en": "Beast Earrings"
         },
         "icon": null
@@ -2459,12 +2482,13 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "obsidian-set",
     "name": {
-      "fr": "",
+      "fr": "Capacité exceptionnelle",
       "en": "Obsidian Set",
       "ko": ""
     },
@@ -2473,33 +2497,33 @@
     "nickname_en": "Outstanding Ability",
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier en obsidienne",
           "en": "Obsidian Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet en obsidienne",
           "en": "Obsidian Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague en obsidienne",
           "en": "Obsidian Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles en obsidienne",
           "en": "Obsidian Earrings"
         },
         "icon": null
@@ -2521,12 +2545,13 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "skeleton-set",
     "name": {
-      "fr": "",
+      "fr": "Berserker",
       "en": "Skeleton Set",
       "ko": ""
     },
@@ -2535,33 +2560,33 @@
     "nickname_en": "Berserker",
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de squelette",
           "en": "Skeleton Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet de squelette",
           "en": "Skeleton Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague de squelette",
           "en": "Skeleton Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles de squelette",
           "en": "Skeleton Earrings"
         },
         "icon": null
@@ -2583,12 +2608,13 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "behemoth-set",
     "name": {
-      "fr": "",
+      "fr": "Exécuteur",
       "en": "Behemoth Set",
       "ko": ""
     },
@@ -2597,33 +2623,33 @@
     "nickname_en": "Executioner",
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier de béhémoth",
           "en": "Behemoth's Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet de béhémoth",
           "en": "Behemoth's Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague de béhémoth",
           "en": "Behemoth's Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles de béhémoth",
           "en": "Behemoth's Earrings"
         },
         "icon": null
@@ -2645,12 +2671,13 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "red-eyed-set",
     "name": {
-      "fr": "",
+      "fr": "Champion de la bataille",
       "en": "Red-eyed Set",
       "ko": ""
     },
@@ -2659,33 +2686,33 @@
     "nickname_en": "Champion on the Field",
     "pieces": [
       {
-        "slot": null,
+        "slot": "necklace",
         "name": {
-          "fr": "",
+          "fr": "Collier à oeil rouge",
           "en": "Red-eyed Necklace"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "bracelet",
         "name": {
-          "fr": "",
+          "fr": "Bracelet à oeil rouge",
           "en": "Red-eyed Bracelet"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "ring",
         "name": {
-          "fr": "",
+          "fr": "Bague à oeil rouge",
           "en": "Red-eyed Ring"
         },
         "icon": null
       },
       {
-        "slot": null,
+        "slot": "earrings",
         "name": {
-          "fr": "",
+          "fr": "Boucles d’oreilles à oeil rouge",
           "en": "Red-eyed Earrings"
         },
         "icon": null
@@ -2707,7 +2734,8 @@
     "wiki_revision": "2026-05-16T05:19:55Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source). Nom FR : association par traduction littérale du nom/surnom du wiki, à confirmer.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
     "id": "romantic-seashell-set",
