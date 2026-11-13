@@ -22,7 +22,7 @@ Confirmé par Alexis : il existe un mode HOTM **sans SJW**. Autre run, autre bos
 - Titre : « ハンターモード » ; puissance de l'équipe 12 842 243 ; bouton « 証明設定 » niveau **935**.
 - Pas de personnage à gauche : 3 chasseurs SSR niv. 170 (puissances 2 503 984 / 2 507 438 / 2 489 276), 3 ombres, successeur niv. 170 (2 193 023, autre successeur que dans le mode avec SJW).
 - Seulement **4 onglets** : équipe/armes, artefacts, compétences, noyaux. Pas d'onglet bénédictions (propre à SJW).
-- Bas : boss niv. 150, 5 traits, attribut recommandé (eau), puissance recommandée 12 550 000, « 第2関門 » (porte 2) **95 000pt**. Le mode avec SJW affichait « 第1関門 » 94 600pt : le lien porte/mode est une hypothèse, **à confirmer**.
+- Bas : boss niv. 150, 5 traits, attribut recommandé (eau), puissance recommandée 12 550 000, « 第2関門 » (porte 2) **95 000pt**. Le mode avec SJW affichait « 第1関門 » 94 600pt. Recherche web du 13/11/2026 (sources non officielles, incohérentes entre elles, **non vérifié**) : le HOTM compte 3 portes par saison, chacune avec son boss (le boss tourne) ; réussir une porte débloque la suivante. « Porte 1 » et « porte 2 » seraient donc deux portes de la même saison, pas deux modes ; reste à savoir si le mode avec ou sans SJW dépend de la porte. Sources : dotgg.gg (notes de mise à jour), gamemarket.gg (« Proof of Mastery »), solo-leveling-arise.fandom.com (Game Modes).
 - Artefacts : pastilles 1·1 / 2·2 / 2·2 ; noyaux : 3 par chasseur, niv. 25 MAX.
 - Les règles HOTM sont donc **par sous-mode** (avec / sans SJW) : voir `data/rules/`.
 
