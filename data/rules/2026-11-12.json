@@ -2,13 +2,14 @@
   "week": "2026-11-12",
   "modes": {
     "poc": null,
-    "bot": {
+    "bot_season": {
       "sjw": true,
       "sjw_skills": true,
       "blessings": true,
       "shadows": true,
       "successor": true
     },
+    "bot_challenge": null,
     "gb": null,
     "hotm": {
       "restrictions": "aucune",
@@ -20,9 +21,9 @@
     }
   },
   "verified_at": "2026-11-13",
-  "notes": "null = règles du mode pas encore fournies. HOTM : un sous-mode sans SJW existe (voir docs/REFERENCE_ECRANS_HOTM.md), sans restriction de contenu.",
+  "notes": "null = règles du mode pas encore fournies. HOTM : un sous-mode sans SJW existe (voir docs/REFERENCE_ECRANS_HOTM.md), sans restriction de contenu. BOT séparé en bot_season / bot_challenge le 13/11/2026 : le bloc bot existant est rangé en bot_season (SJW autorisé, donc season par définition).",
   "sources": {
-    "bot": "confirmation d'Alexis (captures BOT, 12/11/2026)",
-    "hotm": "confirmation d'Alexis, « aucune restriction » (13/11/2026) ; captures HOTM"
+    "hotm": "confirmation d'Alexis, « aucune restriction » (13/11/2026) ; captures HOTM",
+    "bot_season": "confirmation d'Alexis (captures BOT, 12/11/2026)"
   }
 }

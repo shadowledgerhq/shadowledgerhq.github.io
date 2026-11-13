@@ -1,6 +1,6 @@
 # Projet SLA — Shadow Ledger : contexte de référence
 
-Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Mis à jour le 13/11/2026 (HOTM par porte).
+Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Mis à jour le 13/11/2026 (BOT season/challenge, joueur = chaîne).
 
 ## 1. Le projet en une phrase
 
@@ -22,14 +22,14 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 
 | Mode | Nom complet | Critère de classement | Runs |
 | --- | --- | --- | --- |
-| POC | Power Of Calamity | Dégâts max (somme des 2 runs) | 2 |
-| BOT | Battlefield Of Time | Chrono le plus court | 1 |
+| POC | Power Of Calamity | Dégâts max. Une run = une équipe : total = meilleure run de l'équipe 1 + meilleure run de l'équipe 2 | 2 (une par équipe) |
+| BOT | Battlefield Of Time | Chrono le plus court, **deux classements par semaine** : `season` (時の戦場, saison de 49 jours, SJW autorisé) et `challenge` (時の戦場チャレンジ, 7 jours, chasseurs uniquement) | 1 par variante |
 | GB | Guild Boss | Rage Count (RC) le plus élevé (somme des 2 runs) | 2 |
 | HOTM | Hall Of The Monarchs | Points les plus élevés, **par porte** : un classement par porte (제 n관문 / 第n関門), pas de classement HOTM global | 1 par porte |
 
 - Reset de tous les modes : **jeudi 01h00, heure de Paris**.
 - Une **semaine** est identifiée par la date du jeudi où elle commence (ex. `2026-11-12`).
-- Éléments autorisés (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : **ils changent chaque semaine** (ex. semaine du 05/11/2026 : BOT sans Sung Jin Woo, compétences ni bénédictions, mais avec ombres et successeur). Ils sont enregistrés dans `data/rules/<semaine>.json`, un bloc par mode, avec source et date de vérification.
+- Éléments autorisés (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : **ils changent chaque semaine** (ex. semaine du 05/11/2026 : BOT challenge sans Sung Jin Woo, compétences ni bénédictions, mais avec ombres et successeur). Ils sont enregistrés dans `data/rules/<semaine>.json`, un bloc par classement (`poc`, `bot_season`, `bot_challenge`, `gb`, `hotm`), avec source et date de vérification.
 
 ## 4. Les étapes
 
@@ -43,19 +43,20 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 6. Vidéo sans score après le tri 4 → liste `rejected` (identifiant + raison), jamais réanalysée.
 
 Règles :
-- Une ligne par joueur : sa meilleure vidéo de la semaine.
-- POC et GB : somme des 2 runs. Si une seule run est trouvée : statut `a_verifier`, pas de classement tant que la 2e manque.
+- **Joueur = chaîne YouTube** (`channel_id`) ; le pseudo en jeu n'est pas lu. Une ligne par joueur (HOTM : par porte ; BOT : par variante), toutes vidéos de la semaine confondues.
+- Shorts inclus ; lives et rediffusions de live exclus.
+- POC et GB : somme des 2 meilleures runs distinctes, qui peuvent venir de **2 vidéos différentes** (POC : équipe 1 + équipe 2, jamais deux runs de la même équipe). Si une seule run est trouvée : statut `a_verifier`, pas de classement tant que la 2e manque.
 - Égalité : la vidéo publiée en premier passe devant.
 - Score arrondi (« 2.1B ») : provisoire ; on garde la valeur exacte dès qu'elle est lue à l'image.
 - Doublons : même run ré-uploadée ou postée en 2 langues → on garde la vidéo de la chaîne d'origine (la plus ancienne).
-- Vérifier le boss / la saison à l'écran : une vidéo publiée cette semaine peut montrer une run de la semaine précédente.
+- Boss de la semaine **déduit des données** : libellé le plus fréquent parmi les runs sûres, à partir de 3 vidéos (`_boss.json`). Run avec un autre libellé → `a_verifier` ; libellé de la semaine précédente → `rejected`.
 - Toutes régions et langues (OCR multilingue, formats 1.2B / 억 / 万).
 - Champ `confiance` : `sur` ou `a_verifier`.
 - POC et HOTM : le score retenu est « 이번 기록 » (score de cette run) de l'écran RESULT, **jamais** « 기존 기록 » (ancien record) ni le score de l'écran de composition.
 - Contrôles de cohérence : POC, total = SJW + successeur + 3 chasseurs ; HOTM, total = 클리어 (clear) + 증명 보너스 (bonus de preuve).
 - Légendes ajoutées par l'auteur de la vidéo (titre, texte incrusté) : au mieux un score provisoire, à confirmer sur l'écran RESULT.
 - HOTM : une ligne par joueur **et par porte** ; porte illisible → `a_verifier`.
-- *Décision d'Alexis du 13/11/2026 (discussion 1 — Classements).*
+- *Décisions d'Alexis du 13/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` (aussi dans les documents du Projet SLA).
 
 ### Étape 2 — Builds du top 10 (automatisée en grande partie)
 
@@ -92,7 +93,7 @@ Règles :
 | YouTube Shorts | Extraits verticaux | EN + sous-titres FR |
 | TikTok | Clips verticaux de **1 à 3 min** (rémunération > 1 min) | Voix EN + sous-titres FR |
 | Discord | Serveur communautaire, salon « classement de la semaine » | FR + EN |
-| X | Top 3 de chaque mode en image (HOTM : top 3 **par porte**), **chaque mercredi** | FR + EN |
+| X | Top 3 de chaque classement en image (HOTM : par porte ; BOT : season et challenge), **chaque mercredi** | FR + EN |
 | Instagram Reels | Optionnel, réutilise les verticaux | EN + sous-titres FR |
 
 - Même pseudo, même description, même photo de profil partout. Création des comptes : par Alexis.
@@ -105,7 +106,7 @@ Règles :
 ### Étape 5 — Site web
 
 - Site statique sur GitHub Pages, FR + EN, qui lit les JSON du dépôt.
-- Pages : classement par mode (HOTM : **une page par porte**) → page build du joueur → fiches de la base de données → liens vers les réseaux (sur toutes les pages) → vidéos.
+- Pages : classement par mode (HOTM : **une page par porte** ; BOT : season et challenge) → page build du joueur → fiches de la base de données → liens vers les réseaux (sur toutes les pages) → vidéos.
 - Archives des semaines passées.
 - Crédit et lien vers la vidéo source de chaque joueur ; moyen de demander le retrait.
 - Mentions légales ; consentement cookies si statistiques ou publicité.
@@ -130,7 +131,9 @@ shadowledgerhq.github.io/
 │   ├── db/                  base de données du jeu (un JSON par catégorie) + patches.json
 │   ├── icons/<categorie>/   banque d'icônes
 │   ├── rules/<semaine>.json éléments autorisés par mode et par semaine
-│   ├── runs/<semaine>/      un JSON par mode : poc.json, bot.json, gb.json ; HOTM : hotm-gate-<n>.json (un par porte)
+│   ├── runs/<semaine>/      un JSON par classement : poc.json, gb.json, bot-season.json, bot-challenge.json, hotm-gate-<n>.json ;
+│   │                        + _meta.json (fenêtre, gel), _boss.json (boss déduit), _rapport.md (rapport du passage)
+│   ├── channels.json        chaînes YouTube suivies
 │   ├── builds/<semaine>/<mode>/   un JSON par build
 │   ├── rejected/<semaine>.json
 │   └── processed.json       vidéos déjà traitées

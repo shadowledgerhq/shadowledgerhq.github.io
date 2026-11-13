@@ -1,12 +1,19 @@
 {
   "week": "2026-11-05",
   "modes": {
-    "poc":  null,
-    "bot":  {"sjw": false, "sjw_skills": false, "blessings": false, "shadows": true, "successor": true},
-    "gb":   null,
+    "poc": null,
+    "bot_season": null,
+    "bot_challenge": {
+      "sjw": false,
+      "sjw_skills": false,
+      "blessings": false,
+      "shadows": true,
+      "successor": true
+    },
+    "gb": null,
     "hotm": null
   },
   "source": "confirmation d'Alexis (captures BOT)",
   "verified_at": "2026-11-12",
-  "notes": "null = règles du mode pas encore fournies"
+  "notes": "null = règles du mode pas encore fournies. BOT séparé en bot_season / bot_challenge le 13/11/2026 : le bloc bot existant est rangé en bot_challenge (sans SJW, donc challenge par définition)."
 }

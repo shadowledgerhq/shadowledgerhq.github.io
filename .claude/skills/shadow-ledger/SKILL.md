@@ -11,12 +11,13 @@ Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md
 
 | Terme | Sens |
 | --- | --- |
-| POC | Power Of Calamity. Classement : dégâts max, somme des 2 runs. |
-| BOT | Battlefield Of Time. Classement : chrono le plus court (secondes). 1 run. |
+| POC | Power Of Calamity. Classement : dégâts max ; une run = une équipe, total = équipe 1 + équipe 2. |
+| BOT | Battlefield Of Time. Chrono le plus court (secondes). Deux classements : `season` (時の戦場, 49 j, SJW autorisé) et `challenge` (時の戦場チャレンジ, 7 j, chasseurs uniquement). |
 | GB | Guild Boss. Classement : Rage Count le plus élevé, somme des 2 runs. |
 | HOTM | Hall Of The Monarchs. Un classement **par porte** (제 n관문 / 第n関門) : points les plus élevés. 1 run par porte. |
 | RC | Rage Count, unité de score du GB. |
 | SJW | Sung Jin Woo. |
+| Joueur | Une chaîne YouTube, identifiée par `channel_id`. |
 | Reset | Jeudi 01h00, heure de Paris, pour les 4 modes. |
 | Semaine | Identifiée par la date du jeudi où elle commence : AAAA-MM-JJ. |
 | Tri 1 à 4 | 1 titre/description/sous-titres · 2 miniature · 3 début (10 s) et fin (30 s), 1 img/2 s · 4 vidéo entière, 1 img/10 s. |
@@ -33,16 +34,20 @@ Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md
 
 ## 3. Formats JSON
 
-### Run (data/runs/<semaine>/<mode>.json, liste)
+### Run (data/runs/<semaine>/<classement>.json, liste)
+
+Fichiers : `poc.json`, `gb.json`, `bot-season.json`, `bot-challenge.json`, `hotm-gate-<n>.json`.
 
 ```json
 {
   "run_id": "poc-2026-11-12-dQw4w9WgXcQ",
   "week": "2026-11-12",
   "mode": "poc",
-  "player": "pseudo en jeu",
+  "channel_id": "UCxxxxxxxxxxxxxxxxxxxxxx",
+  "player": "nom de la chaîne",
   "channel": "nom de la chaîne",
   "video_id": "dQw4w9WgXcQ",
+  "video_ids": ["dQw4w9WgXcQ"],
   "published_at": "2026-11-13T18:02:00+01:00",
   "lang": "ko",
   "score": {"total": 4268000000, "runs": [2134000000, 2134000000], "unit": "damage"},
@@ -56,12 +61,18 @@ Le contexte complet (décisions, étapes, calendrier) est dans `docs/CONTEXTE.md
 
 Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 
+- `channel_id` = clé du joueur. `video_id` = vidéo de la meilleure run ; `video_ids` = toutes les vidéos utilisées (les 2 runs POC/GB peuvent venir de 2 vidéos).
+- `rank` : seulement pour les lignes `confidence: sur` ; sinon `null`.
+
 Champs supplémentaires :
-- `"gate"` (HOTM uniquement) : numéro de la porte, entier (`3` pour 제 3관문 / 第3関門). Un fichier par porte : `data/runs/<semaine>/hotm-gate-<n>.json`.
-- `"hunter_mode"` (HOTM uniquement) : `false` par défaut, `true` = run sans SJW.
-- `"runs_detail"` (POC et HOTM) : liste d'un objet par run, dans le même ordre que `score.runs`.
-  - POC : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
-  - HOTM : `{"clear": 0, "proof_bonus": 0, "proof_level": null, "submode": ""}` ; contrôle : clear + proof_bonus = score.
+- `"gate"` (HOTM uniquement) : numéro de la porte, **entier** (`3` pour 제 3관문 / 第3関門).
+- `"hunter_mode"` (HOTM uniquement) : `false`, `true` (run sans SJW) ou `null`.
+- `"bot_variant"` (BOT uniquement) : `"season"`, `"challenge"` ou `null`.
+- `"runs_detail"` : liste d'un objet par run, dans le même ordre que `score.runs`. Champs communs :
+  `{"video_id": "", "published_at": "", "t": 0, "stage": "", "team": null, "score_source": "", "exact": true}`
+  (`t` = secondes dans la vidéo ; `stage` = libellé du boss ou du stage lu à l'écran ; `team` = POC 1, 2 ou `null`).
+  - POC, en plus : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
+  - HOTM, en plus : `{"clear": 0, "proof_bonus": 0, "proof_level": null}` ; contrôle : clear + proof_bonus = score.
 - Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition.
 
 ### Build (data/builds/<semaine>/<mode>/<run_id>-<n>.json)
@@ -145,8 +156,8 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 ### Classements (étape 1)
 - [ ] Toutes les vidéos ont une date de publication postérieure au dernier reset.
 - [ ] Le boss / la saison visible correspond à la semaine.
-- [ ] Une seule ligne par joueur (HOTM : par joueur et par porte) ; pas de ré-upload en double.
-- [ ] POC et GB : 2 runs présentes, total = somme.
+- [ ] Une seule ligne par chaîne (HOTM : par porte ; BOT : par variante) ; pas de ré-upload en double.
+- [ ] POC et GB : 2 runs présentes, total = somme (POC : une run par équipe).
 - [ ] POC : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
 - [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas.
 - [ ] Les scores `exact: false` ou `a_verifier` sont signalés.
