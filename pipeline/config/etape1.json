@@ -53,6 +53,16 @@
     "daily": {"debut": "20:00", "fin": "23:59"},
     "weekly": {"debut": "01:00", "fin": "04:59"}
   },
+  "pc": {
+    "_doc": "Script du PC d'Alexis (pipeline/pc.py). geler=false tant que les tris 3-4 (OCR) ne sont pas codés : une semaine ne se gèle pas avec des scores provisoires. whisper_cmd=null : Whisper désactivé.",
+    "yt_dlp": "yt-dlp",
+    "sous_titres_langues": "ko.*,ja.*,en.*,fr.*,zh.*",
+    "whisper_cmd": null,
+    "whisper_model": "small",
+    "whisper_max_minutes": 15,
+    "max_videos": 300,
+    "geler": false
+  },
   "_a_confirmer": [
     "queries.poc « 俺アラ 災厄 » (nom japonais du POC)",
     "queries.gb « 俺アラ ギルドボス »",
