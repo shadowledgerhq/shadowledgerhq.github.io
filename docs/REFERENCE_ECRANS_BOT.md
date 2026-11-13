@@ -15,8 +15,8 @@ Seul ce qui est visible est noté ; rien n'est supposé.
 | --- | --- |
 | 1. Équipe | Niveau, rareté (SSR), puissance et étoiles de chaque chasseur ; armes de chaque chasseur ; 2 armes de SJW (niv. 170, puissance SJW 9 226 468). |
 | 2. Artefacts | 8 pièces par personnage (niv. 120, +20) ; pastilles de bonus de set (SJW : 2 et 2 ; chasseurs : 1 et 1). |
-| 3. Compétences | Icônes de compétences par chasseur (sans niveau ni nom : reconnaissance par icône). |
-| 4. Compétences SJW | 8 compétences de SJW (+5 chacune). |
+| 3. Compétences | Icônes de compétences par chasseur et de SJW (sans nom : reconnaissance par icône). |
+| 4. Bénédictions | Les 8 bénédictions de SJW (+5 chacune). Correction d'Alexis (13/11/2026) : ce ne sont pas des compétences. |
 | 5. Noyaux | 3 noyaux par personnage, niv. 25 / MAX, pourcentage de progression ; certains emplacements vides. |
 
 ## Conséquences pour la base de données

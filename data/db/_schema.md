@@ -46,7 +46,7 @@ Les champs sont à confirmer sur la source avant la saisie de chaque catégorie.
 Les règles changent chaque semaine (ex. semaine du 05/11/2026 : BOT sans Sung Jin Woo, donc sans ses compétences ni bénédictions, mais avec ombres et successeur). Il n'y a donc **pas** de champ `allowed_modes` dans la base.
 Proposition : `data/rules/<semaine>.json`, un bloc par mode :
 `{"bot": {"sjw": false, "sjw_skills": false, "blessings": false, "shadows": true, "successor": true}}`
-avec `source` et `verified_at`. À valider (voir SUIVI).
+avec `source` et `verified_at`. Pour le HOTM, un bloc par sous-mode (`hotm_sjw`, `hotm_hunter`). À valider (voir SUIVI).
 
 ## Ordre de saisie
 

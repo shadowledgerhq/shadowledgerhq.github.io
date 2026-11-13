@@ -8,6 +8,7 @@
 - Captures POC lues : `docs/REFERENCE_ECRANS_POC.md` ; catégorie `subjugation_support` et champ `role` ajoutés au schéma.
 - POC corrigé (SJW confirmé, composition libre, score équipe 1 confirmé) ; écran de résultat lu.
 - Captures HOTM (composition, onglets, résultat) lues : `docs/REFERENCE_ECRANS_HOTM.md` ; catégorie `proof_modifiers` ajoutée au schéma.
+- Corrections d'Alexis : les 8 « +5 » = bénédictions, le « +2 » = compétences ; mode HOTM sans SJW lu (docs mis à jour).
 ## En cours
 - Choix de la méthode de récupération des données (voir « Besoin d'Alexis »).
 ## À faire

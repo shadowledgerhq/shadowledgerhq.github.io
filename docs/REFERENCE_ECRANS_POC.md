@@ -16,7 +16,7 @@ Source : 5 captures fournies par Alexis le 13/11/2026 (une seule run). Les captu
 - Personnage de gauche : niv. 170, puissance **3 405 259**, identique à la puissance de combat de 성진우 sur l'écran de stats fourni le 12/11. **Confirmé par Alexis : c'est bien Sung Jin Woo** (avec un costume).
 
 ## Onglets (barre verticale gauche) — mêmes que le BOT
-Équipe/armes · Artefacts (8 pièces niv. 120 +20 ; pastilles de set : 2·2 / 1·1 / 1·1 / 2·2) · Compétences · Compétences du personnage de gauche (+5) · Noyaux (3 par personnage, niv. 25 MAX).
+Équipe/armes · Artefacts (8 pièces niv. 120 +20 ; pastilles de set : 2·2 / 1·1 / 1·1 / 2·2) · Compétences · Bénédictions de SJW (8, +5) · Noyaux (3 par personnage, niv. 25 MAX).
 
 ## Fenêtre « 토벌 지원 » (soutien de subjugation) — nouvelle catégorie
 3 colonnes, 1 choix par colonne (compteur 1/1 ×3), pouce = recommandé, onglet « 토벌 숙련도 » (maîtrise) :
