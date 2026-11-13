@@ -1,0 +1,2195 @@
+[
+  {
+    "id": "beru",
+    "name": {
+      "fr": "",
+      "en": "Beru",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "Ant King",
+    "obtaining_en": "Beru can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Chapter 23 Episode 7 <Ant King's Shadow>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Attack and Critical Hit damage increases by 3%.",
+        "value": 3.0
+      },
+      "elite": {
+        "text": "All team members' Attack and Critical Hit damage increases by 3.5%.",
+        "value": 3.5
+      },
+      "knight": {
+        "text": "All team members' Attack and Critical Hit damage increases by 4%.",
+        "value": 4.0
+      },
+      "elite_knight": {
+        "text": "All team members' Attack and Critical Hit damage increases by 4.5%.",
+        "value": 4.5
+      },
+      "general": {
+        "text": "All team members' Attack and Critical Hit damage increases by 5%.",
+        "value": null
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "My King!",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user appears in the air above and body-slams the ground."
+        },
+        "effects_text_en": "Damage: 324.75-649.76% of the user's Attack ・When the user uses this skill, it activates the [Gluttony Recovery] effect on the entire team. [Gluttony Recovery] 10% of the target's HP is restored.",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "SCREECH!",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user emits waves of energy in a circular formation around themself."
+        },
+        "effects_text_en": "Damage: 386.75-773.81% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Let Us Crush Them!",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user moves at blinding speed to accurately stab the target's vital points."
+        },
+        "effects_text_en": "Damage: 369.75-739.8% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "I Shall Devour You!",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user strikes the enemy with a spinning kick."
+        },
+        "effects_text_en": "Damage: 461.59-923.57% of the user's Attack ・When this skill hits, it activates the [Punishment] effect. [Punishment] Increases damage taken by 5%. Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Rip!",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks the enemy by scratching them with their sharp appendages."
+        },
+        "effects_text_en": "Damage: 464.2-928.77% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Make Way for His Highness!",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user fires a forward-facing beam to melt enemies."
+        },
+        "effects_text_en": "Damage: 529.8-1060.22% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "His Highness Approaches",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user leaps into the air and slams the ground to cause an explosion."
+        },
+        "effects_text_en": "Damage: 401.43-803.18% of the user's Attack ・When this skill hits, it activates the [Punishment] effect. [Punishment] Increases damage taken by 5%. Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Shadow Scythe: Replica",
+      "passive1": "The Shadow's Healing Given increases by 15% and their Defense Penetration increases by 2.5%.",
+      "passive2": "The Shadow's Healing Given increases by 90% and their Defense Penetration increases by 15%."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Beru",
+    "wiki_revid": 14990,
+    "wiki_timestamp": "2026-02-27T05:33:44Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "beste",
+    "name": {
+      "fr": "",
+      "en": "Beste",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "Ice Witch",
+    "obtaining_en": "Beste can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Hidden 5 Episode 5 <The Disappearing Escape Route>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Defense Penetration increases by 4%.",
+        "value": 4.0
+      },
+      "elite": {
+        "text": "All team members' Defense Penetration increases by 5%.",
+        "value": 5.0
+      },
+      "knight": {
+        "text": "All team members' Defense Penetration increases by 6%.",
+        "value": 6.0
+      },
+      "elite_knight": {
+        "text": "All team members' Defense Penetration increases by 7%.",
+        "value": 7.0
+      },
+      "general": {
+        "text": "All team members' Defense Penetration increases by 8%.",
+        "value": null
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "Icicle Spike",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by expelling spikes made of ice in the direction they're facing."
+        },
+        "effects_text_en": "Damage: 216.37-432.91% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "Rage",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user summons a piercing ice pillar to attack"
+        },
+        "effects_text_en": "Damage: 270.74-541.7% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Permafrost",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user forms sharp frost thorns on the ground to attack enemies as they move forward."
+        },
+        "effects_text_en": "Damage: 399.79-799.9% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Ice Predator",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user summons a giant ice fox to attack"
+        },
+        "effects_text_en": "Damage: 341.84-683.95% of the user's Attack ・When this skill hits, it activates the [Defense Penetration Increase] effect on the entire team. [Defense Penetration Increase] Increases the user's Defense Penetration by 10%. Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Glacialbreak",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "A giant ice pillar tears through the earth, moving forward to strike the enemy."
+        },
+        "effects_text_en": "Damage: 364.2-728.69% of the user's Attack ・When this skill hits, it triggers the [Freeze] effect. [Freeze] Interrupts the target. Duration: 2 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Queen's Authority",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user summons an exploding ice flower to attack the enemy."
+        },
+        "effects_text_en": "Damage: 516.92-1034.25% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Frozen Reckoning",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks the enemy by unleashing a storm of razor-sharp ice shards."
+        },
+        "effects_text_en": "Damage: 339.98-680.23% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Thetis' Grimoire: Replica",
+      "passive1": "The Shadow's Attack increases by 4% The Shadow's Basic Skill damage increases by 2.5%.",
+      "passive2": "The Shadow's Attack increases by 24% The Shadow's Basic Skill damage increases by 15%."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Beste",
+    "wiki_revid": 10640,
+    "wiki_timestamp": "2025-03-28T09:19:00Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "bigrock",
+    "name": {
+      "fr": "",
+      "en": "Bigrock",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "The Blue Spirit",
+    "obtaining_en": "Bigrock can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Reverse Chapter 2 Episode 2 <To Overcome>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Basic Skill Damage increases by 8%.",
+        "value": 8.0
+      },
+      "elite": {
+        "text": "All team members' Basic Skill Damage increases by 9%.",
+        "value": 9.0
+      },
+      "knight": {
+        "text": "All team members' Basic Skill Damage increases by 10%.",
+        "value": 10.0
+      },
+      "elite_knight": {
+        "text": "All team members' Basic Skill Damage increases by 11%.",
+        "value": 11.0
+      },
+      "general": {
+        "text": "All team members' Basic Skill Damage increases by 12%.",
+        "value": 12.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Attack by striking the ground with its fist, then swings its other hand inward to attack."
+        },
+        "effects_text_en": "Damage: 348-696.78% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Attacks by swinging both hands powerfully inward,"
+        },
+        "effects_text_en": "Damage: 222.75-445.76% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Sunder",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Attacks by striking the ground twice with its fist and then throws rock fragments towards the front."
+        },
+        "effects_text_en": "Damage: 516.75-1034.39% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Tectonic Shift",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Attacks by channeling mana into the ground with both hands to create spike-like rocks."
+        },
+        "effects_text_en": "Damage: 349.5-699.28% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Pulverize",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Attacks by striking the ground with its fist and releasing mana."
+        },
+        "effects_text_en": "Damage: 571.5-1143.26% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Mana Discharge",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "It roars towards the front and releases mana to deal damage."
+        },
+        "effects_text_en": "Damage: 359.25-718.61% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Bigrock Rush",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user quickly dashes forward and attacks the target."
+        },
+        "effects_text_en": "Damage: 389.62-779.55% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Rock Golem Hammer: Replica",
+      "passive1": "When the Shadow is hit the target's Attack decreases by 2.5% for 5 second(s). When the Shadow is hit the attacker's Defense is decreased by 30% for 5 second(s).",
+      "passive2": "When the Shadow is hit the target's Attack decreases by 15% for 5 second(s). When the Shadow is hit the attacker's Defense is decreased by 5% for 5 second(s)."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Bigrock",
+    "wiki_revid": 9523,
+    "wiki_timestamp": "2025-03-14T22:31:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "blades",
+    "name": {
+      "fr": "",
+      "en": "Blades",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "Coldblooded Fighter",
+    "obtaining_en": "Blades can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Chapter 12 Episode 1 <The Return>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Attack increases by 3%.",
+        "value": 3.0
+      },
+      "elite": {
+        "text": "All team members' Attack increases by 4%.",
+        "value": 4.0
+      },
+      "knight": {
+        "text": "All team members' Attack increases by 5%.",
+        "value": 5.0
+      },
+      "elite_knight": {
+        "text": "All team members' Attack increases by 6%.",
+        "value": 6.0
+      },
+      "general": {
+        "text": "All team members' Attack increases by 7%.",
+        "value": 7.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by performing two large left and right swings with a dagger."
+        },
+        "effects_text_en": "Damage: 150-300.12% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user gathers energy into the daggers in both hands and attacks by performing a large slash to the front."
+        },
+        "effects_text_en": "Damage: 164.35-328.83% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Moonlight Dancing",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "After gathering their power, the user attacks by performing a zigzag circular spinning slash towards the front."
+        },
+        "effects_text_en": "Damage: 316.01-632.27% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Frost Gazer",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user gathers the power of coldness into a sword, plunges it into the ground, and then attacks by unleashing a blast of coldness to where the enemy is located."
+        },
+        "effects_text_en": "Damage: 353.75-707.78% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Spinning Strike",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user gathers their power and creates a circle of sword energy around themselves, then propels it forward in a straight line to attack enemies within the range of the effect."
+        },
+        "effects_text_en": "Damage: 293.75-587.74% of the user's Attack ・When using this skill, applies the [Attack Increase] effect. [Attack Increase] Increases the user's Attack by 100%. Duration: 10 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Silent Strike",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user hides in the fog and disappears before reappearing above the enemy and slashing down."
+        },
+        "effects_text_en": "Damage: 392.5-785.31% of the user's Attack ・When using this skill, applies the [Critical Hit Rate Increase] effect. [Critical Hit Rate Increase] Increases the user's Critical Hit Rate by 50%. Duration: 10 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Silent Strike",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user hides and throws a dagger into the air. The user then teleports behind the enemy to strike them down."
+        },
+        "effects_text_en": "Damage: 444.44-889.24% of the user's Attack ・When the final hit lands, it [Stuns] the target. [Stun] This skill immobilizes the target. Duration: 1 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Baruka's Dagger: Replica",
+      "passive1": "The Shadow's Attack increases by 2.5% and their Defense Penetration increases by 2.5%.",
+      "passive2": "The Shadow's Attack increases by 15% and their Defense Penetration increases by 15%."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Blades",
+    "wiki_revid": 9522,
+    "wiki_timestamp": "2025-03-14T22:28:28Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "brute",
+    "name": {
+      "fr": "",
+      "en": "Brute",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "The Butcher",
+    "obtaining_en": "Brute can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Chapter 31 Episode 7 <A Nightmarish Battle>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "Increases the entire team's Water damage increases by 5%",
+        "value": 5.0
+      },
+      "elite": {
+        "text": "Increases the entire team's Water damage increases by 6%",
+        "value": 6.0
+      },
+      "knight": {
+        "text": "Increases the entire team's Water damage increases by 7%",
+        "value": 7.0
+      },
+      "elite_knight": {
+        "text": "Increases the entire team's Water damage increases by 8%",
+        "value": 8.0
+      },
+      "general": {
+        "text": "Increases the entire team's Water damage increases by 9%",
+        "value": 9.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user leaps backward while swinging their broadsword horizontally"
+        },
+        "effects_text_en": "Damage: 390.81-781.93% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user delivers a downward strike in front of themself with their broadsword."
+        },
+        "effects_text_en": "Damage: 319.04-638.34% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Decisive Strike",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user delivers a diagonal downward strike, following by upward diagonal slash."
+        },
+        "effects_text_en": "Damage: 380.91-762.12% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Thunder Strike",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "After leaping, the user slams their broadsword into the ground."
+        },
+        "effects_text_en": "Damage: 282.41-565.05% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Echoing Earth",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user strikes the ground with their broadsword, releasing a shockwave across it."
+        },
+        "effects_text_en": "Damage: 388.58-777.47% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Raging Incursion",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user spins to slash nearby enemies, then slams their broadsword down to release a powerful shockwave."
+        },
+        "effects_text_en": "Damage: 551.69-1103.82% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Wild Roar",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user gives a mighty roar, releasing a powerful shockwave."
+        },
+        "effects_text_en": "Damage: 439.57-879.49% of the user's Attack ・The [Attack Increase] effect is applied to the entire team while this skill is used. [Attack Increase] Increases Attack by 20% Duration: 10 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Orc's Broadsword: Replica",
+      "passive1": "The user's Critical Hit Rate and Critical Hit damage increases by 3%",
+      "passive2": "The user's Critical Hit Rate and Critical Hit damage increases by 18%"
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Brute",
+    "wiki_revid": 16983,
+    "wiki_timestamp": "2026-05-14T00:51:15Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "cerbie",
+    "name": {
+      "fr": "",
+      "en": "Cerbie",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "The Gatekeeper",
+    "obtaining_en": "Cerbie can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Hard Chapter 5 Episode 3 <The Gatekeeper>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Critical Hit Damage increases by 4%.",
+        "value": 4.0
+      },
+      "elite": {
+        "text": "All team members' Critical Hit Damage increases by 5%.",
+        "value": 5.0
+      },
+      "knight": {
+        "text": "All team members' Critical Hit Damage increases by 6%.",
+        "value": 6.0
+      },
+      "elite_knight": {
+        "text": "All team members' Critical Hit Damage increases by 7%.",
+        "value": 7.0
+      },
+      "general": {
+        "text": "All team members' Critical Hit Damage increases by 8%.",
+        "value": 8.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by clawing once with their right paw."
+        },
+        "effects_text_en": "Damage: 259.5-519.21% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by firing fireballs from their three mouths"
+        },
+        "effects_text_en": "Damage: 375-750.3% of the user's Attack ・When this skill hits, it applies the [Combustion] effect. [Combustion] Deals damage equal to 50% of the user's Attack every 3 second(s). Increases damage taken by 5%. Duration: Infinite.",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Infernal Heat",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by clawing once with their right paw and once with their left paw."
+        },
+        "effects_text_en": "Damage: 414.75-829.83% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Concentrated Flame",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user lifts both of their front paws and strikes downward to attack the surrounding area."
+        },
+        "effects_text_en": "Damage: 400.21-800.74% of the user's Attack ・When this skill hits, it applies the [Combustion] effect. [Combustion] Deals damage equal to 50% of the user's Attack every 3 second(s). Increases damage taken by 5%. Duration: Infinite.",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Accelerate",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "After gathering their strength, the user charges forward and attacks."
+        },
+        "effects_text_en": "Damage: 287.25-574.73% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Internal Flame Wave",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "After creating distance, the user attacks by sending a blast of fire towards the enemy."
+        },
+        "effects_text_en": "Damage: 720-1440.58% of the user's Attack ・When this skill hits, it applies the [Combustion] effect. [Combustion] Deals damage equal to 50% of the user's Attack every 3 second(s). Increases damage taken by 5%. Duration: Infinite.",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Hellfire Meteorite",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "A meteor appears midair and launches itself at nearby targets."
+        },
+        "effects_text_en": "Damage: 562-1124.45% of the user's Attack ・When this skill hits, it applies the [Combustion] effect. [Combustion] Deals damage equal to 50% of the user's Attack every 3 second(s). Increases damage taken by 5%. Duration: Infinite",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Lycan Slayer: Replica",
+      "passive1": "When Cerbie hits a target with the [Combustion] effect applied, his Skill Damage increases by 8% for 10 secon(s).",
+      "passive2": "When Cerbie hits a target with the [Combustion] effect applied, his Skill Damage increases by 50% for 10 secon(s)."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Cerbie",
+    "wiki_revid": 9525,
+    "wiki_timestamp": "2025-03-14T22:34:33Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "greed",
+    "name": {
+      "fr": "",
+      "en": "Greed",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "The Soldier of Avarice",
+    "obtaining_en": "== Skills ==",
+    "leader_skill_by_rank": {},
+    "skills": [],
+    "passives": [],
+    "armament_en": null,
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Greed",
+    "wiki_revid": 17777,
+    "wiki_timestamp": "2026-07-18T19:12:26Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "igris",
+    "name": {
+      "fr": "",
+      "en": "Igris",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "His First Shadow",
+    "obtaining_en": "Igris can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Chapter 9 <The Birth of a New Monarch>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Critical Hit Rate increases by 4%.",
+        "value": 4.0
+      },
+      "elite": {
+        "text": "All team members' Critical Hit Rate increases by 5%.",
+        "value": 5.0
+      },
+      "knight": {
+        "text": "All team members' Critical Hit Rate increases by 6%.",
+        "value": 6.0
+      },
+      "elite_knight": {
+        "text": "All team members' Critical Hit Rate increases by 7%.",
+        "value": 7.0
+      },
+      "general": {
+        "text": "All team members' Critical Hit Rate increases by 8%.",
+        "value": 8.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by slashing with a longsword twice diagonally from bottom to top."
+        },
+        "effects_text_en": "Damage: 139.24-278.59% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by performing 4 quick and powerful consecutive slashes with a longsword."
+        },
+        "effects_text_en": "Damage: 266.24-532.69% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Quadruple Wave",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user gathers their power and fires sword energy 4 times to attack the enemy from a distance."
+        },
+        "effects_text_en": "Damage: 381.15-762.6% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Earth Slash",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user gathers their power and jumps to attack the enemy by powerfully striking downward with their sword."
+        },
+        "effects_text_en": "Damage: 321.25-642.76% of the user's Attack ・When this skill hits it inflicts the [Bleed] effect on the target. [Bleed] Deals damage equal to 0.6% of the current HP every 3 second(s). Duration: 30 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Blade Axle",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user gathers their power and charges forward while slashing quickly, attacking enemies in their path with sword energy."
+        },
+        "effects_text_en": "Damage: 415.52-831.37% of the user's Attack ・When using this skill, applies the [Attack Increase] effect. [Attack Increase] Increases the user's Attack by 100%. Duration: 10 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "The Commander's Touch",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "After pulling the enemies in front, the user attacks by striking down powerfully with a sword."
+        },
+        "effects_text_en": "Damage: 377.5-755.3% of the user's Attack ・When this skill hits it inflicts the [Bleed] effect on the target. [Bleed] Deals damage equal to 0.6% of the current HP every 3 second(s). Duration: 30 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Lightning Crash",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user builds a massive electric charge and strikes down powerfully, releasing lightning waves to strike nearby enemies."
+        },
+        "effects_text_en": "Damage: 296.31-592.86% of the user's Attack ・When this skill hits, it activates the [Paralyze] effect. [Paralyze] This skill interrupts the target. Duration: 1 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Demon King's Longsword: Replica",
+      "passive1": "The Shadow's Critical Hit Rate and Critical Hit damage increases by 2.5%.",
+      "passive2": "The Shadow's Critical Hit Rate and Critical Hit damage increases by 15%."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Igris",
+    "wiki_revid": 16648,
+    "wiki_timestamp": "2026-05-06T22:03:51Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "iron",
+    "name": {
+      "fr": "",
+      "en": "Iron",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "Musclebound Menace",
+    "obtaining_en": "Iron can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Chapter 11 Episode 5 <Overwhelming Power>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Max HP increases by 6%.",
+        "value": 6.0
+      },
+      "elite": {
+        "text": "All team members' Max HP increases by 7.5%.",
+        "value": 7.5
+      },
+      "knight": {
+        "text": "All team members' Max HP increases by 9%.",
+        "value": 9.0
+      },
+      "elite_knight": {
+        "text": "All team members' Max HP increases by 10.5%.",
+        "value": 10.5
+      },
+      "general": {
+        "text": "All team members' Max HP increases by 12%.",
+        "value": 12.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by swinging the battle hammer left and right two times."
+        },
+        "effects_text_en": "Damage: 82.29-164.65% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by pushing the target with a shield and then striking down powerfully with a battle hammer."
+        },
+        "effects_text_en": "Damage: 92.86-185.79% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Iron Hammer!",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user raises a hammer and slams it down to attack, distorting the terrain."
+        },
+        "effects_text_en": "Damage: 185.93-372.01% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Charge, Iron!",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user jumps towards the front and attacks by slamming down with a hammer."
+        },
+        "effects_text_en": "Damage: 143.75-287.62% of the user's Attack ・When this skill hits, applies the [Defense Decrease] effect. [Defense Decrease] Decreases Defense by 12%. Duration: 10 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Iron, Angry!",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "After attacking the enemy with a loud shout, the user strikes down powerfully with a shield and attacks the surrounding area."
+        },
+        "effects_text_en": "Damage: 432.26-864.87% of the user's Attack ・When this skill is used, it applies a [Shield] effect. [Shield] The [Shield] us equal to 10% of the user's Max HP and is granted to all Shadows. Duration: 10 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "The Iron Special",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "A special technique invented by Iron. Iron combines techniques and attacks enemies with a battle hammer and shield."
+        },
+        "effects_text_en": "Damage: 327.29-654.84% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Shield of Protection",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "An array of shields appear around the Shadow to protect and enhance them."
+        },
+        "effects_text_en": "Damage: 465-930.37% of the user's Attack ・When the user uses this skill, it creates a [Shield of Protection] effect. ・When this skill hits, it activates the [Defense Increase] effect [Shield of Protection] Shadow's damage taken within the area decreases by 30% and [Super Armor] is activated. The Skill Damage of Shadows within the area increases by 10%. Duration: 15 second(s) [Defense Decrease] Decreases the enemy's Defense by 12%. Duration: 10 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "A Guardian's Will: Replica",
+      "passive1": "The Shadow's HP increases by 4%. The Shadow's Shield Acquisition Chance increases by 6%.",
+      "passive2": "The Shadow's HP increases by 24%. The Shadow's Shield Acquisition Chance increases by 36%."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Iron",
+    "wiki_revid": 13181,
+    "wiki_timestamp": "2025-08-08T23:44:53Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "jima",
+    "name": {
+      "fr": "",
+      "en": "Jima",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "Recluse of the Deep Sea",
+    "obtaining_en": "Jima can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Chapter 26 Episode 7 <Proof Found>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "Increases the entire team's Attack by 3% and Shield Acquisition Chance by 5%",
+        "value": 3.0
+      },
+      "elite": {
+        "text": "Increases the entire team's Attack by 3.5% and Shield Acquisition Chance by 7%",
+        "value": 3.5
+      },
+      "knight": {
+        "text": "Increases the entire team's Attack by 4% and Shield Acquisition Chance by 9%",
+        "value": 4.0
+      },
+      "elite_knight": {
+        "text": "Increases the entire team's Attack by 4.5% and Shield Acquisition Chance by 11%",
+        "value": 4.5
+      },
+      "general": {
+        "text": "Increases the entire team's Attack by 5% and Shield Acquisition Chance by 13%",
+        "value": 5.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by performing two large left and right swings with a spear."
+        },
+        "effects_text_en": "Damage: 229.5-459.18% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by swinging the spears in both hands widely."
+        },
+        "effects_text_en": "Damage: 222.75-445.68% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Tail Whip",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user swings their tail forward in a wide arc to attack enemies in the front."
+        },
+        "effects_text_en": "Damage: 437.25-874.85% of the user's Attack.",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Jima' Frenzy",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user quickly slashes forward, then attacks enemies with a powerful strike."
+        },
+        "effects_text_en": "Damage: 279.23-558.68% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Charging Stab",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user charges toward the target, then stabs with the spears in both their hands."
+        },
+        "effects_text_en": "Damage: 331.95-664.17% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Deep Sea Raid",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user dives into the ground, then bursts upward toward the target to attack the enemy."
+        },
+        "effects_text_en": "Damage: 534.75-1069.93% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Jima's Rage",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user releases a breath toward the ground to create a massive wave and attack."
+        },
+        "effects_text_en": "Damage: 464.7-929.77% of the user's Attack ・Using this skill grants the user [Shield] to the entire team. [Shield] Gains a [Shield] equal to 5000 Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Naga Guardian Dragon's Trident: Replica",
+      "passive1": "When a [Shield] is activated, it triggers the [Attack Increase] effect. [Attack Increase] Increases Attack by 4% Duration: 15 second(s)",
+      "passive2": "When a [Shield] is activated, it triggers the [Attack Increase] effect. [Attack Increase] Increases Attack by 24% Duration: 15 second(s)"
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Jima",
+    "wiki_revid": 15020,
+    "wiki_timestamp": "2026-02-27T22:43:12Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "kaisel",
+    "name": {
+      "fr": "",
+      "en": "Kaisel",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "Wyvern",
+    "obtaining_en": "Kaisel can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Chapter 20 Episode 6 <Monarch of the White Flames>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Ultimate Skill Damage increases by 5%.",
+        "value": 5.0
+      },
+      "elite": {
+        "text": "All team members' Ultimate Skill Damage increases by 6%.",
+        "value": 6.0
+      },
+      "knight": {
+        "text": "All team members' Ultimate Skill Damage increases by 7%.",
+        "value": 7.0
+      },
+      "elite_knight": {
+        "text": "All team members' Ultimate Skill Damage increases by 8%",
+        "value": 8.0
+      },
+      "general": {
+        "text": "All team members' Ultimate Skill Damage increases by 9%.",
+        "value": 9.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "Breath of the White Flames",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user exhales a powerful jet of flame toward the front."
+        },
+        "effects_text_en": "Damage: 657-1314.53% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "Rage of the White Flames",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user exhales heat towards the sky to change the weather, causing lightning to strike nearby."
+        },
+        "effects_text_en": "Damage: 600-1200.48% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Waves of the White Flames",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user flies into the air and exhales globs of fire towards the ground."
+        },
+        "effects_text_en": "Damage: 825-1650.66% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Flight of the Wyvern",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user flies into the air, moves near enemies, and then slams them with its body."
+        },
+        "effects_text_en": "Damage: 782.25-1565.13% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Roar of the Heavens",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user flies gracefully forward, exhaling fire and hurtling meteors towards the ground."
+        },
+        "effects_text_en": "Damage: 665.25-1331.03% of the user's Attack ・When the user uses this skill, it activates the [Speed Increase] effect. [Speed Increase] Increases Speed by 10%. Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Wrath of the Wyvern",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "After gathering energy, the user releases a roar and attacks enemies within range."
+        },
+        "effects_text_en": "Damage: 665.25-1331.03% of the user's Attack ・When the user uses this skill, it activates the [Speed Increase] effect. [Attack Increase] Increases the user's Attack by 100%. Duration: 10 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Rage of the Wyvern",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user soars into the air and launches a damage-dealing meteor at nearby enemies."
+        },
+        "effects_text_en": "Damage: 854.18-1709.04% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Skadi: Replica",
+      "passive1": "The Shadow's Critical Hit Damage increases by 4% and their damage dealt to bosses increases by 5%.",
+      "passive2": "The Shadow's Critical Hit Damage increases by 24% and their damage dealt to bosses increases by 30%."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Kaisel",
+    "wiki_revid": 13174,
+    "wiki_timestamp": "2025-08-08T23:34:23Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "skull",
+    "name": {
+      "fr": "",
+      "en": "Skull",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "The King of the Dead",
+    "obtaining_en": "Skull can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Hard Hidden 4 Episode 10 <The Death Knight>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "The entire team's MP increases by 6% The entire team's Skill Mana Consumption decreases by 5%",
+        "value": 6.0
+      },
+      "elite": {
+        "text": "The entire team's MP increases by 7.5% The entire team's Skill Mana Consumption decreases by 5%",
+        "value": 7.5
+      },
+      "knight": {
+        "text": "The entire team's MP increases by 9% The entire team's Skill Mana Consumption decreases by 5%",
+        "value": 9.0
+      },
+      "elite_knight": {
+        "text": "The entire team's MP increases by 10.5% The entire team's Skill Mana Consumption decreases by 5%",
+        "value": 10.5
+      },
+      "general": {
+        "text": "The entire team's MP increases by 12% The entire team's Skill Mana Consumption decreases by 5%",
+        "value": 12.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "Skeletal Thorns",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user projects an osseus spike to wound the enemy."
+        },
+        "effects_text_en": "Damage: 253.2-506.6% of the user's Attack ・When this skill hits, it activates the [HP Recovery Rate Decrease] effect [HP Recovery Rate Decrease] Decreases the target's HP Recovery Rate by 20% Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "Phantasm",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks enemies by releasing the power of a cursed spirit."
+        },
+        "effects_text_en": "Damage: 332.9-666.07% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Spur of Agony",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user hurls fires osseus spikes in all directions to wound enemies around them."
+        },
+        "effects_text_en": "Damage: 332.9-666.07% of the user's Attack. ・When this skill hits, it activates the [HP Recovery Rate Decrease] effect [HP Recovery Rate Decrease] Decreases the target's HP Recovery Rate by 20% Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Deathfire",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user unleashes deadly flames to incinerate enemies."
+        },
+        "effects_text_en": "Damage: 297.75-595.74% of the user's Attack ・When this skill hits, it applies the [Death Flame] effect [Death Flame] Deals damage equal to 50% of the user's Attack every 3 second(s) Decreases Defense by 5% Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Ethereal Gravestone",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user summons a massive soul-imbued pillar to attack enemies."
+        },
+        "effects_text_en": "Damage: 343.04-686.35% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Suffering Grounds",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Sharp bones burst from the earth around the user, inflicting damage on enemies."
+        },
+        "effects_text_en": "Damage: 420.02-840.38% of the user's Attack ・When this skill hits, it activates the [HP Recovery Rate Decrease] effect [HP Recovery Rate Decrease] Decreases the target's HP Recovery Rate by 20% Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Death's Comet",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "A deadly meteor falls from the sky, burning enemies within its range."
+        },
+        "effects_text_en": "Damage: 532.63-1065.69% of the user's Attack ・When this skill hits, it applies the [Death Flame] effect [Death Flame] Deals damage equal to 50% of the user's Attack every 3 second(s) Decreases Defense by 5% Duration: 20 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Grave Keeper's Scythe: Replica",
+      "passive1": "When attacking a target with Skull's [Death Flame], the user's damage dealt increases by 4% for 10 second(s).",
+      "passive2": "When attacking a target with Skull's [Death Flame], the user's damage dealt increases by 24% for 10 second(s)."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Skull",
+    "wiki_revid": 15015,
+    "wiki_timestamp": "2026-02-27T22:38:57Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "tank",
+    "name": {
+      "fr": "",
+      "en": "Tank",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "Leader of the Snowy Mountain",
+    "obtaining_en": "Tank can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Chapter 10 Episode 9 <Wild Beasts>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Defense increases by 6%.",
+        "value": 6.0
+      },
+      "elite": {
+        "text": "All team members' Defense increases by 7.5%.",
+        "value": 7.5
+      },
+      "knight": {
+        "text": "All team members' Defense increases by 9%.",
+        "value": 9.0
+      },
+      "elite_knight": {
+        "text": "All team members' Defense increases by 10.5%.",
+        "value": 10.5
+      },
+      "general": {
+        "text": "All team members' Defense increases by 12%.",
+        "value": 12.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by quickly slashing the target from side to side with its front claws."
+        },
+        "effects_text_en": "Damage: 135-270.11% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by quickly slashing both sides with its front claws, and then performs a powerful upward strike."
+        },
+        "effects_text_en": "Damage: 220.1-440.38% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Tank Crash",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks the target with a powerful lunge."
+        },
+        "effects_text_en": "Damage: 365.36-731.01% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Tank Press",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user gathers their power, leaps high into the air, and attacks the enemy by slashing downward toward them."
+        },
+        "effects_text_en": "Damage: 382.92-766.15% of the user's Attack ・When this final hit lands, [Stun] the target. [Stun] Immobilizes the target. Duration: 1 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Tank Overkill",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user raises its front claws to attack by quickly and powerfully slashing the target, and then performs a powerful downward strike."
+        },
+        "effects_text_en": "Damage: 517.56-1035.53% of the user's Attack ・When using this skill, applies the [Defense Increase] to all shadows. [Defense Increase] Increases the Defense by 40%. Duration: 10 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Tank Roar",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user roars loudly and attacks nearby enemies within a circular range."
+        },
+        "effects_text_en": "Damage: 432.5-865.35% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Tank's Rage",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user charges forward and slashes the enemy with its claws."
+        },
+        "effects_text_en": "Damage: 507.24-1014.89% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Frostbite Falchion: Replica",
+      "passive1": "The Shadow's Defense Penetration increases by 2.5%. The Shadow's damage dealt to Normal monsters increases by 8%.",
+      "passive2": "The Shadow's Defense Penetration increases by 15%. The Shadow's damage dealt to Normal monsters increases by 50%."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Tank",
+    "wiki_revid": 13183,
+    "wiki_timestamp": "2025-08-08T23:47:35Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "tusk",
+    "name": {
+      "fr": "",
+      "en": "Tusk",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "Almighty Shaman",
+    "obtaining_en": "Tusk can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Chapter 18 Episode 14 <Boss Fight>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "All team members' Core Attack Damage increases by 20%.",
+        "value": 20.0
+      },
+      "elite": {
+        "text": "All team members' Core Attack Damage increases by 25%.",
+        "value": 25.0
+      },
+      "knight": {
+        "text": "All team members' Core Attack Damage increases by 30%.",
+        "value": 30.0
+      },
+      "elite_knight": {
+        "text": "All team members' Core Attack Damage increases by 35%.",
+        "value": 35.0
+      },
+      "general": {
+        "text": "All team members' Core Attack Damage increases by 40%.",
+        "value": 40.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by throwing mana power towards the ground, creating a small explosive area."
+        },
+        "effects_text_en": "Damage: 220.18-440.54% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by throwing forward-facing fiery blades."
+        },
+        "effects_text_en": "Damage: 146.25-292.62% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Tracking Fire Bombs",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user creates a divination circle to the front and fires 6 tracking fire orbs at the enemy."
+        },
+        "effects_text_en": "Damage: 417.79-835.91% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Erupting Flames",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by causing flames to erupt from the ground beneath their target 5 times."
+        },
+        "effects_text_en": "Damage: 370.96-742.22% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Concentrated Heat",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user gathers heat above their head to create a giant fire orb before throwing it to attack the enemy."
+        },
+        "effects_text_en": "Damage: 468.75-937.88% of the user's Attack ・Using this skill applies the [Attack Increase] effect to all shadows. [Attack Increase] Increases the user's Attack by 20%. Duration: 10 second(s).",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Claws of the Rampaging Fire Dragon",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user throws forward-facing fiery blades of vengeance three times."
+        },
+        "effects_text_en": "Damage: 551.67-1103.78% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Breath of the Fire Dragon",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user unleashes a forward-facing blast of fire dragon power."
+        },
+        "effects_text_en": "Damage: 508.21-1016.83% of the user's Attack ・When this skill hits, it activates the [Burn] effect. [Burn] Deals damage equal to 30% of Attack every 3 second(s). Duration: 30 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Orb of Avarice: Replica",
+      "passive1": "Enemies with 50% or less HP take 8% more damage when they are hit by the Shadow.",
+      "passive2": "Enemies with 50% or less HP take 50% more damage when they are hit by the Shadow."
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Tusk",
+    "wiki_revid": 11738,
+    "wiki_timestamp": "2025-04-12T05:01:32Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  },
+  {
+    "id": "uros",
+    "name": {
+      "fr": "",
+      "en": "Uros",
+      "ko": ""
+    },
+    "rarity": null,
+    "nickname_en": "Doomed Berserker",
+    "obtaining_en": "Uros can be shadow extracted from the Army of Shadows menu for 100 Traces of Shadow after completing Normal Hidden 10 Episode 8 <The Third Test>.",
+    "leader_skill_by_rank": {
+      "common": {
+        "text": "Increases the entire team's Dark damage increases by 5%",
+        "value": 5.0
+      },
+      "elite": {
+        "text": "Increases the entire team's Dark damage increases by 6%",
+        "value": 6.0
+      },
+      "knight": {
+        "text": "Increases the entire team's Dark damage increases by 7%",
+        "value": 7.0
+      },
+      "elite_knight": {
+        "text": "Increases the entire team's Dark damage increases by 8%",
+        "value": 8.0
+      },
+      "general": {
+        "text": "Increases the entire team's Dark damage increases by 9%",
+        "value": 9.0
+      }
+    },
+    "skills": [
+      {
+        "slot": 1,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user swings the axe twice, slams it down, then spins to strike."
+        },
+        "effects_text_en": "Damage: 533.86-1068.15% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 2,
+        "name": {
+          "fr": "",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user throws a returning axe forward to attack."
+        },
+        "effects_text_en": "Damage: 338.58-677.43% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 3,
+        "name": {
+          "fr": "",
+          "en": "Decisive Strike",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user leaps forward and attacks with a powerful downward strike."
+        },
+        "effects_text_en": "Damage: 380.91-762.12% of the user's Attack ・When this skill hits, it activates the [Defense Decrease] effect. [Defense Decrease] Decreases Defense by 20% Duration: 15 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 4,
+        "name": {
+          "fr": "",
+          "en": "Thunder Strike",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user lifts their front foot and attacks with a powerful stomp."
+        },
+        "effects_text_en": "Damage: 396.75-793.82% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 5,
+        "name": {
+          "fr": "",
+          "en": "Echoing Earth",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user attacks by striking the earth with an axe, unleashing electricity that moves along the ground."
+        },
+        "effects_text_en": "Damage: 332.4-665.07% of the user's Attack",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 6,
+        "name": {
+          "fr": "",
+          "en": "Wild Roar",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user roars loudly and emits electricity in all directions to attack."
+        },
+        "effects_text_en": "Damage: 302.7-605.64% of the user's Attack ・When this skill hits, it activates the [Paralyze] effect. [Paralyze] This skill interrupts the target. Duration: 2 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      },
+      {
+        "slot": 7,
+        "name": {
+          "fr": "",
+          "en": "Raging Incursion",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The user rushes forward and performs a downward slam, releasing a shockwave to attack."
+        },
+        "effects_text_en": "Damage: 476.94-954.26% of the user's Attack ・When this skill hits, it activates the [Defense Decrease] effect. [Defense Decrease] Decreases Defense by 20% Duration: 15 second(s)",
+        "effects": [],
+        "values_by_level": {}
+      }
+    ],
+    "passives": [],
+    "armament_en": {
+      "image1": "",
+      "weapon_name": "Zeke's Fragment: Replica",
+      "passive1": "The user's Defense Penetration increases by 4%",
+      "passive2": "The user's Defense Penetration increases by 24%"
+    },
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Uros",
+    "wiki_revid": 17570,
+    "wiki_timestamp": "2026-06-05T22:58:15Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Les chefs d'ombre ont été rééquilibrés le 22/10/2026 (cf. patches.json) : valeurs du wiki possiblement antérieures. Nom FR et icône à compléter."
+  }
+]
