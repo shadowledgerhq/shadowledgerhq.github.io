@@ -34,13 +34,15 @@ def lecture_vide(meta, mode):
 
 
 def variante_bot(titre, config):
-    """v3 (SPEC §4.6) : variante BOT d'après le titre : `challenge`, `season` ou None (illisible).
-    Mots dans config.bot_variante_mots [À CONFIRMER] ; les deux à la fois = ambigu = None ;
-    challenge est cherché en premier (variante la plus spécifique) seulement s'il est seul."""
+    """SPEC §4.6 : variante BOT d'après le titre. `challenge` / `チャレンジ` / `챌린지` -> challenge ;
+    `S\\d+-\\d`, `season \\d+`, `시즌 \\d+`, `シーズン\\d+` -> season. Les deux indices ou aucun -> None."""
+    cfg = config.get("bot_variante", {})
     bas = (titre or "").lower()
-    trouve = {v for v, mots in config.get("bot_variante_mots", {}).items()
-              if any(_mot_entier(m.lower(), bas) for m in mots)}
-    return trouve.pop() if len(trouve) == 1 else None
+    challenge = any(_mot_entier(m.lower(), bas) for m in cfg.get("challenge", []))
+    season = any(re.search(rx, titre or "", re.IGNORECASE) for rx in cfg.get("season_regex", []))
+    if challenge == season:
+        return None
+    return "challenge" if challenge else "season"
 
 
 def _mot_entier(mot, texte):
@@ -71,11 +73,13 @@ def lectures_texte(meta, textes, config):
                     lec["notes"].append("autres candidats : " + ", ".join(r["autres"]))
                 if r.get("semaine_passee"):
                     lec["notes"].append("semaine précédente ?")
-                if mode == "hotm":  # v3 : porte d'après le titre d'abord
-                    porte = lire_porte(meta.get("title") or "") or lire_porte(texte)
+                if mode == "hotm":  # v3 : porte d'après le titre (l'écran prime dès qu'il est lu)
+                    porte = lire_porte(meta.get("title") or "")
                     lec["gate"] = porte["number"] if porte else None
                 if mode == "bot":  # v3 : variante d'après le titre
                     lec["bot_variant"] = variante_bot(meta.get("title"), config)
+                    if lec["bot_variant"]:
+                        lec["notes"].append("variante d'après le titre")
             elif r["valeur"] != lec["score"]:
                 lec["notes"].append(f"{source} : {r['brut']}")
         if lec:

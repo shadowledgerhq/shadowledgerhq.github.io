@@ -45,15 +45,12 @@
     "bot": [5, 180],
     "gb": null
   },
-  "hypothese_mots": ["can", "could", "maybe", "might", "if", "possible", "potentially", "target", "goal", "aiming", "expected", "theoretical", "estimated",
-                      "peut", "pourrait", "objectif", "théorique", "si",
-                      "가능", "예상", "목표", "이론상", "도전",
-                      "可能", "予想", "目標", "理論値", "目指", "预计", "目标", "理论"],
-  "semaine_passee_mots": ["last week", "previous week", "last season", "semaine passée", "semaine dernière", "semaine précédente",
-                           "지난주", "저번주", "지난 주", "先週", "上周", "上週"],
-  "bot_variante_mots": {
-    "challenge": ["challenge", "チャレンジ", "챌린지", "挑战"],
-    "season": ["season", "シーズン", "시즌", "赛季"]
+  "hypothese_mots": ["can", "could", "possible", "up to", "max", "~", "가능", "可能", "目標", "target"],
+  "semaine_passee_mots": ["last week", "저번 주", "지난주", "先週", "previous week", "저번주", "semaine passée", "semaine dernière", "上周"],
+  "bot_variante": {
+    "_doc": "SPEC §4.6 : indice du titre. Les deux indices ou aucun = variante inconnue.",
+    "challenge": ["challenge", "チャレンジ", "챌린지"],
+    "season_regex": ["S\\d+-\\d", "season \\d+", "시즌 \\d+", "シーズン\\d+"]
   },
   "doublon_modes": ["poc"],
   "modes_classement": ["poc", "bot", "hotm"],

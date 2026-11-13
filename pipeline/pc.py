@@ -198,15 +198,17 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         if restantes:
             alertes.append(f"tris 3-4 (OCR) : non gérés [EN ATTENTE] : {restantes} vidéo(s) restent en_cours")
 
+    res = classement.calculer(week, d, config, instant)
     if passage == "weekly" and not meta.get("frozen"):
-        if config["pc"].get("geler"):
+        lignes, provisoires = sum(res["fichiers"].values()), len(res["a_verifier"]) if not res.get("gelee") else 0
+        if not config["pc"].get("geler"):
+            alertes.append(f"semaine {week} NON gelée (pc.geler = false : tris 3-4 non gérés)")
+        elif lignes and provisoires == lignes:
+            alertes.append(f"semaine {week} NON gelée : toutes les lignes sont provisoires (SPEC §6)")
+        else:
             meta["frozen"], meta["frozen_at"] = True, iso_utc(instant)
             d.ecrire(f"runs/{week}/_meta.json", meta)
             alertes.append(f"semaine {week} gelée")
-        else:
-            alertes.append(f"semaine {week} NON gelée (pc.geler = false : tris 3-4 non gérés)")
-
-    res = classement.calculer(week, d, config, instant)
     ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes)
     if git:
         git.pousser(f"données: passage PC {passage} {jour}")

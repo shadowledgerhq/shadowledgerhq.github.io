@@ -29,7 +29,7 @@
     "published_at": "2026-11-13T10:12:06Z",
     "lang": "zh",
     "mode": "bot",
-    "bot_variant": null,
+    "bot_variant": "season",
     "gate": null,
     "hunter_mode": null,
     "t": null,
@@ -41,7 +41,8 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 19.754s"
+      "score provisoire (titre) : 19.754s",
+      "variante d'après le titre"
     ]
   },
   {
@@ -51,7 +52,7 @@
     "published_at": "2026-11-13T05:44:18Z",
     "lang": "ko",
     "mode": "bot",
-    "bot_variant": "season",
+    "bot_variant": null,
     "gate": null,
     "hunter_mode": null,
     "t": null,
@@ -85,7 +86,8 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 23;223s"
+      "score provisoire (titre) : 23;223s",
+      "variante d'après le titre"
     ]
   },
   {
@@ -118,7 +120,7 @@
     "published_at": "2026-11-12T12:01:40Z",
     "lang": "ja",
     "mode": "bot",
-    "bot_variant": null,
+    "bot_variant": "season",
     "gate": null,
     "hunter_mode": null,
     "t": null,
@@ -130,7 +132,8 @@
     "confidence": "a_verifier",
     "detail": {},
     "notes": [
-      "score provisoire (titre) : 19.558"
+      "score provisoire (titre) : 19.558",
+      "variante d'après le titre"
     ]
   },
   {

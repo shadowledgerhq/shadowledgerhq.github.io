@@ -61,9 +61,12 @@ def dedoublonner(runs, config):
             possibles[(r["_cle"], r["score"])].append(r)
     for groupe in possibles.values():
         if len({r["channel_id"] for r in groupe}) >= 2:
-            for r in groupe:
-                if "doublon possible" not in r["notes"]:
-                    r["notes"].append("doublon possible")
+            groupe.sort(key=lambda r: (_pub(r), r["video_id"]))
+            for r in groupe:  # § 4.4 : note `doublon possible : <video_id>` (la plus ancienne des autres vidéos)
+                autre = next(x for x in groupe if x["video_id"] != r["video_id"] and x["channel_id"] != r["channel_id"])
+                note = f"doublon possible : {autre['video_id']}"
+                if note not in r["notes"]:
+                    r["notes"].append(note)
     for groupe in groupes.values():
         if len(groupe) < 2:
             continue

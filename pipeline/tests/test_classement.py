@@ -138,7 +138,7 @@ def test_v3_doublon_bot_hotm_note_sans_retrait():
     d = preparer(lectures)
     res = calculer(W, d, CONFIG, HORLOGE)
     h = lire(d, "hotm-gate-1")
-    assert len(h) == 2 and all("doublon possible" in l["notes"] for l in h)   # les deux restent, classées
+    assert len(h) == 2 and sorted(l["notes"].split("doublon possible : ")[1][:2] for l in h) == ["h1", "h2"]  # note avec le video_id de l'autre
     assert len(lire(d, "bot-season")) == 2 and d.rejected(W) == []
     # POC : la run en trop est retirée ; la vidéo n'est rejetée que si elle n'a plus aucune run
     d = preparer([lec("a1", "UCA", "poc", 100 * T, team=1), lec("a2", "UCA", "poc", 50 * T, team=2),

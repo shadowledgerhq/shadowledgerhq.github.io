@@ -87,6 +87,14 @@ def test_weekly_gel_et_ouverture():
         assert any("NON gelée" in a for a in r["alertes"])
         config["pc"]["geler"] = True
         r = pc.lancer("weekly", JEUDI, d, config, FauxOutils({}))
+        assert d.meta(SEM)["frozen"] is False and any("toutes les lignes sont provisoires" in a for a in r["alertes"])   # SPEC §6
+        # une ligne « sûre » (écran RESULT lu) : le gel est permis
+        lectures = d.lectures(SEM)
+        lectures.append({**lectures[0], "video_id": "z", "channel_id": "UCz", "score": 90 * 10**12, "exact": True, "confidence": "sur",
+                         "team": 1, "score_source": "video-complete"})
+        lectures.append({**lectures[-1], "team": 2, "score": 80 * 10**12, "t": 9})
+        d.ecrire(f"runs/{SEM}/_lectures.json", lectures)
+        r = pc.lancer("weekly", JEUDI, d, config, FauxOutils({}))
         assert d.meta(SEM)["frozen"] is True and d.meta(SEM)["frozen_at"] is not None
         o = FauxOutils({})
         r = pc.lancer("weekly", JEUDI, d, config, o)           # semaine gelée : rien n'est retraité

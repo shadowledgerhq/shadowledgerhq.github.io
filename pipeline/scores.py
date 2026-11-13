@@ -176,14 +176,28 @@ def chronos(texte):
     return res
 
 
-_RE_CHAPITRE = re.compile(r"^[ \t\W_]{0,6}(?:\d{1,2}:)?\d{1,2}:\d{2}(?![\d.,:])(?=[ \t\-–—:|)\]]|$)[^\n]*", re.MULTILINE)
+_HORODATAGE = r"(?<![\d:.,])(?:\d{1,2}:)?\d{1,2}:\d{2}(?![\d:]|[.,]\d)"  # m:ss ou h:mm:ss, sans millièmes
+_RE_HORODATAGE = re.compile(_HORODATAGE)
+_RE_LIGNE_CHAPITRE = re.compile(rf"^[ \t\W_]{{0,6}}{_HORODATAGE}[^\n]*", re.MULTILINE)
 
 
-def masquer_chapitres(description):
-    """v3 : les chapitres d'une description (lignes « 00:32 Titre », au moins 2) ne sont pas des scores."""
-    if len(_RE_CHAPITRE.findall(description or "")) < 2:
-        return description or ""
-    return _RE_CHAPITRE.sub(lambda m: " " * len(m.group(0)), description)
+def _secondes(h):
+    p = [int(x) for x in h.split(":")]
+    return sum(v * m for v, m in zip(reversed(p), (1, 60, 3600)))
+
+
+def masquer_chapitres(description, mode=None):
+    """v3 §2.2 : exclut (masque) les chapitres d'une description :
+    - toute ligne qui commence par un horodatage (« 0:12 … ») ;
+    - tous les horodatages, s'il y en a au moins 2 croissants dans la description ;
+    - au BOT, toute durée m:ss sans millièmes (souvent un chapitre)."""
+    texte = description or ""
+    texte = _RE_LIGNE_CHAPITRE.sub(lambda m: " " * len(m.group(0)), texte)
+    valeurs = [_secondes(m.group(0)) for m in _RE_HORODATAGE.finditer(texte)]
+    croissants = any(b > a for a, b in zip(valeurs, valeurs[1:]))
+    if mode == "bot" or croissants:
+        texte = _RE_HORODATAGE.sub(lambda m: " " * len(m.group(0)), texte)
+    return texte
 
 
 def _mot_present(mot, texte):
@@ -240,16 +254,16 @@ def choisir(cands, mode):
 
 def extraire(texte, mode, config, source=None):
     """Premier score provisoire du texte pour le mode (v3).
-    `source` = "description" : les chapitres sont ignorés.
+    `source` = "description" : les chapitres sont ignorés ; « semaine passée » : titre seulement.
     Retourne NON_GERE (mode sans plage), None (rien) ou
     {"valeur", "arrondi", "brut", "autres": [bruts], "semaine_passee": bool}."""
     p = plage(mode, config)
     if p is None:
         return NON_GERE
     texte = texte or ""
-    lu = masquer_chapitres(texte) if source == "description" else texte
+    lu = masquer_chapitres(texte, mode) if source == "description" else texte
     cands = [c for c in candidats(lu, mode, p) if not est_hypothese(lu, c["pos"], c["pos"] + len(c["brut"]), config)]
     meilleur, autres = choisir(cands, mode)
     if meilleur is None:
         return None
-    return {**meilleur, "autres": [a["brut"] for a in autres], "semaine_passee": semaine_passee(texte, config)}
+    return {**meilleur, "autres": [a["brut"] for a in autres], "semaine_passee": source in (None, "titre") and semaine_passee(texte, config)}

@@ -107,7 +107,12 @@ def test_v3_semaine_passee_et_hypothese():
     assert lec[0]["score"] == 133 * 10**12 and "semaine précédente ?" in lec[0]["notes"]
     assert extraire("POC 133T", "poc", CONFIG)["semaine_passee"] is False
     assert extraire("POC 133T 150T 가능", "poc", CONFIG)["autres"] == []                # hypothèse après (CJK)
-    assert extraire("POC if 150T then 133T", "poc", CONFIG)["valeur"] == 133 * 10**12  # « if » juste avant
+    assert extraire("POC up to 150T, 133T", "poc", CONFIG)["valeur"] == 133 * 10**12    # « up to » (spec §2.2)
+    assert extraire("POC max 150T 133T", "poc", CONFIG)["autres"] == []
+    assert extraire("POC ~150T", "poc", CONFIG) is None                                  # « ~ » collé au nombre
+    # « semaine passée » : titre seulement
+    assert extraire("last week 133T", "poc", CONFIG, "description")["semaine_passee"] is False
+    assert extraire("지난주 133T", "poc", CONFIG, "titre")["semaine_passee"] is True
 
 
 def test_v3_bot_millisecondes():
@@ -123,8 +128,16 @@ def test_v3_bot_millisecondes():
 def test_v3_chapitres_de_description():
     chapitres = "BOT clear\n00:00 Intro\n00:32 Boss\n01:01 Phase 2\n01:45 Fin\n03:49 Merci"
     assert extraire(chapitres, "bot", CONFIG, "description") is None
-    # les mêmes lignes dans un titre ne sont pas des chapitres ; une ligne seule non plus
-    assert extraire("0:19 clear", "bot", CONFIG, "description")["valeur"] == 19
+    # une ligne qui commence par un horodatage est un chapitre, même seule (spec §2.2)
+    assert extraire("0:19 clear", "bot", CONFIG, "description") is None
+    # au BOT, tout m:ss sans millièmes de la description est exclu ; avec millièmes ou « s » : lu
+    assert extraire("clear en 0:19 !", "bot", CONFIG, "description") is None
+    assert extraire("clear 0:19.558", "bot", CONFIG, "description")["valeur"] == 19.558
+    assert extraire("clear 21s", "bot", CONFIG, "description")["valeur"] == 21
+    # 2 horodatages croissants dans la description (hors début de ligne) : tous exclus
+    assert extraire("Boss 0:20 puis fin 1:05 clear 33s", "bot", CONFIG, "description")["valeur"] == 33
+    # dans le titre, un chrono m:ss reste un score
+    assert extraire("BOT 0:19", "bot", CONFIG, "titre")["valeur"] == 19
     # premier candidat par source, priorité titre > description
     lec, _ = lectures_texte(meta("BOT 19.558s", ("bot",)), [("titre", "BOT 19.558s"), ("description", "20.1s\n0:30")], CONFIG)
     assert lec[0]["score"] == 19.558 and lec[0]["score_source"] == "titre" and any(n.startswith("description") for n in lec[0]["notes"])
@@ -133,13 +146,20 @@ def test_v3_chapitres_de_description():
 def test_v3_variante_bot_et_porte_dapres_le_titre():
     assert variante_bot("時の戦場チャレンジ 19s", CONFIG) == "challenge"
     assert variante_bot("BOT challenge 19s", CONFIG) == "challenge"
+    assert variante_bot("BOT 챌린지", CONFIG) == "challenge"
     assert variante_bot("時の戦場 シーズン12 19s", CONFIG) == "season"
-    assert variante_bot("BOT 19s", CONFIG) is None
-    assert variante_bot("season challenge", CONFIG) is None   # ambigu
+    assert variante_bot("BOT S12-3 19s", CONFIG) == "season" and variante_bot("BOT season 12", CONFIG) == "season"
+    assert variante_bot("시즌 12 BOT", CONFIG) == "season"
+    assert variante_bot("BOT 19s", CONFIG) is None and variante_bot("season finale", CONFIG) is None
+    assert variante_bot("season 12 challenge", CONFIG) is None   # les deux indices
     lec, _ = lectures_texte(meta("BOT Challenge 19.558s", ("bot",)), [("titre", "BOT Challenge 19.558s")], CONFIG)
-    assert lec[0]["bot_variant"] == "challenge"
-    lec, _ = lectures_texte(meta("HOTM 第2関門 95,000pt", ("hotm",)), [("description", "第1関門 94,600pt")], CONFIG)
-    assert lec[0]["gate"] == 2                                  # porte lue dans le titre, pas dans le texte du score
+    assert lec[0]["bot_variant"] == "challenge" and "variante d'après le titre" in lec[0]["notes"]
+    lec, _ = lectures_texte(meta("BOT 19.558s", ("bot",)), [("titre", "BOT 19.558s")], CONFIG)
+    assert lec[0]["bot_variant"] is None
+    lec, _ = lectures_texte(meta("HOTM 第2関門 95,000pt", ("hotm",)), [("titre", "HOTM 第2関門 95,000pt")], CONFIG)
+    assert lec[0]["gate"] == 2
+    lec, _ = lectures_texte(meta("HOTM 95,000pt", ("hotm",)), [("titre", "HOTM 95,000pt"), ("description", "第1関門")], CONFIG)
+    assert lec[0]["gate"] is None                               # porte : titre seulement
 
 
 def test_v3_mots_cles_de_mode_en_mot_entier():

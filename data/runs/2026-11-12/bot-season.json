@@ -1,5 +1,81 @@
 [
   {
+    "run_id": "bot-season-2026-11-12-a-923ClD9Rc",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCYNsWXOKkyjkkm-pFvt0vAQ",
+    "player": "aaaaaaaaaaaa",
+    "channel": "aaaaaaaaaaaa",
+    "video_id": "a-923ClD9Rc",
+    "video_ids": [
+      "a-923ClD9Rc"
+    ],
+    "published_at": "2026-11-12T13:01:40+01:00",
+    "lang": "ja",
+    "score": {
+      "total": 19.558,
+      "runs": [
+        19.558
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 19.558; variante d'après le titre; boss non contrôlé",
+    "bot_variant": "season",
+    "runs_detail": [
+      {
+        "video_id": "a-923ClD9Rc",
+        "published_at": "2026-11-12T13:01:40+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-season-2026-11-12-Lt84IhMjBvM",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
+    "player": "𐐂露依Rui ルイ 𐐚",
+    "channel": "𐐂露依Rui ルイ 𐐚",
+    "video_id": "Lt84IhMjBvM",
+    "video_ids": [
+      "Lt84IhMjBvM"
+    ],
+    "published_at": "2026-11-13T11:12:06+01:00",
+    "lang": "zh",
+    "score": {
+      "total": 19.754,
+      "runs": [
+        19.754
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 19.754s; variante d'après le titre; boss non contrôlé",
+    "bot_variant": "season",
+    "runs_detail": [
+      {
+        "video_id": "Lt84IhMjBvM",
+        "published_at": "2026-11-13T11:12:06+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
     "run_id": "bot-season-2026-11-12-tOzRUlmZ2JI",
     "week": "2026-11-12",
     "mode": "bot",
@@ -23,50 +99,12 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 23;223s; boss non contrôlé",
+    "notes": "score provisoire (titre) : 23;223s; variante d'après le titre; boss non contrôlé",
     "bot_variant": "season",
     "runs_detail": [
       {
         "video_id": "tOzRUlmZ2JI",
         "published_at": "2026-11-12T20:12:47+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false
-      }
-    ]
-  },
-  {
-    "run_id": "bot-season-2026-11-12-uwJfPTJI8ZE",
-    "week": "2026-11-12",
-    "mode": "bot",
-    "channel_id": "UCXTmMgefIJnkOksH7acBrXQ",
-    "player": "리히온",
-    "channel": "리히온",
-    "video_id": "uwJfPTJI8ZE",
-    "video_ids": [
-      "uwJfPTJI8ZE"
-    ],
-    "published_at": "2026-11-13T06:44:18+01:00",
-    "lang": "ko",
-    "score": {
-      "total": 28.0,
-      "runs": [
-        28.0
-      ],
-      "unit": "seconds"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : 28초; boss non contrôlé",
-    "bot_variant": "season",
-    "runs_detail": [
-      {
-        "video_id": "uwJfPTJI8ZE",
-        "published_at": "2026-11-13T06:44:18+01:00",
         "t": null,
         "stage": null,
         "team": null,
