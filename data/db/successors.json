@@ -1,0 +1,472 @@
+[
+  {
+    "id": "myro",
+    "name": {
+      "fr": "",
+      "en": "Myro",
+      "ko": ""
+    },
+    "rarity": null,
+    "role": null,
+    "type_en": "successor",
+    "element": "wind",
+    "class": "Successor",
+    "weapon_type": null,
+    "exclusive_weapon": "Rage of the White Flames",
+    "release_date_en": "7 May 2026",
+    "skills": [
+      {
+        "type": "basic_attack",
+        "name": {
+          "fr": "",
+          "en": "Andante",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Myro swings her sword like she's dancing to cut down enemies."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Stage 1 Damage: 838-1257% of the user's Attack Stage 2 Damage: 860-1290% of the user's Attack Stage 3 Damage: 878-1317% of the user's Attack Stage 4 Damage: 893-1339.5% of the user's Attack Stage 5 Damage: 913-1369.5% of the user's Attack ・Deals Wind elemental damage.",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_1",
+        "name": {
+          "fr": "",
+          "en": "Grazioso",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Myro quickly dashes toward the enemy, delivers a series of slashes, then retreats while unleashing white flame sword blasts."
+        },
+        "cooldown": 5.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 1076-1614% of the user's Attack Cooldown: 5 sec ・Deals Wind elemental damage. ・When the final hit lands, it [Knocks Down] the target.",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_2",
+        "name": {
+          "fr": "",
+          "en": "Feroce",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Myro charges forward and stabs the enemy."
+        },
+        "cooldown": 6.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 870-1305% of the user's Attack Cooldown: 6 sec ・Deals Wind elemental damage. ・Gains [Super Armor] while using this skill. ・Using this skill restores 50 MP.",
+        "values_by_level": {}
+      },
+      {
+        "type": "support",
+        "name": {
+          "fr": "",
+          "en": "Pianissimo Largo",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "With a white flame-imbued blade, Myro cleaves the darkened sky."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 4030% of the user's Attack ・Deals Wind elemental damage. ・When this skill hits, it inflicts the [Airborne] effect. ・Using this increases the entire team's Wind Overload damage by 30% for 15 second(s).",
+        "values_by_level": {}
+      },
+      {
+        "type": "qte",
+        "name": {
+          "fr": "",
+          "en": "Agitato",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Myro leaps into the air with a mirage slash."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 1520-2280% of the user's Attack ・Deals Wind elemental damage. ・When this skill hits, it inflicts the [Airborne] effect.",
+        "values_by_level": {}
+      },
+      {
+        "type": "ultimate",
+        "name": {
+          "fr": "",
+          "en": "Pianissimo",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "With a white flame-imbued blade, Myro cleaves the darkened sky."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 6120-9180% of the user's Attack ・Deals Wind elemental damage. ・When this skill hits, it inflicts the [Airborne] effect.",
+        "values_by_level": {}
+      }
+    ],
+    "passives": [
+      {
+        "tier": 0,
+        "text": {
+          "fr": "",
+          "en": "The user now enters the stage with 0% MP and at the start of the stage, the [Myor's Blue Poison] effect is activated. Increases Attack by 5% times 10% of the user's current MP. Extending the Break or Wind Overload state, increases Critical Hit Rate by 50% and Critical Hit damage by 25% (Removed when [Unique Domain - White Flames Legacy] ends). When the user's attack hits, there is a 25% chance to activate Cadenza and Cadenza can be used when Dash is used while Cadenza is available (Cooldown: 6 second(s)). Using Grazioso activates the [Andantino] effect. Using Agitato puts the user in an [Aerial] state and transforms Andante to Andante Forte. Only the Basic Attack can be used when Andante Forte is active. Transforms Feroce to Feroce Sforzando for 5 second(s) after using Andante Stage 5 and increases damage by 100%. Activates an effect that increases Critical Hit damage by 1000% while using Pianissimo. In [Team Fight] mode, the user's damage dealt increases by 500%. [Myor's Blue Poison] Increases Defense Penetration by 10%. Increases damage dealt by 25%. Increases the user's Attack by 1.25% every 1 second(s) (stacks up to 30 times). Duration: Infinite [Andantino] Increases Andante damage by 100%. Using Andante additional restores 100% of the user's MP. Gains [Super Armor] while using Andante. Using Adante Stage 5 removes the Andantino effect. Duration: Infinite"
+        }
+      }
+    ],
+    "base_stats": {
+      "lv1": {
+        "hp": null,
+        "attack": null,
+        "defense": null,
+        "total_power": null
+      },
+      "max": {
+        "hp": null,
+        "attack": null,
+        "defense": null,
+        "total_power": null
+      }
+    },
+    "advancement": [],
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Myro",
+    "wiki_revid": 18092,
+    "wiki_timestamp": "2026-11-06T23:39:07Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki)."
+  },
+  {
+    "id": "the-monarch-of-shadows",
+    "name": {
+      "fr": "",
+      "en": "The Monarch of Shadows",
+      "ko": ""
+    },
+    "rarity": null,
+    "role": null,
+    "type_en": "successor",
+    "element": "dark",
+    "class": "Successor",
+    "weapon_type": null,
+    "exclusive_weapon": "Shadows Judgment",
+    "release_date_en": "30 July 2026",
+    "skills": [
+      {
+        "type": "basic_attack",
+        "name": {
+          "fr": "",
+          "en": "Nocturne SLash",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The Monarch of Shadows unleashes a flurry of slashes that combine dagger techniques and martial arts."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Stage 1 Damage: 572-858% of the user's Attack Stage 2 Damage: 656-984% of the user's Attack Stage 3 Damage: 636-957% of the user's Attack ・Deals Dark elemental damage.",
+        "values_by_level": {}
+      },
+      {
+        "type": "core_attack",
+        "name": {
+          "fr": "",
+          "en": "Void Requiem",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The Monarch of Shadows attacks to perform a Requiem of Darkness."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 555-832.5% of the user's Attack Usage Condition: Consumes 1 [Shard(s)] ・Deals Dark elemental damage",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_1",
+        "name": {
+          "fr": "",
+          "en": "Mirage Blade",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The Monarch of Shadows swings his blade of death."
+        },
+        "cooldown": 9.0,
+        "mp_cost": "105-138",
+        "effects": [],
+        "effects_text_en": "Damage: 753-1129.5% of the user's Attack Cooldown: 9 MP Consumption: 105-138 ・Deals Dark elemental damage. ・When the final hit lands, it inflicts the [Airborne] effect.",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_2",
+        "name": {
+          "fr": "",
+          "en": "Abyssal Fang",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The Monarch of Shadows pierces through the enemy at blinding speeds."
+        },
+        "cooldown": 9.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 850-1275% of the user's Attack Cooldown: 9 sec MP Consumption 140-184 ・Deals Dark elemental damage. ・When the final hit lands, it inflicts the [Airborne] effect.",
+        "values_by_level": {}
+      },
+      {
+        "type": "support",
+        "name": {
+          "fr": "",
+          "en": "Eternal Doom",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The Monarch of Shadows brands surviving enemies with eternal destruction."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 2533% of the user's Attack ・Deals Dark elemental damage. ・When this skill hits, it inflicts the [Airborne] effect. ・Using this increases the entire team's Dark Overload damage by 30% for 15 second(s).",
+        "values_by_level": {}
+      },
+      {
+        "type": "qte",
+        "name": {
+          "fr": "",
+          "en": "Dual Fatality",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The Monarch of Shadows delivers two deadly strikes simultaneously with crisscrossing blades."
+        },
+        "cooldown": 7.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 2268-3402% of the user's Attack Cooldown: 7 sec Usage Condition: Use Mirage Blade and Abyssal Fang once each. ・Deals Dark elemental damage. ・When this skill hits, it inflicts the [Airborne] effect. When this skill hits, it decreases the Defense by 60% for 20 second(s).",
+        "values_by_level": {}
+      },
+      {
+        "type": "ultimate",
+        "name": {
+          "fr": "",
+          "en": "Sovereign Doom",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The Monarch of Shadows unleashes the Breath of Destruction, then condemns the enemy to an endless death."
+        },
+        "cooldown": 45.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 6036-9054% of the user's Attack Cooldown: 45 sec ・Power Gauge Consumption: 100% ・Deals Dark elemental damage. ・When this skill hits, it inflicts the [Airborne] effect.",
+        "values_by_level": {}
+      }
+    ],
+    "passives": [
+      {
+        "tier": 0,
+        "text": {
+          "fr": "",
+          "en": "The [Ascension] effect is activated when entering a stage. The Monarch of Shadows' Critical Hit Rate increases by 50% and their Critical Hit damage increases by 25% when the target's [Break] state and the [Dark] [Overload] duration are extended (Removed when [Unique Domain - Realm of the Dead] ends). Cannot recover Core Gauge Using Dual Fatality activates [Void Requiem] and creates 4 Shard(s). Using Dual Fatality transforms Mirage Blade and Abyssal Fang to Phantom Raid and Grim Edge, increasing their damage by 200%. Using Void Requiem 8 time(s) activates Dual Fatality, allowing the Monarch of Shadows to use it. Using Phantom Raid or Grim Edge creates 4 [Shard(s)]. Creating [Shards] activates the [Omen]. Using Void Requiem reduces the cooldown of Phantom Raid and Grim Edge by 0.1 second(s). Each time all skills, including the Core Attack, hit, they activate 1 [Silhouette(s)] (Cooldown: 2 second(s)). In [Team Fight] mode, the Monarch of Shadows' damage dealt increases by 500%. [Silhouette] A dagger that conceals its killing intent strikes from above. Applies an effect that deals Dark elemental damage equal to 234% of the Monarch of Shadows' Attack Counts as a Core Attack. [Ascension] Gains [Super Armor] while the effect is active. Increases damage dealt to Boss and Elite monsters by 50%. Increases Attack by 50%. Duration: Infinite [Omen] Increases Void Requiem damage by 50% Increases Sovereign Doom damage by 50%. Duration: 10 second(s)"
+        }
+      }
+    ],
+    "base_stats": {
+      "lv1": {
+        "hp": null,
+        "attack": null,
+        "defense": null,
+        "total_power": null
+      },
+      "max": {
+        "hp": null,
+        "attack": null,
+        "defense": null,
+        "total_power": null
+      }
+    },
+    "advancement": [],
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/The_Monarch_of_Shadows",
+    "wiki_revid": 18146,
+    "wiki_timestamp": "2026-11-07T02:25:52Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki)."
+  },
+  {
+    "id": "velvet",
+    "name": {
+      "fr": "",
+      "en": "Velvet",
+      "ko": ""
+    },
+    "rarity": null,
+    "role": null,
+    "type_en": "successor",
+    "element": "fire",
+    "class": "Successor",
+    "weapon_type": null,
+    "exclusive_weapon": "Dance of the Fangs",
+    "release_date_en": null,
+    "skills": [
+      {
+        "type": "basic_attack",
+        "name": {
+          "fr": "",
+          "en": "Ravaging Claw / Crimson Fang",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "In Double-Edged Spear Stance, Ravaging Claw can be used to slash enemies across a wide area. In Twin Blades Stance, use Crimson Fang to slash enemies in rapid succession."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Stage 1 Damage: 312-468% of the user's Attack Stage 2 Damage: 349-523.5% of the user's Attack Stage 3 Damage: 386-579% of the user's Attack Stage 4 Damage: 462-693% of the user's Attack ・Deals Fire elemental damage.",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_1",
+        "name": {
+          "fr": "",
+          "en": "Vulpine Claw",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Velvet pulls nearby enemies in with her double-edged spear, then strikes downward from the air to launch them upwards."
+        },
+        "cooldown": 9.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 469-703.5% of the user's Attack Cooldown: 9 sec MP Consumption 105-138 ・Deals Fire elemental damage. ・When the final hit lands, it inflicts the [Airborne] effect.",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_2",
+        "name": {
+          "fr": "",
+          "en": "Fox Fang Spare",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Velvet splits her weapon into twin blades, leaps, then strikes down both blades to launch the enemy into the air."
+        },
+        "cooldown": 6.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 530-795% of the user's Attack Cooldown: 6 sec MP Consumption 140-184 ・Deals Fire elemental damage. ・When the final hit lands, it inflicts the [Airborne] effect.",
+        "values_by_level": {}
+      },
+      {
+        "type": "support",
+        "name": {
+          "fr": "",
+          "en": "Survival of the Fittest",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Velvet unleashes her feral instincts and violently crushes nearby enemies"
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 2580% of the user's Attack ・Deals Fire elemental damage. ・When this skill hits, it inflicts the [Airborne] effect. ・Using this increases the entire team's Fire Overload damage by 30% for 15 second(s).",
+        "values_by_level": {}
+      },
+      {
+        "type": "qte",
+        "name": {
+          "fr": "",
+          "en": "Tear",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Velvet dashes between enemies, then detonates all slashed paths at once to launch them into the air."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 2284-3426% of the user's Attack ・Deals Fire elemental damage. ・When the final hit lands, it inflicts the [Airborne] effect.",
+        "values_by_level": {}
+      },
+      {
+        "type": "ultimate",
+        "name": {
+          "fr": "",
+          "en": "Bloodbath",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Velvet's awakened ferocity tears through the area, turning it into utter chaos."
+        },
+        "cooldown": 45.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 4593-6889.5% of the user's Attack Cooldown: 45 sec ・Deals Fire elemental damage. ・When this skill hits, it inflicts the [Airborne] effect.",
+        "values_by_level": {}
+      }
+    ],
+    "passives": [
+      {
+        "tier": 0,
+        "text": {
+          "fr": "",
+          "en": "Entering a stage activates the [Untamed Flame] effect, allowing the user to fight in the [Twin Blades Stance]. When the target's [Break] or Fire Overload duration are extended, the user's Critical Hit Rate increases by 50%, and their Critical Hit damage increases by 25% (Removed when [Unique Domain - Howling Fracture] ends). Using Vulpine Claw activates the [Double-Edged Spear Stance]. Using Fox Fang Snare activates the [Twin Blades Stance]. [Doubled-Edged Spear Stance] Basic Attack changes to Ravaging Claw. When Ravaging Claw hits, the user gains 1 instance of the [Elongated Claws] effect. If the [Twin Fangs] effect is active when this occurs, the number of [Twin Fangs] instances applied is reduced by 1. While in the [Doubled-Edged Spear Stance], Tear can be used if the user has 8 [Elongated Claws] instances applied. Using Tear consumes all the [Elongated Claws] instances and activates the [Tearing Claws] effect. [Twin Blades Stance] Basic Attack changes to Crimson Fang. When Crimson Fang hits, the user gains 1 instance of the [Twin Fangs] effect. If the [Elongated Claws] effect is active when this occurs, the number of [Elongated Claws] instances applied is reduced by 1. While in the [Twin Blades Stance], Bloodbound can be used if the user has 8 [Twin Fangs] instances applied. Using Bloodbound consumes all the [Twin Fangs] instances and activates the [Bloodbound Twin Fangs] effect. [Bloodbound] removes [Elongated Claws, Twin Fangs, Tearing Claws, and Bloodbound Twin Fangs] when the attack ends. In [Team Fight] Mode, damage dealt increases by 500% [Untamed Flame] Gains [Super Armor] while the effect is active. Increases damage dealt to Boss and Elite monsters by 50%. Increases Attack by 50%. Duration: Infinite [Elongated Claws] Increases Attack by 5% Increases Fire damage by 5%. Duration: Infinite (up to 8 instances) [Twin Fangs] Increases Attack by 5% Increases Critical Hit damage by 5%. Duration: Infinite (up to 8 instances) [Tearing Claws] Increases Attack by 50% Increases Fire damage by 50%. Increases Fire Overload damage by 30%. Increases Fox Fang Snare and Crimson Fang damage by 100%. Cannot obtain the [Elongated Claws] effect Duration: Infinite [Bloodbound Twin Fangs] Increases Attack by 50% Increases Critical Hit damage by 50%. Increases Defense Penetration by 20%. Increases Vulpine Claw and Ravaging Claw damage by 100%. Cannot obtain the [Twin Fangs] effect Duration: Infinite"
+        }
+      }
+    ],
+    "base_stats": {
+      "lv1": {
+        "hp": null,
+        "attack": null,
+        "defense": null,
+        "total_power": null
+      },
+      "max": {
+        "hp": null,
+        "attack": null,
+        "defense": null,
+        "total_power": null
+      }
+    },
+    "advancement": [],
+    "icon": null,
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Velvet",
+    "wiki_revid": 18136,
+    "wiki_timestamp": "2026-11-07T01:14:57Z",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki)."
+  }
+]
