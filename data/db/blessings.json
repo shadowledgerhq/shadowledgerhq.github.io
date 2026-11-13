@@ -14,7 +14,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Le truc, c'est d'asséner un coup de poing plus vif et plus précis. Votre Attaque augmente de 10 par tranche de 1 points d'Agilité appliqués (pour un boost maximal de 2310).",
       "en": "・Your Attack stat increases by 2-4-6-7 for every Agility points applied up to a maximum boost of 300-700-1200-1540."
     },
     "flavor_en": "It's all about landing a quicker, sharper punch.",
@@ -35,8 +35,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki). Catégorie : wiki (empowerment) ≠ type API slagate (survie) : celle du wiki est conservée, à vérifier dans le jeu.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "first-strike-barrage",
@@ -53,7 +54,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Je ne vole pas comme le papillon et ne pique pas comme l'abeille ; je suis l'essaim. Lorsque vous réussissez à porter 35 attaque(s), votre Attaque augmente de 2.25 % (cumulable jusqu'à 15 fois).",
       "en": "・Upon landing a hit 60-50-40-35 time(s), Jinwoo's Attack increases by 1-1.5-2-2.25% (Stacks up to 10 times)."
     },
     "flavor_en": "I don't float like a butterfly and sting like a bee: I become the swarm.",
@@ -80,8 +81,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "irresistible-force",
@@ -98,7 +100,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Frappez sans la moindre hésitation et avancez. Lorsque vous utilisez une compétence avec effet de [Bris], votre Attaque augmente de 12 % pendant 7 seconde(s) (cumulable jusqu'à 3 fois).",
       "en": "・When Jinwoo uses a skill with the [Break] effect his Attack increases by 3-5-7-8% for 6 second(s) (Stacks up to 3 times)"
     },
     "flavor_en": "I'll swing with hesitation and move forward.",
@@ -119,13 +121,14 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki). Catégorie : wiki (empowerment) ≠ type API slagate (survie) : celle du wiki est conservée, à vérifier dans le jeu.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "crushing-attack",
     "name": {
-      "fr": "",
+      "fr": "Attaque dévastatrice",
       "en": "Crushing Attack",
       "ko": ""
     },
@@ -137,7 +140,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Écrasez tout ce qui se dresse sur votre route. Les dégâts de vos compétences avec effet de [Bris] augmentent de 40 %.",
       "en": "・The damage of Jinwoo's skill with the [Break] effect increases by 15-25-35-40%."
     },
     "flavor_en": "I'll just crush anything that stands in my way.",
@@ -158,12 +161,14 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "sandbag",
     "name": {
-      "fr": "",
+      "fr": "Économie des forces",
       "en": "Sandbag",
       "ko": ""
     },
@@ -175,7 +180,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Les difficultés d'aujourd'hui ne sont que des étapes vers les succès de demain. L'Attaque de Jinwoo diminue de -10% pendant 60 seconde(s). Ensuite, son Attaque augmente de 50 % pendant 360 seconde(s).",
       "en": "・Jinwoo's Attack will decrease by 10% for 180-150-130-120 second(s). ・Then his Attack increases by 40% for 120 second(s)."
     },
     "flavor_en": "The hardships of today are merely steeping stones to future success",
@@ -196,7 +201,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "desire",
@@ -213,7 +220,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Même à bout de forces, votre désir d'atteindre le sommet vous revigore et vous fait avancer. Si vos PM actuels sont à 60 % ou moins, votre attaque augmente de 28 %. Vous commencerez le combat avec 60% de vos PM actuels. Si vous obtenez l'effet [Récupération de PM], [Désir] dissipe l'éffet attaque augmentée pendant 10 secondes.",
       "en": "・If Jinwoo's current MP is 60% or below, his Attack increases by 12-16-24-28%. ・Jinoo will start the battle with his current MP at 60%. ・If Sung Jinwoo gains the [MP Recovery] effect, [Desire] removes the Attack Increase effect for 10 second(s)."
     },
     "flavor_en": "Even at my most drained, my desire to reach the top fuels me to push onward.",
@@ -234,8 +241,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "intuit",
@@ -252,7 +260,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Ses mots ont résonné en vous pour vous permettre de comprendre votre destinée et le but de vos pouvoirs. Votre statistique d'Attaque augmente de 10 par tranche de 1 points d'Intelligence à votre actif (cumulable jusqu'à un maximum de 2310).",
       "en": "・Your Basic Attack increases by 2-4-6-7 for every 1 point of Intelligence you have. (Increasing up to a maximum of 300-700-1200-1540)"
     },
     "flavor_en": "His words helped you realize your destiny and the purpose of your powers.",
@@ -273,8 +281,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "we-are-one",
@@ -291,7 +300,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vos compétences sont améliorées en présence de chasseurs du même élément. S'il y a dans l'équipe 2 chasseurs du même élément, votre Attaque, votre Défense, vos PV et ceux des chasseurs concernés augmentent de 6.5 %. S'il y a dans l'équipe 3 chasseurs du même élément, votre Attaque, votre Défense, vos PV et ceux des chasseurs concernés augmentent de 6.5 % supplémentaires. En mode [Combat d'équipe], s'il y a dans l'équipe 3 chasseurs du même élément, votre Attaque, votre Défense et vos PV augmentent de 13% supplémentaires.",
       "en": "・If there are 2 support hunters with the same element on the team, it increases Sung Jinwoo and the support hunter's Attack, Defense, and HP by 2.5-3.5-5-6.5%. ・If there are 3 support hunters with the same element on the team, it increases Sung Jinwoo and the support hunter's Attack, Defense, and HP by an additional 2.5-3.5-5-6.5%."
     },
     "flavor_en": "Your abilities are enhanced when there are support hunters who share an element.",
@@ -318,8 +327,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "swift-strike",
@@ -336,7 +346,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "L'utilisation d'Évasion extrême améliore vos capacités. Lorsque vous réussissez à utiliser Évasion extrême, vos dégâts augmentent de 33 % pendant 8 seconde(s) (temps de rechargement : 3 seconde(s)). Lorsque la compétence Foulée de l'ombre arrive juste après l'utilisation d'Évasion extrême, les dégâts supplémentaires augmentent de 33 % pendant 8 seconde(s).",
       "en": "・When you use Extreme Evasion successfully, your damage increases by 11-18-28-33% for 5 second(s). (Cooldown: 10 second(s))"
     },
     "flavor_en": "Using Extreme Evasion enhances your abilities.",
@@ -357,8 +367,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "assassins-proficiency",
@@ -375,7 +386,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vos capacités d'Assassin sont améliorées. Les dégâts de vos attaques dans le dos augmentent de 33 %. Lorsque les compétences Mort ou Effondrement touchent leur cible par derrière, elles réinitialisent le temps de rechargement de Foulée de l'ombre et l'activent (temps de rechargement : 15 seconde(s)).",
       "en": "・Your back attack damage is increased by 9-14-24--29%."
     },
     "flavor_en": "Your assassin abilities are enhanced.",
@@ -389,8 +400,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "fatal-strike",
@@ -407,7 +419,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous pouvez achever rapidement vos ennemis avec un coup fatal. La jauge de [Bris] diminue instantanément de 6 % en cas de coup critique réussi (Temps de rechargement : 2 seconde(s)).",
       "en": "・Your target's [Break] Gauge instantly decreases by 2-3-5-6% when you land a Critical Hit (Cooldown: 2 second(s))."
     },
     "flavor_en": "You can quickly take down enemies with a fatal blow.",
@@ -428,8 +440,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "weakness-detection",
@@ -446,7 +459,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous pouvez distinguer les faiblesses de votre ennemi. Les dégâts que vous infligez aux cibles dotées d'une faiblesse élémentaire augmentent de 24 %.",
       "en": "・Your damage dealt to targets that have elemental weakness increases by 8-12-20-24%."
     },
     "flavor_en": "You can see your enemy's weaknesses.",
@@ -467,8 +480,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "swiftness",
@@ -485,7 +499,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous vous déplacez rapidement. Le nombre maximal de Ruées augmente de 1. Il y a 36 % de chances de réinitialiser le temps de rechargement lorsque la compétence Ruée est utilisée.",
       "en": "・You can now Dash 1 additional time. ・There is a 12-18-30-36% chance for your Dash cooldown to reset upon dashing."
     },
     "flavor_en": "You are able to move incredibly swiftly.",
@@ -506,8 +520,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "double-edged-sword",
@@ -524,7 +539,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Le danger grandit en même temps que votre Attaque. Lorsque vos attaques touchent leurs cibles, votre Attaque augmente de 8 % pendant 10 seconde(s), mais l'Attaque des cibles augmente également de 3 % (cumulable jusqu'à 4 fois).",
       "en": "・When your attacks hit, your Attack increases by 2-3-4-4.5% for 10 second(s), but the Attack of the target that was hit also increases by 2-3-3-3% (stacking up to 4 times)."
     },
     "flavor_en": "As an Attack is enhanced, the danger you face increases as well.",
@@ -551,8 +566,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "boss-slayer",
@@ -569,7 +585,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous vous spécialisez dans la chasse aux boss. Les dégâts que vous infligez aux boss augmentent de 29 %, mais le temps de rechargement de Ruée augmente de 20 %.",
       "en": "・Your damage dealt to Bosses increases by 9-14-24-29%, but the cooldown of your Dash increases by 15-20-20-20%."
     },
     "flavor_en": "You have specialized in Boss Hunting.",
@@ -596,8 +612,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "chains-of-blood",
@@ -614,7 +631,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Des chaînes ensanglantées vous étreignent. Les dégâts de vos attaques augmentent à hauteur de 80 % des PV perdus, mais les dégâts subis augmentent de 10 %.",
       "en": "・Your Attack damage increases by 14-22-36-42% of your lost HP ratio, but your damage taken also increases by 10%."
     },
     "flavor_en": "You will be draped in chains of blood.",
@@ -635,8 +652,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "title-demon-slayer",
@@ -653,7 +671,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous avez obtenu le Titre : Chasseur de démons. Augmente les PM totaux de 1400. Vous récupérez 6 PM par seconde. Vos PM augmentent de 1400 supplémentaires en mode [Combat d'équipe].",
       "en": "・Your MP increases by 500-700-1200-1400. ・You recover 3-4-5-6 of your MP every second."
     },
     "flavor_en": "You have obtained the Title: Demon Slayer.",
@@ -680,13 +698,14 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "title-conqueror-of-adversity",
     "name": {
-      "fr": "",
+      "fr": "Titre : Vaillant dans l'adversité",
       "en": "Title: Conqueror of Adversity",
       "ko": ""
     },
@@ -698,7 +717,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous avez obtenu le Titre : Vaillant dans l'adversité. Chaque fois que vos PV tombent en dessous de 25 %, votre Attaque, votre Défense et vos PV augmentent de 6 % (cumulable jusqu'à 3 fois).",
       "en": "・Every time your HP decreases by 25%, your Attack, Defense, and HP increase by 2-3-5-6% (stacking up to 3 time(s))."
     },
     "flavor_en": "You have obtained the Title: Conqueror of Adversity.",
@@ -719,12 +738,14 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "title-wolf-assassin",
     "name": {
-      "fr": "",
+      "fr": "Titre : Massacreur de lycans",
       "en": "Title: Wolf Assassin",
       "ko": ""
     },
@@ -736,7 +757,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous avez obtenu le Titre : Massacreur de lycans. Les dégâts infligés aux monstres normaux augmentent de 33 %.",
       "en": "・The damage you deal to Normal Monsters increases by 11-18-28-33%."
     },
     "flavor_en": "You have obtained the Title: Wolf Assassin.",
@@ -757,7 +778,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "pulverize",
@@ -774,7 +797,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous pulvérisez l'ennemi. Augmente l'effet de [Bris] de 36 %. Augmente les dégâts infligés aux cibles affectées par l'effet [Bris] de 36 %.",
       "en": "・The power of the [Break] effects you apply to your enemies increase by 12-18-30-36%. ・The damage you deal to targets affected by the [Break] effect increases by 12-18-30-36%."
     },
     "flavor_en": "You pulverize your enemies.",
@@ -801,13 +824,14 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "bloodlust",
     "name": {
-      "fr": "",
+      "fr": "Hostilité",
       "en": "Bloodlust",
       "ko": ""
     },
@@ -819,7 +843,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "La puissante hostilité de Jinwoo affaiblit les capacités de la cible. Lorsque Jinwoo atteint sa cible, l'Attaque de celle-ci diminue de 14 % pendant 6 seconde(s). Lorsque Jinwoo attaque, la Défense de la cible diminue de 14 % pendant 6 seconde(s).",
       "en": "・When you are hit, it decreases your attacker's Attack by 4-7-12-14% for 6 second(s). ・When you attack, it decreases your target's Defense by 4-7-12-14% for 6 second(s)."
     },
     "flavor_en": "Your powerful bloodlust weakens your enemies' abilities.",
@@ -846,7 +870,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "sharp-perception",
@@ -863,7 +889,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "L'intuition que vous avez développée en tant que chasseur de rang inférieur vous permet de trouver les points faibles de votre adversaire. Votre Taux de coup critique augmente de 3.5 % pendant 8 seconde(s) lorsque vos attaques touchent vos cibles (cumulable 7 fois).",
       "en": "・Your Critical Hit Rate will increase by 1-2-3-3.5% for 8 second(s) when your attacks hit (stacking up to 4-5-6-7 time(s))."
     },
     "flavor_en": "The instincts you honed as a low-ranking hunter have given you the ability to intuit your opponent's weaknesses.",
@@ -890,8 +916,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "reawakening",
@@ -908,7 +935,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous avez terminé la Quête secrète : La Bravoure du Faible. Le temps de rechargement de toutes vos compétences diminue de 24 %.",
       "en": "・Your skill cooldowns will all decrease by 8-12-20-24%."
     },
     "flavor_en": "You have completed the Secret Quest: Courage of the Weak.",
@@ -929,8 +956,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "mana-rampage",
@@ -947,7 +975,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous avez appris à gagner en puissance en canalisant une plus grande quantité de mana. La consommation de mana de vos compétences augmente de 12 % et votre Attaque augmente de 20 %.",
       "en": "・Your Attack will increase by 6-9-16-20%, but your Skill Mana Consumption will also increase by 8-12-12-12%."
     },
     "flavor_en": "You have learned how to gain greater power by channeling a higher volume of mana.",
@@ -974,8 +1002,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "monarchs-domain",
@@ -992,7 +1021,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Lorsque Jinwoo invoque une ombre, l’effet [Domaine du monarque] s’active et renforce l’ombre. L’Attaque de l’ombre se trouvant dans la zone augmente de 120 %. Inflige toutes les secondes des dégâts équivalents à 450 % de l’Attaque de Sung Jinwoo aux ennemis se trouvant dans la zone. Durée : 8 secondes",
       "en": "・Shadows' Attack within the domain increases by 40-60-100-120%. ・The Shadow also deals damage equal to 200-300-400-450% of the value of your Attack every second to enemies within the domain. ・Duration: 8 second(s)"
     },
     "flavor_en": "When you summon a Shadow, [Monarch's Domain] activates.",
@@ -1019,8 +1048,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "speed",
@@ -1037,7 +1067,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "La course à pied a renforcé vos jambes. Votre Vitesse augmente de 24 %. Le temps de rechargement de Ruée est réduit de 24 %.",
       "en": "・Your Speed will increase by 8-12-20-24%. ・Your Dash cooldown will decrease by 8-12-20-24%."
     },
     "flavor_en": "Running had made your legs stronger.",
@@ -1064,8 +1094,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "advanced-dagger-technique",
@@ -1082,7 +1113,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "L'usage récurrent de dagues vous a permis de les manier plus efficacement. Lorsque vous attaquez un ennemi dont les PV sont à 70 % ou moins, les dégâts infligés augmentent de 24 %. Lorsque vous attaquez un ennemi dont les PV sont à 70 % ou moins et que vous avez une [dague] équipée, les dégâts que vous infligez augmentent de 48 % supplémentaires.",
       "en": "・When attacking an enemy who has 70% or less of their HP, the damage you deal increases by 8-12-20-24%."
     },
     "flavor_en": "Due to your extensive use of daggers, yuou are now more proficient with them.",
@@ -1103,8 +1134,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "swift-restoration",
@@ -1121,7 +1153,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Les tactiques des ennemis ne sont plus qu'insignifiantes tentatives à présent. Votre Taux de récupération de PV augmente de 25 %. Chaque fois que vous récupérez des PV, vous récupérez 4.5 % de PV supplémentaires (temps de rechargement : 15 seconde(s)).",
       "en": "・Jinwoo's HP Recovery Rate increases by 10-16-22-25% ・Each time Jinwoo recovers HP, he regains an additional 2-3-4-4.5% of his HP (Cooldown: 15 second(s))"
     },
     "flavor_en": "An enemy's petty tricks are nothing more than annoyances now.",
@@ -1148,13 +1180,14 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "irreversible-road",
     "name": {
-      "fr": "",
+      "fr": "Sans retour",
       "en": "Irreversible Road",
       "ko": ""
     },
@@ -1166,7 +1199,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Lorsque les pouvoirs entrent en synergie, ils se renforcent mutuellement. Votre Défense augmente de 36 %. Si vos armes équipées sont du même élément, votre Défense augmente de 36 % supplémentaires.",
       "en": "・Jinwoo's Defense increases by 4-12-20-24% If Jinwoo's equipped weapons are of the same element, his Defense increases by an additional 4-12-20-24%"
     },
     "flavor_en": "When powers synergize, they become stronger.",
@@ -1193,7 +1226,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "best-defense-is-a-good-offense",
@@ -1210,7 +1245,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "La meilleure défense consiste à dissuader l'ennemi d'attaquer. Lorsque votre compétence ultime est utilisée, vous acquérez un [Bouclier] équivalent à 35 % de vos PV max pendant 15 seconde(s).",
       "en": "・When Jinwoo's Ultimate Skill is used, he gains a [Shield] equal to 10-20-30-35% of his Max HP for 15 second(s)"
     },
     "flavor_en": "The ultimate defense lies in making the enemy unwilling to attack.",
@@ -1231,13 +1266,14 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "ravenous-instinct",
     "name": {
-      "fr": "",
+      "fr": "Instinct primaire",
       "en": "Ravenous Instinct",
       "ko": ""
     },
@@ -1249,7 +1285,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "\"Mon instinct de survie s'éveille à mesure que le danger grandit.\" Lorsque vos PM actuels sont à 60 % ou moins, votre Défense augmente de 50 %.",
       "en": "・When Jinwoo's current MP is at 60% of below, their Defense increases by 10-26-42-50%%"
     },
     "flavor_en": "My survival instincts awaken in the midst of danger.",
@@ -1270,7 +1306,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Nom FR rapproché par la phrase d'ambiance et la mécanique (concordantes). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "aggressive-defense",
@@ -1287,7 +1325,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "La meilleur défense, c'est l'attaque. Lorsque votre attaque de base touche sa cible, vous bénéficiez d'un [Bouclier] équivalent à 0.5 % de vos PV max pendant 10 secondes (cumulable jusqu'à 12 fois). Temps de rechargement : 1 seconde.",
       "en": "・When your Basic Attack hits you gain a [Shield] equal to 0.2-0.3-0.5-0.5% of your Max HP for 10 second(s). (stacks up to 10-10-10-12 times) ・Cooldown: 1 second(s)"
     },
     "flavor_en": "Offense is the best defense.",
@@ -1308,8 +1346,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "solidify",
@@ -1326,7 +1365,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "\"Je me sentais devenir plus fort au fil du temps.\" Réduit les ddégâts que vous subissez de 1 % toutes les 5 secondes (cumulable jusqu'à 20 fois).",
       "en": "・Your damage received decreases by 1% every 6-6-6-5 seconds (stacking up to 10-15-20-20 times)."
     },
     "flavor_en": "\"As time passed, I felt my body becoming stronger.\"",
@@ -1347,8 +1386,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "mana-powered-shield",
@@ -1365,7 +1405,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Les ombres peuvent se régénérer tant qu'elles disposent de mana. Vous absorbez 100 % des dégâts que vous subissez, mais cela consomme des PM équivalents à 12 % des dégâts absorbés. Si vos PM actuels ne suffisent pas à absorber 100 % des dégâts, les dégâts restants sont répercutés sur vos PV. Temps de rechargement : 10 seconde(s)",
       "en": "・You absorb 100% of your damage taken but consume MP equal to 20-17-14-12% of the damage you absorb. ・If you don't have enough MP left to absorb 100% of the damage, the remaining damage will be taken out of your HP ・Cooldown: 10 second(s)"
     },
     "flavor_en": "Shadows can regenerate indefinitely as long as they are supplied with mana.",
@@ -1386,8 +1426,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "natural-disaster",
@@ -1404,7 +1445,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Les bêtes magiques ne sont pas les seules à troubler la tranquillité du donjon. Dans le mode [Combat d'équipe], les dégâts subis par les coéquipiers diminuent de 9.5 %.",
       "en": "・In [Team Fight] mode, team members' damage taken decreases by 3-5-8-9.5%."
     },
     "flavor_en": "Magic beasts aren't the only danger lurking in the dungeon.",
@@ -1425,8 +1466,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "penalty-quest-survival",
@@ -1443,7 +1485,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Objectif : rester en vie pendant le temps imparti. Lorsque vous utilisez Évasion extrême 5 fois avec succès, votre Défense augmente de 70 %.",
       "en": "・When you successfully use Extreme Evasion 5 times, your Defense will increase by 26-40-60-70%."
     },
     "flavor_en": "Goal: Survive for the allotted amount of time.",
@@ -1464,8 +1506,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "life",
@@ -1482,7 +1525,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "« Je refuse de mourir dans un endroit pareil ! » ·Quand vous entrez dans un niveau, vous gagnez un [Bouclier] équivalent à 50 % de vos PV max pendant 60 seconde(s).",
       "en": "・When the user enters a stage, they gain a [Shield] equal to 10-20-35-50% of their Max HP for 60 second(s)."
     },
     "flavor_en": "\"I can't lose my life in a place like this.\"",
@@ -1503,8 +1546,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "hp-extraction",
@@ -1521,7 +1565,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "La capacité Monarque des ombres permet d'utiliser des capacités d'extraction de PV des ennemis. Vous récupérez 2.5 % de vos PV en vainquant un ennemi. Vous récupérez 7 % de vos PV en frappant des monstres d'Élite ou supérieurs (temps de rechargement : 20 seconde(s)).",
       "en": "・You will recover 0.8-1.2-2-2.5% of your HP when defeating an enemy. ・You will recover 2.4-3.6-6-7% of your HP when hitting Elite or higher monsters. (Cooldown: 30 second(s))"
     },
     "flavor_en": "As the Monarch of Shadows, you can use your abilities to extract HP from your enemies.",
@@ -1548,8 +1592,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "camouflage",
@@ -1566,7 +1611,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Lorsqu'un puissant éclair s'abat sur vous, vous disparaissez et récupérez aussi vite. Lorsque vous subissez des dégâts équivalents à au moins 5 % de vos PV max, vous vous camouflez pendant 3 seconde(s) et récupérez 6 % de PV toutes les 1 seconde(s). (Temps de rechargement : 30 seconde(s))",
       "en": "・When you receive damage exceeding 5% of your Max HP, you Camouflage for 3 second(s) and recover 2-3-5-6% of your HP every 1 second(s). (Cooldown: 30 second(s))"
     },
     "flavor_en": "When you are hit with the strength of a lightning bolt, you will vanish and recover just as quickly.",
@@ -1587,8 +1632,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "daily-quest-completion",
@@ -1605,7 +1651,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous avez terminé la quête journalière. Voici votre récompense. Si vos PV tombent à 1 ou moins, vous bénéficiez de l'effet [Immortel] pendant 4 seconde(s). Lorsque l'effet [Immortel] expire, vous récupérez 2000 de vos PV ainsi qu'une quantité supplémentaire de PV équivalente à 20 % de vos PV max. Cet effet ne s'active qu'une fois par combat.",
       "en": "・If your HP falls to 1, you become [Immortal] for 4 second(s). ・When the [Immortal] effect ends, you will recover 2000 HP, plus an additional 4-8-16-20% of your maximum HP. ・This effect will only activate once during battle."
     },
     "flavor_en": "You have completed the Daily Quest. Here is your reward.",
@@ -1626,8 +1672,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki). Catégorie : wiki (survival) ≠ type API slagate (booster) : celle du wiki est conservée, à vérifier dans le jeu.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "kasakas-steel-scales",
@@ -1644,7 +1691,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "L'effet Écailles de Kasaka rend votre corps dur comme l'acier. Les dégâts subis sont réduits de 15 %. Augmente l'effet des Boucliers reçus de 20 %.",
       "en": "・Your damage taken decreases by 6-9-15-15%. ・Increases received Shield effect by 6-9-15-20%."
     },
     "flavor_en": "Kasaka's Scale's effects strengthen your body like steel.",
@@ -1671,8 +1718,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "tenacity",
@@ -1689,7 +1737,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Vous faites preuve d'une grande ténacité. Les dégâts que vous subissez sont réduits de 50 % et votre Défense augmente de 80 % lorsque vos PV sont à 30 % ou moins.",
       "en": "・The damage you take will decrease by 20-30-50-50% and your Defense will increase by 20-30-50-80% when your HP is 30% or less."
     },
     "flavor_en": "You possess a tenacious spirit.",
@@ -1716,8 +1764,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "kandiarus-blessing",
@@ -1734,7 +1783,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Le grand enchanteur Kandiaru vous a offert un enchantement spécial. Vos PV augmentent de 24%.",
       "en": "・Your maximum HP increases by 8-12-20-24%."
     },
     "flavor_en": "The Great Spellcaster Kandiaru has gifted you a special enhancement.",
@@ -1755,8 +1804,9 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "master-marksman",
@@ -1773,7 +1823,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Affronter une bête magique colossale juste avec une arme à feu, ce n'est pas donné à tout le monde. Les dégâts de l'attaque de noyau et de la compétence d'arme de Jinwoo augmentent de 24 %. Équiper une [Arme à feu] ou un [Arc] augmente les dégâts de l'attaque de noyau et de la compétence d'arme de 48 % supplémentaires.",
       "en": ""
     },
     "flavor_en": "",
@@ -1784,8 +1834,9 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "do-or-die",
@@ -1802,7 +1853,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Pendant un instant, il se dit que s'il était amené à combattre l'homme se trouvant devant lui, il y perdrait très certainement un bras. L'Attaque·de Jinwoo augmente de 50 %, mais il subit des dégâts équivalents à 1 % de ses PV max toutes les secondes, malgré son [Bouclier]. Toutefois, si ses PV actuels sont en dessous de 10 %, il ne subit pas les dégâts de [Marche ou crève].",
       "en": ""
     },
     "flavor_en": "",
@@ -1813,8 +1864,9 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "supercharge",
@@ -1831,7 +1883,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Concentrez vos émotions et assénez une attaque déchaînée. Lorsque vos PV sont à 100 % ou plus de vos PV max, votre Attaque augmente de 30 %. Lorsque vos PV sont à 100 % ou moins, l'effet Attaque augmentée est temporairement supprimé.",
       "en": ""
     },
     "flavor_en": "",
@@ -1842,8 +1894,9 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "iron-stance",
@@ -1860,7 +1913,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Pourtant, l'homme refusait de concéder le moindre centimètre. Les pieds baignant dans son propre sang, il tint bon jusqu'au bout. Les Dégâts de coup critique de Jinwoo augmentent de 48 %, mais le temps de rechargement de sa Ruée augmente de 100 %. Toutefois, réussir une Évasion extrême réactive la Ruée 1 fois.",
       "en": ""
     },
     "flavor_en": "",
@@ -1871,8 +1924,9 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "architects-plan",
@@ -1889,7 +1943,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Le système a ses propres objectifs. Si le système veut se servir de vous, apprenez à vous servir du système. Équiper l'artéfact de Panoplie 8 du [Poison bleu du Concepteur] augmente les dégâts infligés par Jinwoo de 36 %. En mode [Sung Jinwoo], lorsqu'un chasseur [Attaquant] de l'équipe porte l'artéfact de Panoplie 8 du [Poison bleu du Concepteur], les dégâts infligés par [Sung Jinwoo] augmentent de 36 % et ce dernier récupère 0.2 % de PV toutes les secondes.",
       "en": ""
     },
     "flavor_en": "",
@@ -1900,8 +1954,9 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "booster"
   },
   {
     "id": "spring-of-life",
@@ -1918,7 +1973,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "La régénération est une capacité hors du commun qu'on ne trouve que chez certaines bêtes magiques de rang A ou supérieur. Jinwoo récupère 0.4 % de PV toutes les secondes. Si sa stat Vitalité est à 200 ou plus, il récupère également 0.8 % de PV toutes les secondes.",
       "en": ""
     },
     "flavor_en": "",
@@ -1929,8 +1984,9 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
   },
   {
     "id": "devour",
@@ -1947,7 +2003,7 @@
       "transcendent"
     ],
     "text": {
-      "fr": "",
+      "fr": "Une bête ne se bat pas, elle chasse. Lorsque les attaques de Jinwoo touchent leur cible, il récupère 0.5 % de ses PV. Temps de rechargement : 1 seconde(s)",
       "en": ""
     },
     "flavor_en": "",
@@ -1958,7 +2014,233 @@
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
-    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "api_type": "survie"
+  },
+  {
+    "id": "acrobat",
+    "name": {
+      "fr": "Acrobate",
+      "en": "Acrobat",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "api_type": "booster",
+    "rarity": null,
+    "text": {
+      "fr": "Vos mouvements sont aussi gracieux que ceux d'un acrobate et reflètent votre maîtrise du combat. Quand vous entrez dans un niveau, vous obtenez 10 cumuls de l'effet [Acrobate]. Si vous parvenez à utiliser Évasion extrême, vous obtenez 2 cumuls de l'effet [Acrobate]. [Acrobate] Augmente l'Attaque de 3.5 %. Si une attaque vous touche, cet effet est supprimé (temps de rechargement : 5 secondes). Durée : illimitée (cumulable jusqu'à 10 fois)",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes)."
+  },
+  {
+    "id": "garde-double",
+    "name": {
+      "fr": "Garde double",
+      "en": "",
+      "ko": ""
+    },
+    "category": "survival",
+    "api_type": "survie",
+    "rarity": null,
+    "text": {
+      "fr": "« Tu traverseras jamais ça. » Les [Boucliers] conférés à Jinwoo augmentent de 25 %. Lorsqu'un [Bouclier] est actif, votre Défense augmente de 50 %.",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+  },
+  {
+    "id": "jugement-ultime",
+    "name": {
+      "fr": "Jugement ultime",
+      "en": "",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "api_type": "booster",
+    "rarity": null,
+    "text": {
+      "fr": "La seule option que vous proposez à vos ennemis est une fin rapide. Si toutes vos armes équipées sont du même élément, deux effets sont activés. Les dégâts de sa Compétence ultime augmentent de 70 %. Le Taux de remplissage de la jauge de puissance augmente de 5 %.",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+  },
+  {
+    "id": "la-vie-en-marche",
+    "name": {
+      "fr": "La vie en marche",
+      "en": "",
+      "ko": ""
+    },
+    "category": "survival",
+    "api_type": "survie",
+    "rarity": null,
+    "text": {
+      "fr": "La vie est un cycle sans fin, le flux éternel de l'existence. Si vos PV sont égaux ou supérieurs à 51 %, votre Défense augmente de 55 %. Si vos PV sont égaux ou inférieurs à 50 %, les soins reçus augmentent de 55 %.",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+  },
+  {
+    "id": "ricochet",
+    "name": {
+      "fr": "Ricochet",
+      "en": "Ricochet",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "api_type": "booster",
+    "rarity": null,
+    "text": {
+      "fr": "Le mana commence à circuler en boucle pour revenir à son propriétaire. Votre stat d'Attaque supplémentaire augmente de 240 % de vos PM max lorsque vous arrivez dans un niveau. (Augmente votre stat Attaque supplémentaire maximale de 15000.)",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes)."
+  },
+  {
+    "id": "r-sonance-darme",
+    "name": {
+      "fr": "Résonance d'arme",
+      "en": "",
+      "ko": ""
+    },
+    "category": "survival",
+    "api_type": "survie",
+    "rarity": null,
+    "text": {
+      "fr": "La sensation de ne faire qu'un avec une arme est une métamorphose brutale mais magnifique. Lorsque vous utilisez une compétence d'arme 4 fois, vous obtenez un [Bouclier] équivalent à 16 % de vos PV max pendant 10 seconde(s) (temps de rechargement : 20 seconde(s)).",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+  },
+  {
+    "id": "soutien-mutuel",
+    "name": {
+      "fr": "Soutien mutuel",
+      "en": "",
+      "ko": ""
+    },
+    "category": "survival",
+    "api_type": "survie",
+    "rarity": null,
+    "text": {
+      "fr": "« Si tout le monde s'en sort ... » « Ça suffit, les remarques fatalistes. Ça me rend dingue ! » En mode [Combat d'équipe], les soins prodigués aux membres de votre équipe augmentent de 30 %.",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+  },
+  {
+    "id": "surpression",
+    "name": {
+      "fr": "Surpression",
+      "en": "",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "api_type": "booster",
+    "rarity": null,
+    "text": {
+      "fr": "« La puissance d'un chasseur est limitée à un certain seuil. » Pas la sienne, cependant. L'effet d'[Accumulation élémentaire] diminue de 30 %, mais les dégâts de Surcharge de Jinwoo augmentent de 40 %.",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+  },
+  {
+    "id": "finisher-touch",
+    "name": {
+      "fr": "Toucher de l'Exécuteur",
+      "en": "Finisher Touch",
+      "ko": ""
+    },
+    "category": "empowerment",
+    "api_type": "booster",
+    "rarity": null,
+    "text": {
+      "fr": "Parfois, un plus un donne plus que deux. Si toutes vos armes équipées sont du même élément, les dégâts de compétence de votre arme augmentent de 75 %. En mode [Combat d'équipe], si toutes vos armes équipées sont du même élément, les dégâts de compétence de votre arme augmentent de 150 % supplémentaires.",
+      "en": ""
+    },
+    "flavor_en": "",
+    "effects": [],
+    "conditions": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes)."
   }
 ]

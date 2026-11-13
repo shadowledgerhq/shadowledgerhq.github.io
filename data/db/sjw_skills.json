@@ -6,7 +6,8 @@
     "name": {
       "fr": "Roue de pleine lune",
       "en": "Full Moon Wheel",
-      "ko": ""
+      "ko": "원월륜",
+      "ja": "円月輪"
     },
     "rarity": [
       "rare",
@@ -47,7 +48,8 @@
     "name": {
       "fr": "Multiple",
       "en": "Multiply",
-      "ko": ""
+      "ko": "멀티플",
+      "ja": "マルチプル"
     },
     "rarity": [
       "rare",
@@ -88,7 +90,8 @@
     "name": {
       "fr": "Entaille ardente",
       "en": "Flame Slash",
-      "ko": ""
+      "ko": "불꽃베기",
+      "ja": "炎斬り"
     },
     "rarity": [
       "rare",
@@ -129,7 +132,8 @@
     "name": {
       "fr": "Ruée tourbillonnante",
       "en": "Whirlwind Rush",
-      "ko": ""
+      "ko": "회오리 돌진",
+      "ja": "竜巻猛進"
     },
     "rarity": [
       "rare",
@@ -196,7 +200,8 @@
     "name": {
       "fr": "Bris à la chaîne",
       "en": "Chained Break",
-      "ko": ""
+      "ko": "연쇄파",
+      "ja": "連鎖破"
     },
     "rarity": [
       "rare",
@@ -237,7 +242,8 @@
     "name": {
       "fr": "Bris lumineux",
       "en": "Enlightened Break",
-      "ko": ""
+      "ko": "명투파",
+      "ja": "明透破"
     },
     "rarity": [
       "rare",
@@ -246,7 +252,7 @@
       "transcendent"
     ],
     "type": null,
-    "element": null,
+    "element": "light",
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
@@ -278,7 +284,8 @@
     "name": {
       "fr": "Bris de contre",
       "en": "Countering Break",
-      "ko": ""
+      "ko": "반격파",
+      "ja": "反撃破"
     },
     "rarity": [
       "rare",
@@ -319,7 +326,8 @@
     "name": {
       "fr": "Bris d'ascension",
       "en": "Ascension Break",
-      "ko": ""
+      "ko": "승천파",
+      "ja": "昇天破"
     },
     "rarity": [
       "rare",
@@ -386,7 +394,8 @@
     "name": {
       "fr": "Détonation",
       "en": "Detonation",
-      "ko": ""
+      "ko": "폭발",
+      "ja": "爆発"
     },
     "rarity": [
       "rare",
@@ -427,7 +436,8 @@
     "name": {
       "fr": "Électrocution",
       "en": "Electric Shock",
-      "ko": ""
+      "ko": "감전",
+      "ja": "感電"
     },
     "rarity": [
       "rare",
@@ -468,7 +478,8 @@
     "name": {
       "fr": "Ascension",
       "en": "Ascension",
-      "ko": ""
+      "ko": "승천",
+      "ja": "昇天"
     },
     "rarity": [
       "rare",
@@ -509,7 +520,8 @@
     "name": {
       "fr": "Bombardement",
       "en": "Bombardment",
-      "ko": ""
+      "ko": "폭격",
+      "ja": "爆撃"
     },
     "rarity": [
       "rare",
@@ -576,7 +588,8 @@
     "name": {
       "fr": "Accablement",
       "en": "Rush",
-      "ko": ""
+      "ko": "쇄도",
+      "ja": "殺到"
     },
     "rarity": [
       "rare",
@@ -617,7 +630,8 @@
     "name": {
       "fr": "Percussion",
       "en": "Percussion",
-      "ko": ""
+      "ko": "타진",
+      "ja": "打尽"
     },
     "rarity": [
       "rare",
@@ -658,7 +672,8 @@
     "name": {
       "fr": "Illusion",
       "en": "Illusion",
-      "ko": ""
+      "ko": "잔상",
+      "ja": "残像"
     },
     "rarity": [
       "rare",
@@ -699,7 +714,8 @@
     "name": {
       "fr": "Déchaînement",
       "en": "Pummel",
-      "ko": ""
+      "ko": "난타",
+      "ja": "乱打"
     },
     "rarity": [
       "rare",
@@ -766,7 +782,8 @@
     "name": {
       "fr": "Explosions consécutives",
       "en": "Sequent Explosions",
-      "ko": ""
+      "ko": "연쇄폭발",
+      "ja": "連鎖爆発"
     },
     "rarity": [
       "rare",
@@ -807,7 +824,8 @@
     "name": {
       "fr": "Onde croisée",
       "en": "Crosshairs",
-      "ko": ""
+      "ko": "포화",
+      "ja": "砲火"
     },
     "rarity": [
       "rare",
@@ -848,7 +866,8 @@
     "name": {
       "fr": "Ombres",
       "en": "Reap",
-      "ko": ""
+      "ko": "그림자",
+      "ja": "影"
     },
     "rarity": [
       "rare",
@@ -889,7 +908,8 @@
     "name": {
       "fr": "Bourrasque",
       "en": "Gale",
-      "ko": ""
+      "ko": "광풍",
+      "ja": "狂風"
     },
     "rarity": [
       "rare",
@@ -956,7 +976,8 @@
     "name": {
       "fr": "Annihilation",
       "en": "Annihilation",
-      "ko": ""
+      "ko": "멸살",
+      "ja": "滅絶"
     },
     "rarity": [
       "rare",
@@ -997,7 +1018,8 @@
     "name": {
       "fr": "Débordement",
       "en": "Effulgence",
-      "ko": ""
+      "ko": "섬광",
+      "ja": "閃光"
     },
     "rarity": [
       "rare",
@@ -1038,7 +1060,8 @@
     "name": {
       "fr": "Scission",
       "en": "Sunder",
-      "ko": ""
+      "ko": "균열",
+      "ja": "亀裂"
     },
     "rarity": [
       "rare",
@@ -1079,7 +1102,8 @@
     "name": {
       "fr": "Recrudescence",
       "en": "Escalate",
-      "ko": ""
+      "ko": "점퍼",
+      "ja": "ジャンパー"
     },
     "rarity": [
       "rare",
@@ -1146,7 +1170,8 @@
     "name": {
       "fr": "Extermination",
       "en": "Decimate",
-      "ko": ""
+      "ko": "살상",
+      "ja": "殺傷"
     },
     "rarity": [
       "rare",
@@ -1187,7 +1212,8 @@
     "name": {
       "fr": "Lésion interne",
       "en": "Internal Wound",
-      "ko": ""
+      "ko": "내상",
+      "ja": "内傷"
     },
     "rarity": [
       "rare",
@@ -1228,7 +1254,8 @@
     "name": {
       "fr": "Plantage",
       "en": "Hone In",
-      "ko": ""
+      "ko": "간파",
+      "ja": "看破"
     },
     "rarity": [
       "rare",
@@ -1269,7 +1296,8 @@
     "name": {
       "fr": "À point",
       "en": "On Point",
-      "ko": ""
+      "ko": "일점",
+      "ja": "一角"
     },
     "rarity": [
       "rare",
@@ -1336,7 +1364,8 @@
     "name": {
       "fr": "Tempête glacée",
       "en": "Cold Storm",
-      "ko": ""
+      "ko": "한기폭풍",
+      "ja": "アイスストーム"
     },
     "rarity": [
       "rare",
@@ -1377,7 +1406,8 @@
     "name": {
       "fr": "Fantôme",
       "en": "Phantom",
-      "ko": ""
+      "ko": "환영",
+      "ja": "幻影"
     },
     "rarity": [
       "rare",
@@ -1418,7 +1448,8 @@
     "name": {
       "fr": "Frappe",
       "en": "Strike",
-      "ko": ""
+      "ko": "일격",
+      "ja": "一撃"
     },
     "rarity": [
       "rare",
@@ -1459,7 +1490,8 @@
     "name": {
       "fr": "Coup de tonnerre",
       "en": "Stroke of Lightning",
-      "ko": ""
+      "ko": "낙뢰",
+      "ja": "落雷"
     },
     "rarity": [
       "rare",
@@ -1526,7 +1558,8 @@
     "name": {
       "fr": "Choc terrestre",
       "en": "Earth Shock",
-      "ko": ""
+      "ko": "대지 충격",
+      "ja": "大地衝撃"
     },
     "rarity": [
       "rare",
@@ -1567,7 +1600,8 @@
     "name": {
       "fr": "Rotation fulgurante",
       "en": "High-speed Rotation",
-      "ko": ""
+      "ko": "고속 회전",
+      "ja": "高速回転"
     },
     "rarity": [
       "rare",
@@ -1608,7 +1642,8 @@
     "name": {
       "fr": "Éruption",
       "en": "Eruption",
-      "ko": ""
+      "ko": "연속파",
+      "ja": "連続破"
     },
     "rarity": [
       "rare",
@@ -1649,7 +1684,8 @@
     "name": {
       "fr": "Feu sauvage",
       "en": "Wildfire",
-      "ko": ""
+      "ko": "작열",
+      "ja": "灼熱"
     },
     "rarity": [
       "rare",
@@ -1716,7 +1752,8 @@
     "name": {
       "fr": "Trou noir",
       "en": "Black Hole",
-      "ko": ""
+      "ko": "블랙홀",
+      "ja": "ブラックホール"
     },
     "rarity": [
       "rare",
@@ -1757,7 +1794,8 @@
     "name": {
       "fr": "Libération",
       "en": "Liberation",
-      "ko": ""
+      "ko": "해방",
+      "ja": "解放"
     },
     "rarity": [
       "rare",
@@ -1798,7 +1836,8 @@
     "name": {
       "fr": "Attaque finale",
       "en": "Finisher",
-      "ko": ""
+      "ko": "종말",
+      "ja": "終末"
     },
     "rarity": [
       "rare",
@@ -1839,7 +1878,8 @@
     "name": {
       "fr": "Absorption",
       "en": "Absorption",
-      "ko": ""
+      "ko": "흡수",
+      "ja": "吸収"
     },
     "rarity": [
       "rare",
@@ -1906,7 +1946,8 @@
     "name": {
       "fr": "Frappe d'ombres multiples",
       "en": "Multishadow Strike",
-      "ko": ""
+      "ko": "잔영권",
+      "ja": "残影拳"
     },
     "rarity": [
       "rare",
@@ -1947,7 +1988,8 @@
     "name": {
       "fr": "Décimation",
       "en": "Decimation",
-      "ko": ""
+      "ko": "진멸격",
+      "ja": "衝滅撃"
     },
     "rarity": [
       "rare",
@@ -1988,7 +2030,8 @@
     "name": {
       "fr": "Onde de vide",
       "en": "Vacuum Wave",
-      "ko": ""
+      "ko": "진공파",
+      "ja": "真空波"
     },
     "rarity": [
       "rare",
@@ -2029,7 +2072,8 @@
     "name": {
       "fr": "Iceberg",
       "en": "Iceberg",
-      "ko": ""
+      "ko": "빙산격",
+      "ja": "アイスブレイク"
     },
     "rarity": [
       "rare",
@@ -2096,7 +2140,8 @@
     "name": {
       "fr": "Double attaque descendante",
       "en": "Double Down",
-      "ko": ""
+      "ko": "레이드컷",
+      "ja": "レイドカット"
     },
     "rarity": [
       "rare",
@@ -2137,7 +2182,8 @@
     "name": {
       "fr": "Explosion sonique",
       "en": "Sonic Explosion",
-      "ko": ""
+      "ko": "소닉 익스플로전",
+      "ja": "ソニックバースト"
     },
     "rarity": [
       "rare",
@@ -2178,7 +2224,8 @@
     "name": {
       "fr": "Voile venteux",
       "en": "Wind Shroud",
-      "ko": ""
+      "ko": "윈드 슈라우드",
+      "ja": "ウィンドシュラウド"
     },
     "rarity": [
       "rare",
@@ -2219,7 +2266,8 @@
     "name": {
       "fr": "Entailles croissantes",
       "en": "Magnifying Slashes",
-      "ko": ""
+      "ko": "바일 슬래쉬",
+      "ja": "ヴァイルスラッシュ"
     },
     "rarity": [
       "rare",
@@ -2278,5 +2326,991 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+  },
+  {
+    "id": "rune--blazing-annihilation",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Annihilation flamboyante",
+      "en": "Blazing Annihilation",
+      "ko": "멸화",
+      "ja": "滅火"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--aurora",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Aurore",
+      "en": "Aurora",
+      "ko": "극광",
+      "ja": "極光"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "light",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--breach",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Brèche",
+      "en": "Breach",
+      "ko": "개문",
+      "ja": "アブソリュション"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--asura-kick",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Coup de pied azur",
+      "en": "Asura Kick",
+      "ko": "수라각",
+      "ja": "修羅脚"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "light",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--flowing-water-kick",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Coup de pied de l'eau circulante",
+      "en": "Flowing Water Kick",
+      "ko": "유수각",
+      "ja": "流水脚"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--gale-kick",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Coup de pied de la bourrasque",
+      "en": "Gale Kick",
+      "ko": "질풍각",
+      "ja": "疾風脚"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--firestorm-kick",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Coup de pied de la tempête de feu",
+      "en": "Firestorm Kick",
+      "ko": "염화각",
+      "ja": "炎火脚"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--void-punch",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Coup de poing du vide",
+      "en": "Void Punch",
+      "ko": "공허권",
+      "ja": "空虚拳"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--dispersion",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Dispersion",
+      "en": "Dispersion",
+      "ko": "확산",
+      "ja": "エクステンド"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--tidal-surge",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Déflagration déferlante",
+      "en": "Tidal Surge",
+      "ko": "침수",
+      "ja": "浸水"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--heaven-annihilation",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Dévastation des Cieux",
+      "en": "Heaven Annihilation",
+      "ko": "멸천",
+      "ja": "滅天"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--explosion",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Explosion",
+      "en": "Explosion",
+      "ko": "폭쇄",
+      "ja": "アナイアレイター"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--darkfall",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Fin du jour",
+      "en": "Darkfall",
+      "ko": "극암",
+      "ja": "極岩"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--severing-flash",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Flash coupant",
+      "en": "Severing Flash",
+      "ko": "섬단",
+      "ja": "閃断"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "fire",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--darkness-obliteration-kick",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Foulage des ombres oblitérantes",
+      "en": "Darkness Obliteration Kick",
+      "ko": "암멸각",
+      "ja": "暗滅脚"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--blitzstrike",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Frappe blitz",
+      "en": "Blitzstrike",
+      "ko": "일순",
+      "ja": "一瞬"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "light",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--quickstrike",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Frappe rapide",
+      "en": "Quickstrike",
+      "ko": "순참",
+      "ja": "瞬斬"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--silent-strike",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Frappe silencieuse",
+      "en": "Silent Strike",
+      "ko": "묵시",
+      "ja": "黙示"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--veiled-strike",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Frappe voilée",
+      "en": "Veiled Strike",
+      "ko": "단절",
+      "ja": "断絶"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--frozen-flow",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Frimas fluide",
+      "en": "Frozen Flow",
+      "ko": "프로즌 플로우",
+      "ja": "フローズンフロー"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--cold-ice",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Glace gelée",
+      "en": "Cold Ice",
+      "ko": "한빙",
+      "ja": "マイナスゼロ"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--surging-tide",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Marée résurgente",
+      "en": "Surging Tide",
+      "ko": "노도",
+      "ja": "怒涛"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--void",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Néant",
+      "en": "Void",
+      "ko": "심연",
+      "ja": "深淵"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "dark",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--darkness-obliteration",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Ombre : Tragédie",
+      "en": "Darkness: Obliteration",
+      "ko": "은영 : 참극",
+      "ja": "隠影：惨劇"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--daybreak",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Point du jour",
+      "en": "Daybreak",
+      "ko": "여명",
+      "ja": "黎明"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "light",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--stormrage",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Rage tempétueuse",
+      "en": "Stormrage",
+      "ko": "폭람",
+      "ja": "暴嵐"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--torrent-cleave",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Rapière torrentielle",
+      "en": "Torrent Cleave",
+      "ko": "격류참",
+      "ja": "激流斬"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "water",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--storm",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Tempête",
+      "en": "Storm",
+      "ko": "폭풍",
+      "ja": "暴風"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": "wind",
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "rune--truth-mutilate",
+    "kind": "rune",
+    "parent_skill": null,
+    "name": {
+      "fr": "Vérité : Mutilation",
+      "en": "Truth: Mutilate",
+      "ko": "진 : 난도",
+      "ja": "真：乱刀"
+    },
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
+    "type": null,
+    "element": null,
+    "cooldown": null,
+    "mp_cost": null,
+    "text": {
+      "fr": "",
+      "en": ""
+    },
+    "effects": [],
+    "effects_text_en": "",
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
   }
 ]
