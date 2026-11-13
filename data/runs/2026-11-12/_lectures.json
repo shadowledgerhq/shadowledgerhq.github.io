@@ -160,33 +160,6 @@
     ]
   },
   {
-    "video_id": "E4lHBPoZeKs",
-    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
-    "channel_title": "Black Thunder X",
-    "published_at": "2026-11-12T07:58:32Z",
-    "lang": "en",
-    "mode": "bot",
-    "bot_variant": "season",
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 32.0,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : 00:32",
-      "autres candidats : 01:01, 01:45, 03:49",
-      "description non relue (règles v3)",
-      "variante d'après le titre"
-    ],
-    "regles": null,
-    "bot_season_week": null
-  },
-  {
     "video_id": "5MI-RLj7FSk",
     "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
     "channel_title": "PADWAE",

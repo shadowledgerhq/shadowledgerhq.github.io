@@ -113,3 +113,23 @@ def remplacer_lectures(toutes, video_id, nouvelles, sources):
     """Remplace les lectures de `video_id` issues de `sources` (idempotent)."""
     gardees = [l for l in toutes if not (l["video_id"] == video_id and l["score_source"] in sources)]
     return gardees + nouvelles
+
+
+_HORODATAGE = re.compile(r"\d{1,2}(?::\d{2}){1,2}")
+
+
+def candidats_en_chapitres(lec):
+    """v9 (relecture sans clé) : règle des chapitres (§2.2, ≥ 2 horodatages croissants) appliquée aux
+    candidats déjà stockés dans `notes` d'une lecture de description (score + « autres candidats »)."""
+    brut = []
+    for n in lec.get("notes", []):
+        if n.startswith("score provisoire (description) : "):
+            brut.append(n.split(" : ", 1)[1])
+        elif n.startswith("autres candidats : "):
+            brut += n.split(" : ", 1)[1].split(", ")
+    secondes = []
+    for b in brut:
+        if _HORODATAGE.fullmatch(b.strip()):
+            t = [int(x) for x in b.strip().split(":")]
+            secondes.append(sum(v * 60 ** i for i, v in enumerate(reversed(t))))
+    return len(secondes) >= 2 and secondes == sorted(secondes) and len(set(secondes)) == len(secondes)

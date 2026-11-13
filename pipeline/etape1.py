@@ -20,7 +20,7 @@ from semaine import (PARIS, bornes, dans_creneau, id_semaine, iso_utc, maintenan
                      semaine_precedente)
 from bot_saison import lire_saison_semaine
 from hotm_ecran import lire_porte
-from tri1 import lectures_texte, remplacer_lectures, variante_bot
+from tri1 import candidats_en_chapitres, lectures_texte, remplacer_lectures, variante_bot
 from youtube import ApiYouTube, recherche
 
 JEUDI = 3
@@ -131,6 +131,10 @@ def relire(d, config, week, api=None, ids=None):
                     or (src == "sous-titres" and l["mode"] in modes_nouveaux)):
                 continue  # remplacée par la relecture (priorité titre > description > sous-titres)
             if l["score_source"] == "description" and vid not in descriptions:
+                if candidats_en_chapitres(l):  # chapitres : le score n'en est pas un, lecture retirée
+                    res["chapitres_retires"] = res.get("chapitres_retires", 0) + 1
+                    res["descriptions_non_relues"] += 1
+                    continue
                 res["descriptions_non_relues"] += 1
                 if "description non relue (règles v3)" not in l["notes"]:
                     l["notes"].append("description non relue (règles v3)")
@@ -232,6 +236,8 @@ def lancer(passage, instant, force=False, semaine=None, d=None, config=None):
             r = relire(d, config, week, ApiYouTube(os.environ["YOUTUBE_API_KEY"], config["quota_max_units"])
                        if os.environ.get("YOUTUBE_API_KEY") else None)
             alertes.append(f"tri 1 relu : {r['changees']} vidéo(s) modifiée(s) sur {r['videos']}")
+            if r.get("chapitres_retires"):
+                alertes.append(f"{r['chapitres_retires']} lecture(s) de description retirée(s) : candidats en chapitres (§2.2)")
             if r["descriptions_non_relues"]:
                 alertes.append(f"{r['descriptions_non_relues']} lecture(s) de description non relue(s) "
                                "(YOUTUBE_API_KEY absente) : relancer avec la clé ou attendre le prochain passage daily")

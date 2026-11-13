@@ -278,45 +278,5 @@
         "exact": false
       }
     ]
-  },
-  {
-    "run_id": "bot-season-2026-11-12-E4lHBPoZeKs",
-    "week": "2026-11-12",
-    "mode": "bot",
-    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
-    "player": "Black Thunder X",
-    "channel": "Black Thunder X",
-    "video_id": "E4lHBPoZeKs",
-    "video_ids": [
-      "E4lHBPoZeKs"
-    ],
-    "published_at": "2026-11-12T08:58:32+01:00",
-    "lang": "en",
-    "score": {
-      "total": 32.0,
-      "runs": [
-        32.0
-      ],
-      "unit": "seconds"
-    },
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (description) : 00:32; autres candidats : 01:01, 01:45, 03:49; description non relue (règles v3); variante d'après le titre; boss non contrôlé",
-    "bot_variant": "season",
-    "bot_season_week": null,
-    "player_ingame": null,
-    "runs_detail": [
-      {
-        "video_id": "E4lHBPoZeKs",
-        "published_at": "2026-11-12T08:58:32+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "description",
-        "exact": false
-      }
-    ]
   }
 ]

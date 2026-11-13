@@ -84,6 +84,18 @@ def test_v8_relecture_regles_et_cas_e4l():
     assert a_relire(d, config, W) == []
 
 
+def test_v9_chapitres_dans_les_notes_sans_cle():
+    d, config = monde(), charger_config()
+    ls = d.lectures(W)
+    for x in ls:
+        if x["video_id"] == "b":
+            x["notes"] = ["score provisoire (description) : 00:32", "autres candidats : 01:01, 01:45, 03:49"]
+    d.ecrire(f"runs/{W}/_lectures.json", ls)
+    r = relire(d, config, W)
+    assert "b" not in {x["video_id"] for x in d.lectures(W)} and r["chapitres_retires"] == 1
+    assert a_relire(d, config, W) == ["a", "b", "c"] or "b" in a_relire(d, config, W)  # reste à relire avec la clé
+
+
 def test_v8_variante_du_titre_sans_cle():
     """Sans clé : la description n'est pas relue, mais la variante BOT (titre) est rejouée sur la lecture gardée."""
     d, config = Donnees(tempfile.mkdtemp()), charger_config()
@@ -98,4 +110,4 @@ def test_v8_variante_du_titre_sans_cle():
 
 
 if __name__ == "__main__":
-    test_v8_variante_du_titre_sans_cle(); test_relire_hors_ligne(); test_relire_avec_api(); test_v8_relecture_regles_et_cas_e4l(); print("OK")
+    test_v8_variante_du_titre_sans_cle(); test_v9_chapitres_dans_les_notes_sans_cle(); test_relire_hors_ligne(); test_relire_avec_api(); test_v8_relecture_regles_et_cas_e4l(); print("OK")
