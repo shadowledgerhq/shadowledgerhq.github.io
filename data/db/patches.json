@@ -1,1 +1,251 @@
-[]
+[
+  {
+    "id": "2026-10-22",
+    "version": null,
+    "date": "2026-10-22",
+    "name": {
+      "fr": "Mise à jour du 22/10/2026 (2,5e anniversaire)",
+      "en": "10/22 (Thu) Update Details"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/14/109985",
+    "extra_urls": [
+      "https://forum.netmarble.com/slv_en/view/32/109983"
+    ],
+    "source": "https://forum.netmarble.com/slv_en/view/14/109985",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Numéro de version non indiqué dans les notes. Valeurs chiffrées des chasseurs/ombres : avis d'équilibrage 32/109983 (EN).",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "holy-guardian-barrier-go-gunhee",
+        "change": "ajout : SSR Water Buster ; arme exclusive Foundation of Order"
+      },
+      {
+        "category": "weapons",
+        "id": "foundation-of-order",
+        "change": "ajout : arme exclusive de Go Gunhee"
+      },
+      {
+        "category": "successors",
+        "id": "velvet",
+        "change": "ajout : Successeur Fire (événement limité)"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "commanders-authority",
+        "change": "ajout : compétence ultime (job change Monarch of Shadows: Requiem) + 5 runes d'élément"
+      },
+      {
+        "category": "stats",
+        "id": "level-cap",
+        "change": "SJW niv. max 160→170 ; Gate max 29→31"
+      },
+      {
+        "category": "hunters",
+        "id": "elena-renault",
+        "change": "T5 : nouvel effet Insatiable Hunger (Burst +40%, équipe Water Buster)"
+      },
+      {
+        "category": "hunters",
+        "id": "yoo-soohyun",
+        "change": "T1 valeurs (12 s / CD 6 s) ; T2 +12%/allié Fire ; T3 Superstar (ATK +60%, crit +30%) ; T4 +10%/allié Fire"
+      },
+      {
+        "category": "hunters",
+        "id": "cha-hae-in-pure-sword-princess",
+        "change": "base 175→220% ; T3 15→60% / 170→200% ; T4 7→8% ; T5 effet Will of the Sword, 60→100%"
+      },
+      {
+        "category": "hunters",
+        "id": "seorin",
+        "change": "Frozen Drift durée 20→60 s ; T3 Black Tea? ; T5 Subzero max 10→20 ; arme PV 12→30%"
+      },
+      {
+        "category": "hunters",
+        "id": "meilin-fisher",
+        "change": "compétence, base, T3, T4, T5 et arme : valeurs et durées augmentées, nouveaux effets"
+      },
+      {
+        "category": "hunters",
+        "id": "choi-jong-in",
+        "change": "Fire Barrage : baisse de DEF 15→70 %, durée 15→25 s"
+      },
+      {
+        "category": "hunters",
+        "id": "baek-yoonho",
+        "change": "White Flame Storm Kick : baisse de DEF 20→70 %, durée 12→25 s"
+      },
+      {
+        "category": "hunters",
+        "id": "emma-laurent",
+        "change": "Roaring Flames : Fire 15→20 % ; +30 % dégâts sur cible Break"
+      },
+      {
+        "category": "hunters",
+        "id": "liu-zhigang",
+        "change": "Veiled Intent : portée fortement augmentée"
+      },
+      {
+        "category": "hunters",
+        "id": "agnes-rivera",
+        "change": "Il Bacio della Morte : portée fortement augmentée"
+      },
+      {
+        "category": "hunters",
+        "id": "lee-joohee-pilgrim-of-the-labyrinth",
+        "change": "Radiant Burst : portée fortement augmentée"
+      },
+      {
+        "category": "hunters",
+        "id": "diana-lopez",
+        "change": "Chicxulub : portée fortement augmentée"
+      },
+      {
+        "category": "shadows",
+        "id": "iron",
+        "change": "chef : DEF équipe +18 % (nouveau)"
+      },
+      {
+        "category": "shadows",
+        "id": "tank",
+        "change": "chef : PV max équipe +18 % (nouveau)"
+      },
+      {
+        "category": "shadows",
+        "id": "blades",
+        "change": "chef : ATK équipe 7→18 %"
+      },
+      {
+        "category": "shadows",
+        "id": "bigrock",
+        "change": "chef : dégâts de base 12→24 %"
+      },
+      {
+        "category": "shadows",
+        "id": "skull",
+        "change": "chef : puissance de mana 12→24 %"
+      },
+      {
+        "category": "shadows",
+        "id": "tusk",
+        "change": "chef : dégâts attaque noyau 40→60 %"
+      },
+      {
+        "category": "shadows",
+        "id": "kaisellin",
+        "change": "chef : dégâts ultime 9→24 %"
+      },
+      {
+        "category": "shadows",
+        "id": "jima",
+        "change": "chef : ATK équipe 5→13 %"
+      },
+      {
+        "category": "shadows",
+        "id": "beru",
+        "change": "chef : ATK et dégâts crit 5→10 %"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "a-determiner",
+        "change": "« Balance adjustments to the set effects of certain Hunters and Artifacts » : aucun détail d'artefact dans l'avis ; à lire en jeu / slagate"
+      },
+      {
+        "category": "proof_modifiers",
+        "id": "a-determiner",
+        "change": "nouvelle saison HOTM le 05/11 (récompenses par score ajoutées) ; POC : boss Ennio, Conquest Support ; BOT : classement par groupes"
+      }
+    ]
+  },
+  {
+    "id": "2026-09-17",
+    "version": null,
+    "date": "2026-09-17",
+    "name": {
+      "fr": "Mise à jour du 2026-09-17",
+      "en": "9/17 (Thu) Update Details"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/14/109279",
+    "source": "https://forum.netmarble.com/slv_en/view/14/109279",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Entrée de liste seulement : notes non encore lues.",
+    "changes": []
+  },
+  {
+    "id": "2026-08-27",
+    "version": null,
+    "date": "2026-08-27",
+    "name": {
+      "fr": "Mise à jour du 2026-08-27",
+      "en": "8/27 (Thu) Update Details"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/14/108721",
+    "source": "https://forum.netmarble.com/slv_en/view/14/108721",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Entrée de liste seulement : notes non encore lues.",
+    "changes": []
+  },
+  {
+    "id": "2026-07-30",
+    "version": null,
+    "date": "2026-07-30",
+    "name": {
+      "fr": "Mise à jour du 2026-07-30",
+      "en": "7/30 (Thu) Update Details"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/14/107953",
+    "source": "https://forum.netmarble.com/slv_en/view/14/107953",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Entrée de liste seulement : notes non encore lues.",
+    "changes": []
+  },
+  {
+    "id": "2026-07-02",
+    "version": null,
+    "date": "2026-07-02",
+    "name": {
+      "fr": "Mise à jour du 2026-07-02",
+      "en": "7/2 (Thu) Update Details"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/14/107225",
+    "source": "https://forum.netmarble.com/slv_en/view/14/107225",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Entrée de liste seulement : notes non encore lues.",
+    "changes": []
+  },
+  {
+    "id": "2026-06-04",
+    "version": null,
+    "date": "2026-06-04",
+    "name": {
+      "fr": "Mise à jour du 2026-06-04",
+      "en": "6/4 (Thu) Update Details"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/14/106108",
+    "source": "https://forum.netmarble.com/slv_en/view/14/106108",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Entrée de liste seulement : notes non encore lues.",
+    "changes": []
+  },
+  {
+    "id": "2026-05-07",
+    "version": null,
+    "date": "2026-05-07",
+    "name": {
+      "fr": "Mise à jour du 2026-05-07",
+      "en": "5/7 (Thu) Update Details"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/14/104878",
+    "source": "https://forum.netmarble.com/slv_en/view/14/104878",
+    "verified_at": "2026-11-13",
+    "game_version": null,
+    "notes": "Entrée de liste seulement : notes non encore lues.",
+    "changes": []
+  }
+]
