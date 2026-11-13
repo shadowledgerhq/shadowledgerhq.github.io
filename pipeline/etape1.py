@@ -18,9 +18,9 @@ import classement
 from donnees import Donnees, ajouter_rejet, charger_config
 from semaine import (PARIS, bornes, dans_creneau, id_semaine, iso_utc, maintenant, parse_iso,
                      semaine_precedente)
-from bot_saison import lire_saison_semaine
+from bot_saison import NOTE_CHALLENGE, lire_saison_semaine, titre_challenge
 from hotm_ecran import lire_porte
-from tri1 import candidats_en_chapitres, lectures_texte, remplacer_lectures, variante_bot
+from tri1 import candidats_en_chapitres, lectures_texte, remplacer_lectures
 from youtube import ApiYouTube, recherche
 
 JEUDI = 3
@@ -95,7 +95,7 @@ def a_relire(d, config, week):
 
 
 def relire(d, config, week, api=None, ids=None):
-    """Rejoue le tri 1 (score, variante BOT, porte HOTM) des vidéos `en_cours` lues avec une version plus
+    """Rejoue le tri 1 (score, semaine BOT, porte HOTM) des vidéos `en_cours` lues avec une version plus
     ancienne des règles (`a_relire`). Avec `api` : titre et description relus via videos.list (1 unité par
     50 vidéos), puis la vidéo est marquée `regles` = version courante. Sans `api` : titres seulement ; les
     lectures issues d'une description sont gardées (non rejouables hors ligne), marquées, et la vidéo reste
@@ -138,13 +138,11 @@ def relire(d, config, week, api=None, ids=None):
                 res["descriptions_non_relues"] += 1
                 if "description non relue (règles v3)" not in l["notes"]:
                     l["notes"].append("description non relue (règles v3)")
-                # variante BOT et porte HOTM viennent du titre : rejouées même sans relire la description
-                if l["mode"] == "bot" and l.get("bot_variant") is None:
-                    l["bot_variant"] = variante_bot(videos[vid].get("title"), config)
-                    if l["bot_variant"] and "variante d'après le titre" not in l["notes"]:
-                        l["notes"].append("variante d'après le titre")
+                # semaine BOT, challenge et porte HOTM viennent du titre : rejoués même sans relire la description
                 if l["mode"] == "bot":
-                    l["bot_season_week"] = lire_saison_semaine(videos[vid].get("title"))
+                    l["bot_season_week"] = lire_saison_semaine(videos[vid].get("title"), config)
+                    if titre_challenge(videos[vid].get("title"), config) and NOTE_CHALLENGE not in l["notes"]:
+                        l["notes"].append(NOTE_CHALLENGE)
                 if l["mode"] == "hotm" and l.get("gate") is None:
                     porte = lire_porte(videos[vid].get("title") or "")
                     l["gate"] = porte["number"] if porte else None
@@ -157,6 +155,7 @@ def relire(d, config, week, api=None, ids=None):
             processed[vid]["regles"] = config.get("tri1_version")
     for l in lectures:
         l.setdefault("bot_season_week", None)
+        l.pop("bot_variant", None)  # v10 : champ supprimé
         l.setdefault("regles", None)  # v8 : champ présent partout (null = lue avant la v8)
     d.ecrire(f"runs/{week}/_lectures.json", lectures)
     d.ecrire(f"runs/{week}/_videos.json", videos)

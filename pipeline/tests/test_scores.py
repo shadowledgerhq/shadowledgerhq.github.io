@@ -4,7 +4,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scores import NON_GERE, chronos, extraire, nombres
 
 from donnees import charger_config
-from tri1 import lectures_texte, variante_bot
+from bot_saison import lire_saison_semaine, titre_challenge
+from tri1 import lectures_texte
 
 CONFIG = charger_config()  # réglages réels (v3 : plage BOT 5-180, mots d'hypothèse, semaine passée…)
 T = 10**12
@@ -145,19 +146,13 @@ def test_v3_chapitres_de_description():
     assert lec[0]["score"] == 19.558 and lec[0]["score_source"] == "titre" and any(n.startswith("description") for n in lec[0]["notes"])
 
 
-def test_v3_variante_bot_et_porte_dapres_le_titre():
-    assert variante_bot("時の戦場チャレンジ 19s", CONFIG) == "challenge"
-    assert variante_bot("BOT challenge 19s", CONFIG) == "challenge"
-    assert variante_bot("BOT 챌린지", CONFIG) == "challenge"
-    assert variante_bot("時の戦場 シーズン12 19s", CONFIG) == "season"
-    assert variante_bot("BOT S12-3 19s", CONFIG) == "season" and variante_bot("BOT season 12", CONFIG) == "season"
-    assert variante_bot("시즌 12 BOT", CONFIG) == "season"
-    assert variante_bot("BOT 19s", CONFIG) is None and variante_bot("season finale", CONFIG) is None
-    assert variante_bot("season 12 challenge", CONFIG) is None   # les deux indices
+def test_v3_challenge_et_porte_dapres_le_titre():
+    assert titre_challenge("時の戦場チャレンジ 19s", CONFIG) and titre_challenge("BOT challenge 19s", CONFIG)
+    assert titre_challenge("BOT 챌린지", CONFIG) and not titre_challenge("BOT 19s", CONFIG)
     lec, _ = lectures_texte(meta("BOT Challenge 19.558s", ("bot",)), [("titre", "BOT Challenge 19.558s")], CONFIG)
-    assert lec[0]["bot_variant"] == "challenge" and "variante d'après le titre" in lec[0]["notes"]
+    assert "challenge ? (mode supprimé)" in lec[0]["notes"] and lec[0]["confidence"] == "a_verifier" and "bot_variant" not in lec[0]
     lec, _ = lectures_texte(meta("BOT 19.558s", ("bot",)), [("titre", "BOT 19.558s")], CONFIG)
-    assert lec[0]["bot_variant"] is None
+    assert not any("challenge" in n for n in lec[0]["notes"])
     lec, _ = lectures_texte(meta("HOTM 第2関門 95,000pt", ("hotm",)), [("titre", "HOTM 第2関門 95,000pt")], CONFIG)
     assert lec[0]["gate"] == 2
     lec, _ = lectures_texte(meta("HOTM 95,000pt", ("hotm",)), [("titre", "HOTM 95,000pt"), ("description", "第1関門")], CONFIG)
@@ -185,17 +180,9 @@ def test_v5_rage_count():
 
 # --- v8 : vrais titres du 1er passage ----------------------------------------------------------
 
-def test_v8_variante_season_titres_reels():
-    for vid, titre in [("wJ9CwjKwyco", "19s Baruka Battlefield of Time s20 | Solo Leveling Arise"),
-                       ("5MI-RLj7FSk", "battlefield of time s20 Baruka 19.9s Solo Leveling Arise / 시간의 전장 s20 바루카 19.9초 나혼자만 레벨업 어라이즈"),
-                       ("duX8KmoDdYw", "29s BOT S20 Baruka | Solo Leveling Arise "),
-                       ("uwJfPTJI8ZE", "나혼자만레벨업)시간의전장 시즌20 바루카 28초│BATTLEFIELD OF TIME - Baruka [28] SOLO LEVELING : ARISE"),
-                       ("E4lHBPoZeKs", "BARUKA S20 BOT GUIDE WITHOUT S RANK FIGURES | BATTLEFIELD OF TIME SEASON 20 [SOLO LEVELING: ARISE]")]:
-        assert variante_bot(titre, CONFIG) == "season", vid
-    assert variante_bot("Battlefield of Time - Baruka #sololevelingarise #battlefieldoftime #baruka", CONFIG) is None   # wFFdg1gcZpE
-    for t in ("BOT S12-3", "BOT s 12", "bot S20-1 19s", "Season20", "season  7", "시즌 5", "시즌5", "シーズン 12", "シーズン12"):
-        assert variante_bot(t, CONFIG) == ("season" if not t.lower().startswith("bot s 12") else None), t   # « S 12 » : pas un indice
-    assert variante_bot("BOT S RANK", CONFIG) is None and variante_bot("PS5 BOT", CONFIG) is None and variante_bot("S20 challenge", CONFIG) is None
+def test_v10_semaine_du_titre():
+    assert lire_saison_semaine("bot S20-4 19s", CONFIG) == "S20-4" and lire_saison_semaine("BOT s20", CONFIG) is None
+    assert lire_saison_semaine("BOT S20-5", CONFIG) is None and lire_saison_semaine("PS5-1 BOT", CONFIG) is None
 
 
 def test_v8_degats_gb_dans_le_titre():

@@ -5,7 +5,7 @@ import re
 
 from hotm_ecran import lire_porte
 from scores import NON_GERE, degats_gb, extraire
-from bot_saison import lire_saison_semaine
+from bot_saison import NOTE_CHALLENGE, lire_saison_semaine, titre_challenge
 from semaine import bornes, parse_iso, semaine_de
 
 SOURCES_TEXTE = ("titre", "description", "sous-titres")
@@ -21,7 +21,6 @@ def lecture_vide(meta, mode):
         "lang": meta.get("lang"),
         "mode": mode,
         "regles": None,         # v8 : version des règles du tri 1 qui a produit la lecture (config.tri1_version)
-        "bot_variant": None,
         "bot_season_week": None,  # v9 : `S20-4` lu dans le titre (BOT), contrôle de semaine au classement
         "player_ingame": None,  # v4 : pseudo en jeu (BOT, bandeau du bas), information seulement
         "damage": None,         # v5 : GB, `Final Score` (arrondi si lu sur le Personal Record)
@@ -37,18 +36,6 @@ def lecture_vide(meta, mode):
         "detail": {},
         "notes": [],
     }
-
-
-def variante_bot(titre, config):
-    """SPEC §4.6 : variante BOT d'après le titre. `challenge` / `チャレンジ` / `챌린지` -> challenge ;
-    `S\\d+-\\d`, `season \\d+`, `시즌 \\d+`, `シーズン\\d+` -> season. Les deux indices ou aucun -> None."""
-    cfg = config.get("bot_variante", {})
-    bas = (titre or "").lower()
-    challenge = any(_mot_entier(m.lower(), bas) for m in cfg.get("challenge", []))
-    season = any(re.search(rx, titre or "", re.IGNORECASE) for rx in cfg.get("season_regex", []))
-    if challenge == season:
-        return None
-    return "challenge" if challenge else "season"
 
 
 def _mot_entier(mot, texte):
@@ -97,11 +84,10 @@ def lectures_texte(meta, textes, config):
                 if mode == "hotm":  # v3 : porte d'après le titre (l'écran prime dès qu'il est lu)
                     porte = lire_porte(meta.get("title") or "")
                     lec["gate"] = porte["number"] if porte else None
-                if mode == "bot":  # v3 : variante d'après le titre
-                    lec["bot_season_week"] = lire_saison_semaine(meta.get("title"))
-                    lec["bot_variant"] = variante_bot(meta.get("title"), config)
-                    if lec["bot_variant"]:
-                        lec["notes"].append("variante d'après le titre")
+                if mode == "bot":  # v9-v10 : semaine S<n>-<w> du titre ; ancien mode challenge
+                    lec["bot_season_week"] = lire_saison_semaine(meta.get("title"), config)
+                    if titre_challenge(meta.get("title"), config):
+                        lec["notes"].append(NOTE_CHALLENGE)
             elif r["valeur"] != lec["score"]:
                 lec["notes"].append(f"{source} : {r['brut']}")
         if lec:
