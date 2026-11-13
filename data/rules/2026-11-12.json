@@ -1,12 +1,28 @@
 {
   "week": "2026-11-12",
   "modes": {
-    "poc":  null,
-    "bot":  {"sjw": true, "sjw_skills": true, "blessings": true, "shadows": true, "successor": true},
-    "gb":   null,
-    "hotm": null
+    "poc": null,
+    "bot": {
+      "sjw": true,
+      "sjw_skills": true,
+      "blessings": true,
+      "shadows": true,
+      "successor": true
+    },
+    "gb": null,
+    "hotm": {
+      "restrictions": "aucune",
+      "sjw": true,
+      "sjw_skills": true,
+      "blessings": true,
+      "shadows": true,
+      "successor": true
+    }
   },
-  "source": "confirmation d'Alexis (captures BOT)",
-  "verified_at": "2026-11-12",
-  "notes": "null = règles du mode pas encore fournies"
+  "verified_at": "2026-11-13",
+  "notes": "null = règles du mode pas encore fournies. HOTM : un sous-mode sans SJW existe (voir docs/REFERENCE_ECRANS_HOTM.md), sans restriction de contenu.",
+  "sources": {
+    "bot": "confirmation d'Alexis (captures BOT, 12/11/2026)",
+    "hotm": "confirmation d'Alexis, « aucune restriction » (13/11/2026) ; captures HOTM"
+  }
 }
