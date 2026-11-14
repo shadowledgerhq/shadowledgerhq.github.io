@@ -314,6 +314,9 @@ def construire_build(ctx, obs, regles, cfg, db):
         notes.append("emplacement vide")
     notes += [e for e in erreurs if e not in notes]
 
+    for k in CLES:                      # facultatif non trouvé : null (jamais `false`, jamais compté)
+        if exp.get(k) == "fac" and not found.get(k):
+            found[k] = None
     # --- statut (§2.2)
     attendus = [k for k, v in exp.items() if v is True]
     rien = not any(found.get(k) for k in CLES) and all(c.startswith("0/") for c in counts.values())
@@ -335,13 +338,14 @@ def construire_build(ctx, obs, regles, cfg, db):
         n = f"conflit : {k}"
         if n not in notes:
             notes.append(n)
+    alertes += [f"reconnaissance faible : {e}" for e in obs.get("faibles") or []]
     for a in alertes:
         if a not in notes:
             notes.append(a)
     confiance = "a_verifier" if alertes else "sur"
 
     return {
-        "spec": 1, "run_id": ctx["run_id"], "run_index": ctx["run_index"], "week": ctx["week"], "mode": mode,
+        "spec": 2, "run_id": ctx["run_id"], "run_index": ctx["run_index"], "week": ctx["week"], "mode": mode,
         "gate": ctx.get("gate"), "hunter_mode": hunter_mode, "rank": ctx.get("rank"), "player": ctx.get("player"),
         "channel_id": ctx.get("channel_id"), "video_id": ctx.get("video_id"), "t_result": ctx.get("t_result"),
         "t_composition": obs.get("t_composition"), "team": ctx.get("team"),
@@ -360,7 +364,7 @@ def construire_build(ctx, obs, regles, cfg, db):
 # --- observation des images (§0, §2.1) ------------------------------------------------------------------------------
 
 def _voter(resultats):
-    """Vote majoritaire entre plusieurs images : (id | None, conflit, meilleur résultat)."""
+    """Vote majoritaire entre plusieurs lectures (images d'un onglet, onglets) : (id | None, conflit, meilleur résultat)."""
     ok = [r["id"] for r in resultats if r["ok"]]
     meilleur = max(resultats, key=lambda r: r["score"]) if resultats else None
     if not ok:
@@ -371,78 +375,80 @@ def _voter(resultats):
     return c[0][0], False, meilleur
 
 
+def _par_categorie(cfg, cle, categorie, defaut):
+    v = cfg.get(cle, defaut)
+    return v.get(categorie, defaut) if isinstance(v, dict) else v
+
+
 def observer(images, mode, cfg, banque, db=None, ctx_note=None):
-    """`images` = {onglet: [PIL.Image]} (plusieurs images d'un même onglet : vote majoritaire). Zones :
-    `cfg.zones.<mode>.<onglet>.<propriétaire>.<élément>` (voir `etape2.json`). Sans zones pour un onglet : rien n'est cherché,
-    note `zones <mode>/<onglet> non définies`. Retourne les observations pour `construire_build`."""
+    """`images` = {onglet: [PIL.Image]} (plusieurs images d'un même onglet : vote ; ombres et successeur : vote entre onglets).
+    `mode` = clé de config (`poc`, `bot`, `hotm`, `hotm_sans_sjw`, `gb`). Zones : `cfg.zones.<mode>.<onglet>.<propriétaire>.<élément>`.
+    Sans zones pour un onglet : rien n'est cherché, note `zones <mode>/<onglet> non définies`. Seuils, masques et candidats
+    réduits : SPEC §2.1. Retourne les observations pour `construire_build`."""
     from icones import ECHELLES, recadrer, reconnaitre
+    db = db or {}
     obs = {"sjw": None, "hunters": [], "shadows": [], "successor": None, "subjugation_support": None, "proof": None,
-           "unmatched": [], "notes": [], "conflits": [], "found_at": {}}
-    seuil, ecart = cfg.get("seuil_icone", 0.55), cfg.get("ecart_icone", 0.05)
+           "unmatched": [], "notes": [], "conflits": [], "faibles": [], "found_at": {}}
+    ecart = cfg.get("ecart_icone", 0.05)
     echelles = tuple(cfg.get("echelles_icone") or ECHELLES)
     onglets = (cfg.get("onglets") or {}).get(mode) or []
     if mode == "gb" and not onglets:
         obs["notes"].append("composition GB non décrite")
         return obs
     zones_mode = (cfg.get("zones") or {}).get(mode) or {}
-    hunters = {}
-    cartes = {"sjw": None}
+    lectures = {}          # (propriétaire, élément, emplacement) -> {"cat", "res": [résultats]}
 
-    def lire(imgs, zone, categorie, element, proprietaire, slot=None, restreint=None):
-        res = [reconnaitre(recadrer(im, zone), categorie, banque, seuil, ecart, restreint, echelles) for im in imgs]
-        ident, conflit, meilleur = _voter(res)
-        if meilleur and meilleur.get("absente"):
-            n = f"icône absente : {categorie}"
-            if n not in obs["notes"]:
-                obs["notes"].append(n)
-        if conflit:
-            obs["conflits"].append(element)
-        elif ident is None and meilleur and not meilleur.get("absente"):
-            obs["unmatched"].append({"element": element, "owner": proprietaire, "slot": slot, "best_id": meilleur["best_id"],
-                                     "score": meilleur["score"], "crop": None})
-        return ident
+    def reco(img, zone, cat, restreint=None):
+        return reconnaitre(recadrer(img, zone), cat, banque, _par_categorie(cfg, "seuil_icone", cat, 0.55), ecart, restreint,
+                           echelles, (cfg.get("masques") or {}).get(cat))
 
-    def noyaux_permis(slot):
-        return {k for k, c in (db or {}).get("cores", {}).items() if c.get("slot") == slot} or None
+    def lire(imgs, zone, cat, element, owner, slot=None, restreint=None):
+        L = lectures.setdefault((owner, element, slot), {"cat": cat, "res": []})
+        L["res"] += [reco(im, zone, cat, restreint) for im in imgs]
 
-    def pieces_permises(slot):
-        return {k for k in banque.categorie("artifact_pieces") if k.endswith("--" + slot)}
+    noyaux = lambda slot: {k for k, c in db.get("cores", {}).items() if c.get("slot") == slot} or None
+    pieces = lambda slot: {k for k in banque.categorie("artifact_pieces") if k.endswith("--" + slot)}
+    qte = {k for k, x in db.get("sjw_skills", {}).items() if x.get("type") == "qte"}
+    comp = lambda slot: (qte or None) if slot.startswith("qte") else ({k for k in db.get("sjw_skills", {}) if k not in qte} or None)
+    armes_sjw = {k for k, w in db.get("weapons", {}).items() if w.get("kind") == "sung_jinwoo"} or None
 
-    def lire_proprietaire(imgs, nom, z, proprietaire_sjw):
-        """Lit les éléments de `z` pour un propriétaire ; accumule dans `obs`."""
+    def lire_proprietaire(imgs, nom, z):
         if nom == "sjw":
-            s = cartes["sjw"] or {"weapons": [], "artifacts": [], "cores": [], "stats": {}, "skills": [], "blessings": []}
-            cartes["sjw"] = s
-            for zz in z.get("weapons") or []:
-                s["weapons"].append({"id": lire(imgs, zz, "weapons", "sjw_weapons", "sjw"), "level": None})
+            for i, zz in enumerate(z.get("weapons") or []):
+                lire(imgs, zz, "weapons", "sjw_weapons", "sjw", i, armes_sjw)
             for slot, zz in (z.get("artifacts") or {}).items():
-                i = lire(imgs, zz, "artifact_pieces", "sjw_artifacts", "sjw", slot, pieces_permises(slot))
-                s["artifacts"].append({"slot": slot, "set_id": i.split("--")[0] if i else None, "level": None})
+                lire(imgs, zz, "artifact_pieces", "sjw_artifacts", "sjw", slot, pieces(slot))
             for slot, zz in (z.get("cores") or {}).items():
-                s["cores"].append({"slot": slot, "id": lire(imgs, zz, "cores", "sjw_cores", "sjw", slot, noyaux_permis(slot)), "level": None})
+                lire(imgs, zz, "cores", "sjw_cores", "sjw", slot, noyaux(slot))
             for slot, zz in (z.get("skills") or {}).items():
-                s["skills"].append({"slot": slot, "id": lire(imgs, zz, "sjw_skills", "sjw_skills", "sjw", slot), "level": None})
-            for zz in z.get("blessings") or []:
-                s["blessings"].append({"id": lire(imgs, zz, "blessings", "blessings", "sjw"), "level": None})
+                lire(imgs, zz, "sjw_skills", "sjw_skills", "sjw", slot, comp(slot))
+            for i, zz in enumerate(z.get("blessings") or []):
+                lire(imgs, zz, "blessings", "blessings", "sjw", i)
         elif nom.startswith("hunter_"):
-            pos = int(nom.split("_")[1])
-            h = hunters.setdefault(pos, {"position": pos, "id": None, "weapon": {"id": None, "level": None}, "artifacts": [], "cores": [], "stats": {}})
-            if z.get("hunter"):
-                h["id"] = lire(imgs, z["hunter"], "hunters", "hunters", nom) or h["id"]
-            if z.get("weapon"):
-                h["weapon"]["id"] = lire(imgs, z["weapon"], "weapons", "weapons", nom) or h["weapon"]["id"]
+            if z.get("hunter_face"):
+                lire(imgs, z["hunter_face"], "hunters", "hunters", nom)
+            if z.get("weapon"):         # armes du chasseur d'abord (`hunter_id`), puis toutes les armes de chasseurs
+                hid, _, _ = _voter([reco(im, z["hunter_face"], "hunters") for im in imgs]) if z.get("hunter_face") else (None, 0, 0)
+                propres = {k for k, w in db.get("weapons", {}).items() if w.get("hunter_id") == hid and k in banque.categorie("weapons")} if hid else set()
+                autres = {k for k, w in db.get("weapons", {}).items() if w.get("kind") == "hunter"} or None
+                res = [reco(im, z["weapon"], "weapons", propres) for im in imgs] if propres else []
+                ident, _, _ = _voter(res) if res else (None, 0, 0)
+                L = lectures.setdefault((nom, "weapons", None), {"cat": "weapons", "res": []})
+                L["res"] += res if ident else [reco(im, z["weapon"], "weapons", autres) for im in imgs]
             for slot, zz in (z.get("artifacts") or {}).items():
-                i = lire(imgs, zz, "artifact_pieces", "artifacts", nom, slot, pieces_permises(slot))
-                h["artifacts"].append({"slot": slot, "set_id": i.split("--")[0] if i else None, "level": None})
+                lire(imgs, zz, "artifact_pieces", "artifacts", nom, slot, pieces(slot))
             for slot, zz in (z.get("cores") or {}).items():
-                h["cores"].append({"slot": slot, "id": lire(imgs, zz, "cores", "cores", nom, slot, noyaux_permis(slot)), "level": None})
+                lire(imgs, zz, "cores", "cores", nom, slot, noyaux(slot))
         elif nom == "shadows":
-            obs["shadows"] = [{"position": i + 1, "id": lire(imgs, zz, "shadows", "shadows", "shadows")} for i, zz in enumerate(z.get("shadows") or [])]
+            for i, zz in enumerate(z.get("shadows") or []):
+                lire(imgs, zz, "shadows", "shadows", "shadows", i)
         elif nom == "successor" and z.get("successor"):
-            obs["successor"] = {"id": lire(imgs, z["successor"], "successors", "successor", "successor"), "level": None}
-        elif nom == "poc" and z.get("subjugation"):
-            obs["subjugation_support"] = [lire(imgs, zz, "subjugation_support", "subjugation_support", "poc") for zz in z["subjugation"]]
+            lire(imgs, z["successor"], "successors", "successor", "successor")
+        elif nom == "poc":
+            for i, zz in enumerate(z.get("subjugation") or []):
+                lire(imgs, zz, "subjugation_support", "subjugation_support", "poc", i)
 
+    vus = 0
     for onglet in onglets:
         zones, imgs = zones_mode.get(onglet), (images or {}).get(onglet) or []
         if not zones:
@@ -451,10 +457,59 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
         if not imgs:
             obs["notes"].append(f"images {mode}/{onglet} absentes")
             continue
+        vus += 1
         for nom, z in zones.items():
-            lire_proprietaire(imgs, nom, z, nom == "sjw")
-    obs["sjw"] = cartes["sjw"]
-    obs["hunters"] = [hunters[p] for p in sorted(hunters)]
+            lire_proprietaire(imgs, nom, z)
+    if not vus and any((zones_mode.get(o) for o in onglets)):
+        obs["notes"].append("composition non filmée")
+        obs["composition_non_filmee"] = True
+
+    # --- vote et assemblage (SPEC §2.1)
+    valeurs = {}
+    for cle, L in lectures.items():
+        owner, element, slot = cle
+        ident, conflit, meilleur = _voter(L["res"])
+        valeurs[cle] = ident
+        if meilleur and meilleur.get("absente"):
+            n = f"icône absente : {L['cat']}"
+            if n not in obs["notes"]:
+                obs["notes"].append(n)
+        elif conflit:
+            obs["conflits"].append(element)
+        elif ident is None and meilleur:
+            obs["unmatched"].append({"element": element, "owner": owner, "slot": slot, "best_id": meilleur["best_id"],
+                                     "score": meilleur["score"], "crop": None})
+        elif ident is not None:
+            fort = max(r["score"] for r in L["res"] if r["id"] == ident)
+            if fort < _par_categorie(cfg, "seuil_sur", L["cat"], _par_categorie(cfg, "seuil_icone", L["cat"], 0.55) + 0.10) and element not in obs["faibles"]:
+                obs["faibles"].append(element)
+    get = lambda owner, element: [(k[2], v) for k, v in valeurs.items() if k[0] == owner and k[1] == element]
+    if any(k[0] == "sjw" for k in valeurs):
+        obs["sjw"] = {"weapons": [{"id": v, "level": None} for _, v in sorted(get("sjw", "sjw_weapons"))],
+                      "artifacts": [{"slot": sl, "set_id": v.split("--")[0] if v else None, "level": None} for sl, v in get("sjw", "sjw_artifacts")],
+                      "cores": [{"slot": sl, "id": v, "level": None} for sl, v in get("sjw", "sjw_cores")],
+                      "skills": [{"slot": sl, "id": v, "level": None} for sl, v in get("sjw", "sjw_skills")],
+                      "blessings": [{"id": v, "level": None} for _, v in sorted(get("sjw", "blessings"))], "stats": {}}
+    positions = sorted({int(k[0].split("_")[1]) for k in valeurs if k[0].startswith("hunter_")})
+    for pos in positions:
+        o = f"hunter_{pos}"
+        obs["hunters"].append({"position": pos, "id": (get(o, "hunters") or [(None, None)])[0][1],
+                               "weapon": {"id": (get(o, "weapons") or [(None, None)])[0][1], "level": None},
+                               "artifacts": [{"slot": sl, "set_id": v.split("--")[0] if v else None, "level": None} for sl, v in get(o, "artifacts")],
+                               "cores": [{"slot": sl, "id": v, "level": None} for sl, v in get(o, "cores")], "stats": {}})
+    if any(k[0] == "shadows" for k in valeurs):
+        obs["shadows"] = [{"position": i + 1, "id": v} for i, v in sorted(get("shadows", "shadows"))]
+    if any(k[0] == "successor" for k in valeurs):
+        obs["successor"] = {"id": get("successor", "successor")[0][1], "level": None}
+    if any(k[0] == "poc" for k in valeurs):
+        obs["subjugation_support"] = [v for _, v in sorted(get("poc", "subjugation_support"))]
+    # pièce isolée : un set porté par une seule pièce parmi au moins 4 reconnues (SPEC §2.1 ; valeur gardée)
+    for nom, arts in [("sjw", (obs["sjw"] or {}).get("artifacts") or [])] + [(f"hunter_{h['position']}", h["artifacts"]) for h in obs["hunters"]]:
+        c = Counter(a["set_id"] for a in arts if a["set_id"])
+        if sum(c.values()) >= 4:
+            for a in arts:
+                if a["set_id"] and c[a["set_id"]] == 1:
+                    obs["notes"].append(f"pièce isolée : {a['slot']} ({nom})")
     return obs
 
 
@@ -512,7 +567,8 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
                 builds.append(ancien)
                 continue
             images = fournisseur(ctx) if fournisseur else {}
-            obs = observer(images, ctx["mode"], cfg, banque, db)
+            cle_cfg = "hotm_sans_sjw" if ctx["mode"] == "hotm" and ctx.get("hunter_mode") is True else ctx["mode"]
+            obs = observer(images, cle_cfg, cfg, banque, db)
             if not images:
                 obs["notes"].append("images de composition non disponibles")
             obs["analyse_terminee"] = analyse_terminee(processed, ctx["video_id"])

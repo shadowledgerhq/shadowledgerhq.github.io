@@ -69,7 +69,7 @@ class Banque:
         self.categorie(nom)[identifiant] = _bgra(image)
 
 
-def _score(zone, ref, echelles):
+def _score(zone, ref, echelles, masques=None):
     cv2, np = _cv()
     cote = min(zone.shape[:2])
     h, w = ref.shape[:2]
@@ -80,6 +80,8 @@ def _score(zone, ref, echelles):
         if r.shape[0] > zone.shape[0] or r.shape[1] > zone.shape[1]:
             continue
         masque = (r[..., 3] > 128).astype(np.uint8) * 255
+        for x0, y0, x1, y1 in masques or ():      # surimpressions du jeu (cadre, +20, Lv., cadenas) : ignorées
+            masque[int(y0 * r.shape[0]):int(round(y1 * r.shape[0])), int(x0 * r.shape[1]):int(round(x1 * r.shape[1]))] = 0
         if masque.sum() == 0:
             continue
         out = np.nan_to_num(cv2.matchTemplate(zone, np.ascontiguousarray(r[..., :3]), cv2.TM_CCOEFF_NORMED, mask=masque),
@@ -88,17 +90,18 @@ def _score(zone, ref, echelles):
     return meilleur
 
 
-def reconnaitre(image, categorie, banque, seuil=0.55, ecart=0.05, restreint=None, echelles=ECHELLES):
+def reconnaitre(image, categorie, banque, seuil=0.55, ecart=0.05, restreint=None, echelles=ECHELLES, masques=None):
     """Cherche dans `image` (PIL, déjà recadrée sur la zone) l'icône de `categorie` qui lui ressemble le plus. Retourne
     {"id", "score", "second", "ok", "best_id"} : `id` = candidat retenu seulement si score ≥ seuil et écart ≥ `ecart`
-    avec le 2e candidat ; sinon `id` None et `best_id` garde le meilleur (pour `unmatched`). `restreint` = ids permis."""
+    avec le 2e candidat ; sinon `id` None et `best_id` garde le meilleur (pour `unmatched`). `restreint` = ids permis ;
+    `masques` = rectangles (fractions de l'icône) ignorés dans la comparaison."""
     ref = banque.categorie(categorie)
     if restreint is not None:
         ref = {k: v for k, v in ref.items() if k in restreint}
     if not ref:
         return {"id": None, "score": 0.0, "second": 0.0, "ok": False, "best_id": None, "absente": True}
     zone = _bgr(image)
-    notes = sorted(((_score(zone, g, echelles), k) for k, g in ref.items()), reverse=True)
+    notes = sorted(((_score(zone, g, echelles, masques), k) for k, g in ref.items()), reverse=True)
     meilleur, ident = notes[0]
     second = notes[1][0] if len(notes) > 1 else 0.0
     ok = meilleur >= seuil and (meilleur - second) >= ecart

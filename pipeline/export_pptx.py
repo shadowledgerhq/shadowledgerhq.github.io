@@ -254,6 +254,10 @@ def _fmt_stat(v):
 
 def _stats(d, s, stats, x, y, pas=2.35):
     """Tableau 2 colonnes : stats | attributs (valeurs comme à l'écran). Stat non lue : `—`."""
+    if not any(v not in (None, {}) for v in (stats or {}).values()):      # stats facultatives, écran non filmé / non lu
+        d.rect(s, x, y, 2 * pas - 0.1, 1.6, None, X.SOURD, pointille=True, arrondi=True)
+        d.texte(s, x + 0.1, y, 2 * pas - 0.3, 1.6, f"{lib(d.cfg, 'stats', d.lang)} : {lib(d.cfg, 'non_trouve', d.lang)}", 11, X.SOURD, italique=True, align="c", ancre="m")
+        return
     liste = sorted((st for st in d.db.get("stats", {}).values() if st.get("required")), key=lambda st: (st.get("category") != "stat", st.get("order", 0)))
     for col, (cat, titre) in enumerate((("stat", "stats"), ("attribute", "attributs"))):
         cx = x + col * pas
@@ -422,7 +426,7 @@ def slide_preuve(d, b, row):
 def slide_sources(d, buildsf, row):
     b = buildsf[0]
     cfg, lang = d.cfg, d.lang
-    s = d.diapo(lib(cfg, "sources", lang), b, row, "Slide Sources (spec 1).")
+    s = d.diapo(lib(cfg, "sources", lang), b, row, "Slide Sources (spec 2).")
     patches = sorted(d.db_patches, key=lambda p: p.get("date") or "")
     version = patches[-1].get("version") if patches else "?"
     credit = ""
@@ -437,7 +441,7 @@ def slide_sources(d, buildsf, row):
         f"{lib(cfg, 'donnees_jeu', lang)} : data/db (Shadow Ledger) — slagate.com (Sohoven), wiki Fandom (CC BY-SA), forum Netmarble · {lib(cfg, 'version_jeu', lang)} {version}",
         f"{lib(cfg, 'credits_icones', lang)} : {credit}",
         lib(cfg, "mention", lang),
-        f"{lib(cfg, 'genere', lang)} {date.today():%d/%m/%Y} · spec 1",
+        f"{lib(cfg, 'genere', lang)} {date.today():%d/%m/%Y} · spec 2",
     ]
     d.texte(s, 0.6, 1.8, 12.0, 4.8, "\n\n".join(lignes), 13, X.TEXTE)
     return s

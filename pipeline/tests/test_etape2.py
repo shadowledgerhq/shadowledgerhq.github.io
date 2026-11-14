@@ -190,10 +190,10 @@ def test_stats_facultatives_et_plafond_analyse():
     o = obs_hunters()
     for h in o["hunters"]:
         h["stats"] = {}
-    assert build(ctx(hunter_mode=True), o, REGLES_TOUT)["status"] == "build_partiel"          # stats_obligatoires = true
-    assert build(ctx(hunter_mode=True), o, REGLES_TOUT, {**CFG, "stats_obligatoires": False})["status"] == "build_complet"
+    assert build(ctx(hunter_mode=True), o, REGLES_TOUT, {**CFG, "stats_obligatoires": True})["status"] == "build_partiel"
+    assert build(ctx(hunter_mode=True), o, REGLES_TOUT)["status"] == "build_complet"            # défaut v2 : stats facultatives
     o = obs_hunters(analyse_terminee=False)
-    b = build(ctx(hunter_mode=True), o, REGLES_TOUT, {**CFG, "stats_obligatoires": False})
+    b = build(ctx(hunter_mode=True), o, REGLES_TOUT)
     assert b["status"] == "build_partiel" and "analyse en cours" in b["notes"]
 
 
@@ -232,9 +232,9 @@ def test_reconnaissance_par_icone_et_seuils():
     r2 = icones.reconnaitre(bruit, "hunters", banque, 0.55, 0.05, restreint={"a", "b"})
     assert not r2["ok"] and r2["id"] is None and r2["best_id"] in ("a", "b")
     # observer : sans zone -> rien cherché, note ; avec zone -> reconnu (structure zones.<mode>.<onglet>.<propriétaire>.<élément>)
-    obs = B.observer({"personnages": [ecran("carre")]}, "bot", CFG, banque, DB)
+    obs = B.observer({"personnages": [ecran("carre")]}, "bot", {**CFG, "zones": {}}, banque, DB)
     assert "zones bot/personnages non définies" in obs["notes"] and not obs["hunters"]
-    cfg = {**CFG, "zones": {"bot": {"personnages": {"hunter_1": {"hunter": [0, 0, 1, 1]}}}}}
+    cfg = {**CFG, "zones": {"bot": {"personnages": {"hunter_1": {"hunter_face": [0, 0, 1, 1]}}}}}
     obs = B.observer({"personnages": [ecran("carre"), ecran("carre")]}, "bot", cfg, banque, DB)
     assert len(obs["hunters"]) == 1 and obs["hunters"][0]["position"] == 1
     assert obs["hunters"][0]["id"] == "a" and not obs["unmatched"]
@@ -256,6 +256,92 @@ def test_noyaux_reels_bot_japonais():
     assert par[1]["body"] is None and par[3]["body"] is None and par[3]["spirit"] is None      # emplacements vides : jamais devinés
     assert {u["slot"] for u in obs["unmatched"] if u["owner"] == "hunter_1"} == {"body"}
     assert {c["slot"]: c["id"] for c in obs["sjw"]["cores"]}["mind"] == "ancient-wraiths-obession"
+
+
+def test_10_bot_sans_aucune_stat_complet():
+    o = obs_hunters(sjw=obs_sjw())
+    o["sjw"]["stats"] = {}
+    for h in o["hunters"]:
+        h["stats"] = {}
+    b = build(ctx("bot"), o, REGLES_TOUT)
+    assert CFG["stats_obligatoires"] is False and b["status"] == "build_complet", (b["status"], b["counts"], b["notes"])
+    assert b["found"]["stats"] is None and b["found"]["sjw_stats"] is None
+
+
+def test_11_captures_bot_zones_et_positions():
+    from PIL import Image
+    Z = CFG["zones"]["bot"]
+    # positions des 8 pièces (SPEC §1.3) : colonne gauche = armure, droite = accessoires, lignes de haut en bas
+    for o in ("sjw", "hunter_1", "hunter_2", "hunter_3"):
+        a = Z["artefacts"][o]["artifacts"]
+        gauche, droite = ("helmet", "chestplate", "gloves", "boots"), ("necklace", "bracelet", "ring", "earrings")
+        assert [a[s][1] for s in gauche] == sorted(a[s][1] for s in gauche) and all(a[g][0] < a[d][0] and abs(a[g][1] - a[d][1]) < 0.02 for g, d in zip(gauche, droite))
+    # 6 compétences de SJW : colonne gauche ultimate / skill_2 / skill_1, colonne droite qte_3 / qte_2 / qte_1
+    k = Z["competences"]["sjw"]["skills"]
+    assert k["ultimate"][1] < k["skill_2"][1] < k["skill_1"][1] and k["qte_3"][1] < k["qte_2"][1] < k["qte_1"][1]
+    assert max(k[s][0] for s in ("ultimate", "skill_2", "skill_1")) < min(k[s][0] for s in ("qte_3", "qte_2", "qte_1")) + 0.03
+    # captures réelles : noyaux des 4 personnages (SJW inclus) reconnus, compétences rattachées aux bons emplacements, qte_1 sans niveau
+    dossier = RACINE / "docs" / "essais" / "composition"
+    if not (dossier / "bot_noyaux_ja.png").exists():
+        return
+    imgs = {t: [Image.open(dossier / f"bot_{t}_ja.png")] for t in ("noyaux", "competences", "benedictions")}
+    obs = B.observer(imgs, "bot", CFG, icones.Banque(RACINE), DB)
+    cores = {c["slot"]: c["id"] for c in obs["sjw"]["cores"]}
+    assert cores["mind"] == "ancient-wraiths-obession"
+    assert {s["slot"] for s in obs["sjw"]["skills"]} == set(B.sjw_mod.SKILL_SLOTS)
+    assert next(s for s in obs["sjw"]["skills"] if s["slot"] == "qte_1")["level"] is None
+    assert len(obs["sjw"]["blessings"]) == 8
+    assert [o["id"] for o in obs["shadows"]][0] == "beste" or obs["shadows"][0]["id"] is None
+
+
+def test_12_bande_de_doute_reconnaissance_faible():
+    b = build(ctx("bot"), obs_hunters(sjw=obs_sjw(), faibles=["cores"]), REGLES_TOUT)
+    assert b["status"] == "build_complet" and b["confidence"] == "a_verifier" and "reconnaissance faible : cores" in b["notes"]
+    from PIL import Image, ImageDraw
+    banque = icones.Banque(RACINE)
+    m = Image.new("RGBA", (128, 128), (0, 0, 0, 0))
+    d = ImageDraw.Draw(m)
+    d.ellipse((6, 6, 122, 122), fill=(200, 60, 60, 255))
+    d.line((6, 6, 122, 122), fill=(20, 220, 240, 255), width=16)
+    banque.ajouter("hunters", "a", m)
+    banque.ajouter("hunters", "b", Image.new("RGBA", (128, 128), (10, 200, 10, 255)))
+    fond = Image.effect_noise((100, 100), 60).convert("RGBA")
+    fond.alpha_composite(m.resize((56, 56)), (22, 18))
+    zones = {"bot": {"personnages": {"hunter_1": {"hunter_face": [0, 0, 1, 1]}}}}
+    obs = B.observer({"personnages": [fond]}, "bot", {**CFG, "zones": zones, "seuil_icone": {"hunters": 0.2}, "seuil_sur": {"hunters": 1.01}}, banque, DB)
+    assert obs["hunters"][0]["id"] == "a" and obs["faibles"] == ["hunters"]
+    obs = B.observer({"personnages": [fond]}, "bot", {**CFG, "zones": zones, "seuil_icone": {"hunters": 0.2}, "seuil_sur": {"hunters": 0.3}}, banque, DB)
+    assert obs["hunters"][0]["id"] == "a" and not obs["faibles"]
+
+
+def test_13_hotm_sans_sjw_et_vote_entre_onglets():
+    from PIL import Image, ImageDraw
+    assert "benedictions" not in CFG["onglets"]["hotm_sans_sjw"] and "benedictions" in CFG["onglets"]["hotm"]
+    banque = icones.Banque(RACINE)
+    def m(n):
+        im = Image.new("RGBA", (64, 64), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        d.rectangle((4, 4, 60, 60), fill=(200, 60, 60, 255))
+        d.line((4, 4, 60, 60) if n else (4, 60, 60, 4), fill=(20, 220, 240, 255), width=8)
+        return im
+    banque.ajouter("shadows", "a", m(1))
+    banque.ajouter("shadows", "b", m(0))
+    zones = {"hotm_sans_sjw": {"personnages": {"hunter_1": {"hunter_face": [0, 0, 1, 1]}, "shadows": {"shadows": [[0, 0, 1, 1]]}},
+                               "artefacts": {"shadows": {"shadows": [[0, 0, 1, 1]]}}}}
+    cfg = {**CFG, "zones": zones}
+    ecran = lambda n: Image.new("RGBA", (80, 80), (20, 20, 40, 255))
+    e1, e2 = ecran(1), ecran(1)
+    e1.alpha_composite(m(1), (8, 8)); e2.alpha_composite(m(1), (8, 8))
+    obs = B.observer({"personnages": [e1], "artefacts": [e2]}, "hotm_sans_sjw", cfg, banque, DB)
+    assert obs["sjw"] is None and obs["shadows"][0]["id"] == "a" and not obs["conflits"]      # aucun recadrage SJW ; 2 onglets d'accord
+    e3 = ecran(0)
+    e3.alpha_composite(m(0), (8, 8))
+    obs = B.observer({"personnages": [e1], "artefacts": [e3]}, "hotm_sans_sjw", cfg, banque, DB)
+    assert obs["shadows"][0]["id"] is None and "shadows" in obs["conflits"]                  # égalité : null + conflit
+    assert "composition non filmée" in B.observer({}, "hotm_sans_sjw", cfg, banque, DB)["notes"]
+    # pièce isolée : valeur gardée, note ajoutée
+    b = build(ctx(hunter_mode=True), obs_hunters(notes=["pièce isolée : boots (hunter_1)"]), REGLES_TOUT)
+    assert "pièce isolée : boots (hunter_1)" in b["notes"] and b["status"] == "build_complet"
 
 
 def test_calculer_sur_arbre_de_test():
