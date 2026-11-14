@@ -119,11 +119,11 @@ def controle_results_sans_hunter_rank(lec, hud, config):
 def lecture_gb_combat(meta, ecran, config, source="video-complete"):
     """v12 §3.1 : HUD du combat GB (`Points` + `Boss Rage Count xN` + chrono sur la même image). Le HUD n'est
     JAMAIS un score : lecture sans score (`score: None`, ignorée par le classement), qui garde le `Boss Rage Count`
-    (information, `hud_rage_count`) et les `Points` (= `Final Score` en cours, hypothèse). Sans `Boss Rage Count` ni
-    chrono lisibles : ignorée. Les lectures d'une même run sont regroupées par `ocr_ecrans.regrouper_hud`."""
+    (information, `hud_rage_count`) et les `Points` (= `Final Score` en cours, hypothèse). Sans chrono lisible, ou sans compteur
+    ni `Points` : ignorée (le compteur peut manquer dans une langue dont le libellé est mal lu). Les lectures d'une même run sont regroupées par `ocr_ecrans.regrouper_hud`."""
     rc, chrono = ecran.get("rage_count"), ecran.get("chrono")
-    if rc is None or chrono is None or not 0 <= rc <= 500:
-        return None
+    if chrono is None or (rc is not None and not 0 <= rc <= 500) or (rc is None and (not ecran.get("rage_optionnel") or ecran.get("points") is None)):
+        return None             # chrono illisible, ou compteur illisible (sauf langue à libellé mal lu : `rage_optionnel`) : HUD ignoré
     lec = lecture_vide(meta, "gb")
     lec.update(score=None, score_source=None, exact=False, confidence="a_verifier", stage=ecran.get("stage"),
                t=ecran.get("t"), team=None,

@@ -42,17 +42,19 @@ def libelles_hud(config=None):
     for langue, lib in (((config or _config()).get("gb") or {}).get("libelles") or {}).items():
         hud = lib.get("hud") or {} if isinstance(lib, dict) else {}
         if hud.get("points"):
+            compagnons = list(hud.get("rage", [])) + list(hud.get("equipe", [])) + list(hud.get("avertissement", ["WARNING"]))
             sortie.append((langue, "|".join(_motif(x) for x in hud["points"]), "|".join(_motif(x) for x in hud.get("rage", [])) or None,
-                           "|".join(_motif(x) for x in hud.get("equipe", [])) or None, bool(hud.get("rage_x", True))))
+                           "|".join(_motif(x) for x in compagnons) or None, bool(hud.get("rage_x", True)), bool(hud.get("rage_optionnel", False))))
     return sortie
 
 
 def langue_hud(texte, config=None):
     """Langue dont les libellés du HUD figurent dans `texte` (Points + compteur de rage ou équipe), ou None."""
     bas = sans_accents(texte).lower()
-    for langue, pts, rage, equipe, rage_x in libelles_hud(config):
-        if re.search(rf"\b(?:{pts})\b", bas) and ((rage and re.search(rage, bas)) or (equipe and re.search(equipe, bas))):
-            return langue
+    for langue, pts, rage, equipe, rage_x, _ in libelles_hud(config):
+        if re.search(rf"\b(?:{pts})\b", bas) and ((rage and re.search(rage, bas)) or (equipe and re.search(equipe, bas))
+                                                    or re.search(rf"\b(?:{pts})\W{{0,6}}\d+(?:[,.]\d{{3}}){{2,}}", bas)):
+            return langue              # libellé des Points + compagnon (rage, équipe, WARNING) ou grand nombre groupé
     return None
 
 
@@ -90,8 +92,10 @@ def detecter(texte):
         return "gb_results"
     if "your points have been registered" in bas or ("rage rewards" in bas and "tap the screen to continue" in bas):
         return "gb_results_partiel"   # v12 : écran Results en animation ; « Rage Rewards » seul = bouton du salon (v14)
-    if langue_hud(t) and chrono_hud(t) is not None:
-        return "gb_combat"     # v11 : HUD pendant la run (jamais un écran de résultat) ; v15 : libellés par langue
+    if langue_hud(t):
+        # v11 : HUD pendant la run (jamais un écran de résultat) ; v15 : libellés par langue ; chrono illisible sur l'image
+        # entière : HUD « incertain », confirmé par la lecture ciblée du chrono (zones_hud)
+        return "gb_combat" if chrono_hud(t) is not None else "gb_combat_incertain"
     if "phase 1" in bas and "play time" in bas and _TEMPS.search(t):
         return "bot"
     if "합산" in t and ("증명" in t or "클리어" in t):
@@ -127,7 +131,7 @@ def lire_gb_combat(texte, config=None):
         pre = r"[xX×]\s*" if lib[4] else ""
         rc = re.search(rf"(?:{lib[2]})\W{{0,6}}{pre}(\d{{1,3}})(?!\d)", bas, re.IGNORECASE)
     return {"points": _entier(pts.group(1)) if pts else None, "rage_count": int(rc.group(1)) if rc else None,
-            "chrono": chrono_hud(t), "stage": None, "langue": langue}
+            "chrono": chrono_hud(t), "stage": None, "langue": langue, "rage_optionnel": bool(lib and lib[5])}
 
 
 def lire_bot(texte):
@@ -250,6 +254,21 @@ def _appliquer_zones(ecran, zones, config):
     ecran["hunter_ranks"] = rangs
 
 
+def _appliquer_zones_hud(ecran, zones, config):
+    """HUD dont le chrono n'est pas lu sur l'image entière : zones `config.gb.zones_hud` (chrono, Points, compteur de rage)."""
+    if zones.get("format_ok") is False:
+        return
+    ch = chrono_hud(zones.get("hud_chrono"))
+    if ch is not None:
+        ecran["chrono"] = ch
+    m = re.search(r"\d+(?:[,.]\d{3})+|\d+", zones.get("hud_points") or "")
+    if m and ecran.get("points") is None:
+        ecran["points"] = _entier(m.group(0))
+    rc = _entier_court(zones.get("hud_rage"))
+    if rc is not None and ecran.get("rage_count") is None:
+        ecran["rage_count"] = rc
+
+
 def _appliquer_zones_record(ecran, zones, config):
     """Personal Record du salon : lecture ciblée (`config.gb.zones_record`, fractions) de `Total Score`, `Total Rage Count`,
     `Challenge Count`, du RC et des dégâts de chaque groupe, de `No history` et de `Time Left in Season`. La zone prime
@@ -293,12 +312,18 @@ def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
     type_ecran = detecter(texte)
     if type_ecran is None:
         return []
-    ecran = {**(lire_gb_combat(texte, config) if type_ecran == "gb_combat" else LECTEURS[type_ecran](texte)), "t": t}
+    ecran = {**(lire_gb_combat(texte, config) if type_ecran in ("gb_combat", "gb_combat_incertain") else LECTEURS[type_ecran](texte)), "t": t}
     if type_ecran in ("gb_results", "gb_results_partiel"):
         ecran["stage"] = _boss_du_hud(texte, config) or ecran["stage"]     # v12 : nom normalisé si le boss est connu
         if zones is not None:
             _appliquer_zones(ecran, zones, config)
         type_ecran = "gb_results"
+    if type_ecran == "gb_combat_incertain":
+        if zones is not None:
+            _appliquer_zones_hud(ecran, zones, config)
+        if ecran.get("chrono") is None:
+            return []                       # chrono toujours illisible : pas de lecture HUD
+        type_ecran = "gb_combat"
     if type_ecran == "gb_record" and zones is not None:
         _appliquer_zones_record(ecran, zones, config)
     if type_ecran == "gb_combat":
@@ -340,6 +365,12 @@ def zone_valide(nom, texte, config=None):
         return _entier_court(t, 4) is not None
     if nom == "temps":
         return _temps_zone(t) is not None
+    if nom == "hud_chrono":
+        return chrono_hud(t) is not None
+    if nom == "hud_points":
+        return bool(re.search(r"\d+(?:[,.]\d{3})+", t))
+    if nom == "hud_rage":
+        return _entier_court(t) is not None
     if nom in ("g1_dmg", "g2_dmg"):
         return bool(re.search(r"\d+(?:[.,]\d+)?\s*[KMBT]\b|no\s*hist", t, re.IGNORECASE))
     if nom == "time_left":
@@ -360,7 +391,7 @@ def consensus_zone(nom, textes, config=None):
 def boss_connu(texte, config, seuil=0.75):
     """Nom de boss de `config.gb.boss_noms` reconnu dans un court texte (recadrage), avec tolérance aux fautes d'OCR."""
     import difflib
-    lignes = [re.sub(r"[^A-Za-z ]", "", l).strip().lower() for l in (texte or "").splitlines()]
+    lignes = [re.sub(r"[^\w ]|\d|_", "", l).strip().lower() for l in (texte or "").splitlines()]
     for nom in (config.get("gb") or {}).get("boss_noms", ["Giant Statue"]):
         if any(l and difflib.SequenceMatcher(None, l, nom.lower()).ratio() >= seuil for l in lignes):
             return nom
@@ -395,9 +426,12 @@ def regrouper_hud(lectures, config=None):
             runs[-1].append(l)
         for run in runs:
             dernier = min(run, key=lambda x: x["detail"]["chrono_hud"])
-            d = {**dernier["detail"], "hud_rage_count": max(x["detail"]["hud_rage_count"] for x in run),
+            rcs = [x["detail"]["hud_rage_count"] for x in run if x["detail"].get("hud_rage_count") is not None]
+            d = {**dernier["detail"], "hud_rage_count": max(rcs) if rcs else None,
                  "t_debut": min(x["detail"].get("t_debut", x["t"]) for x in run), "t_fin": max(x["detail"].get("t_fin", x["t"]) for x in run)}
             points = d.get("hud_points") if d["chrono_hud"] <= chrono_max else None
+            if points is not None and points < cfg.get("hud_points_min", 10**9):    # les scores GB dépassent 1e9 : en dessous, lecture abîmée
+                points = None
             if points is not None:
                 d.update(damage_exact=False, damage_source="hud")
             sortie.append({**dernier, "damage": points, "detail": d,

@@ -63,11 +63,12 @@
     "record_tolerance_minutes": 60,
     "record_tolerance_jours_minutes": 1440,
     "record_tolerance_min_minutes": 1,
-    "boss_noms": ["Giant Statue", "Estátua de Pedra Gigante"],
+    "boss_noms": ["Giant Statue", "Estátua de Pedra Gigante", "거대 석상"],
     "libelles": {
       "_doc": "SPEC §3.1 (v15) : libellés par langue, jamais en dur. Seuls les libellés vus sur de vraies captures sont listés ; langue sans libellés connus = note « libellés <langue> inconnus ».",
       "en": {"hud": {"points": ["Points"], "rage": ["Boss Rage Count"], "equipe": ["Team A", "Team B"], "rage_x": true}},
-      "pt": {"hud": {"points": ["Pontos"], "rage": ["Número de Fúrias do Chefão", "Fúrias do Chefão"], "equipe": ["Equipe A", "Equipe B"], "rage_x": false}}
+      "pt": {"hud": {"points": ["Pontos"], "rage": ["Número de Fúrias do Chefão", "Fúrias do Chefão"], "equipe": ["Equipe A", "Equipe B"], "rage_x": false, "rage_optionnel": true}},
+      "ko": {"hud": {"points": ["POINT"], "rage": ["보스 격노 횟수"], "equipe": ["A팀", "B팀"], "rage_x": true, "rage_optionnel": true}}
     },
     "hud_nouvelle_run_s": 20,
     "chrono_fin_s": 15,
@@ -91,6 +92,12 @@
       "rage": [0.505, 0.865, 0.10, 0.075],
       "temps": [0.93, 0.045, 0.07, 0.06]
     },
+    "zones_hud": {
+      "hud_chrono": [0.80, 0.015, 0.13, 0.085],
+      "hud_points": [0.12, 0.095, 0.11, 0.045],
+      "hud_rage": [0.17, 0.145, 0.06, 0.045]
+    },
+    "hud_points_min": 1000000000,
     "zones_ocr": {"variantes": [{"echelle": 2, "seuil": null}, {"echelle": 2, "seuil": 140}, {"echelle": 3, "seuil": 140}]},
     "_zones_ocr": "Prétraitements essayés puis vote (essai sur images réelles du 14/11 : 15 lectures sur 15 justes, contre 12 sur 15 pour le meilleur prétraitement seul). tesseract : OMP_THREAD_LIMIT=1.",
     "zones_record": {

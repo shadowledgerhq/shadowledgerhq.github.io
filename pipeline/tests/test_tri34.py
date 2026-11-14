@@ -126,7 +126,7 @@ class OutilsImages:
     zones = {}      # {(vidéo, t): {"boss": texte, "joueur": texte}} : texte lu dans les recadrages
 
     def recadrer(self, png, zone, echelle=3, seuil=None):
-        tous = {**CONFIG["gb"]["zones"], **CONFIG["gb"]["zones_record"]}
+        tous = {**CONFIG["gb"]["zones"], **CONFIG["gb"]["zones_record"], **CONFIG["gb"]["zones_hud"]}
         nom = next(n for n, z in tous.items() if list(z) == list(zone))
         return f"{png}#{nom}"
 
@@ -304,7 +304,8 @@ def test_v12_hud_information_seulement():
     assert l["detail"]["hud_points"] == 1540584556 and l["detail"]["chrono_hud"] == 10.45 and l["detail"]["hud_rage_count"] == 12
     assert ocr_ecrans.lectures_depuis_texte(HUD_50, _m(), CONFIG, "video-complete", 50)[0]["detail"]["hud_rage_count"] == 6   # « Rage Coun »
     assert ocr_ecrans.lectures_depuis_texte(HUD_130, _m(), CONFIG, "video-complete", 130) == []    # Boss Rage Count illisible (xd)
-    assert ocr_ecrans.detecter(HUD_170) is None
+    assert ocr_ecrans.detecter(HUD_170) == "gb_combat_incertain"                                      # libellés lus, chrono illisible
+    assert ocr_ecrans.lectures_depuis_texte(HUD_170, _m(), CONFIG, "video-complete", 170) == []     # sans zone ni chrono : ignoré
     assert ocr_ecrans.chrono_hud("Points 1,540,584,556 02:40") == 160 and ocr_ecrans.chrono_hud("Points 1,540,584,556") is None
     (g,) = ocr_ecrans.lectures_depuis_texte(HUD_238, _m(), CONFIG, "debut-fin", 238)
     assert g["detail"]["chrono_hud"] == 1.0 and g["detail"]["hud_points"] == 1593669209            # « WARNING » ignoré
@@ -314,11 +315,11 @@ def test_v12_hud_information_seulement():
 def test_v12_regroupement_et_degats_provisoires():
     brut = lambda rc, chrono, pts, t: ocr_ecrans.lectures_depuis_texte(
         f"Points {pts:,}\nBoss Rage Count x{rc}\n{int(chrono // 60):02d}:{int(chrono % 60):02d}", _m("v"), CONFIG, "video-complete", t)[0]
-    run1 = [brut(2, 150, 10_000, 30), brut(5, 100, 50_000, 80), brut(9, 20, 90_000, 160)]       # chrono min 20 s > 5 s : pas de dégâts
-    run2 = [brut(1, 170, 5_000, 300), brut(4, 60, 70_000, 380), brut(6, 4, 99_000, 436)]
+    run1 = [brut(2, 150, 10_000_000_000, 30), brut(5, 100, 50_000_000_000, 80), brut(9, 20, 90_000_000_000, 160)]       # chrono min 20 s > 5 s : pas de dégâts
+    run2 = [brut(1, 170, 5_000_000_000, 300), brut(4, 60, 70_000_000_000, 380), brut(6, 4, 99_000_000_000, 436)]
     fin = ocr_ecrans.regrouper_hud(run1 + run2, CONFIG)
     assert sorted((l["t"], l["detail"]["hud_rage_count"], l["damage"], l["score"]) for l in fin) == [
-        (160, 9, None, None), (436, 6, 99_000, None)]
+        (160, 9, None, None), (436, 6, 99_000_000_000, None)]
     r2 = [l for l in fin if l["t"] == 436][0]
     assert r2["detail"]["damage_exact"] is False and r2["detail"]["damage_source"] == "hud"
     assert len(ocr_ecrans.regrouper_hud(fin + run2, CONFIG)) == 2                                  # idempotent

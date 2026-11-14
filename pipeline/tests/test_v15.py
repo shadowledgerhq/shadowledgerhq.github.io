@@ -139,6 +139,59 @@ def test_hud_portugais_et_langues():
     assert "pt" in CONFIG["gb"]["libelles"] and "en" in CONFIG["gb"]["libelles"]
 
 
+HUD_KO = """POINT 10.375.798.059.160 3.18
+보스 격노 횟수 x125 WARNING
+A팀 편성 정보 보기
+"""
+
+
+def test_hud_coreen_et_publication_apres_le_dernier_hud():
+    assert ocr_ecrans.detecter(HUD_KO) == "gb_combat" and ocr_ecrans.langue_hud(HUD_KO) == "ko"
+    h = ocr_ecrans.lire_gb_combat(HUD_KO)
+    assert (h["points"], h["rage_count"], h["chrono"], h["langue"]) == (10375798059160, 125, 3.18, "ko")
+    assert ocr_ecrans.boss_connu("거대 석상", CONFIG) == "거대 석상" and ocr_ecrans.boss_connu("Temple Altar", CONFIG) is None
+    assert ocr_ecrans.detecter("POINT 5\n3.18") is None
+    # publication : les images qui suivent le dernier HUD (écran Results, langue inconnue) sont choisies
+    import subprocess
+    import tempfile
+
+    def faux(cmd, **kw):
+        Path(cmd[-1]).write_bytes(b"jpg")
+        return subprocess.CompletedProcess(cmd, 0, stdout="", stderr="")
+    with tempfile.TemporaryDirectory() as tmp:
+        src, dst = Path(tmp) / "logs", Path(tmp) / "docs"
+        src.mkdir()
+        for nom in ["tri3_0", "tri3_213_gb_combat", "tri3_215", "tri3_219", "tri3_223", "tri3_229", "tri3_241", "tri3_4"]:
+            (src / f"V_{nom}.txt").write_text("x" * (3 + len(nom)), encoding="utf-8")
+            (src / f"V_{nom}.png").write_bytes(b"png")
+        noms = pc.publier_essai(pc.Outils(CONFIG["pc"], executer=faux), src, dst, None, maximum=5)
+        pris = {n for n in noms if n.endswith(".txt")}
+        assert "V_tri3_213_gb_combat.txt" in pris and {"V_tri3_215.txt", "V_tri3_241.txt"} <= pris        # début et fin de la zone après le HUD
+
+
+HUD_KO_REEL = """oor Ma Shoe ; a Mase (y) 3.1 i
+poInt 10.375,798,058,160, ~ SE & a ue
+BA Ab x125 We RNING if 7
+"""
+
+
+def test_hud_coreen_chrono_lu_par_zone_et_points_abimes():
+    assert ocr_ecrans.detecter(HUD_KO_REEL) == "gb_combat_incertain"            # « POINT » + « WARNING » lus, chrono « 3.1 » incomplet
+    m = {**meta_gb("mj"), "mode_guess": ["gb"]}
+    assert ocr_ecrans.lectures_depuis_texte(HUD_KO_REEL, m, CONFIG, "video-complete", 200) == []
+    zones = {**VIDE, "hud_chrono": "3.18", "hud_points": "10,375,798,059,160", "hud_rage": "125"}
+    (l,) = ocr_ecrans.lectures_depuis_texte(HUD_KO_REEL, m, CONFIG, "video-complete", 200, zones)
+    assert l["detail"]["chrono_hud"] == 3.18 and l["detail"]["hud_rage_count"] == 125 and l["detail"]["hud_points"] == 10375798058160
+    # sans compteur de rage lu mais avec Points et chrono : HUD gardé (compteur = information)
+    zs = {**VIDE, "hud_chrono": "3.18", "hud_points": "", "hud_rage": ""}
+    (l2,) = ocr_ecrans.lectures_depuis_texte(HUD_KO_REEL, m, CONFIG, "video-complete", 200, zs)
+    assert l2["detail"]["hud_rage_count"] is None and l2["detail"]["chrono_hud"] == 3.18
+    # Points abîmés (7288064 pour 7 884 144 289 064) : jamais des dégâts provisoires
+    brut = ocr_ecrans.lectures_depuis_texte(HUD_PT, m, CONFIG, "video-complete", 213)
+    fin = ocr_ecrans.regrouper_hud([{**b, "detail": {**b["detail"], "hud_points": 7288064, "chrono_hud": 0.8}} for b in brut], CONFIG)
+    assert fin[0]["damage"] is None
+
+
 def test_langue_sans_libelles_connus():
     config = pc.charger_config()
     with __import__("tempfile").TemporaryDirectory() as tmp:

@@ -366,7 +366,7 @@ def lire_zones_results(outils, png, config, type_ecran="gb_results"):
     Personal Record). Une zone couvre toute la case du champ. Format différent de 16:9 (Short vertical, 4:3, bandes
     noires) : zones non appliquées (`format_ok: False`). Retourne {nom: texte lu} ; "" si illisible."""
     gb_cfg, cfg = config.get("gb") or {}, config["pc"]["images"]
-    zones = gb_cfg.get("zones_record" if type_ecran == "gb_record" else "zones", {})
+    zones = gb_cfg.get({"gb_record": "zones_record", "gb_combat_incertain": "zones_hud"}.get(type_ecran, "zones"), {})
     taille = outils.dimensions(png)
     if taille and taille[1] and abs(taille[0] / taille[1] - 16 / 9) > gb_cfg.get("format_tolerance", 0.02):
         return {"format_ok": False}
@@ -387,7 +387,7 @@ def lire_zones_results(outils, png, config, type_ecran="gb_results"):
 
 
 RESULTATS_TYPES = ("gb_results", "gb_results_partiel")
-ZONES_TYPES = RESULTATS_TYPES + ("gb_record",)
+ZONES_TYPES = RESULTATS_TYPES + ("gb_record", "gb_combat_incertain")
 
 
 def _garder(ocr_debug, vid, etiquette, t, texte, png):
@@ -755,6 +755,10 @@ def publier_essai(outils, source, destination, git=None, maximum=8, resume=None,
             reconnus = [reconnus[round(k * (len(reconnus) - 1) / 3)] for k in range(4)]
         combats = sorted((f for f in fichiers if types[f] == "gb_combat"), key=t_de)
         choisis = list(dict.fromkeys(reconnus + combats[:1] + combats[-1:]))
+        if combats:       # images juste après le dernier HUD de la vidéo : l'écran Results, dans une langue peut-être inconnue
+            apres = sorted((f for f in fichiers if types[f] is None and t_de(f) > t_de(combats[-1])), key=t_de)
+            if apres:
+                choisis += list(dict.fromkeys(apres[round(k * (len(apres) - 1) / 3)] for k in range(4)))
         choisis += sorted((f for f in fichiers if "_tri3_" in f.stem and f not in choisis), key=t_de)[-4:]   # fin de vidéo (langue inconnue)
         tri4 = sorted((f for f in fichiers if "_tri4_" in f.stem and f not in choisis), key=t_de)
         if tri4:                                                 # milieu de vidéo (langue inconnue) : 3 images réparties
