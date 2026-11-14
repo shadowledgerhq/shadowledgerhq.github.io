@@ -1,25 +1,23 @@
 {
  "semaine": "2026-11-12",
  "alertes": [
-  "lGDbzyIJcjY : 429 Too Many Requests, reportée au prochain passage",
-  "429 : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées",
-  "38 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
+  "51 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
  ],
  "lectures": [
   {
-   "video_id": "lGDbzyIJcjY",
-   "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
-   "channel_title": "HS Retro Gaming",
-   "published_at": "2026-11-12T12:00:07Z",
-   "lang": "en-US",
+   "video_id": "T5dR6iJAn-Y",
+   "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+   "channel_title": "RaidenShadow",
+   "published_at": "2026-11-12T13:50:20Z",
+   "lang": "pt-BR",
    "mode": "gb",
-   "regles": 13,
+   "regles": 17,
    "bot_season_week": null,
    "player_ingame": null,
-   "damage": 1596246179,
+   "damage": null,
    "gate": null,
    "hunter_mode": null,
-   "t": 238,
+   "t": 213,
    "stage": null,
    "team": null,
    "score": null,
@@ -28,186 +26,293 @@
    "confidence": "a_verifier",
    "detail": {
     "ecran": "combat",
-    "hud_points": 1596246179,
-    "chrono_hud": 0.47,
-    "hud_rage_count": 12,
-    "t_debut": 50,
-    "t_fin": 238,
-    "damage_exact": false,
-    "damage_source": "hud"
+    "hud_points": null,
+    "chrono_hud": 0.8,
+    "separateur_perdu": false,
+    "hud_rage_count": 120,
+    "t_debut": 213,
+    "t_fin": 213
    },
    "notes": [
-    "HUD : Boss Rage Count x12, chrono 0.47"
+    "HUD : Boss Rage Count x120, chrono 0.8"
    ]
   },
   {
-   "video_id": "lGDbzyIJcjY",
-   "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
-   "channel_title": "HS Retro Gaming",
-   "published_at": "2026-11-12T12:00:07Z",
-   "lang": "en-US",
+   "video_id": "T5dR6iJAn-Y",
+   "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+   "channel_title": "RaidenShadow",
+   "published_at": "2026-11-12T13:50:20Z",
+   "lang": "pt-BR",
    "mode": "gb",
-   "regles": 13,
+   "regles": 17,
    "bot_season_week": null,
    "player_ingame": null,
-   "damage": 1601097999,
+   "damage": 7907273299084,
    "gate": null,
    "hunter_mode": null,
-   "t": 252,
-   "stage": "Giant Statue",
+   "t": 229,
+   "stage": "Estátua Gigante",
    "team": null,
-   "score": 19,
+   "score": 156,
    "score_source": "debut-fin",
-   "exact": true,
-   "confidence": "sur",
+   "exact": false,
+   "confidence": "a_verifier",
    "detail": {
     "damage_exact": true,
     "play_time": "03:00",
-    "new_record": true,
-    "player_score": 313099049,
+    "new_record": false,
+    "player_score": null,
     "hunter_ranks": [
-     null,
-     null,
-     null,
-     null,
-     58465656,
-     22280102
+     2719877951535,
+     473844449049,
+     199639030058,
+     131808903549,
+     90867324225,
+     36903017574
     ],
-    "hunter_ranks_lus": 2,
-    "n_images": 3,
+    "hunter_ranks_lus": 6,
+    "n_images": 7,
+    "successor_score": null,
+    "successeur_present": false,
     "votes": {
      "stage": [
       [
-       "Giant Statue",
-       3
-      ]
-     ],
-     "player_score": [
-      [
-       313099049,
-       2
+       "Estátua Gigante",
+       7
       ]
      ],
      "final_score": [
       [
-       1601097999,
-       2
+       7907273299084,
+       7
       ]
      ],
      "rage_count": [
       [
-       19,
-       2
-      ],
-      [
-       7,
-       1
+       156,
+       7
       ]
      ],
      "play_time": [
       [
        "03:00",
-       2
+       7
+      ]
+     ],
+     "hunter_rank_1": [
+      [
+       2719877951595,
+       3
+      ],
+      [
+       2719877951535,
+       4
+      ]
+     ],
+     "hunter_rank_2": [
+      [
+       473844449049,
+       7
+      ]
+     ],
+     "hunter_rank_3": [
+      [
+       199699030058,
+       3
+      ],
+      [
+       199639030058,
+       4
+      ]
+     ],
+     "hunter_rank_4": [
+      [
+       131808903549,
+       7
       ]
      ],
      "hunter_rank_5": [
       [
-       58465656,
-       1
+       90867324225,
+       7
       ]
      ],
      "hunter_rank_6": [
       [
-       22280102,
-       1
+       96903017574,
+       2
+      ],
+      [
+       36903017574,
+       5
       ]
      ]
     },
-    "rc_images": 2,
-    "final_images": 2,
-    "t_debut": 252,
-    "t_fin": 253,
-    "hud_rage_count": 12
+    "rc_images": 7,
+    "final_images": 7,
+    "rc_t": {
+     "156": 229
+    },
+    "sequence": {
+     "rage_count": [
+      [
+       229,
+       156
+      ],
+      [
+       229,
+       156
+      ],
+      [
+       230,
+       156
+      ],
+      [
+       231,
+       156
+      ],
+      [
+       231,
+       156
+      ],
+      [
+       232,
+       156
+      ],
+      [
+       233,
+       156
+      ]
+     ],
+     "final_score": [
+      [
+       229,
+       7907273299084
+      ],
+      [
+       229,
+       7907273299084
+      ],
+      [
+       230,
+       7907273299084
+      ],
+      [
+       231,
+       7907273299084
+      ],
+      [
+       231,
+       7907273299084
+      ],
+      [
+       232,
+       7907273299084
+      ],
+      [
+       233,
+       7907273299084
+      ]
+     ]
+    },
+    "t_debut": 229,
+    "t_fin": 233,
+    "hud_rage_count": 120
    },
    "notes": [
-    "écart OCR zone/image : player_score",
-    "lecture fusionnée (3 images)",
-    "contrôle sans Hunter Rank"
+    "lecture fusionnée (7 images)",
+    "contrôle sans Hunter Rank : Player's Score illisible"
    ]
   }
  ],
  "processed": {
-  "lGDbzyIJcjY": {
+  "T5dR6iJAn-Y": {
    "week": "2026-11-12",
-   "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
-   "published_at": "2026-11-12T12:00:07Z",
+   "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+   "published_at": "2026-11-12T13:50:20Z",
    "first_seen": "2026-11-13",
    "updated_at": "2026-11-14",
    "last_tri": 4,
    "status": "termine",
    "modes": [
-    "gb",
-    "poc"
+    "gb"
    ],
    "pc_needed": false,
+   "regles": 17,
    "pc": {
+    "sous_titres": "absent",
+    "date": "2026-11-14",
+    "hauteurs": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_taille": [
+     1920,
+     1080
+    ],
     "results_lus": [
      [
-      252,
-      253
+      229,
+      241
      ]
     ],
     "tri3": "fait",
-    "date": "2026-11-14",
     "tri4": "fait"
    }
   }
  },
  "fichiers_logs_ocr": [
-  "lGDbzyIJcjY_recherche_252_gb_results_partiel.txt",
-  "lGDbzyIJcjY_recherche_253_gb_results_partiel.txt",
-  "lGDbzyIJcjY_tri3_0.txt",
-  "lGDbzyIJcjY_tri3_2.txt",
-  "lGDbzyIJcjY_tri3_224.txt",
-  "lGDbzyIJcjY_tri3_226.txt",
-  "lGDbzyIJcjY_tri3_228_gb_combat.txt",
-  "lGDbzyIJcjY_tri3_230.txt",
-  "lGDbzyIJcjY_tri3_232.txt",
-  "lGDbzyIJcjY_tri3_234_gb_combat.txt",
-  "lGDbzyIJcjY_tri3_236.txt",
-  "lGDbzyIJcjY_tri3_238_gb_combat.txt",
-  "lGDbzyIJcjY_tri3_240.txt",
-  "lGDbzyIJcjY_tri3_242.txt",
-  "lGDbzyIJcjY_tri3_244.txt",
-  "lGDbzyIJcjY_tri3_246.txt",
-  "lGDbzyIJcjY_tri3_248.txt",
-  "lGDbzyIJcjY_tri3_250.txt",
-  "lGDbzyIJcjY_tri3_252_gb_results.txt",
-  "lGDbzyIJcjY_tri3_4.txt",
-  "lGDbzyIJcjY_tri3_6.txt",
-  "lGDbzyIJcjY_tri3_8.txt",
-  "lGDbzyIJcjY_tri4_100_gb_combat.txt",
-  "lGDbzyIJcjY_tri4_110.txt",
-  "lGDbzyIJcjY_tri4_120_gb_combat.txt",
-  "lGDbzyIJcjY_tri4_130_gb_combat.txt",
-  "lGDbzyIJcjY_tri4_140.txt",
-  "lGDbzyIJcjY_tri4_150.txt",
-  "lGDbzyIJcjY_tri4_160.txt",
-  "lGDbzyIJcjY_tri4_170.txt",
-  "lGDbzyIJcjY_tri4_200.txt",
-  "lGDbzyIJcjY_tri4_210.txt",
-  "lGDbzyIJcjY_tri4_220.txt",
-  "lGDbzyIJcjY_tri4_230_gb_combat.txt",
-  "lGDbzyIJcjY_tri4_30_gb_combat.txt",
-  "lGDbzyIJcjY_tri4_40_gb_combat.txt",
-  "lGDbzyIJcjY_tri4_50_gb_combat.txt",
-  "lGDbzyIJcjY_tri4_60_gb_combat.txt",
-  "lGDbzyIJcjY_tri4_70_gb_combat.txt",
-  "lGDbzyIJcjY_tri4_80.txt",
-  "lGDbzyIJcjY_tri4_90.txt"
+  "T5dR6iJAn-Y_recherche_229_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_230_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_231_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_232_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_233_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_234.txt",
+  "T5dR6iJAn-Y_recherche_235.txt",
+  "T5dR6iJAn-Y_recherche_236.txt",
+  "T5dR6iJAn-Y_recherche_237.txt",
+  "T5dR6iJAn-Y_recherche_238.txt",
+  "T5dR6iJAn-Y_recherche_239.txt",
+  "T5dR6iJAn-Y_recherche_240.txt",
+  "T5dR6iJAn-Y_recherche_241.txt",
+  "T5dR6iJAn-Y_tri3_0.txt",
+  "T5dR6iJAn-Y_tri3_2.txt",
+  "T5dR6iJAn-Y_tri3_213_gb_combat_incertain.txt",
+  "T5dR6iJAn-Y_tri3_215.txt",
+  "T5dR6iJAn-Y_tri3_219.txt",
+  "T5dR6iJAn-Y_tri3_221.txt",
+  "T5dR6iJAn-Y_tri3_223.txt",
+  "T5dR6iJAn-Y_tri3_225.txt",
+  "T5dR6iJAn-Y_tri3_227.txt",
+  "T5dR6iJAn-Y_tri3_229_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_tri3_231_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_tri3_233.txt",
+  "T5dR6iJAn-Y_tri3_235.txt",
+  "T5dR6iJAn-Y_tri3_237.txt",
+  "T5dR6iJAn-Y_tri3_239.txt",
+  "T5dR6iJAn-Y_tri3_241.txt",
+  "T5dR6iJAn-Y_tri3_4.txt",
+  "T5dR6iJAn-Y_tri3_6.txt",
+  "T5dR6iJAn-Y_tri3_8.txt"
  ],
  "textes_recherche": {
-  "lGDbzyIJcjY_recherche_252_gb_results_partiel.txt": "| OT Na. a 7 Z\nYour points have been registered.\na 6 2 ~\n\nX\n",
-  "lGDbzyIJcjY_recherche_253_gb_results_partiel.txt": "2\nWw\nRage Rewards\nx ¢.\n\\ ：\n; 58,465,656\nTap the screen to continue.\nNew Record Achic\n"
+  "T5dR6iJAn-Y_recherche_229_gb_results_partiel.txt": "No a uc 4\nEstatua Gigante\nZS\nBo di d\n| wai 2560528086 Recompensa de Furia ge\nRank do Cacgador . \"\nhe\n|\\F : } 70)) | 25200,\n|a> ees =\nS> Ng 90,867,324,225\na Toque na tela / Pressione um botao para continuar.\n6 5 796.303,017,574\nNovo Recorde Quebrado!\nPontuacao Final Numero de Furias G4\n; F 6 Bp\n7,907,273,299,084 156 Y\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_230_gb_results_partiel.txt": ". ad re) © Tempo de Progresso 3:00\neo\n_— : <>\nRontwacs cee Jose ws)\n| wai 5 4256992.828.096 Recompensa de Furia ge 2\nRank do Cacador ' y\n[@\n& Sal 70) _=25;200)\nL\n4 f\nS> Ng 90,867,324,225\n§ \") 96,903,017,574 Toque na tela / Pressione um botao para continuar.\nNovo Recorde Quebrado!\nPontuagao Final Numero de Furias fj}\nS DB\n7,507,273,2959,084 156\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_231_gb_results_partiel.txt": "RK a S Ul I C =] ofe) : © Tempo de Progresso 03:00\nE a Gigante Y}\n5 Tp\nPontuagao do Jogador\n; ony\nRank do Cacador ( ml : q b\na Xx\nes: :\n<dod 279877951535, - 2\n» SR” of\nAPL omsson, gx) 4\n< as\n® ee, 199.699.030.058 is\n6 SH 131808903549 %\nSW 90.087,324,225\n6 Ase903.01757%\n“Novo Recorde Quebrado!\nPontuagao Final NumerodeFurias Jy () GS J\n7.907,273,299,084 156 Y\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_232_gb_results_partiel.txt": "n = 5 Ul l ta efe © Tempo de Progresso 03:00\nE a Gigante : “\nos\nPontuacao do Jogador\n< - YY\nRank do Cacador i ( — i,’\n= = \\\nee 2T9sTI951535 |, = AI\nwoe),\n‘a 4) dé , 473i es y, § ¥ n2e))\n4 3\n® ee, 199699030058 &\n6 SH 131808903549 \\\n8 Wh 30.867,324,225\n6 A@ise903.0175%\n| Novo Recorde Quebrado!\nPontuagao Final NumerodeFurias Jy () GS J\n7.907,273,299,084 156 Y\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_233_gb_results_partiel.txt": "in ay S Ul if ; a ele © Tempo de Progresso 03:00\nPontuacao do Jogador\n— ,\nRank do Cacgador ( mal Oy q y\nir Lia S :\ny, 27193,877851535 y~ A\ni,\nAP mee, Ys, 3\n> > 199,639,030,058 4 —s\n& SF 131808,903,549 ‘\ns WH 30.867,324,225\n& Ne 903007574\n| Novo Recorde Quebrado!\nPontuagao Final Numero de Furias (2) ee\n7,907,273,299,084 156 Y Bl\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_234.txt": "_ Like and Subscribe ‘\nv4 for more ideoss\n",
+  "T5dR6iJAn-Y_recherche_235.txt": "_ Like and Subscribe ‘\n4 for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_236.txt": "_ Like and Subscribe ‘\n4 for more dacs.\n",
+  "T5dR6iJAn-Y_recherche_237.txt": "_ Like and Subscribe ‘\n4 for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_238.txt": "_ Like and Subscribe ‘\n4 for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_239.txt": "_ Like and Subscribe ‘\noA ; for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_240.txt": "_ Like and Subscribe ‘\noA ; for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_241.txt": "_ Like and Subscribe ‘\noA ; for more dace\n"
  }
 }
