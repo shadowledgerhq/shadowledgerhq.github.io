@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 10 — 13/11/2026 (BOT : un seul classement, Challenge supprimé du jeu ; saison = 4 semaines + 1 de calcul) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 11 — 14/11/2026 (GB : écran de combat (HUD) décrit, jamais source sûre) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -84,7 +84,7 @@ Noms coréens et japonais : sources inven.co.kr et gamewith.jp/altema.jp (13/11/
 - **Publication proche du reset (v8)** : vidéo publiée moins de `config.reset_alerte_heures` (= 3 h, décision du 13/11, à réajuster après 3 semaines de données) après le reset → note `publiée juste après le reset : semaine précédente ?`. Alerte seulement, jamais un motif de rejet ni un frein au classement. Au GB, le `Time Left in Season` du Personal Record (§4.7) tranche ; au BOT, `S<n>-<w>` du titre (§4.6) tranche s'il est présent.
 
 ### 2.3 Statut
-- Tout score du tri 1 est **provisoire** : `exact: false`, `confidence: a_verifier`, `score_source` = `titre` / `description` / `sous-titres`. Une légende de l'auteur (« Same strat get 132T ») est traitée de la même façon.
+- Tout score du tri 1 est **provisoire** : `exact: false`, `confidence: a_verifier`, `score_source` = `titre` / `description` / `sous-titres` (GB : aussi `hud`, v11). Une légende de l'auteur (« Same strat get 132T ») est traitée de la même façon.
 - La vidéo passe toujours aux tris suivants jusqu'à lecture de l'écran RESULT.
 
 ## 3. Tris 2 à 4 — image (cadre seulement)
@@ -109,7 +109,22 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
   - L'écran RESULT **n'indique pas le groupe**. On le retrouve avec l'écran `Guild Boss` / `Personal Record` s'il apparaît dans la vidéo (RC et dégâts arrondis par groupe) ; sinon groupe inconnu.
   - **Écran `Guild Boss` → `Personal Record`** : `Total Score` (exact), `Challenge Count`, `Total Rage Count`, puis par groupe le RC et les dégâts arrondis (ex. `Group 1` 167 · 17.28T ; `Group 2` 165 · 15.55T ; total 332 = 167 + 165). C'est un record, mais **accepté comme source au GB (décision d'Alexis, v6)** : voir §4.7.
   - Écran `Form Team` (`Guild Boss Mode`) : `Score` = total du record (ex. 32 842 054 460 310), jamais utilisé.
+  - **Écran de combat (HUD), v11** (vidéo `lGDbzyIJcjY`, client anglais, captures `docs/essais/ocr/lGDbzyIJcjY_*.jpg`, 14/11/2026). C'est l'écran pendant la run, **pas un écran de résultat** :
+    - en haut à gauche, un bloc de 2 lignes : `Points` (ex. `1,540,584,556`) et `Boss Rage Count` `xN` (ex. `x12`), qui augmentent pendant la run ;
+    - en haut au centre : `LV. 150 Giant Statue` (nom du boss), barre de vie en %, multiplicateur de barre `xN` (ex. `x426`, ignoré) ;
+    - en haut à droite : chrono décompté depuis `03:00` (`mm:ss`, puis `ss.cc` en rouge sous 1 min, ex. `10.45`) ;
+    - à droite : panneau `Team A` / `Team B` (équipe active de 3 chasseurs ; ce n'est **pas** le groupe 1/2) ;
+    - bandeaux au centre : `The boss monster refuses to die and becomes enraged!` (= +1 Rage Count), `The giant statue is using a powerful attack!` ;
+    - une cible secondaire peut remplacer le nom en haut (ex. `LV. 150 Temple Altar` à 130 s) : ce n'est pas le boss.
+  - **Règles HUD (v11)** :
+    - `Points` + `Boss Rage Count` sur la même image → mode `gb` confirmé (type d'écran `combat`).
+    - Le HUD ne donne **jamais** un score `sur`. La dernière lecture HUD d'une run (chrono le plus bas, RC le plus haut) donne au plus un RC **provisoire** : `score_source: hud`, `exact: false`, `a_verifier`, comme un titre. Il est remplacé dès qu'un écran `Results` ou `Personal Record` est lu.
+    - `Points` du HUD : jamais utilisé pour le classement ni le départage. Son lien avec le `Final Score` de l'écran Results est inconnu (1,54 milliard en fin de run ici, contre 15 763 milliards sur la capture Results du 13/11). Gardé pour information dans `runs_detail[i].points_hud`.
+    - `stage` : pris sur l'écran Results. Le nom en haut du HUD ne sert que s'il n'y a pas d'écran Results, et jamais une cible secondaire (`Temple Altar`).
+    - Une lecture HUD isolée (sans les 3 libellés `Points`, `Boss Rage Count`, chrono) est ignorée : l'OCR du HUD est bruité (ex. 50 s : `Points 99,530,637` lu entre 313 989 131 et 770 387 441).
+  - **Trouver l'écran Results (v11)** : il suit la fin du chrono (ou la mort du boss). Si un HUD GB montre un chrono ≤ 15 s à l'instant t, lire les images de t à t + 30 s à 1 image/s (tri 3 ou 4) jusqu'à trouver `Results`. Ici : chrono `10.45` à 228 s, vidéo de 254 s → écran Results attendu entre 238 et 254 s.
 - Japonais et autres langues : libellés RESULT **[À CONFIRMER]** (seul le coréen est vu pour POC et HOTM).
+- **Libellés que l'OCR doit reconnaître au GB (client anglais, v11)** : écran Results : `Results`, `Player's Score`, `Hunter Rank`, `Final Score`, `Rage Count`, `Play Time`, `New Record Achieved!` ; Personal Record : `Guild Boss`, `Personal Record`, `Total Score`, `Challenge Count`, `Total Rage Count`, `Group 1`, `Group 2`, `Time Left in Season` ; HUD : `Points`, `Boss Rage Count`, `Giant Statue`, `Team A`, `Team B`. Tolérer les fautes d'OCR courantes (`Rage Gount`, `RageCount`, `Rage Coun`).
 
 ### 3.2 Contrôles
 - POC : `이번 기록` = SJW + successeur + chasseurs 1, 2 et 3. Si égal → `exact: true`, `sur`. Sinon ou illisible → `a_verifier`.
@@ -239,4 +254,5 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 - `pipeline/analyse_porte_mode.py` lit `data/runs/*/hotm.json` → lire `data/runs/*/hotm-gate-*.json`.
 - `gate` : entier dans le JSON (voir §5.1).
 - Retirer `runs_detail.submode` (skill et code).
+- (v11) GB : reconnaître l'écran de combat (§3.1) ; `score_source: hud` ; champ `runs_detail[i].points_hud` ; recherche de l'écran Results après un chrono ≤ 15 s. Cas test : `lGDbzyIJcjY` → RC provisoire 12 (HUD à 228 s), écran Results cherché entre 238 et 254 s.
 - (v10) Migration : fusionner `bot-season.json` et `bot-variante-inconnue.json` de la semaine 2026-11-12 dans `bot.json` ; supprimer les anciens fichiers BOT et le champ `bot_variant` (code, tests, site).
