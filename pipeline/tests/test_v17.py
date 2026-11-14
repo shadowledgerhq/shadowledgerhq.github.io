@@ -7,6 +7,7 @@ import ocr_ecrans
 import pc
 from test_gb import meta as meta_gb
 from test_tri34 import CONFIG
+from test_tri34 import SEM
 from test_v15 import HUD_KO_REEL, HUD_PT, RESULTS_KO, Z_KO, VIDE
 
 
@@ -49,8 +50,8 @@ def test_points_plausibles():
     ok, raison = p("10375790058", "ko", CONFIG)               # cas MJ2iz5TFmvM : groupes perdus
     assert not ok and "groupes" in raison
     assert not p("7288064", "pt", CONFIG)[0]                   # sous 1e9
-    assert not p("1,000,000,000,000,000", "ko", CONFIG)[0]     # au-dessus de 1e14
-    assert p("1593669209", "en", CONFIG)[0]                    # anglais : non groupé accepté
+    assert p("1,000,000,000,000,000", "ko", CONFIG)[0] and not p("10,000,000,000,000,000", "ko", CONFIG)[0]     # plafond 1e15
+    assert not p("1593669209", "en", CONFIG)[0] and p("1593,669,209", "en", CONFIG)[0]    # v18 : groupes exigés aussi en anglais
     assert not p("10,37,579,0058", "ko", CONFIG)[0]            # groupes ≠ 3 chiffres
 
 
@@ -65,6 +66,35 @@ def test_hud_points_rejetes_ko_pt():
     assert ecran.get("points") is None and "groupes" in ecran["points_rejet"] and ecran["chrono"] == 3.18
     (l2,) = ocr_ecrans.lectures_depuis_texte(HUD_PT, m, CONFIG, "video-complete", 213)
     assert l2["detail"]["hud_points"] == 7884144289064
+
+
+def test_v18_boss_alias_et_ecart_titre_ecran():
+    import classement
+    ids = {classement.boss_id(n, CONFIG) for n in ("Giant Statue", "Estátua Gigante", "Estatua de Pedra  Gigante", "거대 석상")}
+    assert ids == {"giant_statue"} and classement.boss_id("Autre", CONFIG) == "Autre"
+    m = {**meta_gb("v"), "lang": "ko", "mode_guess": ["gb"]}
+    ls = [ocr_ecrans.lectures_depuis_texte(RESULTS_KO, m, CONFIG, "video-complete", t, Z_KO)[0] for t in (231, 232)]
+    titre = {**ls[0], "score": 159, "score_source": "titre", "damage": None, "notes": [], "detail": {}}
+    sortie = pc.fusionner_ecrans([titre], "v", ls, CONFIG)
+    (res,) = [l for l in sortie if l["score"] is not None]
+    assert res["score"] == 160 and res["confidence"] == "sur" and "écart titre/écran : titre 159" in res["notes"]
+    ok = pc.fusionner_ecrans([{**titre, "score": 160}], "v", ls, CONFIG)
+    assert not any("écart titre/écran" in n for l in ok for n in l["notes"])
+
+
+def test_v18_record_leve_alerte_reset_de_la_video():
+    import classement
+    from datetime import timedelta
+    from semaine import bornes
+    _, fin = bornes(SEM)
+    pub = "2026-11-12T03:00:00Z"
+    note = "publiée juste après le reset : semaine précédente ?"
+    base = {"video_id": "awb", "published_at": pub, "notes": [note], "confidence": "sur"}
+    rec = {**base, "score_source": "record", "detail": {"time_left": "6d 22h"}, "notes": [note]}
+    res = {**base, "score_source": "debut-fin", "detail": {}, "notes": [note]}
+    autre = {**base, "video_id": "zzz", "score_source": "debut-fin", "detail": {}, "notes": [note]}
+    gardees, prec = classement.controler_saison_record([rec, res, autre], SEM, CONFIG)
+    assert not prec and rec["notes"] == [] and res["notes"] == [] and autre["notes"] == [note]
 
 
 if __name__ == "__main__":

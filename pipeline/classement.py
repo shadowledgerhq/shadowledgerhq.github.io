@@ -6,6 +6,8 @@ _boss.json ; mises à jour de rejected/<semaine>.json, processed.json, channels.
 
 Usage : python3 pipeline/classement.py [AAAA-MM-JJ]   (défaut : semaine en cours)
 """
+import re
+import unicodedata
 import sys
 from collections import defaultdict
 from datetime import timezone
@@ -88,16 +90,28 @@ def dedoublonner(runs, config):
 
 # --- §4.5 boss -----------------------------------------------------------------
 
+def _norm_nom(t):
+    return re.sub(r"\s+", "", "".join(c for c in unicodedata.normalize("NFD", t or "") if unicodedata.category(c) != "Mn")).lower()
+
+
+def boss_id(stage, config):
+    """v18 : identifiant commun d'un nom de boss (`config.gb.boss_alias`, comparaison sans accents, casse ni espaces) ;
+    nom inconnu : le nom lui-même. `stage` garde le texte lu."""
+    alias = {_norm_nom(n): i for n, i in ((config.get("gb") or {}).get("boss_alias") or {}).items()}
+    return alias.get(_norm_nom(stage), stage)
+
+
 def controler_boss(runs, cles, config, boss_prec):
     """Modifie les runs (a_verifier + note). Retourne (boss_semaine, cles_non_controlees,
     runs_semaine_precedente)."""
-    ref_prec = {b["classement"]: b["stage"] for b in boss_prec}
+    ref_prec = {b["classement"]: boss_id(b["stage"], config) for b in boss_prec}
     boss, non_controle, precedentes = [], set(), []
     for cle in cles:
         sures = [r for r in runs if r["_cle"] == cle and r["confidence"] == "sur" and r["stage"]]
-        videos_par_stage = defaultdict(set)
+        videos_par_stage, texte_stage = defaultdict(set), {}
         for r in sures:
-            videos_par_stage[r["stage"]].add(r["video_id"])
+            videos_par_stage[boss_id(r["stage"], config)].add(r["video_id"])
+            texte_stage.setdefault(boss_id(r["stage"], config), r["stage"])
         nb_videos = len({r["video_id"] for r in sures})
         if nb_videos < config.get("boss_min_videos", 3):
             non_controle.add(cle)
@@ -105,12 +119,12 @@ def controler_boss(runs, cles, config, boss_prec):
         ref = sorted(videos_par_stage.items(), key=lambda kv: (-len(kv[1]), kv[0]))[0][0]
         exemple = sures[0]
         boss.append({"classement": cle, "mode": exemple["mode"], "gate": exemple.get("gate"),
-                     "stage": ref,
+                     "stage": texte_stage[ref],
                      "videos": len(videos_par_stage[ref])})
         for r in runs:
-            if r["_cle"] != cle or not r["stage"] or r["stage"] == ref:
+            if r["_cle"] != cle or not r["stage"] or boss_id(r["stage"], config) == ref:
                 continue
-            if r["stage"] == ref_prec.get(cle):
+            if boss_id(r["stage"], config) == ref_prec.get(cle):
                 precedentes.append(r)
             else:
                 r["confidence"] = "a_verifier"
@@ -132,6 +146,8 @@ def _choisir_poc(runs, mode="poc"):
             if r["team"] in equipes:
                 continue  # deux runs de la même équipe ne s'additionnent jamais
             equipes.add(r["team"])
+        elif any(c["team"] not in (1, 2) for c in choix):
+            continue      # v18 : deux runs de groupe / d'équipe inconnu ne s'additionnent jamais (même joueur, même groupe possible)
         choix.append(r)
         if len(choix) == 2:
             break
@@ -165,6 +181,9 @@ def ligne_joueur(runs_j, cle, config):
         choix, _ = choisir_runs(utiles, mode)
         ok = False
     notes = []
+    if mode in ("poc", "gb") and choix and any(r["team"] not in (1, 2) for r in choix):   # v18 : runs de groupe inconnu laissées de côté
+        notes += [f"groupes inconnus : 2e run non additionnée ({r['score']}, {r['video_id']})"
+                  for r in _tri_score(sures, mode) if r not in choix and r["team"] not in (1, 2)]
     if une_seule:
         notes.append("une seule run")
     elif mode in ("poc", "gb") and len(choix) < 2:
@@ -266,7 +285,7 @@ def controler_saison_record(runs, week, config):
     de la saison précédente (rejeté, `semaine_precedente`). Illisible -> a_verifier."""
     _, fin = bornes(week)
     marges = gb.tolerances(config.get("gb"))
-    gardees, precedentes = [], []
+    gardees, precedentes, levees = [], [], set()
     for r in runs:
         if r.get("score_source") == "record":
             verdict = gb.saison_precedente((r.get("detail") or {}).get("time_left"), r["published_at"], fin, marges)
@@ -278,7 +297,11 @@ def controler_saison_record(runs, week, config):
                 r["notes"].append("saison illisible (Time Left in Season)")
             else:       # v15 : capture de la bonne semaine confirmée par `Time Left in Season` : l'alerte « juste après le reset » est levée
                 r["notes"][:] = [n for n in r["notes"] if not n.startswith("publiée juste après le reset")]
+                levees.add(r["video_id"])
         gardees.append(r)
+    for r in gardees:         # v18 : le Personal Record lève l'alerte pour toutes les runs de la même vidéo (awb-GlVIa7Q)
+        if r["video_id"] in levees:
+            r["notes"][:] = [n for n in r["notes"] if not n.startswith("publiée juste après le reset")]
     return gardees, precedentes
 
 

@@ -111,8 +111,9 @@
       "hud_rage": [0.17, 0.145, 0.06, 0.045]
     },
     "hud_points_min": 1000000000,
-    "hud_points_max": 100000000000000,
-    "hud_points_groupes": ["ko", "pt"],
+    "hud_points_max": 1000000000000000,
+    "hud_points_groupes": "toutes",
+    "boss_alias": {"Giant Statue": "giant_statue", "Estátua Gigante": "giant_statue", "Estátua de Pedra Gigante": "giant_statue", "거대 석상": "giant_statue"},
     "zones_ocr": {"variantes": [{"echelle": 2, "seuil": null}, {"echelle": 2, "seuil": 140}, {"echelle": 3, "seuil": 140}]},
     "_zones_ocr": "Prétraitements essayés puis vote (essai sur images réelles du 14/11 : 15 lectures sur 15 justes, contre 12 sur 15 pour le meilleur prétraitement seul). tesseract : OMP_THREAD_LIMIT=1.",
     "zones_record": {
@@ -129,7 +130,7 @@
     "results_fin_max_s": 60,
     "_doc": "SPEC §4.7 (v7) : marge sur le moment estimé de la capture du Personal Record, selon la plus petite unité de Time Left in Season : heures -> 60 min ; jours seulement -> 24 h ; minutes -> 1 min."
   },
-  "tri1_version": 13,
+  "tri1_version": 17,
   "reset_alerte_heures": 3,
   "_reset_alerte_heures": "Décision de la discussion 1 : 3 h, à réajuster après 3 semaines de données (début décembre 2026).",
   "plausible_degats_gb": [1000000000000, 1000000000000000],

@@ -71,7 +71,8 @@ def test_poc_equipe_illisible():
     d = preparer([lec("e1", "UCE", "poc", 10 * T), lec("e2", "UCE", "poc", 9 * T)])
     calculer(W, d, CONFIG, HORLOGE)
     l = lire(d, "poc")[0]
-    assert l["rank"] is None and l["score"]["total"] == 19 * T and "équipe illisible" in l["notes"]
+    # v18 : deux runs d'équipe inconnue ne s'additionnent jamais : la meilleure est classée, l'autre notée
+    assert l["rank"] == 1 and l["score"]["total"] == 10 * T and "groupes inconnus : 2e run non additionnée (9000000000000, e2)" in l["notes"]
 
 
 def test_bot_unique_et_hotm_portes():

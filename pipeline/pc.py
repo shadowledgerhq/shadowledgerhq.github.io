@@ -310,7 +310,20 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None):
     ecran = [l for l in reste + nouvelles if l["video_id"] == vid and _est_ecran(l)]
     autres = [l for l in reste if not (l["video_id"] == vid and _est_ecran(l))]
     ecran = ocr_ecrans.fusionner_results(ocr_ecrans.regrouper_hud(ecran, config), config)
-    return autres + ocr_ecrans.dedoublonner_lectures(ecran)
+    ecran = ocr_ecrans.dedoublonner_lectures(ecran)
+    # v18 : l'écran contrôlé prime sur le titre ; si la valeur du titre diffère, note `écart titre/écran : titre <valeur>`
+    titres = {}
+    for l in lectures:
+        if l["video_id"] == vid and l["mode"] in modes and l["score_source"] in SOURCES_TEXTE and l.get("score") is not None:
+            titres.setdefault(l["mode"], []).append(l["score"])
+    for mode, valeurs in titres.items():
+        lus = [l for l in ecran if l["mode"] == mode and l.get("score") is not None]
+        if mode == "poc" or not lus or (mode == "gb" and len(lus) != 1) or any(l["score"] in valeurs for l in lus):
+            continue
+        for l in lus:
+            if l["confidence"] == "sur" and not any(n.startswith("écart titre/écran") for n in l["notes"]):
+                l["notes"].append(f"écart titre/écran : titre {valeurs[0]}")
+    return autres + ecran
 
 
 def suffisant(lectures, vid, modes):

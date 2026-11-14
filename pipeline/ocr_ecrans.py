@@ -33,7 +33,7 @@ def sans_accents(texte):
 def _motif(libelle):
     """Libellé -> motif tolérant (sans accents, espaces et retours à la ligne libres, casse indifférente)."""
     mots = sans_accents(libelle).lower().split()
-    return r"\s*".join(re.escape(m) for m in mots)
+    return r"\s*".join(r"\s*".join(re.escape(c) for c in m) if not m.isascii() else re.escape(m) for m in mots)
 
 
 def _motif_flou(libelle):
@@ -139,18 +139,20 @@ def detecter(texte):
 
 def points_plausibles(brut, langue, config=None):
     """v17 : Points du HUD plausibles ? Entier lu `brut` (texte OCR). Rejet si : hors de [`gb.hud_points_min` ;
-    `gb.hud_points_max`] ; ou, dans une langue de `gb.hud_points_groupes` (ko, pt), nombre sans séparateurs de
-    milliers (l'OCR a perdu des groupes : ex. 10375790058 pour 10 375 790 058 xxx) ou groupes qui ne font pas 3 chiffres.
+    `gb.hud_points_max` = 1e15] ; ou nombre sans séparateurs de milliers / groupes qui ne font pas 3 chiffres, dans TOUTES
+    les langues (v18 ; l'OCR a perdu des groupes : ex. 10375790058 pour 10 375 790 058 xxx). `gb.hud_points_groupes`
+    peut être une liste de langues pour restreindre l'exigence.
     Retourne (ok, raison)."""
     cfg = (config or {}).get("gb") or {}
     brut = (brut or "").strip()
     if not brut:
         return False, "Points illisibles"
     valeur = _entier(brut)
-    if not cfg.get("hud_points_min", 10**9) <= valeur <= cfg.get("hud_points_max", 10**14):
+    if not cfg.get("hud_points_min", 10**9) <= valeur <= cfg.get("hud_points_max", 10**15):
         return False, f"Points hors plage ({valeur})"
-    if langue in cfg.get("hud_points_groupes", ["ko", "pt"]):
-        if not re.fullmatch(r"\d{1,3}(?:[,. \u00a0\u202f]\d{3})+", brut):
+    groupes = cfg.get("hud_points_groupes", "toutes")
+    if groupes == "toutes" or langue in groupes:
+        if not re.fullmatch(r"\d{1,4}(?:[,. \u00a0\u202f]\d{3})+", brut):
             return False, f"Points sans groupes de 3 chiffres ({brut})"
     return True, None
 

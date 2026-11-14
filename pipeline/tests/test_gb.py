@@ -124,7 +124,7 @@ def test_gb_meme_groupe_jamais_additionne_et_groupe_illisible():
     d = preparer([lec("b1", "UCB", "gb", 167, damage=17 * T), lec("b2", "UCB", "gb", 165, damage=15 * T)])
     calculer(W, d, CONFIG, HORLOGE)
     l = lire(d, "gb")[0]
-    assert l["score"]["total"] == 332 and l["rank"] is None and "groupe illisible" in l["notes"]
+    assert l["score"]["total"] == 167 and l["rank"] == 1 and "groupes inconnus : 2e run non additionnée (165, b2)" in l["notes"]   # v18
 
 
 def test_tie_break_avec_total_score_exact_du_record():
