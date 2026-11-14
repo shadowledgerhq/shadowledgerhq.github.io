@@ -53,10 +53,10 @@ def test_poc_equipes_egalite_doublon_provisoire():
     res = calculer(W, d, CONFIG, HORLOGE)
     poc = lire(d, "poc")
     assert [(l["channel_id"], l["rank"], l["score"]["total"]) for l in poc] == [
-        ("UCA", 1, 150 * T), ("UCC", 2, 150 * T), ("UCB", None, 120 * T)]
+        ("UCA", 1, 150 * T), ("UCC", 2, 150 * T), ("UCB", 3, 120 * T)]            # v16 : une seule run sûre = classée
     assert poc[0]["video_ids"] == ["a1", "a2"] and poc[0]["score"]["runs"] == [100 * T, 50 * T]
     assert poc[1]["exact"] is True and "c0" not in poc[1]["video_ids"]
-    assert "une seule run trouvée" in poc[2]["notes"]
+    assert "une seule run" in poc[2]["notes"] and "trouvée" not in poc[2]["notes"] and poc[2]["confidence"] == "sur"
     rej = d.rejected(W)
     assert [(r["video_id"], r["reason"], r["detail"]) for r in rej] == [("d1", "doublon", "a1")]
     assert res["rejets"] and json.loads((d.data / "channels.json").read_text())[0]["source"] == "auto"
