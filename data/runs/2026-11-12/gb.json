@@ -1,5 +1,148 @@
 [
   {
+    "run_id": "gb-2026-11-12-nh2D7xZ7dOQ",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "player": "SlayOnLow",
+    "channel": "SlayOnLow",
+    "video_id": "nh2D7xZ7dOQ",
+    "video_ids": [
+      "nh2D7xZ7dOQ"
+    ],
+    "published_at": "2026-11-13T11:14:16+01:00",
+    "lang": "en",
+    "score": {
+      "total": 332,
+      "runs": [
+        167,
+        165
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "record",
+    "exact": true,
+    "confidence": "sur",
+    "rank": 1,
+    "notes": "contrôle Personal Record : Total Score 92842054460310 incohérent avec les dégâts des groupes; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "nh2D7xZ7dOQ",
+        "published_at": "2026-11-13T11:14:16+01:00",
+        "t": 2,
+        "stage": null,
+        "team": 1,
+        "score_source": "record",
+        "exact": true,
+        "damage": 17280000000000,
+        "damage_exact": false,
+        "total_score": null,
+        "total_rage_count": 332,
+        "challenge_count": 2,
+        "time_left": "6d 9h"
+      },
+      {
+        "video_id": "nh2D7xZ7dOQ",
+        "published_at": "2026-11-13T11:14:16+01:00",
+        "t": 2,
+        "stage": null,
+        "team": 2,
+        "score_source": "record",
+        "exact": true,
+        "damage": 15550000000000,
+        "damage_exact": false,
+        "total_score": null,
+        "total_rage_count": 332,
+        "challenge_count": 2,
+        "time_left": "6d 9h"
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-12-awb-GlVIa7Q",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "player": "Ahmad1195",
+    "channel": "Ahmad1195",
+    "video_id": "awb-GlVIa7Q",
+    "video_ids": [
+      "awb-GlVIa7Q"
+    ],
+    "published_at": "2026-11-12T02:07:38+01:00",
+    "lang": "en",
+    "score": {
+      "total": 189,
+      "runs": [
+        189
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "record",
+    "exact": true,
+    "confidence": "sur",
+    "rank": 2,
+    "notes": "Results incertain écarté (RC 189) : le Personal Record fait foi; une seule run; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "awb-GlVIa7Q",
+        "published_at": "2026-11-12T02:07:38+01:00",
+        "t": 240,
+        "stage": null,
+        "team": 1,
+        "score_source": "record",
+        "exact": true,
+        "damage": 64299126429862,
+        "damage_exact": true,
+        "total_score": 64299126429862,
+        "total_rage_count": 189,
+        "challenge_count": 1,
+        "time_left": "6d 22h",
+        "damage_source": "record"
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-12-T5dR6iJAn-Y",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "player": "RaidenShadow",
+    "channel": "RaidenShadow",
+    "video_id": "T5dR6iJAn-Y",
+    "video_ids": [
+      "T5dR6iJAn-Y"
+    ],
+    "published_at": "2026-11-12T14:50:20+01:00",
+    "lang": "pt-BR",
+    "score": {
+      "total": 156,
+      "runs": [
+        156
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "debut-fin",
+    "exact": true,
+    "confidence": "sur",
+    "rank": 3,
+    "notes": "écart titre/écran : titre 159; lecture fusionnée (14 images); contrôle sans Hunter Rank; chrono HUD déduit (t=214); séparateur perdu (OCR); groupes inconnus : 2e run non additionnée (137, Oj_-5x6700s); une seule run; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "T5dR6iJAn-Y",
+        "published_at": "2026-11-12T14:50:20+01:00",
+        "t": 229,
+        "stage": "Estátua Gigante",
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": true,
+        "damage": 7907273299084,
+        "damage_exact": true,
+        "hud_rage_count": 120
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-12-OPcjwjYkuME",
     "week": "2026-11-12",
     "mode": "gb",
@@ -35,45 +178,6 @@
         "exact": false,
         "damage": null,
         "damage_exact": null
-      }
-    ]
-  },
-  {
-    "run_id": "gb-2026-11-12-awb-GlVIa7Q",
-    "week": "2026-11-12",
-    "mode": "gb",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "player": "Ahmad1195",
-    "channel": "Ahmad1195",
-    "video_id": "awb-GlVIa7Q",
-    "video_ids": [
-      "awb-GlVIa7Q"
-    ],
-    "published_at": "2026-11-12T02:07:38+01:00",
-    "lang": "en",
-    "score": {
-      "total": 189,
-      "runs": [
-        189
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 189 rc; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "awb-GlVIa7Q",
-        "published_at": "2026-11-12T02:07:38+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false,
-        "damage": 64200000000000,
-        "damage_exact": false
       }
     ]
   },
@@ -117,41 +221,41 @@
     ]
   },
   {
-    "run_id": "gb-2026-11-12-nh2D7xZ7dOQ",
+    "run_id": "gb-2026-11-12-vYtRCpFtSOk",
     "week": "2026-11-12",
     "mode": "gb",
-    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
-    "player": "SlayOnLow",
-    "channel": "SlayOnLow",
-    "video_id": "nh2D7xZ7dOQ",
+    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+    "player": "Eden(이든)",
+    "channel": "Eden(이든)",
+    "video_id": "vYtRCpFtSOk",
     "video_ids": [
-      "nh2D7xZ7dOQ"
+      "vYtRCpFtSOk"
     ],
-    "published_at": "2026-11-13T11:14:16+01:00",
-    "lang": "en",
+    "published_at": "2026-11-12T11:51:56+01:00",
+    "lang": "ko",
     "score": {
-      "total": 165,
+      "total": 162,
       "runs": [
-        165
+        162
       ],
       "unit": "rage_count"
     },
-    "score_source": "titre",
+    "score_source": "video-complete",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 165RC; une seule run trouvée; boss non contrôlé",
+    "notes": "lecture fusionnée (8 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
-        "video_id": "nh2D7xZ7dOQ",
-        "published_at": "2026-11-13T11:14:16+01:00",
-        "t": null,
-        "stage": null,
+        "video_id": "vYtRCpFtSOk",
+        "published_at": "2026-11-12T11:51:56+01:00",
+        "t": 220,
+        "stage": "거대 석상",
         "team": null,
-        "score_source": "titre",
+        "score_source": "video-complete",
         "exact": false,
-        "damage": null,
-        "damage_exact": null
+        "damage": 12859482380262,
+        "damage_exact": true
       }
     ]
   }

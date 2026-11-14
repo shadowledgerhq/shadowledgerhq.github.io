@@ -326,7 +326,24 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None):
         for l in lus:
             if l["confidence"] == "sur" and not any(n.startswith("écart titre/écran") for n in l["notes"]):
                 l["notes"].append(f"écart titre/écran : titre {valeurs[0]}")
+    _lever_alerte_reset(ecran, config)
     return autres + ecran
+
+
+def _lever_alerte_reset(ecran, config):
+    """v22 : un Personal Record dont `Time Left in Season` confirme la bonne semaine (v15/v17) lève l'alerte
+    « publiée juste après le reset » sur toutes les lectures d'écran de la même vidéo (awb-GlVIa7Q)."""
+    marges = classement.gb.tolerances((config or {}).get("gb"))
+    leve = set()
+    for l in ecran:
+        tl = (l.get("detail") or {}).get("time_left")
+        if l.get("score_source") == "record" and tl and l.get("published_at"):
+            fin = classement.bornes(classement.id_semaine(classement.parse_iso(l["published_at"])))[1]
+            if classement.gb.saison_precedente(tl, l["published_at"], fin, marges) is False:
+                leve.add(l["video_id"])
+    for l in ecran:
+        if l["video_id"] in leve:
+            l["notes"][:] = [n for n in l["notes"] if not n.startswith("publiée juste après le reset")]
 
 
 def suffisant(lectures, vid, modes):

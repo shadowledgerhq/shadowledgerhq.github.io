@@ -101,7 +101,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 75K; autres candidats : 7430, 3200; porte HOTM illisible; boss non contrôlé",
+    "notes": "score provisoire (description) : 75K; autres candidats : 7430, 3200; description non relue (règles v3); porte HOTM illisible; boss non contrôlé",
     "gate": null,
     "hunter_mode": null,
     "runs_detail": [

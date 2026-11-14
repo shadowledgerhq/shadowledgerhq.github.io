@@ -209,6 +209,18 @@ def test_v21_t5dr_de_bout_en_bout():
         assert not [a for a in o2.appels if a[0] == "img" and a[2] == ((214, 2, 1),)]
 
 
+def test_v22_record_leve_alerte_reset_sur_la_video():
+    from donnees import charger_config
+    note = "publiée juste après le reset : semaine précédente ?"
+    mk = lambda src, tl: {"video_id": "v", "published_at": "2026-11-12T01:07:38Z", "score_source": src, "notes": [note], "detail": {"time_left": tl}}
+    ecran = [mk("record", "6d 22h"), mk("video-complete", None)]
+    pc._lever_alerte_reset(ecran, charger_config())
+    assert all(note not in l["notes"] for l in ecran)
+    ecran = [mk("record", "1h")]          # capture 1 h avant le reset de fin : saison précédente, alerte gardée
+    pc._lever_alerte_reset(ecran, charger_config())
+    assert note in ecran[0]["notes"]
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):
