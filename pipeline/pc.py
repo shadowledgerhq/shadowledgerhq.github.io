@@ -463,7 +463,8 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
             zones = lire_zones_results(outils, png, config, type_ecran, texte, langs)
             zones_lues += 1
         lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
-                     if _est_results_gb(l) or (l["mode"] == "gb" and l["score_source"] == "record")]    # + Personal Record du salon
+                     if _est_results_gb(l) or (l["mode"] == "gb" and l["score_source"] == "record")      # + Personal Record du salon
+                     or (l.get("detail") or {}).get("ecran") == "combat_sans_chrono"]                     # + HUD au chrono illisible (SPEC v19)
         Path(png).unlink(missing_ok=True)
     if trouve is None:
         journal(f"  écran Results non trouvé entre {int(t0)} et {dernier} s")
