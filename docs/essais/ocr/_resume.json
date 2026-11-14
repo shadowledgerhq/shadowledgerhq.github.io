@@ -52,25 +52,24 @@
    "gate": null,
    "hunter_mode": null,
    "t": 252,
-   "stage": null,
+   "stage": "Giant Statue",
    "team": null,
    "score": 19,
    "score_source": "debut-fin",
-   "exact": false,
-   "confidence": "a_verifier",
+   "exact": true,
+   "confidence": "sur",
    "detail": {
     "damage_exact": true,
     "play_time": "03:00",
     "new_record": false,
-    "player_score": 89008,
+    "player_score": 313099049,
     "hunter_ranks_lus": 0,
-    "completude": 4,
+    "completude": 5,
     "lectures_identiques": 1,
     "hud_rage_count": 12
    },
    "notes": [
-    "contrôle GB : écran GB illisible (Player's Score, Hunter Rank ou Final Score)",
-    "contrôle sans Hunter Rank : boss illisible"
+    "contrôle sans Hunter Rank"
    ]
   }
  ],
@@ -103,7 +102,9 @@
  },
  "fichiers_logs_ocr": [
   "lGDbzyIJcjY_recherche_252.txt",
+  "lGDbzyIJcjY_recherche_252_gb_results_partiel.txt",
   "lGDbzyIJcjY_recherche_253.txt",
+  "lGDbzyIJcjY_recherche_253_gb_results_partiel.txt",
   "lGDbzyIJcjY_tri3_0.txt",
   "lGDbzyIJcjY_tri3_2.txt",
   "lGDbzyIJcjY_tri3_224.txt",
@@ -146,6 +147,8 @@
  ],
  "textes_recherche": {
   "lGDbzyIJcjY_recherche_252.txt": "| OT Na. a 7 Z\nYour points have been registered.\na 6 2 ~\n\nX\n",
-  "lGDbzyIJcjY_recherche_253.txt": "2\nWw\nRage Rewards\nx ¢.\n\\ ：\n; 58,465,656\nTap the screen to continue.\nNew Record Achic\n"
+  "lGDbzyIJcjY_recherche_252_gb_results_partiel.txt": "| OT Na. a 7 Z\nYour points have been registered.\na 6 2 ~\n\nX\n",
+  "lGDbzyIJcjY_recherche_253.txt": "2\nWw\nRage Rewards\nx ¢.\n\\ ：\n; 58,465,656\nTap the screen to continue.\nNew Record Achic\n",
+  "lGDbzyIJcjY_recherche_253_gb_results_partiel.txt": "2\nWw\nRage Rewards\nx ¢.\n\\ ：\n; 58,465,656\nTap the screen to continue.\nNew Record Achic\n"
  }
 }
