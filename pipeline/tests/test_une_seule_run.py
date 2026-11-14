@@ -93,6 +93,51 @@ def test_record_groupe_illisible_reste_a_verifier():
     assert r["confidence"] == "a_verifier" and r["detail"].get("damage_source") is None
 
 
+def test_publication_d_essai_sans_pull_ni_conflit():
+    """Essai du 14/11 : `git pull --rebase --autostash` échouait (data/ modifié par --no-git) et laissait un fichier « unmerged »."""
+    import subprocess
+    import tempfile
+    import pc
+
+    def git(cwd, *a):
+        return subprocess.run(["git", *a], cwd=cwd, capture_output=True, text=True, check=True).stdout
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        git(tmp, "init", "-q", "--bare", "r.git")
+        git(tmp, "clone", "-q", "r.git", "w")
+        w = tmp / "w"
+        for k, v in (("user.email", "a@b"), ("user.name", "t")):
+            git(w, "config", k, v)
+        git(w, "checkout", "-q", "-b", "main")
+        (w / "data").mkdir()
+        (w / "docs/essais/ocr").mkdir(parents=True)
+        (w / "data/x").write_text("1")
+        (w / "docs/essais/ocr/old.txt").write_text("old")
+        git(w, "add", ".")
+        git(w, "commit", "-qm", "i")
+        git(w, "push", "-q", "origin", "main")
+        git(tmp, "clone", "-q", "r.git", "w2")
+        w2 = tmp / "w2"
+        for k, v in (("user.email", "a@b"), ("user.name", "t")):
+            git(w2, "config", k, v)
+        (w2 / "data/x").write_text("remote")
+        git(w2, "commit", "-qam", "remote")
+        git(w2, "push", "-q", "origin", "main")
+        # côté PC : data/ modifié par un essai --no-git, fichiers d'essai neufs et modifiés
+        (w / "data/x").write_text("local")
+        (w / "docs/essais/ocr/new.txt").write_text("new")
+        (w / "docs/essais/ocr/old.txt").write_text("changed")
+        avant = git(w, "rev-parse", "HEAD")
+        assert pc.Git(w).pousser_chemin("essai", "docs/essais/ocr") is True
+        assert git(w, "rev-parse", "HEAD") == avant and (w / "data/x").read_text() == "local"          # HEAD et data/ intacts
+        assert not (w / "docs/essais/ocr/new.txt").exists() and (w / "docs/essais/ocr/old.txt").read_text() == "old"
+        assert "unmerged" not in git(w, "status") and "claude/essai-pc-" in git(w, "ls-remote", "origin")
+        branche = [l.split("refs/heads/")[1] for l in git(w, "ls-remote", "origin").splitlines() if "essai-pc" in l][0]
+        git(w2, "fetch", "-q", "origin", branche)
+        assert git(w2, "show", f"origin/{branche}:docs/essais/ocr/new.txt") == "new"               # le contenu est bien sur la branche
+        assert pc.Git(w).pousser_chemin("essai", "docs/essais/ocr") is False                         # rien de nouveau : pas de commit
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

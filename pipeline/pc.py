@@ -207,13 +207,21 @@ class Git:
             raise
 
     def pousser_chemin(self, message, chemin):
-        """Commit + push d'un seul chemin (ex. docs/essais/ocr), sans toucher au reste de l'arbre de travail."""
+        """Diagnostic (docs/essais/ocr) : commit d'un seul chemin, poussé sur une branche `claude/essai-pc-<horodatage>` (le
+        workflow de fusion automatique la verse dans `main`), puis commit défait localement et fichiers retirés de l'arbre
+        de travail. Aucun `pull` ni `rebase` : les résultats d'essai (`data/` modifié par `--no-git`) ne créent jamais de
+        conflit. Le contenu arrive dans `main` ; le prochain `git pull` le récupère."""
         self._run("add", chemin)
         if not self._run("status", "--porcelain", chemin).strip():
             return False
         self._run("commit", "-m", message, "--", chemin)
-        self._run("pull", "--rebase", "--autostash", "origin", "main")
-        self._run("push", "origin", "HEAD:main")
+        branche = "claude/essai-pc-" + maintenant().strftime("%Y%m%d-%H%M%S")
+        try:
+            self._run("push", "origin", f"HEAD:refs/heads/{branche}")
+        finally:                                    # le commit local est défait quoi qu'il arrive
+            self._run("reset", "--mixed", "HEAD~1")
+            self._run("clean", "-fdq", "--", chemin)
+            self._run("checkout", "--", chemin)
         return True
 
     def pousser(self, message):
