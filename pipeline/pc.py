@@ -299,9 +299,13 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         texte = vus[h]
                     else:
                         texte = vus[h] = _ocr_image(outils, png, langs, cfg, st)
-                    if ocr_debug and texte:
+                    if ocr_debug and texte:  # texte lu + image d'origine (pour voir l'écran réel)
                         Path(ocr_debug).mkdir(parents=True, exist_ok=True)
                         (Path(ocr_debug) / f"{vid}_tri{tri}_{t}.txt").write_text(texte, encoding="utf-8")
+                        try:
+                            shutil.copyfile(png, Path(ocr_debug) / f"{vid}_tri{tri}_{t}.png")
+                        except OSError:
+                            pass
                     nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config,
                                                                   "debut-fin" if tri == 3 else "video-complete", t)
                     Path(png).unlink(missing_ok=True)
@@ -379,7 +383,7 @@ def annoter_non_verifies(d, week):
 
 
 def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper=False, maximum=None, images=None,
-           journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None):
+           journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None, seulement=None):
     """`journal(ligne)` : progression (print en production) ; `dormir(s)` : pause entre vidéos (time.sleep en
     production). Les deux sont inertes par défaut (tests). `_lectures.json` et `processed.json` sont écrits après
     chaque vidéo : un arrêt (PC éteint, Ctrl+C) ne perd que la vidéo en cours."""
@@ -414,7 +418,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             return (videos.get(vid, {}).get("title") or "")[:50]
 
         a_faire = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours"
-                   and p.get("pc_needed") and (p.get("pc") or {}).get("sous_titres") not in ("fait", "absent")]
+                   and (not seulement or v in seulement) and p.get("pc_needed") and (p.get("pc") or {}).get("sous_titres") not in ("fait", "absent")]
         limite = maximum or pc_cfg["max_videos"]
         if len(a_faire) > limite:
             alertes.append(f"{len(a_faire) - limite} vidéo(s) reportée(s) au prochain passage (limite {limite})")
@@ -450,7 +454,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         cfg_img = pc_cfg["images"]
         if cfg_img["actif"] if images is None else images:
             a_images = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours" and p.get("pc_needed")
-                        and v in videos and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile")]
+                        and (not seulement or v in seulement) and v in videos and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile")]
             lim_img = min(maximum, cfg_img["max_videos"]) if maximum else cfg_img["max_videos"]  # --max limite aussi les images
             if len(a_images) > lim_img:
                 alertes.append(f"{len(a_images) - lim_img} vidéo(s) reportée(s) pour les images (limite {lim_img})")
@@ -521,12 +525,13 @@ if __name__ == "__main__":
     ap.add_argument("--no-git", action="store_true", help="pas de pull/push (essai local)")
     ap.add_argument("--whisper", action="store_true", help="active Whisper (config pc.whisper_cmd requis)")
     ap.add_argument("--max", type=int, help="limite les vidéos traitées, sous-titres ET images")
-    ap.add_argument("--garder-ocr", action="store_true", help="écrit le texte lu par tesseract dans logs/ocr/ (diagnostic)")
+    ap.add_argument("--video", action="append", help="ne traite que cette vidéo (identifiant YouTube ; répétable)")
+    ap.add_argument("--garder-ocr", action="store_true", help="écrit le texte lu par tesseract et l'image dans logs/ocr/ (diagnostic)")
     ap.add_argument("--maintenant", help="instant simulé ISO 8601 (tests)")
     a = ap.parse_args()
     try:
         r = lancer(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(),
-                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max,
+                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max, seulement=set(a.video or []),
                    journal=lambda m: print(m, flush=True), dormir=time.sleep,
                    ocr_debug=(RACINE / "logs" / "ocr") if a.garder_ocr else None)
     except GitErreur as e:
