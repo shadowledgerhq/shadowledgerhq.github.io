@@ -619,9 +619,11 @@ def publier_essai(outils, source, destination, git=None, maximum=8, resume=None)
     source, destination = Path(source), Path(destination)
     textes = sorted(source.glob("*.txt"), key=lambda f: -f.stat().st_size)
     types = {f: (re.search(r"_(gb_\w+|bot|hotm|poc)$", f.stem) or [None, None])[1] for f in textes}
-    choisis, par_type = [], {}
+    choisis, par_type = [f for f in textes if "_recherche_" in f.stem][:4], {}   # images de l'écran Results : toujours
     for f in textes:
         t = types[f]
+        if f in choisis:
+            continue
         if t and par_type.get(t, 0) < (2 if t == "gb_combat" else 4):
             par_type[t] = par_type.get(t, 0) + 1
             choisis.append(f)
@@ -629,7 +631,9 @@ def publier_essai(outils, source, destination, git=None, maximum=8, resume=None)
     destination.mkdir(parents=True, exist_ok=True)
     ecrits = []
     if resume is not None:  # lectures et état de la vidéo après le passage (diagnostic)
-        (destination / "_resume.json").write_text(json.dumps({**resume, "fichiers_logs_ocr": sorted(f.name for f in source.glob("*.txt"))},
+        (destination / "_resume.json").write_text(json.dumps({**resume, "fichiers_logs_ocr": sorted(f.name for f in source.glob("*.txt")),
+                                                           "textes_recherche": {f.name: f.read_text(encoding="utf-8", errors="replace")
+                                                                                for f in sorted(source.glob("*_recherche_*.txt"))}},
                                                           ensure_ascii=False, indent=1), encoding="utf-8")
         ecrits.append("_resume.json")
     for f in choisis[:maximum]:
