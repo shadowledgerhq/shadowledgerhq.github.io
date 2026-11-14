@@ -114,7 +114,7 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
     - en haut au centre : `LV. 150 Giant Statue` (nom du boss), barre de vie en %, multiplicateur de barre `xN` (ex. `x426`, ignoré) ;
     - en haut à droite : chrono décompté depuis `03:00` (`mm:ss`, puis `ss.cc` en rouge sous 1 min, ex. `10.45`) ;
     - à droite : panneau `Team A` / `Team B` (équipe active de 3 chasseurs ; ce n'est **pas** le groupe 1/2) ;
-    - bandeaux au centre : `The boss monster refuses to die and becomes enraged!` (= +1 Rage Count), `The giant statue is using a powerful attack!` ;
+    - bandeaux au centre : `The boss monster refuses to die and becomes enraged!` (+1 au `Boss Rage Count` du HUD, pas au RC classé), `The giant statue is using a powerful attack!` ;
     - une cible secondaire peut remplacer le nom en haut (ex. `LV. 150 Temple Altar` à 130 s) : ce n'est pas le boss.
   - **Règles HUD (v11, révisées v12 après l'essai réel du 14/11 sur `lGDbzyIJcjY`)** :
     - `Points` + `Boss Rage Count` + chrono sur la même image → mode `gb` confirmé (type d'écran `combat`). Le HUD ne donne **jamais** un score `sur`.
