@@ -89,12 +89,25 @@ def lire_bot(texte):
             "player_ingame": None, "armes_sjw": None}   # pseudo et armes : [EN ATTENTE] (icônes, recadrage)
 
 
+def _valeurs_sous_libelles(texte):
+    """Mise en page vue le 14/11 (écran Results qui s'affiche) : `Final Score` et `Rage Count` sont deux libellés sur
+    une même ligne, leurs valeurs sur la ligne suivante (`1.601.097.999 19`). Retourne (final_score, rage_count)."""
+    m = re.search(r"final\s*score[^\n]*rage\s*count[^\n]*\n\s*([^\n]+)", texte, re.IGNORECASE)
+    if not m:
+        return None, None
+    nombres = re.findall(r"\d{1,3}(?:[.,]\d{3})+|\d+", m.group(1))
+    if len(nombres) < 2:
+        return None, None
+    return _entier(nombres[0]), int(nombres[-1]) if re.fullmatch(r"\d{1,3}", nombres[-1]) else None
+
+
 def lire_gb_results(texte):
+    final_sous, rc_sous = _valeurs_sous_libelles(texte)
     return {"stage": _ligne_apres(r"\bResults\b", texte),
             "player_score": _nombre_apres(r"player'?s\s*score", texte),
             "hunter_ranks": [_entier(x) for x in re.findall(r"hunter\s*rank\s*[1-6]" + _SEP + _ENT, texte, re.IGNORECASE)],
-            "final_score": _nombre_apres(r"final\s*score", texte),
-            "rage_count": _nombre_apres(r"rage\s*count", texte, r"(\d{1,3})(?!\d)"),
+            "final_score": _nombre_apres(r"final\s*score", texte) or final_sous,
+            "rage_count": _nombre_apres(r"rage\s*count", texte, r"(\d{1,3})(?!\d)") or rc_sous,
             "play_time": (re.search(r"play\s*time\D{0,5}(\d{1,2}:\d{2})", texte, re.IGNORECASE) or [None, None])[1],
             "new_record": "new record" in texte.lower()}
 

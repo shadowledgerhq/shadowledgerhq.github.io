@@ -268,6 +268,30 @@ def test_v11_hud_gb():
     assert cible["stage"] is None                                                                           # cible secondaire : jamais le stage
 
 
+RESULTS_252 = """R a S Ul | tS @ Play Time 03:00
+Player's Score
+[ 0
+| a.089.008 / - >,
+Hunter Rank ¥ 7 rs " ( : Y ¢q 기
+= : {ㅣ
+0 < < 그 그룬 에 ES ~. Na
+Your points have been registered.
+Final Score Rage Count ®
+1.601.097.999 19
+"""
+
+
+def test_v11_results_en_cours_d_affichage_texte_reel():
+    """Écran Results vu à 252 s de lGDbzyIJcjY : valeurs sous les libellés, Hunter Rank pas encore affichés."""
+    m = meta("lGDbzyIJcjY", ["gb"])
+    assert ocr_ecrans.detecter(RESULTS_252) == "gb_results"
+    (l,) = ocr_ecrans.lectures_depuis_texte(RESULTS_252, m, CONFIG, "debut-fin", 252)
+    assert l["score"] == 19 and l["damage"] == 1601097999 and l["confidence"] == "a_verifier" and l["exact"] is False
+    assert l["detail"]["damage_exact"] is True and any("contrôle GB" in n for n in l["notes"])
+    out = pc.fusionner_ecrans([], "lGDbzyIJcjY", ocr_ecrans.lectures_depuis_texte(HUD_228, m, CONFIG, "debut-fin", 228) + [l], CONFIG)
+    assert [(x["score"], x["score_source"]) for x in out] == [(19, "debut-fin")]    # le HUD (14-24 s avant) est remplacé
+
+
 def test_v11_regroupement_par_run_et_remplacement_par_results():
     m = meta("v", ["gb"])
     brut = lambda rc, chrono, t: ocr_ecrans.lectures_depuis_texte(
