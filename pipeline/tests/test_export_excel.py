@@ -22,7 +22,7 @@ def test_lignes_et_fichier():
         f = export_excel.exporter("2026-11-12", racine=tmp)
         wb = openpyxl.load_workbook(f)
         assert wb.sheetnames[0] == "Shadow Ledger" and {"POC", "BOT", "GB", "HOTM"} <= set(wb.sheetnames)       # HOTM : onglet vide s'il n'y a rien
-        assert wb["GB"]["B6"].value == "A" and wb["GB"]["A6"].value.endswith("1") and wb["HOTM"]["A7"].value.startswith("Aucune donnée")
+        assert wb["GB"]["C6"].value == "A" and wb["GB"]["B6"].value.endswith("1") and wb["HOTM"]["B7"].value.startswith("Aucune donnée")
 
 
 if __name__ == "__main__":

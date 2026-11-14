@@ -19,7 +19,8 @@ NOMS = {"poc": "POC · Power Of Calamity", "bot": "BOT · Battlefield Of Time", 
 UNITES = {"damage": "Dégâts", "seconds": "Temps", "rage_count": "Rage Count", "points": "Points"}
 EQUIPE = {"poc": "Éq.", "gb": "G"}
 COLONNES = ["Rang", "Joueur", "Score", "Détail des runs", "Statut", "Publiée (Paris)", "Vidéo", "Notes"]
-LARGEURS = [11, 24, 18, 34, 15, 17, 18, 80]
+LARGEURS = [11, 24, 18, 32, 15, 17, 18, 62]
+MARGE = 14      # colonnes de marge de chaque côté : le tableau paraît centré dans une fenêtre Excel courante
 # Palette (hex sans #)
 NUIT, PANNEAU, PANNEAU2, ENTETE = "0B0E1A", "121830", "181F3D", "1E1B4B"
 VIOLET, BLEU, OR, ARGENT, BRONZE, TEXTE, SOURD = "7C3AED", "38BDF8", "F5C542", "C0C8D8", "CD7F32", "E5E9F5", "7F88A8"
@@ -138,7 +139,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
     # --- page de garde -------------------------------------------------------------------------------------------
     peindre(accueil, 60, 26)
     banniere(accueil, 6, "Solo Leveling: Arise", _semaine_txt(semaine))
-    for i, l in enumerate([10, 40, 14, 14, 14, 10], 1):
+    for i, l in enumerate([52, 40, 14, 14, 14, 52], 1):
         accueil.column_dimensions[chr(64 + i)].width = l
     for r_ in (5, 6):
         accueil.merge_cells(start_row=r_, start_column=2, end_row=r_, end_column=5)
@@ -174,47 +175,49 @@ def exporter(semaine, sortie=None, racine=RACINE):
         ws.sheet_properties.tabColor = {"poc": "EF4444", "bot": BLEU, "gb": OR, "hotm": VIOLET}.get(mode, VIOLET)
         lignes = lignes_mode(runs)
         peindre(ws, max(len(lignes) + 30, 60), 26)
-        banniere(ws, len(COLONNES), _nom_onglet(cle), _semaine_txt(semaine))
-        for i, l in enumerate(LARGEURS, 1):
+        banniere(ws, len(COLONNES) + 2, _nom_onglet(cle), _semaine_txt(semaine))      # 1 colonne de marge de chaque côté
+        ws.column_dimensions["A"].width = MARGE
+        ws.column_dimensions[chr(64 + len(COLONNES) + 2)].width = MARGE
+        for i, l in enumerate(LARGEURS, 2):
             ws.column_dimensions[chr(64 + i)].width = l
-        for j, t in enumerate(COLONNES, 1):
+        for j, t in enumerate(COLONNES, 2):
             c = ws.cell(5, j, t)
             c.font, c.fill, c.border = police(BLEU, 11, True), fond(ENTETE), Border(bottom=Side(style="medium", color=VIOLET))
             c.alignment = Alignment(horizontal="center", vertical="center")
         ws.row_dimensions[5].height = 26
         if not lignes:
-            ws.merge_cells(start_row=7, start_column=1, end_row=7, end_column=len(COLONNES))
-            ws["A7"] = "Aucune donnée cette semaine pour ce classement."
-            ws["A7"].font, ws["A7"].alignment = police(SOURD, 12, i=True), Alignment(horizontal="center")
+            ws.merge_cells(start_row=7, start_column=2, end_row=7, end_column=len(COLONNES) + 1)
+            ws["B7"] = "Aucune donnée cette semaine pour ce classement."
+            ws["B7"].font, ws["B7"].alignment = police(SOURD, 12, i=True), Alignment(horizontal="center")
         for k, l in enumerate(lignes, 6):
             *cellules, unite = l
             sur = cellules[4] == "sur"
             rang = cellules[0]
             for j, v in enumerate(cellules, 1):
-                c = ws.cell(k, j, v)
+                c = ws.cell(k, j + 1, v)
                 c.fill, c.border = fond(PANNEAU if k % 2 == 0 else PANNEAU2), Border(bottom=trait)
                 c.font = police(TEXTE if sur else SOURD, 11, j in (1, 2, 3) and sur, not sur)
                 c.alignment = Alignment(vertical="center", horizontal="center", wrap_text=(j in (4, 8)))
             if rang in PODIUM:
                 medaille, couleur = PODIUM[rang]
-                ws.cell(k, 1).value = f"{medaille} {rang}"
-                for j in (1, 2, 3):
+                ws.cell(k, 2).value = f"{medaille} {rang}"
+                for j in (2, 3, 4):
                     ws.cell(k, j).font = police(couleur, 12, True)
             elif rang is None:
-                ws.cell(k, 1).value = "—"
-            s = ws.cell(k, 5)
+                ws.cell(k, 2).value = "—"
+            s = ws.cell(k, 6)
             s.value, s.font = ("✔ Sûr", police(VERT, 11, True)) if sur else ("⚠ À vérifier", police(AMBRE, 11, False, True))
-            sc = ws.cell(k, 3)
+            sc = ws.cell(k, 4)
             if isinstance(sc.value, (int, float)):
                 sc.number_format = ('#,##0.00,,,," T"' if sc.value >= 1e12 else '#,##0.00,,," M"' if sc.value >= 1e8 and unite == "damage"
                                     else '0.00" s"' if unite == "seconds" else '0" RC"' if unite == "rage_count" else "#,##0")
             if cellules[6]:
-                v = ws.cell(k, 7)
-                v.hyperlink, v.value, v.font = cellules[6], "▶ Voir la vidéo", police(BLEU, 11, False)
-                v.font = Font(name="Segoe UI", size=11, color=BLEU, underline="single")
-            ws.row_dimensions[k].height = 30 if (cellules[7] and len(cellules[7]) > 90) else 22
+                v = ws.cell(k, 8)
+                v.hyperlink, v.value = cellules[6], "▶ Voir la vidéo"
+                v.font = Font(name="Segoe UI", size=11, color="7DD3FC", underline="single")
+            ws.row_dimensions[k].height = 30 if (cellules[7] and len(cellules[7]) > 70) else 22
         ws.freeze_panes = "A6"
-        ws.auto_filter.ref = f"A5:{chr(64 + len(COLONNES))}{max(5 + len(lignes), 6)}"
+        ws.auto_filter.ref = f"B5:{chr(64 + len(COLONNES) + 1)}{max(5 + len(lignes), 6)}"
     dossier = Path(sortie) if sortie else Path(racine) / "exports" / semaine
     dossier.mkdir(parents=True, exist_ok=True)
     fichier = dossier / "classements.xlsx"
