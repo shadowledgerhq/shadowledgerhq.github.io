@@ -1,8 +1,7 @@
 {
  "semaine": "2026-11-12",
  "alertes": [
-  "vYtRCpFtSOk : libellés ko inconnus (aucun écran GB reconnu)",
-  "34 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
+  "33 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
  ],
  "lectures": [
   {
@@ -495,6 +494,174 @@
    ]
   },
   {
+   "video_id": "vYtRCpFtSOk",
+   "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+   "channel_title": "Eden(이든)",
+   "published_at": "2026-11-12T10:51:56Z",
+   "lang": "ko",
+   "mode": "gb",
+   "regles": 13,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": 12859482380262,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 220,
+   "stage": "거대 석상",
+   "team": null,
+   "score": 162,
+   "score_source": "video-complete",
+   "exact": false,
+   "confidence": "a_verifier",
+   "detail": {
+    "damage_exact": true,
+    "play_time": "03:00",
+    "new_record": false,
+    "player_score": 2524909777122,
+    "hunter_ranks": [
+     9241675813363,
+     19008319055,
+     370200200655,
+     124363571339,
+     44836373256,
+     98138331472
+    ],
+    "hunter_ranks_lus": 6,
+    "n_images": 4,
+    "successor_score": null,
+    "successeur_present": false,
+    "votes": {
+     "stage": [
+      [
+       "거대 석상",
+       4
+      ]
+     ],
+     "player_score": [
+      [
+       2524909777122,
+       4
+      ]
+     ],
+     "final_score": [
+      [
+       12859482380262,
+       4
+      ]
+     ],
+     "rage_count": [
+      [
+       162,
+       4
+      ]
+     ],
+     "play_time": [
+      [
+       "03:00",
+       4
+      ]
+     ],
+     "hunter_rank_1": [
+      [
+       9241675813363,
+       3
+      ]
+     ],
+     "hunter_rank_2": [
+      [
+       515958313055,
+       1
+      ],
+      [
+       19008319055,
+       2
+      ]
+     ],
+     "hunter_rank_3": [
+      [
+       370200200655,
+       3
+      ],
+      [
+       3241679819063,
+       1
+      ]
+     ],
+     "hunter_rank_4": [
+      [
+       124363571339,
+       3
+      ]
+     ],
+     "hunter_rank_5": [
+      [
+       44836373256,
+       3
+      ]
+     ],
+     "hunter_rank_6": [
+      [
+       98138331472,
+       2
+      ],
+      [
+       38138331472,
+       1
+      ]
+     ]
+    },
+    "rc_images": 4,
+    "final_images": 4,
+    "rc_t": {
+     "162": 220
+    },
+    "sequence": {
+     "rage_count": [
+      [
+       220,
+       162
+      ],
+      [
+       224,
+       162
+      ],
+      [
+       225,
+       162
+      ],
+      [
+       226,
+       162
+      ]
+     ],
+     "final_score": [
+      [
+       220,
+       12859482380262
+      ],
+      [
+       224,
+       12859482380262
+      ],
+      [
+       225,
+       12859482380262
+      ],
+      [
+       226,
+       12859482380262
+      ]
+     ]
+    },
+    "t_debut": 220,
+    "t_fin": 226
+   },
+   "notes": [
+    "lecture fusionnée (4 images)",
+    "contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262"
+   ]
+  },
+  {
    "video_id": "MJ2iz5TFmvM",
    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
    "channel_title": "Eden(이든)",
@@ -562,7 +729,7 @@
      43356454581
     ],
     "hunter_ranks_lus": 6,
-    "n_images": 3,
+    "n_images": 4,
     "successor_score": null,
     "successeur_present": false,
     "votes": {
@@ -661,7 +828,7 @@
      "stage": [
       [
        "거대 석상",
-       2
+       3
       ]
      ]
     },
@@ -701,11 +868,11 @@
      ]
     },
     "t_debut": 221,
-    "t_fin": 223,
+    "t_fin": 234,
     "hud_rage_count": 125
    },
    "notes": [
-    "lecture fusionnée (3 images)",
+    "lecture fusionnée (4 images)",
     "conflit de lecture : player_score",
     "conflit de lecture : hunter_rank_3"
    ]
@@ -1111,7 +1278,7 @@
    "first_seen": "2026-11-13",
    "updated_at": "2026-11-14",
    "last_tri": 4,
-   "status": "en_cours",
+   "status": "termine",
    "modes": [
     "gb"
    ],
@@ -1132,10 +1299,14 @@
      1920,
      1080
     ],
-    "results_lus": [],
+    "results_lus": [
+     [
+      220,
+      279
+     ]
+    ],
     "tri3": "fait",
-    "tri4": "fait",
-    "libelles_inconnus": "ko"
+    "tri4": "fait"
    }
   },
   "MJ2iz5TFmvM": {
@@ -1260,7 +1431,7 @@
       "hud_points": 10375790058,
       "ecart_hud_final_pct": 102649.166,
       "notes": [
-       "lecture fusionnée (3 images)",
+       "lecture fusionnée (4 images)",
        "conflit de lecture : player_score",
        "conflit de lecture : hunter_rank_3"
       ]
@@ -1447,9 +1618,26 @@
      1920,
      1080
     ],
-    "ecran_results_lu": false,
+    "ecran_results_lu": true,
     "hud": [],
-    "resultats": [],
+    "resultats": [
+     {
+      "t": 220,
+      "rage_count": 162,
+      "final_score": 12859482380262,
+      "stage": "거대 석상",
+      "confidence": "a_verifier",
+      "hunter_rank_lus": 6,
+      "rc_images": 4,
+      "final_images": 4,
+      "hud_points": null,
+      "ecart_hud_final_pct": null,
+      "notes": [
+       "lecture fusionnée (4 images)",
+       "contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262"
+      ]
+     }
+    ],
     "lectures_texte": []
    }
   },
@@ -1510,6 +1698,39 @@
     ]
    },
    {
+    "channel": "Eden(이든)",
+    "video_ids": [
+     "vYtRCpFtSOk",
+     "MJ2iz5TFmvM"
+    ],
+    "total": 322,
+    "runs": [
+     162,
+     160
+    ],
+    "rank": null,
+    "confidence": "a_verifier",
+    "notes": "lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupe illisible; boss non contrôlé",
+    "runs_detail": [
+     {
+      "video_id": "vYtRCpFtSOk",
+      "t": 220,
+      "team": null,
+      "damage": 12859482380262,
+      "exact": false,
+      "score_source": "video-complete"
+     },
+     {
+      "video_id": "MJ2iz5TFmvM",
+      "t": 221,
+      "team": null,
+      "damage": 10661037770748,
+      "exact": false,
+      "score_source": "video-complete"
+     }
+    ]
+   },
+   {
     "channel": "RaidenShadow",
     "video_ids": [
      "T5dR6iJAn-Y",
@@ -1539,29 +1760,6 @@
       "damage": 3096765357626,
       "exact": false,
       "score_source": "debut-fin"
-     }
-    ]
-   },
-   {
-    "channel": "Eden(이든)",
-    "video_ids": [
-     "MJ2iz5TFmvM"
-    ],
-    "total": 160,
-    "runs": [
-     160
-    ],
-    "rank": null,
-    "confidence": "a_verifier",
-    "notes": "lecture fusionnée (3 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-     {
-      "video_id": "MJ2iz5TFmvM",
-      "t": 221,
-      "team": null,
-      "damage": 10661037770748,
-      "exact": false,
-      "score_source": "video-complete"
      }
     ]
    }
@@ -1605,6 +1803,7 @@
   "MJ2iz5TFmvM_recherche_232.txt",
   "MJ2iz5TFmvM_recherche_233.txt",
   "MJ2iz5TFmvM_recherche_234.txt",
+  "MJ2iz5TFmvM_recherche_234_gb_results_partiel.txt",
   "MJ2iz5TFmvM_recherche_235.txt",
   "MJ2iz5TFmvM_recherche_236.txt",
   "MJ2iz5TFmvM_recherche_237.txt",
@@ -2020,6 +2219,66 @@
   "nh2D7xZ7dOQ_tri4_70_gb_combat.txt",
   "nh2D7xZ7dOQ_tri4_80_gb_combat_incertain.txt",
   "nh2D7xZ7dOQ_tri4_90.txt",
+  "vYtRCpFtSOk_recherche_220.txt",
+  "vYtRCpFtSOk_recherche_221.txt",
+  "vYtRCpFtSOk_recherche_222.txt",
+  "vYtRCpFtSOk_recherche_223.txt",
+  "vYtRCpFtSOk_recherche_224_gb_results_partiel.txt",
+  "vYtRCpFtSOk_recherche_225_gb_results_partiel.txt",
+  "vYtRCpFtSOk_recherche_226_gb_results_partiel.txt",
+  "vYtRCpFtSOk_recherche_227.txt",
+  "vYtRCpFtSOk_recherche_228.txt",
+  "vYtRCpFtSOk_recherche_229.txt",
+  "vYtRCpFtSOk_recherche_230.txt",
+  "vYtRCpFtSOk_recherche_231.txt",
+  "vYtRCpFtSOk_recherche_232.txt",
+  "vYtRCpFtSOk_recherche_233.txt",
+  "vYtRCpFtSOk_recherche_234.txt",
+  "vYtRCpFtSOk_recherche_235.txt",
+  "vYtRCpFtSOk_recherche_236.txt",
+  "vYtRCpFtSOk_recherche_237.txt",
+  "vYtRCpFtSOk_recherche_238.txt",
+  "vYtRCpFtSOk_recherche_239.txt",
+  "vYtRCpFtSOk_recherche_240.txt",
+  "vYtRCpFtSOk_recherche_241.txt",
+  "vYtRCpFtSOk_recherche_242.txt",
+  "vYtRCpFtSOk_recherche_243.txt",
+  "vYtRCpFtSOk_recherche_244.txt",
+  "vYtRCpFtSOk_recherche_245.txt",
+  "vYtRCpFtSOk_recherche_246.txt",
+  "vYtRCpFtSOk_recherche_247.txt",
+  "vYtRCpFtSOk_recherche_248.txt",
+  "vYtRCpFtSOk_recherche_249.txt",
+  "vYtRCpFtSOk_recherche_250.txt",
+  "vYtRCpFtSOk_recherche_251.txt",
+  "vYtRCpFtSOk_recherche_252.txt",
+  "vYtRCpFtSOk_recherche_253.txt",
+  "vYtRCpFtSOk_recherche_254.txt",
+  "vYtRCpFtSOk_recherche_255.txt",
+  "vYtRCpFtSOk_recherche_256.txt",
+  "vYtRCpFtSOk_recherche_257.txt",
+  "vYtRCpFtSOk_recherche_258.txt",
+  "vYtRCpFtSOk_recherche_259.txt",
+  "vYtRCpFtSOk_recherche_260.txt",
+  "vYtRCpFtSOk_recherche_261.txt",
+  "vYtRCpFtSOk_recherche_262.txt",
+  "vYtRCpFtSOk_recherche_263.txt",
+  "vYtRCpFtSOk_recherche_264.txt",
+  "vYtRCpFtSOk_recherche_265.txt",
+  "vYtRCpFtSOk_recherche_266.txt",
+  "vYtRCpFtSOk_recherche_267.txt",
+  "vYtRCpFtSOk_recherche_268.txt",
+  "vYtRCpFtSOk_recherche_269.txt",
+  "vYtRCpFtSOk_recherche_270.txt",
+  "vYtRCpFtSOk_recherche_271.txt",
+  "vYtRCpFtSOk_recherche_272.txt",
+  "vYtRCpFtSOk_recherche_273.txt",
+  "vYtRCpFtSOk_recherche_274.txt",
+  "vYtRCpFtSOk_recherche_275.txt",
+  "vYtRCpFtSOk_recherche_276.txt",
+  "vYtRCpFtSOk_recherche_277.txt",
+  "vYtRCpFtSOk_recherche_278.txt",
+  "vYtRCpFtSOk_recherche_279.txt",
   "vYtRCpFtSOk_tri3_0.txt",
   "vYtRCpFtSOk_tri3_2.txt",
   "vYtRCpFtSOk_tri3_395.txt",
@@ -2041,6 +2300,7 @@
   "vYtRCpFtSOk_tri3_6.txt",
   "vYtRCpFtSOk_tri3_8.txt",
   "vYtRCpFtSOk_tri4_220.txt",
+  "vYtRCpFtSOk_tri4_220_gb_results_partiel.txt",
   "vYtRCpFtSOk_tri4_390.txt",
   "vYtRCpFtSOk_tri4_400.txt",
   "vYtRCpFtSOk_tri4_410.txt"
@@ -2202,6 +2462,7 @@
   "MJ2iz5TFmvM_recherche_232.txt": "5\n",
   "MJ2iz5TFmvM_recherche_233.txt": "< 길 드 보 스 ? | = &\n1 Aas -\n. 4 들\n© 시즌 남은 시간 6 일 14 시 간 Pee 개인 기록 Fad\n¥ \" 1 / A Y 총 점 수 도전 횟수 2\noy 보스 정보 ㆍ, oun 21,798,886,542.860 충 격 노 횟수 320\n* als — 3 | Se a1 160 11316\n| _\\ sag22%\n} , 빼 며 “~ 7\n~ 6 | 그 2 160 10.661 ㅇ\n— Beier et 1 3\n(tie zea ae 거대 석상\n| 전투력 SHAY (0) | , ㆍ 틸 장 -\nrare 100,000 00 - '\n",
   "MJ2iz5TFmvM_recherche_234.txt": "< 길 드 보 스 ? 이 ly / = 6\nad = eo\n!\n\\ ” ㅋㅋ 5\n© 시 즌 남 은 시간 6 일 acy bi naw 202 기\n고 331 Vey, a 전 횟수\nae DIAS 총 점수 도전 횟수 2\n, sane N a ‘ Oy En 21798.886542060 | 충 격 노 횟수 320\n| ~ \\ BG 고 1224 4\nZ P K@ 을. 다\n* as 58 GS | ㅣ SELES 11st @\na) ^ sagees\nmeee y | =\n/ | 4 4 Ps A ^ |! ©) | x 입장. = 2 |\n4 { 13 M ~ om gall = — 0\n2 | 22 2160 10.667 ㅇ\n= eae eee\n(2) use 2s 거대 석상 —_ —\n= w (Ofna\n(a) 격노 보상 ×100.000 060 ;\n",
+  "MJ2iz5TFmvM_recherche_234_gb_results_partiel.txt": "< 길 드 보 스 ? 이 ly / = 6\nad = eo\n!\n\\ ” ㅋㅋ 5\n© 시 즌 남 은 시간 6 일 acy bi naw 202 기\n고 331 Vey, a 전 횟수\nae DIAS 총 점수 도전 횟수 2\n, sane N a ‘ Oy En 21798.886542060 | 충 격 노 횟수 320\n| ~ \\ BG 고 1224 4\nZ P K@ 을. 다\n* as 58 GS | ㅣ SELES 11st @\na) ^ sagees\nmeee y | =\n/ | 4 4 Ps A ^ |! ©) | x 입장. = 2 |\n4 { 13 M ~ om gall = — 0\n2 | 22 2160 10.667 ㅇ\n= eae eee\n(2) use 2s 거대 석상 —_ —\n= w (Ofna\n(a) 격노 보상 ×100.000 060 ;\n",
   "MJ2iz5TFmvM_recherche_235.txt": "티티\nAda 9 시 BD B)\nquxwe FF ~ fag :\n. ms i =\n@ 시 즌 남 은 시간 6 일 14 시 간 < y) 개인 기록\nNY 에 보스 } 설 6 i 총 점 수 도전 횟수 2\n개 * | j UNAY 「 Ss ae en\now wea NF | 1 | 세 기 | 21798,886,542.860 충격 7\nza = \"~ ae ' … © Se\n『 , * Ke - \\ | x\nㆍ 006 528 | ! lea 1 1 그 룹 1 2.160 1.181 ㅇ\n~\n, J Ps: 4 개 그룹 2 2.160 10.66T ®\n가이 ~ SRRERE\nain] 길 드 은 거대 석상 1 =\nO-7 re © Ea\n전투력 추천 속성 4 bee\n(그 격노 보상 100,000 OG ：\n",
   "MJ2iz5TFmvM_recherche_236.txt": "| - |X 8 511.096.1293 —\n< 편성 ? @& a OE)\n| a 길드 보스 모드 %\n개리 Ba oO wt *\n4 년 @ ip. ^\n| /; ( ( | 1 - ^ \\\n| | 실토 내\nbi, \\l ~ f aie\n내 > / * i / gx =\n“) x is + ‘VieeZ\nSalis. WO ^ 뻐 &» p | ~ 위 i\nae \\@ a ; EY 4\nx alent ety eae _— = =\nwis] 티 스 특 성 애 물 보 오후 권장 전투력 100.000\n3 “Rl aaas 08 점수 21798.886.542860\n",
   "MJ2iz5TFmvM_recherche_237.txt": "< 편성 ? 96 i= 프리 x 1,096,129 2” 」\n| Ea 길드 보스 모드 %\nAE! 8 팀 계승자\nvd . — ! >. 개 :\n머 ~ 구 숭 고 00 5 a OF |\n~ Sh QD / () ! f a]\na s ! ( fe \\\nwe 00102 0 6 개 veve 167, \\ 1 x ~ 0\n10200 이 % 1750988. 이 | ell Hs KK\nTAN O, ssh SSR ie ^ a\nA —_~ © hagiis °\\ © \"~ -= / A\nevel 167) x ig tere BIN <4 en ‘Vee 해 |\n1916200 8 1157/88) 2 | ~\n» Z Wie © 0. ==- / aay\n\" aed | > © . Sy, ㄴㄴ /paauever /\n1) 노 (everday, 0 를 aia) Ss | 60 (ae\nf OS) Gary 해 “a 167 Oy \\ N57 20\nlve, 167 이 내직 No sears a 109.\n말러 데스 능시 OR 거 장 / 선 두려 100000 으 될 <\nio a 는 i : T 자 동 편성 입 장 하기\n= hs 추천 속성 니더 ae 21798,886.542860) —nZlena\n",
@@ -2354,6 +2615,66 @@
   "T5dR6iJAn-Y_recherche_238.txt": "_ Like and Subscribe ‘\n4 for more ideoes\n",
   "T5dR6iJAn-Y_recherche_239.txt": "_ Like and Subscribe ‘\noA ; for more ideoes\n",
   "T5dR6iJAn-Y_recherche_240.txt": "_ Like and Subscribe ‘\noA ; for more ideoes\n",
-  "T5dR6iJAn-Y_recherche_241.txt": "_ Like and Subscribe ‘\noA ; for more dace\n"
+  "T5dR6iJAn-Y_recherche_241.txt": "_ Like and Subscribe ‘\noA ; for more dace\n",
+  "vYtRCpFtSOk_recherche_220.txt": ": | SKIP 려\ni 0 ㆍ lam fi\n= = ~ / 소 —*\n",
+  "vYtRCpFtSOk_recherche_221.txt": "' SKIP >>!\ne 3\n5\n",
+  "vYtRCpFtSOk_recherche_222.txt": "P ? é SKIP 려\n「 ; ： y\nan a4 U =~, %\n— _… ㅡ ~ 때 3 ~ , “e\n~\n=\n5\n",
+  "vYtRCpFtSOk_recherche_223.txt": "i © 진행 시간 03:00\n~\n플레이어 스코어 VJ ,\n~ ote 보상 \"=\nee = a ~ ~\n계승자 스코어\nEK ,\nFON = |\n베기 ㆍ ~ >. ＊.\n때 ㆍ\nDS ' \\@)-\n『 ~\n| 7 >\nry, A 그 /, |\n4240 7 970200200655 , eee\nSBE ssosnoe —\n0 44,836,373,256 oT ate 5\n0102 12,859,482,380,262 162 b\n",
+  "vYtRCpFtSOk_recherche_224_gb_results_partiel.txt": "8 at\n…~\n플레이어 스코어 <>\n>\nZN oJ A\nASH 스코어 as )\nNF NGS.\no\\ Yea\nOS) fais 4 화 면 을 눌러 계속\n> RRP 124.383,571339\nMie 달성!\n> WMP 4.036373256 ag 430) ae as ® % 『\na> 38,331,472\n© RBar 12,859,482,380,262 162 Y\n3 다 시 하기 나가기\n",
+  "vYtRCpFtSOk_recherche_225_gb_results_partiel.txt": "플레이어 스코어\n{YN Vas\n계승자 스코어 ( ~ q\n“ | |\n헌터 순위\nDiez as\n22, aN 7 4 ,\n> WARP 24.363,571339\nAI 달성!\n3 WMP «038,373,256 Pm apace 이 ~\n7 38.331472 톱 i\nQ@\\ Breas 12859,482,380.262 162 Y\n다 시 하기 나가기\n",
+  "vYtRCpFtSOk_recherche_226_gb_results_partiel.txt": ",ECII © 진행 시간 03:00\ni cE 개 ! he i 년\n플레이어 스코어\n계승자 스코어 ( 고 /\n1”\n헌터 순위 y\nrm Ta 7)\n》 위 _ » ~\n0, .\n&S 124363571338\n> WMP «236,373,256 ees 격노 횟수 @ Ge\n8 138,331,472 re rc\n© QO\\ Brea 12859,482380,262 162 aid\n다 시 하기 나가기\n",
+  "vYtRCpFtSOk_recherche_227.txt": "5\n",
+  "vYtRCpFtSOk_recherche_228.txt": "기 …… |\n「 ‘ 「 J ao\nJ] . | iy - | bh ~ |\n’ , 7} ~ it ) /\n7, // * “aba be\nhd) \\\\ 시 격 광 회의 BUS 플레이어 캐 릭 터 와 헌터 캐 릭 터 를 모두\n^ 3 0 0002 ym ( 받 용 하 에 특수한 몬 스 터 를 처 치 하는 레이드 콘 텐 츠 입니다.\n노쓰 ㆍ 「 r 4 4 b\n- Lea) +\n- oe |\nOat ai YE | a uf . =\n\"~ > *\n",
+  "vYtRCpFtSOk_recherche_229.txt": "기 …… |\n「 ‘ 「 J ao\nJ] . | iy oo | bh re |\n’ , 7} s ww J /\noT) (PN a a 010) 0\nhd) \\\\ 시 격 광 회의 BUS 플레이어 캐 릭 터 와 헌터 캐 릭 터 를 모두\nym) I Sy 0060 ( 받 용 하 예 특수한 몬 스 터 를 처 치 하는 레이드 콘 텐 츠 입니다.\n기 .@ ) 나 i\nx | |\n` ie a [- 때 a J , [\n\"~ > * 4\n",
+  "vYtRCpFtSOk_recherche_230.txt": "4 ; 「 j\n| va 0 /\nㅣ Oy a - Ai) p J i 7\nOm) a / a ot Pin 광 회의 Bue 플레이어 캐 릭 터 와 헌터 캐 릭 터 를 모두\n> a) SAG Mme ae Biss 특수한 2518 처 치 하는 Hols 콘 텐 츠 입니다.\n\n, 4 / ! 4 1\n< cy alll ,\naan = ~ a J =\n",
+  "vYtRCpFtSOk_recherche_231.txt": "Vee” ff\nYar\n>|) Py, \" Oh\nhet 고 6\n4 al a } @\n| 2 ,\ni ~ y v4 ~ 시 ' 1\" G\n7. / + alt\naay | ff \\\\ mate Sf Ire 광 회의 공 방 은 플레이어 캐 릭 터 와 헌터 캐 릭 터 를 모두\n> a) IAG NM) we Biz c(G)S Sst 몬 스 터 를 처 치 하는 레이드 콘 텐 츠 입니다.\n고 00 1100\"\nㆍ { ry rt 내\n",
+  "vYtRCpFtSOk_recherche_232.txt": "Vey” ff\nYar\n>|) PX \" Oh\nhet\n4 al a } @\n| 2 ,\ni ~ y v4 ~ 시 ' 1\" G\n7. / + ‘alt\naay | ff \\\\ 2 Ire 광 회의 공 방 은 플레이어 캐 릭 터 와 헌터 캐 릭 터 를 모두\nym) J a) IAG NM) we Biz c(G)S Sst 몬 스 터 를 처 치 하는 레이드 콘 텐 츠 입니다.\nBE 1100\"\nㆍ { ry rt 내\n",
+  "vYtRCpFtSOk_recherche_233.txt": "4 \\ ' < @\nep) (년 / Me beg Pin 광 회의 Bue 플레이어 Wado 헌터 캐 릭 터 를 모두\nye 3 0 ZAAG hi Ss EiesiOps Set 몬 스 터 를 처 치 하는 레이드 콘 텐 츠 입니다.\nㄴ | i Gh ; =) ~ é > : Z N 1” ' f\n\\A ~ ^ 4 iw ly y 1\nZo ' TRY\n도 … ㆍ ' | A \\e | 5\n= = = “=\n",
+  "vYtRCpFtSOk_recherche_234.txt": "rd \\ y. 「\n, 섞 ~ = d\nA 4) t/\ns | SK 6 + Vie UN : [1 me\nCay (년 뻐스 광 휘 의 YS 플레이어 캐 릭 터 와 헌터 캐 릭 터 를 모두\npnd +2 ZANE hy Se Pion\nYy ~* AY uN -)] r\n14 Jig 4 Ke a) 8 |\n. … ㆍ ve ry Sp 5\naes oS 를! z A\noa é bad =\n",
+  "vYtRCpFtSOk_recherche_235.txt": "Pa ㅣ ; 4 4\n\n이 ye 14 ! | 셔\nGoris 0\nCay (년 peers Yo Bae 공 방 은 플레이어 Wales 헌터 캐 릭 터 를 모두\n^ Cae: ZANE 0 WY Gigsige se ec] 처 치 하는 레이드 콘 텐 츠 입니다:\nNe 0 oy ” , a ae 2 .2 ( > Y=\n~ | ‘ ~\n- » Z 때 ofl) 개 ~ 5\n| 2 on =\n은 =< _ =\n",
+  "vYtRCpFtSOk_recherche_236.txt": "< 길 드 보스 ? = B\n(시즈 남은 시간 62! 13 시 간 | 개인 기록 - 7\n/ 총 점수 도전 횟수 2\nㆍ 별 보스 정보 | 28.500.520151010 #254 802\n| 0\n* alls ~.. 션 | 그 룹 1 162 12.851\n『\n「 \\ 4 RS\n- SSR es\n： i fa Be.\nㅋㅋ § < Le 7\n| 그 름 2 160 10.687\ntees 고율 ee,\n(eke) 길드원 ae 거대 석상\n전투력 추천 속성 Fe) 입장 b\n~ 너 : ®\n(OG) 격노 보상 100,000 oG | 2 때 =4\n",
+  "vYtRCpFtSOk_recherche_237.txt": "| ㅋㅋ\n《 길 드 보 스 ? [\n< 길 <. =D B)\n+ . Ne |\\ —_—_ _ _ _\n@ 시 즌 남 은 시간 6 일 개 ( 개. 개인 기록 P\n- 에 「 W ce LY ir\n5 00000 <\nㆍ 월 보스 정보 「 ; ; | 시내 - . . 28.520.500151010 | 충 격 노 횟수 322\n이 ‘ SS ee\n* = a \\\\) =\nㆍ alle S28 = BR 그 룹 1 으 162 12.851 ㅇ\n를 7X sag823\n을 2° Gad\n내 ~ ~ :\n———— 00 Qi | 282 ©.160 10.66T @\n. Se oy\naia | 길드원 랭킹 거대 석상 1 =\n(@) ee > 100,000 066 06 본 ,\n",
+  "vYtRCpFtSOk_recherche_238.txt": "| | |\n\n< 길 드 보 스 ? q _ os B)\n| = 에 a _\n\n@ neues 69 aay. , / : A 개인 기록 @\n드는 Wil ny ee 7 총 점 수 도전 횟수 2\n\noe wea s 7 eal 1 Posy 로 - . . 28520520151010 | 총 격 노 횟수 - 322\n* abe 8518 을 oo ㅣ] 그, 으 162 12.851 ㅇ\n에 TV gagees\n\nDg (Cer\n\n제 ~ 제\n「 . 브\n\n| fi Pt _ 382 2.160 1.66T ®\n\nae > eReSaE\n\n(i) wee we 거대 석상 =\n(@) ave 100,000 OS 12005 ㅣ\n",
+  "vYtRCpFtSOk_recherche_239.txt": "\\,\n< 길 드 보스 ? 00) = 6\na i\n@ 시 즌 남 은 시간 6 일 13 시 간 ㆍ 205 개인 기록 이\nq f GOB; Y) 개\n| a MORES e 총 점 수 도전 횟수 2\now 보 스 점보 0 N “ape | Ko bs | 2352052015100 충 격 노 횟수 322\n… = ~) Big we. rt 으르 로\nㅎ = \\ | | is\nㆍ ale 558 108 그 룹 1 2.162 | 12.851 ®\n’ Se 00. | _ ｜|% SSN SI ae ee oe\nVa oman\nio! i | eae\nT | | 그 룹 2 2.160 | 10.66T ®\n= ESSERE\n길드원 랭킹 거대 석상 sh ; -\n빅백 / ㅇ 6\n(GF) xv 100,000 66 hd\n",
+  "vYtRCpFtSOk_recherche_240.txt": "|\n\n< 길 드 보 스 ? a 1! = 8\n4 : Ue |\\ ” EE\n\n© 시 즌 남은 시간 6 a) E (6 세 개인 기록 ~\n\n— 개 Te ek SG FAN Wy.\n| Rs Lf 개 개 1, 개 총 점 수 도전 횟수 2\nMf esas I< 2 : seme | Te 1 | 28500500151010 | 충 격 노 횟수 302\n| es ; |. “^ cree\noe, 촛 려 전 | i I 는 \\\\ x\n\nlt i | 그 61 우 162 12.85T ©\n4% | 0) zy 7\n\n을 . ee) 던 즈 =\n\na inal ia | 3 느 개\n\n_ _ ze. bi | 22 2.160 10.681 ®\n\n= eae\n\n(i) wee we 거대 석상 “ : ye BS,\n(@) ave 100,000 OB (2) pen a cant eal .\n",
+  "vYtRCpFtSOk_recherche_241.txt": "{ 비리\nquo _ 2” 」\n로 Ty al\n1. | —Eeee\n@ 시 즌 남은 시간 6 일 13 시 간 ” he SY ~ 개인 기록 2\n, 0. oy Orin. ~\n7 Pa 도, Way BUY: 총 점 수 도 전 횟수 2\nOM sss © 0. 3 | 9 총 격노 횟수\n~ ! De Ih | 235200952015.00 1 ㅎ 르이 922\nwk _ 4 | | | \\ 7\nㆍ ahs 총력전 4 «| 더 &\nals ~ | IGS) BE 그 룹 1 2.162 12.851 @\nVi 7) \\ gagees\n\\ eae ( 딜 즈 으\nfs _ = Qi | 22 2.160 10.66T ©\na6 gaseen\n(i) ue we 거대 석상 | 잘 로 주로\n(@) ave 100,000 00 0 나 ;\n",
+  "vYtRCpFtSOk_recherche_242.txt": "팀 전투력 10,983,\n< 편 9 2 0: | --… SOK 8 852 10,983,515 os fl\n| Ea 길드 보스 모드 &\nAS Bo &® wat -\nㅣ ' ‘fan\nY f ㅠ ^ \\\n/ A 7\ns x = (| - ¢ Os\n~^/ VAR oes\npe 4 . ^ wn i A\nhyo < £2 ^ =F 6 | » iS ~ 1\n¥ * sie ~ | 2 - 제 ㅣ Oy Vgaaevel\n\\ : eva. 167 Qs | / ie 96167 / 는 a\" NX ㅣ | (aren\nje 과 게서 , \\ Fe ae) | «Be 1620 11\nx dot nee «3 i, »< . 저스 커\n| i 배 SUS\n시 키니 se os 점수 23.500.50015100\n",
+  "vYtRCpFtSOk_recherche_243.txt": "< 편성 ? 086 % 8 521 10.983.515 0” 」\n| Bal , 길 드 보 스 모드 g\n^ AS BE Bo ㄱ 승 자\nCree $F ~ 55R $ @\\ 550 © a = fp |\n‘ JerlBT SPB 시 ile ed Wr\npaige y Pg 개 even G7 NX {3} “Ves \\\nQQ TERE oe re Ce 1683743 | . RP\nyee HS aes 20 ~ i 2 \\ \\ 6 ) 소치\n\" 7 즈 / ㆍ / rele: '\n>, 550 ~ > SSR / 0\n“ oe : 4/5 Wa /\n「 ~ Beer cy a ete lag, 은 | WR a,\n01675 2 “ ae 제패 > HE ey Mh 7 ) Baise 207977, {\nwit [2a ers! 4 ug aes 10000 Qa ^ _ .\nhas 추천 속성 주 | ax ji 자동 편성 입 장 하기\n테 퍼 키 이 시 점수 23.52052015.010 00000\n",
+  "vYtRCpFtSOk_recherche_244.txt": "< 편성 ? > = za % 2 52 10,983,515 = 8\n| Ka WEHABE %\nAB Be Se) 계승자\nVW 기 7, & er 4 ep |\n> & eu? 558 $ $, SSR pw Nee\n\\ 「 Boy Oey ie WwW\n^ AEB) Peet: a |e | NA\na, i= Py ee = Go * Te = . 40\nNN 5 베 \\ \\ \\ = /\nGR 160069 ^: NC × 11483740 | we “Ug\nyee = 노세 ~ | + i a \\ 서 4 ) ag\nyr — 저때 “^ 도 fh Nel ig Ls\n| BA 550 WRN SSR / 5\n©), SSR = S 2 4. @ i( ny NY ~\n『 고 | x \\ ~ ~ 4 U//pasaeveL\nf 6: 00167, 시 에 | vB) 7) | vp ) N67 ae\naan 글 Be) ey, 7 Ee) | Bal\n00520 Se) CORDA 결장 전투력 100.000 을 - 개 ‘\n0 | > 자 동 편성 입 장 하기\nes ke pale OG 점수 00/0600000000\n",
+  "vYtRCpFtSOk_recherche_245.txt": "< 편성 2\n® = % 24521 10,834,685 PT a 1]\n| Ea 길드 보 스 모드 % a\nes = BS @\nFil. : : 「 계승자\n겨 오오 266\n4 ») 별 (os hb F aww,\nATEVEU Bio 이 =: 「 『 ^\n건 Pn Oe 도 그 ; A\n$ = 그 % isle | en | 기 AN 가\nQGP y ENN 녀 000”.\n@ | 28224. kee ^:\nan f 9 es & Vag? / a 베\nj ZS) 42 5 \\ ~~ LV I y\na a | ett 이 제아 oo 30 ! 10 te\n7 9 ——- 1 Ae. DONS\n- ㅡ Was GEL. GN \" “ass\n167 00 싶 \\ - 18 Ty 4 K @ .\nso So ~ > 130 | 18691240, » fs ) 00 ㆍ ,\n050 Wee, Wc) on, eee ey 4 a = Balen sg\nLV.150\"*~\n50 | 토스 특성 03\n= | BASS =: : 때\nA 추천 속성 OE = ] ae 100,000 | 재패 |\nBM) 점성 | acs t 동\n; : ㆍ ㅁㅁ 000\n",
+  "vYtRCpFtSOk_recherche_246.txt": "<2 & GED x so neasc05 - 」\nAS\naf 0 = ㅣ 28\nw 4 36120\" @7120+ f 60004.8.009 1 004. 20004 / 40120 인 !\n+) ieee 나기 ica Lee\n| @.120+ 68720 41200 01208 41208 | 40208 (000 08204\n잭 A [ font e170, 00021 -00 비 | Livizn: | wiz0%, 6 fo elvis\n: B120+ [81208 1,203) (a0, (iio! Lazo ati jaiv20.,\nes 자동 장착 자동 장착 자동 장착\nWit Eres A ss 10000) @ 0 ,\nCie T 7 ssa 입 장 하기\nBint) 그 그 a 1722 ir\n",
+  "vYtRCpFtSOk_recherche_247.txt": "< 포서 ? 제 ※ 22521 10,834,685 on Bl\nAS\ni Oe Pad | ome\n\\ ‘4 호 Sine) 8720 iv 3702 0000 . 00004 4 ee 0000\"\n| 8104 a BP al a (ivan) Wie Sih.) 60020\"\nE : ^ wee, 뻐 py. AVE. Zz een vy 2\n| 190 의 0000 outs FP izes Luma mae\na ie oe Pa aie 0. 6 시초\nq 4 ahi’ _ av 0s atinzas, (alwizoy) . 009 ' 이 기\n) 을 자동 장착 자동 장착 자동 장착\nWaist | 보스 특성 =. 권장 전투력 100000 을 =...\n테 버 키 a 접수 ie? | 10000\n",
+  "vYtRCpFtSOk_recherche_248.txt": "\\ 아티팩트 장작 ? Pp 추 천 스토 \\ 공격력 y 치명타 피해 니 치명타 확률 mR\n@ v # 4 장착 아티팩트 @ 선택 아티팩트 @\nale ~ 40 설 계 자 의 푸른 투구 440 설 계 자 의 푸른 투구\nURS!) 2 Bi | = 22 20) 장비 점수 242 20) 장비 점수 242\n~ te 4 Le qu W208) Say \"20069\n@1V.120 6094 600 80004 00009 전설 ® 전설 @\nyy Be) 16) Bi) ~, 추가 공격력 ㅣ 09 ㆍ 추가 공격력 4483\nau) 20) 20. 60 ㅣ 피 해 량 증 7 피 해 량 증 7\n00 8 81001 80000 9100 ㅣ 피 해 량 증가 2746 (+1060) ! 피 하 량 증 가 2746 (+1060)\n' 방어력 관통 2870 (+1060) 0 방어력 관통 2870 (+1060)\nby. 1 나 ial i \\ ~, 공 격 력 (%) +4 34.49% 00000 ~, 공 격 력 (%) +4 34.49% CBD)\nqu ui O} i ae ll) 이 치 명 타 획 1691 (41 치명타 확률 !\n40201 10020 80009 1000 이 [그 hal 20000 Bae 2.691 COED)\n재 련 불가 재 련 불가\n\\ fy by 4 2 7 = 때\nwa a2) |. \" 굴 2 ‘quo 설 계 자 의 푸른 독기 설 계 자 의 푸른 독기\n4020 |@uvizoy) [60020 0120 cai - ' ~ i = ：\nbn ine als Mai aa ia iW ada a al\n| | Aen) Aen, [4 세 트 효과] [4 세 트 효과]\n0120 W120 wi ei, [독기] 효과 적용 [독기] 효과 적용\n% 4 4 | oy 변경 후 팝업 자동 닫기\n0 ) (23 By) )\n",
+  "vYtRCpFtSOk_recherche_249.txt": "My OME Bt ? 6 추 천 스 덧 ~\\ 공격력 *y 치 명 타 ' 피 해 \\y 치명타 확률 <\na 4, & 「 장착 아티팩트 @ 선택 아티팩트 @\n이 사이 ip ooh 설 계 자 의 FB 두구 peat 섬 계 자의 푸른 두구\n! 해아 0 4 (Ds 나 @ qe 20) 장비 점수 242 N20] 장비 점수 242\n아어 lah day 10102\n@1120 1000 비 APIS: WAV) ceed 전설 ® Bl 전설 ®\nPhy, 24 1S 246) \\ 추가 공격력 44921  × 추가 공격력 4482\nau ee wee ge y 피 해 량 증기 ! 피 해 량 증기\n90001 ions, 80009 80000 » 피 하 량 증가 2746 (+1060) » 피 해 량 증 가 2748 (+1060)\n9 방어력 관통 2870 (+1060) y 방어력 관통 2870 (+1060)\nDy. 4 2 te \\ BAB (%) +4 34.49% (41.6%) \\ 공 격 력 (%) +4 34.49% (+1.8%))\n84000 84000 80000 81000 치명타 확 2.681 (+060) 치명타 Bt 2.681 (+1060)\n재 련 불가 재 련 불가\n| | | 0 - eer\n7 | 400) | S70) | as] MAIKO] 푸른 독기 설 계 자 의 푸른 독기\n00120) (Blwi20 IAW Ww.120 + 2 6 02 ee a 4 6 eC aE\n«i a lai i a ad Wa lei al a ea\n| eps) | Ape] | he [4 세 트 효과] [4 세 트 효과]\n8 001 600 1.120) |@ 00120 [독기] aa ae [독기] 효과 적용\n11414 변경 후 팝업 자동 닫기\n(4 (7) Ls 0 (4\n때 수 때 eel 때 4 ba 이 = a\n",
+  "vYtRCpFtSOk_recherche_250.txt": "\\ 아티팩트 장착 ? 6 추 천 스 댓 \\ 공격력 *y 치명타 피해 \\v 치명타 확률 ×\naa) 2 장착 아티팩트 69 #4 oF ME (0)\n6) 이 설 계 자 의 푸른 갑옷 ~ 이 설 계 자 의 푸른 갑옷\n; ~. ^. 6 1) 20) 장비 점수 262 0°20) 장비 점수 262\n320 | #20) eg £20 WAZO4) 줘서 WAl20\n@ivi20 18409 lawns leita 이 전설 ® Beis 전선 ®\n6 의 ~ ai 추가 방어력 4,492 7h 방어력 4492\n81101 81101 개 00 태기 치명타 확률 2822 (+1060) \\ 치명타 확률 2,822 (11080\n. . \\ 공 격 력 (%) +3 28.46% (+1690) \\ 공 격 력 (%) +3 28.46% 0141.80\nhe @ ‘> ‘> y 방어력 관통 2788 (+1060) 9 방어력 관통 2738 (+1060)\nif aie if aan ae ha) \\ 추가 공격력 +1 2566 (4350) \\ 추가 공격력 +1 2566 (7350))\n: 재 련 불가 재 련 불가\n1 ie | 3 설 계 자 의 푸른 독기 설 계 자 의 푸른 독기\n09121 12 Way Eval\n@ a. ae. AD Mi i i a Al a ad i\n4 Cis 4, fr x Cn 51 [4 세 트 효과 ] [4 세 트 효과]\n6 iw 110120| |@lvaz02 18101203 [독기] 효과 적용 [독기] 효과 적용\n0 ~ ‘he ~ 번 경 후 팝 업 자 동 단기 |\n시 「 =. =\noO # 8@ sxe\n",
+  "vYtRCpFtSOk_recherche_251.txt": "\\ 아티팩트 Bat 2 6 추 천 스 덧 \\ 24a *y 치명타 피해 \\y 치명타 확률 ~K\n@ v & 4 장착 아티팩트 @ 선택 아티팩트 @\n‘ge! 설 계 자 의 푸른 갑옷 \"이 설 계 자 의 푸른 갑옷\n9 ~ ~ 6\" (£20) 장비 점수 262 (720) 장비 점수 262\n6 의 ~ gai OSI} 방어력 4482 USI} 방어력 4482\n(20 81: #20 811: #20 811. #20) \\ 치명타 확률 2,822 (+1060) \\ 치명타 확률 2,822 (+1060))\n\\euazas) wae ee ~, 공 격 력 (0) +3 28.48% (41.6%) ~, 공 격 력 (%) +3 28.46% (+1.6%))\nhe ~ ~ ~ 방어력 관통 2738 (+1060) ' 방어력 관통 2788 (+1060)\n/46\nAS ian WE 게시 \\ 추가 공격력 +1 2566 (+350) \\ 추가 공격력 +1 2566 (+350)\n- - : (이 재 련 불가\n2 ^ | ie 설 계 자 의 푸른 독기 설 계 자 의 푸른 독기\n14920, @ 4020, [@ 0020 40120 태 - 4\n0 eae set Stee\n“~. ee. ~. 자 [4 세 트 효과] [4 세 트 효과]\nevi, ‘tvazo) (@ivaz0%) | @ivazo! [독기] 효과 적용 [독기] 효과 적용 zs\n변경 후 팝업 자동 닫기\n61 69601 6950] 699! 는 노드\n",
+  "vYtRCpFtSOk_recherche_252.txt": "\\ 아티팩트 Bat 2 6 추 천 스 덧 \\ 24a *y 치명타 피해 \\y 치명타 확률 ※×\n@ v 4, 「 장착 아티팩트 @ 선택 아티팩트 @\nsage Wire| 푸른 US gage PITS RE US\n: to! “~, ~ “fe Ae 장비 점수 262 fsa 장비 점수 262\n@ivi20 80009 | 턴 기 660 전설 <《 이 전 섬 <\n. 개 0 4482 민 추 가 방어력 4492\n61121 81101 개 00 84101. , 치명타 확률 2822 (#1060) | 치명타 확률 2822 C1060)\n\\ 공 격 력 (%) +3 28.46% (+1169) ×, 공 격 력 (%) +3 28.46% (+1696)\nCG @& @& & 9 방어력 관통 2788 (+1060) 9 방어력 관통 2738 (+1060)\nAY ai atv in ae \\ 추가 공격력 +1 2566 +350 % 추가 공격력 +1 2566 (+350)\n5 재 련 불가 재 련 불가\n! 일 ＊ fi He 일 + 6 인 설 계 자 의 푸른 독기 설 계 자 의 푸른 독기\n| | son) | 192 [4 세 트 효과] [4 세 트 효과 ]\n&. 피 14020 [@10012053 [6101200 [독기] 효과 적용 [독기] 효과 적용\n0 ~ he) ~ 번 경 후 팝 업 자 동 닫기 |\n1901 10 1380 na\nma ae | ： 2 i [~ ;\n",
+  "vYtRCpFtSOk_recherche_253.txt": "Y 아티팩트 장착 ? 6 추 천 스 덧 \\ aaa y SISE 피해 \\y 치명타 확률 XK\n@ v 4, 「 장착 아티팩트 @ 선택 아티팩트 @\n‘ep! 설 계 자 의 푸른 갑옷 \"이 설 계 자 의 푸른 갑옷\n’ eal ~ ~ 6 1 © +20| 장비 점수 .+20\n/ AGN GSN 601 a2) 장 비 점 수 262 ee 장비 점수 262\n@ivi20 + [60020] (60020 | @iva20+ 660 전설 ® ieee 전 섬 ^\n6 의 ~ Qa 추가 방어력 4482 추가 방어력 4482\n81121 81171 게 00 81101 \\ 치명타 확률 7,822 (+1060) 치명타 확률 2,822 (+1060)\n, BAB (%) +3 28.46% (+1.6%) ~, 공 격 력 (96) +3 28.46% (+1.6%)\neh ~ ~ ‘> y ore 관통 2738 (+1060) y 방어력 관통 2738 (+1060)\n811: a au a 08 ae \\ 추가 공격력 +1 2,566 (+950) \\ 추가 공격력 +1 2,566 (+350)\n재 련 불가 재 련 불가\n% “~ amo ness 고 aa pe -\nillo kool la aicllekgy - 설 계 자 의 푸른 독기 설 계 자 의 푸른 독기\n@ @ 2 00 Boeteset etttdecus\nMEN WAG Gaol 도 [4 세 트 효과] [4 세 트 효과]\n10020, [@. 4020 |@ivaz0) (eivaz0 [독기] 효과 적용 [독기] 효과 적용\n6 」 ~ ‘he ~ aaeuans 271]\n- _ = ~ ~\n",
+  "vYtRCpFtSOk_recherche_254.txt": "YY 아티팩트 Bat ? 6 추 천 스 댓 \\ 공격력 치명타 피해 \\y 치명타 확률 x\n@ v 「 0 / 장착 아티팩트 @ 선택 아티팩트 @\n‘ep! 설 계 자 의 푸른 갑옷 \"이 설 계 자 의 푸른 갑옷\nke} ~ ~ hf S620) 장비 점수 2 a\nf AGL 6000 oa yaad) 장 비 점수 262 Bef 장 비 점수 262\n@020 15! 비고 터 괴 660 전설 © end 전설 ©\n6 의 ~ ar 추가 방어력 4482 추가 방어력 4482\n80024 버 괴 기 Pe SHANE 2.022 (+1060) 기 2.822 04080\n\\ 공 격 력 (%) +3 28.46% 0001.69” \\ 공 격 력 (%) +3 28.46% (+1696)\nseh @ “~ 9 방어력 관통 2738 (+1080) y 방어력 관통 2738 (+1060)\n811: a at a 08 ae \\ 추가 공격력 +1 2566 (+350) \\ 추가 공격력 +1 2,566 (#350)\n- 재 련 불가 재 련 불가\n5 afr 5 경 설 계 자 의 프르 도 - 에 이 프르 도 7\n| “6 1 Sg . - 설 계 자 의 푸른 독기 SATIS] 푸른 독기\na. Be 2 i ei i lg a Wal i\nAL GAN GSull Gon [4 세 트 효과] [4 세 트 효과 ]\n10020, |. 4020 |@ivaz0%) (eivaz0 [독기] 효과 적용 [독기] 효과 적용\n6 」 ~ ‘he ~ aasuans 271]\n= 때 ~ ~\n",
+  "vYtRCpFtSOk_recherche_255.txt": "My OME Bt ? 6 추 천 스 덧 ~\\ 공격력 *y 치명타 피해 닐 치명타 확률 <\n. ) v a < 장착 아티팩트 @ 선택 아티팩트 @\na ; 설 계 자 의 푸른 장갑 ， 설 계 자 의 푸른 장갑\n! & y & +20) 장비 점수 306 +20) 장비 점수 306\n; +20 +20 +20 PLWAZOS) xq 10.4 애 000\n@…120 ㆍ [60020] |Biviz0+) [601205 입니 전선 ® came 전설 ®\n의 『 , 2 & \\ 공 격 력 (%) WI) \\ SAA%) 21.15%)\n*20| | 20 | ,49020| 4920 추가 공격력 (4350) 추 가 공 (4350)\n8 20, 8 00 lect Feith a lel 4777 (est) ene ed 4777 (2350),\n치명타 확률 2.807 (+1060) 치명타 확률 2,807 041060)|\n개 『 Zi ya) » mates S7t +1 4,595 (+1060) 9 피 하 량 증가 +1 4,595 (+1060)\n20) | f-20| | +70) | 470) o aap He | SIR\navis) 80000 90004 60009 ^ } 체 력 2738 (+700) © #7 Ae 2738 (+700)\n: 재 련 불가 재 련 불가\n(을) fs j = = = -\n20) | 42020 | 70) | 70] - 설 계 자 의 푸른 독기 설 계 자 의 푸른 독기\n70 20 on 0 [4 세 트 효과] [4 세 트 효과]\n00205 [610002059 8 0020] 80020 [독기] 효과 적용 [독기] 효과 적용\n; 「 ; 번 경 후 팝 업 자 동 닫 기 |\n| | - 의 의 의\no = 00\n",
+  "vYtRCpFtSOk_recherche_256.txt": "YY 아티팩트 Bat ? seas 공격력 치명타 피해 Ny 치명타 확률 x\n@ v ^ @ ZR 아티팩트 @ 선택 아티팩트 @\n4 설 계 자 의 푸른 신발 1 설 계 자 의 푸른 신발\n= mae) iS SY\n“@ (할 0 ‘hed 10 장비 점수 263 $ hea 장비 점수 263 $\n@.120 lad 본교 번거 = 전설 aes 전설\nr@ re **@ **@ ‘S 치명타 피해 식 치 명 타 피해\n(320|| fi $00) | a 3201| fi 320 추 가 공 =z\natu labuty 8 edit) SERS EM ap (NBA\n\\ 공 격 력 (%) +2 20.806%06089^ \\ 공 격 력 (%) +2 20.86%6\\( 1160)\n[주어 ‘ied bas as SW 치명타 확률 +1 치명타 확률 +1\nai 2! ai ; ie aii 0 aii ii Y 방어력 관통 2,732 (+1060) 9 방어력 관통 2,732 (+1060)\n재 련 불가 재 련 불가\nbit is | ys Vs 설 계 자 의 푸른 독기 설 계 자 의 푸른 독기\n7” \" an ee il cla ae ii al aS a ad\nva Ae Ly f i [4 세 트 효과] [4 세 트 효과]\nui 10120, | 1.120 1.120 [독기] 효과 적용 [독기] 효과 적용\nit ay iy be 번 경 후 팝 업 자 동 닫기\no ㅋ 00\n",
+  "vYtRCpFtSOk_recherche_257.txt": "\\ 아티팩트 장착 ? @ SAAR \\ 공격력 *y 치명타 피해 \\y 치명타 확률 > <\n. 2) v & 2? 장착 아티팩트 @ 선택 아티팩트 @\nGe 설 계 자 의 푸른 신발 Gg) 설 계 자 의 푸른 신발\n(10 10 ees. ea\n기 기 ~ 28] 장비 점수 263 J £20) 장 비 점수 263\n그 그 600 %@ %@ 직 치명타 피해 6990 * 치명타 피해 - 6990\n까고 (기 f 320). zp aoe +350) 추가 공격력 +\n4701 givens, 90103 lv 추 가 공 2649 (1350) 추가 공격력 +1 2648 (4350)\n\\ 공 격 력 (%) +2 20.86% G16%)) \\ 공 격 력 (%) +2 20.86% (16%)\n@ f @ a IRE} 확률 +1 4428 00601 \\ 치명타 확률 +1 4428 00601\n래 adi 』 20 lad. 0 279201060) . 9 방어력 관동 2732 (+1060)\n재 련 불가 재 련 불가\neG be tek ee ; me =\ndiet | OLS Oly OME od 설 계 자 의 푸른 독기\nAPA 때 때 v.120)\nsede tek ee eg, Mi a wl Sl a ls id Wl\n( ‘ | i 「 i 「 f {| [4 세 트 효과 ] [4 세 트 효과]\n10120, | 10420 10120 10120 [독기] 효과 적용 [독기] 효과 적용\n+ Pes a bed 변 경 후 팝 업 자 동 단기 텔 |\nated Cis ita it : :\n",
+  "vYtRCpFtSOk_recherche_258.txt": "<2 ®& GED x 2 on e34605 -_ 8)\nAG\ny \\)\n¢ _ @ Pad VW | ~ Qa\n* ~ ail 20200 Pe ee ie\n- F [ 제 16009 eu aiv20+, 0009, 0009 6 fo, aiviz0:,\nq nae = | 60096\" 12034) 80000 ： 30 nae\n. es 자동 장착 자동 장착 자동 장착\npee | SSS) 없 너 226 권장 전투력 100000 때 y\n5 iy suse OG 점수 11137848772112 =\n",
+  "vYtRCpFtSOk_recherche_259.txt": "Qts2 a8 Gea | SS HYAS4 BBS %, 최 명 타 피하 닐 치명타 확률 ae! Bh\n® @ ^ it 장착 아티팩트 @ 22 se 아 디 팩트 @\n“^ Ae 새지 al ae\n| Dees ee xty) 저스 te 자니 정 숭 1955 ae\naio | 0600 10000 02020. 오빠 2240 WP ee +20) 0 는 8 Me 20)\n= mere ey ! 000 Bivizos 00 Eisizas) 0006 ails, Bivi20)\n.@ [ ce ㆍ @ sett) ied | 73%. yc py 9) 3h IEMs\nau 5 ee ae B24 | 그 OE RS q SS -\n을 00203 Binge. Weta? = Sa +20} 0) fee*201 99M POS 62206 추기 공개 ay > 10},3583 edi)\nPs Bu ane ia pt ES ㆍ ” 00008 0 0208 00208 배 01205 00000 a\nSee) 4 1. <. 4 SED) 79 2 ae 2 ,/ 14980650)\n; 0 © ' ero ap 90 ofa 7. re] 그 -. ie ^ ml Se\n12 @lvi208) aioe > ! 00000 Biv.12095 ° { Livin. 00209 ; Ci no) [-10801 SS] x 0\n17021 0004 80000160020 1000001000 회 40203. 00208 1 100021000 회 |\n1704 eet 20) | er; aes = 」 자동 장착 자동 BERS Sl 자동 장착\n5 002 ide = | 변경 후 팝업 자동 닫기\n8700 an) 20) team 2 0) 권장 전투력 100.000 7 「\n이니 대 또 전 “@@ sane 113784872112\n",
+  "vYtRCpFtSOk_recherche_260.txt": "OME Bt ? 6 추 천 스 덧 ~\\ 공격력 *y 치명타 피해 닐 치명타 확률 x\n1 Ng ^ 장착 아티팩트 @ 선택 아티팩트 @\n내 = oH) 설 계 자 의 푸른 목걸이 60 설 계 자 의 푸 른 목걸이\n6“ 내 @ vac) oe @ 420) 장비 점수 S420) 자비 정수\n| | 8 9 이 장비 점수 255 © gg ool I 255 ®\n1120+ | 80020. |@iv1204) |eivazo 전설 660 전설\n*G@*@e@ @ @“ ca 21.15% © 체 력 (%) 27.75%\n%1201| 84201 020 포 120 추가 공격력 G 추 가 공 5\n80704 자가 000 9102! ~, 추가 공격력 1896 8501 ×, 추가 공격력 1396 (+350)\n- ; - -_ ~, BAB (%) +4 35.48% (+1.8%)) ~, 공 격 력 (%) +4 35.46% (41.6560)|\n“~ (| 22 oe 추가 방어력 1492 (+350) ' 추가 방어력 1482 (+350)\n+20) | teet20) | teet-20) | e420) % 치명타 피 히 055 ( ] 실 치명타 피 히 |\n9102! oD aren laren | 갱어 ‘S 치명타 피해 2,855 (+1060) ‘Ss 치명타 피해 2,855 (+1060)\n= : =e 재 련 불가 재 련 불가\nii a5 | ieee Zl 56920 | 20) MAINS] 푸른 독기 설 계 자 의 푸른 독기\n12 11.120 + 12 v.120-\n\nSh 2 et CB 18 쏘 2 6 eee ae\n~ @ ~@ ~ Kd miata\nae “iin e270 ea 고 [4 세 트 효과] [4 세 트 효과]\naun 0000 bingo 60020 0 170 으 가 적 흐 (571 8348 7\nPal areal Maral Wee 변경 후 팝업 자동 닫기\n~: boas La {3 aossatisc\n| 고시 9 0 sez\neile 2 5 V ?\n",
+  "vYtRCpFtSOk_recherche_261.txt": "\\ 아티팩트 장착 2 6 추 천 스 덧 \\ 공격력 × 치명타 피해 \\y 치명타 확률 ×\nRn Ce), 장착 아티팩트 69 선 턱 아티팩트 @\nro 설 계 자 의 푸른 팔찌 설 계 자 의 푸른 팔찌\n“\" 2 2 Re Fr xu Ain\nBSS! | RSE) | (a | 점수 251 720) 장비 점수 251\n+20) | #20) | / 즐 320 iwazo4| 5, L120:\nRe a aR a * 명 속성 피 해 (%) 18389 * 명 속성 피 해 (%)\n오이 acon 으으 00 추가 공 격 력 +1 eee) ㆍ 추가 공격력 1\n00201 | 00201 | 0020 |@ 70020 00\n\\ 공 격 력 (%) +2 216%060690 \\ 공 격 력 (%) +2 21.6% 001.6596)\naR aR 2 oa 직 치명타 피해 +1 48650610600) 직 치명타 피해 +1\n~ 즐리 | a aay © 피 해 량 감소 © 피 해 량 감소\n000 [30 [8 Ree Md ce Sa bea a LY\nTHE 불가 재 련 불가\n성 만 a yy B y si 8 J i 설 계 자 의 푸른 독기 설 계 자 의 푸른 독기\n00120, 082 W120) | 10120 i at a pei ee |\nMi Al i el Sd A a Wa cc\nLG a a 2 [4 세 트 효과 ] [4 세 트 효과]\n8204 70020 20020. win,  - 드 기 흐 과 적 용 [독기] 효과 적용 ：\nBR 변경 후 팝업 자동 닫기\n",
+  "vYtRCpFtSOk_recherche_262.txt": "YY 아티팩트 장착 ? 6 추 천 스 덧 \\ 공격력 *y 치명타 피해 \\y 치명타 확률 ×\n0 €¢ CA ~ 장착 아티팩트 69 —s- SH ore ME @\n: eke 설 계 자 의 푸른 반지 eke 설 계 자 의 푸른 반지\n1?) tel, oe = C) \\ 420) 장비 점수 420) 장비 점수\n| 220 200 220 느 장비 점수 305 as ens 장비 점수 305 ©\n@0120 ‘a 20, 050 6584 전설 md 전설\n2) “0 ves) a \\ SAA (%) _ 288 × 공 격 력 (%) _ 20058\n00 Pi 이끼 벤 ain) | 추가 공격력 +3 ~ 추가 공격력 +3\n: , : . 질 치명타 피해 294506060| 질 치명타 피해 2,945(CI060))\neH “~” = - © 피 해 량 증가 +1 4709 (+1060) » 피 해 량 증 가 +1 4708 (+1060)\n+20 420) | \\ #20 +20 Y 방어력 관 : + 방어력 ZH +\n20 2 2 2 y 방어력 관통 2,879 (+1060) 0 방어력 관통 2879 (+1080)\n00201 [80020 [90020 (00020\n재 련 불가 재 련 불가\nai aay aly aa att AN avian 설 계 자 의 푸른 독기 설 계 자 의 푸른 독기\nnam “15 15) 해 [4 세 트 효과] [4 세 트 효과]\n00201 |@ 00120 20 82000 [독기] 효과 적용 [독기] 효과 적용\n! 에 ; 변경 후 팝업 자동 닫기\n이 드가 이 . |\nWw ata oY S SE 에 0 개\n",
+  "vYtRCpFtSOk_recherche_263.txt": "\\ 아티팩트 장착 2 6 추 천 스 덧 \\ 공격력 *y 치명타 피해 \\y 치명타 확률 ^\nn “6 o CR 장착 아티팩트 & 69 sore 0)\n기 @ e@ 4 @ 6 6 설 계 자 의 푸른 귀걸이 6 6 설 계 자 의 푸른 귀걸이\n120 gr | BO Geel | BO sl 420) 자비 점수 3200 스\n* 520 | *＊ 3011 * 00 laksa! ~ ® 기 Sal 8% 254\n@iv.120 + | 60020 |@lvi204) |Bivazoe 전설 전설\n6 0 0@\\ 66 @ 추가 마력 1,305 6 추가 마력 1305\nㅎ 1201| * 1520 | ps2) | *＊ 20 \\ 공 격 력 (6) +3 21.73% Glee) ~, 공 격 력 (%) +3 21.73% 60060”\n2\nWviZ04) (Bivi20+) (Blvazo+) |Bivizn eee — Pea 08\n추가 공격력 [ 추가 공격력\n6M 66) 4) 0 직 치명타 피해 2,930 CUED) 직 치명타 피해 2930 (Uso)\n+20 Ub) +9 a7) &Y 방어력 관통 +4 we 관통 +1\nnie 1 0 4,583 (+1060) 9 방어력 BS + 4,583 (+1060)\n재 련 불가 재 련 불가\niD tO tr tiny - hi :\n420|| * 420|| * 420|| #420) - - 설 계 자 의 푸른 =7 설 계 자 의 푸른 독 7\n82000 ee ae a 푸아\ni Qs Gos os ‘alla ia a a ada ll\nelles - ANN ne as [4 세 트 효과 ] [4 세 트 효과 ]\n80004 10824 00 기 [독기] 효과 적용 [독기] 효과 적용\n2 6B) 64) 6 aasua ns 271%]\n| 개 기 기 기\n= = = ^ oy ~ =\n",
+  "vYtRCpFtSOk_recherche_264.txt": "Py OEE Zar ? @ 추 전 스토 ~\\ 공격력 y 치 명 타 피해 \\y 치명타 확률 rw,\n0“ @ ^ 3 장착 아티팩트 @ 선택 아티팩트 9)\n기“ ^ 222 6 설 계 자 의 푸른 귀걸이 6 60 설 계 자 의 푸른 귀걸이\n40 BO ed BO Cs! 470 in 4 고\n$420) | *3001| * 300 0 ~ ag 1 8 256\n@ 20 + | 80020 8002 00062 전설 aed 전설\n0” 0 6@G 66 6 추가 마력 1305 o 추가 마력 1305\n1201 * 3201| 420) |e 공 2 1100\n91000 als 91001 2 91001 \\ Ba) 13 21.73% (+.6%)) ~ 공 격 력 (96) +3 21.73% (#1.6%))\n~, 추가 공격력 1486 (+350)) \\ 추가 공격력 1486 (+350))\nㆍ @ 《 (806 ce 직 치명타 피해 2,930 (+1060)) 직 치명타 피해 2930 (+1060))\n#20 a) 5 15 9 방어력 관 : ; 권\n기 fea li ha ii oo) | (Yeo ae 4583 (+1060) 9 방어력 관통 +1 4,583 (+1060)\n재 련 불가 재 련 불기\n0140 oii ~ - — :\n20 #20 #20 720 설 계 자 의 BS 독 7 설 계 자 의 푸른 ST\ndy en 2 7 ean 구 fof & oh : < ag os ae\ni Qs 06 ~ Maa Ua a a ca all\n+ $20|| ¥ 420] | * 420)| ¢ #20 [4 세 트 효과] [4 세 트 효과 ]\n020 [80020 [64020 [800020: HESS 61150\n300 6G 0 46 변 경 후 팝 업 자 동 닫기 텔\n| 1 4 \"| 이\nqe 7 = 2\noO # 88 HM\n",
+  "vYtRCpFtSOk_recherche_265.txt": "<2 % 8 28 10,834,685 - 」\nAz\n4 _ Oe ^ Vp ar\n[ | 824 ~ Ag ee 302 5 { v2 2) fos,\non j [ ei, Brae 80009 000 의 lu i202 bv 205) 6 fo aivs203,\n어 f | bd) ee ‘ in 0 6 wey ay\nq 8120: (e1205% giv 203, la203, (owing) Lazo ： 이 aiy204)\n( 자동 장착 자동 장착 자동 장착 자동 장착\nAbe\nWists | 보스 특성 CEES 권장 전투력 100/000 4 ne\n= io akin oO 점수 11137/.848.772112 0\n",
+  "vYtRCpFtSOk_recherche_266.txt": "<x y= <A GQe ees 쑥 공격력 00. 이 치명타 확률 치명타 피해 을 )\n「 7 4 \"2 장착 아티팩트 @  ^ ㅋ 선택 아티팩트 @\nele 29 { @ 수 크 트 91 2257 Og @ +289 2257\n7 We 00 |. (< 으니 장비 점수 265 A [을 2] 장 비 점 수 285.~\n@…120 | ~ : Bi sn lv in { ills 전보 우이 gery | ch 전 설 느 2020 20\n= — = 2 7 ath ~ QF 120% @10.120+ LW.120,4, | sLv:120% 6iv.120% | @tv.120+\nf . —_ \\ = 71 그\nRO 2 \\ 추가 공격력 . Ba a2 이. ~, oe\nWen) WY kd 기 he z 6 | *-20 20) 우 지 영 타 확율. 00) Se 22716001059\nvA | 베고 ive.  =SeSz B20) de SOR TIBIEFINS2) 20 | % 지 명 다 확률 Fi Ne ane’ C+\nv.12 Lv.12! 1120 을 Ly: 시 = 추가 Heys Blv1208)) vi20% e+] Vv120 20020 체력 1 00120: Wi 5121 rye\n{ 1, ey ㅣ mshepSrt + vy, 4766@1052), (3) (MBNA S241 Mee ea 00050\n* ~ ty ” { uy ‘ a. } © 201 원 을 eM) (시 om\n6.00 ain i a il: 0 이 SBE) +2 2 001 2 2080% 너 0022 SHAM +2 fing ati 080% 이이\n‘ | . = 새 련 블 가 : 그\n1) 「 Wy | ui: Py | 000) an 20 70 6 il A ee Aon 7\n\\ i Wa 7s 23000 < 2. SS = > @11.120+ @lv.1204 +. fuse — li = Blv.1203- 1204\nvA 20 hi 1100 ~ 1020 1020. 배 9 oi @iv.120 Lv 20 V; a ;\n‘ \\ io? « | 1 ee | \" - ¢ ~ | 70018\n| 을 - il\n4 . an Ay 《 4: =a = = We sa ——\n~ 1220) (oobi <2) PAM seal 자동 장착 자동 BASS (자동 장착\n00 bi 20 60004 ua a os =\n니 년 Vv\nhy 시미 이 Oy oy 번 경 추 팝 업 자 동 단기 텔 |\nFy | | yy 10100 o—— an —\"\n@ aes ee Seuqe ) 1137848772112 =\n",
+  "vYtRCpFtSOk_recherche_267.txt": "= ~~\n\\ 아티팩트 장착 ? @> 2048 \\ 공격력 \\y 치명타 확률 치명타 피해 x\n@ ¥ & yg 장착 아티팩트 @ 선택 아티팩트 @\n\\ 고 ml 고\nSak) 6K ) @ 수 르 트 의 e257 ： @ 수 르 트 의 불 꽃 투구\nA i ‘ 1420) 장비 점수 265 1 320| 장비 점수 265\ni, 420) 420) | 420 120 시 회 04201 =,\n\n@iv.120 80004 6224 lassen 전설 © ees 전설 ©\n‘RE ENYERS ER ~ 추가 공격력 4488 ㆍ 추가 공격력 4482\n120 Agel T2420) 6 4 지 명 티 ' .\n9102 6..000 61003 6.000 치명타 확률 2716 (+1052) 치명타 확률 2716 (+1052)\n, . . . © 추가 체력 +1 5,171 (+700) 9 추가 체력 +1 5,171 (+700)\nvy vy Us UN 피 해 량 증 가 +4 4744 (+1052) 피 해 량 증 가 +1 4744 (+1052)\n^ | ^ | 4 | 보스 ~, 공 격 력 (%) +2 20.93% (1.53% ~, BAH (%) +2 20.93% (153%\n— 때 ~ 재 련 불가 자 련 불가\n\\ \\ \\ | = 그 “| 더\nWV, A sil VA Ve 수 르 트 의 불꽃 수 르 트 의 불꽃\n\n0 020, @. 40201 |. 020\n“py Lt D4 0. WA [4 세 트 효과 ] [4 세 트 효과 ]\n\n5 WA WZ WZ\n\nDivito \\ Me aie zsh emis [ 멸 화 ] 효과 적용\nNest\" x 1 \\ \\ 소우\n' { { ' 변경 후 팝업 자동 닫기\n\n^ | ^ 별 el ih’. y . 럽\n",
+  "vYtRCpFtSOk_recherche_268.txt": "My OME Bat ? @> 2044 ~\\ 공격력 닐 치명타 확률 치명타 피해 <\nv & 장착 아티팩트 선택 아티팩트\n” hb\n@ 수 르 트 의 불꽃 갑옷 @ 수 르 트 의 불꽃 갑옷\n@ @ @) [ 120 장비 점수 120 장비 점수\n+20) +20 #0 #0 ; : 개 장비 점수 266 7 장비 점수 266\n@…120 + | 10020 re 23 @10120 나고 전설 < 나 12009 전설 <\n(SG) 0, / ) 추가 방어력 4492 추가 방어력 4492\n내 al ‘4 ; an 8 나이 te \\y 치명타 확률 +2 6.316 (+1060) \\v 치명타 확률 +2 6,316 (+1060)\n~, 공 격 력 (%) 7.53% (+1.55%)) \\ 공 격 력 (%) 7.53% (+1.55%)\n2 2 yp 2 \\ 추가 공격력 +2 3,778 (+345) \\ 추가 공격력 +2 3778 (+345)\n‘eo at +2) 4 i Y 방 어 력 (%) 7.58% (+1.6%) Y 방 어 력 (%) 7.58% (+1.6%)\n재 련 불가 재 련 불가\nVip, 27 Ly 2 | = 0 im, =\n수 르 트 의 불꽃 수 르 트 의 불꽃\n;: < [4 세 트 효과 ] [4 세 트 효과 ]\n. 40120 0120, 18 10201 | 1020 [ 멸 화 ] 효과 적용 [ 멸 화 ] 효과 적용\ny y ~ y) 변경 후 팝업 자동 닫기\n",
+  "vYtRCpFtSOk_recherche_269.txt": "BE N\nMy 아 티 팩 트 장 착 ? @> 2044 ~\\ 공격력 닐 치명타 확률 치명타 피해 <\n( ) v & a 장착 아티팩트 @ 선택 아티팩트 @\n승 @ @ 수 르 트 의 불꽃 장갑 @ 수 르 트 의 불꽃 장갑\nhy f 3 ba\n, 1 … 사 20 장비 점수 살 20 장비 점수\nㆍ 사 20 420 420 10000 상 수 317 이 상 수 317\n@ 120 80004 102 @04120 mas 전설 ® dS 전성 ®\n@ . 4 / × 공 격 력 (%) TN 공 격 력 (0) 21.15%)\n7/420) | 7420) | 420) | 20 초가 공격력 추 가 공\n80201 (awn, 80000 18000 추가 공격력 +3 4865 (F350) % 추가 공격력 +3 4865 (F350)\n+ 피 해 량 증가 2617 (+1039) 피 하 량 증가 2,617 (+1039)\n:. Z “ 방어력 관통 2,786 (+1052) y 방어력 관통 2786 (+1052)\n걸이 살피 … 설 미 | … 살 5 0) 추가 방어력 +1 +  S7} 방어력 +1\n9.1000 81041 (8020 (8 wien 9 추가 방어력 2,547 (+350) 0 추가 방어력 2547 (+350)\n재 련 불가 재 련 불가\n/; A Vs A = = = =\n갈피 가미 갈피 220  - 수 르 트 의 불꽃 수 르 트 의 불꽃\n10021 ¢lw.120) [8 00120] | @tvA20;\n7490 7490) 2200 ae [4 세 트 효과 ] [4 세 트 효과]\nanos, 40205 [6 0020] (6 90120, «= (HBAS evs -\n) ) ~ 변경 후 팝업 자동 닫기\n13 = 3 Hip\n| Ae | | ^ | ^ | 4 | ,\n",
+  "vYtRCpFtSOk_recherche_270.txt": "My OME Bt ? @> 2048 ~\\ 공격력 닐 치명타 확률 치명타 피해 <\n@ v & 「 장착 아티팩트 @ 선택 아티팩트 @\n@ 수 르 트 의 불꽃 신발 @ 수 르 트 의 불꽃 신발\n@| i 》' @ ay © 120) 장 비 점 수 248 ee #20) 장 비 점수 248\nUy Uy ‘ | 41201 14120\n@….120 + | 80020 (64020 008 a 전설 © 비이 전설 ©\nㆍ AG a: y 방어력 관통 6,990 y 방어력 관통 6,990\n8:20) ae 20) +20 추가 공격력 11 oR SSE 로\n4004. 021 two) 800 ~, 추가 공격력 + 2.884 (+350) ~, 추가 공격력 + 2684 (+350)\n방 어 력 (%) +1 14.91% (41.57%) 0 방 어 력 (%) +1 14.91% (41.57%)\ndae 씬 4 it) \\ 치명타 확률 2933 (+1052)) \\ 치명타 확률 28933 (+1052)\n18940] 350] 1 | 1 ~, 공 격 력 (%) +2 .88% (+1.59%)) ~, 공 격 력 (%) +2 88% (1.53%)\na ae onl Boe ~ 공 격 력 (%6) 19.88% (+1.59%4) ~ 공 격 력 (96) 19.08% (+1.59%)\n재 련 불가 재 련 불가\n을! vi | fy \\ 시 ㅣ [4 세 트 효과 ] [4 세 트 효과 ]\n| 90 e. a 0020] | 40200 [ 멸 화 ] 효과 적용 [ 멸 화 ] 효과 적용\n| | : 변경 후 팝업 자동 닫 7\n7 | 11 | 11 | 11 | eee\n",
+  "vYtRCpFtSOk_recherche_271.txt": "벌서 Pa By, - = 프 리 세 00 We 려 10 09/, 60 ㄷ | | ~ (iy\nPOEME SA 2 == @ > 추 전 스 트 \\ 공격력 \\y SIRE} 확률 y aiger may OL aS\nAE] ;\neo # * 0 장착 아티팩트 69 “29 이 5 프 트 @\nSlt 2, @ 수 르 트 의 불 꽃 신발 | @ 수 르 트 의 불꽃 신발\n. “0 Gi ” ig\nZA, ZS ANG 420) 장비 점수 248 제 ©2720) 장비 점수 248\n| in A mS ix eb o ung am o J\n20 | i 20) SG) 62323 00002\n|@0.120 a1 002 00201 | 0020 ap 11200. @lv20 * an i 0120 @10.20 <\nYad | CTR 9 방어력 관통 6,990 9 방어력 관통 6,990\n20 기 E20) | 6320 ~ 추가 공격력 +1 ＊ ㆍ 2684 (+350) ~ 추 가 공 격 력 +1 40\" ㅎ 2604 +350)|\n0120 L.120) | @Lv.120+,) | 6Lv.120 gLv.12 v.70 Lv.12 12 20 1@0[0120,\nY 방 어 력 (060) +1\" 14.91% (+1.57%) 1 방 어 력 (06) +1 14.91% (+1.57%)\nOS ae eR \\ 치명타 확률 2,933 1052) ~ 치명타 확률 2933 (+1052)\nai no F 220 | 1 ~, 공 격 력 (%6) +2 8% (153%) BAEC) +2 i 59\nAo) (590 1 34. SBA) +2, 18.88% (81590) BAM) +2 188% (+1539)\n재 련 불가 재 련 불가\n0020] | 00201 00201 00200\n: aa aS al ll ll ld\n내} 을 상가 vs | [4 세 트 효과 ] [4 세 트 효과]\n10120] [@ 10120, 8 10001 eine [ 멸 화 ] 효과 적용 [ 멸 화 ] 효과 적용\na ae ae 1 0 분 변경 후 팝업 자동 닫기\nDOE 41 | 11 1 그 sacs 100 7 \"\n",
+  "vYtRCpFtSOk_recherche_272.txt": "<us? ® x Hoes 10834685 8\nAgi\na)\n\\ ‘4 a 6.1202 0200 aiv20 ivi |. 004 00009 4 @iv.i20% 0\n고 [ew 20 이리 | 69008 | AS a\nCo : [ a\n® | Vu GD oe. 0 02 >\nJo F [ afore 16009 「0000212000 외 (twins) wan) ei fo, atv20¥)\n1 1 AS: em 을 00 0\n0020. e120 | uaa @00100+ (awiz03) | wi203) | [000010002\n==\n) ( 자 동 장작 자동 장착 자동 장착 자동 장착\nWit = 스 5 신 ae anaes iV\nya eles) oF 점수 De ——EEE=\n2 ih) (137,848,772,\n",
+  "vYtRCpFtSOk_recherche_273.txt": "\\ 아티팩트 장착 9 @> 2842 ~\\ 공격력 \\y 치명타 확률 치명타 피해 <\n0 @ ^ 위 장착 아티팩트 @ 선택 아티팩트 @\n@ +259 불꽃 목걸이 @ 수 르 트 의 불꽃 목걸이\nGee @ (\n: <4) 220) 장비 점수 267 <4) 220) 장비 점수 267\n$y 120 yee 20) [7 120 leisy 00420+\n@0120 1000 14) 000 04, \\aiuizas, 00 전설 3 ® 00 전성 0\n송 GC) © 체 력 (%) 27.75% <? 체 력 (%) 21.15%\ntp 120] Sy 20) [?7 20) sy 20) 추가 공격력 +1 i 추가 공격력 +1\n1800 바이 이 0 #7824 , 추가 공격력 + 27\n\\ 공 격 력 (%) +1 13.94% ets) \\ 공 격 력 (%) +1 13.94% 68559\n직 치명타 피해 +2 617011052) “ AIBEt 피해 +2 6,1701@1052))\n01120 | 나 4. Re A 9 방어력 Zk ; ye 관 ;\n기 ar ven Sd of 9 방어력 관동 2785 (+1052) 9 방어력 관동 2785 (+1052)\n재 련 불가 재 련 불가\nas VS |44/ 1447 BRE 수 르 트 의 불꽃\n(, (, ( [4 세 트 효과] [4 세 트 효과]\n1“ 2. a 2) (ash aa tg [열화] 효과 적용 ：\n： 번 경 추 팝 업 자 동 단기 (Ml\n427 | Gas | a ta . y\n",
+  "vYtRCpFtSOk_recherche_274.txt": "OME Bat 2 @> sus \\ 공격력 w 치명타 확률 치명타 피해 A\n^ & ^ HS 장착 아티팩트 @ 선택 아티팩트 @\n_ 을 수 르 트 의 불꽃 목걸이 @ 수 르 트 의 불꽃 목걸이\nGe @ @ (\n4 vere: 27220) 장비 점수 267 1, , 120, 장비 점수 267\n7 Ise 120 | 7 320 | 17 320 00120 9120+\n@0120 1000 기 1800 기 000 eS 전설 ® SiS 전설 <\nDis @ , © 체 력 (%) 27.75% © 체 력 (%) 27.15%\n+p 20) | 420) | yy . 3201 | 17 320 추가 공격력 +1 x 추가 공 : 1 연도\n세 eo baat lain 91021 tN 추가 공격력 + 2713 +335)| ~, 추가 공격력 + 2713 +335)|\n~, 공 격 력 (6) +1 13.94% (+1.55%)) ~, BAA(%) +1 13.94% (+1.55%))\n! Sy 치명타 피해 +2 6170 (+1052)) Sy 치명타 피해 +2 6170 (+1052)\nSp 120 Nar 내 내 y 방어력 ZH ; y 방어력 Zh ;\n태아 이재 19 방어력 관통 2785 (+1052) ' 방어력 관통 2785 (+1052)\n재 련 불가 재 련 불가\ntas Tas Tess Ty 수 르 트 의 불꽃 수 르 트 의 불꽃\nari) an [20 Nae 도 및 a 7 a .\n| Pe ee ae ee CO we la | au [eee TED\n( [4 세 트 효과 ] [4 세 트 효과]\nＬ 0 “~. in [: 기 (aan ease [ 멸 화 ] 효과 적용 ：\n. , 변경 후 팝업 자동 닫기\n",
+  "vYtRCpFtSOk_recherche_275.txt": "\\ OME Bat 2 @> su48 공격력 w 치명타 확률 %y 치명타 피해 ×\n1 @ & A 장착 아티팩트 @ 선택 아티팩트 @\n수 르 트 의 불꽃 팔찌 수 르 트 의 불꽃 팔찌\n@ real recall Wey ei 장비 점수 279 ee 장비 점수 279\n+ 1 11120 ! 20\nwy.20- |@tvae0s) \\a@tvieos, | tva20 a 전설 ㅁ 전설 ㅁ\nSA) A ae) ae + BAS 피 해 (%) 16.38%) + 명 속성 피 해 (%) 16.38%}\n기 Cantal Catal Cie imine iea 4,287 (+1052) 9 she 37141 4,287 (+1052)\n= ' \\ 추가 공격력 1465 (+350) \\ 추가 공격력 1,465 (+350)\nSee OOK INCE U 추가 방어력 1490 (+350) ' 추가 방어력 1490 (+350)\nea 00 0008 eet 0 치명타 피 해 +3 8,083 (+1060) 직 치명타 피해 +3 8,083 (+1080)\n재 련 불가 재 련 불가\n=) @ SEN DEAS = a = -\nny ey oy ee 수 르 트 의 불꽃 수 르 트 의 불꽃\n000 비 0000 캐 -00400 캐 00406 ： 「 『 | | '\nWeen wet 22200 일, 세트 효과] [4 세 트 효과]\nny) ny 0 이내 0 기 eS MIE 3\n1V1204) |@lVv.1203) | Biv.120% Wwil20 [열화] 효과 적용 [ 멸 화 ] 효과 적용 ：\n더 NSk NE NS 변경 후 팝업 자동 닫기\nmy | | | ED | ; :\n",
+  "vYtRCpFtSOk_recherche_276.txt": "뼈 N\n\\ OME Bat ? @> 2844 공격력 님 치명타 확률 찔 치명타 피해 XK\n01 ^ \\ 장착 아티팩트 @ 선택 아티팩트 @\n. @ 수 르 트 의 불꽃 반지 . @ 수 르 트 의 불꽃 반지\n더 더 4 te 28 Gin 200\n.@ oe an -@ Be Tee) 장 비 점수 309 ® Vial) 장 비 점수 309 \"기\n@.120 「0000 미 15900 00 mes 전설 eed 전설\n대두 | AL A \\ 공 격 력 (%) WIA) \\ 공 격 력 (%) 27.75%\n사오 Ca a mi 추가 방어력 +1 추가 빙 1\n80009 101 IN ei 1 ERA 2,689 (+350) Wes 2,689 (+350)\n×, 추가 공격력 +2 3,642 (+305)) ×, 추가 공격력 +2 3,642 (+405)\nMa | AN 400 | A » 피 하 량 증가 2789 (+1039) » 피 해 량 증가 2789 (+1039)\n이기 See 인 * 치명타 피해 +1 4,398 (+1052 +s 치명타 피해 +1 4,398 (+1052:\n재 련 불가 재 련 불가\nWeg V9) 10 0 Sey - - - -\nAWOL. \\) (ES ew 4. AS EC) Sa 고 ee\n= ee ee any 르 트 의 [불꽃 르 트 의 불꽃\n} | 1 Gar | CO a Gy ; 2 | 11 Gr | Cr] 4, | 8 버\n| (le | (“| Ce [4 세 트 효과] [4 세 트 효과 ]\nin as | 기 는 0020] (SN as [ 멸 화 ] 효과 적용 ：\n나여 여운 대 es 변경 후 팝업 자동 닫기\new Ve Ve De\n",
+  "vYtRCpFtSOk_recherche_277.txt": "\\ OME Bat ? @> 2144 직 , 공격력 닐 치명타 확률 *y 치명타 피해 4\nR @ ^ 장착 아티팩트 @ 선택 아티팩트 @\nㆍ @ 수 르 트 의 불꽃 귀걸이 ㆍ 을 수 르 트 의 불꽃 귀걸이\n@ ㅎ @ @ 님 © ) 20, 장 비 점수 260 4s 20, 장 비 점수 260\n@120 80003 00294 케이 전설 ® 전설 ®\nBcc: me ae ce @ 추가 마력 1805 @ 추가 마력 1,305\n020) 20) 4 240 é Y 방어력 관통 +2 ye 관통 +2\n1800 02 81010 811: nm) | SBS 6,339 (+1026) 9 방어력 관통 + 6,339 (+1026)\n9 추가 체력 3108 (+700) © 추가 체력 3103 (+700)\nae me nS OC \\ 공 격 력 (%) +2 21.05% (+1.59%)} \\ 공 격 력 (%) +2 21.05% (+1.59%)}\n(6 4 i. Ki ×, 추가 공격력 | ×, 추가 공 i =\na4 a0, Atvaza 해 래 me aici 1386 (+345) 추가 공격력 1886 (+345))\nae un aa ai 재 련 불가 재 련 불가\nHi ^/ 0 i TSENSR TEE Sse\nhp AA he [4 세 트 효과 ] [4 세 트 효과 ]\n4100 「 rn Avago! 81072 [ 멸 화 ] 효과 적용 [ 멸 화 ] 효과 적용\n시 Wire 가 번 경 후 팝 업 자동 271%]\nPAA Aga AA | 024 : :\n",
+  "vYtRCpFtSOk_recherche_278.txt": "< #42 ee 6 2952 10,834,685 개 B\n‘ v ed <, 공격력 치명타 확률 니 치명타 피해\nAg\n' e ~ u 장착 아티팩트 @ 선택 아티팩트 b @\n~ @ 200 2020 ㅣ < @ +25d2ageo\nOe, Oe @ 가 iy ln)\n(RIA (NEE) ‘uo ecu, 0000. 200 aivi20% eivit0%, =\nf 주가 마력 1205. Aye? 39 마력 1305\n0 J hot Rea 방어력 관동 ae ON 89929 026) 70) ONDA 관동 +2 4 seapoaw\nmat 12, el. We Vv | A 88\n= |. Guadetns nog 테드 LI : &\n6 0 oo i” 2.05% BS), AY 29002 Me a a 0)\nein) | 4 yon) bial; 가 4 18000 ura. p49 tung veo | 005 abuse yee ee\nj 재 련 ' 붙 개 (60. ,\nI: ay at2 0 그거 geal + 2 이 뿔 그 \"기\n그 이은 coe aon, Mui tlre! Jo (afl uot,\n= -— Aye : 번 경 추 관 인 자존 ¥ |\nWSO = 시 부 스 특 2 1 | (26 ae yt Ea, & Bl 권장 전투력 100.000 , … ie\n6 자사주 COB @ sess aracarn ||\n",
+  "vYtRCpFtSOk_recherche_279.txt": "<2 & % 3128 10,834,685 8)\n세키\n¢ _ Oe Pad VW et Poke\nsh) ie : Cy, lus)\n\\ eis |@720~ Bieler Arie unis 0 oY, @ivi20% Maite\n+ ~, ｜ 이 Pics | gio\n6.1202 ee Ag Oe 000 4 120% @100208\na ef!) (6004 geared aur) Luu) aaa) zo ans\nkt) WY) Ar PvP 기\nans) [8.008 [0000001700 의 00001 00 의 \\ 0204 aiv120)\nes 자동 장착 자동 장착 자동 장착\n발라 ea 디 너 22 모 6 ag ae 100,000 Qa y ，\nih eae 점, ian. ㅣ 10000\n"
  }
 }
