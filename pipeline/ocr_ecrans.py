@@ -137,6 +137,24 @@ def detecter(texte):
     return None
 
 
+def points_plausibles(brut, langue, config=None):
+    """v17 : Points du HUD plausibles ? Entier lu `brut` (texte OCR). Rejet si : hors de [`gb.hud_points_min` ;
+    `gb.hud_points_max`] ; ou, dans une langue de `gb.hud_points_groupes` (ko, pt), nombre sans séparateurs de
+    milliers (l'OCR a perdu des groupes : ex. 10375790058 pour 10 375 790 058 xxx) ou groupes qui ne font pas 3 chiffres.
+    Retourne (ok, raison)."""
+    cfg = (config or {}).get("gb") or {}
+    brut = (brut or "").strip()
+    if not brut:
+        return False, "Points illisibles"
+    valeur = _entier(brut)
+    if not cfg.get("hud_points_min", 10**9) <= valeur <= cfg.get("hud_points_max", 10**14):
+        return False, f"Points hors plage ({valeur})"
+    if langue in cfg.get("hud_points_groupes", ["ko", "pt"]):
+        if not re.fullmatch(r"\d{1,3}(?:[,. \u00a0\u202f]\d{3})+", brut):
+            return False, f"Points sans groupes de 3 chiffres ({brut})"
+    return True, None
+
+
 def chrono_hud(texte):
     """Chrono du HUD GB en secondes : `mm:ss` (≤ 3 min) ou `ss.cc` (sous 1 min, ex. `10.45`) ; None si illisible.
     Les grands nombres (Points) sont retirés d'abord."""
@@ -162,7 +180,12 @@ def lire_gb_combat(texte, config=None):
     if lib and lib[2]:
         pre = r"[xX×]\s*" if lib[4] else ""
         rc = re.search(rf"(?:{lib[2]})\W{{0,6}}{pre}(\d{{1,3}})(?!\d)", bas, re.IGNORECASE)
-    return {"points": _entier(pts.group(1)) if pts else None, "rage_count": int(rc.group(1)) if rc else None,
+    points, rejet = (_entier(pts.group(1)) if pts else None), None
+    if pts:
+        ok_p, rejet = points_plausibles(pts.group(1), langue, config)
+        if not ok_p:
+            points = None
+    return {"points": points, "points_rejet": rejet, "rage_count": int(rc.group(1)) if rc else None,
             "chrono": chrono_hud(t), "stage": None, "langue": langue, "rage_optionnel": bool(lib and lib[5])}
 
 
@@ -299,7 +322,11 @@ def _appliquer_zones_hud(ecran, zones, config):
         ecran["chrono"] = ch
     m = re.search(r"\d+(?:[,.]\d{3})+|\d+", zones.get("hud_points") or "")
     if m and ecran.get("points") is None:
-        ecran["points"] = _entier(m.group(0))
+        ok_p, rejet = points_plausibles(m.group(0), ecran.get("langue"), config)
+        if ok_p:
+            ecran["points"] = _entier(m.group(0))
+        else:
+            ecran["points_rejet"] = rejet
     rc = _entier_court(zones.get("hud_rage"))
     if rc is not None and ecran.get("rage_count") is None:
         ecran["rage_count"] = rc
@@ -613,20 +640,24 @@ def fusionner_results(lectures, config=None):
         lec = {**base, "stage": retenu.get("stage"), "damage": final, "score": rc, "detail": d, "notes": notes,
                "exact": False, "confidence": "a_verifier"}
         if not conflits:
-            if d["hunter_ranks_lus"] == 6:                     # somme Player's Score + 6 Hunter Rank = Final Score
+            ok = False
+            if d["hunter_ranks_lus"] == 6 and d["player_score"] is not None:   # somme Player's Score + 6 Hunter Rank = Final Score
                 ok, pb = ecrans.controle_gb_results(d["player_score"], rangs, final, d.get("successor_score"),
                                                     d["successeur_present"])
                 if ok:
                     lec.update(exact=True, confidence="sur")
-                else:
-                    lec["notes"] += [f"contrôle GB : {p}" for p in pb]
-            else:                                              # contrôle de remplacement (v13, durci)
-                ok, pb = ecrans.controle_results_sans_hunter_rank(lec, hud, config or {})
-                if ok:
+            if not ok:
+                # v17 : repli sur le contrôle sans Hunter Rank (somme fausse, Player's Score illisible, < 6 rangs)
+                complet = d["hunter_ranks_lus"] == 6
+                ok2, pb2 = ecrans.controle_results_sans_hunter_rank(lec, hud, config or {}, joueur_optionnel=complet)
+                if ok2:
                     lec.update(exact=True, confidence="sur")
                     lec["notes"].append("contrôle sans Hunter Rank")
+                elif complet and d["player_score"] is not None:
+                    lec["notes"] += [f"contrôle GB : {p}" for p in pb]
+                    lec["notes"] += [f"contrôle sans Hunter Rank : {p}" for p in pb2]
                 else:
-                    lec["notes"] += [f"contrôle sans Hunter Rank : {p}" for p in pb]
+                    lec["notes"] += [f"contrôle sans Hunter Rank : {p}" for p in pb2]
         sortie.append(lec)
     return sortie
 

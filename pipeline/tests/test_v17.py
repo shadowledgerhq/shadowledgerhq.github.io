@@ -1,0 +1,74 @@
+"""v17 : repli sur le contrôle sans Hunter Rank (6 rangs lus mais somme fausse / Player's Score illisible) ; plausibilité des Points HUD ko/pt."""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ocr_ecrans
+import pc
+from test_gb import meta as meta_gb
+from test_tri34 import CONFIG
+from test_v15 import HUD_KO_REEL, HUD_PT, RESULTS_KO, Z_KO, VIDE
+
+
+def _un(zones, ts=(231, 232), hud=None):
+    m = {**meta_gb("v"), "lang": "ko", "mode_guess": ["gb"]}
+    ls = [ocr_ecrans.lectures_depuis_texte(RESULTS_KO, m, CONFIG, "video-complete", t, zones)[0] for t in ts] + (hud or [])
+    (res,) = [l for l in pc.fusionner_ecrans([], "v", ls, CONFIG) if l["score"] is not None]
+    return res
+
+
+def test_repli_somme_fausse():
+    # un Hunter Rank mal lu mais toujours décroissant : somme ≠ Final, 2 images identiques -> repli, sûr
+    res = _un({**Z_KO, "rang_3": "302,730,549,500"})
+    assert res["confidence"] == "sur" and "contrôle sans Hunter Rank" in res["notes"] and res["detail"]["hunter_ranks_lus"] == 6
+    # rangs non décroissants : le repli échoue aussi, les deux contrôles sont notés
+    bad = _un({**Z_KO, "rang_3": "902,730,549,500"})
+    assert bad["confidence"] == "a_verifier" and any(n.startswith("contrôle GB") for n in bad["notes"])
+    assert "contrôle sans Hunter Rank : Hunter Rank lus non décroissants" in bad["notes"]
+    # une seule image : Rage Count lu une fois -> a_verifier
+    une = _un({**Z_KO, "rang_3": "302,730,549,500"}, ts=(231,))
+    assert une["confidence"] == "a_verifier"
+
+
+def test_repli_player_score_illisible():
+    # sans HUD : Player's Score illisible reste bloquant ; la somme ne peut pas être faite
+    sans = _un({**Z_KO, "joueur": ""})
+    assert sans["confidence"] == "a_verifier" and "contrôle sans Hunter Rank : Player's Score illisible" in sans["notes"]
+    # avec HUD confirmant le Final Score (Points ≤ Final ≤ ×1,02) : accepté
+    m = {**meta_gb("v"), "lang": "ko", "mode_guess": ["gb"]}
+    hud = ocr_ecrans.lectures_depuis_texte(HUD_KO_REEL.replace("10.375,798,058,160", "10,661,000,000,000"), m, CONFIG, "video-complete", 200,
+                                           {**VIDE, "hud_chrono": "3.18", "hud_points": "10,661,000,000,000", "hud_rage": "125"})
+    hud = ocr_ecrans.regrouper_hud(hud, CONFIG)
+    ok = _un({**Z_KO, "joueur": ""}, hud=hud)
+    assert ok["confidence"] == "sur" and "contrôle sans Hunter Rank" in ok["notes"]
+
+
+def test_points_plausibles():
+    p = ocr_ecrans.points_plausibles
+    assert p("10.375.798.058.160", "ko", CONFIG)[0] and p("7.884.144.289.064", "pt", CONFIG)[0]
+    ok, raison = p("10375790058", "ko", CONFIG)               # cas MJ2iz5TFmvM : groupes perdus
+    assert not ok and "groupes" in raison
+    assert not p("7288064", "pt", CONFIG)[0]                   # sous 1e9
+    assert not p("1,000,000,000,000,000", "ko", CONFIG)[0]     # au-dessus de 1e14
+    assert p("1593669209", "en", CONFIG)[0]                    # anglais : non groupé accepté
+    assert not p("10,37,579,0058", "ko", CONFIG)[0]            # groupes ≠ 3 chiffres
+
+
+def test_hud_points_rejetes_ko_pt():
+    m = {**meta_gb("mj"), "mode_guess": ["gb"]}
+    lu = ocr_ecrans.lire_gb_combat(HUD_PT.replace("7.884.144.289.064", "10375790058"), CONFIG)       # groupes perdus
+    assert lu["langue"] == "pt" and lu["points"] is None and "groupes" in lu["points_rejet"]
+    assert ocr_ecrans.lire_gb_combat(HUD_PT, CONFIG)["points"] == 7884144289064
+    # zone du HUD coréen : Points sans groupes rejetés, jamais des dégâts provisoires
+    ecran = {"langue": "ko", "chrono": None}
+    ocr_ecrans._appliquer_zones_hud(ecran, {**VIDE, "hud_chrono": "3.18", "hud_points": "10375790058", "hud_rage": "125"}, CONFIG)
+    assert ecran.get("points") is None and "groupes" in ecran["points_rejet"] and ecran["chrono"] == 3.18
+    (l2,) = ocr_ecrans.lectures_depuis_texte(HUD_PT, m, CONFIG, "video-complete", 213)
+    assert l2["detail"]["hud_points"] == 7884144289064
+
+
+if __name__ == "__main__":
+    for nom, f in sorted(globals().items()):
+        if nom.startswith("test_"):
+            f()
+            print("ok", nom)

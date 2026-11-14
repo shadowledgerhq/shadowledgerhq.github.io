@@ -86,7 +86,7 @@ def lecture_gb_results(meta, ecran, config, source="video-complete"):
     return lec
 
 
-def controle_results_sans_hunter_rank(lec, hud, config):
+def controle_results_sans_hunter_rank(lec, hud, config, joueur_optionnel=False):
     """v12, durci v13 §3.1 : contrôle de remplacement quand les 6 `Hunter Rank` ne sont pas tous lus. Retourne
     (ok, problèmes). Toutes les conditions : (1) boss, `Final Score`, `Rage Count` et `Play Time` lus ; (2) `Rage Count`
     identique sur ≥ 2 images ; (3) `Final Score` dans [Points HUD ; Points × (1 + `gb.hud_tolerance`)] (HUD à chrono
@@ -113,7 +113,8 @@ def controle_results_sans_hunter_rank(lec, hud, config):
     joueur = d.get("player_score")
     if final is not None:
         if joueur is None:
-            pb.append("Player's Score illisible")
+            if not (joueur_optionnel and points is not None):   # v17 : repli à 6 rangs lus, Final Score confirmé par le HUD
+                pb.append("Player's Score illisible")
         elif joueur + (d.get("successor_score") or 0) + sum(rangs) >= final:
             pb.append("Player's Score + Hunter Rank lus ≥ Final Score")
     if any(a < b for a, b in zip(rangs, rangs[1:])):

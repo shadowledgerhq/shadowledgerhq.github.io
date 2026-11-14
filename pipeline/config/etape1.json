@@ -111,6 +111,8 @@
       "hud_rage": [0.17, 0.145, 0.06, 0.045]
     },
     "hud_points_min": 1000000000,
+    "hud_points_max": 100000000000000,
+    "hud_points_groupes": ["ko", "pt"],
     "zones_ocr": {"variantes": [{"echelle": 2, "seuil": null}, {"echelle": 2, "seuil": 140}, {"echelle": 3, "seuil": 140}]},
     "_zones_ocr": "Prétraitements essayés puis vote (essai sur images réelles du 14/11 : 15 lectures sur 15 justes, contre 12 sur 15 pour le meilleur prétraitement seul). tesseract : OMP_THREAD_LIMIT=1.",
     "zones_record": {
