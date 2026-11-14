@@ -120,7 +120,7 @@ def test_gb_meme_groupe_jamais_additionne_et_groupe_illisible():
     d = preparer([lec("a1", "UCA", "gb", 167, team=1, damage=17 * T), lec("a2", "UCA", "gb", 160, team=1, damage=16 * T)])
     calculer(W, d, CONFIG, HORLOGE)
     l = lire(d, "gb")[0]
-    assert l["score"]["total"] == 167 and l["rank"] is None and "une seule run trouvée" in l["notes"]
+    assert l["score"]["total"] == 167 and l["rank"] == 1 and "une seule run" in l["notes"]       # v16 : classée (même groupe jamais additionné)
     d = preparer([lec("b1", "UCB", "gb", 167, damage=17 * T), lec("b2", "UCB", "gb", 165, damage=15 * T)])
     calculer(W, d, CONFIG, HORLOGE)
     l = lire(d, "gb")[0]

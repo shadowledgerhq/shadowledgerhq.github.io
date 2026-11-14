@@ -153,11 +153,21 @@ def ligne_joueur(runs_j, cle, config):
     sures = [r for r in utiles if r["confidence"] == "sur"]
     choix, ok = choisir_runs(sures, mode) if sures else ([], False)
     nb_requis = 2 if mode in ("poc", "gb") else 1
-    if not (ok and len(choix) == nb_requis):
+    une_seule = False
+    if mode in ("poc", "gb") and len(choix) == 1:
+        # v16 (décision d'Alexis du 14/11) : une seule run `sur` est classée, total = cette run ; une 2e run (autre équipe /
+        # autre groupe) trouvée plus tard s'y ajoutera. Si une run provisoire d'une autre équipe existe déjà, le total est
+        # incertain : ligne `a_verifier` comme avant.
+        concurrentes = [r for r in utiles if r not in sures and (r["team"] is None or r["team"] != choix[0]["team"])]
+        une_seule = not concurrentes
+        ok = une_seule
+    if not (ok and (len(choix) == nb_requis or une_seule)):
         choix, _ = choisir_runs(utiles, mode)
         ok = False
     notes = []
-    if mode in ("poc", "gb") and len(choix) < 2:
+    if une_seule:
+        notes.append("une seule run")
+    elif mode in ("poc", "gb") and len(choix) < 2:
         notes.append("une seule run trouvée")
     if mode in ("poc", "gb") and len(choix) == 2 and not ok and any(r["team"] is None for r in choix):
         notes.append("équipe illisible" if mode == "poc" else "groupe illisible")

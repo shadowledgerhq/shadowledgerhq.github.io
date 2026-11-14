@@ -532,7 +532,7 @@ def test_v13_cas_lGDbzyIJcjY_de_bout_en_bout():
         huds = [x for x in d.lectures(SEM) if (x.get("detail") or {}).get("ecran") == "combat"]
         assert huds and all(x["score_source"] is None and x["score"] is None for x in huds)            # HUD : jamais une source de score
         ligne = lire_gb(d)
-        assert ligne["confidence"] == "a_verifier" and ligne["rank"] is None and "une seule run trouvée" in ligne["notes"]
+        assert ligne["confidence"] == "sur" and ligne["rank"] == 1 and "une seule run" in ligne["notes"]       # v16 : classée 19
         rd = ligne["runs_detail"][0]
         assert rd["damage"] == 1601097999 and rd["damage_exact"] is True and rd["hud_rage_count"] == 12 and "points_hud" not in rd
         assert ligne["score"]["runs"] == [19]
