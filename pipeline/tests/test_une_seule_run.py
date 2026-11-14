@@ -116,7 +116,7 @@ def test_publication_d_essai_sans_pull_ni_conflit():
         git(w, "add", ".")
         git(w, "commit", "-qm", "i")
         git(w, "push", "-q", "origin", "main")
-        git(tmp, "clone", "-q", "r.git", "w2")
+        git(tmp, "clone", "-q", "-b", "main", "r.git", "w2")
         w2 = tmp / "w2"
         for k, v in (("user.email", "a@b"), ("user.name", "t")):
             git(w2, "config", k, v)
