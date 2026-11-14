@@ -77,7 +77,7 @@ def test_challenge_et_numero_de_saison_jamais_un_score():
     m = {"video_id": "v", "channel_id": "UC", "channel_title": "", "title": t,
          "published_at": "2026-11-12T01:30:00Z", "lang": "en", "mode_guess": ["bot"]}
     lec, _ = lectures_texte(m, [("titre", t)], CONFIG)
-    assert lec[0]["bot_season_week"] == "S20-4" and lec[0]["regles"] == 10
+    assert lec[0]["bot_season_week"] == "S20-4" and lec[0]["regles"] == CONFIG["tri1_version"]
     r = [{**lec[0], "notes": list(lec[0]["notes"]) + ["challenge ? (mode supprimé)"], "confidence": "sur"}]
     g, _, _ = controler_semaine_bot(r, W, CONFIG)
     assert g[0]["confidence"] == "a_verifier"

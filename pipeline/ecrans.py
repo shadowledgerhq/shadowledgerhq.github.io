@@ -59,50 +59,58 @@ def controle_gb_results(player_score, hunter_ranks, final_score):
 
 
 def lecture_gb_results(meta, ecran, config, source="video-complete"):
-    """Écran Results GB. Sans `Rage Count` lu : lecture PARTIELLE (`score: None`, `detail.ecran: results_partiel`),
-    jamais classée ; `ocr_ecrans.fusionner_results` en reprend le boss, `Player's Score` et `Play Time` manquants
-    sur la meilleure image de l'écran (l'écran s'anime : toutes les informations ne sont pas visibles ensemble)."""
+    """Écran Results GB (une image). Sans `Rage Count` lu : lecture PARTIELLE (`score: None`,
+    `detail.ecran: results_partiel`), jamais classée par elle-même. Les lectures d'une même animation sont
+    fusionnées champ par champ par `ocr_ecrans.fusionner_results` (qui contrôle aussi la run)."""
     partielle = ecran.get("rage_count") is None
-    ranks = [r for r in (ecran.get("hunter_ranks") or []) if r is not None]
-    ok, pb = controle_gb_results(ecran.get("player_score"), ecran.get("hunter_ranks"), ecran.get("final_score"))
+    rangs = list(ecran.get("hunter_ranks") or [None] * 6)
+    rangs = (rangs + [None] * 6)[:6]
+    ok, pb = controle_gb_results(ecran.get("player_score"), rangs, ecran.get("final_score"))
     lec = lecture_vide(meta, "gb")
     lec["notes"] += notes_alerte_reset(meta, config)
-    completude = sum(x is not None for x in (ecran.get("stage"), ecran.get("player_score"), ecran.get("final_score"),
-                                             ecran.get("play_time"))) + 1 + len(ranks)   # +1 : Rage Count (lu)
-    lec.update(score=ecran["rage_count"], damage=ecran.get("final_score"), score_source=source, exact=ok,
-               confidence="sur" if ok else "a_verifier", stage=ecran.get("stage"), t=ecran.get("t"), team=None,
+    lec["notes"] += ecran.get("notes_extra", [])
+    lec.update(score=ecran.get("rage_count"), damage=ecran.get("final_score"), score_source=source, exact=ok and not partielle,
+               confidence="sur" if ok and not partielle else "a_verifier", stage=ecran.get("stage"), t=ecran.get("t"), team=None,
                detail={"damage_exact": True, "play_time": ecran.get("play_time"),
                        "new_record": bool(ecran.get("new_record")), "player_score": ecran.get("player_score"),
-                       "hunter_ranks_lus": len(ranks), "completude": completude, "lectures_identiques": 1})
+                       "hunter_ranks": rangs, "hunter_ranks_lus": sum(r is not None for r in rangs), "n_images": 1})
     if partielle:
-        lec.update(exact=False, confidence="a_verifier")
         lec["detail"]["ecran"] = "results_partiel"
-        return lec
-    lec["notes"] += [f"contrôle GB : {p}" for p in pb]
+    elif not ok:
+        lec["notes"] += [f"contrôle GB : {p}" for p in pb]
     return lec
 
 
-def controle_results_sans_hunter_rank(lec, hud, config, identiques):
-    """v12 §3.1 : contrôle de remplacement quand les 6 `Hunter Rank` ne sont pas lisibles. Retourne (ok, problèmes).
-    Conditions : écran Results reconnu avec boss, `Final Score`, `Rage Count` et `Play Time` lus ; `Player's Score` <
-    `Final Score` ; avec un HUD de la même run (chrono ≤ 5 s) : dernier `Points` ≤ `Final Score` ≤ `Points` ×
-    (1 + `gb.hud_tolerance`) ; sans HUD : mêmes `Final Score` et `Rage Count` sur ≥ 2 images."""
+def controle_results_sans_hunter_rank(lec, hud, config):
+    """v12, durci v13 §3.1 : contrôle de remplacement quand les 6 `Hunter Rank` ne sont pas tous lus. Retourne
+    (ok, problèmes). Toutes les conditions : (1) boss, `Final Score`, `Rage Count` et `Play Time` lus ; (2) `Rage Count`
+    identique sur ≥ 2 images ; (3) `Final Score` dans [Points HUD ; Points × (1 + `gb.hud_tolerance`)] (HUD à chrono
+    ≤ 5 s) ou, sans HUD, identique sur ≥ 2 images ; (4) `Player's Score` + `Hunter Rank` lus < `Final Score`, et les
+    `Hunter Rank` lus décroissent du rang 1 au rang 6."""
     d, pb = lec.get("detail") or {}, []
     final = lec.get("damage")
     for nom, valeur in (("boss", lec.get("stage")), ("Final Score", final), ("Rage Count", lec.get("score")),
                         ("Play Time", d.get("play_time"))):
         if valeur is None:
             pb.append(f"{nom} illisible")
-    joueur = d.get("player_score")
-    if final is not None and (joueur is None or not joueur < final):
-        pb.append("Player's Score illisible ou ≥ Final Score")
+    if d.get("rc_images", 1) < 2:
+        pb.append("Rage Count lu sur une seule image")
     points = (hud or {}).get("damage")
     if points is not None and final is not None:
         tol = (config.get("gb") or {}).get("hud_tolerance", 0.02)
         if not points <= final <= points * (1 + tol):
             pb.append(f"Final Score {final} hors de [Points HUD {points} ; × {1 + tol:g}]")
-    elif points is None and identiques < 2:
-        pb.append("Final Score et Rage Count lus sur une seule image, sans HUD de fin de run")
+    elif d.get("final_images", 1) < 2:
+        pb.append("Final Score lu sur une seule image, sans HUD de fin de run")
+    rangs = [r for r in (d.get("hunter_ranks") or []) if r is not None]
+    joueur = d.get("player_score")
+    if final is not None:
+        if joueur is None:
+            pb.append("Player's Score illisible")
+        elif joueur + sum(rangs) >= final:
+            pb.append("Player's Score + Hunter Rank lus ≥ Final Score")
+    if any(a < b for a, b in zip(rangs, rangs[1:])):
+        pb.append("Hunter Rank lus non décroissants")
     return not pb, pb
 
 
@@ -115,7 +123,7 @@ def lecture_gb_combat(meta, ecran, config, source="video-complete"):
     if rc is None or chrono is None or not 0 <= rc <= 500:
         return None
     lec = lecture_vide(meta, "gb")
-    lec.update(score=None, score_source="hud", exact=False, confidence="a_verifier", stage=ecran.get("stage"),
+    lec.update(score=None, score_source=None, exact=False, confidence="a_verifier", stage=ecran.get("stage"),
                t=ecran.get("t"), team=None,
                detail={"ecran": "combat", "hud_points": ecran.get("points"), "chrono_hud": chrono,
                        "hud_rage_count": rc})

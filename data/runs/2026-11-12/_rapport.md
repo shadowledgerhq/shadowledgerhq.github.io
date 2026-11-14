@@ -1,4 +1,4 @@
-# Rapport — semaine 2026-11-12 — passage relire — 2026-11-14 13:36 (Paris)
+# Rapport — semaine 2026-11-12 — passage relire — 2026-11-14 14:15 (Paris)
 
 - Semaine : 39 en cours (dont 39 pour le PC), 0 terminée(s), 4 rejetée(s)
 - Classements : bot 8, gb 2, poc 1
@@ -25,5 +25,5 @@
 - rien
 
 ## Erreurs et alertes
-- tri 1 relu : 0 vidéo(s) modifiée(s) sur 39
+- tri 1 relu : 11 vidéo(s) modifiée(s) sur 39
 - 1 lecture(s) de description non relue(s) (YOUTUBE_API_KEY absente) : relancer avec la clé ou attendre le prochain passage daily

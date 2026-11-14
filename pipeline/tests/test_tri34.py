@@ -126,12 +126,16 @@ class OutilsImages:
     zones = {}      # {(vidéo, t): {"boss": texte, "joueur": texte}} : texte lu dans les recadrages
 
     def recadrer(self, png, zone, echelle=3):
-        return f"{png}#{'boss' if zone[0] < 0.1 else 'joueur'}"
+        nom = next(n for n, z in CONFIG["gb"]["zones"].items() if list(z) == list(zone))
+        return f"{png}#{nom}"
+
+    def dimensions(self, png):
+        return (1280, 720)
 
     def empreinte(self, png):
         return png
 
-    def ocr(self, png, langues=None, psm=6, timeout=120):
+    def ocr(self, png, langues=None, psm=6, timeout=120, extra=None):
         self.appels.append(("ocr", psm, langues))
         if "#" in png:
             base, zone = png.split("#")
@@ -292,7 +296,7 @@ def test_v12_hud_information_seulement():
     assert ocr_ecrans.detecter(HUD_228) == "gb_combat" and ocr_ecrans.detecter(RESULTS_GB) == "gb_results"
     assert ocr_ecrans.detecter(RESULTS_252) == "gb_results"          # sans le mot « Results » : Final Score + bandeau suffisent
     (l,) = ocr_ecrans.lectures_depuis_texte(HUD_228, _m(), CONFIG, "debut-fin", 228)
-    assert l["score"] is None and l["score_source"] == "hud" and l["confidence"] == "a_verifier" and l["t"] == 228   # jamais un RC
+    assert l["score"] is None and l["score_source"] is None and l["confidence"] == "a_verifier" and l["t"] == 228 and l["regles"] == CONFIG["tri1_version"]   # jamais un RC
     assert l["detail"]["hud_points"] == 1540584556 and l["detail"]["chrono_hud"] == 10.45 and l["detail"]["hud_rage_count"] == 12
     assert ocr_ecrans.lectures_depuis_texte(HUD_50, _m(), CONFIG, "video-complete", 50)[0]["detail"]["hud_rage_count"] == 6   # « Rage Coun »
     assert ocr_ecrans.lectures_depuis_texte(HUD_130, _m(), CONFIG, "video-complete", 130) == []    # Boss Rage Count illisible (xd)
@@ -323,41 +327,132 @@ def _hud(t, texte=HUD_238):
     return ocr_ecrans.lectures_depuis_texte(texte, _m(), CONFIG, "debut-fin", t)
 
 
-def test_v12_results_controle_sans_hunter_rank():
-    (r,) = ocr_ecrans.lectures_depuis_texte(RESULTS_252, _m(), CONFIG, "debut-fin", 252)
-    assert r["score"] == 19 and r["damage"] == 1601097999 and r["detail"]["player_score"] == 89008   # valeur lue (OCR bruité)
-    # image 252 seule : boss illisible, pas de HUD ni de 2e image -> a_verifier
-    out = pc.fusionner_ecrans([], "lGDbzyIJcjY", [r], CONFIG)
-    assert out[0]["confidence"] == "a_verifier" and any("boss illisible" in n for n in out[0]["notes"])
-    # + image 253 plus complète (boss, Player's Score) + HUD 238 (chrono 1.00, Points 1 593 669 209) : sûr
-    (r3,) = ocr_ecrans.lectures_depuis_texte(RESULTS_253, _m(), CONFIG, "debut-fin", 253)
-    out = pc.fusionner_ecrans([], "lGDbzyIJcjY", [r, r3] + _hud(238), CONFIG)
-    (res,) = [l for l in out if l["score"] is not None]
-    assert res["t"] == 253 and res["score"] == 19 and res["damage"] == 1601097999 and res["exact"] is True
-    assert res["confidence"] == "sur" and "contrôle sans Hunter Rank" in res["notes"] and res["detail"]["hud_rage_count"] == 12
-    assert res["detail"]["lectures_identiques"] == 2 and res["stage"] == "Giant Statue"
-    # Final Score hors de [Points ; Points × 1,02] -> a_verifier
-    hors = {**r3, "damage": 1_700_000_000}
-    out = pc.fusionner_ecrans([], "lGDbzyIJcjY", [hors] + _hud(238), CONFIG)
-    assert [l for l in out if l["score"] is not None][0]["confidence"] == "a_verifier"
-    # sans HUD : 2 images identiques suffisent
-    out = pc.fusionner_ecrans([], "lGDbzyIJcjY", [r, r3], CONFIG)
-    assert [l for l in out if l["score"] is not None][0]["confidence"] == "sur"
-    # Player's Score ≥ Final Score -> a_verifier
-    gros = {**r3, "detail": {**r3["detail"], "player_score": 2_000_000_000}}
-    assert [l for l in pc.fusionner_ecrans([], "lGDbzyIJcjY", [gros, {**gros, "t": 254}], CONFIG) if l["score"] is not None][0]["confidence"] == "a_verifier"
-    # avec les 6 Hunter Rank : contrôle habituel, pas la note de remplacement
-    ok = ocr_ecrans.lectures_depuis_texte(RESULTS_GB, _m(), CONFIG, "debut-fin", 245)[0]
-    assert ok["confidence"] == "sur" and "contrôle sans Hunter Rank" not in ok["notes"]
-
-
 RESULTS_252_EXT = "| OT Na. a 7 Z\nYour points have been registered.\na 6 2 ~\n\nX\n"
 RESULTS_253_REEL = "2\nWw\nRage Rewards\nx ¢.\n\\ ：\n; 58,465,656\nTap the screen to continue.\nNew Record Achic\n"
+VIDE = {"format_ok": True}
+Z_252 = {**VIDE, "boss": "Giant Statue", "joueur": "313,099,049", "final": "1,601,097,999", "rage": "19", "temps": "03:00"}
+Z_253 = {**VIDE, "boss": "Giant Statue", "joueur": "313,099,049", "rang_4": "62,925,780", "rang_5": "58,465,656",
+         "rang_6": "22,280,102", "final": "1,601,097,999", "rage": "19", "temps": "03:00"}
 
 
-def test_v12_cas_lGDbzyIJcjY_de_bout_en_bout():
-    """Textes OCR réels du 14/11 : HUD à 228 s (10.45) et 238 s, Results à 252 s (valeurs, titre/boss illisibles) puis
-    images de l'animation sans valeurs lisibles. Boss et Player's Score lus par recadrage -> RC 19 sûr."""
+def _res(texte, t, zones=None):
+    return ocr_ecrans.lectures_depuis_texte(texte, _m(), CONFIG, "debut-fin", t, zones)[0]
+
+
+def _un_ecran(lectures):
+    out = [l for l in pc.fusionner_ecrans([], "lGDbzyIJcjY", lectures, CONFIG) if l["mode"] == "gb" and l["score"] is not None]
+    assert len(out) == 1
+    return out[0]
+
+
+def test_v13_cas_lGDbzyIJcjY_fusion_et_controle():
+    """Cas de la spec : RC 19 lu à 252 s et 253 s ; HUD 1 596 246 179 ≤ 1 601 097 999 ≤ 1 628 171 102 ; Hunter Rank 4-6 lus."""
+    hud = _hud(238, HUD_238.replace("1593,669,209", "1596,246,179"))
+    r252, r253 = _res(RESULTS_252, 252, Z_252), _res(RESULTS_253_REEL, 253, Z_253)
+    assert r253["score"] == 19 and r253["detail"]["new_record"] is True                       # bandeau « New Record Achieved! » à 253 s
+    res = _un_ecran([r252, r253] + hud)
+    d = res["detail"]
+    assert (res["score"], res["damage"], res["exact"], res["confidence"], res["stage"], res["t"]) == (19, 1601097999, True, "sur", "Giant Statue", 252)
+    assert d["new_record"] is True and d["hunter_ranks"] == [None, None, None, 62925780, 58465656, 22280102] and d["player_score"] == 313099049
+    assert d["rc_images"] == 2 and d["final_images"] == 2 and d["n_images"] == 2 and d["hud_rage_count"] == 12
+    assert "lecture fusionnée (2 images)" in res["notes"] and "contrôle sans Hunter Rank" in res["notes"]
+    assert 1596246179 <= 1601097999 <= 1628171102
+    # idempotent : refusionner la lecture fusionnée avec les images ne double pas les votes
+    again = _un_ecran([res, _res(RESULTS_253_REEL, 253, Z_253)] + hud)
+    assert again["detail"]["rc_images"] == 3 and again["confidence"] == "sur"
+
+
+def test_v13_controle_sans_hunter_rank_durci():
+    hud = _hud(238, HUD_238.replace("1593,669,209", "1596,246,179"))
+    r252, r253 = _res(RESULTS_252, 252, Z_252), _res(RESULTS_253_REEL, 253, Z_253)
+    # (2) Rage Count sur une seule image -> a_verifier
+    une = _un_ecran([r253] + hud)
+    assert une["confidence"] == "a_verifier" and "contrôle sans Hunter Rank : Rage Count lu sur une seule image" in une["notes"]
+    # (3) Final Score hors de [Points ; Points × 1,02] -> a_verifier
+    haut = _un_ecran([r252, r253] + _hud(238, HUD_238.replace("1593,669,209", "1500,000,000")))
+    assert haut["confidence"] == "a_verifier" and any("hors de [Points HUD" in n for n in haut["notes"])
+    # (3) sans HUD : Final Score identique sur 2 images ET (4) -> sûr
+    sans = _un_ecran([r252, r253])
+    assert sans["confidence"] == "sur" and sans["detail"]["final_images"] == 2
+    # (4) Hunter Rank non décroissants -> a_verifier
+    zc = {**Z_253, "rang_4": "22,280,102", "rang_6": "62,925,780"}
+    bad = _un_ecran([r252, _res(RESULTS_253_REEL, 253, zc)])
+    assert bad["confidence"] == "a_verifier" and "contrôle sans Hunter Rank : Hunter Rank lus non décroissants" in bad["notes"]
+    # (4) Player's Score + Hunter Rank ≥ Final Score -> a_verifier
+    zg = {**Z_253, "joueur": "1,600,000,000", "final": "1,601,097,999"}
+    gros = _un_ecran([_res(RESULTS_252, 252, {**Z_252, "joueur": "1,600,000,000"}), _res(RESULTS_253_REEL, 253, zg)])
+    assert gros["confidence"] == "a_verifier" and any("≥ Final Score" in n for n in gros["notes"])
+    # (1) boss illisible -> a_verifier
+    sb = _un_ecran([_res(RESULTS_252, 252, {**Z_252, "boss": ""}), _res(RESULTS_253_REEL, 253, {**Z_253, "boss": ""})])
+    assert sb["confidence"] == "a_verifier" and "contrôle sans Hunter Rank : boss illisible" in sb["notes"]
+    # les 6 Hunter Rank lus : somme habituelle (Player's Score + 6 Hunter Rank = Final Score)
+    ok = ocr_ecrans.lectures_depuis_texte(RESULTS_GB, _m(), CONFIG, "debut-fin", 245)[0]
+    assert ok["confidence"] == "sur" and "contrôle sans Hunter Rank" not in ok["notes"]
+    assert _un_ecran([ok])["confidence"] == "sur"
+
+
+def test_v13_conflit_de_lecture():
+    a = _res(RESULTS_253_REEL, 253, Z_253)
+    b = _res(RESULTS_253_REEL, 254, {**Z_253, "rage": "18"})
+    res = _un_ecran([a, b])
+    assert res["confidence"] == "a_verifier" and "conflit de lecture : rage_count" in res["notes"]
+    # la valeur la plus fréquente l'emporte (pas de conflit)
+    c = _res(RESULTS_253_REEL, 255, Z_253)
+    res = _un_ecran([a, b, c])
+    assert res["score"] == 19 and not any(n.startswith("conflit") for n in res["notes"]) and res["detail"]["rc_images"] == 2
+
+
+def test_v13_regroupement_des_images_d_un_ecran():
+    # plus de 15 s entre la première et la dernière image : deux écrans distincts
+    tard = _res(RESULTS_253_REEL, 270, {**Z_253, "rage": "18"})
+    out = pc.fusionner_ecrans([], "lGDbzyIJcjY", [_res(RESULTS_253_REEL, 252, Z_253), tard], CONFIG)
+    assert len([l for l in out if l["score"] is not None]) == 2
+    # un HUD de combat entre deux images : deux écrans distincts (deux runs)
+    hud = _hud(257)       # HUD à 257 s (chrono 1.00)
+    out = pc.fusionner_ecrans([], "lGDbzyIJcjY", [_res(RESULTS_253_REEL, 253, Z_253), _res(RESULTS_253_REEL, 260, {**Z_253, "rage": "18"})] + hud, CONFIG)
+    assert len([l for l in out if l["score"] is not None]) == 2
+    # écran vu sans Rage Count lisible : pas classé
+    assert pc.fusionner_ecrans([], "lGDbzyIJcjY", [_res(RESULTS_252_EXT, 252, VIDE)], CONFIG) == []
+
+
+def test_v13_zones_ecart_et_format():
+    # la zone prime sur l'image entière ; l'écart est noté
+    r = _res(RESULTS_252, 252, {**Z_252, "final": "1,601,097,998"})
+    assert r["damage"] == 1601097998 and "écart OCR zone/image : final_score" in r["notes"]
+    assert "écart OCR zone/image : player_score" in r["notes"] and r["detail"]["player_score"] == 313099049   # image entière : 89 008
+    # format non 16:9 : zones non appliquées
+    f = _res(RESULTS_252, 252, {"format_ok": False})
+    assert "format non standard" in f["notes"] and f["detail"]["player_score"] == 89008
+    # lecture des zones par pc : fractions, format
+    class O:
+        cfg = CONFIG["pc"]
+        appels = []
+
+        def __init__(self, taille):
+            self.taille = taille
+
+        def dimensions(self, png):
+            return self.taille
+
+        def recadrer(self, png, zone, echelle=3):
+            self.appels.append(zone)
+            assert all(0 <= v <= 1 for v in zone)                       # fractions, jamais des pixels
+            return png
+
+        def ocr(self, png, langues=None, psm=6, timeout=120, extra=None):
+            return "1"
+    o = O((1280, 720))
+    z = pc.lire_zones_results(o, "x.png", CONFIG)
+    assert z["format_ok"] and set(CONFIG["gb"]["zones"]) <= set(z) and len(o.appels) == len(CONFIG["gb"]["zones"])
+    assert {"boss", "joueur", "final", "rage", "temps", *[f"rang_{k}" for k in range(1, 7)]} == set(CONFIG["gb"]["zones"])
+    assert pc.lire_zones_results(O((1080, 1920)), "x.png", CONFIG) == {"format_ok": False}      # Short vertical
+    assert pc.lire_zones_results(O((1440, 1080)), "x.png", CONFIG) == {"format_ok": False}      # 4:3
+    assert pc.lire_zones_results(O((1920, 1080)), "x.png", CONFIG)["format_ok"]                 # 1080p 16:9
+
+
+def test_v13_cas_lGDbzyIJcjY_de_bout_en_bout():
+    """Textes OCR réels du 14/11 : HUD à 228 s et 238 s, Results à 252 s (valeurs, titre/boss illisibles), puis images de
+    l'animation sans valeurs lisibles ; les zones ciblées complètent. RC 19 sûr, new_record, ligne gb a_verifier."""
     config = charger_config()
     with __import__("tempfile").TemporaryDirectory() as tmp:
         d = monde(tmp)
@@ -366,29 +461,37 @@ def test_v12_cas_lGDbzyIJcjY_de_bout_en_bout():
         d.ecrire(f"runs/{SEM}/_videos.json", videos)
 
         class Faux(OutilsImages):
-            zones = {("a", 252): {"boss": "Giant Statue", "joueur": "313,099,049"}, ("a", 253): {"boss": "Giant Statue", "joueur": ""}}
+            zones = {("a", 252): Z_252, ("a", 253): Z_253}
 
             def images(self, chemin, segments, dossier, prefixe="f"):
                 self.appels.append(("img", self.cur, tuple(segments), prefixe))
                 return [(d_ + i, f"{self.cur}@{d_ + i}") for d_, n, p in segments for i in range(0, n, p)]
-        # la grille voit 252 s ; l'extension relit 252 et 253 (images différentes, sans valeurs)
-        class Deux(Faux):
-            def ocr(self, png, langues=None, psm=6, timeout=120):
+
+            def ocr(self, png, langues=None, psm=6, timeout=120, extra=None):
                 if "#" not in png and self.appels and self.appels[-1][0] == "img" and self.appels[-1][3] != "f":
-                    self.ext = True
+                    self.ext = True                                          # images de recherche de l'écran Results
                 if "#" not in png and getattr(self, "ext", False) and png in ("a@252", "a@253"):
                     return {"a@252": RESULTS_252_EXT, "a@253": RESULTS_253_REEL}[png]
+                if "#" in png:
+                    base, zone = png.split("#")
+                    vid, t = base.split("@")
+                    return self.zones.get((vid, int(t)), {}).get(zone, "")
                 return super().ocr(png, langues, psm, timeout)
-        o = Deux({"a": {228: HUD_228, 238: HUD_238, 252: RESULTS_252}})
+        HUD_FIN = HUD_238.replace("1593,669,209", "1596,246,179")
+        o = Faux({"a": {228: HUD_228, 238: HUD_FIN, 252: RESULTS_252}})
         lignes = []
         pc.lancer("daily", INSTANT, d, config, o, maximum=1, journal=lignes.append)
         assert [a[2] for a in o.appels if a[0] == "img" and a[3] != "f"] == [((252, 2, 1),)]
-        assert any("écran Results lu de 252 à 253 s" in l for l in lignes)
         lec = [l for l in d.lectures(SEM) if l["video_id"] == "a" and l["mode"] == "gb" and l.get("score") is not None]
         assert len(lec) == 1
         l = lec[0]
         assert (l["score"], l["damage"], l["exact"], l["confidence"], l["stage"]) == (19, 1601097999, True, "sur", "Giant Statue")
-        assert "contrôle sans Hunter Rank" in l["notes"] and l["detail"]["player_score"] == 313099049 and l["detail"]["hud_rage_count"] == 12
+        assert l["t"] == 252 and "contrôle sans Hunter Rank" in l["notes"] and l["detail"]["new_record"] is True
+        assert l["regles"] == config["tri1_version"] == 13
+        assert l["detail"]["hunter_ranks"][3:] == [62925780, 58465656, 22280102] and l["detail"]["player_score"] == 313099049
+        assert any(n.startswith("lecture fusionnée (") for n in l["notes"])
+        huds = [x for x in d.lectures(SEM) if (x.get("detail") or {}).get("ecran") == "combat"]
+        assert huds and all(x["score_source"] is None and x["score"] is None for x in huds)            # HUD : jamais une source de score
         ligne = lire_gb(d)
         assert ligne["confidence"] == "a_verifier" and ligne["rank"] is None and "une seule run trouvée" in ligne["notes"]
         rd = ligne["runs_detail"][0]
@@ -396,7 +499,7 @@ def test_v12_cas_lGDbzyIJcjY_de_bout_en_bout():
         assert ligne["score"]["runs"] == [19]
         assert d.processed()["a"]["pc"]["results_lus"] == [[252, 253]]
         # 2e passage : aucune relecture de l'écran Results
-        o2 = Deux({"a": {228: HUD_228, 238: HUD_238, 252: RESULTS_252}})
+        o2 = Faux({"a": {228: HUD_228, 238: HUD_FIN, 252: RESULTS_252}})
         pc.lancer("daily", INSTANT, d, config, o2, maximum=1)
         assert not [a for a in o2.appels if a[0] == "img" and a[3] != "f"]
 
@@ -408,8 +511,7 @@ def test_v12_boss_et_player_score_par_zone():
     assert ocr_ecrans._nombre_zone("313,099,049") == 313099049 and ocr_ecrans._nombre_zone("a.089.008") is None
     assert ocr_ecrans.detecter(RESULTS_252_EXT) == "gb_results_partiel" and ocr_ecrans.detecter(RESULTS_253_REEL) == "gb_results_partiel"
     (p,) = ocr_ecrans.lectures_depuis_texte(RESULTS_253_REEL, _m(), CONFIG, "debut-fin", 253)
-    assert p["score"] is None and p["detail"]["ecran"] == "results_partiel"
-    # sans lecture avec Rage Count : l'écran n'est pas classé
+    assert p["score"] is None and p["detail"]["ecran"] == "results_partiel"       # « Rage Rewards » / « Tap the screen » : jamais des valeurs
     assert pc.fusionner_ecrans([], "lGDbzyIJcjY", [p], CONFIG) == []
 
 
@@ -453,6 +555,23 @@ def test_refaire_une_video():
 def lire_gb(d):
     import json
     return json.loads((Path(d.data) / "runs" / SEM / "gb.json").read_text(encoding="utf-8"))[0]
+
+
+def test_dimensions_png_et_ocr_chiffres():
+    import struct
+    import subprocess
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmp:
+        f = Path(tmp) / "a.png"
+        f.write_bytes(b"\x89PNG\r\n\x1a\n" + struct.pack(">I", 13) + b"IHDR" + struct.pack(">II", 1280, 720) + b"\x08\x02\x00\x00\x00")
+        o = pc.Outils(CONFIG["pc"])
+        assert o.dimensions(f) == (1280, 720) and o.dimensions(Path(tmp) / "absent.png") is None
+        (Path(tmp) / "b.png").write_bytes(b"pas un png")
+        assert o.dimensions(Path(tmp) / "b.png") is None
+    cmds = []
+    o2 = pc.Outils(CONFIG["pc"], executer=lambda cmd, **kw: cmds.append(cmd) or subprocess.CompletedProcess(cmd, 0, stdout="19", stderr=""))
+    assert o2.ocr("z.png", "eng", 7, 40, ["-c", "tessedit_char_whitelist=0123456789,.:"]) == "19"
+    assert cmds[-1][-2:] == ["-c", "tessedit_char_whitelist=0123456789,.:"] and cmds[-1][cmds[-1].index("--psm") + 1] == "7"
 
 
 def test_commandes_des_outils():
