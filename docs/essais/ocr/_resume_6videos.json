@@ -1,8 +1,7 @@
 {
  "semaine": "2026-11-12",
  "alertes": [
-  "T5dR6iJAn-Y : images : yt-dlp code 1 : ime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one\nERROR: unable to download video data: HTTP Error 403: Forbidden",
-  "52 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
+  "51 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
  ],
  "lectures": [
   {
@@ -301,6 +300,261 @@
     "compteur animé",
     "contrôle sans Hunter Rank",
     "Hunter Rank incohérents ignorés (HUD)"
+   ]
+  },
+  {
+   "video_id": "T5dR6iJAn-Y",
+   "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+   "channel_title": "RaidenShadow",
+   "published_at": "2026-11-12T13:50:20Z",
+   "lang": "pt-BR",
+   "mode": "gb",
+   "regles": 17,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": null,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 213,
+   "stage": null,
+   "team": null,
+   "score": null,
+   "score_source": null,
+   "exact": false,
+   "confidence": "a_verifier",
+   "detail": {
+    "ecran": "combat",
+    "hud_points": null,
+    "chrono_hud": 0.8,
+    "separateur_perdu": false,
+    "hud_rage_count": 120,
+    "t_debut": 213,
+    "t_fin": 213,
+    "points_deduits": {
+     "t": 214,
+     "points": 7905911007261,
+     "separateur_perdu": true
+    }
+   },
+   "notes": [
+    "HUD : Boss Rage Count x120, chrono 0.8"
+   ]
+  },
+  {
+   "video_id": "T5dR6iJAn-Y",
+   "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+   "channel_title": "RaidenShadow",
+   "published_at": "2026-11-12T13:50:20Z",
+   "lang": "pt-BR",
+   "mode": "gb",
+   "regles": 17,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": null,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 214,
+   "stage": null,
+   "team": null,
+   "score": null,
+   "score_source": null,
+   "exact": false,
+   "confidence": "a_verifier",
+   "detail": {
+    "ecran": "combat_sans_chrono",
+    "hud_points": 7905911007261,
+    "hud_rage_count": null,
+    "separateur_perdu": true
+   },
+   "notes": []
+  },
+  {
+   "video_id": "T5dR6iJAn-Y",
+   "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+   "channel_title": "RaidenShadow",
+   "published_at": "2026-11-12T13:50:20Z",
+   "lang": "pt-BR",
+   "mode": "gb",
+   "regles": 17,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": 7907273299084,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 229,
+   "stage": "Estátua Gigante",
+   "team": null,
+   "score": 156,
+   "score_source": "debut-fin",
+   "exact": true,
+   "confidence": "sur",
+   "detail": {
+    "damage_exact": true,
+    "play_time": "03:00",
+    "new_record": false,
+    "player_score": null,
+    "hunter_ranks": [
+     2719877951535,
+     473844449049,
+     199639030058,
+     131808903549,
+     90867324225,
+     36903017574
+    ],
+    "hunter_ranks_lus": 6,
+    "n_images": 7,
+    "successor_score": null,
+    "successeur_present": false,
+    "votes": {
+     "stage": [
+      [
+       "Estátua Gigante",
+       7
+      ]
+     ],
+     "final_score": [
+      [
+       7907273299084,
+       7
+      ]
+     ],
+     "rage_count": [
+      [
+       156,
+       7
+      ]
+     ],
+     "play_time": [
+      [
+       "03:00",
+       7
+      ]
+     ],
+     "hunter_rank_1": [
+      [
+       2719877951595,
+       3
+      ],
+      [
+       2719877951535,
+       4
+      ]
+     ],
+     "hunter_rank_2": [
+      [
+       473844449049,
+       7
+      ]
+     ],
+     "hunter_rank_3": [
+      [
+       199699030058,
+       3
+      ],
+      [
+       199639030058,
+       4
+      ]
+     ],
+     "hunter_rank_4": [
+      [
+       131808903549,
+       7
+      ]
+     ],
+     "hunter_rank_5": [
+      [
+       90867324225,
+       7
+      ]
+     ],
+     "hunter_rank_6": [
+      [
+       96903017574,
+       2
+      ],
+      [
+       36903017574,
+       5
+      ]
+     ]
+    },
+    "rc_images": 7,
+    "final_images": 7,
+    "rc_t": {
+     "156": 229
+    },
+    "sequence": {
+     "rage_count": [
+      [
+       229,
+       156
+      ],
+      [
+       229,
+       156
+      ],
+      [
+       230,
+       156
+      ],
+      [
+       231,
+       156
+      ],
+      [
+       231,
+       156
+      ],
+      [
+       232,
+       156
+      ],
+      [
+       233,
+       156
+      ]
+     ],
+     "final_score": [
+      [
+       229,
+       7907273299084
+      ],
+      [
+       229,
+       7907273299084
+      ],
+      [
+       230,
+       7907273299084
+      ],
+      [
+       231,
+       7907273299084
+      ],
+      [
+       231,
+       7907273299084
+      ],
+      [
+       232,
+       7907273299084
+      ],
+      [
+       233,
+       7907273299084
+      ]
+     ]
+    },
+    "t_debut": 229,
+    "t_fin": 233,
+    "hud_rage_count": 120
+   },
+   "notes": [
+    "lecture fusionnée (7 images)",
+    "contrôle sans Hunter Rank",
+    "chrono HUD déduit (t=214)",
+    "séparateur perdu (OCR)"
    ]
   },
   {
@@ -1034,6 +1288,7 @@
      1920,
      1080
     ],
+    "hud_suite": [],
     "results_lus": [],
     "tri3": "fait",
     "tri4": "inutile"
@@ -1068,6 +1323,9 @@
      1920,
      1080
     ],
+    "hud_suite": [
+     214
+    ],
     "results_lus": [
      [
       230,
@@ -1084,12 +1342,12 @@
    "published_at": "2026-11-12T13:50:20Z",
    "first_seen": "2026-11-13",
    "updated_at": "2026-11-14",
-   "last_tri": 1,
-   "status": "en_cours",
+   "last_tri": 4,
+   "status": "termine",
    "modes": [
     "gb"
    ],
-   "pc_needed": true,
+   "pc_needed": false,
    "regles": 17,
    "pc": {
     "sous_titres": "absent",
@@ -1102,7 +1360,22 @@
      480,
      720,
      1080
-    ]
+    ],
+    "image_taille": [
+     1920,
+     1080
+    ],
+    "hud_suite": [
+     213
+    ],
+    "results_lus": [
+     [
+      229,
+      241
+     ]
+    ],
+    "tri3": "fait",
+    "tri4": "fait"
    }
   },
   "vYtRCpFtSOk": {
@@ -1134,6 +1407,7 @@
      1920,
      1080
     ],
+    "hud_suite": [],
     "results_lus": [
      [
       220,
@@ -1172,6 +1446,9 @@
     "image_taille": [
      1920,
      1080
+    ],
+    "hud_suite": [
+     200
     ],
     "results_lus": [
      [
@@ -1213,6 +1490,7 @@
      1920,
      1080
     ],
+    "hud_suite": [],
     "results_lus": [
      [
       20,
@@ -1335,10 +1613,39 @@
      720,
      1080
     ],
-    "image_lue_px": null,
-    "ecran_results_lu": false,
-    "hud": [],
-    "resultats": [],
+    "image_lue_px": [
+     1920,
+     1080
+    ],
+    "ecran_results_lu": true,
+    "hud": [
+     {
+      "t": 213,
+      "chrono": 0.8,
+      "points": null,
+      "boss_rage_count": 120
+     }
+    ],
+    "resultats": [
+     {
+      "t": 229,
+      "rage_count": 156,
+      "final_score": 7907273299084,
+      "stage": "Estátua Gigante",
+      "confidence": "sur",
+      "hunter_rank_lus": 6,
+      "rc_images": 7,
+      "final_images": 7,
+      "hud_points": null,
+      "ecart_hud_final_pct": null,
+      "notes": [
+       "lecture fusionnée (7 images)",
+       "contrôle sans Hunter Rank",
+       "chrono HUD déduit (t=214)",
+       "séparateur perdu (OCR)"
+      ]
+     }
+    ],
     "lectures_texte": []
    },
    "awb-GlVIa7Q": {
@@ -1514,21 +1821,21 @@
    {
     "channel": "RaidenShadow",
     "video_ids": [
-     "Oj_-5x6700s"
+     "T5dR6iJAn-Y"
     ],
-    "total": 137,
+    "total": 156,
     "runs": [
-     137
+     156
     ],
     "rank": 3,
     "confidence": "sur",
-    "notes": "lecture fusionnée (5 images); compteur animé; contrôle sans Hunter Rank; Hunter Rank incohérents ignorés (HUD); une seule run; boss non contrôlé",
+    "notes": "lecture fusionnée (7 images); contrôle sans Hunter Rank; chrono HUD déduit (t=214); séparateur perdu (OCR); groupes inconnus : 2e run non additionnée (137, Oj_-5x6700s); une seule run; boss non contrôlé",
     "runs_detail": [
      {
-      "video_id": "Oj_-5x6700s",
-      "t": 230,
+      "video_id": "T5dR6iJAn-Y",
+      "t": 229,
       "team": null,
-      "damage": 3096765357626,
+      "damage": 7907273299084,
       "exact": true,
       "score_source": "debut-fin"
      }
@@ -1641,6 +1948,8 @@
   "MJ2iz5TFmvM_recherche_279.txt",
   "MJ2iz5TFmvM_recherche_280.txt",
   "MJ2iz5TFmvM_recherche_281.txt",
+  "MJ2iz5TFmvM_suite_hud_201_gb_combat_incertain.txt",
+  "MJ2iz5TFmvM_suite_hud_202_gb_combat.txt",
   "MJ2iz5TFmvM_tri3_0.txt",
   "MJ2iz5TFmvM_tri3_2.txt",
   "MJ2iz5TFmvM_tri3_375.txt",
@@ -1677,6 +1986,8 @@
   "Oj_-5x6700s_recherche_239.txt",
   "Oj_-5x6700s_recherche_240.txt",
   "Oj_-5x6700s_recherche_241.txt",
+  "Oj_-5x6700s_suite_hud_215_gb_combat_incertain.txt",
+  "Oj_-5x6700s_suite_hud_216.txt",
   "Oj_-5x6700s_tri3_0.txt",
   "Oj_-5x6700s_tri3_2.txt",
   "Oj_-5x6700s_tri3_212_gb_combat_incertain.txt",
@@ -1698,6 +2009,40 @@
   "Oj_-5x6700s_tri3_6.txt",
   "Oj_-5x6700s_tri3_8.txt",
   "Oj_-5x6700s_tri4_210.txt",
+  "T5dR6iJAn-Y_recherche_229_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_230_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_231_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_232_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_233_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_recherche_234.txt",
+  "T5dR6iJAn-Y_recherche_235.txt",
+  "T5dR6iJAn-Y_recherche_236.txt",
+  "T5dR6iJAn-Y_recherche_237.txt",
+  "T5dR6iJAn-Y_recherche_238.txt",
+  "T5dR6iJAn-Y_recherche_239.txt",
+  "T5dR6iJAn-Y_recherche_240.txt",
+  "T5dR6iJAn-Y_recherche_241.txt",
+  "T5dR6iJAn-Y_suite_hud_214_gb_combat_incertain.txt",
+  "T5dR6iJAn-Y_suite_hud_215.txt",
+  "T5dR6iJAn-Y_tri3_0.txt",
+  "T5dR6iJAn-Y_tri3_2.txt",
+  "T5dR6iJAn-Y_tri3_213_gb_combat_incertain.txt",
+  "T5dR6iJAn-Y_tri3_215.txt",
+  "T5dR6iJAn-Y_tri3_219.txt",
+  "T5dR6iJAn-Y_tri3_221.txt",
+  "T5dR6iJAn-Y_tri3_223.txt",
+  "T5dR6iJAn-Y_tri3_225.txt",
+  "T5dR6iJAn-Y_tri3_227.txt",
+  "T5dR6iJAn-Y_tri3_229_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_tri3_231_gb_results_partiel.txt",
+  "T5dR6iJAn-Y_tri3_233.txt",
+  "T5dR6iJAn-Y_tri3_235.txt",
+  "T5dR6iJAn-Y_tri3_237.txt",
+  "T5dR6iJAn-Y_tri3_239.txt",
+  "T5dR6iJAn-Y_tri3_241.txt",
+  "T5dR6iJAn-Y_tri3_4.txt",
+  "T5dR6iJAn-Y_tri3_6.txt",
+  "T5dR6iJAn-Y_tri3_8.txt",
   "awb-GlVIa7Q_recherche_200_gb_combat_incertain.txt",
   "awb-GlVIa7Q_recherche_201_gb_combat.txt",
   "awb-GlVIa7Q_recherche_202_gb_combat_incertain.txt",
@@ -2173,6 +2518,19 @@
   "Oj_-5x6700s_recherche_239.txt": "—_ ”\n_ Like and Subscribe ‘\n“4 for more ideogs\n",
   "Oj_-5x6700s_recherche_240.txt": "—_ ”\n_ Like and Subscribe ‘\n«4 for more ideo\n",
   "Oj_-5x6700s_recherche_241.txt": "_ Like and Subscribe ‘\n~ ad more ess\n",
+  "T5dR6iJAn-Y_recherche_229_gb_results_partiel.txt": "No a uc 4\nEstatua Gigante\nZS\nBo di d\n| wai 2560528086 Recompensa de Furia ge\nRank do Cacgador . \"\nhe\n|\\F : } 70)) | 25200,\n|a> ees =\nS> Ng 90,867,324,225\na Toque na tela / Pressione um botao para continuar.\n6 5 796.303,017,574\nNovo Recorde Quebrado!\nPontuacao Final Numero de Furias G4\n; F 6 Bp\n7,907,273,299,084 156 Y\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_230_gb_results_partiel.txt": ". ad re) © Tempo de Progresso 3:00\neo\n_— : <>\nRontwacs cee Jose ws)\n| wai 5 4256992.828.096 Recompensa de Furia ge 2\nRank do Cacador ' y\n[@\n& Sal 70) _=25;200)\nL\n4 f\nS> Ng 90,867,324,225\n§ \") 96,903,017,574 Toque na tela / Pressione um botao para continuar.\nNovo Recorde Quebrado!\nPontuagao Final Numero de Furias fj}\nS DB\n7,507,273,2959,084 156\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_231_gb_results_partiel.txt": "RK a S Ul I C =] ofe) : © Tempo de Progresso 03:00\nE a Gigante Y}\n5 Tp\nPontuagao do Jogador\n; ony\nRank do Cacador ( ml : q b\na Xx\nes: :\n<dod 279877951535, - 2\n» SR” of\nAPL omsson, gx) 4\n< as\n® ee, 199.699.030.058 is\n6 SH 131808903549 %\nSW 90.087,324,225\n6 Ase903.01757%\n“Novo Recorde Quebrado!\nPontuagao Final NumerodeFurias Jy () GS J\n7.907,273,299,084 156 Y\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_232_gb_results_partiel.txt": "n = 5 Ul l ta efe © Tempo de Progresso 03:00\nE a Gigante : “\nos\nPontuacao do Jogador\n< - YY\nRank do Cacador i ( — i,’\n= = \\\nee 2T9sTI951535 |, = AI\nwoe),\n‘a 4) dé , 473i es y, § ¥ n2e))\n4 3\n® ee, 199699030058 &\n6 SH 131808903549 \\\n8 Wh 30.867,324,225\n6 A@ise903.0175%\n| Novo Recorde Quebrado!\nPontuagao Final NumerodeFurias Jy () GS J\n7.907,273,299,084 156 Y\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_233_gb_results_partiel.txt": "in ay S Ul if ; a ele © Tempo de Progresso 03:00\nPontuacao do Jogador\n— ,\nRank do Cacgador ( mal Oy q y\nir Lia S :\ny, 27193,877851535 y~ A\ni,\nAP mee, Ys, 3\n> > 199,639,030,058 4 —s\n& SF 131808,903,549 ‘\ns WH 30.867,324,225\n& Ne 903007574\n| Novo Recorde Quebrado!\nPontuagao Final Numero de Furias (2) ee\n7,907,273,299,084 156 Y Bl\nTentar de Novo Sair\n",
+  "T5dR6iJAn-Y_recherche_234.txt": "_ Like and Subscribe ‘\nv4 for more ideoss\n",
+  "T5dR6iJAn-Y_recherche_235.txt": "_ Like and Subscribe ‘\n4 for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_236.txt": "_ Like and Subscribe ‘\n4 for more dacs.\n",
+  "T5dR6iJAn-Y_recherche_237.txt": "_ Like and Subscribe ‘\n4 for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_238.txt": "_ Like and Subscribe ‘\n4 for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_239.txt": "_ Like and Subscribe ‘\noA ; for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_240.txt": "_ Like and Subscribe ‘\noA ; for more ideoes\n",
+  "T5dR6iJAn-Y_recherche_241.txt": "_ Like and Subscribe ‘\noA ; for more dace\n",
   "vYtRCpFtSOk_recherche_220.txt": ": | SKIP 려\ni 0 ㆍ lam fi\n= = ~ / 소 —*\n",
   "vYtRCpFtSOk_recherche_221.txt": "' SKIP >>!\ne 3\n5\n",
   "vYtRCpFtSOk_recherche_222.txt": "P ? é SKIP 려\n「 ; ： y\nan a4 U =~, %\n— _… ㅡ ~ 때 3 ~ , “e\n~\n=\n5\n",
