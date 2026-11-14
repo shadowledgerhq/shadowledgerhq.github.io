@@ -13,6 +13,10 @@ from semaine import parse_iso
 
 
 def degats(run):
+    """Dégâts pour le départage : jamais ceux du HUD (provisoires, v12) ; seuls `Final Score`, `Total Score` et les
+    dégâts lus dans un titre comptent."""
+    if (run.get("detail") or {}).get("damage_source") == "hud":
+        return 0
     return run.get("damage") or 0
 
 
@@ -104,3 +108,32 @@ def saison_precedente(time_left, publie, reset, marges=None):
         return None
     marge = timedelta(minutes=(marges or TOLERANCES_DEFAUT)[unite])
     return parse_iso(reset) - reste > parse_iso(publie) + marge
+
+
+def appliquer_hud(lectures):
+    """v12 : les dégâts provisoires du HUD (lectures sans score, `detail.ecran == "combat"`, `damage` = dernier `Points`
+    à chrono ≤ 5 s) sont attachés à la lecture de score de la même vidéo (titre, description, sous-titres) quand il n'y
+    en a qu'une, sans dégâts, et qu'aucun écran Results ni Personal Record n'est lu pour cette vidéo. Le
+    `Boss Rage Count` du HUD (`hud_rage_count`) est ajouté pour information. Retourne les lectures de score modifiées
+    (copies) ; les lectures du HUD ne sont jamais classées."""
+    huds = [l for l in lectures if l["mode"] == "gb" and (l.get("detail") or {}).get("ecran") == "combat"]
+    scores = [l for l in lectures if l.get("score") is not None]
+    sortie = []
+    for l in scores:
+        if l["mode"] != "gb":
+            sortie.append(l)
+            continue
+        meme = [h for h in huds if h["video_id"] == l["video_id"]]
+        ecran = [x for x in scores if x["video_id"] == l["video_id"] and x["mode"] == "gb"
+                 and x["score_source"] in ("debut-fin", "video-complete", "record")]
+        texte = [x for x in scores if x["video_id"] == l["video_id"] and x["mode"] == "gb" and x not in ecran]
+        if l["score_source"] in ("debut-fin", "video-complete", "record") or len(meme) != 1 or ecran or len(texte) != 1:
+            sortie.append(l)
+            continue
+        h, d = meme[0], dict(l.get("detail") or {})
+        d["hud_rage_count"] = h["detail"]["hud_rage_count"]
+        if l.get("damage") is None and h.get("damage") is not None:
+            l = {**l, "damage": h["damage"]}
+            d.update(damage_exact=False, damage_source="hud")
+        sortie.append({**l, "detail": d})
+    return sortie

@@ -17,7 +17,7 @@ from semaine import bornes, id_semaine, iso_paris, maintenant, parse_iso, semain
 
 UNITES = {"poc": "damage", "bot": "seconds", "gb": "rage_count", "hotm": "points"}
 CLES_DETAIL = {"poc": ("sjw", "successor", "hunters"), "hotm": ("clear", "proof_bonus", "proof_level"),
-               "gb": ("total_score", "total_rage_count", "challenge_count", "time_left", "points_hud")}
+               "gb": ("total_score", "total_rage_count", "challenge_count", "time_left", "hud_rage_count", "damage_source")}
 
 
 def cle_classement(lec, config):
@@ -284,7 +284,7 @@ def calculer(week, d=None, config=None, horloge=None):
     rejetes = d.tous_rejetes()
     runs = []
     modes_classes = config.get("modes_classement", ["poc", "bot", "hotm"])  # v3 : GB lu mais pas classé
-    for lec in d.lectures(week):
+    for lec in gb.appliquer_hud(d.lectures(week)):  # v12 : dégâts provisoires du HUD attachés aux lectures GB
         if lec["video_id"] in rejetes or lec.get("score") is None or lec["mode"] not in modes_classes:
             continue
         r = {**lec, "notes": list(lec.get("notes", []))}

@@ -61,32 +61,58 @@ def controle_gb_results(player_score, hunter_ranks, final_score):
 def lecture_gb_results(meta, ecran, config, source="video-complete"):
     if ecran.get("rage_count") is None:
         return None
+    ranks = [r for r in (ecran.get("hunter_ranks") or []) if r is not None]
     ok, pb = controle_gb_results(ecran.get("player_score"), ecran.get("hunter_ranks"), ecran.get("final_score"))
     lec = lecture_vide(meta, "gb")
     lec["notes"] += notes_alerte_reset(meta, config)
+    completude = sum(x is not None for x in (ecran.get("stage"), ecran.get("player_score"), ecran.get("final_score"),
+                                             ecran.get("play_time"))) + 1 + len(ranks)   # +1 : Rage Count (lu)
     lec.update(score=ecran["rage_count"], damage=ecran.get("final_score"), score_source=source, exact=ok,
                confidence="sur" if ok else "a_verifier", stage=ecran.get("stage"), t=ecran.get("t"), team=None,
                detail={"damage_exact": True, "play_time": ecran.get("play_time"),
-                       "new_record": bool(ecran.get("new_record"))})  # groupe inconnu : voir gb.rattacher_groupes
+                       "new_record": bool(ecran.get("new_record")), "player_score": ecran.get("player_score"),
+                       "hunter_ranks_lus": len(ranks), "completude": completude, "lectures_identiques": 1})
     lec["notes"] += [f"contrôle GB : {p}" for p in pb]
     return lec
 
 
+def controle_results_sans_hunter_rank(lec, hud, config, identiques):
+    """v12 §3.1 : contrôle de remplacement quand les 6 `Hunter Rank` ne sont pas lisibles. Retourne (ok, problèmes).
+    Conditions : écran Results reconnu avec boss, `Final Score`, `Rage Count` et `Play Time` lus ; `Player's Score` <
+    `Final Score` ; avec un HUD de la même run (chrono ≤ 5 s) : dernier `Points` ≤ `Final Score` ≤ `Points` ×
+    (1 + `gb.hud_tolerance`) ; sans HUD : mêmes `Final Score` et `Rage Count` sur ≥ 2 images."""
+    d, pb = lec.get("detail") or {}, []
+    final = lec.get("damage")
+    for nom, valeur in (("boss", lec.get("stage")), ("Final Score", final), ("Rage Count", lec.get("score")),
+                        ("Play Time", d.get("play_time"))):
+        if valeur is None:
+            pb.append(f"{nom} illisible")
+    joueur = d.get("player_score")
+    if final is not None and (joueur is None or not joueur < final):
+        pb.append("Player's Score illisible ou ≥ Final Score")
+    points = (hud or {}).get("damage")
+    if points is not None and final is not None:
+        tol = (config.get("gb") or {}).get("hud_tolerance", 0.02)
+        if not points <= final <= points * (1 + tol):
+            pb.append(f"Final Score {final} hors de [Points HUD {points} ; × {1 + tol:g}]")
+    elif points is None and identiques < 2:
+        pb.append("Final Score et Rage Count lus sur une seule image, sans HUD de fin de run")
+    return not pb, pb
+
+
 def lecture_gb_combat(meta, ecran, config, source="video-complete"):
-    """v11 §3.1 : HUD du combat GB (`Points` + `Boss Rage Count xN` + chrono sur la même image). Jamais `sur` :
-    RC provisoire (`a_verifier`). Une lecture sans les 3 éléments, ou au RC hors plage, est ignorée.
-    `Points` n'est gardé que pour information (`detail.points_hud`). Les lectures d'une même run sont regroupées
-    par `ocr_ecrans.regrouper_hud`."""
+    """v12 §3.1 : HUD du combat GB (`Points` + `Boss Rage Count xN` + chrono sur la même image). Le HUD n'est
+    JAMAIS un score : lecture sans score (`score: None`, ignorée par le classement), qui garde le `Boss Rage Count`
+    (information, `hud_rage_count`) et les `Points` (= `Final Score` en cours, hypothèse). Sans `Boss Rage Count` ni
+    chrono lisibles : ignorée. Les lectures d'une même run sont regroupées par `ocr_ecrans.regrouper_hud`."""
     rc, chrono = ecran.get("rage_count"), ecran.get("chrono")
-    mini, maxi = (config.get("plausible", {}).get("gb") or [1, 500])
-    if rc is None or chrono is None or not (mini <= rc <= maxi):
+    if rc is None or chrono is None or not 0 <= rc <= 500:
         return None
     lec = lecture_vide(meta, "gb")
-    lec["notes"] += notes_alerte_reset(meta, config)
-    lec.update(score=rc, score_source=source, exact=False, confidence="a_verifier", stage=ecran.get("stage"),
+    lec.update(score=None, score_source="hud", exact=False, confidence="a_verifier", stage=ecran.get("stage"),
                t=ecran.get("t"), team=None,
-               detail={"ecran": "combat", "points_hud": ecran.get("points"), "chrono_hud": chrono})
-    lec["notes"].append(f"score provisoire (hud) : RC {rc}, chrono {chrono}")
+               detail={"ecran": "combat", "hud_points": ecran.get("points"), "chrono_hud": chrono,
+                       "hud_rage_count": rc})
     return lec
 
 

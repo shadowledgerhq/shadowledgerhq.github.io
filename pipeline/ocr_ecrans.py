@@ -43,7 +43,7 @@ def detecter(texte):
     bas = t.lower()
     if "personal record" in bas and ("total rage count" in bas or "group 1" in bas):
         return "gb_record"
-    if "final score" in bas and "hunter rank" in bas:
+    if "final score" in bas and ("hunter rank" in bas or "your points have been registered" in bas):
         return "gb_results"
     if re.search(r"\bpoints\b", bas) and "boss rage count" in bas and chrono_hud(t) is not None:
         return "gb_combat"     # v11 : HUD pendant la run (jamais un écran de résultat)
@@ -72,7 +72,7 @@ def chrono_hud(texte):
 def lire_gb_combat(texte):
     """v11 : HUD du combat GB. Points (information), Boss Rage Count `xN`, chrono. Un élément illisible = None."""
     t = normaliser(texte)
-    pts = re.search(r"points\W{0,6}(\d[\d,. ]*\d)", t, re.IGNORECASE)
+    pts = re.search(r"points\W{0,6}(\d+(?:[,.]\d{3})+|\d+)", t, re.IGNORECASE)
     rc = re.search(r"boss\s*rage\s*count\W{0,6}[xX×]\s*(\d{1,3})(?!\d)", t, re.IGNORECASE)
     return {"points": _entier(pts.group(1)) if pts else None, "rage_count": int(rc.group(1)) if rc else None,
             "chrono": chrono_hud(t), "stage": None}
@@ -101,10 +101,17 @@ def _valeurs_sous_libelles(texte):
     return _entier(nombres[0]), int(nombres[-1]) if re.fullmatch(r"\d{1,3}", nombres[-1]) else None
 
 
+def _nombre_lignes_suivantes(libelle, texte, lignes=2):
+    """Valeur écrite sur l'une des `lignes` lignes qui suivent le libellé (mise en page de l'écran Results en animation)."""
+    m = re.search(libelle + r"[^\n]*\n((?:[^\n]*\n?){1,%d})" % lignes, texte, re.IGNORECASE)
+    n = re.search(r"\d{1,3}(?:[.,]\d{3})+|\d{4,}", m.group(1)) if m else None
+    return _entier(n.group(0)) if n else None
+
+
 def lire_gb_results(texte):
     final_sous, rc_sous = _valeurs_sous_libelles(texte)
     return {"stage": _ligne_apres(r"\bResults\b", texte),
-            "player_score": _nombre_apres(r"player'?s\s*score", texte),
+            "player_score": _nombre_apres(r"player'?s\s*score", texte) or _nombre_lignes_suivantes(r"player'?s\s*score", texte),
             "hunter_ranks": [_entier(x) for x in re.findall(r"hunter\s*rank\s*[1-6]" + _SEP + _ENT, texte, re.IGNORECASE)],
             "final_score": _nombre_apres(r"final\s*score", texte) or final_sous,
             "rage_count": _nombre_apres(r"rage\s*count", texte, r"(\d{1,3})(?!\d)") or rc_sous,
@@ -145,6 +152,8 @@ def lectures_depuis_texte(texte, meta, config, source, t=None):
     if type_ecran is None:
         return []
     ecran = {**LECTEURS[type_ecran](texte), "t": t}
+    if type_ecran == "gb_results":
+        ecran["stage"] = _boss_du_hud(texte, config) or ecran["stage"]     # v12 : nom normalisé si le boss est connu
     if type_ecran == "gb_combat":
         ecran["stage"] = _boss_du_hud(texte, config)
         l = ecrans.lecture_gb_combat(meta, ecran, config, source)
@@ -172,30 +181,73 @@ def _boss_du_hud(texte, config):
 
 
 def regrouper_hud(lectures, config=None):
-    """v11 : les lectures de combat (`detail.ecran == "combat"`) d'une vidéo sont regroupées par run (le chrono
-    repart à la hausse : > `gb.hud_nouvelle_run_s`, 20 s). Par run : la lecture au chrono le plus bas, avec le RC
-    le plus haut lu dans la run (le RC ne baisse jamais). `score_source: hud`, jamais `sur`. Idempotent : les
-    lectures `hud` déjà regroupées sont reprises comme lectures brutes."""
-    seuil = ((config or {}).get("gb") or {}).get("hud_nouvelle_run_s", 20)
-    hud = [l for l in lectures if (l.get("detail") or {}).get("ecran") == "combat"]
-    autres = [l for l in lectures if not (l.get("detail") or {}).get("ecran") == "combat"]
-    sortie = list(autres)
+    """v12 : les lectures de combat (`detail.ecran == "combat"`, sans score) d'une vidéo sont regroupées par run (le
+    chrono repart à la hausse : > `gb.hud_nouvelle_run_s`, 20 s). Par run, une lecture : chrono le plus bas,
+    `hud_rage_count` le plus haut (information), et `damage` = `Points` de la lecture au chrono le plus bas SI ce
+    chrono est ≤ `gb.hud_chrono_points_s` (5 s) : dégâts provisoires (`damage_exact: false`, `damage_source: hud`).
+    Jamais un RC. Idempotent : les lectures déjà regroupées sont reprises comme lectures brutes."""
+    cfg = (config or {}).get("gb") or {}
+    seuil, chrono_max = cfg.get("hud_nouvelle_run_s", 20), cfg.get("hud_chrono_points_s", 5)
+    est_hud = lambda l: (l.get("detail") or {}).get("ecran") == "combat"
+    hud = [l for l in lectures if est_hud(l)]
+    sortie = [l for l in lectures if not est_hud(l)]
     for vid in sorted({l["video_id"] for l in hud}):
         runs = []
         for l in sorted((x for x in hud if x["video_id"] == vid), key=lambda x: (x["t"] is None, x["t"] or 0)):
-            chrono = l["detail"]["chrono_hud"]
-            if runs and chrono > runs[-1][-1]["detail"]["chrono_hud"] + seuil:
-                runs.append([])
-            if not runs:
+            if not runs or l["detail"]["chrono_hud"] > runs[-1][-1]["detail"]["chrono_hud"] + seuil:
                 runs.append([])
             runs[-1].append(l)
         for run in runs:
             dernier = min(run, key=lambda x: x["detail"]["chrono_hud"])
-            rc = max(x["score"] for x in run)
-            fin = {**dernier, "score": rc, "score_source": "hud", "exact": False, "confidence": "a_verifier",
-                   "notes": [n for n in dernier["notes"] if not n.startswith("score provisoire (")] +
-                            [f"score provisoire (hud) : RC {rc}, chrono {dernier['detail']['chrono_hud']}"]}
-            sortie.append(fin)
+            d = {**dernier["detail"], "hud_rage_count": max(x["detail"]["hud_rage_count"] for x in run)}
+            points = d.get("hud_points") if d["chrono_hud"] <= chrono_max else None
+            if points is not None:
+                d.update(damage_exact=False, damage_source="hud")
+            sortie.append({**dernier, "damage": points, "detail": d,
+                           "notes": [f"HUD : Boss Rage Count x{d['hud_rage_count']}, chrono {d['chrono_hud']}"]})
+    return sortie
+
+
+def fusionner_results(lectures, config=None):
+    """v12 : toutes les lectures de l'écran Results d'une vidéo (images successives de l'animation) : regroupées en
+    écrans (images à moins de `gb.results_cluster_s` = 15 s l'une de l'autre), une lecture par écran : la plus complète
+    (`detail.completude`, puis la plus tardive). Contrôle sans Hunter Rank (ecrans.controle_results_sans_hunter_rank)
+    avec le HUD qui précède (≤ `gb.hud_results_fenetre_s`) ; `hud_rage_count` du HUD gardé pour information.
+    Idempotent (`detail.lectures_identiques` cumule les images concordantes)."""
+    cfg = (config or {}).get("gb") or {}
+    ecart, fenetre = cfg.get("results_cluster_s", 15), cfg.get("hud_results_fenetre_s", 60)
+    est_res = lambda l: (l["mode"] == "gb" and l["score_source"] in ("debut-fin", "video-complete")
+                         and (l.get("detail") or {}).get("ecran") != "combat")
+    resultats = sorted((l for l in lectures if est_res(l)), key=lambda l: (l["video_id"], l["t"] or 0))
+    autres = [l for l in lectures if not est_res(l)]
+    huds = [l for l in autres if (l.get("detail") or {}).get("ecran") == "combat"]
+    ecrans_res, courant = [], []
+    for l in resultats:
+        if courant and (l["video_id"] != courant[-1]["video_id"] or (l["t"] or 0) - (courant[-1]["t"] or 0) > ecart):
+            ecrans_res.append(courant)
+            courant = []
+        courant.append(l)
+    if courant:
+        ecrans_res.append(courant)
+    sortie = list(autres)
+    for groupe in ecrans_res:
+        best = max(groupe, key=lambda l: ((l.get("detail") or {}).get("completude", 0), l["t"] or 0))
+        cle = (best.get("damage"), best["score"])
+        identiques = sum((l.get("detail") or {}).get("lectures_identiques", 1) for l in groupe if (l.get("damage"), l["score"]) == cle)
+        hud = max((h for h in huds if h["video_id"] == best["video_id"] and h["t"] is not None and best["t"] is not None
+                   and 0 <= best["t"] - h["t"] <= fenetre), key=lambda h: h["t"], default=None)
+        d = {**best["detail"], "lectures_identiques": identiques}
+        if hud:
+            d["hud_rage_count"] = hud["detail"]["hud_rage_count"]
+        lec = {**best, "detail": d, "notes": [n for n in best["notes"] if not n.startswith("contrôle sans Hunter Rank :")]}
+        if d.get("hunter_ranks_lus", 0) < 6 and not lec["exact"]:   # Hunter Rank illisibles : contrôle de remplacement
+            ok, pb = ecrans.controle_results_sans_hunter_rank(lec, hud, config or {}, identiques)
+            if ok:
+                lec.update(exact=True, confidence="sur", notes=[n for n in lec["notes"] if not n.startswith("contrôle GB")]
+                           + ["contrôle sans Hunter Rank"])
+            else:
+                lec["notes"] += [f"contrôle sans Hunter Rank : {p}" for p in pb]
+        sortie.append(lec)
     return sortie
 
 

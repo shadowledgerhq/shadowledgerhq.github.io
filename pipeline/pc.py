@@ -247,18 +247,14 @@ def _est_results_gb(l):
 def fusionner_ecrans(lectures, vid, nouvelles, config=None):
     """Les lectures d'écran de la vidéo remplacent ses lectures de texte pour les mêmes modes (le score lu à
     l'écran vaut mieux que celui du titre) ; une même image lue plusieurs fois ne compte qu'une fois.
-    v11 : les lectures du HUD GB sont regroupées par run (`ocr_ecrans.regrouper_hud`), puis une lecture `hud` est
-    retirée dès qu'un écran `Results` la suit (≤ `gb.hud_results_fenetre_s`) ou qu'un `Personal Record` est lu."""
-    modes = {l["mode"] for l in nouvelles}
+    v12 : le HUD GB (lectures sans score) ne remplace rien ; ses lectures sont regroupées par run
+    (`ocr_ecrans.regrouper_hud`). Les lectures de l'écran Results sont regroupées en écrans, la plus complète est
+    gardée et contrôlée (`ocr_ecrans.fusionner_results`)."""
+    modes = {l["mode"] for l in nouvelles if l.get("score") is not None}
     reste = [l for l in lectures if not (l["video_id"] == vid and l["mode"] in modes and l["score_source"] in SOURCES_TEXTE)]
     ecran = [l for l in reste + nouvelles if l["video_id"] == vid and l["score_source"] in SOURCES_ECRAN]
     autres = [l for l in reste if not (l["video_id"] == vid and l["score_source"] in SOURCES_ECRAN)]
-    ecran = ocr_ecrans.regrouper_hud(ecran, config)
-    fenetre = ((config or {}).get("gb") or {}).get("hud_results_fenetre_s", 60)
-    resultats = [l for l in ecran if _est_results_gb(l)]
-    records = [l for l in ecran if l["mode"] == "gb" and l["score_source"] == "record"]
-    ecran = [l for l in ecran if not (l["score_source"] == "hud" and (
-        records or any(l["t"] is not None and r["t"] is not None and 0 <= r["t"] - l["t"] <= fenetre for r in resultats)))]
+    ecran = ocr_ecrans.fusionner_results(ocr_ecrans.regrouper_hud(ecran, config), config)
     return autres + ocr_ecrans.dedoublonner_lectures(ecran)
 
 
@@ -271,7 +267,7 @@ def suffisant(lectures, vid, modes):
 
 
 MARQUEURS_ECRAN = ("results", "phase 1", "play time", "rage count", "personal record", "final score", "hunter rank",
-                   "합산", "증명", "클리어", "이번", "플레이어 스코어", "계승자")
+                   "your points have been registered", "warning", "합산", "증명", "클리어", "이번", "플레이어 스코어", "계승자")
 
 
 def langues_ocr(meta, cfg):
@@ -321,25 +317,33 @@ def _garder(ocr_debug, vid, etiquette, t, texte, png):
         pass
 
 
-def chercher_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, journal, ocr_debug, source):
-    """v11 : après un chrono HUD ≤ 15 s à l'instant `t0`, lit les images de t0 à t0 + 30 s à 1 image/s jusqu'à
-    trouver l'écran `Results`. Retourne (lectures, nombre d'images lues)."""
-    cfg = config["pc"]["images"]
-    fenetre = min(config.get("gb", {}).get("recherche_results_s", 30), int(duree_s - t0))
+def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, journal, ocr_debug, source, cherche):
+    """v11-v12 : lit les images à 1 image/s à partir de `t0`. `cherche` : `t0` est un HUD de fin de run (chrono ≤ 15 s),
+    l'écran Results est cherché dans les `gb.recherche_results_s` (30) secondes ; sinon `t0` est une image déjà
+    reconnue comme Results. Une fois l'écran trouvé, TOUTES ses images sont lues jusqu'à la fin de la vidéo
+    (au plus `gb.results_fin_max_s` = 60 s après) : l'écran s'anime, la plus complète est gardée par
+    `ocr_ecrans.fusionner_results`. Retourne (lectures, nombre d'images, première image Results | None, dernier t lu)."""
+    cfg, gb_cfg = config["pc"]["images"], config.get("gb", {})
+    cherche_s, cap = gb_cfg.get("recherche_results_s", 30), gb_cfg.get("results_fin_max_s", 60)
+    fenetre = int(min(duree_s - t0, (cherche_s if cherche else 0) + cap))
     if fenetre <= 0:
-        return [], 0
-    st, n = {"candidates": 0, "lentes": 0}, 0
+        return [], 0, None, int(t0)
+    st, n, trouve, dernier, lectures = {"candidates": 0, "lentes": 0}, 0, None if cherche else t0, int(t0), []
     for t, png in outils.images(chemin, [(int(t0), fenetre, 1)], tmp, prefixe=f"r{int(t0)}_"):
-        n += 1
+        if (trouve is None and t > t0 + cherche_s) or (trouve is not None and t > trouve + cap):
+            Path(png).unlink(missing_ok=True)
+            break
+        n, dernier = n + 1, t
         texte = _ocr_image(outils, png, langs, cfg, st, complet=True)
         _garder(ocr_debug, vid, "recherche", t, texte, png)
-        trouvees = [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t) if _est_results_gb(l)]
-        Path(png).unlink(missing_ok=True)
-        if trouvees:
+        if trouve is None and ocr_ecrans.detecter(texte) == "gb_results":
+            trouve = t
             journal(f"  écran Results trouvé à {t} s")
-            return trouvees, n
-    journal(f"  écran Results non trouvé entre {int(t0)} et {int(t0) + fenetre} s")
-    return [], n
+        lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t) if _est_results_gb(l)]
+        Path(png).unlink(missing_ok=True)
+    if trouve is None:
+        journal(f"  écran Results non trouvé entre {int(t0)} et {dernier} s")
+    return lectures, n, trouve, dernier
 
 
 def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda m: None, ocr_debug=None,
@@ -365,7 +369,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                 if pc.get(f"tri{tri}") == "fait":
                     continue
                 source = "debut-fin" if tri == 3 else "video-complete"
-                nouvelles, st, complet, vus = [], {"images": 0, "doublons": 0, "candidates": 0, "lentes": 0}, True, {}
+                nouvelles, st, complet, vus, detectes = [], {"images": 0, "doublons": 0, "candidates": 0, "lentes": 0}, True, {}, []
                 t0 = horloge()
                 for t, png in outils.images(chemin, segments_tri(tri, minutes * 60, cfg), tmp):
                     if horloge() > fin:
@@ -379,19 +383,29 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                     else:
                         texte = vus[h] = _ocr_image(outils, png, langs, cfg, st, complet=(tri == 3 and cfg.get("tri3_ocr_complet", True)))
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
+                    if ocr_ecrans.detecter(texte) == "gb_results":
+                        detectes.append(t)
                     nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t)
                     Path(png).unlink(missing_ok=True)
                 lectures = fusionner_ecrans(lectures, vid, nouvelles, config)
-                # v11 : chrono HUD ≤ 15 s -> chercher l'écran Results qui suit (une seule recherche par instant)
-                deja = pc.setdefault("results_cherches", [])
-                for h in [l for l in lectures if l["video_id"] == vid and l["score_source"] == "hud"
-                          and l["detail"]["chrono_hud"] <= seuil_fin and l["t"] is not None and l["t"] not in deja]:
+                # v12 : écran Results lu jusqu'à la fin de la vidéo ; chrono HUD ≤ 15 s -> on cherche l'écran qui suit
+                lus = pc.setdefault("results_lus", [])            # [[début, fin]] déjà lus (aucune relecture au tri 4)
+                couvert = lambda t: any(a <= t <= b for a, b in lus)
+                res_t = detectes + [l["t"] for l in lectures if l["video_id"] == vid and _est_results_gb(l) and l["t"] is not None]
+                departs = [(t, False) for t in sorted(set(detectes))]
+                departs += [(h["t"], True) for h in lectures
+                            if h["video_id"] == vid and (h.get("detail") or {}).get("ecran") == "combat"
+                            and h["detail"]["chrono_hud"] <= seuil_fin and h["t"] is not None
+                            and not any(h["t"] <= r <= h["t"] + 90 for r in res_t)]
+                for t_dep, cherche in sorted(departs):
+                    if couvert(t_dep):
+                        continue
                     if horloge() > fin:
                         complet = False
                         break
-                    trouvees, n_img = chercher_results_gb(vid, meta, outils, config, chemin, tmp, h["t"], minutes * 60,
-                                                          langs, journal, ocr_debug, source)
-                    deja.append(h["t"])
+                    trouvees, n_img, _, dernier = lire_results_gb(vid, meta, outils, config, chemin, tmp, t_dep, minutes * 60,
+                                                                  langs, journal, ocr_debug, source, cherche)
+                    lus.append([t_dep, dernier])
                     st["images"] += n_img
                     lectures = fusionner_ecrans(lectures, vid, trouvees, config)
                     nouvelles += trouvees

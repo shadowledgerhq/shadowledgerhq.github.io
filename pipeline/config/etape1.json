@@ -68,6 +68,10 @@
     "chrono_fin_s": 15,
     "recherche_results_s": 30,
     "hud_results_fenetre_s": 60,
+    "hud_chrono_points_s": 5,
+    "hud_tolerance": 0.02,
+    "results_cluster_s": 15,
+    "results_fin_max_s": 60,
     "_doc": "SPEC §4.7 (v7) : marge sur le moment estimé de la capture du Personal Record, selon la plus petite unité de Time Left in Season : heures -> 60 min ; jours seulement -> 24 h ; minutes -> 1 min."
   },
   "tri1_version": 10,
