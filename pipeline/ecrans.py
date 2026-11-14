@@ -86,7 +86,7 @@ def controle_results_sans_hunter_rank(lec, hud, config):
     (ok, problèmes). Toutes les conditions : (1) boss, `Final Score`, `Rage Count` et `Play Time` lus ; (2) `Rage Count`
     identique sur ≥ 2 images ; (3) `Final Score` dans [Points HUD ; Points × (1 + `gb.hud_tolerance`)] (HUD à chrono
     ≤ 5 s) ou, sans HUD, identique sur ≥ 2 images ; (4) `Player's Score` + `Hunter Rank` lus < `Final Score`, et les
-    `Hunter Rank` lus décroissent du rang 1 au rang 6."""
+    `Hunter Rank` lus décroissent du rang 1 au rang 6 (v14 : sans HUD, 3 `Hunter Rank` lus au moins)."""
     d, pb = lec.get("detail") or {}, []
     final = lec.get("damage")
     for nom, valeur in (("boss", lec.get("stage")), ("Final Score", final), ("Rage Count", lec.get("score")),
@@ -103,6 +103,8 @@ def controle_results_sans_hunter_rank(lec, hud, config):
     elif d.get("final_images", 1) < 2:
         pb.append("Final Score lu sur une seule image, sans HUD de fin de run")
     rangs = [r for r in (d.get("hunter_ranks") or []) if r is not None]
+    if points is None and len(rangs) < 3:       # v14 : sans HUD, la condition 4 demande au moins 3 Hunter Rank lus
+        pb.append(f"{len(rangs)} Hunter Rank lu(s) (3 au moins sans HUD de fin de run)")
     joueur = d.get("player_score")
     if final is not None:
         if joueur is None:

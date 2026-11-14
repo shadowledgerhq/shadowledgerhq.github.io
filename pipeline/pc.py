@@ -130,6 +130,12 @@ class Outils:
             trouvees += [(debut + i * pas, f) for i, f in enumerate(sorted(Path(dossier).glob(f"{prefixe}{k}_*.png")))]
         return trouvees
 
+    def hauteurs(self, video_id):
+        """Hauteurs (en pixels) des formats vidéo proposés par YouTube (`yt-dlp -F`), triées ; [] si illisible."""
+        sortie = self._lancer([self.cfg["yt_dlp"], *self.cfg.get("yt_dlp_options", []), "-F",
+                               f"https://www.youtube.com/watch?v={video_id}"], 120)
+        return sorted({int(h) for _, h in re.findall(r"\b(\d{3,4})x(\d{3,4})\b", sortie)}, key=int)
+
     def reduire(self, png, largeur):
         """Copie réduite de l'image (largeur en pixels) pour le passage OCR rapide."""
         sortie = Path(png).with_name(Path(png).stem + "_p.png")
@@ -180,7 +186,13 @@ class Git:
         return r.stdout
 
     def tirer(self):
-        self._run("pull", "--rebase", "origin", "main")
+        try:
+            self._run("pull", "--rebase", "origin", "main")
+        except GitErreur as e:
+            if "overwritten" in str(e) or "unstaged" in str(e) or "uncommitted" in str(e):
+                raise GitErreur(f"{e}\nModifications locales dans data/ (essais avec --no-git ?) : lancer « git checkout -- data » "
+                                "puis relancer.") from e
+            raise
 
     def pousser_chemin(self, message, chemin):
         """Commit + push d'un seul chemin (ex. docs/essais/ocr), sans toucher au reste de l'arbre de travail."""
@@ -416,6 +428,14 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
     seuil_fin = config.get("gb", {}).get("chrono_fin_s", 15)
     with tempfile.TemporaryDirectory() as tmp:
         try:
+            if ocr_debug:    # diagnostic : résolutions proposées par YouTube (`yt-dlp -F`)
+                try:
+                    pc["hauteurs"] = outils.hauteurs(vid)
+                    journal(f"  formats disponibles : {', '.join(str(h) + 'p' for h in pc['hauteurs']) or 'inconnus'}")
+                except OutilAbsent:
+                    raise
+                except Exception as e:
+                    journal(f"  formats non lus : {e}")
             journal("  téléchargement…")
             chemin = outils.telecharger(vid, tmp)
             for tri in (3, 4):
@@ -429,6 +449,11 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         complet = False
                         break
                     st["images"] += 1
+                    if "image_taille" not in pc:
+                        taille = outils.dimensions(png)
+                        if taille:
+                            pc["image_taille"] = list(taille)
+                            journal(f"  image lue : {taille[0]}x{taille[1]}")
                     h = outils.empreinte(png)
                     if h in vus:
                         st["doublons"] += 1
@@ -662,42 +687,85 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     return {"week": week, "traitees": traitees, "alertes": alertes}
 
 
-def publier_essai(outils, source, destination, git=None, maximum=8, resume=None):
+def publier_essai(outils, source, destination, git=None, maximum=8, resume=None, nom_resume="_resume.json"):
     """Diagnostic : copie dans `destination` (docs/essais/ocr, versionné) les textes OCR de `source` (logs/ocr) et les
-    images de `maximum` fichiers, en JPEG réduit ; puis commit + push si `git`. Passent d'abord les écrans reconnus
-    (nom de fichier terminé par le type : `_gb_results`, `_gb_combat`…, 2 au plus pour le HUD, 4 pour les autres),
-    puis les textes les plus longs. Retourne les noms écrits."""
+    images de `maximum` fichiers PAR VIDÉO, en JPEG réduit ; puis commit + push si `git`. Passent d'abord les images
+    de recherche de l'écran Results, puis les écrans reconnus (nom de fichier terminé par le type : `_gb_results`,
+    `_gb_combat`…, 2 au plus pour le HUD, 4 pour les autres), puis les textes les plus longs. Retourne les noms écrits."""
     source, destination = Path(source), Path(destination)
     textes = sorted(source.glob("*.txt"), key=lambda f: -f.stat().st_size)
     types = {f: (re.search(r"_(gb_\w+|bot|hotm|poc)$", f.stem) or [None, None])[1] for f in textes}
-    choisis, par_type = [f for f in textes if "_recherche_" in f.stem][:4], {}   # images de l'écran Results : toujours
+    par_video = {}
     for f in textes:
-        t = types[f]
-        if f in choisis:
-            continue
-        if t and par_type.get(t, 0) < (2 if t == "gb_combat" else 4):
-            par_type[t] = par_type.get(t, 0) + 1
-            choisis.append(f)
-    choisis += [f for f in textes if f not in choisis]
+        m = re.match(r"(.+?)_(?:tri[34]|recherche)_", f.stem)
+        par_video.setdefault(m.group(1) if m else f.stem, []).append(f)
     destination.mkdir(parents=True, exist_ok=True)
     ecrits = []
-    if resume is not None:  # lectures et état de la vidéo après le passage (diagnostic)
-        (destination / "_resume.json").write_text(json.dumps({**resume, "fichiers_logs_ocr": sorted(f.name for f in source.glob("*.txt")),
-                                                           "textes_recherche": {f.name: f.read_text(encoding="utf-8", errors="replace")
-                                                                                for f in sorted(source.glob("*_recherche_*.txt"))}},
-                                                          ensure_ascii=False, indent=1), encoding="utf-8")
-        ecrits.append("_resume.json")
-    for f in choisis[:maximum]:
-        png = f.with_suffix(".png")
-        if png.exists():
-            jpg = destination / (f.stem + ".jpg")
-            outils._lancer([outils.cfg["images"]["ffmpeg"], "-v", "error", "-y", "-i", str(png), "-q:v", "4", str(jpg)], 60)
-            ecrits.append(jpg.name)
-        shutil.copyfile(f, destination / f.name)
-        ecrits.append(f.name)
+    if resume is not None:  # lectures et état des vidéos après le passage (diagnostic)
+        (destination / nom_resume).write_text(json.dumps({**resume, "fichiers_logs_ocr": sorted(f.name for f in source.glob("*.txt")),
+                                                          "textes_recherche": {f.name: f.read_text(encoding="utf-8", errors="replace")
+                                                                               for f in sorted(source.glob("*_recherche_*.txt"))}},
+                                                         ensure_ascii=False, indent=1), encoding="utf-8")
+        ecrits.append(nom_resume)
+    for fichiers in par_video.values():
+        choisis, par_type = [f for f in fichiers if "_recherche_" in f.stem][:4], {}   # images de l'écran Results : toujours
+        for f in fichiers:
+            t = types[f]
+            if f in choisis:
+                continue
+            if t and par_type.get(t, 0) < (2 if t == "gb_combat" else 4):
+                par_type[t] = par_type.get(t, 0) + 1
+                choisis.append(f)
+        choisis += [f for f in fichiers if f not in choisis]
+        for f in choisis[:maximum]:
+            png = f.with_suffix(".png")
+            if png.exists():
+                jpg = destination / (f.stem + ".jpg")
+                outils._lancer([outils.cfg["images"]["ffmpeg"], "-v", "error", "-y", "-i", str(png), "-q:v", "4", str(jpg)], 60)
+                ecrits.append(jpg.name)
+            shutil.copyfile(f, destination / f.name)
+            ecrits.append(f.name)
     if git and ecrits:
         git.pousser_chemin("essai: images et textes OCR du PC", str(destination))
     return ecrits
+
+
+def bilan_essai(d, week, ids, config):
+    """Diagnostic des vidéos de test GB : par vidéo, résolution (formats proposés, image lue), écrans Results lus (RC,
+    Final Score, contrôle, notes), HUD de fin de run et écart `Points` HUD / `Final Score` en %, puis les lignes
+    `gb.json` des joueurs concernés (somme des runs)."""
+    lectures, processed, videos = d.lectures(week), d.processed(), d.videos(week)
+    fenetre = (config.get("gb") or {}).get("hud_results_fenetre_s", 60)
+    bilan = {}
+    for v in sorted(ids):
+        huds = [l for l in lectures if l["video_id"] == v and (l.get("detail") or {}).get("ecran") == "combat"]
+        pc_ = (processed.get(v) or {}).get("pc") or {}
+        resultats = []
+        for l in sorted((x for x in lectures if x["video_id"] == v and x["mode"] == "gb" and x.get("score") is not None
+                         and x["score_source"] in ("debut-fin", "video-complete")), key=lambda x: x["t"] or 0):
+            hud = max((h for h in huds if h["t"] is not None and l["t"] is not None and h.get("damage") is not None
+                       and 0 <= l["t"] - h["t"] <= fenetre), key=lambda h: h["t"], default=None)
+            d_ = l.get("detail") or {}
+            resultats.append({"t": l["t"], "rage_count": l["score"], "final_score": l["damage"], "stage": l["stage"],
+                              "confidence": l["confidence"], "hunter_rank_lus": d_.get("hunter_ranks_lus"),
+                              "rc_images": d_.get("rc_images"), "final_images": d_.get("final_images"),
+                              "hud_points": hud["damage"] if hud else None,
+                              "ecart_hud_final_pct": round((l["damage"] - hud["damage"]) / hud["damage"] * 100, 3)
+                              if hud and l["damage"] else None, "notes": l["notes"]})
+        bilan[v] = {"titre": (videos.get(v) or {}).get("title"), "duree": (videos.get(v) or {}).get("duration"),
+                    "formats_disponibles_p": pc_.get("hauteurs"), "image_lue_px": pc_.get("image_taille"),
+                    "ecran_results_lu": bool(resultats),
+                    "hud": [{"t": h["t"], "chrono": h["detail"]["chrono_hud"], "points": h["detail"].get("hud_points"),
+                             "boss_rage_count": h["detail"]["hud_rage_count"]} for h in huds],
+                    "resultats": resultats,
+                    "lectures_texte": [{"source": l["score_source"], "score": l["score"], "damage": l.get("damage")}
+                                       for l in lectures if l["video_id"] == v and l["mode"] == "gb"
+                                       and l["score_source"] in ("titre", "description", "sous-titres")]}
+    lignes = [{"channel": r["channel"], "video_ids": r["video_ids"], "total": r["score"]["total"], "runs": r["score"]["runs"],
+               "rank": r["rank"], "confidence": r["confidence"], "notes": r["notes"],
+               "runs_detail": [{k: x.get(k) for k in ("video_id", "t", "team", "damage", "exact", "score_source")} for x in r["runs_detail"]]}
+              for r in d.lire(f"runs/{week}/gb.json", []) if set(r["video_ids"]) & set(ids)]
+    return {"par_video": bilan, "lignes_gb": lignes}
 
 
 if __name__ == "__main__":
@@ -710,13 +778,17 @@ if __name__ == "__main__":
     ap.add_argument("--max", type=int, help="limite les vidéos traitées, sous-titres ET images")
     ap.add_argument("--video", action="append", help="ne traite que cette vidéo (identifiant YouTube ; répétable)")
     ap.add_argument("--publier-essai", action="store_true",
-                    help="comme --garder-ocr, puis copie les 6 meilleures images (JPEG) et textes dans docs/essais/ocr et les pousse")
+                    help="comme --garder-ocr, puis copie les meilleures images (JPEG) et textes dans docs/essais/ocr et les pousse")
+    ap.add_argument("--resolution", type=int, help="télécharge les vidéos en hauteur ≤ N pixels (ex. 1080 pour tester les zones en 1080p)")
     ap.add_argument("--refaire", action="store_true", help="avec --video : retraite la vidéo même si elle est déjà faite")
     ap.add_argument("--garder-ocr", action="store_true", help="écrit le texte lu par tesseract et l'image dans logs/ocr/ (diagnostic)")
     ap.add_argument("--maintenant", help="instant simulé ISO 8601 (tests)")
     a = ap.parse_args()
+    config = charger_config()
+    if a.resolution:
+        config["pc"]["images"]["format_video"] = f"bv*[height<={a.resolution}]/b[height<={a.resolution}]"
     try:
-        r = lancer(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(),
+        r = lancer(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(), config=config,
                    git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max, seulement=set(a.video or []), refaire=a.refaire,
                    journal=lambda m: print(m, flush=True), dormir=time.sleep,
                    ocr_debug=(RACINE / "logs" / "ocr") if (a.garder_ocr or a.publier_essai) else None)
@@ -730,8 +802,12 @@ if __name__ == "__main__":
             resume = {"semaine": r["week"], "alertes": r["alertes"],
                       "lectures": [l for l in d_.lectures(r["week"]) if not ids or l["video_id"] in ids],
                       "processed": {v: p for v, p in d_.processed().items() if v in ids}}
-            noms = publier_essai(Outils(charger_config()["pc"]), RACINE / "logs" / "ocr", RACINE / "docs" / "essais" / "ocr", Git(),
-                                 resume=resume)
+            nom = "_resume.json"
+            if len(ids) > 1 or a.resolution:
+                nom = f"_resume_{len(ids)}video{'s' if len(ids) > 1 else ''}{'_' + str(a.resolution) + 'p' if a.resolution else ''}.json"
+                resume["bilan"] = bilan_essai(d_, r["week"], ids, config)
+            noms = publier_essai(Outils(config["pc"]), RACINE / "logs" / "ocr", RACINE / "docs" / "essais" / "ocr", Git(),
+                                 maximum=5 if len(ids) > 1 else 8, resume=resume, nom_resume=nom)
             print(f"Essai publié dans docs/essais/ocr : {len(noms)} fichier(s).")
         except (GitErreur, OutilAbsent, OSError, RuntimeError) as e:
             print(f"ERREUR publication de l'essai : {e}", file=sys.stderr)

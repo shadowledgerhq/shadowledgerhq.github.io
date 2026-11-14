@@ -11,9 +11,25 @@ Le script `pipeline/pc.py` tourne sur le PC d'Alexis : sous-titres (yt-dlp), Whi
    - Se connecter à GitHub (Git Credential Manager le propose au premier `git push`).
 3. Cloner le dépôt : `git clone https://github.com/shadowledgerhq/shadowledgerhq.github.io.git`
 4. Essai à blanc (ne pousse rien) : `py -3 pipeline\pc.py daily --no-git --max 2` (voir « Tris 3-4 »).
-5. Créer les tâches : PowerShell, dans le dossier du dépôt : `powershell -ExecutionPolicy Bypass -File pipeline\pc\installer_taches.ps1`
+5. Avant de créer les tâches : `git checkout -- data` (jette les résultats des essais `--no-git`, sinon le premier `git pull` automatique échoue), puis `git pull origin main`.
+6. Créer les tâches : PowerShell, dans le dossier du dépôt : `powershell -ExecutionPolicy Bypass -File pipeline\pc\installer_taches.ps1` (la commande affiche l'heure du prochain passage de chaque tâche).
    - quotidien 20:30, hebdomadaire jeudi 01:15, « exécuter dès que possible si l'heure est manquée » ;
    - journal : `logs\pc.log` (non versionné).
+
+## Après la création des tâches
+- Test immédiat : PowerShell, `Start-ScheduledTask -TaskName 'ShadowLedger PC quotidien'`, puis ouvrir `logs\pc.log` (le passage dure quelques minutes à une heure ; il affiche une ligne par vidéo). Un passage manuel ne se lance pas deux fois en même temps.
+- Les tâches tournent **session ouverte**, sous ton compte (Git, yt-dlp, Tesseract). PC éteint ou verrouillé à 20h30 : le passage part dès que possible. PC en veille jeudi à 01h15 : il ne se réveille pas tout seul.
+- Chaque passage fait `git pull`, traite les vidéos, puis `git push` des seuls fichiers `data/`. En cas de conflit ou d'erreur réseau, il s'arrête, l'écrit dans `logs\pc.log` (« ERREUR git ») et reprend au passage suivant.
+- Le gel de la semaine (`pc.geler`) reste désactivé (`false`) tant que la discussion 1 n'a pas validé l'OCR : le passage du jeudi traite les vidéos mais ne gèle pas.
+- Pour arrêter : `Unregister-ScheduledTask -TaskName 'ShadowLedger PC*' -Confirm:$false`.
+
+## Test des zones GB sur 6 vidéos (essai)
+Pour vérifier la résolution, l'écran Results et l'écart `Points` HUD / `Final Score` sur plusieurs vidéos, puis envoyer les images et textes sur GitHub :
+```
+rmdir /s /q logs\ocr
+py -3 pipeline\pc.py daily --no-git --video T5dR6iJAn-Y --video Oj_-5x6700s --video vYtRCpFtSOk --video MJ2iz5TFmvM --video nh2D7xZ7dOQ --video awb-GlVIa7Q --refaire --publier-essai
+```
+Puis, pour tester une résolution 1080p, sur une seule vidéo : `py -3 pipeline\pc.py daily --no-git --video nh2D7xZ7dOQ --resolution 1080 --refaire --publier-essai`. Le bilan est écrit dans `docs/essais/ocr/_resume_6videos.json` (et `_resume_1video_1080p.json`) : formats proposés, taille de l'image lue, écrans Results, écart HUD, lignes `gb.json`. Compter 15 à 30 minutes.
 
 ## Whisper (facultatif, lent)
 `py -3 -m pip install openai-whisper`, puis dans `pipeline/config/etape1.json` : `"pc": {"whisper_cmd": "whisper", …}` et lancer avec `--whisper`. Seules les vidéos de 15 minutes ou moins, sans sous-titres ni score, sont transcrites.

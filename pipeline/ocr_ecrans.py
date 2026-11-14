@@ -348,11 +348,23 @@ def fusionner_results(lectures, config=None):
         for champ, cumul in votes.items():
             classes = sorted(cumul.items(), key=lambda kv: -kv[1])
             retenu[champ] = classes[0][0]
-            if len(classes) > 1 and classes[0][1] == classes[1][1]:
+            if champ == "rage_count":      # v14 : ≥ 2 fois plus d'images que toutes les lectures discordantes réunies
+                if len(classes) > 1 and classes[0][1] < 2 * sum(n for _, n in classes[1:]):
+                    conflits.append(champ)
+            elif len(classes) > 1 and classes[0][1] == classes[1][1]:
                 conflits.append(champ)
         rc, final = retenu.get("rage_count"), retenu.get("final_score")
         avec_rc = [l for l in groupe if l.get("score") == rc]
         base = min(avec_rc, key=lambda l: l["t"] or 0)
+        rc_t = {}                                   # valeur de Rage Count -> première image où elle est lue
+
+        def noter(valeur, t_v):
+            if valeur is not None and t_v is not None:
+                rc_t[str(valeur)] = min(t_v, rc_t.get(str(valeur), t_v))
+        for l in groupe:
+            noter(l.get("score"), l["t"])
+            for k, t_k in ((l.get("detail") or {}).get("rc_t") or {}).items():
+                noter(k, t_k)
         n_images = sum((l.get("detail") or {}).get("n_images", 1) for l in groupe)
         nombre = lambda champ, valeur: votes.get(champ, {}).get(valeur, 0)
         rangs = [retenu.get(f"hunter_rank_{k}") for k in range(1, 7)]
@@ -363,6 +375,7 @@ def fusionner_results(lectures, config=None):
              "new_record": any((l.get("detail") or {}).get("new_record") for l in groupe),
              "votes": {c: [[v, n] for v, n in cumul.items()] for c, cumul in votes.items()},
              "rc_images": nombre("rage_count", rc), "final_images": nombre("final_score", final), "n_images": n_images,
+             "rc_t": rc_t,
              "t_debut": min(debut(l) for l in groupe), "t_fin": max(fin(l) for l in groupe)}
         d.pop("ecran", None)
         d.pop("completude", None)
@@ -372,11 +385,13 @@ def fusionner_results(lectures, config=None):
         notes = []
         for l in groupe:
             for n in l["notes"]:
-                if not n.startswith(("contrôle sans Hunter Rank", "lecture fusionnée", "conflit de lecture", "contrôle GB")) and n not in notes:
+                if not n.startswith(("contrôle sans Hunter Rank", "lecture fusionnée", "conflit de lecture", "contrôle GB", "RC discordant écarté")) and n not in notes:
                     notes.append(n)
         if n_images >= 2:
             notes.append(f"lecture fusionnée ({n_images} images)")
         notes += [f"conflit de lecture : {c}" for c in conflits]
+        if "rage_count" not in conflits:            # v14 : chaque valeur de Rage Count écartée est notée
+            notes += [f"RC discordant écarté : {v} (t={rc_t.get(str(v))})" for v in votes.get("rage_count", {}) if v != rc]
         lec = {**base, "stage": retenu.get("stage"), "damage": final, "score": rc, "detail": d, "notes": notes,
                "exact": False, "confidence": "a_verifier"}
         if not conflits:

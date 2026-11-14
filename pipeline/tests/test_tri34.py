@@ -132,6 +132,9 @@ class OutilsImages:
     def dimensions(self, png):
         return (1280, 720)
 
+    def hauteurs(self, vid):
+        return [360, 720, 1080]
+
     def empreinte(self, png):
         return png
 
@@ -400,6 +403,36 @@ def test_v13_conflit_de_lecture():
     c = _res(RESULTS_253_REEL, 255, Z_253)
     res = _un_ecran([a, b, c])
     assert res["score"] == 19 and not any(n.startswith("conflit") for n in res["notes"]) and res["detail"]["rc_images"] == 2
+    assert "RC discordant écarté : 18 (t=254)" in res["notes"]                               # v14 : 2 contre 1 accepté
+
+
+def test_v14_vote_du_rage_count():
+    img = lambda t, rc: _res(RESULTS_253_REEL, t, {**Z_253, "rage": str(rc)})
+    ok = _un_ecran([img(252, 19), img(253, 19), img(254, 7)])                          # 2 contre 1 : retenu
+    assert ok["score"] == 19 and ok["confidence"] == "sur" and "RC discordant écarté : 7 (t=254)" in ok["notes"]
+    assert _un_ecran([img(252, 19), img(253, 19), img(254, 7), img(255, 7)])["confidence"] == "a_verifier"      # 2 contre 2
+    trois = _un_ecran([img(252, 19), img(253, 19), img(254, 19), img(255, 7), img(256, 7)])                     # 3 contre 2
+    assert trois["confidence"] == "a_verifier" and "conflit de lecture : rage_count" in trois["notes"]
+    assert not any(n.startswith("RC discordant") for n in trois["notes"])
+    quatre = _un_ecran([img(252, 19), img(253, 19), img(254, 19), img(255, 19), img(256, 7), img(257, 8)])      # 4 contre 2 : retenu
+    assert quatre["score"] == 19 and [n for n in quatre["notes"] if n.startswith("RC discordant")] == [
+        "RC discordant écarté : 7 (t=256)", "RC discordant écarté : 8 (t=257)"]
+    # idempotent : refusionner la lecture fusionnée n'ajoute ni ne perd de note
+    deux = _un_ecran([ok, img(255, 19)])
+    assert deux["detail"]["rc_images"] == 3 and "RC discordant écarté : 7 (t=254)" in deux["notes"]
+    assert [n for n in deux["notes"] if n.startswith("RC discordant")] == ["RC discordant écarté : 7 (t=254)"]
+
+
+def test_v14_sans_hud_trois_hunter_rank_au_moins():
+    hud = _hud(238, HUD_238.replace("1593,669,209", "1596,246,179"))
+    r252 = _res(RESULTS_252, 252, Z_252)
+    deux_rangs = {**Z_253, "rang_4": ""}                                               # seuls les rangs 5 et 6 sont lus (cas du 14/11)
+    deux = _un_ecran([r252, _res(RESULTS_253_REEL, 253, deux_rangs)])
+    assert deux["confidence"] == "a_verifier" and any("2 Hunter Rank lu(s) (3 au moins" in n for n in deux["notes"])
+    avec_hud = _un_ecran([r252, _res(RESULTS_253_REEL, 253, deux_rangs)] + hud)        # avec HUD : inchangé, 0 à 6 rangs suffisent
+    assert avec_hud["confidence"] == "sur"
+    trois = _un_ecran([r252, _res(RESULTS_253_REEL, 253, Z_253)])                      # 3 rangs lus, sans HUD : accepté
+    assert trois["confidence"] == "sur"
 
 
 def test_v13_regroupement_des_images_d_un_ecran():
@@ -480,7 +513,13 @@ def test_v13_cas_lGDbzyIJcjY_de_bout_en_bout():
         HUD_FIN = HUD_238.replace("1593,669,209", "1596,246,179")
         o = Faux({"a": {228: HUD_228, 238: HUD_FIN, 252: RESULTS_252}})
         lignes = []
-        pc.lancer("daily", INSTANT, d, config, o, maximum=1, journal=lignes.append)
+        pc.lancer("daily", INSTANT, d, config, o, maximum=1, journal=lignes.append, ocr_debug=Path(tmp) / "dbg")
+        assert any("formats disponibles : 360p, 720p, 1080p" in x for x in lignes) and any("image lue : 1280x720" in x for x in lignes)
+        bil = pc.bilan_essai(d, SEM, {"a"}, config)["par_video"]["a"]
+        assert bil["formats_disponibles_p"] == [360, 720, 1080] and bil["image_lue_px"] == [1280, 720] and bil["ecran_results_lu"]
+        r0 = bil["resultats"][0]
+        assert r0["rage_count"] == 19 and r0["final_score"] == 1601097999 and r0["hud_points"] == 1596246179
+        assert r0["ecart_hud_final_pct"] == round((1601097999 - 1596246179) / 1596246179 * 100, 3)
         assert [a[2] for a in o.appels if a[0] == "img" and a[3] != "f"] == [((252, 2, 1),)]
         lec = [l for l in d.lectures(SEM) if l["video_id"] == "a" and l["mode"] == "gb" and l.get("score") is not None]
         assert len(lec) == 1
@@ -572,6 +611,37 @@ def test_dimensions_png_et_ocr_chiffres():
     o2 = pc.Outils(CONFIG["pc"], executer=lambda cmd, **kw: cmds.append(cmd) or subprocess.CompletedProcess(cmd, 0, stdout="19", stderr=""))
     assert o2.ocr("z.png", "eng", 7, 40, ["-c", "tessedit_char_whitelist=0123456789,.:"]) == "19"
     assert cmds[-1][-2:] == ["-c", "tessedit_char_whitelist=0123456789,.:"] and cmds[-1][cmds[-1].index("--psm") + 1] == "7"
+
+
+def test_hauteurs_et_publication_par_video():
+    import subprocess
+    import tempfile
+    F = """ID  EXT RESOLUTION FPS | FILESIZE
+251 webm audio only tiny 130k
+18  mp4  640x360   30 |
+247 webm 1280x720  30 |
+137 mp4  1920x1080 30 |
+"""
+    o = pc.Outils(CONFIG["pc"], executer=lambda cmd, **kw: subprocess.CompletedProcess(cmd, 0, stdout=F, stderr=""))
+    assert o.hauteurs("x") == [360, 720, 1080]
+    cmds = []
+
+    def faux(cmd, **kw):
+        cmds.append(cmd)
+        Path(cmd[-1]).write_bytes(b"jpg")
+        return subprocess.CompletedProcess(cmd, 0, stdout="", stderr="")
+    with tempfile.TemporaryDirectory() as tmp:
+        src, dst = Path(tmp) / "logs", Path(tmp) / "docs"
+        src.mkdir()
+        for vid in ("Oj_-5x6700s", "a-923ClD9Rc"):                          # identifiants avec « _ » et « - »
+            for nom in ("tri3_228_gb_combat", "tri3_252_gb_results", "tri4_30", "recherche_253"):
+                (src / f"{vid}_{nom}.txt").write_text("x" * len(nom), encoding="utf-8")
+                (src / f"{vid}_{nom}.png").write_bytes(b"png")
+        noms = pc.publier_essai(pc.Outils(CONFIG["pc"], executer=faux), src, dst, None, maximum=2, resume={"a": 1}, nom_resume="_resume_2videos.json")
+        assert "_resume_2videos.json" in noms and (dst / "_resume_2videos.json").exists()
+        for vid in ("Oj_-5x6700s", "a-923ClD9Rc"):
+            assert len([n for n in noms if n.startswith(vid) and n.endswith(".txt")]) == 2     # 2 fichiers par vidéo
+            assert f"{vid}_recherche_253.txt" in noms                                             # images de recherche : toujours
 
 
 def test_commandes_des_outils():
