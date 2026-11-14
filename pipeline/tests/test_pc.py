@@ -29,13 +29,13 @@ def config_sans_images():
 
 
 class FauxOutils:
-    def __init__(self, textes, erreurs=()):
-        self.textes, self.erreurs, self.appels = textes, set(erreurs), []
+    def __init__(self, textes, erreurs=(), erreurs_msg=None):
+        self.textes, self.erreurs, self.appels, self.erreurs_msg = textes, set(erreurs), [], erreurs_msg or {}
 
     def sous_titres(self, vid, dossier):
         self.appels.append(vid)
         if vid in self.erreurs:
-            raise RuntimeError("HTTP 429")
+            raise RuntimeError(self.erreurs_msg.get(vid, "boom"))
         return self.textes.get(vid, "")
 
     def whisper(self, vid, dossier):
@@ -75,13 +75,62 @@ def test_passage_daily_idempotent():
         assert "sous-titres : 150T" in lec["d"]["notes"]
         p = d.processed()
         assert [p[v]["pc"]["sous_titres"] for v in "abcd"] == ["fait", "erreur", "absent", "fait"]
-        assert any("HTTP 429" in a for a in r["alertes"]) and any("[EN ATTENTE]" in a for a in r["alertes"])
+        assert any("boom" in a for a in r["alertes"]) and any("[EN ATTENTE]" in a for a in r["alertes"])
         assert "pc-daily" in (Path(tmp) / f"data/runs/{SEM}/_rapport.md").read_text(encoding="utf-8")
         # 2e passage : seule la vidéo en erreur est retentée, rien n'est doublé
         avant = json.dumps(d.lectures(SEM))
         o2 = FauxOutils({"b": "98T"})
         pc.lancer("daily", INSTANT, d, config, o2)
         assert o2.appels == ["b"] and len(d.lectures(SEM)) == len(json.loads(avant)) + 1
+
+
+def test_429_reporte_et_arrete_les_sous_titres():
+    config = config_sans_images()
+    with tempfile.TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        o = FauxOutils({"a": VTT, "c": "x"}, erreurs=["b"], erreurs_msg={"b": "HTTP Error 429: Too Many Requests"})
+        lignes, pauses = [], []
+        r = pc.lancer("daily", INSTANT, d, config, o, journal=lignes.append, dormir=pauses.append)
+        assert o.appels == ["a", "b"]                                   # arrêt au 429 : c et d ne sont pas tentées
+        p = d.processed()
+        assert p["a"]["pc"]["sous_titres"] == "fait" and "pc" not in p["b"] and "pc" not in p["c"]   # b reportée, rien de marqué
+        assert any("429" in a for a in r["alertes"]) and pauses == [config["pc"]["pause_s"]]          # pause entre a et b
+        assert any(l.startswith("[1/4] a") for l in lignes) and any(l.startswith("[2/4] b") for l in lignes)
+        # le passage suivant reprend à b
+        o2 = FauxOutils({"b": "98T", "c": "", "d": ""})
+        pc.lancer("daily", INSTANT, d, config, o2)
+        assert o2.appels == ["b", "c", "d"]
+
+
+def test_enregistrement_apres_chaque_video():
+    config = config_sans_images()
+    with tempfile.TemporaryDirectory() as tmp:
+        d = monde(tmp)
+
+        class Coupe(FauxOutils):
+            def sous_titres(self, vid, dossier):
+                if vid == "c":
+                    # a et b sont déjà sur disque quand c démarre
+                    assert [d.processed()[v].get("pc", {}).get("sous_titres") for v in "ab"] == ["fait", "fait"]
+                    raise KeyboardInterrupt
+                return super().sous_titres(vid, dossier)
+        try:
+            pc.lancer("daily", INSTANT, d, config, Coupe({"a": VTT, "b": VTT}))
+        except KeyboardInterrupt:
+            pass
+        assert d.processed()["a"]["pc"]["sous_titres"] == "fait" and "pc" not in d.processed()["c"]
+        assert any(l["video_id"] == "a" and l["score_source"] == "sous-titres" for l in d.lectures(SEM))
+
+
+def test_budget_de_temps_du_passage():
+    config = config_sans_images()
+    config["pc"]["budget_minutes"] = 1
+    horloge_t = iter(range(0, 10_000, 40))                              # +40 s à chaque lecture de l'horloge
+    with tempfile.TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        o = FauxOutils({})
+        r = pc.lancer("daily", INSTANT, d, config, o, horloge=lambda: next(horloge_t))
+        assert 0 < len(o.appels) < 4 and any("budget de temps" in a for a in r["alertes"])
 
 
 def test_weekly_gel_et_ouverture():
