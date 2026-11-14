@@ -57,7 +57,11 @@ def detail_runs(r):
 def lignes_mode(runs):
     """[ligne] triée : classés (rang) d'abord, puis les autres. Colonnes : voir COLONNES (+ unité en dernier, usage interne)."""
     def cle(r):
-        return (r.get("rank") is None, r.get("rank") or 0, str(r.get("player") or ""))
+        # classés d'abord (par rang) ; les autres par score : BOT = temps le plus court d'abord, autres modes = score le plus haut d'abord
+        sc = r.get("score") or {}
+        total = sc.get("total")
+        valeur = float("inf") if total is None else (total if sc.get("unit") == "seconds" else -total)
+        return (r.get("rank") is None, r.get("rank") or 0, valeur, str(r.get("player") or ""))
     sortie = []
     for r in sorted(runs, key=cle):
         sc = r.get("score") or {}
