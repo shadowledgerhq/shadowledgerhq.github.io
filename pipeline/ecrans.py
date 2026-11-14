@@ -152,6 +152,19 @@ def lecture_gb_combat(meta, ecran, config, source="video-complete"):
     return lec
 
 
+def lecture_gb_combat_sans_chrono(meta, ecran, config, source="video-complete"):
+    """v20 (SPEC v19) : HUD du combat GB dont le chrono est illisible mais dont les `Points` sont plausibles. Lecture sans
+    score (`detail.ecran == "combat_sans_chrono"`), conservée ; `ocr_ecrans.regrouper_hud` la rattache à la run dont un HUD au
+    chrono lu ≤ 5 s la précède de 2 s au plus (chrono HUD déduit). Sans Points plausibles : ignorée (None)."""
+    if ecran.get("points") is None:
+        return None
+    lec = lecture_vide(meta, "gb")
+    lec.update(score=None, score_source=None, exact=False, confidence="a_verifier", stage=ecran.get("stage"),
+               t=ecran.get("t"), team=None,
+               detail={"ecran": "combat_sans_chrono", "hud_points": ecran.get("points"), "hud_rage_count": ecran.get("rage_count")})
+    return lec
+
+
 def degats_arrondis(texte):
     """`17.28T` -> (17_280_000_000_000, pas d'arrondi 1e10). Nombre déjà lu : (valeur, None)."""
     if isinstance(texte, (int, float)):

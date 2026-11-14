@@ -178,7 +178,8 @@ BA Ab x125 We RNING if 7
 def test_hud_coreen_chrono_lu_par_zone_et_points_abimes():
     assert ocr_ecrans.detecter(HUD_KO_REEL) == "gb_combat_incertain"            # « POINT » + « WARNING » lus, chrono « 3.1 » incomplet
     m = {**meta_gb("mj"), "mode_guess": ["gb"]}
-    assert ocr_ecrans.lectures_depuis_texte(HUD_KO_REEL, m, CONFIG, "video-complete", 200) == []
+    (sc,) = ocr_ecrans.lectures_depuis_texte(HUD_KO_REEL, m, CONFIG, "video-complete", 200)       # v20 : HUD sans chrono, Points plausibles
+    assert sc["detail"]["ecran"] == "combat_sans_chrono" and sc["detail"]["hud_points"] == 10375798058160
     zones = {**VIDE, "hud_chrono": "3.18", "hud_points": "10,375,798,059,160", "hud_rage": "125"}
     (l,) = ocr_ecrans.lectures_depuis_texte(HUD_KO_REEL, m, CONFIG, "video-complete", 200, zones)
     assert l["detail"]["chrono_hud"] == 3.18 and l["detail"]["hud_rage_count"] == 125 and l["detail"]["hud_points"] == 10375798058160

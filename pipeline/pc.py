@@ -292,7 +292,7 @@ def segments_tri(tri, duree_s, cfg):
 
 def _est_ecran(l):
     """Lecture issue d'une image : écran reconnu, ou HUD de combat (sans score ni source depuis la v13)."""
-    return l["score_source"] in SOURCES_ECRAN or (l.get("detail") or {}).get("ecran") == "combat"
+    return l["score_source"] in SOURCES_ECRAN or (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")
 
 
 def _est_results_gb(l):

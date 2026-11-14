@@ -8,7 +8,7 @@ import pc
 from test_gb import meta as meta_gb
 from test_tri34 import CONFIG
 from test_tri34 import SEM
-from test_v15 import HUD_KO_REEL, HUD_PT, RESULTS_KO, Z_KO, VIDE
+from test_v15 import RESULTS_PT, Z_PT, HUD_KO_REEL, HUD_PT, RESULTS_KO, Z_KO, VIDE
 
 
 def _un(zones, ts=(231, 232), hud=None):
@@ -119,6 +119,35 @@ def test_v19_repli_assoupli_hud():
     assert not ecrans.controle_results_sans_hunter_rank(base, {"damage": 2000000000000}, CONFIG, infos=[])[0]
     # condition 1 en défaut (boss illisible) : non assoupli
     assert not ecrans.controle_results_sans_hunter_rank({**base, "stage": None}, hud, CONFIG, infos=[])[0]
+
+
+def test_v20_chrono_hud_deduit():
+    """SPEC v19 : Points d'un HUD au chrono illisible (≤ 2 s après un HUD au chrono ≤ 5 s) = dernier Points ; cas T5dR6iJAn-Y."""
+    m = {**meta_gb("t5"), "lang": "pt", "mode_guess": ["gb"]}
+    ref = "(®) 0.80\nPontos 7288064\nNúmero de Fúrias do Chefão 120 WARNING\n"
+    def sc(pts): return f"Pontos {pts}\nNúmero de Fúrias do Chefão 120 WARNING\n"
+    def run(sans, t_ref=213, t_sc=214, ts=(229, 231, 233), extra=()):
+        ls = ocr_ecrans.lectures_depuis_texte(ref, m, CONFIG, "video-complete", t_ref)
+        ls += ocr_ecrans.lectures_depuis_texte(sc(sans), m, CONFIG, "video-complete", t_sc) if sans else []
+        ls += [ocr_ecrans.lectures_depuis_texte(RESULTS_PT, m, CONFIG, "video-complete", t, {**Z_PT, "joueur": ""})[0] for t in ts]
+        res = [l for l in pc.fusionner_ecrans([], "t5", ls + list(extra), CONFIG) if l["score"] is not None]
+        assert len(res) == 1
+        return res[0], ls
+    ok, ls = run("7,905,911007,261")                                             # séparateur perdu, toléré
+    assert ls[1]["detail"]["ecran"] == "combat_sans_chrono" and ls[1]["detail"]["hud_points"] == 7905911007261
+    assert ok["score"] == 156 and ok["confidence"] == "sur" and "chrono HUD déduit (t=214)" in ok["notes"] and "contrôle sans Hunter Rank" in ok["notes"]
+    # Points hors de la fenêtre du Final Score (> Final) : ignorés
+    assert run("9,905,911,007,261")[0]["confidence"] == "a_verifier"
+    # trop tard (> 2 s après le HUD de référence) : ignoré
+    assert run("7,905,911,007,261", t_sc=216)[0]["confidence"] == "a_verifier"
+    # l'écran Results précède le HUD sans chrono : ignoré
+    assert run("7,905,911,007,261", t_sc=214, ts=(212, 213, 233))[0]["confidence"] == "a_verifier"
+    # Points non plausibles (sans séparateurs) : ignorés
+    assert run("7905911007261")[0]["confidence"] == "a_verifier"
+    # idempotent : refusionner les lectures déjà fusionnées garde la note une seule fois
+    res, ls = run("7,905,911,007,261")
+    deux = [l for l in pc.fusionner_ecrans([], "t5", pc.fusionner_ecrans([], "t5", ls + [], CONFIG), CONFIG) if l["score"] is not None][0]
+    assert deux["confidence"] == "sur" and deux["notes"].count("chrono HUD déduit (t=214)") == 1
 
 
 if __name__ == "__main__":

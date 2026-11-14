@@ -152,7 +152,7 @@ def points_plausibles(brut, langue, config=None):
         return False, f"Points hors plage ({valeur})"
     groupes = cfg.get("hud_points_groupes", "toutes")
     if groupes == "toutes" or langue in groupes:
-        if not re.fullmatch(r"\d{1,4}(?:[,. \u00a0\u202f]\d{3})+", brut):
+        if not re.fullmatch(r"\d{1,4}(?:[,. \u00a0\u202f](?:\d{3})+)+", brut):
             return False, f"Points sans groupes de 3 chiffres ({brut})"
     return True, None
 
@@ -177,7 +177,7 @@ def lire_gb_combat(texte, config=None):
     langue = langue_hud(t, config) or "en"
     lib = {x[0]: x for x in libelles_hud(config)}.get(langue)
     bas = sans_accents(t)
-    pts = re.search(rf"(?:{lib[1]})\W{{0,6}}(\d+(?:[,.]\d{{3}})+|\d+)", bas, re.IGNORECASE) if lib else None
+    pts = re.search(rf"(?:{lib[1]})\W{{0,6}}(\d+(?:[,.]\d+)+|\d+)", bas, re.IGNORECASE) if lib else None
     rc = None
     if lib and lib[2]:
         pre = r"[xX×]\s*" if lib[4] else ""
@@ -387,7 +387,12 @@ def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
         if zones is not None:
             _appliquer_zones_hud(ecran, zones, config)
         if ecran.get("chrono") is None:
-            return []                       # chrono toujours illisible : pas de lecture HUD
+            # v20 : chrono illisible : lecture « sans chrono » si les Points sont plausibles (rattachée par regrouper_hud)
+            ecran["stage"] = _boss_du_hud(texte, config)
+            lec = ecrans.lecture_gb_combat_sans_chrono(meta, ecran, config, source)
+            if lec:
+                lec["regles"] = config.get("tri1_version")
+            return [lec] if lec else []
         type_ecran = "gb_combat"
     if type_ecran == "gb_record" and zones is not None:
         _appliquer_zones_record(ecran, zones, config)
@@ -481,8 +486,11 @@ def regrouper_hud(lectures, config=None):
     cfg = (config or {}).get("gb") or {}
     seuil, chrono_max = cfg.get("hud_nouvelle_run_s", 20), cfg.get("hud_chrono_points_s", 5)
     est_hud = lambda l: (l.get("detail") or {}).get("ecran") == "combat"
+    ecran_de = lambda l: (l.get("detail") or {}).get("ecran")
     hud = [l for l in lectures if est_hud(l)]
+    sans_chrono = [l for l in lectures if ecran_de(l) == "combat_sans_chrono" and l.get("t") is not None]
     sortie = [l for l in lectures if not est_hud(l)]
+    delai = cfg.get("hud_chrono_deduit_s", 2)
     for vid in sorted({l["video_id"] for l in hud}):
         runs = []
         for l in sorted((x for x in hud if x["video_id"] == vid), key=lambda x: (x["t"] is None, x["t"] or 0)):
@@ -494,6 +502,17 @@ def regrouper_hud(lectures, config=None):
             rcs = [x["detail"]["hud_rage_count"] for x in run if x["detail"].get("hud_rage_count") is not None]
             d = {**dernier["detail"], "hud_rage_count": max(rcs) if rcs else None,
                  "t_debut": min(x["detail"].get("t_debut", x["t"]) for x in run), "t_fin": max(x["detail"].get("t_fin", x["t"]) for x in run)}
+            # v20 (SPEC v19) : Points d'un HUD sans chrono lisible qui suit de ≤ 2 s un HUD au chrono lu ≤ 5 s, sans autre écran
+            # entre eux ; le plus tardif est gardé (`detail.points_deduits`), contrôlé plus tard contre le Final Score
+            deduits = [x["detail"]["points_deduits"] for x in run if x["detail"].get("points_deduits")]
+            for ref in (x for x in run if x["detail"]["chrono_hud"] <= chrono_max and x["t"] is not None):
+                for sc in sans_chrono:
+                    if (sc["video_id"] == vid and 0 < sc["t"] - ref["t"] <= delai and not any(
+                            o["video_id"] == vid and o["t"] is not None and ref["t"] < o["t"] < sc["t"]
+                            for o in lectures if ecran_de(o) not in ("combat", "combat_sans_chrono"))):
+                        deduits.append({"t": sc["t"], "points": sc["detail"]["hud_points"]})
+            if deduits:
+                d["points_deduits"] = max(deduits, key=lambda x: x["t"])
             points = d.get("hud_points") if d["chrono_hud"] <= chrono_max else None
             if points is not None and points < cfg.get("hud_points_min", 10**9):    # les scores GB dépassent 1e9 : en dessous, lecture abîmée
                 points = None
@@ -630,7 +649,7 @@ def fusionner_results(lectures, config=None):
         notes = []
         for l in groupe:
             for n in l["notes"]:
-                if not n.startswith(("contrôle sans Hunter Rank", "Hunter Rank incohérents", "lecture fusionnée", "conflit de lecture", "contrôle GB", "RC discordant écarté", "compteur animé")) and n not in notes:
+                if not n.startswith(("contrôle sans Hunter Rank", "Hunter Rank incohérents", "chrono HUD déduit", "lecture fusionnée", "conflit de lecture", "contrôle GB", "RC discordant écarté", "compteur animé")) and n not in notes:
                     notes.append(n)
         if n_images >= 2:
             notes.append(f"lecture fusionnée ({n_images} images)")
@@ -652,11 +671,20 @@ def fusionner_results(lectures, config=None):
                 # v17 : repli sur le contrôle sans Hunter Rank (somme fausse, Player's Score illisible, < 6 rangs)
                 complet = d["hunter_ranks_lus"] == 6
                 infos = []
-                ok2, pb2 = ecrans.controle_results_sans_hunter_rank(lec, hud, config or {}, joueur_optionnel=complet, infos=infos)
+                hud_eff, deduit = hud, None
+                ded = ((hud or {}).get("detail") or {}).get("points_deduits")
+                tol = cfg.get("hud_tolerance", 0.02)
+                dans = lambda pts: pts is not None and final is not None and pts <= final <= pts * (1 + tol)
+                if (ded and final is not None and ded["t"] < d["t_debut"] and dans(ded["points"])
+                        and not dans((hud or {}).get("damage"))):
+                    hud_eff, deduit = {**hud, "damage": ded["points"]}, ded["t"]      # v20 : chrono HUD déduit (SPEC v19)
+                ok2, pb2 = ecrans.controle_results_sans_hunter_rank(lec, hud_eff, config or {}, joueur_optionnel=complet, infos=infos)
                 if ok2:
                     lec.update(exact=True, confidence="sur")
                     lec["notes"].append("contrôle sans Hunter Rank")
                     lec["notes"] += infos
+                    if deduit is not None:
+                        lec["notes"].append(f"chrono HUD déduit (t={deduit})")
                 elif complet and d["player_score"] is not None:
                     lec["notes"] += [f"contrôle GB : {p}" for p in pb]
                     lec["notes"] += [f"contrôle sans Hunter Rank : {p}" for p in pb2]
