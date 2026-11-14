@@ -248,9 +248,9 @@ def test_publier_essai():
             (src / f"{nom}.png").write_bytes(b"png")
         g = FauxGit()
         noms = pc.publier_essai(pc.Outils(CONFIG["pc"], executer=faux), src, dst, g, maximum=2, resume={"semaine": "x", "lectures": []})
-        assert sorted(noms) == ["_resume.json", "v_tri4_100.jpg", "v_tri4_100.txt", "v_tri4_50.jpg", "v_tri4_50.txt"]
+        assert sorted(noms) == ["_resume.json", "v_tri3_4.jpg", "v_tri3_4.txt", "v_tri4_100.jpg", "v_tri4_100.txt"]     # fin de vidéo (tri 3) + texte le plus long
         assert "v_tri4_100.txt" in (dst / "_resume.json").read_text(encoding="utf-8")   # les 2 textes les plus longs
-        assert (dst / "v_tri4_100.jpg").exists() and not (dst / "v_tri3_4.txt").exists() and len(g.appels) == 1
+        assert (dst / "v_tri4_100.jpg").exists() and not (dst / "v_tri4_50.txt").exists() and len(g.appels) == 1
 
 
 # --- v11 : HUD du combat GB (textes OCR réels de docs/essais/ocr, vidéo lGDbzyIJcjY) -----------------------------------
@@ -543,6 +543,34 @@ def test_v13_cas_lGDbzyIJcjY_de_bout_en_bout():
         assert not [a for a in o2.appels if a[0] == "img" and a[3] != "f"]
 
 
+SALON_RECORD = "< Guild Boss ? mn!\n© Time tettin season 6d 9h Personal Record @\nTotal Score Challenge Count 2\n32,842,054480,310 | totatragecoune 332\nGroup? 167 17.281\n(BR) rage rewards 100,000\n"
+
+
+def test_v14_salon_guild_boss_pas_un_results():
+    """Salon Guild Boss (essai du 14/11, nh2D7xZ7dOQ à 2 s) : le bouton « Rage Rewards » n'est pas un écran Results."""
+    assert ocr_ecrans.detecter(SALON_RECORD) == "gb_record"            # OCR abîmé (« Total Rage Gount », « Group? ») toléré
+    assert ocr_ecrans.detecter("Rage Rewards\n100,000") is None and ocr_ecrans.detecter("Guild Boss\nRage Rewards") is None
+    assert ocr_ecrans.detecter("Rage Rewards\nTap the screen to continue.") == "gb_results_partiel"
+    assert ocr_ecrans.lectures_depuis_texte(SALON_RECORD, _m(), CONFIG, "debut-fin", 2, VIDE) == []   # pas de lecture parasite (RC 3)
+
+
+def test_ffmpeg_sans_stdin_et_nouvelle_tentative():
+    import subprocess
+    import tempfile
+    appels = []
+
+    def faux(cmd, **kw):
+        appels.append((cmd, kw.get("stdin")))
+        if cmd[0] == "ffmpeg" and sum(1 for c, _ in appels if c[0] == "ffmpeg") == 1:
+            raise subprocess.TimeoutExpired(cmd, kw["timeout"])           # 1er essai bloqué
+        return subprocess.CompletedProcess(cmd, 0, stdout="", stderr="")
+    o = pc.Outils(CONFIG["pc"], executer=faux)
+    with tempfile.TemporaryDirectory() as tmp:
+        o.images(Path(tmp) / "v.mp4", [(0, 10, 2)], tmp)
+    ff = [(c, i) for c, i in appels if c[0] == "ffmpeg"]
+    assert len(ff) == 2 and "-nostdin" in ff[0][0] and ff[0][1] == subprocess.DEVNULL            # une seule nouvelle tentative
+
+
 def test_v12_boss_et_player_score_par_zone():
     c = {"gb": {"boss_noms": ["Giant Statue"]}}
     assert ocr_ecrans.boss_connu("Giant Statue", c) == "Giant Statue" and ocr_ecrans.boss_connu("Gaint Statue\n", c) == "Giant Statue"
@@ -641,7 +669,7 @@ def test_hauteurs_et_publication_par_video():
         assert "_resume_2videos.json" in noms and (dst / "_resume_2videos.json").exists()
         for vid in ("Oj_-5x6700s", "a-923ClD9Rc"):
             assert len([n for n in noms if n.startswith(vid) and n.endswith(".txt")]) == 2     # 2 fichiers par vidéo
-            assert f"{vid}_recherche_253.txt" in noms                                             # images de recherche : toujours
+            assert f"{vid}_tri3_252_gb_results.txt" in noms and f"{vid}_tri3_228_gb_combat.txt" in noms   # écrans reconnus d'abord
 
 
 def test_commandes_des_outils():

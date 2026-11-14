@@ -41,12 +41,13 @@ def detecter(texte):
     """Type d'écran d'après ses libellés, ou None. `gb_record` avant `gb_results` ; HOTM avant POC."""
     t = normaliser(texte)
     bas = t.lower()
-    if "personal record" in bas and ("total rage count" in bas or "group 1" in bas):
-        return "gb_record"
+    if "personal record" in bas and ("total rage count" in bas or "group 1" in bas or "total score" in bas
+                                     or "challenge count" in bas or "time left in season" in bas):
+        return "gb_record"      # salon Guild Boss ; v14 : tolère un OCR abîmé (« Total Rage Gount », « Group? »)
     if "final score" in bas and ("hunter rank" in bas or "your points have been registered" in bas):
         return "gb_results"
-    if "your points have been registered" in bas or "rage rewards" in bas:
-        return "gb_results_partiel"   # v12 : écran Results en animation, valeurs pas (encore) lisibles
+    if "your points have been registered" in bas or ("rage rewards" in bas and "tap the screen to continue" in bas):
+        return "gb_results_partiel"   # v12 : écran Results en animation ; « Rage Rewards » seul = bouton du salon (v14)
     if re.search(r"\bpoints\b", bas) and "boss rage count" in bas and chrono_hud(t) is not None:
         return "gb_combat"     # v11 : HUD pendant la run (jamais un écran de résultat)
     if "phase 1" in bas and "play time" in bas and _TEMPS.search(t):

@@ -83,7 +83,7 @@ class Outils:
         if shutil.which(cmd[0]) is None and self.executer is subprocess.run:
             raise OutilAbsent(f"{cmd[0]} introuvable (à installer, voir pipeline/pc.py)")
         # UTF-8 explicite : sous Windows, text=True seul décode en cp1252 et abîme le coréen lu par tesseract
-        r = self.executer(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace",
+        r = self.executer(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", stdin=subprocess.DEVNULL,
                           timeout=timeout, **({"env": env} if env else {}))
         if r.returncode != 0:
             raise RuntimeError(f"{cmd[0]} code {r.returncode} : {(r.stderr or '')[-200:].strip()}")
@@ -124,9 +124,16 @@ class Outils:
     def images(self, chemin, segments, dossier, prefixe="f"):
         """Images PNG des segments (début, durée, pas) en secondes ; retourne [(t, chemin_png)]."""
         trouvees = []
+        delai = self.cfg["images"].get("ffmpeg_delai_s", 300)
         for k, (debut, duree, pas) in enumerate(segments):
-            self._lancer([self.cfg["images"]["ffmpeg"], "-v", "error", "-ss", str(debut), "-t", str(duree), "-i", str(chemin),
-                          "-vf", f"fps=1/{pas}", "-q:v", "2", f"{dossier}/{prefixe}{k}_%04d.png"], 900)
+            cmd = [self.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-ss", str(debut), "-t", str(duree), "-i", str(chemin),
+                   "-vf", f"fps=1/{pas}", "-q:v", "2", f"{dossier}/{prefixe}{k}_%04d.png"]
+            try:
+                self._lancer(cmd, delai)
+            except subprocess.TimeoutExpired:      # essai du 14/11 : ffmpeg bloqué 900 s sur une vidéo ; une seule nouvelle tentative
+                for f in Path(dossier).glob(f"{prefixe}{k}_*.png"):
+                    f.unlink(missing_ok=True)
+                self._lancer(cmd, delai)
             trouvees += [(debut + i * pas, f) for i, f in enumerate(sorted(Path(dossier).glob(f"{prefixe}{k}_*.png")))]
         return trouvees
 
@@ -139,7 +146,7 @@ class Outils:
     def reduire(self, png, largeur):
         """Copie réduite de l'image (largeur en pixels) pour le passage OCR rapide."""
         sortie = Path(png).with_name(Path(png).stem + "_p.png")
-        self._lancer([self.cfg["images"]["ffmpeg"], "-v", "error", "-y", "-i", str(png),
+        self._lancer([self.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-y", "-i", str(png),
                       "-vf", f"scale={int(largeur)}:-2", str(sortie)], 60)
         return sortie
 
@@ -147,7 +154,7 @@ class Outils:
         """Zone de l'image (x, y, largeur, hauteur en fractions), agrandie et en gris : lecture ciblée d'un petit texte."""
         x, y, l, h = zone
         sortie = Path(png).with_name(Path(png).stem + "_z.png")
-        self._lancer([self.cfg["images"]["ffmpeg"], "-v", "error", "-y", "-i", str(png), "-vf",
+        self._lancer([self.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-y", "-i", str(png), "-vf",
                       f"crop=iw*{l}:ih*{h}:iw*{x}:ih*{y},scale=iw*{echelle}:-1,format=gray", "-frames:v", "1", str(sortie)], 60)
         return sortie
 
@@ -401,12 +408,13 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
             trouve = t
             journal(f"  écran Results trouvé à {t} s")
         zones = lire_zones_results(outils, png, config) if type_ecran in RESULTATS_TYPES else None
-        lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones) if _est_results_gb(l)]
+        lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
+                     if _est_results_gb(l) or (l["mode"] == "gb" and l["score_source"] == "record")]    # + Personal Record du salon
         Path(png).unlink(missing_ok=True)
     if trouve is None:
         journal(f"  écran Results non trouvé entre {int(t0)} et {dernier} s")
     else:
-        pleines = [l for l in lectures if l["score"] is not None]
+        pleines = [l for l in lectures if l["score"] is not None and l["score_source"] != "record"]
         journal(f"  écran Results lu de {int(t0)} à {dernier} s : {n} image(s), {len(pleines)} lecture(s) avec Rage Count")
     return lectures, n, trouve, dernier
 
@@ -707,21 +715,24 @@ def publier_essai(outils, source, destination, git=None, maximum=8, resume=None,
                                                                                for f in sorted(source.glob("*_recherche_*.txt"))}},
                                                          ensure_ascii=False, indent=1), encoding="utf-8")
         ecrits.append(nom_resume)
+    t_de = lambda f: int((re.search(r"_(?:tri[34]|recherche)_(\d+)", f.stem) or [0, 0])[1])
     for fichiers in par_video.values():
-        choisis, par_type = [f for f in fichiers if "_recherche_" in f.stem][:4], {}   # images de l'écran Results : toujours
-        for f in fichiers:
-            t = types[f]
-            if f in choisis:
-                continue
-            if t and par_type.get(t, 0) < (2 if t == "gb_combat" else 4):
-                par_type[t] = par_type.get(t, 0) + 1
-                choisis.append(f)
+        reconnus = sorted((f for f in fichiers if types[f] in ("gb_results", "gb_results_partiel", "gb_record")), key=t_de)
+        if len(reconnus) > 4:                                    # écrans Results / record : répartis du début à la fin
+            reconnus = [reconnus[round(k * (len(reconnus) - 1) / 3)] for k in range(4)]
+        combats = sorted((f for f in fichiers if types[f] == "gb_combat"), key=t_de)
+        choisis = list(dict.fromkeys(reconnus + combats[:1] + combats[-1:]))
+        choisis += sorted((f for f in fichiers if "_tri3_" in f.stem and f not in choisis), key=t_de)[-4:]   # fin de vidéo (langue inconnue)
+        tri4 = sorted((f for f in fichiers if "_tri4_" in f.stem and f not in choisis), key=t_de)
+        if tri4:                                                 # milieu de vidéo (langue inconnue) : 3 images réparties
+            choisis += list(dict.fromkeys(tri4[round(k * (len(tri4) - 1) / 2)] for k in range(3)))
+        choisis += [f for f in fichiers if "_recherche_" in f.stem and f not in choisis][:2]
         choisis += [f for f in fichiers if f not in choisis]
         for f in choisis[:maximum]:
             png = f.with_suffix(".png")
             if png.exists():
                 jpg = destination / (f.stem + ".jpg")
-                outils._lancer([outils.cfg["images"]["ffmpeg"], "-v", "error", "-y", "-i", str(png), "-q:v", "4", str(jpg)], 60)
+                outils._lancer([outils.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-y", "-i", str(png), "-q:v", "4", str(jpg)], 60)
                 ecrits.append(jpg.name)
             shutil.copyfile(f, destination / f.name)
             ecrits.append(f.name)
@@ -779,6 +790,7 @@ if __name__ == "__main__":
     ap.add_argument("--video", action="append", help="ne traite que cette vidéo (identifiant YouTube ; répétable)")
     ap.add_argument("--publier-essai", action="store_true",
                     help="comme --garder-ocr, puis copie les meilleures images (JPEG) et textes dans docs/essais/ocr et les pousse")
+    ap.add_argument("--images-par-video", type=int, help="avec --publier-essai : nombre d'images publiées par vidéo (défaut 6 à 8)")
     ap.add_argument("--resolution", type=int, help="télécharge les vidéos en hauteur ≤ N pixels (ex. 1080 pour tester les zones en 1080p)")
     ap.add_argument("--refaire", action="store_true", help="avec --video : retraite la vidéo même si elle est déjà faite")
     ap.add_argument("--garder-ocr", action="store_true", help="écrit le texte lu par tesseract et l'image dans logs/ocr/ (diagnostic)")
@@ -807,7 +819,7 @@ if __name__ == "__main__":
                 nom = f"_resume_{len(ids)}video{'s' if len(ids) > 1 else ''}{'_' + str(a.resolution) + 'p' if a.resolution else ''}.json"
                 resume["bilan"] = bilan_essai(d_, r["week"], ids, config)
             noms = publier_essai(Outils(config["pc"]), RACINE / "logs" / "ocr", RACINE / "docs" / "essais" / "ocr", Git(),
-                                 maximum=5 if len(ids) > 1 else 8, resume=resume, nom_resume=nom)
+                                 maximum=(a.images_par_video or (6 if len(ids) > 3 else 8)), resume=resume, nom_resume=nom)
             print(f"Essai publié dans docs/essais/ocr : {len(noms)} fichier(s).")
         except (GitErreur, OutilAbsent, OSError, RuntimeError) as e:
             print(f"ERREUR publication de l'essai : {e}", file=sys.stderr)
