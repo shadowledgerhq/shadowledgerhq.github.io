@@ -53,6 +53,13 @@ def test_points_plausibles():
     assert p("1,000,000,000,000,000", "ko", CONFIG)[0] and not p("10,000,000,000,000,000", "ko", CONFIG)[0]     # plafond 1e15
     assert not p("1593669209", "en", CONFIG)[0] and p("1593,669,209", "en", CONFIG)[0]    # v18 : groupes exigés aussi en anglais
     assert not p("10,37,579,0058", "ko", CONFIG)[0]            # groupes ≠ 3 chiffres
+    # v21 (SPEC v20) : un seul séparateur perdu toléré, 2 séparateurs lus au moins, un seul groupe de 6 chiffres
+    assert p("7,905,911007,261", "pt", CONFIG)[0] and not p("7,905911,007261", "pt", CONFIG)[0]
+    for mauvais in ("7,905911007261", "7,905,911007261", "7905911007261", "7,905,911007,261007"):
+        ok, raison = p(mauvais, "pt", CONFIG)
+        assert not ok and raison, mauvais
+    assert ocr_ecrans._structure_points("7,905,911007,261") == (True, True) and ocr_ecrans._structure_points("7,905,911,007,261") == (True, False)
+    assert ocr_ecrans.lire_gb_combat("Pontos 7,905911007261\nNúmero de Fúrias do Chefão 120 WARNING", CONFIG)["points_rejet"]
 
 
 def test_hud_points_rejetes_ko_pt():
@@ -135,15 +142,18 @@ def test_v20_chrono_hud_deduit():
         return res[0], ls
     ok, ls = run("7,905,911007,261")                                             # séparateur perdu, toléré
     assert ls[1]["detail"]["ecran"] == "combat_sans_chrono" and ls[1]["detail"]["hud_points"] == 7905911007261
-    assert ok["score"] == 156 and ok["confidence"] == "sur" and "chrono HUD déduit (t=214)" in ok["notes"] and "contrôle sans Hunter Rank" in ok["notes"]
+    assert "séparateur perdu (OCR)" in ok["notes"] and ok["score"] == 156 and ok["confidence"] == "sur" and "chrono HUD déduit (t=214)" in ok["notes"] and "contrôle sans Hunter Rank" in ok["notes"]
     # Points hors de la fenêtre du Final Score (> Final) : ignorés
     assert run("9,905,911,007,261")[0]["confidence"] == "a_verifier"
     # trop tard (> 2 s après le HUD de référence) : ignoré
     assert run("7,905,911,007,261", t_sc=216)[0]["confidence"] == "a_verifier"
     # l'écran Results précède le HUD sans chrono : ignoré
     assert run("7,905,911,007,261", t_sc=214, ts=(212, 213, 233))[0]["confidence"] == "a_verifier"
-    # Points non plausibles (sans séparateurs) : ignorés
-    assert run("7905911007261")[0]["confidence"] == "a_verifier"
+    # Points non plausibles (SPEC v20 : au moins 2 séparateurs lus, un seul groupe de 6 chiffres) : ignorés
+    for mauvais in ("7905911007261", "7,905911007261", "7,905,911007261", "7,905,911007,261000"):
+        assert run(mauvais)[0]["confidence"] == "a_verifier", mauvais
+    sans_perte = run("7,905,911,007,261")[0]                                      # lecture complète : pas de note de séparateur perdu
+    assert sans_perte["confidence"] == "sur" and "séparateur perdu (OCR)" not in sans_perte["notes"]
     # idempotent : refusionner les lectures déjà fusionnées garde la note une seule fois
     res, ls = run("7,905,911,007,261")
     deux = [l for l in pc.fusionner_ecrans([], "t5", pc.fusionner_ecrans([], "t5", ls + [], CONFIG), CONFIG) if l["score"] is not None][0]

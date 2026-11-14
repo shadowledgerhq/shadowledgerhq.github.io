@@ -148,6 +148,7 @@ def lecture_gb_combat(meta, ecran, config, source="video-complete"):
     lec.update(score=None, score_source=None, exact=False, confidence="a_verifier", stage=ecran.get("stage"),
                t=ecran.get("t"), team=None,
                detail={"ecran": "combat", "hud_points": ecran.get("points"), "chrono_hud": chrono,
+                       "separateur_perdu": bool(ecran.get("points_perdu")),
                        "hud_rage_count": rc})
     return lec
 
@@ -161,7 +162,8 @@ def lecture_gb_combat_sans_chrono(meta, ecran, config, source="video-complete"):
     lec = lecture_vide(meta, "gb")
     lec.update(score=None, score_source=None, exact=False, confidence="a_verifier", stage=ecran.get("stage"),
                t=ecran.get("t"), team=None,
-               detail={"ecran": "combat_sans_chrono", "hud_points": ecran.get("points"), "hud_rage_count": ecran.get("rage_count")})
+               detail={"ecran": "combat_sans_chrono", "hud_points": ecran.get("points"), "hud_rage_count": ecran.get("rage_count"),
+                       "separateur_perdu": bool(ecran.get("points_perdu"))})
     return lec
 
 

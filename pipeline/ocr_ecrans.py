@@ -137,12 +137,27 @@ def detecter(texte):
     return None
 
 
+def _structure_points(brut):
+    """Structure des groupes d'un nombre de Points : (ok, séparateur_perdu). Strict : 1er groupe de 1 à 4 chiffres, tous
+    les suivants de 3 chiffres. v21 (SPEC v20) : l'OCR peut perdre UN SEUL séparateur : toléré si le 1er groupe a 1 à 4
+    chiffres, si au moins 2 séparateurs sont lus et si tous les groupes suivants ont 3 chiffres sauf un seul de 6."""
+    jetons = re.split(r"[,. \u00a0\u202f]", brut.strip())
+    if len(jetons) < 2 or not all(j.isdigit() for j in jetons) or not 1 <= len(jetons[0]) <= 4:
+        return False, False
+    longueurs = [len(j) for j in jetons[1:]]
+    if all(n == 3 for n in longueurs):
+        return True, False
+    if len(jetons) - 1 >= 2 and sorted(longueurs).count(3) == len(longueurs) - 1 and longueurs.count(6) == 1:
+        return True, True
+    return False, False
+
+
 def points_plausibles(brut, langue, config=None):
     """v17 : Points du HUD plausibles ? Entier lu `brut` (texte OCR). Rejet si : hors de [`gb.hud_points_min` ;
-    `gb.hud_points_max` = 1e15] ; ou nombre sans séparateurs de milliers / groupes qui ne font pas 3 chiffres, dans TOUTES
-    les langues (v18 ; l'OCR a perdu des groupes : ex. 10375790058 pour 10 375 790 058 xxx). `gb.hud_points_groupes`
-    peut être une liste de langues pour restreindre l'exigence.
-    Retourne (ok, raison)."""
+    `gb.hud_points_max` = 1e15] ; ou groupes de milliers incomplets, dans TOUTES les langues (v18 ; l'OCR a perdu des
+    groupes : ex. 10375790058 pour 10 375 790 058 xxx) ; v21 : UN séparateur perdu toléré dans les limites de
+    `_structure_points` (`7,905,911007,261`). `gb.hud_points_groupes` peut être une liste de langues pour restreindre
+    l'exigence. Retourne (ok, raison)."""
     cfg = (config or {}).get("gb") or {}
     brut = (brut or "").strip()
     if not brut:
@@ -151,9 +166,8 @@ def points_plausibles(brut, langue, config=None):
     if not cfg.get("hud_points_min", 10**9) <= valeur <= cfg.get("hud_points_max", 10**15):
         return False, f"Points hors plage ({valeur})"
     groupes = cfg.get("hud_points_groupes", "toutes")
-    if groupes == "toutes" or langue in groupes:
-        if not re.fullmatch(r"\d{1,4}(?:[,. \u00a0\u202f](?:\d{3})+)+", brut):
-            return False, f"Points sans groupes de 3 chiffres ({brut})"
+    if (groupes == "toutes" or langue in groupes) and not _structure_points(brut)[0]:
+        return False, f"Points sans groupes de 3 chiffres ({brut})"
     return True, None
 
 
@@ -182,12 +196,14 @@ def lire_gb_combat(texte, config=None):
     if lib and lib[2]:
         pre = r"[xX×]\s*" if lib[4] else ""
         rc = re.search(rf"(?:{lib[2]})\W{{0,6}}{pre}(\d{{1,3}})(?!\d)", bas, re.IGNORECASE)
-    points, rejet = (_entier(pts.group(1)) if pts else None), None
+    points, rejet, perdu = (_entier(pts.group(1)) if pts else None), None, False
     if pts:
         ok_p, rejet = points_plausibles(pts.group(1), langue, config)
         if not ok_p:
             points = None
-    return {"points": points, "points_rejet": rejet, "rage_count": int(rc.group(1)) if rc else None,
+        else:
+            perdu = _structure_points(pts.group(1))[1]
+    return {"points": points, "points_rejet": rejet, "points_perdu": perdu, "rage_count": int(rc.group(1)) if rc else None,
             "chrono": chrono_hud(t), "stage": None, "langue": langue, "rage_optionnel": bool(lib and lib[5])}
 
 
@@ -327,6 +343,7 @@ def _appliquer_zones_hud(ecran, zones, config):
         ok_p, rejet = points_plausibles(m.group(0), ecran.get("langue"), config)
         if ok_p:
             ecran["points"] = _entier(m.group(0))
+            ecran["points_perdu"] = _structure_points(m.group(0))[1]
         else:
             ecran["points_rejet"] = rejet
     rc = _entier_court(zones.get("hud_rage"))
@@ -510,7 +527,8 @@ def regrouper_hud(lectures, config=None):
                     if (sc["video_id"] == vid and 0 < sc["t"] - ref["t"] <= delai and not any(
                             o["video_id"] == vid and o["t"] is not None and ref["t"] < o["t"] < sc["t"]
                             for o in lectures if ecran_de(o) not in ("combat", "combat_sans_chrono"))):
-                        deduits.append({"t": sc["t"], "points": sc["detail"]["hud_points"]})
+                        deduits.append({"t": sc["t"], "points": sc["detail"]["hud_points"],
+                                        "separateur_perdu": bool(sc["detail"].get("separateur_perdu"))})
             if deduits:
                 d["points_deduits"] = max(deduits, key=lambda x: x["t"])
             points = d.get("hud_points") if d["chrono_hud"] <= chrono_max else None
@@ -649,7 +667,7 @@ def fusionner_results(lectures, config=None):
         notes = []
         for l in groupe:
             for n in l["notes"]:
-                if not n.startswith(("contrôle sans Hunter Rank", "Hunter Rank incohérents", "chrono HUD déduit", "lecture fusionnée", "conflit de lecture", "contrôle GB", "RC discordant écarté", "compteur animé")) and n not in notes:
+                if not n.startswith(("contrôle sans Hunter Rank", "Hunter Rank incohérents", "chrono HUD déduit", "séparateur perdu", "lecture fusionnée", "conflit de lecture", "contrôle GB", "RC discordant écarté", "compteur animé")) and n not in notes:
                     notes.append(n)
         if n_images >= 2:
             notes.append(f"lecture fusionnée ({n_images} images)")
@@ -678,6 +696,7 @@ def fusionner_results(lectures, config=None):
                 if (ded and final is not None and ded["t"] < d["t_debut"] and dans(ded["points"])
                         and not dans((hud or {}).get("damage"))):
                     hud_eff, deduit = {**hud, "damage": ded["points"]}, ded["t"]      # v20 : chrono HUD déduit (SPEC v19)
+                perdu = ded.get("separateur_perdu") if deduit is not None else (hud or {}).get("detail", {}).get("separateur_perdu")
                 ok2, pb2 = ecrans.controle_results_sans_hunter_rank(lec, hud_eff, config or {}, joueur_optionnel=complet, infos=infos)
                 if ok2:
                     lec.update(exact=True, confidence="sur")
@@ -685,6 +704,8 @@ def fusionner_results(lectures, config=None):
                     lec["notes"] += infos
                     if deduit is not None:
                         lec["notes"].append(f"chrono HUD déduit (t={deduit})")
+                    if perdu and (deduit is not None or (hud or {}).get("damage") is not None):
+                        lec["notes"].append("séparateur perdu (OCR)")
                 elif complet and d["player_score"] is not None:
                     lec["notes"] += [f"contrôle GB : {p}" for p in pb]
                     lec["notes"] += [f"contrôle sans Hunter Rank : {p}" for p in pb2]
