@@ -129,7 +129,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
         ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=colonnes)
         ws["A1"], ws["A2"] = "⚔  SHADOW LEDGER  ·  " + titre, sous
         ws["A1"].font, ws["A2"].font = police(BLEU, 20, True), police(SOURD, 11, i=True)
-        ws["A1"].alignment = ws["A2"].alignment = Alignment(vertical="center", indent=1)
+        ws["A1"].alignment = ws["A2"].alignment = Alignment(horizontal="center", vertical="center")
         for c in range(1, colonnes + 1):
             ws.cell(3, c).fill = fond(VIOLET)
             ws.cell(3, c).border = Border()
@@ -138,13 +138,16 @@ def exporter(semaine, sortie=None, racine=RACINE):
     # --- page de garde -------------------------------------------------------------------------------------------
     peindre(accueil, 60, 26)
     banniere(accueil, 6, "Solo Leveling: Arise", _semaine_txt(semaine))
-    for i, l in enumerate([14, 36, 14, 14, 14, 30], 1):
+    for i, l in enumerate([10, 40, 14, 14, 14, 10], 1):
         accueil.column_dimensions[chr(64 + i)].width = l
+    for r_ in (5, 6):
+        accueil.merge_cells(start_row=r_, start_column=2, end_row=r_, end_column=5)
     accueil["B5"], accueil["B6"] = "Classements hebdomadaires", "Source des données : slagate.com · classements calculés automatiquement"
     accueil["B5"].font, accueil["B6"].font = police(OR, 14, True), police(SOURD, 10, i=True)
+    accueil["B5"].alignment = accueil["B6"].alignment = Alignment(horizontal="center")
     for j, t in enumerate(["Mode", "Classés", "À vérifier", "Total"], 2):
         c = accueil.cell(8, j, t)
-        c.font, c.fill, c.alignment = police(TEXTE, 11, True), fond(ENTETE), Alignment(horizontal="center" if j > 2 else "left", indent=1)
+        c.font, c.fill, c.alignment = police(TEXTE, 11, True), fond(ENTETE), Alignment(horizontal="center")
     ligne = 9
     for cle, runs in donnees.items():
         sur = sum(1 for r in runs if r.get("confidence") == "sur" and r.get("rank") is not None)
@@ -152,13 +155,17 @@ def exporter(semaine, sortie=None, racine=RACINE):
             c = accueil.cell(ligne, j, v)
             c.font = police(TEXTE if j == 2 else (VERT if j == 3 else AMBRE if j == 4 else SOURD), 11, j == 2)
             c.fill = fond(PANNEAU if ligne % 2 else PANNEAU2)
-            c.alignment = Alignment(horizontal="left" if j == 2 else "center", indent=1)
+            c.alignment = Alignment(horizontal="center")
         ligne += 1
+    accueil.merge_cells(start_row=ligne + 1, start_column=2, end_row=ligne + 1, end_column=5)
     accueil.cell(ligne + 1, 2, "Légende").font = police(OR, 12, True)
+    accueil.cell(ligne + 1, 2).alignment = Alignment(horizontal="center")
     for k, (txt, couleur) in enumerate([("✔ Sûr : valeur contrôlée, ligne classée", VERT),
                                          ("⚠ À vérifier : valeur provisoire ou non contrôlée, ligne non classée", AMBRE),
                                          ("🥇🥈🥉 Podium du classement", OR)], ligne + 2):
+        accueil.merge_cells(start_row=k, start_column=2, end_row=k, end_column=5)
         accueil.cell(k, 2, txt).font = police(couleur, 10)
+        accueil.cell(k, 2).alignment = Alignment(horizontal="center")
 
     # --- un onglet par mode (ou par porte HOTM) ------------------------------------------------------------------
     for cle, runs in donnees.items():
@@ -173,7 +180,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
         for j, t in enumerate(COLONNES, 1):
             c = ws.cell(5, j, t)
             c.font, c.fill, c.border = police(BLEU, 11, True), fond(ENTETE), Border(bottom=Side(style="medium", color=VIOLET))
-            c.alignment = Alignment(horizontal="center" if j in (1, 3, 5, 6, 7) else "left", vertical="center", indent=0 if j in (1, 3, 5, 6, 7) else 1)
+            c.alignment = Alignment(horizontal="center", vertical="center")
         ws.row_dimensions[5].height = 26
         if not lignes:
             ws.merge_cells(start_row=7, start_column=1, end_row=7, end_column=len(COLONNES))
@@ -187,8 +194,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
                 c = ws.cell(k, j, v)
                 c.fill, c.border = fond(PANNEAU if k % 2 == 0 else PANNEAU2), Border(bottom=trait)
                 c.font = police(TEXTE if sur else SOURD, 11, j in (1, 2, 3) and sur, not sur)
-                c.alignment = Alignment(vertical="center", horizontal="center" if j in (1, 3, 5, 6, 7) else "left",
-                                        indent=0 if j in (1, 3, 5, 6, 7) else 1, wrap_text=(j == 8))
+                c.alignment = Alignment(vertical="center", horizontal="center", wrap_text=(j in (4, 8)))
             if rang in PODIUM:
                 medaille, couleur = PODIUM[rang]
                 ws.cell(k, 1).value = f"{medaille} {rang}"
