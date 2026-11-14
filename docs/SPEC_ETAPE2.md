@@ -13,7 +13,7 @@ Marqueurs (mêmes sens qu'à l'étape 1) : **[À CONFIRMER]** = hypothèse codé
 - **Builds analysés** : les lignes `rank` 1 à 10 (`confidence: sur`) de `data/runs/<semaine>/<mode>.json` (`poc`, `bot`, `gb`, `hotm-gate-<n>`). Une ligne `rank: null` n'a pas de build.
 - **Un build = une run** : un objet de `runs_detail[i]` donne un build `<run_id>-<i+1>.json`. POC et GB : 2 runs = 2 builds, éventuellement dans 2 vidéos différentes.
 - **Où chercher** : dans la vidéo `runs_detail[i].video_id`, l'écran de composition (onglets) **avant** l'écran RESULT de la run (`t`). Si la vidéo contient 2 runs, on prend la composition située entre le RESULT précédent et celui de la run.
-- **Reconnaissance** : par icône (OpenCV, comparaison avec `data/icons/<categorie>/`). Aucun nom n'est lu à l'écran, sauf le pseudo et les chiffres (niveaux, stats).
+- **Reconnaissance** : par icône (OpenCV, comparaison avec `data/icons/<categorie>/`). Sur l'écran de composition, aucun nom n'est écrit ; les noms écrits des écrans hors composition sont lus par OCR (v3, §1.4 et §2.1), ainsi que les chiffres (niveaux, stats).
 - **Ne rien inventer** : un élément non reconnu reste `null`. Un nom absent de la base s'affiche par son `id`, jamais traduit à la main.
 - **Idempotent** : un build est recalculé à chaque passage tant que sa vidéo est `en_cours` ; un build `build_complet` n'est plus retraité.
 - Paramètres réglables dans `pipeline/config/etape2.json`, pas dans le code.
