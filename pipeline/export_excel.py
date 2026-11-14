@@ -19,7 +19,7 @@ NOMS = {"poc": "POC · Power Of Calamity", "bot": "BOT · Battlefield Of Time", 
 UNITES = {"damage": "Dégâts", "seconds": "Temps", "rage_count": "Rage Count", "points": "Points"}
 EQUIPE = {"poc": "Éq.", "gb": "G"}
 COLONNES = ["Rang", "Joueur", "Score", "Détail des runs", "Statut", "Publiée (Paris)", "Vidéo", "Notes"]
-LARGEURS = [9, 24, 18, 34, 15, 17, 16, 80]
+LARGEURS = [11, 24, 18, 34, 15, 17, 18, 80]
 # Palette (hex sans #)
 NUIT, PANNEAU, PANNEAU2, ENTETE = "0B0E1A", "121830", "181F3D", "1E1B4B"
 VIOLET, BLEU, OR, ARGENT, BRONZE, TEXTE, SOURD = "7C3AED", "38BDF8", "F5C542", "C0C8D8", "CD7F32", "E5E9F5", "7F88A8"
@@ -50,7 +50,7 @@ def detail_runs(r):
         eq = equipes[i] if i < len(equipes) and len(equipes) == len(valeurs) else None
         etiquette = f"{EQUIPE.get(r.get('mode'), '')}{eq} " if eq and EQUIPE.get(r.get("mode")) else ""
         pieces.append(etiquette + _compact(v, unite))
-    return " + ".join(pieces)
+    return " + ".join(pieces) if len(pieces) > 1 else ""      # une seule run : le score la donne déjà
 
 
 def lignes_mode(runs):
@@ -136,7 +136,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
         ws.row_dimensions[1].height, ws.row_dimensions[2].height, ws.row_dimensions[3].height = 40, 22, 4
 
     # --- page de garde -------------------------------------------------------------------------------------------
-    peindre(accueil, 30, 6)
+    peindre(accueil, 60, 26)
     banniere(accueil, 6, "Solo Leveling: Arise", _semaine_txt(semaine))
     for i, l in enumerate([14, 36, 14, 14, 14, 30], 1):
         accueil.column_dimensions[chr(64 + i)].width = l
@@ -166,7 +166,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
         ws = wb.create_sheet(_nom_onglet(cle).split(" · ")[0] + (" " + cle.rsplit(" ", 1)[-1] if cle.startswith("hotm gate") else ""))
         ws.sheet_properties.tabColor = {"poc": "EF4444", "bot": BLEU, "gb": OR, "hotm": VIOLET}.get(mode, VIOLET)
         lignes = lignes_mode(runs)
-        peindre(ws, max(len(lignes) + 8, 30), len(COLONNES))
+        peindre(ws, max(len(lignes) + 30, 60), 26)
         banniere(ws, len(COLONNES), _nom_onglet(cle), _semaine_txt(semaine))
         for i, l in enumerate(LARGEURS, 1):
             ws.column_dimensions[chr(64 + i)].width = l

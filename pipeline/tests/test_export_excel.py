@@ -10,7 +10,7 @@ def test_lignes_et_fichier():
             {"rank": 1, "player": "A", "score": {"total": 332, "runs": [167, 165], "unit": "rage_count"}, "confidence": "sur", "video_id": "v1",
              "published_at": "2026-11-13T11:14:16+01:00", "score_source": "record", "notes": ""}]
     lignes = export_excel.lignes_mode(runs)
-    assert [l[1] for l in lignes] == ["A", "B"] and lignes[0][3] == "167 + 165" and lignes[0][6].endswith("v1") and lignes[0][5] == "2026-11-13 11:14"
+    assert [l[1] for l in lignes] == ["A", "B"] and lignes[0][3] == "167 + 165" and lignes[1][3] == "" and lignes[0][6].endswith("v1") and lignes[0][5] == "2026-11-13 11:14"
     try:
         import openpyxl
     except ImportError:
