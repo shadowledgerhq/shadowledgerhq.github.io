@@ -248,9 +248,9 @@ def test_publier_essai():
             (src / f"{nom}.png").write_bytes(b"png")
         g = FauxGit()
         noms = pc.publier_essai(pc.Outils(CONFIG["pc"], executer=faux), src, dst, g, maximum=2, resume={"semaine": "x", "lectures": []})
-        assert sorted(noms) == ["_resume.json", "v_tri3_4.jpg", "v_tri3_4.txt", "v_tri4_100.jpg", "v_tri4_100.txt"]     # fin de vidéo (tri 3) + texte le plus long
+        assert sorted(noms) == ["_resume.json", "v_tri3_4.jpg", "v_tri3_4.txt", "v_tri4_50.jpg", "v_tri4_50.txt"]     # fin de vidéo (tri 3) puis images réparties (tri 4)
         assert "v_tri4_100.txt" in (dst / "_resume.json").read_text(encoding="utf-8")   # les 2 textes les plus longs
-        assert (dst / "v_tri4_100.jpg").exists() and not (dst / "v_tri4_50.txt").exists() and len(g.appels) == 1
+        assert (dst / "v_tri4_50.jpg").exists() and not (dst / "v_tri4_100.txt").exists() and len(g.appels) == 1
 
 
 # --- v11 : HUD du combat GB (textes OCR réels de docs/essais/ocr, vidéo lGDbzyIJcjY) -----------------------------------
