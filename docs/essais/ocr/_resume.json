@@ -1,7 +1,7 @@
 {
  "semaine": "2026-11-12",
  "alertes": [
-  "51 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
+  "56 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
  ],
  "lectures": [
   {
@@ -31,11 +31,44 @@
     "separateur_perdu": false,
     "hud_rage_count": 120,
     "t_debut": 213,
-    "t_fin": 213
+    "t_fin": 213,
+    "points_deduits": {
+     "t": 214,
+     "points": 7905911007261,
+     "separateur_perdu": true
+    }
    },
    "notes": [
     "HUD : Boss Rage Count x120, chrono 0.8"
    ]
+  },
+  {
+   "video_id": "T5dR6iJAn-Y",
+   "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+   "channel_title": "RaidenShadow",
+   "published_at": "2026-11-12T13:50:20Z",
+   "lang": "pt-BR",
+   "mode": "gb",
+   "regles": 17,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": null,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 214,
+   "stage": null,
+   "team": null,
+   "score": null,
+   "score_source": null,
+   "exact": false,
+   "confidence": "a_verifier",
+   "detail": {
+    "ecran": "combat_sans_chrono",
+    "hud_points": 7905911007261,
+    "hud_rage_count": null,
+    "separateur_perdu": true
+   },
+   "notes": []
   },
   {
    "video_id": "T5dR6iJAn-Y",
@@ -55,8 +88,8 @@
    "team": null,
    "score": 156,
    "score_source": "debut-fin",
-   "exact": false,
-   "confidence": "a_verifier",
+   "exact": true,
+   "confidence": "sur",
    "detail": {
     "damage_exact": true,
     "play_time": "03:00",
@@ -221,7 +254,9 @@
    },
    "notes": [
     "lecture fusionnée (7 images)",
-    "contrôle sans Hunter Rank : Player's Score illisible"
+    "contrôle sans Hunter Rank",
+    "chrono HUD déduit (t=214)",
+    "séparateur perdu (OCR)"
    ]
   }
  ],
@@ -255,6 +290,9 @@
      1920,
      1080
     ],
+    "hud_suite": [
+     213
+    ],
     "results_lus": [
      [
       229,
@@ -280,6 +318,8 @@
   "T5dR6iJAn-Y_recherche_239.txt",
   "T5dR6iJAn-Y_recherche_240.txt",
   "T5dR6iJAn-Y_recherche_241.txt",
+  "T5dR6iJAn-Y_suite_hud_214_gb_combat_incertain.txt",
+  "T5dR6iJAn-Y_suite_hud_215.txt",
   "T5dR6iJAn-Y_tri3_0.txt",
   "T5dR6iJAn-Y_tri3_2.txt",
   "T5dR6iJAn-Y_tri3_213_gb_combat_incertain.txt",
