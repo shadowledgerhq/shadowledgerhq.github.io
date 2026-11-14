@@ -566,10 +566,17 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
             if ancien and ancien.get("status") == "build_complet" and not force:
                 builds.append(ancien)
                 continue
-            images = fournisseur(ctx) if fournisseur else {}
+            images, extra = {}, {}
             cle_cfg = "hotm_sans_sjw" if ctx["mode"] == "hotm" and ctx.get("hunter_mode") is True else ctx["mode"]
+            if fournisseur and (cfg.get("zones") or {}).get(cle_cfg):       # sans zones définies : rien à chercher, pas de téléchargement
+                res = fournisseur(ctx)
+                images, extra = res if isinstance(res, tuple) else (res, {})
             obs = observer(images, cle_cfg, cfg, banque, db)
-            if not images:
+            if extra.get("t_composition"):
+                obs["t_composition"] = extra["t_composition"]
+            if extra.get("erreur"):
+                obs["notes"].append(f"images de composition non disponibles : {extra['erreur']}")
+            elif not images:
                 obs["notes"].append("images de composition non disponibles")
             obs["analyse_terminee"] = analyse_terminee(processed, ctx["video_id"])
             b = construire_build(ctx, obs, regles_mode(rules, ctx["mode"]), cfg, db)
@@ -583,6 +590,30 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
             builds.append(b)
     ecrire_rapport(week, builds, racine)
     return builds
+
+
+def build_essai(video_id, mode, racine=RACINE, cfg=None, banque=None, fournisseur=None, t_result=None, hunter_mode=None):
+    """Diagnostic : build d'une seule vidéo hors classement (rang `None`), pour essayer les zones sur une vraie vidéo. Retourne
+    le build ; `unmatched` et `found` montrent ce qui est reconnu. N'écrit rien dans `data/builds`."""
+    racine = Path(racine)
+    cfg = cfg or charger_config()
+    db = charger_db(racine)
+    if banque is None:
+        from icones import Banque
+        banque = Banque(racine)
+    ctx = {"run_id": f"essai-{video_id}", "run_index": 1, "week": "essai", "mode": mode, "gate": None, "hunter_mode": hunter_mode, "rank": None,
+           "player": None, "channel_id": None, "video_id": video_id, "t_result": t_result, "team": None}
+    cle_cfg = "hotm_sans_sjw" if mode == "hotm" and hunter_mode is True else mode
+    res = fournisseur(ctx) if fournisseur else ({}, {})
+    images, extra = res if isinstance(res, tuple) else (res, {})
+    obs = observer(images, cle_cfg, cfg, banque, db)
+    obs["t_composition"] = extra.get("t_composition")
+    if extra.get("erreur"):
+        obs["notes"].append(f"images de composition non disponibles : {extra['erreur']}")
+    elif not images:
+        obs["notes"].append("composition non filmée")
+    obs["analyse_terminee"] = True
+    return construire_build(ctx, obs, None, cfg, db)
 
 
 def rapport(week, builds, fichiers_pptx=()):

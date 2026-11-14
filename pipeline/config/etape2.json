@@ -897,5 +897,32 @@
    ]
   ]
  },
- "_masques": "[À CONFIRMER] zones de surimpression du jeu ignorées, en fractions de l'icône : pièces = bandeau `Lv.120` + cadenas (bas) et `+20` (haut droite) ; noyaux = texte `MAX`/`Lv.25` (bas ; 0,85 gardé : à 0,72 le noyau de SJW passe sous le seuil)."
+ "_masques": "[À CONFIRMER] zones de surimpression du jeu ignorées, en fractions de l'icône : pièces = bandeau `Lv.120` + cadenas (bas) et `+20` (haut droite) ; noyaux = texte `MAX`/`Lv.25` (bas ; 0,85 gardé : à 0,72 le noyau de SJW passe sous le seuil).",
+ "extraction": {
+  "pas_s": 2,
+  "max_par_onglet": 3,
+  "fenetre_max_s": 600,
+  "resolution": 1080,
+  "bouton": [
+   0.772,
+   0.8633,
+   0.9655,
+   0.934
+  ],
+  "seuil_bouton": 0.4,
+  "colonne_onglets": {
+   "x": 0.0484,
+   "y": [
+    0.1997,
+    0.2811,
+    0.361,
+    0.4439,
+    0.5284
+   ],
+   "rayon": 0.0276,
+   "seuil_blanc": 0.08,
+   "rapport_2e": 1.5
+  }
+ },
+ "_extraction": "[À CONFIRMER] détection de l'écran de composition sur les images de la vidéo (capture BOT JA 1158×651) : bouton jaune d'entrée (bas droite) = écran présent ; onglet actif = icône de la colonne de gauche la plus blanche (≥ 8 % de pixels blancs et ≥ 1,5 × la 2e). Sans ces deux signes, l'image est ignorée. Fenêtre d'analyse : de 0 à `t_result` (max `fenetre_max_s` s), 1 image / `pas_s` s, `max_par_onglet` images gardées par onglet."
 }

@@ -737,6 +737,30 @@ def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=Non
     return l
 
 
+def passage_builds(semaine, outils, git=None, journal=None, force=False, pptx=True):
+    """Étape 2 sur le PC : images de composition des vidéos du top 10 (`composition.fournisseur_pc`), calcul des builds,
+    PowerPoint, puis commit/push de `data/builds`. Retourne la liste des builds."""
+    import builds as B
+    import composition
+    journal = journal or (lambda m: None)
+    if git:
+        git.tirer()
+    cfg2 = B.charger_config()
+    fournisseur = composition.fournisseur_pc(outils, cfg2, journal)
+    journal(f"Builds — semaine {semaine}")
+    liste = B.calculer(semaine, RACINE, cfg2, fournisseur=fournisseur, force=force)
+    if pptx:
+        try:
+            import export_pptx
+            fichiers = export_pptx.exporter(semaine, RACINE)
+            journal(f"{len(fichiers)} fichier(s) PowerPoint")
+        except SystemExit as e:          # python-pptx absent
+            journal(f"PowerPoint ignoré : {e}")
+    if git:
+        git.pousser(f"données: builds {semaine}")
+    return liste
+
+
 def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper=False, maximum=None, images=None,
            journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None, seulement=None, refaire=False,
            relance=False, planifier=None, fichier_relance=None):
@@ -1006,7 +1030,9 @@ if __name__ == "__main__":
     for flux in (sys.stdout, sys.stderr):  # titres coréens / japonais : la console Windows (cp1252) planterait sinon
         flux.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
-    ap.add_argument("passage", choices=["daily", "weekly"])
+    ap.add_argument("passage", choices=["daily", "weekly", "builds"], help="builds : étape 2 (images de composition, builds, PowerPoint)")
+    ap.add_argument("--mode", choices=["poc", "bot", "gb", "hotm"], help="avec builds --video : mode de la vidéo (défaut bot)")
+    ap.add_argument("--semaine", help="avec builds : semaine AAAA-MM-JJ (défaut : semaine courante)")
     ap.add_argument("--no-git", action="store_true", help="pas de pull/push (essai local)")
     ap.add_argument("--relance", action="store_true", help="passage de relance (anti-bot) : pas de nouvelle relance programmée")
     ap.add_argument("--whisper", action="store_true", help="active Whisper (config pc.whisper_cmd requis)")
@@ -1021,6 +1047,32 @@ if __name__ == "__main__":
     ap.add_argument("--maintenant", help="instant simulé ISO 8601 (tests)")
     a = ap.parse_args()
     config = charger_config()
+    if a.passage == "builds" and a.video:          # essai sur une vidéo hors classement : `--video ID [--mode bot]`
+        import builds as B
+        import composition
+        cfg2 = B.charger_config()
+        b = B.build_essai(a.video[0], a.mode or "bot", cfg=cfg2, fournisseur=composition.fournisseur_pc(Outils(config["pc"]), cfg2, lambda m: print(m, flush=True)))
+        sortie = RACINE / "docs" / "essais" / "builds"
+        sortie.mkdir(parents=True, exist_ok=True)
+        (sortie / f"{a.video[0]}.json").write_text(json.dumps(b, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"{b['status']} — {b['counts']} — {b['notes']}")
+        if not a.no_git:
+            try:
+                Git().pousser_chemin(f"essai: build {a.video[0]}", "docs/essais/builds")
+                print("Essai publié dans docs/essais/builds.")
+            except GitErreur as e:
+                print(f"ERREUR publication : {e}", file=sys.stderr)
+        sys.exit(0)
+    if a.passage == "builds":
+        try:
+            semaine = a.semaine or id_semaine(maintenant())
+            n = passage_builds(semaine, Outils(config["pc"]), None if a.no_git else Git(), journal=lambda m: print(m, flush=True), force=a.refaire)
+            from collections import Counter
+            print(f"Semaine {semaine} : {len(n)} build(s) — {dict(Counter(b['status'] for b in n))}")
+        except GitErreur as e:
+            print(f"ERREUR git : {e}", file=sys.stderr)
+            sys.exit(1)
+        sys.exit(0)
     if a.resolution:
         config["pc"]["images"]["format_video"] = f"bv*[height<={a.resolution}]/b[height<={a.resolution}]"
     try:

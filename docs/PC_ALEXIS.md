@@ -60,3 +60,8 @@ Puis, pour tester une résolution 1080p, sur une seule vidéo : `py -3 pipeline\
 ## Rapport et relance automatique (v23)
 - `data/runs/<semaine>/_rapport.md` commence par : **passage complet oui/non**, vidéos traitées / en_cours restantes (dont à traiter par le PC), erreurs bloquantes (anti-bot, outil absent, ffmpeg/erreur d'images, conflit git, crash). Complet = aucune erreur bloquante et plus aucune vidéo `pc_needed` sans tri 3-4 terminé.
 - Anti-bot YouTube : le lot s'arrête, le passage est « incomplet : anti-bot » et **une relance unique est programmée 2 h plus tard** (tâche « ShadowLedger PC relance », `lancer_pc.bat daily relance`), au plus une fois par soir (`logs\relance.json`) ; l'heure figure dans le rapport. Non testé sous Windows (PowerShell `Register-ScheduledTask`).
+
+## Builds (étape 2) sur le PC
+- Prérequis : `py -3 -m pip install python-pptx opencv-python-headless`.
+- **Essai sur une vidéo BOT** (hors classement, publie `docs/essais/builds/<id>.json`) : `py -3 pipeline\pc.py builds --video <ID_VIDEO> --mode bot` (ajouter `--no-git` pour ne rien pousser). La vidéo est téléchargée en 1080p, 1 image / 2 s sont lues jusqu'à 10 min, les images de l'écran de composition (bouton jaune d'entrée + onglet actif) sont gardées. Seul BOT a des zones calibrées ; POC, HOTM et GB ne téléchargent rien (`pas_de_build`).
+- Semaine entière (top 10) : `py -3 pipeline\pc.py builds --semaine AAAA-MM-JJ` (calcule les builds, écrit les PowerPoint dans `exports/`, pousse `data/builds`). Non branché dans les tâches planifiées.
