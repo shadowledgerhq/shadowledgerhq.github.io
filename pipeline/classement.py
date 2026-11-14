@@ -276,6 +276,8 @@ def controler_saison_record(runs, week, config):
             if verdict is None:
                 r["confidence"] = "a_verifier"
                 r["notes"].append("saison illisible (Time Left in Season)")
+            else:       # v15 : capture de la bonne semaine confirmée par `Time Left in Season` : l'alerte « juste après le reset » est levée
+                r["notes"][:] = [n for n in r["notes"] if not n.startswith("publiée juste après le reset")]
         gardees.append(r)
     return gardees, precedentes
 

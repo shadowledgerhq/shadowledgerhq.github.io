@@ -116,7 +116,7 @@ class OutilsImages:
         self.appels.append(("dl", vid))
         return Path(dossier) / vid
 
-    def images(self, chemin, segments, dossier, prefixe="f"):
+    def images(self, chemin, segments, dossier, prefixe="f", hauteur=None):
         self.appels.append(("img", self.cur, tuple(segments)))
         return [(d + i, f"{self.cur}@{d + i}") for d, n, p in segments for i in range(0, n, p)]
 
@@ -125,8 +125,9 @@ class OutilsImages:
 
     zones = {}      # {(vidéo, t): {"boss": texte, "joueur": texte}} : texte lu dans les recadrages
 
-    def recadrer(self, png, zone, echelle=3):
-        nom = next(n for n, z in CONFIG["gb"]["zones"].items() if list(z) == list(zone))
+    def recadrer(self, png, zone, echelle=3, seuil=None):
+        tous = {**CONFIG["gb"]["zones"], **CONFIG["gb"]["zones_record"]}
+        nom = next(n for n, z in tous.items() if list(z) == list(zone))
         return f"{png}#{nom}"
 
     def dimensions(self, png):
@@ -467,7 +468,7 @@ def test_v13_zones_ecart_et_format():
         def dimensions(self, png):
             return self.taille
 
-        def recadrer(self, png, zone, echelle=3):
+        def recadrer(self, png, zone, echelle=3, seuil=None):
             self.appels.append(zone)
             assert all(0 <= v <= 1 for v in zone)                       # fractions, jamais des pixels
             return png
@@ -476,7 +477,8 @@ def test_v13_zones_ecart_et_format():
             return "1"
     o = O((1280, 720))
     z = pc.lire_zones_results(o, "x.png", CONFIG)
-    assert z["format_ok"] and set(CONFIG["gb"]["zones"]) <= set(z) and len(o.appels) == len(CONFIG["gb"]["zones"])
+    nb = len(CONFIG["gb"]["zones_ocr"]["variantes"])
+    assert z["format_ok"] and set(CONFIG["gb"]["zones"]) <= set(z) and len(o.appels) == len(CONFIG["gb"]["zones"]) * nb      # une lecture par variante
     assert {"boss", "joueur", "final", "rage", "temps", *[f"rang_{k}" for k in range(1, 7)]} == set(CONFIG["gb"]["zones"])
     assert pc.lire_zones_results(O((1080, 1920)), "x.png", CONFIG) == {"format_ok": False}      # Short vertical
     assert pc.lire_zones_results(O((1440, 1080)), "x.png", CONFIG) == {"format_ok": False}      # 4:3
@@ -496,7 +498,7 @@ def test_v13_cas_lGDbzyIJcjY_de_bout_en_bout():
         class Faux(OutilsImages):
             zones = {("a", 252): Z_252, ("a", 253): Z_253}
 
-            def images(self, chemin, segments, dossier, prefixe="f"):
+            def images(self, chemin, segments, dossier, prefixe="f", hauteur=None):
                 self.appels.append(("img", self.cur, tuple(segments), prefixe))
                 return [(d_ + i, f"{self.cur}@{d_ + i}") for d_, n, p in segments for i in range(0, n, p)]
 
@@ -691,7 +693,7 @@ def test_commandes_des_outils():
     o = pc.Outils(CONFIG["pc"], executer=faux)
     with tempfile.TemporaryDirectory() as tmp:
         chemin = o.telecharger("vid1", tmp)
-        assert chemin.name == "vid1.mp4" and cmds[0][:3] == ["yt-dlp", "-f", "bv*[height<=720]/b[height<=720]"]
+        assert chemin.name == "vid1.mp4" and cmds[0][:3] == ["yt-dlp", "-f", "bv*[height<=1080]/b[height<=1080]"]
         imgs = o.images(chemin, [(0, 10, 2), (270, 30, 2)], tmp)
         assert [t for t, _ in imgs] == [0, 2, 4, 270, 272, 274]
         ff = [c for c in cmds if c[0] == "ffmpeg"]
@@ -702,10 +704,15 @@ def test_commandes_des_outils():
         assert cmds[-1][0] == "ffmpeg" and "scale=960:-2" in cmds[-1]
         o.recadrer(imgs[0][1], (0.02, 0.1, 0.18, 0.07))
         assert cmds[-1][0] == "ffmpeg" and "crop=iw*0.18:ih*0.07:iw*0.02:ih*0.1,scale=iw*3:-1,format=gray" in cmds[-1]
+    reel = pc.shutil.which
+    pc.shutil.which = lambda c: None                 # outils absents (même si tesseract est installé ici)
     try:
-        pc.Outils(CONFIG["pc"]).ocr("x.png")   # tesseract absent de cet environnement
+        pc.Outils(CONFIG["pc"]).ocr("x.png")
+        assert False, "OutilAbsent attendu"
     except pc.OutilAbsent as e:
         assert "tesseract" in str(e)
+    finally:
+        pc.shutil.which = reel
 
 
 if __name__ == "__main__":

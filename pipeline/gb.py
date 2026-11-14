@@ -41,12 +41,48 @@ def _memes_degats_arrondis(run, record):
     return abs(run["damage"] - record["damage"]) <= pas / 2 + 1e-6
 
 
+def _est_results(r):
+    return r.get("score_source") in ("debut-fin", "video-complete") and (r.get("detail") or {}).get("ecran") != "combat"
+
+
+def record_prioritaire(runs):
+    """SPEC §4.1 (v15) : quand un Personal Record CONTRÔLÉ (`sur` : Total Rage Count = somme des groupes joués) est lu dans
+    la même vidéo, il prime sur un écran Results pour le RC de chaque groupe. Le Results sert au départage et au
+    rattachement ; il n'est jamais additionné au record :
+    - Results incertain (`a_verifier`) de même RC qu'un groupe, ou en `conflit de lecture` : écarté, le record fait foi ;
+    - Results sûr de même RC que l'unique groupe joué : même run. Dégâts différents de ceux du record (le `Total Score`
+      exact) -> le record l'emporte, note `écart Results/record : <valeur Results>`.
+    Les autres cas suivent les règles de rattachement habituelles. Retourne une copie de `runs`."""
+    records = [r for r in runs if r.get("score_source") == "record" and r.get("confidence") == "sur" and r.get("team") in (1, 2)]
+    if not records:
+        return runs
+    notes_record, sortie = {}, []
+    for r in runs:
+        if _est_results(r) and r.get("team") is None:
+            recs = [x for x in records if x["video_id"] == r["video_id"]]
+            meme_rc = [x for x in recs if x["score"] == r["score"]]
+            conflit = any(n.startswith("conflit de lecture") for n in r.get("notes", []))
+            solo = len(recs) == 1 and (recs[0].get("detail") or {}).get("damage_source") == "record"
+            if recs and r["confidence"] != "sur" and (meme_rc or conflit):
+                notes_record.setdefault(id((meme_rc or recs)[0]), []).append(
+                    f"Results incertain écarté (RC {r['score']}) : le Personal Record fait foi")
+                continue
+            if solo and meme_rc:
+                if r.get("damage") != recs[0].get("damage"):
+                    notes_record.setdefault(id(recs[0]), []).append(f"écart Results/record : {r.get('damage')}")
+                continue
+        sortie.append(r)
+    return [{**r, "notes": r["notes"] + [n for n in notes_record[id(r)] if n not in r["notes"]]} if id(r) in notes_record else r
+            for r in sortie]
+
+
 def rattacher_groupes(runs):
     """§4.7 : une run `Results` (team None) est rattachée à un groupe du Personal Record si
     - son RC et ses dégâts arrondis correspondent à ceux du record (même run), ou
     - son RC est égal à celui d'un seul groupe et ses dégâts sont supérieurs (nouveau record du groupe,
       cas `New Record Achieved!` : à RC égal, plus de dégâts).
     Sinon elle reste `team: None`. Retourne une copie de `runs` ; les runs rattachées gardent une note."""
+    runs = record_prioritaire(runs)
     records = {r["team"]: r for r in runs if r.get("score_source") == "record" and r.get("team") in (1, 2)}
     sortie = []
     for r in runs:

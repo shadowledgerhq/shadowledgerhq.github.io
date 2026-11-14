@@ -6,12 +6,54 @@ nombre non lu vaut None : la lecture reste `a_verifier` (les contrôles arithmé
 **Non éprouvé sur de vraies captures** : les tests utilisent des textes OCR synthétiques tirés de la spec.
 """
 import re
+import unicodedata
 
 import ecrans
 
 _ENT = r"(\d{1,3}(?:[,.   ]\d{3})+|\d+)"        # 15 763 121 797 048 | 94,600 | 165
 _SEP = r"[^\d\n]{0,8}"                                        # bruit entre le libellé et le nombre
 _TEMPS = re.compile(r"(\d{1,2}):(\d{2})\.(\d{3})")
+
+
+_CONFIG = {}
+
+
+def _config():
+    """Configuration par défaut (libellés GB par langue) quand l'appelant n'en fournit pas."""
+    if not _CONFIG:
+        from donnees import charger_config
+        _CONFIG.update(charger_config())
+    return _CONFIG
+
+
+def sans_accents(texte):
+    return "".join(c for c in unicodedata.normalize("NFD", texte or "") if unicodedata.category(c) != "Mn")
+
+
+def _motif(libelle):
+    """Libellé -> motif tolérant (sans accents, espaces et retours à la ligne libres, casse indifférente)."""
+    mots = sans_accents(libelle).lower().split()
+    return r"\s*".join(re.escape(m) for m in mots)
+
+
+def libelles_hud(config=None):
+    """[(langue, motif Points, motif compteur de Fúrias/Rage, motif équipe)] d'après `config.gb.libelles` (SPEC §3.1 v15)."""
+    sortie = []
+    for langue, lib in (((config or _config()).get("gb") or {}).get("libelles") or {}).items():
+        hud = lib.get("hud") or {} if isinstance(lib, dict) else {}
+        if hud.get("points"):
+            sortie.append((langue, "|".join(_motif(x) for x in hud["points"]), "|".join(_motif(x) for x in hud.get("rage", [])) or None,
+                           "|".join(_motif(x) for x in hud.get("equipe", [])) or None, bool(hud.get("rage_x", True))))
+    return sortie
+
+
+def langue_hud(texte, config=None):
+    """Langue dont les libellés du HUD figurent dans `texte` (Points + compteur de rage ou équipe), ou None."""
+    bas = sans_accents(texte).lower()
+    for langue, pts, rage, equipe, rage_x in libelles_hud(config):
+        if re.search(rf"\b(?:{pts})\b", bas) and ((rage and re.search(rage, bas)) or (equipe and re.search(equipe, bas))):
+            return langue
+    return None
 
 
 _RAGE = re.compile(r"rage\s*[gc]oun?t?\b", re.IGNORECASE)
@@ -48,8 +90,8 @@ def detecter(texte):
         return "gb_results"
     if "your points have been registered" in bas or ("rage rewards" in bas and "tap the screen to continue" in bas):
         return "gb_results_partiel"   # v12 : écran Results en animation ; « Rage Rewards » seul = bouton du salon (v14)
-    if re.search(r"\bpoints\b", bas) and "boss rage count" in bas and chrono_hud(t) is not None:
-        return "gb_combat"     # v11 : HUD pendant la run (jamais un écran de résultat)
+    if langue_hud(t) and chrono_hud(t) is not None:
+        return "gb_combat"     # v11 : HUD pendant la run (jamais un écran de résultat) ; v15 : libellés par langue
     if "phase 1" in bas and "play time" in bas and _TEMPS.search(t):
         return "bot"
     if "합산" in t and ("증명" in t or "클리어" in t):
@@ -72,13 +114,20 @@ def chrono_hud(texte):
     return None
 
 
-def lire_gb_combat(texte):
-    """v11 : HUD du combat GB. Points (information), Boss Rage Count `xN`, chrono. Un élément illisible = None."""
+def lire_gb_combat(texte, config=None):
+    """v11 : HUD du combat GB. Points (information), compteur de rage `xN` (anglais) ou `N` (portugais), chrono.
+    Un élément illisible = None. Libellés par langue : `config.gb.libelles.<langue>.hud` (v15)."""
     t = normaliser(texte)
-    pts = re.search(r"points\W{0,6}(\d+(?:[,.]\d{3})+|\d+)", t, re.IGNORECASE)
-    rc = re.search(r"boss\s*rage\s*count\W{0,6}[xX×]\s*(\d{1,3})(?!\d)", t, re.IGNORECASE)
+    langue = langue_hud(t, config) or "en"
+    lib = {x[0]: x for x in libelles_hud(config)}.get(langue)
+    bas = sans_accents(t)
+    pts = re.search(rf"(?:{lib[1]})\W{{0,6}}(\d+(?:[,.]\d{{3}})+|\d+)", bas, re.IGNORECASE) if lib else None
+    rc = None
+    if lib and lib[2]:
+        pre = r"[xX×]\s*" if lib[4] else ""
+        rc = re.search(rf"(?:{lib[2]})\W{{0,6}}{pre}(\d{{1,3}})(?!\d)", bas, re.IGNORECASE)
     return {"points": _entier(pts.group(1)) if pts else None, "rage_count": int(rc.group(1)) if rc else None,
-            "chrono": chrono_hud(t), "stage": None}
+            "chrono": chrono_hud(t), "stage": None, "langue": langue}
 
 
 def lire_bot(texte):
@@ -158,8 +207,8 @@ def lire_poc(texte):
 LECTEURS = {"gb_results_partiel": lire_gb_results, "gb_combat": lire_gb_combat, "bot": lire_bot, "gb_results": lire_gb_results, "gb_record": lire_gb_record, "hotm": lire_hotm, "poc": lire_poc}
 
 
-def _entier_court(texte):
-    m = re.search(r"(?<!\d)(\d{1,3})(?!\d)", texte or "")
+def _entier_court(texte, chiffres=3):
+    m = re.search(rf"(?<!\d)(\d{{1,{chiffres}}})(?!\d)", texte or "")
     return int(m.group(1)) if m else None
 
 
@@ -201,6 +250,42 @@ def _appliquer_zones(ecran, zones, config):
     ecran["hunter_ranks"] = rangs
 
 
+def _appliquer_zones_record(ecran, zones, config):
+    """Personal Record du salon : lecture ciblée (`config.gb.zones_record`, fractions) de `Total Score`, `Total Rage Count`,
+    `Challenge Count`, du RC et des dégâts de chaque groupe, de `No history` et de `Time Left in Season`. La zone prime
+    sur l'image entière (note `écart OCR zone/image : <champ>` si elles diffèrent)."""
+    notes = ecran.setdefault("notes_extra", [])
+    if zones.get("format_ok") is False:
+        notes.append("format non standard")
+        return
+    groupes = {g: dict(v) for g, v in (ecran.get("groups") or {}).items()}
+    for g in (1, 2):
+        texte_dmg = zones.get(f"g{g}_dmg") or ""
+        if re.search(r"no\s*hist", texte_dmg, re.IGNORECASE):
+            groupes[g] = {"no_history": True}
+            continue
+        rc = _entier_court(zones.get(f"g{g}_rc"))
+        d = re.search(r"(\d+(?:[.,]\d+)?)\s*([KMBT])", texte_dmg, re.IGNORECASE)
+        if rc is not None:
+            ancien = (groupes.get(g) or {}).get("rage_count")
+            if ancien is not None and ancien != rc:
+                notes.append(f"écart OCR zone/image : g{g}_rc")
+            groupes[g] = {**(groupes.get(g) or {}), "rage_count": rc}
+            if d:
+                groupes[g]["damage"] = d.group(1).replace(",", ".") + d.group(2).upper()
+    ecran["groups"] = groupes
+    for champ, valeur in (("total_rage_count", _entier_court(zones.get("total_rage"), 4)),
+                          ("total_score", _nombre_zone(zones.get("total_score"))),
+                          ("challenge_count", _entier_court(zones.get("challenge"), 2))):
+        if valeur is not None:
+            if ecran.get(champ) is not None and ecran[champ] != valeur:
+                notes.append(f"écart OCR zone/image : {champ}")
+            ecran[champ] = valeur
+    tl = re.search(r"(\d+\s*d)?\s*(\d+\s*h)?\s*(\d+\s*m)?", (zones.get("time_left") or "").replace(" ", " "))
+    if tl and tl.group(0).strip():
+        ecran["time_left"] = " ".join(x.strip() for x in tl.groups() if x)
+
+
 def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
     """Texte OCR d'une image -> lectures de la vidéo (liste, éventuellement vide). `zones` : textes lus dans les
     zones ciblées de l'écran Results (pc.lire_zones_results)."""
@@ -208,12 +293,14 @@ def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
     type_ecran = detecter(texte)
     if type_ecran is None:
         return []
-    ecran = {**LECTEURS[type_ecran](texte), "t": t}
+    ecran = {**(lire_gb_combat(texte, config) if type_ecran == "gb_combat" else LECTEURS[type_ecran](texte)), "t": t}
     if type_ecran in ("gb_results", "gb_results_partiel"):
         ecran["stage"] = _boss_du_hud(texte, config) or ecran["stage"]     # v12 : nom normalisé si le boss est connu
         if zones is not None:
             _appliquer_zones(ecran, zones, config)
         type_ecran = "gb_results"
+    if type_ecran == "gb_record" and zones is not None:
+        _appliquer_zones_record(ecran, zones, config)
     if type_ecran == "gb_combat":
         ecran["stage"] = _boss_du_hud(texte, config)
         lectures = [ecrans.lecture_gb_combat(meta, ecran, config, source)]
@@ -234,9 +321,40 @@ def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
 
 
 def _nombre_zone(texte):
-    """Nombre lu dans un recadrage (ex. Player's Score `313,099,049`) ; None s'il est trop court ou illisible."""
-    m = re.search(r"\d{1,3}(?:[.,]\d{3}){2,}", texte or "")
-    return _entier(m.group(0)) if m else None
+    """Nombre lu dans une zone ciblée (ex. `313,099,049`). Rejeté si ses groupes de 3 chiffres sont incomplets ou en
+    trop (SPEC v15 : `64,299,126,425` pour 64 299 126 429 862 est un défaut de zone, pas une valeur)."""
+    m = re.search(r"\d[\d.,]*\d|\d", texte or "")
+    return _entier(m.group(0)) if m and re.fullmatch(r"\d{1,3}(?:[.,]\d{3}){2,}", m.group(0)) else None
+
+
+def zone_valide(nom, texte, config=None):
+    """La lecture d'une zone a-t-elle un format plausible ? Sert au vote entre variantes de prétraitement (pc.lire_zones_results)."""
+    t = texte or ""
+    if nom == "boss":
+        return bool(boss_connu(t, config or _config()))
+    if nom in ("player_score", "joueur", "final", "total_score") or nom.startswith("rang_"):
+        return _nombre_zone(t) is not None
+    if nom in ("rage", "g1_rc", "g2_rc", "challenge"):
+        return _entier_court(t) is not None
+    if nom == "total_rage":
+        return _entier_court(t, 4) is not None
+    if nom == "temps":
+        return _temps_zone(t) is not None
+    if nom in ("g1_dmg", "g2_dmg"):
+        return bool(re.search(r"\d+(?:[.,]\d+)?\s*[KMBT]\b|no\s*hist", t, re.IGNORECASE))
+    if nom == "time_left":
+        return bool(re.search(r"\d+\s*[dhm]", t, re.IGNORECASE))
+    return bool(t.strip())
+
+
+def consensus_zone(nom, textes, config=None):
+    """Lectures d'une même zone sous plusieurs prétraitements -> la plus fréquente parmi les lectures plausibles ; à égalité,
+    la première variante ; sans lecture plausible, la première lecture non vide."""
+    valides = [t for t in textes if zone_valide(nom, t, config)]
+    if valides:
+        normalises = [re.sub(r"\s+", " ", t.strip()) for t in valides]
+        return max(dict.fromkeys(normalises), key=normalises.count)
+    return next((t for t in textes if t.strip()), "")
 
 
 def boss_connu(texte, config, seuil=0.75):
@@ -347,6 +465,30 @@ def fusionner_results(lectures, config=None):
                 for valeur, n in liste:
                     cumul = votes.setdefault(champ, {})
                     cumul[valeur] = cumul.get(valeur, 0) + n
+        # v15 : compteurs animés (Rage Count, Final Score) : lectures croissantes dans le temps, dernière valeur lue sur
+        # ≥ 2 images à la fin = valeur finale ; les valeurs plus petites sont des étapes de l'animation, pas des discordances
+        sequence, animes = {}, []
+        for champ in ("rage_count", "final_score"):
+            seq = []
+            for l in groupe:
+                deja = (l.get("detail") or {}).get("sequence")
+                if deja:
+                    seq += [tuple(x) for x in deja.get(champ, [])]
+                else:
+                    v = l.get("score") if champ == "rage_count" else l.get("damage")
+                    if v is not None:
+                        seq.append((l["t"] or 0, v))
+            seq.sort()
+            sequence[champ] = [list(x) for x in seq]
+            if seq:
+                vals = [v for _, v in seq]
+                if len(vals) >= 2 and vals == sorted(vals) and vals[-1] == vals[-2] and any(v < vals[-1] for v in vals):
+                    votes[champ] = {vals[-1]: vals.count(vals[-1])}
+                    animes.append(champ)
+                else:
+                    votes[champ] = {}
+                    for v in vals:
+                        votes[champ][v] = votes[champ].get(v, 0) + 1
         retenu, conflits = {}, []
         for champ, cumul in votes.items():
             classes = sorted(cumul.items(), key=lambda kv: -kv[1])
@@ -378,7 +520,7 @@ def fusionner_results(lectures, config=None):
              "new_record": any((l.get("detail") or {}).get("new_record") for l in groupe),
              "votes": {c: [[v, n] for v, n in cumul.items()] for c, cumul in votes.items()},
              "rc_images": nombre("rage_count", rc), "final_images": nombre("final_score", final), "n_images": n_images,
-             "rc_t": rc_t,
+             "rc_t": rc_t, "sequence": sequence,
              "t_debut": min(debut(l) for l in groupe), "t_fin": max(fin(l) for l in groupe)}
         d.pop("ecran", None)
         d.pop("completude", None)
@@ -388,10 +530,12 @@ def fusionner_results(lectures, config=None):
         notes = []
         for l in groupe:
             for n in l["notes"]:
-                if not n.startswith(("contrôle sans Hunter Rank", "lecture fusionnée", "conflit de lecture", "contrôle GB", "RC discordant écarté")) and n not in notes:
+                if not n.startswith(("contrôle sans Hunter Rank", "lecture fusionnée", "conflit de lecture", "contrôle GB", "RC discordant écarté", "compteur animé")) and n not in notes:
                     notes.append(n)
         if n_images >= 2:
             notes.append(f"lecture fusionnée ({n_images} images)")
+        if animes:
+            notes.append("compteur animé")
         notes += [f"conflit de lecture : {c}" for c in conflits]
         if "rage_count" not in conflits:            # v14 : chaque valeur de Rage Count écartée est notée
             notes += [f"RC discordant écarté : {v} (t={rc_t.get(str(v))})" for v in votes.get("rage_count", {}) if v != rc]

@@ -121,13 +121,14 @@ class Outils:
             raise RuntimeError("vidéo non téléchargée")
         return fichiers[0]
 
-    def images(self, chemin, segments, dossier, prefixe="f"):
-        """Images PNG des segments (début, durée, pas) en secondes ; retourne [(t, chemin_png)]."""
+    def images(self, chemin, segments, dossier, prefixe="f", hauteur=None):
+        """Images PNG des segments (début, durée, pas) en secondes ; retourne [(t, chemin_png)]. `hauteur` : réduit les
+        images à cette hauteur (tri 4 en 720p, SPEC v15) ; sinon résolution du fichier téléchargé (≤ 1080p)."""
         trouvees = []
         delai = self.cfg["images"].get("ffmpeg_delai_s", 300)
         for k, (debut, duree, pas) in enumerate(segments):
             cmd = [self.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-ss", str(debut), "-t", str(duree), "-i", str(chemin),
-                   "-vf", f"fps=1/{pas}", "-q:v", "2", f"{dossier}/{prefixe}{k}_%04d.png"]
+                   "-vf", f"fps=1/{pas}" + (f",scale=-2:{int(hauteur)}" if hauteur else ""), "-q:v", "2", f"{dossier}/{prefixe}{k}_%04d.png"]
             try:
                 self._lancer(cmd, delai)
             except subprocess.TimeoutExpired:      # essai du 14/11 : ffmpeg bloqué 900 s sur une vidéo ; une seule nouvelle tentative
@@ -150,12 +151,16 @@ class Outils:
                       "-vf", f"scale={int(largeur)}:-2", str(sortie)], 60)
         return sortie
 
-    def recadrer(self, png, zone, echelle=3):
-        """Zone de l'image (x, y, largeur, hauteur en fractions), agrandie et en gris : lecture ciblée d'un petit texte."""
+    def recadrer(self, png, zone, echelle=3, seuil=None):
+        """Zone de l'image (x, y, largeur, hauteur en fractions), agrandie et en gris ; avec `seuil` (0-255) : noir et blanc
+        puis inversé (texte sombre sur fond clair), ce qui aide tesseract sur les chiffres clairs des écrans de jeu."""
         x, y, l, h = zone
         sortie = Path(png).with_name(Path(png).stem + "_z.png")
-        self._lancer([self.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-y", "-i", str(png), "-vf",
-                      f"crop=iw*{l}:ih*{h}:iw*{x}:ih*{y},scale=iw*{echelle}:-1,format=gray", "-frames:v", "1", str(sortie)], 60)
+        filtre = f"crop=iw*{l}:ih*{h}:iw*{x}:ih*{y},scale=iw*{echelle}:-1,format=gray"
+        if seuil:
+            filtre += f",lutyuv=y='if(gt(val,{int(seuil)}),255,0)',negate"
+        self._lancer([self.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-y", "-i", str(png), "-vf", filtre,
+                      "-frames:v", "1", str(sortie)], 60)
         return sortie
 
     def empreinte(self, png):
@@ -339,35 +344,50 @@ def _ocr_image(outils, png, langs, cfg, st, complet=False):
             if not ressemble_ecran(rapide):
                 return ""
         st["candidates"] += 1
-        return outils.ocr(png, langs, 6, cfg.get("ocr_timeout_s", 90))
+        largeur = cfg.get("ocr_largeur_complet")
+        taille = outils.dimensions(png) if largeur else None
+        cible = outils.reduire(png, largeur) if taille and taille[0] > largeur else png      # 1080p : OCR de l'image entière réduite
+        texte = outils.ocr(cible, langs, 6, cfg.get("ocr_timeout_s", 90))
+        if cible is not png:
+            Path(cible).unlink(missing_ok=True)
+        return texte
     except OcrTropLent:
         st["lentes"] += 1
         return ""
 
 
-def lire_zones_results(outils, png, config):
-    """v13 : écran Results (reconnu, même en animation) : lecture de zones ciblées, recadrées et agrandies
-    (`config.gb.zones`, en FRACTIONS de l'image, jamais en pixels) : boss, `Player's Score`, `Hunter Rank` 1 à 6,
-    `Final Score`, `Rage Count`, `Play Time`. Format différent de 16:9 (Short vertical, 4:3, bandes noires) : zones
-    non appliquées (`format_ok: False`). Retourne {nom: texte lu} ; "" si illisible."""
+ZONES_TEXTE = {"boss", "g1_dmg", "g2_dmg", "time_left"}     # zones lues sans liste de caractères (texte ou lettres)
+
+
+def lire_zones_results(outils, png, config, type_ecran="gb_results"):
+    """v13-v15 : écran Results (reconnu, même en animation) ou Personal Record du salon : lecture de zones ciblées,
+    recadrées et agrandies, en FRACTIONS de l'image, jamais en pixels (`config.gb.zones` pour le Results : boss,
+    `Player's Score`, `Hunter Rank` 1 à 6, `Final Score`, `Rage Count`, `Play Time` ; `config.gb.zones_record` pour le
+    Personal Record). Une zone couvre toute la case du champ. Format différent de 16:9 (Short vertical, 4:3, bandes
+    noires) : zones non appliquées (`format_ok: False`). Retourne {nom: texte lu} ; "" si illisible."""
     gb_cfg, cfg = config.get("gb") or {}, config["pc"]["images"]
-    zones = gb_cfg.get("zones", {})
+    zones = gb_cfg.get("zones_record" if type_ecran == "gb_record" else "zones", {})
     taille = outils.dimensions(png)
     if taille and taille[1] and abs(taille[0] / taille[1] - 16 / 9) > gb_cfg.get("format_tolerance", 0.02):
         return {"format_ok": False}
     sortie = {"format_ok": True}
+    variantes = (gb_cfg.get("zones_ocr") or {}).get("variantes") or [{"echelle": 3, "seuil": None}]
     for nom, zone in zones.items():
-        try:
-            petit = outils.recadrer(png, zone)
-            chiffres = None if nom == "boss" else ["-c", "tessedit_char_whitelist=0123456789,.:"]
-            sortie[nom] = outils.ocr(petit, "eng", 7, cfg.get("ocr_timeout_rapide_s", 40), chiffres)
-            Path(petit).unlink(missing_ok=True)
-        except (OcrTropLent, RuntimeError):
-            sortie[nom] = ""
+        textes = []
+        for v in variantes:          # plusieurs prétraitements (seuil / agrandissement) puis vote : un chiffre mal lu est écarté
+            try:
+                petit = outils.recadrer(png, zone, v.get("echelle", 3), v.get("seuil"))
+                chiffres = None if nom in ZONES_TEXTE else ["-c", "tessedit_char_whitelist=0123456789,.:"]
+                textes.append(outils.ocr(petit, "eng", 7, cfg.get("ocr_timeout_rapide_s", 40), chiffres))
+                Path(petit).unlink(missing_ok=True)
+            except (OcrTropLent, RuntimeError):
+                textes.append("")
+        sortie[nom] = ocr_ecrans.consensus_zone(nom, textes, config)
     return sortie
 
 
 RESULTATS_TYPES = ("gb_results", "gb_results_partiel")
+ZONES_TYPES = RESULTATS_TYPES + ("gb_record",)
 
 
 def _garder(ocr_debug, vid, etiquette, t, texte, png):
@@ -395,7 +415,7 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
     fenetre = int(min(duree_s - t0, (cherche_s if cherche else 0) + cap))
     if fenetre <= 0:
         return [], 0, None, int(t0)
-    st, n, trouve, dernier, lectures = {"candidates": 0, "lentes": 0}, 0, None if cherche else t0, int(t0), []
+    st, n, trouve, dernier, lectures, zones_lues = {"candidates": 0, "lentes": 0}, 0, None if cherche else t0, int(t0), [], 0
     for t, png in outils.images(chemin, [(int(t0), fenetre, 1)], tmp, prefixe=f"r{int(t0)}_"):
         if (trouve is None and t > t0 + cherche_s) or (trouve is not None and t > trouve + cap):
             Path(png).unlink(missing_ok=True)
@@ -407,7 +427,10 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
         if trouve is None and type_ecran in RESULTATS_TYPES:
             trouve = t
             journal(f"  écran Results trouvé à {t} s")
-        zones = lire_zones_results(outils, png, config) if type_ecran in RESULTATS_TYPES else None
+        zones = None
+        if type_ecran in ZONES_TYPES and zones_lues < gb_cfg.get("zones_max_images", 12):   # les zones sont chères (plusieurs OCR par zone)
+            zones = lire_zones_results(outils, png, config, type_ecran)
+            zones_lues += 1
         lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
                      if _est_results_gb(l) or (l["mode"] == "gb" and l["score_source"] == "record")]    # + Personal Record du salon
         Path(png).unlink(missing_ok=True)
@@ -452,7 +475,8 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                 source = "debut-fin" if tri == 3 else "video-complete"
                 nouvelles, st, complet, vus, detectes = [], {"images": 0, "doublons": 0, "candidates": 0, "lentes": 0}, True, {}, []
                 t0 = horloge()
-                for t, png in outils.images(chemin, segments_tri(tri, minutes * 60, cfg), tmp):
+                hauteur = cfg.get("tri4_hauteur", 720) if tri == 4 else None      # v15 : tri 3 et Results en 1080p, tri 4 en 720p
+                for t, png in outils.images(chemin, segments_tri(tri, minutes * 60, cfg), tmp, hauteur=hauteur):
                     if horloge() > fin:
                         complet = False
                         break
@@ -468,7 +492,8 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         texte, zones = vus[h]
                     else:
                         texte = _ocr_image(outils, png, langs, cfg, st, complet=(tri == 3 and cfg.get("tri3_ocr_complet", True)))
-                        zones = lire_zones_results(outils, png, config) if ocr_ecrans.detecter(texte) in RESULTATS_TYPES else None
+                        type_img = ocr_ecrans.detecter(texte)
+                        zones = lire_zones_results(outils, png, config, type_img) if type_img in ZONES_TYPES else None
                         vus[h] = (texte, zones)
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
                     if ocr_ecrans.detecter(texte) in RESULTATS_TYPES:
@@ -519,6 +544,14 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
             if est_429(e):
                 return lectures, f"{vid} : 429 Too Many Requests (téléchargement), reportée au prochain passage", True
             return lectures, f"{vid} : images : {e}", False
+    # v15 : GB sans aucun écran reconnu après le tri 4 : libellés de la langue inconnus, la vidéo reste `en_cours`
+    if "gb" in meta.get("mode_guess", []) and pc.get("tri4") in ("fait", "inutile") and not any(
+            l["video_id"] == vid and l["mode"] == "gb" and (l.get("score") is not None or (l.get("detail") or {}).get("ecran") == "combat")
+            and l["score_source"] not in SOURCES_TEXTE for l in lectures):
+        langue = meta.get("lang") or "?"
+        pc["libelles_inconnus"] = langue
+        return lectures, f"{vid} : libellés {langue} inconnus (aucun écran GB reconnu)", False
+    pc.pop("libelles_inconnus", None)
     return lectures, None, False
 
 
@@ -660,7 +693,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                     if etat.get("tri4") in ("fait", "inutile"):
                         processed[vid]["last_tri"] = 4 if etat["tri4"] == "fait" else processed[vid]["last_tri"]
                         processed[vid]["pc_needed"] = False
-                        if any(l["video_id"] == vid and l.get("score") is not None for l in lectures):
+                        if any(l["video_id"] == vid and l.get("score") is not None for l in lectures) and not etat.get("libelles_inconnus"):
                             processed[vid]["status"] = "termine"
                     sauver()
                     if reporte:

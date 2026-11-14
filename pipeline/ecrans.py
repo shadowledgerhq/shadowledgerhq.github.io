@@ -155,9 +155,16 @@ def lectures_gb_record(meta, ecran, config, source="record"):
     joues = [g for g in (1, 2) if not (groupes.get(g) or {}).get("no_history")]
     rcs = [(groupes.get(g) or {}).get("rage_count") for g in joues]
     total = ecran.get("total_rage_count")
-    ok = bool(joues) and None not in rcs and total is not None and sum(rcs) == total
-    pb = [] if ok else ["Total Rage Count ≠ somme des RC des groupes joués (ou illisible)"]
-    seul = ok and len(joues) == 1 and ecran.get("total_score") is not None    # sûr seulement : le Total Score lu à l'image entière peut être faux (« B4 » pour « 64 »)
+    total_score, incoherent = ecran.get("total_score"), None
+    if total_score is not None:       # recoupement : Total Score ≈ somme des dégâts affichés des groupes joués (arrondi ou tronqué)
+        lus = [degats_arrondis((groupes.get(g) or {}).get("damage")) for g in joues]
+        if lus and all(v is not None for v, _ in lus):
+            somme, pas = sum(v for v, _ in lus), sum(p_ or 0 for _, p_ in lus)
+            if not -0.5 * pas - 1 <= total_score - somme <= 1.5 * pas + 1:
+                incoherent, total_score = f"Total Score {total_score} incohérent avec les dégâts des groupes", None
+    ok = bool(joues) and None not in rcs and total is not None and sum(rcs) == total and incoherent is None
+    pb = [] if ok else [incoherent or "Total Rage Count ≠ somme des RC des groupes joués (ou illisible)"]
+    seul = ok and len(joues) == 1 and total_score is not None    # sûr seulement : le Total Score lu à l'image entière peut être faux (« B4 » pour « 64 »)
     lectures = []
     for g in joues:
         rc = (groupes.get(g) or {}).get("rage_count")
@@ -166,11 +173,12 @@ def lectures_gb_record(meta, ecran, config, source="record"):
         deg, pas = degats_arrondis((groupes[g]).get("damage"))
         lec = lecture_vide(meta, "gb")
         lec["notes"] += notes_alerte_reset(meta, config)
-        detail = {"damage_exact": False, "damage_step": pas, "total_score": ecran.get("total_score"),
+        lec["notes"] += ecran.get("notes_extra", [])
+        detail = {"damage_exact": False, "damage_step": pas, "total_score": total_score,
                   "total_rage_count": total, "challenge_count": ecran.get("challenge_count"),
                   "time_left": ecran.get("time_left")}
         if seul:      # un seul groupe joué : le Total Score exact est le Final Score de la run
-            deg, pas = ecran["total_score"], None
+            deg, pas = total_score, None
             detail.update(damage_exact=True, damage_step=None, damage_source="record")
         lec.update(score=rc, damage=deg, score_source=source, exact=ok, confidence="sur" if ok else "a_verifier",
                    stage=ecran.get("stage"), t=ecran.get("t"), team=g, detail=detail)
