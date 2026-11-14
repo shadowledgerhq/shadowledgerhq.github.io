@@ -1,0 +1,147 @@
+{
+ "semaine": "2026-11-12",
+ "alertes": [
+  "lGDbzyIJcjY : 429 Too Many Requests, reportée au prochain passage",
+  "429 : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées",
+  "38 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
+ ],
+ "lectures": [
+  {
+   "video_id": "lGDbzyIJcjY",
+   "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+   "channel_title": "HS Retro Gaming",
+   "published_at": "2026-11-12T12:00:07Z",
+   "lang": "en-US",
+   "mode": "gb",
+   "regles": null,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": 1596246179,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 238,
+   "stage": null,
+   "team": null,
+   "score": null,
+   "score_source": "hud",
+   "exact": false,
+   "confidence": "a_verifier",
+   "detail": {
+    "ecran": "combat",
+    "hud_points": 1596246179,
+    "chrono_hud": 0.47,
+    "hud_rage_count": 12,
+    "damage_exact": false,
+    "damage_source": "hud"
+   },
+   "notes": [
+    "HUD : Boss Rage Count x12, chrono 0.47"
+   ]
+  },
+  {
+   "video_id": "lGDbzyIJcjY",
+   "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+   "channel_title": "HS Retro Gaming",
+   "published_at": "2026-11-12T12:00:07Z",
+   "lang": "en-US",
+   "mode": "gb",
+   "regles": null,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": 1601097999,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 252,
+   "stage": null,
+   "team": null,
+   "score": 19,
+   "score_source": "debut-fin",
+   "exact": false,
+   "confidence": "a_verifier",
+   "detail": {
+    "damage_exact": true,
+    "play_time": "03:00",
+    "new_record": false,
+    "player_score": 89008,
+    "hunter_ranks_lus": 0,
+    "completude": 4,
+    "lectures_identiques": 1,
+    "hud_rage_count": 12
+   },
+   "notes": [
+    "contrôle GB : écran GB illisible (Player's Score, Hunter Rank ou Final Score)",
+    "contrôle sans Hunter Rank : boss illisible"
+   ]
+  }
+ ],
+ "processed": {
+  "lGDbzyIJcjY": {
+   "week": "2026-11-12",
+   "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+   "published_at": "2026-11-12T12:00:07Z",
+   "first_seen": "2026-11-13",
+   "updated_at": "2026-11-14",
+   "last_tri": 4,
+   "status": "termine",
+   "modes": [
+    "gb",
+    "poc"
+   ],
+   "pc_needed": false,
+   "pc": {
+    "results_lus": [
+     [
+      252,
+      253
+     ]
+    ],
+    "tri3": "fait",
+    "date": "2026-11-14",
+    "tri4": "fait"
+   }
+  }
+ },
+ "fichiers_logs_ocr": [
+  "lGDbzyIJcjY_recherche_252.txt",
+  "lGDbzyIJcjY_recherche_253.txt",
+  "lGDbzyIJcjY_tri3_0.txt",
+  "lGDbzyIJcjY_tri3_2.txt",
+  "lGDbzyIJcjY_tri3_224.txt",
+  "lGDbzyIJcjY_tri3_226.txt",
+  "lGDbzyIJcjY_tri3_228_gb_combat.txt",
+  "lGDbzyIJcjY_tri3_230.txt",
+  "lGDbzyIJcjY_tri3_232.txt",
+  "lGDbzyIJcjY_tri3_234_gb_combat.txt",
+  "lGDbzyIJcjY_tri3_236.txt",
+  "lGDbzyIJcjY_tri3_238_gb_combat.txt",
+  "lGDbzyIJcjY_tri3_240.txt",
+  "lGDbzyIJcjY_tri3_242.txt",
+  "lGDbzyIJcjY_tri3_244.txt",
+  "lGDbzyIJcjY_tri3_246.txt",
+  "lGDbzyIJcjY_tri3_248.txt",
+  "lGDbzyIJcjY_tri3_250.txt",
+  "lGDbzyIJcjY_tri3_252_gb_results.txt",
+  "lGDbzyIJcjY_tri3_4.txt",
+  "lGDbzyIJcjY_tri3_6.txt",
+  "lGDbzyIJcjY_tri3_8.txt",
+  "lGDbzyIJcjY_tri4_100_gb_combat.txt",
+  "lGDbzyIJcjY_tri4_110.txt",
+  "lGDbzyIJcjY_tri4_120_gb_combat.txt",
+  "lGDbzyIJcjY_tri4_130_gb_combat.txt",
+  "lGDbzyIJcjY_tri4_140.txt",
+  "lGDbzyIJcjY_tri4_150.txt",
+  "lGDbzyIJcjY_tri4_160.txt",
+  "lGDbzyIJcjY_tri4_170.txt",
+  "lGDbzyIJcjY_tri4_200.txt",
+  "lGDbzyIJcjY_tri4_210.txt",
+  "lGDbzyIJcjY_tri4_220.txt",
+  "lGDbzyIJcjY_tri4_230_gb_combat.txt",
+  "lGDbzyIJcjY_tri4_30_gb_combat.txt",
+  "lGDbzyIJcjY_tri4_40_gb_combat.txt",
+  "lGDbzyIJcjY_tri4_50_gb_combat.txt",
+  "lGDbzyIJcjY_tri4_60_gb_combat.txt",
+  "lGDbzyIJcjY_tri4_70_gb_combat.txt",
+  "lGDbzyIJcjY_tri4_80.txt",
+  "lGDbzyIJcjY_tri4_90.txt"
+ ]
+}
