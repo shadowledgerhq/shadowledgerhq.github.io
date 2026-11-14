@@ -296,7 +296,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 35 sec; description non relue (règles v3); boss non contrôlé",
+    "notes": "score provisoire (description) : 35 sec; boss non contrôlé",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
@@ -307,6 +307,45 @@
         "stage": null,
         "team": null,
         "score_source": "description",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-2026-11-12-HWebrRc_l0o",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "player": "SlayOnLow",
+    "channel": "SlayOnLow",
+    "video_id": "HWebrRc_l0o",
+    "video_ids": [
+      "HWebrRc_l0o"
+    ],
+    "published_at": "2026-11-14T14:09:00+01:00",
+    "lang": "en",
+    "score": {
+      "total": 40.077,
+      "runs": [
+        40.077
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 40.077 SECONDS; boss non contrôlé",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "HWebrRc_l0o",
+        "published_at": "2026-11-14T14:09:00+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
         "exact": false
       }
     ]

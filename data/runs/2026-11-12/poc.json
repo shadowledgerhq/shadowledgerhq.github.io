@@ -13,9 +13,9 @@
     "published_at": "2026-11-12T11:49:17+01:00",
     "lang": "ko",
     "score": {
-      "total": 133000000000000,
+      "total": 142000000000000,
       "runs": [
-        133000000000000
+        142000000000000
       ],
       "unit": "damage"
     },
@@ -23,7 +23,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 133T; semaine précédente ?; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : 142T; autres candidats : 133T; semaine précédente ?; description : 150T; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "zFsAGI_xyOQ",
@@ -32,6 +32,43 @@
         "stage": null,
         "team": null,
         "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "poc-2026-11-12-1pGA1EBZrDw",
+    "week": "2026-11-12",
+    "mode": "poc",
+    "channel_id": "UCj01oba-0Kuz8yj3dwC_ZXw",
+    "player": "creative joker",
+    "channel": "creative joker",
+    "video_id": "1pGA1EBZrDw",
+    "video_ids": [
+      "1pGA1EBZrDw"
+    ],
+    "published_at": "2026-11-14T10:30:14+01:00",
+    "lang": "en",
+    "score": {
+      "total": 100000000000000,
+      "runs": [
+        100000000000000
+      ],
+      "unit": "damage"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 100T; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "1pGA1EBZrDw",
+        "published_at": "2026-11-14T10:30:14+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
         "exact": false
       }
     ]

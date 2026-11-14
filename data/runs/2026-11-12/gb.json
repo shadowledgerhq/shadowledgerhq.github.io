@@ -1,5 +1,44 @@
 [
   {
+    "run_id": "gb-2026-11-12-OPcjwjYkuME",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "OPcjwjYkuME",
+    "video_ids": [
+      "OPcjwjYkuME"
+    ],
+    "published_at": "2026-11-13T18:00:21+01:00",
+    "lang": "en",
+    "score": {
+      "total": 351,
+      "runs": [
+        351
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : RC: 351; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "OPcjwjYkuME",
+        "published_at": "2026-11-13T18:00:21+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-12-awb-GlVIa7Q",
     "week": "2026-11-12",
     "mode": "gb",
@@ -35,6 +74,45 @@
         "exact": false,
         "damage": 64200000000000,
         "damage_exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-12-trinzgj3FV4",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCxldiYWaZHULXjH0MBqZBKQ",
+    "player": "mitchell leveling",
+    "channel": "mitchell leveling",
+    "video_id": "trinzgj3FV4",
+    "video_ids": [
+      "trinzgj3FV4"
+    ],
+    "published_at": "2026-11-14T03:56:22+01:00",
+    "lang": "en",
+    "score": {
+      "total": 177,
+      "runs": [
+        177
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 177 RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "trinzgj3FV4",
+        "published_at": "2026-11-14T03:56:22+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null
       }
     ]
   },

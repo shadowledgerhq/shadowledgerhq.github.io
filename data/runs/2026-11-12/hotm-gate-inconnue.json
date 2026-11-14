@@ -1,0 +1,119 @@
+[
+  {
+    "run_id": "hotm-gate-inconnue-2026-11-12-nZrcGHSDcvs",
+    "week": "2026-11-12",
+    "mode": "hotm",
+    "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
+    "player": "RAVANPLAYZ",
+    "channel": "RAVANPLAYZ",
+    "video_id": "nZrcGHSDcvs",
+    "video_ids": [
+      "nZrcGHSDcvs"
+    ],
+    "published_at": "2026-11-14T18:22:50+01:00",
+    "lang": "en",
+    "score": {
+      "total": 90000,
+      "runs": [
+        90000
+      ],
+      "unit": "points"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 90000; porte HOTM illisible; boss non contrôlé",
+    "gate": null,
+    "hunter_mode": null,
+    "runs_detail": [
+      {
+        "video_id": "nZrcGHSDcvs",
+        "published_at": "2026-11-14T18:22:50+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "hotm-gate-inconnue-2026-11-12-SONLzFhlHfA",
+    "week": "2026-11-12",
+    "mode": "hotm",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "SONLzFhlHfA",
+    "video_ids": [
+      "SONLzFhlHfA"
+    ],
+    "published_at": "2026-11-14T00:15:31+01:00",
+    "lang": "en",
+    "score": {
+      "total": 85000,
+      "runs": [
+        85000
+      ],
+      "unit": "points"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 85k; porte HOTM illisible; boss non contrôlé",
+    "gate": null,
+    "hunter_mode": null,
+    "runs_detail": [
+      {
+        "video_id": "SONLzFhlHfA",
+        "published_at": "2026-11-14T00:15:31+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "hotm-gate-inconnue-2026-11-12-JCQjpvH4Rnw",
+    "week": "2026-11-12",
+    "mode": "hotm",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "player": "SlayOnLow",
+    "channel": "SlayOnLow",
+    "video_id": "JCQjpvH4Rnw",
+    "video_ids": [
+      "JCQjpvH4Rnw"
+    ],
+    "published_at": "2026-11-14T13:59:12+01:00",
+    "lang": "en",
+    "score": {
+      "total": 75000,
+      "runs": [
+        75000
+      ],
+      "unit": "points"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 75K; autres candidats : 7430, 3200; porte HOTM illisible; boss non contrôlé",
+    "gate": null,
+    "hunter_mode": null,
+    "runs_detail": [
+      {
+        "video_id": "JCQjpvH4Rnw",
+        "published_at": "2026-11-14T13:59:12+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false
+      }
+    ]
+  }
+]
