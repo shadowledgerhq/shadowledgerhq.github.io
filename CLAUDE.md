@@ -39,4 +39,5 @@ Les sessions Claude Code sur ce dépôt servent surtout aux discussions **8 — 
 - Tests : `python3 -m pytest -q pipeline/tests` (ou chaque fichier `python3 pipeline/tests/test_<x>.py`).
 - Pipeline étape 1 (stdlib, Python ≥ 3.9) : `python3 pipeline/etape1.py daily|weekly [--force] [--maintenant ISO]` (recherche YouTube + tri 1 + classement + rapport ; clé dans la variable `YOUTUBE_API_KEY`) ; `python3 pipeline/etape1.py classement [--semaine AAAA-MM-JJ]` ; `python3 pipeline/etape1.py relire [--semaine …]` (rejoue le tri 1 avec les règles actuelles, puis recalcule) ou `python3 pipeline/classement.py [AAAA-MM-JJ]` (recalcul seul).
 - Paramètres de l'étape 1 : `pipeline/config/etape1.json` (requêtes, plages plausibles, quota, créneaux).
+- Étape 2 (builds, SPEC_ETAPE2) : `python3 pipeline/builds.py [AAAA-MM-JJ] [--force]` (écrit `data/builds/<semaine>/…` + `_rapport.md`) puis `python3 pipeline/export_pptx.py [semaine] [--mode] [--sortie]` (`exports/<semaine>/builds/`, `pip install python-pptx`). Réglages : `pipeline/config/etape2.json`. Tests : `pipeline/tests/test_etape2.py`.
 - Analyse porte × mode HOTM : `python3 pipeline/analyse_porte_mode.py`.
