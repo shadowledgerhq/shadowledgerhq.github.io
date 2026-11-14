@@ -52,7 +52,98 @@
  },
  "_onglets": "Onglets = icônes de la colonne de gauche de l'écran de composition (SPEC §1.3) : 1 personnages, 2 artefacts, 3 compétences, 4 bénédictions, 5 noyaux ; `subjugation` (POC) et `proof` (HOTM) = fenêtres facultatives. HOTM sans SJW : 4 onglets sans bénédictions, ordre [À CONFIRMER] ; GB non décrit.",
  "zones": {
-  "poc": {},
+  "poc": {
+   "personnages": {
+    "sjw": {
+     "weapons": [
+      [
+       0.1385,
+       0.6327,
+       0.2009,
+       0.7901
+      ],
+      [
+       0.2009,
+       0.6327,
+       0.2597,
+       0.7901
+      ]
+     ]
+    },
+    "shadows": {
+     "shadows": [
+      [
+       0.7056,
+       0.1728,
+       0.8182,
+       0.5787
+      ],
+      [
+       0.7056,
+       0.5864,
+       0.8182,
+       0.6867
+      ],
+      [
+       0.7056,
+       0.6914,
+       0.8182,
+       0.787
+      ]
+     ]
+    },
+    "successor": {
+     "successor": [
+      0.8312,
+      0.1574,
+      0.9593,
+      0.4784
+     ]
+    },
+    "hunter_1": {
+     "hunter_face": [
+      0.3273,
+      0.1775,
+      0.4139,
+      0.3858
+     ],
+     "weapon": [
+      0.3706,
+      0.5586,
+      0.426,
+      0.6944
+     ]
+    },
+    "hunter_2": {
+     "hunter_face": [
+      0.4485,
+      0.1775,
+      0.5351,
+      0.3858
+     ],
+     "weapon": [
+      0.4918,
+      0.5586,
+      0.5472,
+      0.6944
+     ]
+    },
+    "hunter_3": {
+     "hunter_face": [
+      0.5671,
+      0.1775,
+      0.658,
+      0.3858
+     ],
+     "weapon": [
+      0.6165,
+      0.5586,
+      0.6719,
+      0.6944
+     ]
+    }
+   }
+  },
   "bot": {
    "personnages": {
     "sjw": {
@@ -924,5 +1015,6 @@
    "rapport_2e": 1.5
   }
  },
- "_extraction": "[À CONFIRMER] détection de l'écran de composition sur les images de la vidéo (capture BOT JA 1158×651) : bouton jaune d'entrée (bas droite) = écran présent ; onglet actif = icône de la colonne de gauche la plus blanche (≥ 8 % de pixels blancs et ≥ 1,5 × la 2e). Sans ces deux signes, l'image est ignorée. Fenêtre d'analyse : de 0 à `t_result` (max `fenetre_max_s` s), 1 image / `pas_s` s, `max_par_onglet` images gardées par onglet."
+ "_extraction": "[À CONFIRMER] détection de l'écran de composition sur les images de la vidéo (capture BOT JA 1158×651) : bouton jaune d'entrée (bas droite) = écran présent ; onglet actif = icône de la colonne de gauche la plus blanche (≥ 8 % de pixels blancs et ≥ 1,5 × la 2e). Sans ces deux signes, l'image est ignorée. Fenêtre d'analyse : de 0 à `t_result` (max `fenetre_max_s` s), 1 image / `pas_s` s, `max_par_onglet` images gardées par onglet.",
+ "_zones_poc": "POC (écran `プレイヤーチームファイトモード`, capture JA 14/11/2026) : seul l'onglet personnages est calibré ; les cartes sont décalées par rapport au BOT (colonnes à x ≈ 362 / 502 / 645 sur 1155). Autres onglets : zones non définies."
 }
