@@ -630,7 +630,7 @@ def fusionner_results(lectures, config=None):
         notes = []
         for l in groupe:
             for n in l["notes"]:
-                if not n.startswith(("contrôle sans Hunter Rank", "lecture fusionnée", "conflit de lecture", "contrôle GB", "RC discordant écarté", "compteur animé")) and n not in notes:
+                if not n.startswith(("contrôle sans Hunter Rank", "Hunter Rank incohérents", "lecture fusionnée", "conflit de lecture", "contrôle GB", "RC discordant écarté", "compteur animé")) and n not in notes:
                     notes.append(n)
         if n_images >= 2:
             notes.append(f"lecture fusionnée ({n_images} images)")
@@ -651,10 +651,12 @@ def fusionner_results(lectures, config=None):
             if not ok:
                 # v17 : repli sur le contrôle sans Hunter Rank (somme fausse, Player's Score illisible, < 6 rangs)
                 complet = d["hunter_ranks_lus"] == 6
-                ok2, pb2 = ecrans.controle_results_sans_hunter_rank(lec, hud, config or {}, joueur_optionnel=complet)
+                infos = []
+                ok2, pb2 = ecrans.controle_results_sans_hunter_rank(lec, hud, config or {}, joueur_optionnel=complet, infos=infos)
                 if ok2:
                     lec.update(exact=True, confidence="sur")
                     lec["notes"].append("contrôle sans Hunter Rank")
+                    lec["notes"] += infos
                 elif complet and d["player_score"] is not None:
                     lec["notes"] += [f"contrôle GB : {p}" for p in pb]
                     lec["notes"] += [f"contrôle sans Hunter Rank : {p}" for p in pb2]

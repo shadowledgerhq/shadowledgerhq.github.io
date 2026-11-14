@@ -86,13 +86,17 @@ def lecture_gb_results(meta, ecran, config, source="video-complete"):
     return lec
 
 
-def controle_results_sans_hunter_rank(lec, hud, config, joueur_optionnel=False):
+def controle_results_sans_hunter_rank(lec, hud, config, joueur_optionnel=False, infos=None):
     """v12, durci v13 §3.1 : contrôle de remplacement quand les 6 `Hunter Rank` ne sont pas tous lus. Retourne
-    (ok, problèmes). Toutes les conditions : (1) boss, `Final Score`, `Rage Count` et `Play Time` lus ; (2) `Rage Count`
+    (ok, problèmes). Conditions : (1) boss, `Final Score`, `Rage Count` et `Play Time` lus ; (2) `Rage Count`
     identique sur ≥ 2 images ; (3) `Final Score` dans [Points HUD ; Points × (1 + `gb.hud_tolerance`)] (HUD à chrono
     ≤ 5 s) ou, sans HUD, identique sur ≥ 2 images ; (4) `Player's Score` + `Hunter Rank` lus < `Final Score`, et les
-    `Hunter Rank` lus décroissent du rang 1 au rang 6 (v14 : sans HUD, 3 `Hunter Rank` lus au moins)."""
-    d, pb = lec.get("detail") or {}, []
+    `Hunter Rank` lus décroissent du rang 1 au rang 6 (v14 : sans HUD, 3 `Hunter Rank` lus au moins).
+    v19 (SPEC v18, repli assoupli) : la condition 4 est NON bloquante si le HUD confirme le `Final Score` (condition 3
+    par les Points) ET si le `Rage Count` est lu à l'identique sur ≥ 3 images sans aucune lecture discordante (étapes
+    d'un compteur animé non comptées) ET si les conditions 1 et 2 sont remplies ; la note `Hunter Rank incohérents
+    ignorés (HUD)` est ajoutée à `infos` si la condition 4 était en défaut. Sans HUD, la condition 4 reste obligatoire."""
+    d, pb, pb4 = lec.get("detail") or {}, [], []
     final = lec.get("damage")
     for nom, valeur in (("boss", lec.get("stage")), ("Final Score", final), ("Rage Count", lec.get("score")),
                         ("Play Time", d.get("play_time"))):
@@ -101,24 +105,34 @@ def controle_results_sans_hunter_rank(lec, hud, config, joueur_optionnel=False):
     if d.get("rc_images", 1) < 2:
         pb.append("Rage Count lu sur une seule image")
     points = (hud or {}).get("damage")
+    hud_confirme = False
     if points is not None and final is not None:
         tol = (config.get("gb") or {}).get("hud_tolerance", 0.02)
         if not points <= final <= points * (1 + tol):
             pb.append(f"Final Score {final} hors de [Points HUD {points} ; × {1 + tol:g}]")
+        else:
+            hud_confirme = True
     elif d.get("final_images", 1) < 2:
         pb.append("Final Score lu sur une seule image, sans HUD de fin de run")
     rangs = [r for r in (d.get("hunter_ranks") or []) if r is not None]
     if points is None and len(rangs) < 3:       # v14 : sans HUD, la condition 4 demande au moins 3 Hunter Rank lus
-        pb.append(f"{len(rangs)} Hunter Rank lu(s) (3 au moins sans HUD de fin de run)")
+        pb4.append(f"{len(rangs)} Hunter Rank lu(s) (3 au moins sans HUD de fin de run)")
     joueur = d.get("player_score")
     if final is not None:
         if joueur is None:
             if not (joueur_optionnel and points is not None):   # v17 : repli à 6 rangs lus, Final Score confirmé par le HUD
-                pb.append("Player's Score illisible")
+                pb4.append("Player's Score illisible")
         elif joueur + (d.get("successor_score") or 0) + sum(rangs) >= final:
-            pb.append("Player's Score + Hunter Rank lus ≥ Final Score")
+            pb4.append("Player's Score + Hunter Rank lus ≥ Final Score")
     if any(a < b for a, b in zip(rangs, rangs[1:])):
-        pb.append("Hunter Rank lus non décroissants")
+        pb4.append("Hunter Rank lus non décroissants")
+    if pb4 and not pb and hud_confirme:
+        discordantes = len((d.get("votes") or {}).get("rage_count") or []) > 1
+        if d.get("rc_images", 1) >= 3 and not discordantes:
+            if infos is not None:
+                infos.append("Hunter Rank incohérents ignorés (HUD)")
+            pb4 = []
+    pb += pb4
     return not pb, pb
 
 

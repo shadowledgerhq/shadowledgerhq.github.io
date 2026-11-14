@@ -97,6 +97,30 @@ def test_v18_record_leve_alerte_reset_de_la_video():
     assert not prec and rec["notes"] == [] and res["notes"] == [] and autre["notes"] == [note]
 
 
+def test_v19_repli_assoupli_hud():
+    import ecrans
+    base = {"stage": "Estátua Gigante", "damage": 3096765357626, "score": 137,
+            "detail": {"play_time": "03:00", "rc_images": 5, "final_images": 3, "player_score": 1688587202020, "successor_score": 0,
+                       "hunter_ranks": [545355914947, 459719757408, 160594165676, 924330651491, 95702114632, 25475511452],
+                       "votes": {"rage_count": [[137, 5]]}}}
+    hud = {"damage": 3094382613814}
+    infos = []
+    ok, pb = ecrans.controle_results_sans_hunter_rank(base, hud, CONFIG, joueur_optionnel=True, infos=infos)
+    assert ok and infos == ["Hunter Rank incohérents ignorés (HUD)"]                       # cas Oj_-5x6700s
+    # sans HUD : condition 4 obligatoire
+    ok, pb = ecrans.controle_results_sans_hunter_rank(base, None, CONFIG, joueur_optionnel=True, infos=[])
+    assert not ok and any("non décroissants" in p for p in pb)
+    # RC lu sur 2 images seulement, ou lecture discordante : non assoupli
+    deux = {**base, "detail": {**base["detail"], "rc_images": 2}}
+    assert not ecrans.controle_results_sans_hunter_rank(deux, hud, CONFIG, infos=[])[0]
+    disc = {**base, "detail": {**base["detail"], "votes": {"rage_count": [[137, 5], [13, 1]]}}}
+    assert not ecrans.controle_results_sans_hunter_rank(disc, hud, CONFIG, infos=[])[0]
+    # HUD qui ne confirme pas le Final Score (> 2 %) : non assoupli
+    assert not ecrans.controle_results_sans_hunter_rank(base, {"damage": 2000000000000}, CONFIG, infos=[])[0]
+    # condition 1 en défaut (boss illisible) : non assoupli
+    assert not ecrans.controle_results_sans_hunter_rank({**base, "stage": None}, hud, CONFIG, infos=[])[0]
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):
