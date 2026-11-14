@@ -19,8 +19,8 @@ NOMS = {"poc": "POC · Power Of Calamity", "bot": "BOT · Battlefield Of Time", 
 UNITES = {"damage": "Dégâts", "seconds": "Temps", "rage_count": "Rage Count", "points": "Points"}
 EQUIPE = {"poc": "Éq.", "gb": "G"}
 COLONNES = ["Rang", "Joueur", "Score", "Détail des runs", "Statut", "Publiée (Paris)", "Vidéo", "Notes"]
-LARGEURS = [11, 24, 18, 32, 15, 17, 18, 62]
-MARGE = 14      # colonnes de marge de chaque côté : le tableau paraît centré dans une fenêtre Excel courante
+LARGEURS = [11, 24, 18, 32, 15, 17, 18, 58]
+MARGE = 14.5      # colonnes de marge de chaque côté : le tableau paraît centré dans une fenêtre Excel courante
 # Palette (hex sans #)
 NUIT, PANNEAU, PANNEAU2, ENTETE = "0B0E1A", "121830", "181F3D", "1E1B4B"
 VIOLET, BLEU, OR, ARGENT, BRONZE, TEXTE, SOURD = "7C3AED", "38BDF8", "F5C542", "C0C8D8", "CD7F32", "E5E9F5", "7F88A8"
@@ -143,7 +143,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
     # --- page de garde -------------------------------------------------------------------------------------------
     peindre(accueil, 60, 26)
     banniere(accueil, 6, "Solo Leveling: Arise", _semaine_txt(semaine))
-    for i, l in enumerate([52, 40, 14, 14, 14, 52], 1):
+    for i, l in enumerate([69, 40, 14, 14, 14, 69], 1):
         accueil.column_dimensions[chr(64 + i)].width = l
     for r_ in (5, 6):
         accueil.merge_cells(start_row=r_, start_column=2, end_row=r_, end_column=5)
