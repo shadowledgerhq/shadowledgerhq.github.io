@@ -14,6 +14,15 @@ _SEP = r"[^\d\n]{0,8}"                                        # bruit entre le l
 _TEMPS = re.compile(r"(\d{1,2}):(\d{2})\.(\d{3})")
 
 
+_RAGE = re.compile(r"rage\s*[gc]oun?t?\b", re.IGNORECASE)
+_GROS_NOMBRES = re.compile(r"\d{4,}(?:[,.]\d{3})*|\d{1,3}(?:[,.]\d{3})+")
+
+
+def normaliser(texte):
+    """v11 : tolère les fautes d'OCR courantes du Rage Count (`Rage Gount`, `RageCount`, `Rage Coun`)."""
+    return _RAGE.sub("Rage Count", texte or "")
+
+
 def _entier(s):
     return int(re.sub(r"[,.   ]", "", s))
 
@@ -30,12 +39,14 @@ def _ligne_apres(titre, texte):
 
 def detecter(texte):
     """Type d'écran d'après ses libellés, ou None. `gb_record` avant `gb_results` ; HOTM avant POC."""
-    t = texte or ""
+    t = normaliser(texte)
     bas = t.lower()
     if "personal record" in bas and ("total rage count" in bas or "group 1" in bas):
         return "gb_record"
     if "final score" in bas and "hunter rank" in bas:
         return "gb_results"
+    if re.search(r"\bpoints\b", bas) and "boss rage count" in bas and chrono_hud(t) is not None:
+        return "gb_combat"     # v11 : HUD pendant la run (jamais un écran de résultat)
     if "phase 1" in bas and "play time" in bas and _TEMPS.search(t):
         return "bot"
     if "합산" in t and ("증명" in t or "클리어" in t):
@@ -43,6 +54,28 @@ def detecter(texte):
     if "이번" in t and ("플레이어 스코어" in t or "계승자 스코어" in t):
         return "poc"
     return None
+
+
+def chrono_hud(texte):
+    """Chrono du HUD GB en secondes : `mm:ss` (≤ 3 min) ou `ss.cc` (sous 1 min, ex. `10.45`) ; None si illisible.
+    Les grands nombres (Points) sont retirés d'abord."""
+    t = _GROS_NOMBRES.sub(" ", texte or "")
+    for m in re.finditer(r"(?<!\d)(\d{1,2})[:;](\d{2})(?!\d)", t):
+        if int(m.group(1)) <= 3 and int(m.group(2)) < 60:
+            return int(m.group(1)) * 60 + int(m.group(2))
+    for m in re.finditer(r"(?<![\d.,])(\d{1,2})\.(\d{2})(?!\d)", t):
+        if int(m.group(1)) < 60:
+            return int(m.group(1)) + int(m.group(2)) / 100
+    return None
+
+
+def lire_gb_combat(texte):
+    """v11 : HUD du combat GB. Points (information), Boss Rage Count `xN`, chrono. Un élément illisible = None."""
+    t = normaliser(texte)
+    pts = re.search(r"points\W{0,6}(\d[\d,. ]*\d)", t, re.IGNORECASE)
+    rc = re.search(r"boss\s*rage\s*count\W{0,6}[xX×]\s*(\d{1,3})(?!\d)", t, re.IGNORECASE)
+    return {"points": _entier(pts.group(1)) if pts else None, "rage_count": int(rc.group(1)) if rc else None,
+            "chrono": chrono_hud(t), "stage": None}
 
 
 def lire_bot(texte):
@@ -89,15 +122,20 @@ def lire_poc(texte):
             "successor": _nombre_apres(r"계승자\s*스코어", texte), "hunters": None, "stage": None}
 
 
-LECTEURS = {"bot": lire_bot, "gb_results": lire_gb_results, "gb_record": lire_gb_record, "hotm": lire_hotm, "poc": lire_poc}
+LECTEURS = {"gb_combat": lire_gb_combat, "bot": lire_bot, "gb_results": lire_gb_results, "gb_record": lire_gb_record, "hotm": lire_hotm, "poc": lire_poc}
 
 
 def lectures_depuis_texte(texte, meta, config, source, t=None):
     """Texte OCR d'une image -> lectures de la vidéo (liste, éventuellement vide)."""
+    texte = normaliser(texte)
     type_ecran = detecter(texte)
     if type_ecran is None:
         return []
     ecran = {**LECTEURS[type_ecran](texte), "t": t}
+    if type_ecran == "gb_combat":
+        ecran["stage"] = _boss_du_hud(texte, config)
+        l = ecrans.lecture_gb_combat(meta, ecran, config, source)
+        return [l] if l else []
     if type_ecran == "bot":
         l = ecrans.lecture_bot(meta, ecran, config, source)
     elif type_ecran == "gb_results":
@@ -111,12 +149,50 @@ def lectures_depuis_texte(texte, meta, config, source, t=None):
     return [l] if l else []
 
 
+def _boss_du_hud(texte, config):
+    """Nom du boss en haut du HUD, seulement s'il figure dans `config.gb.boss_noms` : une cible secondaire
+    (`Temple Altar`) n'est jamais prise comme `stage`."""
+    for nom in (config.get("gb") or {}).get("boss_noms", ["Giant Statue"]):
+        if re.search(re.sub(r"\s+", r"\\s*", re.escape(nom).replace("\\ ", " ")), texte, re.IGNORECASE):
+            return nom
+    return None
+
+
+def regrouper_hud(lectures, config=None):
+    """v11 : les lectures de combat (`detail.ecran == "combat"`) d'une vidéo sont regroupées par run (le chrono
+    repart à la hausse : > `gb.hud_nouvelle_run_s`, 20 s). Par run : la lecture au chrono le plus bas, avec le RC
+    le plus haut lu dans la run (le RC ne baisse jamais). `score_source: hud`, jamais `sur`. Idempotent : les
+    lectures `hud` déjà regroupées sont reprises comme lectures brutes."""
+    seuil = ((config or {}).get("gb") or {}).get("hud_nouvelle_run_s", 20)
+    hud = [l for l in lectures if (l.get("detail") or {}).get("ecran") == "combat"]
+    autres = [l for l in lectures if not (l.get("detail") or {}).get("ecran") == "combat"]
+    sortie = list(autres)
+    for vid in sorted({l["video_id"] for l in hud}):
+        runs = []
+        for l in sorted((x for x in hud if x["video_id"] == vid), key=lambda x: (x["t"] is None, x["t"] or 0)):
+            chrono = l["detail"]["chrono_hud"]
+            if runs and chrono > runs[-1][-1]["detail"]["chrono_hud"] + seuil:
+                runs.append([])
+            if not runs:
+                runs.append([])
+            runs[-1].append(l)
+        for run in runs:
+            dernier = min(run, key=lambda x: x["detail"]["chrono_hud"])
+            rc = max(x["score"] for x in run)
+            fin = {**dernier, "score": rc, "score_source": "hud", "exact": False, "confidence": "a_verifier",
+                   "notes": [n for n in dernier["notes"] if not n.startswith("score provisoire (")] +
+                            [f"score provisoire (hud) : RC {rc}, chrono {dernier['detail']['chrono_hud']}"]}
+            sortie.append(fin)
+    return sortie
+
+
 def dedoublonner_lectures(lectures):
     """Une même image d'écran est lue à plusieurs instants (1 image / 2 s) : une seule lecture par
     (vidéo, mode, groupe/équipe, score, dégâts) ; la plus tôt dans la vidéo est gardée."""
     vues, sortie = set(), []
     for l in sorted(lectures, key=lambda l: (l.get("t") is None, l.get("t") or 0)):
-        cle = (l["video_id"], l["mode"], l.get("team"), l["score"], l.get("damage"), l["score_source"] == "record")
+        cle = (l["video_id"], l["mode"], l.get("team"), l["score"], l.get("damage"), l["score_source"] == "record",
+               l["t"] if l["score_source"] == "hud" else None)
         if cle not in vues:
             vues.add(cle)
             sortie.append(l)

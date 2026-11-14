@@ -72,6 +72,24 @@ def lecture_gb_results(meta, ecran, config, source="video-complete"):
     return lec
 
 
+def lecture_gb_combat(meta, ecran, config, source="video-complete"):
+    """v11 §3.1 : HUD du combat GB (`Points` + `Boss Rage Count xN` + chrono sur la même image). Jamais `sur` :
+    RC provisoire (`a_verifier`). Une lecture sans les 3 éléments, ou au RC hors plage, est ignorée.
+    `Points` n'est gardé que pour information (`detail.points_hud`). Les lectures d'une même run sont regroupées
+    par `ocr_ecrans.regrouper_hud`."""
+    rc, chrono = ecran.get("rage_count"), ecran.get("chrono")
+    mini, maxi = (config.get("plausible", {}).get("gb") or [1, 500])
+    if rc is None or chrono is None or not (mini <= rc <= maxi):
+        return None
+    lec = lecture_vide(meta, "gb")
+    lec["notes"] += notes_alerte_reset(meta, config)
+    lec.update(score=rc, score_source=source, exact=False, confidence="a_verifier", stage=ecran.get("stage"),
+               t=ecran.get("t"), team=None,
+               detail={"ecran": "combat", "points_hud": ecran.get("points"), "chrono_hud": chrono})
+    lec["notes"].append(f"score provisoire (hud) : RC {rc}, chrono {chrono}")
+    return lec
+
+
 def degats_arrondis(texte):
     """`17.28T` -> (17_280_000_000_000, pas d'arrondi 1e10). Nombre déjà lu : (valeur, None)."""
     if isinstance(texte, (int, float)):

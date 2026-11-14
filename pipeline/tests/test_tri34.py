@@ -116,7 +116,7 @@ class OutilsImages:
         self.appels.append(("dl", vid))
         return Path(dossier) / vid
 
-    def images(self, chemin, segments, dossier):
+    def images(self, chemin, segments, dossier, prefixe="f"):
         self.appels.append(("img", self.cur, tuple(segments)))
         return [(d + i * p, f"{self.cur}@{d + i * p}") for d, n, p in segments for i in range(0, n, p)]
 
@@ -173,6 +173,7 @@ def test_langues_et_marqueurs():
 
 def test_ocr_rapide_filtre_et_max_images():
     config = charger_config()
+    config["pc"]["images"]["tri3_ocr_complet"] = False      # le tri 3 est complet par défaut (v11) ; ici on teste le filtre
     with __import__("tempfile").TemporaryDirectory() as tmp:
         d = monde(tmp)
         videos = d.videos(SEM)
@@ -187,7 +188,7 @@ def test_ocr_rapide_filtre_et_max_images():
         psms = [a[1] for a in o.appels if a[0] == "ocr"]
         assert psms.count(11) >= 2 and psms.count(6) == 1                           # complet seulement sur l'écran candidat
         assert all(a[2] == "eng" for a in o.appels if a[0] == "ocr")                # GB : anglais seul
-        assert any("candidate" in l and "[1/2]" not in l for l in lignes) and any(l.startswith("[2/2] b") for l in lignes)
+        assert any("OCR complet" in l for l in lignes) and any(l.startswith("[2/2] b") for l in lignes)
         assert d.processed()["c"].get("pc") is None
 
 
@@ -233,6 +234,103 @@ def test_publier_essai():
         noms = pc.publier_essai(pc.Outils(CONFIG["pc"], executer=faux), src, dst, g, maximum=2)
         assert sorted(noms) == ["v_tri4_100.jpg", "v_tri4_100.txt", "v_tri4_50.jpg", "v_tri4_50.txt"]   # les 2 textes les plus longs
         assert (dst / "v_tri4_100.jpg").exists() and not (dst / "v_tri3_4.txt").exists() and len(g.appels) == 1
+
+
+# --- v11 : HUD du combat GB (textes OCR réels de docs/essais/ocr, vidéo lGDbzyIJcjY) -----------------------------------
+
+HUD_228 = """\\ ~~
+| LVBBaiciant statue | \\ =. Wi -
+ee 08 시승 _ = 는 > "\\ (®) 10.45 ul
+Points 1540,584,556 / RD Pda a. a oo ti ‘
+__ Boss Rage Count x12 . / wi 1: j st
+The boss monster refuses to die and becomes enra ged!)
+"""
+HUD_50 = "Ti Mam Of wre . 아만 1D x75 © 02:40 i\nPoints 99,530,637 | ian he ta 7\n__ Boss Rage Coun x6 )/ ) | . NK\n"
+HUD_70 = "x164 © 02:27 |\n Points 770,387,441 Nees\n | Boss Rage Count x7 1」 \\ 4\n"
+HUD_130 = "LV. 150 Temple Altar ㄴ a {\n09 . = 0296“ —_ / iy) 01:34 1\nPoints 1057342822 \\ |\nBoss Rage Count xd - wp 4 때\n"
+HUD_170 = "Points - ㆍ 1201006080 ‘ % ' 630 34 나\n Boss RageCount/ 0 00 2000 7\n"
+RESULTS_GB = "Results\nGiant Statue\nPlayer's Score 3,000\nHunter Rank 1 100\nHunter Rank 2 100\nHunter Rank 3 100\nHunter Rank 4 100\nHunter Rank 5 100\nHunter Rank 6 100\nFinal Score 3,600\nRage Gount 12\nPlay Time 03:00\n"
+
+
+def test_v11_hud_gb():
+    assert ocr_ecrans.detecter(HUD_228) == "gb_combat" and ocr_ecrans.detecter(RESULTS_GB) == "gb_results"
+    m = {**meta("lGDbzyIJcjY", ["gb"]), "title": "BEST WIND BUILD"}
+    (l,) = ocr_ecrans.lectures_depuis_texte(HUD_228, m, CONFIG, "debut-fin", 228)
+    assert l["score"] == 12 and l["confidence"] == "a_verifier" and l["exact"] is False and l["t"] == 228
+    assert l["detail"]["points_hud"] == 1540584556 and l["detail"]["chrono_hud"] == 10.45 and l["stage"] is None
+    assert ocr_ecrans.lectures_depuis_texte(HUD_50, m, CONFIG, "video-complete", 50)[0]["score"] == 6     # « Rage Coun »
+    assert ocr_ecrans.lectures_depuis_texte(HUD_130, m, CONFIG, "video-complete", 130) == []              # RC illisible (xd) : ignorée
+    assert ocr_ecrans.detecter(HUD_170) is None                                                            # sans les 3 éléments
+    (r,) = ocr_ecrans.lectures_depuis_texte(RESULTS_GB, m, CONFIG, "debut-fin", 245)
+    assert r["score"] == 12 and r["stage"] == "Giant Statue"                                               # « Rage Gount » toléré
+    assert ocr_ecrans.chrono_hud("Points 1,540,584,556 02:40") == 160 and ocr_ecrans.chrono_hud("Points 1,540,584,556") is None
+    cible = ocr_ecrans.lectures_depuis_texte("LV. 150 Temple Altar\n01:34\nPoints 5\nBoss Rage Count x3", m, CONFIG, "x", 1)[0]
+    assert cible["stage"] is None                                                                           # cible secondaire : jamais le stage
+
+
+def test_v11_regroupement_par_run_et_remplacement_par_results():
+    m = meta("v", ["gb"])
+    brut = lambda rc, chrono, t: ocr_ecrans.lectures_depuis_texte(
+        f"Points 5,000,000\nBoss Rage Count x{rc}\n{int(chrono // 60):02d}:{int(chrono % 60):02d}", m, CONFIG, "video-complete", t)[0]
+    run1 = [brut(2, 150, 30), brut(5, 100, 80), brut(9, 20, 160)]
+    run2 = [brut(1, 170, 300), brut(4, 60, 380)]                       # le chrono repart à la hausse : 2e run
+    fin = ocr_ecrans.regrouper_hud(run1 + run2, CONFIG)
+    assert sorted((l["t"], l["score"], l["score_source"]) for l in fin) == [(160, 9, "hud"), (380, 4, "hud")]
+    assert ocr_ecrans.regrouper_hud(fin, CONFIG) and len(ocr_ecrans.regrouper_hud(fin + run2, CONFIG)) == 2     # idempotent
+    # un écran Results dans les 60 s après la run 1 remplace sa lecture HUD ; la run 2 reste
+    res = ocr_ecrans.lectures_depuis_texte(RESULTS_GB, m, CONFIG, "video-complete", 190)
+    out = pc.fusionner_ecrans([], "v", run1 + run2 + res, CONFIG)
+    assert sorted((l["t"], l["score"], l["score_source"]) for l in out) == [(190, 12, "video-complete"), (380, 4, "hud")]
+    # un Personal Record retire tous les HUD
+    rec = ocr_ecrans.lectures_depuis_texte(GB_RECORD, m, CONFIG, "debut-fin", 5)
+    assert all(l["score_source"] != "hud" for l in pc.fusionner_ecrans([], "v", run1 + run2 + rec, CONFIG))
+
+
+def test_v11_cas_lGDbzyIJcjY_recherche_results():
+    """HUD à 228 s (chrono 10.45, RC 12) -> images de 228 à 254 s à 1 image/s jusqu'à l'écran Results (241 s)."""
+    config = charger_config()
+    with __import__("tempfile").TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        videos = d.videos(SEM)
+        videos["a"].update(mode_guess=["gb"], duration="PT4M14S")           # 254 s
+        d.ecrire(f"runs/{SEM}/_videos.json", videos)
+
+        class Faux(OutilsImages):
+            def images(self, chemin, segments, dossier, prefixe="f"):
+                self.appels.append(("img", self.cur, tuple(segments), prefixe))
+                return [(d_ + i * p, f"{self.cur}@{d_ + i * p}") for d_, n, p in segments for i in range(0, n, p)]
+        o = Faux({"a": {228: HUD_228, 241: RESULTS_GB}})      # 241 : hors de la grille du tri 3 (1 image / 2 s)
+        lignes = []
+        r = pc.lancer("daily", INSTANT, d, config, o, maximum=1, journal=lignes.append)
+        recherche = [a for a in o.appels if a[0] == "img" and a[3] != "f"]
+        assert recherche and recherche[0][2] == ((228, 26, 1),)           # de 228 à la fin de la vidéo (254 s), 1 image/s
+        lec = [l for l in d.lectures(SEM) if l["video_id"] == "a" and l["mode"] == "gb"]
+        assert [(l["score"], l["score_source"], l["t"]) for l in lec] == [(12, "debut-fin", 241)]   # le HUD est remplacé par Results
+        assert any("Results trouvé à 241" in l for l in lignes)
+        assert d.processed()["a"]["pc"]["results_cherches"] == [228]
+        # pas de nouvelle recherche au passage suivant
+        o2 = Faux({})
+        pc.lancer("daily", INSTANT, d, config, o2, maximum=1)
+        assert not [a for a in o2.appels if a[0] == "img" and a[3] != "f"]
+
+
+def test_v11_hud_sans_results_reste_provisoire():
+    config = charger_config()
+    with __import__("tempfile").TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        videos = d.videos(SEM)
+        videos["a"].update(mode_guess=["gb"], duration="PT4M14S")
+        d.ecrire(f"runs/{SEM}/_videos.json", videos)
+        pc.lancer("daily", INSTANT, d, config, OutilsImages({"a": {228: HUD_228}}), maximum=1)
+        (l,) = [l for l in d.lectures(SEM) if l["video_id"] == "a" and l["mode"] == "gb"]
+        assert l["score_source"] == "hud" and l["score"] == 12 and l["confidence"] == "a_verifier" and l["detail"]["points_hud"] == 1540584556
+        ligne = lire_gb(d)
+        assert ligne["runs_detail"][0]["points_hud"] == 1540584556 and ligne["confidence"] == "a_verifier" and ligne["rank"] is None
+
+
+def lire_gb(d):
+    import json
+    return json.loads((Path(d.data) / "runs" / SEM / "gb.json").read_text(encoding="utf-8"))[0]
 
 
 def test_commandes_des_outils():

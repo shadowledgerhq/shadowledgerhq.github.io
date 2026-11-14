@@ -25,7 +25,8 @@ Le script `pipeline/pc.py` tourne sur le PC d'Alexis : sous-titres (yt-dlp), Whi
 - **Enregistrement après chaque vidéo** : `_lectures.json` et `processed.json` sont écrits à chaque vidéo. Arrêt (Ctrl+C, PC éteint) = seule la vidéo en cours est perdue.
 - **OCR plus rapide** :
   - langues selon le mode de la vidéo (BOT et GB : `eng` ; POC et HOTM : `kor+eng`) ;
-  - lecture rapide d'abord (image réduite à 960 px, `--psm 11`, 40 s maximum), puis lecture complète **seulement** si le texte ressemble à un écran RESULT ;
+  - tri 3 : OCR complet de **toutes** les images (10 premières et 30 dernières secondes) ; tri 4 : lecture rapide d'abord (image réduite à 960 px, `--psm 11`, 40 s maximum), puis lecture complète **seulement** si le texte ressemble à un écran RESULT ;
+  - Guild Boss : quand le HUD montre un chrono de 15 s ou moins, les 30 secondes suivantes sont lues à 1 image/s jusqu'à l'écran `Results` ;
   - images identiques lues une seule fois ; image trop lente (90 s) ignorée, le passage continue ;
   - budget par vidéo (15 min : au-delà la vidéo est reprise au passage suivant, 2 essais puis abandon) et par passage (180 min) ;
   - `OMP_THREAD_LIMIT=1` pour tesseract (le multithread d'OpenMP le ralentit sous Windows).

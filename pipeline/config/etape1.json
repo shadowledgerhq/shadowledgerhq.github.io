@@ -63,6 +63,11 @@
     "record_tolerance_minutes": 60,
     "record_tolerance_jours_minutes": 1440,
     "record_tolerance_min_minutes": 1,
+    "boss_noms": ["Giant Statue"],
+    "hud_nouvelle_run_s": 20,
+    "chrono_fin_s": 15,
+    "recherche_results_s": 30,
+    "hud_results_fenetre_s": 60,
     "_doc": "SPEC §4.7 (v7) : marge sur le moment estimé de la capture du Personal Record, selon la plus petite unité de Time Left in Season : heures -> 60 min ; jours seulement -> 24 h ; minutes -> 1 min."
   },
   "tri1_version": 10,
@@ -107,6 +112,7 @@
       "tri3_debut_s": 10,
       "tri3_fin_s": 30,
       "tri3_pas_s": 2,
+      "tri3_ocr_complet": true,
       "tri4_pas_s": 10,
       "max_videos": 15,
       "max_minutes": 30

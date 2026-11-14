@@ -119,13 +119,13 @@ class Outils:
             raise RuntimeError("vidéo non téléchargée")
         return fichiers[0]
 
-    def images(self, chemin, segments, dossier):
+    def images(self, chemin, segments, dossier, prefixe="f"):
         """Images PNG des segments (début, durée, pas) en secondes ; retourne [(t, chemin_png)]."""
         trouvees = []
         for k, (debut, duree, pas) in enumerate(segments):
             self._lancer([self.cfg["images"]["ffmpeg"], "-v", "error", "-ss", str(debut), "-t", str(duree), "-i", str(chemin),
-                          "-vf", f"fps=1/{pas}", "-q:v", "2", f"{dossier}/f{k}_%04d.png"], 900)
-            trouvees += [(debut + i * pas, f) for i, f in enumerate(sorted(Path(dossier).glob(f"f{k}_*.png")))]
+                          "-vf", f"fps=1/{pas}", "-q:v", "2", f"{dossier}/{prefixe}{k}_%04d.png"], 900)
+            trouvees += [(debut + i * pas, f) for i, f in enumerate(sorted(Path(dossier).glob(f"{prefixe}{k}_*.png")))]
         return trouvees
 
     def reduire(self, png, largeur):
@@ -224,8 +224,9 @@ def traiter_video(vid, meta, outils, config, lectures, whisper_actif, jour):
     return lectures, etat, None
 
 
-SOURCES_ECRAN = ("miniature", "debut-fin", "video-complete", "record")
+SOURCES_ECRAN = ("miniature", "debut-fin", "video-complete", "record", "hud")
 SOURCES_TEXTE = ("titre", "description", "sous-titres")
+SOURCES_RESULTATS = ("debut-fin", "video-complete")
 
 
 def segments_tri(tri, duree_s, cfg):
@@ -239,13 +240,25 @@ def segments_tri(tri, duree_s, cfg):
     return [(0, debut, pas), (int(duree_s - fin), fin, pas)]
 
 
-def fusionner_ecrans(lectures, vid, nouvelles):
+def _est_results_gb(l):
+    return l["mode"] == "gb" and l["score_source"] in SOURCES_RESULTATS and (l.get("detail") or {}).get("ecran") != "combat"
+
+
+def fusionner_ecrans(lectures, vid, nouvelles, config=None):
     """Les lectures d'écran de la vidéo remplacent ses lectures de texte pour les mêmes modes (le score lu à
-    l'écran vaut mieux que celui du titre) ; une même image lue plusieurs fois ne compte qu'une fois."""
+    l'écran vaut mieux que celui du titre) ; une même image lue plusieurs fois ne compte qu'une fois.
+    v11 : les lectures du HUD GB sont regroupées par run (`ocr_ecrans.regrouper_hud`), puis une lecture `hud` est
+    retirée dès qu'un écran `Results` la suit (≤ `gb.hud_results_fenetre_s`) ou qu'un `Personal Record` est lu."""
     modes = {l["mode"] for l in nouvelles}
     reste = [l for l in lectures if not (l["video_id"] == vid and l["mode"] in modes and l["score_source"] in SOURCES_TEXTE)]
     ecran = [l for l in reste + nouvelles if l["video_id"] == vid and l["score_source"] in SOURCES_ECRAN]
     autres = [l for l in reste if not (l["video_id"] == vid and l["score_source"] in SOURCES_ECRAN)]
+    ecran = ocr_ecrans.regrouper_hud(ecran, config)
+    fenetre = ((config or {}).get("gb") or {}).get("hud_results_fenetre_s", 60)
+    resultats = [l for l in ecran if _est_results_gb(l)]
+    records = [l for l in ecran if l["mode"] == "gb" and l["score_source"] == "record"]
+    ecran = [l for l in ecran if not (l["score_source"] == "hud" and (
+        records or any(l["t"] is not None and r["t"] is not None and 0 <= r["t"] - l["t"] <= fenetre for r in resultats)))]
     return autres + ocr_ecrans.dedoublonner_lectures(ecran)
 
 
@@ -273,22 +286,77 @@ def langues_ocr(meta, cfg):
 
 
 def ressemble_ecran(texte):
-    bas = (texte or "").lower()
-    return any(m in bas for m in MARQUEURS_ECRAN)
+    bas = ocr_ecrans.normaliser(texte).lower()
+    return any(m in bas for m in MARQUEURS_ECRAN) or ("points" in bas and "boss rage" in bas)
+
+
+def _ocr_image(outils, png, langs, cfg, st, complet=False):
+    """Texte d'une image ; "" si elle ne ressemble pas à un écran RESULT ou si tesseract est trop lent.
+    `complet` : OCR complet sans filtre rapide (tri 3 : toutes les images des 10 premières et 30 dernières secondes)."""
+    try:
+        if cfg.get("ocr_rapide", True) and not complet:
+            petit = outils.reduire(png, cfg.get("ocr_largeur_rapide", 960))
+            rapide = outils.ocr(petit, langs, cfg.get("ocr_psm_rapide", 11), cfg.get("ocr_timeout_rapide_s", 40))
+            Path(petit).unlink(missing_ok=True)
+            if not ressemble_ecran(rapide):
+                return ""
+        st["candidates"] += 1
+        return outils.ocr(png, langs, 6, cfg.get("ocr_timeout_s", 90))
+    except OcrTropLent:
+        st["lentes"] += 1
+        return ""
+
+
+def _garder(ocr_debug, vid, etiquette, t, texte, png):
+    """Diagnostic (--garder-ocr) : texte lu + image ; le type d'écran reconnu est ajouté au nom du fichier."""
+    if not (ocr_debug and texte):
+        return
+    type_ecran = ocr_ecrans.detecter(texte)
+    base = Path(ocr_debug) / f"{vid}_{etiquette}_{t}{'_' + type_ecran if type_ecran else ''}"
+    Path(ocr_debug).mkdir(parents=True, exist_ok=True)
+    base.with_suffix(".txt").write_text(texte, encoding="utf-8")
+    try:
+        shutil.copyfile(png, base.with_suffix(".png"))
+    except OSError:
+        pass
+
+
+def chercher_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, journal, ocr_debug, source):
+    """v11 : après un chrono HUD ≤ 15 s à l'instant `t0`, lit les images de t0 à t0 + 30 s à 1 image/s jusqu'à
+    trouver l'écran `Results`. Retourne (lectures, nombre d'images lues)."""
+    cfg = config["pc"]["images"]
+    fenetre = min(config.get("gb", {}).get("recherche_results_s", 30), int(duree_s - t0))
+    if fenetre <= 0:
+        return [], 0
+    st, n = {"candidates": 0, "lentes": 0}, 0
+    for t, png in outils.images(chemin, [(int(t0), fenetre, 1)], tmp, prefixe=f"r{int(t0)}_"):
+        n += 1
+        texte = _ocr_image(outils, png, langs, cfg, st, complet=True)
+        _garder(ocr_debug, vid, "recherche", t, texte, png)
+        trouvees = [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t) if _est_results_gb(l)]
+        Path(png).unlink(missing_ok=True)
+        if trouvees:
+            journal(f"  écran Results trouvé à {t} s")
+            return trouvees, n
+    journal(f"  écran Results non trouvé entre {int(t0)} et {int(t0) + fenetre} s")
+    return [], n
 
 
 def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda m: None, ocr_debug=None,
                    horloge=time.monotonic):
     """Tri 3, puis tri 4 si le tri 3 ne suffit pas. Retourne (lectures, avertissement | None, reporte).
-    Par image : doublon exact ignoré ; OCR rapide (image réduite, `psm` clairsemé) puis OCR complet seulement si le
-    texte ressemble à un écran RESULT ; image trop lente = ignorée. Budget de temps par vidéo (`budget_video_min`) :
-    dépassé, la vidéo reste « partielle » et est reprise au passage suivant (`essais_max` fois, puis considérée faite)."""
+    Par image : doublon exact ignoré ; tri 3 = OCR complet de toutes les images ; tri 4 = OCR rapide (image réduite,
+    `psm` clairsemé) puis complet seulement si le texte ressemble à un écran RESULT ; image trop lente = ignorée.
+    v11 : HUD GB avec chrono ≤ 15 s -> recherche de l'écran `Results` dans les 30 s suivantes (1 image/s).
+    Budget de temps par vidéo (`budget_video_min`) : dépassé, la vidéo reste « partielle » et est reprise au passage
+    suivant (`essais_max` fois, puis considérée faite)."""
     cfg = config["pc"]["images"]
     minutes = duree_minutes(meta.get("duration"))
     if minutes is None or minutes > cfg["max_minutes"]:
         return lectures, f"{vid} : durée {meta.get('duration')} hors limite ({cfg['max_minutes']} min), images non traitées", False
     langs = langues_ocr(meta, cfg)
     fin = horloge() + cfg.get("budget_video_min", 15) * 60
+    seuil_fin = config.get("gb", {}).get("chrono_fin_s", 15)
     with tempfile.TemporaryDirectory() as tmp:
         try:
             journal("  téléchargement…")
@@ -296,6 +364,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
             for tri in (3, 4):
                 if pc.get(f"tri{tri}") == "fait":
                     continue
+                source = "debut-fin" if tri == 3 else "video-complete"
                 nouvelles, st, complet, vus = [], {"images": 0, "doublons": 0, "candidates": 0, "lentes": 0}, True, {}
                 t0 = horloge()
                 for t, png in outils.images(chemin, segments_tri(tri, minutes * 60, cfg), tmp):
@@ -308,20 +377,27 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         st["doublons"] += 1
                         texte = vus[h]
                     else:
-                        texte = vus[h] = _ocr_image(outils, png, langs, cfg, st)
-                    if ocr_debug and texte:  # texte lu + image d'origine (pour voir l'écran réel)
-                        Path(ocr_debug).mkdir(parents=True, exist_ok=True)
-                        (Path(ocr_debug) / f"{vid}_tri{tri}_{t}.txt").write_text(texte, encoding="utf-8")
-                        try:
-                            shutil.copyfile(png, Path(ocr_debug) / f"{vid}_tri{tri}_{t}.png")
-                        except OSError:
-                            pass
-                    nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config,
-                                                                  "debut-fin" if tri == 3 else "video-complete", t)
+                        texte = vus[h] = _ocr_image(outils, png, langs, cfg, st, complet=(tri == 3 and cfg.get("tri3_ocr_complet", True)))
+                        _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
+                    nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t)
                     Path(png).unlink(missing_ok=True)
-                lectures = fusionner_ecrans(lectures, vid, nouvelles)
-                journal(f"  tri {tri} : {st['images']} image(s), {st['candidates']} candidate(s) à l'OCR complet, "
-                        f"{len(nouvelles)} écran(s) lu(s), {st['lentes']} trop lente(s), {st['doublons']} doublon(s), "
+                lectures = fusionner_ecrans(lectures, vid, nouvelles, config)
+                # v11 : chrono HUD ≤ 15 s -> chercher l'écran Results qui suit (une seule recherche par instant)
+                deja = pc.setdefault("results_cherches", [])
+                for h in [l for l in lectures if l["video_id"] == vid and l["score_source"] == "hud"
+                          and l["detail"]["chrono_hud"] <= seuil_fin and l["t"] is not None and l["t"] not in deja]:
+                    if horloge() > fin:
+                        complet = False
+                        break
+                    trouvees, n_img = chercher_results_gb(vid, meta, outils, config, chemin, tmp, h["t"], minutes * 60,
+                                                          langs, journal, ocr_debug, source)
+                    deja.append(h["t"])
+                    st["images"] += n_img
+                    lectures = fusionner_ecrans(lectures, vid, trouvees, config)
+                    nouvelles += trouvees
+                n_ecrans = len(nouvelles)
+                journal(f"  tri {tri} : {st['images']} image(s), {st['candidates']} lue(s) à l'OCR complet, "
+                        f"{n_ecrans} écran(s) lu(s), {st['lentes']} trop lente(s), {st['doublons']} doublon(s), "
                         f"{int(horloge() - t0)} s" + ("" if complet else " — BUDGET DÉPASSÉ"))
                 if not complet:
                     pc["date"] = jour
@@ -342,22 +418,6 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                 return lectures, f"{vid} : 429 Too Many Requests (téléchargement), reportée au prochain passage", True
             return lectures, f"{vid} : images : {e}", False
     return lectures, None, False
-
-
-def _ocr_image(outils, png, langs, cfg, st):
-    """Texte d'une image ; "" si elle ne ressemble pas à un écran RESULT ou si tesseract est trop lent."""
-    try:
-        if cfg.get("ocr_rapide", True):
-            petit = outils.reduire(png, cfg.get("ocr_largeur_rapide", 960))
-            rapide = outils.ocr(petit, langs, cfg.get("ocr_psm_rapide", 11), cfg.get("ocr_timeout_rapide_s", 40))
-            Path(petit).unlink(missing_ok=True)
-            if not ressemble_ecran(rapide):
-                return ""
-        st["candidates"] += 1
-        return outils.ocr(png, langs, 6, cfg.get("ocr_timeout_s", 90))
-    except OcrTropLent:
-        st["lentes"] += 1
-        return ""
 
 
 def rejeter_sans_score(d, week, jour):
@@ -527,14 +587,24 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     return {"week": week, "traitees": traitees, "alertes": alertes}
 
 
-def publier_essai(outils, source, destination, git=None, maximum=6):
+def publier_essai(outils, source, destination, git=None, maximum=8):
     """Diagnostic : copie dans `destination` (docs/essais/ocr, versionné) les textes OCR de `source` (logs/ocr) et les
-    `maximum` images au texte le plus long, en JPEG réduit ; puis commit + push si `git`. Retourne les noms écrits."""
+    images de `maximum` fichiers, en JPEG réduit ; puis commit + push si `git`. Passent d'abord les écrans reconnus
+    (nom de fichier terminé par le type : `_gb_results`, `_gb_combat`…, 2 au plus pour le HUD, 4 pour les autres),
+    puis les textes les plus longs. Retourne les noms écrits."""
     source, destination = Path(source), Path(destination)
     textes = sorted(source.glob("*.txt"), key=lambda f: -f.stat().st_size)
+    types = {f: (re.search(r"_(gb_\w+|bot|hotm|poc)$", f.stem) or [None, None])[1] for f in textes}
+    choisis, par_type = [], {}
+    for f in textes:
+        t = types[f]
+        if t and par_type.get(t, 0) < (2 if t == "gb_combat" else 4):
+            par_type[t] = par_type.get(t, 0) + 1
+            choisis.append(f)
+    choisis += [f for f in textes if f not in choisis]
     destination.mkdir(parents=True, exist_ok=True)
     ecrits = []
-    for f in textes[:maximum]:
+    for f in choisis[:maximum]:
         png = f.with_suffix(".png")
         if png.exists():
             jpg = destination / (f.stem + ".jpg")

@@ -17,7 +17,7 @@ from semaine import bornes, id_semaine, iso_paris, maintenant, parse_iso, semain
 
 UNITES = {"poc": "damage", "bot": "seconds", "gb": "rage_count", "hotm": "points"}
 CLES_DETAIL = {"poc": ("sjw", "successor", "hunters"), "hotm": ("clear", "proof_bonus", "proof_level"),
-               "gb": ("total_score", "total_rage_count", "challenge_count", "time_left")}
+               "gb": ("total_score", "total_rage_count", "challenge_count", "time_left", "points_hud")}
 
 
 def cle_classement(lec, config):
