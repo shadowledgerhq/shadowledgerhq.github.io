@@ -45,7 +45,10 @@ class OcrTropLent(Exception):
 
 
 def est_429(e):
-    return "429" in str(e) or "too many requests" in str(e).lower()
+    """YouTube limite ou bloque cette adresse : HTTP 429, ou anti-bot (« Sign in to confirm you're not a bot »,
+    `-do-i-pass-cookies-to-yt-dlp`). Le lot s'arrête et les vidéos restantes sont reportées (rien n'est marqué)."""
+    t = str(e).lower()
+    return "429" in t or "too many requests" in t or "not a bot" in t or "pass-cookies" in t or "sign in to confirm" in t
 
 
 # --- texte des sous-titres ------------------------------------------------------------------
@@ -266,7 +269,7 @@ def traiter_video(vid, meta, outils, config, lectures, whisper_actif, jour):
             raise
         except Exception as e:  # une vidéo en erreur ne bloque pas les autres
             if est_429(e):  # YouTube limite le débit : vidéo reportée au prochain passage (rien n'est marqué)
-                return lectures, "reporte", f"{vid} : 429 Too Many Requests, reportée au prochain passage"
+                return lectures, "reporte", f"{vid} : 429 / anti-bot YouTube, reportée au prochain passage"
             return lectures, "erreur", f"{vid} : {e}"
     if texte.strip():
         nouvelles, _ = lectures_texte(meta, [("sous-titres", texte)], config)
@@ -570,7 +573,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
             raise
         except Exception as e:
             if est_429(e):
-                return lectures, f"{vid} : 429 Too Many Requests (téléchargement), reportée au prochain passage", True
+                return lectures, f"{vid} : 429 / anti-bot YouTube (téléchargement), reportée au prochain passage", True
             return lectures, f"{vid} : images : {e}", False
     # v15 : GB sans aucun écran reconnu après le tri 4 : libellés de la langue inconnus, la vidéo reste `en_cours`
     if "gb" in meta.get("mode_guess", []) and pc.get("tri4") in ("fait", "inutile") and not any(
@@ -679,7 +682,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                 if avert:
                     alertes.append(avert)
                 if etat == "reporte":  # 429 : on s'arrête, YouTube limite le débit de cette adresse
-                    alertes.append("429 : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées")
+                    alertes.append("429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)")
                     break
                 processed[vid].setdefault("pc", {}).update(sous_titres=etat, date=jour)
                 processed[vid]["updated_at"] = jour
@@ -725,7 +728,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                             processed[vid]["status"] = "termine"
                     sauver()
                     if reporte:
-                        alertes.append("429 : images arrêtées pour ce passage, les vidéos restantes sont reportées")
+                        alertes.append("429 / anti-bot YouTube : images arrêtées pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)")
                         break
                     if n < len(lot):
                         dormir(pause)

@@ -84,6 +84,19 @@ def test_passage_daily_idempotent():
         assert o2.appels == ["b"] and len(d.lectures(SEM)) == len(json.loads(avant)) + 1
 
 
+def test_anti_bot_youtube_arrete_le_lot():
+    """Blocage anti-bot de yt-dlp (« -do-i-pass-cookies-to-yt-dlp ») traité comme un 429 : le lot s'arrête."""
+    assert pc.est_429(Exception("yt-dlp code 1 : -do-i-pass-cookies-to-yt-dlp for how to manually pass cookies"))
+    assert pc.est_429(Exception("Sign in to confirm you're not a bot")) and not pc.est_429(Exception("Video unavailable"))
+    config = config_sans_images()
+    with tempfile.TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        o = FauxOutils({"a": VTT, "c": "x"}, erreurs=["b"], erreurs_msg={"b": "yt-dlp code 1 : -do-i-pass-cookies-to-yt-dlp"})
+        r = pc.lancer("daily", INSTANT, d, config, o, journal=lambda x: None, dormir=lambda x: None)
+        assert o.appels == ["a", "b"] and "pc" not in d.processed()["b"]
+        assert any("anti-bot" in a for a in r["alertes"])
+
+
 def test_429_reporte_et_arrete_les_sous_titres():
     config = config_sans_images()
     with tempfile.TemporaryDirectory() as tmp:
