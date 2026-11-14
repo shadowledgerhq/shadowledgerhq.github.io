@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 12 — 14/11/2026 (GB : RC du HUD = information seulement ; Points du HUD = Final Score en cours ; contrôle Results sans Hunter Rank) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 13 — 14/11/2026 (GB : écran Results lu par fusion d'images et zones ciblées ; contrôle sans Hunter Rank durci) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -127,12 +127,20 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
     - `stage` : pris sur l'écran Results. Le nom en haut du HUD ne sert que s'il n'y a pas d'écran Results, et jamais une cible secondaire (`Temple Altar`).
     - Une lecture HUD incomplète (sans les 3 éléments) est ignorée : l'OCR du HUD est bruité (ex. 50 s : `Points 99,530,637` lu entre 313 989 131 et 770 387 441).
   - **Trouver l'écran Results (v11)** : il suit la fin du chrono (ou la mort du boss). Si un HUD GB montre un chrono ≤ 15 s à l'instant t, lire les images de t à t + 30 s à 1 image/s jusqu'à trouver `Results`. Vérifié : chrono `10.45` à 228 s, Results à 252 s.
-  - **Écran Results en animation (v12)** : les `Hunter Rank` s'affichent après `Player's Score`, `Final Score` et `Rage Count`, avec le bandeau `Your points have been registered.` ; une vidéo peut se couper avant (essai : Results à 252 s, vidéo de 254 s, Hunter Rank absents). Lire toutes les images de l'écran Results jusqu'à la fin de la vidéo et garder la plus complète.
-  - **Contrôle Results sans Hunter Rank (v12)** : si les 6 `Hunter Rank` ne sont pas lisibles, la run est `sur` quand **toutes** ces conditions sont réunies, sinon `a_verifier` :
-    1. `Results`, le nom du boss, `Final Score`, `Rage Count` et `Play Time` sont lus ;
-    2. `Player's Score` < `Final Score` ;
-    3. si un HUD de la même run a été lu avec un chrono ≤ 5 s : dernier `Points` ≤ `Final Score` ≤ dernier `Points` × 1,02 (`config.gb.hud_tolerance = 0.02`) ; sans HUD, `Final Score` et `Rage Count` identiques sur au moins 2 images.
-    La run porte alors la note `contrôle sans Hunter Rank`. Cas test `lGDbzyIJcjY` : 1 593 663 209 ≤ 1 601 097 999 ≤ 1 625 536 473 → RC 19 `sur`, dégâts 1 601 097 999 exacts ; ligne `a_verifier` car une seule run (groupe inconnu, §4.1).
+  - **Écran Results en animation (v12, précisé v13)** : l'écran se remplit en plusieurs temps, et aucune image ne porte forcément tout. Essai `lGDbzyIJcjY` : à 252 s, titre, boss et bandeau `Your points have been registered.` seuls ; puis valeurs ; à 253 s, l'animation `Rage Rewards` (`Tap the screen to continue.`) recouvre les Hunter Rank 1 à 3, mais `Player's Score`, Hunter Rank 4 à 6, `New Record Achieved!`, `Final Score` et `Rage Count` restent lisibles.
+  - **Fusion des images d'un même écran (v13, validé)** : les champs d'un écran Results peuvent venir de plusieurs images, à ces conditions :
+    - mêmes vidéo et run : images consécutives entre la première image `Results` et la dernière, sans HUD de combat entre elles, sur 15 s au plus (`config.gb.fusion_max_s = 15`) ;
+    - chaque champ garde la valeur lue ; si un champ est lu avec 2 valeurs différentes, on garde la plus fréquente, et en cas d'égalité → conflit, run `a_verifier`, note `conflit de lecture : <champ>` ;
+    - la run porte la note `lecture fusionnée (<n> images)` et `t` = l'image où `Rage Count` est lu.
+    - Libellés de l'animation à reconnaître pour ne pas les lire comme des valeurs : `Rage Rewards`, `Tap the screen to continue.`
+  - **Zones ciblées (v13, validé comme méthode)** : en plus de l'OCR de l'image entière, lecture de zones recadrées et agrandies (titre/boss, `Player's Score`, `Hunter Rank` 1 à 6, `Final Score`, `Rage Count`, `Play Time`). Coordonnées dans `config.gb.zones`, en **fractions de l'image** (x, y, largeur, hauteur entre 0 et 1), jamais en pixels. Valeurs estimées sur du 720p 16:9 : **[À CONFIRMER]** sur au moins 3 autres vidéos, dont une en 1080p. Image au format différent (Short vertical, 4:3, bandes noires) → zones non appliquées, OCR de l'image entière seulement, note `format non standard`. La valeur d'une zone ciblée prime sur celle de l'image entière ; si les deux diffèrent, la note `écart OCR zone/image : <champ>` est ajoutée. Images de référence : `docs/essais/ocr/lGDbzyIJcjY_*results*.jpg`.
+  - **Contrôle Results sans les 6 Hunter Rank (v12, durci v13)** : si la somme `Player's Score` + 6 `Hunter Rank` = `Final Score` n'est pas vérifiable, la run est `sur` seulement si **toutes** ces conditions sont réunies, sinon `a_verifier` :
+    1. `Results`, le nom du boss, `Final Score`, `Rage Count` et `Play Time` sont lus (fusion permise) ;
+    2. **`Rage Count` lu à l'identique sur au moins 2 images** (c'est le score classé : 2 chiffres, une seule erreur d'OCR change le rang) ;
+    3. **`Final Score` confirmé par une source indépendante** : dernier `Points` du HUD avec un chrono ≤ 5 s, et `Points` ≤ `Final Score` ≤ `Points` × 1,02 (`config.gb.hud_tolerance = 0.02`). Sans HUD lisible : `Final Score` identique sur au moins 2 images **et** condition 4 ;
+    4. cohérence des valeurs lues : `Player's Score` + les `Hunter Rank` lus < `Final Score`, et les `Hunter Rank` lus décroissent du rang 1 au rang 6.
+    La condition « `Player's Score` < `Final Score` » seule (v12) ne suffit plus. Note : `contrôle sans Hunter Rank`.
+    Cas test `lGDbzyIJcjY` : RC 19 lu à 252 s et à 253 s (condition 2) ; `Points` 1 596 246 179 à 0,47 s ≤ 1 601 097 999 ≤ 1 628 171 102 (condition 3) ; 313 099 049 + 62 925 78x + 58 465 656 + 22 280 102 ≈ 456,8 millions < 1 601 097 999, et 62,9 M > 58,5 M > 22,3 M (condition 4) → RC 19 `sur`, dégâts 1 601 097 999 exacts, `new_record: true` (bandeau visible à 253 s). Ligne `a_verifier` car une seule run (§4.1).
 - Japonais et autres langues : libellés RESULT **[À CONFIRMER]** (seul le coréen est vu pour POC et HOTM).
 - **Libellés que l'OCR doit reconnaître au GB (client anglais, v11)** : écran Results : `Results`, `Player's Score`, `Hunter Rank`, `Final Score`, `Rage Count`, `Play Time`, `New Record Achieved!` ; Personal Record : `Guild Boss`, `Personal Record`, `Total Score`, `Challenge Count`, `Total Rage Count`, `Group 1`, `Group 2`, `Time Left in Season` ; HUD : `Points`, `Boss Rage Count`, `Giant Statue`, `Team A`, `Team B`, `WARNING` ; bandeau Results : `Your points have been registered.` Tolérer les fautes d'OCR courantes (`Rage Gount`, `RageCount`, `Rage Coun`).
 
@@ -264,5 +272,6 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 - `pipeline/analyse_porte_mode.py` lit `data/runs/*/hotm.json` → lire `data/runs/*/hotm-gate-*.json`.
 - `gate` : entier dans le JSON (voir §5.1).
 - Retirer `runs_detail.submode` (skill et code).
+- (v13) GB : fusion des images de l'écran Results (§3.1, conditions et conflits) ; zones ciblées en fractions dans `config.gb.zones` ; contrôle sans Hunter Rank durci (RC identique sur 2 images, Final Score confirmé par le HUD ou 2 images + cohérence des Hunter Rank lus). Corrections de l'essai du 14/11 : `new_record` doit être `true` pour `lGDbzyIJcjY` (bandeau à 253 s) ; `regles` vaut `null` au lieu de 13 ; la lecture HUD porte `score_source: hud` avec `score: null` : mettre `score_source: null` (seul `damage_source: hud`).
 - (v12) GB : le HUD ne donne plus de RC (supprimer `score_source: hud` pour le RC) ; champs `runs_detail[i].hud_rage_count` (info) et `damage_source: hud` (dégâts provisoires) ; `points_hud` remplacé par `damage` provisoire ; contrôle Results sans Hunter Rank (§3.1) ; lire l'écran Results jusqu'à la fin de la vidéo. Cas test : `lGDbzyIJcjY` → RC 19 `sur`, dégâts 1 601 097 999, note `contrôle sans Hunter Rank`, ligne `a_verifier` (une seule run).
 - (v10) Migration : fusionner `bot-season.json` et `bot-variante-inconnue.json` de la semaine 2026-11-12 dans `bot.json` ; supprimer les anciens fichiers BOT et le champ `bot_variant` (code, tests, site).
