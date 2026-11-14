@@ -164,6 +164,16 @@ class Git:
     def tirer(self):
         self._run("pull", "--rebase", "origin", "main")
 
+    def pousser_chemin(self, message, chemin):
+        """Commit + push d'un seul chemin (ex. docs/essais/ocr), sans toucher au reste de l'arbre de travail."""
+        self._run("add", chemin)
+        if not self._run("status", "--porcelain", chemin).strip():
+            return False
+        self._run("commit", "-m", message, "--", chemin)
+        self._run("pull", "--rebase", "--autostash", "origin", "main")
+        self._run("push", "origin", "HEAD:main")
+        return True
+
     def pousser(self, message):
         self._run("add", "data")
         if not self._run("status", "--porcelain", "data").strip():
@@ -517,6 +527,26 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     return {"week": week, "traitees": traitees, "alertes": alertes}
 
 
+def publier_essai(outils, source, destination, git=None, maximum=6):
+    """Diagnostic : copie dans `destination` (docs/essais/ocr, versionné) les textes OCR de `source` (logs/ocr) et les
+    `maximum` images au texte le plus long, en JPEG réduit ; puis commit + push si `git`. Retourne les noms écrits."""
+    source, destination = Path(source), Path(destination)
+    textes = sorted(source.glob("*.txt"), key=lambda f: -f.stat().st_size)
+    destination.mkdir(parents=True, exist_ok=True)
+    ecrits = []
+    for f in textes[:maximum]:
+        png = f.with_suffix(".png")
+        if png.exists():
+            jpg = destination / (f.stem + ".jpg")
+            outils._lancer([outils.cfg["images"]["ffmpeg"], "-v", "error", "-y", "-i", str(png), "-q:v", "4", str(jpg)], 60)
+            ecrits.append(jpg.name)
+        shutil.copyfile(f, destination / f.name)
+        ecrits.append(f.name)
+    if git and ecrits:
+        git.pousser_chemin("essai: images et textes OCR du PC", str(destination))
+    return ecrits
+
+
 if __name__ == "__main__":
     for flux in (sys.stdout, sys.stderr):  # titres coréens / japonais : la console Windows (cp1252) planterait sinon
         flux.reconfigure(encoding="utf-8", errors="replace")
@@ -526,6 +556,8 @@ if __name__ == "__main__":
     ap.add_argument("--whisper", action="store_true", help="active Whisper (config pc.whisper_cmd requis)")
     ap.add_argument("--max", type=int, help="limite les vidéos traitées, sous-titres ET images")
     ap.add_argument("--video", action="append", help="ne traite que cette vidéo (identifiant YouTube ; répétable)")
+    ap.add_argument("--publier-essai", action="store_true",
+                    help="comme --garder-ocr, puis copie les 6 meilleures images (JPEG) et textes dans docs/essais/ocr et les pousse")
     ap.add_argument("--garder-ocr", action="store_true", help="écrit le texte lu par tesseract et l'image dans logs/ocr/ (diagnostic)")
     ap.add_argument("--maintenant", help="instant simulé ISO 8601 (tests)")
     a = ap.parse_args()
@@ -533,10 +565,16 @@ if __name__ == "__main__":
         r = lancer(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(),
                    git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max, seulement=set(a.video or []),
                    journal=lambda m: print(m, flush=True), dormir=time.sleep,
-                   ocr_debug=(RACINE / "logs" / "ocr") if a.garder_ocr else None)
+                   ocr_debug=(RACINE / "logs" / "ocr") if (a.garder_ocr or a.publier_essai) else None)
     except GitErreur as e:
         print(f"ERREUR git : {e}\nPassage interrompu (conflit ou réseau) : relancer plus tard.", file=sys.stderr)
         sys.exit(1)
+    if a.publier_essai:
+        try:
+            noms = publier_essai(Outils(charger_config()["pc"]), RACINE / "logs" / "ocr", RACINE / "docs" / "essais" / "ocr", Git())
+            print(f"Essai publié dans docs/essais/ocr : {len(noms)} fichier(s).")
+        except (GitErreur, OutilAbsent, OSError, RuntimeError) as e:
+            print(f"ERREUR publication de l'essai : {e}", file=sys.stderr)
     print(f"Semaine {r['week']} : {r['traitees']} vidéo(s) traitée(s).")
     for x in r["alertes"]:
         print("-", x)

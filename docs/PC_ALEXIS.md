@@ -32,6 +32,7 @@ Le script `pipeline/pc.py` tourne sur le PC d'Alexis : sous-titres (yt-dlp), Whi
   Réglages : `pc.images.*` et `pc.budget_minutes`. **Non mesuré sur vos images** : si c'est encore trop lent, `--garder-ocr` écrit le texte lu dans `logs\ocr\` pour voir ce qui est lu.
 - **Erreur 429 de YouTube** : pause de 5 s entre les vidéos (`pc.pause_s`). En cas de 429, le passage s'arrête pour les sous-titres (ou les images), la vidéo n'est pas marquée et sera reprise au passage suivant. Si ça persiste : dans `pipeline/config/etape1.json`, mettre `"yt_dlp_options": ["--impersonate", "chrome"]` dans `pc` (demande `yt-dlp[default,curl-cffi]`).
 - Les valeurs lues sont contrôlées (somme des phases, Final Score, Total Rage Count…) ; sans contrôle réussi, la lecture reste « à vérifier ». L'OCR lit l'**image entière** : les recadrages par zone attendent les images de référence.
+- **Diagnostic partagé** : `--publier-essai` (comme `--garder-ocr`, puis copie les 6 images les mieux lues, en JPEG, et leurs textes dans `docs/essais/ocr/` et les pousse sur GitHub). `--video <id>` limite le passage à une vidéo.
 - Essai conseillé : `py -3 pipeline\pc.py daily --no-git --max 2 --garder-ocr`, puis lire `data/runs/<semaine>/_lectures.json`.
 
 ## Gel de la semaine

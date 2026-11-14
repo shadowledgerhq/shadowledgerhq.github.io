@@ -206,6 +206,35 @@ def test_images_budget_video_partiel_puis_abandon():
         assert any("abandonnées" in a for a in r["alertes"])
 
 
+def test_publier_essai():
+    import subprocess
+    import tempfile
+    cmds = []
+
+    def faux(cmd, **kw):
+        cmds.append(cmd)
+        Path(cmd[-1]).write_bytes(b"jpg")
+        return subprocess.CompletedProcess(cmd, 0, stdout="", stderr="")
+
+    class FauxGit:
+        def __init__(self):
+            self.appels = []
+
+        def pousser_chemin(self, message, chemin):
+            self.appels.append((message, chemin))
+
+    with tempfile.TemporaryDirectory() as tmp:
+        src, dst = Path(tmp) / "logs", Path(tmp) / "docs"
+        src.mkdir()
+        for nom, texte in (("v_tri4_100", "long texte" * 9), ("v_tri3_4", "x"), ("v_tri4_50", "mid text")):
+            (src / f"{nom}.txt").write_text(texte, encoding="utf-8")
+            (src / f"{nom}.png").write_bytes(b"png")
+        g = FauxGit()
+        noms = pc.publier_essai(pc.Outils(CONFIG["pc"], executer=faux), src, dst, g, maximum=2)
+        assert sorted(noms) == ["v_tri4_100.jpg", "v_tri4_100.txt", "v_tri4_50.jpg", "v_tri4_50.txt"]   # les 2 textes les plus longs
+        assert (dst / "v_tri4_100.jpg").exists() and not (dst / "v_tri3_4.txt").exists() and len(g.appels) == 1
+
+
 def test_commandes_des_outils():
     """Lignes de commande yt-dlp / ffmpeg / tesseract (outils absents ici : exécuteur simulé)."""
     import subprocess
