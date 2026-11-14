@@ -525,7 +525,8 @@ def test_v13_cas_lGDbzyIJcjY_de_bout_en_bout():
         r0 = bil["resultats"][0]
         assert r0["rage_count"] == 19 and r0["final_score"] == 1601097999 and r0["hud_points"] == 1596246179
         assert r0["ecart_hud_final_pct"] == round((1601097999 - 1596246179) / 1596246179 * 100, 3)
-        assert [a[2] for a in o.appels if a[0] == "img" and a[3] != "f"] == [((252, 2, 1),)]
+        assert [a[2] for a in o.appels if a[0] == "img" and a[3] != "f" and not a[3].startswith("h")] == [((252, 2, 1),)]
+        assert [a[2] for a in o.appels if a[0] == "img" and a[3].startswith("h")] == [((239, 2, 1),)]       # v21 : 2 images après le HUD de fin (chrono 1.00 s)
         lec = [l for l in d.lectures(SEM) if l["video_id"] == "a" and l["mode"] == "gb" and l.get("score") is not None]
         assert len(lec) == 1
         l = lec[0]
@@ -545,7 +546,7 @@ def test_v13_cas_lGDbzyIJcjY_de_bout_en_bout():
         # 2e passage : aucune relecture de l'écran Results
         o2 = Faux({"a": {228: HUD_228, 238: HUD_FIN, 252: RESULTS_252}})
         pc.lancer("daily", INSTANT, d, config, o2, maximum=1)
-        assert not [a for a in o2.appels if a[0] == "img" and a[3] != "f"]
+        assert not [a for a in o2.appels if a[0] == "img" and a[3] != "f"]            # ni Results, ni suite de HUD
 
 
 SALON_RECORD = "< Guild Boss ? mn!\n© Time tettin season 6d 9h Personal Record @\nTotal Score Challenge Count 2\n32,842,054480,310 | totatragecoune 332\nGroup? 167 17.281\n(BR) rage rewards 100,000\n"
