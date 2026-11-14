@@ -202,6 +202,11 @@ class Git:
         return r.stdout
 
     def tirer(self):
+        # Reprise après un arrêt du PC / un plantage : les lectures du passage interrompu sont dans data/ (écrites après
+        # chaque vidéo) mais pas encore commitées ; on les commite d'abord, sinon `pull --rebase` refuserait de tourner.
+        self._run("add", "data")
+        if self._run("status", "--porcelain", "data").strip():
+            self._run("commit", "-m", "données: reprise après interruption du passage PC")
         try:
             self._run("pull", "--rebase", "origin", "main")
         except GitErreur as e:
