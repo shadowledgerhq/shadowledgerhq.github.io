@@ -16,6 +16,7 @@
 - (v9+) Relecture sans clé : les candidats en chapitres des notes (≥ 2 horodatages croissants) retirent la lecture (E4lHBPoZeKs : plus de 32.0). `reset_alerte_heures` = 3 décidé (à réajuster début déc.). Reste : wFFdg1gcZpE « 35 sec » et E4lHBPoZeKs relus avec la clé par le prochain daily (`a_relire` : regles < 9, testé avec FauxApi). Ancien :
 - 2 lectures de description (E4lHBPoZeKs « 00:32 », wFFdg1gcZpE « 35 sec ») non relues sans clé : le prochain `daily` (clé présente) relit les 39 vidéos de la semaine (1 unité par 50).
 ## À faire
+- Results coréen aux libellés espacés (vYtRCpFtSOk) : détecté (partiel, test). Reste : repli « sans Hunter Rank » si 6 rangs lus mais somme fausse ; plausibilité des Points HUD KO/PT.
 - Essai réel des tris 3-4 sur le PC, puis recadrages par zone et `pc.geler = true` ; tri 2 (miniatures, daily). Pseudo en jeu et armes de SJW (BOT) : icônes, [EN ATTENTE]. POC : les 5 composants (3 chasseurs) non lus, donc jamais « sûr ».
 ## Besoin d'Alexis
 - `git pull origin main`, puis `py -3 pipeline\pc.py daily --no-git --video lGDbzyIJcjY --publier-essai` (relance tri 3 complet + recherche de `Results`) ; me dire ce qui s'affiche. Tâches automatiques : attendre ce retour.

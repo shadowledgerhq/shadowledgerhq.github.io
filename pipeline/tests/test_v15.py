@@ -268,8 +268,17 @@ def test_resolution_1080p_tri3_et_720p_tri4():
         assert hauteurs[0] == (2, None) and hauteurs[1] == (10, 720)                 # tri 3 : résolution d'origine ; tri 4 : 720p
 
 
+def test_results_coreen_libelles_espaces():
+    """Vrai OCR coréen (vYtRCpFtSOk, 220 s) : libellés espacés (`진 행 시간`) -> Results partiel coréen."""
+    import ocr_ecrans as o
+    t = "5 © 진 행 시간 03:00\n플레이어 스코어\n계승자 스코어\n헌터 순위\nAIR 달성!\n12859,482,380,262 162\n다 시 하 기 나가기"
+    assert o.detecter(t) == "gb_results_partiel"
+    assert o.langue_results(t) == "ko"
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):
             f()
             print("ok", nom)
+

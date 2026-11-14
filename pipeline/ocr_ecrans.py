@@ -38,10 +38,11 @@ def _motif(libelle):
 
 def _motif_flou(libelle):
     """Libellé -> motif tolérant aux fautes d'OCR : les mots significatifs (4 lettres ou plus ; tous pour le coréen) sont
-    réduits à leur début (6 caractères), sans accents, séparés par n'importe quoi (`Pontuação Final` ~ `Pontuagao Final`)."""
+    réduits à leur début (6 caractères), sans accents, séparés par n'importe quoi (`Pontuação Final` ~ `Pontuagao Final`).
+    Hors alphabet latin (coréen), des espaces sont tolérés entre les caractères (`진행 시간` ~ `진 행 시간`)."""
     mots = sans_accents(libelle).lower().split()
     sig = [m for m in mots if len(m) >= 4 or not m.isascii()] or mots
-    return r"\w*\W*".join(re.escape(m[:6]) for m in sig)
+    return r"\w*\W*".join((r"\s*".join(re.escape(c) for c in m[:6]) if not m.isascii() else re.escape(m[:6])) for m in sig)
 
 
 def langue_results(texte, config=None):
