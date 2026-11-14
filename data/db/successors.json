@@ -2,7 +2,7 @@
   {
     "id": "myro",
     "name": {
-      "fr": "",
+      "fr": "Myro",
       "en": "Myro",
       "ko": ""
     },
@@ -142,18 +142,19 @@
       }
     },
     "advancement": [],
-    "icon": null,
+    "icon": "data/icons/successors/myro.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Myro",
     "wiki_revid": 18092,
     "wiki_timestamp": "2026-11-06T23:39:07Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)"
   },
   {
     "id": "the-monarch-of-shadows",
     "name": {
-      "fr": "",
+      "fr": "Monarque des Ombres",
       "en": "The Monarch of Shadows",
       "ko": ""
     },
@@ -310,18 +311,19 @@
       }
     },
     "advancement": [],
-    "icon": null,
+    "icon": "data/icons/successors/the-monarch-of-shadows.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/The_Monarch_of_Shadows",
     "wiki_revid": 18146,
     "wiki_timestamp": "2026-11-07T02:25:52Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)"
   },
   {
     "id": "velvet",
     "name": {
-      "fr": "",
+      "fr": "Velvet",
       "en": "Velvet",
       "ko": ""
     },
@@ -461,12 +463,13 @@
       }
     },
     "advancement": [],
-    "icon": null,
+    "icon": "data/icons/successors/velvet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Velvet",
     "wiki_revid": 18136,
     "wiki_timestamp": "2026-11-07T01:14:57Z",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki)."
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)"
   }
 ]

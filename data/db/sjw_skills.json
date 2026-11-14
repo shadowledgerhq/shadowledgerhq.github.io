@@ -3312,5 +3312,232 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+  },
+  {
+    "id": "qte--attaque-surprise",
+    "kind": "skill",
+    "name": {
+      "fr": "Attaque surprise",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [],
+    "element": "neutral",
+    "tags": [
+      "neutral",
+      "break"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": "data/icons/sjw_skills/qte--attaque-surprise.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-14",
+    "game_version": null,
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+  },
+  {
+    "id": "qte--compression",
+    "kind": "skill",
+    "name": {
+      "fr": "Compression",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [],
+    "element": "break",
+    "tags": [
+      "break"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": "data/icons/sjw_skills/qte--compression.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-14",
+    "game_version": null,
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+  },
+  {
+    "id": "qte--extinction",
+    "kind": "skill",
+    "name": {
+      "fr": "Extinction",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [],
+    "element": "neutral",
+    "tags": [
+      "neutral"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": "data/icons/sjw_skills/qte--extinction.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-14",
+    "game_version": null,
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+  },
+  {
+    "id": "qte--foulee-de-lombre",
+    "kind": "skill",
+    "name": {
+      "fr": "Foulée de l'ombre",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [],
+    "element": "neutral",
+    "tags": [
+      "neutral"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": "data/icons/sjw_skills/qte--foulee-de-lombre.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-14",
+    "game_version": null,
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+  },
+  {
+    "id": "qte--frappe-de-glace",
+    "kind": "skill",
+    "name": {
+      "fr": "Frappe de glace",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [],
+    "element": "water",
+    "tags": [
+      "water"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": "data/icons/sjw_skills/qte--frappe-de-glace.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-14",
+    "game_version": null,
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+  },
+  {
+    "id": "qte--grain",
+    "kind": "skill",
+    "name": {
+      "fr": "Grain",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [],
+    "element": "neutral",
+    "tags": [
+      "neutral",
+      "break"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": "data/icons/sjw_skills/qte--grain.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-14",
+    "game_version": null,
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+  },
+  {
+    "id": "qte--surtension",
+    "kind": "skill",
+    "name": {
+      "fr": "Surtension",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [],
+    "element": "fire",
+    "tags": [
+      "fire"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": "data/icons/sjw_skills/qte--surtension.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-14",
+    "game_version": null,
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+  },
+  {
+    "id": "qte--violent-orage",
+    "kind": "skill",
+    "name": {
+      "fr": "Violent orage",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [],
+    "element": "wind",
+    "tags": [
+      "wind"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": "data/icons/sjw_skills/qte--violent-orage.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-14",
+    "game_version": null,
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+  },
+  {
+    "id": "qte--eviction",
+    "kind": "skill",
+    "name": {
+      "fr": "Éviction",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [],
+    "element": "neutral",
+    "tags": [
+      "neutral"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": "data/icons/sjw_skills/qte--eviction.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-14",
+    "game_version": null,
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
   }
 ]
