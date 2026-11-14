@@ -213,3 +213,12 @@ if __name__ == "__main__":
         if nom.startswith("test_"):
             f()
     print("OK")
+
+
+def test_v22_rage_dans_les_titres_gb():
+    cfg = {**CONFIG, "rage_count_mots": ["rage"]}
+    for t in ("Guild Boss Rage: 159", "GB Rage 159 !", "159 Rage", "Rage Count 159"):
+        assert extraire(t, "gb", cfg)["valeur"] == 159, t
+    assert extraire("Boss Rage: 159", "gb", cfg) is None
+    assert extraire("Boss Rage 159", "gb", cfg) is None
+    assert extraire("Rage 1590", "gb", cfg) is None

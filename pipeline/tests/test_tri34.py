@@ -532,7 +532,7 @@ def test_v13_cas_lGDbzyIJcjY_de_bout_en_bout():
         l = lec[0]
         assert (l["score"], l["damage"], l["exact"], l["confidence"], l["stage"]) == (19, 1601097999, True, "sur", "Giant Statue")
         assert l["t"] == 252 and "contrôle sans Hunter Rank" in l["notes"] and l["detail"]["new_record"] is True
-        assert l["regles"] == config["tri1_version"] == 17
+        assert l["regles"] == config["tri1_version"] == 18
         assert l["detail"]["hunter_ranks"][3:] == [62925780, 58465656, 22280102] and l["detail"]["player_score"] == 313099049
         assert any(n.startswith("lecture fusionnée (") for n in l["notes"])
         huds = [x for x in d.lectures(SEM) if (x.get("detail") or {}).get("ecran") == "combat"]

@@ -239,7 +239,10 @@ def rage_counts(texte, libelles=RC_LIBELLES):
     avant = re.compile(rf"(?<![A-Za-z])(?:{labels})\s*[:：=]?\s*{nombre}", re.IGNORECASE)
     res = []
     for rx in (apres, avant):
+        est_avant = rx is avant
         for m in rx.finditer(texte or ""):
+            if est_avant and re.search(r"boss[\s:\-]*$", (texte or "")[:m.start()], re.IGNORECASE):
+                continue  # v22 : « Boss Rage … » = compteur du boss (HUD), jamais un RC
             res.append({"valeur": int(m.group("n")), "arrondi": False, "brut": m.group(0).strip(), "pos": m.start()})
     return res
 
