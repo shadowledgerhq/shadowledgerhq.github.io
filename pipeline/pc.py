@@ -13,6 +13,7 @@ Outils externes : git, yt-dlp (obligatoires), ffmpeg + tesseract (tris 3-4), whi
 import argparse
 import hashlib
 import html
+import json
 import os
 import re
 import shutil
@@ -343,6 +344,9 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
         Path(png).unlink(missing_ok=True)
     if trouve is None:
         journal(f"  écran Results non trouvé entre {int(t0)} et {dernier} s")
+    else:
+        pleines = [l for l in lectures if l["score"] is not None]
+        journal(f"  écran Results lu de {int(t0)} à {dernier} s : {n} image(s), {len(pleines)} lecture(s) avec Rage Count")
     return lectures, n, trouve, dernier
 
 
@@ -607,7 +611,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     return {"week": week, "traitees": traitees, "alertes": alertes}
 
 
-def publier_essai(outils, source, destination, git=None, maximum=8):
+def publier_essai(outils, source, destination, git=None, maximum=8, resume=None):
     """Diagnostic : copie dans `destination` (docs/essais/ocr, versionné) les textes OCR de `source` (logs/ocr) et les
     images de `maximum` fichiers, en JPEG réduit ; puis commit + push si `git`. Passent d'abord les écrans reconnus
     (nom de fichier terminé par le type : `_gb_results`, `_gb_combat`…, 2 au plus pour le HUD, 4 pour les autres),
@@ -624,6 +628,10 @@ def publier_essai(outils, source, destination, git=None, maximum=8):
     choisis += [f for f in textes if f not in choisis]
     destination.mkdir(parents=True, exist_ok=True)
     ecrits = []
+    if resume is not None:  # lectures et état de la vidéo après le passage (diagnostic)
+        (destination / "_resume.json").write_text(json.dumps({**resume, "fichiers_logs_ocr": sorted(f.name for f in source.glob("*.txt"))},
+                                                          ensure_ascii=False, indent=1), encoding="utf-8")
+        ecrits.append("_resume.json")
     for f in choisis[:maximum]:
         png = f.with_suffix(".png")
         if png.exists():
@@ -662,7 +670,13 @@ if __name__ == "__main__":
         sys.exit(1)
     if a.publier_essai:
         try:
-            noms = publier_essai(Outils(charger_config()["pc"]), RACINE / "logs" / "ocr", RACINE / "docs" / "essais" / "ocr", Git())
+            d_ = Donnees()
+            ids = set(a.video or [])
+            resume = {"semaine": r["week"], "alertes": r["alertes"],
+                      "lectures": [l for l in d_.lectures(r["week"]) if not ids or l["video_id"] in ids],
+                      "processed": {v: p for v, p in d_.processed().items() if v in ids}}
+            noms = publier_essai(Outils(charger_config()["pc"]), RACINE / "logs" / "ocr", RACINE / "docs" / "essais" / "ocr", Git(),
+                                 resume=resume)
             print(f"Essai publié dans docs/essais/ocr : {len(noms)} fichier(s).")
         except (GitErreur, OutilAbsent, OSError, RuntimeError) as e:
             print(f"ERREUR publication de l'essai : {e}", file=sys.stderr)

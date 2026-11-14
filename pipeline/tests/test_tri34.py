@@ -231,8 +231,9 @@ def test_publier_essai():
             (src / f"{nom}.txt").write_text(texte, encoding="utf-8")
             (src / f"{nom}.png").write_bytes(b"png")
         g = FauxGit()
-        noms = pc.publier_essai(pc.Outils(CONFIG["pc"], executer=faux), src, dst, g, maximum=2)
-        assert sorted(noms) == ["v_tri4_100.jpg", "v_tri4_100.txt", "v_tri4_50.jpg", "v_tri4_50.txt"]   # les 2 textes les plus longs
+        noms = pc.publier_essai(pc.Outils(CONFIG["pc"], executer=faux), src, dst, g, maximum=2, resume={"semaine": "x", "lectures": []})
+        assert sorted(noms) == ["_resume.json", "v_tri4_100.jpg", "v_tri4_100.txt", "v_tri4_50.jpg", "v_tri4_50.txt"]
+        assert "v_tri4_100.txt" in (dst / "_resume.json").read_text(encoding="utf-8")   # les 2 textes les plus longs
         assert (dst / "v_tri4_100.jpg").exists() and not (dst / "v_tri3_4.txt").exists() and len(g.appels) == 1
 
 
