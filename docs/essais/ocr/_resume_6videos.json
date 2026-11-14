@@ -1,0 +1,1138 @@
+{
+ "semaine": "2026-11-12",
+ "alertes": [
+  "nh2D7xZ7dOQ : images : Command '['ffmpeg', '-v', 'error', '-ss', '0', '-t', '313', '-i', 'C:\\\\Users\\\\moniq\\\\AppData\\\\Local\\\\Temp\\\\tmpd8014vs7\\\\nh2D7xZ7dOQ.mp4', '-vf', 'fps=1/10', '-q:v', '2', 'C:\\\\Users\\\\moniq\\\\AppData\\\\Local\\\\Temp\\\\tmpd8014vs7/f0_%04d.png']' timed out after 900 seconds",
+  "38 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
+ ],
+ "lectures": [
+  {
+   "video_id": "nh2D7xZ7dOQ",
+   "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+   "channel_title": "SlayOnLow",
+   "published_at": "2026-11-13T10:14:16Z",
+   "lang": "en",
+   "mode": "gb",
+   "regles": 13,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": null,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 2,
+   "stage": "Giant Statue",
+   "team": null,
+   "score": 3,
+   "score_source": "debut-fin",
+   "exact": false,
+   "confidence": "a_verifier",
+   "detail": {
+    "damage_exact": true,
+    "play_time": null,
+    "new_record": false,
+    "player_score": null,
+    "hunter_ranks": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "hunter_ranks_lus": 0,
+    "n_images": 2,
+    "votes": {
+     "stage": [
+      [
+       "Giant Statue",
+       2
+      ]
+     ],
+     "rage_count": [
+      [
+       3,
+       2
+      ]
+     ]
+    },
+    "rc_images": 2,
+    "final_images": 0,
+    "rc_t": {
+     "3": 2
+    },
+    "t_debut": 2,
+    "t_fin": 3
+   },
+   "notes": [
+    "écart OCR zone/image : rage_count",
+    "lecture fusionnée (2 images)",
+    "contrôle sans Hunter Rank : Final Score illisible",
+    "contrôle sans Hunter Rank : Play Time illisible",
+    "contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run",
+    "contrôle sans Hunter Rank : 0 Hunter Rank lu(s) (3 au moins sans HUD de fin de run)"
+   ]
+  },
+  {
+   "video_id": "awb-GlVIa7Q",
+   "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+   "channel_title": "Ahmad1195",
+   "published_at": "2026-11-12T01:07:38Z",
+   "lang": "en",
+   "mode": "gb",
+   "regles": 13,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": null,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 200,
+   "stage": null,
+   "team": null,
+   "score": null,
+   "score_source": null,
+   "exact": false,
+   "confidence": "a_verifier",
+   "detail": {
+    "ecran": "combat",
+    "hud_points": 56127069781883,
+    "chrono_hud": 12.78,
+    "hud_rage_count": 154,
+    "t_debut": 0,
+    "t_fin": 200
+   },
+   "notes": [
+    "HUD : Boss Rage Count x154, chrono 12.78"
+   ]
+  },
+  {
+   "video_id": "awb-GlVIa7Q",
+   "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+   "channel_title": "Ahmad1195",
+   "published_at": "2026-11-12T01:07:38Z",
+   "lang": "en",
+   "mode": "gb",
+   "regles": 13,
+   "bot_season_week": null,
+   "player_ingame": null,
+   "damage": 64299126425,
+   "gate": null,
+   "hunter_mode": null,
+   "t": 227,
+   "stage": "Giant Statue",
+   "team": null,
+   "score": 189,
+   "score_source": "video-complete",
+   "exact": false,
+   "confidence": "a_verifier",
+   "detail": {
+    "damage_exact": true,
+    "play_time": "03:00",
+    "new_record": true,
+    "player_score": 795244088074,
+    "hunter_ranks": [
+     88332559253,
+     10503854251,
+     407426593,
+     102919145,
+     971686524,
+     163896022
+    ],
+    "hunter_ranks_lus": 6,
+    "n_images": 9,
+    "votes": {
+     "stage": [
+      [
+       "Giant Statue",
+       9
+      ]
+     ],
+     "player_score": [
+      [
+       795244088074,
+       8
+      ]
+     ],
+     "final_score": [
+      [
+       64299126425,
+       5
+      ],
+      [
+       64299126429,
+       3
+      ]
+     ],
+     "rage_count": [
+      [
+       189,
+       5
+      ],
+      [
+       183,
+       3
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "play_time": [
+      [
+       "03:00",
+       8
+      ]
+     ],
+     "hunter_rank_1": [
+      [
+       188332559253,
+       3
+      ],
+      [
+       88332559253,
+       4
+      ]
+     ],
+     "hunter_rank_2": [
+      [
+       10503854251,
+       4
+      ],
+      [
+       30503854251,
+       3
+      ]
+     ],
+     "hunter_rank_3": [
+      [
+       407426593,
+       6
+      ],
+      [
+       10407426593,
+       1
+      ]
+     ],
+     "hunter_rank_4": [
+      [
+       102919145,
+       6
+      ],
+      [
+       2919145,
+       1
+      ]
+     ],
+     "hunter_rank_5": [
+      [
+       971686524,
+       6
+      ],
+      [
+       571686524,
+       1
+      ]
+     ],
+     "hunter_rank_6": [
+      [
+       163896022,
+       7
+      ]
+     ]
+    },
+    "rc_images": 5,
+    "final_images": 5,
+    "rc_t": {
+     "189": 227,
+     "183": 230,
+     "1": 242
+    },
+    "t_debut": 227,
+    "t_fin": 242,
+    "hud_rage_count": 154
+   },
+   "notes": [
+    "publiée juste après le reset : semaine précédente ?",
+    "écart OCR zone/image : final_score",
+    "écart OCR zone/image : player_score",
+    "écart OCR zone/image : rage_count",
+    "lecture fusionnée (9 images)",
+    "conflit de lecture : rage_count"
+   ]
+  }
+ ],
+ "processed": {
+  "nh2D7xZ7dOQ": {
+   "week": "2026-11-12",
+   "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+   "published_at": "2026-11-13T10:14:16Z",
+   "first_seen": "2026-11-13",
+   "updated_at": "2026-11-14",
+   "last_tri": 3,
+   "status": "en_cours",
+   "modes": [
+    "gb"
+   ],
+   "pc_needed": true,
+   "pc": {
+    "sous_titres": "absent",
+    "date": "2026-11-14",
+    "hauteurs": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_taille": [
+     1280,
+     720
+    ],
+    "results_lus": [
+     [
+      2,
+      61
+     ]
+    ],
+    "tri3": "fait"
+   }
+  },
+  "Oj_-5x6700s": {
+   "week": "2026-11-12",
+   "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+   "published_at": "2026-11-12T18:10:15Z",
+   "first_seen": "2026-11-13",
+   "updated_at": "2026-11-14",
+   "last_tri": 4,
+   "status": "en_cours",
+   "modes": [
+    "gb"
+   ],
+   "pc_needed": false,
+   "pc": {
+    "sous_titres": "absent",
+    "date": "2026-11-14",
+    "hauteurs": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_taille": [
+     1280,
+     720
+    ],
+    "results_lus": [],
+    "tri3": "fait",
+    "tri4": "fait"
+   }
+  },
+  "T5dR6iJAn-Y": {
+   "week": "2026-11-12",
+   "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+   "published_at": "2026-11-12T13:50:20Z",
+   "first_seen": "2026-11-13",
+   "updated_at": "2026-11-14",
+   "last_tri": 4,
+   "status": "en_cours",
+   "modes": [
+    "gb"
+   ],
+   "pc_needed": false,
+   "pc": {
+    "sous_titres": "absent",
+    "date": "2026-11-14",
+    "hauteurs": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_taille": [
+     1280,
+     720
+    ],
+    "results_lus": [],
+    "tri3": "fait",
+    "tri4": "fait"
+   }
+  },
+  "vYtRCpFtSOk": {
+   "week": "2026-11-12",
+   "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+   "published_at": "2026-11-12T10:51:56Z",
+   "first_seen": "2026-11-13",
+   "updated_at": "2026-11-14",
+   "last_tri": 4,
+   "status": "en_cours",
+   "modes": [
+    "gb"
+   ],
+   "pc_needed": false,
+   "pc": {
+    "sous_titres": "absent",
+    "date": "2026-11-14",
+    "hauteurs": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_taille": [
+     1280,
+     720
+    ],
+    "results_lus": [],
+    "tri3": "fait",
+    "tri4": "fait"
+   }
+  },
+  "MJ2iz5TFmvM": {
+   "week": "2026-11-12",
+   "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+   "published_at": "2026-11-12T10:43:26Z",
+   "first_seen": "2026-11-13",
+   "updated_at": "2026-11-14",
+   "last_tri": 4,
+   "status": "en_cours",
+   "modes": [
+    "gb"
+   ],
+   "pc_needed": false,
+   "pc": {
+    "sous_titres": "absent",
+    "date": "2026-11-14",
+    "hauteurs": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_taille": [
+     1280,
+     720
+    ],
+    "results_lus": [],
+    "tri3": "fait",
+    "tri4": "fait"
+   }
+  },
+  "awb-GlVIa7Q": {
+   "week": "2026-11-12",
+   "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+   "published_at": "2026-11-12T01:07:38Z",
+   "first_seen": "2026-11-13",
+   "updated_at": "2026-11-14",
+   "last_tri": 4,
+   "status": "termine",
+   "modes": [
+    "gb"
+   ],
+   "pc_needed": false,
+   "pc": {
+    "sous_titres": "absent",
+    "date": "2026-11-14",
+    "hauteurs": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080,
+     1440
+    ],
+    "image_taille": [
+     1280,
+     720
+    ],
+    "results_lus": [
+     [
+      200,
+      287
+     ]
+    ],
+    "tri3": "fait",
+    "tri4": "fait"
+   }
+  }
+ },
+ "bilan": {
+  "par_video": {
+   "MJ2iz5TFmvM": {
+    "titre": "무과금 AFK 나혼렙 길드 보스 석상 화 160 길드 버프 적용 / F2P AFK SLA Guild Boss Statue Fire 160",
+    "duree": "PT6M45S",
+    "formats_disponibles_p": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_lue_px": [
+     1280,
+     720
+    ],
+    "ecran_results_lu": false,
+    "hud": [],
+    "resultats": [],
+    "lectures_texte": []
+   },
+   "Oj_-5x6700s": {
+    "titre": "Solo Leveling: ARISE - Score: 3T - Rage: 137 - Chefe da Guilda, Estátua (Luz - Semana 4)",
+    "duree": "PT4M2S",
+    "formats_disponibles_p": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_lue_px": [
+     1280,
+     720
+    ],
+    "ecran_results_lu": false,
+    "hud": [],
+    "resultats": [],
+    "lectures_texte": []
+   },
+   "T5dR6iJAn-Y": {
+    "titre": "Solo Leveling: ARISE - Score: 7,9T - Rage: 159 - Chefe da Guilda, Estátua (Fogo - Semana 4)",
+    "duree": "PT4M3S",
+    "formats_disponibles_p": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_lue_px": [
+     1280,
+     720
+    ],
+    "ecran_results_lu": false,
+    "hud": [],
+    "resultats": [],
+    "lectures_texte": []
+   },
+   "awb-GlVIa7Q": {
+    "titre": "64.2 T Light team (Guild boss) -  189 rc guide !!",
+    "duree": "PT5M18S",
+    "formats_disponibles_p": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080,
+     1440
+    ],
+    "image_lue_px": [
+     1280,
+     720
+    ],
+    "ecran_results_lu": true,
+    "hud": [
+     {
+      "t": 200,
+      "chrono": 12.78,
+      "points": 56127069781883,
+      "boss_rage_count": 154
+     }
+    ],
+    "resultats": [
+     {
+      "t": 227,
+      "rage_count": 189,
+      "final_score": 64299126425,
+      "stage": "Giant Statue",
+      "confidence": "a_verifier",
+      "hunter_rank_lus": 6,
+      "rc_images": 5,
+      "final_images": 5,
+      "hud_points": null,
+      "ecart_hud_final_pct": null,
+      "notes": [
+       "publiée juste après le reset : semaine précédente ?",
+       "écart OCR zone/image : final_score",
+       "écart OCR zone/image : player_score",
+       "écart OCR zone/image : rage_count",
+       "lecture fusionnée (9 images)",
+       "conflit de lecture : rage_count"
+      ]
+     }
+    ],
+    "lectures_texte": []
+   },
+   "nh2D7xZ7dOQ": {
+    "titre": "Guild Boss 165RC! Best F2P LIGHT TEAM BUILD (GIANT STATUE) Solo Leveling Arise",
+    "duree": "PT5M13S",
+    "formats_disponibles_p": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_lue_px": [
+     1280,
+     720
+    ],
+    "ecran_results_lu": true,
+    "hud": [],
+    "resultats": [
+     {
+      "t": 2,
+      "rage_count": 3,
+      "final_score": null,
+      "stage": "Giant Statue",
+      "confidence": "a_verifier",
+      "hunter_rank_lus": 0,
+      "rc_images": 2,
+      "final_images": 0,
+      "hud_points": null,
+      "ecart_hud_final_pct": null,
+      "notes": [
+       "écart OCR zone/image : rage_count",
+       "lecture fusionnée (2 images)",
+       "contrôle sans Hunter Rank : Final Score illisible",
+       "contrôle sans Hunter Rank : Play Time illisible",
+       "contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run",
+       "contrôle sans Hunter Rank : 0 Hunter Rank lu(s) (3 au moins sans HUD de fin de run)"
+      ]
+     }
+    ],
+    "lectures_texte": []
+   },
+   "vYtRCpFtSOk": {
+    "titre": "무과금 AFK 나혼렙 길드 보스 석상 명 162 길드 버프 적용 / F2P AFK SLA Guild Boss Statue Light 162",
+    "duree": "PT7M5S",
+    "formats_disponibles_p": [
+     144,
+     180,
+     240,
+     360,
+     480,
+     720,
+     1080
+    ],
+    "image_lue_px": [
+     1280,
+     720
+    ],
+    "ecran_results_lu": false,
+    "hud": [],
+    "resultats": [],
+    "lectures_texte": []
+   }
+  },
+  "lignes_gb": [
+   {
+    "channel": "Ahmad1195",
+    "video_ids": [
+     "awb-GlVIa7Q"
+    ],
+    "total": 189,
+    "runs": [
+     189
+    ],
+    "rank": null,
+    "confidence": "a_verifier",
+    "notes": "publiée juste après le reset : semaine précédente ?; écart OCR zone/image : final_score; écart OCR zone/image : player_score; écart OCR zone/image : rage_count; lecture fusionnée (9 images); conflit de lecture : rage_count; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+     {
+      "video_id": "awb-GlVIa7Q",
+      "t": 227,
+      "team": null,
+      "damage": 64299126425,
+      "exact": false,
+      "score_source": "video-complete"
+     }
+    ]
+   },
+   {
+    "channel": "SlayOnLow",
+    "video_ids": [
+     "nh2D7xZ7dOQ"
+    ],
+    "total": 3,
+    "runs": [
+     3
+    ],
+    "rank": null,
+    "confidence": "a_verifier",
+    "notes": "écart OCR zone/image : rage_count; lecture fusionnée (2 images); contrôle sans Hunter Rank : Final Score illisible; contrôle sans Hunter Rank : Play Time illisible; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 0 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+     {
+      "video_id": "nh2D7xZ7dOQ",
+      "t": 2,
+      "team": null,
+      "damage": null,
+      "exact": false,
+      "score_source": "debut-fin"
+     }
+    ]
+   }
+  ]
+ },
+ "fichiers_logs_ocr": [
+  "MJ2iz5TFmvM_tri3_0.txt",
+  "MJ2iz5TFmvM_tri3_2.txt",
+  "MJ2iz5TFmvM_tri3_375.txt",
+  "MJ2iz5TFmvM_tri3_377.txt",
+  "MJ2iz5TFmvM_tri3_379.txt",
+  "MJ2iz5TFmvM_tri3_381.txt",
+  "MJ2iz5TFmvM_tri3_383.txt",
+  "MJ2iz5TFmvM_tri3_385.txt",
+  "MJ2iz5TFmvM_tri3_387.txt",
+  "MJ2iz5TFmvM_tri3_389.txt",
+  "MJ2iz5TFmvM_tri3_391.txt",
+  "MJ2iz5TFmvM_tri3_393.txt",
+  "MJ2iz5TFmvM_tri3_395.txt",
+  "MJ2iz5TFmvM_tri3_397.txt",
+  "MJ2iz5TFmvM_tri3_399.txt",
+  "MJ2iz5TFmvM_tri3_4.txt",
+  "MJ2iz5TFmvM_tri3_401.txt",
+  "MJ2iz5TFmvM_tri3_403.txt",
+  "MJ2iz5TFmvM_tri3_6.txt",
+  "MJ2iz5TFmvM_tri3_8.txt",
+  "MJ2iz5TFmvM_tri4_200.txt",
+  "Oj_-5x6700s_tri3_0.txt",
+  "Oj_-5x6700s_tri3_2.txt",
+  "Oj_-5x6700s_tri3_212.txt",
+  "Oj_-5x6700s_tri3_214.txt",
+  "Oj_-5x6700s_tri3_218.txt",
+  "Oj_-5x6700s_tri3_220.txt",
+  "Oj_-5x6700s_tri3_222.txt",
+  "Oj_-5x6700s_tri3_224.txt",
+  "Oj_-5x6700s_tri3_228.txt",
+  "Oj_-5x6700s_tri3_230.txt",
+  "Oj_-5x6700s_tri3_232.txt",
+  "Oj_-5x6700s_tri3_234.txt",
+  "Oj_-5x6700s_tri3_236.txt",
+  "Oj_-5x6700s_tri3_238.txt",
+  "Oj_-5x6700s_tri3_240.txt",
+  "Oj_-5x6700s_tri3_4.txt",
+  "Oj_-5x6700s_tri3_6.txt",
+  "Oj_-5x6700s_tri3_8.txt",
+  "Oj_-5x6700s_tri4_210.txt",
+  "T5dR6iJAn-Y_tri3_0.txt",
+  "T5dR6iJAn-Y_tri3_2.txt",
+  "T5dR6iJAn-Y_tri3_213.txt",
+  "T5dR6iJAn-Y_tri3_215.txt",
+  "T5dR6iJAn-Y_tri3_217.txt",
+  "T5dR6iJAn-Y_tri3_219.txt",
+  "T5dR6iJAn-Y_tri3_221.txt",
+  "T5dR6iJAn-Y_tri3_223.txt",
+  "T5dR6iJAn-Y_tri3_225.txt",
+  "T5dR6iJAn-Y_tri3_227.txt",
+  "T5dR6iJAn-Y_tri3_229.txt",
+  "T5dR6iJAn-Y_tri3_231.txt",
+  "T5dR6iJAn-Y_tri3_233.txt",
+  "T5dR6iJAn-Y_tri3_235.txt",
+  "T5dR6iJAn-Y_tri3_237.txt",
+  "T5dR6iJAn-Y_tri3_239.txt",
+  "T5dR6iJAn-Y_tri3_241.txt",
+  "T5dR6iJAn-Y_tri3_4.txt",
+  "T5dR6iJAn-Y_tri3_6.txt",
+  "T5dR6iJAn-Y_tri3_8.txt",
+  "awb-GlVIa7Q_recherche_200_gb_combat.txt",
+  "awb-GlVIa7Q_recherche_201.txt",
+  "awb-GlVIa7Q_recherche_202.txt",
+  "awb-GlVIa7Q_recherche_203.txt",
+  "awb-GlVIa7Q_recherche_204.txt",
+  "awb-GlVIa7Q_recherche_205.txt",
+  "awb-GlVIa7Q_recherche_206.txt",
+  "awb-GlVIa7Q_recherche_207.txt",
+  "awb-GlVIa7Q_recherche_208.txt",
+  "awb-GlVIa7Q_recherche_209.txt",
+  "awb-GlVIa7Q_recherche_210.txt",
+  "awb-GlVIa7Q_recherche_211.txt",
+  "awb-GlVIa7Q_recherche_212.txt",
+  "awb-GlVIa7Q_recherche_213.txt",
+  "awb-GlVIa7Q_recherche_214.txt",
+  "awb-GlVIa7Q_recherche_215.txt",
+  "awb-GlVIa7Q_recherche_216.txt",
+  "awb-GlVIa7Q_recherche_217.txt",
+  "awb-GlVIa7Q_recherche_218.txt",
+  "awb-GlVIa7Q_recherche_219_gb_combat.txt",
+  "awb-GlVIa7Q_recherche_220_gb_combat.txt",
+  "awb-GlVIa7Q_recherche_221_gb_combat.txt",
+  "awb-GlVIa7Q_recherche_222.txt",
+  "awb-GlVIa7Q_recherche_223.txt",
+  "awb-GlVIa7Q_recherche_224.txt",
+  "awb-GlVIa7Q_recherche_225.txt",
+  "awb-GlVIa7Q_recherche_226.txt",
+  "awb-GlVIa7Q_recherche_227_gb_results.txt",
+  "awb-GlVIa7Q_recherche_228_gb_results.txt",
+  "awb-GlVIa7Q_recherche_229_gb_results.txt",
+  "awb-GlVIa7Q_recherche_230_gb_results.txt",
+  "awb-GlVIa7Q_recherche_231_gb_results.txt",
+  "awb-GlVIa7Q_recherche_232_gb_results.txt",
+  "awb-GlVIa7Q_recherche_233_gb_results.txt",
+  "awb-GlVIa7Q_recherche_234_gb_results.txt",
+  "awb-GlVIa7Q_recherche_235.txt",
+  "awb-GlVIa7Q_recherche_236.txt",
+  "awb-GlVIa7Q_recherche_237.txt",
+  "awb-GlVIa7Q_recherche_238.txt",
+  "awb-GlVIa7Q_recherche_239.txt",
+  "awb-GlVIa7Q_recherche_240.txt",
+  "awb-GlVIa7Q_recherche_241_gb_record.txt",
+  "awb-GlVIa7Q_recherche_242_gb_results_partiel.txt",
+  "awb-GlVIa7Q_recherche_243.txt",
+  "awb-GlVIa7Q_recherche_244.txt",
+  "awb-GlVIa7Q_recherche_245.txt",
+  "awb-GlVIa7Q_recherche_246.txt",
+  "awb-GlVIa7Q_recherche_247.txt",
+  "awb-GlVIa7Q_recherche_248.txt",
+  "awb-GlVIa7Q_recherche_249.txt",
+  "awb-GlVIa7Q_recherche_250.txt",
+  "awb-GlVIa7Q_recherche_251.txt",
+  "awb-GlVIa7Q_recherche_252.txt",
+  "awb-GlVIa7Q_recherche_253.txt",
+  "awb-GlVIa7Q_recherche_254.txt",
+  "awb-GlVIa7Q_recherche_255.txt",
+  "awb-GlVIa7Q_recherche_256.txt",
+  "awb-GlVIa7Q_recherche_257.txt",
+  "awb-GlVIa7Q_recherche_258.txt",
+  "awb-GlVIa7Q_recherche_259.txt",
+  "awb-GlVIa7Q_recherche_260.txt",
+  "awb-GlVIa7Q_recherche_261.txt",
+  "awb-GlVIa7Q_recherche_262.txt",
+  "awb-GlVIa7Q_recherche_263.txt",
+  "awb-GlVIa7Q_recherche_264.txt",
+  "awb-GlVIa7Q_recherche_265.txt",
+  "awb-GlVIa7Q_recherche_266.txt",
+  "awb-GlVIa7Q_recherche_267.txt",
+  "awb-GlVIa7Q_recherche_268.txt",
+  "awb-GlVIa7Q_recherche_269.txt",
+  "awb-GlVIa7Q_recherche_270.txt",
+  "awb-GlVIa7Q_recherche_271.txt",
+  "awb-GlVIa7Q_recherche_272.txt",
+  "awb-GlVIa7Q_recherche_273.txt",
+  "awb-GlVIa7Q_recherche_274.txt",
+  "awb-GlVIa7Q_recherche_275.txt",
+  "awb-GlVIa7Q_recherche_276.txt",
+  "awb-GlVIa7Q_recherche_277.txt",
+  "awb-GlVIa7Q_recherche_278.txt",
+  "awb-GlVIa7Q_recherche_279.txt",
+  "awb-GlVIa7Q_recherche_280.txt",
+  "awb-GlVIa7Q_recherche_281.txt",
+  "awb-GlVIa7Q_recherche_282.txt",
+  "awb-GlVIa7Q_recherche_283.txt",
+  "awb-GlVIa7Q_recherche_284.txt",
+  "awb-GlVIa7Q_recherche_285.txt",
+  "awb-GlVIa7Q_recherche_286.txt",
+  "awb-GlVIa7Q_recherche_287.txt",
+  "awb-GlVIa7Q_tri3_0.txt",
+  "awb-GlVIa7Q_tri3_2.txt",
+  "awb-GlVIa7Q_tri3_288.txt",
+  "awb-GlVIa7Q_tri3_290.txt",
+  "awb-GlVIa7Q_tri3_292.txt",
+  "awb-GlVIa7Q_tri3_294.txt",
+  "awb-GlVIa7Q_tri3_296.txt",
+  "awb-GlVIa7Q_tri3_298.txt",
+  "awb-GlVIa7Q_tri3_300.txt",
+  "awb-GlVIa7Q_tri3_302.txt",
+  "awb-GlVIa7Q_tri3_304.txt",
+  "awb-GlVIa7Q_tri3_306.txt",
+  "awb-GlVIa7Q_tri3_308.txt",
+  "awb-GlVIa7Q_tri3_310.txt",
+  "awb-GlVIa7Q_tri3_312.txt",
+  "awb-GlVIa7Q_tri3_314.txt",
+  "awb-GlVIa7Q_tri3_316.txt",
+  "awb-GlVIa7Q_tri3_4_gb_combat.txt",
+  "awb-GlVIa7Q_tri3_6_gb_combat.txt",
+  "awb-GlVIa7Q_tri3_8_gb_combat.txt",
+  "awb-GlVIa7Q_tri4_0_gb_combat.txt",
+  "awb-GlVIa7Q_tri4_110.txt",
+  "awb-GlVIa7Q_tri4_120_gb_combat.txt",
+  "awb-GlVIa7Q_tri4_130.txt",
+  "awb-GlVIa7Q_tri4_140_gb_combat.txt",
+  "awb-GlVIa7Q_tri4_160_gb_combat.txt",
+  "awb-GlVIa7Q_tri4_170.txt",
+  "awb-GlVIa7Q_tri4_180.txt",
+  "awb-GlVIa7Q_tri4_190_gb_combat.txt",
+  "awb-GlVIa7Q_tri4_20.txt",
+  "awb-GlVIa7Q_tri4_200_gb_combat.txt",
+  "awb-GlVIa7Q_tri4_240.txt",
+  "awb-GlVIa7Q_tri4_30.txt",
+  "awb-GlVIa7Q_tri4_40_gb_combat.txt",
+  "awb-GlVIa7Q_tri4_60.txt",
+  "awb-GlVIa7Q_tri4_70_gb_combat.txt",
+  "awb-GlVIa7Q_tri4_80.txt",
+  "awb-GlVIa7Q_tri4_90.txt",
+  "nh2D7xZ7dOQ_recherche_10.txt",
+  "nh2D7xZ7dOQ_recherche_11.txt",
+  "nh2D7xZ7dOQ_recherche_12.txt",
+  "nh2D7xZ7dOQ_recherche_13.txt",
+  "nh2D7xZ7dOQ_recherche_14.txt",
+  "nh2D7xZ7dOQ_recherche_15.txt",
+  "nh2D7xZ7dOQ_recherche_16.txt",
+  "nh2D7xZ7dOQ_recherche_17.txt",
+  "nh2D7xZ7dOQ_recherche_18.txt",
+  "nh2D7xZ7dOQ_recherche_19.txt",
+  "nh2D7xZ7dOQ_recherche_2.txt",
+  "nh2D7xZ7dOQ_recherche_20.txt",
+  "nh2D7xZ7dOQ_recherche_21.txt",
+  "nh2D7xZ7dOQ_recherche_22.txt",
+  "nh2D7xZ7dOQ_recherche_23.txt",
+  "nh2D7xZ7dOQ_recherche_24.txt",
+  "nh2D7xZ7dOQ_recherche_25.txt",
+  "nh2D7xZ7dOQ_recherche_26.txt",
+  "nh2D7xZ7dOQ_recherche_27.txt",
+  "nh2D7xZ7dOQ_recherche_28.txt",
+  "nh2D7xZ7dOQ_recherche_29.txt",
+  "nh2D7xZ7dOQ_recherche_30.txt",
+  "nh2D7xZ7dOQ_recherche_31.txt",
+  "nh2D7xZ7dOQ_recherche_32.txt",
+  "nh2D7xZ7dOQ_recherche_33.txt",
+  "nh2D7xZ7dOQ_recherche_34.txt",
+  "nh2D7xZ7dOQ_recherche_35.txt",
+  "nh2D7xZ7dOQ_recherche_36.txt",
+  "nh2D7xZ7dOQ_recherche_37.txt",
+  "nh2D7xZ7dOQ_recherche_38.txt",
+  "nh2D7xZ7dOQ_recherche_39.txt",
+  "nh2D7xZ7dOQ_recherche_3_gb_results_partiel.txt",
+  "nh2D7xZ7dOQ_recherche_4.txt",
+  "nh2D7xZ7dOQ_recherche_40.txt",
+  "nh2D7xZ7dOQ_recherche_41.txt",
+  "nh2D7xZ7dOQ_recherche_42.txt",
+  "nh2D7xZ7dOQ_recherche_43.txt",
+  "nh2D7xZ7dOQ_recherche_44.txt",
+  "nh2D7xZ7dOQ_recherche_45.txt",
+  "nh2D7xZ7dOQ_recherche_46.txt",
+  "nh2D7xZ7dOQ_recherche_47.txt",
+  "nh2D7xZ7dOQ_recherche_48.txt",
+  "nh2D7xZ7dOQ_recherche_49.txt",
+  "nh2D7xZ7dOQ_recherche_5.txt",
+  "nh2D7xZ7dOQ_recherche_50.txt",
+  "nh2D7xZ7dOQ_recherche_51.txt",
+  "nh2D7xZ7dOQ_recherche_52.txt",
+  "nh2D7xZ7dOQ_recherche_53.txt",
+  "nh2D7xZ7dOQ_recherche_54.txt",
+  "nh2D7xZ7dOQ_recherche_55.txt",
+  "nh2D7xZ7dOQ_recherche_56.txt",
+  "nh2D7xZ7dOQ_recherche_57.txt",
+  "nh2D7xZ7dOQ_recherche_58.txt",
+  "nh2D7xZ7dOQ_recherche_59.txt",
+  "nh2D7xZ7dOQ_recherche_6.txt",
+  "nh2D7xZ7dOQ_recherche_60.txt",
+  "nh2D7xZ7dOQ_recherche_61.txt",
+  "nh2D7xZ7dOQ_recherche_7.txt",
+  "nh2D7xZ7dOQ_recherche_8.txt",
+  "nh2D7xZ7dOQ_recherche_9.txt",
+  "nh2D7xZ7dOQ_tri3_0.txt",
+  "nh2D7xZ7dOQ_tri3_283.txt",
+  "nh2D7xZ7dOQ_tri3_285.txt",
+  "nh2D7xZ7dOQ_tri3_287.txt",
+  "nh2D7xZ7dOQ_tri3_289.txt",
+  "nh2D7xZ7dOQ_tri3_291.txt",
+  "nh2D7xZ7dOQ_tri3_293.txt",
+  "nh2D7xZ7dOQ_tri3_295.txt",
+  "nh2D7xZ7dOQ_tri3_297.txt",
+  "nh2D7xZ7dOQ_tri3_299.txt",
+  "nh2D7xZ7dOQ_tri3_2_gb_results_partiel.txt",
+  "nh2D7xZ7dOQ_tri3_301.txt",
+  "nh2D7xZ7dOQ_tri3_303.txt",
+  "nh2D7xZ7dOQ_tri3_305.txt",
+  "nh2D7xZ7dOQ_tri3_307.txt",
+  "nh2D7xZ7dOQ_tri3_309.txt",
+  "nh2D7xZ7dOQ_tri3_311.txt",
+  "nh2D7xZ7dOQ_tri3_4.txt",
+  "nh2D7xZ7dOQ_tri3_6.txt",
+  "nh2D7xZ7dOQ_tri3_8.txt",
+  "vYtRCpFtSOk_tri3_0.txt",
+  "vYtRCpFtSOk_tri3_2.txt",
+  "vYtRCpFtSOk_tri3_395.txt",
+  "vYtRCpFtSOk_tri3_397.txt",
+  "vYtRCpFtSOk_tri3_399.txt",
+  "vYtRCpFtSOk_tri3_4.txt",
+  "vYtRCpFtSOk_tri3_401.txt",
+  "vYtRCpFtSOk_tri3_403.txt",
+  "vYtRCpFtSOk_tri3_405.txt",
+  "vYtRCpFtSOk_tri3_407.txt",
+  "vYtRCpFtSOk_tri3_409.txt",
+  "vYtRCpFtSOk_tri3_411.txt",
+  "vYtRCpFtSOk_tri3_413.txt",
+  "vYtRCpFtSOk_tri3_415.txt",
+  "vYtRCpFtSOk_tri3_417.txt",
+  "vYtRCpFtSOk_tri3_419.txt",
+  "vYtRCpFtSOk_tri3_421.txt",
+  "vYtRCpFtSOk_tri3_423.txt",
+  "vYtRCpFtSOk_tri3_6.txt",
+  "vYtRCpFtSOk_tri3_8.txt"
+ ],
+ "textes_recherche": {
+  "awb-GlVIa7Q_recherche_200_gb_combat.txt": "qj 1 = =\nen om © 17.26\n| Points 55,438.628.579.417 w en] RZ 38 Da to\nBoss Rage Count x154 i ae Ese 9 q Y . @\na BERLE 1-0 'w ©\nJZ] urs Sy ee ys yay\n= ee fc ae eigen] 4 . = < van 2\n~~ < Ona; ag) —— ~™ RF\nay) p \" = . ;\nigh CEAIS00A284 8\n= e —\ni)\n< a2\n= = ee\na io es AAO é Wh ovo hls\ncs Pacnodo . , omens\nView Formation Info F ¥ a 17 TH “© v o Ney\n",
+  "awb-GlVIa7Q_recherche_201.txt": "ee\n| oints | S5505524900672 OBL at a ALAS\nee x154 | o9Be One wt @\nt d 5\n\\ “4 , } “Team A_\n- j \\ r ©\npan 4 | a\n» ‘\nPB US Cs ly a: a -— £8)\n, Co) Ae eee | oy ‘o\n+ aon no eer\nView Formation r % t s hy ‘4129/4163 — Ly, —,\n7 F ey ee =*_ \\\n",
+  "awb-GlVIa7Q_recherche_202.txt": "|\n% maa gs =a Sy res sg ll\n| Points 55,628528.604727 Ox “e @ =) & @ ) Feel A\nBoss Rage Count hss 4 Oe ae Die ue. @\n( \\ ' ]\n\\ “Team A\nf A Age\nI2G nits | 4 1 >> ie ®\n. ) \\ € Fao\ni a ‘Lhe =\n. . : ‘ 4 >\nfi 7 9 Shield j ay\n. am\n/ 3 o \\ : \\ os\n| ( rt. Koy aint: y I ‘ ait PR (0.8\nWET E23 2°95.\nean ~~ >) : or ag \" mos ’ As ris\n",
+  "awb-GlVIa7Q_recherche_203.txt": "x sus gis om Sf © 1498 1\n| Points TBR887S DSB yd =] © G&A DA 4 f\nBoss Rage Count x154 DUNO! i :\nma\n‘ ' \\ ‘we >\n21 | 9 .\n: | 20 ©\nO« +8190 | /_—\nP’ : oy Kea\n} | GEE\n' i % Vertical/Arts Damage Inctea wy\n/ oN Wee”\nco? a L. SEs ASR Ess 2\nU ~ . V7) Unmane 9 tome cam 1708297410620\nee Formato 4 ¥ eee ee 018K] HS\n",
+  "awb-GlVIa7Q_recherche_204.txt": "or | ies 615.280\n| Point 56,119.760.378.987 Bey CB & @ * ag 7\n| ——- x154 AR Ze) a , i%\n/ does teN eS of “Team A_\ny ae a) ®\nwom SW BTR 4 Bs.\n= = (say Us en) > ee\nOlen te)\n5\nAya WAAL Sa Rees\n& Grexeaeene , oY . kook)\nCF ———— v.70 s7us2 70823 4 x! te). Ee\nView Formation Info ; —-As Ww = » SS\n",
+  "awb-GlVIa7Q_recherche_205.txt": "Se (| LU 4 -—. 4\n4 maint SE wanuar F er 759586 / ( L245 I Il\n|\" points 56.375.937 490.758\" Day algal ay @* c Qe iy S ; =\np)iBoss Rage. coune x155 Ophea Te “At 7 ot - - >\nThe boss monster refuses toidie and becomes enraged! »\n= eg ‘o © =. °@)\n= og &...... |e ;\n: : w\n— SMEPAZAALE > 8)\noe) Sl ELRSAZSLOMS gO ets\n. win mengmn Siege a.) x.\nView Formation Info A SaaS $ 4 © y WS\n",
+  "awb-GlVIa7Q_recherche_206.txt": "wg gf mans . he Bn «=O © DT\n| Points 56,673,822,.072.875 ey 2 Blo @ & @ g KA )\nSse mea: x15 \\ OW Bt fe aa nm\nI it in\nThe boss monster refuses to die and/becomes el raged!\n=~ an ars oT? - r FY, “Team A_\n(945 nits (= PW Fin ia’ A ed\n\"ua Daye 08 42.\n> a See gee eS\n= ~ \"ay = ~ -\n=, eS ~ — fa)\n— e q\nRRO SAA —— ENS!\nob ALxezevae. | Bo Seas t\n<7) Wv.170 amazes f @ “a) > ES\nView Formation Info 7 : a =: oe SJ ay)\n",
+  "awb-GlVIa7Q_recherche_207.txt": "fet.) <n |\n7 Sai: | m| —- «= oo\nx wanuar anu : : enn ip © 0 Li ll\nPoints 57.103,854,197.207 ey BY (8 c Ko ok GA ; rt\nBoss Rage Count x55 OS Be bi OO) 6] oy | @ |\nThe boss monster refuses to diana Beco es enraged!\nry n ‘agauiies i i Yi | “Team A_\n=) as Ss Dee eq = “a >\n948 nits - Gy je 5 Vee Cy. | & iw\n= ee = 2 War 4 : be) a\n— se A\nAOR nd ; 9 “\nin. = i* Si\nSiO. eos20 ~ ease\noP eS SOO (og) ee. ah oem\nNJ) _— w.7o 3706797570008 O H) S 4)\nView Formation Into eae os oe te, WS)\n",
+  "awb-GlVIa7Q_recherche_208.txt": "LVi150 Giang | =\nXK maar OY wana. ; IM anosse2 | © 927 ll\n| Points 57573.456.047189 ee ole x @ j | ry\nBoss Rage Count x55 Oa rs nol ‘ = Om :\nThe boss monster refuses to die and becomes enraged! ; :\nu fy | “Team A_\n950 nts i) : 3 | —=\n- Wiad ang 2 <i:\n= ‘at AP (ECE Few v¥,. . TH x\nar, fe sd )\n: a \" a er\nae SS ar)\nse | “@\n‘ fia .% ¢ 0)\n@ i) me ae) 4h 0%)\nCy - wr I 0629/370629 '$ @ a) By\nView Formation Info ; aA : Sas oS , Neay)\n‘ | wal\n",
+  "awb-GlVIa7Q_recherche_209.txt": "> wanvay , L —s nie =\n; © eS 1541 0 4 5 Il\nPoints i 8 Bar 4/9 Ao ; ——\nBoss Rage Count x155 Ft Boom *y @ :\n¥ N . Na) {2' “Team A\ny \\ = =m | - 44 = i . a * NOb2 5, + her ov ‘ vy —\nI. oe ile [ = CG.\n\\4 r Ul > < > aod)\n3 | ONS\n\\ C2\n4 = ei\n4 BL AVaT WARE en >e\nZ — Gtxeagowes who o¥s\nView Formation Info a 1 if °aR 2\n, ~ NN 63574163 8 = KY)\n",
+  "awb-GlVIa7Q_recherche_210.txt": "t — lw\nX smn 98 wen ' aS TE) cy ul\nPoints se.enest7sin2s4 & BY a & * €axBs m ;\nBoss Rage Count xI56 Ai\" HEE \\y @\nThe boss monster refus#$'to ‘die and becomes enraged!\nrn [+ va * _Team A_\n- xs) - On\n> “i i ah te ke fale i ~~ 1D)\n377 111s oer . waz 057 \\ hh ie)\ni) ; ity UALLIZ907B440937, ~~ —\nt ie ae Ww y Ie (\n—— \"5 Ae \\7\nwe 4\na 4 ; OAS a °\n— < ~ = th og\nCO) as abn on ose\noy _ Tt. x @ AlO.G.m 2 2 F vk I 4\nSJ) WT SB 370527370629 xy 8 Kid °8) —\nView Formation Info 7 > —— sera a. 15) Yay Ney)\n",
+  "awb-GlVIa7Q_recherche_211.txt": "The boss hah et iss f 7 ' BS enraged!\n",
+  "awb-GlVIa7Q_recherche_212.txt": "- The boss monster refuses to'diewand becomes enraged!\nes\nAs\nMALE /\n=. “ Shed\n<>\n",
+  "awb-GlVIa7Q_recherche_213.txt": "\"9047914403\n",
+  "awb-GlVIa7Q_recherche_214.txt": "lt hf\nBS - 3\n.\nSat. la S\n",
+  "awb-GlVIa7Q_recherche_215.txt": "—\n",
+  "awb-GlVIa7Q_recherche_216.txt": "\\ , j\n\\ 4\n",
+  "awb-GlVIa7Q_recherche_217.txt": "™ 5 .\n\n\\ 9830 © wre S\n\n@ apt’: bathe a hate | +> fe)\na e\n\nSd 2\nFa\n= your grave. ~\n5) 6 o\n», & - Xx\n",
+  "awb-GlVIa7Q_recherche_218.txt": "= — ee\naauneee @S\n\nwo MAZOGISS3O |\n\n_ ae @\n\n7\n\n+ ‘eoeneaoua Ore\n",
+  "awb-GlVIa7Q_recherche_219_gb_combat.txt": "J 50 Biape Statue =\nKuen 98 wu I - pe EL, 2 ae na © 5.14 Il\n| points 58.090888.410703 BEM 8S rs & | xD ef > gt\nBoss Rage Count x156, Aw \\ re = ey ¥ 4, ri\nTt 00544 « 2 :\ny 4. - bs Fi JUAC AOU: i p 9, “Team A_\n—\\x Tod ae EH TE / , | 2\n42] urs | x “i & I bo ied Fak Ohl @ i pe\n7 Ji / eee 2\na a $2.)\nXP AO ADE ey <8\nos Gixeagames, wh ook)\n& Lv.170 370629/370629 A 34 i,\na 7 4163/4163 : —\n",
+  "awb-GlVIa7Q_recherche_220_gb_combat.txt": "\\ es if ] jiant Statue , } =,\nPoints 59.115.927.640.322 Ey ‘¢ (e) & K # wv eo ies\n| Boss Rage Count x156 Awe ae\n00:4.14 =\ny, LET | “Team A_\nGID Hrs —Ty_ | (fl; f == =\nE —<1 = Wn [ , < yay 2\nee 3\nSe =\n7 M4 BOA OGaRe ey Soe\n+ / @aenGeeeeg,.. KEY)\nx if wi Tyee /AORZS o a) t@) 1\nView Formation Info ; : See NS = WAT\n",
+  "awb-GlVIa7Q_recherche_221_gb_combat.txt": "wo e =| aM va Ae as) va F an © 3.17 rT\n| points sanseo.870.240 Dee BORE Be fo | +.\n| Boss Rage Count xI56 Ame VEENENS i ae F\n. 00:3.17 & —\n3 ae / \\ i = | “Team A =\nGIAHITS % wy p = ul Uy YISUGLZI™\n— et | if 0 F (oH)\nre <i y ° 8)\n| “mans tane ex ¢ 2,\n; lg ROA E g\n4 y, FA Grrr eS\n",
+  "awb-GlVIa7Q_recherche_222.txt": "( % . P i 2h 2 x3750909 © ll\n4 &&§ teSOLTBa | mn\na a 7 ROVERS ae\nWs g Sy The boss monster refuses ‘to Hie and becomes enraged!\nas ; ij TOTAL d af 5 ¢ 5 : >\n3a Ud ight\n| SAAgWan se a a2 ei\n= Wwv.170 # 37082973708290 31 4a - ~\n3981/4183 wy Tie —\n",
+  "awb-GlVIa7Q_recherche_223.txt": "i Paqgiant statue ' =.\n‘ ay \\ : = a = om 43209031 © 115 Il\ndf we O's vieveo x aaee ,f '\nsold % v = »\nz 4 Phe boss monster refusk$toldie and becomes enraged!\n- \\ <h {_ “Team A_\nN ‘ y - 4) DTAL I ——\nNa _ We i 4 : ) —\na\na WOBBDES : i)\nyy, / = cm ae —379629/370629 ‘ ‘9 @\nA / é : 3982/4163 : < a AS\n",
+  "awb-GlVIa7Q_recherche_224.txt": "ae jant Statue =,\nc Points 64295.496.142790 DXTes 2e@ED ‘dip\nBoss Rage Count x157 a bet ERS )\nhe boss monster refuSb$ die and becomes AL\n7 i] a “Team A_\n436 aaiiad | om\nJD HITS — » Ws ae J ad\nae - 4 ¥ Wi) AID E7 UB PF Se xG vay 9\n~\\Ar. 4 ~~. \" ag — ~~\n; =) i PAL? =\" )\n: amy | =< —\naE et) ae a\n4 = ‘ wer }/- = $2) cy\n) eo NESS:\n© Meet Ci\n.—) 4 w.170 370629/370629 ‘ 23) 4) —\nView Formation Info ff } if - TT —~? ey)\n, A\n",
+  "awb-GlVIa7Q_recherche_225.txt": "MAA | YP Meee\n* ;\nion =. a= ( <a ae :\nEEN ~ 183355964\na la\n\n: ;\n\nJ _—\n\nJ ge\n",
+  "awb-GlVIa7Q_recherche_226.txt": "~~\n",
+  "awb-GlVIa7Q_recherche_227_gb_results.txt": "Player's Score\np= 795,244,088,074 ~~\n: 244,088.07 caer,\n\nHunter Rank ~ a\n——_  lT—T——r\nYour points hewopess registered.\n\nFinal Score Rage Count €\n64,299,126,429,862 189\n",
+  "awb-GlVIa7Q_recherche_228_gb_results.txt": "n<>il\nPlayer's Score wi)\ny= 795,244,088,074 / 3\n; Ney , Rage Rewards ez\nHunter Rank — ‘\nU\n[A iE o|} Bs 15,600\nD 5\n4 73\nSNR \"soe.s7ise6.524\n6 ie 95)963,996,022 Tap the screen to continue.\nNew Record Achieved!\nFinal Score Rage Count\nS B\n64,295,126,429,862 189\nRetry Exit\n",
+  "awb-GlVIa7Q_recherche_229_gb_results.txt": "migeuits @ Play Time 03:00\n; a\nPlayer's Score wi)\n795,244088.074 _) Rage Rewards ,\nRy econ0m ) g E>\nHunter Rank — i\n7 ;\n‘ ;\n[A iE 0 500\nD ¢\n4 : 73\n5 “S08 571686.524\n5 ie 95,963.896,022 Tap the screen to continue.\nNew Record AchieBed!\nFinal Score Rage Count\n: S B\n64,295,126,4259,862 189\nRetry Exit\n",
+  "awb-GlVIa7Q_recherche_230_gb_results.txt": "eieesiis: @ Play Time 03:00\nPlayer's Score\noN CR)\nHunter Rank — y ° :)\nC7 a\noa\naXe / ‘ 4 ro\nST Morvovsse 7\na ie &\n> BRP 734,202918,45 .\nSSR %soasnsass2\n8 HP\\ Brses.096.072\n\"New Record Achieved!\nFinal Score Rage Count (O) o/ 8)\n64,299,126,429,862 189 Y\nRetry Exit\n",
+  "awb-GlVIa7Q_recherche_231_gb_results.txt": "R. aS ul ] Fe 5 - ‘ @ Play Time 03:00\nPlayer's Score\nHunter Rank . —\n4 ( q\nOPE mm) }- A\n4 BRP ra4202509.us Ks\ns SBR %soasnsass2\n8 UH Brses.096022\n\"New Record Achieved!\nFinal Score Rage Count (2) i, ry\n64,299,126,429,862 189 g\nRetry Exit\n",
+  "awb-GlVIa7Q_recherche_232_gb_results.txt": "R Ac] re< @ Play Time 03:00\nPlayer's Ecore .\nKON :\nHunter Rank — 4 q y)\n[MFP seman a\n”\n|\nwd v, iy / Pad red\nSTN rmvcas fin.\n~s ia &\n> BRP 734,202918,45 ° .\nSSR %soasnsass2\n8 UH rses.096.022\n\"New Record Achieved!\nFinal Score Rage Count (2) 1o/ ry\n64,299,126,429,862 189 Y\nRetry Exit\n",
+  "awb-GlVIa7Q_recherche_233_gb_results.txt": "iK ASI ] tS @ Play Time 03:00\nPlayer's Score\nHunter Rank a ( = 4 ¢’ y\nNF ns }e\n~\nCree 7\n»! ie cy\n4 RRP 734,202918,45 °\ns> QQ soasrsaesz\n6 UH \\Braes.096,022\n\"New Record Achieved!\nFinal Score Rage Count (O) B\n64,299,126,429,862 189 =\nRetry Exit\n",
+  "awb-GlVIa7Q_recherche_234_gb_results.txt": "_ © Play Time 03:00\nmanent - J\nPlayer's Score\nMey 795.244.088.074 =\nHunter Rank = a\n= ‘\nOPE smn |\n|\n® nh , &\n4 “BP 73q202919.45 x\n& QP *suasnsnssz,\n8 EP \\Bsca.96.022\n_ New Record Achieved! .\nFinal Score Rage Count @ Ge\n64,299,126,429,862 189 ow\nRetry Exit\n",
+  "awb-GlVIa7Q_recherche_235.txt": "ay\n\\ A\n| )\n) % »\\~\n‘ ==\nLS Sig Seen :\nwa ¥ = Wee a\n— | s A . ¥ f\n( SS ce < f ay a i There are a few strike squads who commit\n] < a i = ie urder inside thi dungeons, then pretend it\nwe ty =) = sss jl : was an \"accident\"\nTh Me ye. oe oe\naa eS ee. ee 0 Clee\nine cols Fics ai OS ee) = a ie e rat OMe <~ \\\n2 Vid fi = al? Sg VAY , z > i +\none o oe = : —— ——— sa ey\n— i — = —— —\n",
+  "awb-GlVIa7Q_recherche_236.txt": "\\ “a\nay\n\\ ay\ni \\G\nwa iv Ss q Pat Fa\nrs ag f ye 3 \\ /\n, Eat 0 gf : __ There are a few strike squads who commit\n‘ 2 > i z sia aur ler inside th dungeons, then pretend it\nN <i \\S =a ——s ——>  _ was an “accident”.\n",
+  "awb-GlVIa7Q_recherche_237.txt": "OW\n\\ * E\nr 1\n\\\n3 ae . \\ oy)\na ki We i\\ <\n© ie Y s oe: \\ >\nsss |< 4 > Fou y ~ &\nh Weer 4 of 7 i There are a few strik ;\n; Ss ; = .. Jat srelare area trike squads who commit\nt . A , 4 2s\" mer = wes urd ler inside th dungeons, then pretend it\nyog ot = =a | = 7 was an \"accident\".\nNS ; Rey \\ Vi\n( = ‘ee ee | A DIET Ly & =\n_ 4 Po is =| ee 5 as ‘\nAH = 1a ee ee\nBer sl Tegal ; ge (ea LiF \\\nee Ty I | LS ye ye M 4 SS a :\n; = A he Dott a) (ar A : nal * — = mai\\ \\\n—=— aj;\n= ————_ ©\n——————— al\n",
+  "awb-GlVIa7Q_recherche_238.txt": "\\ *\n\n5\n\n-_ \\\n\n( .\nN Pal i COS i = ie meas ( a, | ees = a i ’\ni ae ia | :\nex? & Oe, | Pe 8 -\n\na |\n",
+  "awb-GlVIa7Q_recherche_239.txt": "-_ \\\n‘ he b\\*\n+i 7 y CO iinet = = = 6 go a, | 35 = a 4 ' 3\ndi n= =a ;\nah Foe iLL Serene ey |\n: ——— = = ea\n",
+  "awb-GlVIa7Q_recherche_240.txt": "oo i @¢ win Be B\n—s ; _ 7 :\n, 7 /\n‘ 8 = =\n=e ey\nx oe\n",
+  "awb-GlVIa7Q_recherche_241_gb_record.txt": ". I\n<€ Guild Boss 2 ial MW Hg\n?\nf JN | ———— ti“ C—~—‘CSC\n@ time Lettinseason 6d 22h } P< Personal Record 2\n— ( a\n\\ '' ih, ft RS?\n£ 2 ~/a] me Total Score Challenge Count 1\nw a \\ i | rye ; A | B4.299,126,429,862 | otatnage count 189\n7 IN ’ ———— ed\n° ale All-Out War, } im\nBES = f . Group 1 £189 64.29T @\n| UA sagees\nq (eet 7\nY |= ul ie Te\n| ji ae =z: 2. = :\na bi Group 2 No history\nSculdcosme 22 | .\na Se:\nals | Guild Member Rank Giant Statue J a\n, Total Power Recommended Element oO\n(@) Rage Rewards > 100,000 oo ———4\n",
+  "awb-GlVIa7Q_recherche_242_gb_results_partiel.txt": "© ei \\) oo\n€ Guild Boss ‘ b = i os a B\n1 ‘ [ EE\n\n@ time Left in season 6d 22h 2 x y Personal Record oJ\now | (=\nro \\y BOA Ze -—$_______-\n\n* afin AlFQuP War, | : Ky “Group 8.189 84.281 ®\n‘ A sasmss\n\n. f ihe » a} “Sax | ©)\n\n] fi m4 4 “ti Group 2 No history\n\nccc as. é.\n\n(282) cons Member Rank Giant Statue ie -\n\nTotal Power Recommended Element oO\n\n(f) Rage Rewards > 100,000 oo =— ;\n",
+  "awb-GlVIa7Q_recherche_243.txt": "Guild Boss 2 aS Hal\n@ time Lett in season =~) 4 os . ’ focal Record eo\nome -_ AS 3 ‘> BY ’ Total Score Challenge Count 1\n@ boss in a. N ne pe | B4299,126,429,862 Tottnoge count 189\n© ails All-Out War : _ 3 i. ‘ He! \"croup 8.189 BK28TO\n1 A) \\ sagees\nj : ha a a\nfi as ar ai Group 2 No history\n(at) Guild Member Rank Giant Statue _ mt 7\n/ Total Power : Recommended Element. oO\n(HB) rave rewards 100,000 oo }\n",
+  "awb-GlVIa7Q_recherche_244.txt": "< Guild Boss 2 Wy aD\n__ ae . Alp a =\n@ time ett in season 6d 22H s of nd Personal Record (P)\na] a meN 1 a) ™> ] . Y. Se Va. __ Total Score Challenge Count 1\nee ) i ane | ae | B6,299,126,429,862 Totainase count 189\nFd ‘ t ‘ . oy 2 OE\n* r ) y | | '\n° gi, All-Out War = f i .\ncom mit he Seay Group? 2189 B428T@\nOAte el © Goes\nbh = ee . —\na _?_ \\\\ | Group 2 No history\nGuild Boss | eae aa Vy\n(a) Guild Member Rank Giant Statue — | -\nTotal Power Recommended Element (2)\n(GB) nase neware 100,000 Psy] WL *\n",
+  "awb-GlVIa7Q_recherche_245.txt": "< FormTeam 2? ure\" 15,108,711 = 8\n{ Ea Guild Boss Mode\n% % Team A Team B @ vifRemnant Power\n) oF om)” Se NSH = y>\n* » c y 365 : iL t\n» ; ey ae) Fein Me\n2 2 6a0W Bye 2 r RAL Zee x ‘\nfm J (hi. tS ¢\n? YONG? (= SBD ee \\ A\nae 2 » Maes (2 ww . ANS M\nPals TEER ay > is | cnlll/!) My ay) ¥\n5 ! — Evisu ( 16 )59 2H eg L\né i. fone. a ws s\n> ° =~ 4 597,090) F AKAN of 50\n“ar... )\nb 7h pL) oG Score 64,299,126,429,862\n",
+  "awb-GlVIa7Q_recherche_246.txt": "< FormTeam ? a = Preset > hove\" 15,106,701 +E 8)\nP TeamA\n¢ 4 2 } 2 2\n4 \\ y - —\n* u ¢ } é PW aN i ey, AW?\nb 5 abe) labs coed 120 G0 Pw eve\ny IK a =\n$ @, Ve ee Se, =.)\nat lose fi » Bl venceai et Fee\n© ° J - | RNG =). \\a % »\n120 a i? H \\ eiahegtabenn Poy five Su soe\nro — S 2\n-. 1120) a \\ é eo )) f gi G| Curios Wee | :\n| ==:\nAutb-Equlip Auto-Equip | | Auté-Equip Auto-Equip=y\n! x a\noa a CORIRIEES asco 100,000 /\nb bore og Score 64,299,126,429,862\n",
+  "awb-GlVIa7Q_recherche_247.txt": "< FormTeam 2 <@D Xe\" 15,108,711 = B)\nTeam B\n« Im © ome | age | oop\n(; \\ Y > 2 ma &\n») ue it Baie he VE pEO 4\n* , ae e202) evizas) evens, ia eae ins\noh: (fea) Fra ea die Whaat &\n1S Sil i\n| 4° ek ates eyes: BW itetaleae\neu, & atin alan oft ain! ; aiid aus\nZ i\n‘ y ~ Auto-Egulp Auto-Equip Auto-Equip ‘Auto-Equip\nPosy ome ORME Reems 100,000 uae\nKs 7 cea io) >) | score 64,299,126,429,862 tector emer\n",
+  "awb-GlVIa7Q_recherche_248.txt": "< FormTeam 2? <> GzmD xe s068m = J\na Team B\nP Tipe oa j<mé> ont\n‘ Ime © Mir came @\n7 ci Ba dy * ene 3\n% H Ae a i0y) eviz0s) avias, Rane iy Ra)\n5 , &, 2 *\nBy ie aus auc dis ee ! se >\n2 hy Veg ieee as, Sait, I\na) ee eee as |\n» ee | by jet’ geiuts, B igitaea\n> wi) ae aint ali I fib aust | ae\nZ\n: 7 Auto-Equip Auto-Equip Auto-Equip Auto-Equip\nrua =, | Heeidoas 100.000 Qa\nbs AD eae uG Score 64,299,126.429.862\n",
+  "awb-GlVIa7Q_recherche_249.txt": "irons? rT\n< FormTeam ? a 2 en) 15,106,701 aD BE)\nGuild Boss Mode &\n\nTe~ i Team A Team B 3 seeennant Power\ng 4 (J y A . ”\n“ {Gi wile Dw xc me if\n\nby K ° J y j ”\ny 5. ae ds &)@ si a=O wy 6\n@ fe j\na ee\" SkeO PF Seeo  ¥. ZA\n\nme vs «slap ie aaeig A) 4 Af\n\nAS Recommended ug Score 64,299,126,429,862 4\n\n& €:) Element\n",
+  "awb-GlVIa7Q_recherche_250.txt": "< FormTeam 2? <&D ker\" 15,106,711 Te J\n; ( Ea Guild Boss Mode <\nis GN Team A Team B @ “ieRemnant Power\n¥ 4 \\ | es iy TONY \\ g.\nP f \\ wile Le « oie if\nCatt tuieo | somo IR De\nM co Was de. WES Ey \"Nee Magt:\n& >, Oe x hw x ce BA Nae’\n4 ad Or. O\\ Om. ce 23) GH _— A\n2.2.3 Faw, ry “we f\n2 WW «con Tuceu FE”\n<< We 10 ‘ (\npas boss ossive awe [teins 100,000 ke ees\n5 7h cemencl iol *) Score 64.299,126,429,862 ;\n",
+  "awb-GlVIa7Q_recherche_251.txt": "< FormTeam 2? &D kere\" 15,106,711 a Cy\nf Ea Guild Boss Mode\ne J ' Team A Team B @ ‘vifRemnant Power\n( \\ Wy Q a ‘I AWA ¥ ic\n* 5 k OLA t Mi 5\nAw) «,\n® : ; AN Neiate’\nr x + wa’ A\n7 aed Lf 4 7.\nNe Cy | = - te f\n7 wa 50\n> 1,000,000\nN -. a\nle \"hh cements a uG Score 64.299,126,429,862\n",
+  "awb-GlVIa7Q_recherche_252.txt": "< FormTeam 2? <> ker\" 15,106,711 = J\nf Ea Guild Boss Mode\nta TeamA’ Team B @ “ieRemnant Power\nv3 / \\ ail en — 4\ni, \\ § Os Gee \\ O oN ee g\n@ic) sealeaw ;\n* 5) (0 Maer | A MK A MAX iy ¢ ;\nj x } Wv.25 Wv.25 v.25 Wv.25 v.20. Wv.20 2 2\nx 75 ( Auto-Equip Auto-Equip Ly g ‘i\n+ 6 — == YN Ai\nK oe RON se egy r\n© : ) A te) (a»)~ fz) C )) Ya) WI\nOD) a: , MAX MAX, MAX iy mm VS @\n5 W200 fLv.20 v.25 v.25 v.20 Lv. 20 y ‘ ?\nv.25 ; : — ,\n8 a lll 4 Auto-Equip ( Auto-Equip | ” i \\\nCH) ° &) t@) ° fe) © {\na ye et) bell\nv.25, Bw W025 W.20 W.25 v.20 Bi\nAuto-Equip Auto-Equip ‘ Auto-Equip isons\nere oe\n7 Se ——\n“eet ee\n& hb seconimendes ws) Score 64,299,126,429,862\n",
+  "awb-GlVIa7Q_recherche_253.txt": "< FormTeam 3? &D ker\" 15,106,711 = 1\nf Ea Guild Boss Mode <\n2 f Team A Team B @ *irRemnant Power\nPie) eee Zo\n\\ “We a) fas\n* ») is a yar’, ) A Gh A (Sins MAX t .\n% Ky W.25 Lv.25 lw. 25 W.25  Lv.20— v.20 f\n+ v.25 ( Auto-Equip Auto-Equip i Ne g 5\n; 6 - ; bef fi\nni I ‘ee On fz) “ap) he ©\net ¢ at ae ‘ », x a\nW.200 0 Lv.200 v.25 Wv.25  Lv.20— Lv. 20 y %\nlv. 25 sae & = wi. e\n8 MZ . Auto-Equip Auto-Equip m4 N 4,\n7 i a , bal\na Lv. 250 Wv.20 0 Wv.20 Lv.25 Wv.20 0 Lv.25 Lv. 20 _ 50\n. Auto-Equip Auto-Equip ; Auto-Equip ete\nee Ee ee\n— x $$$ sae\nBs he ia oe Score 64,299,126,429,862\n",
+  "awb-GlVIa7Q_recherche_254.txt": "< FormTeam 2? & G=mD x\" 506m = 8)\nf Ea Guild Boss Mode <\n“ Tings TeamA TeamB & “irRemnant Power\ni \\} oy vo es ssn > Oeso YS\nsty \\\\ i vy So $\n4 (evel 17,0 tN r} tevel 170 ~7' Na\noe eeu 2 | Seen aoe ap ona Py ws\nZ V fi\n» d Ai pi eee eh a ‘ \\ age\n° oe GY. WWE! EL. Sees Sd OP\nme ela a oN a NN)\nLevel 170 ino | mate ey = DY wey Oe stl\nLV.150\"\"~ X H Recommended\nL150 | BossPassives 2 D 2] Aasaraimare 100100 2 7\nAN Recommended | ] Auto-Form\nEby jp) Element oS Score 64,299,126 429,862 A\n",
+  "awb-GlVIa7Q_recherche_255.txt": "<FormTeam 2? > ker\" 15,106,711 a 1\n. Team A\nrd y 1 i @ y 2 2 a>\n4h i . - we =\n% Oi cede 6. 100m 20) (Bi 20. Bi Wi CYiyn> abies\nBS 4 Poms Na a XS a\n‘a7 Sid Pi 20s Wan » i <b wie 7 ANS. Me\ng a =. Ne | ‘ > »\nCO) ° md a ¥ “4.\nre (ke hed y\n21205 ta mM iN Sai Cele tyAbitie Sucka\n3 — a j hy 1 Bs / > , 4\n‘ oa aioe i bay + yeh ga: 7 ae.\nan \\ my f : Gar. [ai\nSs 3 | a=:\n: Aulb-Ealll I ( Auto-Equip Auto-Equip Auto-Equip\nLV.150° N i ° ; Recommended ¥\nBy  seconmencee (Bl +) Score 64,299,126,429,862\n",
+  "awb-GlVIa7Q_recherche_256.txt": "< Formteam 2 GED xe\" sem = 8)\nTeam B\n‘. ime © Ome 4 ep\nb we 3 af\n) ‘a - fy is woylee cp Wey 4\n« Sy cole Gav | aie Be\n+ A, &., ii t ia *\ni (tai wae ARs ae oe s\n© ay Veo ‘ Pan ae, hac\n4 6120+, c} eu 4 v.120, ah Bv.1204, ; aii») ai 20+)\n% _)\n2 ; (C Auto-Equip 7 Auto-Equip Auto-Equip Auto-Equip\nWE | gor Passe on  fecgmense Wey tutororm [Enter |\nbs At ‘aaa uG Score 64,293,126 429.862 A\n",
+  "awb-GlVIa7Q_recherche_257.txt": "< FormTeam 2? BD GED xe\" 508m = 8\n{ Ea Guild Boss Mode <\no T= Team A Team B @ ‘vifRemnant Power\n~Z Sk eal Gl  e s\ny q (eve! 1D ret a ay tevel 170 7 ay\nPS a SF po ip on area chy A rf\nY am N H\nim) hs EGS Coll... Dh 7\nB : 2A y y 2h SS a 4 on ; ANN \\\n‘ \\ ex Wan) OL. See ' al ae\n2 ee ee\n\\ ‘ > \\ = rr} , y’\nS 2597098) rf 1) 2521985)) SAN 0 150\ntoo 170 io i a AB XV ni be: } OR xtoooano\n4 A Recommended els) Score 64299176429.862 A\n",
+  "awb-GlVIa7Q_recherche_258.txt": "< FormTeam 2? > ( iPreset % av\" 15,106,711 an 5)\ne f Xf Guild Boss Mode %\n¥ Tae (Team A Team B @& “ieRemnant Power\nZz <Q: <a. cee\nPr » - Cay 1 uG6 \\ é\n¥ y a ORR | we 70, /; ye t\n4 2550 gr SS ian 2671 le Fain ( $\n$ aie a eee eeeeey * Lt we\nIYI 7 a Ng Mag i\nBY 4 f,\n> elles ar] ‘ R/S ‘7 ‘ ay Be r\n. © PANS SSA S eben > SSA\n2 is ee ee\nSf . a) 7.\nSB tee 70) a We teil70) (LAT\neal l70 | oe. ap ne Pes rd Ln Bie) ete\nLV.150'\"~ X Fi my Recommended\n150] Bossiassives D #] Recornmene 100,000 ¢ T\nI\\, | recommended ij ii Auto-Form\nBs he Element uG Score 64,299,126 429,862 A\n",
+  "awb-GlVIa7Q_recherche_259.txt": "< Hunters 2 & ad 6.360 +) © 1450298760 He\n5 +\n»\nt\n1 . +\n™ 4\n",
+  "awb-GlVIa7Q_recherche_260.txt": "< Hunters 2 & a 6360+ @  1450,238,760 ty ry\nnr RECS @) SSR eon\nSs) ON Ts hg Lv. 170/170 S\n© gan © gan O nw =\nig rs Z WW, T a advancement Mf ay dy dy dy SO\ne) q \\ = ; =),\n: © : Total P 2,850,287\nlaced (raed Uae ~ ») 4 @HP ? 80.532\n° ° , { \\ Attack 161,086\ncP G rt ) Vi 0 Defense 94,544\nPY i ‘ewe wt Ue \" > (4 =F\nReanee +. i . @ )\n@ rarity O E teva - r 3} * PS ED\n",
+  "awb-GlVIa7Q_recherche_261.txt": "Stat Details x\n4 ~\naN * - — EEEEREniiee -\nWeapons Artifacts >\nes\n% @ HP 80532\na \\\nSy 6 MP 2795\nA oe | s attack 161086\np / .\nii \\ © Precision 95.38% (36105)? » 7\n\\ Cain we U Defense 79.09% (94544)\nSy pad\ny WY y /\\ | ™, Critical Hit Rate 50% (12548) 2\nLee Joohee, Pilgrim of the 7] \\, % Critical Hit Damage 199.27% (14714)?\nLabyrinth | \\\ny Hunters Association (a5 /— 4 ip ) © Cooldown Reduction 0% (0)\n/ oo . | | Y Defense Penetration 50% (91222)?\n~ Damace Increase — WA15% (ALM 2 =\n",
+  "awb-GlVIa7Q_recherche_262.txt": "Stat Details xX\nra ) Ww =\n/ mi = — ae\nWeapons Artifacts >\n7 a @ HP 80532\n7 \\ MP 7795\nyy i |S Attack 161086\nI ) I © Precision 95.38% (36105)? >» 4\n6 a ty 0 Defense 79.09% (94544)\nIE inn X | \\s Critical Hit Rate 50% (12548)?\nr &\n, j \\ *y Critical Hit Damage [89.27% (14714) ?\nLee Jochee, Pilgrim of the |) \\ \\ om\n————— i y © Cooldown Reduction 0% (0)\n“Hunters Association Gag? —~-+~!)  \\.\noN om j ® Defense Penetration 50% (91222) ?\nDamage Increase 14.15% (8240)?\n",
+  "awb-GlVIa7Q_recherche_263.txt": "Stat Details z~K\n] ey 2\n¥ a ooo\nWeapons Artifacts »\nFou © MP 2795\ng | ~ Attack 161086\ni De © Precision 95.38% (36105)?\nT ] U Defense 79.09% (94544) > il\n6 1 )\nws iy, ip ¥ | \\y Critical Hit Rate 50% (12548)?\ny W ns \\, WA] © critica Hit Damage 199.27% (14714)?\nLee Joohee, Pilgrim of the ) \\ © Cooldown Reduction 0% (0)\nLabyrinth . | } \\\\a\ny Hunters Association == / 4} | @ Defense Penetration 50% (91222)?\n> ® > | ? Damage Increase 14.15% (8240)?\niaikrremmeamtosriiterine anv eno =\nhb\n",
+  "awb-GlVIa7Q_recherche_264.txt": "< Hunters ? BS cd 6360 + @  1450,238,760 te B)\ngeissr [ gah) > ; =~ SSR ® Go Gunhee )\nBA Ma A\nrs on me - 4 lv. 170/170 rr)\n54 [ena » f l\nKa o 7 rf\nis ‘ , , + ae, Manenen A ar ae ae ay a4, .68\ney f 1 “a Total Power 2,641,985\na 4 x ommer a, 1 @ ‘ HP. 83,835\nP a! (ss) Attack 95,059\n»<8 w rt z *| + 4 - 9 Defense 175,245\n. ‘ .\ncd =) rN y . —_\ne Rarity [v] & Level = | 8 * + Ls)\n",
+  "awb-GlVIa7Q_recherche_265.txt": "< Hunters 2 & ® 6360+ @ 1450238760 an E)\n> men) © sei * geepaale © Go Gunhee ; cD\nfe 4 q . Sissi speciats—\nws Al (i ee\n° as O 2 1 :\n5 4 chk 2) 95059\n\nwee aM RS } © Precise.  sssonecamiomee 2 hans\nOTe\" 4 4 _ . e Oa 95.059\n‘¥ ’ * he ear a 50% (BIZ)? 15245\nRELL? Recaee fj\n: San ¥ . io F a 0, 36s) alia calling\nis O EONS aes eae —\" Tre\nee “Rarity SS SS S) + 3\n",
+  "awb-GlVIa7Q_recherche_266.txt": "oy IA Stat Details >.<\nmA. Y . 2. Eee “\ni! g 9 HP 83835\n| | = ine 2974\n\\\\\\6 6 ip ~ Attack 95059\nV)\naR < | K i ‘ © Precision 95.38% (36105) ? > il\n= \\ / iy,\na / | UV Baciee 87.52% (175245)\nYY ae | critical Hit Rate 50% (11617)?\nb\n- GoGunhee ~ \\ 4 | > critical Hit Damage 209.13% (19485)?\nHunters Association Ss =“ © Cooldown Reduction 0% (0)\nAD aa\n} ® a Defense Penetration 46.5% (43459)?\n® Damace Increase AN MAARRY =?\nee Pe re dt Aa r =\n",
+  "awb-GlVIa7Q_recherche_267.txt": "a wey Stat Details x\n& . L ¥ el =\nrN a Weapons Artifacts >\n; If < 0 MP 2874\n| | \\ % Attack 95059\nA : /\n. o// & © Precision 95.38% (36105)?\nqi © Y/ © | 0 Defense 87.52% (175245)\n. / y\na { | \\s Critical Hit Rate 50% (11617)?\n-—4 W & | | *%\\ Critical Hit Damage 209.13% (19465)?\nGo Gunhee © Cooldown Reduction 0% (0)\nHunters Association | — Y Defense Penetration 46.5% (49459)?\n| rt\n> & Damage Increase 21.71% (13866) ?\nb\n",
+  "awb-GlVIa7Q_recherche_268.txt": "< Hunters ? &B } 6360 +| @ — 1450,238,760 He B)\neS Cpa y i ay SSR ¢ Cha Hae-In p\n*% | om 4 iain HEAL Block patie\nke Beige) -< 170/170 in)\n170 10 A |i a . , 1 -\n2 ay |e Ee. ; f= x ;\no ° se\" =e Peivsncement ip\nMed eo ae Fa dy 8\nif 3 ‘ i Total Power 2,637,181\nWye mass | Le ‘& j (s.) HP 78,057\ni % attack 165,898\nF 8 rt WV | ¥ r 9 Defense 94,403\nnt mg _ ia\nfe See i\noe Rarity [v) @& Level f A 8 % + Ls)\n",
+  "awb-GlVIa7Q_recherche_269.txt": "Stat Details K ‘\nZ ——— — 4\nWeapons Artifacts >\n@ HP 78057\nMP » 235\n|S Ateack 165898\nT < © Precision 95.38% (36105) ? » il\nU Defense 79.06% (94403)\n|» critical Hit Rate 50% (10865)?\n| | Critical Hit Damage 207.53% (18548)?\n© Cooldown Reduction 0% (0)\nY Defense Penetration 50% (79540) ?\n__ ¥ Damage Increase = 2 1A 1% qnaa) as\n",
+  "awb-GlVIa7Q_recherche_270.txt": "A Se\nStat Details ><\ngy? \\ _ Se 5\nINN\nPAU Weapons Artifacts >\nVA,\na4 ee Pw | ~ Attack 165898\nSC , ys © Precision 95.38% (36105) ?\nit %, A} Q Defense 79.06% (94403)\nPa Fane |» Critical Hit Rate 50% (10865)?\nwy\nON A | © critical it Damage 207.53% (18548)?\n; 3 r\n= wy at © Cooldown Reduction 0% (0)\nCha Hae-In — oN Defense Penetration _ ; 50% (79540)?\nHunters Guild Pe taican Se. 18.1% (11048)?\n> & Se @ Damage Reduction 0%(0) ?\n",
+  "awb-GlVIa7Q_recherche_271.txt": "< Hunters ? & } 6360 +| @ — 1450,238,760 te B)\n. — : ee SSA $ Cha Hae-In 2\na om rn Girpetipedse) (Heal Block) (specie)\nWS AIM |G , mr Wy. 170/170 9\noman oan e o>\n2 Q Caste S , @ “one XAXA*a ee Oo\ne) ( N } = \\ 2\n* c Fr . Total Power 2,637,181\nRoane? a 4 4 Rene by ' OHP 78,057\n, IF an \\ attack 165,898\niF y ri Fe ae , 0 Defense 94,403\nY { ” so AE __ SWord of Light\ne Rarity (v) 4 Level h ‘ . ‘Oy % + ES)\n",
+  "awb-GlVIa7Q_recherche_272.txt": "< Hunters ? & } 6360 +| @  1450,238,760 te B)\n© — ; ee SSA $ Cha Hae-In <)\nhi pe a =\nWS. SM 'y “R 170/17\nof ‘ & 5 7 + © Xxx 4+ ty CO\nWe: AN ( . Total Power 2,637,181\nThaedd eared Uta A HP 78,057\n= Attack 165,898\n:) Oger Fy ‘ fo 1 (o) —— 4403\n“A § VA ‘ — :\nCag oh x 7 Bb. : :\n¢ » See | tum NZ ; i .\nCy} Rarity [v) @ Level ~ h, 8 % + ES)\n",
+  "awb-GlVIa7Q_recherche_273.txt": "< Hunters 2 %&> vy ss AG > = 8360 + @ 1450238760 an B)\n\\, iG 4 ‘ \"\n- 4 ‘ iy \\ . ~~ 5 wd SSA © Antoine Martinez 2\n\\o ae ey 4 170/170 rr)\nie 4 4 , a Ca | 2 Acvancement eae\n[ w ) hy Total Power 7,625,900\nLass: | aes: Nes 4 y SEN ( ; oHP 212946\n. ; x g \\ ack 100,337\n¥ ° ri TG: NY : . ae 97517\n2) 0 eS a | 2) :\nA: ae | ie\ntoca o |\nVe Swen) tm eS 4 —\ncy) Rarity [v) 6 Level = 8 % + ES)\n",
+  "awb-GlVIa7Q_recherche_274.txt": "come ccmmeces Yay pce tl iii a Le\ny fo \\\\ \\\\ Stat Details\nY gp ko VIN x\n¥E} ce tabs ») 4° HP 212846\nWe \\ L \\ x, / \\ ¥ >\n=, AS ~ BI = © Precision 95.38% (36105)? > 7\np aa ‘. Yi ff Y > \\ ‘y Defense 79.59% (97517)\nEe f. w™ Critical Hit Rate 50% (14428)?\nBn Gta’ \\ d=\n(ip Antoine Martinez TS he re EE ACD)\nI | The Federal Bureau of Hunters \\ \\ © Cooldown Reduction 0% (0)\nI © j || Ws y _ & Defense Penetration 41.22% (44735)?\n? Damaae Increase ATAA%(IIARTY =?\n",
+  "awb-GlVIa7Q_recherche_275.txt": "Wf VG i ql Stat Details K\nLA VMAS =\nkad ds » I, Se SSD Weapons Artifacts >\nhay|\" qo mas ee Y UN 100337\n. \\ \\e \\)) ae\n“MOA AAT) s TS Precision 95.38% (36105)?\nRUST i\n_ AOS iS 1 Defense 79.59% (97517) i\n“Ray L BA yy =\nwl y \\\\ G77, /F\"* ? I= Critical Hit Rate 50% (14428) ?\nAN Ti. , [ serie Hit Damage 205.33% (17384)?\n- \"7 WZ _—\nos Ms | | ¢ (es Cooldown Reduction 0% (0)\nW/ Antoine Martine? rs \\ \\ y Betense Penetration 47.22% (44735)?\nI | The Federal Bureau of Hunters \\ '\ni . = ~ Damage Increase 31.38% (22867)?\nRIS BASS >\n@ Damage Reduction 0%(0) ?\n",
+  "awb-GlVIa7Q_recherche_276.txt": "< Hunters ? & yh 35 AG \\¢ 6360 + @®  1450,238,760 an B)\nSA nN ee\neS rs = ae | , She wa) SSA © Antoine Martinez (9\n®& K ; =} Support\nA) > ° a Ae ‘\noa dh, a= a, a 3 os eo Xa de te ar dO\n‘> De, @, \\tee :\n4 ee qn ) hy ~ aes Total Power 2,625,900\n* ° A ran \\ oHP 212946\n° @5 Ws Ny attack 100,337\n> ¢ ri f/ i ya A v Defense 97,517\n> > Hes: M74\nCay 2 = J ae\ne Rarity [v) &@ Level — : = a 8 * ¢ Le)\n",
+  "awb-GlVIa7Q_recherche_277.txt": "< Hunters ? BB } 6360 + @®  1450,238,760 an B)\n: “ ssR &@ Laura Walker p\n> > ; Os Ls\n@| a ae, Removes) Grants Shield\ni A\nA lv. 170/170 tr)\n170 70 5: 70 3:\n© gan [O gar) Perincement\nSAM am) gs > BS g “oo dara de 0\na, @ A. ‘\na . pe Total Power 2,615,928\nLWP ss) LSS: || LLB “i ; HP 78,639\n= Attack 114,433\n; y ri : P . ‘ 9 Defense 93,923\naf mg wai — , ==\n= sa a Nighf-cleaving Flash\ne Rarity (v) 6 Level r “4 8 % + E37\n",
+  "awb-GlVIa7Q_recherche_278.txt": "< Hunters ? &B a 6360 + @®  1450,238,760 te B)\n~ . : ay SSR $@ LauraWalker 9\n» i\n& | g Ga, Removes) Grants Shield\nA\nad’) Bes f lv. 170/170 8\n© gan [O gan) > <A rr\ni a ; a 4 @ XXX + + te GO\n\\ A wd - Gy i. Total Power — 7,615,928\niss) Ls > AT (') HP 78,639\n; \\ Attack 114,433\n; bg rt F — Vz 0 Defense 93,923\nte) AI a\naa J oh ry =.\n(7) Rarity @ © tevet i = ; & * + E37\n",
+  "awb-GlVIa7Q_recherche_279.txt": "Y Stat Details K\ni rus,\nvy — a\ny F Weapons Artifacts >\n4 Jf\nBy ay 9 HP 78639\nf © MP 2795\n\\ i | *\\ Attack 174433\nii < é © Precision 95.38% (36105)? » ‘|\na ie Y Defense 78.98% (93823)\nall ip Ji ¥ | \\ Critical Hit Rate 50% (12328)?\nSk pbb b\nLaura Walker i | %w Critical Hit Damage 212.38% (21584) ?\nScavenger Guild © Cooldown Reduction 0% (0)\no@ ~~, Y Defense Penetration 49.68% (49372)?\n® Damace Increase MAA MANLY =?\n",
+  "awb-GlVIa7Q_recherche_280.txt": "Stat Details XK\n© “Vie = jn JS | itaiapeiaioes _seaeeemapeenamasinnn. sore\nAly Weapons Artifacts >\nB A | ~ Attack 174433\n© Precision 95.38% (36105) ?\niy Y Defense 78.98% (93923)\nij « : | \\y Critical Hit Rate 50% (12328)? > i]\n4 ~ aN | %y Critical Hit Damage b 712.38% (21584)?\nhall ee 4 ip © Cooldown Reduction _ 0% (0)\nLaura walker \\ Y Defense Penetration =~ 49.68% (49372) ?\n“Scavenger Guild } Damage Increase 21.93% (14042) ?\n> & a, @ Damage Reduction 0%(0) ?\n@ Healing Given Incraace (%) aa eel =F\n",
+  "awb-GlVIa7Q_recherche_281.txt": "< Hunters ? & cd 6360 + @  1450,238,760 re 8)\n© as ; ay SSA ® Laura Walker p\nY @ Sa Rares Grants Shield\nAR 2 2\nWS. OTN 7h lv. 170/170 S\n© ge (Pel o <A :\na eo) |e ws Total Power 2,615,928\nom Waa eal Urs b . AT ( ; \\  OHP 78,699\n, @ \\ Attack 174,433\neo 8 ri , | 9 Defense 93,923\ni 4 v0 mo . P , — fue \\\\ A\n- d } w ‘ Nighg.cleaving Flash\n° SB) Wi AS We\neo Rarity @ @ tevet _ @ . ’ 8 * + ons)\n",
+  "awb-GlVIa7Q_recherche_282.txt": "< Hunters ? BS cd 6360 + @  1450,238,760 re 8)\n— . : = SSA $@ Shimizu Akari FS\nf 7. % HP Recovery | Grants Shield eae»\n\nA\n\ni Laff Mi ,\nis. OI 218 lv. 170/170 9\n* Be. 2 +4 :\n@ : ¢ x to) a XXX+4 +S O\n\na 4 Ss ’\na AM |. ay ’ Total Power 2,597,098\nLNs sass) LBs _ \" ( : ) HP 215815\n\n4 \\ Attack 97,950\n~s i 2 a iA = V. U Defense 94,686\nTo +s 170 me s 2 \\ f : aa\noF) el Bae! —\n4% mn & y Vm) ~s a\nCy) Rarity [v) @ Level a . ‘ 8 % + L&)\n4\n",
+  "awb-GlVIa7Q_recherche_283.txt": "y} Stat Details >\na\nic . —EE———— =\nWY\nAA >» / low 25615\n© MP ® 7735\n\\ i ~\\ Attack 97950\n| < \\ (7 © Precision 95.38% (36105)? » ji\nZN ya U Defense 79.11% (94886)\nZS) Critical Hit Ra fi\ny NS - ex ™ te 50% (13010)?\nShimizu Akari SS | | Critical Hit Damage 21.02% (20657) ?\nBlade Guild = © Cooldown Reduction 0% (0)\no@ = Defense Penetration 47.09% (44495)?\n® Damage Increase DEAR%(IILLLY =?\n",
+  "awb-GlVIa7Q_recherche_284.txt": "By ”) Stat Details x\nFl » an —_— ——— —\nZA \\\\ / low 215615\n© MP 2795\n\\ i ~\\ Attack 97950\nT < \\ (7 © Precision 95.38% (36105)? » 7\na 0 Defense 79.11% (94686)\n\ni) Ls Ge ae ™ Critical Hit Rate e 50% (13010)?\nae Ran | %\\ Critical Hit Damage 21.02% (20657) ?\nBlade Guild ests © Cooldown Reduction 0% (0)\n\n} & = @ Defense Penetration 47.09% (44495)?\nSS —_'&_~Damaae Increase IR AR% M644) >\n",
+  "awb-GlVIa7Q_recherche_285.txt": "a\n/) Stat Details XK\na\nic g = — _\nNAN\ntA N\\\\ attack 97950\n1 © Precision 95.38% (36105) ?\nN 0 Defense 78.11% (94686) » |\nVii. 4 \\ Critical Hit Rate 50% (13010)?\nsy: | | Critical Hit Damage 21.02% (20657)?\nXS y 1 ene © Cooldown Reduction 0% (0)\nShimizu Akari Y Defense Penetration 47.09% (44495)?\nBlade Guild yal Damage Increase 25.86% (17444) ?\noe \\ @ Damage Reduction 0%(0) ?\n",
+  "awb-GlVIa7Q_recherche_286.txt": "< Hunters ? &B cd 6360 +| @  1450,238,760 te B)\n> eS ar SSR $® ShimizuAkari 9\n2 Y HP Recovery | Grants Shield Gp\nIL | A\nm a’) Be Lv. 170 / 170 oS\n+4 +. 2. ral\nKZ C4 eB }\nMW, ed Wied eo) ravancement 2 dy dy dp ae BO\nf ay ®\nSe f | c Ke. a Total Power 2,597,098\neeeee Reenee) | eeeeee . Ps 2 OHP 215,615\na ( AN) \\ Attack 97,950\n> y 2 rng FA = . Ni ~ ‘Defense 94,686\nae 5 ba\neo Rarity [v} & Level — ‘ - 8 % + LS)\nee\n",
+  "awb-GlVIa7Q_recherche_287.txt": "<€ Sung Jinwoo ? light am) Cd 6360 + @  1450,238,760 an B)\nSee y ; ty Sung Jinwoo 2\nVitality © Agility Lv.170/170 Max\n10 10° ‘p zz ————_{_{_ ———\n) ©)\n[+] ¢ é: Total Power 2,948,723\nIntelligence g Perception Fi ic) 6) @ HP 104,396\n1335 10 AZ ; We + ¥ Attack 150,200\nr : 2. Oe memonscrstsneons J Defense 67,009\nskitor ston —_—Uiimate ] a :\n¢ ° ¢ be\n&) +5 fy = SSR\nage rc ° -\n+ lS\nQTeo1 QrTEo2 QTE 03 ‘ nal 1S) Moonshadow\n* Se ty fl : eae RNS\nON _— aa y The Huntsman.\n6 5) Ost > 0s (A au\nOAS, O-~ Ory B 4 —\nVAROW SO —_—s :\n* « .\n.\n",
+  "nh2D7xZ7dOQ_recherche_10.txt": "<FormTeam 2? X feu 12167342 = 6)\n( tar Guild Boss Mode #%\nTeam A’ Team B < (Sif Remnant Power\n¥ 2 re\ni 4 oss 4. ie | : 1\n‘. 4 / & Si & hy (Seen a ‘i - A\nmy Coe Vey fh 170 - 3 vel Ogee {oh pee” ZN\nx) , ys Level ie } a x a dee |\n\\ Beal Ga i \" ssh i _N\na Beh | b4 | sen a o  § a Oy aK\ni AE. A val70. |. fg Ite if <- N y\n= | —_— @ si BS { Qe \\ S\n(PPR. \\ Of = ee | Re ae ml\ni 4 ae 7 We \"aA 1 Level\n26 5 a oa\nif a\n= \\ it Recommended, 7\nNe | | i\nA> fae OG Score 92842054460310 | a\n21 i bpafetemen f\n",
+  "nh2D7xZ7dOQ_recherche_11.txt": "< Hunters ? &S & 65999 + @  1138,347,328 He 8)\nP es\nA\n\n’ lv. 170/170 6\n\n; a 6 ravoncement Ay Ap ar dy Ap - @\n\n' Total Power 2,063,562\n\ng a oHP 82,533\n\nF ee Attack 150,640\n\n¥ Defense 75,372\n\na + +\n",
+  "nh2D7xZ7dOQ_recherche_12.txt": "‘ =\n< Hunters 2 &S * sss93|+ © sess sé fl\n© ssh [ppaaR)@ sce @ SSRioo nmr @\n& ) Y es ®, EN n eral GD MP Recovery\nm@ \\less.| 20 A\nr » 2 : in 3 o Lv. 170/170 S\n° 7 ‘\nee 4 ¢ we) G\n7 7 tu ~ = Total Power 2,063,562\nBird B Bi = an HP 82,533\n5 ‘ | \\ Attack 150,640\nb¢ % re an } }) L ed 9 Defense 75,372\no@ Hy iN .\na GES, | yi si\nmo est a aed ws = i - \\ eS )\n- , mn | 4 : _ a Say mee g\nee,\n(y) Total Power (v) & Level a “4 KO} * + _s\n",
+  "nh2D7xZ7dOQ_recherche_13.txt": "< Hunters 2 & @&  65999|+| @ 138,347,328 He ry\na ak eee ye SSR Oe imran ip\n< z g ay), Specialist Gp MP Recovery\niii , Be in Ss Lv. 170/170 So\n> gen © gan O 7 ‘\nSI ge ee Wig, Pe eee ee an:\nvm “ee 7 Nw 170 A ‘s x Total Power 2,063,562\nx ae eS\n} Oy OHP 82,533\ne } © 558 ; . i) \\ Attack 150,640\neS © a) r f L, : Defense 75,372\nRARE? *. = abel - We . wi — . i a ®))\nQ. Q Oa —  « S BX aay\nvane Vi st\n(7) Total Power (v) & Level _ . ‘ F 8 yy + =]\n",
+  "nh2D7xZ7dOQ_recherche_14.txt": "< Hunters 2 & @& e5999|+| @ 138,347,328 He J\n© ssh [QEER)@ ssn mp SSR) Oe mers\n4 °@ a= with i nownsenene Ar Ap Apr ab\n\n] | Sma b os _\n\n0 0 0 / “ J Total Power 2,063,562\n\nor 9 ae\n\n. 2a aN HP 82,533\n\nSSA - aN Hi \\ Attack 150,640\n\n% SS ene }} | i bs U Defense 75,372\n\n- 24, \\ Ay. \\ y —\n\n1 OSS,  #h? y =6\n2. 2 © gee Wiss ic Pe Ula\n\n© voi21roner @ Eater) s + ¢ Er\n",
+  "nh2D7xZ7dOQ_recherche_15.txt": "a\nStat Details me\nFre\nVAN if a ree 5 =\nBag (a) means nines +\nVf (GS | s atiack 150840\npant G/ ~ SS)\ngy x © Precision 99% (46905) [>\ng ,\n(f i , iy = Defense 75.08% C5372), > i\n1 a» =I ) a | | \\w Critical Hit Rate 50% (12784) fe\nVs La ANY oi\nVag iil fea % | 4 Critical Hit Damage 210.8% (20508) 2\nyi : Wy =\ns i } © Cooldown Reduction 0% (0)\nLeejoonee, pgm ofthe ) \\ —\\\\_& Defense Penetration 40.71% (34935)?\n/ Hunters Association ~'! => —' ! Damage Increase 33.67% (25383) ?\noo od | @ Damage Reduction 0%(0) 2?\n",
+  "nh2D7xZ7dOQ_recherche_16.txt": "aD ee Der, gh Wah. ES\nStat Details *K\n) ass by\ni y = — nets E ==\nWeapons Artifacts »\nVf | » | *~\\ Attack 150640\nGe a Sirrection 99% (46905) 2?\nJia ‘ =~ W Defense 75.09% (75372)\n1 yw \\ | w critica ic Rate 50% (12784) 2 > 7\nmY, \\\naw fit agg! i) \\ | *%\\ Critical Hit Damage 710.8% (20509) 2\n‘4 q ¥ » | UR, N © Cooldown Reduction 0% (0)\nLee ooh, Prim onal } \\\\ & Defense Penetration 40.71% (34335) 2\nLabyrintt 7 \\\naa SS j ¢ Damage Increase 33.67% (25383) 2\n/ Hunters Association fe 2\n$ ® » j @ Damage Reduction 0%(0) 2?\n2 Healing Given Increase (%) 0% (0)\n",
+  "nh2D7xZ7dOQ_recherche_17.txt": "bk em rnin rg\nStat Details zr\n‘ vg\n0 I: x —— ep iz\nmu Weapons Artifacts >\n(aD;\nVf JB |S Attack 150640\nG 2 oS \\. © Gicdeion 99% (46905)?\nATMA 4 ~ 7 Defense 75.09% (75372)\nte mA) A | » critical Hier 50% cm) 2 >\n- ™\\y Critical Hit Rate 2 7\nmr Mt \\ |\n&: Ma Aili Dg NY | \\ Critical Hit Damage 210.8% (20509) 2?\ny, Rey vA\na r Nh | By; © Cooldown Reduction 0% (0)\nee joche®s Pilgrim of the } \\\\ & Defense Penetration 40.1% (34335) 2\nLabyrinth A) \\\nYT... f i ! Damage Increase 33.67% (25383) ?\n/ Hunters Association ~ °° => = =\neS ou” j @ Damage Reduction 0%(0) 2\n& Healing Given Increase (%) 0% (0)\n",
+  "nh2D7xZ7dOQ_recherche_18.txt": "< P}aters 2 & > 65999\\+ © 138,347,328 = yl\n© ssa [gpger)@ ssn mp SSR Oe immer ip\n1 eal é ‘ A\nin WSN, + a We th 170/170 9\nae ) cor y\nee Wwe) We, eo. +++ +e 6\n; ( | Semana\nXA Le Be “~ ie Total Power 2,063,562\nih im Se ol A) HP 82,533\nQ a .~ H * \\ Attack 150,640\nrs ° oa ‘ f NA » 9 Defense 75,372\né _— “limes Pg: Sad Se\nLO eg Tt\n(7) Total Power (v) & Level i F 8 * + zw\n",
+  "nh2D7xZ7dOQ_recherche_19.txt": "<Formteam 2? > GzmD = xm 247302 an g)\n( TREAT (Guild Boss mode\n¥ ee Oo eam 2 V/ Remnant Power\n+ S t 5 eo\nz : ms F i Hy ie, 8 ‘a = ‘ha ~ . 4.\n‘ vol NG, a. ey ay) |S ») f4\nS672 0; 20a ia ”, B : 4\nyp ¥ TM i Vs\n; of” ’ f> a $ + + =f oe\" g\nCs ya Oe (\nAin \\go* eeeene! pcs sks 2 / / )\ntovel 170) 5 Oe SEIS ee BR ee ew\n% 2326415 eR tbianie =. Seen | Eas em £98000\necommende: Auto-Form\n| Eee GG Score 32842054460310\n",
+  "nh2D7xZ7dOQ_recherche_2.txt": "< Guild Boss 2 il at =\ni ae\nGuu mm, | Ja \" \" Personal Record 2\n- oo Y ; ; >> pS 9 Total Score Chattenge cout\nfo, ; be 4. Meadzséce0.0 Tout Ragecount 932\n© pie All-Out War =a | i. 4 t pay 2167 ' 2eT Ry\nA XX Bet Seis\nA~x 7 ® Group 2 2165 15.551 @\n| —. — - | SEBBSB\nBD) nave reves oti ——. 0) L a end :\n",
+  "nh2D7xZ7dOQ_recherche_20.txt": "<FormTeam 2? jee 12.167.342 = 6)\n{ Ea Guild Boss Mode\n# yeaa A Team B NG \\jf Remnant Power\nes $ S ssa > (BRM e sss Y-\n& a Te” NaBee \\ . A\nyt nh lay) v - i a . Aa.\n\\ Ze ini ON wile Me a Nf\n’ OE TISS (oe om i i y\nNASA NG ssn Oe | © 57\na \\ y 2 Q é aN | q & j\ni NER © “ Sap oO vam «(CG A\nUn | pally E Og eh enil 70 , | ) Mg .\n\\/ 3 — - ~io— 7\nff \\ | @ ssn @, S58 \\ SQ\nwz Le oy s8 2 aS | he \\ a\nFetch VAN aga, DOEMIBM 2S 0 217457 ia | Level SO\n26.415 Liew ire: Eee. eee eee brian x 936,000\n2 it\nWis | [Boss Passives <p s#!| 43.8.) & | ecommeneed 100/000 7\n4 te fa i Score 9284205446010 | Jiaiantilieis\n",
+  "nh2D7xZ7dOQ_recherche_21.txt": "< Formteam 2 <> x ieee\" 12147342 = 8\n( tar Guild Boss Mode\nf Tears Team)B @ eran owe\n* Zim eee > SA\n+ XN i F (8) a O)ny— , 77\noy) . <i : ;\n4g: - J\ndade > By ‘J pen\nNVA tow 50\n| \\\\i f ta 936,000\nn ya\n\"Gee DEER | Game 100.000 gee\nEh 4 Benen in Score 9284205446010 fF enter |\n\\\n",
+  "nh2D7xZ7dOQ_recherche_22.txt": "< FormTeam 2 <> Xe\" 12147342 = 8\n( tar Guild Boss Mode\nad Team A Team B) e idtemnane PoORer\ny } A Oise. \\ fe\na7 oS ¢\" ST ORRCO ‘-\nps ASCO o | aS, y, ~\nie) / V2 @ i oom ee — 4 ay\n~ \\ i J tevel 50\n\"eile Passives oe non | Recommended 100,000 if ——— a 7\naN ” foment 4 b Score 32,842,054460.310 f Autororm fo emeer |\n",
+  "nh2D7xZ7dOQ_recherche_23.txt": "< FormTeam 2? (> fea\" 12,147,342 a BE)\n( tar Guild Boss Mode\n> Team A Team B NG ‘Jf Remnant Power\n¥ , ay a) I) \\ py ae\na. GA Ae ) af by\ny EO © Ny <x\n7 1 @ [© My Ae 4 ry y\n, we. \\ | ie Level SO\nAg 936,000 \\\npes Boss Passives > 38! hen Pescicweame 100/000 | oo |\nA, M Seeommandiad its Score 32,842,054460.10\n| \\\n",
+  "nh2D7xZ7dOQ_recherche_24.txt": "<FormTeam 2? X fe\" 12167342 a Cy\n( tar Guild Boss Mode\nTeamA Team B Nd ‘jf Remnant Power\n\\G@RE Fei 2veoleseo |. “83\n\\e pend Bs J xenwe Paoee — L\nx \\my wil a. as Y <]\nFU ek PU ye r ai we SS\nE| 7h Some w=) Score 92842054 460,310 7\nyr \\\\\n",
+  "nh2D7xZ7dOQ_recherche_25.txt": "< FormTeam 2? (> X fester 12,147,942 He 8)\nif xX Guild Boss Mode\ne - Team A. Team B NG ‘jf Remnant Power\n. i ZF «Som | eae 1 fh\n- AS, R hie bn “i Leo Ze ©) rate\n+ Wh Age (Sa\nLeh Se) xn Pxrcee\nf\\ eg Sw O fee oO) eo x\n, } ; | } <q)\n: RY) eee \\> (O° ES 4 TI ig\nViscum | ical Dw wie e QS\nil ~ ¥F j biz ®)/@ HI=O Hons\n' X 836,\nWAST |fboss Passives ne 2] Gesomumanta 100,000 = y\nfh a secon fener)\nel iikaeemene Score 3284205446031 aaa\nie |\n",
+  "nh2D7xZ7dOQ_recherche_26.txt": "<FormTeam 2? feu 12167342 = 6)\n( tar Guild Boss Mode\ny Team A Team B NG Nj? Remnant Power\nPY) a7 y Ata\nb 4 44 & BS ONE On f as\nfor Bed Sx} Pee OE rie * \\\nSaaS Sy eto J e*eo Bf\ndeat” BEBO Gee KS\nyee) ee) Ba NN\nMO?” A Mm Lveo | como Few\nEh i ese Le Score 32842,054460.310\n| \\\n",
+  "nh2D7xZ7dOQ_recherche_27.txt": "<FormTeam 2 GED x 2430 - 5\n‘Team A\n4 - g yy Py ® © | Pee\n*) 8 be aise tay Pea tee a) wre eee\nq f; | 4 ]\na SAY Y 2a gb ele ‘\n+ ‘Wye 20 250) O}) ae fo 300) hn F20)5 +20\n: Ps: e320 2 20) (@v.203 Guat, @v.120+)\\@ui20+\nVe AN G20) dg 20 Ds, pei ey As00)|, 4400\nayy) ANE 8120 Lv1203 s\\121203 @iv.1204)\\_ 1.120) w:120 v.120)\ne, A \\ lilly,\n// N\nZ| ek . We gu ge\nWs 220) * paee20) J 20) 0 1 920)) 2047 { 20)\ni. = ahve: Ae i203 ert] Lia Lia, {site| let ics,\n| he op WA\nF (\\ Auto-Bgui Auto-Equip Auto-Equip Auto-Equip\n& auip\nI\\y -_ :\nWs a me On a Recommended, aa a\n~ | [Boss Passives |i) yim &) SS eae 100/000 4 @\n/|'B\\. |fecommenaea ~ Auto-Form\nje) lyafetemenc JG Score: 32842054460310 A\n7\n",
+  "nh2D7xZ7dOQ_recherche_28.txt": "f mae =\n< FormTeam 2? (> ( iPreset X fone\" 12147342 = £\n; Team A\n\" \\ ae Pie ey eee ea wee\niM |\n4 Ye Fe aise VN eh £0 a2\ni« eal 85203) u 20 evaz0y) waz0s, 6.120) |@.v-120\nGE mar , » i\nWp: ai ead da 20)| 20) et Sn 2 20), 20 é\nt' f 6 ‘e208 Pioo2|\\a'v-00 Biv 120%) LW. 1208 {wsscasl v.120\n‘ f “\n; | \\) 0 * ee 20 Des He %y 420 | 21420 (s20|| 2 20)\n= 120: 033 1204) Wv.120 (alustanis Lv. 12034) 4120-4) |. 120+\nBESS: Vga Wa ;\nao ww 7 > , ,\n( Auto-Equip Auto-Equip Auto-Equip Auto-Equip\nVii = .\nem (aa = 2 a a8 ' =— =\nWig |fboss Passives [sk tim &) ee 100000 4 4\nJOM et ig ee Auto-Form\nB= Neaene Nia Score 92.842,054460,310) a\n]\n",
+  "nh2D7xZ7dOQ_recherche_29.txt": "< FormTeam 2? fe 12.167.342 = 6)\n( tar Guild Boss Mode %\n\n2 Team A Team B Se Remnant Power\n* é My mag, fie Oe i 4) f4\n\n7) 2 Se ee eee\nav < A A of, Sst. Wed ANtG=Egt oy 8\n@ Ig bony i — wy ‘if &\\ GON te ie ‘\n\nf od WA , wow we 50\n\ni Ww f 1 PBK cee 4 PO RaRREED | 836000\nWBE | [Boss Passives 7) {| Tolpowen 100.000 Qa\n|'GI\\, [fRecommendea 1) i |\nbs a ecomm ic) Score 3284205446031 —aar/\n\niP\n",
+  "nh2D7xZ7dOQ_recherche_30.txt": "<FormTeam 2? <p feu 12.167,342 = 6)\nif EG Guild Boss Mode &\n2 Team A Team B he \\jf Remnant Power\nye) DODl oes <4\nig Fiji Fa Wv.20 v.20 v.20 v.20 v.20 v.20 — ‘ihe 4\nar < if yy a la25 ( Auto-Equip ) ( Auto-Equip ) = 3\ne2a~) faial fa |\nfs sn nIe m a, AS\nA fa Cy. a Ww.20 v.20 v.25 Ww.20 v.20 1.20 4 b\n& ‘al iy soll ( Auto-Equip ) | (Auto-Equip_) ¥ i q\ni — ) OT YS \\!\nF\\iGmDenlo@oen -:\na8 0. wh W.20 Wv.20 v.20 Ww.20 WIS Lv.15\n| ~ ‘Auto-Equip (Auto-Equip_) (Auto-Equip ) pa\nW150 : \\ % Recommended\n“Biz ||fBossiPassives | 17a) 46} 8] # Total Power 100/000 _———\nZ (p JElement * Score) 32,842,054 460,310, SSS\n\\\n",
+  "nh2D7xZ7dOQ_recherche_31.txt": "< FormTeam 2? (> eae\" 12,147,342 re BE\nif Ea Guild Boss Mode &\no Team A Team B Ng \\jf Remnant Power\noC oS te 4\na y Mi x = \\\\\n* ) 4 Tis “aa W200 Wv.20 v.20 W.20- Wv.20 v.20 — >) f4\n+ ny ‘‘ iON aS UVraS ( Auto-Equip_) ( Auto-Equip _) = PT\non CS Seon.\nOL NGS, 2 a) & he\nZ Z| a Ub W200 W.20 W.25 | v.20 W.20  Lv.20 5) b 5\nle \\ pe ( Auto-Equip ) (Auto-Equip ) i ,\n} oe ED | Sete) | Za)\nS\\igkoeoloeel\nay\" , th tv.20 v.20 Lv.20 v.20 v.15 Lv.15 50\na ( ‘Auto-Equip ( Auto-Equip )) q Auto-Equip ) i J\nfi oe\nlei Iraletement v6 Score 3242054460310 | —_ ar)\n| 1\n",
+  "nh2D7xZ7dOQ_recherche_32.txt": "— | Ve\n———— ( = Preset v4 ot se Fires of v Bel x 8)\nve ae S = pe yi ree fe) lengeance Fe\nadds 6 ABI, : wy - SlayOnLowYT :\nGuide” =o mth { Egy / Guita Bos Gui v.70 » A\nag poe p) ii Team A On ee oO\nhem, ) ‘a ‘S)) ea ( dh Game Modes ‘hon ge &\nie) erectal summons o ( Ww.20 W200 Ww.20 [<> {Hidden chapter InProgres ea\nb «4 CAT 4 WG es f x \"e\nten — | Sf) aye ae Sip, ani) Be\n6 \\ > be <Ae| €\nay 1d 9h i W.20 Wv.20 Wv.25 Nig yey 4) eS\na 7 Auto-Equip Sung Jinwoo Hunters | | Legacy\nGN, < Saar S\n‘es aa = >\nxd ‘é) =) ‘a U} # % S& |\na. Wv.20 v.20 v.20 Weapons Artifacts Core\nquip Auto-Equip ? a\n— , hed be ®\n» oie wie ee ee\n",
+  "nh2D7xZ7dOQ_recherche_33.txt": "—_—— — [= Preset 4 QO BY sats Fires of Vengeance Fe 8)\n- i vy a a+ & SlayOnLowYT a\nhide’ = \\ AG a { a ecules wn aun wa . Mg”\nSec CUED y) Team A\\ —— |, ke my\ncae < V5 \\Sme\\ 2p WY ©... ae\n—— \\ ee) Ge c ( Ah Game Mode ‘in ge &\nC8 Gp jeesst summons L W.20 v.20 W205) Hidden chapter Inrogres an\nm wailable b i\nNey p Aeon foe (. Auto-Equip = — (S\nEG cs ncrncs ») ve) fe) Pe) He. ae ; BRE | Be\n\\ ». eam 7 y v.20 Lv.20 ppulv.25 “ig wary ‘| ous\n— - @ Tn sungJinwoo| | Hunters | |. “Legacy\nSaeeyTtl<] «| s\n5 Wv.20 v.20 v.20 Weapons Artifacts Core\nquip ( Auto-Equip 2 i\n4 __ Recommended nn hed Sho, i\né | Total Power 100/000 pe\na = : 1\ny 2 842,054.46\n— «eS\n",
+  "nh2D7xZ7dOQ_recherche_34.txt": "— baie\noa — fay fz Preset a x 2 a A) Fires of Vengeance te 8)\n2 yy ,: : . a+ & SlayOnLowYT\n| Glide” = on D sth a f [XH Gute: aa wv.170 . i\nOme \\ La (Ge C2 ( axe P| _\nf 3g ) esa Sem L win) th Game Modes: < &\na \\\\ Special Summons y - sy eS\nwe == Vi Wv.20 v.20 Ww.20, fv) Biden Chapter bid a a\n. Worm ji =e (. Auto-Equip - X%\nAC Ms Successor ofthe Fangs y)) i) ( Se UA ee & il Sp Aer Be\ney “4 4 W200 W.2R. v.25 Che| |p, ae RAS OS\nBy a ( Auto-EGtip SungJinwoo) | Hunters | ‘Legacy\ny fai) (Azle\na v.20 v.20 v.20 Weapons Artifacts Core\n. wooo || = 8\n= en Score 842054460310 P 1\n’ —_ Ss oe me Oo\n",
+  "nh2D7xZ7dOQ_recherche_35.txt": "€ sung Jinwoo 2 WINDMETA vy @ > 65999\\+ @  1138,347,328 He 8)\nsee } 4 ta Sung Jinwoo 2\nVitality © Agility Lv.170/170 Max\ni+] Ae Se . Total Power 2,230,101\nIntelligence Perception ae. % (@) OHP 108,761\nhate\nQ a Wey J 5 SF + Attack 1544\n= V4 enorachetsaios ) Defense 63,827\nskillo1 skilloz Ue by is a. _ : -\nOui . ead\nsem) Dea > i cy gore SSA\ni eer 1.47. £ by,\nOy, Ge We Sy. Sunadinwoo) Bt SN ed x nsurs\nK og 5 'S ES _ a Poca 2 ee OER\nwy , ae 4 p '\n12> | CRBS sf) i = ia) P F\nOD Y as ss + + we\n",
+  "nh2D7xZ7dOQ_recherche_36.txt": "< Sungjinwoo—? WIND META ¥ @ > 65999 + @  1198,347,328 Ho B)\nr Assign Stat Points Ke a\n= “a\nVitall Max\n200| Strength Attack 3,705 co —- 93 +| +0\n+ [2,290,111\nmat | “Vitality | peso ee oc - mm + +0 108,76)\n° , 171,544\na Critical Hit Rate 3 on 63,827\ni. ality, Critical Hit Damage 732 sez wu al il\nOs | SSA\n® A Additional bs 3 2% i = 1\ni Intelligence Cooldown action 120 c 10 ate +10 HN act\n° es YER ”\nPerception Precision ? 9,045 co) ie m + +10 ssh\nmnt [Sung Jinwoo] TotalPower 2,326,415 > 2,230,111 (-96,304) kes\n1 Asura\nSee] Ta i tec,\nal =e\nmee\n",
+  "nh2D7xZ7dOQ_recherche_37.txt": "<€ Sungfinwoo ? WIND META vw) € & 65999 + ©  1198,347328 i B)\nAssign Stat Points o< | 2\nVitalit} | Max\n200) Strength Attack 3705 718 = & Bo t\n2,230,111\nIntellig ae Defense 3,131 a 108,761\n10 Vitality HP 10.437 c 200 ate +10\n© 71,544\n|\n| an Critical Hit Rate 73 al = 63,827\no “st BOTlicy, Critical Hit Damage 732 = w aa il\noS f| ssrA\nef ‘4 Additional MP 24 =\noe Intelligence | Cooidown Reduction 120 az i + +10 A. =\neal iy oe\n’ Perception Precision ? 9,045 <1 to m aR +10 ssh\na Fes\n|\n",
+  "nh2D7xZ7dOQ_recherche_38.txt": "< SungJiiwoo ? WIND META v) & & 65999 + @  1138,947,328 Ht B)\n| Assign Stat Points ye 3\n| 4\nVital} Max\n200) Strength | Attack 3.705 co —) 999 /+|) #0\n12,230,111\nIntellig Vitality Defense 3,131 el- 200 +)! +0 108,76]\n0 HP 10,437\n© 171,544\nap Critical Hit Rate 2B a 63,827\no ~ BOTlicy, Critical Hit Damage 732 = w oa Wi\nOS SSR\nia F; Additional MP 24 7 7\noma Intelligence | Cooidown Reduction 120 ae iw ti 710 i a\n¢ e iy HER a\nPerception Precision ? 9,045 eg = m aR +10 ssh\nl’\nal ( Fe\n",
+  "nh2D7xZ7dOQ_recherche_39.txt": "< sung yitiWoo 2 WINDMETA v) € & 65999 + @  1138,347,328 Ht B)\nAssign Stat Points ye 3\nVitali ] . Max\n200) Strength | Attack 3.705 co - 93 + +0 y\n2,230,111\nset vitality arevenee ee co - mm + +0 108,76)\n° : 17.544\nap Critical Hit Rate 2B a = 53,827\noS ot BaTlicy, Critical Hit Damage 732 = w Sal Le\ni Add 1 MP % 2\na A itiona| = =\nanal Intelligence “Cooldown Reduction 120 ee a sing 210 ae on\n* a ee\nPerception Precision ? 9,045 eg = m aR +10 ssh\nI’\nCR (| r\nwy] 0 + ot fe\n",
+  "nh2D7xZ7dOQ_recherche_3_gb_results_partiel.txt": "< Guild Boss ? _ 5}\n= ee\nvy y : Ab AN Se EEE\n© Time teftin season 6d 9h 5 ce eS Personal Record es)\n~ XY Py\n| wa ¥ a 4 ‘i es. Total Score Challenge Count 2\nom Boss Info 4 N = ) Kee | ~ § 32,842,054,460,310 | totatragecount 932\n~~ . me | SS\n* als All-Out War a m1 are 17.281 @\n| Y | ms |\ni SYN |e ae\n, antl - 7\ner, ie  )\naS v |\noe) Bae ©\nyy af :\n| - ion BONS a a\n|< RB cruz ates 15.55T ©\n; (ae OD. Sages s\nalls | Guild Member Rank Giant Statue va E aa\n~ Total Power __Recommencled Element ©)\n(BR) rage rewards 100,000 5a 4\n",
+  "nh2D7xZ7dOQ_recherche_4.txt": "< FormTeam 2? (> X fewer’ 12,147362 He B)\n( tar Guild Boss Mode\n7 Team A’ - Team B Ro je Remnant Power\nals, 4 ssrA 4 ye\nx a  ~ S e S\n5 4 y ai Al das “4 1 ii ~ ores \\ (A\n Aagee twil7O POA) onl) UG ie ») f f\nh XS aaa Os , ae\nGG ee Por hog 8\n® nVgom < RS rg) MN : @ >>\nP f a 08 » \\ | peolll Ez . a Steven 70) f if =) veal\ny , 2.046, a 213,25 i\nfc aN WE a 2 NY 2 8S i Se\nZ ss —4>—\n} {hi fo ==\" ey As eS | eS \\ Ss\nDeel /A8 on akin Ny ORE ASS in ys im Fy tvs 50\nhi are 5 tt reel Fok ene ax 5) “pease 936,000\n= by ements is) Score 3284205446030 —aaa\n",
+  "nh2D7xZ7dOQ_recherche_40.txt": "< Sung Jinwoo ? WINDMETA vy) @ >  65999/+| @ 138,347,328 He 8)\nSEE ; ta Sung Jinwoo a\nVitality © Agility Lv.170/170 Ma!\n200 0 eA zz\n‘a S$ a N@ 5 + Total Power 2,230,111\nIntelligence Perception ee 3) OHP 108.761\n9 q j ONS OY + x attack 1.544\n- > 2 . { oe Defense 53,877\nstator skinoz _ultimate ES ) — -\noy. % Oe MN\nE01 QTE 02 \"QTE 03 ; i a Moonlit Gale\n“a * “fo aa 4 be. -@ PAYER\n= ee by fi © > \" 4 7 SSR\nZ __ ae fi iy) z RGe a\n‘oO. @ . Om ce i 4 SE Sg ip & nsura\n",
+  "nh2D7xZ7dOQ_recherche_41.txt": ">»\n<a\nme) / Stat Details x\n7 = jf Can) Weapons Artifacts >\nrf LZ © HP 108761\n9 vj 7 J © mP 4439\ner Jf WED |S attack 11544\nI iS PAY RY © Precision 94.34% (35045) 2 7\nSy a °\n. Al J ei U Defense 71.86% (63827)\na a\n& Bs \\ SO |v criticat nitrate 50% (10180) 2\nSY J 252 WY / | *\\ Critical Hit Damage 212.83% 9) g\n“Eade | ev Cooldown Reducti 0.28% (120)\nAhjin Guild | | \\e 3 © Cooldown Reduction F\nz Y Defense Penetration 43.99% (39264) ?\n? Damage Increase 34.7% (26572)?\n",
+  "nh2D7xZ7dOQ_recherche_42.txt": "oi OE eon oe\na Stat Details yA\n. ) fi fo ty tn = -\nf y) hy Weapons Artifacts >\nq er SO SZ= o> Precision 94.34% (35045) 2\nSp Ni 4 U Defense 71.86% (63827)\nt nee 4 We | critical Hit Rate 50% (10160) 2\naS / b\nL ie ¢ Ni / a | *y Critical Hit Damage 12.93% (21978) lod ij\nRe \\ eae / : © Cooldown Reduction 0.28% (120)\nel & ack \\, FO’ 4 vetense Penetration 49.99% (39264)?\nSi, aes \\ J y Damage Increase 34.7% (26572)?\nSung Jinwoo | Bi\nnT \\| ? s @ Damage Reduction 0%(0) 2?\n\\ ; 2 Healing Given Increase (%) 0% (0)\n§& Healing Received Increase (%) 0% (0)\n",
+  "nh2D7xZ7dOQ_recherche_43.txt": "ci ER esa oT\na Stat Details yA\nf “Kk | fi. Po ty tn = -\n; yg :\nq LN OPC AZ © Precision 94.34% (35045) 2\nJp: PN Za W Defense 71.86% (63827)\nCS BZ i NG |» criticaricrate 50% (10160) 2\nCi) CUgaX«\n+ ie <\\ il |e |» Critical Hit Damage 12.93% (21978)? rr\n\" ae / : © Cooldown Reduction 0.29% (120)\na & acd \\ho” AAI’ —-w defense Penetration 43.99% (39264)? >\nSA lemme \\ j I ¢ Damage Increase 34.7% (26572) 2\nSung Jinwoo | Bi\nnT \\| ? s @ Damage Reduction 0% (0) 2\n\\ ; 2 Healing Given Increase (%) 0% (0)\n& Healing Received Increase (%) 0% (0)\n",
+  "nh2D7xZ7dOQ_recherche_44.txt": "Ci OR els EF\n1 Stat Details K\nf . -« ) fi Bf ty yg rn = -\n; yg :\nmy Sf Ui 4, Can) Weapons Artifacts »\nDiy KapeZ= © Precision 94.34% (35045) 2\nAV Del\nJp: Ni Za U Defense 71.86% (63827)\naie BZ c NG | > critica irate 50% (10160) 2\na SS ‘A yy i cA\n. NS “Vil a> |» Critical Hit Damage 212.93% (21978) 2 ij\n. ae / : © Cooldown Reduction 0.29% (120)\nam & 350 \\, FO’ 4 vetense Penetration 49.99% (39264)?\nSi lemme \\ j I ¢ Damage Increase 34.7% (26572)?\nSung Jinwoo | ei\nnT \\| ? s @ Damage Reduction 0%(0) 2\n\\ ; 2 Healing Given Increase (%) 0% (0)\n& Healing Received Increase (%) 0% (0)\n",
+  "nh2D7xZ7dOQ_recherche_45.txt": "< sungJinwoo 2 WIND META vy @ > s5999/+ ©  1138,347.328 He 8)\nBscencen ; i fe)\n994 ; [a Sung Jinwoo\nVitality © Agility Lv.170/170 Mox\n% 0 (wea, A\n(+) eee ar \" Total Power 2,230,111\nIntelligence g — Perception M eK @ OHP 108,761\niW W f a Wy + ¥ Attack 17.544\n= ae E Naw newensenetowios Defense 63,827\nskill 01 skill 02 we / Bs) ‘e “7 K\nSaheb a, “ey, _ ‘ e : } ssh\n\"de eS 16 4 ‘ , , Be, ee\na = AV Al | , . Ss 5\n. » OF Op ee a ay x Yi Spieste sia & Asura\nv) is\n>. Oy Oy y 2\n",
+  "nh2D7xZ7dOQ_recherche_46.txt": "iy\n",
+  "nh2D7xZ7dOQ_recherche_47.txt": "< FormTeam 2? (> fen\" 12,147,342 He EB)\n( tar Guild Boss Mode #%\nSs feamiA\\ meam)B) <> Sif Remnant Power\nYS =e oS > eS >\nte) Si) \\ . .\n* . Um LY = \\\\ ff\n. Ka / . f, atTAX, v.20 v.20 v.20 v.20 Wv.20. v.20 ca Zi) 4,\nal < vA \\ aes (Auto-Equip ) (Auto-Equip_) > -\n6 PERM ew | oar .\n(fp NX W200 v.20 v.25 W.20 v.20 v.20 { iS \\\nie) Wi 7 ceual (te ‘| | (Auto-Equip ) 5 y )\ncave facial facia] ian\n\\ oe. ‘ bs) v.20 v.20 Lv. 20 v.20 v.15 Lv. 15\n| va Ww: 5 Ee = tevel SO\nj Auto*Equip ¢ Auto-Equip J ¢ Auto-Equip ) X 936,000\net MA\neT TT 3\nbs 7M aoa =) Score 9284205446010\n| } Q\n",
+  "nh2D7xZ7dOQ_recherche_48.txt": "< FormTeam 2? (> X fawn 12167362 He B)\nif Xi Guild Boss Mode\n¥ j —_ re = teams - NG ‘ij Remnant Power\n<a o\\ 89 o> Gene \\\nSeo www T 4\no a A Me 4 ‘. \\ _f\nwo 7a Yip ee Wv.20 v.20. v.20 Wv.20 v.20 v.20 eo Py f4\neS \\ iy i aallvr25: (_ Auto-Equip ) ¢ Auto-Equip ) ; NG. 2»\n+S A — ——, NZ\nOY \\, & = «: S Q\nWAsu~) tara\n@,. Vp Re (2 si ®) @. «\nhk / noe Ne lv.20 v.20 v.25 lv.20 v.20 v.20 “ b )\nof ~ “Tys25 a_i Far rN\n® if | ios a Ghani ) fi ‘ « ue ) | 5 : 7 q\nc Guay ros SANS $F & | . :\nov Botcy ies\n737 \\K \\wesie Wv.20 v.20 v.20 W.20 WIS v.15 sf\n| ( aor (Auto-Equip ) (Auto-Equip_) 836000 J\n| BK |ffrecommendea ij i\nle te Element ath Score: 32842054460310 ——\n} \\\n",
+  "nh2D7xZ7dOQ_recherche_49.txt": "hy\n",
+  "nh2D7xZ7dOQ_recherche_5.txt": "< FormTeam 2? X fee\" 12.167.342 = 6)\nif Ed Guild Boss Mode\n“ TeamA Team B 4 Sj Remnant Power\nVF, & SC & % AN \\ Nh f\nmt ae Tih A tn 70) ON miliet me Oy 1\" 4A} f\n\" Me EN ra wail MA oil } Vis 4 i,\n“| 7 ~~ US 882.046.699 to \"203.256 7 al ¥ is |\n. , i 4 i A dd REAR, A BY CELERY\n= 4 / \\ mn <> * > ssa o> i}, ssh \\ ~\\\n(EAMG © 5, ioe \\is\nNy Vl a Sy) Meni) — a\nWa on es Eos. \\cseese P 5 brats dp X 996,000\n2 iT\nit f \\ a,\npang ee hon | Bela 100,000 um emer |\nS ah ia its Score 92,842,054 460310 array\n\\\n",
+  "nh2D7xZ7dOQ_recherche_50.txt": "os .. 2a\nD =F -. ‘a “Se ag D/\\) i & ( a\nBal Ss! wr a, Giant Statue\na | / we 4 myer by a sinister goal, the stone constructs\n) eh oa ¢ / Y | aR 7 relentlessly regenerate their shattered\n7 Fy \" Peay en. +e bodies.\n, j ) AY ih) Ni ae P\n”.. —a- =\n",
+  "nh2D7xZ7dOQ_recherche_51.txt": "6 | = GZ\n\n{ ene \" &\n\ni “ a wen\n\nEo es ye er Giant Statue\n| | ; ee a ipsiven by a sinister goal, the stone constructs\ny eh oa € f SW ion { 7 relentlessly regenerate their shattered\n\n; aa ———\n\n1 SS cs i\nmae 7 LE aN a ee\n",
+  "nh2D7xZ7dOQ_recherche_52.txt": "C aals S\naw. + i .\na, ew\" 7\n- : =\nals ‘ Se 4\nZa) 3s' om a Giant Statue\n- 1 / ; ee ‘i aptiven by a sinister goal, the stone constructs\n} Wh bas ¢ y Wy en ama | relentlessly regenerate their shattered\n4 Py , Py Fe ve \\ es bodies.\n( ————— { \\\n« - . = = _——SSSs “=\npe S —F% ae\n",
+  "nh2D7xZ7dOQ_recherche_53.txt": "( ely ; 4 \\\nNey te ; ai hs :\nBal ds es ae Giant Statue\nES i | / i fei maven by a sinister goal, the stone constructs\n’ Hh 4 ¢ / y a ion { . relentlessly regenerate their shattered\n, 2 ie f aga : ma bodies.\nom Sa a\n",
+  "nh2D7xZ7dOQ_recherche_54.txt": "i,% *y\nCtl ’ \\\nNey te ; ai hs :\nZl en av Giant Statue\n- | ; bas ‘i qptiven by a sinister goal, the stone constructs\n’ Hh ft 4 ¢ / y/ di int { . relentlessly regenerate their shattered\n\" . eae’ bodies.\nfh, Ba a ——~-\n| P= v ee\n",
+  "nh2D7xZ7dOQ_recherche_55.txt": "‘ “ey &\n=a $ 1e ‘\ngals ’ ay idee\ne ar Ss Ue “ed Giant Statue\nel ! Ni an Wyven by a sinister goal, the stone constructs\ny wh a € / y | ame aX t relentlessly regenerate their shattered\n) > ‘4 yy cs en . a bodies.\n",
+  "nh2D7xZ7dOQ_recherche_56.txt": "1%\n\nZales i } =\n\n3 ,s | wae\" Giant Statue\n| I, / ise eh Driven by a sinist\n| . yah f \\ ah er goal, the stone constructs\n\" | ° ; | r [ . v=) i. 3 lentlessly regenerate their shattered\n: : | : 4 4 y b i\" ; ss “gh i bodies.\n\n1 = — “a oY Y 4 <2\n~ Ha % 2 Fy\n",
+  "nh2D7xZ7dOQ_recherche_57.txt": "Cates : 4\n= * ' ‘\n, Gol) # Me 4 . ey\n| as! or bi 7 Giant Statue\n- | { ® a ipven by a sinister goal, the stone constructs\n| eo € / y | aan A t relentlessly regenerate their shattered\n, P) f Fey he bodies.\n/ : y / 7 ce: ail [ Ji és, 1M re “fs EY i\nZA 2 : ==\n=n uy sz@ EA * ee\n",
+  "nh2D7xZ7dOQ_recherche_58.txt": "Cas €\ni —| Ree e “+ \\ SAN I Aa, 4 4 Ca\nj y ant 4 ¢ . yf wenee \\ i, ‘\n= 4% ——_—-— = Ge\na 4 — | ..\n",
+  "nh2D7xZ7dOQ_recherche_59.txt": "Cas €\ni —| Ree e “+ \\ SAN I Aa, 4 4 Ca\nj y ant 4 ¢ . yf wenee \\ i, ‘\n= 4% ——_—-— — Ge\na 4 — | ..\nFs ae\n",
+  "nh2D7xZ7dOQ_recherche_6.txt": "< FormTeam 2? (> % feo\" 12,147,342 He 8\nif [>| Guild Boss Mode\nTeam A Team B  (Sj# Remnant Power\nseaaa! g Co w “a | . A\n+. a / & YASS & ‘pe — \\\n* \\ 7 ae iwil70 Ne eal) UG) | Same 2!\n‘ + d 1.967,2/) a 2.0344] 5% , 4\nTas ANS - = ij\n“ad PG ' 2 i | ° 4 °@ {\nIpc 2 | SEEDS q Sa\nof vy : \\ 88 2.046.699 0 nm 2718 256 f) 7 0 we |\n& f a A a dl EARP, A BST CELERY.\n— 4 q mn <> > ‘> ssa > i}, ssR \\ ~\n'V [BEES \\ SO, 257%, 555) ‘ s \\ |\nFE VP Bea) oe\n\" Sm | a PS OD level = °\nORB 2) Ls ee\nBang eo 3 re 3 Teeibanar 100,000 emer |\nS 7M ia o) Score 92,842,054 460310 are\nF |\n",
+  "nh2D7xZ7dOQ_recherche_60.txt": "LS ea i\n= ey PNY : Fe ij gi\ny al 4 ¢ 2 / Vi, C 4 \\ ‘ 3\n‘ \\ : ef Exe ENS = -\n17 y, ya? te 3 4 ‘in Sa 4\n",
+  "nh2D7xZ7dOQ_recherche_61.txt": "Gi) _ 6\nAk 4 ‘9a 3\noe) % ; md Fs PAL\noe ——— le ew\nRs _ a ee 4 @ Fp\nLE [SN Pn oe ee fe yy 2\nPd a = a — ;\n",
+  "nh2D7xZ7dOQ_recherche_7.txt": "< FormTeam 2? <p X feu\" 12.167,342 = 6)\n( ta Guild Boss Mode\n“ TeamA Team B 4 Sj Remnant Power\naad $ Keo) & ( ® SsR Q-\n; 7 weg! \\ .\nn / > ue > } Ae a \\ ‘s\n\"ROM J) ey 2 wel 170. a wipe Me Sp ae) f'\nmw Gs 4 1967.21 2 20IAT snag De 2\n\\ BEN > iN -. . 1 wg\no,. C¥K MEA So Ta by)\n©) oprah : L@ cos WiRU  & 4\n“4 Spex eA!) \\s 0 Dery ; 170 wy f SS AS\n\\ LoS asa Pw lad | ‘a laea h\n» 23> \\ (evel 0 Ca z q tell Oe =\nteen 0 Pee pe” By 2 in 2 | toe 0\n126,415 < 5 =4 i\nNAR,\nW. 18a = Boss Passives |) @| \\ es Recommended 100.000\na “he oa B=) Score 3284205446010 [iia\n",
+  "nh2D7xZ7dOQ_recherche_8.txt": "< FormTeam 2? <p X feu\" 12.167,342 = 6)\naT Guild Boss Mode &\ni Ea\n“ Team A Team B 4 Sj Remnant Power\naul > ro, 558 OD 1 fe ssn Ye\n“7 ) Ss ay x Nee. \\ . A\n\" Omg doll Wipe «iam\n_ ING ry \\ ae\nOT Ne (aa ok | © ae Oo ‘ s {\nif WAS ~~ | \\eul70 WA & a tevei 70, (> ‘A Ms s 5 :\nNz | | Ceo ike | © Co \\ ~\\\n\\ em |) \\ Gril OP enil] = all st\n29 70 5 2 Rie; We a sidee Siamese Be Sea 36000\nmsi x ay y, Recommended\nS 7 ia B=) Score 92,842,054 460310 para\n",
+  "nh2D7xZ7dOQ_recherche_9.txt": "< FormTeam 2 > Xe\" 12147342 = 6)\n( ta Guild Boss Mode %&\nTeam A\\ Team\\B jf Remnant Power\n&@ (if Remnant Power\n7 : = : io\nees > ssn > Po ssn %\noF x Ne Xx A y , N\nwy \\ i LF; - Y b> & | = ) e A\n\" 9 Ame ioeil7D. wall) UG) | SN 2k\nae 7 4. 1967.27 3 2030475 Made. 4\n» NAY - & ace a 2 eS\n\\ - ee Me J) ‘ Ke 4 t ¢ 4\nOu. .| Varma L erg 225 a we  & j\n© A es oS) DET g Dy A . {\na At) \\4 470 eS a 170 Y \\é 4 6 SS AS\nYd ce A ee SO ee mw»\n(AWA ed Oo Oe\niin\nmpi } \\a, Recommended,\npov esha eh 5) Total/Power 100/000 y\nOK, Recommendea L\\ | i f= Auto-Form ny Enter\nbs a Element B=) Score 3200205446030\n"
+ }
+}
