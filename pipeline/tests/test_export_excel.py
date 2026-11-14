@@ -10,7 +10,7 @@ def test_lignes_et_fichier():
             {"rank": 1, "player": "A", "score": {"total": 332, "runs": [167, 165], "unit": "rage_count"}, "confidence": "sur", "video_id": "v1",
              "published_at": "2026-11-13T11:14:16+01:00", "score_source": "record", "notes": ""}]
     lignes = export_excel.lignes_mode(runs)
-    assert [l[1] for l in lignes] == ["A", "B"] and lignes[0][4] == "167 + 165" and lignes[0][8].endswith("v1") and lignes[0][7] == "2026-11-13 11:14"
+    assert [l[1] for l in lignes] == ["A", "B"] and lignes[0][3] == "167 + 165" and lignes[0][6].endswith("v1") and lignes[0][5] == "2026-11-13 11:14"
     try:
         import openpyxl
     except ImportError:
@@ -21,7 +21,8 @@ def test_lignes_et_fichier():
         (d / "gb.json").write_text(json.dumps(runs), encoding="utf-8")
         f = export_excel.exporter("2026-11-12", racine=tmp)
         wb = openpyxl.load_workbook(f)
-        assert wb.sheetnames == ["GB"] and wb["GB"].max_row == 3 and wb["GB"]["B2"].value == "A"
+        assert wb.sheetnames[0] == "Shadow Ledger" and {"POC", "BOT", "GB", "HOTM"} <= set(wb.sheetnames)       # HOTM : onglet vide s'il n'y a rien
+        assert wb["GB"]["B6"].value == "A" and wb["GB"]["A6"].value.endswith("1") and wb["HOTM"]["A7"].value.startswith("Aucune donnée")
 
 
 if __name__ == "__main__":
