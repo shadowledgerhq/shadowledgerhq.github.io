@@ -11,6 +11,7 @@ Le script `pipeline/pc.py` tourne sur le PC d'Alexis : sous-titres (yt-dlp), Whi
    - Se connecter à GitHub (Git Credential Manager le propose au premier `git push`).
 3. Cloner le dépôt : `git clone https://github.com/shadowledgerhq/shadowledgerhq.github.io.git`
 4. Essai à blanc (ne pousse rien) : `py -3 pipeline\pc.py daily --no-git --max 2` (voir « Tris 3-4 »).
+**Raccourci (étapes 5 et 6) : double-cliquer sur `pipeline\pc\installer.bat`** (remise à zéro de `data`, `git pull`, création des tâches, passage de test, message « tâches créées, prochain passage : … »). Non testé sous Windows.
 5. Avant de créer les tâches : `git checkout -- data` (jette les résultats des essais `--no-git`, sinon le premier `git pull` automatique échoue), puis `git pull origin main`.
 6. Créer les tâches : PowerShell, dans le dossier du dépôt : `powershell -ExecutionPolicy Bypass -File pipeline\pc\installer_taches.ps1` (la commande affiche l'heure du prochain passage de chaque tâche).
    - quotidien 20:30, hebdomadaire jeudi 01:15, « exécuter dès que possible si l'heure est manquée » ;
@@ -55,3 +56,7 @@ Puis, pour tester une résolution 1080p, sur une seule vidéo : `py -3 pipeline\
 
 ## Gel de la semaine
 `pc.geler` reste `false` tant que l'OCR n'a pas été vérifié sur de vraies captures. Une fois `true` : le passage hebdomadaire gèle la semaine, rejette (`pas_de_score`) les vidéos sans aucun score après le tri 4, et marque « non vérifié » les lignes seulement provisoires.
+
+## Rapport et relance automatique (v23)
+- `data/runs/<semaine>/_rapport.md` commence par : **passage complet oui/non**, vidéos traitées / en_cours restantes (dont à traiter par le PC), erreurs bloquantes (anti-bot, outil absent, ffmpeg/erreur d'images, conflit git, crash). Complet = aucune erreur bloquante et plus aucune vidéo `pc_needed` sans tri 3-4 terminé.
+- Anti-bot YouTube : le lot s'arrête, le passage est « incomplet : anti-bot » et **une relance unique est programmée 2 h plus tard** (tâche « ShadowLedger PC relance », `lancer_pc.bat daily relance`), au plus une fois par soir (`logs\relance.json`) ; l'heure figure dans le rapport. Non testé sous Windows (PowerShell `Register-ScheduledTask`).

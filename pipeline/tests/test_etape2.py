@@ -66,9 +66,9 @@ def row_pour(b):
             "runs_detail": [{"video_id": b["video_id"]}]}
 
 
-def pptx(buildsf, lang="fr", row=None):
+def pptx(buildsf, lang="fr", row=None, db=None):
     tmp = Path(tempfile.mkdtemp()) / "t.pptx"
-    n = P.generer_fichier(buildsf, row or row_pour(buildsf[0]), lang, tmp, RACINE, DB, CFG)
+    n = P.generer_fichier(buildsf, row or row_pour(buildsf[0]), lang, tmp, RACINE, db or DB, CFG)
     from pptx import Presentation
     return Presentation(str(tmp)), n
 
@@ -140,17 +140,17 @@ def test_7_video_a_deux_runs_un_fichier():
 
 
 def test_8_nom_fr_vide_en_italique():
-    sans_fr = next((i for i, o in DB["successors"].items() if not o["name"].get("fr") and o["name"].get("en")), None)
-    assert sans_fr, "aucun successeur sans nom FR dans la base de test"
-    en = DB["successors"][sans_fr]["name"]["en"]
-    assert P.nom_affiche(DB, "successors", sans_fr, "fr") == (en + " (EN)", True)
-    assert P.nom_affiche(DB, "successors", sans_fr, "en") == (en, False)
+    import copy
+    db = copy.deepcopy(DB)                                     # la base évolue (discussion 9) : on force un nom FR vide
+    db["successors"][SUCC]["name"]["fr"] = ""
+    en = db["successors"][SUCC]["name"]["en"]
+    assert P.nom_affiche(db, "successors", SUCC, "fr") == (en + " (EN)", True)
+    assert P.nom_affiche(db, "successors", SUCC, "en") == (en, False)
     assert P.nom_affiche(DB, "stats", "hp", "fr") == ("hp", True)           # tout vide : l'id, en italique
-    o = obs_hunters(successor={"id": sans_fr, "level": None})
-    b = build(ctx(hunter_mode=True), o, REGLES_TOUT)
-    prs, _ = pptx([b], "fr")
+    b = build(ctx(hunter_mode=True), obs_hunters(successor={"id": SUCC, "level": None}), REGLES_TOUT)
+    prs, _ = pptx([b], "fr", db=db)
     assert en + " (EN)" in textes(prs)
-    prs, _ = pptx([b], "en")
+    prs, _ = pptx([b], "en", db=db)
     assert en in textes(prs) and en + " (EN)" not in textes(prs)
 
 

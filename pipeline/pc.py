@@ -22,6 +22,7 @@ import subprocess
 import sys
 import tempfile
 import time
+from datetime import timedelta
 from pathlib import Path
 
 import classement
@@ -656,8 +657,84 @@ def annoter_non_verifies(d, week):
         d.ecrire(f"runs/{week}/{f.name}", lignes)
 
 
+# --- état du passage, relance anti-bot (discussion 1, critère de gel n° 3) ---------------------------------------------
+
+FICHIER_RELANCE = RACINE / "logs" / "relance.json"
+NOM_TACHE_RELANCE = "ShadowLedger PC relance"
+
+
+def planifier_windows(quand, commande_bat, nom=NOM_TACHE_RELANCE):
+    """Tâche ponctuelle du Planificateur de tâches (PowerShell, indépendant de la langue de Windows) : `quand` = datetime
+    naïf (heure de Paris = heure du PC) ; la tâche lance `lancer_pc.bat daily relance`. Retourne None ou le message d'erreur."""
+    if sys.platform != "win32":
+        return "planification possible seulement sous Windows"
+    bat = str(commande_bat).replace("'", "''")
+    ps = (f"$a = New-ScheduledTaskAction -Execute 'cmd.exe' -Argument '/c \"{bat}\" daily relance'; "
+          f"$t = New-ScheduledTaskTrigger -Once -At ([datetime]'{quand:%Y-%m-%dT%H:%M:%S}'); "
+          "$s = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries "
+          "-MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Hours 6); "
+          f"Register-ScheduledTask -TaskName '{nom}' -Force -Action $a -Trigger $t -Settings $s | Out-Null")
+    r = subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", ps], capture_output=True, text=True)
+    return None if r.returncode == 0 else (r.stderr or r.stdout).strip()[-300:]
+
+
+def programmer_relance(instant, jour, planifier=None, fichier=None, delai_h=2):
+    """Anti-bot : une seule relance par soir (`jour` = date de Paris du passage), 2 h plus tard. Retourne un texte pour le
+    rapport : heure de la relance, ou la raison pour laquelle il n'y en a pas."""
+    fichier = Path(fichier or FICHIER_RELANCE)
+    try:
+        deja = json.loads(fichier.read_text(encoding="utf-8")).get("jour") if fichier.exists() else None
+    except (OSError, ValueError):
+        deja = None
+    if deja == jour:
+        return "aucune (une relance a déjà été programmée ce soir) : prochain passage normal"
+    quand = (instant.astimezone(PARIS) + timedelta(hours=delai_h)).replace(tzinfo=None, second=0, microsecond=0)
+    err = (planifier or planifier_windows)(quand, RACINE / "pipeline" / "pc" / "lancer_pc.bat")
+    if err:
+        return f"non programmée ({err})"
+    fichier.parent.mkdir(parents=True, exist_ok=True)
+    fichier.write_text(json.dumps({"jour": jour, "a": quand.isoformat()}), encoding="utf-8")
+    return f"{quand:%d/%m/%Y %H:%M} (une seule fois par soir)"
+
+
+def signaler_crash(passage, instant, erreur, d=None, git=None):
+    """Plantage du passage : le rapport du jour dit en tête « passage complet : non » + l'erreur ; poussé si possible."""
+    d = d or Donnees()
+    courante = id_semaine(instant)
+    week = courante if passage == "daily" else semaine_precedente(courante)
+    chemin = f"runs/{week}/_rapport.md"
+    ancien = (d.data / chemin).read_text(encoding="utf-8") if (d.data / chemin).exists() else ""
+    reste = ancien.split("\n", 2)[2] if ancien.count("\n") >= 2 and ancien.startswith("# ") else ""
+    titre = f"# Rapport — semaine {week} — passage pc-{passage} — {instant.astimezone(PARIS).strftime('%Y-%m-%d %H:%M')} (Paris)"
+    texte = "\n".join([titre, ""] + entete_etat(False, 0, 0, 0, [f"crash : {type(erreur).__name__} : {str(erreur)[:200]}"]) + ["", reste]).rstrip() + "\n"
+    d.ecrire(chemin, texte)
+    if git:
+        try:
+            git.pousser(f"données: passage PC {passage} interrompu")
+        except GitErreur:
+            pass
+
+
+def bloquante(avert):
+    """Avertissement d'une vidéo qui relève d'une erreur bloquante (exception pendant les images, ffmpeg) et non d'un simple report."""
+    t = (avert or "").lower()
+    return " : images : " in t or "ffmpeg" in t
+
+
+def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None):
+    """Lignes placées en tête du rapport poussé (SPEC §6, critère de gel n° 3)."""
+    l = [f"- **Passage complet : {'oui' if complet else 'non'}**"
+         + ("" if complet else " (" + (" ; ".join(b.split(" : ")[0] if b.startswith("anti-bot") else b for b in bloquantes[:1]) if bloquantes else "vidéos restantes à traiter") + ")"),
+         f"- Vidéos traitées ce passage : {traitees} · en_cours restantes : {restantes} (dont {a_traiter} à traiter par le PC)",
+         "- Erreurs bloquantes : " + (" ; ".join(bloquantes) if bloquantes else "aucune")]
+    if relance:
+        l.append(f"- Relance automatique : {relance}")
+    return l
+
+
 def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper=False, maximum=None, images=None,
-           journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None, seulement=None, refaire=False):
+           journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None, seulement=None, refaire=False,
+           relance=False, planifier=None, fichier_relance=None):
     """`journal(ligne)` : progression (print en production) ; `dormir(s)` : pause entre vidéos (time.sleep en
     production). Les deux sont inertes par défaut (tests). `_lectures.json` et `processed.json` sont écrits après
     chaque vidéo : un arrêt (PC éteint, Ctrl+C) ne perd que la vidéo en cours."""
@@ -678,7 +755,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     pause = pc_cfg.get("pause_s", 5)
     journal(f"Passage PC {passage} — semaine {week}")
 
-    traitees = 0
+    traitees, images_traitees, antibot, bloquantes = 0, 0, False, []
     if meta.get("frozen"):
         alertes.append(f"semaine {week} déjà gelée : rien à traiter")
     else:
@@ -719,7 +796,10 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                 journal(f"  → {etat} ({int(horloge() - t0)} s)")
                 if avert:
                     alertes.append(avert)
+                    if bloquante(avert):
+                        bloquantes.append(avert)
                 if etat == "reporte":  # 429 : on s'arrête, YouTube limite le débit de cette adresse
+                    antibot = True
                     alertes.append("429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)")
                     break
                 processed[vid].setdefault("pc", {}).update(sous_titres=etat, date=jour)
@@ -731,6 +811,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                     dormir(pause)
         except OutilAbsent as e:
             alertes.append(str(e))
+            bloquantes.append(f"outil absent : {e}")
         cfg_img = pc_cfg["images"]
         if cfg_img["actif"] if images is None else images:
             a_images = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours" and p.get("pc_needed")
@@ -754,6 +835,10 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                     journal(f"  → {int(horloge() - t0)} s" + (f" — {avert}" if avert else ""))
                     if avert:
                         alertes.append(avert)
+                        if bloquante(avert):
+                            bloquantes.append(avert)
+                    if not reporte and not (avert and bloquante(avert)):
+                        images_traitees += 1
                     if etat:
                         processed[vid]["pc"] = etat
                         processed[vid]["updated_at"] = jour
@@ -766,12 +851,14 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                             processed[vid]["status"] = "termine"
                     sauver()
                     if reporte:
+                        antibot = True
                         alertes.append("429 / anti-bot YouTube : images arrêtées pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)")
                         break
                     if n < len(lot):
                         dormir(pause)
             except OutilAbsent as e:
                 alertes.append(str(e))
+                bloquantes.append(f"outil absent : {e}")
         sauver()
         restantes = sum(1 for p in processed.values() if p.get("week") == week and p["status"] == "en_cours")
         if restantes:
@@ -791,10 +878,35 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             meta["frozen"], meta["frozen_at"] = True, iso_utc(instant)
             d.ecrire(f"runs/{week}/_meta.json", meta)
             alertes.append(f"semaine {week} gelée ({n} vidéo(s) rejetée(s) pas_de_score)")
-    ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes)
+    proc = [p for p in d.processed().values() if p.get("week") == week]
+    restantes = sum(1 for p in proc if p["status"] == "en_cours")
+    a_traiter = sum(1 for p in proc if p["status"] == "en_cours" and p.get("pc_needed") and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile"))
+    texte_relance = None
+    if antibot:
+        bloquantes.insert(0, "anti-bot YouTube (passage incomplet : anti-bot)")
+        if relance:
+            texte_relance = "aucune (c'était déjà la relance) : prochain passage normal"
+        else:
+            texte_relance = programmer_relance(instant, jour, planifier, fichier_relance)
+        alertes.append(f"passage incomplet : anti-bot ; relance : {texte_relance}")
+    complet = not bloquantes and a_traiter == 0
+    etat = dict(complet=complet, traitees=traitees + images_traitees, restantes=restantes, a_traiter=a_traiter, bloquantes=list(bloquantes),
+                relance=texte_relance)
+
+    def rapport():
+        ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes,
+                       entete_etat(etat["complet"], etat["traitees"], restantes, a_traiter, etat["bloquantes"], texte_relance))
+    rapport()
     if git:
-        git.pousser(f"données: passage PC {passage} {jour}")
-    return {"week": week, "traitees": traitees, "alertes": alertes}
+        try:
+            git.pousser(f"données: passage PC {passage} {jour}")
+        except GitErreur as e:
+            etat["complet"] = False
+            etat["bloquantes"].append(f"git : {e}")
+            alertes.append(f"git : {e}")
+            rapport()
+            raise
+    return {"week": week, "traitees": traitees, "alertes": alertes, **etat}
 
 
 def publier_essai(outils, source, destination, git=None, maximum=8, resume=None, nom_resume="_resume.json"):
@@ -891,6 +1003,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("passage", choices=["daily", "weekly"])
     ap.add_argument("--no-git", action="store_true", help="pas de pull/push (essai local)")
+    ap.add_argument("--relance", action="store_true", help="passage de relance (anti-bot) : pas de nouvelle relance programmée")
     ap.add_argument("--whisper", action="store_true", help="active Whisper (config pc.whisper_cmd requis)")
     ap.add_argument("--max", type=int, help="limite les vidéos traitées, sous-titres ET images")
     ap.add_argument("--video", action="append", help="ne traite que cette vidéo (identifiant YouTube ; répétable)")
@@ -907,12 +1020,20 @@ if __name__ == "__main__":
         config["pc"]["images"]["format_video"] = f"bv*[height<={a.resolution}]/b[height<={a.resolution}]"
     try:
         r = lancer(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(), config=config,
-                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max, seulement=set(a.video or []), refaire=a.refaire,
+                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max, seulement=set(a.video or []), refaire=a.refaire, relance=a.relance,
                    journal=lambda m: print(m, flush=True), dormir=time.sleep,
                    ocr_debug=(RACINE / "logs" / "ocr") if (a.garder_ocr or a.publier_essai) else None)
     except GitErreur as e:
         print(f"ERREUR git : {e}\nPassage interrompu (conflit ou réseau) : relancer plus tard.", file=sys.stderr)
         sys.exit(1)
+    except Exception as e:        # crash : tracé dans logs\pc.log, signalé en tête du rapport
+        import traceback
+        traceback.print_exc()
+        try:
+            signaler_crash(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(), e, git=None if a.no_git else Git())
+        except Exception:
+            pass
+        sys.exit(2)
     if a.publier_essai:
         try:
             d_ = Donnees()

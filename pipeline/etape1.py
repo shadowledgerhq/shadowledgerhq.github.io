@@ -163,12 +163,14 @@ def relire(d, config, week, api=None, ids=None):
     return res
 
 
-def ecrire_rapport(d, week, passage, instant, resume, res, alertes):
+def ecrire_rapport(d, week, passage, instant, resume, res, alertes, entete=None):
     proc = [p for p in d.processed().values() if p.get("week") == week]
     compte = {s: sum(1 for p in proc if p["status"] == s) for s in ("en_cours", "termine", "rejete")}
     pc = sum(1 for p in proc if p["status"] == "en_cours" and p.get("pc_needed"))
     l = [f"# Rapport — semaine {week} — passage {passage} — "
          f"{instant.astimezone(PARIS).strftime('%Y-%m-%d %H:%M')} (Paris)", ""]
+    if entete:       # passage PC : complet oui/non, vidéos traitées/restantes, erreurs bloquantes (en tête du rapport)
+        l += list(entete) + [""]
     if resume:
         l.append(f"- Quota : {resume['units']} unités"
                  + (f" (arrêt : {resume['arret_quota']})" if resume["arret_quota"] else ""))
