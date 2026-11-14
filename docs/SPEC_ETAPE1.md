@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 20 — 14/11/2026 (GB : un seul séparateur perdu toléré dans les Points du HUD) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 21 — 14/11/2026 (export Excel des classements, §5.6) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -279,6 +279,20 @@ Une vidéo rejetée n'est jamais réanalysée.
 - `data/runs/<semaine>/_meta.json` : `{"week", "start_utc", "end_utc", "frozen": false, "frozen_at": null}`.
 - `data/runs/<semaine>/_rapport.md` : réécrit à chaque passage. Contenu : unités de quota, vidéos nouvelles / traitées / rejetées, runs `a_verifier`, alertes boss, alerte référence de saison BOT (v9), erreurs. Lu par la tâche planifiée (discussion 7).
 
+### 5.6 Export Excel `exports/<semaine>/classements.xlsx` (v21, `pipeline/export_excel.py`)
+Mise en forme validée par Alexis (14/11). Contenu :
+- **Page de garde** : semaine (du jeudi 01h au jeudi suivant, Paris), date de génération, état `Provisoire` / `Gelée le <date>` (`_meta.json`) ; semaine d'essai (2026-11-12) : bandeau `ESSAI — non publié` ; BOT : semaine de saison (`S20-4`) ou `semaine de calcul : pas de classement` ; par mode : nombre de lignes classées et `à vérifier` ; crédit « Scores lus sur les vidéos YouTube des joueurs cités ».
+- **Onglets** : POC, BOT, GB, puis HOTM (un onglet par porte avec données, sinon un onglet HOTM vide « aucune run ») ; `hotm-gate-inconnue.json` jamais exporté. Onglet **Rejetées** en dernier : vidéo (lien), chaîne, raison, détail.
+- **Colonnes** (ordre) : `Rang` · `Joueur` · `Score` · `Détail des runs` · `Dégâts` (GB seulement) · `Statut` · `Publiée (Paris)` · `Vidéo` · `Notes`.
+  - `Score` : POC = nombre **entier complet** avec séparateurs (`131 449 789 393 717`), jamais arrondi en T (deux joueurs peuvent différer de moins de 0,01 T) ; BOT = `mm:ss.mmm` comme l'écran (`00:19.926`), jamais 2 décimales ; GB = `332 RC` ; HOTM = `94 600`.
+  - `Détail des runs` : POC et GB **toujours** remplie, même avec une seule run : `Éq. 1 : … · Éq. 2 : …` / `G1 : 167 · G2 : 165` ; groupe ou équipe inconnu → `G? : 156`. Vide pour BOT et HOTM.
+  - `Dégâts` (GB) : somme des dégâts des runs, entier complet si exact, sinon suffixe arrondi précédé de `≈` ; sert à lire les départages.
+  - `Statut` : `Sûr` / `À vérifier` ; ligne d'une semaine gelée non vérifiée : `Non vérifié`.
+  - `Vidéo` : un lien par vidéo de `video_ids`. `Joueur` = nom de la chaîne ; BOT : pseudo en jeu entre parenthèses s'il est lu.
+  - `Notes` : notes normalisées de la ligne, sans `boss non contrôlé` (déjà sur la page de garde si besoin).
+- **Ordre** : lignes classées par rang (podium 🥇🥈🥉), une ligne vide de séparation titrée `À vérifier`, puis les lignes `rank: null` triées par score (BOT croissant, autres décroissant), rang `—`. Les 10 premières lignes classées = Top 10 de l'étape 2 : liseré ou fond distinct, pas d'onglet à part.
+- Pas d'historique des semaines dans ce fichier (un fichier par semaine ; l'historique viendra du site).
+
 ## 6. Horaires et passages
 
 GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc **2 crons** (heure d'été et heure d'hiver). Le script vérifie l'heure de Paris et sort sans rien faire si ce n'est pas le bon créneau ou si le passage du jour est déjà fait (champ dans `_meta.json`).
@@ -315,6 +329,7 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 - `pipeline/analyse_porte_mode.py` lit `data/runs/*/hotm.json` → lire `data/runs/*/hotm-gate-*.json`.
 - `gate` : entier dans le JSON (voir §5.1).
 - Retirer `runs_detail.submode` (skill et code).
+- (v21) Export Excel (§5.6) : BOT en `mm:ss.mmm` (pas `0.00 s`) ; POC en entier complet (pas `x.xx T`) ; `Détail des runs` toujours remplie au POC/GB (`G?` si inconnu) ; colonne `Dégâts` au GB ; séparation `À vérifier` ; Top 10 marqué ; page de garde (état, essai, saison BOT, comptes) ; onglet `Rejetées` ; tous les liens de `video_ids`.
 - (v20) Points HUD, séparateur perdu (§3.1) : la tolérance codée (« groupes suivants de longueur multiple de 3 ») est trop large ; la limiter à **un seul** groupe de 6 chiffres et **≥ 2 séparateurs lus** ; note `séparateur perdu (OCR)`. Tests : `7,905,911007,261` accepté ; `7,905911007261`, `7,905,911007261`, `7905911007261` rejetés. `regles` reste 17.
 - (v19) HUD au chrono illisible (§3.1) : Points acceptés s'il suit de ≤ 2 s un HUD au chrono ≤ 5 s, sans autre écran entre eux, Points plausibles et dans la fenêtre du Final Score ; note `chrono HUD déduit (t=<s>)`. Cas test : `T5dR6iJAn-Y` → 156 `sur`. `regles` reste 17.
 - (v18) Repli assoupli (§3.1) : condition 4 non bloquante si HUD confirme le Final Score et RC identique sur ≥ 3 images sans discordance ; note `Hunter Rank incohérents ignorés (HUD)`. Validés : 1er groupe de 1 à 4 chiffres ; pas de note `écart titre/écran` au POC ni pour un GB à plusieurs lectures d'écran. Attendus après la relance : awb 189 (record), nh2D 332, T5dR 156, Oj_ 137 `sur` (non additionné à 156), MJ2 160 et vYtR 162 `a_verifier`. Critère de gel n° 1 inchangé.
