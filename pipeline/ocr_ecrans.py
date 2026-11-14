@@ -36,6 +36,35 @@ def _motif(libelle):
     return r"\s*".join(re.escape(m) for m in mots)
 
 
+def _motif_flou(libelle):
+    """Libellé -> motif tolérant aux fautes d'OCR : les mots significatifs (4 lettres ou plus ; tous pour le coréen) sont
+    réduits à leur début (6 caractères), sans accents, séparés par n'importe quoi (`Pontuação Final` ~ `Pontuagao Final`)."""
+    mots = sans_accents(libelle).lower().split()
+    sig = [m for m in mots if len(m) >= 4 or not m.isascii()] or mots
+    return r"\w*\W*".join(re.escape(m[:6]) for m in sig)
+
+
+def langue_results(texte, config=None):
+    """Langue (hors anglais) dont au moins 2 libellés de l'écran Results (`config.gb.libelles.<langue>.results.signaux`)
+    figurent dans `texte`, ou None. SPEC v15 : toutes les langues, libellés dans la configuration."""
+    bas = sans_accents(texte).lower()
+    for langue, lib in (((config or _config()).get("gb") or {}).get("libelles") or {}).items():
+        signaux = ((lib.get("results") or {}).get("signaux") or []) if isinstance(lib, dict) else []
+        if sum(1 for x in signaux if re.search(_motif_flou(x), bas)) >= 2:
+            return langue
+    return None
+
+
+def mise_en_page_results(texte, config=None):
+    """`successeur` si l'écran Results porte la ligne « Successor Score » (Hunter Rank décalés vers le bas), sinon `standard`."""
+    bas = sans_accents(texte).lower()
+    for lib in (((config or _config()).get("gb") or {}).get("libelles") or {}).values():
+        for x in ((lib.get("results") or {}).get("successeur") or []) if isinstance(lib, dict) else []:
+            if re.search(_motif_flou(x), bas):
+                return "successeur"
+    return "standard"
+
+
 def libelles_hud(config=None):
     """[(langue, motif Points, motif compteur de Fúrias/Rage, motif équipe)] d'après `config.gb.libelles` (SPEC §3.1 v15)."""
     sortie = []
@@ -102,6 +131,8 @@ def detecter(texte):
         return "hotm"
     if "이번" in t and ("플레이어 스코어" in t or "계승자 스코어" in t):
         return "poc"
+    if langue_results(t):
+        return "gb_results_partiel"   # v15 : écran Results portugais, coréen… (libellés en configuration) ; valeurs lues par zones
     return None
 
 
@@ -237,6 +268,10 @@ def _appliquer_zones(ecran, zones, config):
         notes.append("format non standard")
         return
     z = interpreter_zones(zones, config)
+    if zones.get("_layout") == "successeur":      # ligne « Successor Score » : valeur lue à part, comptée dans la somme des scores
+        ecran["successeur_present"] = True
+        ecran["successor_score"] = _nombre_zone(zones.get("successeur")) if _nombre_zone(zones.get("successeur")) is not None \
+            else (0 if re.fullmatch(r"\s*0\s*", zones.get("successeur") or "") else None)
     for champ in ("stage", "player_score", "final_score", "rage_count", "play_time"):
         if z[champ] is None:
             continue
@@ -439,13 +474,14 @@ def regrouper_hud(lectures, config=None):
     return sortie
 
 
-CHAMPS_RESULTS = ("stage", "player_score", "final_score", "rage_count", "play_time") + tuple(f"hunter_rank_{k}" for k in range(1, 7))
+CHAMPS_RESULTS = ("stage", "player_score", "successor_score", "final_score", "rage_count", "play_time") + tuple(f"hunter_rank_{k}" for k in range(1, 7))
 
 
 def _valeurs_results(l):
     d = l.get("detail") or {}
     rangs = list(d.get("hunter_ranks") or [None] * 6)
-    v = {"stage": l.get("stage"), "player_score": d.get("player_score"), "final_score": l.get("damage"),
+    v = {"stage": l.get("stage"), "player_score": d.get("player_score"), "successor_score": d.get("successor_score"),
+         "final_score": l.get("damage"),
          "rage_count": l.get("score"), "play_time": d.get("play_time")}
     v.update({f"hunter_rank_{k + 1}": rangs[k] for k in range(6)})
     return v
@@ -577,7 +613,8 @@ def fusionner_results(lectures, config=None):
                "exact": False, "confidence": "a_verifier"}
         if not conflits:
             if d["hunter_ranks_lus"] == 6:                     # somme Player's Score + 6 Hunter Rank = Final Score
-                ok, pb = ecrans.controle_gb_results(d["player_score"], rangs, final)
+                ok, pb = ecrans.controle_gb_results(d["player_score"], rangs, final, d.get("successor_score"),
+                                                    d["successeur_present"])
                 if ok:
                     lec.update(exact=True, confidence="sur")
                 else:

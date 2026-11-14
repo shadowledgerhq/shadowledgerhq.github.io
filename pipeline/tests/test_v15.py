@@ -89,7 +89,7 @@ def test_consensus_des_variantes_et_recoupement_du_total_score():
              "total_score": 92842054460310, "t": 2}
     rs = ecrans.lectures_gb_record(m, ecran, CONFIG)
     assert [r["detail"]["total_score"] for r in rs] == [None, None] and all(any("incohérent" in n for n in r["notes"]) for r in rs)
-    assert all(r["confidence"] == "a_verifier" for r in rs)                                       # un contrôle échoué = a_verifier
+    assert all(r["confidence"] == "sur" and any("incohérent" in n for n in r["notes"]) for r in rs)   # les RC restent contrôlés (167 + 165 = 332)
     ok = ecrans.lectures_gb_record(m, {**ecran, "total_score": 32842054460310}, CONFIG)
     assert [r["detail"]["total_score"] for r in ok] == [32842054460310] * 2 and all(r["confidence"] == "sur" for r in ok)
 
@@ -190,6 +190,51 @@ def test_hud_coreen_chrono_lu_par_zone_et_points_abimes():
     brut = ocr_ecrans.lectures_depuis_texte(HUD_PT, m, CONFIG, "video-complete", 213)
     fin = ocr_ecrans.regrouper_hud([{**b, "detail": {**b["detail"], "hud_points": 7288064, "chrono_hud": 0.8}} for b in brut], CONFIG)
     assert fin[0]["damage"] is None
+
+
+RESULTS_PT = """n = 5 Ul l ta efe © Tempo de Progresso 03:00
+E a Gigante : "
+Pontuacao do Jogador
+Rank do Cacador i
+| Novo Recorde Quebrado!
+Pontuacao Final NumerodeFurias Jy () GS J
+7.907,273,299,084 156 Y
+Tentar de Novo Sair
+"""
+RESULTS_KO = """플레이어 스코어 ws
+| wy 5,576,463,862,754 격노 보상 © a
+계승자 스코어 도
+화면을 눌러 계속
+WH 56450 0 10661037770748 160
+"""
+Z_PT = {**VIDE, "_layout": "standard", "boss": "Estatua Gigante", "joueur": "4,254,332,623,094", "rang_1": "2,719,877,951,535", "rang_2": "473,844,449,049",
+        "rang_3": "199,639,030,058", "rang_4": "131,808,903,549", "rang_5": "90,867,324,225", "rang_6": "36,903,017,574",
+        "final": "7,907,273,299,084", "rage": "156", "temps": "03:00"}
+Z_KO = {**VIDE, "_layout": "successeur", "boss": "거대 석상", "joueur": "5,576,463,862,754", "successeur": "0", "rang_1": "3,686,927,733,236",
+        "rang_2": "873,686,133,825", "rang_3": "302,730,549,509", "rang_4": "125,782,887,452", "rang_5": "52,090,149,391",
+        "rang_6": "43,356,454,581", "final": "10,661,037,770,748", "rage": "160", "temps": "03:00"}
+
+
+def test_results_portugais_et_coreen_captures_reelles():
+    assert ocr_ecrans.detecter(RESULTS_PT) == "gb_results_partiel" and ocr_ecrans.langue_results(RESULTS_PT) == "pt"
+    assert ocr_ecrans.detecter(RESULTS_KO) == "gb_results_partiel" and ocr_ecrans.langue_results(RESULTS_KO) == "ko"
+    assert ocr_ecrans.mise_en_page_results(RESULTS_PT) == "standard" and ocr_ecrans.mise_en_page_results(RESULTS_KO) == "successeur"
+    assert ocr_ecrans.detecter("Pontuacao do Jogador\n7.907.273.299.084") is None                       # un seul libellé ne suffit pas
+    # POC coréen : mêmes libellés « 플레이어 스코어 / 계승자 스코어 » mais jamais un Results GB
+    assert ocr_ecrans.detecter("이번 기록 플레이어 스코어 계승자 스코어") == "poc"
+    for texte, zones, lang, rc, final in ((RESULTS_PT, Z_PT, "pt", 156, 7907273299084), (RESULTS_KO, Z_KO, "ko", 160, 10661037770748)):
+        m = {**meta_gb("v"), "lang": lang, "mode_guess": ["gb"]}
+        ls = [ocr_ecrans.lectures_depuis_texte(texte, m, CONFIG, "video-complete", t, zones)[0] for t in (231, 232)]
+        (res,) = [l for l in pc.fusionner_ecrans([], "v", ls, CONFIG) if l["score"] is not None]
+        assert (res["score"], res["damage"]) == (rc, final) and res["detail"]["hunter_ranks_lus"] == 6
+        # Player's Score + [Successor Score] + 6 Hunter Rank = Final Score : vérifié (somme exacte lue sur les captures)
+        assert res["exact"] is True and res["confidence"] == "sur" and not any("contrôle GB" in n for n in res["notes"]), (lang, res["notes"])
+    # successeur illisible alors que la ligne existe : somme non vérifiable
+    zs = {**Z_KO, "successeur": ""}
+    (a,) = ocr_ecrans.lectures_depuis_texte(RESULTS_KO, {**meta_gb("v"), "mode_guess": ["gb"]}, CONFIG, "video-complete", 231, zs)
+    assert a["confidence"] == "a_verifier" and any("Successor Score illisible" in n for n in a["notes"])
+    # boss lu : « Estatua Gigante » et « 거대 석상 » (noms de la configuration)
+    assert ocr_ecrans.boss_connu("Estatua Gigante\n", CONFIG) in ("Estátua Gigante", "Estátua de Pedra Gigante") and ocr_ecrans.boss_connu("거대 석상", CONFIG) == "거대 석상"
 
 
 def test_langue_sans_libelles_connus():

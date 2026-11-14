@@ -50,11 +50,14 @@ def lecture_bot(meta, ecran, config, source="video-complete"):
     return lec
 
 
-def controle_gb_results(player_score, hunter_ranks, final_score):
-    """v5 : `Player's Score` + les 6 `Hunter Rank` = `Final Score`. Le RC n'a pas de contrôle arithmétique."""
+def controle_gb_results(player_score, hunter_ranks, final_score, successor=0, successeur_present=False):
+    """v5 : `Player's Score` + les 6 `Hunter Rank` = `Final Score`. Avec la ligne « Successor Score » (v15, vue en
+    coréen) elle entre dans la somme. Le RC n'a pas de contrôle arithmétique."""
     if player_score is None or final_score is None or not hunter_ranks or len(hunter_ranks) != 6 or None in hunter_ranks:
         return False, ["écran GB illisible (Player's Score, Hunter Rank ou Final Score)"]
-    somme = player_score + sum(hunter_ranks)
+    if successeur_present and successor is None:
+        return False, ["Successor Score illisible"]
+    somme = player_score + (successor or 0) + sum(hunter_ranks)
     return somme == final_score, ([] if somme == final_score else [f"somme {somme} ≠ Final Score {final_score}"])
 
 
@@ -65,7 +68,8 @@ def lecture_gb_results(meta, ecran, config, source="video-complete"):
     partielle = ecran.get("rage_count") is None
     rangs = list(ecran.get("hunter_ranks") or [None] * 6)
     rangs = (rangs + [None] * 6)[:6]
-    ok, pb = controle_gb_results(ecran.get("player_score"), rangs, ecran.get("final_score"))
+    ok, pb = controle_gb_results(ecran.get("player_score"), rangs, ecran.get("final_score"),
+                                 ecran.get("successor_score", 0), ecran.get("successeur_present", False))
     lec = lecture_vide(meta, "gb")
     lec["notes"] += notes_alerte_reset(meta, config)
     lec["notes"] += ecran.get("notes_extra", [])
@@ -73,7 +77,8 @@ def lecture_gb_results(meta, ecran, config, source="video-complete"):
                confidence="sur" if ok and not partielle else "a_verifier", stage=ecran.get("stage"), t=ecran.get("t"), team=None,
                detail={"damage_exact": True, "play_time": ecran.get("play_time"),
                        "new_record": bool(ecran.get("new_record")), "player_score": ecran.get("player_score"),
-                       "hunter_ranks": rangs, "hunter_ranks_lus": sum(r is not None for r in rangs), "n_images": 1})
+                       "hunter_ranks": rangs, "hunter_ranks_lus": sum(r is not None for r in rangs), "n_images": 1,
+                       "successor_score": ecran.get("successor_score"), "successeur_present": bool(ecran.get("successeur_present"))})
     if partielle:
         lec["detail"]["ecran"] = "results_partiel"
     elif not ok:
@@ -109,7 +114,7 @@ def controle_results_sans_hunter_rank(lec, hud, config):
     if final is not None:
         if joueur is None:
             pb.append("Player's Score illisible")
-        elif joueur + sum(rangs) >= final:
+        elif joueur + (d.get("successor_score") or 0) + sum(rangs) >= final:
             pb.append("Player's Score + Hunter Rank lus ≥ Final Score")
     if any(a < b for a, b in zip(rangs, rangs[1:])):
         pb.append("Hunter Rank lus non décroissants")
@@ -162,8 +167,9 @@ def lectures_gb_record(meta, ecran, config, source="record"):
             somme, pas = sum(v for v, _ in lus), sum(p_ or 0 for _, p_ in lus)
             if not -0.5 * pas - 1 <= total_score - somme <= 1.5 * pas + 1:
                 incoherent, total_score = f"Total Score {total_score} incohérent avec les dégâts des groupes", None
-    ok = bool(joues) and None not in rcs and total is not None and sum(rcs) == total and incoherent is None
-    pb = [] if ok else [incoherent or "Total Rage Count ≠ somme des RC des groupes joués (ou illisible)"]
+    ok = bool(joues) and None not in rcs and total is not None and sum(rcs) == total
+    pb = [] if ok else ["Total Rage Count ≠ somme des RC des groupes joués (ou illisible)"]
+    note_total = [f"contrôle Personal Record : {incoherent}"] if incoherent else []   # Total Score écarté, les RC restent contrôlés
     seul = ok and len(joues) == 1 and total_score is not None    # sûr seulement : le Total Score lu à l'image entière peut être faux (« B4 » pour « 64 »)
     lectures = []
     for g in joues:
@@ -182,7 +188,7 @@ def lectures_gb_record(meta, ecran, config, source="record"):
             detail.update(damage_exact=True, damage_step=None, damage_source="record")
         lec.update(score=rc, damage=deg, score_source=source, exact=ok, confidence="sur" if ok else "a_verifier",
                    stage=ecran.get("stage"), t=ecran.get("t"), team=g, detail=detail)
-        lec["notes"] += [f"contrôle Personal Record : {p}" for p in pb]
+        lec["notes"] += [f"contrôle Personal Record : {p}" for p in pb] + note_total
         lectures.append(lec)
     return lectures
 

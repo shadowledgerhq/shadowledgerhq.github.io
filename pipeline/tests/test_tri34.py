@@ -183,6 +183,7 @@ def test_passage_images_suffisant_puis_gel():
 
 def test_langues_et_marqueurs():
     cfg = CONFIG["pc"]["images"]
+    assert pc.langues_ocr({"mode_guess": ["gb"], "lang": "ko"}, cfg) == "eng+kor" and pc.langues_ocr({"mode_guess": ["gb"], "lang": "pt"}, cfg) == "eng"
     assert pc.langues_ocr({"mode_guess": ["bot"]}, cfg) == "eng" and pc.langues_ocr({"mode_guess": ["hotm"]}, cfg) == "kor+eng"
     assert pc.langues_ocr({"mode_guess": ["gb", "poc"]}, cfg) == "eng+kor" and pc.langues_ocr({"mode_guess": []}, cfg) == cfg["ocr_langues"]
     assert pc.ressemble_ecran("Results\nBaruka") and pc.ressemble_ecran("합산 결과") and not pc.ressemble_ecran("blabla")
@@ -196,6 +197,7 @@ def test_ocr_rapide_filtre_et_max_images():
         videos = d.videos(SEM)
         for v in "abcd":
             videos[v]["mode_guess"] = ["gb"]
+            videos[v]["lang"] = "en"
         d.ecrire(f"runs/{SEM}/_videos.json", videos)
 
         o = OutilsImages({"a": {0: GB_RECORD}})

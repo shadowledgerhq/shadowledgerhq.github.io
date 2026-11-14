@@ -63,12 +63,15 @@
     "record_tolerance_minutes": 60,
     "record_tolerance_jours_minutes": 1440,
     "record_tolerance_min_minutes": 1,
-    "boss_noms": ["Giant Statue", "Estátua de Pedra Gigante", "거대 석상"],
+    "boss_noms": ["Giant Statue", "Estátua de Pedra Gigante", "Estátua Gigante", "거대 석상"],
     "libelles": {
       "_doc": "SPEC §3.1 (v15) : libellés par langue, jamais en dur. Seuls les libellés vus sur de vraies captures sont listés ; langue sans libellés connus = note « libellés <langue> inconnus ».",
-      "en": {"hud": {"points": ["Points"], "rage": ["Boss Rage Count"], "equipe": ["Team A", "Team B"], "rage_x": true}},
-      "pt": {"hud": {"points": ["Pontos"], "rage": ["Número de Fúrias do Chefão", "Fúrias do Chefão"], "equipe": ["Equipe A", "Equipe B"], "rage_x": false, "rage_optionnel": true}},
-      "ko": {"hud": {"points": ["POINT"], "rage": ["보스 격노 횟수"], "equipe": ["A팀", "B팀"], "rage_x": true, "rage_optionnel": true}}
+      "en": {"hud": {"points": ["Points"], "rage": ["Boss Rage Count"], "equipe": ["Team A", "Team B"], "rage_x": true},
+             "results": {"successeur": ["Successor"]}},
+      "pt": {"hud": {"points": ["Pontos"], "rage": ["Número de Fúrias do Chefão", "Fúrias do Chefão"], "equipe": ["Equipe A", "Equipe B"], "rage_x": false, "rage_optionnel": true},
+             "results": {"signaux": ["Resultado", "Pontuação do Jogador", "Rank do Caçador", "Pontuação Final", "Número de Fúrias", "Novo Recorde Quebrado", "Tempo de Progresso"], "successeur": []}},
+      "ko": {"hud": {"points": ["POINT"], "rage": ["보스 격노 횟수"], "equipe": ["A팀", "B팀"], "rage_x": true, "rage_optionnel": true},
+             "results": {"signaux": ["헌터 순위", "최종 스코어", "격노 횟수", "신기록 달성", "진행 시간", "격노 보상", "화면을 눌러 계속"], "successeur": ["계승자 스코어"]}}
     },
     "hud_nouvelle_run_s": 20,
     "chrono_fin_s": 15,
@@ -89,8 +92,18 @@
       "rang_5": [0.135, 0.6615, 0.115, 0.045],
       "rang_6": [0.135, 0.7215, 0.115, 0.045],
       "final": [0.30, 0.87, 0.20, 0.075],
-      "rage": [0.505, 0.865, 0.10, 0.075],
+      "rage": [0.50, 0.86, 0.12, 0.085],
       "temps": [0.93, 0.045, 0.07, 0.06]
+    },
+    "zones_successeur": {
+      "_doc": "Écran Results avec la ligne « Successor Score » (vue en coréen, 1080p) : Hunter Rank 1 à 6 décalés vers le bas, valeur du successeur lue à part.",
+      "successeur": [0.10, 0.3825, 0.18, 0.045],
+      "rang_1": [0.145, 0.521, 0.115, 0.045],
+      "rang_2": [0.145, 0.596, 0.115, 0.045],
+      "rang_3": [0.145, 0.671, 0.115, 0.045],
+      "rang_4": [0.135, 0.7395, 0.115, 0.045],
+      "rang_5": [0.135, 0.7988, 0.115, 0.045],
+      "rang_6": [0.135, 0.859, 0.115, 0.045]
     },
     "zones_hud": {
       "hud_chrono": [0.80, 0.015, 0.13, 0.085],
@@ -149,6 +162,7 @@
       "tesseract": "tesseract",
       "ocr_langues": "eng+kor+jpn",
       "ocr_langues_mode": {"bot": "eng", "gb": "eng", "poc": "kor+eng", "hotm": "kor+eng"},
+      "ocr_langues_video": {"ko": "kor", "ja": "jpn"},
       "ocr_rapide": true,
       "ocr_largeur_rapide": 960,
       "ocr_psm_rapide": 11,

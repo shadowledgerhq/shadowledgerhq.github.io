@@ -333,6 +333,9 @@ def langues_ocr(meta, cfg):
         for l in par_mode.get(m, cfg["ocr_langues"]).split("+"):
             if l not in langs:
                 langs.append(l)
+    for l in (cfg.get("ocr_langues_video") or {}).get(meta.get("lang") or "", "").split("+"):     # ex. vidéo coréenne : + kor
+        if l and l not in langs and "gb" in meta.get("mode_guess", []):
+            langs.append(l)
     return "+".join(langs) or cfg["ocr_langues"]
 
 
@@ -367,14 +370,17 @@ def _ocr_image(outils, png, langs, cfg, st, complet=False):
 ZONES_TEXTE = {"boss", "g1_dmg", "g2_dmg", "time_left"}     # zones lues sans liste de caractères (texte ou lettres)
 
 
-def lire_zones_results(outils, png, config, type_ecran="gb_results"):
+def lire_zones_results(outils, png, config, type_ecran="gb_results", texte=None, langues=None):
     """v13-v15 : écran Results (reconnu, même en animation) ou Personal Record du salon : lecture de zones ciblées,
     recadrées et agrandies, en FRACTIONS de l'image, jamais en pixels (`config.gb.zones` pour le Results : boss,
     `Player's Score`, `Hunter Rank` 1 à 6, `Final Score`, `Rage Count`, `Play Time` ; `config.gb.zones_record` pour le
     Personal Record). Une zone couvre toute la case du champ. Format différent de 16:9 (Short vertical, 4:3, bandes
     noires) : zones non appliquées (`format_ok: False`). Retourne {nom: texte lu} ; "" si illisible."""
     gb_cfg, cfg = config.get("gb") or {}, config["pc"]["images"]
-    zones = gb_cfg.get({"gb_record": "zones_record", "gb_combat_incertain": "zones_hud"}.get(type_ecran, "zones"), {})
+    zones = dict(gb_cfg.get({"gb_record": "zones_record", "gb_combat_incertain": "zones_hud"}.get(type_ecran, "zones"), {}))
+    layout = ocr_ecrans.mise_en_page_results(texte, config) if type_ecran in RESULTATS_TYPES and texte else "standard"
+    if layout == "successeur":      # ligne « Successor Score » : Hunter Rank décalés, valeur du successeur lue à part
+        zones.update({k: v for k, v in (gb_cfg.get("zones_successeur") or {}).items() if isinstance(v, list)})
     taille = outils.dimensions(png)
     if taille and taille[1] and abs(taille[0] / taille[1] - 16 / 9) > gb_cfg.get("format_tolerance", 0.02):
         return {"format_ok": False}
@@ -386,7 +392,8 @@ def lire_zones_results(outils, png, config, type_ecran="gb_results"):
             try:
                 petit = outils.recadrer(png, zone, v.get("echelle", 3), v.get("seuil"))
                 chiffres = None if nom in ZONES_TEXTE else ["-c", "tessedit_char_whitelist=0123456789,.:"]
-                textes.append(outils.ocr(petit, "eng", 7, cfg.get("ocr_timeout_rapide_s", 40), chiffres))
+                textes.append(outils.ocr(petit, (langues or "eng") if nom in ZONES_TEXTE else "eng", 7,
+                                         cfg.get("ocr_timeout_rapide_s", 40), chiffres))
                 Path(petit).unlink(missing_ok=True)
             except (OcrTropLent, RuntimeError):
                 textes.append("")
@@ -437,7 +444,7 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
             journal(f"  écran Results trouvé à {t} s")
         zones = None
         if type_ecran in ZONES_TYPES and zones_lues < gb_cfg.get("zones_max_images", 12):   # les zones sont chères (plusieurs OCR par zone)
-            zones = lire_zones_results(outils, png, config, type_ecran)
+            zones = lire_zones_results(outils, png, config, type_ecran, texte, langs)
             zones_lues += 1
         lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
                      if _est_results_gb(l) or (l["mode"] == "gb" and l["score_source"] == "record")]    # + Personal Record du salon
@@ -501,7 +508,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                     else:
                         texte = _ocr_image(outils, png, langs, cfg, st, complet=(tri == 3 and cfg.get("tri3_ocr_complet", True)))
                         type_img = ocr_ecrans.detecter(texte)
-                        zones = lire_zones_results(outils, png, config, type_img) if type_img in ZONES_TYPES else None
+                        zones = lire_zones_results(outils, png, config, type_img, texte, langs) if type_img in ZONES_TYPES else None
                         vus[h] = (texte, zones)
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
                     if ocr_ecrans.detecter(texte) in RESULTATS_TYPES:
