@@ -158,9 +158,8 @@ On compare avec les icônes actuelles de `data/icons/` (pas de banque de variant
 - **Candidats réduits** : une tuile n'est comparée qu'aux icônes de sa catégorie **et de son emplacement** (pièce `helmet` → les 40 icônes `*--helmet.png` ; noyau `mind` → noyaux `slot: mind` ; compétence `qte_n` → `sjw_skills` de type QTE si la base le précise ; arme de chasseur → armes `hunter_id` = ce chasseur d'abord).
 - **Seuils par catégorie** : `config.seuil_icone.<categorie>` (défaut 0,55, calibré sur les noyaux) et `config.ecart_icone` = 0,05 avec le 2e candidat. Sous le seuil → `unmatched`.
 - **Bande de doute** : un résultat entre le seuil et `config.seuil_sur.<categorie>` (défaut seuil + 0,10) est gardé, mais le build passe en `confidence: a_verifier`, note `reconnaissance faible : <élément>`.
-- **Vote** : un emplacement lu sur plusieurs images (même onglet à plusieurs instants, ou ombres/successeur sur plusieurs onglets) → vote majoritaire. Pièces d'artefact : un set est en général porté par 2, 4 ou 8 pièces ; une pièce isolée d'un set différent de ses voisines garde sa valeur mais ajoute la note `pièce isolée : <slot>`.
+- **Vote** : un emplacement lu sur plusieurs images (même onglet à plusieurs instants, ou ombres/successeur sur plusieurs onglets) → vote majoritaire ; égalité → `null` + note `conflit : <élément>`. Pièces d'artefact : un set est en général porté par 2, 4 ou 8 pièces ; une pièce isolée d'un set différent de ses voisines garde sa valeur mais ajoute la note `pièce isolée : <slot>`.
 - **Chasseurs** : la banque contient des portraits, l'écran montre l'illustration pleine carte. On compare la zone du visage (haut de la carte, `config.zones.<mode>.personnages.<propriétaire>.hunter_face`). Si cela ne passe pas le seuil → `unmatched` (pas de déduction par l'arme ou l'élément).
-- Un même emplacement lu sur plusieurs images : on garde le vote majoritaire. En cas d'égalité → `null` + note `conflit : <élément>`.
 - Icône absente de la banque (`icon: null` dans la base) : l'objet ne peut pas être reconnu. Note `icône absente : <categorie>`.
 
 ### 2.2 Calcul du statut
