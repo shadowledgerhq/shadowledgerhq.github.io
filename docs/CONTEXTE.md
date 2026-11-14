@@ -1,6 +1,6 @@
 # Projet SLA — Shadow Ledger : contexte de référence
 
-Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Mis à jour le 13/11/2026 (alignement sur SPEC_ETAPE1 v10 : GB classé au Rage Count, Personal Record accepté ; BOT : un seul classement, saison de 4 + 1 semaines).
+Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Mis à jour le 14/11/2026 (alignement sur SPEC_ETAPE1 v16 : POC et GB classés avec une seule run sûre ; GB : Personal Record prioritaire ; BOT : un seul classement, saison de 4 + 1 semaines).
 
 ## 1. Le projet en une phrase
 
@@ -46,13 +46,15 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 Règles :
 - **Joueur = chaîne YouTube** (`channel_id`) ; le pseudo en jeu n'est pas la clé (au BOT, il est seulement noté dans `player_ingame`). Une ligne par joueur (HOTM : par porte), toutes vidéos de la semaine confondues.
 - Shorts inclus ; lives et rediffusions de live exclus.
-- POC et GB : somme des 2 meilleures runs distinctes, qui peuvent venir de **2 vidéos différentes** (POC : équipe 1 + équipe 2 ; GB : groupe 1 + groupe 2 ; jamais deux runs de la même équipe ou du même groupe). Si une seule run est trouvée : statut `a_verifier`, pas de classement tant que la 2e manque.
+- POC et GB : somme des 2 meilleures runs distinctes, qui peuvent venir de **2 vidéos différentes** (POC : équipe 1 + équipe 2 ; GB : groupe 1 + groupe 2 ; jamais deux runs de la même équipe ou du même groupe). Une seule run `sur` : le joueur est **classé** (total = cette run, note « une seule run ») ; une 2e run trouvée plus tard dans la semaine, dans la même vidéo ou une autre, complète le total. Une seule run provisoire : `a_verifier`.
 - Égalité : la vidéo publiée en premier passe devant (GB : d'abord la somme des dégâts).
 - Score arrondi (« 2.1B ») : provisoire ; on garde la valeur exacte dès qu'elle est lue à l'image.
 - Doublons : même run ré-uploadée ou postée en 2 langues → on garde la vidéo de la chaîne d'origine (la plus ancienne).
 - Boss de la semaine **déduit des données** : libellé le plus fréquent parmi les runs sûres, à partir de 3 vidéos (`_boss.json`). Run avec un autre libellé → `a_verifier` ; libellé de la semaine précédente → `rejected`.
 - Toutes régions et langues (OCR multilingue, formats 1.2B / 억 / 万).
 - Champ `confiance` : `sur` ou `a_verifier`.
+- GB, Personal Record (v15) : un Personal Record contrôlé **prime** sur un écran Results en conflit (le Results sert alors au départage et au rattachement du groupe ; note « écart Results/record »). `No history` = groupe non joué (le groupe joué est connu). Si un seul groupe a joué, le `Total Score` du record = le `Final Score` exact de la run.
+- Compteurs animés (RC, Final Score) : seule la valeur finale compte ; les valeurs croissantes lues avant sont des étapes de l'animation (note « compteur animé »).
 - Seul l'écran RESULT donne un score sûr. **Exception GB** : l'écran *Personal Record* est accepté si `Total Rage Count` = RC du groupe 1 + RC du groupe 2 et si `Time Left in Season` prouve que la capture date de la semaine en cours (sinon `rejected`, raison `semaine_precedente`).
 - POC et HOTM : le score retenu est « 이번 기록 » (score de cette run) de l'écran RESULT, **jamais** « 기존 기록 » (ancien record) ni le score de l'écran de composition.
 - BOT : score = chrono de la dernière phase de l'écran `Results` (= chrono du bandeau du bas). Un seul classement (`bot.json`). Titre `S<n>-<w>` de la semaine précédente → `rejected` (`semaine_precedente`) ; vidéo BOT publiée pendant la semaine de calcul → `a_verifier`.
@@ -64,7 +66,7 @@ Règles :
 - Vidéo publiée moins de 3 h après le reset : note d'alerte « semaine précédente ? », jamais un rejet.
 - Légendes ajoutées par l'auteur de la vidéo (titre, texte incrusté) : au mieux un score provisoire, à confirmer sur l'écran RESULT.
 - HOTM : une ligne par joueur **et par porte** ; porte illisible (écran et titre) → `hotm-gate-inconnue.json`, jamais publié.
-- *Décisions d'Alexis du 13/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` v10 (aussi dans les documents du Projet SLA).
+- *Décisions d'Alexis des 13 et 14/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` v16 (aussi dans les documents du Projet SLA).
 
 ### Étape 2 — Builds du top 10 (automatisée en grande partie)
 
