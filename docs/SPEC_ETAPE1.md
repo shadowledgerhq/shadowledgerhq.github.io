@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 21 — 14/11/2026 (export Excel des classements, §5.6) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 22 — 14/11/2026 (GB : « Rage » reconnu dans les titres ; tri1_version 18) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -66,7 +66,7 @@ Noms coréens et japonais : sources inven.co.kr et gamewith.jp/altema.jp (13/11/
 | Japonais / chinois | `万` 1e4 · `億`/`亿` 1e8 · `兆` 1e12, cumulables | idem |
 | Chrono (BOT) | `00:19.558` · `0:19` · `19.558s` · `19초` · `19秒` | secondes, 3 décimales |
 | Points (HOTM) | `94,600pt` · `94600 points` | entier |
-| Rage Count (GB, v5) | `165 RC` · `RC 167` · `332RC` · `Rage Count 165` ; libellés coréen et japonais **[À CONFIRMER]** | entier |
+| Rage Count (GB, v5, v22) | `165 RC` · `RC 167` · `332RC` · `Rage Count 165` · (v22) `Rage: 159` · `Rage 159` · `159 Rage` (`config.rage_count_mots` = `["rage"]`, mot entier, nombre collé au mot ou séparé par `:`/espace, jamais précédé de `boss`) ; libellés coréen et japonais **[À CONFIRMER]** | entier |
 
 - Une virgule ou un point suivi d'exactement 3 chiffres (et répété) = séparateur de milliers. Sinon = séparateur décimal.
 - **Nombres ignorés** : dates, années, `Lv.`/`niv.`, puissance (`CP`, `전투력`, `戦闘力`, `power`, `puissance`), numéros de porte, durées hors BOT, numéros de saison BOT (`S20-4`).
@@ -329,6 +329,7 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 - `pipeline/analyse_porte_mode.py` lit `data/runs/*/hotm.json` → lire `data/runs/*/hotm-gate-*.json`.
 - `gate` : entier dans le JSON (voir §5.1).
 - Retirer `runs_detail.submode` (skill et code).
+- (v22) Tri 1 GB : `config.rage_count_mots` = `["rage"]` (§2.2 : `Rage: 159`, `Rage 159`, `159 Rage`, jamais `Boss Rage …`) ; `tri1_version` = **18** (titres relus). Attendus : T5dR → titre 159, note `écart titre/écran : titre 159` sur la ligne ; Oj_ → titre 137, sans note (égal à l'écran). Validé : lecture à 1 img/s des 2 images qui suivent un HUD de fin de run (chrono lu ≤ 5 s), conforme à §3.1 v19.
 - (v21) Export Excel (§5.6) : BOT en `mm:ss.mmm` (pas `0.00 s`) ; POC en entier complet (pas `x.xx T`) ; `Détail des runs` toujours remplie au POC/GB (`G?` si inconnu) ; colonne `Dégâts` au GB ; séparation `À vérifier` ; Top 10 marqué ; page de garde (état, essai, saison BOT, comptes) ; onglet `Rejetées` ; tous les liens de `video_ids`.
 - (v20) Points HUD, séparateur perdu (§3.1) : la tolérance codée (« groupes suivants de longueur multiple de 3 ») est trop large ; la limiter à **un seul** groupe de 6 chiffres et **≥ 2 séparateurs lus** ; note `séparateur perdu (OCR)`. Tests : `7,905,911007,261` accepté ; `7,905911007261`, `7,905,911007261`, `7905911007261` rejetés. `regles` reste 17.
 - (v19) HUD au chrono illisible (§3.1) : Points acceptés s'il suit de ≤ 2 s un HUD au chrono ≤ 5 s, sans autre écran entre eux, Points plausibles et dans la fenêtre du Final Score ; note `chrono HUD déduit (t=<s>)`. Cas test : `T5dR6iJAn-Y` → 156 `sur`. `regles` reste 17.
