@@ -120,7 +120,14 @@ class OutilsImages:
         self.appels.append(("img", self.cur, tuple(segments)))
         return [(d + i * p, f"{self.cur}@{d + i * p}") for d, n, p in segments for i in range(0, n, p)]
 
-    def ocr(self, png):
+    def reduire(self, png, largeur):
+        return png
+
+    def empreinte(self, png):
+        return png
+
+    def ocr(self, png, langues=None, psm=6, timeout=120):
+        self.appels.append(("ocr", psm, langues))
         vid, t = png.split("@")
         return self.textes.get(vid, {}).get(int(t), "")
 
@@ -157,6 +164,48 @@ def test_passage_images_suffisant_puis_gel():
         assert lignes and all("non vérifié" in l["notes"] for l in lignes if l["confidence"] != "sur")
 
 
+def test_langues_et_marqueurs():
+    cfg = CONFIG["pc"]["images"]
+    assert pc.langues_ocr({"mode_guess": ["bot"]}, cfg) == "eng" and pc.langues_ocr({"mode_guess": ["hotm"]}, cfg) == "kor+eng"
+    assert pc.langues_ocr({"mode_guess": ["gb", "poc"]}, cfg) == "eng+kor" and pc.langues_ocr({"mode_guess": []}, cfg) == cfg["ocr_langues"]
+    assert pc.ressemble_ecran("Results\nBaruka") and pc.ressemble_ecran("합산 결과") and not pc.ressemble_ecran("blabla")
+
+
+def test_ocr_rapide_filtre_et_max_images():
+    config = charger_config()
+    with __import__("tempfile").TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        videos = d.videos(SEM)
+        for v in "abcd":
+            videos[v]["mode_guess"] = ["gb"]
+        d.ecrire(f"runs/{SEM}/_videos.json", videos)
+
+        o = OutilsImages({"a": {0: GB_RECORD}})
+        lignes = []
+        r = pc.lancer("daily", INSTANT, d, config, o, maximum=2, journal=lignes.append)
+        assert [a[1] for a in o.appels if a[0] == "dl"] == ["a", "b"]                 # --max limite aussi les images
+        psms = [a[1] for a in o.appels if a[0] == "ocr"]
+        assert psms.count(11) >= 2 and psms.count(6) == 1                           # complet seulement sur l'écran candidat
+        assert all(a[2] == "eng" for a in o.appels if a[0] == "ocr")                # GB : anglais seul
+        assert any("candidate" in l and "[1/2]" not in l for l in lignes) and any(l.startswith("[2/2] b") for l in lignes)
+        assert d.processed()["c"].get("pc") is None
+
+
+def test_images_budget_video_partiel_puis_abandon():
+    config = charger_config()
+    config["pc"]["images"]["budget_video_min"] = 1
+    with __import__("tempfile").TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        t = iter(range(0, 100_000, 30))
+        o = OutilsImages({})
+        for essai in (1, 2):
+            r = pc.lancer("daily", INSTANT, d, config, o, maximum=1, horloge=lambda: next(t))
+            etat = d.processed()["a"]["pc"]
+            assert etat["essais"] == essai
+            assert etat["tri3"] == ("partiel" if essai == 1 else "fait")
+        assert any("abandonnées" in a for a in r["alertes"])
+
+
 def test_commandes_des_outils():
     """Lignes de commande yt-dlp / ffmpeg / tesseract (outils absents ici : exécuteur simulé)."""
     import subprocess
@@ -168,7 +217,7 @@ def test_commandes_des_outils():
         dossier = Path(next((c for c in cmd if "%(ext)s" in c or "%04d" in c), "/x/y")).parent
         if cmd[0] == "yt-dlp":
             (dossier / "vid1.mp4").write_bytes(b"")
-        if cmd[0] == "ffmpeg":
+        if cmd[0] == "ffmpeg" and any("fps=" in c for c in cmd):
             for i in (1, 2, 3):
                 (dossier / f"f{len([c for c in cmds if c[0] == 'ffmpeg']) - 1}_{i:04d}.png").write_bytes(b"")
         return subprocess.CompletedProcess(cmd, 0, stdout="texte lu", stderr="")
@@ -182,6 +231,9 @@ def test_commandes_des_outils():
         ff = [c for c in cmds if c[0] == "ffmpeg"]
         assert ff[1][ff[1].index("-ss") + 1] == "270" and "fps=1/2" in ff[1] and ff[0][ff[0].index("-t") + 1] == "10"
         assert o.ocr(imgs[0][1]) == "texte lu" and cmds[-1][:2] == ["tesseract", str(imgs[0][1])] and "eng+kor+jpn" in cmds[-1]
+        assert o.ocr(imgs[0][1], "eng", 11)  and cmds[-1][cmds[-1].index("-l") + 1] == "eng" and cmds[-1][-1] == "11"
+        o.reduire(imgs[0][1], 960)
+        assert cmds[-1][0] == "ffmpeg" and "scale=960:-2" in cmds[-1]
     try:
         pc.Outils(CONFIG["pc"]).ocr("x.png")   # tesseract absent de cet environnement
     except pc.OutilAbsent as e:

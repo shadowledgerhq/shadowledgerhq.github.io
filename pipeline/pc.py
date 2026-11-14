@@ -1,6 +1,6 @@
 """Passages du PC d'Alexis — docs/SPEC_ETAPE1.md §6 et §2.1.
 
-  python3 pipeline/pc.py daily  [--no-git] [--whisper] [--max N]   (planificateur, 20:30)
+  python3 pipeline/pc.py daily  [--no-git] [--whisper] [--max N] [--garder-ocr]   (planificateur, 20:30)
   python3 pipeline/pc.py weekly [--no-git] [--whisper] [--max N]   (planificateur, jeudi 01:15)
 
 Chaque passage : git pull --rebase -> sous-titres (yt-dlp) [+ Whisper] sur les vidéos `en_cours`
@@ -11,12 +11,15 @@ PC éteint : rien n'est perdu, le passage suivant reprend ce qui est `en_cours`.
 Outils externes : git, yt-dlp (obligatoires), ffmpeg + tesseract (tris 3-4), whisper (facultatif). Python >= 3.9, `pip install tzdata` sous Windows.
 """
 import argparse
+import hashlib
 import html
+import os
 import re
 import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 import classement
@@ -33,6 +36,14 @@ class OutilAbsent(Exception):
 
 class GitErreur(Exception):
     pass
+
+
+class OcrTropLent(Exception):
+    """tesseract a dépassé son délai sur une image : l'image est ignorée, le passage continue."""
+
+
+def est_429(e):
+    return "429" in str(e) or "too many requests" in str(e).lower()
 
 
 # --- texte des sous-titres ------------------------------------------------------------------
@@ -66,18 +77,20 @@ class Outils:
     def __init__(self, config_pc, executer=subprocess.run):
         self.cfg, self.executer = config_pc, executer
 
-    def _lancer(self, cmd, timeout):
+    def _lancer(self, cmd, timeout, env=None):
         if shutil.which(cmd[0]) is None and self.executer is subprocess.run:
             raise OutilAbsent(f"{cmd[0]} introuvable (à installer, voir pipeline/pc.py)")
-        r = self.executer(cmd, capture_output=True, text=True, timeout=timeout)
+        # UTF-8 explicite : sous Windows, text=True seul décode en cp1252 et abîme le coréen lu par tesseract
+        r = self.executer(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace",
+                          timeout=timeout, **({"env": env} if env else {}))
         if r.returncode != 0:
             raise RuntimeError(f"{cmd[0]} code {r.returncode} : {(r.stderr or '')[-200:].strip()}")
         return r.stdout
 
     def sous_titres(self, video_id, dossier):
         """Texte de tous les sous-titres trouvés (ko, ja, en, fr, zh), '' s'il n'y en a pas."""
-        self._lancer([self.cfg["yt_dlp"], "--skip-download", "--write-subs", "--write-auto-subs",
-                      "--sub-langs", self.cfg["sous_titres_langues"], "--sub-format", "vtt",
+        self._lancer([self.cfg["yt_dlp"], *self.cfg.get("yt_dlp_options", []), "--sleep-requests", "1",
+                      "--skip-download", "--write-subs", "--write-auto-subs", "--sub-langs", self.cfg["sous_titres_langues"], "--sub-format", "vtt",
                       "-o", f"{dossier}/{video_id}.%(ext)s", f"https://www.youtube.com/watch?v={video_id}"], 300)
         return "\n".join(vtt_vers_texte(f.read_text(encoding="utf-8", errors="replace"))
                          for f in sorted(Path(dossier).glob(f"{video_id}.*.vtt")))
@@ -99,7 +112,7 @@ class Outils:
     def telecharger(self, video_id, dossier):
         """Télécharge la vidéo (basse résolution, sans audio) dans `dossier` ; retourne le chemin du fichier."""
         cfg = self.cfg["images"]
-        self._lancer([self.cfg["yt_dlp"], "-f", cfg["format_video"], "-o", f"{dossier}/{video_id}.%(ext)s",
+        self._lancer([self.cfg["yt_dlp"], *self.cfg.get("yt_dlp_options", []), "-f", cfg["format_video"], "-o", f"{dossier}/{video_id}.%(ext)s",
                       f"https://www.youtube.com/watch?v={video_id}"], 1800)
         fichiers = [f for f in Path(dossier).glob(f"{video_id}.*") if f.suffix not in (".vtt", ".part", ".txt", ".mp3")]
         if not fichiers:
@@ -115,10 +128,25 @@ class Outils:
             trouvees += [(debut + i * pas, f) for i, f in enumerate(sorted(Path(dossier).glob(f"f{k}_*.png")))]
         return trouvees
 
-    def ocr(self, png):
-        """Texte de l'image entière (tesseract). Les recadrages par zone sont [EN ATTENTE]."""
+    def reduire(self, png, largeur):
+        """Copie réduite de l'image (largeur en pixels) pour le passage OCR rapide."""
+        sortie = Path(png).with_name(Path(png).stem + "_p.png")
+        self._lancer([self.cfg["images"]["ffmpeg"], "-v", "error", "-y", "-i", str(png),
+                      "-vf", f"scale={int(largeur)}:-2", str(sortie)], 60)
+        return sortie
+
+    def empreinte(self, png):
+        return hashlib.md5(Path(png).read_bytes()).hexdigest()
+
+    def ocr(self, png, langues=None, psm=6, timeout=120):
+        """Texte de l'image entière (tesseract). OMP_THREAD_LIMIT=1 : sous Windows, le multithread d'OpenMP ralentit
+        beaucoup tesseract. Les recadrages par zone sont [EN ATTENTE]."""
         cfg = self.cfg["images"]
-        return self._lancer([cfg["tesseract"], str(png), "stdout", "-l", cfg["ocr_langues"], "--psm", "6"], 120) or ""
+        try:
+            return self._lancer([cfg["tesseract"], str(png), "stdout", "-l", langues or cfg["ocr_langues"],
+                                 "--psm", str(psm)], timeout, env={**os.environ, "OMP_THREAD_LIMIT": "1"}) or ""
+        except subprocess.TimeoutExpired:
+            raise OcrTropLent(f"tesseract > {timeout} s")
 
 
 # --- git ------------------------------------------------------------------------------------
@@ -177,6 +205,8 @@ def traiter_video(vid, meta, outils, config, lectures, whisper_actif, jour):
         except OutilAbsent:
             raise
         except Exception as e:  # une vidéo en erreur ne bloque pas les autres
+            if est_429(e):  # YouTube limite le débit : vidéo reportée au prochain passage (rien n'est marqué)
+                return lectures, "reporte", f"{vid} : 429 Too Many Requests, reportée au prochain passage"
             return lectures, "erreur", f"{vid} : {e}"
     if texte.strip():
         nouvelles, _ = lectures_texte(meta, [("sous-titres", texte)], config)
@@ -217,24 +247,76 @@ def suffisant(lectures, vid, modes):
     return all(len([l for l in sures if l["mode"] == m]) >= (2 if m in ("poc", "gb") else 1) for m in modes)
 
 
-def traiter_images(vid, meta, outils, config, lectures, pc, jour):
-    """Tri 3, puis tri 4 si le tri 3 ne suffit pas. Retourne (lectures, avertissement | None)."""
+MARQUEURS_ECRAN = ("results", "phase 1", "play time", "rage count", "personal record", "final score", "hunter rank",
+                   "합산", "증명", "클리어", "이번", "플레이어 스코어", "계승자")
+
+
+def langues_ocr(meta, cfg):
+    """Langues tesseract selon les modes de la vidéo (`images.ocr_langues_mode`) : BOT et GB = client anglais,
+    POC et HOTM = coréen (SPEC §3.1). Mode inconnu : `images.ocr_langues`. Moins de langues = OCR plus rapide."""
+    par_mode, langs = cfg.get("ocr_langues_mode", {}), []
+    for m in meta.get("mode_guess", []):
+        for l in par_mode.get(m, cfg["ocr_langues"]).split("+"):
+            if l not in langs:
+                langs.append(l)
+    return "+".join(langs) or cfg["ocr_langues"]
+
+
+def ressemble_ecran(texte):
+    bas = (texte or "").lower()
+    return any(m in bas for m in MARQUEURS_ECRAN)
+
+
+def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda m: None, ocr_debug=None,
+                   horloge=time.monotonic):
+    """Tri 3, puis tri 4 si le tri 3 ne suffit pas. Retourne (lectures, avertissement | None, reporte).
+    Par image : doublon exact ignoré ; OCR rapide (image réduite, `psm` clairsemé) puis OCR complet seulement si le
+    texte ressemble à un écran RESULT ; image trop lente = ignorée. Budget de temps par vidéo (`budget_video_min`) :
+    dépassé, la vidéo reste « partielle » et est reprise au passage suivant (`essais_max` fois, puis considérée faite)."""
     cfg = config["pc"]["images"]
     minutes = duree_minutes(meta.get("duration"))
     if minutes is None or minutes > cfg["max_minutes"]:
-        return lectures, f"{vid} : durée {meta.get('duration')} hors limite ({cfg['max_minutes']} min), images non traitées"
+        return lectures, f"{vid} : durée {meta.get('duration')} hors limite ({cfg['max_minutes']} min), images non traitées", False
+    langs = langues_ocr(meta, cfg)
+    fin = horloge() + cfg.get("budget_video_min", 15) * 60
     with tempfile.TemporaryDirectory() as tmp:
         try:
+            journal("  téléchargement…")
             chemin = outils.telecharger(vid, tmp)
             for tri in (3, 4):
                 if pc.get(f"tri{tri}") == "fait":
                     continue
-                nouvelles = []
+                nouvelles, st, complet, vus = [], {"images": 0, "doublons": 0, "candidates": 0, "lentes": 0}, True, {}
+                t0 = horloge()
                 for t, png in outils.images(chemin, segments_tri(tri, minutes * 60, cfg), tmp):
-                    nouvelles += ocr_ecrans.lectures_depuis_texte(outils.ocr(png), meta, config,
+                    if horloge() > fin:
+                        complet = False
+                        break
+                    st["images"] += 1
+                    h = outils.empreinte(png)
+                    if h in vus:
+                        st["doublons"] += 1
+                        texte = vus[h]
+                    else:
+                        texte = vus[h] = _ocr_image(outils, png, langs, cfg, st)
+                    if ocr_debug and texte:
+                        Path(ocr_debug).mkdir(parents=True, exist_ok=True)
+                        (Path(ocr_debug) / f"{vid}_tri{tri}_{t}.txt").write_text(texte, encoding="utf-8")
+                    nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config,
                                                                   "debut-fin" if tri == 3 else "video-complete", t)
                     Path(png).unlink(missing_ok=True)
                 lectures = fusionner_ecrans(lectures, vid, nouvelles)
+                journal(f"  tri {tri} : {st['images']} image(s), {st['candidates']} candidate(s) à l'OCR complet, "
+                        f"{len(nouvelles)} écran(s) lu(s), {st['lentes']} trop lente(s), {st['doublons']} doublon(s), "
+                        f"{int(horloge() - t0)} s" + ("" if complet else " — BUDGET DÉPASSÉ"))
+                if not complet:
+                    pc["date"] = jour
+                    pc["essais"] = pc.get("essais", 0) + 1
+                    if pc["essais"] < cfg.get("essais_max", 2):
+                        pc[f"tri{tri}"] = "partiel"
+                        return lectures, f"{vid} : images tri {tri} partielles (budget {cfg.get('budget_video_min', 15)} min), reprises au prochain passage", False
+                    pc[f"tri{tri}"] = "fait"
+                    return lectures, f"{vid} : images tri {tri} abandonnées après {pc['essais']} essais (budget dépassé)", False
                 pc[f"tri{tri}"], pc["date"] = "fait", jour
                 if tri == 3 and suffisant(lectures, vid, set(meta.get("mode_guess", []))):
                     pc["tri4"] = "inutile"
@@ -242,8 +324,26 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour):
         except OutilAbsent:
             raise
         except Exception as e:
-            return lectures, f"{vid} : images : {e}"
-    return lectures, None
+            if est_429(e):
+                return lectures, f"{vid} : 429 Too Many Requests (téléchargement), reportée au prochain passage", True
+            return lectures, f"{vid} : images : {e}", False
+    return lectures, None, False
+
+
+def _ocr_image(outils, png, langs, cfg, st):
+    """Texte d'une image ; "" si elle ne ressemble pas à un écran RESULT ou si tesseract est trop lent."""
+    try:
+        if cfg.get("ocr_rapide", True):
+            petit = outils.reduire(png, cfg.get("ocr_largeur_rapide", 960))
+            rapide = outils.ocr(petit, langs, cfg.get("ocr_psm_rapide", 11), cfg.get("ocr_timeout_rapide_s", 40))
+            Path(petit).unlink(missing_ok=True)
+            if not ressemble_ecran(rapide):
+                return ""
+        st["candidates"] += 1
+        return outils.ocr(png, langs, 6, cfg.get("ocr_timeout_s", 90))
+    except OcrTropLent:
+        st["lentes"] += 1
+        return ""
 
 
 def rejeter_sans_score(d, week, jour):
@@ -278,9 +378,14 @@ def annoter_non_verifies(d, week):
         d.ecrire(f"runs/{week}/{f.name}", lignes)
 
 
-def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper=False, maximum=None, images=None):
+def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper=False, maximum=None, images=None,
+           journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None):
+    """`journal(ligne)` : progression (print en production) ; `dormir(s)` : pause entre vidéos (time.sleep en
+    production). Les deux sont inertes par défaut (tests). `_lectures.json` et `processed.json` sont écrits après
+    chaque vidéo : un arrêt (PC éteint, Ctrl+C) ne perd que la vidéo en cours."""
     d, config = d or Donnees(), config or charger_config()
     outils = outils or Outils(config["pc"])
+    journal, dormir = journal or (lambda m: None), dormir or (lambda s: None)
     alertes, jour = [], instant.astimezone(PARIS).date().isoformat()
     if git:
         git.tirer()
@@ -289,41 +394,80 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     meta = ouvrir_semaine(d, week)
     if passage == "weekly":
         ouvrir_semaine(d, courante)
+    pc_cfg = config["pc"]
+    debut_passage = horloge()
+    fin_passage = debut_passage + pc_cfg.get("budget_minutes", 180) * 60
+    pause = pc_cfg.get("pause_s", 5)
+    journal(f"Passage PC {passage} — semaine {week}")
 
     traitees = 0
     if meta.get("frozen"):
         alertes.append(f"semaine {week} déjà gelée : rien à traiter")
     else:
         processed, videos, lectures = d.processed(), d.videos(week), d.lectures(week)
+
+        def sauver():
+            d.ecrire(f"runs/{week}/_lectures.json", lectures)
+            d.ecrire("processed.json", processed)
+
+        def titre(vid):
+            return (videos.get(vid, {}).get("title") or "")[:50]
+
         a_faire = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours"
                    and p.get("pc_needed") and (p.get("pc") or {}).get("sous_titres") not in ("fait", "absent")]
-        limite = maximum or config["pc"]["max_videos"]
+        limite = maximum or pc_cfg["max_videos"]
         if len(a_faire) > limite:
             alertes.append(f"{len(a_faire) - limite} vidéo(s) reportée(s) au prochain passage (limite {limite})")
+        lot = a_faire[:limite]
+        journal(f"Sous-titres : {len(lot)} vidéo(s)")
         try:
-            for vid in a_faire[:limite]:
+            for n, vid in enumerate(lot, 1):
+                if horloge() > fin_passage:
+                    alertes.append(f"budget de temps du passage atteint ({pc_cfg.get('budget_minutes', 180)} min) : "
+                                   f"{len(lot) - n + 1} vidéo(s) de sous-titres reportée(s)")
+                    break
+                journal(f"[{n}/{len(lot)}] {vid} « {titre(vid)} » : sous-titres…")
                 if vid not in videos:
                     alertes.append(f"{vid} : métadonnées absentes de _videos.json")
                     continue
+                t0 = horloge()
                 lectures, etat, avert = traiter_video(vid, videos[vid], outils, config, lectures, whisper, jour)
+                journal(f"  → {etat} ({int(horloge() - t0)} s)")
                 if avert:
                     alertes.append(avert)
+                if etat == "reporte":  # 429 : on s'arrête, YouTube limite le débit de cette adresse
+                    alertes.append("429 : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées")
+                    break
                 processed[vid].setdefault("pc", {}).update(sous_titres=etat, date=jour)
                 processed[vid]["updated_at"] = jour
                 processed[vid]["last_tri"] = max(processed[vid].get("last_tri", 0), 1)
                 traitees += 1
+                sauver()
+                if n < len(lot):
+                    dormir(pause)
         except OutilAbsent as e:
             alertes.append(str(e))
-        cfg_img = config["pc"]["images"]
+        cfg_img = pc_cfg["images"]
         if cfg_img["actif"] if images is None else images:
             a_images = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours" and p.get("pc_needed")
                         and v in videos and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile")]
-            if len(a_images) > cfg_img["max_videos"]:
-                alertes.append(f"{len(a_images) - cfg_img['max_videos']} vidéo(s) reportée(s) pour les images (limite {cfg_img['max_videos']})")
+            lim_img = min(maximum, cfg_img["max_videos"]) if maximum else cfg_img["max_videos"]  # --max limite aussi les images
+            if len(a_images) > lim_img:
+                alertes.append(f"{len(a_images) - lim_img} vidéo(s) reportée(s) pour les images (limite {lim_img})")
+            lot = a_images[:lim_img]
+            journal(f"Images (tris 3-4) : {len(lot)} vidéo(s)")
             try:
-                for vid in a_images[:cfg_img["max_videos"]]:
+                for n, vid in enumerate(lot, 1):
+                    if horloge() > fin_passage:
+                        alertes.append(f"budget de temps du passage atteint ({pc_cfg.get('budget_minutes', 180)} min) : "
+                                       f"{len(lot) - n + 1} vidéo(s) d'images reportée(s)")
+                        break
+                    journal(f"[{n}/{len(lot)}] {vid} « {titre(vid)} » : images ({', '.join(videos[vid].get('mode_guess', []))})")
                     etat = dict(processed[vid].get("pc") or {})
-                    lectures, avert = traiter_images(vid, videos[vid], outils, config, lectures, etat, jour)
+                    t0 = horloge()
+                    lectures, avert, reporte = traiter_images(vid, videos[vid], outils, config, lectures, etat, jour,
+                                                              journal, ocr_debug, horloge)
+                    journal(f"  → {int(horloge() - t0)} s" + (f" — {avert}" if avert else ""))
                     if avert:
                         alertes.append(avert)
                     if etat:
@@ -336,13 +480,19 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                         processed[vid]["pc_needed"] = False
                         if any(l["video_id"] == vid and l.get("score") is not None for l in lectures):
                             processed[vid]["status"] = "termine"
+                    sauver()
+                    if reporte:
+                        alertes.append("429 : images arrêtées pour ce passage, les vidéos restantes sont reportées")
+                        break
+                    if n < len(lot):
+                        dormir(pause)
             except OutilAbsent as e:
                 alertes.append(str(e))
-        d.ecrire(f"runs/{week}/_lectures.json", lectures)
-        d.ecrire("processed.json", processed)
+        sauver()
         restantes = sum(1 for p in processed.values() if p.get("week") == week and p["status"] == "en_cours")
         if restantes:
             alertes.append(f"{restantes} vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])")
+        journal(f"Terminé en {int((horloge() - debut_passage) // 60)} min : {traitees} vidéo(s) de sous-titres, {restantes} en_cours")
 
     res = classement.calculer(week, d, config, instant)
     if passage == "weekly" and not meta.get("frozen"):
@@ -364,16 +514,21 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
 
 
 if __name__ == "__main__":
+    for flux in (sys.stdout, sys.stderr):  # titres coréens / japonais : la console Windows (cp1252) planterait sinon
+        flux.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
     ap.add_argument("passage", choices=["daily", "weekly"])
     ap.add_argument("--no-git", action="store_true", help="pas de pull/push (essai local)")
     ap.add_argument("--whisper", action="store_true", help="active Whisper (config pc.whisper_cmd requis)")
-    ap.add_argument("--max", type=int)
+    ap.add_argument("--max", type=int, help="limite les vidéos traitées, sous-titres ET images")
+    ap.add_argument("--garder-ocr", action="store_true", help="écrit le texte lu par tesseract dans logs/ocr/ (diagnostic)")
     ap.add_argument("--maintenant", help="instant simulé ISO 8601 (tests)")
     a = ap.parse_args()
     try:
         r = lancer(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(),
-                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max)
+                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max,
+                   journal=lambda m: print(m, flush=True), dormir=time.sleep,
+                   ocr_debug=(RACINE / "logs" / "ocr") if a.garder_ocr else None)
     except GitErreur as e:
         print(f"ERREUR git : {e}\nPassage interrompu (conflit ou réseau) : relancer plus tard.", file=sys.stderr)
         sys.exit(1)
