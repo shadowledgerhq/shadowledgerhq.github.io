@@ -372,20 +372,24 @@ def _voter(resultats):
 
 
 def observer(images, mode, cfg, banque, db=None, ctx_note=None):
-    """`images` = {onglet: [PIL.Image]}. Sans zones pour un onglet : rien n'est cherché, note
-    `zones <mode>/<onglet> non définies`. Retourne les observations pour `construire_build`."""
-    from icones import recadrer, reconnaitre
+    """`images` = {onglet: [PIL.Image]} (plusieurs images d'un même onglet : vote majoritaire). Zones :
+    `cfg.zones.<mode>.<onglet>.<propriétaire>.<élément>` (voir `etape2.json`). Sans zones pour un onglet : rien n'est cherché,
+    note `zones <mode>/<onglet> non définies`. Retourne les observations pour `construire_build`."""
+    from icones import ECHELLES, recadrer, reconnaitre
     obs = {"sjw": None, "hunters": [], "shadows": [], "successor": None, "subjugation_support": None, "proof": None,
            "unmatched": [], "notes": [], "conflits": [], "found_at": {}}
-    seuil, ecart = cfg.get("seuil_icone", 0.8), cfg.get("ecart_icone", 0.05)
+    seuil, ecart = cfg.get("seuil_icone", 0.55), cfg.get("ecart_icone", 0.05)
+    echelles = tuple(cfg.get("echelles_icone") or ECHELLES)
     onglets = (cfg.get("onglets") or {}).get(mode) or []
     if mode == "gb" and not onglets:
         obs["notes"].append("composition GB non décrite")
         return obs
     zones_mode = (cfg.get("zones") or {}).get(mode) or {}
+    hunters = {}
+    cartes = {"sjw": None}
 
     def lire(imgs, zone, categorie, element, proprietaire, slot=None, restreint=None):
-        res = [reconnaitre(recadrer(im, zone), categorie, banque, seuil, ecart, restreint) for im in imgs]
+        res = [reconnaitre(recadrer(im, zone), categorie, banque, seuil, ecart, restreint, echelles) for im in imgs]
         ident, conflit, meilleur = _voter(res)
         if meilleur and meilleur.get("absente"):
             n = f"icône absente : {categorie}"
@@ -398,6 +402,47 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
                                      "score": meilleur["score"], "crop": None})
         return ident
 
+    def noyaux_permis(slot):
+        return {k for k, c in (db or {}).get("cores", {}).items() if c.get("slot") == slot} or None
+
+    def pieces_permises(slot):
+        return {k for k in banque.categorie("artifact_pieces") if k.endswith("--" + slot)}
+
+    def lire_proprietaire(imgs, nom, z, proprietaire_sjw):
+        """Lit les éléments de `z` pour un propriétaire ; accumule dans `obs`."""
+        if nom == "sjw":
+            s = cartes["sjw"] or {"weapons": [], "artifacts": [], "cores": [], "stats": {}, "skills": [], "blessings": []}
+            cartes["sjw"] = s
+            for zz in z.get("weapons") or []:
+                s["weapons"].append({"id": lire(imgs, zz, "weapons", "sjw_weapons", "sjw"), "level": None})
+            for slot, zz in (z.get("artifacts") or {}).items():
+                i = lire(imgs, zz, "artifact_pieces", "sjw_artifacts", "sjw", slot, pieces_permises(slot))
+                s["artifacts"].append({"slot": slot, "set_id": i.split("--")[0] if i else None, "level": None})
+            for slot, zz in (z.get("cores") or {}).items():
+                s["cores"].append({"slot": slot, "id": lire(imgs, zz, "cores", "sjw_cores", "sjw", slot, noyaux_permis(slot)), "level": None})
+            for slot, zz in (z.get("skills") or {}).items():
+                s["skills"].append({"slot": slot, "id": lire(imgs, zz, "sjw_skills", "sjw_skills", "sjw", slot), "level": None})
+            for zz in z.get("blessings") or []:
+                s["blessings"].append({"id": lire(imgs, zz, "blessings", "blessings", "sjw"), "level": None})
+        elif nom.startswith("hunter_"):
+            pos = int(nom.split("_")[1])
+            h = hunters.setdefault(pos, {"position": pos, "id": None, "weapon": {"id": None, "level": None}, "artifacts": [], "cores": [], "stats": {}})
+            if z.get("hunter"):
+                h["id"] = lire(imgs, z["hunter"], "hunters", "hunters", nom) or h["id"]
+            if z.get("weapon"):
+                h["weapon"]["id"] = lire(imgs, z["weapon"], "weapons", "weapons", nom) or h["weapon"]["id"]
+            for slot, zz in (z.get("artifacts") or {}).items():
+                i = lire(imgs, zz, "artifact_pieces", "artifacts", nom, slot, pieces_permises(slot))
+                h["artifacts"].append({"slot": slot, "set_id": i.split("--")[0] if i else None, "level": None})
+            for slot, zz in (z.get("cores") or {}).items():
+                h["cores"].append({"slot": slot, "id": lire(imgs, zz, "cores", "cores", nom, slot, noyaux_permis(slot)), "level": None})
+        elif nom == "shadows":
+            obs["shadows"] = [{"position": i + 1, "id": lire(imgs, zz, "shadows", "shadows", "shadows")} for i, zz in enumerate(z.get("shadows") or [])]
+        elif nom == "successor" and z.get("successor"):
+            obs["successor"] = {"id": lire(imgs, z["successor"], "successors", "successor", "successor"), "level": None}
+        elif nom == "poc" and z.get("subjugation"):
+            obs["subjugation_support"] = [lire(imgs, zz, "subjugation_support", "subjugation_support", "poc") for zz in z["subjugation"]]
+
     for onglet in onglets:
         zones, imgs = zones_mode.get(onglet), (images or {}).get(onglet) or []
         if not zones:
@@ -406,43 +451,10 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
         if not imgs:
             obs["notes"].append(f"images {mode}/{onglet} absentes")
             continue
-        if onglet == "sjw":
-            s = {"weapons": [], "artifacts": [], "cores": [], "stats": {}, "skills": [], "blessings": []}
-            for z in zones.get("weapons") or []:
-                s["weapons"].append({"id": lire(imgs, z, "weapons", "sjw_weapons", "sjw"), "level": None})
-            for slot, z in (zones.get("artifacts") or {}).items():
-                pieces = {k for k in banque.categorie("artifact_pieces") if k.endswith("--" + slot)}
-                i = lire(imgs, z, "artifact_pieces", "sjw_artifacts", "sjw", slot, pieces)
-                s["artifacts"].append({"slot": slot, "set_id": i.split("--")[0] if i else None, "level": None})
-            for slot, z in (zones.get("cores") or {}).items():
-                restreint = {k for k, c in (db or {}).get("cores", {}).items() if c.get("slot") == slot} or None
-                s["cores"].append({"slot": slot, "id": lire(imgs, z, "cores", "sjw_cores", "sjw", slot, restreint), "level": None})
-            for slot, z in (zones.get("skills") or {}).items():
-                s["skills"].append({"slot": slot, "id": lire(imgs, z, "sjw_skills", "sjw_skills", "sjw", slot), "level": None})
-            for z in zones.get("blessings") or []:
-                s["blessings"].append({"id": lire(imgs, z, "blessings", "blessings", "sjw"), "level": None})
-            obs["sjw"] = s
-        elif onglet.startswith("hunter_"):
-            pos = int(onglet.split("_")[1])
-            h = {"position": pos, "id": None, "weapon": {"id": None, "level": None}, "artifacts": [], "cores": [], "stats": {}}
-            if zones.get("hunter"):
-                h["id"] = lire(imgs, zones["hunter"], "hunters", "hunters", f"hunter_{pos}")
-            if zones.get("weapon"):
-                h["weapon"]["id"] = lire(imgs, zones["weapon"], "weapons", "weapons", f"hunter_{pos}")
-            for slot, z in (zones.get("artifacts") or {}).items():
-                pieces = {k for k in banque.categorie("artifact_pieces") if k.endswith("--" + slot)}
-                i = lire(imgs, z, "artifact_pieces", "artifacts", f"hunter_{pos}", slot, pieces)
-                h["artifacts"].append({"slot": slot, "set_id": i.split("--")[0] if i else None, "level": None})
-            for slot, z in (zones.get("cores") or {}).items():
-                restreint = {k for k, c in (db or {}).get("cores", {}).items() if c.get("slot") == slot} or None
-                h["cores"].append({"slot": slot, "id": lire(imgs, z, "cores", "cores", f"hunter_{pos}", slot, restreint), "level": None})
-            obs["hunters"].append(h)
-        elif onglet == "shadows":
-            obs["shadows"] = [{"position": i + 1, "id": lire(imgs, z, "shadows", "shadows", "shadows")} for i, z in enumerate(zones.get("shadows") or [])]
-        elif onglet == "successor" and zones.get("successor"):
-            obs["successor"] = {"id": lire(imgs, zones["successor"], "successors", "successor", "successor"), "level": None}
-        elif onglet == "subjugation" and zones.get("subjugation"):
-            obs["subjugation_support"] = [lire(imgs, z, "subjugation_support", "subjugation_support", "poc") for z in zones["subjugation"]]
+        for nom, z in zones.items():
+            lire_proprietaire(imgs, nom, z, nom == "sjw")
+    obs["sjw"] = cartes["sjw"]
+    obs["hunters"] = [hunters[p] for p in sorted(hunters)]
     return obs
 
 
@@ -490,7 +502,7 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
     processed = _json(racine / "data" / "processed.json", {})
     if banque is None:
         from icones import Banque
-        banque = Banque(racine, cfg.get("taille_comparaison", 32))
+        banque = Banque(racine)
     builds = []
     for nom_mode, ligne in modes_du_top(week, racine):
         for ctx in contextes(nom_mode, ligne, week):

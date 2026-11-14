@@ -1,29 +1,51 @@
-"""Banque d'icônes et reconnaissance par comparaison d'images (SPEC_ETAPE2 §0, §2.1).
-Gratuit : Pillow + numpy (pas d'OpenCV). La comparaison est une corrélation normalisée en niveaux de gris sur les pixels
-opaques de l'icône de référence (`data/icons/<categorie>/<id>.png`, 128×128, fond transparent).
-Rien n'est deviné : sous le seuil ou sans écart suffisant avec le 2e candidat, l'icône est `ok: False` (-> `unmatched`)."""
+"""Banque d'icônes et reconnaissance par recherche de gabarit (SPEC_ETAPE2 §0, §2.1). Gratuit : OpenCV
+(`py -3 -m pip install opencv-python-headless`) + numpy + Pillow.
+
+Chaque icône de référence (`data/icons/<categorie>/<id>.png`, 128×128, fond transparent) est rognée à son contenu, mise à
+plusieurs échelles (fractions de la zone, donc indépendantes de la résolution) et cherchée dans la zone recadrée de l'image
+(`cv2.matchTemplate`, `TM_CCOEFF_NORMED`, masque = transparence de l'icône). Le meilleur score par icône sert au classement.
+Rien n'est deviné : sous le seuil ou sans écart suffisant avec le 2e candidat, `id` vaut None (-> `unmatched`).
+Réglage sur une capture BOT japonaise (14/11/2026) : vrais noyaux 0,60-0,66 contre 0,39-0,57 pour le 2e ; emplacements vides
+0,37-0,43. Seuils [À CONFIRMER] dans `pipeline/config/etape2.json`."""
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parents[1]
 CATEGORIES = ("hunters", "weapons", "artifact_pieces", "cores", "shadows", "sjw_skills", "blessings", "successors",
               "subjugation_support")
+ECHELLES = (0.5, 0.6, 0.7, 0.8)
 
 
-def _gris(img, taille):
-    """(niveaux de gris 0-1, masque opaque) d'une image PIL redimensionnée à taille × taille."""
-    import numpy as np
-    rgba = img.convert("RGBA").resize((taille, taille))
-    a = np.asarray(rgba, dtype=float) / 255.0
-    gris = 0.299 * a[..., 0] + 0.587 * a[..., 1] + 0.114 * a[..., 2]
-    return gris, a[..., 3] > 0.5
+def _cv():
+    try:
+        import cv2
+        import numpy as np
+    except ImportError:
+        raise SystemExit("OpenCV absent : py -3 -m pip install opencv-python-headless")
+    return cv2, np
+
+
+def _bgra(img):
+    """PIL -> tableau BGRA rogné à la zone opaque (seuil alpha 40)."""
+    cv2, np = _cv()
+    a = np.asarray(img.convert("RGBA"))
+    bgra = np.dstack([a[..., 2], a[..., 1], a[..., 0], a[..., 3]])
+    ys, xs = np.where(bgra[..., 3] > 40)
+    if len(ys) == 0:
+        return None
+    return np.ascontiguousarray(bgra[ys.min():ys.max() + 1, xs.min():xs.max() + 1])
+
+
+def _bgr(img):
+    cv2, np = _cv()
+    a = np.asarray(img.convert("RGB"))
+    return np.ascontiguousarray(a[..., ::-1])
 
 
 class Banque:
     """Icônes de référence d'une catégorie, chargées à la demande."""
 
-    def __init__(self, racine=RACINE, taille=32):
+    def __init__(self, racine=RACINE, taille=None):
         self.dossier = Path(racine) / "data" / "icons"
-        self.taille = taille
         self._cache = {}
 
     def categorie(self, nom):
@@ -34,29 +56,40 @@ class Banque:
             for f in sorted(d.glob("*.png")) if d.exists() else []:
                 try:
                     with Image.open(f) as im:
-                        ref[f.stem] = _gris(im, self.taille)
+                        b = _bgra(im)
                 except OSError:
                     continue
+                if b is not None:
+                    ref[f.stem] = b
             self._cache[nom] = ref
         return self._cache[nom]
 
     def ajouter(self, nom, identifiant, image):
         """Pour les tests : ajoute une référence en mémoire."""
-        self.categorie(nom)[identifiant] = _gris(image, self.taille)
+        self.categorie(nom)[identifiant] = _bgra(image)
 
 
-def _ncc(a, b, masque):
-    import numpy as np
-    x, y = a[masque], b[masque]
-    if x.size < 16:
-        return 0.0
-    x, y = x - x.mean(), y - y.mean()
-    d = float(np.sqrt((x * x).sum() * (y * y).sum()))
-    return float((x * y).sum() / d) if d > 1e-9 else 0.0
+def _score(zone, ref, echelles):
+    cv2, np = _cv()
+    cote = min(zone.shape[:2])
+    h, w = ref.shape[:2]
+    meilleur = -1.0
+    for e in echelles:
+        s = e * cote / max(h, w)
+        r = cv2.resize(ref, (max(8, round(w * s)), max(8, round(h * s))), interpolation=cv2.INTER_AREA)
+        if r.shape[0] > zone.shape[0] or r.shape[1] > zone.shape[1]:
+            continue
+        masque = (r[..., 3] > 128).astype(np.uint8) * 255
+        if masque.sum() == 0:
+            continue
+        out = np.nan_to_num(cv2.matchTemplate(zone, np.ascontiguousarray(r[..., :3]), cv2.TM_CCOEFF_NORMED, mask=masque),
+                            nan=-1.0, posinf=-1.0, neginf=-1.0)
+        meilleur = max(meilleur, float(out.max()))
+    return meilleur
 
 
-def reconnaitre(image, categorie, banque, seuil=0.80, ecart=0.05, restreint=None):
-    """Compare `image` (PIL) aux icônes de `categorie`. Retourne
+def reconnaitre(image, categorie, banque, seuil=0.55, ecart=0.05, restreint=None, echelles=ECHELLES):
+    """Cherche dans `image` (PIL, déjà recadrée sur la zone) l'icône de `categorie` qui lui ressemble le plus. Retourne
     {"id", "score", "second", "ok", "best_id"} : `id` = candidat retenu seulement si score ≥ seuil et écart ≥ `ecart`
     avec le 2e candidat ; sinon `id` None et `best_id` garde le meilleur (pour `unmatched`). `restreint` = ids permis."""
     ref = banque.categorie(categorie)
@@ -64,8 +97,8 @@ def reconnaitre(image, categorie, banque, seuil=0.80, ecart=0.05, restreint=None
         ref = {k: v for k, v in ref.items() if k in restreint}
     if not ref:
         return {"id": None, "score": 0.0, "second": 0.0, "ok": False, "best_id": None, "absente": True}
-    gris, _ = _gris(image, banque.taille)
-    notes = sorted(((_ncc(gris, g, m), k) for k, (g, m) in ref.items()), reverse=True)
+    zone = _bgr(image)
+    notes = sorted(((_score(zone, g, echelles), k) for k, g in ref.items()), reverse=True)
     meilleur, ident = notes[0]
     second = notes[1][0] if len(notes) > 1 else 0.0
     ok = meilleur >= seuil and (meilleur - second) >= ecart

@@ -211,27 +211,51 @@ def test_reconnaissance_par_icone_et_seuils():
     from PIL import Image, ImageDraw
     banque = icones.Banque(RACINE)
 
-    def motif(forme):
-        im = Image.new("RGBA", (64, 64), (0, 0, 0, 0))
+    def motif(forme, n=64):
+        im = Image.new("RGBA", (n, n), (0, 0, 0, 0))
         d = ImageDraw.Draw(im)
-        (d.rectangle if forme == "carre" else d.ellipse)((8, 8, 56, 56), fill=(240, 240, 240, 255))
-        if forme == "carre":
-            d.line((8, 8, 56, 56), fill=(10, 10, 10, 255), width=6)
+        (d.rectangle if forme == "carre" else d.ellipse)((4, 4, n - 4, n - 4), fill=(200, 60, 60, 255))
+        d.line((4, 4, n - 4, n - 4) if forme == "carre" else (n // 2, 4, n // 2, n - 4), fill=(20, 220, 240, 255), width=n // 8)
+        d.ellipse((n // 2 - 6, n // 2 + 8, n // 2 + 6, n // 2 + 20), fill=(250, 250, 40, 255))
         return im
-    banque.ajouter("hunters", "a", motif("carre"))
-    banque.ajouter("hunters", "b", motif("rond"))
-    r = icones.reconnaitre(motif("carre"), "hunters", banque, 0.8, 0.05, restreint={"a", "b"})
-    assert r["ok"] and r["id"] == "a"
-    bruit = Image.effect_noise((64, 64), 80).convert("RGBA")
-    r2 = icones.reconnaitre(bruit, "hunters", banque, 0.8, 0.05, restreint={"a", "b"})
+
+    def ecran(forme):
+        fond = Image.effect_noise((100, 100), 60).convert("RGBA")
+        fond.alpha_composite(motif(forme, 56), (22, 18))
+        return fond
+    banque.ajouter("hunters", "a", motif("carre", 128))
+    banque.ajouter("hunters", "b", motif("rond", 128))
+    r = icones.reconnaitre(ecran("carre"), "hunters", banque, 0.55, 0.05, restreint={"a", "b"})
+    assert r["ok"] and r["id"] == "a", r
+    assert icones.reconnaitre(ecran("rond"), "hunters", banque, 0.55, 0.05, restreint={"a", "b"})["id"] == "b"
+    bruit = Image.effect_noise((100, 100), 80).convert("RGBA")
+    r2 = icones.reconnaitre(bruit, "hunters", banque, 0.55, 0.05, restreint={"a", "b"})
     assert not r2["ok"] and r2["id"] is None and r2["best_id"] in ("a", "b")
-    # observer : sans zone -> rien cherché, note ; avec zone -> reconnu
-    obs = B.observer({"hunter_1": [motif("carre")]}, "bot", CFG, banque, DB)
-    assert "zones bot/hunter_1 non définies" in obs["notes"] and not obs["hunters"]
-    cfg = {**CFG, "zones": {"bot": {"hunter_1": {"hunter": [0, 0, 1, 1]}}}}
-    obs = B.observer({"hunter_1": [motif("carre"), motif("carre")]}, "bot", cfg, banque, DB)
-    # la banque contient aussi les vrais chasseurs : le motif de test doit gagner sur les deux images
-    assert obs["hunters"][0]["id"] in ("a", None)
+    # observer : sans zone -> rien cherché, note ; avec zone -> reconnu (structure zones.<mode>.<onglet>.<propriétaire>.<élément>)
+    obs = B.observer({"personnages": [ecran("carre")]}, "bot", CFG, banque, DB)
+    assert "zones bot/personnages non définies" in obs["notes"] and not obs["hunters"]
+    cfg = {**CFG, "zones": {"bot": {"personnages": {"hunter_1": {"hunter": [0, 0, 1, 1]}}}}}
+    obs = B.observer({"personnages": [ecran("carre"), ecran("carre")]}, "bot", cfg, banque, DB)
+    assert len(obs["hunters"]) == 1 and obs["hunters"][0]["position"] == 1
+    assert obs["hunters"][0]["id"] == "a" and not obs["unmatched"]
+    obs = B.observer({"personnages": [Image.effect_noise((100, 100), 80).convert("RGBA")]}, "bot", cfg, banque, DB)
+    assert obs["hunters"][0]["id"] is None and obs["unmatched"][0]["owner"] == "hunter_1"
+
+
+def test_noyaux_reels_bot_japonais():
+    """Capture réelle (docs/essais/composition/bot_noyaux_ja.png, 1158×651) : zones de `etape2.json`, vraie banque d'icônes."""
+    from PIL import Image
+    chemin = RACINE / "docs" / "essais" / "composition" / "bot_noyaux_ja.png"
+    if not chemin.exists():
+        return
+    obs = B.observer({"noyaux": [Image.open(chemin)]}, "bot", CFG, icones.Banque(RACINE), DB)
+    par = {h["position"]: {c["slot"]: c["id"] for c in h["cores"]} for h in obs["hunters"]}
+    assert par[1]["mind"] == "ferocious-protectors-desire" and par[3]["mind"] == "ferocious-protectors-desire"
+    assert par[2]["mind"] == "ancient-wraiths-obession" and par[2]["body"] == "nameless-demons-horn"
+    assert par[1]["spirit"] == par[2]["spirit"] == "teeth-of-the-watcher"
+    assert par[1]["body"] is None and par[3]["body"] is None and par[3]["spirit"] is None      # emplacements vides : jamais devinés
+    assert {u["slot"] for u in obs["unmatched"] if u["owner"] == "hunter_1"} == {"body"}
+    assert {c["slot"]: c["id"] for c in obs["sjw"]["cores"]}["mind"] == "ancient-wraiths-obession"
 
 
 def test_calculer_sur_arbre_de_test():
