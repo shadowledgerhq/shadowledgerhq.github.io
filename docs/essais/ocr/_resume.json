@@ -13,7 +13,7 @@
    "published_at": "2026-11-12T12:00:07Z",
    "lang": "en-US",
    "mode": "gb",
-   "regles": null,
+   "regles": 13,
    "bot_season_week": null,
    "player_ingame": null,
    "damage": 1596246179,
@@ -23,7 +23,7 @@
    "stage": null,
    "team": null,
    "score": null,
-   "score_source": "hud",
+   "score_source": null,
    "exact": false,
    "confidence": "a_verifier",
    "detail": {
@@ -31,6 +31,8 @@
     "hud_points": 1596246179,
     "chrono_hud": 0.47,
     "hud_rage_count": 12,
+    "t_debut": 50,
+    "t_fin": 238,
     "damage_exact": false,
     "damage_source": "hud"
    },
@@ -45,7 +47,7 @@
    "published_at": "2026-11-12T12:00:07Z",
    "lang": "en-US",
    "mode": "gb",
-   "regles": null,
+   "regles": 13,
    "bot_season_week": null,
    "player_ingame": null,
    "damage": 1601097999,
@@ -61,14 +63,75 @@
    "detail": {
     "damage_exact": true,
     "play_time": "03:00",
-    "new_record": false,
+    "new_record": true,
     "player_score": 313099049,
-    "hunter_ranks_lus": 0,
-    "completude": 5,
-    "lectures_identiques": 1,
+    "hunter_ranks": [
+     null,
+     null,
+     null,
+     null,
+     58465656,
+     22280102
+    ],
+    "hunter_ranks_lus": 2,
+    "n_images": 3,
+    "votes": {
+     "stage": [
+      [
+       "Giant Statue",
+       3
+      ]
+     ],
+     "player_score": [
+      [
+       313099049,
+       2
+      ]
+     ],
+     "final_score": [
+      [
+       1601097999,
+       2
+      ]
+     ],
+     "rage_count": [
+      [
+       19,
+       2
+      ],
+      [
+       7,
+       1
+      ]
+     ],
+     "play_time": [
+      [
+       "03:00",
+       2
+      ]
+     ],
+     "hunter_rank_5": [
+      [
+       58465656,
+       1
+      ]
+     ],
+     "hunter_rank_6": [
+      [
+       22280102,
+       1
+      ]
+     ]
+    },
+    "rc_images": 2,
+    "final_images": 2,
+    "t_debut": 252,
+    "t_fin": 253,
     "hud_rage_count": 12
    },
    "notes": [
+    "écart OCR zone/image : player_score",
+    "lecture fusionnée (3 images)",
     "contrôle sans Hunter Rank"
    ]
   }
@@ -101,9 +164,7 @@
   }
  },
  "fichiers_logs_ocr": [
-  "lGDbzyIJcjY_recherche_252.txt",
   "lGDbzyIJcjY_recherche_252_gb_results_partiel.txt",
-  "lGDbzyIJcjY_recherche_253.txt",
   "lGDbzyIJcjY_recherche_253_gb_results_partiel.txt",
   "lGDbzyIJcjY_tri3_0.txt",
   "lGDbzyIJcjY_tri3_2.txt",
@@ -146,9 +207,7 @@
   "lGDbzyIJcjY_tri4_90.txt"
  ],
  "textes_recherche": {
-  "lGDbzyIJcjY_recherche_252.txt": "| OT Na. a 7 Z\nYour points have been registered.\na 6 2 ~\n\nX\n",
   "lGDbzyIJcjY_recherche_252_gb_results_partiel.txt": "| OT Na. a 7 Z\nYour points have been registered.\na 6 2 ~\n\nX\n",
-  "lGDbzyIJcjY_recherche_253.txt": "2\nWw\nRage Rewards\nx ¢.\n\\ ：\n; 58,465,656\nTap the screen to continue.\nNew Record Achic\n",
   "lGDbzyIJcjY_recherche_253_gb_results_partiel.txt": "2\nWw\nRage Rewards\nx ¢.\n\\ ：\n; 58,465,656\nTap the screen to continue.\nNew Record Achic\n"
  }
 }
