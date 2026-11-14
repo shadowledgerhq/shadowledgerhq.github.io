@@ -533,6 +533,26 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                     nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
                     Path(png).unlink(missing_ok=True)
                 lectures = fusionner_ecrans(lectures, vid, nouvelles, config)
+                # v21 : HUD de fin de run (chrono lu ≤ 5 s) -> les 2 images suivantes (1 img/s) : le HUD y a souvent un chrono illisible
+                # mais des Points plus récents (SPEC v19 : chrono HUD déduit) ; les tri 3 sautent une image sur deux
+                suivis = pc.setdefault("hud_suite", [])
+                for h in [x for x in lectures if x["video_id"] == vid and (x.get("detail") or {}).get("ecran") == "combat"
+                          and x["detail"]["chrono_hud"] <= config.get("gb", {}).get("hud_chrono_points_s", 5) and x["t"] is not None]:
+                    if int(h["t"]) in suivis or horloge() > fin:
+                        continue
+                    suivis.append(int(h["t"]))
+                    suite = []
+                    for t_s, png_s in outils.images(chemin, [(int(h["t"]) + 1, 2, 1)], tmp, prefixe=f"h{int(h['t'])}_"):
+                        if t_s > minutes * 60:
+                            Path(png_s).unlink(missing_ok=True)
+                            continue
+                        texte_s = _ocr_image(outils, png_s, langs, cfg, st, complet=True)
+                        _garder(ocr_debug, vid, "suite_hud", t_s, texte_s, png_s)
+                        suite += [l for l in ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
+                                  if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
+                        Path(png_s).unlink(missing_ok=True)
+                    st["images"] += 2
+                    lectures = fusionner_ecrans(lectures, vid, suite, config)
                 # v12 : écran Results lu jusqu'à la fin de la vidéo ; chrono HUD ≤ 15 s -> on cherche l'écran qui suit
                 lus = pc.setdefault("results_lus", [])            # [[début, fin]] déjà lus (aucune relecture au tri 4)
                 couvert = lambda t: any(a <= t <= b for a, b in lus)

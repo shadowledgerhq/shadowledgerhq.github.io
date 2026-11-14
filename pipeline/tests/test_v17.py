@@ -1,5 +1,6 @@
 """v17 : repli sur le contrôle sans Hunter Rank (6 rangs lus mais somme fausse / Player's Score illisible) ; plausibilité des Points HUD ko/pt."""
 import sys
+import tempfile
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -158,6 +159,54 @@ def test_v20_chrono_hud_deduit():
     res, ls = run("7,905,911,007,261")
     deux = [l for l in pc.fusionner_ecrans([], "t5", pc.fusionner_ecrans([], "t5", ls + [], CONFIG), CONFIG) if l["score"] is not None][0]
     assert deux["confidence"] == "sur" and deux["notes"].count("chrono HUD déduit (t=214)") == 1
+
+
+def test_v21_t5dr_de_bout_en_bout():
+    """Cas T5dR6iJAn-Y (flux réel) : HUD à 213 s (chrono 0.80, Points abîmés), le tri 3 saute 214 s : les 2 images qui suivent un HUD
+    de fin de run sont lues (HUD sans chrono, Points 7,905,911007,261) ; Results portugais à 229 s+ ; 156 sur, chrono HUD déduit."""
+    from datetime import datetime
+    from donnees import charger_config
+    from test_tri34 import OutilsImages, SEM, monde, INSTANT
+    config = charger_config()
+    REF = "(®) 0.80\nPontos 7288064\nNúmero de Fúrias do Chefão 120 WARNING\n"
+    SC = "Pontos 7,905,911007,261\nNúmero de Fúrias do Chefão 120 WARNING\n"
+
+    class ZonesPT(dict):
+        def get(self, cle, defaut=None):
+            return {**Z_PT, "joueur": ""} if cle[1] >= 229 else (defaut or {})
+
+    class Faux(OutilsImages):
+        zones = ZonesPT()
+
+        def images(self, chemin, segments, dossier, prefixe="f", hauteur=None):
+            self.appels.append(("img", self.cur, tuple(segments), prefixe))
+            return [(d_ + i, f"{self.cur}@{d_ + i}") for d_, n, p in segments for i in range(0, n, p)]
+
+        def ocr(self, png, langues=None, psm=6, timeout=120, extra=None):
+            if "#" not in png and self.appels and self.appels[-1][0] == "img" and self.appels[-1][3] != "f":
+                self.ext = True
+            if "#" not in png and getattr(self, "ext", False):
+                t = int(png.split("@")[1])
+                return SC if t == 214 else (RESULTS_PT if t >= 229 else "")
+            return super().ocr(png, langues, psm, timeout)
+
+    with tempfile.TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        videos = d.videos(SEM)
+        videos["a"].update(mode_guess=["gb"], duration="PT4M3S")        # 243 s
+        d.ecrire(f"runs/{SEM}/_videos.json", videos)
+        o = Faux({"a": {213: REF, 229: RESULTS_PT, 231: RESULTS_PT, 233: RESULTS_PT}})
+        pc.lancer("daily", INSTANT, d, config, o, maximum=1, journal=lambda m: None)
+        lec = [l for l in d.lectures(SEM) if l["video_id"] == "a" and l["mode"] == "gb"]
+        res = [l for l in lec if l.get("score") is not None]
+        assert len(res) == 1 and res[0]["score"] == 156 and res[0]["confidence"] == "sur", [l["notes"] for l in res]
+        assert "chrono HUD déduit (t=214)" in res[0]["notes"] and "séparateur perdu (OCR)" in res[0]["notes"]
+        assert any(a[0] == "img" and a[2] == ((214, 2, 1),) for a in o.appels)          # images 214 et 215 lues après le HUD de 213 s
+        assert d.processed()["a"]["pc"]["hud_suite"] == [213]
+        # 2e passage : pas de relecture de ces images
+        o2 = Faux({"a": {213: REF, 229: RESULTS_PT}})
+        pc.lancer("daily", INSTANT, d, config, o2, maximum=1, journal=lambda m: None)
+        assert not [a for a in o2.appels if a[0] == "img" and a[2] == ((214, 2, 1),)]
 
 
 if __name__ == "__main__":
