@@ -314,6 +314,22 @@ def test_v11_cas_lGDbzyIJcjY_recherche_results():
         assert not [a for a in o2.appels if a[0] == "img" and a[3] != "f"]
 
 
+def test_refaire_une_video():
+    config = charger_config()
+    with __import__("tempfile").TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        videos = d.videos(SEM)
+        videos["a"].update(mode_guess=["gb"], duration="PT4M14S")
+        d.ecrire(f"runs/{SEM}/_videos.json", videos)
+        pc.lancer("daily", INSTANT, d, config, OutilsImages({"a": {228: HUD_228}}), seulement={"a"})
+        assert d.processed()["a"]["pc"]["tri4"] == "fait"
+        o = OutilsImages({"a": {228: HUD_228}})
+        pc.lancer("daily", INSTANT, d, config, o, seulement={"a"})
+        assert not [x for x in o.appels if x[0] == "dl"]                                   # déjà fait : rien
+        pc.lancer("daily", INSTANT, d, config, o, seulement={"a"}, refaire=True)
+        assert [x for x in o.appels if x[0] == "dl"] == [("dl", "a")]                       # --refaire : retraitée
+
+
 def test_v11_hud_sans_results_reste_provisoire():
     config = charger_config()
     with __import__("tempfile").TemporaryDirectory() as tmp:

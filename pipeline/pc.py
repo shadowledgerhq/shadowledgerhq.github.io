@@ -453,7 +453,7 @@ def annoter_non_verifies(d, week):
 
 
 def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper=False, maximum=None, images=None,
-           journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None, seulement=None):
+           journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None, seulement=None, refaire=False):
     """`journal(ligne)` : progression (print en production) ; `dormir(s)` : pause entre vidéos (time.sleep en
     production). Les deux sont inertes par défaut (tests). `_lectures.json` et `processed.json` sont écrits après
     chaque vidéo : un arrêt (PC éteint, Ctrl+C) ne perd que la vidéo en cours."""
@@ -479,6 +479,12 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         alertes.append(f"semaine {week} déjà gelée : rien à traiter")
     else:
         processed, videos, lectures = d.processed(), d.videos(week), d.lectures(week)
+        if refaire:  # diagnostic : la vidéo choisie est retraitée comme si rien n'avait été fait
+            for v in (seulement or ()):
+                if v in processed:
+                    processed[v].pop("pc", None)
+                    processed[v].update(status="en_cours", pc_needed=True)
+                    lectures = [l for l in lectures if not (l["video_id"] == v and l["score_source"] in SOURCES_ECRAN)]
 
         def sauver():
             d.ecrire(f"runs/{week}/_lectures.json", lectures)
@@ -628,12 +634,13 @@ if __name__ == "__main__":
     ap.add_argument("--video", action="append", help="ne traite que cette vidéo (identifiant YouTube ; répétable)")
     ap.add_argument("--publier-essai", action="store_true",
                     help="comme --garder-ocr, puis copie les 6 meilleures images (JPEG) et textes dans docs/essais/ocr et les pousse")
+    ap.add_argument("--refaire", action="store_true", help="avec --video : retraite la vidéo même si elle est déjà faite")
     ap.add_argument("--garder-ocr", action="store_true", help="écrit le texte lu par tesseract et l'image dans logs/ocr/ (diagnostic)")
     ap.add_argument("--maintenant", help="instant simulé ISO 8601 (tests)")
     a = ap.parse_args()
     try:
         r = lancer(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(),
-                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max, seulement=set(a.video or []),
+                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max, seulement=set(a.video or []), refaire=a.refaire,
                    journal=lambda m: print(m, flush=True), dormir=time.sleep,
                    ocr_debug=(RACINE / "logs" / "ocr") if (a.garder_ocr or a.publier_essai) else None)
     except GitErreur as e:
