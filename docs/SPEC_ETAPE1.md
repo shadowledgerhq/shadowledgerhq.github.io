@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 13 — 14/11/2026 (GB : écran Results lu par fusion d'images et zones ciblées ; contrôle sans Hunter Rank durci) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 14 — 14/11/2026 (GB : vote du Rage Count en cas de lecture discordante ; minimum de Hunter Rank sans HUD ; vidéos de test des zones) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -131,14 +131,21 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
   - **Fusion des images d'un même écran (v13, validé)** : les champs d'un écran Results peuvent venir de plusieurs images, à ces conditions :
     - mêmes vidéo et run : images consécutives entre la première image `Results` et la dernière, sans HUD de combat entre elles, sur 15 s au plus (`config.gb.fusion_max_s = 15`) ;
     - chaque champ garde la valeur lue ; si un champ est lu avec 2 valeurs différentes, on garde la plus fréquente, et en cas d'égalité → conflit, run `a_verifier`, note `conflit de lecture : <champ>` ;
+    - **`Rage Count` (v14)** : s'il existe au moins une lecture discordante, la valeur retenue doit avoir **au moins 2 fois plus d'images que toutes les valeurs discordantes réunies** (ex. 2 contre 1 : accepté ; 2 contre 2 ou 3 contre 2 : refusé). Sinon → `a_verifier`, note `conflit de lecture : rage_count`. Toute valeur écartée est notée : `RC discordant écarté : <valeur> (t=<s>)`. Essai `lGDbzyIJcjY` : 19 sur 2 images, 7 sur 1 image → 19 retenu, note `RC discordant écarté : 7`.
     - la run porte la note `lecture fusionnée (<n> images)` et `t` = l'image où `Rage Count` est lu.
     - Libellés de l'animation à reconnaître pour ne pas les lire comme des valeurs : `Rage Rewards`, `Tap the screen to continue.`
   - **Zones ciblées (v13, validé comme méthode)** : en plus de l'OCR de l'image entière, lecture de zones recadrées et agrandies (titre/boss, `Player's Score`, `Hunter Rank` 1 à 6, `Final Score`, `Rage Count`, `Play Time`). Coordonnées dans `config.gb.zones`, en **fractions de l'image** (x, y, largeur, hauteur entre 0 et 1), jamais en pixels. Valeurs estimées sur du 720p 16:9 : **[À CONFIRMER]** sur au moins 3 autres vidéos, dont une en 1080p. Image au format différent (Short vertical, 4:3, bandes noires) → zones non appliquées, OCR de l'image entière seulement, note `format non standard`. La valeur d'une zone ciblée prime sur celle de l'image entière ; si les deux diffèrent, la note `écart OCR zone/image : <champ>` est ajoutée. Images de référence : `docs/essais/ocr/lGDbzyIJcjY_*results*.jpg`.
+    - **Vidéos de test des zones (v14)**, semaine 2026-11-12, choisies parce qu'elles annoncent une run GB (RC ou score dans le titre) ; résolution et présence de l'écran Results **non vérifiées d'ici** (à contrôler avec `yt-dlp -F` et le tri 3) :
+      - `T5dR6iJAn-Y` et `Oj_-5x6700s` (RaidenShadow, « Rage 159 » groupe Feu et « Rage 137 » groupe Lumière, semaine 4) : même joueur, 2 runs → test aussi de la somme groupe 1 + groupe 2 ;
+      - `vYtRCpFtSOk` et `MJ2iz5TFmvM` (Eden(이든), 162 Lumière et 160 Feu, titre coréen) : même joueur, 2 runs, client coréen probable → test des libellés coréens ;
+      - `nh2D7xZ7dOQ` (SlayOnLow, 165 RC) et `awb-GlVIa7Q` (Ahmad1195, 189 RC, 64.2T).
+      Au moins une doit être en 1080p ; sinon, chercher une autre vidéo GB en 1080p la semaine prochaine.
   - **Contrôle Results sans les 6 Hunter Rank (v12, durci v13)** : si la somme `Player's Score` + 6 `Hunter Rank` = `Final Score` n'est pas vérifiable, la run est `sur` seulement si **toutes** ces conditions sont réunies, sinon `a_verifier` :
     1. `Results`, le nom du boss, `Final Score`, `Rage Count` et `Play Time` sont lus (fusion permise) ;
     2. **`Rage Count` lu à l'identique sur au moins 2 images** (c'est le score classé : 2 chiffres, une seule erreur d'OCR change le rang) ;
     3. **`Final Score` confirmé par une source indépendante** : dernier `Points` du HUD avec un chrono ≤ 5 s, et `Points` ≤ `Final Score` ≤ `Points` × 1,02 (`config.gb.hud_tolerance = 0.02`). Sans HUD lisible : `Final Score` identique sur au moins 2 images **et** condition 4 ;
     4. cohérence des valeurs lues : `Player's Score` + les `Hunter Rank` lus < `Final Score`, et les `Hunter Rank` lus décroissent du rang 1 au rang 6.
+       Avec le HUD (condition 3 par les `Points`), la condition 4 est un simple contrôle de bon sens : 0 à 6 `Hunter Rank` lus suffisent. **Sans HUD (v14)**, il faut au moins 3 `Hunter Rank` lus pour la condition 4, sinon `a_verifier`. Essai `lGDbzyIJcjY` : rangs 5 et 6 seuls lus (58 465 656 et 22 280 102), accepté car le HUD confirme le `Final Score`.
     La condition « `Player's Score` < `Final Score` » seule (v12) ne suffit plus. Note : `contrôle sans Hunter Rank`.
     Cas test `lGDbzyIJcjY` : RC 19 lu à 252 s et à 253 s (condition 2) ; `Points` 1 596 246 179 à 0,47 s ≤ 1 601 097 999 ≤ 1 628 171 102 (condition 3) ; 313 099 049 + 62 925 78x + 58 465 656 + 22 280 102 ≈ 456,8 millions < 1 601 097 999, et 62,9 M > 58,5 M > 22,3 M (condition 4) → RC 19 `sur`, dégâts 1 601 097 999 exacts, `new_record: true` (bandeau visible à 253 s). Ligne `a_verifier` car une seule run (§4.1).
 - Japonais et autres langues : libellés RESULT **[À CONFIRMER]** (seul le coréen est vu pour POC et HOTM).
@@ -272,6 +279,7 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 - `pipeline/analyse_porte_mode.py` lit `data/runs/*/hotm.json` → lire `data/runs/*/hotm-gate-*.json`.
 - `gate` : entier dans le JSON (voir §5.1).
 - Retirer `runs_detail.submode` (skill et code).
+- (v14) GB : vote du Rage Count discordant (≥ 2× les discordantes réunies, note `RC discordant écarté`) ; sans HUD, ≥ 3 Hunter Rank lus pour la condition 4 ; tester les zones sur `T5dR6iJAn-Y`, `Oj_-5x6700s`, `vYtRCpFtSOk`, `MJ2iz5TFmvM`, `nh2D7xZ7dOQ`, `awb-GlVIa7Q` (§3.1).
 - (v13) GB : fusion des images de l'écran Results (§3.1, conditions et conflits) ; zones ciblées en fractions dans `config.gb.zones` ; contrôle sans Hunter Rank durci (RC identique sur 2 images, Final Score confirmé par le HUD ou 2 images + cohérence des Hunter Rank lus). Corrections de l'essai du 14/11 : `new_record` doit être `true` pour `lGDbzyIJcjY` (bandeau à 253 s) ; `regles` vaut `null` au lieu de 13 ; la lecture HUD porte `score_source: hud` avec `score: null` : mettre `score_source: null` (seul `damage_source: hud`).
 - (v12) GB : le HUD ne donne plus de RC (supprimer `score_source: hud` pour le RC) ; champs `runs_detail[i].hud_rage_count` (info) et `damage_source: hud` (dégâts provisoires) ; `points_hud` remplacé par `damage` provisoire ; contrôle Results sans Hunter Rank (§3.1) ; lire l'écran Results jusqu'à la fin de la vidéo. Cas test : `lGDbzyIJcjY` → RC 19 `sur`, dégâts 1 601 097 999, note `contrôle sans Hunter Rank`, ligne `a_verifier` (une seule run).
 - (v10) Migration : fusionner `bot-season.json` et `bot-variante-inconnue.json` de la semaine 2026-11-12 dans `bot.json` ; supprimer les anciens fichiers BOT et le champ `bot_variant` (code, tests, site).
