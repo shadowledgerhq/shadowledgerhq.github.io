@@ -136,6 +136,14 @@ class Outils:
                       "-vf", f"scale={int(largeur)}:-2", str(sortie)], 60)
         return sortie
 
+    def recadrer(self, png, zone, echelle=3):
+        """Zone de l'image (x, y, largeur, hauteur en fractions), agrandie et en gris : lecture ciblée d'un petit texte."""
+        x, y, l, h = zone
+        sortie = Path(png).with_name(Path(png).stem + "_z.png")
+        self._lancer([self.cfg["images"]["ffmpeg"], "-v", "error", "-y", "-i", str(png), "-vf",
+                      f"crop=iw*{l}:ih*{h}:iw*{x}:ih*{y},scale=iw*{echelle}:-1,format=gray", "-frames:v", "1", str(sortie)], 60)
+        return sortie
+
     def empreinte(self, png):
         return hashlib.md5(Path(png).read_bytes()).hexdigest()
 
@@ -304,6 +312,26 @@ def _ocr_image(outils, png, langs, cfg, st, complet=False):
         return ""
 
 
+def lire_zones_results(outils, png, cfg):
+    """v12 : écran Results (reconnu, même en animation) : le titre `Results` / boss et `Player's Score` sont lus par
+    recadrage agrandi (`images.zones_results`), l'image entière les lit mal (essai du 14/11 : boss illisible,
+    `Player's Score` 89 008 au lieu de 313 099 049). Retourne {"boss": texte, "joueur": texte} ; "" si illisible."""
+    zones, sortie = cfg.get("zones_results", {}), {}
+    for nom in ("boss", "joueur"):
+        if nom not in zones:
+            continue
+        try:
+            petit = outils.recadrer(png, zones[nom])
+            sortie[nom] = outils.ocr(petit, "eng", 7, cfg.get("ocr_timeout_rapide_s", 40))
+            Path(petit).unlink(missing_ok=True)
+        except (OcrTropLent, RuntimeError):
+            sortie[nom] = ""
+    return sortie
+
+
+RESULTATS_TYPES = ("gb_results", "gb_results_partiel")
+
+
 def _garder(ocr_debug, vid, etiquette, t, texte, png):
     """Diagnostic (--garder-ocr) : texte lu + image ; le type d'écran reconnu est ajouté au nom du fichier."""
     if not (ocr_debug and texte):
@@ -337,10 +365,12 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
         n, dernier = n + 1, t
         texte = _ocr_image(outils, png, langs, cfg, st, complet=True)
         _garder(ocr_debug, vid, "recherche", t, texte, png)
-        if trouve is None and ocr_ecrans.detecter(texte) == "gb_results":
+        type_ecran = ocr_ecrans.detecter(texte)
+        if trouve is None and type_ecran in RESULTATS_TYPES:
             trouve = t
             journal(f"  écran Results trouvé à {t} s")
-        lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t) if _est_results_gb(l)]
+        zones = lire_zones_results(outils, png, cfg) if type_ecran in RESULTATS_TYPES else None
+        lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones) if _est_results_gb(l)]
         Path(png).unlink(missing_ok=True)
     if trouve is None:
         journal(f"  écran Results non trouvé entre {int(t0)} et {dernier} s")
@@ -383,13 +413,15 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                     h = outils.empreinte(png)
                     if h in vus:
                         st["doublons"] += 1
-                        texte = vus[h]
+                        texte, zones = vus[h]
                     else:
-                        texte = vus[h] = _ocr_image(outils, png, langs, cfg, st, complet=(tri == 3 and cfg.get("tri3_ocr_complet", True)))
+                        texte = _ocr_image(outils, png, langs, cfg, st, complet=(tri == 3 and cfg.get("tri3_ocr_complet", True)))
+                        zones = lire_zones_results(outils, png, cfg) if ocr_ecrans.detecter(texte) in RESULTATS_TYPES else None
+                        vus[h] = (texte, zones)
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
-                    if ocr_ecrans.detecter(texte) == "gb_results":
+                    if ocr_ecrans.detecter(texte) in RESULTATS_TYPES:
                         detectes.append(t)
-                    nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t)
+                    nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
                     Path(png).unlink(missing_ok=True)
                 lectures = fusionner_ecrans(lectures, vid, nouvelles, config)
                 # v12 : écran Results lu jusqu'à la fin de la vidéo ; chrono HUD ≤ 15 s -> on cherche l'écran qui suit

@@ -144,7 +144,8 @@ def test_controle_results_gb():
     assert not ok and "≠ Final Score" in pb[0]
     bad = ecrans.lecture_gb_results(meta("v2"), {**RESULTS, "final_score": 1}, CONFIG)
     assert bad["confidence"] == "a_verifier" and bad["score"] == 165
-    assert ecrans.lecture_gb_results(meta("v2"), {**RESULTS, "rage_count": None}, CONFIG) is None
+    part = ecrans.lecture_gb_results(meta("v2"), {**RESULTS, "rage_count": None}, CONFIG)
+    assert part["score"] is None and part["detail"]["ecran"] == "results_partiel"      # v12 : lecture partielle, jamais classée
 
 
 # --- BOT (v4-v5) ------------------------------------------------------------------------------

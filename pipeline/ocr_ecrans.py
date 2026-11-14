@@ -45,6 +45,8 @@ def detecter(texte):
         return "gb_record"
     if "final score" in bas and ("hunter rank" in bas or "your points have been registered" in bas):
         return "gb_results"
+    if "your points have been registered" in bas or "rage rewards" in bas:
+        return "gb_results_partiel"   # v12 : écran Results en animation, valeurs pas (encore) lisibles
     if re.search(r"\bpoints\b", bas) and "boss rage count" in bas and chrono_hud(t) is not None:
         return "gb_combat"     # v11 : HUD pendant la run (jamais un écran de résultat)
     if "phase 1" in bas and "play time" in bas and _TEMPS.search(t):
@@ -142,18 +144,22 @@ def lire_poc(texte):
             "successor": _nombre_apres(r"계승자\s*스코어", texte), "hunters": None, "stage": None}
 
 
-LECTEURS = {"gb_combat": lire_gb_combat, "bot": lire_bot, "gb_results": lire_gb_results, "gb_record": lire_gb_record, "hotm": lire_hotm, "poc": lire_poc}
+LECTEURS = {"gb_results_partiel": lire_gb_results, "gb_combat": lire_gb_combat, "bot": lire_bot, "gb_results": lire_gb_results, "gb_record": lire_gb_record, "hotm": lire_hotm, "poc": lire_poc}
 
 
-def lectures_depuis_texte(texte, meta, config, source, t=None):
+def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
     """Texte OCR d'une image -> lectures de la vidéo (liste, éventuellement vide)."""
     texte = normaliser(texte)
     type_ecran = detecter(texte)
     if type_ecran is None:
         return []
     ecran = {**LECTEURS[type_ecran](texte), "t": t}
-    if type_ecran == "gb_results":
+    if type_ecran in ("gb_results", "gb_results_partiel"):
         ecran["stage"] = _boss_du_hud(texte, config) or ecran["stage"]     # v12 : nom normalisé si le boss est connu
+        if zones:   # lecture ciblée (recadrage agrandi) : plus fiable que l'image entière
+            ecran["stage"] = boss_connu(zones.get("boss"), config) or ecran["stage"]
+            ecran["player_score"] = _nombre_zone(zones.get("joueur")) or ecran["player_score"]
+        type_ecran = "gb_results"
     if type_ecran == "gb_combat":
         ecran["stage"] = _boss_du_hud(texte, config)
         l = ecrans.lecture_gb_combat(meta, ecran, config, source)
@@ -169,6 +175,22 @@ def lectures_depuis_texte(texte, meta, config, source, t=None):
     else:
         l = ecrans.lecture_poc(meta, ecran, config, source)
     return [l] if l else []
+
+
+def _nombre_zone(texte):
+    """Nombre lu dans un recadrage (ex. Player's Score `313,099,049`) ; None s'il est trop court ou illisible."""
+    m = re.search(r"\d{1,3}(?:[.,]\d{3}){2,}", texte or "")
+    return _entier(m.group(0)) if m else None
+
+
+def boss_connu(texte, config, seuil=0.75):
+    """Nom de boss de `config.gb.boss_noms` reconnu dans un court texte (recadrage), avec tolérance aux fautes d'OCR."""
+    import difflib
+    lignes = [re.sub(r"[^A-Za-z ]", "", l).strip().lower() for l in (texte or "").splitlines()]
+    for nom in (config.get("gb") or {}).get("boss_noms", ["Giant Statue"]):
+        if any(l and difflib.SequenceMatcher(None, l, nom.lower()).ratio() >= seuil for l in lignes):
+            return nom
+    return None
 
 
 def _boss_du_hud(texte, config):
@@ -231,15 +253,28 @@ def fusionner_results(lectures, config=None):
         ecrans_res.append(courant)
     sortie = list(autres)
     for groupe in ecrans_res:
-        best = max(groupe, key=lambda l: ((l.get("detail") or {}).get("completude", 0), l["t"] or 0))
+        avec_rc = [l for l in groupe if l.get("score") is not None]
+        if not avec_rc:          # écran vu sans Rage Count lisible : rien à classer
+            continue
+        best = max(avec_rc, key=lambda l: ((l.get("detail") or {}).get("completude", 0), l["t"] or 0))
         cle = (best.get("damage"), best["score"])
-        identiques = sum((l.get("detail") or {}).get("lectures_identiques", 1) for l in groupe if (l.get("damage"), l["score"]) == cle)
+        identiques = sum((l.get("detail") or {}).get("lectures_identiques", 1) for l in avec_rc if (l.get("damage"), l["score"]) == cle)
+        # champs manquants (boss, Player's Score, Play Time) repris des autres images du même écran
+        manque = {}
+        for l in sorted(groupe, key=lambda l: -(l.get("detail") or {}).get("completude", 0)):
+            for champ, valeur in (("stage", l.get("stage")), ("player_score", (l.get("detail") or {}).get("player_score")),
+                                  ("play_time", (l.get("detail") or {}).get("play_time"))):
+                if valeur is not None and champ not in manque:
+                    manque[champ] = valeur
         hud = max((h for h in huds if h["video_id"] == best["video_id"] and h["t"] is not None and best["t"] is not None
                    and 0 <= best["t"] - h["t"] <= fenetre), key=lambda h: h["t"], default=None)
         d = {**best["detail"], "lectures_identiques": identiques}
+        for champ in ("player_score", "play_time"):
+            if d.get(champ) is None and champ in manque:
+                d[champ] = manque[champ]
         if hud:
             d["hud_rage_count"] = hud["detail"]["hud_rage_count"]
-        lec = {**best, "detail": d, "notes": [n for n in best["notes"] if not n.startswith("contrôle sans Hunter Rank :")]}
+        lec = {**best, "stage": best.get("stage") or manque.get("stage"), "detail": d, "notes": [n for n in best["notes"] if not n.startswith("contrôle sans Hunter Rank :")]}
         if d.get("hunter_ranks_lus", 0) < 6 and not lec["exact"]:   # Hunter Rank illisibles : contrôle de remplacement
             ok, pb = ecrans.controle_results_sans_hunter_rank(lec, hud, config or {}, identiques)
             if ok:

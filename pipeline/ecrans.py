@@ -59,8 +59,10 @@ def controle_gb_results(player_score, hunter_ranks, final_score):
 
 
 def lecture_gb_results(meta, ecran, config, source="video-complete"):
-    if ecran.get("rage_count") is None:
-        return None
+    """Écran Results GB. Sans `Rage Count` lu : lecture PARTIELLE (`score: None`, `detail.ecran: results_partiel`),
+    jamais classée ; `ocr_ecrans.fusionner_results` en reprend le boss, `Player's Score` et `Play Time` manquants
+    sur la meilleure image de l'écran (l'écran s'anime : toutes les informations ne sont pas visibles ensemble)."""
+    partielle = ecran.get("rage_count") is None
     ranks = [r for r in (ecran.get("hunter_ranks") or []) if r is not None]
     ok, pb = controle_gb_results(ecran.get("player_score"), ecran.get("hunter_ranks"), ecran.get("final_score"))
     lec = lecture_vide(meta, "gb")
@@ -72,6 +74,10 @@ def lecture_gb_results(meta, ecran, config, source="video-complete"):
                detail={"damage_exact": True, "play_time": ecran.get("play_time"),
                        "new_record": bool(ecran.get("new_record")), "player_score": ecran.get("player_score"),
                        "hunter_ranks_lus": len(ranks), "completude": completude, "lectures_identiques": 1})
+    if partielle:
+        lec.update(exact=False, confidence="a_verifier")
+        lec["detail"]["ecran"] = "results_partiel"
+        return lec
     lec["notes"] += [f"contrôle GB : {p}" for p in pb]
     return lec
 

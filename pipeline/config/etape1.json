@@ -117,6 +117,7 @@
       "tri3_fin_s": 30,
       "tri3_pas_s": 2,
       "tri3_ocr_complet": true,
+      "zones_results": {"boss": [0.02, 0.10, 0.18, 0.07], "joueur": [0.15, 0.24, 0.12, 0.06]},
       "tri4_pas_s": 10,
       "max_videos": 15,
       "max_minutes": 30

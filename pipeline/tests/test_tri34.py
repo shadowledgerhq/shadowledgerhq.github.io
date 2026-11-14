@@ -123,11 +123,20 @@ class OutilsImages:
     def reduire(self, png, largeur):
         return png
 
+    zones = {}      # {(vidéo, t): {"boss": texte, "joueur": texte}} : texte lu dans les recadrages
+
+    def recadrer(self, png, zone, echelle=3):
+        return f"{png}#{'boss' if zone[0] < 0.1 else 'joueur'}"
+
     def empreinte(self, png):
         return png
 
     def ocr(self, png, langues=None, psm=6, timeout=120):
         self.appels.append(("ocr", psm, langues))
+        if "#" in png:
+            base, zone = png.split("#")
+            vid, t = base.split("@")
+            return self.zones.get((vid, int(t)), {}).get(zone, "")
         vid, t = png.split("@")
         return self.textes.get(vid, {}).get(int(t), "")
 
@@ -342,8 +351,13 @@ def test_v12_results_controle_sans_hunter_rank():
     assert ok["confidence"] == "sur" and "contrôle sans Hunter Rank" not in ok["notes"]
 
 
+RESULTS_252_EXT = "| OT Na. a 7 Z\nYour points have been registered.\na 6 2 ~\n\nX\n"
+RESULTS_253_REEL = "2\nWw\nRage Rewards\nx ¢.\n\\ ：\n; 58,465,656\nTap the screen to continue.\nNew Record Achic\n"
+
+
 def test_v12_cas_lGDbzyIJcjY_de_bout_en_bout():
-    """HUD à 228 s (chrono 10.45) et 238 s (1.00), Results à 252 s, vidéo de 254 s : RC 19 sûr, dégâts exacts."""
+    """Textes OCR réels du 14/11 : HUD à 228 s (10.45) et 238 s, Results à 252 s (valeurs, titre/boss illisibles) puis
+    images de l'animation sans valeurs lisibles. Boss et Player's Score lus par recadrage -> RC 19 sûr."""
     config = charger_config()
     with __import__("tempfile").TemporaryDirectory() as tmp:
         d = monde(tmp)
@@ -352,28 +366,51 @@ def test_v12_cas_lGDbzyIJcjY_de_bout_en_bout():
         d.ecrire(f"runs/{SEM}/_videos.json", videos)
 
         class Faux(OutilsImages):
+            zones = {("a", 252): {"boss": "Giant Statue", "joueur": "313,099,049"}, ("a", 253): {"boss": "Giant Statue", "joueur": ""}}
+
             def images(self, chemin, segments, dossier, prefixe="f"):
                 self.appels.append(("img", self.cur, tuple(segments), prefixe))
                 return [(d_ + i, f"{self.cur}@{d_ + i}") for d_, n, p in segments for i in range(0, n, p)]
-        o = Faux({"a": {228: HUD_228, 238: HUD_238, 252: RESULTS_252, 253: RESULTS_253}})
+        # la grille voit 252 s ; l'extension relit 252 et 253 (images différentes, sans valeurs)
+        class Deux(Faux):
+            def ocr(self, png, langues=None, psm=6, timeout=120):
+                if "#" not in png and self.appels and self.appels[-1][0] == "img" and self.appels[-1][3] != "f":
+                    self.ext = True
+                if "#" not in png and getattr(self, "ext", False) and png in ("a@252", "a@253"):
+                    return {"a@252": RESULTS_252_EXT, "a@253": RESULTS_253_REEL}[png]
+                return super().ocr(png, langues, psm, timeout)
+        o = Deux({"a": {228: HUD_228, 238: HUD_238, 252: RESULTS_252}})
         lignes = []
         pc.lancer("daily", INSTANT, d, config, o, maximum=1, journal=lignes.append)
-        # l'écran Results reconnu à 252 s est lu jusqu'à la fin de la vidéo (252-253), une seule fois
         assert [a[2] for a in o.appels if a[0] == "img" and a[3] != "f"] == [((252, 2, 1),)]
+        assert any("écran Results lu de 252 à 253 s" in l for l in lignes)
         lec = [l for l in d.lectures(SEM) if l["video_id"] == "a" and l["mode"] == "gb" and l.get("score") is not None]
         assert len(lec) == 1
         l = lec[0]
-        assert (l["score"], l["damage"], l["exact"], l["confidence"]) == (19, 1601097999, True, "sur") and "contrôle sans Hunter Rank" in l["notes"]
+        assert (l["score"], l["damage"], l["exact"], l["confidence"], l["stage"]) == (19, 1601097999, True, "sur", "Giant Statue")
+        assert "contrôle sans Hunter Rank" in l["notes"] and l["detail"]["player_score"] == 313099049 and l["detail"]["hud_rage_count"] == 12
         ligne = lire_gb(d)
         assert ligne["confidence"] == "a_verifier" and ligne["rank"] is None and "une seule run trouvée" in ligne["notes"]
         rd = ligne["runs_detail"][0]
         assert rd["damage"] == 1601097999 and rd["damage_exact"] is True and rd["hud_rage_count"] == 12 and "points_hud" not in rd
         assert ligne["score"]["runs"] == [19]
         assert d.processed()["a"]["pc"]["results_lus"] == [[252, 253]]
-        # 2e passage (tri 4 refait) : aucune relecture de l'écran Results
-        o2 = Faux({"a": {228: HUD_228, 238: HUD_238, 252: RESULTS_252, 253: RESULTS_253}})
-        pc.lancer("daily", INSTANT, d, config, o2, maximum=1, refaire=False)
+        # 2e passage : aucune relecture de l'écran Results
+        o2 = Deux({"a": {228: HUD_228, 238: HUD_238, 252: RESULTS_252}})
+        pc.lancer("daily", INSTANT, d, config, o2, maximum=1)
         assert not [a for a in o2.appels if a[0] == "img" and a[3] != "f"]
+
+
+def test_v12_boss_et_player_score_par_zone():
+    c = {"gb": {"boss_noms": ["Giant Statue"]}}
+    assert ocr_ecrans.boss_connu("Giant Statue", c) == "Giant Statue" and ocr_ecrans.boss_connu("Gaint Statue\n", c) == "Giant Statue"
+    assert ocr_ecrans.boss_connu("Temple Altar", c) is None and ocr_ecrans.boss_connu("", c) is None
+    assert ocr_ecrans._nombre_zone("313,099,049") == 313099049 and ocr_ecrans._nombre_zone("a.089.008") is None
+    assert ocr_ecrans.detecter(RESULTS_252_EXT) == "gb_results_partiel" and ocr_ecrans.detecter(RESULTS_253_REEL) == "gb_results_partiel"
+    (p,) = ocr_ecrans.lectures_depuis_texte(RESULTS_253_REEL, _m(), CONFIG, "debut-fin", 253)
+    assert p["score"] is None and p["detail"]["ecran"] == "results_partiel"
+    # sans lecture avec Rage Count : l'écran n'est pas classé
+    assert pc.fusionner_ecrans([], "lGDbzyIJcjY", [p], CONFIG) == []
 
 
 def test_v12_hud_sans_results_degats_provisoires_et_pas_de_rc():
@@ -446,6 +483,8 @@ def test_commandes_des_outils():
         assert o.ocr(imgs[0][1], "eng", 11)  and cmds[-1][cmds[-1].index("-l") + 1] == "eng" and cmds[-1][-1] == "11"
         o.reduire(imgs[0][1], 960)
         assert cmds[-1][0] == "ffmpeg" and "scale=960:-2" in cmds[-1]
+        o.recadrer(imgs[0][1], (0.02, 0.1, 0.18, 0.07))
+        assert cmds[-1][0] == "ffmpeg" and "crop=iw*0.18:ih*0.07:iw*0.02:ih*0.1,scale=iw*3:-1,format=gray" in cmds[-1]
     try:
         pc.Outils(CONFIG["pc"]).ocr("x.png")   # tesseract absent de cet environnement
     except pc.OutilAbsent as e:
