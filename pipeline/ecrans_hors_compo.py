@@ -286,11 +286,12 @@ def fusionner_zones(obs, attributs, statues, notes, cfg=None):
         ids = {i for a in attributs for i in a}
         fin = {}
         for i in sorted(ids):
-            vals = {a[i] for a in attributs if i in a}
-            if len(vals) == 1:
-                fin[i] = vals.pop()
+            votes = [a[i] for a in attributs if i in a]
+            pal = sorted({v: votes.count(v) for v in votes}.items(), key=lambda kv: -kv[1])
+            if len(pal) == 1 or pal[0][1] > pal[1][1]:           # pluralité stricte (1 seule lecture : retenue)
+                fin[i] = pal[0][0]
             else:
-                notes.append(f"attribut SJW {i} : lectures de zone en désaccord {sorted(vals)}")
+                notes.append(f"attribut SJW {i} : lectures de zone en désaccord {sorted(v for v, _ in pal)}")
         if fin:
             obs.setdefault("sjw", {}).setdefault("stats", {}).update(fin)
             notes.append("attributs SJW lus par zone : " + ", ".join(sorted(fin)))

@@ -230,6 +230,26 @@ def test_zones_fiche_et_statues_avec_faux_ocr():
     assert obs3["sjw"]["stats"] == {"vitality": 10} and any("désaccord" in n for n in n3)
 
 
+def test_images_classees_composition_apres_les_statues_sont_lues():
+    """Essai PC 15/11 : le panneau d'options des statues (bouton jaune visible) est classé « composition » ; juste après une
+    liste de statues, ces images-là sont aussi lues, pas les autres."""
+    import composition
+    txt = {"s1.png": "彫像 所持彫像", "c1.png": "彫像 所持彫像 彫像オプション", "c2.png": "彫像 所持彫像 彫像オプション", "c3.png": "彫像 所持彫像",
+           "c4.png": "彫像 所持彫像", "c5.png": "彫像 所持彫像", "x.png": "rien"}
+
+    class Faux:
+        def reduire(self, png, largeur):
+            return png
+
+        def ocr(self, png, langues, psm, timeout):
+            return txt[Path(png).name]
+    cfg = {**T.CFG, "hors_compo": {"pas": 2, "ocr_max": 50, "suite_images": 2, "langues": "jpn+eng"}}
+    toutes = [(t, Path(n)) for t, n in enumerate(["s1.png", "c1.png", "c2.png", "c3.png", "c4.png", "c5.png", "x.png"])]
+    autres = [toutes[0], toutes[-1]]
+    lus = composition._lire_hors_composition(Faux(), cfg, autres, lambda m: None, None, "V", toutes)
+    assert len(lus) == 4, lus                          # s1 puis c1-c3 (images forcées tant que l'écran dure), plafond `lectures_max` = 4 : c4, c5 ignorées
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

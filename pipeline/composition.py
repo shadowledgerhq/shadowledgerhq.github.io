@@ -73,7 +73,7 @@ def choisir_images(images_t, cfg):
     return sortie, ([min(temps), max(temps)] if temps else None)
 
 
-def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
+def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes=None):
     """OCR rapide d'une image sur `hors_compo.pas` des images qui ne sont pas la composition ; écran reconnu -> OCR complet.
     Retourne [(ecran, texte)] (2 par type au plus ; `hors_compo.ocr_max` appels rapides au plus). Erreur d'OCR : image ignorée."""
     import ecrans_hors_compo as H
@@ -82,8 +82,11 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
     lus, vus, appels, vides, erreurs = [], {}, 0, 0, 0
     _lire_hors_composition.resume = resume = []        # diagnostic : (t, début du texte lu) de chaque image passée à l'OCR rapide
     forcer = 0                       # images lues malgré le pas : le panneau d'options des statues apparaît en fondu après la liste
-    for i, (t, png) in enumerate(autres):
-        if (i % pas and forcer <= 0) or appels >= maxi:
+    ids, k = {str(p) for _, p in autres}, -1
+    for t, png in (toutes or autres):
+        est = toutes is None or str(png) in ids              # image « autre écran » ; les autres (classées composition) ne sont lues que juste après un écran reconnu
+        k += 1 if est else 0
+        if appels >= maxi or (est and k % pas and forcer <= 0) or (not est and forcer <= 0):
             forcer -= 1
             continue
         forcer -= 1
@@ -93,7 +96,9 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
             vides += 0 if rapide.strip() else 1
             resume.append((t, " | ".join(rapide.split())[:240]))
             ecran = H.detecter(rapide, cfg)
-            plafond = (cfg["ecrans"].get("statues", {}).get("lectures_max", 4)) if ecran == "statues" else 2     # statues : le panneau d'options apparaît en fondu
+            if ecran == "statues":
+                forcer = h.get("suite_images", 3)
+            plafond = (cfg["ecrans"].get(ecran) or {}).get("lectures_max", 2) if ecran else 2     # statues : le panneau d'options apparaît en fondu
             if not ecran or vus.get(ecran, 0) >= plafond:
                 continue
             texte = outils.ocr(png, langues, 6, 120)
@@ -131,16 +136,20 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
     return lus
 
 
-def _ocr_zone(outils, png, zone, langues, psm, blanc, seuils=(170, None, 140, 200), valide=None):
+def _ocr_zone(outils, png, zone, langues, psm, blanc, seuils=(170, None, 140, 200), valide=None, vote=False):
     """Texte d'une zone (fractions x, y, l, h) agrandie ×3 ; `blanc` : liste blanche tesseract. Essais : brut puis noir et blanc à
     plusieurs seuils ; le premier texte qui satisfait `valide` (regex) l'emporte, sinon le premier texte non vide (ou "")."""
-    premier = ""
+    premier, valides = "", []
     for seuil in seuils:
         crop = outils.recadrer(png, zone, 3, seuil)
         texte = outils.ocr(crop, langues, psm, 20, ["-c", f"tessedit_char_whitelist={blanc}"] if blanc else None).strip()
         if texte and (valide is None or re.fullmatch(valide, texte)):
-            return texte
+            if not vote:
+                return texte
+            valides.append(texte)
         premier = premier or texte
+    if valides:                                     # vote : texte le plus fréquent (égalité : le plus long, un « 1 » fin est souvent perdu)
+        return max(set(valides), key=lambda x: (valides.count(x), len(x)))
     return premier
 
 
@@ -153,7 +162,7 @@ def _lire_zones(outils, cfg, ecran, png, t, journal, texte=""):
     if ecran == "fiche_sjw" and e["fiche_sjw"].get("zones_attributs"):
         lignes = []
         for ident, zone in e["fiche_sjw"]["zones_attributs"].items():
-            texte = _ocr_zone(outils, png, zone, "eng", 7, "0123456789,", valide=r"\d{1,3}(?:,\d{3})*")
+            texte = _ocr_zone(outils, png, zone, "eng", 7, "0123456789,", valide=r"\d{1,3}(?:,\d{3})*|\d+", vote=True)
             lignes.append(f"{ident}: {texte}")
         journal(f"  fiche_sjw zones t={t} : " + " ; ".join(lignes))
         return [("attributs_zone", "\n".join(lignes))]
@@ -208,14 +217,15 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                 with tempfile.TemporaryDirectory() as tmp:
                     journal(f"  composition {vid} : téléchargement…")
                     chemin = outils.telecharger(vid, tmp)
-                    images_t, autres = [], []
+                    images_t, autres, toutes = [], [], []
                     for t, png in outils.images(chemin, [(debut, fin - debut, e["pas_s"])], tmp, "c"):
                         with Image.open(png) as im:
                             rgb = im.convert("RGB")
                         images_t.append((t, rgb))
+                        toutes.append((t, png))
                         if not analyser_image(rgb, cfg):
                             autres.append((t, png))
-                    ecrans = _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid)
+                    ecrans = _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes)
                     cache[cle] = (*choisir_images(images_t, cfg), None, ecrans)
                     d = choisir_images.diagnostic
                     journal(f"  composition {vid} : {d['images']} images, écran vu sur {d['ecran']}, onglet douteux sur {d['onglet_douteux']}, "
