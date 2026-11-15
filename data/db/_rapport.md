@@ -1,12 +1,12 @@
 # Rapport de contrôle de la base — 2026-11-15
-Total : 493 entrées, **0 erreur(s)**, 525 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
+Total : 494 entrées, **0 erreur(s)**, 528 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
 
 | Fichier | Entrées | Erreurs | Avertissements |
 | --- | ---: | ---: | ---: |
 | artifact_sets | 40 | 0 | 119 |
 | blessings | 59 | 0 | 65 |
 | cores | 18 | 0 | 0 |
-| gems | 15 | 0 | 34 |
+| gems | 16 | 0 | 37 |
 | hunters | 66 | 0 | 0 |
 | patches | 8 | 0 | 38 |
 | proof_modifiers | 17 | 0 | 34 |
@@ -19,11 +19,11 @@ Total : 493 entrées, **0 erreur(s)**, 525 avertissement(s). Généré par `pipe
 | weapons | 115 | 0 | 97 |
 
 Avertissements par type (à suivre dans le temps) :
-- 213 × icône absente (null)
+- 214 × icône absente (null)
 - 87 × name.fr vide
 - 59 × pierre sans effets
-- 46 × name.en vide
-- 46 × source non URL (capture ou texte)
+- 47 × name.en vide
+- 47 × source non URL (capture ou texte)
 - 36 × slot vide
 - 33 × changes : id introuvable dans …
 - 5 × changes : catégorie inconnue …
