@@ -446,7 +446,46 @@
  },
  "subjugation_support": null,
  "proof": null,
- "statues": null,
+ "statues": [
+  {
+   "position": 1,
+   "grade": "D",
+   "options": []
+  },
+  {
+   "position": 2,
+   "grade": "E",
+   "options": []
+  },
+  {
+   "position": 3,
+   "grade": "C",
+   "options": []
+  },
+  {
+   "position": 4,
+   "grade": "B",
+   "options": []
+  },
+  {
+   "position": 5,
+   "grade": "B",
+   "options": [
+    {
+     "text_read": "BM 嫌引。 Ts “hs 7 %) q 20%",
+     "lang": "ja",
+     "grade": null,
+     "id": null
+    },
+    {
+     "text_read": ">| eee, Wet Le i",
+     "lang": "ja",
+     "grade": null,
+     "id": null
+    }
+   ]
+  }
+ ],
  "gems": null,
  "found": {
   "sjw": true,
@@ -466,7 +505,7 @@
   "subjugation_support": null,
   "proof": null,
   "successor_stats": null,
-  "statues": null,
+  "statues": true,
   "gems": null
  },
  "counts": {
@@ -555,7 +594,7 @@
   "règles poc inconnues"
  ],
  "erreurs": [],
- "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; règles poc inconnues; reconnaissance faible : shadows",
+ "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; statues lues par zone; règles poc inconnues; reconnaissance faible : shadows",
  "sources": [
   {
    "type": "video",
