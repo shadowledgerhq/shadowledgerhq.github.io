@@ -1,5 +1,9 @@
 # CLAUDE.md — Shadow Ledger (Projet SLA)
 
+**Règle de compteur (prioritaire, mise à jour le 15/11/2026)**
+
+« Compteur : commence chaque réponse par "Message n/15", où n = nombre de messages d'Alexis dans cette discussion (n = numéro de ta réponse précédente + 1). À partir de n = 15, ajoute en tête "⚠ Discussion longue" et donne un seul message prêt à coller pour une nouvelle discussion : la ligne de rôle (PROMPTS_DISCUSSIONS.md), le SUIVI à jour et la prochaine action précise. »
+
 Ce dépôt contient tout le projet Shadow Ledger d'Alexis : classements hebdomadaires, builds, base de données du jeu, theorycraft, vidéos et site web pour *Solo Leveling: Arise* (modes POC, BOT, GB, HOTM).
 
 ## À lire en premier

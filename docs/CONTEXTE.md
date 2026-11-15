@@ -191,6 +191,8 @@ Les discussions 8 et 9 se font dans Claude Code (claude.ai/code), sur le dépôt
 
 Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la traite pas. Il indique la discussion à ouvrir et donne **un seul message prêt à coller**, dans cet ordre : (1) la ligne de rôle de la discussion cible, reprise de `PROMPTS_DISCUSSIONS.md` ; (2) la demande, avec le contexte utile (fichiers, décisions, ce qui est attendu). Il le fait aussi quand une discussion devient trop longue : **au 15e message d'Alexis** (puis à chaque nouveau message), il le signale en tête de réponse, recommande d'ouvrir une nouvelle discussion et donne un seul message prêt à coller : la ligne de rôle, le SUIVI à jour et la prochaine action précise.
 
+**Compteur (15/11/2026).** « Compteur : commence chaque réponse par "Message n/15", où n = nombre de messages d'Alexis dans cette discussion (n = numéro de ta réponse précédente + 1). À partir de n = 15, ajoute en tête "⚠ Discussion longue" et donne un seul message prêt à coller pour une nouvelle discussion : la ligne de rôle (PROMPTS_DISCUSSIONS.md), le SUIVI à jour et la prochaine action précise. »
+
 ## 8. Ordre de réalisation
 
 1. **Mise en place** : dépôt GitHub, clé API YouTube en secret, skill installé, documents dans le projet. *Fait le 12/11/2026.*
