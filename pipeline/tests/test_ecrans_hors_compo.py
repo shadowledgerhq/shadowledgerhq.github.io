@@ -250,6 +250,19 @@ def test_images_classees_composition_apres_les_statues_sont_lues():
     assert len(lus) == 4, lus                          # s1 puis c1-c3 (images forcées tant que l'écran dure), plafond `lectures_max` = 4 : c4, c5 ignorées
 
 
+def test_ocr_reel_statues_par_zone_une_statue_selectionnee_a_la_fois():
+    """Essai PC 15/11 : t=40 sans sélection ni panneau, t=42 panneau complet (statue 3), t=44 statue 5 mais panneau en fondu (vide)."""
+    lire = lambda t: (Path(__file__).parent / "ocr_reel" / f"statues_zone_{t}.txt").read_text(encoding="utf-8")
+    obs = {}
+    E.integrer(obs, [("statues_zone", lire(t)) for t in (40, 42, 44)], T.DB, T.CFG)
+    st = obs["statues"]
+    assert [x["grade"] for x in st] == list("DECBB")
+    assert [len(x["options"]) for x in st] == [0, 0, 3, 0, 0], "options rattachées à la statue 3 (celle du panneau complet) seulement"
+    o = st[2]["options"]
+    assert (o[0]["label"], o[0]["value"]) == ("攻撃力/防御力(%)", "60%") and (o[1]["label"], o[1]["value"]) == ("追加攻撃力/防御力", "8,000")
+    assert (o[2]["label"], o[2]["value"]) == ("追加魔力", "190")
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

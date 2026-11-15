@@ -299,13 +299,23 @@ def fusionner_zones(obs, attributs, statues, notes, cfg=None):
         meilleure = max(statues, key=lambda z: _score_zone_statues(z, connues))
         if sum(g is not None for g in meilleure["grades"]) >= 3:
             liste = [{"position": i + 1, "grade": g, "options": []} for i, g in enumerate(meilleure["grades"])]
-            vus = [z for z in statues if z.get("selection") and any(z["options"])]
-            if vus:
-                z = max(vus, key=lambda z: _score_zone_statues(z, connues)[1])
+            rattachees = 0
+            for sel in sorted({z["selection"] for z in statues if z.get("selection") and any(z["options"])}):   # une lecture par statue sélectionnée
+                z = max((z for z in statues if z.get("selection") == sel and any(z["options"])), key=lambda z: _score_zone_statues(z, connues))
                 og = z.get("options_grades") or [None] * len(z["options"])
-                liste[z["selection"] - 1]["options"] = [{"text_read": o, "lang": LANG, "grade": g, "id": None} for o, g in zip(z["options"], og) if o]
-            else:
+                liste[sel - 1]["options"] = [_option(o, g, connues) for o, g in zip(z["options"], og) if o]
+                if z.get("effet"):
+                    liste[sel - 1]["unique_effect_text_read"] = z["effet"]
+                rattachees += 1
+            if not rattachees:
                 notes.append("statues : options non rattachées (statue sélectionnée ou panneau d'options non vus)")
             if _score_statues(liste) >= _score_statues(obs.get("statues")):
                 obs["statues"] = liste
-                notes.append("statues lues par zone")
+                notes.append(f"statues lues par zone (options de {rattachees} statue(s) sur {len(liste)})")
+
+
+def _option(texte, grade, connues):
+    """`text_read` brut ; `label` = libellé connu retrouvé (sinon None) ; `value` = dernier nombre (`60%`, `8,000`)."""
+    label = next((k for k in connues if _n(k) in _n(texte)), None)
+    m = re.findall(r"\d[\d,]*(?:\.\d+)?\s*%?", texte)
+    return {"text_read": texte, "lang": LANG, "grade": grade, "id": None, "label": label, "value": m[-1].replace(" ", "") if m else None}

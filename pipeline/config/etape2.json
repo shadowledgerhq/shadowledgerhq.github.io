@@ -1158,7 +1158,7 @@
     ]
    },
    "zones": {
-    "_doc": "[À CONFIRMER sur le PC] fractions (x, y, largeur, hauteur) mesurées sur une image 1600×900 de la vidéo v0tuXJNxudk (client JA) : grade de chaque statue, losange de sélection, 3 lignes d'options de la statue sélectionnée.",
+    "_doc": "[À CONFIRMER sur le PC] fractions (x, y, largeur, hauteur) mesurées sur une image 1600×900 de la vidéo v0tuXJNxudk (client JA) : grade de chaque statue, losange de sélection, 3 lignes d'options de la statue sélectionnée. Panneau complet vérifié sur l'image t=42 de v0tuXJNxudk (statue 3 : S 60 %, S 8 000, C 190).",
     "grades": [
      [
       0.1988,
@@ -1247,23 +1247,29 @@
     "ratio_selection": 1.6,
     "options_grades": [
      [
-      0.5956,
-      0.1867,
-      0.04,
-      0.0711
+      0.58,
+      0.1889,
+      0.0375,
+      0.0667
      ],
      [
-      0.5956,
-      0.3133,
-      0.04,
-      0.0711
+      0.58,
+      0.3156,
+      0.0375,
+      0.0667
      ],
      [
-      0.5956,
-      0.4389,
-      0.04,
-      0.0711
+      0.58,
+      0.4411,
+      0.0375,
+      0.0667
      ]
+    ],
+    "effet": [
+     0.55,
+     0.58,
+     0.4188,
+     0.0889
     ]
    },
    "lectures_max": 4,

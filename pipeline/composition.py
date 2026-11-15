@@ -136,18 +136,19 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes=
     return lus
 
 
-def _ocr_zone(outils, png, zone, langues, psm, blanc, seuils=(170, None, 140, 200), valide=None, vote=False):
+def _ocr_zone(outils, png, zone, langues, psm, blanc, seuils=(170, None, 140, 200), valide=None, vote=False, psms=None):
     """Texte d'une zone (fractions x, y, l, h) agrandie ×3 ; `blanc` : liste blanche tesseract. Essais : brut puis noir et blanc à
     plusieurs seuils ; le premier texte qui satisfait `valide` (regex) l'emporte, sinon le premier texte non vide (ou "")."""
     premier, valides = "", []
     for seuil in seuils:
         crop = outils.recadrer(png, zone, 3, seuil)
-        texte = outils.ocr(crop, langues, psm, 20, ["-c", f"tessedit_char_whitelist={blanc}"] if blanc else None).strip()
-        if texte and (valide is None or re.fullmatch(valide, texte)):
-            if not vote:
-                return texte
-            valides.append(texte)
-        premier = premier or texte
+        for ps in (psms or (psm,)):                  # plusieurs modes de segmentation : psm 7 perd parfois le « 1 » initial (essai 15/11 : 19 lu 9)
+            texte = outils.ocr(crop, langues, ps, 20, ["-c", f"tessedit_char_whitelist={blanc}"] if blanc else None).strip()
+            if texte and (valide is None or re.fullmatch(valide, texte)):
+                if not vote:
+                    return texte
+                valides.append(texte)
+            premier = premier or texte
     if valides:                                     # vote : texte le plus fréquent (égalité : le plus long, un « 1 » fin est souvent perdu)
         return max(set(valides), key=lambda x: (valides.count(x), len(x)))
     return premier
@@ -162,7 +163,7 @@ def _lire_zones(outils, cfg, ecran, png, t, journal, texte=""):
     if ecran == "fiche_sjw" and e["fiche_sjw"].get("zones_attributs"):
         lignes = []
         for ident, zone in e["fiche_sjw"]["zones_attributs"].items():
-            texte = _ocr_zone(outils, png, zone, "eng", 7, "0123456789,", valide=r"\d{1,3}(?:,\d{3})*|\d+", vote=True)
+            texte = _ocr_zone(outils, png, zone, "eng", 7, "0123456789,", valide=r"\d{1,3}(?:,\d{3})*|\d+", vote=True, psms=(7, 8, 13))
             lignes.append(f"{ident}: {texte}")
         journal(f"  fiche_sjw zones t={t} : " + " ; ".join(lignes))
         return [("attributs_zone", "\n".join(lignes))]
@@ -179,7 +180,7 @@ def _lire_zones(outils, cfg, ecran, png, t, journal, texte=""):
             lum = [moyenne(zn) for zn in z["selection"]]
         grades = []
         for zn in z["grades"]:
-            g = _ocr_zone(outils, png, zn, "eng", 10, "EDCBAS", (None, 120, 180), valide=r"[EDCBAS]").strip()[:1]
+            g = _ocr_zone(outils, png, zn, "eng", 10, "EDCBAS", (None, 120, 180, 220), valide=r"[EDCBAS]", vote=True).strip()[:1]
             grades.append(g if g in list("EDCBAS") else None)
         reste = sorted(lum)[:-1]
         mediane = reste[len(reste) // 2]
@@ -187,11 +188,12 @@ def _lire_zones(outils, cfg, ecran, png, t, journal, texte=""):
         selection = haut + 1 if lum[haut] >= z.get("seuil_selection", 80) and lum[haut] >= z.get("ratio_selection", 1.6) * max(mediane, 1) else None
         panneau = not texte or any(_n_ent in re.sub(r"\s+", "", texte) for _n_ent in e["statues"]["entete_options"]["ja"])     # panneau d'options visible ?
         options = [" ".join(_ocr_zone(outils, png, zn, e["statues"].get("langues", "jpn+eng"), 6, None, (None, 150)).split()) if panneau else "" for zn in z["options"]]
-        og = [(_ocr_zone(outils, png, zn, "eng", 10, "EDCBAS", (None, 120, 180), valide=r"[EDCBAS]").strip()[:1] or None) if panneau else None for zn in z.get("options_grades", [])]
+        og = [(_ocr_zone(outils, png, zn, "eng", 10, "EDCBAS", (None, 120, 180, 220), valide=r"[EDCBAS]", vote=True).strip()[:1] or None) if panneau else None for zn in z.get("options_grades", [])]
+        effet = " ".join(_ocr_zone(outils, png, z["effet"], e["statues"].get("langues", "jpn+eng"), 6, None, (None, 150)).split()) if panneau and z.get("effet") else ""
         og = [g if g in list("EDCBAS") else None for g in og]
         journal(f"  statues zones t={t} : grades {grades}, sélection {selection}, options {list(zip(og, options))}")
         import json
-        return [("statues_zone", json.dumps({"t": t, "grades": grades, "selection": selection, "options": options, "options_grades": og}, ensure_ascii=False))]
+        return [("statues_zone", json.dumps({"t": t, "grades": grades, "selection": selection, "options": options, "options_grades": og, "effet": effet}, ensure_ascii=False))]
     return []
 
 
