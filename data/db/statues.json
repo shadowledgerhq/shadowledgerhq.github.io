@@ -119,7 +119,29 @@
         }
       ]
     },
-    "values_by_grade": {},
+    "values_by_grade": {
+      "attack-defense-pct": {
+        "B": "20 %"
+      },
+      "hp-pct": {
+        "B": "12 %"
+      },
+      "defense-penetration": {
+        "D": 1000
+      },
+      "crit-rate": {
+        "C": 1500
+      },
+      "damage-increase": {
+        "C": 1500
+      },
+      "flat-attack-defense": {
+        "D": 1350
+      },
+      "additional-mp": {
+        "rang inconnu": 500
+      }
+    },
     "icon": null,
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
@@ -132,7 +154,16 @@
       "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
       "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
     ],
-    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026",
+    "values_by_grade_note": "Valeurs lues sur des images de démonstration du didacticiel (peuvent différer du jeu fini) : à confirmer en jeu. Un rang par option vu seulement. Ordre des rangs : E<D<C<B<A<S.",
+    "conversion": {
+      "cout_exemple": "300 000 or + 90/10 matériaux (capture)",
+      "cout_avec_sauvegarde": "600 000 or + 24 580/20 matériaux (capture : « conserver des bonus augmente le coût »)",
+      "arret_auto": "rang minimum (B/A/S), nombre minimum de stats (1/2/3), types de stats",
+      "source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026"
+    },
+    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)"
   },
   {
     "id": "conjuror",
@@ -267,7 +298,14 @@
       "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
       "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
     ],
-    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)",
+    "conversion": {
+      "cout_exemple": "300 000 or + 90/10 matériaux (capture)",
+      "cout_avec_sauvegarde": "600 000 or + 24 580/20 matériaux (capture : « conserver des bonus augmente le coût »)",
+      "arret_auto": "rang minimum (B/A/S), nombre minimum de stats (1/2/3), types de stats",
+      "source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026"
+    },
+    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)"
   },
   {
     "id": "white-flames",
@@ -402,7 +440,14 @@
       "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
       "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
     ],
-    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)",
+    "conversion": {
+      "cout_exemple": "300 000 or + 90/10 matériaux (capture)",
+      "cout_avec_sauvegarde": "600 000 or + 24 580/20 matériaux (capture : « conserver des bonus augmente le coût »)",
+      "arret_auto": "rang minimum (B/A/S), nombre minimum de stats (1/2/3), types de stats",
+      "source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026"
+    },
+    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)"
   },
   {
     "id": "transfiguration",
@@ -537,7 +582,14 @@
       "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
       "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
     ],
-    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)",
+    "conversion": {
+      "cout_exemple": "300 000 or + 90/10 matériaux (capture)",
+      "cout_avec_sauvegarde": "600 000 or + 24 580/20 matériaux (capture : « conserver des bonus augmente le coût »)",
+      "arret_auto": "rang minimum (B/A/S), nombre minimum de stats (1/2/3), types de stats",
+      "source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026"
+    },
+    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)"
   },
   {
     "id": "steel",
@@ -672,6 +724,13 @@
       "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
       "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
     ],
-    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)",
+    "conversion": {
+      "cout_exemple": "300 000 or + 90/10 matériaux (capture)",
+      "cout_avec_sauvegarde": "600 000 or + 24 580/20 matériaux (capture : « conserver des bonus augmente le coût »)",
+      "arret_auto": "rang minimum (B/A/S), nombre minimum de stats (1/2/3), types de stats",
+      "source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026"
+    },
+    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)"
   }
 ]
