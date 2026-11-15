@@ -1508,15 +1508,15 @@
   "artifact_pieces": [
    [
     0,
-    0.62,
+    0.7,
     1,
     1
    ],
    [
-    0.5,
-    0.05,
+    0.6,
+    0.2,
     1,
-    0.45
+    1
    ]
   ],
   "cores": [
@@ -1528,7 +1528,7 @@
    ]
   ]
  },
- "_masques": "[À CONFIRMER] zones de surimpression du jeu ignorées, en fractions de l'icône : pièces = bandeau `Lv.120` + cadenas (bas) et `+20` (haut droite) ; noyaux = texte `MAX`/`Lv.25` (bas ; 0,85 gardé : à 0,72 le noyau de SJW passe sous le seuil).",
+ "_masques": "[À CONFIRMER] zones de surimpression du jeu ignorées, en fractions de l'icône de référence ; pièces = bas (`Lv.120`, cadenas) y ≥ 0,7 et quart bas-droite (`+20`, étoile) x ≥ 0,6, y ≥ 0,2. Calé le 15/11 sur 5MI-RLj7FSk (BOT, onglet artefacts) : SJW (Poison bleu du Concepteur, vérifié à l'œil) 7/8 reconnues contre 5/8 avant (ancien masque : haut-droite + bas dès 0,62) ; noyaux = texte `MAX`/`Lv.25` (bas ; 0,85 gardé : à 0,72 le noyau de SJW passe sous le seuil).",
  "extraction": {
   "pas_s": 2,
   "ignorer_debut": 1,
