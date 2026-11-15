@@ -4,6 +4,7 @@
 - **Pas encore essayé sur la vraie vidéo** : à lancer sur le PC (voir « Besoin d'Alexis »). Les seuils 1,5 et 0,5 s sont [À CONFIRMER] par cet essai.
 - Rapport du passage de 20:30 (15/11) : absent du dépôt. Le dernier (`data/runs/2026-11-12/_rapport.md`, 15/11 00:32) = « Passage complet : non », anti-bot YouTube, 16 vidéos traitées, 51 restantes ; relance 02:32 sans rapport publié. Blocage anti-bot non levé à ce jour.
 - **Verrou `logs/pc.lock`** (`pc.Verrou`, `pid_vivant`) : un seul passage PC à la fois (daily, weekly, builds, essais `--video`). Si un autre tourne : refus, code de sortie 3, message avec le détenteur ; verrou repris si processus mort, > 12 h ou illisible. Libéré en fin de passage (atexit). Test `test_verrou_un_seul_passage`. Conséquence : un passage planifié lancé pendant un essai est sauté (rien perdu, repris au suivant).
+- **Rapport PC : ligne « Durée du passage : N min »** (`entete_etat(duree_min=…)`, horloge du passage, hors push final). Visible dès le prochain rapport ; budget d'un passage = 180 min (`pc.budget_minutes`). Test dans `test_passage_pc.py`.
 ## En cours
 - Subjugation POC : écran codé, jamais lu par le vrai OCR (v0tuXJNxudk à relancer avec `--garder-ocr` pour caler `ecrans.subjugation.cartes`).
 - Reste de l'ancien « En cours » : voir l'historique git (`git log -p suivi/code.md`).

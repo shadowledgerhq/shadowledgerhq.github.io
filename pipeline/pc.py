@@ -795,12 +795,14 @@ def bloquante(avert):
     return " : images : " in t or "ffmpeg" in t
 
 
-def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None):
+def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None, duree_min=None):
     """Lignes placées en tête du rapport poussé (SPEC §6, critère de gel n° 3)."""
     l = [f"- **Passage complet : {'oui' if complet else 'non'}**"
          + ("" if complet else " (" + (" ; ".join(b.split(" : ")[0] if b.startswith("anti-bot") else b for b in bloquantes[:1]) if bloquantes else "vidéos restantes à traiter") + ")"),
          f"- Vidéos traitées ce passage : {traitees} · en_cours restantes : {restantes} (dont {a_traiter} à traiter par le PC)",
          "- Erreurs bloquantes : " + (" ; ".join(bloquantes) if bloquantes else "aucune")]
+    if duree_min is not None:       # durée réelle du passage (horloge monotone, hors push final) ; budget : `pc.budget_minutes`
+        l.append(f"- Durée du passage : {int(duree_min)} min")
     if relance:
         l.append(f"- Relance automatique : {relance}")
     return l
@@ -993,7 +995,8 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
 
     def rapport():
         ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes,
-                       entete_etat(etat["complet"], etat["traitees"], restantes, a_traiter, etat["bloquantes"], texte_relance))
+                       entete_etat(etat["complet"], etat["traitees"], restantes, a_traiter, etat["bloquantes"], texte_relance,
+                                   (horloge() - debut_passage) / 60))
     rapport()
     if git:
         try:
