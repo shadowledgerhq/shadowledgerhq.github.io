@@ -278,6 +278,13 @@ def integrer(obs, lectures, db, cfg):
     notes = obs.setdefault("notes", [])
     fiche = set().union(*[nombres_fiche(t) for e, t in lectures if e == "fiche_sjw"]) if lectures else set()
     vus_zone, zones_statues = [], []
+    positions, i_stats = [], -1              # position (1..3) de la carte de chaque écran de stats (`portraits.py`), dans l'ordre
+    for e_, t_ in lectures:
+        if e_ == "stats_position":
+            try:
+                positions = json.loads(t_)
+            except ValueError:
+                positions = []
     for ecran, texte in lectures:
         if ecran == "gemmes":
             g = lire_gemmes(texte, cfg)
@@ -308,6 +315,8 @@ def integrer(obs, lectures, db, cfg):
             if attr:
                 obs.setdefault("sjw", {}).setdefault("stats", {}).update(attr)
         elif ecran == "stats":
+            i_stats += 1
+            pos = positions[i_stats] if i_stats < len(positions) else None
             r = lire_stats(texte, db, cfg)
             if not r["stats"]:
                 continue
@@ -341,6 +350,15 @@ def integrer(obs, lectures, db, cfg):
             else:
                 hs = obs.setdefault("hunters", [])
                 h = next((x for x in hs if x.get("id") == ident), None)
+                if h is None and pos:                          # carte de la composition liée au portrait : on complète cette position
+                    h = next((x for x in hs if x.get("position") == pos and not x.get("id")), None)
+                    if h is not None:
+                        h["id"] = ident
+                        notes.append(f"chasseur {ident} placé en position {pos} par son portrait")
+                    elif not any(x.get("position") == pos for x in hs):
+                        h = {"position": pos, "id": ident, "weapon": {}, "artifacts": [], "cores": [], "stats": {}}
+                        hs.append(h)
+                        notes.append(f"chasseur {ident} placé en position {pos} par son portrait")
                 if h is None:
                     h = {"position": None, "id": ident, "weapon": {}, "artifacts": [], "cores": [], "stats": {}}
                     hs.append(h)

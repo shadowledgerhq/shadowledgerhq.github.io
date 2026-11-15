@@ -2047,5 +2047,21 @@
   "suite_images": 3,
   "compo_pas": 3,
   "compo_ocr_max": 12
- }
+ },
+ "portraits": {
+  "zone_stats": [
+   0.0,
+   0.05,
+   0.45,
+   0.72
+  ],
+  "carte_y": [
+   0.15,
+   0.5
+  ],
+  "carte_marge_x": 0.01,
+  "min_corr": 25,
+  "rapport": 2
+ },
+ "_portraits": "[À CONFIRMER] lie l'écran de stats d'un chasseur (nom lu par l'OCR) à sa carte de la composition par points d'intérêt (`pipeline/portraits.py`) : portrait = partie gauche de l'écran de stats, carte = zone du visage élargie (y 0,15-0,5) ; accepté si ≥ `min_corr` correspondances et ≥ `rapport` × la 2e carte. Mesuré 15/11 sur v0tuXJNxudk : 84 contre 19 et 4."
 }
