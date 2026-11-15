@@ -117,6 +117,13 @@ def test_pas_de_telechargement_sans_zones_et_build_essai():
     assert b["rank"] is None and b["status"] == "build_partiel" and b["counts"]["cores"] == "6/9"
 
 
+def test_debut_de_visite_ignore():
+    """Les icônes n'apparaissent qu'après le changement d'onglet : la 1re image de chaque visite est écartée (sauf visite d'une image)."""
+    l = [(0, "a"), (2, "b"), (4, "c"), (20, "d"), (22, "e"), (40, "f")]
+    assert [x for _, x in C._sans_debut_de_visite(l, 1, 3)] == ["b", "c", "e", "f"]
+    assert C._sans_debut_de_visite(l, 0, 3) == l
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

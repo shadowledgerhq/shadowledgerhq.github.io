@@ -50,6 +50,23 @@ def analyser_image(image, cfg):
     return onglet_actif(image, cfg) if bouton_present(image, cfg) else None
 
 
+def _sans_debut_de_visite(l, ignorer, ecart):
+    """Retire les `ignorer` premières images de chaque visite d'un onglet (images consécutives, écart ≤ `ecart` s) :
+    juste après le changement d'onglet, les icônes ne sont pas encore affichées (fondu : le fond/portrait se voit à leur place).
+    Une visite d'une seule image est gardée telle quelle."""
+    if not ignorer:
+        return l
+    visites, cur = [], []
+    for t, im in l:
+        if cur and t - cur[-1][0] > ecart:
+            visites.append(cur)
+            cur = []
+        cur.append((t, im))
+    if cur:
+        visites.append(cur)
+    return [x for v in visites for x in (v[ignorer:] if len(v) > ignorer else v)]
+
+
 def choisir_images(images_t, cfg):
     """`images_t` = [(t, image)] dans l'ordre du temps. Retourne ({onglet: [images]}, [t_min, t_max]) : au plus
     `max_par_onglet` images par onglet, réparties sur la durée où l'onglet est vu ; ([], None) si aucune."""
@@ -64,11 +81,14 @@ def choisir_images(images_t, cfg):
         if o:
             par.setdefault(o, []).append((t, im))
     sortie, temps = {}, []
+    ignorer = cfg["extraction"].get("ignorer_debut", 0)
+    ecart = cfg["extraction"].get("visite_ecart_s", 3)
     for o, l in par.items():
+        temps += [t for t, _ in l]                       # fenêtre de composition : toutes les images vues
+        l = _sans_debut_de_visite(l, ignorer, ecart)
         pas = max(1, len(l) // n)
         choisies = l[::pas][:n]
         sortie[o] = [im for _, im in choisies]
-        temps += [t for t, _ in l]
     choisir_images.diagnostic = diag
     return sortie, ([min(temps), max(temps)] if temps else None)
 

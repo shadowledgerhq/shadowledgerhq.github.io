@@ -1531,6 +1531,8 @@
  "_masques": "[À CONFIRMER] zones de surimpression du jeu ignorées, en fractions de l'icône : pièces = bandeau `Lv.120` + cadenas (bas) et `+20` (haut droite) ; noyaux = texte `MAX`/`Lv.25` (bas ; 0,85 gardé : à 0,72 le noyau de SJW passe sous le seuil).",
  "extraction": {
   "pas_s": 2,
+  "ignorer_debut": 1,
+  "visite_ecart_s": 3,
   "max_par_onglet": 3,
   "fenetre_max_s": 600,
   "resolution": 1080,
