@@ -144,3 +144,11 @@ def test_tester_ytdlp_prend_le_premier_reglage_qui_passe():
         loc = Path(tmp) / "pc_local.json"
         loc.write_text('{"yt_dlp_options": ["--impersonate", "chrome"]}', encoding="utf-8")
         assert donnees.charger_config(donnees.CONFIG, loc)["pc"]["yt_dlp_options"] == ["--impersonate", "chrome"]
+
+
+def test_profils_chrome():
+    with tempfile.TemporaryDirectory() as tmp:
+        f = Path(tmp) / "Local State"
+        f.write_text('{"profile": {"info_cache": {"Default": {"name": "Alexis", "user_name": "a@x.fr"}, "Profile 1": {"name": "Outils", "user_name": "b@x.fr"}}}}', encoding="utf-8")
+        assert pc.profils_chrome(f) == [("Default", "Alexis", "a@x.fr"), ("Profile 1", "Outils", "b@x.fr")]
+        assert pc.profils_chrome(Path(tmp) / "absent") == []

@@ -149,6 +149,16 @@ def tester_ytdlp(cfg_pc, video_id, executer=subprocess.run, journal=print):
     return None
 
 
+def profils_chrome(local_state=None):
+    """Profils Chrome du PC : [(dossier, nom, adresse Google)], lus dans « Local State » (Windows)."""
+    ls = Path(local_state or Path(os.environ.get("LOCALAPPDATA", "")) / "Google" / "Chrome" / "User Data" / "Local State")
+    try:
+        info = json.loads(ls.read_text(encoding="utf-8")).get("profile", {}).get("info_cache", {})
+    except (OSError, ValueError):
+        return []
+    return [(d, v.get("name", ""), v.get("user_name", "")) for d, v in sorted(info.items())]
+
+
 # --- texte des sous-titres ------------------------------------------------------------------
 
 def vtt_vers_texte(vtt):
@@ -1169,10 +1179,11 @@ if __name__ == "__main__":
     for flux in (sys.stdout, sys.stderr):  # titres coréens / japonais : la console Windows (cp1252) planterait sinon
         flux.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
-    ap.add_argument("passage", choices=["daily", "weekly", "builds", "ytdlp-test"],
+    ap.add_argument("passage", choices=["daily", "weekly", "builds", "ytdlp-test", "ytdlp-profil"],
                     help="builds : étape 2 (images de composition, builds, PowerPoint) ; ytdlp-test : cherche les réglages yt-dlp qui passent l'anti-bot")
     ap.add_argument("--mode", choices=["poc", "bot", "gb", "hotm"], help="avec builds --video : mode de la vidéo (défaut bot)")
     ap.add_argument("--semaine", help="avec builds : semaine AAAA-MM-JJ (défaut : semaine courante)")
+    ap.add_argument("--profil", help="avec ytdlp-profil : dossier du profil Chrome du compte secondaire (ex. \"Profile 1\")")
     ap.add_argument("--no-git", action="store_true", help="pas de pull/push (essai local)")
     ap.add_argument("--relance", action="store_true", help="passage de relance (anti-bot) : pas de nouvelle relance programmée")
     ap.add_argument("--whisper", action="store_true", help="active Whisper (config pc.whisper_cmd requis)")
@@ -1195,6 +1206,25 @@ if __name__ == "__main__":
         sys.exit(3)
     import atexit
     atexit.register(verrou.liberer)
+    if a.passage == "ytdlp-profil":
+        from donnees import CONFIG_PC_LOCALE, ecrire_atomique
+        if not a.profil:
+            profs = profils_chrome()
+            print("Profils Chrome trouvés sur ce PC :" if profs else "Aucun profil Chrome trouvé.")
+            for d, nom, mail in profs:
+                print(f'  --profil "{d}"   nom : {nom}   compte : {mail or "(non connecté)"}')
+            print('Relancer avec --profil "<dossier>" en choisissant le profil du compte SECONDAIRE.')
+            sys.exit(0)
+        opts = ["--impersonate", "chrome", "--cookies-from-browser", f"chrome:{a.profil}"]
+        vid = (a.video or ["5MI-RLj7FSk"])[0]
+        try:
+            sortie = Outils({**config["pc"], "yt_dlp_options": opts})._lancer([config["pc"]["yt_dlp"], *opts, "-F", f"https://www.youtube.com/watch?v={vid}"], 120)
+        except (RuntimeError, subprocess.TimeoutExpired, OutilAbsent) as e:
+            print(f"ÉCHEC avec le profil « {a.profil} » : {str(e)[:200]}\nVérifier : Chrome fermé, profil connecté à YouTube (ouvrir une vidéo).", file=sys.stderr)
+            sys.exit(1)
+        ecrire_atomique(CONFIG_PC_LOCALE, json.dumps({"yt_dlp_options": opts}, ensure_ascii=False, indent=1) + "\n")
+        print(f"RÉUSSI. Enregistré dans pc_local.json : {opts}")
+        sys.exit(0)
     if a.passage == "ytdlp-test":
         from donnees import CONFIG_PC_LOCALE, ecrire_atomique
         vid = (a.video or ["5MI-RLj7FSk"])[0]

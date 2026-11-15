@@ -17,7 +17,7 @@
 - Relance des 6 vidéos par Alexis (v17), puis bilan à la discussion 1.
 - Essai réel des tris 3-4 sur le PC, puis recadrages par zone et `pc.geler = true` ; tri 2 (miniatures, daily). Pseudo en jeu et armes de SJW (BOT) : icônes, [EN ATTENTE]. POC : les 5 composants (3 chasseurs) non lus, donc jamais « sûr ».
 ## Besoin d'Alexis
-- **D'abord** (une commande) : `py -3 -m pip install -U "yt-dlp[default,curl-cffi]"` puis `py -3 pipeline\pc.py ytdlp-test`. Si « Aucun réglage ne passe » : ouvrir une vidéo YouTube dans Firefox (compte connecté, de préférence secondaire), relancer. Envoyer la sortie. Ensuite l'essai ci-dessous.
+- **D'abord** : créer un compte Google secondaire + profil Chrome connecté à YouTube (Alexis refuse de risquer son compte principal), puis `py -3 pipeline\pc.py ytdlp-profil` (liste) et `… ytdlp-profil --profil "Profile 1"`. Ensuite l'essai ci-dessous.
 - `py -3 pipeline\verifier_json.py` (doit dire « lisibles »). Puis essai (aucun autre passage en cours) : `py -3 pipeline\pc.py builds --video 5MI-RLj7FSk --mode bot --garder-ocr` ; envoyer le rapport et les images `docs/essais/builds/5MI-RLj7FSk_ocr/*_compo_*`. Ensuite `v0tuXJNxudk` (POC) avec `--garder-ocr`.
 - Relancer les 6 vidéos (v17), coller `docs/essais/ocr/_resume_6videos.json` à la discussion 1 avec `docs/MESSAGE_DISCUSSION_1_v17.md`. Tâches automatiques : attendre ces retours.
 ## Demandes de modif du skill
