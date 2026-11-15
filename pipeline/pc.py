@@ -230,7 +230,10 @@ class Git:
         finally:                                    # le commit local est défait quoi qu'il arrive
             self._run("reset", "--mixed", "HEAD~1")
             self._run("clean", "-fdq", "--", chemin)
-            self._run("checkout", "--", chemin)
+            try:
+                self._run("checkout", "--", chemin)
+            except GitErreur:                       # chemin nouveau (absent de HEAD) : rien à restaurer
+                pass
         return True
 
     def pousser(self, message):
