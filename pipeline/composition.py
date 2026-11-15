@@ -93,6 +93,45 @@ def choisir_images(images_t, cfg):
     return sortie, ([min(temps), max(temps)] if temps else None)
 
 
+def _gris(image, largeur=320):
+    np = _np()
+    h = max(1, round(image.height * largeur / image.width))
+    return np.asarray(image.convert("L").resize((largeur, h))).astype(float)
+
+
+def instabilites(images):
+    """Pour chaque image d'une suite serrée, écart moyen (niveaux de gris) avec la plus ressemblante de ses voisines
+    (précédente, suivante) : faible = écran stable. Pendant un fondu, l'image diffère des deux voisines."""
+    g = [_gris(im) for im in images]
+    d = [float(abs(g[i] - g[i + 1]).mean()) for i in range(len(g) - 1)]
+    sortie = []
+    for i in range(len(g)):
+        voisins = ([d[i - 1]] if i > 0 else []) + ([d[i]] if i < len(d) else [])
+        sortie.append(max(voisins) if voisins else 0.0)      # max : stable seulement si les deux voisines lui ressemblent
+    return sortie
+
+
+def choisir_stables(images_t, cfg):
+    """`images_t` = [(t, image)] serrées (≈ 0,5 s). Retourne {onglet: [indices dans images_t]} : par onglet, au plus
+    `max_par_onglet` images parmi les plus stables (écart ≤ minimum + `stabilite_tol`), réparties dans le temps.
+    Évite les images en fondu au changement d'onglet (portraits visibles, icônes pâles)."""
+    e = cfg["extraction"]
+    n, tol = e["max_par_onglet"], e.get("stabilite_tol", 1.5)
+    inst = instabilites([im for _, im in images_t])
+    par = {}
+    for i, (t, im) in enumerate(images_t):
+        o = analyser_image(im, cfg)
+        if o:
+            par.setdefault(o, []).append(i)
+    sortie = {}
+    for o, idx in par.items():
+        mini = min(inst[i] for i in idx)
+        bons = [i for i in idx if inst[i] <= mini + tol]
+        pas = max(1, len(bons) // n)
+        sortie[o] = bons[::pas][:n]
+    return sortie
+
+
 def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes=None):
     """OCR rapide d'une image sur `hors_compo.pas` des images qui ne sont pas la composition ; écran reconnu -> OCR complet.
     Retourne [(ecran, texte)] (2 par type au plus ; `hors_compo.ocr_max` appels rapides au plus). Erreur d'OCR : image ignorée."""
@@ -239,6 +278,37 @@ def _lire_zones(outils, cfg, ecran, png, t, journal, texte=""):
     return []
 
 
+def _affiner(outils, cfg, chemin, fenetre, tmp, journal):
+    """Seconde extraction à `pas_fin_s` (0,5 s) dans la fenêtre de composition ± `marge_fin_s` ; garde par onglet les images
+    les plus stables (`choisir_stables`). Échec ou onglet absent : retombe sur le choix à `pas_s`. Mêmes valeurs de retour
+    que `choisir_images` ; d'abord les images (réduites pour l'analyse, rechargées en pleine taille pour les gardées)."""
+    from PIL import Image
+    e = cfg["extraction"]
+    t0 = max(0, fenetre[0] - e.get("marge_fin_s", 1))
+    t1 = fenetre[1] + e.get("marge_fin_s", 1)
+    try:
+        trouvees = outils.images(chemin, [(t0, t1 - t0 + e["pas_fin_s"], e["pas_fin_s"])], tmp, "fin")
+        petites = []
+        for t, png in trouvees:
+            with Image.open(png) as im:
+                rgb = im.convert("RGB")
+                rgb.thumbnail((800, 800))
+            petites.append((t, rgb))
+        choix = choisir_stables(petites, cfg)
+        sortie = {}
+        for o, idx in choix.items():
+            sortie[o] = []
+            for i in idx:
+                with Image.open(trouvees[i][1]) as im:
+                    sortie[o].append(im.convert("RGB"))
+        journal(f"  composition : affinage à {e['pas_fin_s']} s, {len(trouvees)} images, onglets : "
+                f"{', '.join(f'{o} ×{len(l)}' for o, l in sortie.items()) or 'aucun'}")
+        return sortie, fenetre
+    except Exception as ex:
+        journal(f"  composition : affinage impossible ({str(ex)[:100]}), choix à {e['pas_s']} s conservé")
+        return None, fenetre
+
+
 def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
     """Fournisseur d'images pour `builds.calculer(fournisseur=…)` : télécharge chaque vidéo une fois (`outils.telecharger`),
     extrait 1 image / `pas_s` s de 0 à `t_result` (`outils.images`), garde les images de l'écran de composition. Retourne
@@ -279,6 +349,10 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                                 im.thumbnail((1600, 900))
                                 im.save(Path(ocr_debug) / f"{vid}_compo_{onglet}_{k}.jpg", quality=85)
                     d = choisir_images.diagnostic
+                    if e.get("pas_fin_s") and cache[cle][1]:
+                        fin, fenetre = _affiner(outils, cfg, chemin, cache[cle][1], tmp, journal)
+                        if fin:                                  # onglet absent à 0,5 s : on garde le choix à pas_s
+                            cache[cle] = ({**cache[cle][0], **fin}, fenetre, None, ecrans)
                     journal(f"  composition {vid} : {d['images']} images, écran vu sur {d['ecran']}, onglet douteux sur {d['onglet_douteux']}, "
                             f"onglets : {', '.join(f'{o} ×{len(l)}' for o, l in cache[cle][0].items()) or 'aucun'}")
             except Exception as ex:                      # 429, ffmpeg, vidéo privée : build `pas_de_build`, raison notée

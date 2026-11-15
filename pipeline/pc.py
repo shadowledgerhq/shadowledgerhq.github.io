@@ -132,7 +132,7 @@ class Outils:
         delai = self.cfg["images"].get("ffmpeg_delai_s", 300)
         for k, (debut, duree, pas) in enumerate(segments):
             cmd = [self.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-ss", str(debut), "-t", str(duree), "-i", str(chemin),
-                   "-vf", f"fps=1/{pas}" + (f",scale=-2:{int(hauteur)}" if hauteur else ""), "-q:v", "2", f"{dossier}/{prefixe}{k}_%04d.png"]
+                   "-vf", (f"fps=1/{pas}" if float(pas).is_integer() and pas == int(pas) else f"fps={1 / pas:g}") + (f",scale=-2:{int(hauteur)}" if hauteur else ""), "-q:v", "2", f"{dossier}/{prefixe}{k}_%04d.png"]
             try:
                 self._lancer(cmd, delai)
             except subprocess.TimeoutExpired:      # essai du 14/11 : ffmpeg bloqué 900 s sur une vidéo ; une seule nouvelle tentative

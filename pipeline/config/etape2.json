@@ -1532,6 +1532,9 @@
  "extraction": {
   "pas_s": 2,
   "ignorer_debut": 1,
+  "pas_fin_s": 0.5,
+  "marge_fin_s": 1,
+  "stabilite_tol": 1.5,
   "visite_ecart_s": 3,
   "max_par_onglet": 3,
   "fenetre_max_s": 600,

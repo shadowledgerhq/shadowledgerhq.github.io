@@ -124,6 +124,21 @@ def test_debut_de_visite_ignore():
     assert C._sans_debut_de_visite(l, 0, 3) == l
 
 
+def test_choisir_stables_ecarte_le_fondu():
+    """Changement d'onglet en fondu (0,5 s) : l'image mélangée n'est pas gardée, une image stable de l'onglet l'est."""
+    a = capture("personnages")
+    b = capture("artefacts").resize(a.size)
+    fondu = [Image.blend(a, b, k) for k in (0.3, 0.6, 0.9)]
+    suite = [a, a, a, *fondu, b, b, b]
+    images_t = [(i * 0.5, im) for i, im in enumerate(suite)]
+    inst = C.instabilites([im for _, im in images_t])
+    assert inst[1] < 0.5 and inst[4] > inst[7]                     # l'image au milieu du fondu est la moins stable
+    choix = C.choisir_stables(images_t, CFG)
+    assert set(choix) <= {"personnages", "artefacts"}
+    assert all(i >= 6 for i in choix.get("artefacts", [6]))        # jamais une image du fondu
+    assert choix.get("artefacts") and choix.get("personnages")
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):
