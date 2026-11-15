@@ -6,6 +6,8 @@ points d'intérêt (SIFT + homographie RANSAC) le portrait de l'écran de stats 
 par l'OCR sur l'écran de stats donne l'identité, le portrait donne la position (1 à 3). Gratuit : OpenCV + Pillow.
 Mesuré : bonne carte 84 correspondances sûres, les deux autres 19 et 4 (seuils `portraits` dans `etape2.json`)."""
 
+from pathlib import Path
+
 LARGEUR = 640
 
 
@@ -74,3 +76,53 @@ def choisir(notes, cfg):
 
 def notes_cartes(portrait, cartes):
     return [correspondances(k, portrait) for k in cartes]
+
+
+# --- bibliothèque de cartes apprises : `data/icons/hunters_cartes/<id>.png` ----------------------------------------------
+
+DOSSIER_CARTES = ("data", "icons", "hunters_cartes")
+
+
+def dossier_cartes(icones_dir):
+    """`icones_dir` = dossier `data/icons` (celui de `icones.Banque`)."""
+    return Path(icones_dir) / DOSSIER_CARTES[-1]
+
+
+def charger_cartes(icones_dir):
+    from PIL import Image
+    sortie = {}
+    d = dossier_cartes(icones_dir)
+    for f in sorted(d.glob("*.png")) if d.exists() else []:
+        try:
+            with Image.open(f) as im:
+                sortie[f.stem] = im.convert("RGB").copy()
+        except OSError:
+            continue
+    return sortie
+
+
+def apparier_cartes(cartes_vues, bibliotheque, cfg):
+    """`cartes_vues` = {position: image} ; `bibliotheque` = {id: image}. Retourne ({position: id}, matrice {position: {id: n}}).
+    Un couple (position, id) est retenu si n ≥ `min_corr_biblio` (défaut 40 : le bruit atteint ~30 avec une seule carte connue)
+    et n ≥ `rapport` × le meilleur des autres : autre chasseur de la bibliothèque sur cette carte, même chasseur sur une autre carte."""
+    c = cfg.get("portraits") or {}
+    mini, rapport = c.get("min_corr_biblio", 40), c.get("rapport", 2)
+    m = {p: {k: correspondances(im, ref) for k, ref in bibliotheque.items()} for p, im in cartes_vues.items()}
+    sortie = {}
+    for p, ligne in m.items():
+        for k, n in ligne.items():
+            autres = [v for k2, v in ligne.items() if k2 != k] + [m[p2][k] for p2 in m if p2 != p]
+            if n >= mini and n >= rapport * max(autres + [1]):
+                sortie[p] = k
+    return sortie, m
+
+
+def apprendre(icones_dir, ident, carte):
+    """Enregistre la carte d'un chasseur identifié de façon sûre (nom OCR + portrait). Retourne True si nouvelle ; jamais d'écrasement."""
+    d = dossier_cartes(icones_dir)
+    f = d / f"{ident}.png"
+    if f.exists():
+        return False
+    d.mkdir(parents=True, exist_ok=True)
+    carte.convert("RGB").save(f)
+    return True

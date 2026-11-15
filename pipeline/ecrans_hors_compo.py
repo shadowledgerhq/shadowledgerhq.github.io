@@ -353,10 +353,10 @@ def integrer(obs, lectures, db, cfg):
                 if h is None and pos:                          # carte de la composition liée au portrait : on complète cette position
                     h = next((x for x in hs if x.get("position") == pos and not x.get("id")), None)
                     if h is not None:
-                        h["id"] = ident
+                        h["id"], h["via_portrait"] = ident, True
                         notes.append(f"chasseur {ident} placé en position {pos} par son portrait")
                     elif not any(x.get("position") == pos for x in hs):
-                        h = {"position": pos, "id": ident, "weapon": {}, "artifacts": [], "cores": [], "stats": {}}
+                        h = {"position": pos, "id": ident, "weapon": {}, "artifacts": [], "cores": [], "stats": {}, "via_portrait": True}
                         hs.append(h)
                         notes.append(f"chasseur {ident} placé en position {pos} par son portrait")
                 if h is None:

@@ -2085,7 +2085,8 @@
   ],
   "carte_marge_x": 0.01,
   "min_corr": 25,
-  "rapport": 2
+  "rapport": 2,
+  "min_corr_biblio": 40
  },
- "_portraits": "[À CONFIRMER] lie l'écran de stats d'un chasseur (nom lu par l'OCR) à sa carte de la composition par points d'intérêt (`pipeline/portraits.py`) : portrait = partie gauche de l'écran de stats, carte = zone du visage élargie (y 0,15-0,5) ; accepté si ≥ `min_corr` correspondances et ≥ `rapport` × la 2e carte. Mesuré 15/11 sur v0tuXJNxudk : 84 contre 19 et 4."
+ "_portraits": "[À CONFIRMER] lie l'écran de stats d'un chasseur (nom lu par l'OCR) à sa carte de la composition par points d'intérêt (`pipeline/portraits.py`) : portrait = partie gauche de l'écran de stats, carte = zone du visage élargie (y 0,15-0,5) ; accepté si ≥ `min_corr` correspondances et ≥ `rapport` × la 2e carte. Mesuré 15/11 sur v0tuXJNxudk : 84 contre 19 et 4. Cartes apprises (`data/icons/hunters_cartes/`, une par chasseur identifié par nom + portrait) : `min_corr_biblio` 40 (le bruit monte à ~30 avec une seule carte connue), et la carte doit dominer ≥ `rapport` × les autres cartes / les autres positions."
 }

@@ -399,6 +399,47 @@ def _par_categorie(cfg, cle, categorie, defaut):
     return v.get(categorie, defaut) if isinstance(v, dict) else v
 
 
+def _zones_cartes(zones_mode):
+    pers = (zones_mode or {}).get("personnages") or {}
+    return {int(k.split("_")[1]): v["hunter_face"] for k, v in pers.items() if k.startswith("hunter_") and v.get("hunter_face")}
+
+
+def _hunters_par_bibliotheque(obs, images, zones_mode, banque, cfg):
+    """Chasseur sans identité : on compare sa carte (points d'intérêt) aux cartes apprises (`data/icons/hunters_cartes/`, `portraits.py`)."""
+    import portraits as P
+    sans = [h for h in obs["hunters"] if not h.get("id") and h.get("position")]
+    base = (images.get("personnages") or [])[:1]
+    zones = _zones_cartes(zones_mode)
+    if not sans or not base or not zones:
+        return
+    cartes = P.charger_cartes(banque.dossier)
+    if not cartes:
+        return
+    pos = sorted(zones)
+    crops = dict(zip(pos, P.decouper_cartes(base[0], [zones[p] for p in pos], cfg)))
+    trouves, m = P.apparier_cartes(crops, cartes, cfg)
+    for h in sans:
+        ident = trouves.get(h.get("position"))
+        if ident:
+            h["id"] = ident
+            obs["notes"].append(f"chasseur {ident} reconnu par sa carte apprise (position {h['position']}, {m[h['position']][ident]} correspondances)")
+
+
+def apprendre_cartes(obs, images, cfg, banque, mode_cle):
+    """Enregistre la carte de chaque chasseur identifié par nom + portrait (jamais écrasée) : bibliothèque apprise."""
+    import portraits as P
+    zones = _zones_cartes(((cfg.get("zones") or {}).get(mode_cle)) or {})
+    base = (images.get("personnages") or [])[:1]
+    if not zones or not base:
+        return
+    pos = sorted(zones)
+    crops = P.decouper_cartes(base[0], [zones[p] for p in pos], cfg)
+    for h in obs.get("hunters") or []:
+        if h.get("via_portrait") and h.get("id") and h.get("position") in zones:
+            if P.apprendre(banque.dossier, h["id"], crops[pos.index(h["position"])]):
+                obs["notes"].append(f"carte de {h['id']} apprise (data/icons/hunters_cartes)")
+
+
 def observer(images, mode, cfg, banque, db=None, ctx_note=None):
     """`images` = {onglet: [PIL.Image]} (plusieurs images d'un même onglet : vote ; ombres et successeur : vote entre onglets).
     `mode` = clé de config (`poc`, `bot`, `hotm`, `hotm_sans_sjw`, `gb`). Zones : `cfg.zones.<mode>.<onglet>.<propriétaire>.<élément>`.
@@ -524,6 +565,7 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
                                "weapon": {"id": (get(o, "weapons") or [(None, None)])[0][1], "level": None},
                                "artifacts": [{"slot": sl, "set_id": v.split("--")[0] if v else None, "level": None} for sl, v in get(o, "artifacts")],
                                "cores": [{"slot": sl, "id": v, "level": None} for sl, v in get(o, "cores")], "stats": {}})
+    _hunters_par_bibliotheque(obs, images, zones_mode, banque, cfg)
     if any(k[0] == "shadows" for k in valeurs):
         obs["shadows"] = [{"position": i + 1, "id": v} for i, v in sorted(get("shadows", "shadows"))]
     if any(k[0] == "successor" for k in valeurs):
@@ -636,6 +678,7 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
             if extra.get("ecrans"):
                 import ecrans_hors_compo
                 ecrans_hors_compo.integrer(obs, extra["ecrans"], db, cfg)
+                apprendre_cartes(obs, images, cfg, banque, cle_cfg)
             if extra.get("t_composition"):
                 obs["t_composition"] = extra["t_composition"]
             if extra.get("erreur"):
@@ -702,6 +745,7 @@ def build_essai(video_id, mode, racine=RACINE, cfg=None, banque=None, fournisseu
     if extra.get("ecrans"):
         import ecrans_hors_compo
         ecrans_hors_compo.integrer(obs, extra["ecrans"], db, cfg)
+        apprendre_cartes(obs, images, cfg, banque, cle_cfg)
     obs["t_composition"] = extra.get("t_composition")
     obs["ocr_resume"] = extra.get("ocr_resume")
     if extra.get("erreur"):

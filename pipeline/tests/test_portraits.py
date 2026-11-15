@@ -43,3 +43,27 @@ if __name__ == "__main__":
     test_choisir_refuse_les_cas_ambigus()
     test_integrer_place_le_chasseur_a_sa_position()
     print("ok")
+
+
+def test_carte_apprise_reconnue_et_apprentissage(tmp_path=None):
+    import tempfile
+    from PIL import Image
+    import icones
+    compo = Image.open(DOSSIER / "v0tuXJNxudk_compo_personnages_0.jpg").convert("RGB")
+    with tempfile.TemporaryDirectory() as tmp:
+        banque = icones.Banque(tmp)
+        zones = [CFG["zones"]["poc"]["personnages"][f"hunter_{i}"]["hunter_face"] for i in (1, 2, 3)]
+        cartes = P.decouper_cartes(compo, zones, CFG)
+        obs = {"hunters": [{"position": p, "id": None} for p in (1, 2, 3)], "notes": []}
+        B._hunters_par_bibliotheque(obs, {"personnages": [compo]}, CFG["zones"]["poc"], banque, CFG)   # bibliothèque vide : rien
+        assert not any(h["id"] for h in obs["hunters"])
+        # apprentissage : un chasseur placé par son portrait
+        obs["hunters"][1].update({"id": "christopher-reed", "via_portrait": True})
+        B.apprendre_cartes(obs, {"personnages": [compo]}, CFG, banque, "poc")
+        assert (Path(tmp) / "data" / "icons" / "hunters_cartes" / "christopher-reed.png").exists() or \
+            (banque.dossier / "hunters_cartes" / "christopher-reed.png").exists()
+        # reconnaissance : sur une autre image (la même carte, légèrement réduite)
+        obs2 = {"hunters": [{"position": p, "id": None} for p in (1, 2, 3)], "notes": []}
+        petit = compo.resize((1200, 675))
+        B._hunters_par_bibliotheque(obs2, {"personnages": [petit]}, CFG["zones"]["poc"], banque, CFG)
+        assert [h["id"] for h in obs2["hunters"]] == [None, "christopher-reed", None], obs2
