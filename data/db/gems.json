@@ -57,9 +57,11 @@
     "color": "blue",
     "levels": null,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "rang 6, qualité A": "5 %"
+    },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de PV (%) »."
@@ -232,12 +234,18 @@
     "color": "blue",
     "levels": null,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "rang 5, qualité A": 350,
+      "rang 5, qualité B": 290,
+      "rang 5, qualité C": 260,
+      "rang 3, sans lettre (bord bleu)": 140,
+      "rang 2, sans lettre (bord gris)": 120
+    },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de PV supplémentaires »."
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de PV supplémentaires ». Mêmes valeurs que l'attaque supplémentaire aux rangs 5 (A/B/C) et 3. Rang 2 = petit cristal bleu à bord gris. Rang 6 non relevé pour ce type."
   },
   {
     "id": "gem-board-1",
@@ -321,6 +329,6 @@
     "source": "capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Lettre D/C/B/A (qualité) affichée sur chaque gemme. Ordre D<C<B<A confirmé par les valeurs (même rang 5 : D 230 < C 260 < B 290 < A 350). Le rang pèse davantage : rang 6 qualité D (370) > rang 5 qualité A (350). Le nombre en bas à droite d'une gemme d'inventaire est la quantité possédée (confirmé : « En votre possession »). Les gemmes de rang 3 n'ont pas de lettre. Boutons Fusionner / Promotion ; Changer (change le type de bonus) et Déséquiper coûtent chacun 1 jeton (icône de ticket, 27 sur ce compte). Valeurs pour les autres types de gemme : non relevées."
+    "notes": "Lettre D/C/B/A (qualité) affichée sur chaque gemme. Ordre D<C<B<A confirmé par les valeurs (même rang 5 : D 230 < C 260 < B 290 < A 350). Le rang pèse davantage : rang 6 qualité D (370) > rang 5 qualité A (350). Le nombre en bas à droite d'une gemme d'inventaire est la quantité possédée (confirmé : « En votre possession »). Les gemmes de rang 3 (bord bleu) et de rang 2 (bord gris) n'ont pas de lettre. Boutons Fusionner / Promotion ; Changer (change le type de bonus) et Déséquiper coûtent chacun 1 jeton (icône de ticket, 27 sur ce compte). Valeurs pour les autres types de gemme : non relevées."
   }
 ]
