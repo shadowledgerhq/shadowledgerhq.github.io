@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 23 — 16/11/2026 (GB : conflit du Final Score départagé par le HUD ; décisions après la relance du 15/11) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 24 — 16/11/2026 (rythme des boss par mode, éléments autorisés déduits des écrans, libellés inconnus collectés) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -217,6 +217,19 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 - Run avec un autre libellé → `a_verifier` + note `boss différent : <libellé>`. Si ce libellé est la référence de la semaine précédente → `rejected`, raison `semaine_precedente`.
 - Moins de 3 vidéos : pas de contrôle, note `boss non contrôlé`.
 
+- **Rythme des boss (v24, sources Netmarble relayées par dotgg.gg, lues le 16/11/2026, à vérifier sur les données)** : le boss **ne change pas chaque jeudi** sauf au BOT.
+  - POC : un boss par **saison** (« A new season begins, and the boss changes to… », notes de mise à jour 27/08/2026), éléments recommandés fixes jusqu'à la saison suivante.
+  - GB : boss fixé **jusqu'à la mise à jour régulière suivante** (« Until the next regular update, the Guild Boss will be set to the Giant Statue », 27/08/2026), rotation Fachtna / Reine des fourmis / Giant Statue ; les 2 attributs variables de la Giant Statue changent chaque semaine.
+  - HOTM : saison de **2 semaines**, 3 portes, un boss par porte tiré au hasard à chaque saison (notes du 27/08/2026, 1re saison le 03/09/2026).
+  - BOT : 1 boss par semaine (§4.6).
+  - Conséquence : hors BOT, le libellé du boss est souvent identique d'une semaine à l'autre. Le contrôle §4.5 reste utile contre un boss **différent**, mais ne prouve jamais à lui seul la bonne semaine ; la date (fenêtre §1.1), le `Time Left in Season` (GB) et `S<n>-<w>` (BOT) restent les preuves. `_boss.json` garde aussi `premiere_semaine` du libellé, pour repérer le changement de saison.
+- **Éléments autorisés (v24)** : `data/rules/<semaine>.json` est **déduit des écrans** par le pipeline, jamais saisi à la main :
+  - un élément est `true` dès qu'**une** run `sur` de la semaine le montre à l'écran (POC : ligne SJW et successeur du RESULT ; GB : `Player's Score` = SJW, ligne `Successor Score` ; BOT : 2 icônes d'armes de SJW dans le bandeau ; HOTM : écran de composition) ;
+  - `false` seulement si **au moins 5** runs `sur` de 5 chaînes différentes le montrent absent (note `déduit, à vérifier`) ; sinon `null` (inconnu). Jamais `false` sur une seule vidéo ;
+  - chaque bloc garde `source: "écrans"`, la liste des `video_id` et la date de calcul ; un bloc saisi avant la v24 garde sa source d'origine.
+  - Format : un bloc par classement `poc`, `bot`, `gb`, `hotm` (v10 : plus de `bot_season` / `bot_challenge`). Migration : semaine 2026-11-12 `bot_season` → `bot` ; semaine 2026-11-05 `bot_challenge` (`sjw: false`) → `bot`, note `relevé du 05/11 rangé en challenge (mode retiré en mai 2026) : à vérifier, peut-être un boss joué en mode chasseur`.
+- **Libellés inconnus (v24)** : quand l'OCR d'une vidéo en coréen ou en japonais (ou autre langue sans libellés connus) trouve un écran qui ressemble à un écran de score (au moins 3 grands nombres alignés, ou un chrono `mm:ss.mmm`) sans libellé reconnu, le texte OCR brut et l'image sont gardés dans `docs/essais/ocr/libelles_inconnus/<video_id>_<t>.{txt,jpg}` (au plus 3 images par vidéo). La discussion 1 en tire les libellés et les ajoute à `config.*.libelles.<langue>`. Manquent aujourd'hui : BOT ko/ja, POC ja, HOTM ja, GB ja, Personal Record ko/pt.
+
 ### 4.6 BOT : un seul classement, saisons de 4 semaines (v10, décision d'Alexis)
 - **Challenge supprimé** : le mode `Battlefield of Time: Challenge` a été retiré du jeu à la mise à jour de mai 2026 (source : forum Netmarble, *Developer Note: 2nd Anniversary Eve* et *5/7 (Thu) Update Details*, lus le 13/11/2026). Un seul classement BOT par semaine : `data/runs/<semaine>/bot.json`. Plus de champ `bot_variant`, plus de fichier `bot-season.json`, `bot-challenge.json` ni `bot-variante-inconnue.json`.
 - Un titre contenant `challenge`, `チャレンジ` ou `챌린지` (ancienne vidéo, autre mode) → note `challenge ? (mode supprimé)`, `a_verifier`.
@@ -331,6 +344,7 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 - `pipeline/analyse_porte_mode.py` lit `data/runs/*/hotm.json` → lire `data/runs/*/hotm-gate-*.json`.
 - `gate` : entier dans le JSON (voir §5.1).
 - Retirer `runs_detail.submode` (skill et code).
+- (v24) §4.5 : rythme des boss par mode (note), `_boss.json.premiere_semaine` ; `data/rules/<semaine>.json` déduit des écrans (true dès 1 run sûre, false si ≥ 5 runs sûres de 5 chaînes, sinon null), un bloc par classement, migration bot_season/bot_challenge → bot ; collecte des écrans de score aux libellés inconnus dans `docs/essais/ocr/libelles_inconnus/`.
 - (v23) Après la relance du 15/11 (bilan conforme, `regles` 18) : conflit du `Final Score` départagé par le HUD (§3.1, cas `lGDbzyIJcjY` → 19 `sur`) ; `n images` = images distinctes (la ligne RaidenShadow de `gb.json` affiche `lecture fusionnée (14 images)` pour 7 images dans le bilan : vérifier qu'aucune image n'est comptée deux fois). Points HUD de `MJ2iz5TFmvM` (10 375 798 059 160 à 3,18 s, 2,7 % sous le Final Score) : lecture plausible, gardée, mais hors fenêtre → ne confirme pas ; pas de changement de tolérance. Gel : `pc.geler` reste `false` jusqu'au critère 3 (§6).
 - (v22) Tri 1 GB : `config.rage_count_mots` = `["rage"]` (§2.2 : `Rage: 159`, `Rage 159`, `159 Rage`, jamais `Boss Rage …`) ; `tri1_version` = **18** (titres relus). Attendus : T5dR → titre 159, note `écart titre/écran : titre 159` sur la ligne ; Oj_ → titre 137, sans note (égal à l'écran). Validé : lecture à 1 img/s des 2 images qui suivent un HUD de fin de run (chrono lu ≤ 5 s), conforme à §3.1 v19.
 - (v21) Export Excel (§5.6) : BOT en `mm:ss.mmm` (pas `0.00 s`) ; POC en entier complet (pas `x.xx T`) ; `Détail des runs` toujours remplie au POC/GB (`G?` si inconnu) ; colonne `Dégâts` au GB ; séparation `À vérifier` ; Top 10 marqué ; page de garde (état, essai, saison BOT, comptes) ; onglet `Rejetées` ; tous les liens de `video_ids`.
