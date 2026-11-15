@@ -184,6 +184,52 @@ def test_ocr_reel_stats_par_position_et_accord_fiche():
     assert "sjw" not in seul and seul["unmatched"][0]["stats"]["hp"] == 108376
 
 
+def test_zones_fiche_et_statues_avec_faux_ocr():
+    """Lecture par zone (faux recadrage/OCR) : attributs de la fiche, grades + statue sélectionnée (la plus lumineuse) + options."""
+    import tempfile
+    from PIL import Image, ImageDraw
+    import composition as C
+    zs = T.CFG["ecrans"]["statues"]["zones"]
+    za = T.CFG["ecrans"]["fiche_sjw"]["zones_attributs"]
+    with tempfile.TemporaryDirectory() as d:
+        im = Image.new("RGB", (1600, 900), (30, 30, 50))
+        x, y, l, h = zs["selection"][4]                              # statue 5 sélectionnée : losange clair
+        ImageDraw.Draw(im).rectangle([x * 1600, y * 900, (x + l) * 1600, (y + h) * 900], fill=(200, 200, 220))
+        png = Path(d) / "f.png"
+        im.save(png)
+
+        class Faux:
+            def __init__(self):
+                self.zone = None
+            def recadrer(self, p, zone, echelle=3, seuil=None):
+                self.zone = [round(v, 4) for v in zone]
+                return p
+            def ocr(self, p, langues=None, psm=6, timeout=0, extra=None):
+                arr = lambda zones: [[round(v, 4) for v in z] for z in zones]
+                if self.zone in arr(za.values()):
+                    return ["19", "10", "10", "1,335", "10"][arr(za.values()).index(self.zone)]
+                if self.zone in arr(zs["grades"]):
+                    return "DECBB"[arr(zs["grades"]).index(self.zone)]
+                return "攻撃力/防御力(%) 20%" if self.zone == arr(zs["options"])[0] else ""
+        o = Faux()
+        fiche = C._lire_zones(o, T.CFG, "fiche_sjw", png, 8, lambda m: None)
+        sta = C._lire_zones(o, T.CFG, "statues", png, 44, lambda m: None)
+    obs = {}
+    notes = E.integrer(obs, fiche + fiche + sta, T.DB, T.CFG)
+    assert obs["sjw"]["stats"] == {"strength": 19, "vitality": 10, "agility": 10, "intelligence": 1335, "perception": 10}, obs["sjw"]
+    assert [x["grade"] for x in obs["statues"]] == list("DECBB") and obs["statues"][4]["options"][0]["text_read"] == "攻撃力/防御力(%) 20%"
+    assert all(not x["options"] for x in obs["statues"][:4]), "options rattachées à la seule statue sélectionnée"
+    # sélection non détectée (image uniforme) : grades gardés, options non rattachées (jamais « statue 1 » par défaut)
+    plat = {}
+    E.fusionner_zones(plat, [], [{"t": 1, "grades": list("DECBB"), "selection": None, "options": ["x", "", ""]}], notes2 := [])
+    assert all(not x["options"] for x in plat["statues"]) and any("non rattachées" in n for n in notes2)
+    # deux lectures en désaccord : valeur non lue
+    n3 = []
+    obs3 = {}
+    E.fusionner_zones(obs3, [{"strength": 19}, {"strength": 18, "vitality": 10}], [], n3)
+    assert obs3["sjw"]["stats"] == {"vitality": 10} and any("désaccord" in n for n in n3)
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

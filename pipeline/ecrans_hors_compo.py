@@ -2,6 +2,7 @@
 Libellés dans `config.ecrans` (JA seulement, autres langues [EN ATTENTE]). Valeur illisible -> absente, jamais inventée.
 Format des textes : voir `tests/test_etape2_v3.py` (textes recopiés des captures `docs/essais/composition/poc_*_ja.png`).
 `integrer` rattache le résultat à `obs` (observations de `builds.observer`) ; tout est facultatif, jamais compté dans le statut."""
+import json
 import re
 
 import noms
@@ -194,6 +195,7 @@ def integrer(obs, lectures, db, cfg):
     stats du successeur. Retourne les notes ajoutées."""
     notes = obs.setdefault("notes", [])
     fiche = set().union(*[nombres_fiche(t) for e, t in lectures if e == "fiche_sjw"]) if lectures else set()
+    vus_zone, zones_statues = [], []
     for ecran, texte in lectures:
         if ecran == "gemmes":
             g = lire_gemmes(texte, cfg)
@@ -201,8 +203,12 @@ def integrer(obs, lectures, db, cfg):
                 obs["gems"] = g
         elif ecran == "statues":
             s = lire_statues(texte, cfg)
-            if s:
+            if s and _score_statues(s) >= _score_statues(obs.get("statues")):
                 obs["statues"] = s
+        elif ecran == "attributs_zone":
+            vus_zone.append(lire_attributs_zone(texte))
+        elif ecran == "statues_zone":
+            zones_statues.append(json.loads(texte))
         elif ecran == "fiche_sjw":
             attr = lire_attributs(texte, cfg)
             if attr:
@@ -246,4 +252,50 @@ def integrer(obs, lectures, db, cfg):
                     hs.append(h)
                     notes.append("chasseur trouvé par l'écran de stats")
                 h.setdefault("stats", {}).update(r["stats"])
+    fusionner_zones(obs, vus_zone, zones_statues, notes)
     return notes
+
+
+def lire_attributs_zone(texte):
+    """`id: valeur` par ligne (une zone par attribut) -> {id: int} ; valeur = nombre seul (`1,335`), < 100 000, sinon non lue."""
+    sortie = {}
+    for ligne in _lignes(texte):
+        ident, _, v = ligne.partition(":")
+        v = v.strip()
+        if re.fullmatch(r"\d{1,3}(?:,\d{3})+|\d+", v) and int(v.replace(",", "")) < 100000:
+            sortie[ident.strip()] = int(v.replace(",", ""))
+    return sortie
+
+
+def _score_statues(statues):
+    return sum(1 + len(s.get("options") or []) for s in (statues or []))
+
+
+def fusionner_zones(obs, attributs, statues, notes):
+    """Lectures par zone. Attributs : valeur retenue si toutes les lectures de la zone qui la voient sont d'accord (écart -> non lue, note).
+    Statues : la lecture aux grades les mieux lus ; options rattachées à la statue SÉLECTIONNÉE seulement si la sélection est détectée."""
+    if attributs:
+        ids = {i for a in attributs for i in a}
+        fin = {}
+        for i in sorted(ids):
+            vals = {a[i] for a in attributs if i in a}
+            if len(vals) == 1:
+                fin[i] = vals.pop()
+            else:
+                notes.append(f"attribut SJW {i} : lectures de zone en désaccord {sorted(vals)}")
+        if fin:
+            obs.setdefault("sjw", {}).setdefault("stats", {}).update(fin)
+            notes.append("attributs SJW lus par zone : " + ", ".join(sorted(fin)))
+    if statues:
+        meilleure = max(statues, key=lambda z: (sum(g is not None for g in z["grades"]), sum(bool(o) for o in z["options"])))
+        if sum(g is not None for g in meilleure["grades"]) >= 3:
+            liste = [{"position": i + 1, "grade": g, "options": []} for i, g in enumerate(meilleure["grades"])]
+            vus = [z for z in statues if z.get("selection") and any(z["options"])]
+            if vus:
+                z = max(vus, key=lambda z: sum(bool(o) for o in z["options"]))
+                liste[z["selection"] - 1]["options"] = [{"text_read": o, "lang": LANG, "grade": None, "id": None} for o in z["options"] if o]
+            else:
+                notes.append("statues : options non rattachées (statue sélectionnée ou panneau d'options non vus)")
+            if _score_statues(liste) >= _score_statues(obs.get("statues")):
+                obs["statues"] = liste
+                notes.append("statues lues par zone")

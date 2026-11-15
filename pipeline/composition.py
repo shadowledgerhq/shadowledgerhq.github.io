@@ -89,7 +89,8 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
             vides += 0 if rapide.strip() else 1
             resume.append((t, " | ".join(rapide.split())[:240]))
             ecran = H.detecter(rapide, cfg)
-            if not ecran or vus.get(ecran, 0) >= 2:
+            plafond = (cfg["ecrans"].get("statues", {}).get("lectures_max", 4)) if ecran == "statues" else 2     # statues : le panneau d'options apparaît en fondu
+            if not ecran or vus.get(ecran, 0) >= plafond:
                 continue
             texte = outils.ocr(png, langues, 6, 120)
         except Exception as ex:                      # OCR trop lent / tesseract absent : on passe
@@ -101,6 +102,10 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
         vus[ecran] = vus.get(ecran, 0) + 1
         lus.append((ecran, texte))
         journal(f"  écran {ecran} lu à t={t} s")
+        try:
+            lus += _lire_zones(outils, cfg, ecran, png, t, journal)
+        except Exception as ex:                      # recadrage/OCR de zone : jamais bloquant
+            journal(f"  zones {ecran} t={t} : {str(ex)[:80]}")
         if ocr_debug:
             from pathlib import Path
             Path(ocr_debug).mkdir(parents=True, exist_ok=True)
@@ -116,6 +121,55 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
     journal(f"  hors composition : {len(autres)} images, {appels} lues par l'OCR rapide ({vides} sans texte, {erreurs} erreurs), "
             f"écrans reconnus : {', '.join(e for e, _ in lus) or 'aucun'}")
     return lus
+
+
+def _ocr_zone(outils, png, zone, langues, psm, blanc, seuils=(None, 150)):
+    """Texte d'une zone (fractions x, y, l, h) agrandie ×3 ; `blanc` : liste blanche tesseract. 2 essais : brut, puis noir et blanc."""
+    for seuil in seuils:
+        crop = outils.recadrer(png, zone, 3, seuil)
+        texte = outils.ocr(crop, langues, psm, 20, ["-c", f"tessedit_char_whitelist={blanc}"] if blanc else None).strip()
+        if texte:
+            return texte
+    return ""
+
+
+def _lire_zones(outils, cfg, ecran, png, t, journal):
+    """Lectures par zone (SPEC v3, [À CONFIRMER] sur le PC : positions mesurées sur UNE vidéo JA 1920×1080). Retourne des lectures
+    `("attributs_zone", "id: valeur" par ligne)` (fiche de SJW) ou `("statues_zone", json)` (grades, statue sélectionnée, options)."""
+    if not hasattr(outils, "recadrer"):
+        return []
+    e = cfg["ecrans"]
+    if ecran == "fiche_sjw" and e["fiche_sjw"].get("zones_attributs"):
+        lignes = []
+        for ident, zone in e["fiche_sjw"]["zones_attributs"].items():
+            texte = _ocr_zone(outils, png, zone, "eng", 7, "0123456789,")
+            lignes.append(f"{ident}: {texte}")
+        journal(f"  fiche_sjw zones t={t} : " + " ; ".join(lignes))
+        return [("attributs_zone", "\n".join(lignes))]
+    z = e.get("statues", {}).get("zones")
+    if ecran == "statues" and z:
+        from PIL import Image
+        with Image.open(png) as im:
+            gris = im.convert("L")
+            W, H = gris.size
+            def moyenne(zone):
+                x, y, l, h = zone
+                box = gris.crop((int(x * W), int(y * H), int((x + l) * W), int((y + h) * H)))
+                return sum(box.getdata()) / max(1, box.size[0] * box.size[1])
+            lum = [moyenne(zn) for zn in z["selection"]]
+        grades = []
+        for zn in z["grades"]:
+            g = _ocr_zone(outils, png, zn, "eng", 10, "EDCBAS", (None, 120, 180)).strip()[:1]
+            grades.append(g if g in list("EDCBAS") else None)
+        reste = sorted(lum)[:-1]
+        mediane = reste[len(reste) // 2]
+        haut = max(range(len(lum)), key=lambda i: lum[i])
+        selection = haut + 1 if lum[haut] >= z.get("seuil_selection", 80) and lum[haut] >= z.get("ratio_selection", 1.6) * max(mediane, 1) else None
+        options = [" ".join(_ocr_zone(outils, png, zn, e["statues"].get("langues", "jpn+eng"), 6, None, (None, 150)).split()) for zn in z["options"]]
+        journal(f"  statues zones t={t} : grades {grades}, sélection {selection}, options {options}")
+        import json
+        return [("statues_zone", json.dumps({"t": t, "grades": grades, "selection": selection, "options": options}, ensure_ascii=False))]
+    return []
 
 
 def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
