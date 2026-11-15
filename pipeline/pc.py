@@ -26,7 +26,7 @@ from datetime import timedelta
 from pathlib import Path
 
 import classement
-from donnees import RACINE, Donnees, ajouter_rejet, charger_config
+from donnees import RACINE, Donnees, JsonAbime, ajouter_rejet, charger_config, lire_json
 from etape1 import ecrire_rapport, ouvrir_semaine
 from semaine import PARIS, id_semaine, iso_utc, maintenant, parse_iso, semaine_precedente
 import ocr_ecrans
@@ -258,23 +258,58 @@ class Outils:
 # --- git ------------------------------------------------------------------------------------
 
 class Git:
-    def __init__(self, racine=RACINE):
+    """git avec délai maximal (jamais de fenêtre bloquée) et sans question au clavier. Les fichiers JSON de data/ sont
+    vérifiés avant tout commit : un fichier abîmé (marqueurs de conflit, coupure) n'entre jamais dans l'historique."""
+    DELAI_S = 180
+
+    def __init__(self, racine=RACINE, delai_s=None):
         self.racine = racine
+        self.delai_s = delai_s or self.DELAI_S
 
     def _run(self, *args):
-        r = subprocess.run(["git", *args], cwd=self.racine, capture_output=True, text=True)
+        env = {**os.environ, "GIT_TERMINAL_PROMPT": "0", "GIT_EDITOR": "true"}
+        try:
+            r = subprocess.run(["git", *args], cwd=self.racine, capture_output=True, text=True, stdin=subprocess.DEVNULL,
+                               timeout=self.delai_s, env=env)
+        except subprocess.TimeoutExpired:
+            raise GitErreur(f"git {args[0]} : sans réponse après {self.delai_s} s (réseau ?)") from None
         if r.returncode != 0:
             raise GitErreur(f"git {args[0]} : {(r.stderr or r.stdout)[-300:].strip()}")
         return r.stdout
 
+    def verifier_json(self):
+        """Lève GitErreur en nommant les fichiers data/**/*.json illisibles de l'arbre de travail."""
+        mauvais = []
+        for f in sorted((Path(self.racine) / "data").rglob("*.json")):
+            try:
+                lire_json(f)
+            except JsonAbime as e:
+                mauvais.append(str(e))
+            except OSError:
+                pass
+        if mauvais:
+            raise GitErreur("JSON abîmé, rien n'est commité : " + " | ".join(mauvais[:5]))
+
+    def _rebase(self):
+        """pull --rebase ; en cas d'échec, le rebase est abandonné (pas d'état « rebase en cours » qui bloque la suite)."""
+        try:
+            self._run("pull", "--rebase", "origin", "main")
+        except GitErreur:
+            try:
+                self._run("rebase", "--abort")
+            except GitErreur:
+                pass
+            raise
+
     def tirer(self):
         # Reprise après un arrêt du PC / un plantage : les lectures du passage interrompu sont dans data/ (écrites après
         # chaque vidéo) mais pas encore commitées ; on les commite d'abord, sinon `pull --rebase` refuserait de tourner.
+        self.verifier_json()
         self._run("add", "data")
         if self._run("status", "--porcelain", "data").strip():
             self._run("commit", "-m", "données: reprise après interruption du passage PC")
         try:
-            self._run("pull", "--rebase", "origin", "main")
+            self._rebase()
         except GitErreur as e:
             if "overwritten" in str(e) or "unstaged" in str(e) or "uncommitted" in str(e):
                 raise GitErreur(f"{e}\nModifications locales dans data/ (essais avec --no-git ?) : lancer « git checkout -- data » "
@@ -303,11 +338,12 @@ class Git:
         return True
 
     def pousser(self, message):
+        self.verifier_json()
         self._run("add", "data")
         if not self._run("status", "--porcelain", "data").strip():
             return False
         self._run("commit", "-m", message)
-        self._run("pull", "--rebase", "origin", "main")  # une seule tentative ; conflit -> GitErreur
+        self._rebase()                                   # une seule tentative ; conflit -> GitErreur (rebase abandonné)
         self._run("push", "origin", "HEAD:main")
         return True
 
@@ -1168,6 +1204,9 @@ if __name__ == "__main__":
                    ocr_debug=(RACINE / "logs" / "ocr") if (a.garder_ocr or a.publier_essai) else None)
     except GitErreur as e:
         print(f"ERREUR git : {e}\nPassage interrompu (conflit ou réseau) : relancer plus tard.", file=sys.stderr)
+        sys.exit(1)
+    except JsonAbime as e:
+        print(f"ERREUR fichier de données : {e}\nVérifier : py -3 pipeline\\verifier_json.py", file=sys.stderr)
         sys.exit(1)
     except Exception as e:        # crash : tracé dans logs\pc.log, signalé en tête du rapport
         import traceback

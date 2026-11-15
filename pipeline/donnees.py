@@ -1,6 +1,7 @@
 """Lecture/écriture des fichiers de data/ (docs/SPEC_ETAPE1.md §5).
 N'écrit un fichier que si son contenu change (pas de commit inutile)."""
 import json
+import os
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parents[1]
@@ -9,6 +10,31 @@ CONFIG = Path(__file__).resolve().parent / "config" / "etape1.json"
 
 def charger_config(chemin=CONFIG):
     return json.loads(Path(chemin).read_text(encoding="utf-8"))
+
+
+class JsonAbime(ValueError):
+    """Fichier JSON illisible : le message nomme le fichier, la ligne et la cause probable."""
+
+
+def lire_json(chemin):
+    """json.loads d'un fichier, avec le nom du fichier fautif dans l'erreur (JsonAbime)."""
+    p = Path(chemin)
+    texte = p.read_text(encoding="utf-8")
+    try:
+        return json.loads(texte)
+    except json.JSONDecodeError as e:
+        marq = any(l.startswith(("<<<<<<<", "=======", ">>>>>>>")) for l in texte.splitlines())
+        cause = "marqueurs de conflit git (<<<<<<<) dans le fichier" if marq else "fichier coupé ou abîmé"
+        raise JsonAbime(f"{p} illisible : {e.msg} (ligne {e.lineno}, colonne {e.colno}) ; {cause}") from e
+
+
+def ecrire_atomique(p, texte):
+    """Écrit dans un fichier temporaire voisin puis remplace : jamais de fichier à moitié écrit."""
+    p = Path(p)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    tmp = p.with_name(p.name + ".tmp")
+    tmp.write_text(texte, encoding="utf-8")
+    os.replace(tmp, p)
 
 
 class Donnees:
@@ -20,7 +46,7 @@ class Donnees:
         p = self.data / chemin
         if not p.exists():
             return defaut
-        return json.loads(p.read_text(encoding="utf-8"))
+        return lire_json(p)
 
     def ecrire(self, chemin, contenu):
         p = self.data / chemin
@@ -28,8 +54,7 @@ class Donnees:
             json.dumps(contenu, ensure_ascii=False, indent=2) + "\n")
         if p.exists() and p.read_text(encoding="utf-8") == texte:
             return False
-        p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(texte, encoding="utf-8")
+        ecrire_atomique(p, texte)
         return True
 
     # --- fichiers nommés ---
@@ -42,7 +67,7 @@ class Donnees:
     def tous_rejetes(self):
         ids = set()
         for p in (self.data / "rejected").glob("*.json"):
-            ids |= {r["video_id"] for r in json.loads(p.read_text(encoding="utf-8"))}
+            ids |= {r["video_id"] for r in lire_json(p)}
         return ids
 
     def channels(self):

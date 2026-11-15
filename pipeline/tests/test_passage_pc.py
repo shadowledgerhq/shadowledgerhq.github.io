@@ -82,6 +82,41 @@ def test_scripts_windows():
     assert "%1 %2" in lanceur
 
 
+def test_json_abime_nomme_le_fichier_et_ecriture_atomique():
+    import subprocess
+    from donnees import JsonAbime
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Donnees(tmp)
+        d.ecrire("a/b.json", {"x": 1})
+        assert not list((d.data / "a").glob("*.tmp"))           # fichier temporaire remplacé, pas laissé
+        (d.data / "a" / "b.json").write_text('{"x": 1,\n<<<<<<< HEAD\n"y": 2}', encoding="utf-8")
+        try:
+            d.lire("a/b.json", None)
+            assert False
+        except JsonAbime as e:
+            assert "b.json" in str(e) and "conflit" in str(e) and "ligne 2" in str(e)
+        subprocess.run(["git", "init", "-q"], cwd=tmp, check=True)
+        try:
+            pc.Git(tmp).verifier_json()
+            assert False
+        except pc.GitErreur as e:
+            assert "b.json" in str(e) and "rien n'est commité" in str(e)
+        (d.data / "a" / "b.json").write_text('{"x": 1}', encoding="utf-8")
+        pc.Git(tmp).verifier_json()                              # fichier réparé : passe
+
+
+def test_git_delai_maximal():
+    import time
+    with tempfile.TemporaryDirectory() as tmp:
+        g = pc.Git(tmp, delai_s=0.001)
+        t = time.time()
+        try:
+            g._run("--version")
+        except pc.GitErreur as e:
+            assert "sans réponse" in str(e)
+        assert time.time() - t < 5
+
+
 if __name__ == "__main__":
     for nom, fn in sorted(globals().items()):
         if nom.startswith("test_"):
