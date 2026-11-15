@@ -4,8 +4,8 @@
     "name": {
       "fr": "Chevalier",
       "en": "Knight Figure",
-      "ko": "",
-      "ja": ""
+      "ko": "기사",
+      "ja": "騎士"
     },
     "rarity": null,
     "target": "hunters",
@@ -24,8 +24,8 @@
         "name": {
           "fr": "Attaque et Défense (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "攻撃力・防御力(%)",
+          "ko": "공격력·방어력(%)"
         }
       },
       {
@@ -33,8 +33,8 @@
         "name": {
           "fr": "PV (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "HP(%)",
+          "ko": "HP(%)"
         }
       },
       {
@@ -42,8 +42,8 @@
         "name": {
           "fr": "Attaque et Défense supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加攻撃力・防御力",
+          "ko": "추가 공격력·방어력"
         }
       },
       {
@@ -51,8 +51,8 @@
         "name": {
           "fr": "PV supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加HP",
+          "ko": "추가 HP"
         }
       },
       {
@@ -60,8 +60,8 @@
         "name": {
           "fr": "Taux de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心率",
+          "ko": "치명타 확률"
         }
       },
       {
@@ -69,8 +69,8 @@
         "name": {
           "fr": "Dégâts de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心ダメージ",
+          "ko": "치명타 피해"
         }
       },
       {
@@ -78,8 +78,8 @@
         "name": {
           "fr": "Pénétration de défense",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "防御貫通",
+          "ko": "방어력 관통"
         }
       },
       {
@@ -87,8 +87,8 @@
         "name": {
           "fr": "Hausse des dégâts",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "ダメージ増加",
+          "ko": "피해 증가"
         }
       },
       {
@@ -96,8 +96,8 @@
         "name": {
           "fr": "PM supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加MP",
+          "ko": "추가 MP"
         }
       }
     ],
@@ -105,7 +105,9 @@
     "unique_effect": {
       "text": {
         "fr": "Les Dégâts de coup critique des chasseurs augmentent de 30 %.",
-        "en": "Increases Hunter Critical Hit Damage by 30%."
+        "en": "Increases Hunter Critical Hit Damage by 30%.",
+        "ja": "ハンターの会心ダメージが30%増加します。",
+        "ko": "헌터의 치명타 피해가 30% 증가합니다."
       },
       "condition": "s'active lorsque les trois stats atteignent le rang B ou un rang supérieur (slagate)",
       "effects": [
@@ -217,15 +219,16 @@
       "D": 30,
       "E": 40
     },
-    "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)"
+    "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
+    "name_ja_ko_source": "https://slagate.com/builds (onglet Statues, page affichée en japonais/coréen) ; lecture de page autorisée par Alexis le 13/11/2026 ; nom court de slagate (le jeu EN dit « … Figure »)"
   },
   {
     "id": "conjuror",
     "name": {
       "fr": "Conjurateur",
       "en": "Conjuror Figure",
-      "ko": "",
-      "ja": ""
+      "ko": "소환사",
+      "ja": "召喚師"
     },
     "rarity": null,
     "target": "sung_jinwoo_successor",
@@ -244,8 +247,8 @@
         "name": {
           "fr": "Attaque et Défense (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "攻撃力・防御力(%)",
+          "ko": "공격력·방어력(%)"
         }
       },
       {
@@ -253,8 +256,8 @@
         "name": {
           "fr": "PV (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "HP(%)",
+          "ko": "HP(%)"
         }
       },
       {
@@ -262,8 +265,8 @@
         "name": {
           "fr": "Attaque et Défense supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加攻撃力・防御力",
+          "ko": "추가 공격력·방어력"
         }
       },
       {
@@ -271,8 +274,8 @@
         "name": {
           "fr": "PV supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加HP",
+          "ko": "추가 HP"
         }
       },
       {
@@ -280,8 +283,8 @@
         "name": {
           "fr": "Taux de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心率",
+          "ko": "치명타 확률"
         }
       },
       {
@@ -289,8 +292,8 @@
         "name": {
           "fr": "Dégâts de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心ダメージ",
+          "ko": "치명타 피해"
         }
       },
       {
@@ -298,8 +301,8 @@
         "name": {
           "fr": "Pénétration de défense",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "防御貫通",
+          "ko": "방어력 관통"
         }
       },
       {
@@ -307,8 +310,8 @@
         "name": {
           "fr": "Hausse des dégâts",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "ダメージ増加",
+          "ko": "피해 증가"
         }
       },
       {
@@ -316,8 +319,8 @@
         "name": {
           "fr": "PM supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加MP",
+          "ko": "추가 MP"
         }
       }
     ],
@@ -437,15 +440,16 @@
     },
     "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
     "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
-    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : sung_jinwoo_successor) n'a pas été revérifié : à confirmer si une capture est disponible."
+    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : sung_jinwoo_successor) n'a pas été revérifié : à confirmer si une capture est disponible.",
+    "name_ja_ko_source": "https://slagate.com/builds (onglet Statues, page affichée en japonais/coréen) ; lecture de page autorisée par Alexis le 13/11/2026 ; nom court de slagate (le jeu EN dit « … Figure »)"
   },
   {
     "id": "white-flames",
     "name": {
       "fr": "Flammes blanches",
       "en": "Figure of White Flames",
-      "ko": "",
-      "ja": ""
+      "ko": "백염",
+      "ja": "白炎"
     },
     "rarity": null,
     "target": "hunters",
@@ -464,8 +468,8 @@
         "name": {
           "fr": "Attaque et Défense (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "攻撃力・防御力(%)",
+          "ko": "공격력·방어력(%)"
         }
       },
       {
@@ -473,8 +477,8 @@
         "name": {
           "fr": "PV (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "HP(%)",
+          "ko": "HP(%)"
         }
       },
       {
@@ -482,8 +486,8 @@
         "name": {
           "fr": "Attaque et Défense supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加攻撃力・防御力",
+          "ko": "추가 공격력·방어력"
         }
       },
       {
@@ -491,8 +495,8 @@
         "name": {
           "fr": "PV supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加HP",
+          "ko": "추가 HP"
         }
       },
       {
@@ -500,8 +504,8 @@
         "name": {
           "fr": "Taux de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心率",
+          "ko": "치명타 확률"
         }
       },
       {
@@ -509,8 +513,8 @@
         "name": {
           "fr": "Dégâts de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心ダメージ",
+          "ko": "치명타 피해"
         }
       },
       {
@@ -518,8 +522,8 @@
         "name": {
           "fr": "Pénétration de défense",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "防御貫通",
+          "ko": "방어력 관통"
         }
       },
       {
@@ -527,8 +531,8 @@
         "name": {
           "fr": "Hausse des dégâts",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "ダメージ増加",
+          "ko": "피해 증가"
         }
       },
       {
@@ -536,8 +540,8 @@
         "name": {
           "fr": "PM supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加MP",
+          "ko": "추가 MP"
         }
       }
     ],
@@ -657,15 +661,16 @@
     },
     "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
     "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
-    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : hunters) n'a pas été revérifié : à confirmer si une capture est disponible."
+    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : hunters) n'a pas été revérifié : à confirmer si une capture est disponible.",
+    "name_ja_ko_source": "https://slagate.com/builds (onglet Statues, page affichée en japonais/coréen) ; lecture de page autorisée par Alexis le 13/11/2026 ; nom court de slagate (le jeu EN dit « … Figure »)"
   },
   {
     "id": "transfiguration",
     "name": {
       "fr": "Transfiguration",
       "en": "Figure of Transfiguration",
-      "ko": "",
-      "ja": ""
+      "ko": "변신",
+      "ja": "変身"
     },
     "rarity": null,
     "target": "sung_jinwoo_successor",
@@ -684,8 +689,8 @@
         "name": {
           "fr": "Attaque et Défense (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "攻撃力・防御力(%)",
+          "ko": "공격력·방어력(%)"
         }
       },
       {
@@ -693,8 +698,8 @@
         "name": {
           "fr": "PV (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "HP(%)",
+          "ko": "HP(%)"
         }
       },
       {
@@ -702,8 +707,8 @@
         "name": {
           "fr": "Attaque et Défense supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加攻撃力・防御力",
+          "ko": "추가 공격력·방어력"
         }
       },
       {
@@ -711,8 +716,8 @@
         "name": {
           "fr": "PV supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加HP",
+          "ko": "추가 HP"
         }
       },
       {
@@ -720,8 +725,8 @@
         "name": {
           "fr": "Taux de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心率",
+          "ko": "치명타 확률"
         }
       },
       {
@@ -729,8 +734,8 @@
         "name": {
           "fr": "Dégâts de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心ダメージ",
+          "ko": "치명타 피해"
         }
       },
       {
@@ -738,8 +743,8 @@
         "name": {
           "fr": "Pénétration de défense",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "防御貫通",
+          "ko": "방어력 관통"
         }
       },
       {
@@ -747,8 +752,8 @@
         "name": {
           "fr": "Hausse des dégâts",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "ダメージ増加",
+          "ko": "피해 증가"
         }
       },
       {
@@ -756,8 +761,8 @@
         "name": {
           "fr": "PM supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加MP",
+          "ko": "추가 MP"
         }
       }
     ],
@@ -877,15 +882,16 @@
     },
     "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
     "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
-    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : sung_jinwoo_successor) n'a pas été revérifié : à confirmer si une capture est disponible."
+    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : sung_jinwoo_successor) n'a pas été revérifié : à confirmer si une capture est disponible.",
+    "name_ja_ko_source": "https://slagate.com/builds (onglet Statues, page affichée en japonais/coréen) ; lecture de page autorisée par Alexis le 13/11/2026 ; nom court de slagate (le jeu EN dit « … Figure »)"
   },
   {
     "id": "steel",
     "name": {
       "fr": "Acier",
       "en": "Figure of Steel",
-      "ko": "",
-      "ja": ""
+      "ko": "강철",
+      "ja": "鋼鉄"
     },
     "rarity": null,
     "target": "hunters",
@@ -904,8 +910,8 @@
         "name": {
           "fr": "Attaque et Défense (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "攻撃力・防御力(%)",
+          "ko": "공격력·방어력(%)"
         }
       },
       {
@@ -913,8 +919,8 @@
         "name": {
           "fr": "PV (%)",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "HP(%)",
+          "ko": "HP(%)"
         }
       },
       {
@@ -922,8 +928,8 @@
         "name": {
           "fr": "Attaque et Défense supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加攻撃力・防御力",
+          "ko": "추가 공격력·방어력"
         }
       },
       {
@@ -931,8 +937,8 @@
         "name": {
           "fr": "PV supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加HP",
+          "ko": "추가 HP"
         }
       },
       {
@@ -940,8 +946,8 @@
         "name": {
           "fr": "Taux de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心率",
+          "ko": "치명타 확률"
         }
       },
       {
@@ -949,8 +955,8 @@
         "name": {
           "fr": "Dégâts de coup critique",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "会心ダメージ",
+          "ko": "치명타 피해"
         }
       },
       {
@@ -958,8 +964,8 @@
         "name": {
           "fr": "Pénétration de défense",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "防御貫通",
+          "ko": "방어력 관통"
         }
       },
       {
@@ -967,8 +973,8 @@
         "name": {
           "fr": "Hausse des dégâts",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "ダメージ増加",
+          "ko": "피해 증가"
         }
       },
       {
@@ -976,8 +982,8 @@
         "name": {
           "fr": "PM supplémentaires",
           "en": "",
-          "ja": "",
-          "ko": ""
+          "ja": "追加MP",
+          "ko": "추가 MP"
         }
       }
     ],
@@ -1097,6 +1103,7 @@
     },
     "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
     "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
-    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : hunters) n'a pas été revérifié : à confirmer si une capture est disponible."
+    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : hunters) n'a pas été revérifié : à confirmer si une capture est disponible.",
+    "name_ja_ko_source": "https://slagate.com/builds (onglet Statues, page affichée en japonais/coréen) ; lecture de page autorisée par Alexis le 13/11/2026 ; nom court de slagate (le jeu EN dit « … Figure »)"
   }
 ]
