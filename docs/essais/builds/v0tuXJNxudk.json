@@ -82,7 +82,7 @@
    },
    {
     "slot": "body",
-    "id": null,
+    "id": "arrogant-rulers-will",
     "level": null
    },
    {
@@ -569,7 +569,7 @@
  "counts": {
   "sjw_weapons": "0/2",
   "sjw_artifacts": "8/8",
-  "sjw_cores": "1/3",
+  "sjw_cores": "2/3",
   "sjw_stats": "13/15",
   "sjw_skills": "0/6",
   "blessings": "7/8",
@@ -737,17 +737,9 @@
   {
    "element": "sjw_cores",
    "owner": "sjw",
-   "slot": "body",
-   "best_id": "ancient-wraiths-right-hand",
-   "score": 0.5,
-   "crop": null
-  },
-  {
-   "element": "sjw_cores",
-   "owner": "sjw",
    "slot": "spirit",
-   "best_id": "ancient-wraiths-mana-power",
-   "score": 0.509,
+   "best_id": "ferocious-protectors-claw",
+   "score": 0.585,
    "crop": null
   }
  ],
@@ -772,7 +764,7 @@
   "règles poc inconnues"
  ],
  "erreurs": [],
- "notes": "icône absente : weapons; pièce isolée : necklace (hunter_2); stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur christopher-reed placé en position 2 par son portrait; attribut SJW strength : lecture la plus longue retenue 19 (autres lectures : [9]); attributs SJW lus par zone : agility, intelligence, perception, strength, vitality; statues lues par zone (options de 1 statue(s) sur 5); règles poc inconnues; reconnaissance faible : shadows; reconnaissance faible : sjw_artifacts; reconnaissance faible : artifacts; reconnaissance faible : blessings; reconnaissance faible : sjw_cores",
+ "notes": "icône absente : weapons; pièce isolée : necklace (hunter_2); stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur christopher-reed placé en position 2 par son portrait; attribut SJW strength : lecture la plus longue retenue 19 (autres lectures : [9]); attributs SJW lus par zone : agility, intelligence, perception, strength, vitality; statues lues par zone (options de 1 statue(s) sur 5); règles poc inconnues; reconnaissance faible : shadows; reconnaissance faible : sjw_artifacts; reconnaissance faible : artifacts; reconnaissance faible : blessings",
  "sources": [
   {
    "type": "video",
