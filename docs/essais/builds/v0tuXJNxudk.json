@@ -112,7 +112,11 @@
    "defense-penetration": {
     "percent": 43.02,
     "rating": 37748
-   }
+   },
+   "agility": 10,
+   "intelligence": 1335,
+   "perception": 10,
+   "vitality": 10
   },
   "skills": [
    {
@@ -470,20 +474,7 @@
   {
    "position": 5,
    "grade": "B",
-   "options": [
-    {
-     "text_read": "BM 嫌引。 Ts “hs 7 %) q 20%",
-     "lang": "ja",
-     "grade": null,
-     "id": null
-    },
-    {
-     "text_read": ">| eee, Wet Le i",
-     "lang": "ja",
-     "grade": null,
-     "id": null
-    }
-   ]
+   "options": []
   }
  ],
  "gems": null,
@@ -512,7 +503,7 @@
   "sjw_weapons": "0/2",
   "sjw_artifacts": "0/8",
   "sjw_cores": "0/3",
-  "sjw_stats": "8/15",
+  "sjw_stats": "12/15",
   "sjw_skills": "0/6",
   "blessings": "0/8",
   "hunters": "1/3",
@@ -594,7 +585,7 @@
   "règles poc inconnues"
  ],
  "erreurs": [],
- "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; statues lues par zone; règles poc inconnues; reconnaissance faible : shadows",
+ "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; attribut SJW strength : lectures de zone en désaccord [9, 19]; attributs SJW lus par zone : agility, intelligence, perception, vitality; statues : options non rattachées (statue sélectionnée ou panneau d'options non vus); statues lues par zone; règles poc inconnues; reconnaissance faible : shadows",
  "sources": [
   {
    "type": "video",

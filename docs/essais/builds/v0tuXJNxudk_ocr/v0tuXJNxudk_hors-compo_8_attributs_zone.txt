@@ -1,0 +1,5 @@
+strength: 9
+vitality: 10
+agility: 10
+intelligence: 1335
+perception: 10
