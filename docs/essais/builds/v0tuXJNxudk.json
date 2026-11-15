@@ -192,7 +192,7 @@
   {
    "position": 1,
    "team_slot": null,
-   "id": "christopher-reed",
+   "id": null,
    "weapon": {
     "id": null,
     "level": null
@@ -256,41 +256,12 @@
      "level": null
     }
    ],
-   "stats": {
-    "hp": 81263,
-    "crit-damage": {
-     "percent": 207.07,
-     "rating": 18298
-    },
-    "cooldown-reduction": {
-     "percent": 0.0,
-     "rating": 0
-    },
-    "mana": 5423,
-    "attack": 85562,
-    "accuracy": {
-     "percent": 88.32,
-     "rating": 28905
-    },
-    "defense": {
-     "percent": 85.22,
-     "rating": 144098
-    },
-    "crit-rate": {
-     "percent": 50.0,
-     "rating": 4507
-    },
-    "defense-penetration": {
-     "percent": 41.74,
-     "rating": 45680
-    }
-   },
-   "position_inconnue": true
+   "stats": {}
   },
   {
    "position": 2,
    "team_slot": null,
-   "id": null,
+   "id": "christopher-reed",
    "weapon": {
     "id": null,
     "level": null
@@ -354,7 +325,35 @@
      "level": null
     }
    ],
-   "stats": {}
+   "stats": {
+    "hp": 81263,
+    "crit-damage": {
+     "percent": 207.07,
+     "rating": 18298
+    },
+    "cooldown-reduction": {
+     "percent": 0.0,
+     "rating": 0
+    },
+    "mana": 5423,
+    "attack": 85562,
+    "accuracy": {
+     "percent": 88.32,
+     "rating": 28905
+    },
+    "defense": {
+     "percent": 85.22,
+     "rating": 144098
+    },
+    "crit-rate": {
+     "percent": 50.0,
+     "rating": 4507
+    },
+    "defense-penetration": {
+     "percent": 41.74,
+     "rating": 45680
+    }
+   }
   },
   {
    "position": 3,
@@ -773,7 +772,7 @@
   "règles poc inconnues"
  ],
  "erreurs": [],
- "notes": "icône absente : weapons; pièce isolée : necklace (hunter_2); stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; attribut SJW strength : lecture la plus longue retenue 19 (autres lectures : [9]); attributs SJW lus par zone : agility, intelligence, perception, strength, vitality; statues lues par zone (options de 1 statue(s) sur 5); règles poc inconnues; reconnaissance faible : shadows; reconnaissance faible : sjw_artifacts; reconnaissance faible : artifacts; reconnaissance faible : blessings; reconnaissance faible : sjw_cores",
+ "notes": "icône absente : weapons; pièce isolée : necklace (hunter_2); stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur christopher-reed placé en position 2 par son portrait; attribut SJW strength : lecture la plus longue retenue 19 (autres lectures : [9]); attributs SJW lus par zone : agility, intelligence, perception, strength, vitality; statues lues par zone (options de 1 statue(s) sur 5); règles poc inconnues; reconnaissance faible : shadows; reconnaissance faible : sjw_artifacts; reconnaissance faible : artifacts; reconnaissance faible : blessings; reconnaissance faible : sjw_cores",
  "sources": [
   {
    "type": "video",
