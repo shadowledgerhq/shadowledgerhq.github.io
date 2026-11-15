@@ -1,0 +1,843 @@
+{
+ "spec": 3,
+ "run_id": "essai-v0tuXJNxudk",
+ "run_index": 1,
+ "week": "essai",
+ "mode": "poc",
+ "gate": null,
+ "hunter_mode": null,
+ "rank": null,
+ "player": null,
+ "channel_id": null,
+ "video_id": "v0tuXJNxudk",
+ "t_result": null,
+ "t_composition": [
+  10,
+  52
+ ],
+ "team": null,
+ "rules": null,
+ "status": "build_partiel",
+ "confidence": "a_verifier",
+ "sjw": {
+  "weapons": [
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   }
+  ],
+  "artifacts": [
+   {
+    "slot": "helmet",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "chestplate",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "gloves",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "boots",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "necklace",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "bracelet",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "ring",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "earrings",
+    "set_id": null,
+    "level": null
+   }
+  ],
+  "cores": [
+   {
+    "slot": "mind",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "body",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "spirit",
+    "id": null,
+    "level": null
+   }
+  ],
+  "stats": {
+   "vitality": 170,
+   "agility": 170
+  },
+  "skills": [
+   {
+    "slot": "skill_1",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "skill_2",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "ultimate",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "qte_1",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "qte_2",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "qte_3",
+    "id": null,
+    "level": null
+   }
+  ],
+  "blessings": [
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   }
+  ]
+ },
+ "hunters": [
+  {
+   "position": 1,
+   "team_slot": null,
+   "id": "christopher-reed",
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {
+    "hp": 81263,
+    "crit-damage": {
+     "percent": 207.07,
+     "rating": 18298
+    },
+    "cooldown-reduction": {
+     "percent": 0.0,
+     "rating": 0
+    }
+   },
+   "position_inconnue": true
+  },
+  {
+   "position": 2,
+   "team_slot": null,
+   "id": null,
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  },
+  {
+   "position": 3,
+   "team_slot": null,
+   "id": null,
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  }
+ ],
+ "set_bonuses": {
+  "sjw": [],
+  "hunter_1": [],
+  "hunter_2": [],
+  "hunter_3": []
+ },
+ "shadows": [
+  {
+   "position": 1,
+   "id": "beste"
+  },
+  {
+   "position": 2,
+   "id": "brute"
+  },
+  {
+   "position": 3,
+   "id": "kaisel"
+  }
+ ],
+ "successor": {
+  "id": null,
+  "level": null,
+  "stats": {}
+ },
+ "subjugation_support": null,
+ "proof": null,
+ "statues": null,
+ "gems": null,
+ "found": {
+  "sjw": true,
+  "sjw_weapons": null,
+  "sjw_artifacts": null,
+  "sjw_cores": null,
+  "sjw_stats": null,
+  "sjw_skills": null,
+  "blessings": null,
+  "hunters": false,
+  "weapons": false,
+  "artifacts": false,
+  "cores": false,
+  "stats": null,
+  "shadows": true,
+  "successor": null,
+  "subjugation_support": null,
+  "proof": null,
+  "successor_stats": null,
+  "statues": null,
+  "gems": null
+ },
+ "counts": {
+  "sjw_weapons": "0/2",
+  "sjw_artifacts": "0/8",
+  "sjw_cores": "0/3",
+  "sjw_stats": "2/15",
+  "sjw_skills": "0/6",
+  "blessings": "0/8",
+  "hunters": "1/3",
+  "weapons": "0/3",
+  "artifacts": "0/24",
+  "cores": "0/9",
+  "stats": "3/45",
+  "shadows": "3/3"
+ },
+ "found_at": {},
+ "unmatched": [
+  {
+   "element": "sjw_weapons",
+   "owner": "sjw",
+   "slot": 0,
+   "best_id": "the-huntsman",
+   "score": 0.602,
+   "crop": null
+  },
+  {
+   "element": "sjw_weapons",
+   "owner": "sjw",
+   "slot": 1,
+   "best_id": "the-huntsman",
+   "score": 0.62,
+   "crop": null
+  },
+  {
+   "element": "successor",
+   "owner": "successor",
+   "slot": null,
+   "best_id": "myro",
+   "score": 0.308,
+   "crop": null
+  },
+  {
+   "element": "hunters",
+   "owner": "hunter_1",
+   "slot": null,
+   "best_id": "cha-hae-in",
+   "score": 0.569,
+   "crop": null
+  },
+  {
+   "element": "hunters",
+   "owner": "hunter_2",
+   "slot": null,
+   "best_id": "han-song-yi",
+   "score": 0.542,
+   "crop": null
+  },
+  {
+   "element": "hunters",
+   "owner": "hunter_3",
+   "slot": null,
+   "best_id": "han-song-yi",
+   "score": 0.609,
+   "crop": null
+  },
+  {
+   "element": "stats",
+   "owner": null,
+   "slot": null,
+   "best_id": null,
+   "score": 0.0,
+   "crop": null,
+   "text_read": "Bag              能力値情報               x",
+   "stats": {
+    "crit-rate": {
+     "percent": 50.0,
+     "rating": 15077
+    },
+    "crit-damage": {
+     "percent": 218.2,
+     "rating": 28459
+    },
+    "cooldown-reduction": {
+     "percent": 16.27,
+     "rating": 8094
+    },
+    "defense": {
+     "percent": 43.02,
+     "rating": 37748
+    }
+   }
+  }
+ ],
+ "attendus": {
+  "sjw": "fac",
+  "sjw_weapons": "fac",
+  "sjw_artifacts": "fac",
+  "sjw_cores": "fac",
+  "sjw_stats": "fac",
+  "sjw_skills": "fac",
+  "blessings": "fac",
+  "hunters": true,
+  "weapons": true,
+  "artifacts": true,
+  "cores": true,
+  "stats": "fac",
+  "shadows": "fac",
+  "successor": "fac",
+  "subjugation_support": "fac"
+ },
+ "plafonds": [
+  "règles poc inconnues"
+ ],
+ "erreurs": [],
+ "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; chasseur trouvé par l'écran de stats; règles poc inconnues; reconnaissance faible : shadows",
+ "sources": [
+  {
+   "type": "video",
+   "video_id": "v0tuXJNxudk",
+   "t": [
+    10,
+    52
+   ]
+  }
+ ],
+ "ocr_resume": [
+  [
+   0,
+   "< | kie | 2 | + | 38,336 | + | @ | 121B.83B.B0B | an | Ly | PoDFire | ご | ? | iA | 19 | co | 水篠旬 | の | 活力 | 速度 | Ww. | 170/170 | 526828 | / | 30550000 | 10 | 10 | 戦闘カ | 2.623.854 | 知能 | 感覚 | HP | 108,376 | 1335, | al | “ey | 50 | +A | 攻撃カ |"
+  ],
+  [
+   4,
+   "a | 能力値情報 | ees | ー | 2BB28 | x | N | AAAS | 2) | 武器 | アーティファクト | @ | HP | 108376 | AW, | Oo | mA | 5582 | BD | 138984 | 4 | 精密度 | 66.47% | mm | Ns | 防御カ | 7878%00380) | 50% | (15077) | 2 | CO) | 1 | マシリティ | 水篠旬 | | | NW | クリティカルダメージ | 218."
+  ],
+  [
+   8,
+   "PoDFire | に2 | 38336 | +| | © | 1,216,836,606 | an | < | kie | 3 | P | E | 筋カ | b | 19 | co | 水篠旬 | の | 活力 | 速度 | Lv.70/170 | 526828/30550000 | 10 | 10 | 戦闘カ | 2,623,854 | 1,335 | 知能 | 感覚 | al | Me | HP | 108,376 | © | プ | 攻撃カ | 138,984 | s"
+  ],
+  [
+   16,
+   "\\) | 能力値情報 | - | x | 武器 | アーティファクト | A | 9 | HP | 81263 | @ | RA | 5423 | し | へ | BRD | B55B2 | zk | ぐ | WEE | 88.32% | (28905) | a | | | 9 | ii, | 85.22% | (144098) | 50% | (4807) | -AlUN2 | | | MW | クリティカル率 | クリストファー・ | UK | | | クティカルタメージ"
+  ],
+  [
+   20,
+   "ae | < | an | 2 | f® | Minna” | 12,543,701 | sere | =D | BE) | (Nl | プレイヤーチームファイトモード | & | 人 | Korte | Pry | SS | <4 | KK | De | a | 2! | / | 8 | na | = | alt | ones | す | で | mana | anae | we | AN | 00 | 100 | 100 | NN | N | のUP | < | 02 |"
+  ],
+  [
+   24,
+   "継承者の基本情報 | 回| | 牙の継承者 | ベルペベット. | > | 通常攻撃特化 | 固有領域 | ステータス | 戦闘カ | 2175732 | é | 3] | HP | 237,541 | BRD | 319,571 | FORBES | 防御カ | 020 | スキル | a | ュン | = | om | 4 | a | Inspired | by | WILLIAN | & | Dark"
+  ],
+  [
+   28,
+   "| | ae | | | 宝石 | 武器庫 | se | 宝石で | 武器を鍛え上げ、 | 力をアップしましょう! | 力を引き出」 | Inspired | by | WILLIAN | & | Dark"
+  ],
+  [
+   32,
+   "x | _ | = | 7 | All | q | 装着中の宝石 | $16 | } | 16 | 能力値情報 | ^ | 攻撃力(%) | B0% | © | HP(%) | B0% | 防御カ(%) | 80% | 9 | 防御力貫通 | 15440 | 6 | em | 1920 | Inspired | by | WILLIAN | & | Dark"
+  ],
+  [
+   36,
+   "ーー | 庄プリセット | a@aaaaaaaaaaa | 本ofsLc2025 | ¥ | の | ーーニュ | ww | プレィ | tm | 526828 | / | sass | 0m0= | ギルド | Ks | 上 | a | VA | & | ig | & | ド4 | * | スペシャルスカウト | 武器 | ロ | アーティファクト | ay | res | WEAR | 回 | | | as | 召喚 | ショップ | Pe | a | ee | 2 | "
+  ],
+  [
+   40,
+   "で彫像 | ? | 38336 | + | @⑳ | 1216836606 | =D | ロコ | | | + | ] | 所持彫像 | ele | Ny | kat | N | の | Ex | mL | ai | <0 | て | nz | = | i | 1 | し1 | rot | aie | ="
+  ],
+  [
+   44,
+   "1,216,836,606 | ロコ | 彫像 | ? | る | 39,336 | +| | © | =D | | | 所持彫像 | 5/5 | vy) | ) | MOR | に | ve | Dy | > | | | グ | 8 | B | | | LT | 了軸 | 1 | N | 1 | 1 | | | D | ry | he | <2>| | i | Noe | ロード工 | B | まこ | > | Ge | 上 | 『 | Ly | Ty | ae | SRZ"
+  ],
+  [
+   54,
+   "Migay | | | バーティ | 0 | ーー | |交代 | 」 | an | <a | D1 | | | ーー | TLA¥-F-LAF | REE | x | @ | ヾ | Hon | (HO | em | 1 | & | 6 | 認めのyHpzo | 増加 | ert | SE | cr | aa | | | fad | にOF | ae | ーー | (— | | | 2? | ダメ | if | に | REx | 100 | 100 | TT | A | "
+  ],
+  [
+   58,
+   "バーティ | 12,543,701 | Ree | an | <at> | ie | anh | =D | 「 | Ng | プレイヤーチームファイトモード | な | eb | Holtie | OP | Or | VA | < | vine | if | こみ | yl | mee | ane | woe | tf | で | 、 | loo | +00 | il | 200 | v | ms | anne | Meme | 02 | Bo | ‘ | 170) | LE"
+  ],
+  [
+   62,
+   "SI | 77Z747/ | pggg7 | |"
+  ],
+  [
+   66,
+   "LE | Pia) | ) | _ | i) | (TS | oo"
+  ],
+  [
+   70,
+   "Rn | NVA | vw | 山 | ANY | ーーイー | mmm | 。 | >やー | - | ee | が | Jy. | ニオの2 | vaし | 1 | a | um | — | ーーここWa | ee | に | ンー | ジランー | 監視課職員 | は回復能力持っています!回復しきる | fomjf | 。 | /"
+  ],
+  [
+   74,
+   "しOO | YK | we | SS | mee | LT | > | UPS | iT | = | にに3 | Ba) | 290693204mt | — | 02:55 | or | ts) | + | TAB | 20 | Hs | B | _—— | £ | ララタウン | デ | = | 7 | しもまう | /2/ | @ | ope | pieersnier| | [ana | s | foe | fo] | 369576/359576 | [ape | [x "
+  ],
+  [
+   78,
+   "LO | “ | XK | mana | SS | mown | 山 | ティ | 078,032,345 | —— | 02:51 | 3 | ニコ | 、、 | NNW | NN | TAB | = | gen | OS | ae | de | a | as | 208% | ーー | = | a | — | ニー | ay | . | ao | 097 | La | Rs | ぞい | 7 | Pets] | re | 0 | f | tu | ma) | 7 | し "
+  ],
+  [
+   82,
+   "y | しOO | MANUAL | gf | ol | Yo | xa | oo | snot | V | 1 | 7 | ノ | iT} | ピン | A | LA | ーーアン | バラ | ) | 77BJ85705pU | ぃ | Pere | 5% | = | +f | y | N, | ーー | ニン | Ly) | ma | my | TAB | My | い | が | NL/Z | WS | ra | ex | GHITS | © | :n0xx3e20)"
+  ],
+  [
+   86,
+   "LA | my | oN | と | iT | 2057437950B | 回の7%MEOFK) | IE | Me | << | y | al | ーー | TAB | oer: | A | wr | 大 | ihe | ル | = | WS | | | - | = | es | a | 大 | “OSKkuto | Seow | 39676/369576 | ad | $ | と | 977774777/ | cago | DIの | Ww"
+  ],
+  [
+   90,
+   "ピー | iT | 221.213.285.370 | pt | , | iI | \"a | —— | “Al | *で | “9s | / | ル/ | TAB | = | 99 | 7s | DORLY=A | OER | ーー | のエンーの | Meus | [os | WR | a | っ | ダ。 | 7/77Z7/7/ | (@⑳ | ow | (mofo | fue] | ee | oA | 『 | >) | cm | i | [sfo] | SES | eQ"
+  ],
+  [
+   94,
+   "Pa | 4 | し | い1 | see | i | ae | しDO | we | SE | mwa | ーー | 2608 | iT | use | Aas | ATBpt | は/ | ス | < | 02:35 | 700 | TAB | We | Son | Ss | 105 | xr | — | 7 | 4226 | 思 | 国回回所回回固名 | oh. | $ | ie | ⑳ | Fh) | 5, | 『 | TSRrr | = | WW | au | GN"
+  ],
+  [
+   98,
+   "uu | MANUAL | Lv.100 | Aw | OKT | 9S | Bama | AN | aye | es | wy | I | 349494372765m | 9 | MO | 02:31 | D | し | 7 | に | >» | TAB | プ | Z、 | ip | & | ee | Guits | * | 2stoxxy=20%8 | sa | Ramage | 208 | テー | Se | = | 92085178802 | a | —# | ジー"
+  ],
+  [
+   102,
+   "iuou | X | wwe | BF | ww | Lv | uu | オ | a | > | 373: | “ee | TpD | も | erでyes。 | wy | so | ーー | ンーン1 | んん | =の表エンニオのな虹 | りー | HMORTVEAOER | oS | ou | ei | sn | 3 | ~ | nse | (ツ | >> | mS | > | 4 | 本 | i) | [af | Aoe | 169675 | GFT | OF | ["
+  ],
+  [
+   106,
+   "しDD | MK | waa | BF | waar | Zz | AK | dl | 。 | $s | ~ | ~ | ar. | // | = | > | SEAT | SR | a | 0; | 12:23 | J | 28% | oes | oe | SN | zl | ae | EE | KO | , | fos | y | es | oO | “GG | HITS | -noxzs | =AORR | レニイノ | KMORTY=A0ER | Za | S | 2"
+  ],
+  [
+   110,
+   "しOO | MANUAL | se | ヾき | i | 435,492751.085pt | >a | NS | 2:19 | 4 | AP | \\\\ | si | “>, | or | 5 | ‘Wag | urs” | AMORIY=A | ORR | 25 | N | Eo | x | BSF. | * | ニー | 70/3 | /// | リリ | ーーアメ | ビー | DUTT: | 007 | ーー | 777775/ | Ask | ay | val | "
+  ],
+  [
+   114,
+   "Lv.100 | 永交の炎エンニ | xd2368 | < | 435450822729mt | SOO | 圧9 | 一 | an | ozs | と | # | 回> | EE | TAB | sess | に | seth: | =40) | oe: | の3 | OB | ae | TA | ee | and | NN | = | ie | Sad | 3 | =_=_ | AA | ーー | Ue | As | . | fy | [fs] | “ste | Luxe"
+  ],
+  [
+   118,
+   "= | = | Ly,100 | 永交の炎エン: | しOO | CO | ed | ごう | we | RDx | Be | / | ~ | てで | ) | 496,756 | 18273Ipt | g | + | 4 | ~ | @ | = | 02:1 | デ | or | TAB | | | 5G | us | som | PF | anon: | von | la | 2 | っさ。: | b.% | 34 | one | っと | e | Lug | [fs] "
+  ],
+  [
+   122,
+   "目の前から消えろ | ! | il | y | 2"
+  ],
+  [
+   126,
+   "N | — | aay | / | [i | for]"
+  ],
+  [
+   130,
+   "ーー | ーー | OR | Ds | XK | mana | SS | won | = | ーー-- | ーー | 山 | KS | 8 | 2 | ) | 5765704934It | @ | ~<a | ぷー | On | TAB | を | eee | £ | のMTS | onc | 20%\" | HORI | Y=AOER | 4 | ) | i | > | ai | \"SKS | eH | OL) | AA | ry | Boas | eg | SU | [vf"
+  ],
+  [
+   134,
+   "Ds | ee | en | A | v.10 | tho: | ンー | 山 | on | 223B74495958mt | et | oo, | P | 02:05 | TAB | ~ | P | FMORTY= | ORR | ORI | Y=AOER | “<5 | OD | |: | a | レア | 7 | & | ング | az. | wy | げ/ | (ns) | リリ | dy’ | PAR | 0 | [o) | 2) | A | anf | > | >"
+  ],
+  [
+   138,
+   "27Z747Z7/ | [+f] | | | 777474777/"
+  ],
+  [
+   142,
+   "[fs] | [v[a] | |"
+  ],
+  [
+   146,
+   "- | . | 山 | 72 | ) | 1986 | 651707 | 070pt~ | S、 | 』 | CE | @ | 六さ | +@Ol | Xs | Ui | SS | X | NN | ンク | TAB | っ | の | ーー | 16 | Pr | vr | 2グ | g | 2) | Pavey | ao) | A | he | だ | Sy | $ | とダク | ク | N | ダ | TONG | G15: | ー | 200) | ee | iT]"
+  ],
+  [
+   150,
+   "ae | —_— | ーー | ーー一 | しID | に | CO | 山 | てでテッ | 9.301B32183I7IE | 54 | TAB | で | ws | ie | 。 | ms | のエ | ats | | | Ys | AG | | | 4 | z | Ur | [Sa | 6A | og | @ | R | LerTSHIFT | [oD | — | —* | CORON | Nツ | [omjf | 。 | 7/ | space"
+  ],
+  [
+   154,
+   "mie | MANUAL | LV.100 | KMOKT | Y=: | gent | 山 | 9,408,081,485,893pt | “SEseoRse | —~ | tole | ュー | 91 | トリあめ | Tiss | TAB | \"2655583689 | ・ | ld | と | ers | 9のエンニオの生ま | HMORIY=AOER | MG | : | Se | ya | Pe | wate | 7Z77/ | aynurt | (ae | Ne"
+  ],
+  [
+   158,
+   "しDD | x | OTN | ごうう | 山 | 138 | conarz0s6ft | N | es | 50 | YO | oe | S | @ | シン | )、0145 | ー | で | to | | | KK | NN | A | 1_“~* | ノノ | | | TAB | , | pg | ーデ人 | iy | Pes | my | hs | 4 | イン | NN | v, | CO | ーー | TET) | (na | ] | fe | fr] | 7"
+  ],
+  [
+   162,
+   "DO | MANUAL | SS | moun | Lv.t00 | K*ORTY | SB | IP | iT | OSE: | 12,264 | :967,499,848pt | 0142 | Ax | >) | ws | = | で | RK | ニオのな | (1 | ‘ | テー | = | “se | HITS’ | ons: | あの3 | SN | 、 | ーー | wy | eres | 77 | いこ | し | で | pag | Fa | iy. | "
+  ],
+  [
+   166,
+   "ESの | 2人 | RR | し | mann. | CO | nn | | | f~ | i | (84378.54047Bmt | ASE | \" | se | TAB | 2 | alg | a | | | KORY | =7081 | 4 | yy | tf | に | w | \\ | NG | | | シン | AX | に | Cvs | eo | 玉認 | QAM | FT | 3517 | [v[a] | =キー | ¥ | i) | にう | fomjf "
+  ],
+  [
+   170,
+   "0 | Ath | KT | et | UAL | x | komm | x12577 | 山 | 12578.378,08: | ーーペー | @ | (Ap | 25% | Ay, | TAB | こい | ie | HITS” | 55wc | Mee | での | DOREY | =: | ~~ | uy) | a | ~ | aa | ==> | — | Ow | \\ | ras | pee | Se) | RHJ | Lh | %e | R | err | ae "
+  ],
+  [
+   174,
+   "M00 | Kaho: | しDD | we | SS | waar | ーーー | ッぞマ | iT | \\ | 13 | KJ | - | sre | 12818 | 79,608,6009t | 01:30 | was | AY | = | > | ジー | Sk | \\ | & | HITS | | | Tie | aa | WW | 2 | ーー生か、 | ae | ay, | Ze, | ON | き | > | mF | N | hia | 2A | krすす "
+  ],
+  [
+   178,
+   "pa | anual | MANUAL | SE | tana | vo | 山 | Erっ | 1822 | MK | MSO | Or | » | Qu | li | い | 4 | TAB | ON | Ja | = | Yeu | TS | HORT: | eae | tho; | SN | でーー | ジッ | に | By | S | sy | シン | + | 9 | UM | peg | の | PY | で | ail | [[s] | — | wh | /"
+  ],
+  [
+   182,
+   "pew | wana | LV.100 | AMOKTY | =} | 3, | こう | 山 | (ere) | 68 | 2865850mt | NG | TaSeee | , | 22 | と | ー | MT | 4 | ' | TAB | ’. | a | YaAOER | lg | wae | ae | a | の | 7 | - | OG | |: | “Ff | LP | ZS | BOGE | 人 | OFAC | R | wer | る@ | 6B | U"
+  ],
+  [
+   186,
+   "Donun | XK | wanuat | SE | wana | 山 | Wwe | 1524505B934lmt | HB | = | ノイ | # | lt? | TAB | o | RZ | 77s | の | Ae | と | NN | アデ | ムジ07ダグ | A | YY | — | = | oct | Be | se | :)— | Vag | re | \\@ | こりまう | Ss | 3 | R | err | sn | 0285177107857) |"
+  ],
+  [
+   190,
+   "しDI | sh | OO | iT | (x-rea) | 183145 | PA} | | | 9 | es! | Bi | %J| | 4 | i=. | 2 | TAB | Palo | dle. | の族エンニオの | に | & | ie. | ie} | 7Z7Z7/ | にコ | GU | SN | G | (ns) | £\\ | REAA | Be | OR | err | siuer | [vfs] | 本 | ーー | 0s) | 7) | ※ | SS"
+  ],
+  [
+   194,
+   "Lv.100 | bl | ba | pew | anual | MANUAL | SS | wun | 山 | 1 | 15,603,814,193.47 | ey | PCO | 内 | い | 4 | OU | 2 | Tk | 28% | & | &. | TAB | SS | レン | a>: | ‘ | () | 114 | urs | Ose: | 1のな時 | LT | シテの | ] | Ae | SAS | ry | Zi | hha | ZAM | I "
+  ],
+  [
+   198,
+   "pew | anus | anuat | a | MTT | a | a | 山 | ry | AOR} | = | lll3783809I7m | アジーー- | Ol: | ee | aN | TAB | fee | 145x115 | wr | (の7 | どの」 | we: | トド | ンァ | AD | 」: | was | fa] | ト. | Ad | 6.) | Lor | にコ | ty | R | um | ツー"
+  ],
+  [
+   202,
+   "デジーー。 | dt | Ge | » | iy | ee | a | ルン"
+  ],
+  [
+   206,
+   "awe | SS | \\ | いさ | SES | [a5] | I | (| | KN | ec | Aan | SS | wi"
+  ],
+  [
+   210,
+   "J | しOO | x | / | 山 | 0 | an | N | と | ~ | 9 | oN | 5 | ae | = | 87,866) | me | ie | 人に- | テラ | WS | — | an | Lc | wy | ョーー | = | BOG | WET: | B-=s | BAK | AP | ob | [rf] | 3 | KS) | ペグ | ii | | | 7/794747/ | ーー | BOW"
+  ],
+  [
+   214,
+   "しDOT | mda | 9 | er | Pad | I | picnics | = | シン | ol | ‘az | WES | a | の | er\" | を | プ | 4 | グ( | <f4 | ンン | = | N | > | Sy | Oe | wa | 人 | xe | Peysyys) | se | 37, | im | £\\ | RAS | 1028: | [anf | for | fe] | “ | 2 | トシ | にCS | | | ia | r"
+  ],
+  [
+   218,
+   "Ii100 | 永郊の炎エジニ | pee | wanuat | XK | mana | GE | ee | Esa | I | で | ) | 18,459,093 | 888,655pt, | 2 | OD | 2 | RS) | SOND | a | mml | と | デー | a | TAB | 2 | プク5 | | | エンニョの | HUORIY=AOER | We | NG | |: | A | ャーー | ーー | R | az | Re | @ | WM"
+  ],
+  [
+   222,
+   "\\ | RFE | = | a | 7 | i | = | RAGA, | mand | oo | NN | ut | KAN | あやeo.@ | ob | Lae | » | AA’ | 00:47 | ee | | | ey | Y | Le | IAB | ン | if | でマー | Ss | co | vy | af | ccf | 科、 | まず | is | グ/ | 9 | / | アノ | TB | 。 | a | ーーょ、 | マン | 『んた | でフ"
+  ],
+  [
+   226,
+   "しLA | MANUAL | $8 | ae | 18,830,984.2B8 | A | eal | い | が1 | an | A | に | We | 和 | & | the | BG | urs | Men | ee | eC | al | a | し.』 | (ZOU | りり0 | 2 | PS | ae | C= | mi | ay. | wey | SEE | リウ | —- | にJRa7saw, | 230s | we | Be | 5 | | | / |"
+  ],
+  [
+   230,
+   "Lv.100 | 氷効の炎エ | MANUAL | vs | as) | 19,207,940,541,048pt | WES | Do | Hee | 1 | ーーアー | ss、 | oH | 00:40 | ェーン | . | by: | = | シールド | 7 | TAB | TO} | 4 | Sin | ay | hal | えるWa | リ | / | oy | 4 | mB\" | am | や | ae | pO | YS | | | [rfr[c[vfo}"
+  ],
+  [
+   234,
+   "しDD | に | Ne | iT | 20BIm843054937mt | 216 | ~~, | SS | か | TAB | pf | 74 | ーッン | Ww: | ~~\" | -w | fe | 4 | Lael | シア | a | dd | がーー | AVA | ダ | a | N | ラリグイ | i | A | fy | Is] | GUshexs® | 4 | A | tod | hy | AS, | eA | tx | ee | KG | /p/ヵ/"
+  ],
+  [
+   238,
+   "NOW | XK | mana | OY | anon | I | ーー | <ンー | 21848040126590mt | ツメ | \\ue | HS | OO | We | MS | 00:32 | しOp | Ng | 、 | TAB | ~ | wm | at | AN | eg | 147 | upデ。 | Ce | デン | ダン | OU | £4 | G6 | 4 | 7 | と | at | —- | — | を | ここここ=ュー | Ne | ZZ7Z"
+  ],
+  [
+   242,
+   "OO | aan | XK | mana | BE | waa | ーー | ーー | ATT | 山 | “es | UES | 22893.374.882544mt | oo | 00:28.0) | TAB | ig | 177 | nts | MORLY=ADER | HMORIY=AOER | ) | Ae | WS | |: | —_ | 8 | 2 | OPEL | Ys) | Ay | ios | ae | の | 8 | R | ere | [anf | 8"
+  ],
+  [
+   246,
+   "Dew | anu | ms | Oe | oe | LV.10 | thor | semy: | 山 | 2303130185angnN | 9 | を|ぃ| | 。| | 全う | TAB | ~ | poe | _ | 97 | デー | 一 | = | 時1 | Ae | 2) | まま | B89. | fw): | を | : | = | => | = | 200) | 回 | es | SS | の | Aa | R | LeFTSHIFT | //// | f"
+  ],
+  [
+   250,
+   "awu | ー | NN | =) | AX | we | nnn | en | | | =Ne | = | aa | 山 | か | > | 3075623m | * | * | Selo | ーーー | = | ニー | いう | 10:19 | aw, | — | 4 | | | \\ァ | NNN | アア | — | 207 | HIT | 20) | ru | PY | yr, | fa | a | \\ | VE | ンス | ar | EEデー | > | マン "
+  ],
+  [
+   254,
+   "HO0 | 示 | DD | x | wan | SS | wun | ニー | ネル | ーー | iT | 23,805.541.281990pt | * | 5 | 00:15 | 2 | ie | Tas, | >. | | | 、 | ITS | o | いい | FM | ググ | Ps | ーーレン4 | Ww | eo | ae | er | の | ee | <— | (ie | ee | @ | が/ | aq | sK | SeZg | 2 | @8 |"
+  ],
+  [
+   258,
+   "SS | a> | iT | oro | i | +O | Ai | oon | « | TAB | ‘hg | ジン | lpr, | ジジク | レンニン | レ | a | ご | NN | /7/77リ | ドン2 | 2 | eee | in | R | LEFT | SHIFT | 4747/ | [+ | fe] | qe | fomjf | 。 | / | a | IO | space"
+  ],
+  [
+   262,
+   "Noooooooooooo | ンー | ん | TIN | es | Ye | Lan | A | yy | | | \\"
+  ],
+  [
+   266,
+   "x | 山 | NOOO000000000 | パグ | > | 252757B790B4m | WARNING, | Z | val | ン | 009.19 | 2 | \\@ | So | Be | ie | ny | vane | N | N | ニューーテ | - | ーーー | ーー | [s] | 名 | 2にを | に | BAA | aw | Ae | %, | 5 | る|る | & | 777474777/ | BOVE | = | AOIO | @) |"
+  ],
+  [
+   270,
+   "たオン | ar | aa | sn | 2 | rs | ERプーネルーー | iT | バテ | ) | 25,361.800,687,333pt | rte | 9 | head | roe | WAR) | 9 | 4 | ーーィ | シー | ーー | にペー | 6 | Si | 00 | < | \\ | TAB | ン/( | と | Jurrs | a | ーー | WF | aé | グェタグ | S、 | の | ah | Pee. | 72 | ~ | "
+  ],
+  [
+   274,
+   "pew | anv | MANUAL | CO | / | 山 | 25584442929Bpt | Se | Ne | alte | i | TAB | >. | >) | = | 29 | nits | ° | “2 | |: | ay | 12) | py | きき | 少 | = | SE | Op | ッ | [af | s] | Ze | oy | @ | [ofr] | BALE | 1 | ee | R | LEFT | SHIFT | /w// | 。 | "
+  ],
+  [
+   278,
+   "SKIP | »>1 | さ- | ~~. | wa, | や | 7 | fomff | 。 | / | 774777474777/"
+  ],
+  [
+   282,
+   "Sy\" | 全 | トン2 | ia | Vad | v | パ | )ノ | [fs] | /リ | (| | fomjf | 。 | / | [v[a]"
+  ],
+  [
+   286,
+   "© | 進行時間 | 03 | ーー | .* | SS | プレイヤーのスコァ | _& | | | Spo | Yrsan | 735,486 | ァ | > | 継承者スコア | ~*% | 22402223885821 | ハンターランキング議 | ~ | や | BP | renamniase | リ | 1839B1254 | fli | 3 | BRAIT | > | 坦 | GIGgBATOATO | アブ | = | a | 既存の記録 | 20,287,2"
+  ],
+  [
+   290,
+   "© | 進行時間 | 03 | ph | el— | .* | プレイヤーのスコァ | ~~. | | | Spo | Yrsan | 735406 | ~~ | 継承者スコア | ~*% | 22402223885321 | =... | NYB~ | BIRT | ~ | ow | waists | ff, | fli | iS | BRAIT | > | Ww | 90E27020 | ノ | SO | 既存の記録 | 20,287,204,659,047 | fy |"
+  ]
+ ]
+}
