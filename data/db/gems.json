@@ -211,13 +211,14 @@
       "rang 5, qualité A": "0,35 %",
       "rang 5, qualité B": "0,32 %",
       "rang 5, qualité C": "0,3 %",
-      "rang 2, sans lettre (bord gris)": "0,15 %"
+      "rang 2, sans lettre (bord gris)": "0,15 %",
+      "rang 1, sans lettre (bord gris)": "0,1 %"
     },
     "icon": null,
     "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "12e type de gemme, absent du calculateur de slagate : « Gemme de vitesse », violette, bonus « Vitesse (%) ». Rang 1 : valeur coupée par la capture (0,1…), à relever. Absente des totaux « Infos sur la gemme » et de la constellation (la constellation I/II ne comporte que PM supplémentaires et baisse du coût de PM en violet)."
+    "notes": "12e type de gemme, absent du calculateur de slagate : « Gemme de vitesse », violette, bonus « Vitesse (%) ». Rang 1 = 0,1 %. Absente des totaux « Infos sur la gemme » et de la constellation (la constellation I/II ne comporte que PM supplémentaires et baisse du coût de PM en violet)."
   },
   {
     "id": "gem-bonus-damage-reduction",
