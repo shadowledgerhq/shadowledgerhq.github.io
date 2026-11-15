@@ -13,12 +13,14 @@
     "color": "red",
     "levels": null,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "rang 6, qualité A": "5 %"
+    },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque (%) »."
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque (%) ». Une seule valeur lue : gemme équipée rang 6, qualité A = 5 % (cohérent avec 8 gemmes = 40 % sur la constellation I)."
   },
   {
     "id": "gem-bonus-def-pct",
@@ -181,12 +183,19 @@
     "color": "red",
     "levels": null,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "rang 6, rang de qualité D": 370,
+      "rang 5, qualité A": 350,
+      "rang 5, qualité B": 290,
+      "rang 5, qualité C": 260,
+      "rang 5, qualité D": 230,
+      "rang 3, sans lettre (bord bleu)": 140
+    },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque supplémentaire »."
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque supplémentaire ». Valeurs de l'« Attaque supplémentaire » (fixe) lues sur les écrans de comparaison. « Rang » = niveau de la gemme (forme : étoile = rang 6, hexagone = rang 5, losange/triangle = rang 3, déduit des captures)."
   },
   {
     "id": "gem-bonus-flat-defense",
@@ -309,9 +318,9 @@
       "B",
       "A"
     ],
-    "source": "capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Lettre D/C/B/A affichée sur chaque gemme (inventaire et constellation). Ordre D<C<B<A déduit des boutons « Promotion » et « Fusionner » et des totaux (rang A = plus fort) : à confirmer. Le nombre en bas à droite d'une gemme d'inventaire est probablement la quantité possédée (à confirmer). Deux formes de gemme existent (étoile, hexagone) : sens inconnu. Valeurs par rang : non visibles, captures de détail d'une gemme à demander."
+    "notes": "Lettre D/C/B/A (qualité) affichée sur chaque gemme. Ordre D<C<B<A confirmé par les valeurs (même rang 5 : D 230 < C 260 < B 290 < A 350). Le rang pèse davantage : rang 6 qualité D (370) > rang 5 qualité A (350). Le nombre en bas à droite d'une gemme d'inventaire est la quantité possédée (confirmé : « En votre possession »). Les gemmes de rang 3 n'ont pas de lettre. Boutons Fusionner / Promotion ; Changer (change le type de bonus) et Déséquiper coûtent chacun 1 jeton (icône de ticket, 27 sur ce compte). Valeurs pour les autres types de gemme : non relevées."
   }
 ]
