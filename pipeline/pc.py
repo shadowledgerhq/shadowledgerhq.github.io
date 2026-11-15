@@ -29,6 +29,7 @@ import classement
 from donnees import RACINE, Donnees, JsonAbime, ajouter_rejet, charger_config, lire_json
 from etape1 import ecrire_rapport, ouvrir_semaine
 from semaine import PARIS, id_semaine, iso_utc, maintenant, parse_iso, semaine_precedente
+import libelles_inconnus
 import ocr_ecrans
 from tri1 import lectures_texte
 
@@ -393,8 +394,11 @@ class Git:
 
     def pousser(self, message):
         self.verifier_json()
-        self._run("add", "data")
-        if not self._run("status", "--porcelain", "data").strip():
+        chemins = ["data"]
+        if (Path(self.racine) / "docs" / "essais" / "ocr" / "libelles_inconnus").exists():
+            chemins.append("docs/essais/ocr/libelles_inconnus")          # v24 : écrans de score à libellés inconnus
+        self._run("add", *chemins)
+        if not self._run("status", "--porcelain", *chemins).strip():
             return False
         self._run("commit", "-m", message)
         self._rebase()                                   # une seule tentative ; conflit -> GitErreur (rebase abandonné)
@@ -542,7 +546,7 @@ def ressemble_ecran(texte):
     return any(m in bas for m in MARQUEURS_ECRAN) or ("points" in bas and "boss rage" in bas)
 
 
-def _ocr_image(outils, png, langs, cfg, st, complet=False):
+def _ocr_image(outils, png, langs, cfg, st, complet=False, collecte=False):
     """Texte d'une image ; "" si elle ne ressemble pas à un écran RESULT ou si tesseract est trop lent.
     `complet` : OCR complet sans filtre rapide (tri 3 : toutes les images des 10 premières et 30 dernières secondes)."""
     try:
@@ -550,8 +554,8 @@ def _ocr_image(outils, png, langs, cfg, st, complet=False):
             petit = outils.reduire(png, cfg.get("ocr_largeur_rapide", 960))
             rapide = outils.ocr(petit, langs, cfg.get("ocr_psm_rapide", 11), cfg.get("ocr_timeout_rapide_s", 40))
             Path(petit).unlink(missing_ok=True)
-            if not ressemble_ecran(rapide):
-                return ""
+            if not ressemble_ecran(rapide) and not (collecte and libelles_inconnus.ressemble_score(rapide)):
+                return ""                      # v24 : `collecte` laisse passer un écran de score à libellés inconnus (autre langue)
         st["candidates"] += 1
         largeur = cfg.get("ocr_largeur_complet")
         taille = outils.dimensions(png) if largeur else None
@@ -705,8 +709,14 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         st["doublons"] += 1
                         texte, zones = vus[h]
                     else:
-                        texte = _ocr_image(outils, png, langs, cfg, st, complet=(tri == 3 and cfg.get("tri3_ocr_complet", True)))
+                        inconnus = pc.setdefault("libelles_inconnus", [])
+                        texte = _ocr_image(outils, png, langs, cfg, st, complet=(tri == 3 and cfg.get("tri3_ocr_complet", True)),
+                                           collecte=len(inconnus) < libelles_inconnus.MAX_PAR_VIDEO)
                         type_img = ocr_ecrans.detecter(texte)
+                        if libelles_inconnus.a_garder(texte, type_img, inconnus) and libelles_inconnus.espace(t, inconnus):
+                            libelles_inconnus.garder(RACINE, vid, t, texte, png)      # v24 : libellé d'une langue inconnue
+                            inconnus.append(t)
+                            journal(f"  écran de score sans libellé reconnu gardé à t={t} s (docs/essais/ocr/libelles_inconnus)")
                         zones = lire_zones_results(outils, png, config, type_img, texte, langs) if type_img in ZONES_TYPES else None
                         vus[h] = (texte, zones)
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)

@@ -2,15 +2,27 @@
   "week": "2026-11-12",
   "modes": {
     "poc": null,
-    "bot_season": {
+    "bot": {
       "sjw": true,
       "sjw_skills": true,
       "blessings": true,
       "shadows": true,
       "successor": true
     },
-    "bot_challenge": null,
-    "gb": null,
+    "gb": {
+      "sjw": true,
+      "deduit": {
+        "source": "écrans",
+        "video_ids": [
+          "Oj_-5x6700s"
+        ],
+        "elements": {
+          "sjw": true
+        },
+        "date": "2026-11-15"
+      },
+      "source": "écrans"
+    },
     "hotm": {
       "restrictions": "aucune",
       "sjw": true,

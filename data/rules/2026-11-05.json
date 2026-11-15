@@ -2,13 +2,13 @@
   "week": "2026-11-05",
   "modes": {
     "poc": null,
-    "bot_season": null,
-    "bot_challenge": {
+    "bot": {
       "sjw": false,
       "sjw_skills": false,
       "blessings": false,
       "shadows": true,
-      "successor": true
+      "successor": true,
+      "notes": "relevé du 05/11 rangé en challenge (mode retiré en mai 2026) : à vérifier, peut-être un boss joué en mode chasseur"
     },
     "gb": null,
     "hotm": null
