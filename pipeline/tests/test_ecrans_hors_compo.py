@@ -266,6 +266,72 @@ def test_ocr_reel_statues_par_zone_une_statue_selectionnee_a_la_fois():
     assert (o[2]["label"], o[2]["value"]) == ("追加魔力", "190")
 
 
+# Texte SYNTHÉTIQUE (aucune capture lue : les mots JA 過負荷 / 付与 / 武器 / 通常攻撃 sont des hypothèses [À CONFIRMER]) : 9 cartes, ordre colonne par colonne.
+SUBJ_TXT = """討伐支援
+討伐熟練度
+攻撃力/防御力/最大HP +20%
+過負荷ダメージ +10%
+クリティカルダメージ +20%
+ストッカー/サポーター/バスターがチームにいる場合
+属性付与効果 +200%
+ストッカー/サポーター/バスターがチームにいる場合
+属性ダメージ +100%
+ストッカー/サポーター/バスターがチームにいる場合
+過負荷ダメージ +100%
+継承者 攻撃力/防御力/最大HP +200%
+スキル 属性付与 +500%
+通常攻撃/コア攻撃/武器スキル +500%
+1/1  1/1  1/1"""
+
+
+def _db_reelle():
+    import builds
+    return builds.charger_db(), builds.charger_config()
+
+
+def test_subjugation_premiere_ligne_de_chaque_colonne():
+    db, cfg = _db_reelle()
+    assert E.detecter("討伐支援\n討伐熟練度", cfg) == "subjugation"
+    r = E.lire_subjugation(SUBJ_TXT, db, cfg)
+    assert r["ids"] == ["poc-cap-c1-atk-def-hp", "poc-cap-c2-infusion", "poc-cap-c3-successor-stats"], r
+    assert len(r["cartes"]) == 9 and not r["ambigues"]
+    obs = {}
+    E.integrer(obs, [("subjugation", SUBJ_TXT)], db, cfg)
+    assert obs["subjugation_support"] == r["ids"]
+
+
+def test_subjugation_carte_illisible_ou_ambigue_jamais_devinee():
+    db, cfg = _db_reelle()
+    texte = "討伐支援\n???? +20%\n過負荷ダメージ +10%\n継承者 +200% 継承者 属性付与 +200%"
+    r = E.lire_subjugation(texte, db, cfg)
+    assert r["ids"][0] == "poc-cap-c1-overload-dmg"        # la 1re carte lue de la colonne 1 (celle d'avant est illisible : non devinée)
+    assert r["ids"][1] is None
+    assert E.lire_subjugation("", db, cfg)["ids"] == [None, None, None]
+    # 10 % n'est pas 100 % : la carte « +100% » ne vaut pas la carte « +10% »
+    r = E.lire_subjugation("過負荷ダメージ +100%", db, cfg)
+    assert r["ids"] == [None, "poc-cap-c2-overload-dmg", None]
+
+
+def test_sonde_popup_sur_image_classee_composition():
+    """Le popup garde le bouton jaune visible : l'image est « composition » mais doit être lue (1 sur `compo_pas`)."""
+    import composition
+    textes = {"c0.png": "rien", "c1.png": SUBJ_TXT, "c2.png": SUBJ_TXT, "c3.png": SUBJ_TXT}
+
+    class Faux:
+        def reduire(self, png, largeur):
+            return png
+
+        def ocr(self, png, langues, psm, timeout):
+            return textes[Path(png).name]
+    db, cfg = _db_reelle()
+    cfg = {**cfg, "hors_compo": {"pas": 1, "ocr_max": 10, "langues": "jpn+eng", "compo_pas": 1, "compo_ocr_max": 10}}
+    toutes = [(i * 2, Path(n)) for i, n in enumerate(textes)]
+    lus = composition._lire_hors_composition(Faux(), cfg, [], lambda m: None, None, "VID", toutes)
+    assert [e for e, _ in lus] == ["subjugation", "subjugation"]       # `lectures_max` = 2
+    sans = composition._lire_hors_composition(Faux(), {**cfg, "hors_compo": {**cfg["hors_compo"], "compo_pas": 0}}, [], lambda m: None, None, "VID", toutes)
+    assert sans == []
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

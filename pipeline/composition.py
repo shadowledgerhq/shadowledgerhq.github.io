@@ -82,13 +82,18 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes=
     lus, vus, appels, vides, erreurs = [], {}, 0, 0, 0
     _lire_hors_composition.resume = resume = []        # diagnostic : (t, début du texte lu) de chaque image passée à l'OCR rapide
     forcer = 0                       # images lues malgré le pas : le panneau d'options des statues apparaît en fondu après la liste
-    ids, k = {str(p) for _, p in autres}, -1
+    ids, k, kc, appels_compo = {str(p) for _, p in autres}, -1, -1, 0
     for t, png in (toutes or autres):
         est = toutes is None or str(png) in ids              # image « autre écran » ; les autres (classées composition) ne sont lues que juste après un écran reconnu
         k += 1 if est else 0
-        if appels >= maxi or (est and k % pas and forcer <= 0) or (not est and forcer <= 0):
+        kc += 0 if est else 1
+        # popup `討伐支援` : le bouton jaune reste visible, l'image est classée composition → 1 image sur `compo_pas`, seul cet écran est gardé
+        sonde = (not est and forcer <= 0 and h.get("compo_pas") and kc % h["compo_pas"] == 0 and appels_compo < h.get("compo_ocr_max", 12)
+                 and sum(1 for e_, _ in lus if e_ == "subjugation") < (cfg["ecrans"].get("subjugation") or {}).get("lectures_max", 2))
+        if appels >= maxi or (est and k % pas and forcer <= 0) or (not est and forcer <= 0 and not sonde):
             forcer -= 1
             continue
+        appels_compo += 1 if sonde else 0
         forcer -= 1
         appels += 1
         try:
@@ -96,6 +101,8 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes=
             vides += 0 if rapide.strip() else 1
             resume.append((t, " | ".join(rapide.split())[:240]))
             ecran = H.detecter(rapide, cfg)
+            if sonde and ecran != "subjugation":
+                continue
             if ecran == "statues":
                 forcer = h.get("suite_images", 3)
             plafond = (cfg["ecrans"].get(ecran) or {}).get("lectures_max", 2) if ecran else 2     # statues : le panneau d'options apparaît en fondu

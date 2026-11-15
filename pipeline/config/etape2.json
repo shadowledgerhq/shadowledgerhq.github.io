@@ -1775,7 +1775,102 @@
     "ko": [
      "토벌 지원"
     ]
-   }
+   },
+   "cartes": {
+    "_doc": "[À CONFIRMER sur une capture JA] mots JA attendus par carte (un mot par groupe suffit, tous les groupes présents, aucun mot de `sans`) + un `N %` parmi les valeurs des effets de la base. Seuls 攻撃力 防御力 クリティカル 継承者 sont vus sur de vrais écrans JA ; les autres mots sont des hypothèses. Ajouter une entrée pour toute nouvelle carte de la semaine.",
+    "poc-cap-c1-atk-def-hp": {
+     "mots": [
+      [
+       "攻撃力",
+       "攻撃"
+      ],
+      [
+       "防御力",
+       "防御"
+      ],
+      [
+       "HP"
+      ]
+     ]
+    },
+    "poc-cap-c1-overload-dmg": {
+     "mots": [
+      [
+       "過負荷",
+       "オーバーロード"
+      ]
+     ]
+    },
+    "poc-cap-c1-crit-dmg": {
+     "mots": [
+      [
+       "クリティカル"
+      ],
+      [
+       "ダメージ"
+      ]
+     ]
+    },
+    "poc-cap-c2-infusion": {
+     "mots": [
+      [
+       "付与"
+      ]
+     ]
+    },
+    "poc-cap-c2-element-dmg": {
+     "mots": [
+      [
+       "属性"
+      ],
+      [
+       "ダメージ"
+      ]
+     ],
+     "sans": [
+      "付与",
+      "過負荷",
+      "オーバーロード"
+     ]
+    },
+    "poc-cap-c2-overload-dmg": {
+     "mots": [
+      [
+       "過負荷",
+       "オーバーロード"
+      ]
+     ]
+    },
+    "poc-cap-c3-successor-stats": {
+     "mots": [
+      [
+       "継承者"
+      ]
+     ]
+    },
+    "poc-cap-c3-infusion-skills": {
+     "mots": [
+      [
+       "スキル"
+      ],
+      [
+       "付与"
+      ]
+     ]
+    },
+    "poc-cap-c3-weapon-attacks": {
+     "mots": [
+      [
+       "通常攻撃"
+      ],
+      [
+       "武器"
+      ]
+     ]
+    }
+   },
+   "fenetre_lignes": 3,
+   "lectures_max": 2
   }
  },
  "hors_compo": {
@@ -1784,6 +1879,8 @@
   "ocr_max": 120,
   "langues": "jpn+eng",
   "largeur": 960,
-  "suite_images": 3
+  "suite_images": 3,
+  "compo_pas": 3,
+  "compo_ocr_max": 12
  }
 }
