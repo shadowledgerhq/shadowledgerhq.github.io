@@ -198,7 +198,8 @@
       "rang 5, qualité D": 130,
       "rang 5, qualité A": 180,
       "rang 4, sans lettre (bord violet)": 120,
-      "rang 3, sans lettre (bord bleu)": 85
+      "rang 3, sans lettre (bord bleu)": 85,
+      "rang 2, sans lettre (bord gris)": 70
     },
     "icon": null,
     "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16)",
