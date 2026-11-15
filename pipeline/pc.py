@@ -131,6 +131,19 @@ def strategies_ytdlp(avec_node=False):
     return out
 
 
+def a_format_video(sortie):
+    """Vrai si `yt-dlp -F` liste un vrai format vidéo (pas seulement les vignettes « mhtml »)."""
+    return any(("video only" in l or re.search(r"\b(mp4|webm)\b", l)) and "mhtml" not in l and re.search(r"\b\d{3,4}x\d{3,4}\b", l)
+               for l in sortie.splitlines())
+
+
+def options_js():
+    """YouTube exige un moteur JavaScript : Deno (pris par défaut), sinon Node.js ; [] si Deno présent. None si aucun des deux."""
+    if shutil.which("deno"):
+        return []
+    return ["--js-runtimes", "node"] if shutil.which("node") else None
+
+
 def tester_ytdlp(cfg_pc, video_id, executer=subprocess.run, journal=print):
     """Teste chaque réglage avec `yt-dlp -F` (aucun téléchargement) sur une vidéo ; retourne la liste d'options qui marche
     (ou None). S'arrête au premier succès."""
@@ -142,7 +155,7 @@ def tester_ytdlp(cfg_pc, video_id, executer=subprocess.run, journal=print):
         except (RuntimeError, subprocess.TimeoutExpired, OutilAbsent) as e:
             journal(f"  ÉCHEC  {nom} : {str(e)[:150]}")
             continue
-        if re.search(r"\b\d{3,4}x\d{3,4}\b", sortie):
+        if a_format_video(sortie):
             journal(f"  RÉUSSI {nom}")
             return opts
         journal(f"  ÉCHEC  {nom} : aucun format vidéo listé")
@@ -1215,12 +1228,21 @@ if __name__ == "__main__":
                 print(f'  --profil "{d}"   nom : {nom}   compte : {mail or "(non connecté)"}')
             print('Relancer avec --profil "<dossier>" en choisissant le profil du compte SECONDAIRE.')
             sys.exit(0)
-        opts = ["--impersonate", "chrome", "--cookies-from-browser", f"chrome:{a.profil}"]
+        js = options_js()
+        if js is None:
+            print("Aucun moteur JavaScript : YouTube n'enverra pas les vidéos. Installer Deno (winget install DenoLand.Deno), "
+                  "fermer et rouvrir cmd, puis relancer cette commande.", file=sys.stderr)
+            sys.exit(1)
+        opts = [*js, "--impersonate", "chrome", "--cookies-from-browser", f"chrome:{a.profil}"]
         vid = (a.video or ["5MI-RLj7FSk"])[0]
         try:
             sortie = Outils({**config["pc"], "yt_dlp_options": opts})._lancer([config["pc"]["yt_dlp"], *opts, "-F", f"https://www.youtube.com/watch?v={vid}"], 120)
         except (RuntimeError, subprocess.TimeoutExpired, OutilAbsent) as e:
             print(f"ÉCHEC avec le profil « {a.profil} » : {str(e)[:200]}\nVérifier : Chrome fermé, profil connecté à YouTube (ouvrir une vidéo).", file=sys.stderr)
+            sys.exit(1)
+        if not a_format_video(sortie):
+            print("ÉCHEC : YouTube ne liste que des vignettes (moteur JavaScript ou cookies insuffisants). Voir « EJS » dans "
+                  "https://github.com/yt-dlp/yt-dlp/wiki/EJS", file=sys.stderr)
             sys.exit(1)
         ecrire_atomique(CONFIG_PC_LOCALE, json.dumps({"yt_dlp_options": opts}, ensure_ascii=False, indent=1) + "\n")
         print(f"RÉUSSI. Enregistré dans pc_local.json : {opts}")
