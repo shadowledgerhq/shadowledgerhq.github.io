@@ -1,1 +1,1 @@
-{"t": 40, "grades": ["D", "E", "C", "B", "B"], "selection": null, "options": ["", "", ""], "options_grades": [null, null, null]}
+{"t": 40, "grades": ["D", "E", "C", "B", "B"], "selection": null, "options": ["", "", ""], "options_grades": [null, null, null], "effet": ""}

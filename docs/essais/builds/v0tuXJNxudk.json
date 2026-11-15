@@ -468,22 +468,29 @@
     {
      "text_read": "攻撃力/防御力(%) ey 60%",
      "lang": "ja",
-     "grade": null,
-     "id": null
+     "grade": "S",
+     "id": null,
+     "label": "攻撃力/防御力(%)",
+     "value": "60%"
     },
     {
      "text_read": "追加攻撃力/防御カ 8,000",
      "lang": "ja",
-     "grade": null,
-     "id": null
+     "grade": "S",
+     "id": null,
+     "label": "追加攻撃力/防御力",
+     "value": "8,000"
     },
     {
      "text_read": "追加魔力 190",
      "lang": "ja",
-     "grade": "S",
-     "id": null
+     "grade": "C",
+     "id": null,
+     "label": "追加魔力",
+     "value": "190"
     }
-   ]
+   ],
+   "unique_effect_text_read": "パンターの通常スキルダメージ50%増加 | に すべての効果がB級以上の場合、有効になる"
   },
   {
    "position": 4,
@@ -604,7 +611,7 @@
   "règles poc inconnues"
  ],
  "erreurs": [],
- "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; attribut SJW strength : lectures de zone en désaccord [9, 19]; attributs SJW lus par zone : agility, intelligence, perception, vitality; statues lues par zone; règles poc inconnues; reconnaissance faible : shadows",
+ "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; attribut SJW strength : lectures de zone en désaccord [9, 19]; attributs SJW lus par zone : agility, intelligence, perception, vitality; statues lues par zone (options de 1 statue(s) sur 5); règles poc inconnues; reconnaissance faible : shadows",
  "sources": [
   {
    "type": "video",
