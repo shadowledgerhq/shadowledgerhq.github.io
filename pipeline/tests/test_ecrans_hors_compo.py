@@ -228,6 +228,9 @@ def test_zones_fiche_et_statues_avec_faux_ocr():
     obs3 = {}
     E.fusionner_zones(obs3, [{"strength": 19}, {"strength": 18, "vitality": 10}], [], n3)
     assert obs3["sjw"]["stats"] == {"vitality": 10} and any("désaccord" in n for n in n3)
+    perdu = {}
+    E.fusionner_zones(perdu, [{"strength": 9}, {"strength": 19}], [], n3 := [])       # essai PC 15/11 : « 1 » initial perdu -> la lecture la plus longue
+    assert perdu["sjw"]["stats"] == {"strength": 19} and any("plus longue" in n for n in n3)
 
 
 def test_images_classees_composition_apres_les_statues_sont_lues():

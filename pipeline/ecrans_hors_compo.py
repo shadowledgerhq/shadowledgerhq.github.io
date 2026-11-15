@@ -288,7 +288,11 @@ def fusionner_zones(obs, attributs, statues, notes, cfg=None):
         for i in sorted(ids):
             votes = [a[i] for a in attributs if i in a]
             pal = sorted({v: votes.count(v) for v in votes}.items(), key=lambda kv: -kv[1])
-            if len(pal) == 1 or pal[0][1] > pal[1][1]:           # pluralité stricte (1 seule lecture : retenue)
+            plus_long = max(votes, key=lambda v: len(str(v)))
+            if len(pal) > 1 and all(str(plus_long).endswith(str(v)) for v in votes):
+                fin[i] = plus_long                              # l'OCR perd le chiffre initial (19 lu 9), il n'en invente pas
+                notes.append(f"attribut SJW {i} : lecture la plus longue retenue {plus_long} (autres lectures : {sorted(set(votes) - {plus_long})})")
+            elif len(pal) == 1 or pal[0][1] > pal[1][1]:           # pluralité stricte (1 seule lecture : retenue)
                 fin[i] = pal[0][0]
             else:
                 notes.append(f"attribut SJW {i} : lectures de zone en désaccord {sorted(v for v, _ in pal)}")
