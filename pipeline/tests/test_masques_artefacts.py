@@ -49,7 +49,28 @@ def test_benedictions_sjw_poc_8_sur_8():
     assert lu == vrai, lu
 
 
+def test_noyaux_poc_sjw_et_chasseurs():
+    """Centre seul comparé (anneau, cadenas et `MAX` ignorés) ; vérité lue à l'œil sur la capture POC."""
+    import json
+    from PIL import Image
+    img = Image.open(RACINE / "docs/essais/builds/v0tuXJNxudk_ocr/v0tuXJNxudk_compo_noyaux_0.jpg").convert("RGB")
+    banque = icones.Banque()
+    cores = json.loads((RACINE / "data/db/cores.json").read_text(encoding="utf-8"))
+    cores = cores if isinstance(cores, list) else list(cores.values())
+    attendu = {"sjw": {"mind": "ferocious-protectors-desire", "body": "arrogant-rulers-will"},
+               "hunter_1": {"mind": "ferocious-protectors-desire", "body": "nameless-demons-horn", "spirit": "teeth-of-the-watcher"},
+               "hunter_3": {"mind": "ferocious-protectors-desire", "body": "nameless-demons-horn", "spirit": "teeth-of-the-watcher"}}
+    for proprietaire, slots in attendu.items():
+        for slot, vrai in slots.items():
+            cand = {x["id"] for x in cores if x.get("slot") == slot}
+            r = icones.reconnaitre(icones.recadrer(img, CFG["zones"]["poc"]["noyaux"][proprietaire]["cores"][slot]), "cores", banque,
+                                   CFG["seuil_icone"]["cores"], CFG["ecart_icone"], cand, tuple(CFG["echelles_icone"]["cores"]),
+                                   CFG["masques"]["cores"])
+            assert r["id"] == vrai, (proprietaire, slot, r)
+
+
 if __name__ == "__main__":
+    test_noyaux_poc_sjw_et_chasseurs()
     test_benedictions_sjw_poc_8_sur_8()
     test_sjw_bot_poison_bleu_7_sur_8()
     test_sjw_poc_burning_8_sur_8()
