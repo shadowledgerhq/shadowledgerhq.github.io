@@ -413,8 +413,11 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
     lectures = {}          # (propriétaire, élément, emplacement) -> {"cat", "res": [résultats]}
 
     def reco(img, zone, cat, restreint=None):
-        return reconnaitre(recadrer(img, zone), cat, banque, _par_categorie(cfg, "seuil_icone", cat, 0.55), ecart, restreint,
-                           echelles, (cfg.get("masques") or {}).get(cat))
+        rec = recadrer(img, zone)
+        r = reconnaitre(rec, cat, banque, _par_categorie(cfg, "seuil_icone", cat, 0.55), ecart, restreint,
+                        echelles, (cfg.get("masques") or {}).get(cat))
+        r["_img"] = rec                                          # gardé pour le recadrage des `unmatched` (écrit par `calculer`, jamais dans le JSON)
+        return r
 
     def lire(imgs, zone, cat, element, owner, slot=None, restreint=None):
         L = lectures.setdefault((owner, element, slot), {"cat": cat, "res": []})
@@ -493,6 +496,7 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
         elif ident is None and meilleur:
             obs["unmatched"].append({"element": element, "owner": owner, "slot": slot, "best_id": meilleur["best_id"],
                                      "score": meilleur["score"], "crop": None})
+            obs.setdefault("_crops", {})[(owner, element, slot)] = meilleur.get("_img")
         elif ident is not None:
             fort = max(r["score"] for r in L["res"] if r["id"] == ident)
             if fort < _par_categorie(cfg, "seuil_sur", L["cat"], _par_categorie(cfg, "seuil_icone", L["cat"], 0.55) + 0.10) and element not in obs["faibles"]:
@@ -602,6 +606,7 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
             obs["analyse_terminee"] = analyse_terminee(processed, ctx["video_id"])
             b = construire_build(ctx, obs, regles_mode(rules, ctx["mode"]), cfg, db)
             b["dossier"] = nom_mode
+            ecrire_crops(b, obs, racine, chemin)
             if b["status"] == "pas_de_build" and not b["notes"]:
                 b["notes"] = "aucun élément trouvé"
             chemin.parent.mkdir(parents=True, exist_ok=True)
@@ -611,6 +616,24 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
             builds.append(b)
     ecrire_rapport(week, builds, racine)
     return builds
+
+
+def ecrire_crops(b, obs, racine, chemin_build, taille=96):
+    """SPEC §125 : recadrage de chaque icône non reconnue (`unmatched`) en JPEG ≤ `taille` px dans `_crops/` à côté du build ;
+    `crop` = chemin relatif à la racine du dépôt. Sert à montrer l'image vue dans la vidéo quand aucun nom n'est sûr (PPTX)."""
+    crops = obs.get("_crops") or {}
+    for u in b.get("unmatched") or []:
+        img = crops.get((u.get("owner"), u.get("element"), u.get("slot")))
+        if img is None:
+            continue
+        nom = "_".join(str(x) for x in (f"{b['run_id']}-{b['run_index']}", u.get("element"), u.get("owner"), u.get("slot")) if x is not None)
+        dossier = Path(chemin_build).parent / "_crops"
+        dossier.mkdir(parents=True, exist_ok=True)
+        im = img.convert("RGB")
+        im.thumbnail((taille, taille))
+        f = dossier / f"{nom}.jpg"
+        im.save(f, quality=70)
+        u["crop"] = f.relative_to(racine).as_posix()
 
 
 def regles_recentes(racine, mode):

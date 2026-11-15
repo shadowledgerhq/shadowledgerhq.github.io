@@ -97,6 +97,32 @@ def test_zones_poc_competences_sur_la_capture_reelle():
     assert [s["slot"] for s in obs["sjw"]["skills"]] == ["ultimate", "skill_2", "skill_1", "qte_3", "qte_2", "qte_1"]
 
 
+def test_icones_non_reconnues_gardees_en_recadrage_et_montrees_dans_le_pptx():
+    """SPEC §125 : le recadrage d'une icône vue mais non reconnue est écrit (`_crops/`) et affiché dans le PPTX, sans nom deviné."""
+    from PIL import Image
+    from pptx import Presentation
+    import builds
+    import icones
+    cfg, db = builds.charger_config(), builds.charger_db()
+    png = Path(__file__).resolve().parents[2] / "docs" / "essais" / "composition" / "poc_competences_ja.png"
+    obs = builds.observer({"competences": [Image.open(png).convert("RGB")]}, "poc", cfg, icones.Banque(builds.RACINE), db)
+    inconnues = [u for u in obs["unmatched"] if u["element"] == "sjw_skills"]
+    assert len(inconnues) >= 5 and all(("sjw", "sjw_skills", u["slot"]) in {(k[0], k[1], k[2]) for k in obs["_crops"]} for u in inconnues)
+    with tempfile.TemporaryDirectory() as t:
+        racine = Path(t)
+        chemin = racine / "data" / "builds" / "2026-11-12" / "poc" / "r-1.json"
+        b = T.build(T.ctx("poc"), obs, T.REGLES_TOUT)
+        b["run_id"], b["run_index"] = "r", 1
+        __import__("json").dumps(b)                                  # aucune image dans le JSON du build
+        builds.ecrire_crops(b, obs, racine, chemin)
+        crops = [u["crop"] for u in b["unmatched"] if u.get("crop")]
+        assert crops and all((racine / c).exists() and c.startswith("data/builds/2026-11-12/poc/_crops/") for c in crops)
+        assert max(Image.open(racine / crops[0]).size) <= 96
+        f = racine / "x.pptx"
+        T.P.generer_fichier([b], T.row_pour(b), "fr", f, racine=racine, db=db, cfg=cfg)
+        images = sum(1 for sl in Presentation(str(f)).slides for sh in sl.shapes if sh.shape_type == 13)
+        assert images >= 5, images                                    # les recadrages des compétences inconnues sont dans la slide SJW
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

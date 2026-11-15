@@ -174,7 +174,19 @@ class Dessin:
     def case(self, s, x, y, nom, icone=None, etat=None, niveau=None, italique=False, label_etat=None, taille=BOITE):
         """Icône carrée de `taille` in sur panneau arrondi + nom dessous ; `etat` : None, "non_trouve", "non_gere", "inconnue"."""
         self.rect(s, x, y, taille, taille, X.PANNEAU2 if not etat else None, X.SOURD if etat else "2A3158", pointille=bool(etat), arrondi=True)
-        if etat:
+        crop = None
+        if isinstance(etat, tuple):
+            etat, crop = etat
+        if etat and crop:            # icône vue dans la vidéo, non reconnue : on montre l'image, jamais un nom deviné
+            from PIL import Image
+            with Image.open(crop) as im:
+                w, h = im.size
+            cote = taille - 0.16
+            lw, lh = (cote, cote * h / w) if w >= h else (cote * w / h, cote)
+            s.shapes.add_picture(str(crop), self.m["Inches"](x + (taille - lw) / 2), self.m["Inches"](y + 0.05 + (cote - lh) / 2),
+                                 self.m["Inches"](lw), self.m["Inches"](lh))
+            self.texte(s, x, y + taille - 0.27, taille, 0.25, lib(self.cfg, "icone_inconnue", self.lang), 7, X.SOURD, italique=True, align="c")
+        elif etat:
             lab = lib(self.cfg, {"non_trouve": "non_trouve", "non_gere": "non_gere", "inconnue": "icone_inconnue"}[etat], self.lang)
             self.texte(s, x + 0.05, y + 0.05, taille - 0.1, taille - 0.1, lab, 9, X.SOURD, italique=True, align="c", ancre="m")
         elif icone:
@@ -195,6 +207,15 @@ class Dessin:
 
 
 # --- contenus de slides --------------------------------------------------------------------------------------------------
+
+def _etat(d, b, element, owner, slot=None):
+    """`non_trouve`, ou (`inconnue`, chemin du recadrage vu dans la vidéo | None) quand l'icône a été vue mais non reconnue."""
+    for u in b.get("unmatched") or []:
+        if u.get("element") == element and u.get("owner") == owner and (slot is None or u.get("slot") == slot):
+            c = Path(d.racine) / u["crop"] if u.get("crop") else None
+            return "inconnue", (c if c and c.exists() else None)
+    return "non_trouve"
+
 
 def _est_inconnue(b, element, owner, slot=None):
     return any(u.get("element") == element and u.get("owner") == owner and (slot is None or u.get("slot") == slot) for u in b.get("unmatched") or [])
@@ -223,7 +244,7 @@ def _artefacts(d, s, b, pieces, owner, x0, y0, element, pas_x=BOITE + 0.28):
             d.case(s, x, y, "", None, None)
             d.texte(s, x, y + 0.45, BOITE, 0.3, FICHE_VIDE, 16, X.SOURD, align="c")
         else:
-            d.case(s, x, y, "", None, "inconnue" if _est_inconnue(b, element, owner, a["slot"]) else "non_trouve")
+            d.case(s, x, y, "", None, _etat(d, b, element, owner, a["slot"]))
 
 
 def _noyaux(d, s, b, noyaux, owner, x0, y0, element):
@@ -233,7 +254,7 @@ def _noyaux(d, s, b, noyaux, owner, x0, y0, element):
             nom, it = nom_affiche(d.db, "cores", c["id"], d.lang)
             d.case(s, x, y0, nom, chemin_icone(d.db, "cores", c["id"], d.racine), None, f"Lv {c['level']}" if c.get("level") else None, it)
         else:
-            d.case(s, x, y0, "", None, "inconnue" if _est_inconnue(b, element, owner, c["slot"]) else "non_trouve")
+            d.case(s, x, y0, "", None, _etat(d, b, element, owner, c["slot"]))
 
 
 def _bonus(d, s, b, cle, x, y, largeur=5.6):
@@ -304,7 +325,7 @@ def slide_sjw(d, b, row):
             nom, it = nom_affiche(d.db, "weapons", w["id"], d.lang)
             d.case(s, x, 2.0, nom, chemin_icone(d.db, "weapons", w["id"], d.racine), None, w.get("level"), it)
         else:
-            d.case(s, x, 2.0, "", None, "inconnue" if _est_inconnue(b, "sjw_weapons", "sjw") else "non_trouve")
+            d.case(s, x, 2.0, "", None, _etat(d, b, "sjw_weapons", "sjw"))
     d.texte(s, 3.6, 1.65, 5, 0.3, lib(d.cfg, "artefacts", d.lang), 12, X.BLEU, gras=True)
     pieces = (sj or {}).get("artifacts") or [{"slot": c, "set_id": None} for c in B.SLOTS_ARTEFACT]
     _artefacts(d, s, b, pieces, "sjw", 3.6, 2.0, "sjw_artifacts", pas_x=1.3)
@@ -325,14 +346,14 @@ def slide_chasseur(d, b, row, h):
         d.case(s, 0.5, 2.0, nom, chemin_icone(d.db, "hunters", h["id"], d.racine), None, None, it, taille=1.5)
         d.texte(s, 0.5, 3.85, 2.2, 0.6, " · ".join(x for x in (obj.get("element"), obj.get("role")) if x), 11, X.SOURD)
     else:
-        d.case(s, 0.5, 2.0, "", None, "inconnue" if _est_inconnue(b, "hunters", owner) else "non_trouve", taille=1.5)
+        d.case(s, 0.5, 2.0, "", None, _etat(d, b, "hunters", owner), taille=1.5)
     d.texte(s, 0.5, 4.5, 2, 0.3, lib(d.cfg, "arme", d.lang), 12, X.BLEU, gras=True)
     w = h.get("weapon") or {}
     if w.get("id"):
         n2, i2 = nom_affiche(d.db, "weapons", w["id"], d.lang)
         d.case(s, 0.5, 4.85, n2, chemin_icone(d.db, "weapons", w["id"], d.racine), None, w.get("level"), i2)
     else:
-        d.case(s, 0.5, 4.85, "", None, "inconnue" if _est_inconnue(b, "weapons", owner) else "non_trouve")
+        d.case(s, 0.5, 4.85, "", None, _etat(d, b, "weapons", owner))
     d.texte(s, 3.0, 1.65, 5, 0.3, lib(d.cfg, "artefacts", d.lang), 12, X.BLEU, gras=True)
     _artefacts(d, s, b, h["artifacts"], owner, 3.0, 1.95, "artifacts")
     _bonus(d, s, b, owner, 3.0, 4.95)
@@ -351,7 +372,7 @@ def slide_ombres(d, b, row):
             nom, it = nom_affiche(d.db, "shadows", o["id"], d.lang)
             d.case(s, x, 2.3, nom, chemin_icone(d.db, "shadows", o["id"], d.racine), None, None, it, taille=1.5)
         else:
-            d.case(s, x, 2.3, "", None, "inconnue" if _est_inconnue(b, "shadows", "shadows") else "non_trouve", taille=1.5)
+            d.case(s, x, 2.3, "", None, _etat(d, b, "shadows", "shadows"), taille=1.5)
     return s
 
 
@@ -362,7 +383,7 @@ def slide_successeur(d, b, row):
         nom, it = nom_affiche(d.db, "successors", su["id"], d.lang)
         d.case(s, 5.9, 2.3, nom, chemin_icone(d.db, "successors", su["id"], d.racine), None, su.get("level"), it, taille=1.5)
     else:
-        d.case(s, 5.9, 2.3, "", None, "inconnue" if _est_inconnue(b, "successor", "successor") else "non_trouve", taille=1.5)
+        d.case(s, 5.9, 2.3, "", None, _etat(d, b, "successor", "successor"), taille=1.5)
     if su.get("stats"):                                              # v3 : stats du successeur, seulement si lues
         _stats(d, s, su["stats"], 0.6, 4.2)
     return s
@@ -375,7 +396,7 @@ def _grille(d, s, b, items, cols, x0, y0, categorie, element, plus=True):
             nom, it = nom_affiche(d.db, categorie, ident, d.lang)
             d.case(s, x, y, nom, chemin_icone(d.db, categorie, ident, d.racine), None, (f"+{niveau}" if plus else f"Lv {niveau}") if niveau is not None else None, it)
         else:
-            d.case(s, x, y, "", None, "inconnue" if _est_inconnue(b, element, "sjw", slot) else "non_trouve")
+            d.case(s, x, y, "", None, _etat(d, b, element, "sjw", slot))
 
 
 def slide_competences(d, b, row):
