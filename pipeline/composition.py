@@ -2,6 +2,7 @@
 des images à analyser, et fournisseur d'images pour `builds.calculer` (PC : yt-dlp + ffmpeg, comme les tris 3-4).
 Détection par la disposition (bouton d'entrée jaune + onglet actif de la colonne de gauche), pas par le texte : valable pour
 toutes les langues d'interface. Réglages dans `pipeline/config/etape2.json` (`extraction`)."""
+import re
 import tempfile
 from pathlib import Path
 
@@ -80,9 +81,12 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
     pas, maxi, langues = h.get("pas", 2), h.get("ocr_max", 120), h.get("langues", "jpn+eng")
     lus, vus, appels, vides, erreurs = [], {}, 0, 0, 0
     _lire_hors_composition.resume = resume = []        # diagnostic : (t, début du texte lu) de chaque image passée à l'OCR rapide
+    forcer = 0                       # images lues malgré le pas : le panneau d'options des statues apparaît en fondu après la liste
     for i, (t, png) in enumerate(autres):
-        if i % pas or appels >= maxi:
+        if (i % pas and forcer <= 0) or appels >= maxi:
+            forcer -= 1
             continue
+        forcer -= 1
         appels += 1
         try:
             rapide = outils.ocr(outils.reduire(png, h.get("largeur", 960)), langues, 11, 40)
@@ -103,7 +107,11 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
         lus.append((ecran, texte))
         journal(f"  écran {ecran} lu à t={t} s")
         try:
-            lus += _lire_zones(outils, cfg, ecran, png, t, journal)
+            zl = _lire_zones(outils, cfg, ecran, png, t, journal, texte)
+            lus += zl
+            if ocr_debug:
+                for nom_z, txt_z in zl:
+                    (Path(ocr_debug) / f"{vid}_hors-compo_{t}_{nom_z}.txt").write_text(txt_z, encoding="utf-8")
         except Exception as ex:                      # recadrage/OCR de zone : jamais bloquant
             journal(f"  zones {ecran} t={t} : {str(ex)[:80]}")
         if ocr_debug:
@@ -123,17 +131,20 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
     return lus
 
 
-def _ocr_zone(outils, png, zone, langues, psm, blanc, seuils=(None, 150)):
-    """Texte d'une zone (fractions x, y, l, h) agrandie ×3 ; `blanc` : liste blanche tesseract. 2 essais : brut, puis noir et blanc."""
+def _ocr_zone(outils, png, zone, langues, psm, blanc, seuils=(170, None, 140, 200), valide=None):
+    """Texte d'une zone (fractions x, y, l, h) agrandie ×3 ; `blanc` : liste blanche tesseract. Essais : brut puis noir et blanc à
+    plusieurs seuils ; le premier texte qui satisfait `valide` (regex) l'emporte, sinon le premier texte non vide (ou "")."""
+    premier = ""
     for seuil in seuils:
         crop = outils.recadrer(png, zone, 3, seuil)
         texte = outils.ocr(crop, langues, psm, 20, ["-c", f"tessedit_char_whitelist={blanc}"] if blanc else None).strip()
-        if texte:
+        if texte and (valide is None or re.fullmatch(valide, texte)):
             return texte
-    return ""
+        premier = premier or texte
+    return premier
 
 
-def _lire_zones(outils, cfg, ecran, png, t, journal):
+def _lire_zones(outils, cfg, ecran, png, t, journal, texte=""):
     """Lectures par zone (SPEC v3, [À CONFIRMER] sur le PC : positions mesurées sur UNE vidéo JA 1920×1080). Retourne des lectures
     `("attributs_zone", "id: valeur" par ligne)` (fiche de SJW) ou `("statues_zone", json)` (grades, statue sélectionnée, options)."""
     if not hasattr(outils, "recadrer"):
@@ -142,7 +153,7 @@ def _lire_zones(outils, cfg, ecran, png, t, journal):
     if ecran == "fiche_sjw" and e["fiche_sjw"].get("zones_attributs"):
         lignes = []
         for ident, zone in e["fiche_sjw"]["zones_attributs"].items():
-            texte = _ocr_zone(outils, png, zone, "eng", 7, "0123456789,")
+            texte = _ocr_zone(outils, png, zone, "eng", 7, "0123456789,", valide=r"\d{1,3}(?:,\d{3})*")
             lignes.append(f"{ident}: {texte}")
         journal(f"  fiche_sjw zones t={t} : " + " ; ".join(lignes))
         return [("attributs_zone", "\n".join(lignes))]
@@ -159,16 +170,19 @@ def _lire_zones(outils, cfg, ecran, png, t, journal):
             lum = [moyenne(zn) for zn in z["selection"]]
         grades = []
         for zn in z["grades"]:
-            g = _ocr_zone(outils, png, zn, "eng", 10, "EDCBAS", (None, 120, 180)).strip()[:1]
+            g = _ocr_zone(outils, png, zn, "eng", 10, "EDCBAS", (None, 120, 180), valide=r"[EDCBAS]").strip()[:1]
             grades.append(g if g in list("EDCBAS") else None)
         reste = sorted(lum)[:-1]
         mediane = reste[len(reste) // 2]
         haut = max(range(len(lum)), key=lambda i: lum[i])
         selection = haut + 1 if lum[haut] >= z.get("seuil_selection", 80) and lum[haut] >= z.get("ratio_selection", 1.6) * max(mediane, 1) else None
-        options = [" ".join(_ocr_zone(outils, png, zn, e["statues"].get("langues", "jpn+eng"), 6, None, (None, 150)).split()) for zn in z["options"]]
-        journal(f"  statues zones t={t} : grades {grades}, sélection {selection}, options {options}")
+        panneau = not texte or any(_n_ent in re.sub(r"\s+", "", texte) for _n_ent in e["statues"]["entete_options"]["ja"])     # panneau d'options visible ?
+        options = [" ".join(_ocr_zone(outils, png, zn, e["statues"].get("langues", "jpn+eng"), 6, None, (None, 150)).split()) if panneau else "" for zn in z["options"]]
+        og = [(_ocr_zone(outils, png, zn, "eng", 10, "EDCBAS", (None, 120, 180), valide=r"[EDCBAS]").strip()[:1] or None) if panneau else None for zn in z.get("options_grades", [])]
+        og = [g if g in list("EDCBAS") else None for g in og]
+        journal(f"  statues zones t={t} : grades {grades}, sélection {selection}, options {list(zip(og, options))}")
         import json
-        return [("statues_zone", json.dumps({"t": t, "grades": grades, "selection": selection, "options": options}, ensure_ascii=False))]
+        return [("statues_zone", json.dumps({"t": t, "grades": grades, "selection": selection, "options": options, "options_grades": og}, ensure_ascii=False))]
     return []
 
 

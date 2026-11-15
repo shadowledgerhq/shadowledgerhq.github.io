@@ -252,7 +252,7 @@ def integrer(obs, lectures, db, cfg):
                     hs.append(h)
                     notes.append("chasseur trouvé par l'écran de stats")
                 h.setdefault("stats", {}).update(r["stats"])
-    fusionner_zones(obs, vus_zone, zones_statues, notes)
+    fusionner_zones(obs, vus_zone, zones_statues, notes, cfg)
     return notes
 
 
@@ -271,9 +271,17 @@ def _score_statues(statues):
     return sum(1 + len(s.get("options") or []) for s in (statues or []))
 
 
-def fusionner_zones(obs, attributs, statues, notes):
+def _score_zone_statues(z, connues):
+    """(grades lus, options reconnues ×3 + options non vides) : choisit la lecture la plus complète."""
+    n_connues = sum(1 for o in z["options"] if any(_n(k) in _n(o) for k in connues))
+    return (sum(g is not None for g in z["grades"]), 3 * n_connues + sum(bool(o) for o in z["options"]))
+
+
+def fusionner_zones(obs, attributs, statues, notes, cfg=None):
     """Lectures par zone. Attributs : valeur retenue si toutes les lectures de la zone qui la voient sont d'accord (écart -> non lue, note).
-    Statues : la lecture aux grades les mieux lus ; options rattachées à la statue SÉLECTIONNÉE seulement si la sélection est détectée."""
+    Statues : la lecture aux grades les mieux lus ; options (celles de la lecture la plus complète, `options_connues` du config pesant
+    plus) rattachées à la statue SÉLECTIONNÉE seulement si la sélection est détectée."""
+    connues = ((cfg or {}).get("ecrans", {}).get("statues", {}).get("options_connues") or {}).get(LANG, [])
     if attributs:
         ids = {i for a in attributs for i in a}
         fin = {}
@@ -287,13 +295,14 @@ def fusionner_zones(obs, attributs, statues, notes):
             obs.setdefault("sjw", {}).setdefault("stats", {}).update(fin)
             notes.append("attributs SJW lus par zone : " + ", ".join(sorted(fin)))
     if statues:
-        meilleure = max(statues, key=lambda z: (sum(g is not None for g in z["grades"]), sum(bool(o) for o in z["options"])))
+        meilleure = max(statues, key=lambda z: _score_zone_statues(z, connues))
         if sum(g is not None for g in meilleure["grades"]) >= 3:
             liste = [{"position": i + 1, "grade": g, "options": []} for i, g in enumerate(meilleure["grades"])]
             vus = [z for z in statues if z.get("selection") and any(z["options"])]
             if vus:
-                z = max(vus, key=lambda z: sum(bool(o) for o in z["options"]))
-                liste[z["selection"] - 1]["options"] = [{"text_read": o, "lang": LANG, "grade": None, "id": None} for o in z["options"] if o]
+                z = max(vus, key=lambda z: _score_zone_statues(z, connues)[1])
+                og = z.get("options_grades") or [None] * len(z["options"])
+                liste[z["selection"] - 1]["options"] = [{"text_read": o, "lang": LANG, "grade": g, "id": None} for o, g in zip(z["options"], og) if o]
             else:
                 notes.append("statues : options non rattachées (statue sélectionnée ou panneau d'options non vus)")
             if _score_statues(liste) >= _score_statues(obs.get("statues")):
