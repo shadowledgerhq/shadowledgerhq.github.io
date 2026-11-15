@@ -339,7 +339,74 @@
         }
       ]
     },
-    "values_by_grade": {},
+    "values_by_grade": {
+      "S": {
+        "attack-defense-pct": "60 %",
+        "flat-attack-defense": 8000,
+        "hp-pct": "36 %",
+        "flat-hp": 9000,
+        "crit-rate": 6000,
+        "crit-damage": 6000,
+        "defense-penetration": 6000,
+        "damage-increase": 6000,
+        "additional-mp": 750
+      },
+      "A": {
+        "attack-defense-pct": "40 %",
+        "flat-attack-defense": 5350,
+        "hp-pct": "24 %",
+        "flat-hp": 6000,
+        "crit-rate": 4000,
+        "crit-damage": 4000,
+        "defense-penetration": 4000,
+        "damage-increase": 4000,
+        "additional-mp": 500
+      },
+      "B": {
+        "attack-defense-pct": "20 %",
+        "flat-attack-defense": 2650,
+        "hp-pct": "12 %",
+        "flat-hp": 3000,
+        "crit-rate": 2000,
+        "crit-damage": 2000,
+        "defense-penetration": 2000,
+        "damage-increase": 2000,
+        "additional-mp": 250
+      },
+      "C": {
+        "attack-defense-pct": "15 %",
+        "flat-attack-defense": 2000,
+        "hp-pct": "9 %",
+        "flat-hp": 2250,
+        "crit-rate": 1500,
+        "crit-damage": 1500,
+        "defense-penetration": 1500,
+        "damage-increase": 1500,
+        "additional-mp": 190
+      },
+      "D": {
+        "attack-defense-pct": "10 %",
+        "flat-attack-defense": 1350,
+        "hp-pct": "6 %",
+        "flat-hp": 1500,
+        "crit-rate": 1000,
+        "crit-damage": 1000,
+        "defense-penetration": 1000,
+        "damage-increase": 1000,
+        "additional-mp": 125
+      },
+      "E": {
+        "attack-defense-pct": "5 %",
+        "flat-attack-defense": 650,
+        "hp-pct": "3 %",
+        "flat-hp": 750,
+        "crit-rate": 500,
+        "crit-damage": 500,
+        "defense-penetration": 500,
+        "damage-increase": 500,
+        "additional-mp": 60
+      }
+    },
     "icon": null,
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
@@ -359,7 +426,18 @@
       "arret_auto": "rang minimum (B/A/S), nombre minimum de stats (1/2/3), types de stats",
       "source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026"
     },
-    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)"
+    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)",
+    "grade_rates_pct": {
+      "S": 1.5,
+      "A": 2.6,
+      "B": 7.6,
+      "C": 18.3,
+      "D": 30,
+      "E": 40
+    },
+    "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
+    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : sung_jinwoo_successor) n'a pas été revérifié : à confirmer si une capture est disponible."
   },
   {
     "id": "white-flames",
@@ -481,7 +559,74 @@
         }
       ]
     },
-    "values_by_grade": {},
+    "values_by_grade": {
+      "S": {
+        "attack-defense-pct": "60 %",
+        "flat-attack-defense": 8000,
+        "hp-pct": "36 %",
+        "flat-hp": 9000,
+        "crit-rate": 6000,
+        "crit-damage": 6000,
+        "defense-penetration": 6000,
+        "damage-increase": 6000,
+        "additional-mp": 750
+      },
+      "A": {
+        "attack-defense-pct": "40 %",
+        "flat-attack-defense": 5350,
+        "hp-pct": "24 %",
+        "flat-hp": 6000,
+        "crit-rate": 4000,
+        "crit-damage": 4000,
+        "defense-penetration": 4000,
+        "damage-increase": 4000,
+        "additional-mp": 500
+      },
+      "B": {
+        "attack-defense-pct": "20 %",
+        "flat-attack-defense": 2650,
+        "hp-pct": "12 %",
+        "flat-hp": 3000,
+        "crit-rate": 2000,
+        "crit-damage": 2000,
+        "defense-penetration": 2000,
+        "damage-increase": 2000,
+        "additional-mp": 250
+      },
+      "C": {
+        "attack-defense-pct": "15 %",
+        "flat-attack-defense": 2000,
+        "hp-pct": "9 %",
+        "flat-hp": 2250,
+        "crit-rate": 1500,
+        "crit-damage": 1500,
+        "defense-penetration": 1500,
+        "damage-increase": 1500,
+        "additional-mp": 190
+      },
+      "D": {
+        "attack-defense-pct": "10 %",
+        "flat-attack-defense": 1350,
+        "hp-pct": "6 %",
+        "flat-hp": 1500,
+        "crit-rate": 1000,
+        "crit-damage": 1000,
+        "defense-penetration": 1000,
+        "damage-increase": 1000,
+        "additional-mp": 125
+      },
+      "E": {
+        "attack-defense-pct": "5 %",
+        "flat-attack-defense": 650,
+        "hp-pct": "3 %",
+        "flat-hp": 750,
+        "crit-rate": 500,
+        "crit-damage": 500,
+        "defense-penetration": 500,
+        "damage-increase": 500,
+        "additional-mp": 60
+      }
+    },
     "icon": null,
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
@@ -501,7 +646,18 @@
       "arret_auto": "rang minimum (B/A/S), nombre minimum de stats (1/2/3), types de stats",
       "source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026"
     },
-    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)"
+    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)",
+    "grade_rates_pct": {
+      "S": 1.5,
+      "A": 2.6,
+      "B": 7.6,
+      "C": 18.3,
+      "D": 30,
+      "E": 40
+    },
+    "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
+    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : hunters) n'a pas été revérifié : à confirmer si une capture est disponible."
   },
   {
     "id": "transfiguration",
@@ -623,7 +779,74 @@
         }
       ]
     },
-    "values_by_grade": {},
+    "values_by_grade": {
+      "S": {
+        "attack-defense-pct": "60 %",
+        "flat-attack-defense": 8000,
+        "hp-pct": "36 %",
+        "flat-hp": 9000,
+        "crit-rate": 6000,
+        "crit-damage": 6000,
+        "defense-penetration": 6000,
+        "damage-increase": 6000,
+        "additional-mp": 750
+      },
+      "A": {
+        "attack-defense-pct": "40 %",
+        "flat-attack-defense": 5350,
+        "hp-pct": "24 %",
+        "flat-hp": 6000,
+        "crit-rate": 4000,
+        "crit-damage": 4000,
+        "defense-penetration": 4000,
+        "damage-increase": 4000,
+        "additional-mp": 500
+      },
+      "B": {
+        "attack-defense-pct": "20 %",
+        "flat-attack-defense": 2650,
+        "hp-pct": "12 %",
+        "flat-hp": 3000,
+        "crit-rate": 2000,
+        "crit-damage": 2000,
+        "defense-penetration": 2000,
+        "damage-increase": 2000,
+        "additional-mp": 250
+      },
+      "C": {
+        "attack-defense-pct": "15 %",
+        "flat-attack-defense": 2000,
+        "hp-pct": "9 %",
+        "flat-hp": 2250,
+        "crit-rate": 1500,
+        "crit-damage": 1500,
+        "defense-penetration": 1500,
+        "damage-increase": 1500,
+        "additional-mp": 190
+      },
+      "D": {
+        "attack-defense-pct": "10 %",
+        "flat-attack-defense": 1350,
+        "hp-pct": "6 %",
+        "flat-hp": 1500,
+        "crit-rate": 1000,
+        "crit-damage": 1000,
+        "defense-penetration": 1000,
+        "damage-increase": 1000,
+        "additional-mp": 125
+      },
+      "E": {
+        "attack-defense-pct": "5 %",
+        "flat-attack-defense": 650,
+        "hp-pct": "3 %",
+        "flat-hp": 750,
+        "crit-rate": 500,
+        "crit-damage": 500,
+        "defense-penetration": 500,
+        "damage-increase": 500,
+        "additional-mp": 60
+      }
+    },
     "icon": null,
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
@@ -643,7 +866,18 @@
       "arret_auto": "rang minimum (B/A/S), nombre minimum de stats (1/2/3), types de stats",
       "source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026"
     },
-    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)"
+    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)",
+    "grade_rates_pct": {
+      "S": 1.5,
+      "A": 2.6,
+      "B": 7.6,
+      "C": 18.3,
+      "D": 30,
+      "E": 40
+    },
+    "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
+    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : sung_jinwoo_successor) n'a pas été revérifié : à confirmer si une capture est disponible."
   },
   {
     "id": "steel",
@@ -765,7 +999,74 @@
         }
       ]
     },
-    "values_by_grade": {},
+    "values_by_grade": {
+      "S": {
+        "attack-defense-pct": "60 %",
+        "flat-attack-defense": 8000,
+        "hp-pct": "36 %",
+        "flat-hp": 9000,
+        "crit-rate": 6000,
+        "crit-damage": 6000,
+        "defense-penetration": 6000,
+        "damage-increase": 6000,
+        "additional-mp": 750
+      },
+      "A": {
+        "attack-defense-pct": "40 %",
+        "flat-attack-defense": 5350,
+        "hp-pct": "24 %",
+        "flat-hp": 6000,
+        "crit-rate": 4000,
+        "crit-damage": 4000,
+        "defense-penetration": 4000,
+        "damage-increase": 4000,
+        "additional-mp": 500
+      },
+      "B": {
+        "attack-defense-pct": "20 %",
+        "flat-attack-defense": 2650,
+        "hp-pct": "12 %",
+        "flat-hp": 3000,
+        "crit-rate": 2000,
+        "crit-damage": 2000,
+        "defense-penetration": 2000,
+        "damage-increase": 2000,
+        "additional-mp": 250
+      },
+      "C": {
+        "attack-defense-pct": "15 %",
+        "flat-attack-defense": 2000,
+        "hp-pct": "9 %",
+        "flat-hp": 2250,
+        "crit-rate": 1500,
+        "crit-damage": 1500,
+        "defense-penetration": 1500,
+        "damage-increase": 1500,
+        "additional-mp": 190
+      },
+      "D": {
+        "attack-defense-pct": "10 %",
+        "flat-attack-defense": 1350,
+        "hp-pct": "6 %",
+        "flat-hp": 1500,
+        "crit-rate": 1000,
+        "crit-damage": 1000,
+        "defense-penetration": 1000,
+        "damage-increase": 1000,
+        "additional-mp": 125
+      },
+      "E": {
+        "attack-defense-pct": "5 %",
+        "flat-attack-defense": 650,
+        "hp-pct": "3 %",
+        "flat-hp": 750,
+        "crit-rate": 500,
+        "crit-damage": 500,
+        "defense-penetration": 500,
+        "damage-increase": 500,
+        "additional-mp": 60
+      }
+    },
     "icon": null,
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
@@ -785,6 +1086,17 @@
       "arret_auto": "rang minimum (B/A/S), nombre minimum de stats (1/2/3), types de stats",
       "source": "capture d'écran du jeu (client FR, Menu > Didacticiel > Statue, images de démonstration « éditées à des fins de démonstration », compte avec 390 590 gemmes/832 714 834 or) fournie par Alexis le 15/11/2026"
     },
-    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)"
+    "unique_effect_condition_confirmee": "s'active quand toutes les stats de la statue atteignent au moins le rang B (didacticiel officiel FR)",
+    "grade_rates_pct": {
+      "S": 1.5,
+      "A": 2.6,
+      "B": 7.6,
+      "C": 18.3,
+      "D": 30,
+      "E": 40
+    },
+    "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
+    "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : hunters) n'a pas été revérifié : à confirmer si une capture est disponible."
   }
 ]
