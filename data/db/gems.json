@@ -18,10 +18,13 @@
       "rang 5, qualité D": "3,2 %",
       "rang 5, qualité C": "3,4 %",
       "rang 5, qualité B": "3,6 %",
-      "rang 5, qualité A": "4 %"
+      "rang 5, qualité A": "4 %",
+      "rang 4, sans lettre (bord violet)": "3 %",
+      "rang 3, sans lettre (bord bleu)": "2,25 %",
+      "rang 2, sans lettre (bord gris)": "1,75 %"
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; valeurs rang 2-4 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque (%) ». Une seule valeur lue : gemme équipée rang 6, qualité A = 5 % (cohérent avec 8 gemmes = 40 % sur la constellation I). Rang 5 : D 3,2 / C 3,4 / B 3,6 / A 4 % ; rang 6 A = 5 %."
@@ -280,13 +283,40 @@
       "rang 5, qualité B": 290,
       "rang 5, qualité C": 260,
       "rang 5, qualité D": 230,
-      "rang 3, sans lettre (bord bleu)": 140
+      "rang 3, sans lettre (bord bleu)": 140,
+      "rang 4, sans lettre (bord violet)": 200,
+      "rang 2, sans lettre (bord gris)": 120
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 2-4 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque supplémentaire ». Valeurs de l'« Attaque supplémentaire » (fixe) lues sur les écrans de comparaison. « Rang » = niveau de la gemme (forme : étoile = rang 6, hexagone = rang 5, losange/triangle = rang 3, déduit des captures)."
+  },
+  {
+    "id": "gem-bonus-healing-given",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "Hausse des soins donnés (%)",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": null,
+    "color": "red",
+    "levels": null,
+    "effects": [],
+    "values_by_level": {
+      "rang 4, sans lettre (bord violet)": "0,8 %",
+      "rang 3, sans lettre (bord bleu)": "0,6 %",
+      "rang 2, sans lettre (bord gris)": "0,45 %"
+    },
+    "icon": null,
+    "source": "capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.16",
+    "notes": "Nom de la gemme dans l'inventaire : « Gemme d'augmentation des soins prodigués » ; stat affichée « Hausse de soins donnés (%) ». Gemme rouge (branche attaque). Mêmes valeurs que les soins reçus aux rangs 2-4."
   },
   {
     "id": "gem-bonus-flat-defense",
