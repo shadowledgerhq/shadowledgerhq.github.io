@@ -121,3 +121,26 @@ if __name__ == "__main__":
     for nom, fn in sorted(globals().items()):
         if nom.startswith("test_"):
             fn(); print("ok", nom)
+
+
+def test_tester_ytdlp_prend_le_premier_reglage_qui_passe():
+    class R:
+        def __init__(s, code, out="", err=""):
+            s.returncode, s.stdout, s.stderr = code, out, err
+    appels = []
+
+    def executer(cmd, **kw):
+        appels.append(cmd)
+        if "--cookies-from-browser" in cmd and "edge" in cmd:
+            return R(0, "137 mp4 1920x1080 30")
+        return R(1, "", "Sign in to confirm you're not a bot")
+    msgs = []
+    opts = pc.tester_ytdlp({"yt_dlp": "yt-dlp"}, "abc", executer=executer, journal=msgs.append)
+    assert opts[-2:] == ["--cookies-from-browser", "edge"] and len(appels) == 4
+    assert any("RÉUSSI cookies de edge" in m for m in msgs)
+    assert pc.tester_ytdlp({"yt_dlp": "yt-dlp"}, "abc", executer=lambda c, **k: R(1, "", "x"), journal=lambda m: None) is None
+    import donnees
+    with tempfile.TemporaryDirectory() as tmp:
+        loc = Path(tmp) / "pc_local.json"
+        loc.write_text('{"yt_dlp_options": ["--impersonate", "chrome"]}', encoding="utf-8")
+        assert donnees.charger_config(donnees.CONFIG, loc)["pc"]["yt_dlp_options"] == ["--impersonate", "chrome"]

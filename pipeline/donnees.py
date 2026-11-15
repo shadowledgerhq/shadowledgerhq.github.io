@@ -8,8 +8,16 @@ RACINE = Path(__file__).resolve().parents[1]
 CONFIG = Path(__file__).resolve().parent / "config" / "etape1.json"
 
 
-def charger_config(chemin=CONFIG):
-    return json.loads(Path(chemin).read_text(encoding="utf-8"))
+CONFIG_PC_LOCALE = Path(__file__).resolve().parent / "config" / "pc_local.json"
+
+
+def charger_config(chemin=CONFIG, locale=CONFIG_PC_LOCALE):
+    """Config de l'étape 1 + réglages propres au PC (`pc_local.json`, ignoré par git : options yt-dlp, cookies…).
+    Les clés de `pc_local.json` remplacent celles de `pc` (ex. `yt_dlp_options`)."""
+    cfg = json.loads(Path(chemin).read_text(encoding="utf-8"))
+    if chemin == CONFIG and Path(locale).exists():
+        cfg.setdefault("pc", {}).update(lire_json(locale))
+    return cfg
 
 
 class JsonAbime(ValueError):

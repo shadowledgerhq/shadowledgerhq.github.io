@@ -118,6 +118,37 @@ def est_429(e):
     return "429" in t or "too many requests" in t or "not a bot" in t or "pass-cookies" in t or "sign in to confirm" in t
 
 
+# --- essai des réglages yt-dlp (anti-bot) ----------------------------------------------------
+
+def strategies_ytdlp(avec_node=False):
+    """Réglages yt-dlp essayés dans l'ordre. `--js-runtimes node` si Node.js est installé et pas Deno (YouTube exige
+    un moteur JavaScript). Cookies : Firefox d'abord (Chrome/Edge récents chiffrent leurs cookies, lecture souvent impossible)."""
+    base = ["--js-runtimes", "node"] if avec_node else []
+    imp = ["--impersonate", "chrome"]
+    out = [("réglages par défaut", base), ("imitation de Chrome", base + imp)]
+    for nav in ("firefox", "edge", "chrome", "brave"):
+        out.append((f"cookies de {nav}", base + imp + ["--cookies-from-browser", nav]))
+    return out
+
+
+def tester_ytdlp(cfg_pc, video_id, executer=subprocess.run, journal=print):
+    """Teste chaque réglage avec `yt-dlp -F` (aucun téléchargement) sur une vidéo ; retourne la liste d'options qui marche
+    (ou None). S'arrête au premier succès."""
+    avec_node = shutil.which("deno") is None and shutil.which("node") is not None
+    for nom, opts in strategies_ytdlp(avec_node):
+        o = Outils({**cfg_pc, "yt_dlp_options": opts}, executer)
+        try:
+            sortie = o._lancer([cfg_pc["yt_dlp"], *opts, "-F", f"https://www.youtube.com/watch?v={video_id}"], 120)
+        except (RuntimeError, subprocess.TimeoutExpired, OutilAbsent) as e:
+            journal(f"  ÉCHEC  {nom} : {str(e)[:150]}")
+            continue
+        if re.search(r"\b\d{3,4}x\d{3,4}\b", sortie):
+            journal(f"  RÉUSSI {nom}")
+            return opts
+        journal(f"  ÉCHEC  {nom} : aucun format vidéo listé")
+    return None
+
+
 # --- texte des sous-titres ------------------------------------------------------------------
 
 def vtt_vers_texte(vtt):
@@ -172,7 +203,7 @@ class Outils:
         if not self.cfg.get("whisper_cmd"):
             return None
         audio = f"{dossier}/{video_id}.mp3"
-        self._lancer([self.cfg["yt_dlp"], "-x", "--audio-format", "mp3", "-o", f"{dossier}/{video_id}.%(ext)s",
+        self._lancer([self.cfg["yt_dlp"], *self.cfg.get("yt_dlp_options", []), "-x", "--audio-format", "mp3", "-o", f"{dossier}/{video_id}.%(ext)s",
                       f"https://www.youtube.com/watch?v={video_id}"], 900)
         self._lancer([self.cfg["whisper_cmd"], audio, "--model", self.cfg.get("whisper_model", "small"),
                       "--output_format", "txt", "--output_dir", str(dossier)], 3600)
@@ -1138,7 +1169,8 @@ if __name__ == "__main__":
     for flux in (sys.stdout, sys.stderr):  # titres coréens / japonais : la console Windows (cp1252) planterait sinon
         flux.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
-    ap.add_argument("passage", choices=["daily", "weekly", "builds"], help="builds : étape 2 (images de composition, builds, PowerPoint)")
+    ap.add_argument("passage", choices=["daily", "weekly", "builds", "ytdlp-test"],
+                    help="builds : étape 2 (images de composition, builds, PowerPoint) ; ytdlp-test : cherche les réglages yt-dlp qui passent l'anti-bot")
     ap.add_argument("--mode", choices=["poc", "bot", "gb", "hotm"], help="avec builds --video : mode de la vidéo (défaut bot)")
     ap.add_argument("--semaine", help="avec builds : semaine AAAA-MM-JJ (défaut : semaine courante)")
     ap.add_argument("--no-git", action="store_true", help="pas de pull/push (essai local)")
@@ -1163,6 +1195,18 @@ if __name__ == "__main__":
         sys.exit(3)
     import atexit
     atexit.register(verrou.liberer)
+    if a.passage == "ytdlp-test":
+        from donnees import CONFIG_PC_LOCALE, ecrire_atomique
+        vid = (a.video or ["5MI-RLj7FSk"])[0]
+        print(f"Essai des réglages yt-dlp sur {vid} (aucun téléchargement)…", flush=True)
+        opts = tester_ytdlp(config["pc"], vid, journal=lambda m: print(m, flush=True))
+        if opts is None:
+            print("Aucun réglage ne passe. Pistes : ouvrir YouTube dans Firefox (connecté), mettre à jour yt-dlp "
+                  "(py -3 -m pip install -U \"yt-dlp[default,curl-cffi]\"), attendre 1 à 2 h (adresse limitée).", file=sys.stderr)
+            sys.exit(1)
+        ecrire_atomique(CONFIG_PC_LOCALE, json.dumps({"yt_dlp_options": opts}, ensure_ascii=False, indent=1) + "\n")
+        print(f"Enregistré dans {CONFIG_PC_LOCALE.name} (local au PC, non publié) : {opts}")
+        sys.exit(0)
     if a.passage == "builds" and a.video:          # essai sur une vidéo hors classement : `--video ID [--mode bot]`
         import builds as B
         import composition
