@@ -38,7 +38,7 @@
    },
    {
     "slot": "chestplate",
-    "set_id": null,
+    "set_id": "set-of-burning-greed",
     "level": null
    },
    {
@@ -48,22 +48,22 @@
    },
    {
     "slot": "boots",
-    "set_id": null,
+    "set_id": "set-of-burning-greed",
     "level": null
    },
    {
     "slot": "necklace",
-    "set_id": null,
+    "set_id": "set-of-burning-greed",
     "level": null
    },
    {
     "slot": "bracelet",
-    "set_id": null,
+    "set_id": "set-of-burning-greed",
     "level": null
    },
    {
     "slot": "ring",
-    "set_id": null,
+    "set_id": "set-of-burning-greed",
     "level": null
    },
    {
@@ -75,7 +75,7 @@
   "cores": [
    {
     "slot": "mind",
-    "id": null,
+    "id": "ferocious-protectors-desire",
     "level": null
    },
    {
@@ -169,7 +169,7 @@
     "level": null
    },
    {
-    "id": null,
+    "id": "bloodlust",
     "level": null
    },
    {
@@ -177,7 +177,7 @@
     "level": null
    },
    {
-    "id": null,
+    "id": "reawakening",
     "level": null
    },
    {
@@ -198,7 +198,7 @@
    "artifacts": [
     {
      "slot": "helmet",
-     "set_id": null,
+     "set_id": "set-of-glorious-arrogance",
      "level": null
     },
     {
@@ -208,27 +208,27 @@
     },
     {
      "slot": "gloves",
-     "set_id": null,
+     "set_id": "set-of-glorious-arrogance",
      "level": null
     },
     {
      "slot": "boots",
-     "set_id": null,
+     "set_id": "set-of-glorious-arrogance",
      "level": null
     },
     {
      "slot": "necklace",
-     "set_id": null,
+     "set_id": "viridescent-set",
      "level": null
     },
     {
      "slot": "bracelet",
-     "set_id": null,
+     "set_id": "set-of-glorious-arrogance",
      "level": null
     },
     {
      "slot": "ring",
-     "set_id": null,
+     "set_id": "set-of-glorious-arrogance",
      "level": null
     },
     {
@@ -240,17 +240,17 @@
    "cores": [
     {
      "slot": "mind",
-     "id": null,
+     "id": "ferocious-protectors-desire",
      "level": null
     },
     {
      "slot": "body",
-     "id": null,
+     "id": "nameless-demons-horn",
      "level": null
     },
     {
      "slot": "spirit",
-     "id": null,
+     "id": "teeth-of-the-watcher",
      "level": null
     }
    ],
@@ -306,12 +306,12 @@
     },
     {
      "slot": "gloves",
-     "set_id": null,
+     "set_id": "set-of-kamishs-obession",
      "level": null
     },
     {
      "slot": "boots",
-     "set_id": null,
+     "set_id": "set-of-kamishs-obession",
      "level": null
     },
     {
@@ -321,12 +321,12 @@
     },
     {
      "slot": "bracelet",
-     "set_id": null,
+     "set_id": "set-of-kamishs-obession",
      "level": null
     },
     {
      "slot": "ring",
-     "set_id": null,
+     "set_id": "set-of-kamishs-obession",
      "level": null
     },
     {
@@ -338,17 +338,17 @@
    "cores": [
     {
      "slot": "mind",
-     "id": null,
+     "id": "ferocious-protectors-desire",
      "level": null
     },
     {
      "slot": "body",
-     "id": null,
+     "id": "nameless-demons-horn",
      "level": null
     },
     {
      "slot": "spirit",
-     "id": null,
+     "id": "teeth-of-the-watcher",
      "level": null
     }
    ],
@@ -365,22 +365,22 @@
    "artifacts": [
     {
      "slot": "helmet",
-     "set_id": null,
+     "set_id": "set-of-noble-flesh",
      "level": null
     },
     {
      "slot": "chestplate",
-     "set_id": null,
+     "set_id": "set-of-noble-flesh",
      "level": null
     },
     {
      "slot": "gloves",
-     "set_id": null,
+     "set_id": "set-of-noble-flesh",
      "level": null
     },
     {
      "slot": "boots",
-     "set_id": null,
+     "set_id": "set-of-noble-flesh",
      "level": null
     },
     {
@@ -390,12 +390,12 @@
     },
     {
      "slot": "bracelet",
-     "set_id": null,
+     "set_id": "set-of-noble-flesh",
      "level": null
     },
     {
      "slot": "ring",
-     "set_id": null,
+     "set_id": "set-of-noble-flesh",
      "level": null
     },
     {
@@ -407,17 +407,17 @@
    "cores": [
     {
      "slot": "mind",
-     "id": null,
+     "id": "ferocious-protectors-desire",
      "level": null
     },
     {
      "slot": "body",
-     "id": null,
+     "id": "nameless-demons-horn",
      "level": null
     },
     {
      "slot": "spirit",
-     "id": null,
+     "id": "teeth-of-the-watcher",
      "level": null
     }
    ],
@@ -425,10 +425,48 @@
   }
  ],
  "set_bonuses": {
-  "sjw": [],
-  "hunter_1": [],
-  "hunter_2": [],
-  "hunter_3": []
+  "sjw": [
+   {
+    "set_id": "set-of-burning-greed",
+    "pieces": 5,
+    "tiers": [
+     2,
+     4
+    ]
+   }
+  ],
+  "hunter_1": [
+   {
+    "set_id": "set-of-glorious-arrogance",
+    "pieces": 5,
+    "tiers": [
+     4
+    ]
+   },
+   {
+    "set_id": "viridescent-set",
+    "pieces": 1,
+    "tiers": []
+   }
+  ],
+  "hunter_2": [
+   {
+    "set_id": "set-of-kamishs-obession",
+    "pieces": 4,
+    "tiers": [
+     4
+    ]
+   }
+  ],
+  "hunter_3": [
+   {
+    "set_id": "set-of-noble-flesh",
+    "pieces": 6,
+    "tiers": [
+     4
+    ]
+   }
+  ]
  },
  "shadows": [
   {
@@ -441,7 +479,7 @@
   },
   {
    "position": 3,
-   "id": "kaisel"
+   "id": null
   }
  ],
  "successor": {
@@ -516,9 +554,9 @@
   "hunters": false,
   "weapons": false,
   "artifacts": false,
-  "cores": false,
+  "cores": true,
   "stats": null,
-  "shadows": true,
+  "shadows": null,
   "successor": null,
   "subjugation_support": null,
   "proof": null,
@@ -528,17 +566,17 @@
  },
  "counts": {
   "sjw_weapons": "0/2",
-  "sjw_artifacts": "0/8",
-  "sjw_cores": "0/3",
+  "sjw_artifacts": "5/8",
+  "sjw_cores": "1/3",
   "sjw_stats": "13/15",
   "sjw_skills": "0/6",
-  "blessings": "0/8",
+  "blessings": "2/8",
   "hunters": "1/3",
   "weapons": "0/3",
-  "artifacts": "0/24",
-  "cores": "0/9",
+  "artifacts": "16/24",
+  "cores": "9/9",
   "stats": "9/45",
-  "shadows": "3/3"
+  "shadows": "2/3"
  },
  "found_at": {},
  "unmatched": [
@@ -559,11 +597,19 @@
    "crop": null
   },
   {
+   "element": "shadows",
+   "owner": "shadows",
+   "slot": 2,
+   "best_id": "kaisel",
+   "score": 0.572,
+   "crop": null
+  },
+  {
    "element": "successor",
    "owner": "successor",
    "slot": null,
    "best_id": "myro",
-   "score": 0.308,
+   "score": 0.31,
    "crop": null
   },
   {
@@ -589,6 +635,158 @@
    "best_id": "han-song-yi",
    "score": 0.609,
    "crop": null
+  },
+  {
+   "element": "sjw_artifacts",
+   "owner": "sjw",
+   "slot": "helmet",
+   "best_id": "set-of-burning-greed--helmet",
+   "score": 0.54,
+   "crop": null
+  },
+  {
+   "element": "sjw_artifacts",
+   "owner": "sjw",
+   "slot": "gloves",
+   "best_id": "holy-set--gloves",
+   "score": 0.689,
+   "crop": null
+  },
+  {
+   "element": "sjw_artifacts",
+   "owner": "sjw",
+   "slot": "earrings",
+   "best_id": "set-of-burning-greed--earrings",
+   "score": 0.546,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_1",
+   "slot": "chestplate",
+   "best_id": "new-hunters-set--chestplate",
+   "score": 0.553,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_1",
+   "slot": "earrings",
+   "best_id": "set-of-chaotic-desire--earrings",
+   "score": 0.492,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_2",
+   "slot": "helmet",
+   "best_id": "set-of-kamishs-obession--helmet",
+   "score": 0.457,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_2",
+   "slot": "necklace",
+   "best_id": "viridescent-set--necklace",
+   "score": 0.623,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_2",
+   "slot": "chestplate",
+   "best_id": "new-hunters-set--chestplate",
+   "score": 0.527,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_2",
+   "slot": "earrings",
+   "best_id": "set-of-chaotic-desire--earrings",
+   "score": 0.529,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_3",
+   "slot": "necklace",
+   "best_id": "viridescent-set--necklace",
+   "score": 0.59,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_3",
+   "slot": "earrings",
+   "best_id": "set-of-noble-flesh--earrings",
+   "score": 0.549,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 0,
+   "best_id": "monarchs-domain",
+   "score": 0.539,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 1,
+   "best_id": "soutien-mutuel",
+   "score": 0.401,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 2,
+   "best_id": "soutien-mutuel",
+   "score": 0.454,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 3,
+   "best_id": "aggressive-defense",
+   "score": 0.503,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 5,
+   "best_id": "soutien-mutuel",
+   "score": 0.341,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 7,
+   "best_id": "r-sonance-darme",
+   "score": 0.517,
+   "crop": null
+  },
+  {
+   "element": "sjw_cores",
+   "owner": "sjw",
+   "slot": "body",
+   "best_id": "ancient-wraiths-right-hand",
+   "score": 0.5,
+   "crop": null
+  },
+  {
+   "element": "sjw_cores",
+   "owner": "sjw",
+   "slot": "spirit",
+   "best_id": "ancient-wraiths-mana-power",
+   "score": 0.509,
+   "crop": null
   }
  ],
  "attendus": {
@@ -612,7 +810,7 @@
   "règles poc inconnues"
  ],
  "erreurs": [],
- "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; attribut SJW strength : lecture la plus longue retenue 19 (autres lectures : [9]); attributs SJW lus par zone : agility, intelligence, perception, strength, vitality; statues lues par zone (options de 1 statue(s) sur 5); règles poc inconnues; reconnaissance faible : shadows",
+ "notes": "zones poc/competences non définies; zones poc/subjugation non définies; icône absente : weapons; pièce isolée : necklace (hunter_1); stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; attribut SJW strength : lecture la plus longue retenue 19 (autres lectures : [9]); attributs SJW lus par zone : agility, intelligence, perception, strength, vitality; statues lues par zone (options de 1 statue(s) sur 5); règles poc inconnues; reconnaissance faible : shadows; reconnaissance faible : sjw_artifacts; reconnaissance faible : artifacts; reconnaissance faible : blessings; reconnaissance faible : sjw_cores",
  "sources": [
   {
    "type": "video",
