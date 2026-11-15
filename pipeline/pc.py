@@ -33,6 +33,72 @@ import ocr_ecrans
 from tri1 import lectures_texte
 
 
+def pid_vivant(pid):
+    """Un processus d'identifiant `pid` tourne-t-il ? (Sous Windows `os.kill(pid, 0)` TUERAIT le processus : OpenProcess à la place.)"""
+    if pid <= 0:
+        return False
+    if os.name == "nt":
+        import ctypes
+        h = ctypes.windll.kernel32.OpenProcess(0x1000, False, pid)        # PROCESS_QUERY_LIMITED_INFORMATION
+        if h:
+            ctypes.windll.kernel32.CloseHandle(h)
+            return True
+        return False
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
+class Verrou:
+    """Un seul passage PC à la fois (daily, weekly, builds, essais) : fichier `logs/pc.lock` (PID, passage, début), créé de
+    façon atomique. Verrou périmé (processus mort ou plus de `max_h` heures) : repris. `prendre()` -> (ok, texte du détenteur)."""
+
+    def __init__(self, chemin, max_h=12):
+        self.chemin, self.max_h, self.pris = Path(chemin), max_h, False
+
+    def _detenteur(self):
+        try:
+            d = json.loads(self.chemin.read_text(encoding="utf-8"))
+            return d if isinstance(d, dict) else {}
+        except (OSError, ValueError):
+            return {}
+
+    def prendre(self, nom, maintenant_ts=None):
+        self.chemin.parent.mkdir(parents=True, exist_ok=True)
+        ts = time.time() if maintenant_ts is None else maintenant_ts
+        for _ in range(2):
+            try:
+                fd = os.open(str(self.chemin), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            except FileExistsError:
+                d = self._detenteur()
+                age_h = (ts - d.get("debut", 0)) / 3600
+                if d.get("pid") and pid_vivant(int(d["pid"])) and age_h < self.max_h:
+                    return False, f"{d.get('passage', '?')} (PID {d['pid']}, depuis {age_h * 60:.0f} min)"
+                try:
+                    self.chemin.unlink()                    # périmé : processus mort, ou trop ancien
+                except FileNotFoundError:
+                    pass
+                continue
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                json.dump({"pid": os.getpid(), "passage": nom, "debut": ts}, f)
+            self.pris = True
+            return True, ""
+        return False, "verrou illisible"
+
+    def liberer(self):
+        if self.pris:
+            self.pris = False
+            try:
+                if self._detenteur().get("pid") == os.getpid():
+                    self.chemin.unlink()
+            except OSError:
+                pass
+
+
 class OutilAbsent(Exception):
     pass
 
@@ -1050,6 +1116,14 @@ if __name__ == "__main__":
     ap.add_argument("--maintenant", help="instant simulé ISO 8601 (tests)")
     a = ap.parse_args()
     config = charger_config()
+    verrou = Verrou(RACINE / "logs" / "pc.lock")
+    ok, detenteur = verrou.prendre(a.passage + (f" --video {a.video[0]}" if a.video else ""))
+    if not ok:      # un autre passage tourne : on n'ajoute ni yt-dlp ni OCR en parallèle (anti-bot, délais, git). Code 3 = refus, rien n'est perdu.
+        print(f"Passage refusé : un autre passage PC tourne déjà ({detenteur}). Relancer quand il est terminé "
+              f"(ou supprimer logs\\pc.lock s'il est resté après un arrêt brutal).", file=sys.stderr)
+        sys.exit(3)
+    import atexit
+    atexit.register(verrou.liberer)
     if a.passage == "builds" and a.video:          # essai sur une vidéo hors classement : `--video ID [--mode bot]`
         import builds as B
         import composition
