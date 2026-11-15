@@ -278,6 +278,33 @@ def _lire_zones(outils, cfg, ecran, png, t, journal, texte=""):
     return []
 
 
+def _affiner_onglet(outils, cfg, chemin, onglet, temps, tmp):
+    """Passe à `pas_tres_fin_s` (0,1 s) sur [min(temps) − marge, max(temps) + marge] : retourne les images (pleine taille) les plus
+    stables de cet onglet (`choisir_stables`), ou None (échec, onglet absent : l'appelant garde le choix à 0,5 s)."""
+    from PIL import Image
+    e = cfg["extraction"]
+    pas, marge = e["pas_tres_fin_s"], e.get("marge_tres_fin_s", 0.5)
+    t0 = max(0, min(temps) - marge)
+    try:
+        trouvees = outils.images(chemin, [(t0, max(temps) + marge - t0 + pas, pas)], tmp, f"tf{onglet[:3]}")
+        petites = []
+        for t, png in trouvees:
+            with Image.open(png) as im:
+                rgb = im.convert("RGB")
+                rgb.thumbnail((800, 800))
+            petites.append((t, rgb))
+        idx = choisir_stables(petites, cfg).get(onglet)
+        if not idx:
+            return None
+        sortie = []
+        for i in idx:
+            with Image.open(trouvees[i][1]) as im:
+                sortie.append(im.convert("RGB"))
+        return sortie
+    except Exception:
+        return None
+
+
 def _affiner(outils, cfg, chemin, fenetre, tmp, journal):
     """Seconde extraction à `pas_fin_s` (0,5 s) dans la fenêtre de composition ± `marge_fin_s` ; garde par onglet les images
     les plus stables (`choisir_stables`). Échec ou onglet absent : retombe sur le choix à `pas_s`. Mêmes valeurs de retour
@@ -297,10 +324,14 @@ def _affiner(outils, cfg, chemin, fenetre, tmp, journal):
         choix = choisir_stables(petites, cfg)
         sortie = {}
         for o, idx in choix.items():
-            sortie[o] = []
-            for i in idx:
-                with Image.open(trouvees[i][1]) as im:
-                    sortie[o].append(im.convert("RGB"))
+            sortie[o] = None
+            if e.get("pas_tres_fin_s"):        # essai du 15/11 : onglet « artefacts » capté seulement en fondu à 0,5 s -> passe à 0,1 s
+                sortie[o] = _affiner_onglet(outils, cfg, chemin, o, [trouvees[i][0] for i in idx], tmp)
+            if not sortie[o]:
+                sortie[o] = []
+                for i in idx:
+                    with Image.open(trouvees[i][1]) as im:
+                        sortie[o].append(im.convert("RGB"))
         journal(f"  composition : affinage à {e['pas_fin_s']} s, {len(trouvees)} images, onglets : "
                 f"{', '.join(f'{o} ×{len(l)}' for o, l in sortie.items()) or 'aucun'}")
         return sortie, fenetre

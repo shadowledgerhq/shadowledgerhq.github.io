@@ -139,6 +139,27 @@ def test_choisir_stables_ecarte_le_fondu():
     assert choix.get("artefacts") and choix.get("personnages")
 
 
+def test_affiner_onglet_trouve_le_plateau():
+    """Onglet vu seulement en fondu à 0,5 s : la passe à 0,1 s retrouve une image stable (pas une image mélangée)."""
+    import tempfile
+    a = capture("personnages")
+    b = capture("artefacts").resize(a.size)
+    suite = [a, Image.blend(a, b, 0.3), Image.blend(a, b, 0.6), Image.blend(a, b, 0.9), b, b, b, b]
+
+    class O:
+        def images(self, chemin, segments, dossier, prefixe="f", hauteur=None):
+            sortie = []
+            for k, im in enumerate(suite):
+                f = Path(dossier) / f"{prefixe}_{k}.png"
+                im.save(f)
+                sortie.append((1 + k * 0.1, f))
+            return sortie
+    cfg = {**CFG, "extraction": {**CFG["extraction"], "pas_tres_fin_s": 0.1}}
+    with tempfile.TemporaryDirectory() as tmp:
+        ims = C._affiner_onglet(O(), cfg, "v.mp4", "artefacts", [1.2], tmp)
+    assert ims and all(float(abs(C._gris(im) - C._gris(b)).mean()) < 1 for im in ims)
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):
