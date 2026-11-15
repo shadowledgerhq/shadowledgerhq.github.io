@@ -333,7 +333,8 @@
     "name": {
       "fr": "L'âge adulte",
       "en": "Coming of Age",
-      "ko": ""
+      "ko": "",
+      "ja": "カミングオブエイジ"
     },
     "rarity": "ssr",
     "kind": "hunter",
@@ -373,7 +374,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "crimson-shadow",
@@ -615,7 +617,8 @@
     "name": {
       "fr": "Sommeil éternel",
       "en": "Eternal Slumber",
-      "ko": ""
+      "ko": "",
+      "ja": "永遠の安息"
     },
     "rarity": "ssr",
     "kind": "hunter",
@@ -655,14 +658,16 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "ferns-staff",
     "name": {
       "fr": "",
       "en": "Fern's Staff",
-      "ko": ""
+      "ko": "",
+      "ja": "フェルンの杖"
     },
     "rarity": "ssr",
     "kind": "hunter",
@@ -702,7 +707,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "first-bloom",
@@ -756,7 +762,8 @@
     "name": {
       "fr": "",
       "en": "Frieren's Staff",
-      "ko": ""
+      "ko": "",
+      "ja": "フリーレンの杖"
     },
     "rarity": "ssr",
     "kind": "hunter",
@@ -796,7 +803,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "glorious-demise",
@@ -1289,7 +1297,8 @@
     "name": {
       "fr": "Espiègle",
       "en": "Mischievous",
-      "ko": ""
+      "ko": "",
+      "ja": "マリシャス"
     },
     "rarity": "ssr",
     "kind": "hunter",
@@ -1329,7 +1338,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "nice-to-meet-you",
@@ -1477,7 +1487,8 @@
     "name": {
       "fr": "Tranche-nuit",
       "en": "Nightcleaver",
-      "ko": ""
+      "ko": "",
+      "ja": "斬夜"
     },
     "rarity": "ssr",
     "kind": "hunter",
@@ -1517,7 +1528,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "overdrive",
@@ -1571,7 +1583,8 @@
     "name": {
       "fr": "Farceuse",
       "en": "Prankster",
-      "ko": ""
+      "ko": "",
+      "ja": "プランクスター"
     },
     "rarity": "ssr",
     "kind": "hunter",
@@ -1611,7 +1624,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "purple-butterflys-dream",
@@ -1900,7 +1914,8 @@
     "name": {
       "fr": "",
       "en": "Stark's Axe",
-      "ko": ""
+      "ko": "",
+      "ja": "シュタルクの斧"
     },
     "rarity": "ssr",
     "kind": "hunter",
@@ -1940,7 +1955,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "still-got-it",
@@ -2605,7 +2621,8 @@
     "name": {
       "fr": "Bravoure inégalée",
       "en": "Unparalleled Bravery",
-      "ko": ""
+      "ko": "",
+      "ja": "勇猛無比"
     },
     "rarity": "ssr",
     "kind": "hunter",
@@ -2645,7 +2662,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "unstoppable-frenzy",
