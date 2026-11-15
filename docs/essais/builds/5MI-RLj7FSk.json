@@ -7,6 +7,8 @@
  "gate": null,
  "hunter_mode": null,
  "rank": null,
+ "line_provisional": false,
+ "provisional_rank": null,
  "player": null,
  "channel_id": null,
  "video_id": "5MI-RLj7FSk",
@@ -168,7 +170,7 @@
   {
    "position": 1,
    "team_slot": null,
-   "id": "han-song-yi",
+   "id": null,
    "weapon": {
     "id": null,
     "level": null
@@ -196,7 +198,7 @@
     },
     {
      "slot": "necklace",
-     "set_id": null,
+     "set_id": "set-of-chaotic-wish",
      "level": null
     },
     {
@@ -250,7 +252,7 @@
     },
     {
      "slot": "chestplate",
-     "set_id": null,
+     "set_id": "clerics-set",
      "level": null
     },
     {
@@ -280,7 +282,7 @@
     },
     {
      "slot": "earrings",
-     "set_id": null,
+     "set_id": "set-of-chaotic-wish",
      "level": null
     }
    ],
@@ -306,7 +308,7 @@
   {
    "position": 3,
    "team_slot": null,
-   "id": "han-song-yi",
+   "id": null,
    "weapon": {
     "id": null,
     "level": null
@@ -319,17 +321,17 @@
     },
     {
      "slot": "chestplate",
-     "set_id": "clerics-set",
+     "set_id": null,
      "level": null
     },
     {
      "slot": "gloves",
-     "set_id": null,
+     "set_id": "set-of-glorious-arrogance",
      "level": null
     },
     {
      "slot": "boots",
-     "set_id": null,
+     "set_id": "set-of-chaotic-wish",
      "level": null
     },
     {
@@ -386,18 +388,38 @@
     "set_id": "set-of-chaotic-infamy",
     "pieces": 1,
     "tiers": []
+   },
+   {
+    "set_id": "set-of-chaotic-wish",
+    "pieces": 1,
+    "tiers": []
    }
   ],
   "hunter_2": [
    {
+    "set_id": "clerics-set",
+    "pieces": 1,
+    "tiers": []
+   },
+   {
     "set_id": "set-of-chaotic-infamy",
+    "pieces": 1,
+    "tiers": []
+   },
+   {
+    "set_id": "set-of-chaotic-wish",
     "pieces": 1,
     "tiers": []
    }
   ],
   "hunter_3": [
    {
-    "set_id": "clerics-set",
+    "set_id": "set-of-chaotic-wish",
+    "pieces": 1,
+    "tiers": []
+   },
+   {
+    "set_id": "set-of-glorious-arrogance",
     "pieces": 1,
     "tiers": []
    }
@@ -454,9 +476,9 @@
   "sjw_stats": "0/15",
   "sjw_skills": "1/6",
   "blessings": "0/8",
-  "hunters": "2/3",
+  "hunters": "0/3",
   "weapons": "0/3",
-  "artifacts": "3/24",
+  "artifacts": "7/24",
   "cores": "0/9",
   "stats": "0/45",
   "shadows": "1/3"
@@ -473,10 +495,26 @@
   },
   {
    "element": "hunters",
+   "owner": "hunter_1",
+   "slot": null,
+   "best_id": "han-song-yi",
+   "score": 0.61,
+   "crop": null
+  },
+  {
+   "element": "hunters",
    "owner": "hunter_2",
    "slot": null,
    "best_id": "cha-hae-in",
    "score": 0.528,
+   "crop": null
+  },
+  {
+   "element": "hunters",
+   "owner": "hunter_3",
+   "slot": null,
+   "best_id": "han-song-yi",
+   "score": 0.63,
    "crop": null
   },
   {
@@ -508,23 +546,23 @@
    "owner": "sjw",
    "slot": "helmet",
    "best_id": "set-of-chaotic-desire--helmet",
-   "score": 0.66,
+   "score": 0.702,
    "crop": null
   },
   {
    "element": "sjw_artifacts",
    "owner": "sjw",
    "slot": "chestplate",
-   "best_id": "set-of-the-architects-blue-poison--chestplate",
-   "score": 0.582,
+   "best_id": "new-hunters-set--chestplate",
+   "score": 0.626,
    "crop": null
   },
   {
    "element": "sjw_artifacts",
    "owner": "sjw",
    "slot": "bracelet",
-   "best_id": "aquamarine-set--bracelet",
-   "score": 0.481,
+   "best_id": "set-of-chaotic-infamy--bracelet",
+   "score": 0.519,
    "crop": null
   },
   {
@@ -532,7 +570,7 @@
    "owner": "sjw",
    "slot": "gloves",
    "best_id": "set-of-chaotic-wish--gloves",
-   "score": 0.628,
+   "score": 0.707,
    "crop": null
   },
   {
@@ -540,7 +578,7 @@
    "owner": "sjw",
    "slot": "ring",
    "best_id": "set-of-the-architects-blue-poison--ring",
-   "score": 0.508,
+   "score": 0.468,
    "crop": null
   },
   {
@@ -548,7 +586,7 @@
    "owner": "sjw",
    "slot": "boots",
    "best_id": "set-of-glorious-arrogance--boots",
-   "score": 0.646,
+   "score": 0.722,
    "crop": null
   },
   {
@@ -556,39 +594,31 @@
    "owner": "sjw",
    "slot": "earrings",
    "best_id": "set-of-chaotic-desire--earrings",
-   "score": 0.509,
+   "score": 0.512,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_1",
    "slot": "helmet",
-   "best_id": "set-of-chaotic-infamy--helmet",
-   "score": 0.548,
-   "crop": null
-  },
-  {
-   "element": "artifacts",
-   "owner": "hunter_1",
-   "slot": "necklace",
-   "best_id": "obsidian-set--necklace",
-   "score": 0.446,
+   "best_id": "set-of-chaotic-desire--helmet",
+   "score": 0.599,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_1",
    "slot": "chestplate",
-   "best_id": "clerics-set--chestplate",
-   "score": 0.587,
+   "best_id": "new-hunters-set--chestplate",
+   "score": 0.65,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_1",
    "slot": "gloves",
-   "best_id": "clerics-set--gloves",
-   "score": 0.564,
+   "best_id": "set-of-chaotic-wish--gloves",
+   "score": 0.686,
    "crop": null
   },
   {
@@ -596,7 +626,7 @@
    "owner": "hunter_1",
    "slot": "ring",
    "best_id": "set-of-the-architects-blue-poison--ring",
-   "score": 0.429,
+   "score": 0.517,
    "crop": null
   },
   {
@@ -604,23 +634,23 @@
    "owner": "hunter_1",
    "slot": "boots",
    "best_id": "set-of-chaotic-desire--boots",
-   "score": 0.565,
+   "score": 0.612,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_1",
    "slot": "earrings",
-   "best_id": "set-of-chaotic-wish--earrings",
-   "score": 0.354,
+   "best_id": "skeleton-set--earrings",
+   "score": 0.546,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_2",
    "slot": "helmet",
-   "best_id": "set-of-chaotic-infamy--helmet",
-   "score": 0.45,
+   "best_id": "almighty-kargalgans-set--helmet",
+   "score": 0.542,
    "crop": null
   },
   {
@@ -628,15 +658,7 @@
    "owner": "hunter_2",
    "slot": "necklace",
    "best_id": "set-of-burning-greed--necklace",
-   "score": 0.532,
-   "crop": null
-  },
-  {
-   "element": "artifacts",
-   "owner": "hunter_2",
-   "slot": "chestplate",
-   "best_id": "set-of-surturs-flame--chestplate",
-   "score": 0.508,
+   "score": 0.565,
    "crop": null
   },
   {
@@ -644,7 +666,7 @@
    "owner": "hunter_2",
    "slot": "gloves",
    "best_id": "set-of-chaotic-wish--gloves",
-   "score": 0.533,
+   "score": 0.699,
    "crop": null
   },
   {
@@ -652,71 +674,55 @@
    "owner": "hunter_2",
    "slot": "ring",
    "best_id": "beast-set--ring",
-   "score": 0.502,
+   "score": 0.519,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_2",
    "slot": "boots",
-   "best_id": "black-lions-set--boots",
-   "score": 0.57,
-   "crop": null
-  },
-  {
-   "element": "artifacts",
-   "owner": "hunter_2",
-   "slot": "earrings",
-   "best_id": "set-of-chaotic-wish--earrings",
-   "score": 0.497,
+   "best_id": "set-of-chaotic-wish--boots",
+   "score": 0.609,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_3",
    "slot": "helmet",
-   "best_id": "set-of-chaotic-desire--helmet",
-   "score": 0.581,
+   "best_id": "set-of-chaotic-infamy--helmet",
+   "score": 0.673,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_3",
    "slot": "necklace",
-   "best_id": "set-of-burning-greed--necklace",
-   "score": 0.438,
+   "best_id": "obsidian-set--necklace",
+   "score": 0.521,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_3",
+   "slot": "chestplate",
+   "best_id": "clerics-set--chestplate",
+   "score": 0.574,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_3",
    "slot": "bracelet",
-   "best_id": "set-of-chaotic-infamy--bracelet",
-   "score": 0.461,
-   "crop": null
-  },
-  {
-   "element": "artifacts",
-   "owner": "hunter_3",
-   "slot": "gloves",
-   "best_id": "set-of-glorious-arrogance--gloves",
-   "score": 0.606,
+   "best_id": "peridot-set--bracelet",
+   "score": 0.479,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_3",
    "slot": "ring",
-   "best_id": "set-of-the-architects-blue-poison--ring",
-   "score": 0.506,
-   "crop": null
-  },
-  {
-   "element": "artifacts",
-   "owner": "hunter_3",
-   "slot": "boots",
-   "best_id": "set-of-chaotic-wish--boots",
-   "score": 0.547,
+   "best_id": "beast-set--ring",
+   "score": 0.516,
    "crop": null
   },
   {
@@ -724,7 +730,7 @@
    "owner": "hunter_3",
    "slot": "earrings",
    "best_id": "set-of-the-architects-blue-poison--earrings",
-   "score": 0.433,
+   "score": 0.473,
    "crop": null
   },
   {
@@ -786,7 +792,7 @@
  },
  "plafonds": [],
  "erreurs": [],
- "notes": "images bot/benedictions absentes; images bot/noyaux absentes; icône absente : weapons; essai : règles de la semaine 2026-11-12; doublon : han-song-yi; reconnaissance faible : hunters; reconnaissance faible : sjw_artifacts; reconnaissance faible : artifacts; reconnaissance faible : sjw_skills",
+ "notes": "images bot/benedictions absentes; images bot/noyaux absentes; icône absente : weapons; essai : règles de la semaine 2026-11-12; reconnaissance faible : artifacts; reconnaissance faible : sjw_skills",
  "sources": [
   {
    "type": "video",
@@ -796,5 +802,59 @@
     8
    ]
   }
+ ],
+ "ocr_resume": [
+  [
+   0,
+   "=D | る | Alztel | He | ンク | Za | ウ | Bm | Dv | MAIZE | aes | ys | eegz2 | + | ( | ne) | に3 | Pra | \\\\ | ES | 10/10 | ¥ | を | せき | 名 | 6 | 28 | OF | O|Ly | BA | AR] | Ei | we | N | we | Ty | NN | 4 | ©00:19.97 | BAL | oy"
+  ],
+  [
+   2,
+   "Ll | ぐくき8 | 3 | Ma | ose! | 11,749,823 | gD | EEUUE | 4 | Wasnias) | & | vir | vaca | a | Wik | 4 | Ay | Wir | ee | ; | 3 | wy | 1 | eT | f | 4 | biパ | 02 | が | Al | 4 | \\ | EE | x | = | A | = | NE | & | 03 | a | 1.000.000 | ANS | EES) | EE"
+  ],
+  [
+   10,
+   "NN | ) | っラク | が | /ク | SN | 4 | / | に | も | a | = | > | 時 | y | — | Za | HEMTFDEOE | |!昌久計 | SrHeP| | cw | 4 | っみ。 | a | N | —=—s | Ey | ・ | a | = | )"
+  ],
+  [
+   14,
+   "FN | CY | a | hl | に | “2 | = | キョ | 日早計 | - | ra | \" | va | ae | で | <i | oe | a | =f} | aS | Wis | ミミ | Wr | シン | We | Soave | sereg | a | A | forwardButtonkButton | Bare | m | [co | 2の3 | Ts | Q | SPACE"
+  ],
+  [
+   18,
+   "Miewun | 1? | RI | = | ar | Ul | iY | 5a0:04.44 | II | a | AAL | “i | — | 00:09.483, | ‘> | NN | oll | BS | on | rom | > | AW | at | \" | _ | aNSTR | ia: | — | の | Gee | hig) | ws | 2638 | = | so | > | ぶつ | he | Ge | [9 | 3) | | | con | SI |"
+  ],
+  [
+   22,
+   "x | mee | oe | しDO | ーー | Jl | 7 | o | < | Be | Phase | 1 | _ | 9 | 回 | 00:09.483) | BE | OF | Aa] | 42 | =ラ | に1 | z4 | fr | と | ae | RY | b | oe | ーーーヤ | it | = | a | - | Say | 25 | HITS | ' | j | Hi | oN | —— | (0 | a! | _下 | Ei | —_ | s"
+  ],
+  [
+   26,
+   "iko | we | rt | jn | = | i) | 2952 | 0: | — | “oe | BE | Ol | AA | OH | TAB | ーー9 | コ | pire | を | — | 一ーー | = | —— | a | ーーーーデャッ | 2 | = | —, | a | REV | 四 | BP) | A | wa | SL | oii | %o | Zz | EFT | SHIFTrwardButtonkButton | vio | 2H6/220"
+  ],
+  [
+   30,
+   "CO | ts | BE | ts | に | a | 00 | \" | 00:15.15 | =00.008) | i | «= | > | 8 | _—_ | Ce] | リリアni | ee | ee | — | al | = | ーーー | ーー | ーー | ci. | = | Sp | Ceres | 77) | 78 | LEFT | SHiFarwardguttonkButton | h, | ¥ | eis | WAG | wa | 7864724 | ra"
+  ],
+  [
+   34,
+   "<人 | FP. | | | a | ww | るの | ING | IG | Ne | レブジィ | = | ーー | ーー | -_ | == | ut?! | ae,"
+  ],
+  [
+   38,
+   "pain: | ma | AN | or | thet | De | f | ze | moa | Wl | wu | a, | rf | ree | y | ¥ | 3 | bird | Yee | ーー | ペデーー | ド21 | li | 上しっ | し | 人 | Cm | a | no | s | 3 | ーー | eo | ーー | yd | \\ | = | et | a | ee | —_ | = | ーーー | ン | Be | を | 還る | a\" | "
+  ],
+  [
+   42,
+   "RNN | a | 00 | ーー | us | 7B | an | ee | = | ~~ | .—-—— | ey | / | Di | RAS | ¥ | ae | の | iD | = | (リリ | YS | Om | NN | iy | Yi | a} | aoo | aE | oe | 4, | 4 | 1! | R | LerrsHirsewarel | to | 56 | 12 | 2 | (<y) | W | lA | Ay"
+  ],
+  [
+   46,
+   "GS | < | ーー | ーー | f | =“ | & | がで | .- | ee"
+  ],
+  [
+   50,
+   "上RESU | LT | © | 2842 | 0019 | dd | Het | Phase | 1 | Phase | 2 | et | 90 | e' | いい | Phase | 3 | Santa | 4や | A) | する | 導 | wee | + | g | E | lov | HASPI | PPI"
+  ]
  ]
 }
