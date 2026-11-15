@@ -151,6 +151,14 @@ def test_lecture_hors_composition_avec_faux_ocr():
     assert obs["gems"]["colors"] and obs["hunters"][-1]["id"] == "christopher-reed"
 
 
+def test_ocr_reel_ka_katakana_et_valeurs_refusees():
+    """Essai PC 15/11 : `攻撃カ` (katakana) doit être reconnu ; `Lv.170/170` n'est jamais un attribut."""
+    r = E.lire_stats("HP 81263\n攻撃カ 85562\n防御カ 85.22% (144098)\nクリティカルダメージ 207.07% (18296)", T.DB, T.CFG)
+    assert r["stats"]["attack"] == 85562 and r["stats"]["defense"]["rating"] == 144098 and r["stats"]["crit-damage"]["percent"] == 207.07
+    a = E.lire_attributs("筋カ\n19\n活力\n速度\nLv.170/170\n526828\n知能\n1,335\n感覚", T.CFG)
+    assert a == {"strength": 19, "intelligence": 1335}, a          # vitality/agility/perception : non lus, jamais devinés
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

@@ -13,7 +13,8 @@ LANG = "ja"
 
 
 def _n(t):
-    return re.sub(r"\s+", "", str(t or "")).replace("　", "")
+    """Sans espaces ; `カ` (katakana) ramené à `力` (kanji) : tesseract lit `攻撃力` « 攻撃カ » (essai PC du 15/11), des deux côtés."""
+    return re.sub(r"\s+", "", str(t or "")).replace("　", "").replace("カ", "力")
 
 
 def _lignes(texte):
@@ -58,7 +59,7 @@ def _valeur_stat(reste, affichage):
 def lire_stats(texte, db, cfg):
     """Écran `stats` (onglet 全体). Retourne {"stats": {id: valeur}, "nom_lu": texte | None, "candidats": [lignes de nom]}."""
     e = cfg["ecrans"]["stats"]
-    table = sorted(e["stats"][LANG].items(), key=lambda kv: -len(_n(kv[0])))
+    table = sorted(e["stats"][LANG].items(), key=lambda kv: -len(_n(kv[0])))      # `_n` ramène カ à 力 des deux côtés
     stats, candidats = {}, []
     for ligne in _lignes(texte):
         l = _n(ligne)
@@ -81,20 +82,24 @@ def lire_stats(texte, db, cfg):
 
 
 def lire_attributs(texte, cfg):
-    """Fiche de SJW : 5 attributs. La valeur suit le libellé sur la même ligne ou, sinon, sur la ligne suivante."""
-    table = cfg["ecrans"]["attributs"][LANG]
+    """Fiche de SJW : 5 attributs. La valeur est un nombre SEUL (même ligne après le libellé, ou la ligne suivante), < 100 000 :
+    `Lv.170/170` ou une ligne mêlée de texte n'est jamais une valeur (essai PC du 15/11 : 170 lu à tort)."""
+    table = {_n(k): v for k, v in cfg["ecrans"]["attributs"][LANG].items()}
     lignes = _lignes(texte)
     sortie = {}
+    pur = lambda t: bool(re.fullmatch(r"\d{1,3}(?:[,.]\d{3})*|\d+", t.strip()))
     for i, ligne in enumerate(lignes):
+        ln = _n(ligne)
         for lib, ident in table.items():
-            if lib in ligne and ident not in sortie:
-                v = entier(ligne.split(lib, 1)[1]) if re.search(r"\d", ligne.split(lib, 1)[1]) else None
+            if lib in ln and ident not in sortie:
+                reste = ln.split(lib, 1)[1]
+                v = entier(reste) if pur(reste) else None
                 if v is None:
-                    for suite in lignes[i + 1:i + 3]:
-                        if re.fullmatch(r"[\d,.\s]+", suite):
+                    for suite in lignes[i + 1:i + 2]:
+                        if pur(_n(suite)):
                             v = entier(suite)
                             break
-                if v is not None:
+                if v is not None and v < 100000:
                     sortie[ident] = v
     return sortie
 
