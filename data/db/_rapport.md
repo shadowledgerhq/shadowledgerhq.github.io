@@ -1,9 +1,8 @@
 # Rapport de contrôle de la base — 2026-11-15
-Total : 489 entrées, **1 erreur(s)**, 593 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
+Total : 489 entrées, **0 erreur(s)**, 593 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
 
 | Fichier | Entrées | Erreurs | Avertissements |
 | --- | ---: | ---: | ---: |
-| _veille | 0 | 1 | 0 |
 | artifact_sets | 40 | 0 | 124 |
 | blessings | 59 | 0 | 65 |
 | cores | 18 | 0 | 0 |

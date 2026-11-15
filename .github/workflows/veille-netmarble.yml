@@ -1,5 +1,5 @@
 # Veille quotidienne des notes officielles Netmarble (Developer Notes + Updates). Gratuit : Playwright.
-# Une nouvelle note s'inscrit dans data/db/_veille.md ; la discussion 9 la lit à la reprise.
+# Une nouvelle note s'inscrit dans data/veille/a_traiter.md ; la discussion 9 la lit à la reprise.
 name: Veille Netmarble
 
 on:
@@ -35,7 +35,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/db/_veille.json data/db/_veille.md
+          git add data/veille/netmarble.json data/veille/a_traiter.md
           if git diff --cached --quiet; then echo "Rien à enregistrer."; exit 0; fi
           git commit -m "veille: notes Netmarble $(date -u +%Y-%m-%d)"
           git pull --rebase origin main
