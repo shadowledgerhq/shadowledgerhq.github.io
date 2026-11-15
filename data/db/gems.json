@@ -234,13 +234,17 @@
     "levels": null,
     "effects": [],
     "values_by_level": {
-      "rang 5, qualité A": 180
+      "rang 5, qualité A": 180,
+      "rang 5, qualité B": 160,
+      "rang 5, qualité C": 150,
+      "rang 5, qualité D": 140,
+      "rang 4, sans lettre (bord violet)": 130
     },
     "icon": null,
     "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "13e type de gemme, absent du calculateur de slagate : « Gemme de réduction des dégâts », verte, bonus « Réduction des dégâts » (valeur fixe, pas un %). Rangs 2 à 4 présents dans l'inventaire (bord gris/bleu/violet), non relevés. Absente de la constellation et des totaux « Infos sur la gemme »."
+    "notes": "13e type de gemme, absent du calculateur de slagate : « Gemme de réduction des dégâts », verte, bonus « Réduction des dégâts » (valeur fixe, pas un %). Rang 4 relevé ; rangs 2-3 présents dans l'inventaire (bord gris/bleu), non relevés. Absente de la constellation et des totaux « Infos sur la gemme »."
   },
   {
     "id": "gem-bonus-flat-attack",
@@ -288,7 +292,8 @@
       "rang 5, qualité A": 350,
       "rang 5, qualité B": 290,
       "rang 5, qualité C": 260,
-      "rang 5, qualité D": 230
+      "rang 5, qualité D": 230,
+      "rang 4, sans lettre (bord violet)": 200
     },
     "icon": null,
     "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
