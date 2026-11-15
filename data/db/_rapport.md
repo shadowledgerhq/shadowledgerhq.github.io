@@ -1,12 +1,12 @@
 # Rapport de contrôle de la base — 2026-11-15
-Total : 489 entrées, **0 erreur(s)**, 593 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
+Total : 492 entrées, **0 erreur(s)**, 570 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
 
 | Fichier | Entrées | Erreurs | Avertissements |
 | --- | ---: | ---: | ---: |
 | artifact_sets | 40 | 0 | 124 |
 | blessings | 59 | 0 | 65 |
 | cores | 18 | 0 | 0 |
-| gems | 11 | 0 | 22 |
+| gems | 14 | 0 | 31 |
 | hunters | 66 | 0 | 0 |
 | patches | 8 | 0 | 38 |
 | proof_modifiers | 17 | 0 | 34 |
@@ -16,14 +16,14 @@ Total : 489 entrées, **0 erreur(s)**, 593 avertissement(s). Généré par `pipe
 | statues | 5 | 0 | 5 |
 | subjugation_support | 18 | 0 | 36 |
 | successors | 3 | 0 | 0 |
-| weapons | 115 | 0 | 172 |
+| weapons | 115 | 0 | 140 |
 
 Avertissements par type (à suivre dans le temps) :
-- 209 × icône absente (null)
-- 167 × name.fr vide
+- 212 × icône absente (null)
+- 135 × name.fr vide
 - 59 × pierre sans effets
-- 42 × name.en vide
-- 42 × source non URL (capture ou texte)
+- 45 × name.en vide
+- 45 × source non URL (capture ou texte)
 - 36 × slot vide
 - 33 × changes : id introuvable dans …
 - 5 × changes : catégorie inconnue …

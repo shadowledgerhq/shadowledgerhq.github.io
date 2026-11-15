@@ -10,15 +10,15 @@
     },
     "rarity": null,
     "abbreviation_slagate": "ATK %",
-    "color": null,
+    "color": "red",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque (%) »."
   },
   {
     "id": "gem-bonus-def-pct",
@@ -31,15 +31,15 @@
     },
     "rarity": null,
     "abbreviation_slagate": "DEF %",
-    "color": null,
+    "color": "green",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de Défense (%) »."
   },
   {
     "id": "gem-bonus-hp-pct",
@@ -52,15 +52,15 @@
     },
     "rarity": null,
     "abbreviation_slagate": "HP %",
-    "color": null,
+    "color": "blue",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de PV (%) »."
   },
   {
     "id": "gem-bonus-defense-penetration",
@@ -73,36 +73,36 @@
     },
     "rarity": null,
     "abbreviation_slagate": "Pén. Déf.",
-    "color": null,
+    "color": "yellow",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
   },
   {
     "id": "gem-bonus-dcc",
     "kind": "bonus_stat",
     "name": {
-      "fr": "DCC",
+      "fr": "Dégâts de coup critique",
       "en": "",
       "ja": "",
       "ko": ""
     },
     "rarity": null,
     "abbreviation_slagate": "DCC",
-    "color": null,
+    "color": "yellow",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
   },
   {
     "id": "gem-bonus-accuracy",
@@ -115,36 +115,36 @@
     },
     "rarity": null,
     "abbreviation_slagate": "Précision",
-    "color": null,
+    "color": "yellow",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
   },
   {
     "id": "gem-bonus-mpcr",
     "kind": "bonus_stat",
     "name": {
-      "fr": "MPCR",
+      "fr": "Baisse du coût de PM",
       "en": "",
       "ja": "",
       "ko": ""
     },
     "rarity": null,
     "abbreviation_slagate": "MPCR",
-    "color": null,
+    "color": "purple",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de réduction de la consommation de PM »."
   },
   {
     "id": "gem-bonus-additional-mp",
@@ -157,15 +157,15 @@
     },
     "rarity": null,
     "abbreviation_slagate": "PM suppl.",
-    "color": null,
+    "color": "purple",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
   },
   {
     "id": "gem-bonus-flat-attack",
@@ -178,15 +178,15 @@
     },
     "rarity": null,
     "abbreviation_slagate": "ATK suppl.",
-    "color": null,
+    "color": "red",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque supplémentaire »."
   },
   {
     "id": "gem-bonus-flat-defense",
@@ -199,15 +199,15 @@
     },
     "rarity": null,
     "abbreviation_slagate": "DEF suppl.",
-    "color": null,
+    "color": "green",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de défense supplémentaire »."
   },
   {
     "id": "gem-bonus-flat-hp",
@@ -220,14 +220,98 @@
     },
     "rarity": null,
     "abbreviation_slagate": "HP suppl.",
-    "color": null,
+    "color": "blue",
     "levels": null,
     "effects": [],
     "values_by_level": {},
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
-    "game_version": null,
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+    "game_version": "1.5.16",
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de PV supplémentaires »."
+  },
+  {
+    "id": "gem-board-1",
+    "kind": "board",
+    "name": {
+      "fr": "Gemmes I",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "slots_per_color": 8,
+    "colors": [
+      "red",
+      "blue",
+      "green",
+      "yellow",
+      "purple"
+    ],
+    "observed_totals": {
+      "Attaque (%)": "40 %",
+      "PV (%)": "40 %",
+      "Défense (%)": "40 %",
+      "Précision": 5400,
+      "Dégâts de coup critique": 2895,
+      "Pénétration de défense": 1930,
+      "PM supplémentaires": 480,
+      "Baisse du coût de PM": 880
+    },
+    "source": "capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.16",
+    "notes": "Totaux « Infos sur la gemme » d'UN compte (8 gemmes de chaque couleur équipées, toutes de rang A sur la capture) : ce sont des valeurs observées, pas des valeurs par niveau. Constellation : 5 couleurs, 8 emplacements par couleur."
+  },
+  {
+    "id": "gem-board-2",
+    "kind": "board",
+    "name": {
+      "fr": "Gemmes II",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "slots_per_color": 8,
+    "colors": [
+      "red",
+      "blue",
+      "green",
+      "yellow",
+      "purple"
+    ],
+    "observed_totals": {
+      "Attaque (%)": "40 %",
+      "PV (%)": "37.2 %",
+      "Défense (%)": "38.8 %",
+      "Précision": 5400,
+      "Dégâts de coup critique": 1930,
+      "Pénétration de défense": 2895,
+      "PM supplémentaires": 470,
+      "Baisse du coût de PM": 880
+    },
+    "source": "capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.16",
+    "notes": "Même compte : certaines gemmes équipées sont de rang B (PV % et Défense % inférieurs à 40 %). Les bonus jaunes/violets ne sont pas répartis comme sur la constellation I (DCC et pénétration inversés). Total toutes constellations : 16 gemmes par couleur ; ATK 80 %, PV 77,2 %, DEF 78,8 %, précision 10 800, DCC 4 825, pénétration 4 825, PM suppl. 950, coût PM 1 760."
+  },
+  {
+    "id": "gem-grades",
+    "kind": "grade_scale",
+    "name": {
+      "fr": "Rangs des gemmes",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "grades": [
+      "D",
+      "C",
+      "B",
+      "A"
+    ],
+    "source": "capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.16",
+    "notes": "Lettre D/C/B/A affichée sur chaque gemme (inventaire et constellation). Ordre D<C<B<A déduit des boutons « Promotion » et « Fusionner » et des totaux (rang A = plus fort) : à confirmer. Le nombre en bas à droite d'une gemme d'inventaire est probablement la quantité possédée (à confirmer). Deux formes de gemme existent (étoile, hexagone) : sens inconnu. Valeurs par rang : non visibles, captures de détail d'une gemme à demander."
   }
 ]

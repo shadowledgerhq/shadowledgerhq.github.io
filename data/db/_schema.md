@@ -38,7 +38,7 @@ Valeur calculée et non lue dans le jeu : `"estimated": true`.
 | `subjugation_support.json` | `column` (1-3), `effects`, `condition` (rôle requis), `recommended` ; sert au POC |
 | `proof_modifiers.json` | `effects`, `max_level`, `cost_per_level`, `boss` (si propre à un boss) ; sert au HOTM (« 단련의 증명 ») |
 | `statues.json` | (proposé le 15/11/2026, demande discussion 2) `target` (`hunters` / `sung_jinwoo_successor`), `slots` (3), `grades` (E→S), `option_pool` (9 options), `unique_effect` (texte FR/EN, effet structuré, condition : 3 stats au rang B ou mieux), `values_by_grade` (vide : non relevé). Nom EN officiel Netmarble : « Figure ». |
-| `gems.json` | (proposé le 15/11/2026, demande discussion 2) `kind` (`bonus_stat`, plus tard `color`), `color`, `levels`, `effects`, `values_by_level`. Seuls les types de bonus sont relevés (ATK %, DEF %, HP %, pénétration, DCC, précision, MPCR, PM supplémentaires, ATK/DEF/HP supplémentaires) ; couleurs et niveaux : à fournir (captures de l'écran de gemmes). |
+| `gems.json` | `kind` : `bonus_stat` (11 types, avec `color`), `board` (constellations I et II : `slots_per_color`, `observed_totals` d'un compte, pas des valeurs par niveau), `grade_scale` (rangs D/C/B/A). Couleurs : rouge = ATK (% et fixe), bleu = PV, vert = DEF, jaune = pénétration/précision/DCC, violet = PM suppl./baisse du coût de PM (capture client FR, 15/11). Valeurs par rang : à fournir. |
 | `patches.json` | `version`, `date`, `url` (notes Netmarble), `changes[]` (`category`, `id`, `change`) |
 
 Les champs sont à confirmer sur la source avant la saisie de chaque catégorie.
