@@ -1,0 +1,317 @@
+{
+ "spec": 3,
+ "run_id": "essai-ID_VIDEO",
+ "run_index": 1,
+ "week": "essai",
+ "mode": "poc",
+ "gate": null,
+ "hunter_mode": null,
+ "rank": null,
+ "player": null,
+ "channel_id": null,
+ "video_id": "ID_VIDEO",
+ "t_result": null,
+ "t_composition": null,
+ "team": null,
+ "rules": null,
+ "status": "pas_de_build",
+ "confidence": "sur",
+ "sjw": null,
+ "hunters": [
+  {
+   "position": 1,
+   "team_slot": null,
+   "id": null,
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  },
+  {
+   "position": 2,
+   "team_slot": null,
+   "id": null,
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  },
+  {
+   "position": 3,
+   "team_slot": null,
+   "id": null,
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  }
+ ],
+ "set_bonuses": {
+  "hunter_1": [],
+  "hunter_2": [],
+  "hunter_3": []
+ },
+ "shadows": [
+  {
+   "position": 1,
+   "id": null
+  },
+  {
+   "position": 2,
+   "id": null
+  },
+  {
+   "position": 3,
+   "id": null
+  }
+ ],
+ "successor": {
+  "id": null,
+  "level": null,
+  "stats": {}
+ },
+ "subjugation_support": null,
+ "proof": null,
+ "statues": null,
+ "gems": null,
+ "found": {
+  "sjw": null,
+  "sjw_weapons": null,
+  "sjw_artifacts": null,
+  "sjw_cores": null,
+  "sjw_stats": null,
+  "sjw_skills": null,
+  "blessings": null,
+  "hunters": false,
+  "weapons": false,
+  "artifacts": false,
+  "cores": false,
+  "stats": null,
+  "shadows": null,
+  "successor": null,
+  "subjugation_support": null,
+  "proof": null,
+  "successor_stats": null,
+  "statues": null,
+  "gems": null
+ },
+ "counts": {
+  "hunters": "0/3",
+  "weapons": "0/3",
+  "artifacts": "0/24",
+  "cores": "0/9",
+  "stats": "0/45",
+  "shadows": "0/3"
+ },
+ "found_at": {},
+ "unmatched": [],
+ "attendus": {
+  "sjw": "fac",
+  "sjw_weapons": "fac",
+  "sjw_artifacts": "fac",
+  "sjw_cores": "fac",
+  "sjw_stats": "fac",
+  "sjw_skills": "fac",
+  "blessings": "fac",
+  "hunters": true,
+  "weapons": true,
+  "artifacts": true,
+  "cores": true,
+  "stats": "fac",
+  "shadows": "fac",
+  "successor": "fac",
+  "subjugation_support": "fac"
+ },
+ "plafonds": [
+  "règles poc inconnues"
+ ],
+ "erreurs": [],
+ "notes": "images poc/personnages absentes; zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; composition non filmée; images de composition non disponibles : yt-dlp code 1 : ERROR: [youtube:truncated_id] ID_VIDEO: Incomplete YouTube ID ID_VIDEO. URL https://www.youtube.com/watch?v=ID_VIDEO looks truncated.",
+ "sources": [
+  {
+   "type": "video",
+   "video_id": "ID_VIDEO",
+   "t": null
+  }
+ ]
+}
