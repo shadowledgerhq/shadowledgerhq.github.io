@@ -3,7 +3,7 @@
  "_spec": "docs/SPEC_ETAPE2.md v2. Tout ce qui est [À CONFIRMER] se règle ici, pas dans le code.",
  "top": 10,
  "seuil_icone": {
-  "hunters": 0.55,
+  "hunters": 0.8,
   "weapons": 0.55,
   "artifact_pieces": 0.55,
   "cores": 0.55,
@@ -974,7 +974,7 @@
   0.8
  ],
  "seuil_sur": {
-  "hunters": 0.65,
+  "hunters": 0.9,
   "weapons": 0.65,
   "artifact_pieces": 0.65,
   "cores": 0.65,
@@ -988,15 +988,15 @@
   "artifact_pieces": [
    [
     0,
-    0.7,
+    0.62,
     1,
     1
    ],
    [
-    0.55,
-    0.08,
+    0.5,
+    0.05,
     1,
-    0.4
+    0.45
    ]
   ],
   "cores": [

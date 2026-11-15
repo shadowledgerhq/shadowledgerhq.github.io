@@ -72,6 +72,18 @@ def test_slides_statues_gemmes():
         assert n["sans", "fr"] == 7                                   # test 1 de la spec : 6 + Sources
 
 
+def test_portraits_chasseurs_jamais_devines_sur_la_capture_bot():
+    """Les portraits de la banque n'ont pas le style des cartes : sur la capture BOT, aucun chasseur ne doit être « reconnu »."""
+    import icones
+    from PIL import Image
+    im = Image.open(T.RACINE / "docs" / "essais" / "composition" / "bot_personnages_ja.png").convert("RGB")
+    banque = icones.Banque(T.RACINE)
+    for o in ("hunter_1", "hunter_2", "hunter_3"):
+        zone = icones.recadrer(im, T.CFG["zones"]["bot"]["personnages"][o]["hunter_face"])
+        r = icones.reconnaitre(zone, "hunters", banque, seuil=T.CFG["seuil_icone"]["hunters"])
+        assert r["id"] is None, (o, r)
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):
