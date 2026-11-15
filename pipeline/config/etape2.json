@@ -1037,5 +1037,132 @@
  },
  "_extraction": "[À CONFIRMER] détection de l'écran de composition sur les images de la vidéo (capture BOT JA 1158×651) : bouton jaune d'entrée (bas droite) = écran présent ; onglet actif = icône de la colonne de gauche la plus blanche (≥ 8 % de pixels blancs et ≥ 1,5 × la 2e). Sans ces deux signes, l'image est ignorée. Fenêtre d'analyse : de 0 à `t_result` (max `fenetre_max_s` s), 1 image / `pas_s` s, `max_par_onglet` images gardées par onglet.",
  "_zones_poc": "POC (écran `プレイヤーチームファイトモード`, capture JA 14/11/2026) : seul l'onglet personnages est calibré ; les cartes sont décalées par rapport au BOT (colonnes à x ≈ 362 / 502 / 645 sur 1155). Autres onglets : zones non définies.",
- "seuil_nom": 0.9
+ "seuil_nom": 0.9,
+ "ecrans": {
+  "_ecrans": "[À CONFIRMER] libellés lus sur les captures POC JA (docs/essais/composition/poc_*_ja.png) ; un écran est reconnu avec au moins 2 libellés. Autres langues [EN ATTENTE].",
+  "fiche_sjw": {
+   "libelles": {
+    "ja": [
+     "SKILL01",
+     "SKILL02",
+     "ULTIMATE",
+     "QTE01",
+     "QTE02",
+     "QTE03",
+     "筋力",
+     "活力",
+     "速度",
+     "知能",
+     "感覚"
+    ]
+   }
+  },
+  "stats": {
+   "libelles": {
+    "ja": [
+     "能力値情報",
+     "全体",
+     "武器",
+     "アーティファクト"
+    ]
+   },
+   "stats": {
+    "ja": {
+     "HP": "hp",
+     "魔力": "mana",
+     "攻撃力": "attack",
+     "精密度": "accuracy",
+     "防御力貫通": "defense-penetration",
+     "防御力": "defense",
+     "クリティカル率": "crit-rate",
+     "クリティカルダメージ": "crit-damage",
+     "クールタイム短縮": "cooldown-reduction",
+     "ダメージ増加": "damage-increase"
+    }
+   },
+   "ignorer": [
+    "全体",
+    "武器",
+    "アーティファクト",
+    "能力値情報",
+    "ハンター",
+    "ハンター管理局"
+   ]
+  },
+  "attributs": {
+   "ja": {
+    "筋力": "strength",
+    "活力": "vitality",
+    "速度": "agility",
+    "知能": "intelligence",
+    "感覚": "perception"
+   }
+  },
+  "statues": {
+   "libelles": {
+    "ja": [
+     "彫像",
+     "彫像オプション",
+     "所持彫像"
+    ]
+   },
+   "entete_options": {
+    "ja": [
+     "彫像オプション"
+    ]
+   }
+  },
+  "gemmes": {
+   "libelles": {
+    "ja": [
+     "宝石情報",
+     "装着中の宝石"
+    ]
+   },
+   "entete_niveaux": {
+    "ja": [
+     "装着中の宝石"
+    ]
+   },
+   "entete_bonus": {
+    "ja": [
+     "能力値情報"
+    ]
+   },
+   "bonus": {
+    "ja": {
+     "攻撃力(%)": [
+      "attack",
+      "percent"
+     ],
+     "HP(%)": [
+      "hp",
+      "percent"
+     ],
+     "防御力(%)": [
+      "defense",
+      "percent"
+     ],
+     "防御力貫通": [
+      "defense-penetration",
+      "flat"
+     ],
+     "追加魔力": [
+      "mana",
+      "flat"
+     ]
+    }
+   }
+  },
+  "subjugation": {
+   "libelles": {
+    "ja": [
+     "討伐支援"
+    ],
+    "ko": [
+     "토벌 지원"
+    ]
+   }
+  }
+ }
 }

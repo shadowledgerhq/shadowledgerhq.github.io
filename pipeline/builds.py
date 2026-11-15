@@ -230,6 +230,12 @@ def construire_build(ctx, obs, regles, cfg, db):
                         "weapon": {"id": w.get("id"), "level": w.get("level")},
                         "artifacts": _pieces(o.get("artifacts"), SLOTS_ARTEFACT, "set_id"),
                         "cores": _pieces(o.get("cores"), SLOTS_NOYAU, "id"), "stats": dict(o.get("stats") or {})})
+    for o in (h for h in (obs.get("hunters") or []) if isinstance(h, dict) and h.get("position") is None and h.get("id")):
+        if o["id"] in [h["id"] for h in hunters]:
+            continue
+        libre = next((h for h in hunters if not h["id"]), None)      # place sur la composition inconnue : 1er emplacement libre
+        if libre is not None:
+            libre.update({"id": o["id"], "stats": dict(o.get("stats") or {}), "position_inconnue": True})
     nh = sum(1 for h in hunters if h["id"])
     na = sum(_compter_pieces(h["artifacts"], "set_id") for h in hunters)
     nc = sum(_compter_pieces(h["cores"], "id") for h in hunters)
