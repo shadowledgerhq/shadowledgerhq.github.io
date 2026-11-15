@@ -54,8 +54,12 @@ def choisir_images(images_t, cfg):
     `max_par_onglet` images par onglet, réparties sur la durée où l'onglet est vu ; ([], None) si aucune."""
     n = cfg["extraction"]["max_par_onglet"]
     par = {}
+    diag = {"images": len(images_t), "ecran": 0, "onglet_douteux": 0}
     for t, im in images_t:
         o = analyser_image(im, cfg)
+        if bouton_present(im, cfg):
+            diag["ecran"] += 1
+            diag["onglet_douteux"] += 0 if o else 1
         if o:
             par.setdefault(o, []).append((t, im))
     sortie, temps = {}, []
@@ -64,6 +68,7 @@ def choisir_images(images_t, cfg):
         choisies = l[::pas][:n]
         sortie[o] = [im for _, im in choisies]
         temps += [t for t, _ in l]
+    choisir_images.diagnostic = diag
     return sortie, ([min(temps), max(temps)] if temps else None)
 
 
@@ -90,6 +95,9 @@ def fournisseur_pc(outils, cfg, journal=None):
                         with Image.open(png) as im:
                             images_t.append((t, im.convert("RGB")))
                     cache[cle] = (*choisir_images(images_t, cfg), None)
+                    d = choisir_images.diagnostic
+                    journal(f"  composition {vid} : {d['images']} images, écran vu sur {d['ecran']}, onglet douteux sur {d['onglet_douteux']}, "
+                            f"onglets : {', '.join(f'{o} ×{len(l)}' for o, l in cache[cle][0].items()) or 'aucun'}")
             except Exception as ex:                      # 429, ffmpeg, vidéo privée : build `pas_de_build`, raison notée
                 cache[cle] = ({}, None, str(ex)[:160])
         images, t, err = cache[cle]

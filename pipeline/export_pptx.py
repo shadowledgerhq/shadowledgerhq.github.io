@@ -363,6 +363,8 @@ def slide_successeur(d, b, row):
         d.case(s, 5.9, 2.3, nom, chemin_icone(d.db, "successors", su["id"], d.racine), None, su.get("level"), it, taille=1.5)
     else:
         d.case(s, 5.9, 2.3, "", None, "inconnue" if _est_inconnue(b, "successor", "successor") else "non_trouve", taille=1.5)
+    if su.get("stats"):                                              # v3 : stats du successeur, seulement si lues
+        _stats(d, s, su["stats"], 0.6, 4.2)
     return s
 
 
@@ -423,6 +425,44 @@ def slide_preuve(d, b, row):
     return s
 
 
+def slide_statues(d, b, row):
+    """v3 : 5 cartes (grade en grand), 3 options dessous (grade + texte lu, en italique avec la langue ; jamais traduit)."""
+    s = d.diapo(lib(d.cfg, "statues", d.lang), b, row, _notes(b))
+    for i, st in enumerate((b.get("statues") or [])[:5]):
+        x = 0.6 + i * 2.45
+        d.rect(s, x, 1.7, 2.3, 0.9, X.PANNEAU2, X.OR, arrondi=True)
+        d.texte(s, x, 1.7, 2.3, 0.9, st.get("grade") or "?", 32, X.OR, gras=True, align="c", ancre="m")
+        for j, o in enumerate((st.get("options") or [])[:3]):
+            y = 2.75 + j * 1.2
+            d.rect(s, x, y, 2.3, 1.1, X.PANNEAU if j % 2 else X.PANNEAU2, arrondi=True)
+            d.texte(s, x + 0.05, y + 0.03, 0.6, 0.35, o.get("grade") or "?", 14, X.BLEU, gras=True)
+            lu = o.get("text_read") or ""
+            d.texte(s, x + 0.05, y + 0.38, 2.2, 0.7, f"{lu} ({(o.get('lang') or '').upper()})" if lu else lib(d.cfg, "non_trouve", d.lang),
+                    9, X.TEXTE if lu else X.SOURD, italique=True)
+    return s
+
+
+def slide_gemmes(d, b, row):
+    """v3 : 5 pastilles (couleur de la base si elle existe, sinon position) avec niveau ; bonus totaux."""
+    s = d.diapo(lib(d.cfg, "gemmes", d.lang), b, row, _notes(b))
+    g = b.get("gems") or {}
+    for i, c in enumerate((g.get("colors") or [])[:5]):
+        x = 0.9 + i * 2.4
+        d.rect(s, x, 1.8, 1.6, 1.6, X.PANNEAU2, X.BLEU, arrondi=True)
+        d.texte(s, x, 1.8, 1.6, 1.0, c.get("color") or str(c.get("position", i + 1)), 18, X.TEXTE, gras=True, align="c", ancre="m", italique=not c.get("color"))
+        d.texte(s, x, 2.8, 1.6, 0.5, f"{lib(d.cfg, 'niveau', d.lang)} {c['level']}" if c.get("level") is not None else "?", 12, X.OR, align="c", ancre="m")
+    d.texte(s, 0.9, 3.8, 6, 0.3, lib(d.cfg, "bonus_gemmes", d.lang), 12, X.BLEU, gras=True)
+    for i, bo in enumerate(g.get("bonuses") or []):
+        nom, it = nom_affiche(d.db, "stats", bo.get("stat"), d.lang)
+        y = 4.2 + i * 0.42
+        d.rect(s, 0.9, y, 8.0, 0.38, X.PANNEAU if i % 2 else X.PANNEAU2)
+        d.texte(s, 1.0, y, 5.0, 0.38, nom, 11, X.SOURD if it else X.TEXTE, italique=it, ancre="m")
+        v = bo.get("value")
+        txt = "?" if v is None else (f"{v:g} %".replace(".", ",") if bo.get("unit") == "percent" else X.entier(v))
+        d.texte(s, 6.0, y, 2.8, 0.38, txt, 11, X.TEXTE, align="r", ancre="m")
+    return s
+
+
 def slide_sources(d, buildsf, row):
     b = buildsf[0]
     cfg, lang = d.cfg, d.lang
@@ -468,6 +508,10 @@ def slides_build(d, b, row):
         slide_subjugation(d, b, row)
     if b.get("found", {}).get("proof"):
         slide_preuve(d, b, row)
+    if b.get("found", {}).get("statues"):
+        slide_statues(d, b, row)
+    if b.get("found", {}).get("gems"):
+        slide_gemmes(d, b, row)
 
 
 def generer_fichier(buildsf, row, lang, chemin, racine=RACINE, db=None, cfg=None):

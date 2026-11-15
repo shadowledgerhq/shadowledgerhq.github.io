@@ -244,7 +244,7 @@ def construire_build(ctx, obs, regles, cfg, db):
     while len(ombres) < 3:
         ombres.append({"position": len(ombres) + 1, "id": None})
     succ_o = obs.get("successor") or {}
-    successor = {"id": succ_o.get("id"), "level": succ_o.get("level")}
+    successor = {"id": succ_o.get("id"), "level": succ_o.get("level"), "stats": dict(succ_o.get("stats") or {})}
     found["shadows"] = sum(1 for o in ombres if o["id"]) == 3
     counts["shadows"] = _ratio(sum(1 for o in ombres if o["id"]), 3)
     found["successor"] = bool(successor["id"])
@@ -254,6 +254,13 @@ def construire_build(ctx, obs, regles, cfg, db):
     proof = obs.get("proof")
     for k, trouve in (("subjugation_support", bool(support and any(support))), ("proof", bool(proof))):
         found[k] = True if trouve else None
+    # --- v3 : statues, gemmes, stats du successeur (tous modes, facultatifs, jamais comptés dans le statut)
+    statues = [dict(x) for x in (obs.get("statues") or [])][:5] or None
+    gems = obs.get("gems") or None
+    if gems:
+        gems = {"colors": [dict(c) for c in (gems.get("colors") or [])][:5], "bonuses": [dict(b) for b in (gems.get("bonuses") or [])]}
+        gems = gems if gems["colors"] or gems["bonuses"] else None
+    facultatifs = {"successor_stats": bool(successor["stats"]), "statues": bool(statues), "gems": bool(gems)}
     if proof:
         cout = sum((db.get("proof_modifiers", {}).get((m or {}).get("id"), {}).get("cost_per_level") or 0) * ((m or {}).get("level") or 0)
                    for m in proof.get("modifiers") or [])
@@ -345,7 +352,7 @@ def construire_build(ctx, obs, regles, cfg, db):
     confiance = "a_verifier" if alertes else "sur"
 
     return {
-        "spec": 2, "run_id": ctx["run_id"], "run_index": ctx["run_index"], "week": ctx["week"], "mode": mode,
+        "spec": 3, "run_id": ctx["run_id"], "run_index": ctx["run_index"], "week": ctx["week"], "mode": mode,
         "gate": ctx.get("gate"), "hunter_mode": hunter_mode, "rank": ctx.get("rank"), "player": ctx.get("player"),
         "channel_id": ctx.get("channel_id"), "video_id": ctx.get("video_id"), "t_result": ctx.get("t_result"),
         "t_composition": obs.get("t_composition"), "team": ctx.get("team"),
@@ -354,7 +361,8 @@ def construire_build(ctx, obs, regles, cfg, db):
         "set_bonuses": {**({"sjw": _bonus_sets(sjw["artifacts"], db)} if sjw else {}),
                         **{f"hunter_{h['position']}": _bonus_sets(h["artifacts"], db) for h in hunters}},
         "shadows": ombres, "successor": successor, "subjugation_support": support, "proof": proof,
-        "found": found, "counts": counts, "found_at": obs.get("found_at") or {}, "unmatched": list(obs.get("unmatched") or []),
+        "statues": statues, "gems": gems,
+        "found": {**found, **{k: (True if v else None) for k, v in facultatifs.items()}}, "counts": counts, "found_at": obs.get("found_at") or {}, "unmatched": list(obs.get("unmatched") or []),
         "attendus": {k: v for k, v in exp.items() if v is not None}, "plafonds": plafonds, "erreurs": erreurs,
         "notes": "; ".join(dict.fromkeys(notes)),
         "sources": [{"type": "video", "video_id": ctx.get("video_id"), "t": obs.get("t_composition")}],
@@ -592,6 +600,15 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
     return builds
 
 
+def regles_recentes(racine, mode):
+    """Dernier fichier `data/rules/*.json` : (semaine, bloc du mode) ou (None, None). Sert au seul diagnostic `build_essai`."""
+    for f in sorted((Path(racine) / "data" / "rules").glob("*.json"), reverse=True):
+        r = regles_mode(_json(f, {}), mode)
+        if r is not None:
+            return f.stem, r
+    return None, None
+
+
 def build_essai(video_id, mode, racine=RACINE, cfg=None, banque=None, fournisseur=None, t_result=None, hunter_mode=None):
     """Diagnostic : build d'une seule vidéo hors classement (rang `None`), pour essayer les zones sur une vraie vidéo. Retourne
     le build ; `unmatched` et `found` montrent ce qui est reconnu. N'écrit rien dans `data/builds`."""
@@ -613,7 +630,10 @@ def build_essai(video_id, mode, racine=RACINE, cfg=None, banque=None, fournisseu
     elif not images:
         obs["notes"].append("composition non filmée")
     obs["analyse_terminee"] = True
-    return construire_build(ctx, obs, None, cfg, db)
+    semaine, regles = regles_recentes(racine, mode)
+    if regles is not None:
+        obs["notes"].append(f"essai : règles de la semaine {semaine}")
+    return construire_build(ctx, obs, regles, cfg, db)
 
 
 def rapport(week, builds, fichiers_pptx=()):

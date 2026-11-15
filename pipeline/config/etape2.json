@@ -1,5 +1,5 @@
 {
- "spec": 2,
+ "spec": 3,
  "_spec": "docs/SPEC_ETAPE2.md v2. Tout ce qui est [À CONFIRMER] se règle ici, pas dans le code.",
  "top": 10,
  "seuil_icone": {
@@ -945,6 +945,26 @@
   "pied": {
    "fr": "Shadow Ledger · shadowledgerhq.github.io · @shadowledger_hq",
    "en": "Shadow Ledger · shadowledgerhq.github.io · @shadowledger_hq"
+  },
+  "statues": {
+   "fr": "Statues",
+   "en": "Statues"
+  },
+  "gemmes": {
+   "fr": "Gemmes",
+   "en": "Gems"
+  },
+  "option": {
+   "fr": "Option",
+   "en": "Option"
+  },
+  "bonus_gemmes": {
+   "fr": "Bonus totaux",
+   "en": "Total bonuses"
+  },
+  "niveau": {
+   "fr": "Niveau",
+   "en": "Level"
   }
  },
  "echelles_icone": [
@@ -1016,5 +1036,6 @@
   }
  },
  "_extraction": "[À CONFIRMER] détection de l'écran de composition sur les images de la vidéo (capture BOT JA 1158×651) : bouton jaune d'entrée (bas droite) = écran présent ; onglet actif = icône de la colonne de gauche la plus blanche (≥ 8 % de pixels blancs et ≥ 1,5 × la 2e). Sans ces deux signes, l'image est ignorée. Fenêtre d'analyse : de 0 à `t_result` (max `fenetre_max_s` s), 1 image / `pas_s` s, `max_par_onglet` images gardées par onglet.",
- "_zones_poc": "POC (écran `プレイヤーチームファイトモード`, capture JA 14/11/2026) : seul l'onglet personnages est calibré ; les cartes sont décalées par rapport au BOT (colonnes à x ≈ 362 / 502 / 645 sur 1155). Autres onglets : zones non définies."
+ "_zones_poc": "POC (écran `プレイヤーチームファイトモード`, capture JA 14/11/2026) : seul l'onglet personnages est calibré ; les cartes sont décalées par rapport au BOT (colonnes à x ≈ 362 / 502 / 645 sur 1155). Autres onglets : zones non définies.",
+ "seuil_nom": 0.9
 }
