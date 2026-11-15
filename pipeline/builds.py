@@ -548,7 +548,11 @@ def contextes(nom_mode, ligne, week):
     """Un contexte par run de la ligne (`runs_detail`) : un build par run."""
     details = ligne.get("runs_detail") or [{}]
     for i, d in enumerate(details, 1):
-        yield {"run_id": ligne["run_id"], "run_index": i, "week": week, "mode": ligne.get("mode") or nom_mode.split("-")[0],
+        vid = d.get("video_id") or ligne.get("video_id")
+        # vidéo à plusieurs runs : les écrans de la run i sont ceux qui suivent le résultat de la run précédente de la même vidéo
+        avant = [x.get("t") for x in details[:i - 1] if (x.get("video_id") or ligne.get("video_id")) == vid and isinstance(x.get("t"), (int, float))]
+        yield {"t_debut": int(max(avant)) if avant and isinstance(d.get("t"), (int, float)) and max(avant) < d["t"] else 0,
+               "run_id": ligne["run_id"], "run_index": i, "week": week, "mode": ligne.get("mode") or nom_mode.split("-")[0],
                "dossier": nom_mode, "gate": ligne.get("gate"), "hunter_mode": ligne.get("hunter_mode"), "rank": ligne.get("rank"),
                "player": ligne.get("player"), "channel_id": ligne.get("channel_id"),
                "video_id": d.get("video_id") or ligne.get("video_id"), "t_result": d.get("t"), "team": d.get("team"),

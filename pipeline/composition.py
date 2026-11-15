@@ -125,14 +125,15 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
     def lire(ctx):
         vid, t_fin = ctx["video_id"], ctx.get("t_result")
         fin = min(int(t_fin) if t_fin else e["fenetre_max_s"], e["fenetre_max_s"])
-        cle = (vid, fin)
+        debut = min(int(ctx.get("t_debut") or 0), max(fin - 1, 0))      # run 2 d'une même vidéo : on repart du résultat de la run 1
+        cle = (vid, debut, fin)
         if cle not in cache:
             try:
                 with tempfile.TemporaryDirectory() as tmp:
                     journal(f"  composition {vid} : téléchargement…")
                     chemin = outils.telecharger(vid, tmp)
                     images_t, autres = [], []
-                    for t, png in outils.images(chemin, [(0, fin, e["pas_s"])], tmp, "c"):
+                    for t, png in outils.images(chemin, [(debut, fin - debut, e["pas_s"])], tmp, "c"):
                         with Image.open(png) as im:
                             rgb = im.convert("RGB")
                         images_t.append((t, rgb))

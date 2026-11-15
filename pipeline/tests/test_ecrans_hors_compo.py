@@ -159,6 +159,14 @@ def test_ocr_reel_ka_katakana_et_valeurs_refusees():
     assert a == {"strength": 19, "intelligence": 1335}, a          # vitality/agility/perception : non lus, jamais devinés
 
 
+def test_t_debut_vidéo_à_deux_runs():
+    """Vidéo à 2 runs : la run 2 repart du résultat de la run 1 (ses écrans ne sont pas ceux de la run 1) ; autre vidéo ou t absent : 0."""
+    import builds as B
+    ligne = {"run_id": "r", "mode": "poc", "video_id": "V", "runs_detail": [{"t": 120}, {"t": 300}, {"video_id": "W", "t": 50}, {}]}
+    assert [c["t_debut"] for c in B.contextes("poc", ligne, "2026-11-12")] == [0, 120, 0, 0]
+    assert [c["t_debut"] for c in B.contextes("poc", {"run_id": "r", "video_id": "V"}, "s")] == [0]
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):
