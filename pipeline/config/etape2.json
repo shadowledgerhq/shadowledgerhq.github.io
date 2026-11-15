@@ -1777,27 +1777,28 @@
     ]
    },
    "cartes": {
-    "_doc": "[À CONFIRMER sur une capture JA] mots JA attendus par carte (un mot par groupe suffit, tous les groupes présents, aucun mot de `sans`) + un `N %` parmi les valeurs des effets de la base. Seuls 攻撃力 防御力 クリティカル 継承者 sont vus sur de vrais écrans JA ; les autres mots sont des hypothèses. Ajouter une entrée pour toute nouvelle carte de la semaine.",
+    "_doc": "Mots JA lus sur la capture réelle de v0tuXJNxudk (15/11) : un mot par groupe suffit, tous les groupes présents, aucun mot de `sans`, et un `N%` parmi les valeurs des effets de la base. Ajouter une entrée pour toute nouvelle carte de la semaine.",
     "poc-cap-c1-atk-def-hp": {
      "mots": [
       [
-       "攻撃力",
-       "攻撃"
+       "攻撃力"
       ],
       [
-       "防御力",
-       "防御"
+       "防御力"
       ],
       [
        "HP"
       ]
+     ],
+     "sans": [
+      "継承者"
      ]
     },
     "poc-cap-c1-overload-dmg": {
      "mots": [
       [
-       "過負荷",
-       "オーバーロード"
+       "オーバーロード",
+       "オーバロード"
       ]
      ]
     },
@@ -1805,17 +1806,17 @@
      "mots": [
       [
        "クリティカル"
-      ],
-      [
-       "ダメージ"
       ]
      ]
     },
     "poc-cap-c2-infusion": {
      "mots": [
       [
-       "付与"
+       "注入"
       ]
+     ],
+     "sans": [
+      "スキル"
      ]
     },
     "poc-cap-c2-element-dmg": {
@@ -1828,16 +1829,15 @@
       ]
      ],
      "sans": [
-      "付与",
-      "過負荷",
-      "オーバーロード"
+      "注入",
+      "オーバー"
      ]
     },
     "poc-cap-c2-overload-dmg": {
      "mots": [
       [
-       "過負荷",
-       "オーバーロード"
+       "オーバーロード",
+       "オーバロード"
       ]
      ]
     },
@@ -1854,7 +1854,7 @@
        "スキル"
       ],
       [
-       "付与"
+       "注入"
       ]
      ]
     },
@@ -1869,8 +1869,75 @@
      ]
     }
    },
-   "fenetre_lignes": 3,
-   "lectures_max": 2
+   "lectures_max": 2,
+   "zones": {
+    "_doc": "Fractions (x, y, largeur, hauteur) mesurées sur une capture 1154×651 de v0tuXJNxudk (client JA, popup 討伐支援) ; cases[colonne][ligne]. Sélection = ligne la plus lumineuse de la colonne (cartes choisies éclairées : ~80 contre ~35).",
+    "cases": [
+     [
+      [
+       0.175,
+       0.205,
+       0.22,
+       0.15
+      ],
+      [
+       0.175,
+       0.41,
+       0.22,
+       0.15
+      ],
+      [
+       0.175,
+       0.615,
+       0.22,
+       0.15
+      ]
+     ],
+     [
+      [
+       0.468,
+       0.205,
+       0.208,
+       0.15
+      ],
+      [
+       0.468,
+       0.41,
+       0.208,
+       0.15
+      ],
+      [
+       0.468,
+       0.615,
+       0.208,
+       0.15
+      ]
+     ],
+     [
+      [
+       0.748,
+       0.205,
+       0.21,
+       0.15
+      ],
+      [
+       0.748,
+       0.41,
+       0.21,
+       0.15
+      ],
+      [
+       0.748,
+       0.615,
+       0.21,
+       0.15
+      ]
+     ]
+    ],
+    "ratio_selection": 1.5,
+    "langues": "jpn"
+   },
+   "fenetre_lignes": 3
   }
  },
  "hors_compo": {

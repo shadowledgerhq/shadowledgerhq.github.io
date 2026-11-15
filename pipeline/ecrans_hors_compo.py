@@ -165,39 +165,41 @@ def lire_gemmes(texte, cfg):
     return {"colors": couleurs, "bonuses": bonus}
 
 
-def lire_subjugation(texte, db, cfg):
-    """Écran `討伐支援` (soutien de subjugation, POC) : 9 cartes en 3 colonnes (1 choix par colonne). Chaque carte de la base ayant une entrée
-    `ecrans.subjugation.cartes` est cherchée dans une fenêtre de 1 à `fenetre_lignes` lignes consécutives : tous les groupes de mots, aucun mot
-    de `sans`, et un `N%` parmi les valeurs de ses effets (`(?<!\\d)N(?!\\d)`). Plusieurs cartes pour la même fenêtre → ambiguë, jamais devinée.
-    Sélectionnée = **1re ligne de chaque colonne** (ordre de lecture ; vue sur v0tuXJNxudk, [À CONFIRMER] : le jeu ne l'écrit pas en texte).
-    Retourne {"ids": [id colonne 1, 2, 3] (None si non lue), "cartes": [{id, colonne, ligne}], "ambigues": [lignes], "notes": [...]}."""
-    e = cfg["ecrans"]["subjugation"]
-    cartes = {k: v for k, v in (e.get("cartes") or {}).items() if not k.startswith("_")}
-    fen = max(1, int(e.get("fenetre_lignes", 3)))
-    lignes = [_n(l) for l in _lignes(texte)]
-    trouvees = {}                                  # id -> (ligne de début, taille)
+def _carte_correspond(f, c, valeurs):
+    """Texte normalisé `f` = la carte décrite par la config `c` : tous les groupes de mots, aucun mot de `sans`, un `N%` des `valeurs`."""
+    groupes = [[_n(m) for m in g] for g in c.get("mots") or []]
+    sans = [_n(m) for m in c.get("sans") or []]
+    rv = re.compile(r"(?<![\d.,])(?:" + "|".join(str(v) for v in sorted(valeurs)) + r")(?:[.,]0)?[%％]")
+    return bool(groupes) and all(any(m in f for m in g) for g in groupes) and not any(m in f for m in sans) and bool(rv.search(f))
+
+
+def _candidates_subjugation(db, cfg):
+    """[(id, config carte, valeurs, colonne)] des cartes de la base ayant des mots dans `ecrans.subjugation.cartes`."""
+    cartes = {k: v for k, v in (cfg["ecrans"]["subjugation"].get("cartes") or {}).items() if not k.startswith("_")}
+    sortie = []
     for ident, c in cartes.items():
         entree = (db.get("subjugation_support") or {}).get(ident)
-        if not entree:
-            continue
-        valeurs = {int(abs(x["value"])) for x in entree.get("effects") or [] if isinstance(x.get("value"), (int, float))}
-        if not valeurs:
-            continue
-        groupes = [[_n(m) for m in g] for g in c.get("mots") or []]
-        sans = [_n(m) for m in c.get("sans") or []]
-        rv = re.compile(r"(?<![\d.,])(?:" + "|".join(str(v) for v in sorted(valeurs)) + r")(?:[.,]0)?[%％]")
+        valeurs = {int(abs(x["value"])) for x in (entree or {}).get("effects") or [] if isinstance(x.get("value"), (int, float))}
+        if entree and valeurs:
+            sortie.append((ident, c, valeurs, entree.get("column")))
+    return sortie
+
+
+def lire_subjugation(texte, db, cfg):
+    """Écran `討伐支援`, texte de la page entière (repli : les 3 colonnes peuvent se mélanger ligne à ligne, préférer `lire_subjugation_zone`).
+    Chaque carte est cherchée dans une fenêtre de 1 à `fenetre_lignes` lignes consécutives. Ambiguë → jamais devinée. Sélectionnée = 1re ligne
+    de chaque colonne (ordre de lecture). Retourne {"ids": [col 1, 2, 3], "cartes": [{id, colonne, ligne}], "ambigues": [lignes], "notes": [...]}."""
+    fen = max(1, int(cfg["ecrans"]["subjugation"].get("fenetre_lignes", 3)))
+    lignes = [_n(l) for l in _lignes(texte)]
+    trouvees = {}
+    for ident, c, valeurs, _ in _candidates_subjugation(db, cfg):
         for taille in range(1, fen + 1):
-            ok = None
-            for i in range(0, len(lignes) - taille + 1):
-                f = "".join(lignes[i:i + taille])
-                if groupes and all(any(m in f for m in g) for g in groupes) and not any(m in f for m in sans) and rv.search(f):
-                    ok = i
-                    break
+            ok = next((i for i in range(0, len(lignes) - taille + 1) if _carte_correspond("".join(lignes[i:i + taille]), c, valeurs)), None)
             if ok is not None:
                 trouvees[ident] = (ok, taille)
                 break
     par_fenetre = {}
-    for ident, (i, t) in trouvees.items():
+    for ident, (i, _) in trouvees.items():
         par_fenetre.setdefault(i, []).append(ident)
     ambigues = sorted(i for i, l in par_fenetre.items() if len(l) > 1)
     notes = [f"soutien de subjugation : carte ambiguë à la ligne {i + 1} ({', '.join(sorted(par_fenetre[i]))}), non retenue" for i in ambigues]
@@ -207,6 +209,38 @@ def lire_subjugation(texte, db, cfg):
         c_col = sorted((x for x in lues if x["colonne"] == col), key=lambda x: x["ligne"])
         ids.append(c_col[0]["id"] if c_col else None)
     return {"ids": ids, "cartes": sorted(lues, key=lambda x: x["ligne"]), "ambigues": ambigues, "notes": notes}
+
+
+def lire_subjugation_zone(z, db, cfg):
+    """Lecture par cases (`z` = {"cartes": [[texte × 3 lignes] × 3 colonnes], "lum": [[luminance × 3] × 3]}, voir `composition._lire_zones`).
+    Carte de la case = la carte de la base de CETTE colonne qui correspond (une seule, sinon non lue). Sélectionnée = ligne la plus lumineuse de
+    la colonne si elle l'est `ratio_selection` fois plus que la médiane des autres, sinon 1re ligne (note). Retourne comme `lire_subjugation`."""
+    e = cfg["ecrans"]["subjugation"]
+    ratio = (e.get("zones") or {}).get("ratio_selection", 1.5)
+    cands = _candidates_subjugation(db, cfg)
+    ids, lues, notes = [], [], []
+    for col in (1, 2, 3):
+        textes = (z.get("cartes") or [[]] * 3)[col - 1]
+        lum = (z.get("lum") or [[]] * 3)[col - 1]
+        ligne_ids = []
+        for ligne, tx in enumerate(textes):
+            f = _n(tx)
+            ok = [i for i, c, v, cc in cands if cc == col and _carte_correspond(f, c, v)]
+            ligne_ids.append(ok[0] if len(ok) == 1 else None)
+            if len(ok) > 1:
+                notes.append(f"soutien de subjugation : colonne {col} ligne {ligne + 1} ambiguë ({', '.join(ok)}), non retenue")
+            if ok and len(ok) == 1:
+                lues.append({"id": ok[0], "colonne": col, "ligne": ligne})
+        sel = 0
+        if len(lum) == len(textes) and len(lum) >= 2:
+            haut = max(range(len(lum)), key=lambda i: lum[i])
+            autres = sorted(l for i, l in enumerate(lum) if i != haut)
+            if lum[haut] >= ratio * max(autres[len(autres) // 2], 1):
+                sel = haut
+            else:
+                notes.append(f"soutien de subjugation : colonne {col}, sélection non détectée (luminosité), 1re ligne supposée")
+        ids.append(ligne_ids[sel] if ligne_ids else None)
+    return {"ids": ids, "cartes": lues, "ambigues": [], "notes": notes}
 
 
 def entree_col(db, ident):
@@ -259,6 +293,12 @@ def integrer(obs, lectures, db, cfg):
             if sum(1 for i in r["ids"] if i) > sum(1 for i in (obs.get("subjugation_support") or []) if i):
                 obs["subjugation_support"] = r["ids"]
                 notes.append(f"soutien de subjugation lu par le texte : {sum(1 for i in r['ids'] if i)}/3 (1re ligne de chaque colonne supposée sélectionnée)")
+        elif ecran == "subjugation_zone":
+            r = lire_subjugation_zone(json.loads(texte), db, cfg)
+            notes += [n for n in r["notes"] if n not in notes]
+            if sum(1 for i in r["ids"] if i) >= sum(1 for i in (obs.get("subjugation_support") or []) if i) and any(r["ids"]):
+                obs["subjugation_support"] = r["ids"]
+                notes.append(f"soutien de subjugation lu par cases : {sum(1 for i in r['ids'] if i)}/3 (ligne la plus lumineuse de chaque colonne)")
         elif ecran == "attributs_zone":
             vus_zone.append(lire_attributs_zone(texte))
         elif ecran == "statues_zone":

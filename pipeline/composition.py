@@ -201,6 +201,21 @@ def _lire_zones(outils, cfg, ecran, png, t, journal, texte=""):
         journal(f"  statues zones t={t} : grades {grades}, sélection {selection}, options {list(zip(og, options))}")
         import json
         return [("statues_zone", json.dumps({"t": t, "grades": grades, "selection": selection, "options": options, "options_grades": og, "effet": effet}, ensure_ascii=False))]
+    zs = e.get("subjugation", {}).get("zones")
+    if ecran == "subjugation" and zs:
+        from PIL import Image
+        import json
+        with Image.open(png) as im:
+            gris = im.convert("L")
+            W, H = gris.size
+            def moyenne(zone):
+                x, y, l, h = zone
+                box = gris.crop((int(x * W), int(y * H), int((x + l) * W), int((y + h) * H)))
+                return sum(box.getdata()) / max(1, box.size[0] * box.size[1])
+            lum = [[round(moyenne(zn), 1) for zn in col] for col in zs["cases"]]
+        cartes = [[" ".join(_ocr_zone(outils, png, zn, zs.get("langues", "jpn"), 6, None, (None, 150)).split()) for zn in col] for col in zs["cases"]]
+        journal(f"  subjugation zones t={t} : luminosités {lum}, cartes {cartes}")
+        return [("subjugation_zone", json.dumps({"t": t, "cartes": cartes, "lum": lum}, ensure_ascii=False))]
     return []
 
 

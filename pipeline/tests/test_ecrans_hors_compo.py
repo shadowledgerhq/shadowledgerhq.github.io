@@ -266,22 +266,16 @@ def test_ocr_reel_statues_par_zone_une_statue_selectionnee_a_la_fois():
     assert (o[2]["label"], o[2]["value"]) == ("追加魔力", "190")
 
 
-# Texte SYNTHÉTIQUE (aucune capture lue : les mots JA 過負荷 / 付与 / 武器 / 通常攻撃 sont des hypothèses [À CONFIRMER]) : 9 cartes, ordre colonne par colonne.
-SUBJ_TXT = """討伐支援
-討伐熟練度
-攻撃力/防御力/最大HP +20%
-過負荷ダメージ +10%
-クリティカルダメージ +20%
-ストッカー/サポーター/バスターがチームにいる場合
-属性付与効果 +200%
-ストッカー/サポーター/バスターがチームにいる場合
-属性ダメージ +100%
-ストッカー/サポーター/バスターがチームにいる場合
-過負荷ダメージ +100%
-継承者 攻撃力/防御力/最大HP +200%
-スキル 属性付与 +500%
-通常攻撃/コア攻撃/武器スキル +500%
-1/1  1/1  1/1"""
+# Textes des 9 cartes lus À L'ŒIL sur la capture réelle de v0tuXJNxudk (client JA, popup 討伐支援, 15/11), colonne par colonne, ligne du haut d'abord.
+CARTES = [["攻撃力/防御力/HP20%増加", "[オーバーロード]ダメージ10%増加", "クリティカルダメージ20%増加"],
+          ["パーティに[エレメンタルスタッカー]を 編成した場合、[水篠旬/エレメンタルス タッカー]の[属性注入]効果200%増加",
+           "パーティに[サポーター]を編成した場合 、[水篠旬/サポーター]の属性ダメージ1 00%増加",
+           "パーティに[バスター]を編成した場合、[ 水篠旬/バスター]の[オーバロード]ダメ ージ100% 増加"],
+          ["継承者の攻撃力/防御力/最大HP200%増 加/与えるダメージ200%増加", "[水篠旬]の[属性注入]効果を持つスキル ダメージ500%増加",
+           "[水篠旬]の[通常攻撃/コア攻撃/武器スキル] ダメージ500%増加"]]
+SUBJ_TXT = "討伐支援\n討伐熟練度\n" + "\n".join(l for col in CARTES for l in col) + "\n1/1 1/1 1/1"
+IDS_1RE = ["poc-cap-c1-atk-def-hp", "poc-cap-c2-infusion", "poc-cap-c3-successor-stats"]
+LUM = [[75, 31, 32], [79, 38, 37], [87, 34, 34]]          # luminosités mesurées sur la capture : la ligne 1 (cartes choisies) est éclairée
 
 
 def _db_reelle():
@@ -289,27 +283,58 @@ def _db_reelle():
     return builds.charger_db(), builds.charger_config()
 
 
-def test_subjugation_premiere_ligne_de_chaque_colonne():
+def test_subjugation_texte_reel_par_cases():
     db, cfg = _db_reelle()
     assert E.detecter("討伐支援\n討伐熟練度", cfg) == "subjugation"
-    r = E.lire_subjugation(SUBJ_TXT, db, cfg)
-    assert r["ids"] == ["poc-cap-c1-atk-def-hp", "poc-cap-c2-infusion", "poc-cap-c3-successor-stats"], r
-    assert len(r["cartes"]) == 9 and not r["ambigues"]
+    r = E.lire_subjugation_zone({"cartes": CARTES, "lum": LUM}, db, cfg)
+    assert r["ids"] == IDS_1RE and len(r["cartes"]) == 9 and not r["notes"], r
     obs = {}
-    E.integrer(obs, [("subjugation", SUBJ_TXT)], db, cfg)
-    assert obs["subjugation_support"] == r["ids"]
+    import json
+    E.integrer(obs, [("subjugation_zone", json.dumps({"cartes": CARTES, "lum": LUM}))], db, cfg)
+    assert obs["subjugation_support"] == IDS_1RE
 
 
-def test_subjugation_carte_illisible_ou_ambigue_jamais_devinee():
+def test_subjugation_selection_par_luminosite_et_cartes_illisibles():
     db, cfg = _db_reelle()
-    texte = "討伐支援\n???? +20%\n過負荷ダメージ +10%\n継承者 +200% 継承者 属性付与 +200%"
-    r = E.lire_subjugation(texte, db, cfg)
-    assert r["ids"][0] == "poc-cap-c1-overload-dmg"        # la 1re carte lue de la colonne 1 (celle d'avant est illisible : non devinée)
-    assert r["ids"][1] is None
+    lum = [[30, 76, 31], [79, 38, 37], [87, 34, 34]]          # colonne 1 : la 2e ligne éclairée
+    r = E.lire_subjugation_zone({"cartes": CARTES, "lum": lum}, db, cfg)
+    assert r["ids"][0] == "poc-cap-c1-overload-dmg"
+    r = E.lire_subjugation_zone({"cartes": CARTES, "lum": [[50, 50, 50]] * 3}, db, cfg)       # rien d'éclairé : 1re ligne, note
+    assert r["ids"] == IDS_1RE and sum("sélection non détectée" in n for n in r["notes"]) == 3
+    illisible = [["????", CARTES[0][1], CARTES[0][2]], CARTES[1], CARTES[2]]
+    assert E.lire_subjugation_zone({"cartes": illisible, "lum": LUM}, db, cfg)["ids"][0] is None   # jamais devinée
+    assert E.lire_subjugation_zone({}, db, cfg)["ids"] == [None, None, None]
+
+
+def test_subjugation_texte_page_entiere_repli():
+    db, cfg = _db_reelle()
+    r = E.lire_subjugation(SUBJ_TXT, db, cfg)
+    assert r["ids"] == IDS_1RE and len(r["cartes"]) == 9, r
+    # 10 % n'est pas 100 % (c1 vs c2 surcharge)
+    assert E.lire_subjugation("[オーバーロード]ダメージ100%増加", db, cfg)["ids"] == [None, "poc-cap-c2-overload-dmg", None]
     assert E.lire_subjugation("", db, cfg)["ids"] == [None, None, None]
-    # 10 % n'est pas 100 % : la carte « +100% » ne vaut pas la carte « +10% »
-    r = E.lire_subjugation("過負荷ダメージ +100%", db, cfg)
-    assert r["ids"] == [None, "poc-cap-c2-overload-dmg", None]
+
+
+def test_subjugation_zones_sur_la_capture_reelle():
+    """`_lire_zones` sur la vraie capture (docs/essais/composition/poc_subjugation_ja.png) avec un faux OCR rendant le texte de la case."""
+    import composition, json
+    db, cfg = _db_reelle()
+    plat = [tx for col in CARTES for tx in col]
+    zones = [tuple(z) for col in cfg["ecrans"]["subjugation"]["zones"]["cases"] for z in col]
+
+    class Faux:
+        def recadrer(self, png, zone, k, seuil):
+            return tuple(zone)
+
+        def ocr(self, crop, langues, psm, timeout, extra=None):
+            return plat[zones.index(crop)]
+    png = Path(__file__).resolve().parents[2] / "docs" / "essais" / "composition" / "poc_subjugation_ja.png"
+    lus = composition._lire_zones(Faux(), cfg, "subjugation", png, 0, lambda m: None, "")
+    z = json.loads(lus[0][1])
+    assert [l[0] > 60 and l[1] < 50 and l[2] < 50 for l in z["lum"]] == [True] * 3, z["lum"]     # ligne 1 éclairée dans chaque colonne
+    obs = {}
+    E.integrer(obs, lus, db, cfg)
+    assert obs["subjugation_support"] == IDS_1RE
 
 
 def test_sonde_popup_sur_image_classee_composition():
