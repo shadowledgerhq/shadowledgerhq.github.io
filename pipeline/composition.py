@@ -79,6 +79,7 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
     h = cfg.get("hors_compo") or {}
     pas, maxi, langues = h.get("pas", 2), h.get("ocr_max", 120), h.get("langues", "jpn+eng")
     lus, vus, appels, vides, erreurs = [], {}, 0, 0, 0
+    _lire_hors_composition.resume = resume = []        # diagnostic : (t, début du texte lu) de chaque image passée à l'OCR rapide
     for i, (t, png) in enumerate(autres):
         if i % pas or appels >= maxi:
             continue
@@ -86,6 +87,7 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
         try:
             rapide = outils.ocr(outils.reduire(png, h.get("largeur", 960)), langues, 11, 40)
             vides += 0 if rapide.strip() else 1
+            resume.append((t, " | ".join(rapide.split())[:240]))
             ecran = H.detecter(rapide, cfg)
             if not ecran or vus.get(ecran, 0) >= 2:
                 continue
@@ -144,5 +146,5 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
             except Exception as ex:                      # 429, ffmpeg, vidéo privée : build `pas_de_build`, raison notée
                 cache[cle] = ({}, None, str(ex)[:160], [])
         images, t, err, ecrans = cache[cle]
-        return images, {"t_composition": t, "erreur": err, "ecrans": ecrans}
+        return images, {"t_composition": t, "erreur": err, "ecrans": ecrans, "ocr_resume": list(getattr(_lire_hors_composition, "resume", []))}
     return lire

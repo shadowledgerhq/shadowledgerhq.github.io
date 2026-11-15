@@ -637,6 +637,7 @@ def build_essai(video_id, mode, racine=RACINE, cfg=None, banque=None, fournisseu
         import ecrans_hors_compo
         ecrans_hors_compo.integrer(obs, extra["ecrans"], db, cfg)
     obs["t_composition"] = extra.get("t_composition")
+    obs["ocr_resume"] = extra.get("ocr_resume")
     if extra.get("erreur"):
         obs["notes"].append(f"images de composition non disponibles : {extra['erreur']}")
     elif not images:
@@ -645,7 +646,10 @@ def build_essai(video_id, mode, racine=RACINE, cfg=None, banque=None, fournisseu
     semaine, regles = regles_recentes(racine, mode)
     if regles is not None:
         obs["notes"].append(f"essai : règles de la semaine {semaine}")
-    return construire_build(ctx, obs, regles, cfg, db)
+    b = construire_build(ctx, obs, regles, cfg, db)
+    if obs.get("ocr_resume"):
+        b["ocr_resume"] = obs["ocr_resume"]                 # diagnostic de l'essai seulement : textes lus par l'OCR rapide
+    return b
 
 
 def rapport(week, builds, fichiers_pptx=()):
