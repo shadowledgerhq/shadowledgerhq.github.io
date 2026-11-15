@@ -1,0 +1,637 @@
+[
+  {
+    "id": "knight",
+    "name": {
+      "fr": "Chevalier",
+      "en": "Knight Figure",
+      "ko": "",
+      "ja": ""
+    },
+    "rarity": null,
+    "target": "hunters",
+    "slots": 3,
+    "grades": [
+      "E",
+      "D",
+      "C",
+      "B",
+      "A",
+      "S"
+    ],
+    "option_pool": [
+      {
+        "id": "attack-defense-pct",
+        "name": {
+          "fr": "Attaque et Défense (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "hp-pct",
+        "name": {
+          "fr": "PV (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-attack-defense",
+        "name": {
+          "fr": "Attaque et Défense supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-hp",
+        "name": {
+          "fr": "PV supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-rate",
+        "name": {
+          "fr": "Taux de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-damage",
+        "name": {
+          "fr": "Dégâts de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "defense-penetration",
+        "name": {
+          "fr": "Pénétration de défense",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "damage-increase",
+        "name": {
+          "fr": "Hausse des dégâts",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "additional-mp",
+        "name": {
+          "fr": "PM supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "option_pool_note": "Liste lue sur le panneau slagate (statue « Chevalier », « Exclusif à Chasseurs ») ; la liste des statues de Sung Jin Woo / Successeurs n'a pas été relevée.",
+    "unique_effect": {
+      "text": {
+        "fr": "Les Dégâts de coup critique des chasseurs augmentent de 30 %.",
+        "en": "Increases Hunter Critical Hit Damage by 30%."
+      },
+      "condition": "s'active lorsque les trois stats atteignent le rang B ou un rang supérieur (slagate)",
+      "effects": [
+        {
+          "stat": "crit_damage",
+          "value": 30,
+          "unit": "percent",
+          "target": "hunters",
+          "condition": "3 stats de la statue au rang B ou mieux",
+          "estimated": false
+        }
+      ]
+    },
+    "values_by_grade": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.15",
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+  },
+  {
+    "id": "conjuror",
+    "name": {
+      "fr": "Conjurateur",
+      "en": "Conjuror Figure",
+      "ko": "",
+      "ja": ""
+    },
+    "rarity": null,
+    "target": "sung_jinwoo_successor",
+    "slots": 3,
+    "grades": [
+      "E",
+      "D",
+      "C",
+      "B",
+      "A",
+      "S"
+    ],
+    "option_pool": [
+      {
+        "id": "attack-defense-pct",
+        "name": {
+          "fr": "Attaque et Défense (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "hp-pct",
+        "name": {
+          "fr": "PV (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-attack-defense",
+        "name": {
+          "fr": "Attaque et Défense supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-hp",
+        "name": {
+          "fr": "PV supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-rate",
+        "name": {
+          "fr": "Taux de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-damage",
+        "name": {
+          "fr": "Dégâts de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "defense-penetration",
+        "name": {
+          "fr": "Pénétration de défense",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "damage-increase",
+        "name": {
+          "fr": "Hausse des dégâts",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "additional-mp",
+        "name": {
+          "fr": "PM supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "option_pool_note": "Liste lue sur le panneau slagate (statue « Chevalier », « Exclusif à Chasseurs ») ; la liste des statues de Sung Jin Woo / Successeurs n'a pas été relevée.",
+    "unique_effect": {
+      "text": {
+        "fr": "Les Dégâts de coup critique de Sung Jinwoo et des Successeurs augmentent de 30 %.",
+        "en": "Increases Sung Jinwoo and Successor Critical Hit Damage by 30%."
+      },
+      "condition": "s'active lorsque les trois stats atteignent le rang B ou un rang supérieur (slagate)",
+      "effects": [
+        {
+          "stat": "crit_damage",
+          "value": 30,
+          "unit": "percent",
+          "target": "sung_jinwoo_successor",
+          "condition": "3 stats de la statue au rang B ou mieux",
+          "estimated": false
+        }
+      ]
+    },
+    "values_by_grade": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.15",
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+  },
+  {
+    "id": "white-flames",
+    "name": {
+      "fr": "Flammes blanches",
+      "en": "Figure of White Flames",
+      "ko": "",
+      "ja": ""
+    },
+    "rarity": null,
+    "target": "hunters",
+    "slots": 3,
+    "grades": [
+      "E",
+      "D",
+      "C",
+      "B",
+      "A",
+      "S"
+    ],
+    "option_pool": [
+      {
+        "id": "attack-defense-pct",
+        "name": {
+          "fr": "Attaque et Défense (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "hp-pct",
+        "name": {
+          "fr": "PV (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-attack-defense",
+        "name": {
+          "fr": "Attaque et Défense supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-hp",
+        "name": {
+          "fr": "PV supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-rate",
+        "name": {
+          "fr": "Taux de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-damage",
+        "name": {
+          "fr": "Dégâts de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "defense-penetration",
+        "name": {
+          "fr": "Pénétration de défense",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "damage-increase",
+        "name": {
+          "fr": "Hausse des dégâts",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "additional-mp",
+        "name": {
+          "fr": "PM supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "option_pool_note": "Liste lue sur le panneau slagate (statue « Chevalier », « Exclusif à Chasseurs ») ; la liste des statues de Sung Jin Woo / Successeurs n'a pas été relevée.",
+    "unique_effect": {
+      "text": {
+        "fr": "Les dégâts de compétence de base des chasseurs augmentent de 50 %.",
+        "en": "Increases Hunter Basic Skill Damage by 50%."
+      },
+      "condition": "s'active lorsque les trois stats atteignent le rang B ou un rang supérieur (slagate)",
+      "effects": [
+        {
+          "stat": "basic_skill_damage",
+          "value": 50,
+          "unit": "percent",
+          "target": "hunters",
+          "condition": "3 stats de la statue au rang B ou mieux",
+          "estimated": false
+        }
+      ]
+    },
+    "values_by_grade": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.15",
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+  },
+  {
+    "id": "transfiguration",
+    "name": {
+      "fr": "Transfiguration",
+      "en": "Figure of Transfiguration",
+      "ko": "",
+      "ja": ""
+    },
+    "rarity": null,
+    "target": "sung_jinwoo_successor",
+    "slots": 3,
+    "grades": [
+      "E",
+      "D",
+      "C",
+      "B",
+      "A",
+      "S"
+    ],
+    "option_pool": [
+      {
+        "id": "attack-defense-pct",
+        "name": {
+          "fr": "Attaque et Défense (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "hp-pct",
+        "name": {
+          "fr": "PV (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-attack-defense",
+        "name": {
+          "fr": "Attaque et Défense supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-hp",
+        "name": {
+          "fr": "PV supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-rate",
+        "name": {
+          "fr": "Taux de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-damage",
+        "name": {
+          "fr": "Dégâts de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "defense-penetration",
+        "name": {
+          "fr": "Pénétration de défense",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "damage-increase",
+        "name": {
+          "fr": "Hausse des dégâts",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "additional-mp",
+        "name": {
+          "fr": "PM supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "option_pool_note": "Liste lue sur le panneau slagate (statue « Chevalier », « Exclusif à Chasseurs ») ; la liste des statues de Sung Jin Woo / Successeurs n'a pas été relevée.",
+    "unique_effect": {
+      "text": {
+        "fr": "Les dégâts de compétence de base de Sung Jinwoo et des Successeurs augmentent de 50 %.",
+        "en": "Increases Sung Jinwoo and Successor Basic Skill Damage by 50%."
+      },
+      "condition": "s'active lorsque les trois stats atteignent le rang B ou un rang supérieur (slagate)",
+      "effects": [
+        {
+          "stat": "basic_skill_damage",
+          "value": 50,
+          "unit": "percent",
+          "target": "sung_jinwoo_successor",
+          "condition": "3 stats de la statue au rang B ou mieux",
+          "estimated": false
+        }
+      ]
+    },
+    "values_by_grade": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.15",
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+  },
+  {
+    "id": "steel",
+    "name": {
+      "fr": "Acier",
+      "en": "Figure of Steel",
+      "ko": "",
+      "ja": ""
+    },
+    "rarity": null,
+    "target": "hunters",
+    "slots": 3,
+    "grades": [
+      "E",
+      "D",
+      "C",
+      "B",
+      "A",
+      "S"
+    ],
+    "option_pool": [
+      {
+        "id": "attack-defense-pct",
+        "name": {
+          "fr": "Attaque et Défense (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "hp-pct",
+        "name": {
+          "fr": "PV (%)",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-attack-defense",
+        "name": {
+          "fr": "Attaque et Défense supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "flat-hp",
+        "name": {
+          "fr": "PV supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-rate",
+        "name": {
+          "fr": "Taux de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "crit-damage",
+        "name": {
+          "fr": "Dégâts de coup critique",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "defense-penetration",
+        "name": {
+          "fr": "Pénétration de défense",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "damage-increase",
+        "name": {
+          "fr": "Hausse des dégâts",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      },
+      {
+        "id": "additional-mp",
+        "name": {
+          "fr": "PM supplémentaires",
+          "en": "",
+          "ja": "",
+          "ko": ""
+        }
+      }
+    ],
+    "option_pool_note": "Liste lue sur le panneau slagate (statue « Chevalier », « Exclusif à Chasseurs ») ; la liste des statues de Sung Jin Woo / Successeurs n'a pas été relevée.",
+    "unique_effect": {
+      "text": {
+        "fr": "Les dégâts de Surcharge des chasseurs augmentent de 30 %.",
+        "en": "Increases Hunter Overload Damage by 30%."
+      },
+      "condition": "s'active lorsque les trois stats atteignent le rang B ou un rang supérieur (slagate)",
+      "effects": [
+        {
+          "stat": "overload_damage",
+          "value": 30,
+          "unit": "percent",
+          "target": "hunters",
+          "condition": "3 stats de la statue au rang B ou mieux",
+          "estimated": false
+        }
+      ]
+    },
+    "values_by_grade": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.15",
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+  }
+]

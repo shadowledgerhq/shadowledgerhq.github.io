@@ -37,6 +37,8 @@ Valeur calculée et non lue dans le jeu : `"estimated": true`.
 | `blessings.json` | `effects`, `conditions`, `values_by_level` |
 | `subjugation_support.json` | `column` (1-3), `effects`, `condition` (rôle requis), `recommended` ; sert au POC |
 | `proof_modifiers.json` | `effects`, `max_level`, `cost_per_level`, `boss` (si propre à un boss) ; sert au HOTM (« 단련의 증명 ») |
+| `statues.json` | (proposé le 15/11/2026, demande discussion 2) `target` (`hunters` / `sung_jinwoo_successor`), `slots` (3), `grades` (E→S), `option_pool` (9 options), `unique_effect` (texte FR/EN, effet structuré, condition : 3 stats au rang B ou mieux), `values_by_grade` (vide : non relevé). Nom EN officiel Netmarble : « Figure ». |
+| `gems.json` | (proposé le 15/11/2026, demande discussion 2) `kind` (`bonus_stat`, plus tard `color`), `color`, `levels`, `effects`, `values_by_level`. Seuls les types de bonus sont relevés (ATK %, DEF %, HP %, pénétration, DCC, précision, MPCR, PM supplémentaires, ATK/DEF/HP supplémentaires) ; couleurs et niveaux : à fournir (captures de l'écran de gemmes). |
 | `patches.json` | `version`, `date`, `url` (notes Netmarble), `changes[]` (`category`, `id`, `change`) |
 
 Les champs sont à confirmer sur la source avant la saisie de chaque catégorie.
@@ -52,3 +54,7 @@ avec `source` et `verified_at`. Pour le HOTM, un bloc par sous-mode (`hotm_sjw`,
 
 stats → patches → artifact_sets → cores → hunters → weapons → shadows → successors → sjw_skills → blessings → subjugation_support → proof_modifiers.
 Les icônes sont ajoutées avec chaque catégorie.
+
+
+## Noms JA et KO (15/11/2026)
+`name.ja` et `name.ko` sont facultatifs ; renseignés seulement quand une source les donne (champ `name_ja_source` / `name_ko_source`). Chasseurs : depuis slagate.com (JA 38/66, KO 60/66, les autres n'étant pas localisés par le site). Armes, ombres, successeurs : aucune source bilingue citable pour l'instant : vides. Runes : JA/KO depuis `GET /api/references`.

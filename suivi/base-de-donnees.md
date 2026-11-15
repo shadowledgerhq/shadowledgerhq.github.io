@@ -1,4 +1,4 @@
-# SUIVI — 9 Base de données — 2026-11-14
+# SUIVI — 9 Base de données — 2026-11-15
 ## Fait
 - Schémas, `stats.json` (noms coréens), écrans documentés, règles par semaine (`data/rules/`).
 - Les 12 catégories de `data/db/` existent. Sources : wiki Fandom (EN, CC BY-SA, non vérifié en jeu, scripts `tools/parse_fandom_*.py`), notes Netmarble, captures d'Alexis, slagate (voir décisions).
@@ -8,6 +8,7 @@
 - Décisions d'Alexis (13/11) : wiki Fandom accepté ; lecture de pages et routes GET publiques de slagate OK (pas `/api/query`, pas d'images en masse sauf icônes autorisées) ; icônes autorisées.
 - Soutien de subjugation : semaine 12/11 (capture) ; preuves HOTM : semaine 05/11 seulement.
 - 14/11 : spec étape 2 v2 reçue (destinée à la discussion 8, points §5 n°5, 12, 14 pour nous). Faits (`tools/fetch_icons_extra.py`) : successeurs 3/3 avec nom FR + icône (`data/icons/successors/`, dossier créé) ; 9 compétences QTE de SJW ajoutées à `sjw_skills.json` (`type: qte`, nom FR, icône, éléments ; EN vide). `check_db` : 558 avertissements, 0 erreur.
+- 15/11, demande discussion 2 (spec v3 §5 n°15-17) : noms JA/KO des chasseurs (slagate : JA 38/66, KO 60/66 ; `tools/apply_ja_ko.py`) ; `statues.json` (5 statues = « Figure » chez Netmarble : nom FR/EN, cible, 3 options à 9 choix, grades E→S, effet unique ; sans valeurs par rang) ; `gems.json` (11 types de bonus du calculateur slagate, couleurs/niveaux vides) ; schéma mis à jour. Rien pour JA/KO des armes, ombres, successeurs (pas de source bilingue).
 - `docs/REFERENCE_ECRANS_BOT.md` : section « Écran de résultat (client anglais, capture du 13/11/2026) » ajoutée (phases cumulées, score = chrono de la dernière phase).
 - Recoupement avec le patch du 22/10 (`tools/crosscheck_patches.py`, champs `patch_adjustments`) : 8 chasseurs et 2 armes exclusives déjà à jour sur le wiki (pages ≥ 22/10) ; 4 chasseurs (portée de burst) non vérifiables ; 9 chefs d'ombre : valeurs du wiki = avant patch, valeurs après patch ajoutées (rang General ; Iron/Tank = effet en plus). Plafonds de niveau ajoutés : noyaux 25, armes 130, ombres 195. Pierres : 7 valeurs du wiki ≠ texte FR de l'API (Lightning Speed, Intuit, Irresistible Force, Sandbag, Double-edged Sword, Chains of Blood, Irreversible Road) : wiki périmé, cohérent avec les buffs de juin.
 ## En cours
@@ -21,6 +22,7 @@
 - Vides : `main_stat_options` des sets, `weapon_type` des chasseurs, valeurs par niveau, stats FR/EN, 86 armes de SJW sans FR/icône, 8 sets d'événement.
 - Script de contrôle (ids uniques, FR+EN, source, date, icône) : à demander à la discussion 8.
 ## Besoin d'Alexis
+- Captures de l'écran des gemmes (5 couleurs, niveaux, bonus) et de statues pour les valeurs par rang ; noms JA/KO des armes, ombres, successeurs (capture du jeu JA/KO).
 - Une capture par semaine du soutien de subjugation et des preuves HOTM (pas de preuves 12/11 : Alexis n'en a pas).
 - Captures du GB ; règles POC/GB (05/11, 12/11) et HOTM 05/11 pour `data/rules/`.
 ## Demandes de modif du skill

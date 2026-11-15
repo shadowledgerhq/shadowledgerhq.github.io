@@ -1,0 +1,233 @@
+[
+  {
+    "id": "gem-bonus-atk-pct",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "Attaque (%)",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "ATK %",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+  },
+  {
+    "id": "gem-bonus-def-pct",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "Défense (%)",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "DEF %",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+  },
+  {
+    "id": "gem-bonus-hp-pct",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "PV (%)",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "HP %",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+  },
+  {
+    "id": "gem-bonus-defense-penetration",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "Pénétration de défense",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "Pén. Déf.",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+  },
+  {
+    "id": "gem-bonus-dcc",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "DCC",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "DCC",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer."
+  },
+  {
+    "id": "gem-bonus-accuracy",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "Précision",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "Précision",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+  },
+  {
+    "id": "gem-bonus-mpcr",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "MPCR",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "MPCR",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer."
+  },
+  {
+    "id": "gem-bonus-additional-mp",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "PM supplémentaires",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "PM suppl.",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+  },
+  {
+    "id": "gem-bonus-flat-attack",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "Attaque supplémentaire",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "ATK suppl.",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+  },
+  {
+    "id": "gem-bonus-flat-defense",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "Défense supplémentaire",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "DEF suppl.",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+  },
+  {
+    "id": "gem-bonus-flat-hp",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "PV supplémentaires",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": "HP suppl.",
+    "color": null,
+    "levels": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026)",
+    "verified_at": "2026-11-15",
+    "game_version": null,
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises)."
+  }
+]

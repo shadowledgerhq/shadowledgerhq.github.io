@@ -218,7 +218,8 @@
     "name": {
       "fr": "Alicia Blanche",
       "en": "Alicia Blanche",
-      "ko": ""
+      "ko": "알리시아 블랑쉬",
+      "ja": "アリシア・ブランシュ"
     },
     "rarity": "ssr",
     "role": null,
@@ -416,14 +417,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "amamiya-mirei",
     "name": {
       "fr": "Amamiya Mirei",
       "en": "Amamiya Mirei",
-      "ko": ""
+      "ko": "아마미야 미레이",
+      "ja": "雨宮美玲"
     },
     "rarity": "ssr",
     "role": null,
@@ -621,14 +625,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "anna-ruiz",
     "name": {
       "fr": "Anna Ruiz",
       "en": "Anna Ruiz",
-      "ko": ""
+      "ko": "안나 루이즈",
+      "ja": "アンナ・ルイス"
     },
     "rarity": "sr",
     "role": null,
@@ -826,14 +833,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "antoine-martinez",
     "name": {
       "fr": "Antoine Martinez",
       "en": "Antoine Martinez",
-      "ko": ""
+      "ko": "앙투안 마르티네즈",
+      "ja": "アントワーヌ・マルティネス"
     },
     "rarity": "ssr",
     "role": "stacker",
@@ -1031,14 +1041,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "baek-yoonho",
     "name": {
       "fr": "Baek Yunho",
       "en": "Baek Yoonho",
-      "ko": ""
+      "ko": "백윤호"
     },
     "rarity": "ssr",
     "role": null,
@@ -1245,14 +1257,15 @@
         "wiki_reflects_patch": true,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
-    ]
+    ],
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "cha-hae-in",
     "name": {
       "fr": "Cha Hae-In",
       "en": "Cha Hae-In",
-      "ko": ""
+      "ko": "차해인"
     },
     "rarity": "ssr",
     "role": null,
@@ -1450,14 +1463,15 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "cha-hae-in-the-pure-sword-princess",
     "name": {
       "fr": "Cha Hae-In, la Princesse épéiste immaculée",
       "en": "Cha Hae-In, the Pure Sword Princess",
-      "ko": ""
+      "ko": "차해인"
     },
     "rarity": "ssr",
     "role": null,
@@ -1664,14 +1678,16 @@
         "wiki_reflects_patch": true,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
-    ]
+    ],
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "charlotte",
     "name": {
       "fr": "Charlotte",
       "en": "Charlotte",
-      "ko": ""
+      "ko": "샬럿",
+      "ja": "シャーロット"
     },
     "rarity": "ssr",
     "role": null,
@@ -1869,14 +1885,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "choi-jong-in",
     "name": {
       "fr": "Choi Jong-In",
       "en": "Choi Jong-In",
-      "ko": ""
+      "ko": "최종인"
     },
     "rarity": "ssr",
     "role": null,
@@ -2083,14 +2101,16 @@
         "wiki_reflects_patch": true,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
-    ]
+    ],
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "christopher-reed",
     "name": {
       "fr": "Christopher Reed",
       "en": "Christopher Reed",
-      "ko": ""
+      "ko": "크리스토퍼 리드",
+      "ja": "クリストファー・リード"
     },
     "rarity": "ssr",
     "role": "stacker",
@@ -2288,7 +2308,9 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "diana-lopez",
@@ -2509,7 +2531,8 @@
     "name": {
       "fr": "Elena Renault",
       "en": "Elena Renault",
-      "ko": ""
+      "ko": "엘레나 르노",
+      "ja": "エレナ・ルノー"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -2716,14 +2739,17 @@
         "wiki_reflects_patch": true,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
-    ]
+    ],
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "emma-laurent",
     "name": {
       "fr": "Emma Laurent",
       "en": "Emma Laurent",
-      "ko": ""
+      "ko": "엠마 로랑",
+      "ja": "エマ・ローラン"
     },
     "rarity": "ssr",
     "role": null,
@@ -2930,14 +2956,17 @@
         "wiki_reflects_patch": true,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
-    ]
+    ],
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "esil-radiru",
     "name": {
       "fr": "Esil Radir",
       "en": "Esil Radiru",
-      "ko": ""
+      "ko": "에실 라디르",
+      "ja": "エシル・ラディール"
     },
     "rarity": "ssr",
     "role": null,
@@ -3135,14 +3164,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026) ; rapprochement par ressemblance de nom (esil-radir), à confirmer.",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "fern",
     "name": {
       "fr": "Fern",
       "en": "Fern",
-      "ko": ""
+      "ko": "페른",
+      "ja": "フェルン"
     },
     "rarity": "ssr",
     "role": null,
@@ -3340,14 +3372,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "frieren",
     "name": {
       "fr": "Frieren",
       "en": "Frieren",
-      "ko": ""
+      "ko": "프리렌",
+      "ja": "フリーレン"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -3545,14 +3580,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "gina",
     "name": {
       "fr": "Gina",
       "en": "Gina",
-      "ko": ""
+      "ko": "지나",
+      "ja": "ジーナ"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -3750,14 +3788,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "go-gunhee",
     "name": {
       "fr": "Go Gunhee",
       "en": "Go Gunhee",
-      "ko": ""
+      "ko": "고건희"
     },
     "rarity": "ssr",
     "role": null,
@@ -3955,14 +3995,15 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "goto-ryuji",
     "name": {
       "fr": "Goto Ryuji",
       "en": "Goto Ryuji",
-      "ko": ""
+      "ko": "고토 류지"
     },
     "rarity": "ssr",
     "role": null,
@@ -4160,14 +4201,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "han-se-mi",
     "name": {
       "fr": "Han Se-Mi",
       "en": "Han Se-Mi",
-      "ko": ""
+      "ko": "한세미",
+      "ja": "千結五月女"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -4365,14 +4408,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "han-song-yi",
     "name": {
       "fr": "Han Song-Yi",
       "en": "Han Song-Yi",
-      "ko": ""
+      "ko": "한송이"
     },
     "rarity": "sr",
     "role": null,
@@ -4570,14 +4615,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "harper",
     "name": {
       "fr": "Harper",
       "en": "Harper",
-      "ko": ""
+      "ko": "하퍼",
+      "ja": "ハーパー"
     },
     "rarity": "ssr",
     "role": null,
@@ -4775,7 +4822,9 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "holy-guardian-barrier-go-gunhee",
@@ -4987,7 +5036,8 @@
     "name": {
       "fr": "Hwang Dongsoo",
       "en": "Hwang Dongsoo",
-      "ko": ""
+      "ko": "황동수",
+      "ja": "黄東秀"
     },
     "rarity": "ssr",
     "role": null,
@@ -5185,14 +5235,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "hwang-dongsuk",
     "name": {
       "fr": "Hwang Dongsuk",
       "en": "Hwang Dongsuk",
-      "ko": ""
+      "ko": "황동석",
+      "ja": "黄東石"
     },
     "rarity": "sr",
     "role": null,
@@ -5390,14 +5443,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "isla-wright",
     "name": {
       "fr": "Isla Wright",
       "en": "Isla Wright",
-      "ko": ""
+      "ko": "이슬라 라이트",
+      "ja": "アイラ・ライト"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -5595,14 +5651,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "jo-kyuhwan",
     "name": {
       "fr": "Jo Kyuhwan",
       "en": "Jo Kyuhwan",
-      "ko": ""
+      "ko": "조규환"
     },
     "rarity": "sr",
     "role": null,
@@ -5800,7 +5858,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "jung-yerim",
@@ -6012,7 +6071,7 @@
     "name": {
       "fr": "Kang Taeshik",
       "en": "Kang Taeshik",
-      "ko": ""
+      "ko": "강태식"
     },
     "rarity": "sr",
     "role": null,
@@ -6210,14 +6269,15 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "kim-chul",
     "name": {
       "fr": "Kim Chul",
       "en": "Kim Chul",
-      "ko": ""
+      "ko": "김철"
     },
     "rarity": "sr",
     "role": null,
@@ -6415,14 +6475,15 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "kim-sangshik",
     "name": {
       "fr": "Kim Sangshik",
       "en": "Kim Sangshik",
-      "ko": ""
+      "ko": "김상식"
     },
     "rarity": "sr",
     "role": null,
@@ -6620,14 +6681,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "laura-walker",
     "name": {
       "fr": "Laura Walker",
       "en": "Laura Walker",
-      "ko": ""
+      "ko": "로라 워커",
+      "ja": "ローラ・ウォーカー"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -6825,14 +6888,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "lee-bora",
     "name": {
       "fr": "Lee Bora",
       "en": "Lee Bora",
-      "ko": ""
+      "ko": "이보라",
+      "ja": "李宝羅"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -7030,7 +7096,9 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "lee-joohee",
@@ -7456,7 +7524,8 @@
     "name": {
       "fr": "Lennart Niermann",
       "en": "Lennart Niermann",
-      "ko": ""
+      "ko": "레나트 니어만",
+      "ja": "レナート・ニールマン"
     },
     "rarity": "ssr",
     "role": null,
@@ -7654,14 +7723,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "lim-tae-gyu",
     "name": {
       "fr": "Lim Taegyu",
       "en": "Lim Tae-Gyu",
-      "ko": ""
+      "ko": "임태규"
     },
     "rarity": "ssr",
     "role": null,
@@ -7859,14 +7930,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026) ; rapprochement wiki/slagate par ressemblance de nom (slug lim-taegyu), à confirmer.",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "liu-zhigang",
     "name": {
       "fr": "Liu Zhigang",
       "en": "Liu Zhigang",
-      "ko": ""
+      "ko": "류즈강",
+      "ja": "劉志剛"
     },
     "rarity": "ssr",
     "role": "buster",
@@ -8073,14 +8146,17 @@
         "wiki_reflects_patch": null,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
-    ]
+    ],
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "meilin-fisher",
     "name": {
       "fr": "Meilin Fisher",
       "en": "Meilin Fisher",
-      "ko": ""
+      "ko": "메이린 피셔",
+      "ja": "メイリン・フィッシャー"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -8287,14 +8363,17 @@
         "wiki_reflects_patch": true,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
-    ]
+    ],
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "meri-laine",
     "name": {
       "fr": "Meri Laine",
       "en": "Meri Laine",
-      "ko": ""
+      "ko": "메리 레인",
+      "ja": "メリ・レイン"
     },
     "rarity": "ssr",
     "role": "stacker",
@@ -8492,14 +8571,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "min-byung-gu",
     "name": {
       "fr": "Min Byung-Gu",
       "en": "Min Byung-Gu",
-      "ko": ""
+      "ko": "민병구",
+      "ja": "美濃部剛"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -8697,14 +8779,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "minnie",
     "name": {
       "fr": "Minnie",
       "en": "MINNIE",
-      "ko": ""
+      "ko": "민니",
+      "ja": "ミンニ"
     },
     "rarity": "ssr",
     "role": null,
@@ -8902,14 +8987,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "miyeon",
     "name": {
       "fr": "Miyeon",
       "en": "MIYEON",
-      "ko": ""
+      "ko": "미연",
+      "ja": "ミヨン"
     },
     "rarity": "ssr",
     "role": null,
@@ -9107,14 +9195,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "nam-chae-young",
     "name": {
       "fr": "Nam Chae-Young",
       "en": "Nam Chae-Young",
-      "ko": ""
+      "ko": "남채영"
     },
     "rarity": "sr",
     "role": null,
@@ -9312,14 +9402,15 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "park-beom-shik",
     "name": {
       "fr": "Park Beom-Shik",
       "en": "Park Beom-Shik",
-      "ko": ""
+      "ko": "박범식"
     },
     "rarity": "sr",
     "role": null,
@@ -9517,14 +9608,15 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "park-heejin",
     "name": {
       "fr": "Park Heejin",
       "en": "Park Heejin",
-      "ko": ""
+      "ko": "박희진"
     },
     "rarity": "sr",
     "role": null,
@@ -9558,14 +9650,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "seo-jiwoo",
     "name": {
       "fr": "Seo Jiwoo",
       "en": "Seo Jiwoo",
-      "ko": ""
+      "ko": "서지우",
+      "ja": "早手響"
     },
     "rarity": "ssr",
     "role": null,
@@ -9763,14 +9857,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "seorin",
     "name": {
       "fr": "Seorin",
       "en": "Seorin",
-      "ko": ""
+      "ko": "서린",
+      "ja": "ソリン"
     },
     "rarity": "ssr",
     "role": null,
@@ -9977,14 +10074,17 @@
         "wiki_reflects_patch": true,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
-    ]
+    ],
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "shimizu-akari",
     "name": {
       "fr": "Shimizu Akari",
       "en": "Shimizu Akari",
-      "ko": ""
+      "ko": "시미즈 아카리",
+      "ja": "清水アカリ"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -10182,14 +10282,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "shuhua",
     "name": {
       "fr": "Shuhua",
       "en": "SHUHUA",
-      "ko": ""
+      "ko": "슈화",
+      "ja": "シュファ"
     },
     "rarity": "ssr",
     "role": null,
@@ -10387,14 +10490,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "sian-halat",
     "name": {
       "fr": "Sian Halat ( Igris )",
       "en": "Sian Halat",
-      "ko": ""
+      "ko": "시안 할라트",
+      "ja": "シアン・ハラット"
     },
     "rarity": "ssr",
     "role": "stacker",
@@ -10592,14 +10698,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026) ; rapprochement wiki/slagate par ressemblance de nom (slug sian-halat-igris), à confirmer.",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "silver-mane-baek-yoonho",
     "name": {
       "fr": "Baek Beast",
       "en": "Silver Mane Baek Yoonho",
-      "ko": ""
+      "ko": "백윤호"
     },
     "rarity": "ssr",
     "role": null,
@@ -10797,14 +10905,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026) ; rapprochement wiki/slagate par ressemblance de nom (slug baek-beast), à confirmer.",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "son-kihoon",
     "name": {
       "fr": "Son Kihoon",
       "en": "Son Kihoon",
-      "ko": ""
+      "ko": "손기훈",
+      "ja": "孫基勲"
     },
     "rarity": "ssr",
     "role": null,
@@ -11002,14 +11112,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "song-chiyul",
     "name": {
       "fr": "Song Chiyul",
       "en": "Song Chiyul",
-      "ko": ""
+      "ko": "송치열"
     },
     "rarity": "sr",
     "role": null,
@@ -11043,14 +11155,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "soyeon",
     "name": {
       "fr": "Soyeon",
       "en": "SOYEON",
-      "ko": ""
+      "ko": "소연",
+      "ja": "ソヨン"
     },
     "rarity": "ssr",
     "role": null,
@@ -11248,14 +11362,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "stark",
     "name": {
       "fr": "Stark",
       "en": "Stark",
-      "ko": ""
+      "ko": "슈타르크",
+      "ja": "シュタルク"
     },
     "rarity": "ssr",
     "role": null,
@@ -11453,14 +11570,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "sugimoto-reiji",
     "name": {
       "fr": "Sugimoto Reiji",
       "en": "Sugimoto Reiji",
-      "ko": ""
+      "ko": "스기모토 레이지",
+      "ja": "杉本玲司"
     },
     "rarity": "ssr",
     "role": "stacker",
@@ -11658,14 +11778,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "sung-il-hwan",
     "name": {
       "fr": "Sung Il-Hwan",
       "en": "Sung Il-Hwan",
-      "ko": ""
+      "ko": "성일환"
     },
     "rarity": "ssr",
     "role": null,
@@ -11863,14 +11985,15 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "sung-jinah",
     "name": {
       "fr": "Sung Jinah",
       "en": "Sung Jinah",
-      "ko": ""
+      "ko": "성진아"
     },
     "rarity": "ssr",
     "role": "supporter",
@@ -12068,14 +12191,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "tawata-kanae",
     "name": {
       "fr": "Tawata Kanae",
       "en": "Tawata Kanae",
-      "ko": ""
+      "ko": "타와타 카나에",
+      "ja": "多和田かなえ"
     },
     "rarity": "ssr",
     "role": null,
@@ -12273,14 +12398,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "thomas-andre",
     "name": {
       "fr": "Thomas André",
       "en": "Thomas Andre",
-      "ko": ""
+      "ko": "토마스 안드레",
+      "ja": "トーマス・アンドレ"
     },
     "rarity": "ssr",
     "role": null,
@@ -12478,14 +12606,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "woo-jinchul",
     "name": {
       "fr": "Woo Jinchul",
       "en": "Woo Jinchul",
-      "ko": ""
+      "ko": "우진철"
     },
     "rarity": "ssr",
     "role": null,
@@ -12683,14 +12813,15 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "yoo-jinho",
     "name": {
       "fr": "Yoo Jinho",
       "en": "Yoo Jinho",
-      "ko": ""
+      "ko": "유진호"
     },
     "rarity": "sr",
     "role": null,
@@ -12724,14 +12855,15 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "yoo-soohyun",
     "name": {
       "fr": "Yoo Soohyun",
       "en": "Yoo Soohyun",
-      "ko": ""
+      "ko": "유수현"
     },
     "rarity": "ssr",
     "role": null,
@@ -12938,14 +13070,16 @@
         "wiki_reflects_patch": true,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
-    ]
+    ],
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   },
   {
     "id": "yuqi",
     "name": {
       "fr": "Yuqi",
       "en": "YUQI",
-      "ko": ""
+      "ko": "우기",
+      "ja": "ウギ"
     },
     "rarity": "ssr",
     "role": null,
@@ -13143,6 +13277,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
-    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)"
+    "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
+    "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
   }
 ]
