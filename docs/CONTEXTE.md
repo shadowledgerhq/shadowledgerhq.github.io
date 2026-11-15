@@ -17,6 +17,7 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 | Pseudo | Nom affiché « Shadow Ledger », identifiant **@shadowledger_hq** sur tous les réseaux (@shadowledgerhq était pris sur YouTube). GitHub reste `shadowledgerhq`. |
 | Source des builds | slagate.com (portail fan FR de Sohoven). **Autorisation obtenue.** Autres sites seulement si l'info manque ou est douteuse. |
 | Domaine | `shadowledgerhq.github.io` au début ; domaine personnel plus tard si le projet marche. |
+| Autonomie | Claude ne demande à Alexis que ce que lui seul peut faire (section 9). Information introuvable : hypothèse la plus prudente, marquée « à vérifier » avec sa source. Décision : choix par défaut proposé, et on avance. |
 
 ## 3. Les 4 modes
 
@@ -191,7 +192,11 @@ Les discussions 8 et 9 se font dans Claude Code (claude.ai/code), sur le dépôt
 
 Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la traite pas. Il indique la discussion à ouvrir et donne **un seul message prêt à coller**, dans cet ordre : (1) la ligne de rôle de la discussion cible, reprise de `PROMPTS_DISCUSSIONS.md` ; (2) la demande, avec le contexte utile (fichiers, décisions, ce qui est attendu). Il le fait aussi quand une discussion devient trop longue : **au 15e message d'Alexis** (puis à chaque nouveau message), il le signale en tête de réponse, recommande d'ouvrir une nouvelle discussion et donne un seul message prêt à coller : la ligne de rôle, le SUIVI à jour et la prochaine action précise.
 
-**Compteur (15/11/2026).** « Compteur : commence chaque réponse par "Message n/15", où n = nombre de messages d'Alexis dans cette discussion (n = numéro de ta réponse précédente + 1). À partir de n = 15, ajoute en tête "⚠ Discussion longue" et donne un seul message prêt à coller pour une nouvelle discussion : la ligne de rôle (PROMPTS_DISCUSSIONS.md), le SUIVI à jour et la prochaine action précise. »
+**Boîte aux lettres (15/11/2026).** Les discussions 8 (Code) et 9 (Base de données) écrivent dans le dépôt ; les discussions 1 à 7 n'y accèdent pas en continu. Tout message de 8 ou 9 pour les discussions 1 à 7 s'écrit dans `docs/BOITE.md`, dans la section du destinataire, au format `- [à traiter] AAAA-MM-JJ — de Code — message`. Le destinataire lit sa section au démarrage et passe les messages traités à `[traité]`. Alexis n'a pas à faire le courrier.
+
+**Compteur (15/11/2026).** « Compteur : commence chaque réponse par "Message n/15" (n = numéro de ta réponse précédente + 1). À partir de n = 15, ajoute "⚠ Discussion longue" et donne un seul message prêt à coller pour une nouvelle discussion : ligne de rôle (PROMPTS_DISCUSSIONS.md), SUIVI à jour, prochaine action précise. »
+
+**Autonomie (15/11/2026).** « Ne demande jamais à Alexis une information que tu peux trouver toi-même (dépôt, slagate.com, forum Netmarble, vidéos YouTube, recherche web). Si c'est introuvable : hypothèse la plus prudente, marquée "à vérifier" avec sa source, et continue. Pour une décision : propose ton choix par défaut et avance. "Besoin d'Alexis" = seulement ce que lui seul peut faire (section 9). »
 
 ## 8. Ordre de réalisation
 
@@ -203,18 +208,16 @@ Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la t
 6. **Réseaux** : comptes, logo, échantillon de voix, premières vidéos (discussions 3 et 4).
 7. **Tâche planifiée** de contrôle (discussion 7).
 
-## 9. Ce qu'Alexis doit fournir
+## 9. Ce qu'Alexis seul peut faire
 
-- [ ] Images de référence : où lire le score. *Fait pour BOT et GB (client anglais, 13/11/2026) et pour POC et HOTM (client coréen).* Reste : libellés coréens et japonais de BOT et GB, libellés japonais de POC et HOTM.
-- [ ] Images de référence : où lire chaque élément du build.
-- [ ] Liste des éléments autorisés par mode (ombres, successeur, Sung Jin Woo…).
-- [x] Clé API YouTube Data v3, rangée dans le secret GitHub `YOUTUBE_API_KEY`.
-- [x] Organisation `shadowledgerhq` + dépôt public `shadowledgerhq.github.io` créés.
-- [x] Comptes réseaux créés le 12/11/2026 : YouTube, TikTok, X, Instagram (@shadowledger_hq) + compte et serveur Discord « Shadow Ledger ». Reste : nom TikTok à passer en « Shadow Ledger » à partir du 19/11/2026.
 - [ ] Échantillon de voix (1 à 2 min, propre, sans bruit).
 - [ ] Trace écrite de l'autorisation de Sohoven (à conserver).
+- [ ] Passer le nom TikTok en « Shadow Ledger » le 19/11/2026.
+- En continu : connexions et comptes, secrets (clés, GitHub), manipulations sur son PC (Planificateur de tâches, essais `pc.py`), mise à jour des instructions du Projet SLA, messages vers les discussions 8 et 9 (celles-ci n'ont pas de boîte : Alexis colle la demande).
+
+Tout le reste (images de référence, libellés, listes d'éléments, données du jeu, recherches) est cherché par Claude lui-même (voir « Autonomie », section 7).
 
 ## 10. Points ouverts
 
-- Le boss change-t-il chaque jeudi ? **Oui pour le BOT** (1 boss par semaine, source Netmarble). Une vidéo-guide BOT publiée le mercredi ne sert donc qu'un jour : la publier en début de semaine (vendredi ou samedi). POC, GB et HOTM : à confirmer.
+- Le boss change-t-il chaque jeudi ? **Oui pour le BOT** (1 boss par semaine, source Netmarble). Une vidéo-guide BOT publiée le mercredi ne sert donc qu'un jour : la publier en début de semaine (vendredi ou samedi). POC, GB et HOTM : à déduire des données par la discussion 1.
 - Déclaration des revenus (statut micro-entrepreneur) quand les plateformes paieront.
