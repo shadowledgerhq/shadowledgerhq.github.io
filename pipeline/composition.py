@@ -229,6 +229,13 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                             autres.append((t, png))
                     ecrans = _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes)
                     cache[cle] = (*choisir_images(images_t, cfg), None, ecrans)
+                    if ocr_debug:                    # diagnostic (--garder-ocr) : images de composition retenues, pour définir les zones des onglets
+                        Path(ocr_debug).mkdir(parents=True, exist_ok=True)
+                        for onglet, ims in cache[cle][0].items():
+                            for k, im in enumerate(ims):
+                                im = im.copy()
+                                im.thumbnail((1600, 900))
+                                im.save(Path(ocr_debug) / f"{vid}_compo_{onglet}_{k}.jpg", quality=85)
                     d = choisir_images.diagnostic
                     journal(f"  composition {vid} : {d['images']} images, écran vu sur {d['ecran']}, onglet douteux sur {d['onglet_douteux']}, "
                             f"onglets : {', '.join(f'{o} ×{len(l)}' for o, l in cache[cle][0].items()) or 'aucun'}")
