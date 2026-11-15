@@ -72,10 +72,44 @@ def choisir_images(images_t, cfg):
     return sortie, ([min(temps), max(temps)] if temps else None)
 
 
-def fournisseur_pc(outils, cfg, journal=None):
+def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
+    """OCR rapide d'une image sur `hors_compo.pas` des images qui ne sont pas la composition ; écran reconnu -> OCR complet.
+    Retourne [(ecran, texte)] (2 par type au plus ; `hors_compo.ocr_max` appels rapides au plus). Erreur d'OCR : image ignorée."""
+    import ecrans_hors_compo as H
+    h = cfg.get("hors_compo") or {}
+    pas, maxi, langues = h.get("pas", 2), h.get("ocr_max", 120), h.get("langues", "jpn+eng")
+    lus, vus, appels = [], {}, 0
+    for i, (t, png) in enumerate(autres):
+        if i % pas or appels >= maxi:
+            continue
+        appels += 1
+        try:
+            rapide = outils.ocr(outils.reduire(png, h.get("largeur", 960)), langues, 11, 40)
+            ecran = H.detecter(rapide, cfg)
+            if not ecran or vus.get(ecran, 0) >= 2:
+                continue
+            texte = outils.ocr(png, langues, 6, 120)
+        except Exception as ex:                      # OCR trop lent / tesseract absent : on passe
+            journal(f"  hors composition t={t} : {str(ex)[:80]}")
+            continue
+        ecran = H.detecter(texte, cfg) or ecran
+        vus[ecran] = vus.get(ecran, 0) + 1
+        lus.append((ecran, texte))
+        journal(f"  écran {ecran} lu à t={t} s")
+        if ocr_debug:
+            from pathlib import Path
+            Path(ocr_debug).mkdir(parents=True, exist_ok=True)
+            (Path(ocr_debug) / f"{vid}_hors-compo_{t}_{ecran}.txt").write_text(texte, encoding="utf-8")
+    return lus
+
+
+def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
     """Fournisseur d'images pour `builds.calculer(fournisseur=…)` : télécharge chaque vidéo une fois (`outils.telecharger`),
     extrait 1 image / `pas_s` s de 0 à `t_result` (`outils.images`), garde les images de l'écran de composition. Retourne
-    `ctx -> ({onglet: [images]}, {"t_composition": [t0, t1], "erreur": texte | None})`."""
+    `ctx -> ({onglet: [images]}, {"t_composition": [t0, t1], "erreur": texte | None, "ecrans": [(ecran, texte)]})`.
+    v3 : les images qui ne sont PAS la composition passent par un OCR rapide (image réduite) ; un écran hors composition
+    reconnu (`ecrans_hors_compo.detecter`) est relu en entier, 2 lectures au plus par type. `ocr_debug` : dossier où
+    écrire les textes lus (diagnostic, `--garder-ocr`)."""
     from PIL import Image
     journal = journal or (lambda m: None)
     e = cfg["extraction"]
@@ -90,16 +124,20 @@ def fournisseur_pc(outils, cfg, journal=None):
                 with tempfile.TemporaryDirectory() as tmp:
                     journal(f"  composition {vid} : téléchargement…")
                     chemin = outils.telecharger(vid, tmp)
-                    images_t = []
+                    images_t, autres = [], []
                     for t, png in outils.images(chemin, [(0, fin, e["pas_s"])], tmp, "c"):
                         with Image.open(png) as im:
-                            images_t.append((t, im.convert("RGB")))
-                    cache[cle] = (*choisir_images(images_t, cfg), None)
+                            rgb = im.convert("RGB")
+                        images_t.append((t, rgb))
+                        if not analyser_image(rgb, cfg):
+                            autres.append((t, png))
+                    ecrans = _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid)
+                    cache[cle] = (*choisir_images(images_t, cfg), None, ecrans)
                     d = choisir_images.diagnostic
                     journal(f"  composition {vid} : {d['images']} images, écran vu sur {d['ecran']}, onglet douteux sur {d['onglet_douteux']}, "
                             f"onglets : {', '.join(f'{o} ×{len(l)}' for o, l in cache[cle][0].items()) or 'aucun'}")
             except Exception as ex:                      # 429, ffmpeg, vidéo privée : build `pas_de_build`, raison notée
-                cache[cle] = ({}, None, str(ex)[:160])
-        images, t, err = cache[cle]
-        return images, {"t_composition": t, "erreur": err}
+                cache[cle] = ({}, None, str(ex)[:160], [])
+        images, t, err, ecrans = cache[cle]
+        return images, {"t_composition": t, "erreur": err, "ecrans": ecrans}
     return lire

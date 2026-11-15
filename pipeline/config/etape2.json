@@ -1164,5 +1164,12 @@
     ]
    }
   }
+ },
+ "hors_compo": {
+  "_": "[À CONFIRMER] OCR des images hors composition : 1 image sur `pas` (rapide, réduite à `largeur` px), `ocr_max` appels rapides au plus, langues tesseract.",
+  "pas": 2,
+  "ocr_max": 120,
+  "langues": "jpn+eng",
+  "largeur": 960
  }
 }

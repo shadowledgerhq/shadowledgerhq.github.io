@@ -1054,7 +1054,7 @@ if __name__ == "__main__":
         import builds as B
         import composition
         cfg2 = B.charger_config()
-        b = B.build_essai(a.video[0], a.mode or "bot", cfg=cfg2, fournisseur=composition.fournisseur_pc(Outils(config["pc"]), cfg2, lambda m: print(m, flush=True)))
+        b = B.build_essai(a.video[0], a.mode or "bot", cfg=cfg2, fournisseur=composition.fournisseur_pc(Outils(config["pc"]), cfg2, lambda m: print(m, flush=True), (RACINE / "logs" / "ocr") if a.garder_ocr else None))
         sortie = RACINE / "docs" / "essais" / "builds"
         sortie.mkdir(parents=True, exist_ok=True)
         (sortie / f"{a.video[0]}.json").write_text(json.dumps(b, ensure_ascii=False, indent=1), encoding="utf-8")

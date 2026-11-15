@@ -131,6 +131,26 @@ def test_integration_complete_dans_un_build():
     assert b["found"]["gems"] and b["found"]["statues"]
 
 
+def test_lecture_hors_composition_avec_faux_ocr():
+    import composition
+    textes = {"a.png": STATS_TXT, "b.png": "rien", "c.png": GEMMES_TXT, "d.png": STATS_TXT, "e.png": STATS_TXT}
+
+    class Faux:
+        def reduire(self, png, largeur):
+            return png
+
+        def ocr(self, png, langues, psm, timeout):
+            return textes[Path(png).name]
+    cfg = {**T.CFG, "hors_compo": {"pas": 1, "ocr_max": 10, "langues": "jpn+eng"}}
+    autres = [(i * 2, Path(n)) for i, n in enumerate(textes)]
+    lus = composition._lire_hors_composition(Faux(), cfg, autres, lambda m: None, None, "VID")
+    assert [e for e, _ in lus] == ["stats", "gemmes", "stats"]          # 2 lectures au plus par type, « rien » ignoré
+    obs = T.obs_hunters()
+    import ecrans_hors_compo as E2
+    E2.integrer(obs, lus, T.DB, T.CFG)
+    assert obs["gems"]["colors"] and obs["hunters"][-1]["id"] == "christopher-reed"
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

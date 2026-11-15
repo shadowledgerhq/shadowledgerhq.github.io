@@ -586,6 +586,9 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
                 res = fournisseur(ctx)
                 images, extra = res if isinstance(res, tuple) else (res, {})
             obs = observer(images, cle_cfg, cfg, banque, db)
+            if extra.get("ecrans"):
+                import ecrans_hors_compo
+                ecrans_hors_compo.integrer(obs, extra["ecrans"], db, cfg)
             if extra.get("t_composition"):
                 obs["t_composition"] = extra["t_composition"]
             if extra.get("erreur"):
@@ -630,6 +633,9 @@ def build_essai(video_id, mode, racine=RACINE, cfg=None, banque=None, fournisseu
     res = fournisseur(ctx) if fournisseur else ({}, {})
     images, extra = res if isinstance(res, tuple) else (res, {})
     obs = observer(images, cle_cfg, cfg, banque, db)
+    if extra.get("ecrans"):
+        import ecrans_hors_compo
+        ecrans_hors_compo.integrer(obs, extra["ecrans"], db, cfg)
     obs["t_composition"] = extra.get("t_composition")
     if extra.get("erreur"):
         obs["notes"].append(f"images de composition non disponibles : {extra['erreur']}")
