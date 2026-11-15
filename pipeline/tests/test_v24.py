@@ -207,3 +207,13 @@ def test_v25_zone_vide():
     assert R.zone_vide(im, [0.1, 0.1, 0.5, 0.5]) is False
     assert R.zone_vide(im, None) is None and R.zone_vide(None, [0, 0, 1, 1]) is None
     assert R.zone_vide(im, [0.1, 0.1, 0.1, 0.1]) is None                        # zone minuscule : inconnu
+
+
+def test_v25_zone_armes_bot_sur_la_vraie_capture():
+    """Capture RESULT du BOT (client JA, 15/11/2026) : les 2 armes de SJW sont visibles dans la zone calée -> pas « vide »."""
+    from PIL import Image
+    zone = charger_config()["bot"]["zone_armes_sjw"]
+    img = Image.open(Path(__file__).resolve().parents[2] / "docs" / "essais" / "composition" / "bot_results_ja.png")
+    assert len(zone) == 4 and 0.3 < zone[0] < zone[2] < 0.6 and 0.8 < zone[1] < zone[3] < 1
+    assert R.zone_vide(img, zone) is False
+    assert R.zone_vide(img, [0.60, 0.86, 0.70, 0.93]) is True        # fond sombre uniforme hors du bandeau
