@@ -78,19 +78,22 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
     import ecrans_hors_compo as H
     h = cfg.get("hors_compo") or {}
     pas, maxi, langues = h.get("pas", 2), h.get("ocr_max", 120), h.get("langues", "jpn+eng")
-    lus, vus, appels = [], {}, 0
+    lus, vus, appels, vides, erreurs = [], {}, 0, 0, 0
     for i, (t, png) in enumerate(autres):
         if i % pas or appels >= maxi:
             continue
         appels += 1
         try:
             rapide = outils.ocr(outils.reduire(png, h.get("largeur", 960)), langues, 11, 40)
+            vides += 0 if rapide.strip() else 1
             ecran = H.detecter(rapide, cfg)
             if not ecran or vus.get(ecran, 0) >= 2:
                 continue
             texte = outils.ocr(png, langues, 6, 120)
         except Exception as ex:                      # OCR trop lent / tesseract absent : on passe
-            journal(f"  hors composition t={t} : {str(ex)[:80]}")
+            erreurs += 1
+            if erreurs <= 3:
+                journal(f"  hors composition t={t} : {str(ex)[:80]}")
             continue
         ecran = H.detecter(texte, cfg) or ecran
         vus[ecran] = vus.get(ecran, 0) + 1
@@ -100,6 +103,8 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
             from pathlib import Path
             Path(ocr_debug).mkdir(parents=True, exist_ok=True)
             (Path(ocr_debug) / f"{vid}_hors-compo_{t}_{ecran}.txt").write_text(texte, encoding="utf-8")
+    journal(f"  hors composition : {len(autres)} images, {appels} lues par l'OCR rapide ({vides} sans texte, {erreurs} erreurs), "
+            f"écrans reconnus : {', '.join(e for e, _ in lus) or 'aucun'}")
     return lus
 
 
