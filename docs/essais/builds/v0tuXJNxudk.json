@@ -306,7 +306,7 @@
   "règles poc inconnues"
  ],
  "erreurs": [],
- "notes": "images poc/personnages absentes; images poc/artefacts absentes; zones poc/competences non définies; images poc/benedictions absentes; images poc/noyaux absentes; zones poc/subjugation non définies; composition non filmée; images de composition non disponibles : yt-dlp code 1 : -do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-coo",
+ "notes": "images poc/personnages absentes; images poc/artefacts absentes; images poc/competences absentes; images poc/benedictions absentes; images poc/noyaux absentes; zones poc/subjugation non définies; composition non filmée; images de composition non disponibles : yt-dlp code 1 : -do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-coo",
  "sources": [
   {
    "type": "video",
