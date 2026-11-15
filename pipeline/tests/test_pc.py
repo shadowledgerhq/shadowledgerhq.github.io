@@ -181,6 +181,28 @@ def test_outil_absent():
         assert all("pc" not in p for p in d.processed().values())     # rien de marqué : retenté plus tard
 
 
+def test_verrou_un_seul_passage():
+    import os
+    with tempfile.TemporaryDirectory() as tmp:
+        f = Path(tmp) / "logs" / "pc.lock"
+        v1, v2 = pc.Verrou(f), pc.Verrou(f)
+        assert v1.prendre("daily")[0]
+        ok, qui = v2.prendre("builds")
+        assert not ok and "daily" in qui and f"PID {os.getpid()}" in qui      # refusé : le détenteur est vivant
+        v2.liberer()
+        assert f.exists()                                                      # qui n'a pas pris ne libère pas
+        v1.liberer()
+        assert not f.exists() and v2.prendre("builds")[0]
+        v2.liberer()
+        f.write_text(json.dumps({"pid": 2 ** 22 + 12345, "passage": "daily", "debut": 0}))
+        assert pc.Verrou(f).prendre("weekly")[0]                               # processus mort : verrou repris
+        g = Path(tmp) / "vieux.lock"
+        g.write_text(json.dumps({"pid": os.getpid(), "passage": "daily", "debut": 1000}))
+        assert pc.Verrou(g, max_h=1).prendre("weekly", maintenant_ts=1000 + 7200)[0]     # trop ancien : repris
+        g.write_text("pas du json")
+        assert pc.Verrou(g).prendre("weekly")[0]                               # illisible : repris
+
+
 if __name__ == "__main__":
     for nom, fn in list(globals().items()):
         if nom.startswith("test_"):
