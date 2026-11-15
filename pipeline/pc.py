@@ -1058,6 +1058,11 @@ if __name__ == "__main__":
         sortie = RACINE / "docs" / "essais" / "builds"
         sortie.mkdir(parents=True, exist_ok=True)
         (sortie / f"{a.video[0]}.json").write_text(json.dumps(b, ensure_ascii=False, indent=1), encoding="utf-8")
+        if a.garder_ocr:       # textes complets des écrans hors composition (stats, statues, fiche…) : publiés avec le JSON, plus de collage
+            dossier_ocr = sortie / f"{a.video[0]}_ocr"
+            for f in (RACINE / "logs" / "ocr").glob(f"{a.video[0]}_hors-compo_*.txt"):
+                dossier_ocr.mkdir(parents=True, exist_ok=True)
+                (dossier_ocr / f.name).write_text(f.read_text(encoding="utf-8", errors="replace"), encoding="utf-8")
         print(f"{b['status']} — {b['counts']} — {b['notes']}")
         if not a.no_git:
             try:
