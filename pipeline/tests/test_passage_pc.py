@@ -40,6 +40,7 @@ def test_antibot_relance_unique_par_soir():
         assert "Passage complet : non" in tete[2] and "anti-bot" in tete[2]
         assert any(l.startswith("- Relance automatique : 13/11/2026 22:30") for l in tete)
         assert any("anti-bot" in l and l.startswith("- Erreurs bloquantes") for l in tete)
+        assert any(l.startswith("- Durée du passage : ") and l.endswith(" min") for l in rapport(d).split("\n")[:12])
         # 2e blocage le même soir : pas de nouvelle relance ; la relance elle-même n'en programme pas non plus
         o2 = FauxOutils({}, erreurs=["b"], erreurs_msg={"b": "HTTP Error 429: Too Many Requests"})
         pc.lancer("daily", INSTANT, d, config, o2, planifier=lambda q, bat: planifiees.append(q), fichier_relance=fichier)
