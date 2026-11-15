@@ -487,7 +487,7 @@
    "owner": "sjw",
    "slot": 0,
    "best_id": "truth-demon-knights-spear",
-   "score": 0.686,
+   "score": 0.688,
    "crop": null
   },
   {
@@ -495,7 +495,7 @@
    "owner": "hunter_1",
    "slot": null,
    "best_id": "han-song-yi",
-   "score": 0.61,
+   "score": 0.613,
    "crop": null
   },
   {
@@ -503,7 +503,7 @@
    "owner": "hunter_2",
    "slot": null,
    "best_id": "cha-hae-in",
-   "score": 0.528,
+   "score": 0.532,
    "crop": null
   },
   {
@@ -519,7 +519,7 @@
    "owner": "shadows",
    "slot": 1,
    "best_id": "brute",
-   "score": 0.604,
+   "score": 0.605,
    "crop": null
   },
   {
@@ -543,7 +543,7 @@
    "owner": "sjw",
    "slot": "gloves",
    "best_id": "set-of-the-architects-blue-poison--gloves",
-   "score": 0.667,
+   "score": 0.671,
    "crop": null
   },
   {
@@ -558,23 +558,23 @@
    "element": "sjw_artifacts",
    "owner": "sjw",
    "slot": "earrings",
-   "best_id": "set-of-the-architects-blue-poison--earrings",
-   "score": 0.539,
+   "best_id": "set-of-chaotic-desire--earrings",
+   "score": 0.53,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_1",
    "slot": "helmet",
-   "best_id": "palace-guards-set--helmet",
-   "score": 0.468,
+   "best_id": "holy-set--helmet",
+   "score": 0.46,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_1",
    "slot": "necklace",
-   "best_id": "viridescent-set--necklace",
+   "best_id": "set-of-chaotic-wish--necklace",
    "score": 0.592,
    "crop": null
   },
@@ -591,7 +591,7 @@
    "owner": "hunter_1",
    "slot": "gloves",
    "best_id": "set-of-noble-flesh--gloves",
-   "score": 0.776,
+   "score": 0.763,
    "crop": null
   },
   {
@@ -599,7 +599,7 @@
    "owner": "hunter_1",
    "slot": "ring",
    "best_id": "set-of-the-architects-blue-poison--ring",
-   "score": 0.464,
+   "score": 0.432,
    "crop": null
   },
   {
@@ -615,7 +615,7 @@
    "owner": "hunter_2",
    "slot": "helmet",
    "best_id": "set-of-glorious-arrogance--helmet",
-   "score": 0.502,
+   "score": 0.477,
    "crop": null
   },
   {
@@ -631,7 +631,7 @@
    "owner": "hunter_2",
    "slot": "chestplate",
    "best_id": "set-of-surturs-flame--chestplate",
-   "score": 0.552,
+   "score": 0.509,
    "crop": null
   },
   {
@@ -639,15 +639,15 @@
    "owner": "hunter_2",
    "slot": "bracelet",
    "best_id": "set-of-chaotic-infamy--bracelet",
-   "score": 0.489,
+   "score": 0.465,
    "crop": null
   },
   {
    "element": "artifacts",
    "owner": "hunter_2",
    "slot": "ring",
-   "best_id": "set-of-kamishs-obession--ring",
-   "score": 0.472,
+   "best_id": "beast-set--ring",
+   "score": 0.443,
    "crop": null
   },
   {
@@ -655,7 +655,7 @@
    "owner": "hunter_3",
    "slot": "chestplate",
    "best_id": "new-hunters-set--chestplate",
-   "score": 0.6,
+   "score": 0.597,
    "crop": null
   },
   {
@@ -663,7 +663,7 @@
    "owner": "hunter_3",
    "slot": "bracelet",
    "best_id": "set-of-chaotic-wish--bracelet",
-   "score": 0.44,
+   "score": 0.437,
    "crop": null
   },
   {
@@ -671,7 +671,7 @@
    "owner": "hunter_3",
    "slot": "ring",
    "best_id": "beast-set--ring",
-   "score": 0.511,
+   "score": 0.506,
    "crop": null
   },
   {
@@ -687,7 +687,7 @@
    "owner": "sjw",
    "slot": "ultimate",
    "best_id": "the-commanders-touch--finisher",
-   "score": 0.402,
+   "score": 0.403,
    "crop": null
   },
   {
@@ -703,7 +703,7 @@
    "owner": "sjw",
    "slot": "skill_1",
    "best_id": "rune--severing-flash",
-   "score": 0.42,
+   "score": 0.429,
    "crop": null
   },
   {
@@ -711,7 +711,7 @@
    "owner": "sjw",
    "slot": "qte_3",
    "best_id": "qte--foulee-de-lombre",
-   "score": 0.46,
+   "score": 0.469,
    "crop": null
   },
   {
@@ -719,7 +719,7 @@
    "owner": "sjw",
    "slot": "qte_2",
    "best_id": "qte--extinction",
-   "score": 0.509,
+   "score": 0.519,
    "crop": null
   }
  ],
