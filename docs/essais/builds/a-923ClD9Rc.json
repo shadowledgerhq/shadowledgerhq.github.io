@@ -1,0 +1,597 @@
+{
+ "spec": 2,
+ "run_id": "essai-a-923ClD9Rc",
+ "run_index": 1,
+ "week": "essai",
+ "mode": "bot",
+ "gate": null,
+ "hunter_mode": null,
+ "rank": null,
+ "player": null,
+ "channel_id": null,
+ "video_id": "a-923ClD9Rc",
+ "t_result": null,
+ "t_composition": [
+  0,
+  6
+ ],
+ "team": null,
+ "rules": null,
+ "status": "build_partiel",
+ "confidence": "a_verifier",
+ "sjw": {
+  "weapons": [
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   }
+  ],
+  "artifacts": [
+   {
+    "slot": "helmet",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "chestplate",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "gloves",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "boots",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "necklace",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "bracelet",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "ring",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "earrings",
+    "set_id": null,
+    "level": null
+   }
+  ],
+  "cores": [
+   {
+    "slot": "mind",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "body",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "spirit",
+    "id": null,
+    "level": null
+   }
+  ],
+  "stats": {},
+  "skills": [
+   {
+    "slot": "skill_1",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "skill_2",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "ultimate",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "qte_1",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "qte_2",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "qte_3",
+    "id": null,
+    "level": null
+   }
+  ],
+  "blessings": [
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": "reawakening",
+    "level": null
+   },
+   {
+    "id": "irreversible-road",
+    "level": null
+   },
+   {
+    "id": "iron-stance",
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   }
+  ]
+ },
+ "hunters": [
+  {
+   "position": 1,
+   "team_slot": null,
+   "id": "han-song-yi",
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  },
+  {
+   "position": 2,
+   "team_slot": null,
+   "id": null,
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  },
+  {
+   "position": 3,
+   "team_slot": null,
+   "id": null,
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  }
+ ],
+ "set_bonuses": {
+  "sjw": [],
+  "hunter_1": [],
+  "hunter_2": [],
+  "hunter_3": []
+ },
+ "shadows": [
+  {
+   "position": 1,
+   "id": "beste"
+  },
+  {
+   "position": 2,
+   "id": "brute"
+  },
+  {
+   "position": 3,
+   "id": null
+  }
+ ],
+ "successor": {
+  "id": null,
+  "level": null
+ },
+ "subjugation_support": null,
+ "proof": null,
+ "found": {
+  "sjw": true,
+  "sjw_weapons": null,
+  "sjw_artifacts": null,
+  "sjw_cores": null,
+  "sjw_stats": null,
+  "sjw_skills": null,
+  "blessings": null,
+  "hunters": false,
+  "weapons": false,
+  "artifacts": false,
+  "cores": false,
+  "stats": null,
+  "shadows": null,
+  "successor": null,
+  "subjugation_support": null,
+  "proof": null
+ },
+ "counts": {
+  "sjw_weapons": "0/2",
+  "sjw_artifacts": "0/8",
+  "sjw_cores": "0/3",
+  "sjw_stats": "0/15",
+  "sjw_skills": "0/6",
+  "blessings": "3/8",
+  "hunters": "1/3",
+  "weapons": "0/3",
+  "artifacts": "0/24",
+  "cores": "0/9",
+  "stats": "0/45",
+  "shadows": "2/3"
+ },
+ "found_at": {},
+ "unmatched": [
+  {
+   "element": "sjw_weapons",
+   "owner": "sjw",
+   "slot": 0,
+   "best_id": "the-huntsman",
+   "score": 0.637,
+   "crop": null
+  },
+  {
+   "element": "sjw_weapons",
+   "owner": "sjw",
+   "slot": 1,
+   "best_id": "radiru-clans-double-edged-spear",
+   "score": 0.697,
+   "crop": null
+  },
+  {
+   "element": "hunters",
+   "owner": "hunter_2",
+   "slot": null,
+   "best_id": "go-gunhee",
+   "score": 0.636,
+   "crop": null
+  },
+  {
+   "element": "hunters",
+   "owner": "hunter_3",
+   "slot": null,
+   "best_id": "han-song-yi",
+   "score": 0.64,
+   "crop": null
+  },
+  {
+   "element": "shadows",
+   "owner": "shadows",
+   "slot": 2,
+   "best_id": "brute",
+   "score": 0.582,
+   "crop": null
+  },
+  {
+   "element": "successor",
+   "owner": "successor",
+   "slot": null,
+   "best_id": "myro",
+   "score": 0.336,
+   "crop": null
+  },
+  {
+   "element": "sjw_skills",
+   "owner": "sjw",
+   "slot": "ultimate",
+   "best_id": "rune--blitzstrike",
+   "score": 0.379,
+   "crop": null
+  },
+  {
+   "element": "sjw_skills",
+   "owner": "sjw",
+   "slot": "skill_2",
+   "best_id": "mutilate--phantom",
+   "score": 0.466,
+   "crop": null
+  },
+  {
+   "element": "sjw_skills",
+   "owner": "sjw",
+   "slot": "skill_1",
+   "best_id": "vertical-arts--crosshairs",
+   "score": 0.441,
+   "crop": null
+  },
+  {
+   "element": "sjw_skills",
+   "owner": "sjw",
+   "slot": "qte_3",
+   "best_id": "qte--frappe-de-glace",
+   "score": 0.444,
+   "crop": null
+  },
+  {
+   "element": "sjw_skills",
+   "owner": "sjw",
+   "slot": "qte_2",
+   "best_id": "qte--extinction",
+   "score": 0.463,
+   "crop": null
+  },
+  {
+   "element": "sjw_skills",
+   "owner": "sjw",
+   "slot": "qte_1",
+   "best_id": "qte--foulee-de-lombre",
+   "score": 0.507,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 0,
+   "best_id": "bloodlust",
+   "score": 0.454,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 1,
+   "best_id": "bloodlust",
+   "score": 0.47,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 2,
+   "best_id": "soutien-mutuel",
+   "score": 0.437,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 3,
+   "best_id": "tenacity",
+   "score": 0.513,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 7,
+   "best_id": "soutien-mutuel",
+   "score": 0.323,
+   "crop": null
+  }
+ ],
+ "attendus": {
+  "sjw": "fac",
+  "sjw_weapons": "fac",
+  "sjw_artifacts": "fac",
+  "sjw_cores": "fac",
+  "sjw_stats": "fac",
+  "sjw_skills": "fac",
+  "blessings": "fac",
+  "hunters": true,
+  "weapons": true,
+  "artifacts": true,
+  "cores": true,
+  "stats": "fac",
+  "shadows": "fac",
+  "successor": "fac"
+ },
+ "plafonds": [
+  "règles bot inconnues"
+ ],
+ "erreurs": [],
+ "notes": "images bot/artefacts absentes; images bot/noyaux absentes; icône absente : weapons; règles bot inconnues; reconnaissance faible : hunters; reconnaissance faible : shadows; reconnaissance faible : blessings",
+ "sources": [
+  {
+   "type": "video",
+   "video_id": "a-923ClD9Rc",
+   "t": [
+    0,
+    6
+   ]
+  }
+ ]
+}
