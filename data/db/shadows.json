@@ -4,7 +4,8 @@
     "name": {
       "fr": "Beru",
       "en": "Beru",
-      "ko": ""
+      "ko": "베르",
+      "ja": "ベル"
     },
     "rarity": null,
     "nickname_en": "Ant King",
@@ -173,14 +174,17 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "https://forum.netmarble.com/slv_kr/view/19/6619 (Netmarble KR) ; Beru : post Netmarble Instagram ; Uros : titre de vidéo AKTUBE ; à vérifier en jeu (vérifié le 2026-11-15)"
   },
   {
     "id": "beste",
     "name": {
       "fr": "Beste",
       "en": "Beste",
-      "ko": ""
+      "ko": "",
+      "ja": "ベスティ"
     },
     "rarity": null,
     "nickname_en": "Ice Witch",
@@ -334,14 +338,16 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)"
   },
   {
     "id": "bigrock",
     "name": {
       "fr": "Bigrock",
       "en": "Bigrock",
-      "ko": ""
+      "ko": "큰돌",
+      "ja": "イワオ"
     },
     "rarity": null,
     "nickname_en": "The Blue Spirit",
@@ -510,14 +516,17 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "https://forum.netmarble.com/slv_kr/view/19/6619 (Netmarble KR) ; Beru : post Netmarble Instagram ; Uros : titre de vidéo AKTUBE ; à vérifier en jeu (vérifié le 2026-11-15)"
   },
   {
     "id": "blades",
     "name": {
       "fr": "Lames",
       "en": "Blades",
-      "ko": ""
+      "ko": "쌍칼",
+      "ja": "双刀"
     },
     "rarity": null,
     "nickname_en": "Coldblooded Fighter",
@@ -686,14 +695,17 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "https://forum.netmarble.com/slv_kr/view/19/6619 (Netmarble KR) ; Beru : post Netmarble Instagram ; Uros : titre de vidéo AKTUBE ; à vérifier en jeu (vérifié le 2026-11-15)"
   },
   {
     "id": "brute",
     "name": {
       "fr": "Brute",
       "en": "Brute",
-      "ko": ""
+      "ko": "",
+      "ja": "ビッグ"
     },
     "rarity": null,
     "nickname_en": "The Butcher",
@@ -847,14 +859,16 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)"
   },
   {
     "id": "cerbie",
     "name": {
       "fr": "Cerbie",
       "en": "Cerbie",
-      "ko": ""
+      "ko": "케르",
+      "ja": "ケルベロス"
     },
     "rarity": null,
     "nickname_en": "The Gatekeeper",
@@ -1008,14 +1022,17 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "https://forum.netmarble.com/slv_kr/view/19/6619 (Netmarble KR) ; Beru : post Netmarble Instagram ; Uros : titre de vidéo AKTUBE ; à vérifier en jeu (vérifié le 2026-11-15)"
   },
   {
     "id": "greed",
     "name": {
       "fr": "Avarice",
       "en": "Greed",
-      "ko": ""
+      "ko": "",
+      "ja": "グリード"
     },
     "rarity": null,
     "nickname_en": "The Soldier of Avarice",
@@ -1037,14 +1054,16 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)"
   },
   {
     "id": "igris",
     "name": {
       "fr": "Igrit",
       "en": "Igris",
-      "ko": ""
+      "ko": "이그리트",
+      "ja": "イグリット"
     },
     "rarity": null,
     "nickname_en": "His First Shadow",
@@ -1198,14 +1217,17 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "https://forum.netmarble.com/slv_kr/view/19/6619 (Netmarble KR) ; Beru : post Netmarble Instagram ; Uros : titre de vidéo AKTUBE ; à vérifier en jeu (vérifié le 2026-11-15)"
   },
   {
     "id": "iron",
     "name": {
       "fr": "Iron",
       "en": "Iron",
-      "ko": ""
+      "ko": "아이언",
+      "ja": "アイアン"
     },
     "rarity": null,
     "nickname_en": "Musclebound Menace",
@@ -1373,14 +1395,17 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "https://forum.netmarble.com/slv_kr/view/19/6619 (Netmarble KR) ; Beru : post Netmarble Instagram ; Uros : titre de vidéo AKTUBE ; à vérifier en jeu (vérifié le 2026-11-15)"
   },
   {
     "id": "jima",
     "name": {
       "fr": "Jima",
       "en": "Jima",
-      "ko": ""
+      "ko": "",
+      "ja": "ガーナ"
     },
     "rarity": null,
     "nickname_en": "Recluse of the Deep Sea",
@@ -1549,14 +1574,16 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)"
   },
   {
     "id": "kaisel",
     "name": {
       "fr": "Kaisel",
       "en": "Kaisel",
-      "ko": ""
+      "ko": "",
+      "ja": "カイセル"
     },
     "rarity": null,
     "nickname_en": "Wyvern",
@@ -1725,14 +1752,16 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)"
   },
   {
     "id": "skull",
     "name": {
       "fr": "Crâne",
       "en": "Skull",
-      "ko": ""
+      "ko": "",
+      "ja": "スカル"
     },
     "rarity": null,
     "nickname_en": "The King of the Dead",
@@ -1901,14 +1930,16 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)"
   },
   {
     "id": "tank",
     "name": {
       "fr": "Tank",
       "en": "Tank",
-      "ko": ""
+      "ko": "탱크",
+      "ja": "タンク"
     },
     "rarity": null,
     "nickname_en": "Leader of the Snowy Mountain",
@@ -2076,14 +2107,17 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "https://forum.netmarble.com/slv_kr/view/19/6619 (Netmarble KR) ; Beru : post Netmarble Instagram ; Uros : titre de vidéo AKTUBE ; à vérifier en jeu (vérifié le 2026-11-15)"
   },
   {
     "id": "tusk",
     "name": {
       "fr": "Croc",
       "en": "Tusk",
-      "ko": ""
+      "ko": "어금니",
+      "ja": "キバ"
     },
     "rarity": null,
     "nickname_en": "Almighty Shaman",
@@ -2252,14 +2286,17 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "https://forum.netmarble.com/slv_kr/view/19/6619 (Netmarble KR) ; Beru : post Netmarble Instagram ; Uros : titre de vidéo AKTUBE ; à vérifier en jeu (vérifié le 2026-11-15)"
   },
   {
     "id": "uros",
     "name": {
       "fr": "Uros",
       "en": "Uros",
-      "ko": ""
+      "ko": "우로스",
+      "ja": "ウロス"
     },
     "rarity": null,
     "nickname_en": "Doomed Berserker",
@@ -2413,6 +2450,8 @@
       "value": 195,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "https://forum.netmarble.com/slv_kr/view/19/6619 (Netmarble KR) ; Beru : post Netmarble Instagram ; Uros : titre de vidéo AKTUBE ; à vérifier en jeu (vérifié le 2026-11-15)"
   }
 ]

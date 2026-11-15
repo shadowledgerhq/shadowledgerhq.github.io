@@ -4,7 +4,7 @@
     "name": {
       "fr": "Myro",
       "en": "Myro",
-      "ko": ""
+      "ko": "미로"
     },
     "rarity": null,
     "role": null,
@@ -149,14 +149,16 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_ko_source": "https://m.blog.naver.com/marbleblog/224292017119 (blog officiel Netmarble) ; https://game.mk.co.kr/news/it/12112100 (vérifié le 2026-11-15)"
   },
   {
     "id": "the-monarch-of-shadows",
     "name": {
       "fr": "Monarque des Ombres",
       "en": "The Monarch of Shadows",
-      "ko": ""
+      "ko": "그림자 군주",
+      "ja": "影の君主"
     },
     "rarity": null,
     "role": null,
@@ -318,14 +320,17 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_ko_source": "https://m.blog.naver.com/marbleblog/224292017119 (blog officiel Netmarble) ; https://game.mk.co.kr/news/it/12112100 (vérifié le 2026-11-15)",
+    "name_ja_source": "https://gamewith.jp/sololeveling/ (Velvet) ; compte X officiel JP @Sololv_ARISE_JP (影の君主) (vérifié le 2026-11-15, à vérifier en jeu)"
   },
   {
     "id": "velvet",
     "name": {
       "fr": "Velvet",
       "en": "Velvet",
-      "ko": ""
+      "ko": "",
+      "ja": "ベルベット"
     },
     "rarity": null,
     "role": null,
@@ -470,6 +475,7 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "name_ja_source": "https://gamewith.jp/sololeveling/ (Velvet) ; compte X officiel JP @Sololv_ARISE_JP (影の君主) (vérifié le 2026-11-15, à vérifier en jeu)"
   }
 ]
