@@ -1,6 +1,7 @@
 # Spécification — Étape 2 : builds du top 10 et PowerPoint
 
-Version 3 — 15/11/2026 — discussion 2 (Builds). Destinataire : discussion 8 (Code).
+Version 4 — 15/11/2026 — discussion 2 (Builds). Destinataire : discussion 8 (Code).
+Nouveauté v4 : builds sur classement provisoire quand un mode n'a aucune ligne classée (§0), demandé par la discussion 3 pour le BOT de la semaine 2026-11-12.
 Nouveautés v3 : écrans hors composition (§1.4 : fiche de SJW, stats 能力値情報, statues 彫像, gemmes 宝石情報, soutien 討伐支援), reconnaissance par le **nom écrit** quand il est visible (§2.1), stats du successeur, slides Statues et Gemmes (§3.2). Stats toujours facultatives. Source : captures POC (client JA, `docs/essais/composition/poc_*_ja.png`) et description de la discussion 8 (15/11/2026).
 Nouveautés v2 : écran de composition et onglets réels (§1.3), stats facultatives (décision d'Alexis), position des compétences de SJW et des artefacts, reconnaissance avec la banque actuelle seulement (décision d'Alexis, §2.1), §5 et §7 mis à jour. Source des positions : 5 captures BOT (client JA, `docs/essais/composition/bot_*_ja.png`) et capture HOTM de SJW (13/11/2026).
 Références : `docs/CONTEXTE.md` §4 (étape 2), `docs/SPEC_ETAPE1.md`, `docs/REFERENCE_ECRANS_*.md`, `data/db/_schema.md`, `data/rules/<semaine>.json`, `pipeline/sjw.py`, `pipeline/hotm_ecran.py`, `pipeline/export_excel.py`.
@@ -11,6 +12,7 @@ Marqueurs (mêmes sens qu'à l'étape 1) : **[À CONFIRMER]** = hypothèse codé
 ## 0. Principes
 
 - **Builds analysés** : les lignes `rank` 1 à 10 (`confidence: sur`) de `data/runs/<semaine>/<mode>.json` (`poc`, `bot`, `gb`, `hotm-gate-<n>`). Une ligne `rank: null` n'a pas de build.
+- **Classement provisoire (v4)** : si un mode n'a **aucune** ligne `rank` 1 à 10, on prend les `config.top` premières lignes `a_verifier` triées par score provisoire (même ordre que le classement : BOT du plus court au plus long, autres du plus haut au plus bas). Paramètre `config.builds_provisoires = true`. Ces builds portent `"line_provisional": true`, `rank: null`, `provisional_rank` (1 à 10), `confidence: a_verifier`, note `ligne non classée (score provisoire)`. PowerPoint : bandeau `CLASSEMENT PROVISOIRE` sur la slide de titre et rang affiché `~n`. Dès qu'une ligne du mode devient classée, on revient au §0 normal et les builds provisoires du mode sont supprimés au passage suivant.
 - **Un build = une run** : un objet de `runs_detail[i]` donne un build `<run_id>-<i+1>.json`. POC et GB : 2 runs = 2 builds, éventuellement dans 2 vidéos différentes.
 - **Où chercher** : dans la vidéo `runs_detail[i].video_id`, l'écran de composition (onglets) **avant** l'écran RESULT de la run (`t`). Si la vidéo contient 2 runs, on prend la composition située entre le RESULT précédent et celui de la run.
 - **Reconnaissance** : par icône (OpenCV, comparaison avec `data/icons/<categorie>/`). Sur l'écran de composition, aucun nom n'est écrit ; les noms écrits des écrans hors composition sont lus par OCR (v3, §1.4 et §2.1), ainsi que les chiffres (niveaux, stats).
@@ -65,6 +67,8 @@ Ce format remplace l'exemple du skill §3 (« Build »). Pour le HOTM, `<mode>` 
   "gate": null,
   "hunter_mode": null,
   "rank": 1,
+  "line_provisional": false,
+  "provisional_rank": null,
   "player": "nom de la chaîne",
   "channel_id": "UC…",
   "video_id": "XXXXXXXXXXX",
@@ -363,3 +367,4 @@ Checklist de la discussion 2 :
 15. (v3) `poc_sjw_ja.png` : fiche de SJW reconnue ; 6 compétences rattachées par leur libellé ; attributs `strength` 19, `vitality` 10, `agility` 10, `intelligence` 1335, `perception` 10 ; 2 noms d'armes lus.
 16. (v3) Build sans statues ni gemmes → aucune slide 11-12, statut inchangé.
 17. (v3) Nom et icône en désaccord → `confidence: a_verifier`.
+18. (v4) Semaine 2026-11-12, BOT sans ligne classée → builds pour les 9 lignes `a_verifier` (wJ9CwjKwyco en `provisional_rank` 1), `line_provisional: true`, bandeau dans le PowerPoint. GB (lignes classées) inchangé.

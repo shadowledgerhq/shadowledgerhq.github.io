@@ -3,6 +3,7 @@
 - SPEC_ETAPE2 v1 et v2 codées par la discussion 8
 - SPEC_ETAPE2 v3 : écrans hors composition (fiche SJW, stats 能力値情報, statues 彫像, gemmes 宝石情報, soutien 討伐支援), reconnaissance par le nom écrit, stats du successeur, slides Statues et Gemmes ; stats toujours facultatives ; icônes non reconnues gardées en unmatched
 ## En cours
+- v4 : builds sur classement provisoire (BOT 2026-11-12) à coder par la discussion 8 ; essai pc.py sur les 4 vidéos BOT de tête
 - Implémentation v3 par la discussion 8
 ## À faire
 - Contrôler les builds POC/BOT produits (§6)
