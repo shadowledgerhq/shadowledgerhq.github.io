@@ -416,5 +416,26 @@
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Lettre D/C/B/A (qualité) affichée sur chaque gemme. Ordre D<C<B<A confirmé par les valeurs (même rang 5 : D 230 < C 260 < B 290 < A 350). Le rang pèse davantage : rang 6 qualité D (370) > rang 5 qualité A (350). Le nombre en bas à droite d'une gemme d'inventaire est la quantité possédée (confirmé : « En votre possession »). Les gemmes de rang 3 (bord bleu) et de rang 2 (bord gris) n'ont pas de lettre ; rang 4 : bord violet, sans lettre. Boutons Fusionner / Promotion ; Changer (change le type de bonus) et Déséquiper coûtent chacun 1 jeton (icône de ticket, 27 sur ce compte). Valeurs pour les autres types de gemme : non relevées."
+  },
+  {
+    "id": "gem-rules",
+    "kind": "rules",
+    "name": {
+      "fr": "Règles des gemmes (guide officiel)",
+      "en": "Gem rules",
+      "ja": "",
+      "ko": ""
+    },
+    "rules": [
+      "Accès : Menu > Reliques > Gemmes ; débloqué après le chapitre 15.",
+      "Équiper toutes les gemmes de la 1re page avec des gemmes de rang 4 ou plus débloque la 2e page.",
+      "Équiper/déséquiper/changer une gemme consomme une monnaie ou un jeton.",
+      "Promotion : il faut une gemme de rang 5 de mêmes stat et qualité que l'objectif ; garantit une gemme de rang 6 ; matériaux de promotion : Battlefield of Chaos, palier 16 ou plus.",
+      "Capture officielle : gemme d'attaque supplémentaire rang 3 = 140 (concorde avec la base)."
+    ],
+    "source": "https://guide.netmarble.com/sololv/120 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Jewel)",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.16",
+    "notes": "Le guide officiel ne publie aucune valeur par rang ; page rédigée sur une version de test."
   }
 ]

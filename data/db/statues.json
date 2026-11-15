@@ -124,7 +124,15 @@
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
     "game_version": "1.5.15",
-    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure.",
+    "rules_guide": [
+      "Déblocage : vaincre des ennemis puissants en mode Histoire, difficulté Expert (conditions détaillées dans la liste des statues du jeu).",
+      "Deux types : statues de Sung Jinwoo/Successeurs et statues de chasseurs.",
+      "Chaque statue a 3 sous-stats ; son rang = le plus bas des trois rangs.",
+      "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
+      "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
+    ],
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
   },
   {
     "id": "conjuror",
@@ -251,7 +259,15 @@
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
     "game_version": "1.5.15",
-    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure.",
+    "rules_guide": [
+      "Déblocage : vaincre des ennemis puissants en mode Histoire, difficulté Expert (conditions détaillées dans la liste des statues du jeu).",
+      "Deux types : statues de Sung Jinwoo/Successeurs et statues de chasseurs.",
+      "Chaque statue a 3 sous-stats ; son rang = le plus bas des trois rangs.",
+      "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
+      "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
+    ],
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
   },
   {
     "id": "white-flames",
@@ -378,7 +394,15 @@
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
     "game_version": "1.5.15",
-    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure.",
+    "rules_guide": [
+      "Déblocage : vaincre des ennemis puissants en mode Histoire, difficulté Expert (conditions détaillées dans la liste des statues du jeu).",
+      "Deux types : statues de Sung Jinwoo/Successeurs et statues de chasseurs.",
+      "Chaque statue a 3 sous-stats ; son rang = le plus bas des trois rangs.",
+      "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
+      "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
+    ],
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
   },
   {
     "id": "transfiguration",
@@ -505,7 +529,15 @@
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
     "game_version": "1.5.15",
-    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure.",
+    "rules_guide": [
+      "Déblocage : vaincre des ennemis puissants en mode Histoire, difficulté Expert (conditions détaillées dans la liste des statues du jeu).",
+      "Deux types : statues de Sung Jinwoo/Successeurs et statues de chasseurs.",
+      "Chaque statue a 3 sous-stats ; son rang = le plus bas des trois rangs.",
+      "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
+      "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
+    ],
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
   },
   {
     "id": "steel",
@@ -632,6 +664,14 @@
     "source": "https://slagate.com/builds (panneau « Statues », lecture de page autorisée par Alexis le 13/11/2026) ; nom EN et effet EN : https://forum.netmarble.com/slv_en/view/14/109985",
     "verified_at": "2026-11-15",
     "game_version": "1.5.15",
-    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure."
+    "notes": "Nom de la catégorie : « Statues » (FR/slagate, 彫像 JA) ; Netmarble l'appelle « Figure » en EN (patch du 22/10/2026). Valeurs par rang (E→S) et probabilités : non relevées. Nom EN = nom Netmarble de la figure.",
+    "rules_guide": [
+      "Déblocage : vaincre des ennemis puissants en mode Histoire, difficulté Expert (conditions détaillées dans la liste des statues du jeu).",
+      "Deux types : statues de Sung Jinwoo/Successeurs et statues de chasseurs.",
+      "Chaque statue a 3 sous-stats ; son rang = le plus bas des trois rangs.",
+      "Les bonus de statue ne s'appliquent pas dans le Battlefield of Time (BOT).",
+      "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
+    ],
+    "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)"
   }
 ]
