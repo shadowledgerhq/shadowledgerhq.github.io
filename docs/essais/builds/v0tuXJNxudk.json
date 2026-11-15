@@ -89,7 +89,31 @@
     "level": null
    }
   ],
-  "stats": {},
+  "stats": {
+   "defense": {
+    "percent": 73.79,
+    "rating": 70380
+   },
+   "crit-rate": {
+    "percent": 50.0,
+    "rating": 15077
+   },
+   "crit-damage": {
+    "percent": 218.2,
+    "rating": 28459
+   },
+   "cooldown-reduction": {
+    "percent": 16.27,
+    "rating": 8094
+   },
+   "hp": 108376,
+   "mana": 5582,
+   "attack": 138984,
+   "defense-penetration": {
+    "percent": 43.02,
+    "rating": 37748
+   }
+  },
   "skills": [
    {
     "slot": "skill_1",
@@ -234,6 +258,24 @@
     "cooldown-reduction": {
      "percent": 0.0,
      "rating": 0
+    },
+    "mana": 5423,
+    "attack": 85562,
+    "accuracy": {
+     "percent": 88.32,
+     "rating": 28905
+    },
+    "defense": {
+     "percent": 85.22,
+     "rating": 144098
+    },
+    "crit-rate": {
+     "percent": 50.0,
+     "rating": 4507
+    },
+    "defense-penetration": {
+     "percent": 41.74,
+     "rating": 45680
     }
    },
    "position_inconnue": true
@@ -431,14 +473,14 @@
   "sjw_weapons": "0/2",
   "sjw_artifacts": "0/8",
   "sjw_cores": "0/3",
-  "sjw_stats": "0/15",
+  "sjw_stats": "8/15",
   "sjw_skills": "0/6",
   "blessings": "0/8",
   "hunters": "1/3",
   "weapons": "0/3",
   "artifacts": "0/24",
   "cores": "0/9",
-  "stats": "3/45",
+  "stats": "9/45",
   "shadows": "3/3"
  },
  "found_at": {},
@@ -490,33 +532,6 @@
    "best_id": "han-song-yi",
    "score": 0.609,
    "crop": null
-  },
-  {
-   "element": "stats",
-   "owner": null,
-   "slot": null,
-   "best_id": null,
-   "score": 0.0,
-   "crop": null,
-   "text_read": "Bag              能力値情報               x",
-   "stats": {
-    "defense": {
-     "percent": 73.79,
-     "rating": 70380
-    },
-    "crit-rate": {
-     "percent": 50.0,
-     "rating": 15077
-    },
-    "crit-damage": {
-     "percent": 218.2,
-     "rating": 28459
-    },
-    "cooldown-reduction": {
-     "percent": 16.27,
-     "rating": 8094
-    }
-   }
   }
  ],
  "attendus": {
@@ -540,7 +555,7 @@
   "règles poc inconnues"
  ],
  "erreurs": [],
- "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; chasseur trouvé par l'écran de stats; règles poc inconnues; reconnaissance faible : shadows",
+ "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; règles poc inconnues; reconnaissance faible : shadows",
  "sources": [
   {
    "type": "video",
