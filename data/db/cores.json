@@ -53,7 +53,7 @@
   {
     "id": "arrogant-rulers-reflection",
     "name": {
-      "fr": "Réfléxion du Dominateur arrogant",
+      "fr": "Réflexion du Dominateur arrogant",
       "en": "Arrogant Ruler's Reflection",
       "ko": ""
     },
@@ -92,7 +92,7 @@
     "wiki_revid": 14829,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
     "max_level": {
       "value": 25,
@@ -206,7 +206,7 @@
   {
     "id": "nameless-demons-deception",
     "name": {
-      "fr": "Tromperie du Démon Anonyme",
+      "fr": "Tromperie du démon anonyme",
       "en": "Nameless Demon's Deception",
       "ko": ""
     },
@@ -245,7 +245,7 @@
     "wiki_revid": 14829,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
     "max_level": {
       "value": 25,
@@ -257,7 +257,7 @@
   {
     "id": "ancient-wraiths-obession",
     "name": {
-      "fr": "Obsession du Spectre Antique",
+      "fr": "Obsession du spectre antique",
       "en": "Ancient Wraith's Obession",
       "ko": ""
     },
@@ -296,7 +296,7 @@
     "wiki_revid": 14829,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
     "max_level": {
       "value": 25,
@@ -512,7 +512,7 @@
   {
     "id": "nameless-demons-horn",
     "name": {
-      "fr": "Corne du Démon Anonyme",
+      "fr": "Corne du démon anonyme",
       "en": "Nameless Demon's Horn",
       "ko": ""
     },
@@ -551,7 +551,7 @@
     "wiki_revid": 14829,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
     "max_level": {
       "value": 25,
@@ -563,7 +563,7 @@
   {
     "id": "ancient-wraiths-right-hand",
     "name": {
-      "fr": "Main droite du Spectre Antique",
+      "fr": "Main droite du spectre antique",
       "en": "Ancient Wraith's Right Hand",
       "ko": ""
     },
@@ -602,7 +602,7 @@
     "wiki_revid": 14829,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
     "max_level": {
       "value": 25,
@@ -614,7 +614,7 @@
   {
     "id": "ferocious-protectors-claw",
     "name": {
-      "fr": "Griffe du Protecteur Féroce",
+      "fr": "Griffe du Protecteur féroce",
       "en": "Ferocious Protector's Claw",
       "ko": ""
     },
@@ -653,7 +653,7 @@
     "wiki_revid": 14829,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
     "max_level": {
       "value": 25,
@@ -818,7 +818,7 @@
   {
     "id": "nameless-demons-magisphere",
     "name": {
-      "fr": "Magisphère du Démon Anonyme",
+      "fr": "Magisphère du démon anonyme",
       "en": "Nameless Demon's Magisphere",
       "ko": ""
     },
@@ -857,7 +857,7 @@
     "wiki_revid": 14829,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
     "max_level": {
       "value": 25,
@@ -869,7 +869,7 @@
   {
     "id": "ancient-wraiths-mana-power",
     "name": {
-      "fr": "Énergie de Mana du Spectre Antique",
+      "fr": "Énergie de mana du spectre antique",
       "en": "Ancient Wraith's Mana Power",
       "ko": ""
     },
@@ -908,7 +908,7 @@
     "wiki_revid": 14829,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter.",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
     "max_level": {
       "value": 25,
