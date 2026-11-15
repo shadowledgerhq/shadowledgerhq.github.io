@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-11-19-annonce",
+    "version": null,
+    "date": "2026-11-19",
+    "status": "annonce",
+    "name": {
+      "fr": "Mise à jour de novembre 2026 : annonce des développeurs (Colère de Kamish)",
+      "en": "Developer Note: Kamish's Wrath Arrives (11/12 preview)"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/13/110809",
+    "extra_urls": [],
+    "source": "https://forum.netmarble.com/slv_en/view/13/110809",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Note publiée le 12/11/2026 : aperçu, pas encore les notes de mise à jour. Date de sortie non indiquée par Netmarble (19/11 selon Alexis, à confirmer) ; contenu « susceptible de changer ». Aucune valeur chiffrée : rien ajouté aux autres catégories (hunters, weapons…) avant les notes détaillées. Données de jeu non vérifiées en jeu.",
+    "changes": [
+      {
+        "category": "weapons",
+        "id": "kamish-wrath",
+        "change": "ajout annoncé : arme ultime de SJW (originale) « Kamish's Wrath » : dagues jumelles, spécialisée dégâts Fire, prise inversée"
+      },
+      {
+        "category": "weapons",
+        "id": "kamish-roar",
+        "change": "ajout annoncé : arme originale « Kamish's Roar » : accumulation d'éléments Fire, attaques d'estoc en zone"
+      },
+      {
+        "category": "hunters",
+        "id": "thalia-de-rossi",
+        "change": "ajout annoncé : Supporter Dark Overload (Guilde Rivera) ; boucliers/soins, buff Overload, hausse des dégâts critiques subis par l'ennemi ; synergie avec Agnes Rivera ; augmente les dégâts d'attaque de noyau de SJW"
+      },
+      {
+        "category": "guild_boss",
+        "id": "dargo",
+        "change": "nouveau boss de guilde : Dargo, la Corne de la mer d'Azur (eau) ; forte résistance à l'accumulation élémentaire, il faut accumuler pour le mettre en Overload"
+      },
+      {
+        "category": "poc",
+        "id": "power-of-calamity",
+        "change": "refonte : progression par paliers (boss vaincu = palier suivant), récompenses de palier et de dégâts, reprise au palier max à chaque saison ; restrictions d'éléments supprimées (tous éléments en faiblesse) ; durée raccourcie ; récompenses de classement hebdo/saison inchangées ; première victoire par palier"
+      },
+      {
+        "category": "guild",
+        "id": "guild-revamp-part-2",
+        "change": "événement d'échange d'objets de guilde (semaines 2-3) ; guilde tutoriel (Ahjin) ; amélioration des guildes"
+      },
+      {
+        "category": "settings",
+        "id": "quality-and-display",
+        "change": "qualité Standard (≈ 8 Go au lieu de ≈ 14 Go) ; téléchargement en arrière-plan sur Android ; option d'affichage des dégâts en unités simplifiées"
+      },
+      {
+        "category": "sjw",
+        "id": "auto-battle",
+        "change": "auto-combat de SJW amélioré : enchaînement accumulation d'éléments → Overload"
+      }
+    ]
+  },
+  {
     "id": "2026-10-22",
     "version": "1.5.15",
     "date": "2026-10-22",
