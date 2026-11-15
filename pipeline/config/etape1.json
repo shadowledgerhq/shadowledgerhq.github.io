@@ -53,7 +53,9 @@
     "saison_ref": {"saison": 20, "semaine_saison": 1, "week": "2026-10-22"},
     "semaines_jeu": 4,
     "semaines_calcul": 1,
-    "challenge": ["challenge", "チャレンジ", "챌린지"]
+    "challenge": ["challenge", "チャレンジ", "챌린지"],
+    "zone_armes_sjw": null,
+    "_zone_armes_sjw": "[EN ATTENTE] SPEC v25 §4.5 : zone (fractions x0, y0, x1, y1) des 2 armes de SJW dans le bandeau du bas de l'écran RESULT du BOT ; lue vide (fond uniforme, regles_deduites.zone_vide) = SJW absent. Coordonnées inconnues : aucune capture de l'écran RESULT du BOT dans le dépôt, et le pipeline ne lit pas encore cet écran (BOT lu par le titre). Tant que la zone est null, aucune absence de SJW n'est déduite."
   },
   "doublon_modes": ["poc"],
   "modes_classement": ["poc", "bot", "gb", "hotm"],

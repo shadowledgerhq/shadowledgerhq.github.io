@@ -8,11 +8,17 @@ Preuves lues (lectures `confidence: sur` ; builds pour BOT et HOTM) :
   BOT  : équipement de SJW reconnu dans le build (armes, artefacts ou noyaux du bandeau de gauche) ;
   HOTM : composition : `hunter_mode` false + SJW reconnu = SJW présent ; `hunter_mode` true = sous-mode sans SJW.
 Un bloc garde sa source d'origine ; le calcul est ajouté dans `bloc.deduit` (source « écrans », video_ids, date).
+v25 : `sjw_skills`, `blessings`, `shadows` suivent la même règle, preuve = champ `found` à true du build reconnu de l'étape 2 ;
+`sjw` false (connu ou déduit) -> `sjw_skills` et `blessings` false (note « déduit de sjw: false »), jamais l'inverse. Absence de SJW
+au BOT : seulement si la zone des 2 armes de SJW du bandeau RESULT est lue VIDE (`zone_vide`, `config.bot.zone_armes_sjw`) sur
+≥ 5 runs sûres de 5 chaînes (`detail.armes_sjw_vides` de la lecture BOT) ; une icône non reconnue ne prouve rien.
 Les anciens noms `bot_season` / `bot_challenge` sont migrés vers `bot` (v10 : un seul classement BOT)."""
 from pathlib import Path
 
 MODES = ("poc", "bot", "gb", "hotm")
-ELEMENTS = ("sjw", "successor")
+ELEMENTS = ("sjw", "successor", "sjw_skills", "blessings", "shadows")
+ELEMENTS_SJW = ("sjw_skills", "blessings")          # éléments de SJW : faux si SJW est absent (jamais l'inverse)
+NOTE_CASCADE = "déduit de sjw: false"
 MIN_RUNS, MIN_CHAINES = 5, 5
 NOTE_FAUX = "déduit, à vérifier"
 NOTE_CHALLENGE = ("relevé du 05/11 rangé en challenge (mode retiré en mai 2026) : à vérifier, "
@@ -32,6 +38,12 @@ def migrer(regles):
             if ancien == "bot_challenge":
                 bloc = {**bloc, "notes": NOTE_CHALLENGE}
             modes["bot"] = bloc
+    src = regles.get("sources")
+    if isinstance(src, dict):                       # les sources suivent le renommage (bot_season -> bot)
+        for ancien in ("bot_season", "bot_challenge"):
+            if ancien in src:
+                src.setdefault("bot", src.pop(ancien))
+                change = True
     ordre = {m: modes.get(m) for m in MODES}        # ordre fixe poc, bot, gb, hotm ; autres clés à la suite
     ordre.update({k: v for k, v in modes.items() if k not in ordre})
     if list(ordre) != list(modes):
@@ -62,6 +74,8 @@ def preuves_lectures(lectures):
                 _noter(p, "poc", "sjw", True, vid, chaine)
             if d.get("successor") is not None:
                 _noter(p, "poc", "successor", True, vid, chaine)
+        elif l.get("mode") == "bot" and d.get("armes_sjw_vides") is not None:
+            _noter(p, "bot", "sjw", d["armes_sjw_vides"] is False, vid, chaine)       # zone d'armes lue vide = SJW absent
         elif l.get("mode") == "gb" and l.get("score_source") in ("debut-fin", "video-complete") and d.get("player_score") is not None:
             _noter(p, "gb", "sjw", True, vid, chaine)
             if d.get("successeur_present"):
@@ -78,6 +92,10 @@ def preuves_builds(builds, preuves=None):
         if b.get("status") not in ("build_partiel", "build_complet"):
             continue
         mode, vid, chaine = b.get("mode"), b.get("video_id"), b.get("channel_id")
+        if mode in MODES:                              # v25 : élément lu par l'étape 2 (found à true)
+            for el in ("sjw_skills", "blessings", "shadows"):
+                if (b.get("found") or {}).get(el) is True:
+                    _noter(p, mode, el, True, vid, chaine)
         s = b.get("sjw") or {}
         equipe = any(x.get("id") for x in s.get("weapons") or []) or any(x.get("set_id") for x in s.get("artifacts") or []) \
             or any(x.get("id") for x in s.get("cores") or [])
@@ -145,7 +163,38 @@ def appliquer(regles, valeurs_deduites, date):
         if modes.get(mode) != bloc:
             modes[mode] = bloc
             change = True
+    for mode, bloc in list(modes.items()):                 # v25 : sjw false -> éléments de SJW false
+        if isinstance(bloc, dict) and bloc.get("sjw") is False:
+            manquants = [el for el in ELEMENTS_SJW if bloc.get(el) is None]
+            if manquants:
+                bloc = dict(bloc)
+                deduit = dict(bloc.get("deduit") or {})
+                elements = dict(deduit.get("elements") or {})
+                for el in manquants:
+                    bloc[el] = False
+                    elements[el] = False
+                deduit.update(source=deduit.get("source", "écrans"), elements=elements, video_ids=deduit.get("video_ids", []),
+                              date=deduit.get("date", date))
+                bloc["deduit"] = deduit
+                notes = [x for x in (bloc.get("notes_deduit") or "").split(" ; ") if x] + [NOTE_CASCADE]
+                bloc["notes_deduit"] = " ; ".join(sorted(set(notes)))
+                modes[mode] = bloc
+                change = True
     return change
+
+
+def zone_vide(image, zone, ecart_max=8.0):
+    """v25 : True si la zone (fractions x0, y0, x1, y1 de l'image PIL) est un fond uniforme : écart-type des niveaux de gris
+    ≤ `ecart_max` (aucune icône). `zone` None ou image None : None (inconnu, jamais une preuve d'absence)."""
+    if image is None or not zone:
+        return None
+    from PIL import ImageStat
+    w, h = image.size
+    x0, y0, x1, y1 = zone
+    rect = image.convert("L").crop((round(x0 * w), round(y0 * h), round(x1 * w), round(y1 * h)))
+    if rect.size[0] < 4 or rect.size[1] < 4:
+        return None
+    return ImageStat.Stat(rect).stddev[0] <= ecart_max
 
 
 def mettre_a_jour(d, week, lectures, date):
@@ -156,7 +205,7 @@ def mettre_a_jour(d, week, lectures, date):
     existant = regles is not None
     preuves = preuves_lectures(lectures)
     builds = []
-    for mode in ("bot", "hotm"):
+    for mode in ("poc", "bot", "hotm"):
         dossier = Path(d.data) / "builds" / week / mode
         for f in sorted(dossier.glob("*.json")) if dossier.exists() else []:
             try:

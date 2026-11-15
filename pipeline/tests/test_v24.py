@@ -164,3 +164,46 @@ if __name__ == "__main__":
         if nom.startswith("test_"):
             f()
     print("ok")
+
+
+# --- v25 ------------------------------------------------------------------------------------------------------------------
+
+def test_v25_elements_de_sjw_par_les_builds_found():
+    b = {"mode": "bot", "status": "build_partiel", "video_id": "b1", "channel_id": "UCB", "sjw": {},
+         "found": {"sjw_skills": True, "blessings": False, "shadows": True}}
+    v = R.valeurs(R.preuves_builds([b]))
+    assert v["bot"]["sjw_skills"] == (True, ["b1"]) and v["bot"]["shadows"] == (True, ["b1"]) and "blessings" not in v["bot"]
+    assert R.valeurs(R.preuves_builds([{**b, "status": "pas_de_build"}])) == {}
+
+
+def test_v25_sjw_false_entraine_skills_et_blessings_mais_pas_l_inverse():
+    regles = {"week": W, "modes": {"poc": None, "bot": {"sjw": False, "shadows": True}, "gb": None, "hotm": {"sjw": True}}}
+    assert R.appliquer(regles, {}, "2026-11-15")
+    bot = regles["modes"]["bot"]
+    assert bot["sjw_skills"] is False and bot["blessings"] is False and bot["shadows"] is True
+    assert "déduit de sjw: false" in bot["notes_deduit"] and bot["deduit"]["elements"] == {"sjw_skills": False, "blessings": False}
+    assert "sjw_skills" not in regles["modes"]["hotm"]                      # sjw true n'implique rien
+    assert not R.appliquer(regles, {}, "2026-11-20")                        # idempotent
+    # une valeur déjà connue n'est pas écrasée
+    regles = {"week": W, "modes": {"bot": {"sjw": False, "blessings": True}}}
+    R.appliquer(regles, {}, "2026-11-15")
+    assert regles["modes"]["bot"]["blessings"] is True and regles["modes"]["bot"]["sjw_skills"] is False
+
+
+def test_v25_absence_de_sjw_au_bot_seulement_par_la_zone_vide():
+    bot = lambda i, vide: lec(f"b{i}", f"UC{i}", "bot", 5 * T, detail={"armes_sjw_vides": vide})
+    cinq = [bot(i, True) for i in range(5)]
+    assert R.valeurs(R.preuves_lectures(cinq))["bot"]["sjw"][0] is False
+    assert "bot" not in R.valeurs(R.preuves_lectures(cinq[:4]))              # 4 chaînes : inconnu
+    assert R.valeurs(R.preuves_lectures(cinq + [bot(9, False)]))["bot"]["sjw"][0] is True   # une icône vue l'emporte
+    assert R.valeurs(R.preuves_lectures([lec("x", "UCX", "bot", 5 * T)])) == {}            # zone non lue : rien
+
+
+def test_v25_zone_vide():
+    from PIL import Image, ImageDraw
+    im = Image.new("RGB", (400, 200), (30, 40, 90))
+    assert R.zone_vide(im, [0.1, 0.1, 0.5, 0.5]) is True
+    ImageDraw.Draw(im).rectangle([60, 40, 120, 90], fill=(240, 220, 50))        # une icône dans la zone
+    assert R.zone_vide(im, [0.1, 0.1, 0.5, 0.5]) is False
+    assert R.zone_vide(im, None) is None and R.zone_vide(None, [0, 0, 1, 1]) is None
+    assert R.zone_vide(im, [0.1, 0.1, 0.1, 0.1]) is None                        # zone minuscule : inconnu

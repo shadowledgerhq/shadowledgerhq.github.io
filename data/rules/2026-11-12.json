@@ -1,7 +1,20 @@
 {
   "week": "2026-11-12",
   "modes": {
-    "poc": null,
+    "poc": {
+      "shadows": true,
+      "deduit": {
+        "source": "écrans",
+        "video_ids": [
+          "zFsAGI_xyOQ"
+        ],
+        "elements": {
+          "shadows": true
+        },
+        "date": "2026-11-15"
+      },
+      "source": "écrans"
+    },
     "bot": {
       "sjw": true,
       "sjw_skills": true,
@@ -33,9 +46,9 @@
     }
   },
   "verified_at": "2026-11-13",
-  "notes": "null = règles du mode pas encore fournies. HOTM : un sous-mode sans SJW existe (voir docs/REFERENCE_ECRANS_HOTM.md), sans restriction de contenu. BOT séparé en bot_season / bot_challenge le 13/11/2026 : le bloc bot existant est rangé en bot_season (SJW autorisé, donc season par définition).",
+  "notes": "null = règles du mode pas encore fournies. HOTM : un sous-mode sans SJW existe (voir docs/REFERENCE_ECRANS_HOTM.md), sans restriction de contenu. BOT : un seul classement `bot` depuis la v10 (le mode challenge a été retiré du jeu en mai 2026) ; les anciens blocs `bot_season` / `bot_challenge` ont été migrés vers `bot`. Les blocs `deduit` sont calculés par le pipeline à partir des écrans (SPEC v24-v25).",
   "sources": {
     "hotm": "confirmation d'Alexis, « aucune restriction » (13/11/2026) ; captures HOTM",
-    "bot_season": "confirmation d'Alexis (captures BOT, 12/11/2026)"
+    "bot": "confirmation d'Alexis (captures BOT, 12/11/2026)"
   }
 }
