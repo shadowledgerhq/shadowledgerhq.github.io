@@ -12,6 +12,7 @@
 - `docs/REFERENCE_ECRANS_BOT.md` : section « Écran de résultat (client anglais, capture du 13/11/2026) » ajoutée (phases cumulées, score = chrono de la dernière phase).
 - Recoupement avec le patch du 22/10 (`tools/crosscheck_patches.py`, champs `patch_adjustments`) : 8 chasseurs et 2 armes exclusives déjà à jour sur le wiki (pages ≥ 22/10) ; 4 chasseurs (portée de burst) non vérifiables ; 9 chefs d'ombre : valeurs du wiki = avant patch, valeurs après patch ajoutées (rang General ; Iron/Tank = effet en plus). Plafonds de niveau ajoutés : noyaux 25, armes 130, ombres 195. Pierres : 7 valeurs du wiki ≠ texte FR de l'API (Lightning Speed, Intuit, Irresistible Force, Sandbag, Double-edged Sword, Chains of Blood, Irreversible Road) : wiki périmé, cohérent avec les buffs de juin.
 ## En cours
+- 16/11, demande discussion 8 (compétences des chasseurs, grille 2×4) : pas de nouvelle catégorie. Elles sont dans `hunters.json` → `skills[]` : 7 par chasseur (basic_attack, core_attack, skill_1, skill_2, support, qte, ultimate) pour 63 chasseurs (441), + `passives[]`. Les 8 icônes de l'écran = « i » (infos) + ces 7. Nom EN seulement ; FR/KO/JA et icônes : vides. L'API slagate n'a aucune icône ni nom de compétence de chasseur (`competences` = runes de SJW, `qte` = QTE de SJW). Sans source, rien inventé. SPEC_ETAPE2 §5 n°7 : « hors build, plus tard » (décision d'Alexis).
 - Rien d'engagé. 15/11 : reprise, `check_db` OK (0 erreur, 585 avertissements). Patch du 19/11 pas encore publié : `patches.json` et `game_version` (1.5.15) inchangés ; à recouper après sa sortie.
 ## À faire
 - Valeurs de sets d'artefacts : rééquilibrés 4 fois (04/06→22/10) sans valeurs publiées : texte du wiki (mai) possiblement périmé, à vérifier en jeu. Chasseurs rééquilibrés en juin/juillet/août non recoupés (patchs peu détaillés).
@@ -22,6 +23,7 @@
 - Vides : `main_stat_options` des sets, `weapon_type` des chasseurs, valeurs par niveau, stats FR/EN, 86 armes de SJW sans FR/icône, 8 sets d'événement.
 - Script de contrôle (ids uniques, FR+EN, source, date, icône) : à demander à la discussion 8.
 ## Besoin d'Alexis
+- Si les compétences de chasseurs doivent entrer dans le build : captures JA de l'écran Compétences (icônes + noms) pour quelques chasseurs ; l'icône peut être commune à tous les chasseurs pour un même emplacement : à confirmer.
 - Captures de l'écran des gemmes (5 couleurs, niveaux, bonus) et de statues pour les valeurs par rang ; noms JA/KO des armes, ombres, successeurs (capture du jeu JA/KO).
 - Une capture par semaine du soutien de subjugation et des preuves HOTM (pas de preuves 12/11 : Alexis n'en a pas).
 - Captures du GB ; règles POC/GB (05/11, 12/11) et HOTM 05/11 pour `data/rules/`.
