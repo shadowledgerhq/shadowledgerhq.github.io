@@ -12,7 +12,7 @@
 - `docs/REFERENCE_ECRANS_BOT.md` : section « Écran de résultat (client anglais, capture du 13/11/2026) » ajoutée (phases cumulées, score = chrono de la dernière phase).
 - Recoupement avec le patch du 22/10 (`tools/crosscheck_patches.py`, champs `patch_adjustments`) : 8 chasseurs et 2 armes exclusives déjà à jour sur le wiki (pages ≥ 22/10) ; 4 chasseurs (portée de burst) non vérifiables ; 9 chefs d'ombre : valeurs du wiki = avant patch, valeurs après patch ajoutées (rang General ; Iron/Tank = effet en plus). Plafonds de niveau ajoutés : noyaux 25, armes 130, ombres 195. Pierres : 7 valeurs du wiki ≠ texte FR de l'API (Lightning Speed, Intuit, Irresistible Force, Sandbag, Double-edged Sword, Chains of Blood, Irreversible Road) : wiki périmé, cohérent avec les buffs de juin.
 ## En cours
-- Rien d'engagé.
+- Rien d'engagé. 15/11 : reprise, `check_db` OK (0 erreur, 585 avertissements). Patch du 19/11 pas encore publié : `patches.json` et `game_version` (1.5.15) inchangés ; à recouper après sa sortie.
 ## À faire
 - Valeurs de sets d'artefacts : rééquilibrés 4 fois (04/06→22/10) sans valeurs publiées : texte du wiki (mai) possiblement périmé, à vérifier en jeu. Chasseurs rééquilibrés en juin/juillet/août non recoupés (patchs peu détaillés).
 - 7 pierres du 17/09 + 29 runes récentes : effets/valeurs à saisir (captures du jeu).
