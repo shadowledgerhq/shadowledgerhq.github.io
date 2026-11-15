@@ -156,12 +156,17 @@
     "color": "purple",
     "levels": null,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "rang 6, qualité B": 205,
+      "rang 5, qualité B": 155,
+      "rang 5, qualité C": 145,
+      "rang 5, qualité D": 130
+    },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de réduction de la consommation de PM »."
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de réduction de la consommation de PM ». Nom en jeu : « Baisse du coût de PM »."
   },
   {
     "id": "gem-bonus-additional-mp",
@@ -177,12 +182,40 @@
     "color": "purple",
     "levels": null,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "rang 6, qualité A": 120
+    },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Nom de gemme en jeu : « Gemme d'énergie de mana extra »."
+  },
+  {
+    "id": "gem-bonus-speed",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "Vitesse (%)",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": null,
+    "color": "purple",
+    "levels": null,
+    "effects": [],
+    "values_by_level": {
+      "rang 5, qualité A": "0,35 %",
+      "rang 5, qualité B": "0,32 %",
+      "rang 5, qualité C": "0,3 %",
+      "rang 2, sans lettre (bord gris)": "0,15 %"
+    },
+    "icon": null,
+    "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.16",
+    "notes": "12e type de gemme, absent du calculateur de slagate : « Gemme de vitesse », violette, bonus « Vitesse (%) ». Rang 1 : valeur coupée par la capture (0,1…), à relever. Absente des totaux « Infos sur la gemme » et de la constellation (la constellation I/II ne comporte que PM supplémentaires et baisse du coût de PM en violet)."
   },
   {
     "id": "gem-bonus-flat-attack",
