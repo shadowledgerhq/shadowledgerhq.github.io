@@ -19,7 +19,7 @@ def _lire(image, mode, proprietaire):
     for slot, z in CFG["zones"][mode]["artefacts"][proprietaire]["artifacts"].items():
         r = icones.reconnaitre(icones.recadrer(img, z), "artifact_pieces", banque, CFG["seuil_icone"]["artifact_pieces"],
                                CFG["ecart_icone"], {k for k in pieces if k.endswith("--" + slot)},
-                               tuple(CFG["echelles_icone"]), CFG["masques"]["artifact_pieces"])
+                               tuple(CFG["echelles_icone"]["defaut"]), CFG["masques"]["artifact_pieces"])
         sortie[slot] = r["id"].split("--")[0] if r["id"] else None
     return sortie
 
@@ -35,7 +35,22 @@ def test_sjw_poc_burning_8_sur_8():
     assert all(v and v.startswith("set-of-burning") for v in lu.values()), lu
 
 
+def test_benedictions_sjw_poc_8_sur_8():
+    """Icône qui remplit la zone (échelles 0,8-1,0) et `+5` masqué ; vérité lue à l'œil sur la capture."""
+    from PIL import Image
+    img = Image.open(RACINE / "docs/essais/builds/v0tuXJNxudk_ocr/v0tuXJNxudk_compo_benedictions_0.jpg").convert("RGB")
+    banque = icones.Banque()
+    vrai = ["monarchs-domain", "life", "we-are-one", "aggressive-defense", "bloodlust", "kasakas-steel-scales",
+            "reawakening", "r-sonance-darme"]
+    ech = tuple(CFG["echelles_icone"]["blessings"])
+    zones = CFG["zones"]["poc"]["benedictions"]["sjw"]["blessings"]
+    lu = [icones.reconnaitre(icones.recadrer(img, z), "blessings", banque, 0.0, 0.0, None, ech,
+                             CFG["masques"]["blessings"])["best_id"] for z in zones]
+    assert lu == vrai, lu
+
+
 if __name__ == "__main__":
+    test_benedictions_sjw_poc_8_sur_8()
     test_sjw_bot_poison_bleu_7_sur_8()
     test_sjw_poc_burning_8_sur_8()
     print("ok")

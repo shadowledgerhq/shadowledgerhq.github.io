@@ -1487,12 +1487,19 @@
    "en": "Level"
   }
  },
- "echelles_icone": [
-  0.5,
-  0.6,
-  0.7,
-  0.8
- ],
+ "echelles_icone": {
+  "defaut": [
+   0.5,
+   0.6,
+   0.7,
+   0.8
+  ],
+  "blessings": [
+   0.8,
+   0.9,
+   1.0
+  ]
+ },
  "seuil_sur": {
   "hunters": 0.9,
   "weapons": 0.65,
@@ -1526,9 +1533,17 @@
     1,
     1
    ]
+  ],
+  "blessings": [
+   [
+    0.7,
+    0.3,
+    1,
+    0.85
+   ]
   ]
  },
- "_masques": "[À CONFIRMER] zones de surimpression du jeu ignorées, en fractions de l'icône de référence ; pièces = bas (`Lv.120`, cadenas) y ≥ 0,7 et quart bas-droite (`+20`, étoile) x ≥ 0,6, y ≥ 0,2. Calé le 15/11 sur 5MI-RLj7FSk (BOT, onglet artefacts) : SJW (Poison bleu du Concepteur, vérifié à l'œil) 7/8 reconnues contre 5/8 avant (ancien masque : haut-droite + bas dès 0,62) ; noyaux = texte `MAX`/`Lv.25` (bas ; 0,85 gardé : à 0,72 le noyau de SJW passe sous le seuil).",
+ "_masques": "[À CONFIRMER] zones de surimpression du jeu ignorées, en fractions de l'icône de référence ; pièces = bas (`Lv.120`, cadenas) y ≥ 0,7 et quart bas-droite (`+20`, étoile) x ≥ 0,6, y ≥ 0,2. Calé le 15/11 sur 5MI-RLj7FSk (BOT, onglet artefacts) : SJW (Poison bleu du Concepteur, vérifié à l'œil) 7/8 reconnues contre 5/8 avant (ancien masque : haut-droite + bas dès 0,62) ; noyaux = texte `MAX`/`Lv.25` (bas ; 0,85 gardé : à 0,72 le noyau de SJW passe sous le seuil). Bénédictions : `+5` (bas-droite, x ≥ 0,7, y 0,3-0,85) ignoré ; l'icône remplit la zone, donc échelles 0,8-1,0 (`echelles_icone.blessings`, défaut 0,5-0,8) : 8/8 sur l'image POC v0tuXJNxudk (vérité vérifiée à l'œil) contre 5/8.",
  "extraction": {
   "pas_s": 2,
   "ignorer_debut": 1,

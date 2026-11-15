@@ -409,7 +409,11 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
     obs = {"sjw": None, "hunters": [], "shadows": [], "successor": None, "subjugation_support": None, "proof": None,
            "unmatched": [], "notes": [], "conflits": [], "faibles": [], "found_at": {}}
     ecart = cfg.get("ecart_icone", 0.05)
-    echelles = tuple(cfg.get("echelles_icone") or ECHELLES)
+    ech_cfg = cfg.get("echelles_icone") or ECHELLES       # liste, ou {catégorie: liste, "defaut": liste}
+
+    def echelles_de(cat):
+        e = ech_cfg.get(cat, ech_cfg.get("defaut", ECHELLES)) if isinstance(ech_cfg, dict) else ech_cfg
+        return tuple(e)
     onglets = (cfg.get("onglets") or {}).get(mode) or []
     if mode == "gb" and not onglets:
         obs["notes"].append("composition GB non décrite")
@@ -420,7 +424,7 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
     def reco(img, zone, cat, restreint=None):
         rec = recadrer(img, zone)
         r = reconnaitre(rec, cat, banque, _par_categorie(cfg, "seuil_icone", cat, 0.55), ecart, restreint,
-                        echelles, (cfg.get("masques") or {}).get(cat))
+                        echelles_de(cat), (cfg.get("masques") or {}).get(cat))
         r["_img"] = rec                                          # gardé pour le recadrage des `unmatched` (écrit par `calculer`, jamais dans le JSON)
         return r
 
