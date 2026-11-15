@@ -8,6 +8,7 @@
 - **Demande Prompt 15/11** : CLAUDE.md (3 règles en tête : compteur, autonomie, boîte ; remplacent l'ancien bloc compteur), `docs/BOITE.md` créé (sections 1 à 7), CONTEXTE.md sections 2, 7, 9 (« Ce qu'Alexis seul peut faire »), 10 (boss POC/GB/HOTM à déduire par la discussion 1).
 - **Incident PC (15/11, soir)** : `json.JSONDecodeError` ligne 427 (`donnees.lire`) au passage `daily` ; cause probable : marqueurs de conflit `<<<<<<<` dans un JSON du HEAD local (`Git.tirer` faisait `git add data` + commit sans contrôle, et un `pull --rebase` échoué restait « en cours »). Fichier non identifié.
 - **Correctif (session 5)** : `donnees.lire_json` nomme le fichier, la ligne et la cause (`JsonAbime`) ; `donnees.ecrire` atomique (fichier `.tmp` puis remplacement) ; `Git._run` avec délai 180 s, sans question clavier (`GIT_TERMINAL_PROMPT=0`) → plus de fenêtre bloquée ; `Git.verifier_json` avant tout commit (`tirer`, `pousser`) ; `pull --rebase` échoué → `rebase --abort` automatique ; `pc.py` affiche « ERREUR fichier de données » sans trace. Nouvel outil lecture seule `pipeline/verifier_json.py` (arbre de travail + HEAD). Tests ajoutés dans `test_passage_pc.py` (OpenCV absent ici : `test_composition`/`etape2*` non rejoués ; `test_etape2_v4` échoue déjà avant ma modification).
+- **Incident résolu (15/11)** : cause = `git pull --rebase` resté « en cours » (HEAD détaché, conflit sur `processed.json`, `_lectures.json`, `_rapport.md` des deux côtés). Réparé sans perte : branche `sauvegarde` (78e1780), `reset --hard origin/main`, `pipeline/fusion_locale.py` (13 vidéos plus avancées reprises, 0 lecture perdue), commit poussé (2502ff4). Aucun marqueur de conflit dans 78e1780 : le JSON abîmé n'existait que dans l'arbre de travail pendant le rebase.
 ## En cours
 - Subjugation POC : écran codé, jamais lu par le vrai OCR (v0tuXJNxudk à relancer avec `--garder-ocr` pour caler `ecrans.subjugation.cartes`).
 - Reste de l'ancien « En cours » : voir l'historique git (`git log -p suivi/code.md`).
@@ -15,8 +16,7 @@
 - Relance des 6 vidéos par Alexis (v17), puis bilan à la discussion 1.
 - Essai réel des tris 3-4 sur le PC, puis recadrages par zone et `pc.geler = true` ; tri 2 (miniatures, daily). Pseudo en jeu et armes de SJW (BOT) : icônes, [EN ATTENTE]. POC : les 5 composants (3 chasseurs) non lus, donc jamais « sûr ».
 ## Besoin d'Alexis
-- Une commande à la fois, dossier `C:\Users\moniq\Documents\shadowledgerhq.github.io` : (1) `git fetch origin main` puis `git status -sb` (capture) ; (2) `py -3 pipeline\verifier_json.py` (capture : nomme le fichier abîmé). Ne rien réparer avant ces deux retours.
-- Ensuite : `git pull origin main`, essai `py -3 pipeline\pc.py builds --video 5MI-RLj7FSk --mode bot --garder-ocr` (aucun autre passage en cours), puis rapport du passage et `v0tuXJNxudk` (POC) avec `--garder-ocr`.
+- `py -3 pipeline\verifier_json.py` (doit dire « lisibles »). Puis essai (aucun autre passage en cours) : `py -3 pipeline\pc.py builds --video 5MI-RLj7FSk --mode bot --garder-ocr` ; envoyer le rapport et les images `docs/essais/builds/5MI-RLj7FSk_ocr/*_compo_*`. Ensuite `v0tuXJNxudk` (POC) avec `--garder-ocr`.
 - Relancer les 6 vidéos (v17), coller `docs/essais/ocr/_resume_6videos.json` à la discussion 1 avec `docs/MESSAGE_DISCUSSION_1_v17.md`. Tâches automatiques : attendre ces retours.
 ## Demandes de modif du skill
 - `.claude/skills/shadow-ledger/SKILL.md` et `docs/CONTEXTE.md` décrivent encore BOT « deux classements » (`bot-season`/`bot-challenge`, `bot-variante-inconnue`) : à aligner sur la v10 (discussion 1).
