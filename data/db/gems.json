@@ -14,13 +14,17 @@
     "levels": null,
     "effects": [],
     "values_by_level": {
-      "rang 6, qualité A": "5 %"
+      "rang 6, qualité A": "5 %",
+      "rang 5, qualité D": "3,2 %",
+      "rang 5, qualité C": "3,4 %",
+      "rang 5, qualité B": "3,6 %",
+      "rang 5, qualité A": "4 %"
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque (%) ». Une seule valeur lue : gemme équipée rang 6, qualité A = 5 % (cohérent avec 8 gemmes = 40 % sur la constellation I)."
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque (%) ». Une seule valeur lue : gemme équipée rang 6, qualité A = 5 % (cohérent avec 8 gemmes = 40 % sur la constellation I). Rang 5 : D 3,2 / C 3,4 / B 3,6 / A 4 % ; rang 6 A = 5 %."
   },
   {
     "id": "gem-bonus-def-pct",
