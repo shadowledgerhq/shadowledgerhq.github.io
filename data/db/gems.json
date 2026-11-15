@@ -80,12 +80,14 @@
     "color": "yellow",
     "levels": null,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "rang 6, qualité A": 965
+    },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Pénétration de défense rang 6 A = 965 : cohérent avec les totaux des constellations (2 gemmes = 1 930 ; 3 = 2 895)."
   },
   {
     "id": "gem-bonus-dcc",
@@ -101,12 +103,19 @@
     "color": "yellow",
     "levels": null,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "rang 5, qualité A": 725,
+      "rang 5, qualité B": 630,
+      "rang 5, qualité C": 580,
+      "rang 5, qualité D": 535,
+      "rang 4, sans lettre (bord violet)": 485,
+      "rang 3, sans lettre (bord bleu)": 345
+    },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
+    "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Rang 6 non relevé ; les totaux de constellation (2 895 = 3 × 965) suggèrent 965 au rang 6 A, à confirmer."
   },
   {
     "id": "gem-bonus-accuracy",
@@ -122,9 +131,13 @@
     "color": "yellow",
     "levels": null,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "rang 5, qualité B": 1260,
+      "rang 5, qualité C": 1160,
+      "rang 2, sans lettre (bord gris)": 595
+    },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
@@ -329,6 +342,6 @@
     "source": "capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Lettre D/C/B/A (qualité) affichée sur chaque gemme. Ordre D<C<B<A confirmé par les valeurs (même rang 5 : D 230 < C 260 < B 290 < A 350). Le rang pèse davantage : rang 6 qualité D (370) > rang 5 qualité A (350). Le nombre en bas à droite d'une gemme d'inventaire est la quantité possédée (confirmé : « En votre possession »). Les gemmes de rang 3 (bord bleu) et de rang 2 (bord gris) n'ont pas de lettre. Boutons Fusionner / Promotion ; Changer (change le type de bonus) et Déséquiper coûtent chacun 1 jeton (icône de ticket, 27 sur ce compte). Valeurs pour les autres types de gemme : non relevées."
+    "notes": "Lettre D/C/B/A (qualité) affichée sur chaque gemme. Ordre D<C<B<A confirmé par les valeurs (même rang 5 : D 230 < C 260 < B 290 < A 350). Le rang pèse davantage : rang 6 qualité D (370) > rang 5 qualité A (350). Le nombre en bas à droite d'une gemme d'inventaire est la quantité possédée (confirmé : « En votre possession »). Les gemmes de rang 3 (bord bleu) et de rang 2 (bord gris) n'ont pas de lettre ; rang 4 : bord violet, sans lettre. Boutons Fusionner / Promotion ; Changer (change le type de bonus) et Déséquiper coûtent chacun 1 jeton (icône de ticket, 27 sur ce compte). Valeurs pour les autres types de gemme : non relevées."
   }
 ]
