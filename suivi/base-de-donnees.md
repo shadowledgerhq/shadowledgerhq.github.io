@@ -1,4 +1,4 @@
-# SUIVI — 9 Base de données — 2026-11-16
+# SUIVI — 9 Base de données — 2026-11-16 (contrôle veille 15/11 : rien de nouveau)
 ## Fait
 - Schémas, `stats.json` (noms coréens), écrans documentés, règles par semaine (`data/rules/`).
 - Les 12 catégories de `data/db/` existent. Sources : wiki Fandom (EN, CC BY-SA, non vérifié en jeu, scripts `tools/parse_fandom_*.py`), notes Netmarble, captures d'Alexis, slagate (voir décisions).
