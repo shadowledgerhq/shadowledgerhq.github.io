@@ -8,7 +8,6 @@
 - Contrôler les builds POC/BOT produits (§6)
 - Demander à la discussion 9 : name.ja/name.ko, catégories statues et gems, icônes successeurs, type des compétences SJW
 ## Besoin d'Alexis
-- Statues et gemmes : propres au POC ou réglages du compte ?
 - Captures POC des onglets artefacts, compétences, bénédictions, noyaux ; captures HOTM (avec/sans SJW) et GB
 - Règles POC et GB de la semaine
 ## Demandes de modif du skill

@@ -42,14 +42,14 @@ Marqueurs (mêmes sens qu'à l'étape 1) : **[À CONFIRMER]** = hypothèse codé
 | Soutien de subjugation | 3 choix (1 par colonne) | fac. | — | — | — | — |
 | Preuve d'entraînement | niveau + handicaps | — | — | — | fac. | fac. |
 | Stats du successeur | 10 | fac. | fac. | fac. | fac. | fac. |
-| Statues (v3) | 5 statues × 3 options | fac. | fac. [À CONFIRMER] | fac. [À CONFIRMER] | fac. [À CONFIRMER] | fac. [À CONFIRMER] |
-| Gemmes (v3) | 5 couleurs + bonus | fac. | fac. [À CONFIRMER] | fac. [À CONFIRMER] | fac. [À CONFIRMER] | fac. [À CONFIRMER] |
+| Statues (v3) | 5 statues × 3 options | fac. | fac. | fac. | fac. | fac. |
+| Gemmes (v3) | 5 couleurs + bonus | fac. | fac. | fac. | fac. | fac. |
 
 - **Règles de la semaine** : SJW, compétences et bénédictions sont attendus si `rules.<mode>.sjw` (et `sjw_skills`, `blessings`) valent `true`. Ombres : `shadows`. Successeur : `successor`. Bloc du mode `null` → **[EN ATTENTE]** (§5). Pour le BOT, lire `modes.bot`, sinon `modes.bot_season` (le fichier du 12/11 garde l'ancien découpage).
 - **HOTM** : `hunter_mode` vient de la run, c'est le booléen déjà codé par `hotm_ecran.py`. `false` = avec SJW, `true` = sans SJW, `null` = inconnu. On ne cherche SJW que si `rules.hotm.sjw == true` **et** `hunter_mode == false`.
   - Si `hunter_mode` vaut `null`, on le déduit de la composition : 4 onglets sans bénédictions → `true` ; 5 onglets, ou un personnage à gauche des 3 chasseurs → `false`. Note : `hunter_mode déduit`. Sinon il reste `null` (§2.2).
 - **Stats** : les 15 lignes `required: true` de `data/db/stats.json`, soit 10 stats et 5 attributs. La puissance de combat est facultative (info). Elles sont lisibles seulement si l'écran de stats du personnage est filmé (`REFERENCE_ECRANS_STATS.md`). **Décision d'Alexis (v2, 14/11/2026) : facultatives**, `config.stats_obligatoires = false`. Elles sont cherchées et affichées si l'écran est filmé, jamais comptées dans le statut. La puissance de combat de chaque personnage (onglet personnages) n'est pas une stat du build. **v3 : confirmé, toujours facultatives**, maintenant que l'écran de stats est connu (§1.4) : il n'apparaît que si le joueur l'ouvre.
-- **Statues et gemmes (v3)** : vues sur une vidéo POC. On ne sait pas encore si elles comptent dans les autres modes ou si ce sont des réglages du compte : elles sont lues dans tout mode si l'écran est filmé, toujours facultatives, jamais comptées dans le statut.
+- **Statues et gemmes (v3)** : **valables dans tous les modes** (confirmé par Alexis le 15/11/2026). Lues dans tout mode si l'écran est filmé, toujours facultatives, jamais comptées dans le statut.
 - **Hors build pour l'instant** : les 8 icônes de compétences de chaque chasseur (décision d'Alexis v2 : « plus tard »), les stats principales et secondaires des pièces d'artefact, et le sens des pastilles de set. Voir §5.
 
 ### 1.2 Format JSON — `data/builds/<semaine>/<mode>/<run_id>-<n>.json`
@@ -323,7 +323,7 @@ Le tri 1 (texte) **ne remplit aucun élément** en v1 : une description qui list
 | 15 | **Noms JA et KO dans la base** (chasseurs, armes, successeurs, ombres) pour la reconnaissance par le nom | Comparaison avec les noms présents seulement (EN/FR) ; sans nom JA/KO, le nom lu reste `unmatched` | Discussion 9 |
 | 16 | **Statues** : catégorie absente de la base (options, grades, effets) | Grades lus, texte lu gardé tel quel, `id: null` | Discussion 9 (catégorie `statues`) + captures |
 | 17 | **Gemmes** : noms des 5 couleurs et effets | `color: null`, niveaux et bonus lus | Discussion 9 (catégorie `gems`) |
-| 18 | **Statues et gemmes : propres au POC ou réglages du compte ?** | Lues dans tout mode si filmées, facultatives | Alexis |
+| 18 | **Statues et gemmes : modes concernés** | **Réglé (15/11)** : tous les modes (Alexis) | — |
 
 ## 6. Contrôles (discussion 2)
 
