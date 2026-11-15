@@ -1,5 +1,44 @@
 [
   {
+    "run_id": "hotm-gate-inconnue-2026-11-12-RVkSt2bWn_U",
+    "week": "2026-11-12",
+    "mode": "hotm",
+    "channel_id": "UCFcYmsvelaU0rxAXo_srFhg",
+    "player": "OhchiGameS",
+    "channel": "OhchiGameS",
+    "video_id": "RVkSt2bWn_U",
+    "video_ids": [
+      "RVkSt2bWn_U"
+    ],
+    "published_at": "2026-11-15T10:43:50+01:00",
+    "lang": "ja",
+    "score": {
+      "total": 94000,
+      "runs": [
+        94000
+      ],
+      "unit": "points"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 94000; porte HOTM illisible; boss non contrôlé",
+    "gate": null,
+    "hunter_mode": null,
+    "runs_detail": [
+      {
+        "video_id": "RVkSt2bWn_U",
+        "published_at": "2026-11-15T10:43:50+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
     "run_id": "hotm-gate-inconnue-2026-11-12-nZrcGHSDcvs",
     "week": "2026-11-12",
     "mode": "hotm",
@@ -39,17 +78,17 @@
     ]
   },
   {
-    "run_id": "hotm-gate-inconnue-2026-11-12-SONLzFhlHfA",
+    "run_id": "hotm-gate-inconnue-2026-11-12-SdiCUFy5FbE",
     "week": "2026-11-12",
     "mode": "hotm",
     "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
     "player": "SNG",
     "channel": "SNG",
-    "video_id": "SONLzFhlHfA",
+    "video_id": "SdiCUFy5FbE",
     "video_ids": [
-      "SONLzFhlHfA"
+      "SdiCUFy5FbE"
     ],
-    "published_at": "2026-11-14T00:15:31+01:00",
+    "published_at": "2026-11-15T18:00:33+01:00",
     "lang": "en",
     "score": {
       "total": 85000,
@@ -67,8 +106,8 @@
     "hunter_mode": null,
     "runs_detail": [
       {
-        "video_id": "SONLzFhlHfA",
-        "published_at": "2026-11-14T00:15:31+01:00",
+        "video_id": "SdiCUFy5FbE",
+        "published_at": "2026-11-15T18:00:33+01:00",
         "t": null,
         "stage": null,
         "team": null,
@@ -101,7 +140,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 75K; autres candidats : 7430, 3200; description non relue (règles v3); porte HOTM illisible; boss non contrôlé",
+    "notes": "score provisoire (description) : 75K; autres candidats : 7430, 3200; porte HOTM illisible; boss non contrôlé",
     "gate": null,
     "hunter_mode": null,
     "runs_detail": [
