@@ -84,6 +84,19 @@ def test_portraits_chasseurs_jamais_devines_sur_la_capture_bot():
         assert r["id"] is None, (o, r)
 
 
+def test_zones_poc_competences_sur_la_capture_reelle():
+    """Capture réelle (v0tuXJNxudk, onglet Compétences, POC JA) : les 6 compétences de SJW sont découpées ; rien n'est deviné tant que la banque d'icônes diffère du jeu."""
+    import json
+    from PIL import Image
+    import builds
+    import icones
+    cfg, db = builds.charger_config(), builds.charger_db()
+    png = Path(__file__).resolve().parents[2] / "docs" / "essais" / "composition" / "poc_competences_ja.png"
+    obs = builds.observer({"competences": [Image.open(png).convert("RGB")]}, "poc", cfg, icones.Banque(builds.RACINE), db)
+    assert "zones poc/competences non définies" not in obs["notes"]
+    assert [s["slot"] for s in obs["sjw"]["skills"]] == ["ultimate", "skill_2", "skill_1", "qte_3", "qte_2", "qte_1"]
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):
