@@ -258,5 +258,44 @@
         "damage_exact": true
       }
     ]
+  },
+  {
+    "run_id": "gb-2026-11-12-lGDbzyIJcjY",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+    "player": "HS Retro Gaming",
+    "channel": "HS Retro Gaming",
+    "video_id": "lGDbzyIJcjY",
+    "video_ids": [
+      "lGDbzyIJcjY"
+    ],
+    "published_at": "2026-11-12T13:00:07+01:00",
+    "lang": "en-US",
+    "score": {
+      "total": 19,
+      "runs": [
+        19
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (3 images); conflit de lecture : final_score; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "lGDbzyIJcjY",
+        "published_at": "2026-11-12T13:00:07+01:00",
+        "t": 252,
+        "stage": "Giant Statue",
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": false,
+        "damage": 1601037999,
+        "damage_exact": true
+      }
+    ]
   }
 ]

@@ -1898,5 +1898,188 @@
       "damage_source": "record"
     },
     "notes": []
+  },
+  {
+    "video_id": "lGDbzyIJcjY",
+    "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+    "channel_title": "HS Retro Gaming",
+    "published_at": "2026-11-12T12:00:07Z",
+    "lang": "en-US",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 120,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 1057108833,
+      "hud_rage_count": 9,
+      "separateur_perdu": false
+    },
+    "notes": []
+  },
+  {
+    "video_id": "lGDbzyIJcjY",
+    "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+    "channel_title": "HS Retro Gaming",
+    "published_at": "2026-11-12T12:00:07Z",
+    "lang": "en-US",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 170,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": null,
+      "chrono_hud": 57,
+      "separateur_perdu": false,
+      "hud_rage_count": 10,
+      "t_debut": 50,
+      "t_fin": 170
+    },
+    "notes": [
+      "HUD : Boss Rage Count x10, chrono 57"
+    ]
+  },
+  {
+    "video_id": "lGDbzyIJcjY",
+    "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+    "channel_title": "HS Retro Gaming",
+    "published_at": "2026-11-12T12:00:07Z",
+    "lang": "en-US",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 1601037999,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 252,
+    "stage": "Giant Statue",
+    "team": null,
+    "score": 19,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": false,
+      "player_score": 313099049,
+      "hunter_ranks": [
+        null,
+        null,
+        null,
+        null,
+        58465856,
+        99980102
+      ],
+      "hunter_ranks_lus": 2,
+      "n_images": 3,
+      "successor_score": null,
+      "successeur_present": false,
+      "votes": {
+        "stage": [
+          [
+            "Giant Statue",
+            3
+          ]
+        ],
+        "player_score": [
+          [
+            313099049,
+            2
+          ]
+        ],
+        "final_score": [
+          [
+            1601037999,
+            1
+          ],
+          [
+            1601097999,
+            1
+          ]
+        ],
+        "rage_count": [
+          [
+            19,
+            2
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            2
+          ]
+        ],
+        "hunter_rank_5": [
+          [
+            58465856,
+            1
+          ]
+        ],
+        "hunter_rank_6": [
+          [
+            99980102,
+            1
+          ]
+        ]
+      },
+      "rc_images": 2,
+      "final_images": 1,
+      "rc_t": {
+        "19": 252
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            252,
+            19
+          ],
+          [
+            253,
+            19
+          ]
+        ],
+        "final_score": [
+          [
+            252,
+            1601037999
+          ],
+          [
+            253,
+            1601097999
+          ]
+        ]
+      },
+      "t_debut": 252,
+      "t_fin": 253
+    },
+    "notes": [
+      "écart OCR zone/image : player_score",
+      "écart OCR zone/image : final_score",
+      "lecture fusionnée (3 images)",
+      "conflit de lecture : final_score"
+    ]
   }
 ]
