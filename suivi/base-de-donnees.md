@@ -23,6 +23,6 @@
 - Icônes absentes (sans source, API sans image) : 86 armes (60 de chasseurs, 26 de SJW), 36 pièces / 8 sets d'événement ; noms FR : armes de chasseurs, ~170 au total. SJW lui-même : portrait dans l'API (`chasseurs`), pas dans la base. `type` des 12 compétences de SJW (parents des runes) : inconnu, seuls les QTE sont typés.
 - Vides : `main_stat_options` des sets, `weapon_type` des chasseurs, valeurs par niveau, stats FR/EN, 86 armes de SJW sans FR/icône, 8 sets d'événement.
 ## Besoin d'Alexis
-- Rien pour l'instant : Alexis ne veut pas de tâches manuelles. Reste sans source automatique : valeurs des gemmes par rang (rang 6 des types non vus), effets des pierres/runes récentes, captures hebdomadaires (soutien de subjugation, preuves HOTM, GB). À chercher seul d'abord (forum Netmarble, wiki, vidéos YouTube).
+- Rien pour l'instant : Alexis ne veut pas de tâches manuelles. Reste sans source automatique : valeurs des gemmes par rang (rang 6 des types non vus), effets des pierres/runes récentes, captures hebdomadaires (soutien de subjugation, preuves HOTM, GB). Déjà cherché sans résultat (15/11) : forum Netmarble (guide 96372, pas de valeurs), wiki Fandom (pas de page Gemmes), Reddit, transcriptions YouTube (Sohoven, Guara : aucune table ; seules 230/350 d'ATK suppl. déjà en base). Les valeurs restantes ne sont visibles qu'en jeu : on ne les saisit que si Alexis envoie des captures de lui-même.
 ## Demandes de modif du skill
 - rien
