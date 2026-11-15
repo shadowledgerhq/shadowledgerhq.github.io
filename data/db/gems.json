@@ -195,10 +195,13 @@
       "rang 6, qualité B": 205,
       "rang 5, qualité B": 155,
       "rang 5, qualité C": 145,
-      "rang 5, qualité D": 130
+      "rang 5, qualité D": 130,
+      "rang 5, qualité A": 180,
+      "rang 4, sans lettre (bord violet)": 120,
+      "rang 3, sans lettre (bord bleu)": 85
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16)",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de réduction de la consommation de PM ». Nom en jeu : « Baisse du coût de PM »."
@@ -218,10 +221,17 @@
     "levels": null,
     "effects": [],
     "values_by_level": {
-      "rang 6, qualité A": 120
+      "rang 6, qualité A": 120,
+      "rang 5, qualité A": 90,
+      "rang 5, qualité B": 80,
+      "rang 5, qualité C": 70,
+      "rang 5, qualité D": 65,
+      "rang 4, sans lettre (bord violet)": 60,
+      "rang 3, sans lettre (bord bleu)": 45,
+      "rang 2, sans lettre (bord gris)": 40
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16)",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Nom de gemme en jeu : « Gemme d'énergie de mana extra »."
@@ -245,10 +255,13 @@
       "rang 5, qualité B": "0,32 %",
       "rang 5, qualité C": "0,3 %",
       "rang 2, sans lettre (bord gris)": "0,15 %",
-      "rang 1, sans lettre (bord gris)": "0,1 %"
+      "rang 1, sans lettre (bord gris)": "0,1 %",
+      "rang 5, qualité D": "0,28 %",
+      "rang 4, sans lettre (bord violet)": "0,25 %",
+      "rang 3, sans lettre (bord bleu)": "0,2 %"
     },
     "icon": null,
-    "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
+    "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16)",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "12e type de gemme, absent du calculateur de slagate : « Gemme de vitesse », violette, bonus « Vitesse (%) ». Rang 1 = 0,1 %. Absente des totaux « Infos sur la gemme » et de la constellation (la constellation I/II ne comporte que PM supplémentaires et baisse du coût de PM en violet)."
