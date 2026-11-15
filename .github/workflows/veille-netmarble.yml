@@ -1,0 +1,42 @@
+# Veille quotidienne des notes officielles Netmarble (Developer Notes + Updates). Gratuit : Playwright.
+# Une nouvelle note s'inscrit dans data/db/_veille.md ; la discussion 9 la lit à la reprise.
+name: Veille Netmarble
+
+on:
+  schedule:
+    - cron: "17 6,14,20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: veille-netmarble
+  cancel-in-progress: false
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer Playwright
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Lire le forum
+        run: python3 tools/veille_netmarble.py
+      - name: Commit et push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/db/_veille.json data/db/_veille.md
+          if git diff --cached --quiet; then echo "Rien à enregistrer."; exit 0; fi
+          git commit -m "veille: notes Netmarble $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin HEAD:main
