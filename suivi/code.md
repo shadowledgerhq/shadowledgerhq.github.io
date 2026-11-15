@@ -24,6 +24,6 @@
 - Essai réel des tris 3-4 sur le PC, puis recadrages par zone et `pc.geler = true` ; tri 2 (miniatures, daily). Pseudo en jeu et armes de SJW (BOT) : icônes, [EN ATTENTE]. POC : les 5 composants (3 chasseurs) non lus, donc jamais « sûr ».
 ## Besoin d'Alexis
 - `git pull origin main`, puis (un seul passage à la fois) : `py -3 pipeline\pc.py builds --video 5MI-RLj7FSk --mode bot --garder-ocr` ; renvoyer le rapport (artefacts attendus nettement au-dessus de 9/24). Refaire ensuite `py -3 pipeline\pc.py builds --video v0tuXJNxudk --mode poc --garder-ocr` après `git pull origin main` (bénédictions attendues 8/8).
-- Relancer les 6 vidéos (v17), coller `docs/essais/ocr/_resume_6videos.json` à la discussion 1 avec `docs/MESSAGE_DISCUSSION_1_v17.md`.
+- (fait) Relancer les 6 vidéos (v17), coller `docs/essais/ocr/_resume_6videos.json` à la discussion 1 avec `docs/MESSAGE_DISCUSSION_1_v17.md`.
 ## Demandes de modif du skill
 - `.claude/skills/shadow-ledger/SKILL.md` et `docs/CONTEXTE.md` décrivent encore BOT « deux classements » (`bot-season`/`bot-challenge`, `bot-variante-inconnue`) : à aligner sur la v10 (discussion 1).
