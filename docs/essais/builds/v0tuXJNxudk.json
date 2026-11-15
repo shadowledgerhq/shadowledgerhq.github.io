@@ -116,6 +116,7 @@
    "agility": 10,
    "intelligence": 1335,
    "perception": 10,
+   "strength": 19,
    "vitality": 10
   },
   "skills": [
@@ -529,7 +530,7 @@
   "sjw_weapons": "0/2",
   "sjw_artifacts": "0/8",
   "sjw_cores": "0/3",
-  "sjw_stats": "12/15",
+  "sjw_stats": "13/15",
   "sjw_skills": "0/6",
   "blessings": "0/8",
   "hunters": "1/3",
@@ -611,7 +612,7 @@
   "règles poc inconnues"
  ],
  "erreurs": [],
- "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; attribut SJW strength : lectures de zone en désaccord [9, 19]; attributs SJW lus par zone : agility, intelligence, perception, vitality; statues lues par zone (options de 1 statue(s) sur 5); règles poc inconnues; reconnaissance faible : shadows",
+ "notes": "zones poc/artefacts non définies; zones poc/competences non définies; zones poc/benedictions non définies; zones poc/noyaux non définies; zones poc/subjugation non définies; icône absente : weapons; stats rattachées à SJW par accord avec la fiche (hp, attack, defense); stats lues par position : mana, attack, accuracy, defense, crit-rate, defense-penetration; chasseur trouvé par l'écran de stats; attribut SJW strength : lecture la plus longue retenue 19 (autres lectures : [9]); attributs SJW lus par zone : agility, intelligence, perception, strength, vitality; statues lues par zone (options de 1 statue(s) sur 5); règles poc inconnues; reconnaissance faible : shadows",
  "sources": [
   {
    "type": "video",
