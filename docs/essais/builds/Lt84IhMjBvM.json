@@ -1,0 +1,745 @@
+{
+ "spec": 3,
+ "run_id": "essai-Lt84IhMjBvM",
+ "run_index": 1,
+ "week": "essai",
+ "mode": "bot",
+ "gate": null,
+ "hunter_mode": null,
+ "rank": null,
+ "player": null,
+ "channel_id": null,
+ "video_id": "Lt84IhMjBvM",
+ "t_result": null,
+ "t_composition": [
+  0,
+  4
+ ],
+ "team": null,
+ "rules": {
+  "week": "essai",
+  "sjw": true,
+  "sjw_skills": true,
+  "blessings": true,
+  "shadows": true,
+  "successor": true
+ },
+ "status": "build_partiel",
+ "confidence": "a_verifier",
+ "sjw": {
+  "weapons": [
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   }
+  ],
+  "artifacts": [
+   {
+    "slot": "helmet",
+    "set_id": "set-of-the-architects-blue-poison",
+    "level": null
+   },
+   {
+    "slot": "chestplate",
+    "set_id": "set-of-the-architects-blue-poison",
+    "level": null
+   },
+   {
+    "slot": "gloves",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "boots",
+    "set_id": "set-of-surturs-flame",
+    "level": null
+   },
+   {
+    "slot": "necklace",
+    "set_id": null,
+    "level": null
+   },
+   {
+    "slot": "bracelet",
+    "set_id": "set-of-the-architects-blue-poison",
+    "level": null
+   },
+   {
+    "slot": "ring",
+    "set_id": "set-of-the-architects-blue-poison",
+    "level": null
+   },
+   {
+    "slot": "earrings",
+    "set_id": null,
+    "level": null
+   }
+  ],
+  "cores": [
+   {
+    "slot": "mind",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "body",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "spirit",
+    "id": null,
+    "level": null
+   }
+  ],
+  "stats": {},
+  "skills": [
+   {
+    "slot": "skill_1",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "skill_2",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "ultimate",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "qte_1",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "qte_2",
+    "id": null,
+    "level": null
+   },
+   {
+    "slot": "qte_3",
+    "id": null,
+    "level": null
+   }
+  ],
+  "blessings": [
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   },
+   {
+    "id": "bloodlust",
+    "level": null
+   },
+   {
+    "id": "bloodlust",
+    "level": null
+   },
+   {
+    "id": "iron-stance",
+    "level": null
+   },
+   {
+    "id": null,
+    "level": null
+   }
+  ]
+ },
+ "hunters": [
+  {
+   "position": 1,
+   "team_slot": null,
+   "id": "han-song-yi",
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": "set-of-glorious-arrogance",
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": "set-of-glorious-arrogance",
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": "set-of-surturs-flame",
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  },
+  {
+   "position": 2,
+   "team_slot": null,
+   "id": "cha-hae-in",
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": "set-of-surturs-flame",
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": "set-of-kamishs-obession",
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": "set-of-kamishs-obession",
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  },
+  {
+   "position": 3,
+   "team_slot": null,
+   "id": "han-song-yi",
+   "weapon": {
+    "id": null,
+    "level": null
+   },
+   "artifacts": [
+    {
+     "slot": "helmet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "chestplate",
+     "set_id": "set-of-noble-flesh",
+     "level": null
+    },
+    {
+     "slot": "gloves",
+     "set_id": "set-of-noble-flesh",
+     "level": null
+    },
+    {
+     "slot": "boots",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "necklace",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "bracelet",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "ring",
+     "set_id": null,
+     "level": null
+    },
+    {
+     "slot": "earrings",
+     "set_id": null,
+     "level": null
+    }
+   ],
+   "cores": [
+    {
+     "slot": "mind",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "body",
+     "id": null,
+     "level": null
+    },
+    {
+     "slot": "spirit",
+     "id": null,
+     "level": null
+    }
+   ],
+   "stats": {}
+  }
+ ],
+ "set_bonuses": {
+  "sjw": [
+   {
+    "set_id": "set-of-surturs-flame",
+    "pieces": 1,
+    "tiers": []
+   },
+   {
+    "set_id": "set-of-the-architects-blue-poison",
+    "pieces": 4,
+    "tiers": [
+     4
+    ]
+   }
+  ],
+  "hunter_1": [
+   {
+    "set_id": "set-of-glorious-arrogance",
+    "pieces": 2,
+    "tiers": []
+   },
+   {
+    "set_id": "set-of-surturs-flame",
+    "pieces": 1,
+    "tiers": []
+   }
+  ],
+  "hunter_2": [
+   {
+    "set_id": "set-of-kamishs-obession",
+    "pieces": 2,
+    "tiers": []
+   },
+   {
+    "set_id": "set-of-surturs-flame",
+    "pieces": 1,
+    "tiers": []
+   }
+  ],
+  "hunter_3": [
+   {
+    "set_id": "set-of-noble-flesh",
+    "pieces": 2,
+    "tiers": []
+   }
+  ]
+ },
+ "shadows": [
+  {
+   "position": 1,
+   "id": "beste"
+  },
+  {
+   "position": 2,
+   "id": null
+  },
+  {
+   "position": 3,
+   "id": null
+  }
+ ],
+ "successor": {
+  "id": null,
+  "level": null,
+  "stats": {}
+ },
+ "subjugation_support": null,
+ "proof": null,
+ "statues": null,
+ "gems": null,
+ "found": {
+  "sjw": true,
+  "sjw_weapons": false,
+  "sjw_artifacts": false,
+  "sjw_cores": false,
+  "sjw_stats": null,
+  "sjw_skills": false,
+  "blessings": false,
+  "hunters": true,
+  "weapons": false,
+  "artifacts": false,
+  "cores": false,
+  "stats": null,
+  "shadows": false,
+  "successor": false,
+  "subjugation_support": null,
+  "proof": null,
+  "successor_stats": null,
+  "statues": null,
+  "gems": null
+ },
+ "counts": {
+  "sjw_weapons": "0/2",
+  "sjw_artifacts": "5/8",
+  "sjw_cores": "0/3",
+  "sjw_stats": "0/15",
+  "sjw_skills": "0/6",
+  "blessings": "3/8",
+  "hunters": "3/3",
+  "weapons": "0/3",
+  "artifacts": "8/24",
+  "cores": "0/9",
+  "stats": "0/45",
+  "shadows": "1/3"
+ },
+ "found_at": {},
+ "unmatched": [
+  {
+   "element": "sjw_weapons",
+   "owner": "sjw",
+   "slot": 0,
+   "best_id": "demon-kings-daggers",
+   "score": 0.607,
+   "crop": null
+  },
+  {
+   "element": "sjw_weapons",
+   "owner": "sjw",
+   "slot": 1,
+   "best_id": "moonlit-gale",
+   "score": 0.664,
+   "crop": null
+  },
+  {
+   "element": "shadows",
+   "owner": "shadows",
+   "slot": 1,
+   "best_id": "igris",
+   "score": 0.597,
+   "crop": null
+  },
+  {
+   "element": "shadows",
+   "owner": "shadows",
+   "slot": 2,
+   "best_id": "brute",
+   "score": 0.638,
+   "crop": null
+  },
+  {
+   "element": "successor",
+   "owner": "successor",
+   "slot": null,
+   "best_id": "myro",
+   "score": 0.361,
+   "crop": null
+  },
+  {
+   "element": "sjw_artifacts",
+   "owner": "sjw",
+   "slot": "necklace",
+   "best_id": "obsidian-set--necklace",
+   "score": 0.586,
+   "crop": null
+  },
+  {
+   "element": "sjw_artifacts",
+   "owner": "sjw",
+   "slot": "gloves",
+   "best_id": "palace-guards-set--gloves",
+   "score": 0.65,
+   "crop": null
+  },
+  {
+   "element": "sjw_artifacts",
+   "owner": "sjw",
+   "slot": "earrings",
+   "best_id": "set-of-the-architects-blue-poison--earrings",
+   "score": 0.505,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_1",
+   "slot": "chestplate",
+   "best_id": "set-of-glorious-arrogance--chestplate",
+   "score": 0.552,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_1",
+   "slot": "bracelet",
+   "best_id": "set-of-chaotic-infamy--bracelet",
+   "score": 0.476,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_1",
+   "slot": "ring",
+   "best_id": "set-of-glorious-arrogance--ring",
+   "score": 0.472,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_1",
+   "slot": "boots",
+   "best_id": "set-of-glorious-arrogance--boots",
+   "score": 0.586,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_1",
+   "slot": "earrings",
+   "best_id": "set-of-chaotic-desire--earrings",
+   "score": 0.504,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_2",
+   "slot": "helmet",
+   "best_id": "set-of-kamishs-obession--helmet",
+   "score": 0.456,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_2",
+   "slot": "necklace",
+   "best_id": "viridescent-set--necklace",
+   "score": 0.464,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_2",
+   "slot": "bracelet",
+   "best_id": "set-of-chaotic-infamy--bracelet",
+   "score": 0.428,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_2",
+   "slot": "ring",
+   "best_id": "set-of-kamishs-obession--ring",
+   "score": 0.505,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_2",
+   "slot": "earrings",
+   "best_id": "set-of-chaotic-desire--earrings",
+   "score": 0.459,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_3",
+   "slot": "helmet",
+   "best_id": "clerics-set--helmet",
+   "score": 0.475,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_3",
+   "slot": "necklace",
+   "best_id": "viridescent-set--necklace",
+   "score": 0.505,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_3",
+   "slot": "bracelet",
+   "best_id": "set-of-chaotic-infamy--bracelet",
+   "score": 0.532,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_3",
+   "slot": "ring",
+   "best_id": "peridot-set--ring",
+   "score": 0.388,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_3",
+   "slot": "boots",
+   "best_id": "set-of-noble-flesh--boots",
+   "score": 0.526,
+   "crop": null
+  },
+  {
+   "element": "artifacts",
+   "owner": "hunter_3",
+   "slot": "earrings",
+   "best_id": "set-of-the-architects-blue-poison--earrings",
+   "score": 0.439,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 0,
+   "best_id": "first-strike-barrage",
+   "score": 0.475,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 1,
+   "best_id": "best-defense-is-a-good-offense",
+   "score": 0.416,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 2,
+   "best_id": "soutien-mutuel",
+   "score": 0.491,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 3,
+   "best_id": "irreversible-road",
+   "score": 0.461,
+   "crop": null
+  },
+  {
+   "element": "blessings",
+   "owner": "sjw",
+   "slot": 7,
+   "best_id": "aggressive-defense",
+   "score": 0.552,
+   "crop": null
+  }
+ ],
+ "attendus": {
+  "sjw": true,
+  "sjw_weapons": true,
+  "sjw_artifacts": true,
+  "sjw_cores": true,
+  "sjw_stats": "fac",
+  "sjw_skills": true,
+  "blessings": true,
+  "hunters": true,
+  "weapons": true,
+  "artifacts": true,
+  "cores": true,
+  "stats": "fac",
+  "shadows": true,
+  "successor": true
+ },
+ "plafonds": [],
+ "erreurs": [],
+ "notes": "images bot/competences absentes; images bot/noyaux absentes; icône absente : weapons; pièce isolée : boots (sjw); essai : règles de la semaine 2026-11-12; doublon : han-song-yi; reconnaissance faible : hunters; reconnaissance faible : sjw_artifacts; reconnaissance faible : artifacts; reconnaissance faible : blessings",
+ "sources": [
+  {
+   "type": "video",
+   "video_id": "Lt84IhMjBvM",
+   "t": [
+    0,
+    4
+   ]
+  }
+ ]
+}
