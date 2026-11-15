@@ -84,28 +84,18 @@
     "first_seen": "2026-11-13",
     "updated_at": "2026-11-15",
     "last_tri": 4,
-    "status": "termine",
+    "status": "en_cours",
     "modes": [
       "gb",
       "poc"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 17,
     "pc": {
       "image_taille": [
         1920,
         1080
-      ],
-      "hud_suite": [],
-      "results_lus": [
-        [
-          252,
-          253
-        ]
-      ],
-      "tri3": "fait",
-      "date": "2026-11-15",
-      "tri4": "fait"
+      ]
     }
   },
   "Aqj1crEcrD4": {
