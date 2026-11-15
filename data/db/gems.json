@@ -64,10 +64,17 @@
     "levels": null,
     "effects": [],
     "values_by_level": {
-      "rang 6, qualité A": "5 %"
+      "rang 6, qualité A": "5 %",
+      "rang 5, qualité A": "4 %",
+      "rang 5, qualité B": "3,6 %",
+      "rang 5, qualité C": "3,4 %",
+      "rang 5, qualité D": "3,2 %",
+      "rang 4, sans lettre (bord violet)": "3 %",
+      "rang 3, sans lettre (bord bleu)": "2,25 %",
+      "rang 2, sans lettre (bord gris)": "1,75 %"
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de PV (%) »."
@@ -329,13 +336,39 @@
       "rang 5, qualité B": 290,
       "rang 5, qualité C": 260,
       "rang 3, sans lettre (bord bleu)": 140,
-      "rang 2, sans lettre (bord gris)": 120
+      "rang 2, sans lettre (bord gris)": 120,
+      "rang 4, sans lettre (bord violet)": 200
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de PV supplémentaires ». Mêmes valeurs que l'attaque supplémentaire aux rangs 5 (A/B/C) et 3. Rang 2 = petit cristal bleu à bord gris. Rang 6 non relevé pour ce type."
+  },
+  {
+    "id": "gem-bonus-healing-received",
+    "kind": "bonus_stat",
+    "name": {
+      "fr": "Hausse des soins reçus (%)",
+      "en": "",
+      "ja": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "abbreviation_slagate": null,
+    "color": "blue",
+    "levels": null,
+    "effects": [],
+    "values_by_level": {
+      "rang 4, sans lettre (bord violet)": "0,8 %",
+      "rang 3, sans lettre (bord bleu)": "0,6 %",
+      "rang 2, sans lettre (bord gris)": "0,45 %"
+    },
+    "icon": null,
+    "source": "capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "verified_at": "2026-11-15",
+    "game_version": "1.5.16",
+    "notes": "Nom de la gemme dans l'inventaire : « Gemme d'augmentation des soins reçus » ; stat affichée « Hausse des soins reçus (%) ». Gemme bleue (branche PV) avec PV (%) et PV supplémentaires. Le type « soins donnés » (rouge) existe aussi (non vu en détail)."
   },
   {
     "id": "gem-board-1",
