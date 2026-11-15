@@ -1,5 +1,5 @@
 {
-  "spec": 2,
+  "spec": 3,
   "run_id": "gb-2026-11-12-nh2D7xZ7dOQ",
   "run_index": 2,
   "week": "2026-11-12",
@@ -7,6 +7,8 @@
   "gate": null,
   "hunter_mode": null,
   "rank": 1,
+  "line_provisional": false,
+  "provisional_rank": null,
   "player": "SlayOnLow",
   "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
   "video_id": "nh2D7xZ7dOQ",
@@ -457,10 +459,13 @@
   ],
   "successor": {
     "id": null,
-    "level": null
+    "level": null,
+    "stats": {}
   },
   "subjugation_support": null,
   "proof": null,
+  "statues": null,
+  "gems": null,
   "found": {
     "sjw": null,
     "sjw_weapons": null,
@@ -477,7 +482,10 @@
     "shadows": null,
     "successor": null,
     "subjugation_support": null,
-    "proof": null
+    "proof": null,
+    "successor_stats": null,
+    "statues": null,
+    "gems": null
   },
   "counts": {
     "hunters": "0/6",

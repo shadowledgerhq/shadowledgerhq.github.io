@@ -356,10 +356,15 @@ def construire_build(ctx, obs, regles, cfg, db):
         if a not in notes:
             notes.append(a)
     confiance = "a_verifier" if alertes else "sur"
+    if ctx.get("line_provisional"):          # v4 : ligne non classée, jamais « sûr »
+        confiance = "a_verifier"
+        if "ligne non classée (score provisoire)" not in notes:
+            notes.insert(0, "ligne non classée (score provisoire)")
 
     return {
         "spec": 3, "run_id": ctx["run_id"], "run_index": ctx["run_index"], "week": ctx["week"], "mode": mode,
-        "gate": ctx.get("gate"), "hunter_mode": hunter_mode, "rank": ctx.get("rank"), "player": ctx.get("player"),
+        "gate": ctx.get("gate"), "hunter_mode": hunter_mode, "rank": ctx.get("rank"),
+        "line_provisional": bool(ctx.get("line_provisional")), "provisional_rank": ctx.get("provisional_rank"), "player": ctx.get("player"),
         "channel_id": ctx.get("channel_id"), "video_id": ctx.get("video_id"), "t_result": ctx.get("t_result"),
         "t_composition": obs.get("t_composition"), "team": ctx.get("team"),
         "rules": {"week": ctx["week"], **{k: (regles or {}).get(k) for k in ("sjw", "sjw_skills", "blessings", "shadows", "successor")}} if regles else None,
@@ -533,19 +538,45 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
 
 # --- lecture des classements, calcul, rapport ------------------------------------------------------------------------------
 
-def modes_du_top(week, racine=RACINE):
-    """[(dossier_mode, ligne)] des lignes rank 1..top des fichiers poc, bot, gb et hotm-gate-<n> (jamais `inconnue`)."""
-    cfg_top = charger_config()["top"]
+def modes_du_top(week, racine=RACINE, cfg=None):
+    """[(dossier_mode, ligne)] des lignes rank 1..top des fichiers poc, bot, gb et hotm-gate-<n> (jamais `inconnue`).
+    v4 : un mode sans aucune ligne classée (et `config.builds_provisoires`) donne ses `top` premières lignes `a_verifier`
+    par score provisoire (BOT du plus court au plus long, autres du plus haut au plus bas) : copies avec
+    `line_provisional` true, `rank` null, `provisional_rank` 1..top."""
+    cfg = cfg or charger_config()
+    cfg_top = cfg["top"]
     dossier = Path(racine) / "data" / "runs" / week
     sortie = []
     for f in sorted(dossier.glob("*.json")):
         nom = f.stem
         if nom.startswith("_") or nom == "hotm-gate-inconnue" or not (nom in ("poc", "bot", "gb") or nom.startswith("hotm-gate-")):
             continue
-        for r in _json(f, []):
-            if r.get("rank") is not None and r["rank"] <= cfg_top:
-                sortie.append((nom, r))
+        lignes = [r for r in _json(f, []) if isinstance(r, dict)]
+        classees = [r for r in lignes if r.get("rank") is not None and r["rank"] <= cfg_top]
+        if classees:
+            sortie += [(nom, r) for r in classees]
+        elif cfg.get("builds_provisoires"):
+            cand = [r for r in lignes if r.get("confidence") == "a_verifier" and isinstance((r.get("score") or {}).get("total"), (int, float))]
+            cand.sort(key=lambda r: r["score"]["total"] * (1 if nom == "bot" else -1))   # tri stable : ordre du fichier à score égal
+            for i, r in enumerate(cand[:cfg_top], 1):
+                sortie.append((nom, dict(r, rank=None, line_provisional=True, provisional_rank=i)))
     return sortie
+
+
+def supprimer_provisoires(week, attendus, racine=RACINE):
+    """v4 : supprime les builds `line_provisional` (et leurs recadrages) qui ne font plus partie de la sélection
+    (mode devenu classé, ligne sortie du top). `attendus` : ensemble de chemins de builds provisoires courants."""
+    base = Path(racine) / "data" / "builds" / week
+    supprimes = []
+    for f in sorted(base.glob("*/*.json")):
+        b = _json(f, None)
+        if b and b.get("line_provisional") and f.resolve() not in attendus:
+            for u in b.get("unmatched") or []:
+                if u.get("crop"):
+                    (Path(racine) / u["crop"]).unlink(missing_ok=True)
+            f.unlink()
+            supprimes.append(f)
+    return supprimes
 
 
 def contextes(nom_mode, ligne, week):
@@ -558,6 +589,7 @@ def contextes(nom_mode, ligne, week):
         yield {"t_debut": int(max(avant)) if avant and isinstance(d.get("t"), (int, float)) and max(avant) < d["t"] else 0,
                "run_id": ligne["run_id"], "run_index": i, "week": week, "mode": ligne.get("mode") or nom_mode.split("-")[0],
                "dossier": nom_mode, "gate": ligne.get("gate"), "hunter_mode": ligne.get("hunter_mode"), "rank": ligne.get("rank"),
+               "line_provisional": bool(ligne.get("line_provisional")), "provisional_rank": ligne.get("provisional_rank"),
                "player": ligne.get("player"), "channel_id": ligne.get("channel_id"),
                "video_id": d.get("video_id") or ligne.get("video_id"), "t_result": d.get("t"), "team": d.get("team"),
                "published_at": d.get("published_at") or ligne.get("published_at"), "score": ligne.get("score"), "lang": ligne.get("lang")}
@@ -581,7 +613,10 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
         from icones import Banque
         banque = Banque(racine)
     builds = []
-    for nom_mode, ligne in modes_du_top(week, racine):
+    selection = modes_du_top(week, racine, cfg)
+    supprimer_provisoires(week, {(racine / "data" / "builds" / week / n / f"{c['run_id']}-{c['run_index']}.json").resolve()
+                                 for n, l in selection if l.get("line_provisional") for c in contextes(n, l, week)}, racine)
+    for nom_mode, ligne in selection:
         for ctx in contextes(nom_mode, ligne, week):
             chemin = racine / "data" / "builds" / week / nom_mode / f"{ctx['run_id']}-{ctx['run_index']}.json"
             ancien = _json(chemin, None)
@@ -687,7 +722,8 @@ def rapport(week, builds, fichiers_pptx=()):
     for dossier in sorted({b.get("dossier") or b["mode"] for b in builds}):
         bm = [b for b in builds if (b.get("dossier") or b["mode"]) == dossier]
         c = Counter(b["status"] for b in bm)
-        L += [f"## {dossier}", "", f"- build_complet : {c['build_complet']} · build_partiel : {c['build_partiel']} · pas_de_build : {c['pas_de_build']}"]
+        prov = any(b.get("line_provisional") for b in bm)
+        L += [f"## {dossier}" + (" — CLASSEMENT PROVISOIRE (lignes non classées, score provisoire)" if prov else ""), "", f"- build_complet : {c['build_complet']} · build_partiel : {c['build_partiel']} · pas_de_build : {c['pas_de_build']}"]
         av = [b for b in bm if b["confidence"] == "a_verifier"]
         L.append("- À vérifier : " + (", ".join(f"{b['run_id']}-{b['run_index']} ({b['notes']})" for b in av) if av else "aucun"))
         um = Counter(u["element"] for b in bm for u in b["unmatched"])

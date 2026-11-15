@@ -92,6 +92,13 @@ def score_texte(row):
     return v + (" RC" if sc.get("unit") == "rage_count" else "")
 
 
+def rang_texte(b):
+    """`#n` (classé) ou `~n` (v4 : ligne provisoire)."""
+    if b.get("line_provisional"):
+        return f"~{b.get('provisional_rank') or '?'}"
+    return f"#{b.get('rank')}"
+
+
 def date_semaine(week, lang):
     d = date.fromisoformat(week)
     return f"{d:%d/%m/%Y}" if lang == "fr" else d.isoformat()
@@ -158,7 +165,7 @@ class Dessin:
         self.rect(s, 0, 0, W, 0.9, X.ENTETE)
         self.rect(s, 0, 0.84, W, 0.06, COULEUR_MODE.get(b["mode"], X.VIOLET))
         mode = b["mode"].upper()
-        self.texte(s, 0.4, 0.2, 8.5, 0.5, f"{mode} · #{b.get('rank')} · {b.get('player') or ''}", 14, X.TEXTE, ancre="m")
+        self.texte(s, 0.4, 0.2, 8.5, 0.5, f"{mode} · {rang_texte(b)} · {b.get('player') or ''}", 14, X.TEXTE, ancre="m")
         self.texte(s, 8.9, 0.2, 4.0, 0.5, f"{lib(self.cfg, 'semaine', self.lang)} {date_semaine(b['week'], self.lang)}", 12, X.SOURD, align="r", ancre="m")
         self.texte(s, 0.5, 1.0, 12.3, 0.6, titre, 28, X.BLEU, gras=True)
         t = t_utile(b)
@@ -168,6 +175,9 @@ class Dessin:
         if b["week"] in X.SEMAINES_ESSAI:
             self.rect(s, 9.6, 1.05, 3.3, 0.45, "B91C1C")
             self.texte(s, 9.6, 1.05, 3.3, 0.45, lib(self.cfg, "essai", self.lang), 12, "FFFFFF", gras=True, align="c", ancre="m")
+        if b.get("line_provisional"):
+            self.rect(s, 5.6, 1.05, 3.8, 0.45, "D97706")
+            self.texte(s, 5.6, 1.05, 3.8, 0.45, lib(self.cfg, "provisoire", self.lang), 12, "FFFFFF", gras=True, align="c", ancre="m")
         s.notes_slide.notes_text_frame.text = notes
         return s
 
@@ -295,9 +305,9 @@ def slide_titre(d, b, row):
     cfg, lang = d.cfg, d.lang
     s = d.diapo(f"{X.NOMS.get(b['mode'], b['mode'])} — {lib(cfg, 'titre_build', lang)}", b, row, _notes(b))
     rang = b.get("rank") or 0
-    couleur = {1: X.OR, 2: X.ARGENT, 3: X.BRONZE}.get(rang, X.VIOLET)
+    couleur = {1: X.OR, 2: X.ARGENT, 3: X.BRONZE}.get(rang, X.VIOLET)   # provisoire : jamais de médaille
     d.rect(s, 0.6, 2.0, 1.4, 1.4, couleur, arrondi=True)
-    d.texte(s, 0.6, 2.0, 1.4, 1.4, f"#{rang}", 36, X.NUIT, gras=True, align="c", ancre="m")
+    d.texte(s, 0.6, 2.0, 1.4, 1.4, rang_texte(b), 36, X.NUIT, gras=True, align="c", ancre="m")
     l = [f"{lib(cfg, 'joueur', lang)} : {b.get('player') or ''}", f"{lib(cfg, 'score', lang)} : {score_texte(row)}"]
     if b["mode"] in ("poc", "gb"):
         l.append(f"{lib(cfg, 'run', lang)} {b['run_index']}/{max(1, len((row or {}).get('runs_detail') or [1]))} · "
@@ -565,14 +575,20 @@ def exporter(semaine, racine=RACINE, sortie=None, mode=None, cfg=None):
                 lignes[r["run_id"]] = r
     groupes = defaultdict(list)
     for b in toutes:
-        groupes[(b.get("dossier") or b["mode"], b.get("rank") or 0, b.get("video_id"))].append(b)
+        prov = bool(b.get("line_provisional"))
+        groupes[(b.get("dossier") or b["mode"], prov, (b.get("provisional_rank") if prov else b.get("rank")) or 0, b.get("video_id"))].append(b)
     fichiers = []
-    for (dossier, rang, vid), liste in sorted(groupes.items()):
+    attendus = set()
+    for (dossier, prov, rang, vid), liste in sorted(groupes.items()):
         row = lignes.get(liste[0]["run_id"])
         for lang in LANGUES:
-            chemin = sortie / dossier / f"{rang:02d}-{vid}-{lang}.pptx"
+            chemin = sortie / dossier / f"{'p' if prov else ''}{rang:02d}-{vid}-{lang}.pptx"
+            attendus.add(chemin.resolve())
             generer_fichier(liste, row, lang, chemin, racine, db, cfg)
             fichiers.append(str(chemin.relative_to(sortie.parent.parent.parent)) if chemin.is_relative_to(racine) else str(chemin))
+    for f in sortie.glob("*/p[0-9][0-9]-*.pptx"):       # v4 : PowerPoint provisoires périmés (mode devenu classé)
+        if f.resolve() not in attendus and (mode is None or f.parent.name.split("-")[0] == mode):
+            f.unlink()
     B.ecrire_rapport(semaine, toutes, racine, fichiers)
     return fichiers
 

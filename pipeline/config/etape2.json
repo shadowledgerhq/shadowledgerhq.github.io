@@ -2,6 +2,7 @@
  "spec": 3,
  "_spec": "docs/SPEC_ETAPE2.md v2. Tout ce qui est [À CONFIRMER] se règle ici, pas dans le code.",
  "top": 10,
+ "builds_provisoires": true,
  "seuil_icone": {
   "hunters": 0.8,
   "weapons": 0.55,
@@ -1356,6 +1357,10 @@
   "semaine": {
    "fr": "Semaine du",
    "en": "Week of"
+  },
+  "provisoire": {
+   "fr": "CLASSEMENT PROVISOIRE",
+   "en": "PROVISIONAL RANKING"
   },
   "essai": {
    "fr": "ESSAI — non publié",
