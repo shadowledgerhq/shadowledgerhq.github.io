@@ -167,6 +167,23 @@ def test_t_debut_vidéo_à_deux_runs():
     assert [c["t_debut"] for c in B.contextes("poc", {"run_id": "r", "video_id": "V"}, "s")] == [0]
 
 
+def test_ocr_reel_stats_par_position_et_accord_fiche():
+    """Textes réels (essai PC v0tuXJNxudk, 15/11) : libellés perdus -> stats par position ; écran sans nom -> SJW par accord avec la fiche."""
+    lire = lambda n: (Path(__file__).parent / "ocr_reel" / f"{n}.txt").read_text(encoding="utf-8")
+    r = E.lire_stats(lire("16_stats"), T.DB, T.CFG)
+    assert r["stats"]["attack"] == 85562 and r["stats"]["mana"] == 5423 and r["stats"]["defense"] == {"percent": 85.22, "rating": 144098}
+    assert r["stats"]["crit-rate"] == {"percent": 50.0, "rating": 4507} and r["stats"]["defense-penetration"]["percent"] == 41.74 and len(r["stats"]) == 9
+    obs = {}
+    E.integrer(obs, [("fiche_sjw", lire("0_fiche_sjw")), ("stats", lire("4_stats")), ("stats", lire("16_stats"))], T.DB, T.CFG)
+    s = obs["sjw"]["stats"]
+    assert s["hp"] == 108376 and s["attack"] == 138984 and s["defense"]["rating"] == 70380 and "accuracy" not in s   # accuracy : ligne illisible, jamais devinée
+    assert s["defense-penetration"]["percent"] == 43.02 and not obs.get("unmatched")
+    assert obs["hunters"][0]["id"] == "christopher-reed" and obs["hunters"][0]["stats"]["hp"] == 81263
+    seul = {}
+    E.integrer(seul, [("stats", lire("4_stats"))], T.DB, T.CFG)         # sans fiche : aucun accord possible, écran non rattaché
+    assert "sjw" not in seul and seul["unmatched"][0]["stats"]["hp"] == 108376
+
+
 if __name__ == "__main__":
     for nom, f in sorted(globals().items()):
         if nom.startswith("test_"):

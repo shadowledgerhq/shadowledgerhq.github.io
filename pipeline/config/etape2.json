@@ -1087,6 +1087,19 @@
     "能力値情報",
     "ハンター",
     "ハンター管理局"
+   ],
+   "ordre_brut": [
+    "hp",
+    "mana",
+    "attack"
+   ],
+   "ordre_pct": [
+    "accuracy",
+    "defense",
+    "crit-rate",
+    "crit-damage",
+    "cooldown-reduction",
+    "defense-penetration"
    ]
   },
   "attributs": {

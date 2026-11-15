@@ -7,7 +7,7 @@ import re
 import noms
 
 NOMBRE = r"\d[\d,.\s]*"
-RE_PCT = re.compile(r"(-?\d+(?:[.,]\d+)?)\s*%\s*(?:[(（]\s*(" + NOMBRE + r")\s*[)）])?")
+RE_PCT = re.compile(r"(?<![\d.,])(-?\d+(?:[.,]\d+)?)\s*%\s*(?:[(（]\s*(" + NOMBRE + r")\s*[)）])?")
 RE_ENTIER = re.compile(r"(?<![\d.,])(\d{1,3}(?:[,.\s]\d{3})+|\d+)(?![\d.,]*\s*%)")
 LANG = "ja"
 
@@ -56,11 +56,21 @@ def _valeur_stat(reste, affichage):
     return {"percent": pct, "rating": entier(m.group(2)) if m.group(2) else None}
 
 
+def _jeton_pct(ligne):
+    m = RE_PCT.search(ligne)
+    if not m:
+        return None
+    return {"percent": float(m.group(1).replace(",", ".")), "rating": entier(m.group(2)) if m.group(2) else None}
+
+
 def lire_stats(texte, db, cfg):
-    """Écran `stats` (onglet 全体). Retourne {"stats": {id: valeur}, "nom_lu": texte | None, "candidats": [lignes de nom]}."""
+    """Écran `stats` (onglet 全体). Retourne {"stats": {id: valeur}, "nom_lu": texte | None, "candidats": [lignes de nom],
+    "positionnel": [ids lus par position]}. Les libellés sont souvent perdus par l'OCR (essai PC 15/11 : `防御`, `クリティカル`, icône
+    à la place de `攻撃力`) : les stats sans libellé lu sont affectées PAR POSITION (`ecrans.stats.ordre_brut` / `ordre_pct`, [À CONFIRMER]
+    sur l'ordre de l'écran) seulement si le nombre de lignes de valeur sans libellé = le nombre de stats manquantes ; sinon non lues."""
     e = cfg["ecrans"]["stats"]
     table = sorted(e["stats"][LANG].items(), key=lambda kv: -len(_n(kv[0])))      # `_n` ramène カ à 力 des deux côtés
-    stats, candidats = {}, []
+    stats, candidats, libres_brut, libres_pct = {}, [], [], []
     for ligne in _lignes(texte):
         l = _n(ligne)
         trouve = False
@@ -68,17 +78,37 @@ def lire_stats(texte, db, cfg):
             i = l.find(_n(lib))
             if i < 0:
                 continue
-            if ident == "defense" and "貫通" in l[i:i + 8]:
-                continue
+            suite = l[i + len(_n(lib)):]
+            if ident == "defense" and ("貫通" in l[i:i + 8] or suite[:2] in ("中通", "貫通")):
+                continue                                   # 防御力貫通 (ou sa lecture « 防御力中通 ») n'est pas la défense
             affichage = (db.get("stats", {}).get(ident) or {}).get("display", "raw")
-            v = _valeur_stat(l[i + len(_n(lib)):], affichage)
+            v = _valeur_stat(suite, affichage)
             if v is not None and ident not in stats:
                 stats[ident] = v
             trouve = True
             break
-        if not trouve and not re.search(r"\d", ligne) and len(l) >= 3 and l not in {_n(x) for x in e["ignorer"]}:
+        if trouve:
+            continue
+        if "%" in ligne or "％" in ligne:
+            libres_pct.append(_jeton_pct(ligne))             # None : ligne de valeur illisible (garde sa place dans l'ordre)
+        elif re.search(r"(?<![\d.,])(\d{1,3}(?:,\d{3})+|\d{3,7})(?![\d,]|\.\d)", ligne):
+            libres_brut.append(entier(re.findall(r"(?<![\d.,])(?:\d{1,3}(?:,\d{3})+|\d{3,7})(?![\d,]|\.\d)", ligne)[-1]))
+        elif not re.search(r"\d", ligne) and len(l) >= 3 and l not in {_n(x) for x in e["ignorer"]}:
             candidats.append(ligne)
-    return {"stats": stats, "nom_lu": None, "candidats": candidats}
+    positionnel = []
+    for ordre, libres in ((e.get("ordre_brut") or [], libres_brut), (e.get("ordre_pct") or [], libres_pct)):
+        manquants = [i for i in ordre if i not in stats]
+        if manquants and len(libres) == len(manquants):
+            for ident, v in zip(manquants, libres):
+                if v is not None:
+                    stats[ident] = v
+                    positionnel.append(ident)
+    return {"stats": stats, "nom_lu": None, "candidats": candidats, "positionnel": positionnel}
+
+
+def nombres_fiche(texte):
+    """Entiers à séparateur de milliers de la fiche de SJW (HP, attaque, défense, puissance…) : clés d'accord avec l'écran de stats."""
+    return {int(re.sub(r"\D", "", x)) for x in re.findall(r"(?<![\d,.])\d{1,3}(?:,\d{3})+(?![\d,])", str(texte or ""))}
 
 
 def lire_attributs(texte, cfg):
@@ -163,6 +193,7 @@ def integrer(obs, lectures, db, cfg):
     """`lectures` = [(ecran, texte)] d'une même run. Remplit `obs` : stats par propriétaire (nom lu -> id), `statues`, `gems`,
     stats du successeur. Retourne les notes ajoutées."""
     notes = obs.setdefault("notes", [])
+    fiche = set().union(*[nombres_fiche(t) for e, t in lectures if e == "fiche_sjw"]) if lectures else set()
     for ecran, texte in lectures:
         if ecran == "gemmes":
             g = lire_gemmes(texte, cfg)
@@ -191,6 +222,16 @@ def integrer(obs, lectures, db, cfg):
                         break
                 if ident:
                     break
+            if ident is None and fiche:                    # écran sans nom lisible : SJW si ≥ 2 valeurs (HP, attaque, défense) sont celles de sa fiche
+                v = r["stats"]
+                accord = [k for k, x in (("hp", v.get("hp")), ("attack", v.get("attack")), ("defense", (v.get("defense") or {}).get("rating")
+                                                                                              if isinstance(v.get("defense"), dict) else v.get("defense"))) if x in fiche]
+                if len(accord) >= 2:
+                    obs.setdefault("sjw", {}).setdefault("stats", {}).update(v)
+                    notes.append(f"stats rattachées à SJW par accord avec la fiche ({', '.join(accord)})")
+                    continue
+            if r.get("positionnel"):
+                notes.append("stats lues par position : " + ", ".join(r["positionnel"]))
             if ident is None:
                 lu = max(r["candidats"], key=len) if r["candidats"] else None
                 obs.setdefault("unmatched", []).append({"element": "stats", "owner": None, "slot": None, "best_id": None, "score": 0.0,

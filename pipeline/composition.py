@@ -105,6 +105,14 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid):
             from pathlib import Path
             Path(ocr_debug).mkdir(parents=True, exist_ok=True)
             (Path(ocr_debug) / f"{vid}_hors-compo_{t}_{ecran}.txt").write_text(texte, encoding="utf-8")
+            try:                                          # image réduite (JPEG) pour caler les zones de lecture à distance
+                from PIL import Image as _Im
+                with _Im.open(png) as im:
+                    im = im.convert("RGB")
+                    im.thumbnail((1600, 900))
+                    im.save(Path(ocr_debug) / f"{vid}_hors-compo_{t}_{ecran}.jpg", quality=80)
+            except Exception:
+                pass
     journal(f"  hors composition : {len(autres)} images, {appels} lues par l'OCR rapide ({vides} sans texte, {erreurs} erreurs), "
             f"écrans reconnus : {', '.join(e for e, _ in lus) or 'aucun'}")
     return lus
