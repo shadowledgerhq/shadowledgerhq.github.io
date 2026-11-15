@@ -13,6 +13,7 @@ from collections import defaultdict
 from datetime import timezone
 
 import gb
+import regles_deduites
 from bot_saison import controler_semaine_bot
 from donnees import Donnees, ajouter_rejet, charger_config
 from semaine import bornes, id_semaine, iso_paris, maintenant, parse_iso, semaine_precedente
@@ -333,6 +334,11 @@ def calculer(week, d=None, config=None, horloge=None):
     cles = sorted({r["_cle"] for r in runs})
     boss, non_controle, precedentes, runs = controler_boss(
         runs, cles, config, d.boss(semaine_precedente(week)))
+    boss_prec = d.boss(semaine_precedente(week))
+    for b in boss:                  # v24 : première semaine où ce libellé de boss est la référence (changement de saison)
+        avant = next((p for p in boss_prec if p.get("classement") == b["classement"]
+                      and boss_id(p["stage"], config) == boss_id(b["stage"], config)), None)
+        b["premiere_semaine"] = (avant.get("premiere_semaine") or semaine_precedente(week)) if avant else week
 
     # Vidéos qui n'ont plus aucune run : rejetées (doublon / semaine précédente).
     rejected, processed = d.rejected(week), d.processed()
@@ -386,6 +392,7 @@ def calculer(week, d=None, config=None, horloge=None):
         else:  # classement devenu vide (ou mode retiré du classement, ex. gb.json) : pas de fichier
             (dossier / f"{cle}.json").unlink()
     d.ecrire(f"runs/{week}/_boss.json", boss)
+    regles_deduites.mettre_a_jour(d, week, d.lectures(week), date)     # v24 : éléments autorisés déduits des écrans
     d.ecrire(f"rejected/{week}.json", rejected)
     d.ecrire("processed.json", processed)
 
