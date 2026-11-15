@@ -2,6 +2,7 @@
 des images à analyser, et fournisseur d'images pour `builds.calculer` (PC : yt-dlp + ffmpeg, comme les tris 3-4).
 Détection par la disposition (bouton d'entrée jaune + onglet actif de la colonne de gauche), pas par le texte : valable pour
 toutes les langues d'interface. Réglages dans `pipeline/config/etape2.json` (`extraction`)."""
+import json
 import re
 import tempfile
 from pathlib import Path
@@ -139,6 +140,7 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes=
     h = cfg.get("hors_compo") or {}
     pas, maxi, langues = h.get("pas", 2), h.get("ocr_max", 120), h.get("langues", "jpn+eng")
     lus, vus, appels, vides, erreurs = [], {}, 0, 0, 0
+    _lire_hors_composition.portraits = portraits = []   # un portrait par écran de stats lu, dans l'ordre (liaison chasseur -> carte, `portraits.py`)
     _lire_hors_composition.resume = resume = []        # diagnostic : (t, début du texte lu) de chaque image passée à l'OCR rapide
     forcer = 0                       # images lues malgré le pas : le panneau d'options des statues apparaît en fondu après la liste
     ids, k, kc, appels_compo = {str(p) for _, p in autres}, -1, -1, 0
@@ -177,6 +179,14 @@ def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes=
         vus[ecran] = vus.get(ecran, 0) + 1
         lus.append((ecran, texte))
         journal(f"  écran {ecran} lu à t={t} s")
+        if ecran == "stats":
+            try:
+                import portraits as _P
+                from PIL import Image as _Im
+                with _Im.open(png) as im:
+                    portraits.append(_P.decouper_portrait(im.convert("RGB"), cfg).copy())
+            except Exception:
+                portraits.append(None)
         try:
             zl = _lire_zones(outils, cfg, ecran, png, t, journal, texte)
             lus += zl
@@ -340,6 +350,37 @@ def _affiner(outils, cfg, chemin, fenetre, tmp, journal):
         return None, fenetre
 
 
+def _positions_portraits(images, ecrans, ctx, cfg, journal):
+    """[("stats_position", json)] : pour chaque écran de stats lu, position (1..3) de la carte de chasseur dont l'illustration
+    est la même (`portraits.position_portrait`), ou None. Jamais bloquant."""
+    ports = getattr(_lire_hors_composition, "portraits", None) or []
+    if not ports or not any(e == "stats" for e, _ in ecrans):
+        return []
+    try:
+        import portraits as P
+        cle = "hotm_sans_sjw" if ctx.get("mode") == "hotm" and ctx.get("hunter_mode") is True else ctx.get("mode")
+        pers = ((cfg.get("zones") or {}).get(cle) or {}).get("personnages") or {}
+        zones = [pers[f"hunter_{i}"]["hunter_face"] for i in (1, 2, 3) if f"hunter_{i}" in pers and "hunter_face" in pers[f"hunter_{i}"]]
+        base = (images.get("personnages") or [])[:3]
+        if not zones or not base:
+            return []
+        sortie = []
+        for pt in ports:
+            if pt is None:
+                sortie.append(None)
+                continue
+            total = [0] * len(zones)
+            for im in base:
+                total = [x + y for x, y in zip(total, P.notes_cartes(pt, P.decouper_cartes(im, zones, cfg)))]
+            idx = P.choisir(total, cfg)
+            sortie.append(idx + 1 if idx is not None else None)
+            journal(f"  portrait de stats -> carte {sortie[-1] or '?'} (correspondances {total})")
+        return [("stats_position", json.dumps(sortie))]
+    except Exception as ex:
+        journal(f"  portraits : {str(ex)[:80]}")
+        return []
+
+
 def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
     """Fournisseur d'images pour `builds.calculer(fournisseur=…)` : télécharge chaque vidéo une fois (`outils.telecharger`),
     extrait 1 image / `pas_s` s de 0 à `t_result` (`outils.images`), garde les images de l'écran de composition. Retourne
@@ -377,6 +418,7 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                         fin, fenetre = _affiner(outils, cfg, chemin, cache[cle][1], tmp, journal)
                         if fin:                                  # onglet absent à 0,5 s : on garde le choix à pas_s
                             cache[cle] = ({**cache[cle][0], **fin}, fenetre, None, ecrans)
+                    ecrans.extend(_positions_portraits(cache[cle][0], ecrans, ctx, cfg, journal))
                     if ocr_debug:                    # diagnostic (--garder-ocr) : images de composition retenues, pour définir les zones des onglets
                         Path(ocr_debug).mkdir(parents=True, exist_ok=True)
                         for onglet, ims in cache[cle][0].items():
