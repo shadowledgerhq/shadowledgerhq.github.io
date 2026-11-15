@@ -21,10 +21,11 @@
       "rang 5, qualité A": "4 %",
       "rang 4, sans lettre (bord violet)": "3 %",
       "rang 3, sans lettre (bord bleu)": "2,25 %",
-      "rang 2, sans lettre (bord gris)": "1,75 %"
+      "rang 2, sans lettre (bord gris)": "1,75 %",
+      "rang 1, sans lettre (bord gris)": "1,25 %"
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; valeurs rang 2-4 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; valeurs rang 2-4 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque (%) ». Une seule valeur lue : gemme équipée rang 6, qualité A = 5 % (cohérent avec 8 gemmes = 40 % sur la constellation I). Rang 5 : D 3,2 / C 3,4 / B 3,6 / A 4 % ; rang 6 A = 5 %."
@@ -51,10 +52,11 @@
       "rang 5, qualité D": "3,2 %",
       "rang 4, sans lettre (bord violet)": "3 %",
       "rang 3, sans lettre (bord bleu)": "2,25 %",
-      "rang 2, sans lettre (bord gris)": "1,75 %"
+      "rang 2, sans lettre (bord gris)": "1,75 %",
+      "rang 1, sans lettre (bord gris)": "1,25 %"
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de Défense (%) »."
@@ -81,10 +83,11 @@
       "rang 5, qualité D": "3,2 %",
       "rang 4, sans lettre (bord violet)": "3 %",
       "rang 3, sans lettre (bord bleu)": "2,25 %",
-      "rang 2, sans lettre (bord gris)": "1,75 %"
+      "rang 2, sans lettre (bord gris)": "1,75 %",
+      "rang 1, sans lettre (bord gris)": "1,25 %"
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de PV (%) »."
@@ -111,10 +114,11 @@
       "rang 5, qualité D": 535,
       "rang 4, sans lettre (bord violet)": 485,
       "rang 3, sans lettre (bord bleu)": 345,
-      "rang 2, sans lettre (bord gris)": 290
+      "rang 2, sans lettre (bord gris)": 290,
+      "rang 1, sans lettre (bord gris)": 165
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Pénétration de défense rang 6 A = 965 : cohérent avec les totaux des constellations (2 gemmes = 1 930 ; 3 = 2 895)."
@@ -140,10 +144,11 @@
       "rang 5, qualité D": 535,
       "rang 4, sans lettre (bord violet)": 485,
       "rang 3, sans lettre (bord bleu)": 345,
-      "rang 2, sans lettre (bord gris)": 290
+      "rang 2, sans lettre (bord gris)": 290,
+      "rang 1, sans lettre (bord gris)": 165
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Rang 6 non relevé ; les totaux de constellation (2 895 = 3 × 965) suggèrent 965 au rang 6 A, à confirmer."
@@ -169,10 +174,11 @@
       "rang 5, qualité A": 1450,
       "rang 5, qualité D": 1065,
       "rang 4, sans lettre (bord violet)": 970,
-      "rang 3, sans lettre (bord bleu)": 695
+      "rang 3, sans lettre (bord bleu)": 695,
+      "rang 1, sans lettre (bord gris)": 325
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
@@ -199,10 +205,11 @@
       "rang 5, qualité A": 180,
       "rang 4, sans lettre (bord violet)": 120,
       "rang 3, sans lettre (bord bleu)": 85,
-      "rang 2, sans lettre (bord gris)": 70
+      "rang 2, sans lettre (bord gris)": 70,
+      "rang 1, sans lettre (bord gris)": 40
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16) ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de réduction de la consommation de PM ». Nom en jeu : « Baisse du coût de PM »."
@@ -229,10 +236,11 @@
       "rang 5, qualité D": 65,
       "rang 4, sans lettre (bord violet)": 60,
       "rang 3, sans lettre (bord bleu)": 45,
-      "rang 2, sans lettre (bord gris)": 40
+      "rang 2, sans lettre (bord gris)": 40,
+      "rang 1, sans lettre (bord gris)": 25
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16)",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16) ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Nom de gemme en jeu : « Gemme d'énergie de mana extra »."
@@ -262,7 +270,7 @@
       "rang 3, sans lettre (bord bleu)": "0,2 %"
     },
     "icon": null,
-    "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16)",
+    "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16) ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "12e type de gemme, absent du calculateur de slagate : « Gemme de vitesse », violette, bonus « Vitesse (%) ». Rang 1 = 0,1 %. Absente des totaux « Infos sur la gemme » et de la constellation (la constellation I/II ne comporte que PM supplémentaires et baisse du coût de PM en violet)."
@@ -288,10 +296,11 @@
       "rang 5, qualité D": 140,
       "rang 4, sans lettre (bord violet)": 130,
       "rang 3, sans lettre (bord bleu)": 85,
-      "rang 2, sans lettre (bord gris)": 70
+      "rang 2, sans lettre (bord gris)": 70,
+      "rang 1, sans lettre (bord gris)": 40
     },
     "icon": null,
-    "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "13e type de gemme, absent du calculateur de slagate : « Gemme de réduction des dégâts », verte, bonus « Réduction des dégâts » (valeur fixe, pas un %). Rangs 2 à 5 relevés ; rang 1 et rang 6 non vus. Absente de la constellation et des totaux « Infos sur la gemme »."
@@ -318,10 +327,11 @@
       "rang 5, qualité D": 230,
       "rang 3, sans lettre (bord bleu)": 140,
       "rang 4, sans lettre (bord violet)": 200,
-      "rang 2, sans lettre (bord gris)": 120
+      "rang 2, sans lettre (bord gris)": 120,
+      "rang 1, sans lettre (bord gris)": 70
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 2-4 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 2-4 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme d'attaque supplémentaire ». Valeurs de l'« Attaque supplémentaire » (fixe) lues sur les écrans de comparaison. « Rang » = niveau de la gemme (forme : étoile = rang 6, hexagone = rang 5, losange/triangle = rang 3, déduit des captures)."
@@ -343,10 +353,11 @@
     "values_by_level": {
       "rang 4, sans lettre (bord violet)": "0,8 %",
       "rang 3, sans lettre (bord bleu)": "0,6 %",
-      "rang 2, sans lettre (bord gris)": "0,45 %"
+      "rang 2, sans lettre (bord gris)": "0,45 %",
+      "rang 1, sans lettre (bord gris)": "0,25 %"
     },
     "icon": null,
-    "source": "capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Nom de la gemme dans l'inventaire : « Gemme d'augmentation des soins prodigués » ; stat affichée « Hausse de soins donnés (%) ». Gemme rouge (branche attaque). Mêmes valeurs que les soins reçus aux rangs 2-4."
@@ -372,10 +383,11 @@
       "rang 5, qualité D": 230,
       "rang 4, sans lettre (bord violet)": 200,
       "rang 3, sans lettre (bord bleu)": 140,
-      "rang 2, sans lettre (bord gris)": 120
+      "rang 2, sans lettre (bord gris)": 120,
+      "rang 1, sans lettre (bord gris)": 70
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de défense supplémentaire ». Mêmes valeurs que l'attaque et les PV supplémentaires au rang 5."
@@ -401,10 +413,11 @@
       "rang 3, sans lettre (bord bleu)": 140,
       "rang 2, sans lettre (bord gris)": 120,
       "rang 4, sans lettre (bord violet)": 200,
-      "rang 5, qualité D": 230
+      "rang 5, qualité D": 230,
+      "rang 1, sans lettre (bord gris)": 70
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 5 D : capture d'écran du jeu fournie par Alexis le 15/11/2026",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rang 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 5 D : capture d'écran du jeu fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de PV supplémentaires ». Mêmes valeurs que l'attaque supplémentaire aux rangs 5 (A/B/C) et 3. Rang 2 = petit cristal bleu à bord gris. Rang 6 non relevé pour ce type."
@@ -426,10 +439,11 @@
     "values_by_level": {
       "rang 4, sans lettre (bord violet)": "0,8 %",
       "rang 3, sans lettre (bord bleu)": "0,6 %",
-      "rang 2, sans lettre (bord gris)": "0,45 %"
+      "rang 2, sans lettre (bord gris)": "0,45 %",
+      "rang 1, sans lettre (bord gris)": "0,25 %"
     },
     "icon": null,
-    "source": "capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026",
+    "source": "capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Nom de la gemme dans l'inventaire : « Gemme d'augmentation des soins reçus » ; stat affichée « Hausse des soins reçus (%) ». Gemme bleue (branche PV) avec PV (%) et PV supplémentaires. Le type « soins donnés » (rouge) existe aussi (non vu en détail)."
