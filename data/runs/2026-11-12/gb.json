@@ -126,7 +126,7 @@
     "exact": true,
     "confidence": "sur",
     "rank": 3,
-    "notes": "écart titre/écran : titre 159; lecture fusionnée (14 images); contrôle sans Hunter Rank; chrono HUD déduit (t=214); séparateur perdu (OCR); groupes inconnus : 2e run non additionnée (137, Oj_-5x6700s); une seule run; boss non contrôlé",
+    "notes": "écart titre/écran : titre 159; lecture fusionnée (7 images); contrôle sans Hunter Rank; chrono HUD déduit (t=214); séparateur perdu (OCR); groupes inconnus : 2e run non additionnée (137, Oj_-5x6700s); une seule run; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "T5dR6iJAn-Y",
@@ -244,7 +244,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "lecture fusionnée (8 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; boss non contrôlé",
+    "notes": "lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "vYtRCpFtSOk",

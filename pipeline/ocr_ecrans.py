@@ -562,6 +562,15 @@ def _votes_results(l):
     return {c: [[v, 1]] for c, v in _valeurs_results(l).items() if v is not None}
 
 
+def _sans_doublons_anciens(groupe):
+    """Une lecture fusionnée avant v23 (sans `detail.par_t`) est abandonnée si des lectures d'image du même écran sont présentes : la
+    vidéo a été relue, ses images sont déjà là (sinon elles seraient comptées deux fois)."""
+    anciennes = [l for l in groupe if (l.get("detail") or {}).get("votes") and not (l.get("detail") or {}).get("par_t")]
+    if not anciennes or len(anciennes) == len(groupe):
+        return groupe
+    return [l for l in groupe if l not in anciennes]
+
+
 def fusionner_results(lectures, config=None):
     """v13 : lectures de l'écran Results d'une vidéo, fusionnées CHAMP PAR CHAMP sur les images consécutives d'un même
     écran : au plus `gb.fusion_max_s` (15 s) entre la première et la dernière image, sans HUD de combat entre elles.
@@ -596,26 +605,37 @@ def fusionner_results(lectures, config=None):
     for groupe in ecrans_res:
         if not any(l.get("score") is not None for l in groupe):
             continue                                  # écran vu sans Rage Count lisible : rien à classer
-        votes = {}
+        # v23 : une image = un `t` distinct. Les votes sont comptés par image (`detail.par_t`), jamais par lecture : une vidéo
+        # relue (--refaire) ajoute les mêmes images aux lectures déjà fusionnées sans les compter deux fois (RaidenShadow 14 au lieu de 7).
+        groupe = _sans_doublons_anciens(groupe)
+        par_t, anciens = {}, []
         for l in groupe:
+            pt = (l.get("detail") or {}).get("par_t")
+            if pt:
+                for t_i, vals in pt:
+                    par_t[t_i] = {**par_t.get(t_i, {}), **vals}
+            elif (l.get("detail") or {}).get("votes"):
+                anciens.append(l)                      # lecture fusionnée avant v23 (sans `par_t`), seule de son écran : votes gardés tels quels
+            else:
+                par_t[l["t"] or 0] = {c: v for c, v in _valeurs_results(l).items() if v is not None}
+        votes = {}
+        for vals in par_t.values():
+            for champ, v in vals.items():
+                votes.setdefault(champ, {})
+                votes[champ][v] = votes[champ].get(v, 0) + 1
+        for l in anciens:
             for champ, liste in _votes_results(l).items():
                 for valeur, n in liste:
-                    cumul = votes.setdefault(champ, {})
-                    cumul[valeur] = cumul.get(valeur, 0) + n
+                    votes.setdefault(champ, {})
+                    votes[champ][valeur] = votes[champ].get(valeur, 0) + n
         # v15 : compteurs animés (Rage Count, Final Score) : lectures croissantes dans le temps, dernière valeur lue sur
         # ≥ 2 images à la fin = valeur finale ; les valeurs plus petites sont des étapes de l'animation, pas des discordances
         sequence, animes = {}, []
         for champ in ("rage_count", "final_score"):
-            seq = []
-            for l in groupe:
-                deja = (l.get("detail") or {}).get("sequence")
-                if deja:
-                    seq += [tuple(x) for x in deja.get(champ, [])]
-                else:
-                    v = l.get("score") if champ == "rage_count" else l.get("damage")
-                    if v is not None:
-                        seq.append((l["t"] or 0, v))
-            seq.sort()
+            seq = {(t_i, vals[champ]) for t_i, vals in par_t.items() if champ in vals}
+            for l in anciens:
+                seq |= {tuple(x) for x in ((l.get("detail") or {}).get("sequence") or {}).get(champ, [])}
+            seq = sorted(seq)
             sequence[champ] = [list(x) for x in seq]
             if seq:
                 vals = [v for _, v in seq]
@@ -626,7 +646,7 @@ def fusionner_results(lectures, config=None):
                     votes[champ] = {}
                     for v in vals:
                         votes[champ][v] = votes[champ].get(v, 0) + 1
-        retenu, conflits = {}, []
+        retenu, conflits, egalite_final, departage = {}, [], None, None
         for champ, cumul in votes.items():
             classes = sorted(cumul.items(), key=lambda kv: -kv[1])
             retenu[champ] = classes[0][0]
@@ -634,7 +654,10 @@ def fusionner_results(lectures, config=None):
                 if len(classes) > 1 and classes[0][1] < 2 * sum(n for _, n in classes[1:]):
                     conflits.append(champ)
             elif len(classes) > 1 and classes[0][1] == classes[1][1]:
-                conflits.append(champ)
+                if champ == "final_score":
+                    egalite_final = [v for v, n in classes if n == classes[0][1]]    # v23 : départagée par le HUD plus bas
+                else:
+                    conflits.append(champ)
         rc, final = retenu.get("rage_count"), retenu.get("final_score")
         avec_rc = [l for l in groupe if l.get("score") == rc]
         base = min(avec_rc, key=lambda l: l["t"] or 0)
@@ -647,17 +670,28 @@ def fusionner_results(lectures, config=None):
             noter(l.get("score"), l["t"])
             for k, t_k in ((l.get("detail") or {}).get("rc_t") or {}).items():
                 noter(k, t_k)
-        n_images = sum((l.get("detail") or {}).get("n_images", 1) for l in groupe)
+        n_images = len(par_t) + sum((l.get("detail") or {}).get("n_images", 1) for l in anciens)
         nombre = lambda champ, valeur: votes.get(champ, {}).get(valeur, 0)
         rangs = [retenu.get(f"hunter_rank_{k}") for k in range(1, 7)]
         hud = max((h for h in huds if h["video_id"] == base["video_id"] and h["t"] is not None and base["t"] is not None
                    and 0 <= base["t"] - h["t"] <= fenetre), key=lambda h: h["t"], default=None)
+        if egalite_final:                            # v23 : Final Score à égalité, départagé par le dernier `Points` du HUD (jamais le Rage Count)
+            tol_h = cfg.get("hud_tolerance", 0.02)
+            ded_h = ((hud or {}).get("detail") or {}).get("points_deduits")
+            pts_h = [p_ for p_ in ((hud or {}).get("damage"),
+                                   ded_h["points"] if ded_h and ded_h["t"] < min(debut(l) for l in groupe) else None) if p_ is not None]
+            dans_h = [v for v in egalite_final if any(p_ <= v <= p_ * (1 + tol_h) for p_ in pts_h)]
+            if len(dans_h) == 1:
+                final = retenu["final_score"] = dans_h[0]
+                departage = [v for v in egalite_final if v != final]
+            else:
+                conflits.append("final_score")
         d = {**base["detail"], "player_score": retenu.get("player_score"), "hunter_ranks": rangs,
              "hunter_ranks_lus": sum(r is not None for r in rangs), "play_time": retenu.get("play_time"),
              "new_record": any((l.get("detail") or {}).get("new_record") for l in groupe),
              "votes": {c: [[v, n] for v, n in cumul.items()] for c, cumul in votes.items()},
              "rc_images": nombre("rage_count", rc), "final_images": nombre("final_score", final), "n_images": n_images,
-             "rc_t": rc_t, "sequence": sequence,
+             "rc_t": rc_t, "sequence": sequence, "par_t": [[t_i, par_t[t_i]] for t_i in sorted(par_t)],
              "t_debut": min(debut(l) for l in groupe), "t_fin": max(fin(l) for l in groupe)}
         d.pop("ecran", None)
         d.pop("completude", None)
@@ -673,6 +707,8 @@ def fusionner_results(lectures, config=None):
             notes.append(f"lecture fusionnée ({n_images} images)")
         if animes:
             notes.append("compteur animé")
+        if departage:
+            notes.append(f"conflit final_score départagé par le HUD ({', '.join(str(v) for v in departage)})")
         notes += [f"conflit de lecture : {c}" for c in conflits]
         if "rage_count" not in conflits:            # v14 : chaque valeur de Rage Count écartée est notée
             notes += [f"RC discordant écarté : {v} (t={rc_t.get(str(v))})" for v in votes.get("rage_count", {}) if v != rc]

@@ -364,9 +364,49 @@ def test_v13_cas_lGDbzyIJcjY_fusion_et_controle():
     assert d["rc_images"] == 2 and d["final_images"] == 2 and d["n_images"] == 2 and d["hud_rage_count"] == 12
     assert "lecture fusionnée (2 images)" in res["notes"] and "contrôle sans Hunter Rank" in res["notes"]
     assert 1596246179 <= 1601097999 <= 1628171102
-    # idempotent : refusionner la lecture fusionnée avec les images ne double pas les votes
+    # v23 : une image = un `t` distinct ; refusionner la lecture fusionnée avec la MÊME image (vidéo relue) ne compte rien de plus
     again = _un_ecran([res, _res(RESULTS_253_REEL, 253, Z_253)] + hud)
-    assert again["detail"]["rc_images"] == 3 and again["confidence"] == "sur"
+    assert again["detail"]["rc_images"] == 2 and again["detail"]["n_images"] == 2 and again["confidence"] == "sur"
+    assert "lecture fusionnée (2 images)" in again["notes"]
+    # une image nouvelle (t différent) compte
+    plus = _un_ecran([res, _res(RESULTS_253_REEL, 254, Z_253)] + hud)
+    assert plus["detail"]["rc_images"] == 3 and plus["detail"]["n_images"] == 3 and plus["confidence"] == "sur"
+    # relecture complète (mêmes images, deux fois) : toujours 2 images, pas 4
+    deux = _un_ecran([res, r252, r253] + hud)
+    assert deux["detail"]["n_images"] == 2 and deux["detail"]["rc_images"] == 2
+
+
+def test_v23_final_score_a_egalite_departage_par_le_hud():
+    """Final Score lu 1 601 097 999 (1 image) et 1 601 097 990 (1 image) : le HUD (1 596 246 179) n'en garde qu'une dans [Points ; × 1,02]
+    -> pas de conflit ; Rage Count jamais départagé par le HUD."""
+    hud = _hud(238, HUD_238.replace("1593,669,209", "1596,246,179"))
+    r252, r253 = _res(RESULTS_252, 252, Z_252), _res(RESULTS_253_REEL, 253, {**Z_253, "final": "1,701,097,999"})
+    res = _un_ecran([r252, r253] + hud)
+    assert res["damage"] == 1601097999 and res["confidence"] == "sur", res["notes"]
+    assert "conflit final_score départagé par le HUD (1701097999)" in res["notes"]
+    assert not any(n.startswith("conflit de lecture : final_score") for n in res["notes"])
+    # les deux valeurs dans la fenêtre (ou aucune) : conflit comme avant
+    r253b = _res(RESULTS_253_REEL, 253, {**Z_253, "final": "1,601,097,990"})
+    res = _un_ecran([r252, r253b] + hud)
+    assert "conflit de lecture : final_score" in res["notes"] and res["confidence"] == "a_verifier"
+    res = _un_ecran([r252, r253])                       # sans HUD : conflit
+    assert "conflit de lecture : final_score" in res["notes"]
+    # Rage Count : jamais départagé par le HUD
+    r253c = _res(RESULTS_253_REEL, 253, {**Z_253, "rage": "18"})
+    res = _un_ecran([r252, r253c] + hud)
+    assert "conflit de lecture : rage_count" in res["notes"]
+
+
+def test_v23_lecture_fusionnee_ancienne_non_doublee_apres_relecture():
+    """Cas RaidenShadow : une lecture fusionnée d'avant v23 (sans par_t, 2 images) + les mêmes 2 images relues = 2 images, pas 4."""
+    hud = _hud(238, HUD_238.replace("1593,669,209", "1596,246,179"))
+    r252, r253 = _res(RESULTS_252, 252, Z_252), _res(RESULTS_253_REEL, 253, Z_253)
+    res = _un_ecran([r252, r253] + hud)
+    ancienne = {**res, "detail": {k: v for k, v in res["detail"].items() if k != "par_t"}}
+    deux = _un_ecran([ancienne, r252, r253] + hud)
+    assert deux["detail"]["n_images"] == 2 and deux["detail"]["rc_images"] == 2, deux["detail"]
+    seule = _un_ecran([ancienne] + hud)                    # sans relecture : l'ancienne reste telle quelle
+    assert seule["detail"]["n_images"] == 2
 
 
 def test_v13_controle_sans_hunter_rank_durci():
