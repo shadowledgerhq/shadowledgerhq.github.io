@@ -967,6 +967,18 @@
         "rarity": "legendary",
         "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
         "verified_at": "2026-11-16"
+      },
+      {
+        "level": 12,
+        "stat_enhancement_level_pct": 79,
+        "stats": {
+          "Additional Defense": 4513,
+          "Critical Hit Damage": 5114
+        },
+        "passive_condition": "Light hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglets Corps et Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
       }
     ]
   },
@@ -1086,6 +1098,30 @@
         "rarity": "legendary",
         "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
         "verified_at": "2026-11-16"
+      },
+      {
+        "level": 14,
+        "stat_enhancement_level_pct": 83,
+        "stats": {
+          "HP (%)": 46.5,
+          "Critical Hit Damage": 5329
+        },
+        "passive_condition": "Water hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglets Corps et Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 10,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "HP (%)": 36.79,
+          "Critical Hit Rate": 4799
+        },
+        "passive_condition": "Light hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglets Corps et Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
       }
     ]
   },
@@ -1152,6 +1188,18 @@
         "passive_condition": "Dark hunter",
         "rarity": "legendary",
         "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "HP (%)": 53.34,
+          "Damage Increase": 6644
+        },
+        "passive_condition": "Water hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglets Corps et Âme ; client FR 1.5.16)",
         "verified_at": "2026-11-16"
       }
     ]
@@ -1220,6 +1268,18 @@
         "rarity": "legendary",
         "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
         "verified_at": "2026-11-16"
+      },
+      {
+        "level": 10,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "HP (%)": 36.79,
+          "Critical Hit Rate": 4799
+        },
+        "passive_condition": "Water hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglets Corps et Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
       }
     ]
   },
@@ -1287,6 +1347,18 @@
         "rarity": "legendary",
         "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
         "verified_at": "2026-11-16"
+      },
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "HP (%)": 53.34,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Water hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglets Corps et Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
       }
     ]
   },
@@ -1353,6 +1425,18 @@
         "passive_condition": "Light hunter",
         "rarity": "legendary",
         "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 10,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "HP (%)": 36.79,
+          "Damage Increase": 4799
+        },
+        "passive_condition": "Light hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglets Corps et Âme ; client FR 1.5.16)",
         "verified_at": "2026-11-16"
       }
     ]
@@ -1442,7 +1526,7 @@
       "Niveau supérieur : coût 200 or par point d'EXP ; matériaux de progression : +10 EXP, +50 EXP, +250 EXP (+ d'autres noyaux, ex. noyau Légendaire niv. 1 ≈ 80 EXP, déduit). Vu : niv. 10→15 = 2 300 EXP (460 000 or) ; niv. 15→17 = 2 580 EXP (516 000 or) ; EXP à niv. 10 : 230 par niveau pour le suivant, 1 130 pour passer du niv. 17 au 18 (lecture « 740/1130 »). Chaque niveau relève les 2 stats d'une valeur aléatoire dans une plage affichée (niv. 10→15 : Attaque % +1,75~16,55, coup critique +175~1845 ; niv. 15→17 : +0,56~2,06 et +58~258).",
       "Amélioration (au niveau max, jusqu'à MAX) : « améliore un bonus de stat d'une valeur aléatoire » (1 des 2 stats) ; coût par tentative 15 000 or + 5 matériaux ; plage par tentative à niv. 15 : Attaque % +0,3~1,55, coup critique +40~200 ; options « Améliorer automatiquement » et « Amélioration instantanée » (jusqu'au palier max, s'arrête si manque de matériaux ou d'or). Vu : 87 % → MAX en 16 tentatives (240 000 or) = +7,61 % Attaque, +687 coup critique.",
       "Quelques noyaux affichent un portrait de chasseur (équipé) ; la puissance totale du chasseur est mise à jour après chaque étape.",
-      "« Niveau d'amélioration de stat » (%) = floor( moyenne sur les 2 stats de (valeur − minimum initial Légendaire) / (valeur max du palier de niveau max − minimum initial) ). Minimums initiaux Légendaires (rates.json) : Attaque supplémentaire 120, Attaque % 0,70, stats de l'option 2 (coup critique, dégâts critiques, hausse des dégâts, pénétration) 150. Formule vérifiée sur 11 relevés (2, 9, 15, 22, 62, 64, 67, 70, 71, 87, 91, 92 %), tous exacts ; MAX = 100 %.",
+      "« Niveau d'amélioration de stat » (%) = floor( moyenne sur les 2 stats de (valeur − minimum initial Légendaire) / (valeur max du palier de niveau max − minimum initial) ). Minimums initiaux Légendaires (rates.json) : Attaque supplémentaire 120, Attaque % 0,70, stats de l'option 2 (coup critique, dégâts critiques, hausse des dégâts, pénétration) 150. Formule vérifiée sur 14 relevés (2, 9, 15, 22, 62, 64, 67, 70, 71, 79, 83, 87, 91, 92 %), tous exacts ; MAX = 100 %.",
       "Libellés FR des passifs : « Passif de l'esprit » (Esprit/mind), « Passif du corps » (Corps/body), « Passif de l'âme » (Âme/spirit).",
       "Libellés FR des passifs : « Passif de l'esprit » (emplacement Esprit/mind) et « Passif du corps » (Corps/body) ; l'onglet Âme/spirit n'a pas été vu."
     ],
@@ -1455,7 +1539,8 @@
         "Additional Attack": 3953,
         "option 2 (Critical Hit Rate, Critical Hit Damage, Damage Increase, Defense Penetration)": 4799,
         "Additional Defense": 3953,
-        "Additional HP": 7906
+        "Additional HP": 7906,
+        "HP (%)": 36.79
       },
       "15": {
         "Attack (%)": 53.34,
@@ -1463,13 +1548,14 @@
         "option 2": 6644,
         "Additional Defense": 5473,
         "Defense (%)": 53.34,
-        "Additional HP": 10946
+        "Additional HP": 10946,
+        "HP (%)": 53.34
       },
       "20": {
         "Attack (%)": 58.49,
         "option 2": 7289
       },
-      "note": "Identiques pour les 3 emplacements et toutes les familles vues (Esprit, Corps, Âme) : la stat principale flat (Attaque/Défense 3953/5473 ; PV 7906/10946 aux paliers 10/15, rapport ×2 entre PV et Attaque), le % (36,79/53,34/58,49) et l'option 2 (4799/6644/7289) suivent la même échelle ; PV % non vu ; 20 : flat inconnu ; 25 : inconnu.",
+      "note": "Identiques pour les 3 emplacements et toutes les familles vues : stats principales flat (Attaque/Défense 3953/5473 ; PV 7906/10946 aux paliers 10/15), stats principales en % (Attaque, Défense, PV : 36,79/53,34 ; palier 20 : 58,49 vu pour l'Attaque) et option 2 (4799/6644/7289). Palier 20 flat et palier 25 inconnus. Points intermédiaires : niv. 12 (79 %) Défense 4513 / dégâts critiques 5114 ; niv. 14 (83 %) PV % 46,5 / dégâts critiques 5329.",
       "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
       "verified_at": "2026-11-16"
     }
