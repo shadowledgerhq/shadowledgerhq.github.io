@@ -219,7 +219,7 @@ def test_images_budget_video_partiel_puis_abandon():
         t = iter(range(0, 100_000, 30))
         o = OutilsImages({})
         for essai in (1, 2):
-            r = pc.lancer("daily", INSTANT, d, config, o, maximum=1, horloge=lambda: next(t))
+            r = pc.lancer("daily", INSTANT, d, config, o, maximum=1, horloge=lambda: next(t), seulement={"a"})
             etat = d.processed()["a"]["pc"]
             assert etat["essais"] == essai
             assert etat["tri3"] == ("partiel" if essai == 1 else "fait")
@@ -593,7 +593,7 @@ SALON_RECORD = "< Guild Boss ? mn!\n© Time tettin season 6d 9h Personal Record 
 
 
 
-def test_v28_hud_de_fin_cherche_en_amont_du_results():
+def _cas_v28(rc_titre=None):
     """Textes OCR réels du 14/11 : HUD à 228 s et 238 s, Results à 252 s (valeurs, titre/boss illisibles), puis images de
     l'animation sans valeurs lisibles ; les zones ciblées complètent. RC 19 sûr, new_record, ligne gb a_verifier."""
     config = charger_config()
@@ -602,6 +602,11 @@ def test_v28_hud_de_fin_cherche_en_amont_du_results():
         videos = d.videos(SEM)
         videos["a"].update(mode_guess=["gb"], duration="PT4M14S")           # 254 s
         d.ecrire(f"runs/{SEM}/_videos.json", videos)
+        if rc_titre is not None:              # v29 : lecture du titre / de la description (RC annoncé)
+            from tri1 import lecture_vide
+            lt = lecture_vide(videos["a"], "gb")
+            lt.update(score=rc_titre, score_source="description", confidence="a_verifier")
+            d.ecrire(f"runs/{SEM}/_lectures.json", d.lectures(SEM) + [lt])
 
         class Faux(OutilsImages):
             zones = {("a", 253): Z_253}      # 252 s : titre et boss seuls (Rage Count sur une seule image), comme la vraie vidéo
@@ -630,15 +635,34 @@ def test_v28_hud_de_fin_cherche_en_amont_du_results():
         # le HUD de fin (238 s, Points 1 596 246 179) est lu en amont ; le Rage Count, lui, reste sur UNE image (252 s : bannière seule) :
         # le contrôle v13 (RC sur ≥ 2 images) garde `a_verifier`, comme sur la vraie vidéo
         lec = [x for x in d.lectures(SEM) if x["video_id"] == "a" and x["mode"] == "gb" and x.get("score") is not None]
-        assert len(lec) == 1 and lec[0]["score"] == 19 and lec[0]["confidence"] == "a_verifier"
-        assert lec[0]["detail"]["hud_rage_count"] == 12            # le HUD de 238 s est rattaché à la run
-        assert "contrôle sans Hunter Rank : Rage Count lu sur une seule image" in lec[0]["notes"]
-        assert not any("sans HUD de fin de run" in n for n in lec[0]["notes"])
+        assert len(lec) == 1 and lec[0]["score"] == 19 and lec[0]["detail"]["hud_rage_count"] == 12     # HUD de 238 s rattaché
         assert d.processed()["a"]["pc"]["hud_amont"] == [252]
-        # 2e passage : aucune relecture de l'écran Results
+        # 2e passage : aucune relecture de l'écran Results ni nouvelle recherche en amont
         o2 = Faux({"a": {252: RESULTS_252}})
         pc.lancer("daily", INSTANT, d, config, o2, maximum=1)
-        assert not [a for a in o2.appels if a[0] == "img" and a[3].startswith("a")]      # une seule recherche en amont
+        assert not [a for a in o2.appels if a[0] == "img" and a[3].startswith("a")]
+        return lec[0]
+
+
+def test_v28_hud_de_fin_cherche_en_amont_du_results():
+    """HUD de fin lu en amont ; le Rage Count reste sur UNE image (252 s : bannière seule) : sans RC du titre, `a_verifier`."""
+    l = _cas_v28()
+    assert l["confidence"] == "a_verifier" and "contrôle sans Hunter Rank : Rage Count lu sur une seule image" in l["notes"]
+    assert not any("sans HUD de fin de run" in n for n in l["notes"])
+
+
+def test_v29_rc_sur_la_derniere_image_avec_hud_et_description():
+    """SPEC v29 §3.1 : RC lu sur une seule image = la dernière de la vidéo (253 s sur 254 s), HUD de fin qui confirme le Final
+    Score et description qui donne le même RC -> `sûr`."""
+    l = _cas_v28(rc_titre=19)
+    assert (l["confidence"], l["exact"], l["damage"]) == ("sur", True, 1601097999)
+    assert "RC lu sur la dernière image de la vidéo : HUD de fin et titre/description concordants" in l["notes"]
+    assert l["detail"]["rc_texte"] == [19] and l["detail"]["duree_video_s"] == 254
+
+
+def test_v29_rc_derniere_image_titre_different_reste_a_verifier():
+    l = _cas_v28(rc_titre=18)
+    assert l["confidence"] == "a_verifier" and "contrôle sans Hunter Rank : Rage Count lu sur une seule image" in l["notes"]
 
 def test_v14_salon_guild_boss_pas_un_results():
     """Salon Guild Boss (essai du 14/11, nh2D7xZ7dOQ à 2 s) : le bouton « Rage Rewards » n'est pas un écran Results."""

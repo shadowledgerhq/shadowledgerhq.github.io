@@ -112,7 +112,7 @@ def test_429_reporte_et_arrete_les_sous_titres():
         # le passage suivant reprend à b
         o2 = FauxOutils({"b": "98T", "c": "", "d": ""})
         pc.lancer("daily", INSTANT, d, config, o2)
-        assert o2.appels == ["b", "c", "d"]
+        assert sorted(o2.appels) == ["b", "c", "d"] and o2.appels[0] == "d"       # v29 : d a un score provisoire (titre) : traitée d'abord
 
 
 def test_enregistrement_apres_chaque_video():

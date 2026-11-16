@@ -1,5 +1,9 @@
 {
   "_doc": "Paramètres du pipeline étape 1 (docs/SPEC_ETAPE1.md). Modifiables sans toucher au code. Les clés « _a_confirmer » listent les hypothèses [À CONFIRMER] de la spec.",
+  "ecrans_exclus": {
+    "_doc": "SPEC v29 : écrans à ne JAMAIS prendre pour un écran de score (ni détectés, ni lus par zone, ni collectés dans libelles_inconnus). Un marqueur trouvé dans le texte OCR (comparé sans accents, casse ni espaces) exclut l'image. Vus : composition BOT (FormTeam / Player Mode : son « Record » est un ancien record), fiches de chasseur, écrans de statue coréens, équipement automatique, page Netmarble, classement en direct du BOT (temps d'autres joueurs).",
+    "marqueurs": ["FormTeam", "Player Mode", "Total Power", "Lv.170/170", "조각상", "전투력", "자동 장착", "My Page", "Real-time Rank", "Realtime Rank"]
+  },
   "fuseau": "Europe/Paris",
   "reset": {"jour_semaine": 3, "heure": 1, "_doc": "jour_semaine : lundi = 0, jeudi = 3"},
   "quota_max_units": 6000,

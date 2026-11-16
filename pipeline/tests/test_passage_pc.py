@@ -37,7 +37,8 @@ def test_antibot_relance_unique_par_soir():
         assert r["complet"] is False and "anti-bot YouTube" in r["bloquantes"][0]
         assert planifiees == [datetime(2026, 11, 13, 22, 30)]                 # 20:30 Paris + 2 h
         tete = rapport(d).split("\n")[:9]
-        assert "Passage complet : non" in tete[2] and "anti-bot" in tete[2]
+        assert tete[2].startswith("- Top 10 couvert : non")                        # v29 : première ligne du bloc
+        assert "Passage complet : non" in tete[3] and "anti-bot" in tete[3]
         assert any(l.startswith("- Relance automatique : 13/11/2026 22:30") for l in tete)
         assert any("anti-bot" in l and l.startswith("- Erreurs bloquantes") for l in tete)
         assert any(l.startswith("- Durée du passage : ") and l.endswith(" min") for l in rapport(d).split("\n")[:12])

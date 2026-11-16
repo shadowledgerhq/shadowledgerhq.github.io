@@ -119,7 +119,7 @@ def lecture_gb_results(meta, ecran, config, source="video-complete"):
     return lec
 
 
-def controle_results_sans_hunter_rank(lec, hud, config, joueur_optionnel=False, infos=None):
+def controle_results_sans_hunter_rank(lec, hud, config, joueur_optionnel=False, infos=None, derniere_image_titre=False):
     """v12, durci v13 §3.1 : contrôle de remplacement quand les 6 `Hunter Rank` ne sont pas tous lus. Retourne
     (ok, problèmes). Conditions : (1) boss, `Final Score`, `Rage Count` et `Play Time` lus ; (2) `Rage Count`
     identique sur ≥ 2 images ; (3) `Final Score` dans [Points HUD ; Points × (1 + `gb.hud_tolerance`)] (HUD à chrono
@@ -128,7 +128,10 @@ def controle_results_sans_hunter_rank(lec, hud, config, joueur_optionnel=False, 
     v19 (SPEC v18, repli assoupli) : la condition 4 est NON bloquante si le HUD confirme le `Final Score` (condition 3
     par les Points) ET si le `Rage Count` est lu à l'identique sur ≥ 3 images sans aucune lecture discordante (étapes
     d'un compteur animé non comptées) ET si les conditions 1 et 2 sont remplies ; la note `Hunter Rank incohérents
-    ignorés (HUD)` est ajoutée à `infos` si la condition 4 était en défaut. Sans HUD, la condition 4 reste obligatoire."""
+    ignorés (HUD)` est ajoutée à `infos` si la condition 4 était en défaut. Sans HUD, la condition 4 reste obligatoire.
+    v29 (exception, `derniere_image_titre`) : un `Rage Count` lu sur UNE seule image, la dernière de la vidéo, et égal au RC du
+    titre ou de la description, est accepté SI le HUD de fin confirme le `Final Score` (condition 3 par les Points) et si le
+    seul défaut est cette image unique (la condition 4 devient un simple contrôle de bon sens, comme en v19)."""
     d, pb, pb4 = lec.get("detail") or {}, [], []
     final = lec.get("damage")
     for nom, valeur in (("boss", lec.get("stage")), ("Final Score", final), ("Rage Count", lec.get("score")),
@@ -165,6 +168,11 @@ def controle_results_sans_hunter_rank(lec, hud, config, joueur_optionnel=False, 
             if infos is not None:
                 infos.append("Hunter Rank incohérents ignorés (HUD)")
             pb4 = []
+    if (derniere_image_titre and hud_confirme and d.get("rc_images", 1) < 2
+            and set(pb) == {"Rage Count lu sur une seule image"}):
+        pb, pb4 = [], []
+        if infos is not None:
+            infos.append("RC lu sur la dernière image de la vidéo : HUD de fin et titre/description concordants")
     pb += pb4
     return not pb, pb
 

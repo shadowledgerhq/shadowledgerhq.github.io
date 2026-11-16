@@ -31,6 +31,7 @@ from etape1 import ecrire_rapport, ouvrir_semaine
 from semaine import PARIS, id_semaine, iso_utc, maintenant, parse_iso, semaine_precedente
 import libelles_inconnus
 import ocr_ecrans
+import ordre_pc
 import rapport_pc
 from tri1 import lectures_texte
 
@@ -537,7 +538,7 @@ def _est_results_gb(l):
     return l["mode"] == "gb" and l["score_source"] in SOURCES_RESULTATS and (l.get("detail") or {}).get("ecran") != "combat"
 
 
-def fusionner_ecrans(lectures, vid, nouvelles, config=None):
+def fusionner_ecrans(lectures, vid, nouvelles, config=None, duree_s=None):
     """Les lectures d'écran de la vidéo remplacent ses lectures de texte pour les mêmes modes (le score lu à
     l'écran vaut mieux que celui du titre) ; une même image lue plusieurs fois ne compte qu'une fois.
     v12 : le HUD GB (lectures sans score) ne remplace rien ; ses lectures sont regroupées par run
@@ -546,6 +547,16 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None):
     modes = {l["mode"] for l in nouvelles if l.get("score") is not None}
     reste = [l for l in lectures if not (l["video_id"] == vid and l["mode"] in modes and l["score_source"] in SOURCES_TEXTE)]
     ecran = [l for l in reste + nouvelles if l["video_id"] == vid and _est_ecran(l)]
+    # v29 : contexte de l'exception « RC lu sur la dernière image » (SPEC §3.1) : RC du titre / de la description et durée de la
+    # vidéo, gardés dans `detail` des lectures Results (les lectures de texte disparaissent à la fusion, la durée n'est pas relue)
+    rc_texte = sorted({l["score"] for l in lectures if l["video_id"] == vid and l["mode"] == "gb" and l.get("score") is not None
+                       and l["score_source"] in ("titre", "description")})
+    for l in ecran:
+        if _est_results_gb(l):
+            if rc_texte:
+                l["detail"]["rc_texte"] = sorted(set(l["detail"].get("rc_texte") or []) | set(rc_texte))
+            if duree_s:
+                l["detail"]["duree_video_s"] = int(duree_s)
     autres = [l for l in reste if not (l["video_id"] == vid and _est_ecran(l))]
     ecran = ocr_ecrans.fusionner_results(ocr_ecrans.regrouper_hud(ecran, config), config)
     ecran = ocr_ecrans.dedoublonner_lectures(ecran)
@@ -887,7 +898,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         detectes.append(t)
                     nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
                     Path(png).unlink(missing_ok=True)
-                lectures = fusionner_ecrans(lectures, vid, nouvelles, config)
+                lectures = fusionner_ecrans(lectures, vid, nouvelles, config, duree_s=minutes * 60)
                 # v21 : HUD de fin de run (chrono lu ≤ 5 s) -> les 2 images suivantes (1 img/s) : le HUD y a souvent un chrono illisible
                 # mais des Points plus récents (SPEC v19 : chrono HUD déduit) ; les tri 3 sautent une image sur deux
                 suivis = pc.setdefault("hud_suite", [])
@@ -907,7 +918,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                                   if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
                         Path(png_s).unlink(missing_ok=True)
                     st["images"] += 2
-                    lectures = fusionner_ecrans(lectures, vid, suite, config)
+                    lectures = fusionner_ecrans(lectures, vid, suite, config, duree_s=minutes * 60)
                 # v12 : écran Results lu jusqu'à la fin de la vidéo ; chrono HUD ≤ 15 s -> on cherche l'écran qui suit
                 lus = pc.setdefault("results_lus", [])            # [[début, fin]] déjà lus (aucune relecture au tri 4)
                 couvert = lambda t: any(a <= t <= b for a, b in lus)
@@ -927,7 +938,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                                                                   langs, journal, ocr_debug, source, cherche)
                     lus.append([t_dep, dernier])
                     st["images"] += n_img
-                    lectures = fusionner_ecrans(lectures, vid, trouvees, config)
+                    lectures = fusionner_ecrans(lectures, vid, trouvees, config, duree_s=minutes * 60)
                     nouvelles += trouvees
                 # v28 : Results GB non `sûr` sans aucun HUD de fin de run dans les `gb.hud_amont_s` s qui précèdent -> on lit ces images
                 # une fois (1 img/s) : un HUD à chrono ≤ 5 s ou à Points récents confirme le Final Score (SPEC v19/v21)
@@ -952,7 +963,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         Path(png_s).unlink(missing_ok=True)
                     st["images"] += t_r - debut_a
                     journal(f"  HUD de fin cherché de {debut_a} à {t_r} s : {len(suite)} lecture(s)")
-                    lectures = fusionner_ecrans(lectures, vid, suite, config)
+                    lectures = fusionner_ecrans(lectures, vid, suite, config, duree_s=minutes * 60)
                 n_ecrans = len(nouvelles)
                 journal(f"  tri {tri} : {st['images']} image(s), {st['candidates']} lue(s) à l'OCR complet, "
                         f"{n_ecrans} écran(s) lu(s), {st['lentes']} trop lente(s), {st['doublons']} doublon(s), "
@@ -1100,9 +1111,11 @@ def bloquante(avert):
     return " : images : " in t or "ffmpeg" in t
 
 
-def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None, duree_min=None):
-    """Lignes placées en tête du rapport poussé (SPEC §6, critère de gel n° 3)."""
-    l = [f"- **Passage complet : {'oui' if complet else 'non'}**"
+def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None, duree_min=None, top10=None, gel3=None):
+    """Lignes placées en tête du rapport poussé (SPEC §6, critère de gel n° 3). v29 : `top10` = nombre de vidéos candidates au
+    top 10 encore en attente (ligne « Top 10 couvert », en tête) ; `gel3` = texte du critère de gel n° 3 (passages couverts)."""
+    l = [ordre_pc.ligne_top10(top10)] if top10 is not None else []
+    l += [f"- **Passage complet : {'oui' if complet else 'non'}**"
          + ("" if complet else " (" + (" ; ".join(b.split(" : ")[0] if b.startswith("anti-bot") else b for b in bloquantes[:1]) if bloquantes else "vidéos restantes à traiter") + ")"),
          f"- Vidéos traitées ce passage : {traitees} · en_cours restantes : {restantes} (dont {a_traiter} à traiter par le PC)",
          "- Erreurs bloquantes : " + (" ; ".join(bloquantes) if bloquantes else "aucune")]
@@ -1110,6 +1123,8 @@ def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=Non
         l.append(f"- Durée du passage : {int(duree_min)} min")
     if relance:
         l.append(f"- Relance automatique : {relance}")
+    if gel3:
+        l.append(f"- Critère de gel n° 3 : {gel3}")
     return l
 
 
@@ -1181,6 +1196,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
 
         a_faire = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours"
                    and (not seulement or v in seulement) and p.get("pc_needed") and (p.get("pc") or {}).get("sous_titres") not in ("fait", "absent")]
+        a_faire = ordre_pc.ordonner(d, week, a_faire)[0]          # v29 : candidates au top 10 d'abord
         limite = maximum or pc_cfg["max_videos"]
         if len(a_faire) > limite:
             alertes.append(f"{len(a_faire) - limite} vidéo(s) reportée(s) au prochain passage (limite {limite})")
@@ -1221,6 +1237,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         if cfg_img["actif"] if images is None else images:
             a_images = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours" and p.get("pc_needed")
                         and (not seulement or v in seulement) and v in videos and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile")]
+            a_images = ordre_pc.ordonner(d, week, a_images)[0]       # v29 : idem pour les images (anti-bot : on s'arrête quand on peut)
             lim_img = min(maximum, cfg_img["max_videos"]) if maximum else cfg_img["max_videos"]  # --max limite aussi les images
             if len(a_images) > lim_img:
                 alertes.append(f"{len(a_images) - lim_img} vidéo(s) reportée(s) pour les images (limite {lim_img})")
@@ -1295,12 +1312,14 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             texte_relance = programmer_relance(instant, jour, planifier, fichier_relance)
         alertes.append(f"passage incomplet : anti-bot ; relance : {texte_relance}")
     complet = not bloquantes and a_traiter == 0
+    top10_n = ordre_pc.candidates_restantes(d, week, d.processed())      # v29 : après le classement du passage
     etat = dict(complet=complet, traitees=traitees + images_traitees, restantes=restantes, a_traiter=a_traiter, bloquantes=list(bloquantes),
                 relance=texte_relance)
 
     def rapport():
+        gel3 = rapport_pc.critere_gel3(d, week, f"pc-{passage}", instant, top10_n, etat["bloquantes"])
         lignes = entete_etat(etat["complet"], etat["traitees"], restantes, a_traiter, etat["bloquantes"], texte_relance,
-                             (horloge() - debut_passage) / 60)
+                             (horloge() - debut_passage) / 60, top10_n, gel3)
         if git is not None and getattr(git, "conflit_resolu", False):
             lignes.append("- Conflit git résolu automatiquement")
         rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)      # v26 : bloc daté, jamais effacé, propre au PC

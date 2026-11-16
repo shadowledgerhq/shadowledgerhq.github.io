@@ -42,7 +42,8 @@ def _motif_flou(libelle):
     Hors alphabet latin (coréen), des espaces sont tolérés entre les caractères (`진행 시간` ~ `진 행 시간`)."""
     mots = sans_accents(libelle).lower().split()
     sig = [m for m in mots if len(m) >= 4 or not m.isascii()] or mots
-    return r"\w*\W*".join((r"\s*".join(re.escape(c) for c in m[:6]) if not m.isascii() else re.escape(m[:6])) for m in sig)
+    # v29 : des mots courts (≤ 3 lettres : `do`, `de`) peuvent s'intercaler (`Rank do Caçador`, `Número de Fúrias`)
+    return r"\w*(?:\W+\w{1,3})*\W*".join((r"\s*".join(re.escape(c) for c in m[:6]) if not m.isascii() else re.escape(m[:6])) for m in sig)
 
 
 def langue_results(texte, config=None):
@@ -138,6 +139,8 @@ def _titre_bot_lu(cp, config=None):
 def candidat_bot(texte, config=None):
     """v27 : l'image mérite la lecture par zone du RESULT du BOT : titre lu, ou au moins 2 temps `mm:ss.mmm`, ou le mot « phase »
     (l'OCR de l'image entière lit mal ces écrans japonais : `Phase1` -> « Men 4 »)."""
+    if ecran_exclu(texte, config):
+        return False
     t = normaliser(texte)
     cp = compact(t)
     return _titre_bot_lu(cp, config) or len(_TEMPS.findall(t)) >= 2 or "phase" in cp
@@ -190,8 +193,16 @@ def zones_bot_valides(zb):
     return bool(zb) and len(zb.get("phases") or []) >= 2
 
 
+def ecran_exclu(texte, config=None):
+    """v29 : le texte porte un marqueur de `config.ecrans_exclus.marqueurs` (écran qui n'est jamais un écran de score)."""
+    cp = compact(texte)
+    return any(compact(m) in cp for m in ((config or _config()).get("ecrans_exclus") or {}).get("marqueurs") or [])
+
+
 def detecter(texte, config=None):
-    """Type d'écran d'après ses libellés, ou None. `gb_record` avant `gb_results` ; HOTM avant POC."""
+    """Type d'écran d'après ses libellés, ou None. `gb_record` avant `gb_results` ; HOTM avant POC. v29 : écran exclu -> None."""
+    if ecran_exclu(texte, config):
+        return None
     t = normaliser(texte)
     bas = t.lower()
     if "personal record" in bas and ("total rage count" in bas or "group 1" in bas or "total score" in bas
@@ -796,6 +807,14 @@ def fusionner_results(lectures, config=None):
              "rc_images": nombre("rage_count", rc), "final_images": nombre("final_score", final), "n_images": n_images,
              "rc_t": rc_t, "sequence": sequence, "par_t": [[t_i, par_t[t_i]] for t_i in sorted(par_t)],
              "t_debut": min(debut(l) for l in groupe), "t_fin": max(fin(l) for l in groupe)}
+        rc_texte = sorted({v for l in groupe for v in ((l.get("detail") or {}).get("rc_texte") or [])})
+        duree_v = max([(l.get("detail") or {}).get("duree_video_s") or 0 for l in groupe] or [0])
+        if rc_texte:
+            d["rc_texte"] = rc_texte
+        if duree_v:
+            d["duree_video_s"] = duree_v
+        # v29 : exception « RC lu sur une seule image, la dernière de la vidéo » (le titre ou la description donne le même RC)
+        derniere_ok = bool(duree_v and d["t_fin"] >= duree_v - 1 and rc in rc_texte)
         d.pop("ecran", None)
         d.pop("completude", None)
         d.pop("lectures_identiques", None)
@@ -836,7 +855,8 @@ def fusionner_results(lectures, config=None):
                         and not dans((hud or {}).get("damage"))):
                     hud_eff, deduit = {**hud, "damage": ded["points"]}, ded["t"]      # v20 : chrono HUD déduit (SPEC v19)
                 perdu = ded.get("separateur_perdu") if deduit is not None else (hud or {}).get("detail", {}).get("separateur_perdu")
-                ok2, pb2 = ecrans.controle_results_sans_hunter_rank(lec, hud_eff, config or {}, joueur_optionnel=complet, infos=infos)
+                ok2, pb2 = ecrans.controle_results_sans_hunter_rank(lec, hud_eff, config or {}, joueur_optionnel=complet, infos=infos,
+                                                                  derniere_image_titre=derniere_ok)
                 if ok2:
                     lec.update(exact=True, confidence="sur")
                     lec["notes"].append("contrôle sans Hunter Rank")

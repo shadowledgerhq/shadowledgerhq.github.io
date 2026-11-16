@@ -16,6 +16,9 @@ def ressemble_score(texte):
     """≥ 3 lignes portant chacune un grand nombre (≥ 7 chiffres), ou un chrono `mm:ss.mmm`."""
     if not texte:
         return False
+    import ocr_ecrans
+    if ocr_ecrans.ecran_exclu(texte):         # v29 : écrans exclus (composition, fiche de chasseur…) jamais collectés
+        return False
     if _CHRONO.search(texte):
         return True
     return sum(1 for ligne in texte.splitlines() if _GRAND_NOMBRE.search(ligne)) >= 3
