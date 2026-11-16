@@ -2432,7 +2432,12 @@
     },
     "category": "empowerment",
     "api_type": "booster",
-    "rarity": null,
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
     "text": {
       "fr": "Vos mouvements sont aussi gracieux que ceux d'un acrobate et reflètent votre maîtrise du combat. Quand vous entrez dans un niveau, vous obtenez 10 cumuls de l'effet [Acrobate]. Si vous parvenez à utiliser Évasion extrême, vous obtenez 2 cumuls de l'effet [Acrobate]. [Acrobate] Augmente l'Attaque de 3.5 %. Si une attaque vous touche, cet effet est supprimé (temps de rechargement : 5 secondes). Durée : illimitée (cumulable jusqu'à 10 fois)",
       "en": ""
@@ -2440,13 +2445,24 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          1,
+          2,
+          3,
+          3.5
+        ]
+      ],
+      "max_stacks": 10,
+      "unit": "% d'Attaque par cumul"
+    },
     "icon": "data/icons/blessings/acrobat.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16), 4 raretés vues",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
   },
   {
     "id": "garde-double",
@@ -2457,7 +2473,12 @@
     },
     "category": "survival",
     "api_type": "survie",
-    "rarity": null,
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
     "text": {
       "fr": "« Tu traverseras jamais ça. » Les [Boucliers] conférés à Jinwoo augmentent de 25 %. Lorsqu'un [Bouclier] est actif, votre Défense augmente de 50 %.",
       "en": ""
@@ -2465,13 +2486,29 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          25,
+          25,
+          25,
+          25
+        ],
+        [
+          10,
+          26,
+          42,
+          50
+        ]
+      ],
+      "unit": "% boucliers conférés ; % Défense avec bouclier actif"
+    },
     "icon": "data/icons/blessings/garde-double.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16), 4 raretés vues",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
   },
   {
     "id": "jugement-ultime",
@@ -2482,7 +2519,12 @@
     },
     "category": "empowerment",
     "api_type": "booster",
-    "rarity": null,
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
     "text": {
       "fr": "La seule option que vous proposez à vos ennemis est une fin rapide. Si toutes vos armes équipées sont du même élément, deux effets sont activés. Les dégâts de sa Compétence ultime augmentent de 70 %. Le Taux de remplissage de la jauge de puissance augmente de 5 %.",
       "en": ""
@@ -2490,13 +2532,24 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          30,
+          45,
+          60,
+          70
+        ]
+      ],
+      "gauge_fill_rate_pct": 5,
+      "unit": "% dégâts de compétence ultime (toutes armes du même élément)"
+    },
     "icon": "data/icons/blessings/jugement-ultime.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16), 4 raretés vues",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
   },
   {
     "id": "la-vie-en-marche",
@@ -2507,7 +2560,12 @@
     },
     "category": "survival",
     "api_type": "survie",
-    "rarity": null,
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
     "text": {
       "fr": "La vie est un cycle sans fin, le flux éternel de l'existence. Si vos PV sont égaux ou supérieurs à 51 %, votre Défense augmente de 55 %. Si vos PV sont égaux ou inférieurs à 50 %, les soins reçus augmentent de 55 %.",
       "en": ""
@@ -2515,13 +2573,29 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          30,
+          40,
+          50,
+          55
+        ],
+        [
+          30,
+          40,
+          50,
+          55
+        ]
+      ],
+      "unit": "% Défense (PV ≥ 51 %) ; % soins reçus (PV ≤ 50 %)"
+    },
     "icon": "data/icons/blessings/la-vie-en-marche.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16), 4 raretés vues",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
   },
   {
     "id": "ricochet",
@@ -2532,7 +2606,12 @@
     },
     "category": "empowerment",
     "api_type": "booster",
-    "rarity": null,
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
     "text": {
       "fr": "Le mana commence à circuler en boucle pour revenir à son propriétaire. Votre stat d'Attaque supplémentaire augmente de 240 % de vos PM max lorsque vous arrivez dans un niveau. (Augmente votre stat Attaque supplémentaire maximale de 15000.)",
       "en": ""
@@ -2540,13 +2619,24 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          80,
+          140,
+          200,
+          240
+        ]
+      ],
+      "max_extra_attack_cap": 15000,
+      "unit": "% des PM max → Attaque supplémentaire à l'entrée d'un niveau"
+    },
     "icon": "data/icons/blessings/ricochet.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16), 4 raretés vues",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
   },
   {
     "id": "r-sonance-darme",
