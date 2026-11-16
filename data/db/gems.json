@@ -397,7 +397,7 @@
     "source": "capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Nom de la gemme dans l'inventaire : « Gemme d'augmentation des soins prodigués » ; stat affichée « Hausse de soins donnés (%) ». Gemme rouge (branche attaque). Mêmes valeurs que les soins reçus aux rangs 2-4."
+    "notes": "Nom de la gemme dans l'inventaire : « Gemme d'augmentation des soins prodigués » ; stat affichée « Hausse de soins donnés (%) ». Gemme rouge (branche attaque). Mêmes valeurs que les soins reçus aux rangs 2-4. Confirmé par Alexis (16/11/2026) : ce type n'existe qu'aux rangs 1 à 4 (pas de rang 5 ni 6)."
   },
   {
     "id": "gem-bonus-flat-defense",
@@ -491,7 +491,7 @@
     "source": "capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
-    "notes": "Nom de la gemme dans l'inventaire : « Gemme d'augmentation des soins reçus » ; stat affichée « Hausse des soins reçus (%) ». Gemme bleue (branche PV) avec PV (%) et PV supplémentaires. Le type « soins donnés » (rouge) existe aussi (non vu en détail)."
+    "notes": "Nom de la gemme dans l'inventaire : « Gemme d'augmentation des soins reçus » ; stat affichée « Hausse des soins reçus (%) ». Gemme bleue (branche PV) avec PV (%) et PV supplémentaires. Le type « soins donnés » (rouge) existe aussi (non vu en détail). Confirmé par Alexis (16/11/2026) : ce type n'existe qu'aux rangs 1 à 4 (pas de rang 5 ni 6)."
   },
   {
     "id": "gem-board-1",
