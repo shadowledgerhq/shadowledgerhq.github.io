@@ -202,7 +202,7 @@
       "Convertir change les stats ; Verrouiller en garde une ; « Sauver les stats » permet de revenir à la précédente ; rang préféré + Conversion auto."
     ],
     "rules_guide_source": "https://guide.netmarble.com/sololv/225 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Figures)",
-    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026 ; confirmé le 16/11 par le guide officiel Netmarble /sololv/215 (Figure Rates, tableau identique pour les 5 statues ; taux par option et par rang dans rates.json → figure-rates)",
     "values_by_grade_note": "Table complète lue en jeu (6 rangs × 9 options). Concorde avec les valeurs du didacticiel (B 20 %/12 %, D 1 000/1 350, C 1 500, PM 500 = rang A). Unités : % pour les options (%), sinon points. Le jeu précise que les taux affichés sont arrondis (somme non garantie à 100 % ; ici 100). Probabilité par stat à la conversion ; autres statues : non relevées.",
     "conversion": {
       "cout_exemple": "300 000 or + 90/10 matériaux (capture)",
@@ -439,7 +439,7 @@
       "E": 40
     },
     "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
-    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026 ; confirmé le 16/11 par le guide officiel Netmarble /sololv/215 (Figure Rates, tableau identique pour les 5 statues ; taux par option et par rang dans rates.json → figure-rates)",
     "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : sung_jinwoo_successor) n'a pas été revérifié : à confirmer si une capture est disponible.",
     "name_ja_ko_source": "https://slagate.com/builds (onglet Statues, page affichée en japonais/coréen) ; lecture de page autorisée par Alexis le 13/11/2026 ; nom court de slagate (le jeu EN dit « … Figure »)"
   },
@@ -660,7 +660,7 @@
       "E": 40
     },
     "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
-    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026 ; confirmé le 16/11 par le guide officiel Netmarble /sololv/215 (Figure Rates, tableau identique pour les 5 statues ; taux par option et par rang dans rates.json → figure-rates)",
     "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : hunters) n'a pas été revérifié : à confirmer si une capture est disponible.",
     "name_ja_ko_source": "https://slagate.com/builds (onglet Statues, page affichée en japonais/coréen) ; lecture de page autorisée par Alexis le 13/11/2026 ; nom court de slagate (le jeu EN dit « … Figure »)"
   },
@@ -881,7 +881,7 @@
       "E": 40
     },
     "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
-    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026 ; confirmé le 16/11 par le guide officiel Netmarble /sololv/215 (Figure Rates, tableau identique pour les 5 statues ; taux par option et par rang dans rates.json → figure-rates)",
     "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : sung_jinwoo_successor) n'a pas été revérifié : à confirmer si une capture est disponible.",
     "name_ja_ko_source": "https://slagate.com/builds (onglet Statues, page affichée en japonais/coréen) ; lecture de page autorisée par Alexis le 13/11/2026 ; nom court de slagate (le jeu EN dit « … Figure »)"
   },
@@ -1102,7 +1102,7 @@
       "E": 40
     },
     "option_rate_within_grade": "équiprobable : taux du rang / 9 (ex. rang S 1,5 % → 0,1667 % par option)",
-    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026",
+    "values_by_grade_source": "capture d'écran du jeu (client FR, Statue > Infos sur le taux, « Infos sur la stat Statue de chevalier », compte à 3/5 statues) fournie par Alexis le 15/11/2026 ; confirmé le 16/11 par le guide officiel Netmarble /sololv/215 (Figure Rates, tableau identique pour les 5 statues ; taux par option et par rang dans rates.json → figure-rates)",
     "values_by_grade_note": "Table identique à celle de la statue Chevalier, de l'aveu d'Alexis (15/11/2026, « ce sont les mêmes pour toutes ») ; seule la table du Chevalier a été vue en capture. Le pool d'options de cette statue (cible : hunters) n'a pas été revérifié : à confirmer si une capture est disponible.",
     "name_ja_ko_source": "https://slagate.com/builds (onglet Statues, page affichée en japonais/coréen) ; lecture de page autorisée par Alexis le 13/11/2026 ; nom court de slagate (le jeu EN dit « … Figure »)"
   }

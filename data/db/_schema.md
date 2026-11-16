@@ -39,6 +39,8 @@ Valeur calculée et non lue dans le jeu : `"estimated": true`.
 | `proof_modifiers.json` | `effects`, `max_level`, `cost_per_level`, `boss` (si propre à un boss) ; sert au HOTM (« 단련의 증명 ») |
 | `statues.json` | (proposé le 15/11/2026, demande discussion 2) `target` (`hunters` / `sung_jinwoo_successor`), `slots` (3), `grades` (E→S), `option_pool` (9 options), `unique_effect` (texte FR/EN, effet structuré, condition : 3 stats au rang B ou mieux), `values_by_grade` (vide : non relevé). Nom EN officiel Netmarble : « Figure ». |
 | `gems.json` | `kind` : `bonus_stat` (13 types dont « Vitesse (%) » et « Réduction des dégâts » vus en jeu, avec `color`), `board` (constellations I et II : `slots_per_color`, `observed_totals` d'un compte, pas des valeurs par niveau), `grade_scale` (rangs D/C/B/A). Couleurs : rouge = ATK (% et fixe), bleu = PV, vert = DEF, jaune = pénétration/précision/DCC, violet = PM suppl./baisse du coût de PM (capture client FR, 15/11). Valeurs par rang : à fournir. |
+| `rates.json` | (16/11/2026, guide officiel Netmarble) `kind: rates`, `guide_page`, `blocks[]` : lignes de texte et tableaux `{header, rows}` tels que publiés (Chest/Draw/Fuse/Capsule/Dice/Artifact/Artifact Enchantment/Core/Figure/Amplification/World Drop/Seasonal Card Rates). Valeurs arrondies par Netmarble. |
+| `game_rules.json` | (16/11/2026) `kind: rules`, une entrée par page de règles du guide officiel (EN) ; pages 233-240 = guide communautaire de Fachtna. Pages « Rewards » de modes non reprises. |
 | `patches.json` | `version`, `date`, `url` (notes Netmarble), `changes[]` (`category`, `id`, `change`) |
 
 Les champs sont à confirmer sur la source avant la saisie de chaque catégorie.

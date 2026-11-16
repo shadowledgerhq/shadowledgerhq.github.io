@@ -48,7 +48,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "arrogant-rulers-reflection",
@@ -99,7 +100,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "hunger-of-the-crimson-apex",
@@ -150,7 +152,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "eyes-of-the-watcher",
@@ -201,7 +204,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "nameless-demons-deception",
@@ -252,7 +256,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "ancient-wraiths-obession",
@@ -303,7 +308,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "ferocious-protectors-armor",
@@ -354,7 +360,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "arrogant-rulers-will",
@@ -405,7 +412,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "desires-of-the-crimson-apex",
@@ -456,7 +464,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "limbs-of-the-watcher",
@@ -507,7 +516,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "nameless-demons-horn",
@@ -558,7 +568,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "ancient-wraiths-right-hand",
@@ -609,7 +620,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "ferocious-protectors-claw",
@@ -660,7 +672,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "arrogant-rulers-gaze",
@@ -711,7 +724,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "punishment-of-the-crimson-apex",
@@ -762,7 +776,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "teeth-of-the-watcher",
@@ -813,7 +828,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "nameless-demons-magisphere",
@@ -864,7 +880,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   },
   {
     "id": "ancient-wraiths-mana-power",
@@ -915,6 +932,7 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/109279",
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
-    }
+    },
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
   }
 ]

@@ -3818,7 +3818,7 @@
     "kind": "rune",
     "name": {
       "fr": "Attaque surprise",
-      "en": "",
+      "en": "Surprise Attack",
       "ko": ""
     },
     "rarity": null,
@@ -3847,14 +3847,15 @@
     "text": {
       "fr": "Jinwoo se téléporte au-dessus de l'ennemi et le frappe vers le bas pour l'écraser. Bris légers. [Renverse] la cible si la dernière attaque touche. Applique l'effet [Résonance]."
     },
-    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "qte--compression",
     "kind": "rune",
     "name": {
       "fr": "Compression",
-      "en": "",
+      "en": "Compress",
       "ko": ""
     },
     "rarity": null,
@@ -3882,14 +3883,15 @@
     "text": {
       "fr": "En commençant par l'ennemi devant lui, Jinwoo frappe vers le bas avec une énergie puissante ; une explosion inflige ensuite des dégâts de zone. [Renverse] la cible si la dernière attaque touche. Lorsque la dernière attaque touche sa cible, sa […]"
     },
-    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "qte--extinction",
     "kind": "rune",
     "name": {
       "fr": "Extinction",
-      "en": "",
+      "en": "Extinction",
       "ko": ""
     },
     "rarity": null,
@@ -3917,7 +3919,8 @@
     "text": {
       "fr": "Jinwoo poursuit la cible en l'air et entaille sur une vaste zone, puis frappe violemment le sol. Applique [En l'air] et [Attaque réduite]."
     },
-    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "qte--foulee-de-lombre",
@@ -3957,7 +3960,7 @@
     "kind": "rune",
     "name": {
       "fr": "Frappe de glace",
-      "en": "",
+      "en": "Ice Strike",
       "ko": ""
     },
     "rarity": null,
@@ -3985,14 +3988,15 @@
     "text": {
       "fr": "Jinwoo invoque une prison de glace qui transperce l'ennemi, puis entaille une vaste zone et frappe violemment vers le bas. Dégâts d'eau. Applique [En l'air]. Lorsque cette compétence touche sa cible, elle […]"
     },
-    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "qte--grain",
     "kind": "rune",
     "name": {
       "fr": "Grain",
-      "en": "",
+      "en": "Squall",
       "ko": ""
     },
     "rarity": null,
@@ -4021,14 +4025,15 @@
     "text": {
       "fr": "Après plusieurs coups de taille à la vitesse de la lumière, Jinwoo exécute une entaille en X vers l'avant. Bris moyens. Applique [En l'air]. Lorsque la dernière attaque touche sa cible, […]"
     },
-    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "qte--surtension",
     "kind": "rune",
     "name": {
       "fr": "Surtension",
-      "en": "",
+      "en": "Surge",
       "ko": ""
     },
     "rarity": null,
@@ -4056,14 +4061,15 @@
     "text": {
       "fr": "Jinwoo insuffle de la magie de feu dans sa paume droite et frappe le sol pour déchaîner une attaque de zone, puis une énorme explosion soulève le sol. Dégâts de feu. [Renverse] la cible si la première attaque touche."
     },
-    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "qte--violent-orage",
     "kind": "rune",
     "name": {
       "fr": "Violent orage",
-      "en": "",
+      "en": "Thunderstorm",
       "ko": ""
     },
     "rarity": null,
@@ -4091,14 +4097,15 @@
     "text": {
       "fr": "Jinwoo lance plusieurs éclairs du ciel, suivis d'un puissant coup de tonnerre. Dégâts de vent. [Renverse] la cible si la dernière attaque touche. Lorsque l'attaque touche un ennemi sans jauge de bris, les dégâts de […]"
     },
-    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "qte--eviction",
     "kind": "rune",
     "name": {
       "fr": "Éviction",
-      "en": "",
+      "en": "Overshadow",
       "ko": ""
     },
     "rarity": null,
@@ -4126,7 +4133,8 @@
     "text": {
       "fr": "Jinwoo se cache et crée des ombres dans une large zone, puis entaille rapidement l'ennemi ; les ombres attaquent ensuite toutes en même temps pour infliger d'importants dégâts. Applique [En l'air]. Lors de l'utilisation d'Éviction, les PV de […]"
     },
-    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; attribué par élimination (nom FR non littéral), à vérifier en jeu"
   },
   {
     "id": "dagger-rush",

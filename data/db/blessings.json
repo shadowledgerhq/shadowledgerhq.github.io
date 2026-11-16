@@ -1443,7 +1443,7 @@
     "id": "best-defense-is-a-good-offense",
     "name": {
       "fr": "Attaquer pour mieux défendre",
-      "en": "Best Defense is a Good Offense",
+      "en": "Best Defense is a Good Offense!",
       "ko": ""
     },
     "category": "survival",
@@ -2478,7 +2478,7 @@
     "id": "garde-double",
     "name": {
       "fr": "Garde double",
-      "en": "",
+      "en": "Dual Guard",
       "ko": ""
     },
     "category": "survival",
@@ -2518,13 +2518,14 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR).",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "jugement-ultime",
     "name": {
       "fr": "Jugement ultime",
-      "en": "",
+      "en": "Ultimate Judgement",
       "ko": ""
     },
     "category": "empowerment",
@@ -2559,13 +2560,14 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR).",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "la-vie-en-marche",
     "name": {
       "fr": "La vie en marche",
-      "en": "",
+      "en": "Life in Motion",
       "ko": ""
     },
     "category": "survival",
@@ -2605,7 +2607,8 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR).",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "ricochet",
@@ -2652,7 +2655,7 @@
     "id": "r-sonance-darme",
     "name": {
       "fr": "Résonance d'arme",
-      "en": "",
+      "en": "Weapon Resonance",
       "ko": ""
     },
     "category": "survival",
@@ -2689,13 +2692,14 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR).",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "soutien-mutuel",
     "name": {
       "fr": "Soutien mutuel",
-      "en": "",
+      "en": "Mutual Support",
       "ko": ""
     },
     "category": "survival",
@@ -2729,13 +2733,14 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR).",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
   },
   {
     "id": "surpression",
     "name": {
       "fr": "Surpression",
-      "en": "",
+      "en": "Power Unlocked",
       "ko": ""
     },
     "category": "empowerment",
@@ -2770,7 +2775,8 @@
     "game_version": null,
     "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer.",
     "values_note": "Série : dégâts de Surcharge de Jinwoo (%) ; Accumulation élémentaire -30 % (fixe).",
-    "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; attribué par élimination (nom FR non littéral), à vérifier en jeu"
   },
   {
     "id": "finisher-touch",
