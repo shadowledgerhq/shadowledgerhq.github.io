@@ -2807,5 +2807,28 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
+  },
+  {
+    "id": "skill-research-rules",
+    "kind": "rules",
+    "name": {
+      "fr": "Recherche de compétence : règles (synthèse et amplification)",
+      "en": "Skill Research: rules"
+    },
+    "rules_en": [
+      "Menu to further upgrade Legendary Skill Runes and Blessing Stones; unlocks once one or more Legendary Skill Runes or Blessing Stones are registered.",
+      "Synthesis: target a Legendary rune/stone; Rare and Heroic runes/stones cannot be used as material; materials need not be the same type as the target; consumes materials and Gold; manual or auto selection.",
+      "Amplification: applies to Transcendent runes/stones; other copies of the same item serve as materials, consumed only on success (kept on failure); Amplification Agents and Gold are consumed on every attempt; extra agents raise the success chance, with a maximum and a per-agent gain that depend on the Amplification Tier (100 % not guaranteed).",
+      "Amplification buffs (skill damage, stats) do not apply in the Battlefield of Time.",
+      "Effects by Amplification Tier: runes apply only while equipped; Blessing Stones always apply while owned."
+    ],
+    "values_by_level": {
+      "rules_only": true
+    },
+    "icon": null,
+    "source": "https://guide.netmarble.com/sololv/153 (guide officiel Netmarble, EN seul, écrit sur la version test)",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Règles seulement : aucune valeur par palier d'amplification (taux de succès, agents, effets) dans le guide ; voir page Probabilités « Amplification Rate »."
   }
 ]
