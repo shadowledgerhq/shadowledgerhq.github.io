@@ -73,7 +73,14 @@ def blocs(texte, garder_vides):
                 out.append(s)
     return out
 
-rates, rules = [], []
+NAV_REC = {"Unstable Dungeon Rewards(%d)" % i for i in range(1, 7)} | {"Mind Rift(1)", "Mind Rift(2)",
+    "Workshop of Brilliant Light Rewards", "Battlefield of Chaos Rewards", "Simulation Gate Reward",
+    "Gate Reward (1)", "Gate Reward (2)", "Gate Reward (3)", "Gate Reward (4)"}
+OCR = {}
+URLS = {}
+if (D.parent / "ocr.json").exists():
+    OCR = json.loads((D.parent / "ocr.json").read_text(encoding="utf-8"))
+rates, rules, recomp = [], [], []
 for f in sorted(D.glob("*.txt"), key=lambda p: int(p.stem)):
     n = int(f.stem)
     lignes = f.read_text(encoding="utf-8").split("\n")
@@ -81,23 +88,34 @@ for f in sorted(D.glob("*.txt"), key=lambda p: int(p.stem)):
     if not titre.startswith(PREF):
         continue
     en = titre[len(PREF):].strip()
-    if n == 1 or re.search(r"\(\d\)$", en) or ("Reward" in en and not 233 <= n <= 240):
-        continue  # menu, tableaux de récompenses de modes
-    est_taux = "Rate" in en
+    if n == 1:
+        continue  # menu
+    est_recomp = bool(re.search(r"\(\d\)$", en) or ("Reward" in en and not 233 <= n <= 240))
+    est_taux = "Rate" in en or est_recomp
     b = blocs("\n".join(lignes[1:]), est_taux)
-    b = [x for x in b if not (isinstance(x, str) and x in NAV)]
+    b = [x for x in b if not (isinstance(x, str) and (x in NAV or x in NAV_REC))]
     if not est_taux and b and isinstance(b[0], str) and b[0] == en:
         b = b[1:]
-    e = {"id": slug(en), "kind": "rates" if est_taux else "rules",
+    imgs = []
+    fi = D / f"{n}.img.json"
+    if fi.exists():
+        for u in json.loads(fi.read_text()):
+            if "9qtg1734577513628" in u:
+                continue  # image par défaut
+            imgs.append({"url": u, "ocr": OCR.get(u, [])})
+    e = {"id": slug(en), "kind": "rewards" if est_recomp else ("rates" if est_taux else "rules"),
          "name": {"fr": FR.get(en.lstrip("🦎⭐ "), ""), "en": en.lstrip("🦎⭐ ")},
          "guide_page": n, "blocks": b, "icon": None, "source": URL.format(n),
          "verified_at": DATE, "game_version": None,
          "notes": "Guide officiel Netmarble (EN seul), écrit sur la version test : peut être périmé. Valeurs arrondies."}
     if 233 <= n <= 240:
         e["notes"] = "Guide communautaire « Fachtna's Essential ARISE Guide » hébergé sur le guide officiel Netmarble (conseils, pas des règles officielles)."
-    (rates if est_taux else rules).append(e)
+    if imgs:
+        e["images"] = imgs
+        e["images_note"] = "Captures de la version test (« Development Build ») ; texte OCR indicatif, bruité, non vérifié."
+    (recomp if est_recomp else rates if est_taux else rules).append(e)
 
-for nom, liste in (("rates", rates), ("game_rules", rules)):
+for nom, liste in (("rates", rates), ("game_rules", rules), ("mode_rewards", recomp)):
     p = RACINE / "data" / "db" / f"{nom}.json"
     p.write_text("[\n" + ",\n".join(json.dumps(e, ensure_ascii=False, separators=(",", ":")) for e in liste) + "\n]\n", encoding="utf-8")
     print(nom, len(liste), p.stat().st_size // 1024, "Ko")

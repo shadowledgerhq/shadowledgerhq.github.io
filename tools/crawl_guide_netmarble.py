@@ -18,6 +18,8 @@ with sync_playwright() as p:
             # content after menu
             c=body[i+len('Game Mode Reward Rate'):] if i>=0 else body
             open(S+f'{n}.txt','w').write(t+'\n'+c)
+            imgs=pg.evaluate("()=>[...document.querySelectorAll('img')].map(i=>i.src).filter(u=>u.startsWith('http')&&u.includes('/images/'))")
+            if imgs: open(S+f'{n}.img.json','w').write(json.dumps(imgs))
             print(n,t,len(c),flush=True)
         except Exception as e: print(n,'ERR',str(e)[:60],flush=True)
     b.close()

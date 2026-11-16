@@ -1,5 +1,5 @@
 # Rapport de contrôle de la base — 2026-11-16
-Total : 591 entrées, **0 erreur(s)**, 653 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
+Total : 606 entrées, **0 erreur(s)**, 683 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
 
 | Fichier | Entrées | Erreurs | Avertissements |
 | --- | ---: | ---: | ---: |
@@ -9,6 +9,7 @@ Total : 591 entrées, **0 erreur(s)**, 653 avertissement(s). Généré par `pipe
 | game_rules | 74 | 0 | 74 |
 | gems | 19 | 0 | 44 |
 | hunters | 66 | 0 | 0 |
+| mode_rewards | 15 | 0 | 30 |
 | patches | 8 | 0 | 38 |
 | proof_modifiers | 17 | 0 | 34 |
 | rates | 12 | 0 | 12 |
@@ -21,10 +22,9 @@ Total : 591 entrées, **0 erreur(s)**, 653 avertissement(s). Généré par `pipe
 | weapons | 115 | 0 | 97 |
 
 Avertissements par type (à suivre dans le temps) :
-- 311 × icône absente (null)
+- 326 × icône absente (null)
 - 91 × source non URL (capture ou texte)
-- 75 × name.fr vide
+- 90 × name.fr vide
 - 60 × pierre sans effets
 - 42 × name.en vide
 - 36 × slot vide
-- 33 × changes : id introuvable dans …
