@@ -169,6 +169,10 @@ def ecrire_rapport(d, week, passage, instant, resume, res, alertes, entete=None)
     pc = sum(1 for p in proc if p["status"] == "en_cours" and p.get("pc_needed"))
     l = [f"# Rapport — semaine {week} — passage {passage} — "
          f"{instant.astimezone(PARIS).strftime('%Y-%m-%d %H:%M')} (Paris)", ""]
+    if entete is None and not str(passage).startswith("pc-"):
+        import rapport_pc      # v26 (critère de gel n° 3) : le passage GitHub recopie le dernier bloc du PC, sans toucher à _rapport_pc.md
+        bloc = rapport_pc.dernier_bloc(d, week)
+        entete = (["Dernier passage du PC (`_rapport_pc.md`, recopié) :", ""] + bloc) if bloc else ["Aucun passage du PC pour cette semaine (`_rapport_pc.md` absent)."]
     if entete:       # passage PC : complet oui/non, vidéos traitées/restantes, erreurs bloquantes (en tête du rapport)
         l += list(entete) + [""]
     if resume:

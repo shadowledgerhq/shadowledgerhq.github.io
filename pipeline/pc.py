@@ -22,7 +22,7 @@ import subprocess
 import sys
 import tempfile
 import time
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import classement
@@ -31,6 +31,7 @@ from etape1 import ecrire_rapport, ouvrir_semaine
 from semaine import PARIS, id_semaine, iso_utc, maintenant, parse_iso, semaine_precedente
 import libelles_inconnus
 import ocr_ecrans
+import rapport_pc
 from tri1 import lectures_texte
 
 
@@ -60,6 +61,7 @@ class Verrou:
 
     def __init__(self, chemin, max_h=12):
         self.chemin, self.max_h, self.pris = Path(chemin), max_h, False
+        self.perime = None          # v26 : détenteur d'un verrou périmé repris (passage interrompu : PC éteint, fenêtre fermée)
 
     def _detenteur(self):
         try:
@@ -79,6 +81,7 @@ class Verrou:
                 age_h = (ts - d.get("debut", 0)) / 3600
                 if d.get("pid") and pid_vivant(int(d["pid"])) and age_h < self.max_h:
                     return False, f"{d.get('passage', '?')} (PID {d['pid']}, depuis {age_h * 60:.0f} min)"
+                self.perime = d or None
                 try:
                     self.chemin.unlink()                    # périmé : processus mort, ou trop ancien
                 except FileNotFoundError:
@@ -345,16 +348,62 @@ class Git:
         if mauvais:
             raise GitErreur("JSON abîmé, rien n'est commité : " + " | ".join(mauvais[:5]))
 
+    conflit_resolu = False          # v26 : un conflit sur data/ a été résolu automatiquement pendant ce passage (noté dans le rapport)
+
     def _rebase(self):
-        """pull --rebase ; en cas d'échec, le rebase est abandonné (pas d'état « rebase en cours » qui bloque la suite)."""
+        """pull --rebase ; en cas d'échec, le rebase est abandonné (pas d'état « rebase en cours » qui bloque la suite), puis
+        le conflit sur data/ est résolu automatiquement (`_resoudre_conflit`) : version distante pour les fichiers du passage
+        GitHub, version du PC pour les tris 3-4. Une seule tentative ; si elle échoue, GitErreur."""
         try:
             self._run("pull", "--rebase", "origin", "main")
-        except GitErreur:
+        except GitErreur as e:
             try:
                 self._run("rebase", "--abort")
             except GitErreur:
                 pass
-            raise
+            if "network" in str(e).lower() or "resolve host" in str(e).lower() or "sans réponse" in str(e):
+                raise                                          # pas un conflit : réseau
+            self._resoudre_conflit(e)
+
+    def _resoudre_conflit(self, erreur):
+        """Fusion (pas de rebase) avec `-X theirs` (= la version distante l'emporte sur les conflits de texte), puis, pour les
+        fichiers modifiés par le PC : tris 3-4 (`PROPRES_PC`) = version du PC ; `processed.json` et `_lectures.json` = fusion
+        par vidéo (`fusion_pc`) ; le reste (classements, vidéos, rapport GitHub…) reste distant : le passage le recalcule."""
+        import fusion_pc
+        locale = self._run("rev-parse", "HEAD").strip()
+        try:
+            self._run("fetch", "origin", "main")
+            base = self._run("merge-base", locale, "origin/main").strip()
+            changes = [c for c in self._run("diff", "--name-only", base, locale).splitlines() if c.strip()]
+            self._run("merge", "-X", "theirs", "--no-edit", "-m", "données: conflit git résolu automatiquement (PC)", "origin/main")
+        except GitErreur as e2:
+            try:
+                self._run("merge", "--abort")
+            except GitErreur:
+                pass
+            raise GitErreur(f"conflit git non résolu : {str(erreur)[:200]} | {e2}") from e2
+        racine = Path(self.racine)
+        for chemin in changes:
+            cible = racine / chemin
+            if fusion_pc.est_propre_pc(chemin):
+                self._run("checkout", locale, "--", chemin)
+            elif fusion_pc.fusion_json(chemin):
+                try:
+                    distant = json.loads(self._run("show", f"origin/main:{chemin}"))
+                except (GitErreur, ValueError):
+                    distant = None
+                try:
+                    local = json.loads(self._run("show", f"{locale}:{chemin}"))
+                except (GitErreur, ValueError):
+                    continue
+                fusion = fusion_pc.fusionner(chemin, distant, local)
+                if fusion is not None:
+                    cible.write_text(json.dumps(fusion, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        self.verifier_json()
+        self._run("add", "data")
+        if self._run("status", "--porcelain").strip():
+            self._run("commit", "-m", "données: conflit git résolu automatiquement (PC)")
+        self.conflit_resolu = True
 
     def tirer(self):
         # Reprise après un arrêt du PC / un plantage : les lectures du passage interrompu sont dans data/ (écrites après
@@ -399,6 +448,9 @@ class Git:
             chemins.append("docs/essais/ocr/libelles_inconnus")          # v24 : écrans de score à libellés inconnus
         self._run("add", *chemins)
         if not self._run("status", "--porcelain", *chemins).strip():
+            if self.conflit_resolu:                      # v26 : fusion locale (conflit résolu) pas encore poussée
+                self._run("push", "origin", "HEAD:main")
+                return True
             return False
         self._run("commit", "-m", message)
         self._rebase()                                   # une seule tentative ; conflit -> GitErreur (rebase abandonné)
@@ -889,22 +941,40 @@ def programmer_relance(instant, jour, planifier=None, fichier=None, delai_h=2):
     return f"{quand:%d/%m/%Y %H:%M} (une seule fois par soir)"
 
 
-def signaler_crash(passage, instant, erreur, d=None, git=None):
-    """Plantage du passage : le rapport du jour dit en tête « passage complet : non » + l'erreur ; poussé si possible."""
-    d = d or Donnees()
+def semaine_du_passage(passage, instant):
     courante = id_semaine(instant)
-    week = courante if passage == "daily" else semaine_precedente(courante)
-    chemin = f"runs/{week}/_rapport.md"
-    ancien = (d.data / chemin).read_text(encoding="utf-8") if (d.data / chemin).exists() else ""
-    reste = ancien.split("\n", 2)[2] if ancien.count("\n") >= 2 and ancien.startswith("# ") else ""
-    titre = f"# Rapport — semaine {week} — passage pc-{passage} — {instant.astimezone(PARIS).strftime('%Y-%m-%d %H:%M')} (Paris)"
-    texte = "\n".join([titre, ""] + entete_etat(False, 0, 0, 0, [f"crash : {type(erreur).__name__} : {str(erreur)[:200]}"]) + ["", reste]).rstrip() + "\n"
-    d.ecrire(chemin, texte)
+    return courante if passage == "daily" else semaine_precedente(courante)
+
+
+def signaler_echec(passage, instant, cause, d=None, git=None, conflit_resolu=False):
+    """Un passage qui n'aboutit pas (anti-bot, conflit git, JSON abîmé, crash, verrou refusé, passage interrompu) écrit quand même
+    son bloc « Passage complet : non » + la cause dans `_rapport_pc.md` (jamais effacé) ; poussé si possible (v26, critère de gel
+    n° 3). Retourne le bloc. Ne lève jamais : un échec de l'écriture ou du push ne masque pas l'erreur d'origine."""
+    d = d or Donnees()
+    week = semaine_du_passage(passage, instant)
+    lignes = entete_etat(False, 0, 0, 0, [cause[:300]])
+    if conflit_resolu or (git is not None and getattr(git, "conflit_resolu", False)):
+        lignes.append("- Conflit git résolu automatiquement")
+    bloc = rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)
+    try:          # `_rapport.md` : même en-tête qu'avant (le passage GitHub suivant le remplace par le dernier bloc du PC)
+        chemin = f"runs/{week}/_rapport.md"
+        ancien = (d.data / chemin).read_text(encoding="utf-8") if (d.data / chemin).exists() else ""
+        reste = ancien.split("\n", 2)[2] if ancien.count("\n") >= 2 and ancien.startswith("# ") else ""
+        titre = f"# Rapport — semaine {week} — passage pc-{passage} — {instant.astimezone(PARIS).strftime('%Y-%m-%d %H:%M')} (Paris)"
+        d.ecrire(chemin, "\n".join([titre, ""] + lignes + ["", reste]).rstrip() + "\n")
+    except OSError:
+        pass
     if git:
         try:
             git.pousser(f"données: passage PC {passage} interrompu")
-        except GitErreur:
-            pass
+        except Exception:
+            pass          # le bloc reste dans data/ : le passage suivant le commite (`Git.tirer`)
+    return bloc
+
+
+def signaler_crash(passage, instant, erreur, d=None, git=None):
+    """Plantage du passage (compatibilité) : bloc « Passage complet : non » + l'erreur."""
+    return signaler_echec(passage, instant, f"crash : {type(erreur).__name__} : {str(erreur)[:200]}", d, git)
 
 
 def bloquante(avert):
@@ -1112,13 +1182,20 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                 relance=texte_relance)
 
     def rapport():
-        ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes,
-                       entete_etat(etat["complet"], etat["traitees"], restantes, a_traiter, etat["bloquantes"], texte_relance,
-                                   (horloge() - debut_passage) / 60))
+        lignes = entete_etat(etat["complet"], etat["traitees"], restantes, a_traiter, etat["bloquantes"], texte_relance,
+                             (horloge() - debut_passage) / 60)
+        if git is not None and getattr(git, "conflit_resolu", False):
+            lignes.append("- Conflit git résolu automatiquement")
+        rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)      # v26 : bloc daté, jamais effacé, propre au PC
+        ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes, lignes)
     rapport()
     if git:
+        conflit_avant = git.conflit_resolu
         try:
             git.pousser(f"données: passage PC {passage} {jour}")
+            if git.conflit_resolu and not conflit_avant:       # conflit résolu au push : noté dans le bloc, poussé à part
+                rapport()
+                git.pousser(f"données: rapport PC {passage} {jour} (conflit git résolu)")
         except GitErreur as e:
             etat["complet"] = False
             etat["bloquantes"].append(f"git : {e}")
@@ -1216,6 +1293,18 @@ def bilan_essai(d, week, ids, config):
     return {"par_video": bilan, "lignes_gb": lignes}
 
 
+def _echec_bloc(a, cause):
+    """v26 : écrit le bloc « Passage complet : non » d'un passage daily/weekly qui échoue (jamais d'exception, jamais de push
+    après une erreur git : le prochain passage commite le bloc, `Git.tirer`)."""
+    if a.passage not in ("daily", "weekly"):
+        return
+    try:
+        signaler_echec(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(), cause,
+                       git=None if (a.no_git or cause.startswith(("git", "fichier"))) else Git())
+    except Exception:
+        pass
+
+
 if __name__ == "__main__":
     for flux in (sys.stdout, sys.stderr):  # titres coréens / japonais : la console Windows (cp1252) planterait sinon
         flux.reconfigure(encoding="utf-8", errors="replace")
@@ -1244,9 +1333,23 @@ if __name__ == "__main__":
     if not ok:      # un autre passage tourne : on n'ajoute ni yt-dlp ni OCR en parallèle (anti-bot, délais, git). Code 3 = refus, rien n'est perdu.
         print(f"Passage refusé : un autre passage PC tourne déjà ({detenteur}). Relancer quand il est terminé "
               f"(ou supprimer logs\\pc.lock s'il est resté après un arrêt brutal).", file=sys.stderr)
+        if a.passage in ("daily", "weekly"):          # v26 : jamais d'échec sans trace
+            try:
+                signaler_echec(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(),
+                               f"passage refusé : un autre passage PC tourne déjà ({detenteur})")
+            except Exception:
+                pass
         sys.exit(3)
     import atexit
     atexit.register(verrou.liberer)
+    if verrou.perime and a.passage in ("daily", "weekly") and (verrou.perime.get("passage") or "").split(" ")[0] in ("daily", "weekly"):
+        try:      # v26 : le passage précédent est mort sans rien écrire (PC éteint, fenêtre fermée, arrêt brutal) : on le dit
+            debut = verrou.perime.get("debut")
+            instant_mort = parse_iso(datetime.fromtimestamp(debut, timezone.utc).isoformat()) if debut else maintenant()
+            signaler_echec(verrou.perime["passage"].split(" ")[0], instant_mort,
+                           "passage interrompu (PC éteint, fenêtre fermée ou processus tué : aucune erreur enregistrée)")
+        except Exception:
+            pass
     if a.passage == "ytdlp-profil":
         from donnees import CONFIG_PC_LOCALE, ecrire_atomique
         if not a.profil:
@@ -1328,17 +1431,16 @@ if __name__ == "__main__":
                    ocr_debug=(RACINE / "logs" / "ocr") if (a.garder_ocr or a.publier_essai) else None)
     except GitErreur as e:
         print(f"ERREUR git : {e}\nPassage interrompu (conflit ou réseau) : relancer plus tard.", file=sys.stderr)
+        _echec_bloc(a, f"git : {str(e)[:250]}")
         sys.exit(1)
     except JsonAbime as e:
         print(f"ERREUR fichier de données : {e}\nVérifier : py -3 pipeline\\verifier_json.py", file=sys.stderr)
+        _echec_bloc(a, f"fichier de données abîmé : {str(e)[:250]}")
         sys.exit(1)
     except Exception as e:        # crash : tracé dans logs\pc.log, signalé en tête du rapport
         import traceback
         traceback.print_exc()
-        try:
-            signaler_crash(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(), e, git=None if a.no_git else Git())
-        except Exception:
-            pass
+        _echec_bloc(a, f"crash : {type(e).__name__} : {str(e)[:200]}")
         sys.exit(2)
     if a.publier_essai:
         try:
