@@ -2139,14 +2139,31 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          8,
+          12,
+          20,
+          24
+        ],
+        [
+          16,
+          24,
+          40,
+          48
+        ]
+      ]
+    },
     "icon": "data/icons/blessings/master-marksman.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
     "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "values_note": "Séries : dégâts d'attaque de noyau/compétence d'arme ; bonus supplémentaire avec arme à feu ou arc.",
+    "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "do-or-die",
@@ -2169,14 +2186,25 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          22,
+          32,
+          42,
+          50
+        ]
+      ]
+    },
     "icon": "data/icons/blessings/do-or-die.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
     "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "values_note": "Série : Attaque de Jinwoo (%) ; perte 1 % PV max/s (inchangée) ; sous 10 % PV : pas de dégâts.",
+    "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "supercharge",
@@ -2229,14 +2257,25 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          20,
+          28,
+          40,
+          48
+        ]
+      ]
+    },
     "icon": "data/icons/blessings/iron-stance.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
     "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "values_note": "Série : dégâts de coup critique de Jinwoo (%) ; recharge de la Ruée +100 % (fixe) ; évasion extrême réactive la Ruée 1 fois.",
+    "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "architects-plan",
@@ -2259,14 +2298,31 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          14,
+          22,
+          30,
+          36
+        ],
+        [
+          14,
+          22,
+          30,
+          36
+        ]
+      ]
+    },
     "icon": "data/icons/blessings/architects-plan.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
     "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "values_note": "Séries : dégâts infligés par Jinwoo (%) ; bonus identique pour un chasseur Attaquant en mode Sung Jinwoo (+0,2 % PV/s fixe).",
+    "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "spring-of-life",
@@ -2512,7 +2568,12 @@
     },
     "category": "empowerment",
     "api_type": "booster",
-    "rarity": null,
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
     "text": {
       "fr": "« La puissance d'un chasseur est limitée à un certain seuil. » Pas la sienne, cependant. L'effet d'[Accumulation élémentaire] diminue de 30 %, mais les dégâts de Surcharge de Jinwoo augmentent de 40 %.",
       "en": ""
@@ -2520,13 +2581,24 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          24,
+          30,
+          36,
+          40
+        ]
+      ]
+    },
     "icon": "data/icons/blessings/surpression.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer.",
+    "values_note": "Série : dégâts de Surcharge de Jinwoo (%) ; Accumulation élémentaire -30 % (fixe).",
+    "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "finisher-touch",
