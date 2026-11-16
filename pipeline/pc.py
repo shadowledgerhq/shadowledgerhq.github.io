@@ -319,10 +319,12 @@ class Git:
     """git avec délai maximal (jamais de fenêtre bloquée) et sans question au clavier. Les fichiers JSON de data/ sont
     vérifiés avant tout commit : un fichier abîmé (marqueurs de conflit, coupure) n'entre jamais dans l'historique."""
     DELAI_S = 180
+    ATTENTES_RESEAU_S = (30, 90, 180)       # v28 : réseau coupé au `pull` -> 3 nouvelles tentatives (30 s, 90 s, 3 min) avant d'abandonner
 
-    def __init__(self, racine=RACINE, delai_s=None):
+    def __init__(self, racine=RACINE, delai_s=None, dormir=time.sleep):
         self.racine = racine
         self.delai_s = delai_s or self.DELAI_S
+        self.dormir = dormir
 
     def _run(self, *args):
         env = {**os.environ, "GIT_TERMINAL_PROMPT": "0", "GIT_EDITOR": "true"}
@@ -354,16 +356,28 @@ class Git:
         """pull --rebase ; en cas d'échec, le rebase est abandonné (pas d'état « rebase en cours » qui bloque la suite), puis
         le conflit sur data/ est résolu automatiquement (`_resoudre_conflit`) : version distante pour les fichiers du passage
         GitHub, version du PC pour les tris 3-4. Une seule tentative ; si elle échoue, GitErreur."""
-        try:
-            self._run("pull", "--rebase", "origin", "main")
-        except GitErreur as e:
+        essai = 0
+        while True:
             try:
-                self._run("rebase", "--abort")
-            except GitErreur:
-                pass
-            if "network" in str(e).lower() or "resolve host" in str(e).lower() or "sans réponse" in str(e):
-                raise                                          # pas un conflit : réseau
-            self._resoudre_conflit(e)
+                self._run("pull", "--rebase", "origin", "main")
+                return
+            except GitErreur as e:
+                try:
+                    self._run("rebase", "--abort")
+                except GitErreur:
+                    pass
+                if not self._est_reseau(e):
+                    self._resoudre_conflit(e)
+                    return
+                if essai >= len(self.ATTENTES_RESEAU_S):
+                    raise                                      # pas un conflit : réseau toujours coupé
+                self.dormir(self.ATTENTES_RESEAU_S[essai])
+                essai += 1
+
+    @staticmethod
+    def _est_reseau(e):
+        t = str(e).lower()
+        return "network" in t or "resolve host" in t or "sans réponse" in t or "unable to access" in t
 
     def _resoudre_conflit(self, erreur):
         """Fusion (pas de rebase) avec `-X theirs` (= la version distante l'emporte sur les conflits de texte), puis, pour les
@@ -915,6 +929,30 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                     st["images"] += n_img
                     lectures = fusionner_ecrans(lectures, vid, trouvees, config)
                     nouvelles += trouvees
+                # v28 : Results GB non `sûr` sans aucun HUD de fin de run dans les `gb.hud_amont_s` s qui précèdent -> on lit ces images
+                # une fois (1 img/s) : un HUD à chrono ≤ 5 s ou à Points récents confirme le Final Score (SPEC v19/v21)
+                amont, amont_s = pc.setdefault("hud_amont", []), config.get("gb", {}).get("hud_amont_s", 30)
+                for r in [x for x in lectures if x["video_id"] == vid and x["mode"] == "gb" and x.get("score") is not None
+                          and x["score_source"] in SOURCES_RESULTATS and x.get("confidence") != "sur" and x.get("t") is not None]:
+                    t_r = int(r["t"])
+                    a_hud = any(h["video_id"] == vid and (h.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")
+                                and 0 <= t_r - h["t"] <= amont_s and (h["detail"].get("hud_points") is not None
+                                                                      or (h["detail"].get("chrono_hud") or 99) <= 5)
+                                for h in lectures if h["t"] is not None)
+                    if a_hud or t_r in amont or horloge() > fin:
+                        continue
+                    amont.append(t_r)
+                    debut_a = max(0, t_r - amont_s)
+                    suite = []
+                    for t_s, png_s in outils.images(chemin, [(debut_a, t_r - debut_a, 1)], tmp, prefixe=f"a{t_r}_"):
+                        texte_s = _ocr_image(outils, png_s, langs, cfg, st, complet=True)
+                        _garder(ocr_debug, vid, "hud_amont", t_s, texte_s, png_s)
+                        suite += [l for l in ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
+                                  if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
+                        Path(png_s).unlink(missing_ok=True)
+                    st["images"] += t_r - debut_a
+                    journal(f"  HUD de fin cherché de {debut_a} à {t_r} s : {len(suite)} lecture(s)")
+                    lectures = fusionner_ecrans(lectures, vid, suite, config)
                 n_ecrans = len(nouvelles)
                 journal(f"  tri {tri} : {st['images']} image(s), {st['candidates']} lue(s) à l'OCR complet, "
                         f"{n_ecrans} écran(s) lu(s), {st['lentes']} trop lente(s), {st['doublons']} doublon(s), "

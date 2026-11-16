@@ -95,6 +95,7 @@
     "hud_nouvelle_run_s": 20,
     "chrono_fin_s": 15,
     "recherche_results_s": 30,
+    "hud_amont_s": 30,
     "hud_results_fenetre_s": 60,
     "hud_chrono_points_s": 5,
     "hud_tolerance": 0.02,
