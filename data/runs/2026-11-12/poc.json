@@ -72,5 +72,79 @@
         "exact": false
       }
     ]
+  },
+  {
+    "run_id": "poc-2026-11-12-2AJljDc_nN4",
+    "week": "2026-11-12",
+    "mode": "poc",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "2AJljDc_nN4",
+    "video_ids": [
+      "2AJljDc_nN4"
+    ],
+    "published_at": "2026-11-16T06:00:22+01:00",
+    "lang": "en",
+    "score": {
+      "total": 52820000000000,
+      "runs": [
+        52820000000000
+      ],
+      "unit": "damage"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 52.82T; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "2AJljDc_nN4",
+        "published_at": "2026-11-16T06:00:22+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "poc-2026-11-12-LQM4VbJ3vpc",
+    "week": "2026-11-12",
+    "mode": "poc",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "player": "RaidenShadow",
+    "channel": "RaidenShadow",
+    "video_id": "LQM4VbJ3vpc",
+    "video_ids": [
+      "LQM4VbJ3vpc"
+    ],
+    "published_at": "2026-11-15T23:28:31+01:00",
+    "lang": "pt-BR",
+    "score": {
+      "total": 4570000000000,
+      "runs": [
+        4570000000000
+      ],
+      "unit": "damage"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 4,57T; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "LQM4VbJ3vpc",
+        "published_at": "2026-11-15T23:28:31+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
   }
 ]

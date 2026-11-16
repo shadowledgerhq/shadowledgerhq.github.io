@@ -273,6 +273,45 @@
     ]
   },
   {
+    "run_id": "bot-2026-11-12-ysfa3H023n8",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "player": "LATOYA Gaming",
+    "channel": "LATOYA Gaming",
+    "video_id": "ysfa3H023n8",
+    "video_ids": [
+      "ysfa3H023n8"
+    ],
+    "published_at": "2026-11-16T13:00:36+01:00",
+    "lang": "und",
+    "score": {
+      "total": 28.349,
+      "runs": [
+        28.349
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 28.349; boss non contrôlé",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "ysfa3H023n8",
+        "published_at": "2026-11-16T13:00:36+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
     "run_id": "bot-2026-11-12-duX8KmoDdYw",
     "week": "2026-11-12",
     "mode": "bot",
@@ -385,6 +424,84 @@
         "stage": null,
         "team": null,
         "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-2026-11-12-OppPeyQ--7s",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCFcYmsvelaU0rxAXo_srFhg",
+    "player": "OhchiGameS",
+    "channel": "OhchiGameS",
+    "video_id": "OppPeyQ--7s",
+    "video_ids": [
+      "OppPeyQ--7s"
+    ],
+    "published_at": "2026-11-16T12:43:51+01:00",
+    "lang": "ja",
+    "score": {
+      "total": 44.0,
+      "runs": [
+        44.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 44s; boss non contrôlé",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "OppPeyQ--7s",
+        "published_at": "2026-11-16T12:43:51+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-2026-11-12-VFDbdYFzor4",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCjNngJRDRC7QSyZ76FlvKfQ",
+    "player": "Akihiro",
+    "channel": "Akihiro",
+    "video_id": "VFDbdYFzor4",
+    "video_ids": [
+      "VFDbdYFzor4"
+    ],
+    "published_at": "2026-11-15T21:24:32+01:00",
+    "lang": "en",
+    "score": {
+      "total": 130.266,
+      "runs": [
+        130.266
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 02:10.266; boss non contrôlé",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "VFDbdYFzor4",
+        "published_at": "2026-11-15T21:24:32+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
         "exact": false
       }
     ]

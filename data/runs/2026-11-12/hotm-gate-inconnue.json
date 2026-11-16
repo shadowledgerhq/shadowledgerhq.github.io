@@ -39,22 +39,22 @@
     ]
   },
   {
-    "run_id": "hotm-gate-inconnue-2026-11-12-nZrcGHSDcvs",
+    "run_id": "hotm-gate-inconnue-2026-11-12-8qqgrjiYhck",
     "week": "2026-11-12",
     "mode": "hotm",
     "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
     "player": "RAVANPLAYZ",
     "channel": "RAVANPLAYZ",
-    "video_id": "nZrcGHSDcvs",
+    "video_id": "8qqgrjiYhck",
     "video_ids": [
-      "nZrcGHSDcvs"
+      "8qqgrjiYhck"
     ],
-    "published_at": "2026-11-14T18:22:50+01:00",
+    "published_at": "2026-11-16T13:07:08+01:00",
     "lang": "en",
     "score": {
-      "total": 90000,
+      "total": 91500,
       "runs": [
-        90000
+        91500
       ],
       "unit": "points"
     },
@@ -62,13 +62,13 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 90000; porte HOTM illisible; boss non contrôlé",
+    "notes": "score provisoire (titre) : 91500; porte HOTM illisible; boss non contrôlé",
     "gate": null,
     "hunter_mode": null,
     "runs_detail": [
       {
-        "video_id": "nZrcGHSDcvs",
-        "published_at": "2026-11-14T18:22:50+01:00",
+        "video_id": "8qqgrjiYhck",
+        "published_at": "2026-11-16T13:07:08+01:00",
         "t": null,
         "stage": null,
         "team": null,
@@ -117,22 +117,22 @@
     ]
   },
   {
-    "run_id": "hotm-gate-inconnue-2026-11-12-JCQjpvH4Rnw",
+    "run_id": "hotm-gate-inconnue-2026-11-12-GI-WEhZz6Ng",
     "week": "2026-11-12",
     "mode": "hotm",
     "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
     "player": "SlayOnLow",
     "channel": "SlayOnLow",
-    "video_id": "JCQjpvH4Rnw",
+    "video_id": "GI-WEhZz6Ng",
     "video_ids": [
-      "JCQjpvH4Rnw"
+      "GI-WEhZz6Ng"
     ],
-    "published_at": "2026-11-14T13:59:12+01:00",
+    "published_at": "2026-11-16T16:53:14+01:00",
     "lang": "en",
     "score": {
-      "total": 75000,
+      "total": 77000,
       "runs": [
-        75000
+        77000
       ],
       "unit": "points"
     },
@@ -140,13 +140,13 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 75K; autres candidats : 7430, 3200; porte HOTM illisible; boss non contrôlé",
+    "notes": "score provisoire (description) : 77000; autres candidats : 7430, 3200; porte HOTM illisible; boss non contrôlé",
     "gate": null,
     "hunter_mode": null,
     "runs_detail": [
       {
-        "video_id": "JCQjpvH4Rnw",
-        "published_at": "2026-11-14T13:59:12+01:00",
+        "video_id": "GI-WEhZz6Ng",
+        "published_at": "2026-11-16T16:53:14+01:00",
         "t": null,
         "stage": null,
         "team": null,

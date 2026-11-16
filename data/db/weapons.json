@@ -7638,7 +7638,8 @@
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche indique encore Last Hunt 100 % ; voir patch_adjustments."
       },
       {
         "line": "Duration : 7 15 second(s)",
@@ -7657,6 +7658,15 @@
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
         "status": "applique"
+      }
+    ],
+    "patch_adjustments": [
+      {
+        "patch": "2026-08-27",
+        "source": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "wiki_reflects_patch": false,
+        "summary": "Last Hunt : dégâts Eau 2000 % de l'Attaque au palier 0 (5000 % au palier 5), compté comme compétence de base ; [Skadi's Curse] +10 % de dégâts d'Overload subis, 15 s ; T1 Skadi's Domain 1000 % de l'Attaque de l'attaquant (recharge 0,5 s) ; T3 maximum de [Skadi's Blessing] 4 cumuls, +50 % Winter Hunting ; T5 [Deep Erosion] +24 % de dégâts de faiblesse élémentaire subis, 15 s.",
+        "note": "Valeurs de l'avis Netmarble ; la fiche (wiki) indique encore Last Hunt à 100 % et ne stocke que le palier 0."
       }
     ]
   },
@@ -8121,8 +8131,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : dégâts +300 % déjà dans le passif."
       }
     ]
   },
@@ -8778,7 +8789,8 @@
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "palier_non_stocke",
+        "verif_note": "2026-11-16 : la fiche de l'arme ne stocke que le palier 0 ; effet des paliers 3 et 5 absent."
       },
       {
         "line": "While a Shield is active, the user’s Basic Attack and Core Attack and Fire of Destruction damage increases by 50% 200%",
@@ -8788,7 +8800,8 @@
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "palier_non_stocke",
+        "verif_note": "2026-11-16 : la fiche de l'arme ne stocke que le palier 0 ; effet des paliers 3 et 5 absent."
       }
     ]
   },
