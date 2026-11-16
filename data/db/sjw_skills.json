@@ -880,7 +880,7 @@
     "cooldown": 10.0,
     "mp_cost": "100",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de ténèbres. Rare/Héroïque/Transcendance : [À terre] ; Légendaire : [renverse]. Applique un [Bouclier] (20 % des PV de Jinwoo, 2 s). Jinwoo peut contre-attaquer : contre-attaque réussie = 250/500/1000/1250 % de l'Attaque + [Étourdissement], et réinitialise Foulée de l'ombre (recharge de cet effet 30/25/20/20 s).",
       "en": "If Jinwoo is attacked before leaping, he dodges the attack. After, his clone charges and unleashes a powerful attack."
     },
     "effects": [],
@@ -891,14 +891,28 @@
         1745.0,
         2454.0,
         2808.0
+      ],
+      "counter_damage_pct_of_attack_by_rarity": [
+        250,
+        500,
+        1000,
+        1250
+      ],
+      "shield_pct_hp": 20,
+      "shield_duration_s": 2,
+      "shadow_step_reset_cooldown_s_by_rarity": [
+        30,
+        25,
+        20,
+        20
       ]
     },
     "icon": "data/icons/sjw_skills/vertical-arts--reap.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki. Dégâts confirmés par le Codex FR le 16/11/2026 (1136/1745/2454/2808 %) ; recharge 10 s, 100 PM ; effets détaillés ajoutés.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
@@ -3470,7 +3484,7 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu). 16/11 : introuvable dans le Codex de runes de compétence (Alexis, 83 entrées vues) ; nom en « X : Y », peut-être une compétence évoluée/autre type. À vérifier."
   },
   {
     "id": "rune--daybreak",
@@ -3490,21 +3504,29 @@
     ],
     "type": null,
     "element": "light",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de lumière. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2212.0,
+        2782.0,
+        3282.0,
+        3567.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--daybreak.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--stormrage",
@@ -3566,21 +3588,34 @@
     ],
     "type": null,
     "element": "water",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 15.0,
+    "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts d'eau et de Bris lourd. Dernière attaque : [renverse]. Dégâts de la compétence d'arme d'eau +60/100/160/180 % pendant 7 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        651.0,
+        923.0,
+        1194.0,
+        1524.0
+      ],
+      "water_weapon_skill_damage_bonus_pct_7s_by_rarity": [
+        60,
+        100,
+        160,
+        180
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--torrent-cleave.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--storm",
@@ -3600,21 +3635,29 @@
     ],
     "type": null,
     "element": "wind",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de vent. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2212.0,
+        2782.0,
+        3282.0,
+        3567.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--storm.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--truth-mutilate",
@@ -3648,7 +3691,7 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu). 16/11 : introuvable dans le Codex de runes de compétence (Alexis, 83 entrées vues) ; nom en « X : Y », peut-être une compétence évoluée/autre type. À vérifier."
   },
   {
     "id": "qte--attaque-surprise",
