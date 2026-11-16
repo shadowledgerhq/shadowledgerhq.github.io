@@ -71,7 +71,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Les dégâts de compétence ultime de l'utilisateur augmentent de 25 %.",
       "en": "The user's Ultimate Skill damage increases by 15/20/25%."
     },
     "values_by_rarity": {
@@ -101,7 +101,22 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16) : valeur Légendaire 25 % (concorde avec le wiki).",
+    "observed_samples": [
+      {
+        "rarity": "legendary",
+        "level": 1,
+        "stat_enhancement_level_pct": 9,
+        "stats": {
+          "Additional Attack": 770,
+          "Defense Penetration": 285
+        },
+        "passive_condition": "Sung Jinwoo",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "hunger-of-the-crimson-apex",
@@ -279,7 +294,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Augmente l'Attaque de 5 %.",
       "en": "Increases the user's Attack by 2-3-5%."
     },
     "values_by_rarity": {
@@ -309,7 +324,34 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16) : valeur Légendaire 5 % (concorde avec le wiki).",
+    "observed_samples": [
+      {
+        "rarity": "legendary",
+        "level": 1,
+        "stat_enhancement_level_pct": 22,
+        "stats": {
+          "Additional Attack": 892,
+          "Critical Hit Damage": 1312
+        },
+        "passive_condition": "Sung Jinwoo",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 1,
+        "stat_enhancement_level_pct": 2,
+        "stats": {
+          "Additional Attack": 198,
+          "Critical Hit Rate": 265
+        },
+        "passive_condition": "Fire hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "ferocious-protectors-armor",
@@ -934,5 +976,26 @@
       "note": "20 selon le wiki, avant le patch"
     },
     "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+  },
+  {
+    "id": "core-rules",
+    "kind": "rules",
+    "name": {
+      "fr": "Interface et règles des noyaux",
+      "en": "Core screen and rules",
+      "ja": "",
+      "ko": ""
+    },
+    "rules": [
+      "Écran Noyaux : 4 onglets (Tous + 3 emplacements), capacité d'inventaire 3000 (632/3000 sur le compte d'Alexis), tri/filtre, Récupérer (recyclage), bouton Niveau supérieur ; cadenas = verrouillé contre la consommation.",
+      "Chaque noyau affiche « Niveau d'amélioration de stat » en % (Niv. d'amélioration de stat, avec « ? ») ; sur la grille : « X % / Niv. N » ou « MAX / Niv. N ». Le guide Netmarble décrit l'amélioration (enhancement) comme une étape distincte du niveau : à niveau max, un des 2 stats tiré au hasard est amélioré jusqu'à une limite. Le lien exact du % avec les valeurs n'est pas établi (3 échantillons : 9 % → 770/285 ; 22 % → 892/1312 ; 2 % → 198/265, stats de natures différentes).",
+      "Niveaux max observés sur la grille : MAX Niv. 10 et MAX Niv. 15 (raretés/paliers de limit break à déterminer) ; le patch du 17/09/2026 annonce niveau max 25.",
+      "6 familles de noyaux (filtre « Type de noyau ») : démon anonyme, spectre antique, Gardien (« Veilleur » dans le wiki/slagate : à vérifier), Prédateur écarlate, Dominateur arrogant, Protecteur féroce ; 3 emplacements par famille = 18 noyaux (esprit/mind, corps/body, âme/spirit : correspondance FR à vérifier).",
+      "Filtre : Type de noyau, Stats (nombre d'options incluses + effets : Attaque/Défense/PV supplémentaires et en %, Taux et Dégâts de coup critique, Hausse des dégâts, Pénétration de défense, …), Effet exclu, Condition d'activation de l'effet (Tout ou condition précise).",
+      "Condition d'activation du passif (une par noyau, tirée à l'obtention) : « S'active lorsque Sung Jinwoo en est équipé » ou « lorsqu'un chasseur de type [Feu] (Eau, Vent, Lumière, Ténèbres) en est équipé » (6 × 16,6667 %, voir rates.json → core-rate)."
+    ],
+    "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16) ; guide Netmarble /sololv/141 (rates.json, game_rules.json)",
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16"
   }
 ]
