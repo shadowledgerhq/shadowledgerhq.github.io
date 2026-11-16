@@ -2379,21 +2379,29 @@
     ],
     "type": null,
     "element": "light",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de lumière. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2875.0,
+        3617.0,
+        4267.0,
+        4638.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--aurora.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : pentagone. ",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--breach",
@@ -2685,21 +2693,29 @@
     ],
     "type": null,
     "element": "fire",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de feu. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2875.0,
+        3617.0,
+        4267.0,
+        4638.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--heaven-annihilation.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : ronde (forme à confirmer). ",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--explosion",
@@ -3059,21 +3075,29 @@
     ],
     "type": null,
     "element": "water",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de eau. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2875.0,
+        3617.0,
+        4267.0,
+        4638.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--surging-tide.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : losange. ",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--void",
@@ -3093,21 +3117,29 @@
     ],
     "type": null,
     "element": "dark",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de ténèbres. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2875.0,
+        3617.0,
+        4267.0,
+        4638.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--void.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : hexagone. ",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--darkness-obliteration",
@@ -3195,21 +3227,29 @@
     ],
     "type": null,
     "element": "wind",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de vent. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2875.0,
+        3617.0,
+        4267.0,
+        4638.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--stormrage.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : bouclier/triangle. ",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--torrent-cleave",
@@ -3539,215 +3579,5 @@
     "verified_at": "2026-11-14",
     "game_version": null,
     "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
-  },
-  {
-    "id": "power-gauge--heavens-devastation",
-    "kind": "rune",
-    "parent_skill": null,
-    "name": {
-      "fr": "Dévastation des Cieux",
-      "en": "",
-      "ko": "",
-      "ja": ""
-    },
-    "rarity": [
-      "rare",
-      "heroic",
-      "legendary",
-      "transcendent"
-    ],
-    "type": null,
-    "element": "fire",
-    "cooldown": 60.0,
-    "mp_cost": null,
-    "power_gauge_cost_pct": 100,
-    "text": {
-      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de feu. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
-      "en": ""
-    },
-    "effects": [],
-    "effects_text_en": "",
-    "values_by_level": {
-      "damage_pct_of_attack_by_rarity": [
-        2875.0,
-        3617.0,
-        4267.0,
-        4638.0
-      ]
-    },
-    "icon": null,
-    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)",
-    "wiki_revid": null,
-    "verified_at": "2026-11-16",
-    "game_version": "1.5.16",
-    "notes": "Rune récente absente de slagate/wiki. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : ronde (forme à confirmer). Noms EN/KO/JA : aucune source."
-  },
-  {
-    "id": "power-gauge--surging-tide",
-    "kind": "rune",
-    "parent_skill": null,
-    "name": {
-      "fr": "Marée résurgente",
-      "en": "",
-      "ko": "",
-      "ja": ""
-    },
-    "rarity": [
-      "rare",
-      "heroic",
-      "legendary",
-      "transcendent"
-    ],
-    "type": null,
-    "element": "water",
-    "cooldown": 60.0,
-    "mp_cost": null,
-    "power_gauge_cost_pct": 100,
-    "text": {
-      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de eau. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
-      "en": ""
-    },
-    "effects": [],
-    "effects_text_en": "",
-    "values_by_level": {
-      "damage_pct_of_attack_by_rarity": [
-        2875.0,
-        3617.0,
-        4267.0,
-        4638.0
-      ]
-    },
-    "icon": null,
-    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)",
-    "wiki_revid": null,
-    "verified_at": "2026-11-16",
-    "game_version": "1.5.16",
-    "notes": "Rune récente absente de slagate/wiki. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : losange. Noms EN/KO/JA : aucune source."
-  },
-  {
-    "id": "power-gauge--raging-tempest",
-    "kind": "rune",
-    "parent_skill": null,
-    "name": {
-      "fr": "Rage tempétueuse",
-      "en": "",
-      "ko": "",
-      "ja": ""
-    },
-    "rarity": [
-      "rare",
-      "heroic",
-      "legendary",
-      "transcendent"
-    ],
-    "type": null,
-    "element": "wind",
-    "cooldown": 60.0,
-    "mp_cost": null,
-    "power_gauge_cost_pct": 100,
-    "text": {
-      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de vent. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
-      "en": ""
-    },
-    "effects": [],
-    "effects_text_en": "",
-    "values_by_level": {
-      "damage_pct_of_attack_by_rarity": [
-        2875.0,
-        3617.0,
-        4267.0,
-        4638.0
-      ]
-    },
-    "icon": null,
-    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)",
-    "wiki_revid": null,
-    "verified_at": "2026-11-16",
-    "game_version": "1.5.16",
-    "notes": "Rune récente absente de slagate/wiki. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : bouclier/triangle. Noms EN/KO/JA : aucune source."
-  },
-  {
-    "id": "power-gauge--aurora",
-    "kind": "rune",
-    "parent_skill": null,
-    "name": {
-      "fr": "Aurore",
-      "en": "",
-      "ko": "",
-      "ja": ""
-    },
-    "rarity": [
-      "rare",
-      "heroic",
-      "legendary",
-      "transcendent"
-    ],
-    "type": null,
-    "element": "light",
-    "cooldown": 60.0,
-    "mp_cost": null,
-    "power_gauge_cost_pct": 100,
-    "text": {
-      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de lumière. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
-      "en": ""
-    },
-    "effects": [],
-    "effects_text_en": "",
-    "values_by_level": {
-      "damage_pct_of_attack_by_rarity": [
-        2875.0,
-        3617.0,
-        4267.0,
-        4638.0
-      ]
-    },
-    "icon": null,
-    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)",
-    "wiki_revid": null,
-    "verified_at": "2026-11-16",
-    "game_version": "1.5.16",
-    "notes": "Rune récente absente de slagate/wiki. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : pentagone. Noms EN/KO/JA : aucune source."
-  },
-  {
-    "id": "power-gauge--void",
-    "kind": "rune",
-    "parent_skill": null,
-    "name": {
-      "fr": "Néant",
-      "en": "",
-      "ko": "",
-      "ja": ""
-    },
-    "rarity": [
-      "rare",
-      "heroic",
-      "legendary",
-      "transcendent"
-    ],
-    "type": null,
-    "element": "dark",
-    "cooldown": 60.0,
-    "mp_cost": null,
-    "power_gauge_cost_pct": 100,
-    "text": {
-      "fr": "Dégâts : 2875 % à 4638 % de l'Attaque de l'utilisateur (selon la rareté). Temps de rechargement : 60 s. Consommation de la jauge de puissance : 100 %. Inflige des dégâts élémentaires de ténèbres. Lorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].",
-      "en": ""
-    },
-    "effects": [],
-    "effects_text_en": "",
-    "values_by_level": {
-      "damage_pct_of_attack_by_rarity": [
-        2875.0,
-        3617.0,
-        4267.0,
-        4638.0
-      ]
-    },
-    "icon": null,
-    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)",
-    "wiki_revid": null,
-    "verified_at": "2026-11-16",
-    "game_version": "1.5.16",
-    "notes": "Rune récente absente de slagate/wiki. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : hexagone. Noms EN/KO/JA : aucune source."
   }
 ]
