@@ -38,9 +38,23 @@
     "wiki_revid": 17612,
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki. Amplification : palier 2 vu en capture (rune +1→+2, 250 agents, 500 000 or, taux 50 %). Palier 2 = 6 % (palier 1 = 3 % d'après le texte FR) ; paliers 3-5 inconnus.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
-    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "amplification_effects": [
+      {
+        "tier": 1,
+        "fr": "+3 % de dégâts finaux de la compétence [Roue de pleine lune]",
+        "final_damage_pct": 3,
+        "source": "texte FR slagate"
+      },
+      {
+        "tier": 2,
+        "fr": "+6 % de dégâts finaux de la compétence [Roue de pleine lune]",
+        "final_damage_pct": 6,
+        "source": "capture d'Alexis 16/11/2026 (client FR 1.5.16, écran Recherche de compétence)"
+      }
+    ]
   },
   {
     "id": "double-slash--multiply",

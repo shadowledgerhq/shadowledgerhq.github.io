@@ -2107,7 +2107,7 @@
     "wiki_revid": 17129,
     "verified_at": "2026-11-13",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki). Amplification palier 1 vu en capture (+0→+1, 250 agents, 500 000 or, taux 50 %) ; paliers 2-5 inconnus.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "api_type": "survie",
     "value_check": {
@@ -2116,7 +2116,17 @@
       ],
       "all_found_in_api_text": true,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "amplification_effects": [
+      {
+        "tier": 1,
+        "fr": "Une fois obtenu, augmente en combat l'Attaque supplémentaire et la Défense supplémentaire de Sung Jinwoo de 50, ainsi que ses PV supplémentaires de 100.",
+        "extra_atk": 50,
+        "extra_def": 50,
+        "extra_hp": 100,
+        "source": "capture d'Alexis 16/11/2026 (client FR 1.5.16, écran Recherche de compétence)"
+      }
+    ]
   },
   {
     "id": "master-marksman",
@@ -2868,6 +2878,18 @@
         }
       ],
       "note_en": "Displayed values are rounded. Minimum quantity (250) gives the basic rate; each extra agent adds the per-agent gain, up to 450 agents (checked: base + 200 × gain = max rate for tiers 1-5)."
+    },
+    "costs_and_materials": {
+      "synthesis": {
+        "gold": 500000,
+        "materials_fr": "15 exemplaires Transcendants de la même rune/pierre (affichés « Pierre transcendée : [nom] », 14/15 et 44/15 vus) + 1 rune/pierre légendaire aléatoire (1 exemplaire) ; condition : posséder la cible en Légendaire ou supérieur ; bouton Sélection automatique",
+        "source": "capture d'Alexis 16/11/2026 (client FR 1.5.16, écran Recherche de compétence) : Accablement (rune), Force irrésistible (pierre)"
+      },
+      "amplification": {
+        "gold": 500000,
+        "materials_fr": "1 exemplaire de la rune/pierre (consommé seulement si succès) + Agents d'amplification (250 minimum, curseur jusqu'à Max) ; bouton « Voir le taux »; l'écran affiche le palier visé (+N→+N+1), le taux (50 % + 0,000 % au minimum) et le texte de l'effet du palier",
+        "source": "capture d'Alexis 16/11/2026 (client FR 1.5.16, écran Recherche de compétence) : Roue de pleine lune (rune, +1→+2), Bénédiction de Kandiaru (pierre, +0→+1)"
+      }
     }
   }
 ]
