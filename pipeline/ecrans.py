@@ -32,9 +32,32 @@ def controle_bot(phases, chrono, play_time):
     return not pb, pb
 
 
+NOTE_BOT_TEMPS_NON_LU = "BOT ja : temps de jeu non lu"
+NOTE_BOT_INSTABLE = "temps instable (animation ?)"
+
+
+def controle_bot_zones(phases, play_time):
+    """v27 : lecture par zone / repli. Le temps de jeu (haut droite, arrondi à la seconde) doit être la dernière phase tronquée,
+    phases croissantes. Retourne (coherent, problèmes) ; temps de jeu non lu = (False, [NOTE_BOT_TEMPS_NON_LU])."""
+    if play_time is None:
+        return False, [NOTE_BOT_TEMPS_NON_LU]
+    pb = []
+    if any(b <= a for a, b in zip(phases, phases[1:])):
+        pb.append("phases non croissantes")
+    if int(phases[-1]) != play_time:
+        pb.append(f"temps de jeu {play_time} ≠ dernière phase tronquée {int(phases[-1])}")
+    return not pb, pb
+
+
 def lecture_bot(meta, ecran, config, source="video-complete"):
     phases, chrono = ecran.get("phases"), ecran.get("chrono")
-    ok, pb = controle_bot(phases, chrono, ecran.get("play_time"))
+    via_zones = bool(ecran.get("via_zones"))
+    if via_zones:        # v27
+        if not phases or len(phases) < 2:
+            return None
+        ok, pb = controle_bot_zones(phases, ecran.get("play_time"))
+    else:
+        ok, pb = controle_bot(phases, chrono, ecran.get("play_time"))
     score = phases[-1] if phases else chrono
     if score is None:
         return None
@@ -45,7 +68,13 @@ def lecture_bot(meta, ecran, config, source="video-complete"):
                detail={"phases": phases, "play_time": ecran.get("play_time")})
     if ecran.get("armes_sjw_vides") is not None:      # v26 : True = 2 cases de gauche du bandeau vides = pas d'armes de SJW
         lec["detail"]["armes_sjw_vides"] = bool(ecran["armes_sjw_vides"])
-    lec["notes"] += [f"contrôle BOT : {p}" for p in pb]
+    if via_zones:        # v27 : `sur` seulement après répétition sur ≥ 2 images (`ocr_ecrans.dedoublonner_lectures`)
+        lec["detail"]["v27"] = True
+        lec["detail"]["v27_sur"] = bool(ok)
+        lec["detail"]["par_t"] = [ecran.get("t")] if ecran.get("t") is not None else []
+        lec["notes"] += [p if p == NOTE_BOT_TEMPS_NON_LU else f"contrôle BOT : {p}" for p in pb]
+    else:
+        lec["notes"] += [f"contrôle BOT : {p}" for p in pb]
     lec["bot_season_week"] = lire_saison_semaine(meta.get("title"), config)
     if titre_challenge(meta.get("title"), config):  # v10 : ancien mode supprimé
         lec["notes"].append(NOTE_CHALLENGE)

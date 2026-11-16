@@ -43,7 +43,7 @@ def test_v26_phase1_sans_espace_et_casse_toutes_langues():
 
 def test_v26_pas_de_faux_positif():
     assert O.detecter("Phase1 boss 12 joueurs", CFG) is None       # pas de chronos
-    assert O.detecter("RESULT\nPhase1 00:04.734\nPhase2 00:15.212", CFG) is None   # pas de temps de jeu
+    assert O.detecter("RESULT\nPhase1 00:04.734\nPhase2 00:15.212", CFG) == "bot"   # v27 : repli `a_verifier` (voir test_v27), jamais `sur`
 
 
 def test_v26_boutons_ignores():

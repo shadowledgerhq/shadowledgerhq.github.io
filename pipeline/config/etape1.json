@@ -57,8 +57,19 @@
     "libelles": {
       "_doc": "SPEC §3.1 (v26) : libellés du RESULT BOT par langue. `titre` = titre de l'écran (le boss est lu dessous) ; `play_time` = temps de jeu arrondi ; `ignores` = boutons, jamais lus. `Phase1` / `Phase 1` : même libellé dans toutes les langues (comparaison sans accents, casse ni espaces). Anglais, coréen : [À CONFIRMER] sur capture ; japonais vu le 16/11/2026 (docs/essais/composition/bot_results_sans_sjw_ja.png).",
       "en": {"titre": ["Results"], "play_time": ["Play Time"], "ignores": []},
-      "ja": {"titre": ["RESULT"], "play_time": ["進行時間"], "ignores": ["もう一度プレイ", "出る", "戦闘オプション"]},
+      "ja": {"titre": ["RESULT", "結果"], "play_time": ["進行時間", "信行時間"], "ignores": ["もう一度プレイ", "出る", "戦闘オプション"]},
       "ko": {"titre": ["결과"], "play_time": ["진행 시간"], "ignores": []}
+    },
+    "zones_lecture": {
+      "_doc": "SPEC v27 §3.1 : lecture PAR ZONE de l'écran RESULT du BOT (16:9, fractions x, y, largeur, hauteur), pour les clients dont l'OCR de l'image entière échoue (japonais : `Phase1` lu « Men 4 », 進行時間 lu 信行時間). Calée le 16/11/2026 sur bot_results_sans_sjw_ja.png (temps de jeu 00:29 lu) et bot_results_ja.png (temps de jeu masqué par le décor : non lu). `phases` = une zone par ligne (temps cumulés, la dernière en cyan). Chaque zone est lue sous plusieurs prétraitements (canal : cyan = min(G,B), masque_cyan = pixels très cyan pour la dernière phase, max, gris ; seuil de binarisation) puis votée : une valeur n'est gardée que si au moins `accord_min` variantes la lisent à l'identique (format strict mm:ss.mmm / mm:ss). [À CONFIRMER] sur vidéo réelle.",
+      "temps_jeu": [0.925, 0.045, 0.06, 0.05],
+      "phases": [[0.2, 0.285, 0.11, 0.065], [0.2, 0.365, 0.11, 0.065], [0.2, 0.445, 0.11, 0.065]],
+      "echelle_temps_jeu": 2.5,
+      "echelle_phases": 3,
+      "variantes_temps_jeu": [{"canal": "gris", "seuil": null}, {"canal": "gris", "seuil": 150}, {"canal": "gris", "seuil": 180}, {"canal": "max", "seuil": null}],
+      "variantes_phases": [{"canal": "cyan", "seuil": 150}, {"canal": "cyan", "seuil": 190}, {"canal": "gris", "seuil": 190}, {"canal": "max", "seuil": 190}, {"canal": "cyan", "seuil": null}, {"canal": "gris", "seuil": null}, {"canal": "masque_cyan", "seuil": null, "echelle": 2}, {"canal": "masque_cyan", "seuil": null, "echelle": 3}, {"canal": "masque_cyan", "seuil": null, "echelle": 4}],
+      "accord_min": 2,
+      "images_min": 2
     },
     "zone_armes_sjw": [0.236, 0.855, 0.332, 0.937],
     "_zone_armes_sjw": "SPEC v25 §4.5, calée le 16/11/2026 sur 2 captures RESULT du BOT (client JA) : docs/essais/composition/bot_results_ja.png (5 cases pleines) et bot_results_sans_sjw_ja.png (3 chasseurs seulement). Le bandeau est ALIGNÉ À DROITE : sans armes de SJW, les 3 icônes de chasseurs glissent dans les 3 cases de droite et les 2 cases de GAUCHE (x 0,236-0,332) restent vides (écart-type 3 contre 60-76 quand elles sont pleines). Zone vide (`regles_deduites.zone_vide`, seuil 8) = pas d'armes de SJW = SJW absent. Le pipeline ne lit pas encore l'écran RESULT du BOT (lu par le titre) : `detail.armes_sjw_vides` à renseigner lors de cette lecture ; ≥ 5 runs sûres de 5 chaînes requises pour conclure."

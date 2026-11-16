@@ -129,6 +129,67 @@ def _ligne_apres(titre, texte):
     return m.group(1).strip() if m else None
 
 
+def _titre_bot_lu(cp, config=None):
+    """v27 : un titre de l'écran RESULT du BOT (`config.bot.libelles.<langue>.titre`, sans accents/casse/espaces) figure dans `cp`
+    (texte déjà compacté). `Results` en anglais, `RESULT` / `結果` en japonais."""
+    return any(compact(l) in cp for l in (libelles_bot("titre", config) or ["Results"]))
+
+
+def candidat_bot(texte, config=None):
+    """v27 : l'image mérite la lecture par zone du RESULT du BOT : titre lu, ou au moins 2 temps `mm:ss.mmm`, ou le mot « phase »
+    (l'OCR de l'image entière lit mal ces écrans japonais : `Phase1` -> « Men 4 »)."""
+    t = normaliser(texte)
+    cp = compact(t)
+    return _titre_bot_lu(cp, config) or len(_TEMPS.findall(t)) >= 2 or "phase" in cp
+
+
+_TEMPS_STRICT = re.compile(r"(?<!\d)\d{1,2}:\d{2}\.\d{3}(?!\d)")
+_TEMPS_JEU = re.compile(r"(?<!\d)\d{1,2}:\d{2}(?![\d.])")
+
+
+def _secondes(m):
+    mm, reste = m.split(":")
+    return int(mm) * 60 + float(reste)
+
+
+def vote_zone(textes, motif, accord_min=2):
+    """v27 : même zone lue sous plusieurs prétraitements -> la valeur au format `motif` (fullmatch sur un mot du texte) lue à
+    l'identique par au moins `accord_min` variantes, à égalité la première ; None sinon (jamais une valeur lue une seule fois)."""
+    lus = []
+    for t in textes:
+        for m in re.findall(motif.pattern, t or ""):
+            lus.append(m)
+            break
+    if not lus:
+        return None
+    meilleur = max(dict.fromkeys(lus), key=lus.count)
+    return meilleur if lus.count(meilleur) >= accord_min else None
+
+
+def zones_bot_lues(lus_phases, lus_temps_jeu, config=None):
+    """v27 : textes OCR par variante (`lus_phases` = liste par ligne de phase de listes de textes ; `lus_temps_jeu` = liste de
+    textes) -> {"phases": [secondes...], "temps_jeu": entier en secondes | None}. Les phases doivent croître ; la 1re ligne
+    illisible ou non croissante coupe la liste. Pur : aucun accès fichier (testable sans tesseract)."""
+    cfg = ((config or _config()).get("bot") or {}).get("zones_lecture") or {}
+    accord = cfg.get("accord_min", 2)
+    phases = []
+    for textes in lus_phases:
+        v = vote_zone(textes, _TEMPS_STRICT, accord)
+        if v is None:
+            break
+        s = _secondes(v)
+        if phases and s <= phases[-1]:
+            break
+        phases.append(round(s, 3))
+    tj = vote_zone(lus_temps_jeu, _TEMPS_JEU, accord)
+    return {"phases": phases, "temps_jeu": int(_secondes(tj)) if tj else None}
+
+
+def zones_bot_valides(zb):
+    """v27 : la lecture par zone suffit à reconnaître un écran RESULT du BOT : au moins 2 phases lues, croissantes."""
+    return bool(zb) and len(zb.get("phases") or []) >= 2
+
+
 def detecter(texte, config=None):
     """Type d'écran d'après ses libellés, ou None. `gb_record` avant `gb_results` ; HOTM avant POC."""
     t = normaliser(texte)
@@ -147,6 +208,8 @@ def detecter(texte, config=None):
     cp = compact(t)
     if "phase1" in cp and _TEMPS.search(t) and any(compact(l) in cp for l in (libelles_bot("play_time", config) or ["Play Time"])):
         return "bot"        # v26 : `Phase1` sans espace accepté partout ; `Play Time` / `進行時間` selon la langue
+    if len(_TEMPS.findall(t)) >= 2 and _titre_bot_lu(cp, config):
+        return "bot"        # v27 : repli, titre RESULT/結果 + au moins 2 temps `mm:ss.mmm` (Phase1 / temps de jeu mal lus) -> `a_verifier`
     if "합산" in t and ("증명" in t or "클리어" in t):
         return "hotm"
     if "이번" in t and ("플레이어 스코어" in t or "계승자 스코어" in t):
@@ -226,7 +289,11 @@ def lire_gb_combat(texte, config=None):
             "chrono": chrono_hud(t), "stage": None, "langue": langue, "rage_optionnel": bool(lib and lib[5])}
 
 
-def lire_bot(texte, config=None):
+def lire_bot(texte, config=None, zb=None):
+    """Écran RESULT du BOT. `zb` (v27) = lecture par zone (`zones_bot_lues`). Chemin v26 (texte entier cohérent : phases, chrono
+    du bandeau, temps de jeu) inchangé et seul à pouvoir être `sur` sans répétition ; sinon `via_zones` : phases de la zone (≥ 2) ou
+    du texte, temps de jeu du texte ou de la zone, pas de boss (l'OCR du titre est alors trop incertain), `sur` seulement si le
+    temps de jeu est lu et cohérent avec la dernière phase ET lu à l'identique sur ≥ 2 images (fusion, `dedoublonner_lectures`)."""
     temps = [int(m) * 60 + int(s) + int(ms) / 1000 for m, s, ms in _TEMPS.findall(texte)]
     phases, chrono = temps, None
     if len(temps) >= 2 and abs(temps[-1] - temps[-2]) < 1e-3:   # le bandeau du bas répète la dernière phase
@@ -235,9 +302,19 @@ def lire_bot(texte, config=None):
     pt = re.search(rf"(?:{pt_rx})\D{{0,5}}(\d{{1,2}}):(\d{{2}})", texte, re.IGNORECASE)
     titre = _rx_libelles(libelles_bot("titre", config) or ["Results"])
     boss = _ligne_apres(rf"(?<![A-Za-z])(?:{titre})(?![A-Za-z])", texte)
-    return {"stage": boss, "phases": phases, "chrono": chrono,
-            "play_time": int(pt.group(1)) * 60 + int(pt.group(2)) if pt else None,
-            "player_ingame": None, "armes_sjw": None}   # pseudo et armes : [EN ATTENTE] (icônes, recadrage)
+    play_time = int(pt.group(1)) * 60 + int(pt.group(2)) if pt else None
+    res = {"stage": boss, "phases": phases, "chrono": chrono, "play_time": play_time,
+           "player_ingame": None, "armes_sjw": None}   # pseudo et armes : [EN ATTENTE] (icônes, recadrage)
+    if not (chrono is not None and play_time is not None and phases):      # v27 : texte entier insuffisant
+        if zones_bot_valides(zb):                                          # lecture par zone réussie
+            res["phases"] = list(zb["phases"])
+            if play_time is None:
+                res["play_time"] = zb.get("temps_jeu")
+            res["chrono"], res["via_zones"], res["stage"] = None, True, None
+        elif play_time is None:                                            # repli : titre + ≥ 2 temps, temps de jeu non lu -> a_verifier
+            res["chrono"], res["via_zones"], res["stage"] = None, True, None
+        # sinon (temps de jeu lu mais bandeau non lu, sans zone) : règle v26 inchangée, `a_verifier` (« écran BOT illisible »)
+    return res
 
 
 def _valeurs_sous_libelles(texte):
@@ -414,9 +491,12 @@ def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
     zones ciblées de l'écran Results (pc.lire_zones_results)."""
     texte = normaliser(texte)
     type_ecran = detecter(texte, config)
+    zb = (zones or {}).get("bot")
+    if type_ecran is None and zones_bot_valides(zb):
+        type_ecran = "bot"          # v27 : reconnu par la lecture par zone (≥ 2 phases lues dans les zones des temps)
     if type_ecran is None:
         return []
-    ecran = {**(lire_gb_combat(texte, config) if type_ecran in ("gb_combat", "gb_combat_incertain") else LECTEURS[type_ecran](texte, config) if type_ecran == "bot" else LECTEURS[type_ecran](texte)), "t": t}
+    ecran = {**(lire_gb_combat(texte, config) if type_ecran in ("gb_combat", "gb_combat_incertain") else lire_bot(texte, config, zb) if type_ecran == "bot" else LECTEURS[type_ecran](texte)), "t": t}
     if type_ecran in ("gb_results", "gb_results_partiel"):
         ecran["stage"] = _boss_du_hud(texte, config) or ecran["stage"]     # v12 : nom normalisé si le boss est connu
         if zones is not None:
@@ -774,9 +854,51 @@ def fusionner_results(lectures, config=None):
     return sortie
 
 
+def _repetition_bot_v27(lectures):
+    """v27 (anti-animation) : les lectures BOT par zone / repli (`detail.v27`) d'un même temps (vidéo, score) sont comptées par
+    image distincte (`detail.par_t`, idempotent : une relecture des mêmes images ne double rien). `sur` seulement si le contrôle
+    du temps de jeu est bon (`detail.v27_sur`) ET si le temps est lu sur ≥ `bot.zones_lecture.images_min` images (2) ; sinon
+    `a_verifier` + note « temps instable (animation ?) ». Une lecture instable dont la 1re phase est celle d'une lecture stable de
+    la même vidéo (même run, animation) est écartée. Retourne la liste complète (autres lectures inchangées)."""
+    v27 = [l for l in lectures if l.get("mode") == "bot" and (l.get("detail") or {}).get("v27")]
+    if not v27:
+        return lectures
+    images_min = 2
+    groupes = {}
+    for l in v27:
+        d = l["detail"]
+        ts = set(d.get("par_t") or []) | ({l["t"]} if l.get("t") is not None else set())
+        g = groupes.setdefault((l["video_id"], l["score"]), set())
+        g |= ts
+    for l in v27:
+        d = l["detail"]
+        d["par_t"] = sorted(groupes[(l["video_id"], l["score"])])
+        stable = bool(d.get("v27_sur")) and len(d["par_t"]) >= images_min
+        l["notes"][:] = [n for n in l["notes"] if n != ecrans.NOTE_BOT_INSTABLE]
+        if stable:
+            l["confidence"], l["exact"] = "sur", True
+        else:
+            l["confidence"], l["exact"] = "a_verifier", False
+            if d.get("v27_sur"):
+                l["notes"].append(ecrans.NOTE_BOT_INSTABLE)
+    stables = [l for l in v27 if l["confidence"] == "sur"]
+    ecartees = set()
+    for l in v27:
+        if l["confidence"] == "sur" or not (l["detail"].get("phases") or [None])[0]:
+            continue
+        for s in stables:
+            if s["video_id"] == l["video_id"] and s["score"] != l["score"] and s["detail"]["phases"][0] == l["detail"]["phases"][0]:
+                ecartees.add(id(l))
+                if "lectures instables du même run écartées" not in " ".join(s["notes"]):
+                    s["notes"].append("lectures instables du même run écartées")
+                break
+    return [l for l in lectures if id(l) not in ecartees]
+
+
 def dedoublonner_lectures(lectures):
     """Une même image d'écran est lue à plusieurs instants (1 image / 2 s) : une seule lecture par
     (vidéo, mode, groupe/équipe, score, dégâts) ; la plus tôt dans la vidéo est gardée."""
+    lectures = _repetition_bot_v27(lectures)
     vues, sortie, gardees = set(), [], {}
     for l in sorted(lectures, key=lambda l: (l.get("t") is None, l.get("t") or 0)):
         cle = (l["video_id"], l["mode"], l.get("team"), l["score"], l.get("damage"), l["score_source"] == "record",

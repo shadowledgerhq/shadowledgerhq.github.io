@@ -671,6 +671,77 @@ def zone_armes_bot(png, config):
         return None
 
 
+def _bot_texte_complet(texte, config):
+    """v27 : le texte de l'image entière donne déjà phases, chrono du bandeau et temps de jeu (chemin v26) : pas de lecture par zone."""
+    e = ocr_ecrans.lire_bot(ocr_ecrans.normaliser(texte), config)
+    return not e.get("via_zones")
+
+
+def recadrer_bot(png, zone, echelle, canal, seuil, sortie):
+    """v27 : zone de l'image (fractions x, y, largeur, hauteur) agrandie, en niveaux de gris selon `canal` (`cyan` = min(G, B) : blanc et
+    cyan restent clairs, décors violets/rouges s'éteignent ; `max` ; `gris` ; `masque_cyan` : seuls les pixels très cyan, pour la dernière phase), noir sur blanc ; avec `seuil` : binarisée. PIL + numpy
+    (installés avec opencv). Écrit `sortie` ; retourne False si PIL/numpy manquent."""
+    try:
+        import numpy as np
+        from PIL import Image
+    except ImportError:
+        return False
+    with Image.open(png) as im:
+        im = im.convert("RGB")
+    w, h = im.size
+    x, y, l, hh = zone
+    c = im.crop((int(x * w), int(y * h), int((x + l) * w), int((y + hh) * h)))
+    c = c.resize((max(1, int(c.size[0] * echelle)), max(1, int(c.size[1] * echelle))), Image.LANCZOS)
+    a = np.asarray(c).astype(int)
+    if canal == "masque_cyan":          # dernière phase : chiffres cyan lumineux sur décor ; pixels très cyan (G, B ≫ R) en noir, le reste blanc
+        r, gr, b = a[:, :, 0], a[:, :, 1], a[:, :, 2]
+        out = np.where((np.minimum(gr, b) - r > 60) & (np.minimum(gr, b) > 120), 0, 255)
+    else:
+        g = {"cyan": np.minimum(a[:, :, 1], a[:, :, 2]), "max": a.max(axis=2)}.get(canal)
+        if g is None:
+            g = np.asarray(c.convert("L")).astype(int)
+        out = np.where(g > seuil, 0, 255) if seuil else 255 - g
+    Image.fromarray(out.astype(np.uint8)).save(sortie)
+    return True
+
+
+def lire_zones_bot(outils, png, config):
+    """v27 (SPEC §3.1) : lecture PAR ZONE de l'écran RESULT du BOT (16:9) : une zone par ligne de phase et la zone du temps de
+    jeu, chacune sous plusieurs prétraitements puis votée (`ocr_ecrans.zones_bot_lues`). Retourne {"phases": [...],
+    "temps_jeu": entier | None} ; None si l'image n'est pas en 16:9 ou si PIL manque (jamais une preuve)."""
+    cfg = (config.get("bot") or {}).get("zones_lecture")
+    if not cfg:
+        return None
+    taille = outils.dimensions(png)
+    if not taille or not taille[1] or abs(taille[0] / taille[1] - 16 / 9) > 0.02:
+        return None
+    delai = config["pc"]["images"].get("ocr_timeout_rapide_s", 40)
+    chiffres = ["-c", "tessedit_char_whitelist=0123456789,.:"]
+    tmp = Path(png).with_name(Path(png).stem + "_bz.png")
+
+    def lire(zone, echelle, variantes):
+        textes = []
+        for v in variantes:
+            try:
+                if not recadrer_bot(png, zone, v.get("echelle", echelle), v.get("canal", "gris"), v.get("seuil"), tmp):
+                    return None
+                textes.append(outils.ocr(tmp, "eng", 7, delai, chiffres))
+            except (OcrTropLent, RuntimeError):
+                textes.append("")
+            except OSError:
+                return None            # image illisible : jamais une preuve
+        return textes
+
+    try:
+        phases = [lire(z, cfg.get("echelle_phases", 3), cfg.get("variantes_phases", [])) for z in cfg.get("phases", [])]
+        temps = lire(cfg["temps_jeu"], cfg.get("echelle_temps_jeu", 2.5), cfg.get("variantes_temps_jeu", [])) if cfg.get("temps_jeu") else []
+    finally:
+        tmp.unlink(missing_ok=True)
+    if any(p is None for p in phases) or temps is None:
+        return None
+    return ocr_ecrans.zones_bot_lues(phases, temps, config)
+
+
 RESULTATS_TYPES = ("gb_results", "gb_results_partiel")
 ZONES_TYPES = RESULTATS_TYPES + ("gb_record", "gb_combat_incertain")
 
@@ -786,8 +857,16 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                             inconnus.append(t)
                             journal(f"  écran de score sans libellé reconnu gardé à t={t} s (docs/essais/ocr/libelles_inconnus)")
                         zones = lire_zones_results(outils, png, config, type_img, texte, langs) if type_img in ZONES_TYPES else None
-                        if type_img == "bot":
-                            zones = {"armes_sjw_vides": zone_armes_bot(png, config)}
+                        if type_img == "bot" or (type_img is None and ocr_ecrans.candidat_bot(texte, config)):
+                            zb = None
+                            if type_img is None or not _bot_texte_complet(texte, config):      # v27 : texte entier insuffisant -> zones
+                                zb = lire_zones_bot(outils, png, config)
+                            if type_img is None and not ocr_ecrans.zones_bot_valides(zb):
+                                zb = None
+                            elif type_img is None:
+                                type_img = "bot"
+                            if type_img == "bot":
+                                zones = {"armes_sjw_vides": zone_armes_bot(png, config), "bot": zb}
                         vus[h] = (texte, zones)
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
                     if ocr_ecrans.detecter(texte) in RESULTATS_TYPES:
