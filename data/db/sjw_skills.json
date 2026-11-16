@@ -4227,7 +4227,7 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break). 16/11 : QTE autonome (onglet 1, Niv. 10, sans emplacement de rune).",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break). 16/11 : QTE autonome (onglet 1, Niv. 10, sans emplacement de rune). 16/11 (session 6) : « Shadow Step » est cité dans les notes Netmarble du 12/06/2024 (forum 13/26795) ; lien avec cette compétence QTE déduit, à vérifier.",
     "text": {
       "fr": "Jinwoo trouve une ouverture et se place derrière l'ennemi pour lui tendre un piège. Condition d'utilisation : réussir une [Évasion extrême], déclencher l'état [Bris] ou utiliser une [compétence d'ombre]. Condition spéciale : s'active lorsqu'un successeur [rejoint le combat]. [Foulée de l'ombre] s'active après utilisation. L'ennemi est grandement ralenti pendant 3 secondes. La défense de l'ennemi touché est réduite de […]"
     },
@@ -4406,7 +4406,7 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break).",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break). 16/11 (session 6) : « Overshadow » absent des 686 notes archivées ; nom EN toujours déduit, à vérifier.",
     "parent_skill": "qte-death",
     "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
     "text": {
@@ -4550,7 +4550,7 @@
     "kind": "skill",
     "name": {
       "fr": "Toucher du maître",
-      "en": "",
+      "en": "Commander's Authority",
       "ko": ""
     },
     "rarity": null,
@@ -4571,7 +4571,8 @@
     "name_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Compétence ultime NON POSSÉDÉE sur le compte d'Alexis (verrouillée, Niv. 1), affichée sous le nom « Toucher du maître » (même nom que la compétence de base à 4 runes : à vérifier, doublon d'affichage possible). Id provisoire."
+    "notes": "Compétence ultime NON POSSÉDÉE sur le compte d'Alexis (verrouillée, Niv. 1), affichée sous le nom « Toucher du maître » (même nom que la compétence de base à 4 runes : à vérifier, doublon d'affichage possible). Id provisoire. 16/11 (session 6) : nom EN probable « Commander's Authority » (nouvelle ultime, job change Requiem, notes 22/10/2026) ; nom FR officiel à confirmer.",
+    "name_en_source": "Notes Netmarble 12/10/2026 (forum 13/109808 : « new Ultimate Skill Commander's Authority », max level 170) et 22/10/2026 (14/109985 : 5 runes de compétence par élément pour cette ultime, 4 raretés). Correspondance avec l'ultime « Toucher du maître » vue en capture déduite (une seule nouvelle ultime + 5 runes élémentaires) : à vérifier."
   },
   {
     "id": "qte-collapse",

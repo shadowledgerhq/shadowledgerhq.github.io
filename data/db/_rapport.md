@@ -1,5 +1,5 @@
 # Rapport de contrôle de la base — 2026-11-16
-Total : 1319 entrées, **0 erreur(s)**, 2078 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
+Total : 1319 entrées, **0 erreur(s)**, 2077 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
 
 | Fichier | Entrées | Erreurs | Avertissements |
 | --- | ---: | ---: | ---: |
@@ -15,7 +15,7 @@ Total : 1319 entrées, **0 erreur(s)**, 2078 avertissement(s). Généré par `pi
 | proof_modifiers | 17 | 0 | 34 |
 | rates | 12 | 0 | 12 |
 | shadows | 15 | 0 | 0 |
-| sjw_skills | 105 | 0 | 54 |
+| sjw_skills | 105 | 0 | 53 |
 | stats | 16 | 0 | 64 |
 | statues | 5 | 0 | 5 |
 | subjugation_support | 18 | 0 | 36 |
