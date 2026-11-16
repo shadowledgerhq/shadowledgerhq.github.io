@@ -91,7 +91,7 @@ def test_2e_capture_sur_apres_2_images_a_verifier_avec_une_seule(tmp_path):
         return
     zb = _zones("bot_results_sans_sjw_ja.png", tmp_path)
     une = _lecture(zb, 10, JA_REEL)
-    assert une["detail"]["v27_sur"] and une["score"] == 29.224 and une["stage"] is None      # lecture de l'image : cohérente
+    assert une["detail"]["v27_sur"] and une["score"] == 29.224 and une["stage"] is None and ecrans.NOTE_BOT_BOSS_NON_CONTROLE in une["notes"]      # lecture de l'image : cohérente
     seule = _fusion([une])
     assert seule[0]["confidence"] == "a_verifier" and ecrans.NOTE_BOT_INSTABLE in seule[0]["notes"]    # un temps vu sur 1 image : animation ?
     deux = _fusion([_lecture(zb, 10, JA_REEL), _lecture(zb, 12, JA_REEL)])

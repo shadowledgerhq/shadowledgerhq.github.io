@@ -34,6 +34,7 @@ def controle_bot(phases, chrono, play_time):
 
 NOTE_BOT_TEMPS_NON_LU = "BOT ja : temps de jeu non lu"
 NOTE_BOT_INSTABLE = "temps instable (animation ?)"
+NOTE_BOT_BOSS_NON_CONTROLE = "boss non contrôlé"
 
 
 def controle_bot_zones(phases, play_time):
@@ -69,6 +70,7 @@ def lecture_bot(meta, ecran, config, source="video-complete"):
     if ecran.get("armes_sjw_vides") is not None:      # v26 : True = 2 cases de gauche du bandeau vides = pas d'armes de SJW
         lec["detail"]["armes_sjw_vides"] = bool(ecran["armes_sjw_vides"])
     if via_zones:        # v27 : `sur` seulement après répétition sur ≥ 2 images (`ocr_ecrans.dedoublonner_lectures`)
+        lec["notes"].append(NOTE_BOT_BOSS_NON_CONTROLE)
         lec["detail"]["v27"] = True
         lec["detail"]["v27_sur"] = bool(ok)
         lec["detail"]["par_t"] = [ecran.get("t")] if ecran.get("t") is not None else []
