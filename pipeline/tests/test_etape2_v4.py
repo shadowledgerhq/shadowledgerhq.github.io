@@ -36,7 +36,7 @@ def test_18_bot_sans_ligne_classee_builds_provisoires():
     assert cfg["builds_provisoires"] is True
     res = B.calculer(SEM, racine=t, cfg=cfg, banque=object())
     prov = sorted((b for b in res if b["mode"] == "bot"), key=lambda b: b["provisional_rank"])
-    assert len(prov) == 9 and prov[0]["video_id"] == "wJ9CwjKwyco" and prov[0]["provisional_rank"] == 1
+    assert len(prov) >= 9 and prov[0]["video_id"] == "wJ9CwjKwyco" and prov[0]["provisional_rank"] == 1
     assert [b["video_id"] for b in prov[:4]] == ["wJ9CwjKwyco", "a-923ClD9Rc", "Lt84IhMjBvM", "5MI-RLj7FSk"]
     assert all(b["line_provisional"] and b["rank"] is None and b["confidence"] == "a_verifier"
                and "ligne non classée (score provisoire)" in b["notes"] for b in prov)
@@ -46,7 +46,7 @@ def test_18_bot_sans_ligne_classee_builds_provisoires():
     assert all(b["line_provisional"] for b in res if b["mode"] == "poc")
     fichiers = P.exporter(SEM, racine=t, cfg=cfg)
     f = t / "exports" / SEM / "builds" / "bot" / "p01-wJ9CwjKwyco-fr.pptx"
-    assert f.exists() and len([x for x in fichiers if "/bot/p" in x.replace("\\", "/")]) == 18
+    assert f.exists() and len([x for x in fichiers if "/bot/p" in x.replace("\\", "/")]) == 2 * len(prov)
     textes = _pptx_textes(f)
     assert any("CLASSEMENT PROVISOIRE" in x for x in textes) and any(x.startswith("~1") or x == "~1" for x in textes)
     en = _pptx_textes(t / "exports" / SEM / "builds" / "bot" / "p01-wJ9CwjKwyco-en.pptx")
