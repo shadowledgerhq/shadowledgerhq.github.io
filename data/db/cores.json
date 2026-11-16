@@ -19,7 +19,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Le Taux de coup critique de l'utilisateur augmente de 10 %.",
       "en": "The user's Critical Hit Rate increases by 6/8/10%."
     },
     "values_by_rarity": {
@@ -49,7 +49,71 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écrans Noyaux : niveau supérieur, amélioration, limit break ; client FR 1.5.16) : valeur Légendaire 10 % (concorde avec le wiki 6/8/10).",
+    "progression_observed": {
+      "core": "Légendaire, emplacement Esprit (mind), condition d'activation du passif : chasseur [Ténèbres] ; équipé par Sung Ilhwan",
+      "stats": [
+        "Attack (%)",
+        "Critical Hit Rate (points)"
+      ],
+      "max_values_by_level_cap": {
+        "10": {
+          "Attack (%)": 36.79,
+          "Critical Hit Rate": 4799
+        },
+        "15": {
+          "Attack (%)": 53.34,
+          "Critical Hit Rate": 6644
+        },
+        "20": {
+          "Attack (%)": 58.49,
+          "Critical Hit Rate": 7289
+        }
+      },
+      "timeline": [
+        {
+          "step": "niv. 10, amélioration de stat MAX",
+          "Attack (%)": 36.79,
+          "Critical Hit Rate": 4799,
+          "total_power": 2802
+        },
+        {
+          "step": "après limit break 10→15 (amélioration de stat 70 %)",
+          "Attack (%)": 36.79,
+          "Critical Hit Rate": 4799
+        },
+        {
+          "step": "après niveau supérieur 10→15 (+2300 EXP ; amélioration de stat 87 %)",
+          "Attack (%)": 45.73,
+          "Critical Hit Rate": 5957,
+          "total_power": 3478,
+          "owner_total_power": "Sung Ilhwan 1 396 043 → 1 407 432 (+11 389)"
+        },
+        {
+          "step": "après amélioration instantanée (16 tentatives × 15 000 or ; amélioration de stat MAX)",
+          "Attack (%)": 53.34,
+          "Critical Hit Rate": 6644,
+          "gain": {
+            "Attack (%)": 7.61,
+            "Critical Hit Rate": 687
+          }
+        },
+        {
+          "step": "après limit break 15→20 (amélioration de stat 91 %)",
+          "Attack (%)": 53.34,
+          "Critical Hit Rate": 6644
+        },
+        {
+          "step": "après niveau supérieur 15→17 (+2580 EXP)",
+          "Attack (%)": 54.18,
+          "Critical Hit Rate": 6792,
+          "exp_to_next": "740/1130"
+        }
+      ],
+      "source": "captures d'Alexis du 16/11/2026 (écrans Noyaux : niveau supérieur, amélioration, limit break ; client FR 1.5.16)",
+      "verified_at": "2026-11-16"
+    }
   },
   {
     "id": "arrogant-rulers-reflection",
@@ -988,13 +1052,16 @@
     },
     "rules": [
       "Écran Noyaux : 4 onglets (Tous + 3 emplacements), capacité d'inventaire 3000 (632/3000 sur le compte d'Alexis), tri/filtre, Récupérer (recyclage), bouton Niveau supérieur ; cadenas = verrouillé contre la consommation.",
-      "Chaque noyau affiche « Niveau d'amélioration de stat » en % (Niv. d'amélioration de stat, avec « ? ») ; sur la grille : « X % / Niv. N » ou « MAX / Niv. N ». Le guide Netmarble décrit l'amélioration (enhancement) comme une étape distincte du niveau : à niveau max, un des 2 stats tiré au hasard est amélioré jusqu'à une limite. Le lien exact du % avec les valeurs n'est pas établi (3 échantillons : 9 % → 770/285 ; 22 % → 892/1312 ; 2 % → 198/265, stats de natures différentes).",
-      "Niveaux max observés sur la grille : MAX Niv. 10 et MAX Niv. 15 (raretés/paliers de limit break à déterminer) ; le patch du 17/09/2026 annonce niveau max 25.",
       "6 familles de noyaux (filtre « Type de noyau ») : démon anonyme, spectre antique, Gardien (« Veilleur » dans le wiki/slagate : à vérifier), Prédateur écarlate, Dominateur arrogant, Protecteur féroce ; 3 emplacements par famille = 18 noyaux (esprit/mind, corps/body, âme/spirit : correspondance FR à vérifier).",
       "Filtre : Type de noyau, Stats (nombre d'options incluses + effets : Attaque/Défense/PV supplémentaires et en %, Taux et Dégâts de coup critique, Hausse des dégâts, Pénétration de défense, …), Effet exclu, Condition d'activation de l'effet (Tout ou condition précise).",
-      "Condition d'activation du passif (une par noyau, tirée à l'obtention) : « S'active lorsque Sung Jinwoo en est équipé » ou « lorsqu'un chasseur de type [Feu] (Eau, Vent, Lumière, Ténèbres) en est équipé » (6 × 16,6667 %, voir rates.json → core-rate)."
+      "Condition d'activation du passif (une par noyau, tirée à l'obtention) : « S'active lorsque Sung Jinwoo en est équipé » ou « lorsqu'un chasseur de type [Feu] (Eau, Vent, Lumière, Ténèbres) en est équipé » (6 × 16,6667 %, voir rates.json → core-rate).",
+      "« Niveau d'amélioration de stat » = progression des stats actuelles vers leur maximum au palier de niveau max courant : « MAX » quand les stats atteignent le maximum. Formule déduite (moyenne des rapports valeur actuelle / valeur max sur les 2 stats), concordante sur 3 points (70 %, 87 %, 91 %) : à vérifier.",
+      "Limit break : niveau max 10 → 15 → 20 (→ 25 depuis le patch du 17/09/2026, 3e limit break non vu). Conditions : atteindre le niveau max ET le niveau d'amélioration de stat MAX. Coûts vus : 10→15 = 20 matériaux (icône violette) + 100 000 or ; 15→20 = 20 matériaux (icône rouge) + 300 000 or. Le limit break relève les valeurs MAX des stats (et ramène l'amélioration de stat sous 100 %). Noms des matériaux non lus.",
+      "Niveau supérieur : coût 200 or par point d'EXP ; matériaux de progression : +10 EXP, +50 EXP, +250 EXP (+ d'autres noyaux, ex. noyau Légendaire niv. 1 ≈ 80 EXP, déduit). Vu : niv. 10→15 = 2 300 EXP (460 000 or) ; niv. 15→17 = 2 580 EXP (516 000 or) ; EXP à niv. 10 : 230 par niveau pour le suivant, 1 130 pour passer du niv. 17 au 18 (lecture « 740/1130 »). Chaque niveau relève les 2 stats d'une valeur aléatoire dans une plage affichée (niv. 10→15 : Attaque % +1,75~16,55, coup critique +175~1845 ; niv. 15→17 : +0,56~2,06 et +58~258).",
+      "Amélioration (au niveau max, jusqu'à MAX) : « améliore un bonus de stat d'une valeur aléatoire » (1 des 2 stats) ; coût par tentative 15 000 or + 5 matériaux ; plage par tentative à niv. 15 : Attaque % +0,3~1,55, coup critique +40~200 ; options « Améliorer automatiquement » et « Amélioration instantanée » (jusqu'au palier max, s'arrête si manque de matériaux ou d'or). Vu : 87 % → MAX en 16 tentatives (240 000 or) = +7,61 % Attaque, +687 coup critique.",
+      "Quelques noyaux affichent un portrait de chasseur (équipé) ; la puissance totale du chasseur est mise à jour après chaque étape."
     ],
-    "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16) ; guide Netmarble /sololv/141 (rates.json, game_rules.json)",
+    "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16) ; guide Netmarble /sololv/141 (rates.json, game_rules.json) ; captures d'Alexis du 16/11/2026 (écrans Noyaux : niveau supérieur, amélioration, limit break ; client FR 1.5.16)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16"
   }
