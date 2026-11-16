@@ -641,7 +641,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "L'utilisation de la compétence de base confère à l'utilisateur un Bouclier équivalent à 10 % de son Attaque pendant 10 seconde(s) (temps de rechargement : 45 seconde(s)).",
       "en": "Using the Basic Skill grants the user a Shield equal to 6/8/10% of their Attack for 10 second(s). (Cooldown: 45 second(s))"
     },
     "values_by_rarity": {
@@ -671,7 +671,58 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16) : valeur Légendaire concordante avec le wiki.",
+    "observed_samples": [
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 5473,
+          "Critical Hit Damage": 6644
+        },
+        "passive_condition": "Sung Jinwoo",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 5473,
+          "Damage Increase": 6644
+        },
+        "passive_condition": "Fire hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 5473,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Dark hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 5473,
+          "Critical Hit Damage": 6644
+        },
+        "passive_condition": "Water hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "desires-of-the-crimson-apex",
@@ -693,7 +744,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Augmente la Défense de 6 % à 50 % de PM ou moins.",
       "en": "Increases Defense by 4-5-6% when MP is 50% or below."
     },
     "values_by_rarity": {
@@ -723,7 +774,46 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16) : valeur Légendaire concordante avec le wiki.",
+    "observed_samples": [
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 5473,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Dark hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Defense (%)": 53.34,
+          "Critical Hit Damage": 6644
+        },
+        "passive_condition": "Water hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 5473,
+          "Critical Hit Damage": 6644
+        },
+        "passive_condition": "Wind hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "limbs-of-the-watcher",
@@ -797,7 +887,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Lorsqu'il utilise sa compétence ultime, il bénéficie d'un Bouclier équivalent à 10 % de ses PV max pendant 8 seconde(s).",
       "en": "When the user uses their Ultimate Skill, it grants a Shield equal to 3-6-10% by of their Max HP for 8 second(s)."
     },
     "values_by_rarity": {
@@ -827,7 +917,58 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16) : valeur Légendaire concordante avec le wiki.",
+    "observed_samples": [
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 5473,
+          "Damage Increase": 6644
+        },
+        "passive_condition": "Dark hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 5473,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Fire hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 5473,
+          "Critical Hit Damage": 6644
+        },
+        "passive_condition": "Water hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "level": 10,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Defense": 3953,
+          "Defense Penetration": 4799
+        },
+        "passive_condition": "Light hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Corps ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "ancient-wraiths-right-hand",
@@ -1212,7 +1353,8 @@
       "Amélioration (au niveau max, jusqu'à MAX) : « améliore un bonus de stat d'une valeur aléatoire » (1 des 2 stats) ; coût par tentative 15 000 or + 5 matériaux ; plage par tentative à niv. 15 : Attaque % +0,3~1,55, coup critique +40~200 ; options « Améliorer automatiquement » et « Amélioration instantanée » (jusqu'au palier max, s'arrête si manque de matériaux ou d'or). Vu : 87 % → MAX en 16 tentatives (240 000 or) = +7,61 % Attaque, +687 coup critique.",
       "Quelques noyaux affichent un portrait de chasseur (équipé) ; la puissance totale du chasseur est mise à jour après chaque étape.",
       "« Niveau d'amélioration de stat » (%) = floor( moyenne sur les 2 stats de (valeur − minimum initial Légendaire) / (valeur max du palier de niveau max − minimum initial) ). Minimums initiaux Légendaires (rates.json) : Attaque supplémentaire 120, Attaque % 0,70, stats de l'option 2 (coup critique, dégâts critiques, hausse des dégâts, pénétration) 150. Formule vérifiée sur 11 relevés (2, 9, 15, 22, 62, 64, 67, 70, 71, 87, 91, 92 %), tous exacts ; MAX = 100 %.",
-      "Inventaire : 632 → 626 noyaux après avoir consommé 6 noyaux Légendaires niv. 1 comme matériau d'EXP (confirme le décompte)."
+      "Inventaire : 632 → 626 noyaux après avoir consommé 6 noyaux Légendaires niv. 1 comme matériau d'EXP (confirme le décompte).",
+      "Libellés FR des passifs : « Passif de l'esprit » (emplacement Esprit/mind) et « Passif du corps » (Corps/body) ; l'onglet Âme/spirit n'a pas été vu."
     ],
     "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16) ; guide Netmarble /sololv/141 (rates.json, game_rules.json) ; captures d'Alexis du 16/11/2026 (écrans Noyaux : niveau supérieur, amélioration, limit break ; client FR 1.5.16)",
     "verified_at": "2026-11-16",
@@ -1221,18 +1363,21 @@
       "10": {
         "Attack (%)": 36.79,
         "Additional Attack": 3953,
-        "option 2 (Critical Hit Rate, Critical Hit Damage, Damage Increase, Defense Penetration)": 4799
+        "option 2 (Critical Hit Rate, Critical Hit Damage, Damage Increase, Defense Penetration)": 4799,
+        "Additional Defense": 3953
       },
       "15": {
         "Attack (%)": 53.34,
         "Additional Attack": 5473,
-        "option 2": 6644
+        "option 2": 6644,
+        "Additional Defense": 5473,
+        "Defense (%)": 53.34
       },
       "20": {
         "Attack (%)": 58.49,
         "option 2": 7289
       },
-      "note": "Identiques pour toutes les familles de noyaux vues (Désir du Protecteur féroce, Réflexion du Dominateur arrogant, Yeux du Veilleur) ; l'option 2 partage la même échelle pour les 4 stats ; Défense/PV non vus ; 20 : Attaque supplémentaire inconnue ; 25 : inconnu.",
+      "note": "Identiques pour toutes les familles et emplacements vus (Esprit : Désir du Protecteur féroce, Réflexion du Dominateur arrogant, Yeux du Veilleur ; Corps : Corne du démon anonyme, Désirs du Prédateur écarlate, Volonté du Dominateur arrogant) : la stat principale (Attaque/Défense, flat ou %) et l'option 2 suivent la même échelle ; PV non vus ; 20 : Attaque/Défense supplémentaire inconnues ; 25 : inconnu.",
       "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
       "verified_at": "2026-11-16"
     }
