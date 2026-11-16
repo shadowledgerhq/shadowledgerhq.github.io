@@ -1,6 +1,6 @@
 # Spécification — Pipeline étape 1 (classements)
 
-Version 25 — 16/11/2026 (éléments autorisés : compétences, bénédictions, ombres ; preuve d'absence au BOT) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
+Version 26 — 16/11/2026 (libellés japonais du RESULT BOT) — discussion 1 (Classements). Destinataire : discussion 8 (Code).
 Références : `docs/CONTEXTE.md` §3-4, skill shadow-ledger §3, `docs/REFERENCE_ECRANS_*.md`, `pipeline/hotm_ecran.py`.
 Marqueurs : **[À CONFIRMER]** = hypothèse à coder en paramètre, modifiable sans toucher au code ; **[EN ATTENTE]** = bloqué par une info manquante, à coder en « non géré » propre (la vidéo reste `en_cours`, jamais une valeur inventée).
 
@@ -100,6 +100,7 @@ Les recadrages OCR sont **[EN ATTENTE]** des images de référence (à régler s
 - HOTM : libellés `클리어`, `증명 보너스`, `합산 결과` (le titre RESULT est le nom du stage, ex. `기만자의 무대`). Porte et `hunter_mode` lus sur l'écran de composition par `hotm_ecran.py`.
 - BOT (v4, capture client anglais du 13/11/2026) : titre `Results` + nom du boss dessous (ex. `Baruka`). Bloc gauche : `Phase 1` / `Phase 2` / `Phase 3` avec des temps **cumulés** `mm:ss.mmm` (ex. 00:09.281 / 00:14.986 / 00:19.926, le dernier en cyan). Bandeau du bas : pseudo en jeu (ex. `ThenaX`), chrono final (00:19.926), icônes de l'équipe. Haut droite : `Play Time 00:19` (arrondi à la seconde).
   - Score = chrono de la **dernière phase** = chrono du bandeau du bas.
+  - **Japonais (v26, capture `docs/essais/composition/bot_results_sans_sjw_ja.png`)** : titre `RESULT` (en anglais) · boss dessous et en tête du bloc (ex. `突撃の暗殺者タール`) · `Phase1` / `Phase2` / `Phase3` en anglais (sans espace) · `進行時間` (= `Play Time`) · boutons `もう一度プレイ`, `出る`, `戦闘オプション` (ignorés). Contrôle vérifié : Phase3 00:29.224 = bandeau 00:29.224, `進行時間 00:29`. Run **sans SJW** : bandeau avec 3 chasseurs seulement, zone des armes de SJW vide (preuve d'absence §4.5 pour cette run). À ranger dans `config.bot.libelles.ja`.
   - Libellés coréens et japonais **[À CONFIRMER]**. Nombre de phases selon le boss **[À CONFIRMER]** : toujours prendre la dernière.
   - Jamais le « record » de l'écran de composition.
   - Bandeau du bas (confirmé par Alexis) : le losange « 1 » est un **rang** (ignoré) ; les 2 icônes après les 3 chasseurs sont les **armes de SJW**.
@@ -346,6 +347,7 @@ GitHub Actions fonctionne en UTC et peut avoir du retard. Chaque workflow a donc
 - `pipeline/analyse_porte_mode.py` lit `data/runs/*/hotm.json` → lire `data/runs/*/hotm-gate-*.json`.
 - `gate` : entier dans le JSON (voir §5.1).
 - Retirer `runs_detail.submode` (skill et code).
+- (v26) BOT : libellés japonais du RESULT (§3.1) dans `config.bot.libelles.ja` ; `Phase1` sans espace accepté dans toutes les langues ; comparaison sans accents/casse/espaces comme au GB.
 - (v25) data/rules : sjw_skills, blessings, shadows par les builds reconnus (étape 2), même règle ; sjw false → sjw_skills et blessings false ; absence de SJW au BOT seulement par la zone d'armes du bandeau lue vide sur ≥ 5 runs sûres de 5 chaînes ; corriger la note périmée bot_season/bot_challenge de data/rules/2026-11-12.json ; rejouer lGDbzyIJcjY sur la vidéo au prochain passage PC (attendu 19 sur).
 - (v24) §4.5 : rythme des boss par mode (note), `_boss.json.premiere_semaine` ; `data/rules/<semaine>.json` déduit des écrans (true dès 1 run sûre, false si ≥ 5 runs sûres de 5 chaînes, sinon null), un bloc par classement, migration bot_season/bot_challenge → bot ; collecte des écrans de score aux libellés inconnus dans `docs/essais/ocr/libelles_inconnus/`.
 - (v23) Après la relance du 15/11 (bilan conforme, `regles` 18) : conflit du `Final Score` départagé par le HUD (§3.1, cas `lGDbzyIJcjY` → 19 `sur`) ; `n images` = images distinctes (la ligne RaidenShadow de `gb.json` affiche `lecture fusionnée (14 images)` pour 7 images dans le bilan : vérifier qu'aucune image n'est comptée deux fois). Points HUD de `MJ2iz5TFmvM` (10 375 798 059 160 à 3,18 s, 2,7 % sous le Final Score) : lecture plausible, gardée, mais hors fenêtre → ne confirme pas ; pas de changement de tolérance. Gel : `pc.geler` reste `false` jusqu'au critère 3 (§6).
