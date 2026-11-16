@@ -22,6 +22,12 @@ for c, items in db.items():
         if e.get("kind") == "rules": continue
         for n in {e["name"].get("en", ""), e["name"].get("fr", "")}:
             if n: idx[c].setdefault(norm(n), e)
+ALIAS = {"artifact_sets": {"kamishsobsession": "set-of-kamishs-obession"}, "weapons": {"vulkansrage": "vulcans-rage", "somaasura": "soma-and-asura"},
+         "sjw_skills": {"phantomstrike": "phantom-strike", "daggerrush": "dagger-rush"}}
+for c, m in ALIAS.items():
+    par_id = {e["id"]: e for e in db[c]}
+    for k, i in m.items():
+        if i in par_id: idx[c][k] = par_id[i]
 def cat_de(titre):
     t = titre.lower()
     for k, c in CAT:
@@ -77,6 +83,46 @@ def appliquer_pierre(e, texte, rapport, n):
                     rapport.append(f"  appliqué {e['id']} ligne {k}: {anc} → {nouv}"); break
             else: rapport.append(f"  NON appliqué {e['id']} : anciennes valeurs {anc} ≠ base {vec}")
     return modif
+STOP = {"increases", "damage", "duration", "second", "user", "attack", "when", "with", "every", "that", "this", "effect", "stacking", "times", "after", "target", "their", "from"}
+PAIR = re.compile(r"(?<![\d.\-])(\d+(?:\.\d+)?)(%?)\s+(\d+(?:\.\d+)?)(%| second\(s\)| seconds?| times?)?(?![\d.\-])")
+def paires(txt):
+    out = []; prec = []
+    for lg in txt.split("\n"):
+        if not lg.strip(): continue
+        ctx = " ".join(prec[-2:]) + " " + lg; prec.append(lg)
+        if lg.strip().startswith(("Tier", "(", "Lv", "Category")) or "/" in lg: continue
+        for m in PAIR.finditer(lg):
+            a, ua, b, ub = m.group(1), m.group(2), m.group(3), (m.group(4) or "")
+            if a == b: continue
+            u = ub if ub else ua
+            if ua and not ub: u = ua
+            out.append({"line": " ".join(lg.split())[:140], "old": a, "new": b, "unit": u.strip(),
+                        "ctx": {w.lower() for w in re.findall(r"[A-Za-z]{4,}", ctx)} - STOP})
+    return out
+def motif(v, u):
+    u = (" " + u) if u not in ("", "%") else u
+    return re.compile(r"(?<![\d.\-])" + re.escape(v) + re.escape(u) + r"(?![\d.\-])")
+def appliquer_nombres(e, h, rapport):
+    ch = []
+    for pr in paires(h["text_en"]):
+        blob = json.dumps({k: v for k, v in e.items() if k not in ("balance_history", "values_balance_applied", "balance_changes", "notes")}, ensure_ascii=False)
+        mo, mn = motif(pr["old"], pr["unit"]), motif(pr["new"], pr["unit"])
+        co, cn = len(mo.findall(blob)), len(mn.findall(blob))
+        pr = dict(pr, date=h["date"], url=h["url"]); ctx = pr["ctx"]
+        if co == 0 and cn >= 1: pr["status"] = "deja_applique"
+        elif co == 1 and cn == 0 and sum(1 for w in ctx if w in blob[max(0, mo.search(blob).start() - 200):mo.search(blob).end() + 200].lower()) >= 2:
+            def rem(o):
+                if isinstance(o, str):
+                    return mo.sub(pr["new"] + ((" " + pr["unit"]) if pr["unit"] not in ("", "%") else pr["unit"]), o, count=1)
+                if isinstance(o, list): return [rem(x) for x in o]
+                if isinstance(o, dict): return {k: (v if k in ("balance_history", "values_balance_applied", "balance_changes", "notes") else rem(v)) for k, v in o.items()}
+                return o
+            for k in list(e):
+                if k not in ("balance_history", "values_balance_applied", "balance_changes", "notes"): e[k] = rem(e[k])
+            pr["status"] = "applique"; rapport.append(f"  texte {e['id']}: {pr['old']}→{pr['new']}{pr['unit']} ({h['date']})")
+        else: pr["status"] = "a_verifier"
+        pr.pop("ctx", None); ch.append(pr)
+    return ch
 rap, non_trouves, patches = [], [], []
 for n in notes:
     ch = []
@@ -91,6 +137,9 @@ for n in notes:
             if not any(h["url"] == entry["url"] and h["text_en"] == txt for h in cible.setdefault("balance_history", [])):
                 cible["balance_history"].append(entry)
             if c == "blessings": appliquer_pierre(cible, txt, rap, n)
+            elif c in ("hunters", "weapons", "sjw_skills", "shadows", "artifact_sets"):
+                pc = appliquer_nombres(cible, entry, rap)
+                cible["balance_changes"] = [x for x in cible.get("balance_changes", []) if x["url"] != entry["url"] or x["line"] not in {y["line"] for y in pc}] + pc
             ch.append({"category": c, "id": cible["id"], "change": " ".join(txt.split())[:160]})
         else:
             if c and nom: non_trouves.append(f"{n['date']} {c} {nom}")

@@ -1,5 +1,5 @@
 # Rapport de contrôle de la base — 2026-11-16
-Total : 1319 entrées, **0 erreur(s)**, 2090 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
+Total : 1319 entrées, **0 erreur(s)**, 2078 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
 
 | Fichier | Entrées | Erreurs | Avertissements |
 | --- | ---: | ---: | ---: |
@@ -11,11 +11,11 @@ Total : 1319 entrées, **0 erreur(s)**, 2090 avertissement(s). Généré par `pi
 | hunters | 66 | 0 | 0 |
 | mode_rewards | 15 | 0 | 30 |
 | netmarble_notes | 686 | 0 | 1372 |
-| patches | 35 | 0 | 73 |
+| patches | 35 | 0 | 68 |
 | proof_modifiers | 17 | 0 | 34 |
 | rates | 12 | 0 | 12 |
 | shadows | 15 | 0 | 0 |
-| sjw_skills | 105 | 0 | 61 |
+| sjw_skills | 105 | 0 | 54 |
 | stats | 16 | 0 | 64 |
 | statues | 5 | 0 | 5 |
 | subjugation_support | 18 | 0 | 36 |
@@ -27,4 +27,4 @@ Avertissements par type (à suivre dans le temps) :
 - 776 × name.fr vide
 - 91 × source non URL (capture ou texte)
 - 60 × pierre sans effets
-- 55 × changes : id introuvable dans …
+- 50 × changes : id introuvable dans …

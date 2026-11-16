@@ -184,6 +184,17 @@
         "section": "Shadow Leader Skill Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShadow's Authority\n(Leader Skill)\nBased on General rank\n\n(Values Increased)\n\nAll team members' Attack and Critical Hit Damage increase by 5% 10%"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "All team members' Attack and Critical Hit Damage increase by 5% 10%",
+        "old": "5",
+        "new": "10",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      }
     ]
   },
   {
@@ -534,6 +545,17 @@
         "section": "Shadow Leader Skill Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShadow's Authority\n(Leader Skill)\nBased on General rank\n\n(Values Increased)\n\nAll team members' Basic Skill damage increases by 12% 24%"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "All team members' Basic Skill damage increases by 12% 24%",
+        "old": "12",
+        "new": "24",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      }
     ]
   },
   {
@@ -720,6 +742,17 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
         "section": "Shadow Leader Skill Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShadow's Authority\n(Leader Skill)\nBased on General rank\n\n(Values Increased)\n\nAll team members' Attack increases by 7% 18%"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "All team members' Attack increases by 7% 18%",
+        "old": "7",
+        "new": "18",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
       }
     ]
   },
@@ -1430,7 +1463,8 @@
         "section": "Shadow Leader Skill Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShadow's Authority\n(Leader Skill)\nBased on General rank\n\n(New Effect Added)\n\nAll team members' Defense increases by 18%"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "jima",
@@ -1616,6 +1650,17 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
         "section": "Shadow Leader Skill Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShadow's Authority\n(Leader Skill)\nBased on General rank\n\n(Values Increased)\n\nAll team members' Attack increases by 5% 13%"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "All team members' Attack increases by 5% 13%",
+        "old": "5",
+        "new": "13",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
       }
     ]
   },
@@ -1804,6 +1849,17 @@
         "section": "Shadow Leader Skill Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShadow's Authority\n(Leader Skill)\nBased on General rank\n\n(Values Increased)\n\nAll team members' Ultimate Skill Damage increases by 9% 24%"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "All team members' Ultimate Skill Damage increases by 9% 24%",
+        "old": "9",
+        "new": "24",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      }
     ]
   },
   {
@@ -1989,6 +2045,17 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
         "section": "Shadow Leader Skill Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShadow's Authority\n(Leader Skill)\nBased on General rank\n\n(Values Increased)\n\nAll team members' Mana Power increases by 12% 24%"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "All team members' Mana Power increases by 12% 24%",
+        "old": "12",
+        "new": "24",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
       }
     ]
   },
@@ -2176,7 +2243,8 @@
         "section": "Shadow Leader Skill Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShadow's Authority\n(Leader Skill)\nBased on General rank\n\n(New Effect Added)\n\nAll team members' Max HP increases by 18%"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "tusk",
@@ -2362,6 +2430,17 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
         "section": "Shadow Leader Skill Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShadow's Authority\n(Leader Skill)\nBased on General rank\n\n(Values Increased)\n\nAll team members' Core Attack skill damage increases by 40% 60%"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "All team members' Core Attack skill damage increases by 40% 60%",
+        "old": "40",
+        "new": "60",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
       }
     ]
   },

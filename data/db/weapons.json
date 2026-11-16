@@ -3629,7 +3629,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement 0\n\n- [Shield]\n\nCreates a [Shield] equal to 20% of the user’s Max HP.\n\n- [Storm of White Flames]\n\nIncreases the user’s Attack by 8%.\n\nCreates a lightning that deals damage equal to 120% of the user’s Attack in nearby areas every 0.75 second.\n\n- [Shield]\n\nCreates a [Shield] equal to 50% of the user’s Max HP.\n\n- [Storm of White Flames]\n\nIncreases the user’s Attack by 12%.\n\nCreates a lightning that deals damage equal to 200% of the user’s Attack in nearby areas every 0.75 second.\n\nAdvancement 1\n\n- [Stroke of Lightning]\n\nDeals damage equal to 60% of Attack.\n\n- [Stroke of Lightning]\n\nDeals damage equal to 100% of Attack.\n\nAdvancement 3\n\n-\n\n- The damage of [Storm of White Flames] increases by 30%. (New)\n\n- Wind damage increases by 10% while [Storm of White Flames] is active. (New)\n\nAdvancement 5\n\n- [Final Thunderbolt]\n\nApplies upon a successful [Counterattack].\n\n- [Benediction of the White Flames] Applies when [Counterattack] fails.\n\n- [Final Thunderbolt]\n\nA large lightning bolt falls on the target dealing damage equal to 800% of the user’s Attack to nearby enemies.\n\n- When [Lightning] hits it applies the [Benediction of White Flames] effect and [Final Thunderbolt].\n\n- [Final Thunderbolt]\n\nA large lightning bolt falls on the target dealing damage equal to 1,600% of the user’s Attack to nearby enemies.\n\n- [Stroke of Lightning] effect enhancement (New)\n\n[Stroke of Lightning] is enhanced.\n\nEach time the user hits the same target 3 time(s) it applies the [Stroke of Lightning] effect on the target.\n\n- [Stroke of Lightning]\n\nDeals damage equal to 200% of the user’s Attack.\n\nCooldown: 0.3 second(s)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "demon-knights-spear",
@@ -3882,7 +3883,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "Category\n\nChanged\n\nTier 0\n\n(Full Bloom New Effect Added)\n\n[Full Bloom]\nIt also increases the usage speed of Plum Flower Swift Flight by 20%\nIncreases Plum Flower Swift Flight damage by 20%\nIncreases Attack by 4%\nThe user’s Critical Hit Rate increases by 4%\nDuration : 8 second(s)\n\nTier 1\n\n(New Effect Added)\n\nThe [Full Bloom] effect is enhanced.\n\n[Full Bloom]\nIncreases [Plum Flower Swift Flight]‘s usage speed by 20%\nIncreases [Plum Flower Swift Flight]‘s damage by 50%\nIncreases [Plum Flower Swift Flight]‘s Critical Hit damage by 50%\nIncreases Attack by 4%\nIncreases Critical Hit Rate by 4%\nDuration : 8 second(s)\n\nTier 5\n\n(New Effect Added)\n\nThe [Full Bloom] effect is enhanced.\n\n[Full Bloom]\nIncreases [Plum Flower Swift Flight]‘s usage speed by 20%\nIncreases [Plum Flower Swift Flight]‘s damage by 80%\nIncreases [Plum Flower Swift Flight]‘s Critical Hit damage by 80%\nIncreases [Plum Flower Swift Flight]‘s Dark damage by 80%\nIncreases Attack by 4%\nIncreases Critical Hit Rate by 4%\nDuration : 8 second(s)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "divine-quarterstaff",
@@ -4010,7 +4012,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nHeavenly Order Strike\n\nDamage: 1556% of Jinwoo’s Attack\n\nDamage: 2178% of Jinwoo’s Attack"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "dragonscale-broadsword",
@@ -4356,7 +4359,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 1\n\n[High Fever]\n\n- Jinwoo’s Fire damage increases by 50% when he hits a target with the [High Fever] effect.\n\n- The user regains 10% of their MP 1 time when they hit a target with the [High Fever] effect applied.\n\nDuration: 8 second(s) (stacking up to 1 times)\n\n[High Fever]\n\n- Jinwoo’s Fire damage increases by 70% when he hits a target with the [High Fever] effect.\n\n- The user regains 10% of their MP 1 time when they hit a target with the [High Fever] effect applied.\n\nDuration: 8 second(s) (stacking up to 1 times)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "foress-wish",
@@ -4679,7 +4683,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 1\n\n[Golden Wound]\n\n- When the user attacks a target with the [Golden Wound] effect applied it increases the user’s Light damage by 99.99%.\n\n- When the user attacks a target with the [Golden Wound] effect applied, the user recovers 9.99% of their HP 1 time.\n\nBeing hit by a Light attack removes this effect.\n\nDuration: 9.9 second(s)\n\n[Golden Wound]\n\n- When the user attacks a target with the [Golden Wound] effect applied it increases the user’s Light damage by 110%.\n\n- When the user attacks a target with the [Golden Wound] effect applied, the user recovers 9.99% of their HP 1 time.\n\nBeing hit by a Light attack removes this effect.\n\nDuration: 9.9 second(s)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "grave-keepers-scythe",
@@ -6048,7 +6053,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "Category\n\nChanged\n\nBasic Attack\n\n※ Elemental Accumulation amount increased\n\nCore Attack\n\n※ Elemental Accumulation amount increased\n\n[Elemental Accumulation : Low Medium]\n\nTier 0\n\n(New effect added)\n\nUsing Lunar Wind restores 100% of the user’s Core Gauge and activates the [Spirit Fury] effect\n\n※ The actual Elemental Accumulation for Moonlit Gale’s basic attack has been increased, while its tooltip description remains unchanged."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "moonshadow",
@@ -6141,7 +6147,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 98% of Jinwoo’s Attack\n\nStage 2 Damage: 102% of Jinwoo’s Attack\n\nStage 3 Damage: 108% of Jinwoo’s Attack\n\nStage 1 Damage: 190% of Jinwoo’s Attack\n\nStage 2 Damage: 195% of Jinwoo’s Attack\n\nStage 3 Damage: 200% of Jinwoo’s Attack\n\nAdvancement Tier 5\n\nIncreases the user’s damage by 15% while the time slowing effect is active.\n\nIncreases the user and their team members’ damage by 15% while the time slowing effect is active."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "naga-guardian-dragons-trident",
@@ -6657,7 +6664,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 93% of Jinwoo’s Attack\n\nStage 2 Damage: 97% of Jinwoo’s Attack\n\nStage 3 Damage: 103% of Jinwoo’s Attack\n\nStage 1 Damage: 145% of Jinwoo’s Attack\n\nStage 2 Damage: 150% of Jinwoo’s Attack\n\nStage 3 Damage: 156% of Jinwoo’s Attack\n\nAdvancement Tier 0\n\n- When the third attack of the [Basic Attack] hits, inflicts the [Firebird Soul] effect.\n\n- Increases [Flame Shot] damage by 70% per [Firebird Soul] instance.[\n\n- When the [Basic Attack] hits 3 times it inflicts the pFirebird Soul] effect.\n\n- Increases [Flame Shot] damage by 80% per [Firebird Soul] instance.[\n\nAdvancement Tier 1\n\n -\n\n- When [Flame Shot] hits, fills the user’s Core Gauge by 50%."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "radiru-clans-double-edged-spear",
@@ -7479,7 +7487,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 116% of Jinwoo’s Attack\n\nStage 2 Damage: 120% of Jinwoo’s Attack\n\nStage 3 Damage: 128% of Jinwoo’s Attack\n\nStage 1 Damage: 174% of Jinwoo’s Attack\n\nStage 2 Damage: 180% of Jinwoo’s Attack\n\nStage 3 Damage: 187% of Jinwoo’s Attack"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "skadi",
@@ -7500,7 +7509,7 @@
         "tier": 0,
         "text": {
           "fr": "",
-          "en": "When Winter Hunting is used, it activates Last Hunt and applies the [Skadi's Blessing] effect for 7 second(s). When Winter Hunting hits, it applies the [Skadi's Curse] effect to the target. Last Hunt <p style=\"margin-left: 20px;\">Deals damage equal to 100% of the user's Attack to targets with the [Skadi's Curse] effect. Inflicts the [Freeze] effect. When the Last Hunt skill hits, it removes the [Skadi's Curse] effect.</p> [Skadi's Blessing] <p style=\"margin-left: 20px;\">Increases the user's Attack by 3%. Increases the user's Defense Penetration by 3%. Duration: 10 second(s)</p> [Skadi's Curse] <p style=\"margin-left: 20px;\">Duration: 7 second(s)</p> [Freeze] <p style=\"margin-left: 20px;\">Interrupts the target. Duration: 2 second(s)</p>"
+          "en": "When Winter Hunting is used, it activates Last Hunt and applies the [Skadi's Blessing] effect for 7 second(s). When Winter Hunting hits, it applies the [Skadi's Curse] effect to the target. Last Hunt <p style=\"margin-left: 20px;\">Deals damage equal to 100% of the user's Attack to targets with the [Skadi's Curse] effect. Inflicts the [Freeze] effect. When the Last Hunt skill hits, it removes the [Skadi's Curse] effect.</p> [Skadi's Blessing] <p style=\"margin-left: 20px;\">Increases the user's Attack by 3%. Increases the user's Defense Penetration by 3%. Duration: 10 second(s)</p> [Skadi's Curse] <p style=\"margin-left: 20px;\">Duration: 15 second(s)</p> [Freeze] <p style=\"margin-left: 20px;\">Interrupts the target. Duration: 2 second(s)</p>"
         }
       },
       {
@@ -7535,7 +7544,7 @@
         "tier": 5,
         "text": {
           "fr": "",
-          "en": "Enhances the Last Hunt skill. <p style=\"margin-left: 20px;\">Deals damage equal to 500% of the user's Attack to target with the [Skadi's Curse] effect. Inflicts the [Freeze] effect. When the Last Hunt skills hits, it removes the [Skadi's Curse] effect.</p> [Freeze] <p style=\"margin-left: 20px;\">Interrupts the target. Duration: 3 second(s)</p>"
+          "en": "Enhances the Last Hunt skill. <p style=\"margin-left: 20px;\">Deals damage equal to 1000% of the user's Attack to target with the [Skadi's Curse] effect. Inflicts the [Freeze] effect. When the Last Hunt skills hits, it removes the [Skadi's Curse] effect.</p> [Freeze] <p style=\"margin-left: 20px;\">Interrupts the target. Duration: 3 second(s)</p>"
         }
       }
     ],
@@ -7618,6 +7627,35 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "※ The [Skadi's Curse] effect has been enhanced, and landing the [Last Hunt] skill will no longer consume the [Skadi's Curse] effect.\n\nCategory\n\nChanged\n\nTier 0\n\n(Last Hunt value increased, changed from Fixed Damage to Skill Damage, select tooltips removed)\n\n[Last Hunt]\nDeals Water elemental damage equal to 200% 2000%\nCounts as a Basic Skill\nWhen the Last Hunt Skill hits it removes the [Skadi’s Curse] effect.\n\n(New Skadi's Curse effect added and effect duration extended)\n\n[Skadi’s Curse]\nIncreases Water Overload damage taken by 10%\nDuration : 7 15 second(s)\n\nTier 1\n\n(Effect Value Increase)\n\n[Skadi’s Domain]\nWhen any attack lands while in the domain, it deals damage equal to  500% 1000% of the attacker’s Attack. (Cooldown: 0.5 second(s))\n\nTier 3\n\n(New effect added)\n\nWhen all the user’s equipped weapons are Water element weapons, [Skadi’s Blessing]’s stack maximum increases to 4 instances\n\n[Skadi’s Blessing]\nIncreases Winter Hunting damage by 50%\n\nTier 5\n\n(Tooltip updated)\n\nDeals damage equal to 5000% of the user’s Attack to targets with the [Skadi’s Curse] effect.\n\n[Last Hunt]\nDeals Water elemental damage equal to 5000% of the user’s Attack\nThe [Freeze] effect is activated\nCounts as a Basic Skill\nWhen the Last Hunt skill hits, it removes the [Skadi’s Curse] effect\n\n(New effect added)\n\n[Skadi’s Curse] is enhanced\n\n[Skadi’s Curse]\nIncreases Water Overload damage taken by 10%\nAdditionally activates [Deep Erosion]\n\n[Deep Erosion]\nIncreases Elemental Weakness damage taken by 24%\nDuration : 15 second(s)"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "Deals Water elemental damage equal to 200% 2000%",
+        "old": "200",
+        "new": "2000",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 7 15 second(s)",
+        "old": "7",
+        "new": "15",
+        "unit": "second(s)",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "applique"
+      },
+      {
+        "line": "When any attack lands while in the domain, it deals damage equal to 500% 1000% of the attacker’s Attack. (Cooldown: 0.5 second(s))",
+        "old": "500",
+        "new": "1000",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "applique"
       }
     ]
   },
@@ -7718,7 +7756,16 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nChanged\n\nWeapon Type\n\n(Weapon Type Changed)\n\nSword Dagger\n\n※ Please note that only the weapon types for SSR Soma & Asura will be changed. This modification will only affect certain 'Challenge Medals' achievement conditions and the effect of the 'Advanced Dagger Technique' Blessing Stone."
+      }
+    ],
+    "balance_changes": []
   },
   {
     "id": "spooky-pumpkin",
@@ -8064,6 +8111,17 @@
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "Category\n\nChanged\n\nTier 0\n\n(Attack Increased)\n\nUsing Judgement Time transforms their Core Attack into Time to Hunt for 6 second(s) and increases damage by 100% 300%\n\nTier 1\n\n([Light] Damage Taken Increase effect and extended its duration added)\n\n[Sunder]\n\nIncreases [Break] effectiveness by 25%\n\nIncreases the target’s Light damage taken by 25%\n\nDuration: 3 second(s) 5 second(s)\n\nTier 5\n\n(Activation requirements for the [Judgment Overture] effect eased)\n\nAfter Judgment Time hits if a Core Attack is the next attack and it hits, it inflicts [Judgment Overture] to the target.\n\nWhen Judgement Time hits it inflicts the [Judgment Overture] effect to the target\n\nWhen [Judgment Overture] has stacked 3 times it becomes 1 instance of [Destroy] (Max: 1 time)"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "Using Judgement Time transforms their Core Attack into Time to Hunt for 6 second(s) and increases damage by 100% 300%",
+        "old": "100",
+        "new": "300",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      }
     ]
   },
   {
@@ -8192,7 +8250,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 70% of Jinwoo’s Attack\n\nStage 2 Damage: 73% of Jinwoo’s Attack\n\nStage 3 Damage: 77% of Jinwoo’s Attack\n\nStage 1 Damage: 102% of Jinwoo’s Attack\n\nStage 2 Damage: 104% of Jinwoo’s Attack\n\nStage 3 Damage: 108% of Jinwoo’s Attack"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "transfiguration-key",
@@ -8299,7 +8358,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "Category\n\nChanged\n\nBasic Attack\n\n※ Elemental Accumulation amount increased\n\nCore Attack\n\n※ Elemental Accumulation\n\n[Elemental Accumulation : Low Medium]\n\n※ The actual Elemental Accumulation for Transfiguration Key's basic attack has been increased, while its tooltip description remains unchanged"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "truth-demon-knights-spear",
@@ -8427,7 +8487,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 5\n\n[Holy Knight’s Curse]\n\n - At 5 instances it deals additional damage equal to 1000% of the user’s Attack.\n\n - When the additional damage is taken the effect is removed.\n\n - Duration: 60 second(s)\n\n[Holy Knight’s Curse]\n\n - At 3 instances it deals additional damage equal to 2000% of the user’s Attack.\n\n - When the additional damage is taken the effect is removed.\n\n - Duration: 60 second(s)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "truth-kasakas-venom-fang",
@@ -8561,7 +8622,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 5\n\nThe damage of [Vanishing Shade] increases by 150%.\n\nThe damage of [Vanishing Shade] increases by 200%."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "vulcans-rage",
@@ -8582,7 +8644,7 @@
         "tier": 0,
         "text": {
           "fr": "",
-          "en": "When the user uses Fire of Destruction it applies the [Vulcan's Blessing] effect. [Vulcan's Blessing] It creates a [Shield] equal to 10% of the user's Attack and applies the [Concentration] effect for every Basic Attack and Core Attack that hits the enemy. Duration: 10 second(s). [Concentration] When the duration ends or the effect is removed, [Vulcan's Blessing] explodes and deals damage equal to 400% of the user's Attack (stacking up to 20 times). When it explodes, it deals additional 20% damage per instance of [Concentration]. When [Vulcan's Blessing] is at 20 instances, [Vulcan's Blessing] instantly explodes and recreates [Shield] equal to 10% of the user's Attack. Duration: Infinite"
+          "en": "When the user uses Fire of Destruction it applies the [Vulcan's Blessing] effect. [Vulcan's Blessing] It creates a [Shield] equal to 10% of the user's Attack and applies the [Concentration] effect for every Basic Attack and Core Attack that hits the enemy. Duration: 10 second(s). [Concentration] When the duration ends or the effect is removed, [Vulcan's Blessing] explodes and deals damage equal to 1000% of the user's Attack (stacking up to 10 times). When it explodes, it deals additional 100% damage per instance of [Concentration]. When [Vulcan's Blessing] is at 20 instances, [Vulcan's Blessing] instantly explodes and recreates [Shield] equal to 10% of the user's Attack. Duration: Infinite"
         }
       }
     ],
@@ -8659,6 +8721,68 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/51707",
         "section": "Sung Jinwoo Weapon Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 140% of Jinwoo’s Attack\n\nStage 2 Damage: 146% of Jinwoo’s Attack\n\nStage 3 Damage: 155% of Jinwoo’s Attack\n\nStage 1 Damage: 245% of Jinwoo’s Attack\n\nStage 2 Damage: 250% of Jinwoo’s Attack\n\nStage 3 Damage: 260% of Jinwoo’s Attack\n\nAdvancement Tier 0\n\n- [Concentration]\n\nWhen the duration ends or the effect is removed, [Vulcan’s Blessing] explodes and deals damage equal to 300% of the user’s Attack (stacking up to 20 times).\n\n- When it explodes, it deals additional 15% damage per instance of [Concentration].\n\n- [Concentration]\n\nWhen the duration ends or the effect is removed, [Vulcan’s Blessing] explodes and deals damage equal to 400% of the user’s Attack (stacking up to 20 times).\n\n- When it explodes, it deals additional 20% damage per instance of [Concentration].\n\n- When [Concentration] is at 20 instances, [Vulcan’s Blessing] instantly explodes and recreates [Shield] equal to 10% of the user’s Attack.\n\nDuration: Infinite\n\nAdvancement Tier 5\n\nWhile [Shield] is in effect, the damage of [Fire of Destruction] increases by 40%.\n\nWhile [Shield] is in effect, the damage of [Fire of Destruction] increases by 50%."
+      },
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nChanged\n\nTier 0\n\n(New effect: Vulcan’s Blessing added)\n\n[Vulcan’s Blessing]\n\nIncreases [Basic Attack, Core Attack] damage by 100%\n\n(Concentration Stats Increased & Max Stacks Reduced )\n\n[Concentration]\n\nWhen the duration ends or the effect is removed, [Vulcan’s Blessing] detonates and deals damage equal to 400% 1000% of the user’s Attack (stacking up to 20 10 times)\n\nWhen it explodes, it deals additional 20% 100% damage per [Concentration] instance\n\nWhen [Vulcan’s Blessing] detonates, it removes all stacked instances of [Concentration]\n\nAt 20 10 instances of [Concentration],\n\n[Vulcan’s Blessing] instantly detonates and forms a [Shield] equal to 10% of the user’s Attack\n\nDuration: Infinite\n\nTier 1\n\n(New effect added)\n\nEquipping all Fire weapons increases Fire of Destruction’s damage by 100%\n\nTier 3\n\n(New Effect on Rage Added & Duration Extended)\n\n[Rage]\n\nThe user’s [Basic Attack and Core Attack] damage increases by 200%\n\nThe user’s Fire damage dealt is increased by 20%\n\nDuration: 15 20 second(s)\n\nTier 5\n\n(Buff Range Expanded & Stats Increased While Shield is Active)\n\nWhile a Shield is active, the user’s  Basic Attack and Core Attack and Fire of Destruction damage increases by 50% 200%\n\n(New effect added)\n\nUsing a Basic Attack while [Rage] is active allows the user to only use Stage 3 Basic Attacks\n\n※ The attack speed of Vulcan's Rage's Basic  Attack and Core Attack has been increased compared to before."
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "When the duration ends or the effect is removed, [Vulcan’s Blessing] detonates and deals damage equal to 400% 1000% of the user’s Attack (st",
+        "old": "400",
+        "new": "1000",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "applique"
+      },
+      {
+        "line": "When the duration ends or the effect is removed, [Vulcan’s Blessing] detonates and deals damage equal to 400% 1000% of the user’s Attack (st",
+        "old": "20",
+        "new": "10",
+        "unit": "times",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "applique"
+      },
+      {
+        "line": "When it explodes, it deals additional 20% 100% damage per [Concentration] instance",
+        "old": "20",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "applique"
+      },
+      {
+        "line": "At 20 10 instances of [Concentration],",
+        "old": "20",
+        "new": "10",
+        "unit": "",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration: 15 20 second(s)",
+        "old": "15",
+        "new": "20",
+        "unit": "second(s)",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "a_verifier"
+      },
+      {
+        "line": "While a Shield is active, the user’s Basic Attack and Core Attack and Fire of Destruction damage increases by 50% 200%",
+        "old": "50",
+        "new": "200",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "a_verifier"
       }
     ]
   },
@@ -8872,7 +8996,8 @@
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "Category\n\nChanged\n\nTier 5\n\n(New effect added)\n\nWhen all the user’s equipped weapons are Dark element weapons and Winchester Roke’s Basic Attack is used, it activates the Core Attack"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "winter-fang",
@@ -9005,6 +9130,17 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
         "section": "Sung Jinwoo Weapon Balance Adjustments",
         "text_en": "Category\n\nChanged\n\nTier 5\n\n(New effect added and value increased)\n\n[Dusk, Silver Mark, and Isolation] effects are enhanced\n\n[Silver Mark]\nThe damage of [White Wolf’s Night] increases by 70% 80%\n\n[Isolation]\nIncreases damage dealt by 40%\nIncreases Critical Hit damage by 40%\nDuration : Infinite"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "The damage of [White Wolf’s Night] increases by 70% 80%",
+        "old": "70",
+        "new": "80",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
       }
     ]
   },

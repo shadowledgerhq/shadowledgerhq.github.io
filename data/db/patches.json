@@ -1659,7 +1659,7 @@
       },
       {
         "category": "artifact_sets",
-        "id": "kamish-s-obsession",
+        "id": "set-of-kamishs-obession",
         "change": "Category Before Changed 8 Set Effect The [Obsession] effect is enhanced to become the [Burning Obsession] effect [Burning Obsession] Increases the user and the "
       },
       {
@@ -1808,7 +1808,7 @@
       },
       {
         "category": "artifact_sets",
-        "id": "kamish-s-obsession",
+        "id": "set-of-kamishs-obession",
         "change": "Category Changed 8 set effects (New effect added) Increases allies’ Overload damage by 15% in [Team Fight] Mode (stacks up to 2 times)"
       },
       {
@@ -1838,7 +1838,7 @@
       },
       {
         "category": "sjw_skills",
-        "id": "multistrike--rush",
+        "id": "dagger-rush",
         "change": "Rune Category Changed Explosion (Fire) (New effect added) Explosion damage increases by 60% / 100% / 160% / 180% while [Shield] is active"
       },
       {
@@ -1895,12 +1895,12 @@
       },
       {
         "category": "weapons",
-        "id": "ssr-vulkan-s-rage",
+        "id": "vulcans-rage",
         "change": "Category Changed Tier 0 (New effect: Vulcan’s Blessing added) [Vulcan’s Blessing] Increases [Basic Attack, Core Attack] damage by 100% (Concentration Stats Incr"
       },
       {
         "category": "weapons",
-        "id": "ssr-soma-asura",
+        "id": "soma-and-asura",
         "change": "Category Changed Weapon Type (Weapon Type Changed) Sword Dagger ※ Please note that only the weapon types for SSR Soma & Asura will be changed. This modification"
       },
       {
@@ -2089,7 +2089,7 @@
       },
       {
         "category": "artifact_sets",
-        "id": "kamish-s-obsession",
+        "id": "set-of-kamishs-obession",
         "change": "Category Changed 8 Set Effect (New effect added) In [Team Fight] mode, when an [Elemental Stacker] class hunter equips this, it increases allies’ Overload damag"
       },
       {

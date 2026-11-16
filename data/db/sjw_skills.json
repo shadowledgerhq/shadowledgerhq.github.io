@@ -235,7 +235,8 @@
         "section": "Rune Skill Balance Adjustment",
         "text_en": "Rune\n\nBefore\n\nChanged\n\nFull Moon Wheel\n\nMP Consumption: 100\n\nDamage dealt to Normal Monsters increases by 45%/75%/120%.\n\nMP Consumption: 80\n\nDamage dealt to Boss or Elite monsters 45%/75%/120%\n\nMultiply\n\nMP Consumption: 50\n\nDamage: 455%/498%/612% of Jinwoo’s Attack\n\nWhen this skill hits an Elite or higher monster, there is a 25%/35%/50% chance that this skill’s cooldown will be reset (Cooldown: 0.5 second(s))\n\nMP Consumption: 30\n\nDamage: 546%/598%/734% of Jinwoo’s Attack\n\nWhen this skill hits an Elite or higher monster, there is a 50%/60%/70% chance that this skill’s cooldown will be reset (Cooldown: 0.5 second(s))\n\nFlame Slash\n\nMP Consumption: 100\n\nDamage: 424%/ 567%/ 787% of Jinwoo’s Attack\n\nMP Consumption: 80\n\nDamage: 551%/ 737%/ 1023% of Jinwoo’s Attack\n\nWhirlwind Rush\n\nMP Consumption: 100\n\nMP Consumption: 80"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "crushing-blow--chained-break",
@@ -453,7 +454,8 @@
         "section": "Rune Skill Balance Adjustment",
         "text_en": "Rune\n\nBefore\n\nChanged\n\nChained Break\n\nMP Consumption: 100\n\nMP Consumption: 80\n\nEnlightened Break\n\nMP Consumption: 100\n\nMP Consumption: 80\n\nCountering Break\n\nMP Consumption: 100\n\nMP Consumption: 80\n\nAscension Break\n\nMP Consumption: 100\n\nMP Consumption: 80"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "dagger-toss--detonation",
@@ -678,7 +680,8 @@
         "section": "Rune Skill Balance Adjustment",
         "text_en": "Rune\n\nBefore\n\nChanged\n\nDetonation\n\nMP Consumption: 100\n\nDamage per dagger: 97%/136%/177% of Jinwoo’s Attack\n\n[Burn] Deals damage equal to 30%/50%/80% of Attack (stacking up to 1/2/3 times)\n\nMP Consumption: 80\n\nDamage per dagger: 136%/190%/248% of Jinwoo’s Attack\n\n[Burn] Deals damage equal to 50%/100%/150% of Attack (stacking up to 1/2/3 times)\n\nElectric Shock\n\nMP Consumption: 100\n\nMP Consumption: 80\n\nAscension\n\nMP Consumption: 100\n\nDamage: 500%/545%/622% of Jinwoo’s Attack\n\nMP Consumption: 80\n\nDamage: 700%/763%/871% of Jinwoo’s Attack\n\nBombardment\n\nMP Consumption: 100\n\nMP Consumption: 80"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "multistrike--rush",
@@ -904,7 +907,8 @@
         "section": "Rune Skill Balance Adjustment",
         "text_en": "Rune\n\nBefore\n\nChanged\n\nRush\n\nMP Consumption: 100\n\nDamage: 520%/655%/900% of Jinwoo’s Attack\n\nMP Consumption: 80\n\nDamage: 624%/786%/1080% of Jinwoo’s Attack\n\nPercussion\n\nMP Consumption: 100\n\nDamage: 628%/768%/947% of Jinwoo’s Attack\n\nMP Consumption: 80\n\nDamage: 754%/922%/1136% of Jinwoo’s Attack\n\nIllusion\n\nMP Consumption: 100\n\nDamage: 326%/454%/534% of Jinwoo’s Attack\n\nEach time this skill hits, it increases Jinwoo’s damage by 2%/3%/4% (stacking up to 2/3/4 times).\n\nMP Consumption: 80\n\nDamage: 391%/545%/641% of Jinwoo’s Attack\n\nEach time this skill hits, it increases Jinwoo’s damage by 9%/10%/11% (stacking up to 2/3/4 times).\n\nPummel\n\nMP Consumption: 50\n\nDamage: 495%/705%/866% of Jinwoo’s Attack\n\nMP Consumption: 40\n\nDamage: 545%/776%/953% of Jinwoo’s Attack"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "vertical-arts--sequent-explosions",
@@ -1136,7 +1140,8 @@
         "section": "Rune Skill Balance Adjustments",
         "text_en": "Rune Category\n\nChanged\n\nGale\n\n(Wind)\n\n(Increased Transcendent grade values and added a new effect )\n\nThe user’s damage dealt to Normal monsters increases by 10% / 15% / 20% / 22.5% 25% (Up to 10 targets) based on the number of targets this skill hits\n\n(Always applied as a 10-stack effect to bosses and elite monsters)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "cutting-rush--annihilation",
@@ -1342,7 +1347,8 @@
         "section": "Rune Skill Balance Adjustment",
         "text_en": "Rune\n\nBefore\n\nAfter\n\nAnnihilation\n\nDamage: 680% / 692% / 730% of Jinwoo’s Attack\n\nDamage: 767% / 804% / 872% of Jinwoo’s Attack"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "vital-strike--decimate",
@@ -1563,7 +1569,8 @@
         "section": "Rune Skill Balance Adjustments",
         "text_en": "Rune Category\n\nChanged\n\nOn Point\n\n(Water)\n\n(New effect added)\n\nOn Point increases damage by 60% / 100% / 160% / 180% while [Shield] is active"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "mutilate--cold-storm",
@@ -1781,7 +1788,8 @@
         "section": "Rune Skill Balance Adjustment",
         "text_en": "Rune\n\nBefore\n\nChanged\n\nCold Storm\n\nDamage: 883%/1328%/1992% of Jinwoo’s Attack\n\n[Frostbite] Deals damage equal to 150%/250%/400% of the user’s Attack\n\nDamage: 927%/1394%/2092% of Jinwoo’s Attack\n\n[Frostbite] Deals damage equal to 250%/400%/600% of the user’s Attack\n\nPhantom\n\nMP Consumption: 75\n\nDamage: 393%/480%/635% of Jinwoo’s Attack and Jinwoo’s Max HP\n\nMP Consumption: 60\n\nDamage: 629%/768%/1016% of Jinwoo’s Attack and Jinwoo’s Max HP"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "deaths-dance--earth-shock",
@@ -1994,7 +2002,8 @@
         "section": "Rune Skill Balance Adjustments",
         "text_en": "Rune Category\n\nChanged\n\nHigh-speed Rotation\n\n(Wind)\n\n(New effect added)\n\nWhen your Attack hits an enemy that doesn’t have a Break Gauge, it increases the damage of High-speed Rotation by 90% / 160% / 240% / 280%  for 7 second(s)\n\nEruption\n\n(Dark)\n\n(New effect added)\n\nWhen this skill hits it grants an effect on Sung Jinwoo that increases his Core Attack damage by 90% / 160% / 240% / 280% for 7 second(s)\n\nWildfire\n\n(Fire)\n\n(Effect stats increased)\n\nThe damage increases by 30% 60% / 40% 100% / 55% 160% / 70% 180%  when attacking enemies with their elemental weakness."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "the-commanders-touch--black-hole",
@@ -2213,7 +2222,8 @@
         "section": "Rune Skill Balance Adjustment",
         "text_en": "Rune\n\nBefore\n\nChanged\n\nBlack Hole\n\nDamage: 22% / 25% / 30% of Jinwoo’s Attack\n\nDamage: 30% / 37% / 50% of Jinwoo’s Attack"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "armor-break--multishadow-strike",
@@ -2676,7 +2686,8 @@
         "section": "Rune Skill Balance Adjustments",
         "text_en": "Rune Category\n\nChanged\n\nDouble Down\n\n(Light)\n\n(New effect added)\n\nDouble Down damage is increased by an additional  90% /160% / 240% / 280% in Team Fight Mode"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "rune--blazing-annihilation",
@@ -4194,7 +4205,7 @@
     "kind": "skill",
     "name": {
       "fr": "Foulée de l'ombre",
-      "en": "",
+      "en": "Shadow Step",
       "ko": ""
     },
     "rarity": null,
@@ -4220,7 +4231,8 @@
     "text": {
       "fr": "Jinwoo trouve une ouverture et se place derrière l'ennemi pour lui tendre un piège. Condition d'utilisation : réussir une [Évasion extrême], déclencher l'état [Bris] ou utiliser une [compétence d'ombre]. Condition spéciale : s'active lorsqu'un successeur [rejoint le combat]. [Foulée de l'ombre] s'active après utilisation. L'ennemi est grandement ralenti pendant 3 secondes. La défense de l'ennemi touché est réduite de […]"
     },
-    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "name_en_source": "notes Netmarble 22/11/2024 (« core QTE skill Shadow Step ») : déduit, à vérifier"
   },
   {
     "id": "qte--frappe-de-glace",
@@ -4408,7 +4420,7 @@
     "kind": "skill",
     "name": {
       "fr": "Ruée de dague",
-      "en": "",
+      "en": "Dagger Rush",
       "ko": ""
     },
     "rarity": null,
@@ -4427,14 +4439,24 @@
     "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée)."
+    "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée).",
+    "balance_history": [
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune Category\n\nChanged\n\nExplosion\n\n(Fire)\n\n(New effect added)\n\nExplosion damage increases by 60% / 100% / 160% / 180% while [Shield] is active"
+      }
+    ],
+    "balance_changes": [],
+    "name_en_source": "notices d'équilibrage 06/2026 + notes 31/10/2024 (forum 14/…)"
   },
   {
     "id": "phantom-strike",
     "kind": "skill",
     "name": {
       "fr": "Frappe fantôme",
-      "en": "",
+      "en": "Phantom Strike",
       "ko": ""
     },
     "rarity": null,
@@ -4454,14 +4476,24 @@
     "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée)."
+    "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée).",
+    "balance_history": [
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune Category\n\nChanged\n\nQuickstrike\n\n(Wind)\n\n(Effect values and a new effect added)\n\nQuickstrike damage dealt to targets affected by [Wind][Overload] increases by  25% 40% / 35% 60% / 45% 80% / 50% 100%\n\nWhen Jinwoo or an ally successfully inflicts [Wind][Overload] it resets the cooldown of Quickstrike (Cooldown: 20 second(s))"
+      }
+    ],
+    "balance_changes": [],
+    "name_en_source": "notes 12/02/2026 (forum 14) et notice d'équilibrage 04/06/2026"
   },
   {
     "id": "piercing-thrust",
     "kind": "skill",
     "name": {
       "fr": "Poussée perforante",
-      "en": "",
+      "en": "Piercing Thrust",
       "ko": ""
     },
     "rarity": null,
@@ -4481,14 +4513,15 @@
     "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée)."
+    "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée).",
+    "name_en_source": "notes Netmarble 31/07/2025 (forum 14/92917 : « New Skill [Piercing Thrust] »)"
   },
   {
     "id": "kings-domain",
     "kind": "skill",
     "name": {
       "fr": "Domaine du roi",
-      "en": "",
+      "en": "King's Domain",
       "ko": ""
     },
     "rarity": null,
@@ -4509,7 +4542,8 @@
     "name_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Compétence ultime de Jinwoo (Niv. 23 sur le compte d'Alexis, 10+13). Nom EN officiel inconnu (id provisoire). 5 emplacements : feu, eau, vent, lumière, ténèbres. Dégâts dépendent du niveau (Tempête 7983,57 % au niv. 23)."
+    "notes": "Compétence ultime de Jinwoo (Niv. 23 sur le compte d'Alexis, 10+13). Nom EN officiel inconnu (id provisoire). 5 emplacements : feu, eau, vent, lumière, ténèbres. Dégâts dépendent du niveau (Tempête 7983,57 % au niv. 23).",
+    "name_en_source": "notes Netmarble 19/12/2024 (forum 14, « King's Domain »)"
   },
   {
     "id": "commanders-touch-ultimate",
@@ -4544,7 +4578,7 @@
     "kind": "skill",
     "name": {
       "fr": "Effondrement",
-      "en": "",
+      "en": "Collapse",
       "ko": ""
     },
     "rarity": null,
@@ -4563,14 +4597,15 @@
     "name_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Compétence QTE (onglet 2, Niv. 22 sur le compte d'Alexis), 4 emplacements de runes. Condition : réussir une attaque qui [renverse] la cible. Nom EN officiel inconnu (id provisoire)."
+    "notes": "Compétence QTE (onglet 2, Niv. 22 sur le compte d'Alexis), 4 emplacements de runes. Condition : réussir une attaque qui [renverse] la cible. Nom EN officiel inconnu (id provisoire).",
+    "name_en_source": "notes Netmarble 22/11/2024 (« skills that can activate Death or Collapse »)"
   },
   {
     "id": "qte-death",
     "kind": "skill",
     "name": {
       "fr": "Mort",
-      "en": "",
+      "en": "Death",
       "ko": ""
     },
     "rarity": null,
@@ -4589,6 +4624,7 @@
     "name_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Compétence QTE (onglet 3, Niv. 21), 4 emplacements de runes. Condition : réussir une attaque qui applique [En l'air]. Nom EN officiel inconnu (id provisoire)."
+    "notes": "Compétence QTE (onglet 3, Niv. 21), 4 emplacements de runes. Condition : réussir une attaque qui applique [En l'air]. Nom EN officiel inconnu (id provisoire).",
+    "name_en_source": "notes Netmarble 22/11/2024 (« skills that can activate Death or Collapse »)"
   }
 ]

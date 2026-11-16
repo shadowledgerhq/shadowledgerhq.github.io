@@ -219,7 +219,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nIl Bacio della Morte\n(Burst Skill)\n\n(Skill Attack Range Significantly Increased)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "alicia-blanche",
@@ -441,7 +442,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nWinter Storm\n\n(Basic 1)\n\nCooldown Reduction: 8 seconds\n\nCooldown Reduction: 5 seconds\n\nTier 1\n\nIncreases Critical Hit Rate by 20% when [Shield] is active\n\nIncreases Critical Hit Rate by 20% when [Shield] is active\n\n[Absolute Zero] applies [Winter Chill] on hit.\n\n[Winter Chill]\n\n- Deals 100% of Attack as damage every 3 seconds\n\nDuration: 30 seconds (Stacks up to 10 times)\n\nTier 3\n\nIncreases Damage Dealt to [Freeze] targets by 30%.\n\nIncreases Damage Dealt to [Freeze] targets by 30%.\n\nWhen [Frost Arrow] hits a target affected by [Winter Chill], it increases Hunter’s Attack by 12% for 60 seconds. (Stacks up to 3 times)\n\nTier 5\n\nIncreases [Bitter Cold Spear] Damage by 50% and applies [Freeze] on hit.\n\nIncreases [Bitter Cold Spear] Damage by 50% and applies [Freeze] on hit.\n\nIncreases Damage Dealt to targets affected by [Winter Chill] by 10% per stack of [Winter Chill].\n\n - CM Iron’s TIP: The [Winter Chill] effect applied by Alicia Blanche and Meri Laine stacks with each other, regardless of the caster."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "amamiya-mirei",
@@ -657,7 +659,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\nWhen the user has 66% or more of their maximum MP, it applies the [Kuroha’s Darkness] effect\n\nIncreases the user’s Attack by 4% for every additional 150 MP (up to 40%)\n\nWhen the user has 30% or more of their MP, it applies the [Kuroha’s Darkness] effect\n\nIncreases the user’s Attack by 6% for every additional 150 MP (up to 90%)\n\nTier 1\n\nWhile the [Possessed] effect is active, it increases the user’s Critical Hit Rate and Critical Hit damage by 20%\n\nWhen the user uses Kuroha’s Sword Technique Type 3: Wings of Night while the [Possessed] effect is active, it applies the [Deep Darkness] effect.\n\n[Deep Darkness]\n\nIncreases the user’s Attack and Critical Hit Rate by 12% (stacking up to 2 times)\n\nDuration: 10 second(s)\n\nWhen Kuroha’s Sword Technique Lethal Move: Moonless Night Overture hits, it activates the [Winter’s Edge] effect on the target\n\nWhile the [Possessed] effect is active, it increases the user’s Critical Hit Rate and Critical Hit damage by 20%\nUsing Kuroha’s Sword Technique Type 3: Wings of Night while the [Possessed] effect is active applies the [Deep Darkness] effect\n\n[Winter’s Edge]\nDeals damage equal to 100% of the user’s Attack every 3 seconds\nDuration: 30 second(s) (stacks up to 10 times)\n\n[Deep Darkness]\nIncreases Attack and Critical Hit Rate by 12% (stacks up to 2 times)\nDuration: 12 second(s)\n\nTier 2\n\nCharges the user’s Power Gauge by 40% when entering the stage\n\nWhen the user enters the stage their Power Gauge is charged by 40% and their Critical Hit damage increases by 40%\n\nTier 3\n\nWhen the user uses their Basic Attack or Core Attack it charges their MP and Power Gauge by 1% and decreases the cooldown of Kurohara’s Sword Technique Lethal Move: Moonless Night Overture by 2 second(s)\n\nUsing a Back Attack or Core Attack restores 2% of the user’s MP, 1% of the user’s Power Gauge charge, and reduces the cooldown of Kuroha’s Sword Technique Lethal Move: Moonless Night Overture by 2 second(s)\n\nWhen the user’s attack hits a target affected by [Winter’s Edge], the user gains the [Midnight Gale] effect\n\n[Midnight Gale]\n\nIncreases Defense Penetration by 0.2%\n\nIncreases Wind Overload damage by 1%\n\nDuration: Infinite (stacks up to 100 times)\n\nTier 4\n\nAmamiya Mirei’s Wind damage increases by 10% for every Wind member (stacking up to 3 times)\n\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member, and the stack limit is removed)\n\nAmamiya Mirei’s Wind damage increases by 12% for every Wind member (stacking up to 3 times)\n\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member, and the stack limit is removed)\n\nTier 5\n\nWhile [Possessed], the user gains the [Raven’s Confession] effect\n\n[Raven’s Confession]\n\nIncreases the damage of Kuroha’s Sword Technique Type 3: Wing of Night and Kuroha’s Sword Technique 4: Raven’s Cry by 80%\n\nWhile [Possessed], the user gains the [Raven’s Confession] effect\n\n[Raven’s Confession]\n\nIncreases the damage of Kuroha’s Sword Technique Type 3: Wing of Night and Kuroha’s Sword Technique 4: Raven’s Cry by 80%\n\nIncreases the user’s back attack damage by 30%\n\nBunny Bunbun\n\n〈Amamiya Mirei Exclusive Weapon〉\n\nTier 0-5\n\nWhen the user enters a stage, it charges their Power Gauge by 10% / 20% / 30% / 40% 50% / 60%\n\nThe user’s Power Gauge gains 60% charge when the user enters the stage\n\n - CM Iron’s TIP: The [Winter’s Edge] effect applied by Amamiya Mirei and Sugimoto Reiji stacks with each other, regardless of who triggers it."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "anna-ruiz",
@@ -1081,6 +1084,53 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 1\n\n(Affected targets added)\n\nU sing The Angel’s Stay activates the [Holy Barrier] effect on the Light team member with the highest Total Power Sung Jinwoo and Light team members\n\nTier 3\n\n(Effect duration extended)\n\n[Blessed Light]\nDuration : 10 30 second(s)\n\nTier 5\n\n(Effect duration extended)\n\n[Harmony]\nDuration : 15 30 second(s)\n\n[Karma]\nDuration : 15 30 second(s)\n\nSaint’s Benediction\n〈Antoine Martinez’s Exclusive Weapon〉\nBased on Tier 5\n\n(Effect value increased and affected targets added)\n\nThe user’s HP increases by 12% 30%\nThe entire team’s Light damage increases by 15% 30%"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "Duration : 10 30 second(s)",
+        "old": "10",
+        "new": "30",
+        "unit": "second(s)",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 15 30 second(s)",
+        "old": "15",
+        "new": "30",
+        "unit": "second(s)",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 15 30 second(s)",
+        "old": "15",
+        "new": "30",
+        "unit": "second(s)",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "The user’s HP increases by 12% 30%",
+        "old": "12",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "The entire team’s Light damage increases by 15% 30%",
+        "old": "15",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      }
     ]
   },
   {
@@ -1340,6 +1390,26 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nWhite Flame Storm Kick\n(Supporter Skill)\n\n(Values Increased)\n\n[Defense Decrease]\nDecrease the target’s Defense by 20% 70%\nDuration : 12 25 second(s)"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "Decrease the target’s Defense by 20% 70%",
+        "old": "20",
+        "new": "70",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 12 25 second(s)",
+        "old": "12",
+        "new": "25",
+        "unit": "second(s)",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      }
     ]
   },
   {
@@ -1596,7 +1666,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\nWhen The Dancer hits, the user had a 66% chance to [Brand] target\n\nWhen The Dancer hits it activates the [Brand] effect on the target\n\nTier 1\n\nThe max number of times [The Dancer] can stack increases to 5\n\n[Super Armo] is granted while [Waltz of the Sword] is active\n\nWhen Sword of Light hits it activates the [Lightsunder] effect on the target\n\nCritical Hit damage increases by 1% for every [Lightsunder] instance on targets affected by [Lightsunder]\n\nThe max number of times [The Dancer] can stack increases to 5\n\n[Super Armor] is granted while [Waltz of the Sword] is active\n\n[Lightsunder]\n\nDeals Damage equal to 100% of the user’s Attack every 3 seconds\n\nDuration: 30 second(s) (stacks up to 10 times)\n\nTier 4\n\nThe user’s Critical Hit damage increases by 16%.\n\nThe user’s Critical Hit damage increases by 20%.\n\nTier 5\n\nThe damage and Critical Hit Rate of Light of the End increases by 20% and 2% respectively, depending on how many instances of [The Dancer] effect the user has applied (stacking up to 5 times).\n\nIncreases the max amount of stacks of [The Dancer] to 8 stacks\n\nIncreases Power Gauge Acquisition Rate by 15% based on the number of [The Dancer] stacks.\n\nIncreases Light of the End damage by 20% and Critical Hit Rate by 2% (stacks up to 8 times)\n\nIncreases Light Overload damage by 2% for every [Lightsunder] stack to targets inflicted with Lightsunder\n\nReduces the cooldown of Light of the End by 3 second(s) when The Dancer hits a target in the [Light] [Overload] state\n\n- CM Iron's TIP: The 'Lightsunder' effect applied by Cha Hae-In, Akari Shimizu, and Antoine Martinez stacks regardless of the caster."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "cha-hae-in-the-pure-sword-princess",
@@ -1818,6 +1889,71 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nBasic\n\n(Values Increased)\n\nThe user deals Water elemental damage equal to  175% 220% of their Defense for every blade summoned as a part of the Heavenly Swords skill\n\nTier 3\n\n(Values Increased)\n\nWhen an ally successfully puts a target in the [Break] state, it increases their Water damage by 15% 60%\n\n[Sword’s Resolve]\nHeavenly Strike changes to Heavy Attack: Heavenly Strike, increasing its damage by 170% 200%\n\nTier 4\n\n(Values Increased)\n\nPure Sword Princess Cha Hae-In’s Critical Hit Rate increases by  7% 8% and her Critical Hit damage increases by  7% 8% for every Water team member (stacking up to 3 times)\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member, and the stack limit is removed)\n\nTier 5\n\n(New ‘Will of the Sword’ Effect Added)\n\n[Will of the Sword]\nApplies the effects below for every [Will of the Sword] gauge recharge level\nIncreases the user’s Defense by 10%\nIncreases the user’s Critical Hit Rate by 4%\nIncreases the user’s Critical Hit Damage by 4%\nIncreases Water damage by 10%\nDuration: 15 second(s) (stacks up to 6 times)\n\n(Values Increased)\n\n[Pure Sword Princess]\nIncreases damage of Sword of Destiny by 60% 100%\nIncreases the damage of Heavenly Strike and Heavy Attack: Heavenly Strike by 60% 100%"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "The user deals Water elemental damage equal to 175% 220% of their Defense for every blade summoned as a part of the Heavenly Swords skill",
+        "old": "175",
+        "new": "220",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "When an ally successfully puts a target in the [Break] state, it increases their Water damage by 15% 60%",
+        "old": "15",
+        "new": "60",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Heavenly Strike changes to Heavy Attack: Heavenly Strike, increasing its damage by 170% 200%",
+        "old": "170",
+        "new": "200",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Pure Sword Princess Cha Hae-In’s Critical Hit Rate increases by 7% 8% and her Critical Hit damage increases by 7% 8% for every Water team me",
+        "old": "7",
+        "new": "8",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Pure Sword Princess Cha Hae-In’s Critical Hit Rate increases by 7% 8% and her Critical Hit damage increases by 7% 8% for every Water team me",
+        "old": "7",
+        "new": "8",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases damage of Sword of Destiny by 60% 100%",
+        "old": "60",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases the damage of Heavenly Strike and Heavy Attack: Heavenly Strike by 60% 100%",
+        "old": "60",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
       }
     ]
   },
@@ -2041,7 +2177,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nIsla’s Dance★\n\n(Basic Skill 1)\n\nWhen the doll explodes it deals additional damage equal to 350% of Charlotte’s Defense\n\nWhen the doll explodes it deals additional damage equal to 1050% of Charlotte’s Defense\n\nTricked Ya!\n\n(Support Skill)\n\nWhen the doll explodes it deals additional damage equal to 350% of Charlotte’s Defense\n\nWhen the doll explodes it deals additional damage equal to 1050% of Charlotte’s Defense\n\nAdvancement Tier 0\n\nThe user’s Critical Hit damage stat increases equal to 10% of the increased damage stat\n\nThe user’s Critical Hit damage stat increases equal to 20% of the increased damage stat\n\nIn [Team Fight] mode, increases damage dealt by 30%.\n\nAdvancement Tier 2\n\nIncreases the user’s Defense by 16%\n\nIncreases the user’s Defense by 20%\n\nAdvancement Tier 4\n\nBasic Attacks become faster and their damage increases by 60%.\n\nBasic Attacks become faster and their damage increases by 120%."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "choi-jong-in",
@@ -2235,7 +2372,7 @@
         "tier": 5,
         "text": {
           "fr": "",
-          "en": "While [Tagging Out], the cooldown of End of Days passes 3 times faster and recovers Power Gauge by 0.8% every second. When in Team Fight mode, the cooldown of End of Days, Rain of Flames, and Flame Spear pass 2 times faster and the Power Gauge recharges by 0.4% every second."
+          "en": "While [Tagging Out], the cooldown of End of Days passes 3 times faster and recovers Power Gauge by 0.8% every second. When in Team Fight mode, the cooldown of End of Days, Rain of Flames, and Flame Spear pass 2 times faster and the Power Gauge recharges by 5% every second."
         }
       }
     ],
@@ -2293,6 +2430,152 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nFire Barrage\n(Supporter Skill)\n\n(Values Increased)\n\n[Defense Decrease]\nDecrease the target’s Defense by 15% 70%\nDuration : 15 25 second(s)"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "Stage 1 Damage : 210% 360% of the user’s Attack",
+        "old": "210",
+        "new": "360",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Stage 2 Damage : 249% 399% of the user’s Attack",
+        "old": "249",
+        "new": "399",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Stage 3 Damage : 264% 414% of the user’s Attack",
+        "old": "264",
+        "new": "414",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Damage: 1023% 2523% of the user’s Attack",
+        "old": "1023",
+        "new": "2523",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Damage: 2325% 3825% of the user’s Attack",
+        "old": "2325",
+        "new": "3825",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Damage: 2325% 3825% of the user’s Attack",
+        "old": "2325",
+        "new": "3825",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Damage: 3555% 6705% of the user’s Attack",
+        "old": "3555",
+        "new": "6705",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Choi Jong-In cannot deal Critical Hits, but his Attack increases by 50% 100%",
+        "old": "50",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases the user’s Attack and Defense Penetration by 20% 30%",
+        "old": "20",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases the user’s Attack by 12% 50%",
+        "old": "12",
+        "new": "50",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "The damage of [End of Days, Flame Spear] increases by 60% 200%",
+        "old": "60",
+        "new": "200",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases the user’s Fire damage by 16% 100%",
+        "old": "16",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "deja_applique"
+      },
+      {
+        "line": "In [Team Fight] mode, the cooldown of End of Days, Rain of Flames, and Flame Spear passes by 3 times 5 times faster and the Power Gauge rega",
+        "old": "0.4",
+        "new": "5",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "applique"
+      },
+      {
+        "line": "Increases the user’s Attack by 20% 30%",
+        "old": "20",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Decrease the target’s Defense by 15% 70%",
+        "old": "15",
+        "new": "70",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 15 25 second(s)",
+        "old": "15",
+        "new": "25",
+        "unit": "second(s)",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
       }
     ]
   },
@@ -2516,6 +2799,89 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nBasic Passive\n\n(Eased condition for using Finishing Catch)\n\nFinishing Catch becomes available upon a successful Extreme Evasion or when activating [Spiritual Body Manifestation]\n\n(Added affected targets)\n\nUsing Nitro Kick, Foul Play, or Hard Tackle while in [Team Fight] mode grants Fire team members the [Touchdown] effect\n\n[Finishing Catch]\n\nUsing the skill grants Fire team members the [Touchdown] effect\n\n(Extended duration and increased maximum stacks)\n\n[Touchdown]\n\nIncreases Fire Overload damage by 15%\n\nThe Fire [Elemental Accumulation] effect increases by 5%\n\nDuration: 60 90 seconds (stacks up to  3 4 times)\n\nTier 1\n\n(Increased effect values)\n\nFinishing Catch damage increases by 25% 100% to targets inflicted by [Burn]\n\nWhen [Spiritual Body Manifestation] is active it grants an effect that increases Fire team members’ Basic Skill damage by 15% 30% for 30 second(s)\n\nTier 3\n\n(Increased effect values)\n\n[Competitive Spirit]\n\nIncreases Finishing Catch damage by 15% 165%\n\nTier 4\n\n(Added affected targets)\n\n[Fire] team member The entire team’s Fire damage increases by 5% for every Fire ally in the party\n\n(Added new effect)\n\nAdditionally increases Fire team members’ Fire damage by 5%\n\nTier 5\n\n(Eased cooldown limit)\n\nWhen Christopher Reed or an ally successfully triggers the [Fire] [Overload] effect, he recovers 20% of this Power Gauge charge and resets the cooldown of Zero to Hundred (Cooldown: 25 20 seconds)\n\nWhen Christopher’s attack hits a target inflicted with the [Fire] [Overload] effect, it inflicts [Blazing Shock] on the target (Cooldown: 25 20 seconds)\n\n(Increased effect values and added new effect)\n\n[Blazing Shock]\n\nIncreases Fire Overload damage taken by 20% 30%\n\nIncreases taken [Fire] damage by 15%\n\nStrategy for Victory\n\n〈Christopher Reed’s Exclusive Weapon〉\n\nBased on Tier 5\n\n(Increased effect values)\n\nUsing Zero to Hundred increases the user’s Defense Penetration by 15% 30% for 60 seconds\n\n(Added affected targets)\n\nUsing Zero to Hundred increases Fire team members’ Fire damage by 15% for 60 seconds"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "Duration: 60 90 seconds (stacks up to 3 4 times)",
+        "old": "60",
+        "new": "90",
+        "unit": "seconds",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration: 60 90 seconds (stacks up to 3 4 times)",
+        "old": "3",
+        "new": "4",
+        "unit": "times",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Finishing Catch damage increases by 25% 100% to targets inflicted by [Burn]",
+        "old": "25",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "When [Spiritual Body Manifestation] is active it grants an effect that increases Fire team members’ Basic Skill damage by 15% 30% for 30 sec",
+        "old": "15",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases Finishing Catch damage by 15% 165%",
+        "old": "15",
+        "new": "165",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "When Christopher Reed or an ally successfully triggers the [Fire] [Overload] effect, he recovers 20% of this Power Gauge charge and resets t",
+        "old": "25",
+        "new": "20",
+        "unit": "seconds",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "When Christopher’s attack hits a target inflicted with the [Fire] [Overload] effect, it inflicts [Blazing Shock] on the target (Cooldown: 25",
+        "old": "25",
+        "new": "20",
+        "unit": "seconds",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases Fire Overload damage taken by 20% 30%",
+        "old": "20",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Using Zero to Hundred increases the user’s Defense Penetration by 15% 30% for 60 seconds",
+        "old": "15",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      }
     ]
   },
   {
@@ -2738,7 +3104,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nChicxulub\n(Burst Skill)\n\n(Skill Attack Range Significantly Increased)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "elena-renault",
@@ -2963,7 +3330,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 5\n\n(New Effect Added)\n\nUsing Prison d’Argent grants Water Elemental Buster team members the [Insatiable Hunger]\n\n[Insatiable Hunger]\nIncreases Burst Damage by 40%\nSlightly increases the Burst damage accumulation rate\nDuration: 60 seconds"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "emma-laurent",
@@ -3206,6 +3574,17 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nRoaring Flames\n(Supporter Skill)\n\n(Values Increased / New Effect Added)\n\n[Flame’s Wrath]\nIncreases Defense Penetration by 10%\nThe user’s Fire damage increases by 15% 20%\nIncreases damage dealt to targets affect by [Break] by 30%\nDuration : 20 second(s)"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "The user’s Fire damage increases by 15% 20%",
+        "old": "15",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      }
     ]
   },
   {
@@ -3434,7 +3813,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nSupport Fire\n\n(Supporter Skill)\n\n(New Effect Added)\n\nUsing this skill increases Sung Jinwoo’s Fire Weapon Skill damage by 20% for 25 second(s)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "fern",
@@ -3650,7 +4030,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAdjusted\n\nDemon-killing Magic (Zoltraak) - Balanced\n\n(Core Attack)\n\n1055% of the user’s Attack\n\n1060% of the user’s Attack\n\nDemon-killing Magic (Zoltraak) - Barrage\n\n(Basic Skill 1)\n\n1865% of the user’s Attack\n\n1866% of the user’s Attack\n\nDemon-killing Magic (Zoltraak) - Rapid Fire\n\n(Basic Skill 2)\n\n1960% of the user’s Attack\n\n1962% of the user’s Attack\n\nDemon-killing Magic (Zoltraak) - Mighty\n\n(Ultimate Skill)\n\n3560% of the user’s Attack\n\n3566% of the user’s Attack\n\nAdvancement Tier 2\n\n- The user’s [Fire] damage increases by 20%\n\n- The user’s [Fire] damage increases by 20%\n\n- Activates [increase in Fire damage taken] when [Basic Skill 2] hits\n\n[increase in Fire damage taken]\n\n- Increases [Fire] damage taken by 0.3%\n\n- Duration: 30 second(s) (stacks up to  60 time(s))\n\nAdvancement Tier 4\n\n- The user’s Critical Hit Rate increases by 10% and Critical Hit damage by 20%\n\n- The user’s Critical Hit Rate increases by 10% and Critical Hit damage by 20%\n\n- When [Basic Skill 2] hits, the [Increase in Fire damage taken] effect per stack has been adjusted from 0.3% to 0.5%.\n\n[increase in Fire damage taken]\n\n- Increases [Fire] damage taken by 0.5%\n\n- Duration: 30 second(s) (stacks up to  60 time(s))"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "frieren",
@@ -3866,7 +4247,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAdjusted\n\nBasic Magic Attack (Zoltraak) - Multi-Hit\n\n(Basic Attack)\n\n137% / 142% / 147% of the user’s Defense\n\n257% / 266% / 270% of the user’s Defense\n\nBasic Magic Attack (Zoltraak) - Concentrated\n\n(Core Attack)\n\n975% of the user’s Defense\n\n1515% of the user’s Defense\n\nDestructive Lightning Magic (Judradjim)\n\n(Basic Skill 1)\n\n1820% of the user’s Defense\n\n3020% of the user’s Defense\n\nHellish Flame Magic (Vollzanbel)\n\n(Basic Skill2)\n\n1942% of the user’s Defense\n\n3542% of the user’s Defense\n\nDefense Magic\n\n(Support Skill)\n\n(Level 1 - 20)\n\n- If the entire team, excluding Sung Jinwoo, consists of [Water] team members, Sung Jinwoo’s Attack and Defense increases by 15%.\n\n- - If the entire team, excluding Sung Jinwoo, consists of [Water] team members, Sung Jinwoo’s Attack and Defense increases by / 15.2 / 15.4 / 15.6 / 15.8 / 16 / 16.2 / 16.4 / 16.7 / 17 / 17.3 / 17.6 / 17.9 / 18.2 / 18.5 / 18.8 / 19.1 / 19.4 / 19.7 / 20%.\n\nBasic Magic Attack (Zoltraak) - Penetration\n\n(QTE Skill)\n\n954% of the user’s Defense\n\n2254% of the user’s Defense\n\nBasic Magic Attack (Zoltraak) - Ultimate\n\n(Ultimate Skill)\n\n3226% of the user’s Defense\n\n4366% of the user’s Defense\n\nExclusive Weapon\n\n<Frieren’s Staff>\n\nAdvancement Tier 0-5\n\n- The user’s Defense increases by 5 / 10 / 15 / 20 / 25 / 30%\n\n- Team members’ Ultimate Skill damage increases by 5 / 10 / 15 / 20 / 25 / 30%\n\n- The user’s Defense increases by 5 / 10 / 20 / 30 / 40 / 50%\n\n- Team members’ [Basic Skill and Ultimate Skill] damage increases by 5 / 10 / 15 / 20 / 25 / 30%\n\nAdvancement Tier 0\n\n[Mana Power Control]\n\n- Increases the user’s Defense by 20%\n\n- When the user has 50% or more of their MP, it increases their Defense by 20%\n\n- Skill Mana Consumption decreases by 20%\n- Duration: Infinite\n\n[Mana Power Control]\n\n- Increases the user’s Defense by 25%\n\n- When the user has 50% or more of their MP, it increases their Defense by 25%\n\n- Skill Mana Consumption decreases by 20%\n- Duration: Infinite\n\nAdvancement Tier 1\n\n[Vollzanbel]\n\n- Decreases Defense by 5%\n\n- Increases their chance of receiving Critical Hit damage by 5%\n\n- Increases Critical Hit damage taken by 5%\n- Duration: 20 second(s)\n\n[Vollzanbel]\n\n- Decreases Defense by 5%\n\n- Increases their chance of receiving Critical Hit damage by 5%\n\n- Increases Critical Hit damage taken by 5%\n\n- Increases damage from Frieren by 35%\n- Duration: 20 second(s)\n\nAdvancement Tier 3\n\n[Mana Power Control]\n\n- Increases the user’s Defense by 40%\n\n- When the user has 50% or more of their MP, it increases their Defense by 40%\n\n- Skill Mana Consumption decreases by 30%\n- Duration: Infinite\n\n[Mana Power Control]\n\n- Increases the user’s Defense by 50%\n\n- When the user has 50% or more of their MP, it increases their Defense by 50%\n\n- Skill Mana Consumption decreases by 30%\n- Duration: Infinite\n\nAdvancement Tier 5\n\n[Vollzanbel]\n\n- Decreases Defense by 10%\n\n- Increases their chance of receiving Critical Hit damage by 15%\n\n- Increases Critical Hit damage taken by 15%\n- Duration: 20 second(s)\n\n[Vollzanbel]\n\n- Decreases Defense by 10%\n\n- Increases their chance of receiving Critical Hit damage by 15%\n\n- Increases Critical Hit damage taken by 15%\n\n- Increases damage from Frieren by 70%\n- Duration: 30 second(s)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "gina",
@@ -4033,7 +4415,7 @@
         "tier": 1,
         "text": {
           "fr": "",
-          "en": "When the [Mana Circulation] effect activates, it also activates the [Mana Transformation] effect on all team members. [Mana Transformation] Grants a [Shield] equal to 12% of Attack. Increases damage dealt by 12%. Decreases damage taken by 12%. Duration: 20 second(s)"
+          "en": "When the [Mana Circulation] effect activates, it also activates the [Mana Transformation] effect on all team members. [Mana Transformation] Grants a [Shield] equal to 24% of Attack. Increases damage dealt by 12%. Decreases damage taken by 12%. Duration: 20 second(s)"
         }
       },
       {
@@ -4054,7 +4436,7 @@
         "tier": 4,
         "text": {
           "fr": "",
-          "en": "All team members' Attack and Defense Penetration increase by 4% The Attack and Defense Penetration of [Fire] team members increases by an additional 8%."
+          "en": "All team members' Attack and Defense Penetration increase by 8% The Attack and Defense Penetration of [Fire] team members increases by an additional 8%."
         }
       },
       {
@@ -4081,6 +4463,89 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nBasic\n\n(Effect Stats Increased)\n\n[Mana Circulation]\n\nIncreases Attack by 15% 20%\n\nIncreases Fire damage by 15% 20%\n\nDuration: 15 20 second(s)\n\nTier 2\n\n(Effect Stats Increased)\n\nWhen a [Shield] is granted to a team member that team member’s damage dealt increases by 10% 20%\n\nTier 3\n\n([Gravity Boost] Damage Taken Increase effect added)\n\n[Gravity Boost]\n\nIncreases the target’s Fire damage taken by 10%\n\nIncreases the target’s damage taken by 10%\n\nDuration: 20 second(s)\n\nTier 4\n\n(Team-wide Attack Increase effect added)\n\nAll members’ Attack and Defense Penetration increases by 4%\n\n([Fire Element] Teammate Attack Increase effect and increased Defense Penetration stats added)\n\nIncreased Attack and Defense Penetration of [Fire] team members increases by an additional 4% 8%\n\nTier 5\n\n([Space-time Gap] affected skills and increased Damage Increase values added)\n\n[Space-time Gap]\n\nThe damage of Path of Extinction and Liberation increases by 60% 120%\n\nPath of Extinction and Liberation increases by 60% 120% when hitting targets with the [Gravity Boost] effect applied\n\nConcentrated Gravity\n\n(Supporter Skill)\n\n(New Effect Added)\n\nIf the entire team, excluding Sung Jinwoo, is comprised of Fire team members, it activates an effect that increases Sung Jinwoo’s Attack by 20%\n\nThe Glamour of Self-worth\n\n〈Gina Exclusive Weapon〉\n\nTier 5 Based\n\n(Attack Increase stats and Maximum Buff Stacks Increased)\n\nThe user’s Attack increases by 12% 24%\n\nWhen [Mana Circulation] activates it increases all team members’ Attack and Fire damage by 1% (stacking up to 10 20 times)"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "Increases Attack by 15% 20%",
+        "old": "15",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases Fire damage by 15% 20%",
+        "old": "15",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Duration: 15 20 second(s)",
+        "old": "15",
+        "new": "20",
+        "unit": "second(s)",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "When a [Shield] is granted to a team member that team member’s damage dealt increases by 10% 20%",
+        "old": "10",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increased Attack and Defense Penetration of [Fire] team members increases by an additional 4% 8%",
+        "old": "4",
+        "new": "8",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "applique"
+      },
+      {
+        "line": "The damage of Path of Extinction and Liberation increases by 60% 120%",
+        "old": "60",
+        "new": "120",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Path of Extinction and Liberation increases by 60% 120% when hitting targets with the [Gravity Boost] effect applied",
+        "old": "60",
+        "new": "120",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "The user’s Attack increases by 12% 24%",
+        "old": "12",
+        "new": "24",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "applique"
+      },
+      {
+        "line": "When [Mana Circulation] activates it increases all team members’ Attack and Fire damage by 1% (stacking up to 10 20 times)",
+        "old": "10",
+        "new": "20",
+        "unit": "times",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
       }
     ]
   },
@@ -4308,7 +4773,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\n[The Fragment of Brilliant Light]\n\nActivates the user’s Core Attack 1 time.\n\nThe user’s Core Attack becomes Heavy Attack: Abdominal Crush and their damage increases by 75%.\n\nFighting Spirit becomes Heavy Attack: Fighting Spirit and increases the user’s damage by 80%.\n\nDuration : 15 second(s)\n\n[The Fragment of Brilliant Light]\n\nActivates the user’s Core Attack 1 time.\n\nThe user’s Core Attack becomes Heavy Attack: Abdominal Crush and their damage increases by 120%.\n\nFighting Spirit becomes Heavy Attack: Fighting Spirit and increases the user’s damage by 120%.\n\nDuration : 15 second(s)\n\nTier 3\n\n[Ruler’s Aura]\n\nIncreases the user’s Defense by 50%.\n\nThe user gains a Shield equal to 20% of Go Gunhee’s Defense.\n\nThe user’s Damage Taken decreases by 25%.\n\nDuration: 15 second(s)\n\n[Ruler’s Aura]\n\nIncreases the user’s Defense by 80%.\n\nThe user gains a Shield equal to 20% of Go Gunhee’s Defense.\n\nThe user’s Damage Taken decreases by 25%.\n\nDuration: 15 second(s)\n\nTier 4\n\nIncreases the user’s Defense by 16%.\n\nIncreases the user’s Defense by 32%.\n\nTier 5\n\nThe damage of Supernova increases by 60% when dealt to targets that possess a Break Gauge.\n\nWhen Supernova hits a target that doesn’t have a Break Gauge it grants the [Will of the Fragment] effect to team members.\n\n[Will of the Fragment]\n\nIncreases the user’s Critical Hit damage by 30% and QTE damage by 200%\n\nDuration: 20 second(s)\n\nIncreases Supernova damage by 80%\n\nWhen Supernova hits, it grants [Will of the Fragment] to team members\n\n[Will of the Fragment]\n\nIncreases the user’s Critical Hit damage by 30% and QTE damage by 200%\n\nDuration: 60 second(s)\n\nInstant Destruction\n\n(Supporter Skill)\n\n[Aura of Brilliant Light]\n\nDecreases the user’s Damage by 20%.\n\nThe user gains a [Shield] equal to 10% of Sung Jinwoo’s Defense\n\nThe user’s Light damage increases by 20%\n\nDuration: 20 second(s)\n\n[Aura of Brilliant Light]\n\nIncreases the user’s Attack by 20%.\n\nDecreases the user’s Damage by 20%.\n\nThe user gains a [Shield] equal to 10% of Sung Jinwoo’s Defense\n\nThe user’s Light damage increases by 20%\n\nIncreases the user’s Critical Hit Damage by 20%\n\nDuration: 20 second(s)\n\nA Conviction and Calling\n\n(Go Gunhee Exclusive Weapon)\n\nWhen Fighting Spirit or Heavy Attack: Fighting Spirit hits, increases the target’s Light damage taken by 4% / 5% / 6% / 7% / 9% / 12%\n\nWhen Fighting Spirit or Heavy Attack: Fighting Spirit hits, increases the target’s Light damage taken by 4% / 5% / 6% / 7% / 9% / 15% and their chance of receiving Critical Hit damage by 4% / 5% / 7% / 9% / 11% / 15%"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "goto-ryuji",
@@ -4521,6 +4987,17 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 3\n\n(New Effect Added)\n\nThe [Arrogance] effect is enhanced.\n\n[Arrogance]\nIncreases Critical Hit damage by 30%\nIncreases [Basic Skill] damage by 30%\nIncreases [Ultimate Skill] damage by 30%\nIncreases Skill Mana Consumption by 20%\nDuration : 20 second(s)\n\nTier 5\n\n(New Effect Added)\n\nWhen Devastate Prey hits it inflicts the target with the [Domination] effect\n\n[Domination]\nIncreases damage taken by 20%\nIncreases the target’s [Wind] damage taken by 20%\nDecreases Defense by 5%\nDuration : 60 second(s)\n\nDistorted Dreams\n〈Goto Ryuji’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased)\n\nThe user’s HP increases by 12% 30%"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "The user’s HP increases by 12% 30%",
+        "old": "12",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "status": "deja_applique"
       }
     ]
   },
@@ -4743,6 +5220,62 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nGolden Meadow\n(Basic Skill 2)\n\n(New Effect Added & Cooldown Decreased)\n\nUsing this skill removes the entire team’s [debuffs]\nCooldown : 30 25 seconds\n\n(Protection Zone Duration Extended)\n\n[Protection Zone] Duration : 15 25 seconds\n\nDivine Field\n(Supporter Skill)\n\n(New Effect Added)\n\nIf all team members, except for Sung Jinwoo, are [Wind] team members, it increases Jinwoo’s Attack, Critical Hit Rate, and Critical Hit damage by 12%\n\nPassive\n\n(Breath Reset Cooldown Condition Removed)\n\nUsing [Sharp Sprouts, Golden Meadow, or Vines of Vitality] grants the team members the [Breath] effect\n\n(New Effect Added)\n\nWhen [Sharp Sprouts] hits it inflicts 2 [Winter’s Edge] instances\n\n[Winter’s Edge]\nDeals damage equal to 50% of Max HP every 3 second(s)\nDuration : 30 second(s) (stacks up to 10 times)\n\nTier 1\n\n(Effect Activation Conditions Eased)\n\nThe [Sharp Breath] effect is granted to team members when they use their QTE Skill or Ultimate Skill\n\nTier 2\n\n(New Effect Added)\n\nIncreases Wind Overload damage by 25% for the Wind team member with the highest Defense\n\nTier 3\n\n(New Effect Added)\n\nThe [Breath] effect is enhanced.\n\n[Breath]\nIncreases [Basic Skill] damage by 10%\nAdditionally increases Wind team members’ Basic Skill damage by 20%\nAdditionally increases Wind team members’ Ultimate Skill damage by 20%\nDuration:40 second(s) (stacks up to 2 times)\n\nTier 4\n\n(New Effect Added)\n\nThe Wind damage of Wind team members increases by 4% for every Wind ally\n\nTier 5\n\n(New Effect Added)\n\nThe [Sharp Breath] effect is enhanced.\nUsing [Sharp Sprouts or Vines of Vitality] grants Wind Elemental Buster members with [Nature’s Torrent]\nWhen Sharp Sprouts hits, the skill now inflicts 5 [Winter’s Edge] instances\n\n[Sharp Breath]\nApplies the following effects every second:\nCritical Hit Rate : 2% (stacks up to 20%)\nCritical Hit Damage : 4% (stacks up to 40%)\nRestores the user’s Power Gauge by 1%\nDuration : 40 second(s)\n\n[Nature’s Torrent]\nIncreases [Burst] damage 40%\nSlightly increases [Burst] damage accumulation rate\nDuration : 40 second(s)\n\n[Winter’s Edge]\nDeals damage equal to 50% of Max HP every 3 seconds\nDuration : 30 second(s) (stacks up to 10 times)\n\n(Natural Unity Value Increased & New Effect Added)\n\n[Natural Unity]\nIncreases Attack and Defense by 10% 20%\nIncreases Wind Overload damage by 20%\nDuration : 25 60 second(s)\n\nComing of Age\n〈Han Se-Mi’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased & Duration Extended)\n\nIncreases the user’s HP by 10% 50%\nIncreases damage taken by 5% for 10 30 second(s) to targets hit by Han Se-Mi’s skill"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "Cooldown : 30 25 seconds",
+        "old": "30",
+        "new": "25",
+        "unit": "seconds",
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "status": "a_verifier"
+      },
+      {
+        "line": "[Protection Zone] Duration : 15 25 seconds",
+        "old": "15",
+        "new": "25",
+        "unit": "seconds",
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases Attack and Defense by 10% 20%",
+        "old": "10",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 25 60 second(s)",
+        "old": "25",
+        "new": "60",
+        "unit": "second(s)",
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases the user’s HP by 10% 50%",
+        "old": "10",
+        "new": "50",
+        "unit": "%",
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases damage taken by 5% for 10 30 second(s) to targets hit by Han Se-Mi’s skill",
+        "old": "10",
+        "new": "30",
+        "unit": "second(s)",
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "status": "deja_applique"
       }
     ]
   },
@@ -5178,7 +5711,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 3\n\n(New effect added)\n\n[London Drift]\n\nGrants [Super Armor] while the effect is active"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "holy-guardian-barrier-go-gunhee",
@@ -5617,7 +6151,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nCold-blooded Connection\n(Supporter Skill)\n\n(New Effect Added)\n\nUsing this skill grants the entire team the [Unquenchable Greed] effect\n\n[Unquenchable Greed]\nIncreases Critical Hit Rate by 5%\nIncreases Critical Hit damage by 10%\nDuration : 20 second(s)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "hwang-dongsuk",
@@ -6053,6 +6588,134 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nHoroscope\n\n(Core Attack)\n\n(Increased effect values and extended duration)\n\n[The Magician]\n\nGrants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team\n\nDuration : 12 24 seconds\n\nCrossing Stars\n\n(Support Skill)\n\n(Increased effect values and extended duration)\n\n[The Magician]\n\nGrants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team\n\nDuration : 12 24 seconds\n\nArcana : The World\n\n(Ultimate Skill)\n\n(Extended duration)\n\n[The World]\n\nDuration : 8 30 seconds\n\nTier 5\n\n(Increased effect values and extended duration)\n\n[The World]\n\nHP equal to 25% 30% of Isla Wright’s Defense is instantly restored to the entire team\n\nGrants a [Shield] equal to 25% 30% of Isla Wright’s Defense to the entire team\n\nDuration : 8 30 seconds"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "Increases Dark team members’ Attack by 5% 12% of Isla Wright’s Basic Defense",
+        "old": "5",
+        "new": "12",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases damage by0.2% 0.3% for every 1% reduction to the target’s HP (stacking up to 16% 24%)",
+        "old": "0.2",
+        "new": "0.3",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases damage by0.2% 0.3% for every 1% reduction to the target’s HP (stacking up to 16% 24%)",
+        "old": "16",
+        "new": "24",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "deja_applique"
+      },
+      {
+        "line": "The user’s Defense increases by 4% 12%",
+        "old": "4",
+        "new": "12",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "deja_applique"
+      },
+      {
+        "line": "The entire team’s Defense increases by 4% 5% for every Dark team member on the team",
+        "old": "4",
+        "new": "5",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "a_verifier"
+      },
+      {
+        "line": "For every Dark ally in the party Dark team members’ Attack increases by 4% 5%",
+        "old": "4",
+        "new": "5",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Grants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team",
+        "old": "12",
+        "new": "24",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 12 24 seconds",
+        "old": "12",
+        "new": "24",
+        "unit": "seconds",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Grants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team",
+        "old": "12",
+        "new": "24",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 12 24 seconds",
+        "old": "12",
+        "new": "24",
+        "unit": "seconds",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 8 30 seconds",
+        "old": "8",
+        "new": "30",
+        "unit": "seconds",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      },
+      {
+        "line": "HP equal to 25% 30% of Isla Wright’s Defense is instantly restored to the entire team",
+        "old": "25",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Grants a [Shield] equal to 25% 30% of Isla Wright’s Defense to the entire team",
+        "old": "25",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Duration : 8 30 seconds",
+        "old": "8",
+        "new": "30",
+        "unit": "seconds",
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "status": "a_verifier"
+      }
     ]
   },
   {
@@ -6267,7 +6930,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nLight Emission\n\n(Basic Attacks)\n\nStage 1 Damage: 103% of the user’s Attack\n\nStage 2 Damage: 110% of the user’s Attack\n\nStage 3 Damage: 118% of the user’s Attack\n\nStage 1 Damage: 120% of the user’s Attack\n\nStage 2 Damage: 125% of the user’s Attack\n\nStage 3 Damage: 134% of the user’s Attack\n\nOrb of Light\n\n(Core Attack)\n\nDamage: 510% of the user’s Attack\n\nDamage: 562% of the user’s Attack\n\nRadiating Beam (Q)\n\nDamage: 608% of the user’s Attack\n\nDamage: 670% of the user’s Attack\n\nLight(E)\n\nDamage: 906% of the user’s Attack\n\nDamage: 1002% of the user’s Attack\n\nDisk of Light (QTE)\n\nDamage: 630% of the user’s Attack\n\nDamage: 694% of the user’s Attack\n\nFlashbang\n\n(Support Skill)\n\nDamage: 452% of the user’s Attack\n\nDamage: 496% of the user’s Attack\n\nLaser Guidance (Ultimate Skill)\n\nDamage: 1730% of the user’s Attack\n\nDamage: 1940% of the user’s Attack"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "jung-yerim",
@@ -7312,6 +7976,53 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nBasic\n\n(Effect Value Increased)\n\n[Scout]\nContinuously restores HP equal to 2% 3% of Laura Walker’s Attack every 3 second(s)\n\nTier 3\n\n(Effect Value Increased)\n\nUsing Checkpoint restores 50% 100% of the user’s Power Gauge\n\n[Scout]\nContinuously restores HP equal to 4% 6% of Laura Walker’s Attack every 3 second(s)\n\n[Assistant]\nIncreases Attack and Defense by 1.7% 2%\nDuration : 10 second(s)(stacking up to 10 times)\n\nTier 4\n\n(New effect added)\n\nFor every Light ally on the team and Light team members’ damage dealt increases by 5%\n\nTier 5\n\n(Effect Value Increased)\n\n[Professional]\nIncreases damage dealt by 200% 250%"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "Continuously restores HP equal to 2% 3% of Laura Walker’s Attack every 3 second(s)",
+        "old": "2",
+        "new": "3",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Using Checkpoint restores 50% 100% of the user’s Power Gauge",
+        "old": "50",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Continuously restores HP equal to 4% 6% of Laura Walker’s Attack every 3 second(s)",
+        "old": "4",
+        "new": "6",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases Attack and Defense by 1.7% 2%",
+        "old": "1.7",
+        "new": "2",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases damage dealt by 200% 250%",
+        "old": "200",
+        "new": "250",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "deja_applique"
+      }
     ]
   },
   {
@@ -7545,6 +8256,80 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 0\n\n(Effect Duration Extended)\n\n[Charm]\n\nThe target’s damage taken increases by 15%\n\nDuration : 15 30 second(s)\n\nTier 1\n\n(Stats Increased)\n\n[Phantom Fox]’s damage increases by 80% 200%\n\n(New effect added)\n\nWhen Strengthening Charm hits it inflicts 1 [Infestation] instance on the target\n\n[Infestation]\n\nDeals damage equal to 100% of the user’s Attack every 3 seconds\n\nDuration: 30 second(s) (stacking up to 10 times)\n\nTier 3\n\n(Effect Duration Extended)\n\nUsing a Strengthening Charm increases Dark team members’ Attack by 5% and Max HP by 5% for 10 30 second(s) (stacking up to 2 times)\n\n(New effect added)\n\nUsing Strengthening Charm grants a [Healing Charm] to Dark team members\n\n[Healing Charm]\n\nRestores 2% of the target’s HP and 2% of the target’s MP every 3 second(s)\n\nDuration: 30 second(s)\n\nTier 5\n\n(New effect added)\n\n[Healing Charm] is enhanced\n\nWhen Dark Charm: Meg hits it inflicts 3 [Infestation] instances on the target\n\n[Healing Charm]\n\nRestores 2% of the target’s HP and 2% of the target’s MP every 3 second(s)\n\nWhen the [HP Recovery] effect activates, the [Spiritual Infusion] effect also activates\n\nDuration: 30 second(s)\n\n[Spiritual Infusion]\n\nIncreases Attack by 1%\n\nDuration : Infinite(stacking up to 50 times)\n\n[Infestation]\n\nDeals damage equal to 100% of the user’s Attack every 3 second(s)\n\nDuration : 30 second(s) (stacking up to 10 times)\n\nStrengthening charm\n\n(Basic Skill 1)\n\nLv.10 based\n\n(Stats Increased)\n\n[Enhancement Circle]\n\nIncreases magic arrow damage of [Phantom Foxes] by 20% 100% and changes to penetration attack\n\nSummoning Charm : Phantom Foxes\n\n(Basic Skill 2)\n\nLv.10 based\n\n(Stats Increased)\n\n[Phantom Foxes]\n\nMagic Arrow Damage : 600% 1200% of the user’s Attack\n\nQuick Attack: Tempest\n\n(Supporter Skill)\n\nLv.20 based\n\n(Effect Duration Extended)\n\n[Charm]\n\nIncreases damage taken by 15%\n\nDuration : 15 30 seconds(s)\n\n(New Effect Added)\n\nIf the team, excluding Sung Jinwoo, are Dark team members, Jinwoo’s Attack, Critical Hit Rate, and Critical Hit damage increase by 12%\n\nSolid Logic\n\n〈Lee Bora’s Exclusive Weapon〉\n\nTier 5 based\n\n(Stats Increased & Duration Extended)\n\nIncreases the user’s Attack by 10% 20%\n\nTargets hit by the user’s Strengthening Charm have both the damage they take from Critical Hits and their chance of receiving Critical Hit damage increase by 10% for 10 30 second(s).\n\n※ The [Infestation] effect applied by Lee Bora, Sian Halat, and Agnes Rivera stacks with each other, regardless of the caster."
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "Duration : 15 30 second(s)",
+        "old": "15",
+        "new": "30",
+        "unit": "second(s)",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "deja_applique"
+      },
+      {
+        "line": "[Phantom Fox]’s damage increases by 80% 200%",
+        "old": "80",
+        "new": "200",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Using a Strengthening Charm increases Dark team members’ Attack by 5% and Max HP by 5% for 10 30 second(s) (stacking up to 2 times)",
+        "old": "10",
+        "new": "30",
+        "unit": "second(s)",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases magic arrow damage of [Phantom Foxes] by 20% 100% and changes to penetration attack",
+        "old": "20",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Magic Arrow Damage : 600% 1200% of the user’s Attack",
+        "old": "600",
+        "new": "1200",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 15 30 seconds(s)",
+        "old": "15",
+        "new": "30",
+        "unit": "seconds",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases the user’s Attack by 10% 20%",
+        "old": "10",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Targets hit by the user’s Strengthening Charm have both the damage they take from Critical Hits and their chance of receiving Critical Hit d",
+        "old": "10",
+        "new": "30",
+        "unit": "second",
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "status": "deja_applique"
       }
     ]
   },
@@ -7973,7 +8758,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nRadiant Burst\n(Burst Skill)\n\n(Skill Attack Range Significantly Increased)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "lennart-niermann",
@@ -8194,6 +8980,17 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 2\n\n(New Effect Added)\n\nLennart Niermann’s Wind damage increases by 10% for every Wind ally\n\nTier 5\n\n(Mark Effect Values Increased)\n\n[Mark]\nIncreases Defense Penetration by 15% 30%"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "Increases Defense Penetration by 15% 30%",
+        "old": "15",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "status": "a_verifier"
       }
     ]
   },
@@ -8439,7 +9236,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nDark Shot\n\n(Basic Attack)\n\n194% / 202% / 214% of the user’s Attack\n\n194% / 202% / 214% of the user’s Attack\n\nDeals [weak Break] damage\n\nVolley Fire\n\n(Core Attack)\n\n-\n\n* Increases skill motion speed\n\nTyphoon Fire\n\n(Basic Skill 2)\n\n-\n\n* Increases skill motion speed\n\nQuick Attack: Typhoon Fire\n\n(Ultimate Skill)\n\nQuick Attack: Typhoon Fire Damage: 1640% of the user’s Attack Deals medium Break damage.\n\nThe user can fire up to 8 projectiles.\n\nDuration: 10 second(s)\n\nQuick Attack: Typhoon Fire Damage: 1640% of the user’s Attack Deals medium Break damage. (* slightly increased break damage)\n\nThe user can fire up to 8 projectiles.\n\nDuration: 10 second(s)\n\n* Increased Quick Attack: Typhoon Fire skill motion speed after using the ultimate skill.\n\nAdvancement Tier 1\n\nThe [Shoot and Maneuver] skill effect is enhanced\n\nThe skill’s speed and damage increase by 25% and can be used up to 3 times.\n\nThe [Shoot and Maneuver] skill effect is enhanced\n\nThe skill’s speed and damage increase by 25% and can be used up to 3 times.\n\nUsing Volley Fire or Quick Attack: Typhoon Fire, increases allies all team members’ Critical Hit Rate by 0.7% and Critical Hit Damage by 1% for 10 second(s) (stacks up to 8 times)\n\n[Revised 10/23 (Thu) 03:17 (UTC+0)]\n\nAdvancement Tier 3\n\nWhen [Magic Boost] is active it increases the user’s Volley Fire, Typhoon Fire, and Quick Attack: Typhoon Fire damage by 80%\n\nUsing [Shoot and Maneuver] grants the [Magic Boost] effect (Cooldown: 15 second(s))\n\nWhen [Magic Boost] is active it increases the user’s Volley Fire, Typhoon Fire, and Quick Attack: Typhoon Fire damage by 80%\n\nUsing [Shoot and Maneuver] grants the [Magic Boost] effect (Cooldown: 15 second(s))\n\nWhen [Typhoon Fire] hits, activates an effect on the target that increases their Critical Hit damage received by 7% for 12 second(s)\n\n[Added 10/23 (Thu) 03:17 (UTC+0)]\n\nWe have fixed the incorrect details regarding Lim Tae-Gyu’s newly added advancement tier 1 effect.\n\nWe sincerely apologize for the confusion."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "liu-zhigang",
@@ -8664,7 +9462,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nVeiled Intent\n(Burst Skill)\n\n(Skill Attack Range Significantly Increased)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "meilin-fisher",
@@ -8895,6 +9694,107 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nHelp! Berry!\n(Supporter Skill)\n\n(New Effect Added)\n\nIf the entire team, excluding Sung Jinwoo, are [Water] team members, Sung Jinwoo’s Attack and Defense increase by 16%\n\n(Effect Duration Extended)\n\n[Berry, I’m Pumped Up!]\nIncreases the user’s Attack by 16%\nDecreases the user’s damage taken by 16%\nIncreases Water damage by 30% 32%\nDuration : 30 32 second(s)\n\nBasic\n\n(Effect Duration Extended)\n\n[Cuddle Puddle]\nIncreases Water damage taken by 8%\nDuration : 16 32 second(s)\n\n[Bye, Meow!]\nIncreases Attack by 8%\nIncreases Defense by 8%\nDuration : 30 32 second(s) (stacking up to 3 times)\n\nTier 3\n\n(Max Stacks Increased)\n\nWhen an ally uses skill with the [Break] effect, Water team members’ Critical Hit damage increases by 0.5% (stacks up to 50 64 times)\n\nTier 4\n\n(Values Increased)\n\nThe user’s HP increases by 8% 32%\n\nTier 5\n\n(Values Increased)\n\n[Pumped Up!]\nIncreases the user’s Attack by 16% 24%\nIncreases the user’s Defense by  20% 24%\nIncreases the user’s Critical Hit Rate by 16%\nIncreases the user’s Core Attack damage by 16%\nDecreases the user’s damage taken by 16%\nIncreases Water Basic Skill damage by 15% 16%\nDuration: 24 64 second(s)\n\nHook, Line, and Sinker\n〈Meilin Fisher’s Exclusive Weapon〉\nBased on Tier 5\n\n(New Effect Added)\n\nUsing [Up!] grants the team member with the highest Defense an effect that increases their damage by 1% per 2000 of Meilin Fisher’s Max HP for 32 second(s) (Max Damage Increase Rate: 16%)\n\n(Effect Duration Extended)\n\nUsing Side Whip grants the team member with the highest Attack an effect that increases their damage by 1% per 2000 of Meilin Fisher’s Max HP for 12 32 second(s) (Max Damage Increase Rate:16%)"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "Increases Water damage by 30% 32%",
+        "old": "30",
+        "new": "32",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 30 32 second(s)",
+        "old": "30",
+        "new": "32",
+        "unit": "second(s)",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Duration : 16 32 second(s)",
+        "old": "16",
+        "new": "32",
+        "unit": "second(s)",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Duration : 30 32 second(s) (stacking up to 3 times)",
+        "old": "30",
+        "new": "32",
+        "unit": "second(s)",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "When an ally uses skill with the [Break] effect, Water team members’ Critical Hit damage increases by 0.5% (stacks up to 50 64 times)",
+        "old": "50",
+        "new": "64",
+        "unit": "times",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "The user’s HP increases by 8% 32%",
+        "old": "8",
+        "new": "32",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases the user’s Attack by 16% 24%",
+        "old": "16",
+        "new": "24",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases the user’s Defense by 20% 24%",
+        "old": "20",
+        "new": "24",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases Water Basic Skill damage by 15% 16%",
+        "old": "15",
+        "new": "16",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Duration: 24 64 second(s)",
+        "old": "24",
+        "new": "64",
+        "unit": "second(s)",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Using Side Whip grants the team member with the highest Attack an effect that increases their damage by 1% per 2000 of Meilin Fisher’s Max H",
+        "old": "12",
+        "new": "32",
+        "unit": "second(s)",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      }
     ]
   },
   {
@@ -9111,7 +10011,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nShredding Drop\n\n(Basic Attack)\n\n※ Elemental Accumulation Amount Increased\n※ Core Gauge Gain Increased\n\n※ The activation requirement for Meri Laine's Core Attack has been eased from 6 Basic Attacks to 3.\n\n※ The Elemental Accumulation displayed for Meri Laine's Basic Attack will remain the same; however, the actual Elemental Accumulation Amount applied in-game has been increased."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "min-byung-gu",
@@ -9327,7 +10228,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nAdvancement Tier 2\n\nThe user’s HP increases by 5%\n\nThe user’s HP increases by 8%"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "minnie",
@@ -9751,7 +10653,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nEcho Strike\n\n(Basic Attack)\n\n114% / 120% / 128% of the user’s Defense\n\n126% / 130% / 140% of the user’s Defense\n\nMidtone Slash\n\n(Core Attack)\n\n820% of the user’s Defense\n\n876% of the user’s Defense\n\nDescending Glissando\n(Basic Skill 1)\n\n1192% of the user’s Defense\n\n1316% of the user’s Defense\n\nDoubletime Lunge\n\n(Basic Skill 2)\n\n1563% of the user’s Defense\n\n1705% of the user’s Defense\n\nDual Aria\n\n(QTE Skill)\n\n1036% of the user’s Defense\n\n1140% of the user’s Defense\n\nHeadliner\n\n(Ultimate Skill)\n\n2901% of the user’s Defense\n\n3191% of the user’s Defense\n\nAdvancement Tier 0\n\n-\n\nThe entire team gains the [Forever] effect when entering the Encore Mission and Instance Dungeon\n\n[Forever]\n\nIncrease damage dealt by 5%\n\nDuration: Infinite (stacks up to 3 times)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "nam-chae-young",
@@ -10171,7 +11074,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nAxe Strike!\n\n(Basic Attacks)\n\nStage 1 Damage: 188% of the user’s Defense\n\nStage 2 Damage: 197% of the user’s Defense\n\nStage 3 Damage: 212% of the user’s Defense\n\nStage 1 Damage: 205% of the user’s Defense\n\nStage 2 Damage: 214% of the user’s Defense\n\nStage 3 Damage: 230% of the user’s Defense\n\nSpinning Strike!\n\n(Core Attack)\n\nDamage: 720% of the user’s Defense\n\nDamage: 790% of the user’s Defense\n\nDownward Strike! (Q)\n\nDamage: 1127% of the user’s Defense\n\nDamage: 1210% of the user’s Defense\n\nCharge Attack! (E)\n\nDamage: 1262% of the user’s Defense\n\nDamage: 1391% of the user’s Defense\n\nWhirlwind Strike! (QTE)\n\nDamage: 746% of the user’s Defense\n\nDamage: 813% of the user’s Defense\n\nSpinning Downward Strike!\n\n(Support Skill)\n\nDamage: 440% of the user’s Defense\n\nDamage: 484% of the user’s Defense\n\nAnother Worldline (Ultimate Skill)\n\nDamage: 2237% of the user’s Defense\n\nDamage: 2460% of the user’s Defense"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "park-heejin",
@@ -10429,7 +11333,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nWater Dragon Rush (Q)\n\n-\n\nIncreased skill range\n\nLightning Kick (E)\n\n-\n\nIncreased skill range\n\nAdvancement Tier 3\n\nThe user recovers 40 MP upon applying [Water Dragon Training].\n\nThe user recovers 50 MP upon applying [Water Dragon Training]."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "seorin",
@@ -10659,6 +11564,35 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nFrozen Drift\n(Supporter Skill)\n\n(Effect Duration Extended)\n\n[Overdrive]\nIncreases damage dealt by 33%\nDuration  : 20 60 second(s)\n\nTier 3\n\n(New ‘Black Tea?’ Effect Added)\n\n[Black Tea?]\nIncreases Defense by 35%\nIncreases Max HP by 35%\nIncreases Water damage by 35%\n3% of MP is restored every 5 second(s)\nDuration : Infinite\n\nTier 5\n\n(Max Stacks Increased)\n\n[Subzero]\nIncreases Water Damage taken by 2%\nDuration : 30 second(s) (stacking up to 10 20 times)\n\nMelody of Iron and Blood\n〈Seorin’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased)\n\nIncreases the user’s HP by 12% 30%"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "Duration : 20 60 second(s)",
+        "old": "20",
+        "new": "60",
+        "unit": "second(s)",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Duration : 30 second(s) (stacking up to 10 20 times)",
+        "old": "10",
+        "new": "20",
+        "unit": "times",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases the user’s HP by 12% 30%",
+        "old": "12",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "deja_applique"
       }
     ]
   },
@@ -10894,6 +11828,89 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "※ When Shimizu Akari's [Ring of Fire] skill hits, the [Divine Flame] effect will no longer be consumed. Additionally, reaching maximum stacks of [Divine Flame] will no longer change the skill into [Ring of Fire], allowing both effects to remain active simultaneously.\n\nCategory\n\nChanged\n\nRing of Fire\n(Ultimate Skill)\n\n(Select tooltips removed)\n\n[Ring of Fire]\n\nIncreases the target’s Light damage taken by 12%\nWhen this effect is applied it removes all [Divine Flame] effects and they cannot be reapplied\n\nWhen the effect ends the user gains 5 instances of the [Divine Flame] effect\nDuration : 24 second(s)\n※ Improved to allow faster chaining into the next Hunter's QTE skill after using a skill\n\nTier 2\n\n(Effect Value Increased)\n\nIncreases the user’s HP by 5% 10%\nIncreases Shield gained by Light team members by 5% 20%\n\nTier 3\n\n(New effect added, select tooltips removed, effect duration extended)\n\n[Divine Flame]\nIncreases Light damage taken by 1.6% (stacks up to 10 times)\nApplies the [Unrecoverable] effect on the target\nWhen the stack maximum is reached it activates the [Ring of Fire] effect\nDuration : 24 36 second(s)\n\n[Ring of Fire]\nIncreases Light damage by 20%\nIncreases Light Critical Hit damage taken by  20%\nWhen this effect is applied it removes all [Divine Flame] effects and they cannot be reapplied\nWhen the effect ends the user gains 5 instances of the [Divine Flame] effect\nDuration : 60 second(s)\n\n[Unrecoverable]\nTargets are unable to recover their HP\nDuration: 30 second(s)\n\nTier 4\n\n(Effect Value Increased)\n\nLight team members’ Light damage increases by 8% 10% for every Light team member in the party\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member)\n\nThe Defense of the team member with the highest Defense increases by 10% 20%\n\nThe Attack of the Light team member with the highest Attack increases by 10% 20%\n\nTier 5\n\n(New effect added below)\n\nUsing Ring of Fire grants the [Mantra] effect on Light Elemental Buster team members\n\n[Mantra]\nIncreases the Burst damage by 32%\nSlightly increases Burst damage accumulation rate\nDuration : 60 second(s)\n\n(Effect Value Increased)\n\n[Brilliance]\nIncreases damage dealt by 30% 50%\nIncreases the Critical Hit Rate of the user’s Basic Skill and Ultimate Skill by 16%\nIncreases Light Overload damage by 10% 16%\nDuration : 60 second(s)\n\nThe Price of a Promise\n〈Shimizu Akari’s Exclusive Weapon〉\nBased on Tier 5\n\n(Effect value increased and new effect added)\n\nThe user’s HP increases by 12% 50%\nWhen the [Echo of Light] effect is activated on Light team members, the entire team’s Light damage increases by 16% and Light Overload damage increases by 16% for 8 second(s)"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "Increases the user’s HP by 5% 10%",
+        "old": "5",
+        "new": "10",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases Shield gained by Light team members by 5% 20%",
+        "old": "5",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Duration : 24 36 second(s)",
+        "old": "24",
+        "new": "36",
+        "unit": "second(s)",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Light team members’ Light damage increases by 8% 10% for every Light team member in the party",
+        "old": "8",
+        "new": "10",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "The Defense of the team member with the highest Defense increases by 10% 20%",
+        "old": "10",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "The Attack of the Light team member with the highest Attack increases by 10% 20%",
+        "old": "10",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases damage dealt by 30% 50%",
+        "old": "30",
+        "new": "50",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases Light Overload damage by 10% 16%",
+        "old": "10",
+        "new": "16",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "a_verifier"
+      },
+      {
+        "line": "The user’s HP increases by 12% 50%",
+        "old": "12",
+        "new": "50",
+        "unit": "%",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "deja_applique"
+      }
     ]
   },
   {
@@ -11110,7 +12127,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 0\n\n-\n\nThe entire team gains the [Forever] effect when entering the Encore Mission and Instance Dungeon\n\n[Forever]\n\nIncrease damage dealt by 5%\n\nDuration: Infinite (stacks up to 3 times)\n\nAdvancement Tier 3\n\n[Performance]\n\nIncreases the user’s Core Attack damage by 50%\n\nGrants a [Shield] equal to 10% of the user’s Attack\n\nDuration: 3 second(s)\n\n[Performance]\n\nIncreases the user’s Core Attack damage by 55%\n\nGrants a [Shield] equal to 15% of the user’s Attack\n\nDuration: 3 second(s)"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "sian-halat",
@@ -11337,6 +12355,17 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 1\n\n(Effect duration extended)\n\n[Scarlet Domination]\nDuration : 20 40 second(s)"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "Duration : 20 40 second(s)",
+        "old": "20",
+        "new": "40",
+        "unit": "second(s)",
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "status": "deja_applique"
       }
     ]
   },
@@ -11582,7 +12611,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nMagic Beast’s Claws\n\n(Basic Attack)\n\n227% / 232% / 237% of the user’s Attack\n\n457% / 465% / 475% of the user’s Attack\n\nSlaughter\n\n(Core Attack)\n\n793%of the user’s Attack\n\n847% of the user’s Attack\n\nViolent Approach\n(Basic Skill 1)\n\n1340%of the user’s Attack\n\n1907% of the user’s Attack\n\nExtreme Attack: Beast Form\n\n(Basic Skill 2)\n\nDamage: 254% of the user’s Attack\n\n[Extreme Attack: Beast Form]\n\nThe user gains [Super Armor] while its effect\n\nIncreases Attack Speed by 30%\n\nIncreases damage taken by 15%\n\nDuration: 12 second(s)\n\nDamage: 390% of the user’s Attack\n\n[Extreme Attack: Beast Form]\n\nThe user gains [Super Armor] while its effect\n\nIncreases the user’s Attack by 100%\n\nIncreases Attack Speed by 30%\n\nIncreases damage taken by 15%\n\nDuration: 12 second(s)\n\nMagic Beast’s Instinct\n\n(Support Skill)\n\nDamage: 743% of the user’s Attack\n\n[Quick Attack: Beast Form]\n\nIncreases the user’s Attack by 20%.\n\nIncreases damage taken by 10%.\n\nDuration: 15 second(s)\n\nDamage: 1486% of the user’s Attack\n\n[Quick Attack: Beast Form]\n\nIncreases the user’s Attack by 30%.\n\nIncreases damage taken by 10%.\n\nDuration: 15 second(s)\n\nDivinity\n\n(Ultimate Skill)\n\nDamage: 2977% of the user’s Attack\n\nDamage: 4345% of the user’s Attack\n\nAdvancement Tier 0\n\nThe user’s Skill Damage increases proportionally to 50% of the user’s reduced HP\n\n[Curse of the Magic Beast]\n\nDeals damage equal to 200% of Silver Mane Baek Yoonho’s Max HP every 3 second(s).\n\nDuration: 30 second(s)\n\nThe user’s Skill Damage increases proportionally to 100% of the user’s reduced HP\n\n[Curse of the Magic Beast]\n\nDeals damage equal to 1000% of Silver Mane Baek Yoonho’s Max HP every 3 second(s).\n\nDuration: 30 second(s)\n\nAdvancement Tier 1\n\nWhen the user uses Extreme Attack: Beast Form they take damage equal to 10% of their current HP, but gain a [Shield] equal to 20% of their Max HP.\n\nWhen the user uses Extreme Attack: Beast Form they take damage equal to 10% of their current HP, but gain a [Shield] equal to 30% of their Max HP.\n\nAdvancement Tier 2\n\nThe user’s HP increases by 16%.\n\nThe user’s HP increases by 50%.\n\nAdvancement Tier 4\n\nThe user’s Basic Attack damage increases by 80%.\n\nThe user’s Basic Attack and Core Attack damage increases by 100%.\n\nAdvancement Tier 5\n\nChanges the user’s Skill Damage Increase equal to 120% of lost HP Ratio.\n\nChanges the user’s Skill Damage Increase equal to 200% of lost HP Ratio.\n\nHowling White Tiger’s Soul\n\n<Silver Mane Baek Yonnho’s exclusive weapon>\n\nAdvancement Tier 0-5\n\nIncreases the user’s Basic Attack damage by 22.5/32.5/42.5/52.5/65/80%\n\nIf the target is immune to [Bleed] it deals damage equal to 2.5/5/10/15/20/25% of Silver Mane Baek Yoonho’s Max HP.\n\n(Cooldown: 0.5 second(s))\n\nIncreases the user’s Basic Attack and Core Attack damage by 22.5/32.5/42.5/52.5/65/80%\n\nIf the target is immune to [Bleed] it deals damage equal to 30/60/120/180/240/300% of Silver Mane Baek Yoonho’s Max HP.\n\n(Cooldown: 0.5 second(s))"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "son-kihoon",
@@ -11840,7 +12870,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nAfter\n\nScorching Heat\n\n(Basic Attacks)\n\nStage 1 Damage: 192% of the user’s Attack\n\nStage 2 Damage: 203% of the user’s Attack\n\nStage 3 Damage: 220% of the user’s Attack\n\nStage 1 Damage: 210% of the user’s Attack\n\nStage 2 Damage: 220% of the user’s Attack\n\nStage 3 Damage: 236% of the user’s Attack\n\nIncinerate\n\n(Core Attack)\n\nDamage: 513% of the user’s Attack\n\nDamage: 566% of the user’s Attack\n\nHellfire (Q)\n\nDamage: 496% of the user’s Attack\n\nDamage: 550% of the user’s Attack\n\nIaido Type 4: Red Lotus Flower (E)\n\nStage 1 Damage: 293% of the user’s Attack\n\nStage 2 Damage: 325% of the user’s Attack\n\nStage 3 Damage: 358% of the user’s Attack\n\nStage 1 Damage: 321% of the user’s Attack\n\nStage 2 Damage: 357% of the user’s Attack\n\nStage 3 Damage: 393% of the user’s Attack\n\nScorching Heat Penetration (QTE)\n\nDamage: 460% of the user’s Attack\n\nDamage: 516% of the user’s Attack\n\nWeakening Attack: Hellfire\n\n(Support Skill)\n\nDamage: 210% of the user’s Attack\n\nDamage: 250% of the user’s Attack\n\nSpecial Iaido: Fire Demon\n\n(Ultimate Skill)\n\nDamage: 1935% of the user’s Attack\n\nDamage: 2130% of the user’s Attack"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "soyeon",
@@ -12478,6 +13509,17 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 5\n\n(New Effect Added)\n\nWhen [Punisher, Eclipse Slash, Extinction Blade] hit they inflict the [Windblade Rend] effect on the target\n\n[Windblade Rend]\nIncreases target’s [Wind] damage taken by 15%\nIncreases the target’s [Wind][Overload] damage taken by 15%\nDuration : 20 second(s) (stacks up to 3 times)\n\nEtched to the Bone\n〈Sugimoto Reiji’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased)\n\nThe user’s HP increases by 12% 30%"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "The user’s HP increases by 12% 30%",
+        "old": "12",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "status": "a_verifier"
+      }
     ]
   },
   {
@@ -12692,7 +13734,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 3\n\n(New effect added)\n\nWhen Dark Finale or Apocalyptic Might hits a target in a [Break] state it activates the [Suppressed] effect\n\nTier 4\n\n(New effect added)\n\nFor every Dark Breaker ally on the team, Sung Il-Hwan’s Attack increases by 5%"
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "sung-jinah",
@@ -13126,6 +14169,53 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nBasic\n\n(Effect Stats Increased)\n\n[Fire]\n\nThe damage of Tsuchigumo increases by 70% 100%\n\nTier 2\n\n(Effect Stats Increased)\n\nThe user’s Critical Hit damage increases by 16% 20%\n\nTier 5\n\n(Effect Stats Increased)\n\n[Sixth Sense]\n\nThe user’s Attack increases by 102% 120%\n\nThe user’s Critical Hit Rate and Critical Hit Damage increases by 27.5% 30%\n\nThe Path a Hero Must Take\n\n〈Tawata Kanae Exclusive Weapon〉Tier 5 Based\n\n(Effect Stats Increased)\n\nThe user’s Attack increases by 12% 20%"
       }
+    ],
+    "balance_changes": [
+      {
+        "line": "The damage of Tsuchigumo increases by 70% 100%",
+        "old": "70",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "The user’s Critical Hit damage increases by 16% 20%",
+        "old": "16",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "The user’s Attack increases by 102% 120%",
+        "old": "102",
+        "new": "120",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "The user’s Critical Hit Rate and Critical Hit Damage increases by 27.5% 30%",
+        "old": "27.5",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "The user’s Attack increases by 12% 20%",
+        "old": "12",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      }
     ]
   },
   {
@@ -13354,7 +14444,8 @@
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nTier 2\n\nShield Acquisition Chance increases by 8%\n\nWhen a [Shield] is active it increases the user’s Critical Hit Rate and Critical Hit damage by 25%\n\nShield Acquisition Chance increases by 8%\n\nWhen a [Shield] is active it increases the user’s Critical Hit Rate and Critical Hit damage by 25%\n\nWhen an ally successfully puts the target into a [Break] state it increases Critical Hit Rate and Critical Hit damage by 20%\n\nTier 5\n\nWhile the [Steel Tyrant] effect is active it increases the damage of Black Hole Crash by 125%\n\nWhile the [Steel Tyrant] effect is active it increases the damage of Black Hole Crash by 300%\n\n※ The Mana consumption for Thomas Andre's Basic Skill 1 and Basic Skill 2 has been decreased by 50% compared to before."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "woo-jinchul",
@@ -13580,7 +14671,8 @@
         "section": "Hunter Balance Adjustments",
         "text_en": "Category\n\nBefore\n\nAfter\n\nPassive Details\n\nWhen the user uses [Dash], it increases the damage of [Suppress, Mediation of Power, Iron Fist] by 30% for 6 second(s).\n\nWhen the user uses [Dash], it increases the damage of [Suppress, Mediation of Power, Iron Fist] by 30% for 6 second(s) and grants them [Super Armor].\n\nDecreases the cooldown of [Dash] by 1 second(s).\n\nAdvancement Tier 2\n\nThe user’s Defense Penetration increases by 8%.\n\nThe user’s Defense Penetration increases by 10%.\n\nAdvancement Tier 5\n\n-\n\nWhen the user uses their [Basic Attack] 4 time(s) it activates their [Tier 3 Passive].\n\n* The [Basic Passive] effect activated by [Judgement] skill effect in advancement tier 3 will not be applied.\n\nFist of Justice\n\n(Basic Attacks)\n\n-\n\nDeals [weak Break] damage.\n\n* Improved the after hit delay of Stage 3.\n\nSuppress\n\n-\n\nWhen this skill hits it inflicts [Stun] on the target for 3 second(s). (Cooldown: 20 second(s))\n\nMediation of Power\n\n-\n\nWhen the user uses this skill it grants a Shield equal to 2% of Woo Jinchul’s Defense to team members for 20 second(s) (stacking up to 3 times).\n\nAnother Level\n\n<Woo Jinchul’s Exclusive Weapon>\n\nAdvancement Tier 1-5\n\n-\n\nWhen the enemy enters the [Break] state, all team members’ Wind damage increases by 4/5/6/7/8/12%, excluding the user of this skill (Duration: Infinite)\n\n* Damage increase values are applied differently depending on the advancement tier."
       }
-    ]
+    ],
+    "balance_changes": []
   },
   {
     "id": "yoo-jinho",
@@ -13862,6 +14954,143 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 1\n\n(Values Increased)\n\nWhen the user uses Kill Shot it activates the user’s Core Attack and increases their Core Attack damage by 200% for 6 12 second(s).\n(Cooldown: 12 second(s))\n\nWhen the user uses Core Attack, it grants the [Madness] effect. (Cooldown: 12 6 second(s))\n\nTier 2\n\n(New Effect Added)\n\nFor every Fire ally in the party, Yoo Soohyun’s Fire damage increases by 12%\n\nTier 3\n\n(Activation Effect Changed)\n\nUsing Trick Shot grants the [Attack Increase] [Superstar] effect\n\n[Damage Increase]\nDamage increases by 48%\nDuration : 16 second(s)\n\n[Superstar]\nIncreases Attack by 60%\nIncreases Critical Hit Rate by 30%\nDuration : 16 second(s)\n\nTier 4\n\n(New Effect Added)\n\nFor every Fire ally in the party, Yoo Soohyun’s Attack increases by 10%"
+      }
+    ],
+    "balance_changes": [
+      {
+        "line": "Damage: 1200% 2355% of Attack",
+        "old": "1200",
+        "new": "2355",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Damage: 1200% 2512.5% of Attack",
+        "old": "1200",
+        "new": "2512.5",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Damage: 2175% 2536.5% of Attack",
+        "old": "2175",
+        "new": "2536.5",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Damage: 1644.44% 2248.78% of Attack",
+        "old": "1644.44",
+        "new": "2248.78",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Damage: 1200% 1617% of Attack",
+        "old": "1200",
+        "new": "1617",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Damage: 4125% 6315% of Attack",
+        "old": "4125",
+        "new": "6315",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "The user’s Damage Increase stat increases equal to 24% 100% of their Defense Penetration",
+        "old": "24",
+        "new": "100",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Magic firearms appear around Soohyun which deal damage equal to 160% 500% of her Attack",
+        "old": "160",
+        "new": "500",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases Fire damage taken by 1% 1.5%",
+        "old": "1",
+        "new": "1.5",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Decreases the target’s Recovery Rate by 4% 5%",
+        "old": "4",
+        "new": "5",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "When the user uses Kill Shot it activates the user’s Core Attack and increases their Core Attack damage by 40% 200% for 6 second(s).",
+        "old": "40",
+        "new": "200",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "Increases Attack by 24% 48%",
+        "old": "24",
+        "new": "48",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "a_verifier"
+      },
+      {
+        "line": "Increases Attack by 12% 20%",
+        "old": "12",
+        "new": "20",
+        "unit": "%",
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "status": "deja_applique"
+      },
+      {
+        "line": "When the user uses Kill Shot it activates the user’s Core Attack and increases their Core Attack damage by 200% for 6 12 second(s).",
+        "old": "6",
+        "new": "12",
+        "unit": "second",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
+      },
+      {
+        "line": "When the user uses Core Attack, it grants the [Madness] effect. (Cooldown: 12 6 second(s))",
+        "old": "12",
+        "new": "6",
+        "unit": "second(s)",
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "status": "a_verifier"
       }
     ]
   },
