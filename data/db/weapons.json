@@ -3609,7 +3609,27 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nLightning (Skill)\n\n-\n\nMassively reduced skill execution time\n\nThank you."
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 93% of Jinwoo’s Attack\n\nStage 2 Damage: 97% of Jinwoo’s Attack\n\nStage 3 Damage: 104% of Jinwoo’s Attack\n\nStage 1 Damage: 190% of Jinwoo’s Attack\n\nStage 2 Damage: 193% of Jinwoo’s Attack\n\nStage 3 Damage: 200% of Jinwoo’s Attack\n\nAdvancement Tier 0\n\n[Storm of White Flames]\n\nCreates a lightning that deals damage equal to 90% of the user’s Attack in nearby areas every 0.75 second.\n\nDuration: 10 second(s)\n\n[Storm of White Flames]\n\nCreates a lightning that deals damage equal to 120% of the user’s Attack in nearby areas every 0.75 second.\n\nDuration: 10 second(s)\n\nAdvancement Tier 1\n\nInflicts the [Stroke of Lightning] effect to the same target every 5 attack(s).\n\n[Stroke of Lightning]\n\nDeals damage equal to 60% of Attack.\n\nCooldown: 1 second(s)\n\nInflicts the [Stroke of Lightning] effect to the same target every 5 attack(s).\n\n[Stroke of Lightning]\n\nDeals damage equal to 60% of Attack.\n\nCooldown: 0.5 second(s)\n\nAdvancement Tier 5\n\n[Final Thunderbolt]\n\nDrops a large bolt of lightning around the target and deals damage equal to 600% of the user’s Attack to nearby targets.\n\n[Final Thunderbolt]\n\nDrops a large bolt of lightning around the target and deals damage equal to 800% of the user’s Attack to nearby targets."
+      },
+      {
+        "date": "2024-10-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/62691",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement 0\n\n- [Shield]\n\nCreates a [Shield] equal to 20% of the user’s Max HP.\n\n- [Storm of White Flames]\n\nIncreases the user’s Attack by 8%.\n\nCreates a lightning that deals damage equal to 120% of the user’s Attack in nearby areas every 0.75 second.\n\n- [Shield]\n\nCreates a [Shield] equal to 50% of the user’s Max HP.\n\n- [Storm of White Flames]\n\nIncreases the user’s Attack by 12%.\n\nCreates a lightning that deals damage equal to 200% of the user’s Attack in nearby areas every 0.75 second.\n\nAdvancement 1\n\n- [Stroke of Lightning]\n\nDeals damage equal to 60% of Attack.\n\n- [Stroke of Lightning]\n\nDeals damage equal to 100% of Attack.\n\nAdvancement 3\n\n-\n\n- The damage of [Storm of White Flames] increases by 30%. (New)\n\n- Wind damage increases by 10% while [Storm of White Flames] is active. (New)\n\nAdvancement 5\n\n- [Final Thunderbolt]\n\nApplies upon a successful [Counterattack].\n\n- [Benediction of the White Flames] Applies when [Counterattack] fails.\n\n- [Final Thunderbolt]\n\nA large lightning bolt falls on the target dealing damage equal to 800% of the user’s Attack to nearby enemies.\n\n- When [Lightning] hits it applies the [Benediction of White Flames] effect and [Final Thunderbolt].\n\n- [Final Thunderbolt]\n\nA large lightning bolt falls on the target dealing damage equal to 1,600% of the user’s Attack to nearby enemies.\n\n- [Stroke of Lightning] effect enhancement (New)\n\n[Stroke of Lightning] is enhanced.\n\nEach time the user hits the same target 3 time(s) it applies the [Stroke of Lightning] effect on the target.\n\n- [Stroke of Lightning]\n\nDeals damage equal to 200% of the user’s Attack.\n\nCooldown: 0.3 second(s)"
+      }
+    ]
   },
   {
     "id": "demon-knights-spear",
@@ -3848,7 +3868,21 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 94% of Jinwoo’s Attack\n\nStage 2 Damage: 100% of Jinwoo’s Attack\n\nStage 3 Damage: 106% of Jinwoo’s Attack\n\nStage 1 Damage: 123% of Jinwoo’s Attack\n\nStage 2 Damage: 128% of Jinwoo’s Attack\n\nStage 3 Damage: 135% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nChanged\n\nTier 0\n\n(Full Bloom New Effect Added)\n\n[Full Bloom]\nIt also increases the usage speed of Plum Flower Swift Flight by 20%\nIncreases Plum Flower Swift Flight damage by 20%\nIncreases Attack by 4%\nThe user’s Critical Hit Rate increases by 4%\nDuration : 8 second(s)\n\nTier 1\n\n(New Effect Added)\n\nThe [Full Bloom] effect is enhanced.\n\n[Full Bloom]\nIncreases [Plum Flower Swift Flight]‘s usage speed by 20%\nIncreases [Plum Flower Swift Flight]‘s damage by 50%\nIncreases [Plum Flower Swift Flight]‘s Critical Hit damage by 50%\nIncreases Attack by 4%\nIncreases Critical Hit Rate by 4%\nDuration : 8 second(s)\n\nTier 5\n\n(New Effect Added)\n\nThe [Full Bloom] effect is enhanced.\n\n[Full Bloom]\nIncreases [Plum Flower Swift Flight]‘s usage speed by 20%\nIncreases [Plum Flower Swift Flight]‘s damage by 80%\nIncreases [Plum Flower Swift Flight]‘s Critical Hit damage by 80%\nIncreases [Plum Flower Swift Flight]‘s Dark damage by 80%\nIncreases Attack by 4%\nIncreases Critical Hit Rate by 4%\nDuration : 8 second(s)"
+      }
+    ]
   },
   {
     "id": "divine-quarterstaff",
@@ -3968,7 +4002,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2025-10-23",
+        "url": "https://forum.netmarble.com/slv_en/view/32/96532",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nHeavenly Order Strike\n\nDamage: 1556% of Jinwoo’s Attack\n\nDamage: 2178% of Jinwoo’s Attack"
+      }
+    ]
   },
   {
     "id": "dragonscale-broadsword",
@@ -4306,7 +4348,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2025-07-31",
+        "url": "https://forum.netmarble.com/slv_en/view/32/92872",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 1\n\n[High Fever]\n\n- Jinwoo’s Fire damage increases by 50% when he hits a target with the [High Fever] effect.\n\n- The user regains 10% of their MP 1 time when they hit a target with the [High Fever] effect applied.\n\nDuration: 8 second(s) (stacking up to 1 times)\n\n[High Fever]\n\n- Jinwoo’s Fire damage increases by 70% when he hits a target with the [High Fever] effect.\n\n- The user regains 10% of their MP 1 time when they hit a target with the [High Fever] effect applied.\n\nDuration: 8 second(s) (stacking up to 1 times)"
+      }
+    ]
   },
   {
     "id": "foress-wish",
@@ -4621,7 +4671,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2025-07-31",
+        "url": "https://forum.netmarble.com/slv_en/view/32/92872",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 1\n\n[Golden Wound]\n\n- When the user attacks a target with the [Golden Wound] effect applied it increases the user’s Light damage by 99.99%.\n\n- When the user attacks a target with the [Golden Wound] effect applied, the user recovers 9.99% of their HP 1 time.\n\nBeing hit by a Light attack removes this effect.\n\nDuration: 9.9 second(s)\n\n[Golden Wound]\n\n- When the user attacks a target with the [Golden Wound] effect applied it increases the user’s Light damage by 110%.\n\n- When the user attacks a target with the [Golden Wound] effect applied, the user recovers 9.99% of their HP 1 time.\n\nBeing hit by a Light attack removes this effect.\n\nDuration: 9.9 second(s)"
+      }
+    ]
   },
   {
     "id": "grave-keepers-scythe",
@@ -5982,7 +6040,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nChanged\n\nBasic Attack\n\n※ Elemental Accumulation amount increased\n\nCore Attack\n\n※ Elemental Accumulation amount increased\n\n[Elemental Accumulation : Low Medium]\n\nTier 0\n\n(New effect added)\n\nUsing Lunar Wind restores 100% of the user’s Core Gauge and activates the [Spirit Fury] effect\n\n※ The actual Elemental Accumulation for Moonlit Gale’s basic attack has been increased, while its tooltip description remains unchanged."
+      }
+    ]
   },
   {
     "id": "moonshadow",
@@ -6067,7 +6133,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 98% of Jinwoo’s Attack\n\nStage 2 Damage: 102% of Jinwoo’s Attack\n\nStage 3 Damage: 108% of Jinwoo’s Attack\n\nStage 1 Damage: 190% of Jinwoo’s Attack\n\nStage 2 Damage: 195% of Jinwoo’s Attack\n\nStage 3 Damage: 200% of Jinwoo’s Attack\n\nAdvancement Tier 5\n\nIncreases the user’s damage by 15% while the time slowing effect is active.\n\nIncreases the user and their team members’ damage by 15% while the time slowing effect is active."
+      }
+    ]
   },
   {
     "id": "naga-guardian-dragons-trident",
@@ -6575,7 +6649,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 93% of Jinwoo’s Attack\n\nStage 2 Damage: 97% of Jinwoo’s Attack\n\nStage 3 Damage: 103% of Jinwoo’s Attack\n\nStage 1 Damage: 145% of Jinwoo’s Attack\n\nStage 2 Damage: 150% of Jinwoo’s Attack\n\nStage 3 Damage: 156% of Jinwoo’s Attack\n\nAdvancement Tier 0\n\n- When the third attack of the [Basic Attack] hits, inflicts the [Firebird Soul] effect.\n\n- Increases [Flame Shot] damage by 70% per [Firebird Soul] instance.[\n\n- When the [Basic Attack] hits 3 times it inflicts the pFirebird Soul] effect.\n\n- Increases [Flame Shot] damage by 80% per [Firebird Soul] instance.[\n\nAdvancement Tier 1\n\n -\n\n- When [Flame Shot] hits, fills the user’s Core Gauge by 50%."
+      }
+    ]
   },
   {
     "id": "radiru-clans-double-edged-spear",
@@ -7389,7 +7471,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 116% of Jinwoo’s Attack\n\nStage 2 Damage: 120% of Jinwoo’s Attack\n\nStage 3 Damage: 128% of Jinwoo’s Attack\n\nStage 1 Damage: 174% of Jinwoo’s Attack\n\nStage 2 Damage: 180% of Jinwoo’s Attack\n\nStage 3 Damage: 187% of Jinwoo’s Attack"
+      }
+    ]
   },
   {
     "id": "skadi",
@@ -7509,7 +7599,27 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 91% of Jinwoo’s Attack\n\nStage 2 Damage: 94% of Jinwoo’s Attack\n\nStage 3 Damage: 100% of Jinwoo’s Attack\n\nStage 1 Damage: 170% of Jinwoo’s Attack\n\nStage 2 Damage: 173% of Jinwoo’s Attack\n\nStage 3 Damage: 180% of Jinwoo’s Attack\n\nAdvancement Tier 0\n\nDeals damage equal to 100% of the user’s Attack to targets with the [Skadi’s Curse] effect.\n\nDeals damage equal to 200% of the user’s Attack to targets with the [Skadi’s Curse] effect.\n\nAdvancement Tier 5\n\nDeals damage equal to 500% of the user’s Attack to targets with the [Skadi’s Curse] effect.\n\nDeals damage equal to 1,000% of the user’s Attack to targets with the [Skadi’s Curse] effect."
+      },
+      {
+        "date": "2025-06-05",
+        "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 1\n\n[Skadi’s Domain]\n\n- When any attack lands while in the domain it deals damage equal to 50% of the attacker’s Attack. (Cooldown: 0.5 second(s))\n\n- Increases team member’s Water elemental damage by 10% within the domain\n\n[Skadi’s Domain]\n\n- When any attack lands while in the domain it deals damage equal to 500% of the attacker’s Attack. (Cooldown: 0.5 second(s))\n\n- Increases team member’s Water elemental damage by 10% within the domain\n\nAdvancement Tier 3\n\n[Skadi’s Blessing]\n\n- Increases Attack by 3%.\n\n- Increases Defense Penetration by 3%.\n\n- Duration: Infinite (stacking up to 4 times)\n\n[Skadi’s Blessing]\n\n- Increases Attack by 6%.\n\n- Increases Defense Penetration by 6%.\n\n- Duration: Infinite (stacking up to 2 times)\n\nAdvancement Tier 5\n\nEnhances the Last Hunt skill.\n\n- Deals damage equal to 1000% of the user’s Attack to targets with the [Skadi’s Curse] effect.\n\nEnhances the Last Hunt skill.\n\n- Deals damage equal to 5000% of the user’s Attack to targets with the [Skadi’s Curse] effect."
+      },
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "※ The [Skadi's Curse] effect has been enhanced, and landing the [Last Hunt] skill will no longer consume the [Skadi's Curse] effect.\n\nCategory\n\nChanged\n\nTier 0\n\n(Last Hunt value increased, changed from Fixed Damage to Skill Damage, select tooltips removed)\n\n[Last Hunt]\nDeals Water elemental damage equal to 200% 2000%\nCounts as a Basic Skill\nWhen the Last Hunt Skill hits it removes the [Skadi’s Curse] effect.\n\n(New Skadi's Curse effect added and effect duration extended)\n\n[Skadi’s Curse]\nIncreases Water Overload damage taken by 10%\nDuration : 7 15 second(s)\n\nTier 1\n\n(Effect Value Increase)\n\n[Skadi’s Domain]\nWhen any attack lands while in the domain, it deals damage equal to  500% 1000% of the attacker’s Attack. (Cooldown: 0.5 second(s))\n\nTier 3\n\n(New effect added)\n\nWhen all the user’s equipped weapons are Water element weapons, [Skadi’s Blessing]’s stack maximum increases to 4 instances\n\n[Skadi’s Blessing]\nIncreases Winter Hunting damage by 50%\n\nTier 5\n\n(Tooltip updated)\n\nDeals damage equal to 5000% of the user’s Attack to targets with the [Skadi’s Curse] effect.\n\n[Last Hunt]\nDeals Water elemental damage equal to 5000% of the user’s Attack\nThe [Freeze] effect is activated\nCounts as a Basic Skill\nWhen the Last Hunt skill hits, it removes the [Skadi’s Curse] effect\n\n(New effect added)\n\n[Skadi’s Curse] is enhanced\n\n[Skadi’s Curse]\nIncreases Water Overload damage taken by 10%\nAdditionally activates [Deep Erosion]\n\n[Deep Erosion]\nIncreases Elemental Weakness damage taken by 24%\nDuration : 15 second(s)"
+      }
+    ]
   },
   {
     "id": "soma-and-asura",
@@ -7940,7 +8050,21 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 91% of the user’s Attack\n\nStage 2 Damage: 94% of the user’s Attack\n\nStage 3 Damage: 100% of the user’s Attack\n\nStage 1 Damage: 164% of the user’s Attack\n\nStage 2 Damage: 168% of the user’s Attack\n\nStage 3 Damage: 175% of the user’s Attack\n\n- Deals [weak Break] damage.\n\nAdvancement Tier 0\n\n[Time to Hunt] skill\n\nThe Core Attack damage increases by 60%.\n\n[Time to Hunt] skill\n\nThe Core Attack damage increases by 100%.\n\nAdvancement Tier 5\n\n- After [Judgment Time] hits if a [Core Attack] is the next attack and it hits, it inflicts [Judgment Overture] to the target.\n\n- At 3 instances of [Judgment Overture] it changes to 1 instance of [Destroy] (up to 1 times)."
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nChanged\n\nTier 0\n\n(Attack Increased)\n\nUsing Judgement Time transforms their Core Attack into Time to Hunt for 6 second(s) and increases damage by 100% 300%\n\nTier 1\n\n([Light] Damage Taken Increase effect and extended its duration added)\n\n[Sunder]\n\nIncreases [Break] effectiveness by 25%\n\nIncreases the target’s Light damage taken by 25%\n\nDuration: 3 second(s) 5 second(s)\n\nTier 5\n\n(Activation requirements for the [Judgment Overture] effect eased)\n\nAfter Judgment Time hits if a Core Attack is the next attack and it hits, it inflicts [Judgment Overture] to the target.\n\nWhen Judgement Time hits it inflicts the [Judgment Overture] effect to the target\n\nWhen [Judgment Overture] has stacked 3 times it becomes 1 instance of [Destroy] (Max: 1 time)"
+      }
+    ]
   },
   {
     "id": "thetis-grimoire",
@@ -8060,7 +8184,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 70% of Jinwoo’s Attack\n\nStage 2 Damage: 73% of Jinwoo’s Attack\n\nStage 3 Damage: 77% of Jinwoo’s Attack\n\nStage 1 Damage: 102% of Jinwoo’s Attack\n\nStage 2 Damage: 104% of Jinwoo’s Attack\n\nStage 3 Damage: 108% of Jinwoo’s Attack"
+      }
+    ]
   },
   {
     "id": "transfiguration-key",
@@ -8159,7 +8291,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nChanged\n\nBasic Attack\n\n※ Elemental Accumulation amount increased\n\nCore Attack\n\n※ Elemental Accumulation\n\n[Elemental Accumulation : Low Medium]\n\n※ The actual Elemental Accumulation for Transfiguration Key's basic attack has been increased, while its tooltip description remains unchanged"
+      }
+    ]
   },
   {
     "id": "truth-demon-knights-spear",
@@ -8279,7 +8419,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-11-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/67238",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 5\n\n[Holy Knight’s Curse]\n\n - At 5 instances it deals additional damage equal to 1000% of the user’s Attack.\n\n - When the additional damage is taken the effect is removed.\n\n - Duration: 60 second(s)\n\n[Holy Knight’s Curse]\n\n - At 3 instances it deals additional damage equal to 2000% of the user’s Attack.\n\n - When the additional damage is taken the effect is removed.\n\n - Duration: 60 second(s)"
+      }
+    ]
   },
   {
     "id": "truth-kasakas-venom-fang",
@@ -8399,7 +8547,21 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2025-06-05",
+        "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 3\n\n[Kasaka’s Deadly Poison]\n\n- Deals damage equal to 200% of the user’s Attack every 3 second(s).\n\n- Decreases the target’s HP Recovery Rate by 70%.\n\nDuration: 20 second(s)\n\n[Kasaka’s Deadly Poison]\n\n- Deals damage equal to 250% of the user’s Attack every 3 second(s).\n\n- Decreases the target’s HP Recovery Rate by 80%.\n\nDuration: 20 second(s)"
+      },
+      {
+        "date": "2025-07-31",
+        "url": "https://forum.netmarble.com/slv_en/view/32/92872",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 5\n\nThe damage of [Vanishing Shade] increases by 150%.\n\nThe damage of [Vanishing Shade] increases by 200%."
+      }
+    ]
   },
   {
     "id": "vulcans-rage",
@@ -8484,7 +8646,21 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\n-\n\nImproved rigidity\n\n-\n\nImproved battle control frame\n\nStage 1 Damage: 128% of the user’s Attack\n\nStage 2 Damage: 135% of the user’s Attack\n\nStage 3 Damage: 144% of the user’s Attack\n\nStage 1 Damage: 140% of the user’s Attack\n\nStage 2 Damage: 146% of the user’s Attack\n\nStage 3 Damage: 155% of the user’s Attack\n\nCore Attack\n\n-\n\nImproved rigidity\n\nDamage: 767% of Jinwoo’s Attack\n\nDamage: 867% of Jinwoo’s Attack\n\nFire of Destruction (Skill)\n\nDamage: 1197% of Jinwoo’s Attack\n\nDamage: 1277% of Jinwoo’s Attack\n\nVulcan’s Blessing\n\nApplies a [Shield] equal to 5% of the user’s Attack\n\nApplies a [Shield] equal to 10% of the user’s Attack\n\nConcentration\n\nWhen it explodes, it deals additional 6% damage per instance of [Concentration]. (stacking up to 30 times)\n\nWhen it explodes, it deals additional 15% damage per instance of [Concentration]. (stacking up to 20 times)"
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Sung Jinwoo Weapon Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBasic Attack\n\nStage 1 Damage: 140% of Jinwoo’s Attack\n\nStage 2 Damage: 146% of Jinwoo’s Attack\n\nStage 3 Damage: 155% of Jinwoo’s Attack\n\nStage 1 Damage: 245% of Jinwoo’s Attack\n\nStage 2 Damage: 250% of Jinwoo’s Attack\n\nStage 3 Damage: 260% of Jinwoo’s Attack\n\nAdvancement Tier 0\n\n- [Concentration]\n\nWhen the duration ends or the effect is removed, [Vulcan’s Blessing] explodes and deals damage equal to 300% of the user’s Attack (stacking up to 20 times).\n\n- When it explodes, it deals additional 15% damage per instance of [Concentration].\n\n- [Concentration]\n\nWhen the duration ends or the effect is removed, [Vulcan’s Blessing] explodes and deals damage equal to 400% of the user’s Attack (stacking up to 20 times).\n\n- When it explodes, it deals additional 20% damage per instance of [Concentration].\n\n- When [Concentration] is at 20 instances, [Vulcan’s Blessing] instantly explodes and recreates [Shield] equal to 10% of the user’s Attack.\n\nDuration: Infinite\n\nAdvancement Tier 5\n\nWhile [Shield] is in effect, the damage of [Fire of Destruction] increases by 40%.\n\nWhile [Shield] is in effect, the damage of [Fire of Destruction] increases by 50%."
+      }
+    ]
   },
   {
     "id": "west-wind",
@@ -8688,7 +8864,15 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nChanged\n\nTier 5\n\n(New effect added)\n\nWhen all the user’s equipped weapons are Dark element weapons and Winchester Roke’s Basic Attack is used, it activates the Core Attack"
+      }
+    ]
   },
   {
     "id": "winter-fang",
@@ -8808,7 +8992,21 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-05-07",
+        "url": "https://forum.netmarble.com/slv_en/view/32/104871",
+        "section": "Sung Jinwoo's Weapon Balance Adjustment",
+        "text_en": "Categroy\n\nBefore\n\nChanged\n\nBasic\n\nWhen the user’s Current Power Gauge is at 30% or higher while using Wolf’s Shadow, Wolf’s Shadow becomes Wolf’s Echo for 3 second(s)\n\n[Wolf’s Echo]\n\n- Power Gauge Consumption: 30%\n\nWhen the user’s Current Power Gauge is at 10% or higher while using Wolf’s Shadow, Wolf’s Shadow becomes Wolf’s Echo for 7 second(s)\n\n[Wolf’s Echo]\n\n- Power Gauge Consumption: 10%\n\nTier 1\n\n[Silver Mark]\n\nDuration : 3 second(s)\n\n[Silver Mark]\n\n- Duration : 10 second(s)\n\nTier 3\n\n[Dusk]\n\nDuration : 3 second(s)\n\n[Dusk]\n\nDuration : 10 second(s)\n\nTier 5\n\nThe [Dusk and Silver Mark] effects are enhanced.\n\n[Dusk]\n\nDuration: 3 second(s)\n\n[Silver Mark]\n\nIncreases the damage of White Wolf’s Night by 55%\n\nDuration: 3 second(s)(stacking up to 2 times)\n\nThe [Dusk and Silver Mark] effects are enhanced.\n\n[Dusk]\n\nDuration: 10 second(s)\n\n[Silver Mark]\n\nIncreases the damage of White Wolf’s Night by 70%\n\nDuration: 10 second(s)(stacking up to 2 times)"
+      },
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Sung Jinwoo Weapon Balance Adjustments",
+        "text_en": "Category\n\nChanged\n\nTier 5\n\n(New effect added and value increased)\n\n[Dusk, Silver Mark, and Isolation] effects are enhanced\n\n[Silver Mark]\nThe damage of [White Wolf’s Night] increases by 70% 80%\n\n[Isolation]\nIncreases damage dealt by 40%\nIncreases Critical Hit damage by 40%\nDuration : Infinite"
+      }
+    ]
   },
   {
     "id": "zekes-fragment",

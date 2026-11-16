@@ -209,7 +209,33 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nMultiply\n\nMP Consumption: 100\n\nMP Consumption: 50\n\nWhen defeating an enemy, there is a 50%/70%/100% chance to reset the skill’s cooldown (Cooldown: 1 second(s)).\n\nWhen defeating an enemy, there is a 50%/70%/100% chance to reset the skill’s cooldown (Cooldown: 0.5 second(s)).\n\n-\n\nWhen this skill hits an Elite or higher monster, there is a 25%/35%/50% chance that this skill’s cooldown will be reset. (Cooldown: 0.5 second(s))\n\n-\n\nIncreased hit range\n\nFlame Slash\n\nDamage: 292%/360%/460% of Jinwoo’s Attack\n\nDamage: 364%/450%/583% of Jinwoo’s Attack\n\n-\n\nDecreased recoil\n\n-\n\nIncreased hit range"
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nFull Moon Wheel\n\nDamage: 408% / 493% / 600% of Jinwoo’s Attack\n\nDamage: 470% / 586% / 734% of Jinwoo’s Attack\n\nMultiply\n\nDamage: 378% / 396% / 466% of Jinwoo’s Attack\n\nDamage: 455% / 498% / 612% of Jinwoo’s Attack\n\nWhirlwind Rush\n\nDamage: 293% / 400% / 507% of Jinwoo’s Attack\n\nDamage: 344% / 487% / 640% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2024-09-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/56294",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nFull Moon Wheel\n\nDamage: 470% / 586% / 734% of Jinwoo’s Attack\n\nDamage: 630% / 883% / 1230% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2025-03-11",
+        "url": "https://forum.netmarble.com/slv_en/view/32/79785",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nFull Moon Wheel\n\nMP Consumption: 100\n\nDamage dealt to Normal Monsters increases by 45%/75%/120%.\n\nMP Consumption: 80\n\nDamage dealt to Boss or Elite monsters 45%/75%/120%\n\nMultiply\n\nMP Consumption: 50\n\nDamage: 455%/498%/612% of Jinwoo’s Attack\n\nWhen this skill hits an Elite or higher monster, there is a 25%/35%/50% chance that this skill’s cooldown will be reset (Cooldown: 0.5 second(s))\n\nMP Consumption: 30\n\nDamage: 546%/598%/734% of Jinwoo’s Attack\n\nWhen this skill hits an Elite or higher monster, there is a 50%/60%/70% chance that this skill’s cooldown will be reset (Cooldown: 0.5 second(s))\n\nFlame Slash\n\nMP Consumption: 100\n\nDamage: 424%/ 567%/ 787% of Jinwoo’s Attack\n\nMP Consumption: 80\n\nDamage: 551%/ 737%/ 1023% of Jinwoo’s Attack\n\nWhirlwind Rush\n\nMP Consumption: 100\n\nMP Consumption: 80"
+      }
+    ]
   },
   {
     "id": "crushing-blow--chained-break",
@@ -407,7 +433,27 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nChained Break\n\nDamage: 358% / 395% / 488% of Jinwoo’s Attack\n\nDamage: 400% / 455% / 582% of Jinwoo’s Attack\n\nEnlightened Break\n\nDamage: 309% / 317% / 383% of Jinwoo’s Attack\n\nDamage: 354% / 373% / 466% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2024-09-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/56294",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nEnlightened Break\n\nDamage: 354% / 373% / 466% of Jinwoo’s Attack\n\nDamage: 530% / 655% / 945% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2025-03-11",
+        "url": "https://forum.netmarble.com/slv_en/view/32/79785",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nChained Break\n\nMP Consumption: 100\n\nMP Consumption: 80\n\nEnlightened Break\n\nMP Consumption: 100\n\nMP Consumption: 80\n\nCountering Break\n\nMP Consumption: 100\n\nMP Consumption: 80\n\nAscension Break\n\nMP Consumption: 100\n\nMP Consumption: 80"
+      }
+    ]
   },
   {
     "id": "dagger-toss--detonation",
@@ -606,7 +652,33 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nBombardment\n\nDamage: 373%/408%/445% of Jinwoo’s Attack\n\nDamage: 428%/487%/563% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nDetonation\n\nDamage per dagger: 52%/ 60%/ 66% of Jinwoo’s Attack\n\nDamage per dagger: 60%/ 72%/ 82% of Jinwoo’s Attack\n\nAscension\n\nDamage: 395%/ 403%/ 430% of Jinwoo’s Attack\n\nDamage: 476%/ 507%/ 565% of Jinwoo’s Attack\n\nBombardment\n\nDamage: 428%/ 487%/ 563% of Jinwoo’s Attack\n\nDamage: 460%/ 533%/ 628% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2024-09-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/56294",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nDetonation\n\nDamage per dagger: 60%/ 72%/ 82% of Jinwoo’s Attack\n\nDamage per dagger: 97% / 136% / 177% of Jinwoo’s Attack\n\nElectric Shock\n\nDamage: 277% / 317% / 338% of Jinwoo’s Attack\n\nEvery time this skill hits, applies the [Electric Shock] effect to the target\n\nDeals damage equal to 50% / 100% / 200% of Attack.\n\nDamage: 724% / 1084% / 1430% of Jinwoo’s Attack\n\nEvery time this skill hits, applies the [Electric Shock] effect to the target\n\nDeals damage equal to 150% / 300% / 600% of Attack.\n\nAscension\n\nDamage: 476%/ 507%/ 565% of Jinwoo’s Attack\n\nDamage: 500% / 545% / 622% of Jinwoo’s Attack\n\nBombardment\n\nDamage: 460%/ 533%/ 628% of Jinwoo’s Attack\n\nDamage: 735% / 1028% / 1432% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2025-03-11",
+        "url": "https://forum.netmarble.com/slv_en/view/32/79785",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nDetonation\n\nMP Consumption: 100\n\nDamage per dagger: 97%/136%/177% of Jinwoo’s Attack\n\n[Burn] Deals damage equal to 30%/50%/80% of Attack (stacking up to 1/2/3 times)\n\nMP Consumption: 80\n\nDamage per dagger: 136%/190%/248% of Jinwoo’s Attack\n\n[Burn] Deals damage equal to 50%/100%/150% of Attack (stacking up to 1/2/3 times)\n\nElectric Shock\n\nMP Consumption: 100\n\nMP Consumption: 80\n\nAscension\n\nMP Consumption: 100\n\nDamage: 500%/545%/622% of Jinwoo’s Attack\n\nMP Consumption: 80\n\nDamage: 700%/763%/871% of Jinwoo’s Attack\n\nBombardment\n\nMP Consumption: 100\n\nMP Consumption: 80"
+      }
+    ]
   },
   {
     "id": "multistrike--rush",
@@ -649,7 +721,15 @@
     "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
-    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
+    "balance_history": [
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune Category\n\nChanged\n\nExplosion\n\n(Fire)\n\n(New effect added)\n\nExplosion damage increases by 60% / 100% / 160% / 180% while [Shield] is active"
+      }
+    ]
   },
   {
     "id": "multistrike--percussion",
@@ -804,7 +884,27 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nRush\n\nWhen the final hit lands, deals weak Break damage every 3 second(s) for 9 second(s).\n\nWhen the final hit lands, deals weak Break damage every 3 second(s) for 9/12/15 second(s).\n\nIllusion\n\nDamage: 280%/377%/414% of Jinwoo’s Attack\n\nDamage: 297%/400%/460% of Jinwoo’s Attack\n\nPummel\n\nDamage: 302%/378%/420% of Jinwoo’s Attack\n\nDamage: 340%/432%/480% of Jinwoo’s Attack\n\nMP Consumption: 100\n\nMP Consumption: 50\n\nDeals weak Break damage.\n\nDeals weak Break damage.\n\n* Increased the corresponding effect.\n\nNo changes in the description."
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nPercussion\n\nDamage: 408% / 450% / 502% of Jinwoo’s Attack\n\nDamage: 454% / 515% / 592% of Jinwoo’s Attack\n\nPummel\n\nDamage: 340% / 432% / 480% of Jinwoo’s Attack\n\nDamage: 380% / 502% / 577% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2025-03-11",
+        "url": "https://forum.netmarble.com/slv_en/view/32/79785",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nRush\n\nMP Consumption: 100\n\nDamage: 520%/655%/900% of Jinwoo’s Attack\n\nMP Consumption: 80\n\nDamage: 624%/786%/1080% of Jinwoo’s Attack\n\nPercussion\n\nMP Consumption: 100\n\nDamage: 628%/768%/947% of Jinwoo’s Attack\n\nMP Consumption: 80\n\nDamage: 754%/922%/1136% of Jinwoo’s Attack\n\nIllusion\n\nMP Consumption: 100\n\nDamage: 326%/454%/534% of Jinwoo’s Attack\n\nEach time this skill hits, it increases Jinwoo’s damage by 2%/3%/4% (stacking up to 2/3/4 times).\n\nMP Consumption: 80\n\nDamage: 391%/545%/641% of Jinwoo’s Attack\n\nEach time this skill hits, it increases Jinwoo’s damage by 9%/10%/11% (stacking up to 2/3/4 times).\n\nPummel\n\nMP Consumption: 50\n\nDamage: 495%/705%/866% of Jinwoo’s Attack\n\nMP Consumption: 40\n\nDamage: 545%/776%/953% of Jinwoo’s Attack"
+      }
+    ]
   },
   {
     "id": "vertical-arts--sequent-explosions",
@@ -1016,7 +1116,27 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nSequent Explosions\n\nDamage: 315%/322%/340% of Jinwoo’s Attack\n\nDamage: 406%/414%/440% of Jinwoo’s Attack\n\n-\n\nDecreased cooldown between the first and second explosions after skill use.\n\nReap\n\n-\n\nActivates and resets the cooldown of [Shadow Step] upon a successful [Counterattack]. (Cooldown: 30/25/20 second(s)).\n\nGale\n\nDamage: 391%/435%/472% of Jinwoo’s Attack\n\nDamage: 484%/543%/590% of Jinwoo’s Attack\n\nGather enemies by generating Gale.\n\nGather enemies by generating Gale\n\n* Increased the gathering range of enemies.\n\nNo changes in the description."
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nReap\n\nDamage: 298% / 348% / 390% of Jinwoo’s Attack\n\nDamage: 330% / 400% / 463% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune Category\n\nChanged\n\nGale\n\n(Wind)\n\n(Increased Transcendent grade values and added a new effect )\n\nThe user’s damage dealt to Normal monsters increases by 10% / 15% / 20% / 22.5% 25% (Up to 10 targets) based on the number of targets this skill hits\n\n(Always applied as a 10-stack effect to bosses and elite monsters)"
+      }
+    ]
   },
   {
     "id": "cutting-rush--annihilation",
@@ -1214,7 +1334,15 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nAnnihilation\n\nDamage: 680% / 692% / 730% of Jinwoo’s Attack\n\nDamage: 767% / 804% / 872% of Jinwoo’s Attack"
+      }
+    ]
   },
   {
     "id": "vital-strike--decimate",
@@ -1409,7 +1537,33 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nInternal Wound\n\nDamage: 290%/312%/442% of the user’s Attack\n\nDamage: 418%/520%/744% of the user’s Attack"
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nDecimate\n\nDamage: 393%/ 490%/ 622% of Jinwoo’s Attack\n\nDamage: 450%/ 580%/ 760% of Jinwoo’s Attack\n\nHone In\n\nDamage: 568%/ 650%/ 745% of Jinwoo’s Attack\n\nDamage: 640%/ 755%/ 892% of Jinwoo’s Attack\n\nOn Point\n\nDamage: 426%/ 496%/ 604% of Jinwoo’s Attack\n\nDamage: 512%/ 622%/ 791% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2024-09-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/56294",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nHone In\n\nDamage: 640%/ 755%/ 892% of Jinwoo’s Attack\n\nDamage: 802% / 1043% / 1350% of Jinwoo’s Attack\n\nOn Point\n\nDamage: 512%/ 622%/ 791% of Jinwoo’s Attack\n\nDamage:798% / 1143% / 1674% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune Category\n\nChanged\n\nOn Point\n\n(Water)\n\n(New effect added)\n\nOn Point increases damage by 60% / 100% / 160% / 180% while [Shield] is active"
+      }
+    ]
   },
   {
     "id": "mutilate--cold-storm",
@@ -1607,7 +1761,27 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nPhantom\n\nDamage: 270%/356%/380% of Jinwoo’s Attack and 270%/356%/380% of Jinwoo’s Max HP\n\nDamage: 334%/382%/473% of Jinwoo’s Attack and 334%/382%/473% of Jinwoo’s Max HP\n\nMP Consumption: 150\n\nMP Consumption: 75\n\nStrike\n\nDamage: 420%/485%/660% of the user’s Attack\n\nDamage: 435%/537%/760% of the user’s Attack\n\n-\n\nWhen this skill hits, it activates and resets the cooldown of [Death], and increases the damage of [Death] by 10%/20%/30% for 5 second(s).\n\n(Cooldown: 15 second(s))"
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nPhantom\n\nDamage: 334%/ 382%/ 473% of Jinwoo’s Attack and Max HP\n\nDamage: 347%/ 400%/ 500% of Jinwoo’s Attack and Max HP\n\nStrike\n\nDamage: 435%/ 537%/ 760% of Jinwoo’s Attack\n\nDamage: 462%/ 578%/ 828% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2025-03-11",
+        "url": "https://forum.netmarble.com/slv_en/view/32/79785",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nCold Storm\n\nDamage: 883%/1328%/1992% of Jinwoo’s Attack\n\n[Frostbite] Deals damage equal to 150%/250%/400% of the user’s Attack\n\nDamage: 927%/1394%/2092% of Jinwoo’s Attack\n\n[Frostbite] Deals damage equal to 250%/400%/600% of the user’s Attack\n\nPhantom\n\nMP Consumption: 75\n\nDamage: 393%/480%/635% of Jinwoo’s Attack and Jinwoo’s Max HP\n\nMP Consumption: 60\n\nDamage: 629%/768%/1016% of Jinwoo’s Attack and Jinwoo’s Max HP"
+      }
+    ]
   },
   {
     "id": "deaths-dance--earth-shock",
@@ -1806,7 +1980,21 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2025-03-11",
+        "url": "https://forum.netmarble.com/slv_en/view/32/79785",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nHigh-speed Rotation\n\nMP Consumption: 60\n\nDamage: 220%/270%/350% of Jinwoo’s Attack\n\nMP Consumption: 40\n\nDamage: 330%/405%/525% of Jinwoo’s Attack\n\nEruption\n\nDamage: 663%/810%/977% of Jinwoo’s Attack\n\nDamage: 995%/1215%/1466% of Jinwoo’s Attack\n\nWildfire\n\nDamage: 709%/978%/1318% of Jinwoo’s Attack\n\nThe damage increases by 20%/30%/50% when attacking enemies with their elemental weakness.\n\nDamage: 851%/1174%/1582% of Jinwoo’s Attack\n\nThe damage increases by 30%/40%/55% when attacking enemies with their elemental weakness."
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune Category\n\nChanged\n\nHigh-speed Rotation\n\n(Wind)\n\n(New effect added)\n\nWhen your Attack hits an enemy that doesn’t have a Break Gauge, it increases the damage of High-speed Rotation by 90% / 160% / 240% / 280%  for 7 second(s)\n\nEruption\n\n(Dark)\n\n(New effect added)\n\nWhen this skill hits it grants an effect on Sung Jinwoo that increases his Core Attack damage by 90% / 160% / 240% / 280% for 7 second(s)\n\nWildfire\n\n(Fire)\n\n(Effect stats increased)\n\nThe damage increases by 30% 60% / 40% 100% / 55% 160% / 70% 180%  when attacking enemies with their elemental weakness."
+      }
+    ]
   },
   {
     "id": "the-commanders-touch--black-hole",
@@ -2005,7 +2193,27 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nFinisher\n\nDamage: 546%/574%/730% of the user’s Attack\n\nDamage: 700%/823%/1092% of the user’s Attack\n\nLiberation\n\nDamage: 296%/357%/416% of the user’s Attack\n\nDamage: 320%/390%/460% of the user’s Attack\n\n-\n\nWhen this skill hits, it activates and resets the cooldown of [Collapse] and increases the damage of [Collapse] by 10%/20%/30% for 5 second(s).\n\n(Cooldown: 20 second(s))"
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nAfter\n\nFinisher\n\nDamage: 700% / 823% / 1092% of Jinwoo’s Attack\n\nDamage: 736% / 878% / 1185% of Jinwoo’s Attack\n\nLiberation\n\nDamage: 320% / 390% / 460% of Jinwoo’s Attack\n\nDamage: 360% / 454% / 550% of Jinwoo’s Attack"
+      },
+      {
+        "date": "2024-09-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/56294",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Rune\n\nBefore\n\nChanged\n\nBlack Hole\n\nDamage: 22% / 25% / 30% of Jinwoo’s Attack\n\nDamage: 30% / 37% / 50% of Jinwoo’s Attack"
+      }
+    ]
   },
   {
     "id": "armor-break--multishadow-strike",
@@ -2454,7 +2662,21 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
-    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "balance_history": [
+      {
+        "date": "2024-10-31",
+        "url": "https://forum.netmarble.com/slv_en/view/32/64912",
+        "section": "Rune Skill Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nDouble Down\n\n- Damage: 947%/1050%/1216% of Jinwoo’s Attack.\n\n- When your Attack hits an enemy that doesn’t have a Break Gauge it increases the damage of Double Down by 60%/90%/120% for 7 second(s).\n\n- Damage: 1013%/1157%/1332% of Jinwoo’s Attack.\n\n- When your Attack hits an enemy that doesn’t have a Break Gauge it increases the damage of Double Down by 90%/160%/240% for 7 second(s).\n\nSonic Explosion\n\n- Damage: 1028%/1135%/1360% of Jinwoo’s Attack.\n\n- When the final hit lands it increases Sung Jinwoo’s Core Attack damage by 60%/90%120% for 7 second(s).\n\n- Damage: 1103%/1439%/2295% of Jinwoo’s Attack.\n\n- When the final hit lands it increases Sung Jinwoo’s Core Attack damage by 90%/160%240% for 7 second(s).\n\nWind Shroud\n\n-Damage: 716%/753%/826% of Jinwoo’s Attack.\n\n- [Wind Shroud] is activated for each small blade that hits when thrown consecutively, increasing the damage of the last blade by 10%/15%/20%. (stacking up to 6 times)\n\n[Flow of the Wind]\n\n- Increases Attack by 1%/1.5%2% (stacking up to 10 times)\n\n- Damage: 815%/998%/1162% of Jinwoo’s Attack.\n\n- [Wind Shroud] is activated for each small blade that hits when thrown consecutively, increasing the damage of the last blade by 25%/35%/50%. (stacking up to 6 times)\n\n[Flow of the Wind]\n\n- Increases Attack by 1.5%/2%/3% (stacking up to 10 times)"
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Rune Skill Balance Adjustments",
+        "text_en": "Rune Category\n\nChanged\n\nDouble Down\n\n(Light)\n\n(New effect added)\n\nDouble Down damage is increased by an additional  90% /160% / 240% / 280% in Team Fight Mode"
+      }
+    ]
   },
   {
     "id": "rune--blazing-annihilation",

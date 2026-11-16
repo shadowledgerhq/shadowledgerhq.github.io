@@ -1,11 +1,11 @@
-"""Veille des notes officielles Netmarble (forum EN) : « Developer Notes » (13) et « Updates » (14).
+"""Veille des notes officielles Netmarble (forum EN) : « Developer Notes » (13), « Updates » (14) et « Notices » (32 : équilibrages, aperçus).
 Compare avec data/veille/netmarble.json, écrit les nouveautés dans data/veille/a_traiter.md. Gratuit (Playwright, pas d'API payante).
 Usage : python3 tools/veille_netmarble.py   (pip install playwright ; playwright install chromium ; ou CHROMIUM_PATH)
 Sortie : code 0 ; imprime NOUVEAU: <titre> <url> pour chaque nouvelle note."""
 import json, os, re, sys, datetime
 from playwright.sync_api import sync_playwright
 BASE = "https://forum.netmarble.com/slv_en"
-BOARDS = {"13": "Developer Notes", "14": "Updates"}
+BOARDS = {"13": "Developer Notes", "14": "Updates", "32": "Notices"}
 ETAT, RAPPORT = "data/veille/netmarble.json", "data/veille/a_traiter.md"
 def lire(page, b):
     page.goto(f"{BASE}/list/{b}/1", wait_until="networkidle", timeout=90000)

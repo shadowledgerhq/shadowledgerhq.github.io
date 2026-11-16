@@ -23,10 +23,10 @@
     "values_by_level": {
       "values_by_rarity_rare_heroic_legendary_transcendent": [
         [
-          2.0,
-          4.0,
-          6.0,
-          7.0
+          3,
+          5,
+          8,
+          10
         ]
       ]
     },
@@ -44,7 +44,34 @@
       ],
       "all_found_in_api_text": false,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Stats Increased)\n\nYour Attack stat increases by 2 3 / 4 5 / 6 8 / 7 10 for every 1 point of Agility you have.\n\n(Increasing up to a maximum of  300 450 / 700 1050 / 1200 1800 / 1540 2310)"
+      }
+    ],
+    "values_balance_applied": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "line": 0,
+        "from": [
+          2.0,
+          4.0,
+          6.0,
+          7.0
+        ],
+        "to": [
+          3.0,
+          5.0,
+          8.0,
+          10.0
+        ]
+      }
+    ]
   },
   {
     "id": "first-strike-barrage",
@@ -98,7 +125,15 @@
       ],
       "all_found_in_api_text": true,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Max Stacks Increased)\n\nUpon landing a hit 60 / 50 / 40 / 35 time(s) your Attack increases by 1% / 1.5% / 2% / 2.25% (Stacks up to  10 15 times)"
+      }
+    ]
   },
   {
     "id": "irresistible-force",
@@ -124,10 +159,10 @@
     "values_by_level": {
       "values_by_rarity_rare_heroic_legendary_transcendent": [
         [
-          3.0,
-          5.0,
-          7.0,
-          8.0
+          4,
+          7,
+          10,
+          12
         ]
       ]
     },
@@ -145,7 +180,34 @@
       ],
       "all_found_in_api_text": false,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Stats Increased)\n\nWhen you use a skill with the [Break] effect your Attack increases by 3% 4% / 5% 7% / 7% 10% / 8% 12%  for 6 7 second(s)\n\n(Stacks up to 3 times)"
+      }
+    ],
+    "values_balance_applied": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "line": 0,
+        "from": [
+          3.0,
+          5.0,
+          7.0,
+          8.0
+        ],
+        "to": [
+          4.0,
+          7.0,
+          10.0,
+          12.0
+        ]
+      }
+    ]
   },
   {
     "id": "crushing-attack",
@@ -218,10 +280,10 @@
     "values_by_level": {
       "values_by_rarity_rare_heroic_legendary_transcendent": [
         [
-          180.0,
-          150.0,
-          130.0,
-          120.0
+          120,
+          90,
+          70,
+          60
         ]
       ]
     },
@@ -239,7 +301,40 @@
       ],
       "all_found_in_api_text": false,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Conditions Eased & Stats Increased)\n\nJinwoo’s Attack will decrease by 10% for 180 120 / 150 90 / 130 70 / 120 60 second(s)\n\nThen his Attack increases by40% 50% for 120 240 second(s)"
+      },
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Buff Duration Extended)\n\nJinwoo’s Attack will decrease by 120 / 90 / 70 / 60 second(s)\nThen his Attack increases by 50% for 240 300 / 330 / 350 / 360 second(s)"
+      }
+    ],
+    "values_balance_applied": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "line": 0,
+        "from": [
+          180.0,
+          150.0,
+          130.0,
+          120.0
+        ],
+        "to": [
+          120.0,
+          90.0,
+          70.0,
+          60.0
+        ]
+      }
+    ]
   },
   {
     "id": "desire",
@@ -312,10 +407,10 @@
     "values_by_level": {
       "values_by_rarity_rare_heroic_legendary_transcendent": [
         [
-          2.0,
-          4.0,
-          6.0,
-          7.0
+          3,
+          5,
+          8,
+          10
         ]
       ]
     },
@@ -333,7 +428,34 @@
       ],
       "all_found_in_api_text": false,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Stats Increased)\n\nYour Attack stat increases by 2 3 / 4 5 / 6 8 / 7 10 for every 1 point of Intelligence you have.\n\n(Increasing up to a maximum of  300 450 / 700 1050 / 1200 1800 / 1540 2310)"
+      }
+    ],
+    "values_balance_applied": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "line": 0,
+        "from": [
+          2.0,
+          4.0,
+          6.0,
+          7.0
+        ],
+        "to": [
+          3.0,
+          5.0,
+          8.0,
+          10.0
+        ]
+      }
+    ]
   },
   {
     "id": "we-are-one",
@@ -387,7 +509,15 @@
       ],
       "all_found_in_api_text": true,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(New effect added)\n\nIn [Team Fight] Mode, if there are 3 hunters with the same element on the team, it increases your Attack, Defense, and HP by an additional 5% / 7% / 10% / 13%"
+      }
+    ]
   },
   {
     "id": "swift-strike",
@@ -434,7 +564,15 @@
       ],
       "all_found_in_api_text": true,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Conditions Eased & Stats Increased)\n\nWhen you use Extreme Evasion successfully, your damage increases by 11% / 14% 18% / 24% 28% / 29% 33% for  5 8 second(s)\n\n(Cooldown: 10 3 second(s))\n\n(New effect added)\n\nWhen Shadow Step lands right after you use Extreme Evasion the additional damage increases by 11% / 18% / 28% / 33% for 8 second(s)"
+      }
+    ]
   },
   {
     "id": "assassins-proficiency",
@@ -467,7 +605,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Valeurs Rare-Heroic-Legendary-Transcendent. Le wiki ne reflète pas les rééquilibrages de juin/octobre ni les pierres ajoutées le 17/09 (cf. patches.json). Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "booster"
+    "api_type": "booster",
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Stats Increased)\n\nYour back attack damage increases by 9% 11% / 14% 18% / 24% 28% / 29% 33%\n\n(New effect added)\n\nWhen Death or Collapse hits an enemy from behind, it resets the cooldown of Shadow Step and activates (Cooldown: 30 / 25 / 20 / 15 second(s))"
+      }
+    ]
   },
   {
     "id": "fatal-strike",
@@ -634,10 +780,10 @@
     "values_by_level": {
       "values_by_rarity_rare_heroic_legendary_transcendent": [
         [
-          2.0,
-          3.0,
-          4.0,
-          4.5
+          3.5,
+          5,
+          6.5,
+          8
         ],
         [
           2.0,
@@ -662,7 +808,34 @@
       ],
       "all_found_in_api_text": false,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Values Increased)\n\nWhen your attacks hit your Attack increases by 2% 3.5% / 3% 5% / 4% 6.5% / 4.5% 8%, but the Attack of the targets you hit also increases by 3% (stacking up to 4 times)"
+      }
+    ],
+    "values_balance_applied": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "line": 0,
+        "from": [
+          2.0,
+          3.0,
+          4.0,
+          4.5
+        ],
+        "to": [
+          3.5,
+          5.0,
+          6.5,
+          8.0
+        ]
+      }
+    ]
   },
   {
     "id": "boss-slayer",
@@ -742,10 +915,10 @@
     "values_by_level": {
       "values_by_rarity_rare_heroic_legendary_transcendent": [
         [
-          14.0,
-          22.0,
-          36.0,
-          42.0
+          30,
+          50,
+          70,
+          80
         ]
       ]
     },
@@ -763,7 +936,34 @@
       ],
       "all_found_in_api_text": false,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Values Increased)\n\nYour Attack damage increases equal to 14% 30% / 22% 50% / 36% 70% / 42% 80% of your lost HP ratio, but your damage taken also increases by 10%"
+      }
+    ],
+    "values_balance_applied": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "line": 0,
+        "from": [
+          14.0,
+          22.0,
+          36.0,
+          42.0
+        ],
+        "to": [
+          30.0,
+          50.0,
+          70.0,
+          80.0
+        ]
+      }
+    ]
   },
   {
     "id": "title-demon-slayer",
@@ -817,7 +1017,15 @@
       ],
       "all_found_in_api_text": true,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(New effect added)\n\nYour MP increases by an additional 500 / 700 / 1200 / 1400 when in [Team Fight] Mode"
+      }
+    ]
   },
   {
     "id": "title-conqueror-of-adversity",
@@ -1329,7 +1537,15 @@
       ],
       "all_found_in_api_text": true,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(New effect added)\n\nWhen attacking with enemies who have 70% or less of their HP while you have a [dagger] equipped your damage dealt increases by and additional 16% / 24% / 40% / 48%"
+      }
+    ]
   },
   {
     "id": "swift-restoration",
@@ -1409,16 +1625,16 @@
     "values_by_level": {
       "values_by_rarity_rare_heroic_legendary_transcendent": [
         [
-          4.0,
-          12.0,
-          20.0,
-          24.0
+          6,
+          18,
+          30,
+          36
         ],
         [
-          4.0,
-          12.0,
-          20.0,
-          24.0
+          6,
+          18,
+          30,
+          36
         ]
       ]
     },
@@ -1437,7 +1653,51 @@
       ],
       "all_found_in_api_text": false,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Values Increased)\n\nYour Defense increases by 4% 6% / 12% 18% / 20% 30% / 24% 36%\nIf your equipped weapons are of the same element your Defense increases by an additional 4% 6% / 12% 18% / 20% 30% / 24% 36%"
+      }
+    ],
+    "values_balance_applied": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "line": 0,
+        "from": [
+          4.0,
+          12.0,
+          20.0,
+          24.0
+        ],
+        "to": [
+          6.0,
+          18.0,
+          30.0,
+          36.0
+        ]
+      },
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "line": 1,
+        "from": [
+          4.0,
+          12.0,
+          20.0,
+          24.0
+        ],
+        "to": [
+          6.0,
+          18.0,
+          30.0,
+          36.0
+        ]
+      }
+    ]
   },
   {
     "id": "best-defense-is-a-good-offense",
@@ -1867,7 +2127,15 @@
       ],
       "all_found_in_api_text": true,
       "note": "comparaison automatique wiki (Transcendent) ↔ texte FR de l'API ; false = valeur du wiki possiblement périmée ou texte reformulé"
-    }
+    },
+    "balance_history": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Cooldown Decreased)\n\nYou will recover 7% of your HP when hitting Elite or higher monsters(Cooldown: 30 20 second(s))"
+      }
+    ]
   },
   {
     "id": "camouflage",
@@ -2472,7 +2740,15 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR).",
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(New effect added)\n\nSuccessfully using Extreme Evasion grants you 2 instances of the [Acrobat] effect"
+      }
+    ]
   },
   {
     "id": "garde-double",
@@ -2608,7 +2884,15 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR).",
-    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR"
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; traduction littérale du nom FR",
+    "balance_history": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Values Increased)\n\nIf your HP is 51% or higher, your Defence increases by 15% 30% / 25% 40% / 35% 50% / 40% 55%"
+      }
+    ]
   },
   {
     "id": "ricochet",
@@ -2649,7 +2933,15 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR).",
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Stats Increased)\n\nYour Additional Attack stat increases by 50% 80% / 90% 140% / 130% 200% / 150% 240% of your Max MP when you enter a stage.\n\n(Increases your Max Additional Attack stat by 10000 15000)"
+      }
+    ]
   },
   {
     "id": "r-sonance-darme",
@@ -2803,10 +3095,10 @@
     "values_by_level": {
       "values_by_rarity_rare_heroic_legendary_transcendent": [
         [
-          25,
-          45,
-          65,
-          75
+          50,
+          90,
+          130,
+          150
         ],
         [
           50,
@@ -2822,7 +3114,40 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR).",
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Stats Increased)\n\nIn [Team Fight] mode, if all of your equipped weapons are of the same element, the damage of your weapon skills increases by and additional 10% 25% / 20% 45% / 30% 65% / 35% 75%"
+      },
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Blessing Stone Balance Adjustments",
+        "text_en": "(Values Increased)\n\nIn [Team Fight] mode, if all of your equipped weapons are of the same element, the damage of your weapon skills increases by an additional 25% 50% / 45% 90% / 65% 130% / 75% 150%"
+      }
+    ],
+    "values_balance_applied": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "line": 0,
+        "from": [
+          25.0,
+          45.0,
+          65.0,
+          75.0
+        ],
+        "to": [
+          50.0,
+          90.0,
+          130.0,
+          150.0
+        ]
+      }
+    ]
   },
   {
     "id": "skill-research-rules",

@@ -174,7 +174,27 @@
       "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
     },
     "rates_ref": "rates.json → artifact-rates (guide /sololv/4 : stat principale par emplacement, bonus par niveau d'équipement) et artifact-enchantment-rate (/sololv/144) ; règles : game_rules.json → artifacts",
-    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16"
+    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16",
+    "balance_history": [
+      {
+        "date": "2026-04-09",
+        "url": "https://forum.netmarble.com/slv_en/view/32/103975",
+        "section": "Artifact Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\n4 Set Effect\n\nApplies the [Poison] effect\n\n[Poison]\n\n- Increases Basic Skill damage by 20%\n\n- Increases Attack and Defense by 1% every 1 second(s) (stacking up to 30 times)\n\n- Duration: Permanent\n\nApplies the [Poison] effect\n\n[Poison]\n\n- Increases Core Attack, Basic Skill, and Ultimate Skill damage by 20%\n\n- Increases Attack and Defense by 1% every 1 second(s) (stacking up to 30 times)\n\n- Duration: Permanent\n\n8 Set Effect\n\nThe [Poison] effect is enhanced to the [Blue Poison] effect\n\n[Blue Poison]\n\n- Increases Defense Penetration by 20%\n\n- Increases Basic Skill damage by 30%\n\n- Increases Attack and Defense by 2.5% every 1 second(s) (stacks up to 30 times)\n\n- Duration: Permanent\n\nWhen equipped by [Sung Jinwoo] or a [Striker] class hunter, their damage dealt increases by 50% [Poison] effect cannot be activated\n\nThe [Poison] effect is enhanced to the [Blue Poison] effect\n\n[Blue Poison]\n\n- Increases Defense Penetration by 20%\n\n- Increases Core Attack, Basic Skill, and Ultimate Skill damage by 30%\n\n- Increases Attack and Defense by 2.5% every 1 second(s) (stacks up to 30 times)\n\n- Duration: Permanent\n\nWhen equipped by [Sung Jinwoo] or a [Striker] class hunter, their damage dealt increases by 50% [Poison] effect cannot be activated"
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Artifact Set Effect Buffs",
+        "text_en": "Category\n\nChanged\n\n8 set effects\n\n(New effect added)\n\nIncreases allies’ damage dealt by 30% in [Team Fight] Mode (stacks up to 2 times)"
+      },
+      {
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "section": "Artifact Set Effect Adjustments",
+        "text_en": "Category\n\nChanged\n\n8 Set Effect\n\n(Increased effect values)\n\nWhen equipped by [Sung Jinwoo or a Striker] class hunter, their damage dealt increases by 50% 120%"
+      }
+    ]
   },
   {
     "id": "set-of-surturs-flame",
@@ -351,7 +371,21 @@
       "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
     },
     "rates_ref": "rates.json → artifact-rates (guide /sololv/4 : stat principale par emplacement, bonus par niveau d'équipement) et artifact-enchantment-rate (/sololv/144) ; règles : game_rules.json → artifacts",
-    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16"
+    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16",
+    "balance_history": [
+      {
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "section": "Artifact Set Effect Adjustments",
+        "text_en": "Category\n\nChanged\n\n8 Set Effect\n\n(Increased effect values)\n\nWhen an Elemental Buster class hunter equips this, it increases their Overload damage dealt by 50% 100%"
+      },
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Artifact Set Effect Buffs",
+        "text_en": "Category\n\nChanged\n\n8 Set Effect\n\n(Initial effect enhanced and stack effect changed)\n\nA successful Overload increases the user’s Burst damage dealt by 20% (stacking up to 5 times)\nIncreases Burst damage by 50%\nA successful Overload increases the user’s Burst damage by 10% (stacks up to 5 times)\n\n(New effect added)\n\nIn [Team Fight] mode, when an [Elemental Buster] class hunter equips this, it increases allies’ Elemental Weakness damage by 40% (stacking up to 2 times)"
+      }
+    ]
   },
   {
     "id": "set-of-glorious-arrogance",
@@ -528,7 +562,27 @@
       "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
     },
     "rates_ref": "rates.json → artifact-rates (guide /sololv/4 : stat principale par emplacement, bonus par niveau d'équipement) et artifact-enchantment-rate (/sololv/144) ; règles : game_rules.json → artifacts",
-    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16"
+    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16",
+    "balance_history": [
+      {
+        "date": "2026-04-09",
+        "url": "https://forum.netmarble.com/slv_en/view/32/103975",
+        "section": "Artifact Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\n4 Set Effect\n\nApplies the [Arrogance] effect\n\n[Arrogance]\n\n- Increases the damage of the skills with the [Break] effect by 30%\n\n- When an attack that deals Break damage hits the user and their team members’ Critical Hit damage increases by 15% (Cooldown: 40 second(s))\n\n- Duration: 40 second(s)\n\n[Applies the [Arrogance] effect\n\n[Arrogance]\n\n- Increases the damage of the skills with the [Break] effect by 30%\n\n- When an attack that deals Break damage hits the user and their team members’ Critical Hit damage increases by 20% (Cooldown: 40 second(s))\n\n- Duration: 40 second(s)\n\n* Cooldown time deleted\n\n8 Set Effect\n\nIncreases [Break] effectiveness by 30%\n\nEnhances [Arrogance] to [Brilliant Arrogance]\n\n[Brilliant Arrogance]\n\n- Increases the damage of the skills with the [Break] effect by 50%\n\n- When an attack that deals Break damage hits the user and their team members’ Critical Hit damage increases by 25% (Cooldown: 40 second(s))\n\n- Duration: 40 second(s)\n\nWhen [Sung Jinwoo or a Breaker] class hunter equips this, it increases their Critical Hit damage  by 40%\n\nWhen [Sung Jinwoo] or a [Breaker]  class hunter uses their Ultimate Skill the user and their team members’ Critical Hit Rate increases by 15%\n\n(Cooldown: 60 second(s))\n\n- Duration: 60 second(s))\n\n[Arrogance] effect cannot be activated\n\nIncreases [Break] effectiveness by 30%\n\nEnhances [Arrogance] to [Brilliant Arrogance]\n\n[Brilliant Arrogance]\n\n- Increases the damage of the skills with the [Break] effect by 50%\n\n- When an attack that deals Break damage hits the user and their team members’ Critical Hit damage increases by 35% (Cooldown: 40 second(s))\n\n- Duration: 40 second(s)\n\nWhen [Sung Jinwoo or a Breaker] class hunter equips this, in increases their Critical Hit damage  by 40%\n\nWhen [Sung Jinwoo] or a [Breaker]  class hunter uses their Supporter Skill, Ultimate Skill the user and their team members’ Critical Hit Rate increases by 15%\n\n(Cooldown: 60 second(s))\n\n- Duration: 60 second(s))\n\n[Arrogance] effect cannot be activated\n\n* Cooldown time deleted"
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Artifact Set Effect Buffs",
+        "text_en": "Category\n\nChanged\n\n8 set effects\n\n(New effect added)\n\nIncreases allies’ Critical Hit damage dealt by 15% in [Team Fight] Mode (stacks up to 2 times)"
+      },
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Artifact Set Effect Buffs",
+        "text_en": "Category\n\nChanged\n\n8 Set Effect\n\n(New effect added)\n\nIn [Team Fight] mode, when a [Breaker] class hunter equips this, it increases allies’ Critical Hit damage by 40% (stacking up to 2 times)"
+      }
+    ]
   },
   {
     "id": "set-of-noble-flesh",
@@ -705,7 +759,27 @@
       "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
     },
     "rates_ref": "rates.json → artifact-rates (guide /sololv/4 : stat principale par emplacement, bonus par niveau d'équipement) et artifact-enchantment-rate (/sololv/144) ; règles : game_rules.json → artifacts",
-    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16"
+    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16",
+    "balance_history": [
+      {
+        "date": "2026-04-09",
+        "url": "https://forum.netmarble.com/slv_en/view/32/103975",
+        "section": "Artifact Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\n4 Set Effect\n\nThe [Fortification] effect is applied when a Basic Skill or Ultimate Skill hits\n\n[Fortification]\n\n- Increases the user and the team members’ Elemental Weakness damage by 15% (Cooldown: 45 second(s))\n\n- Duration: 45 second(s)\n\nThe [Brilliant Light] effect is applied when the user tags out or uses and Ultimate Skill\n\n[Brilliant Light]\n\n- Increases the user and the team members’ damage dealt by 10% (Cooldown: 20 second(s))\n\n- Duration: 20 second(s)\n\nThe [Fortification] effect is applied when a Basic Skill or Ultimate Skill hits\n\n[Fortification]\n\n- Increases the user and the team members’ Elemental Weakness damage by 15% (Cooldown: 45 second(s))\n\n- Duration: 45 second(s)\n\nWhen tagging out or using a Support Skill or Ultimate Skill, the [Brilliant Light] effect is applied\n\n[Brilliant Light]\n\n- Increases the user and the team members’ damage dealt by 10% (Cooldown: 20 second(s))\n\n- Duration: 20 second(s)\n\n* Cooldown time deleted\n\n8 Set Effect\n\nThe [Fortification] effect is enhanced to become the [Iron Body] effect\n\nThe [Brilliant Light] effect is enhanced to become the [Glory] effect\n\n[Iron Body]\n\n- Increases the user and the team members’ Elemental Weakness damage by 25% (Cooldown: 45 second(s))\n\n[Glory]\n\n- Increases the user and the team members’ damage dealt by 20% (Cooldown: 20 second(s))\n\n- Duration: 20 second(s)\n\n- Restores the user’s MP by 10% (Cooldown: 20 second(s))\n\nWhen [Sung Jinwoo] or a [Supporter] class hunter equips this it increases the user and team members’ Basic Skill damage by 30% and Attack, Defense, and HP by 15%\n\nWhen [Sung Jinwoo] or a [Supporter] class hunter uses their Ultimate Skill they recover 0.25% of their HP every 1 second(s) (Cooldown: 30 second(s))\n\n- Duration: 16 second(s)\n\n[Fortification] and [Brilliant Light] cannot be activated\n\nThe [Fortification] effect is enhanced to become the [Iron Body] effect\n\nThe [Brilliant Light] effect is enhanced to become the [Glory] effect\n\n[Iron Body]\n\n- Increases the user and the team members’ Elemental Weakness damage by 25% (Cooldown: 45 second(s))\n\n[Glory]\n\n- Increases the user and the team members’ damage dealt by 20% (Cooldown: 20 second(s))\n\n- Duration: 20 second(s)\n\n- Restores the user’s MP by 10% (Cooldown: 20 second(s))\n\nWhen [Sung Jinwoo] or a [Supporter] class hunter equips this it increases the user and team members’ Core Skill, Basic Skill, Ultimate Skill damage by 30% and Attack, Defense, and HP by 15%\n\nWhen [Sung Jinwoo] or a [Supporter] class hunter uses their Support Skill or Ultimate Skill they recover 2% of their HP every 1 second(s) (Cooldown: 30 second(s))\n\n- Duration: 6 second(s)\n\n[Fortification] and [Brilliant Light] cannot be activated\n\n* Damage increase buff cooldown time deleted"
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Artifact Set Effect Buffs",
+        "text_en": "Category\n\nChanged\n\n8 set effects\n\n(New effect added)\n\nIncreases allies’ Attack, Defense, and HP by 15% in [Team Fight] Mode (stacks up to 2 times)"
+      },
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Artifact Set Effect Buffs",
+        "text_en": "Category\n\nChanged\n\n8 Set Effect\n\n(New effect added)\n\nIn [Team Fight] mode, when a [Supporter] class hunter equips this, it increases allies’ Attack, Defense, and HP by 40% (stacking up to 2 times)"
+      }
+    ]
   },
   {
     "id": "set-of-kamishs-obession",
@@ -1606,7 +1680,15 @@
       "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
     },
     "rates_ref": "rates.json → artifact-rates (guide /sololv/4 : stat principale par emplacement, bonus par niveau d'équipement) et artifact-enchantment-rate (/sololv/144) ; règles : game_rules.json → artifacts",
-    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16"
+    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16",
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Artifact Balance Adjustment",
+        "text_en": "Rank\n\nBefore\n\nAfter\n\n4 Set Effect\n\nApplies the [Rescue] effect.\n\n- If the user has 25% HP or less, they recover 25% of their HP.\n\n- Activates only once per dungeon.\n\nApplies the [Rescue] effect.\n\n- If the user has 25% HP or less, they recover 25% of their HP.\n\n- Activates only once per dungeon.\n\nThe [Curse] effect becomes the [Enhanced Curse] effect.\n\n- Increases the user’s Damage Taken by 20%.\n\n- Increases the user’s damage dealt by 20% and additionally increases damage dealt by 0.1% every 1 second(s) (stacking up to 100 times).\n\n- Unable to activate the [Curse] effect.\n\n- Duration: Permanent\n\n8 Set Effect\n\nThe [Curse] effect enhances to [Burning Curse].\n\n- Increases the user’s Damage Taken by 20%.\n\n- Increases the user’s damage dealt by 30% and additionally increases damage dealt by 0.2% every 1 second(s) (stacks up to 100 times).\n\n- Unable to activate the [Curse] effect.\n\n- Duration: Permanent\n\nThe [Enhanced Curse] effect becomes the [Burning Curse] effect.\n\n- Increases the user’s Damage Taken by 20%.\n\n- Increases the user’s damage dealt by 30% and additionally increases damage dealt by 0.2% every 1 second(s) (stacking up to 100 times).\n\n- Unable to activate the [Curse] and [Enhanced Curse] effects.\n\n- Duration: Permanent"
+      }
+    ]
   },
   {
     "id": "set-of-burning-blessing",
@@ -1787,7 +1869,15 @@
       "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
     },
     "rates_ref": "rates.json → artifact-rates (guide /sololv/4 : stat principale par emplacement, bonus par niveau d'équipement) et artifact-enchantment-rate (/sololv/144) ; règles : game_rules.json → artifacts",
-    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16"
+    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16",
+    "balance_history": [
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Artifact Balance Adjustment",
+        "text_en": "Rank\n\nBefore\n\nAfter\n\n8 Set Effect\n\n[Enhanced Blessing] effect is enhanced to [Burning Blessing].\n\n[Burning Blessing]\n\n- Activates when tag out or using a Support Skill.\n\n- Increases the user’s damage dealt by 20% and recovers their HP by 0.2% every 1 second(s).\n\n(Cooldown: 25 second(s))\n\n- Unable to activate the [Blessing] and [Enhanced Blessing] effects.\n\n- Duration: 20 second(s)\n\nThe [Enhanced Blessing] effect becomes the [Burning Blessing] effect.\n\n[Burning Blessing]\n\n- Activates when tagging out, using a Support Skill, or using an Ultimate Skill.\n\n- Increases the user’s damage dealt by 20% and restores 0.2% of their HP every 1 second(s). (Cooldown: 25 second(s))\n\n- Unable to activate the [Blessing] and [Enhanced Blessing] effects.\n\n- Duration: 20 second(s)"
+      }
+    ]
   },
   {
     "id": "set-of-burning-greed",
@@ -2293,7 +2383,15 @@
       "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
     },
     "rates_ref": "rates.json → artifact-rates (guide /sololv/4 : stat principale par emplacement, bonus par niveau d'équipement) et artifact-enchantment-rate (/sololv/144) ; règles : game_rules.json → artifacts",
-    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16"
+    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16",
+    "balance_history": [
+      {
+        "date": "2025-08-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+        "section": "Artifact Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\n4set Effect\n\nIncreases [Ultimate Skill] damage by 50% 1 time only (Cooldown: 20 second(S))\n\nIncreases Ultimate Skill damage by 50%."
+      }
+    ]
   },
   {
     "id": "crimson-knights-set",
@@ -2873,7 +2971,21 @@
       "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
     },
     "rates_ref": "rates.json → artifact-rates (guide /sololv/4 : stat principale par emplacement, bonus par niveau d'équipement) et artifact-enchantment-rate (/sololv/144) ; règles : game_rules.json → artifacts",
-    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16"
+    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16",
+    "balance_history": [
+      {
+        "date": "2024-11-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/67238",
+        "section": "Artifact Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\n4 Set Effect\n\nWhen the user’s attacks hit their Attack and Defense increase by 3% for 6 second(s).\n\n(Stacking up to 8 times) (Cooldown: 0.5 second(s))\n\nWhen the user’s attacks hit their Attack and Defense increase by 3% for 8 second(s).\n\n(Stacking up to 8 times) (Cooldown: 0.5 second(s))"
+      },
+      {
+        "date": "2024-11-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/67238",
+        "section": "Artifact Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\n4 Set Effect\n\nWhen attacking, the user ignores 15% of the target’s Defense.\n\nWhen attacking, the user ignores 18% of the target’s Defense."
+      }
+    ]
   },
   {
     "id": "almighty-kargalgans-set",
@@ -5479,7 +5591,15 @@
       "note": "Netmarble annonce des rééquilibrages de sets (6/4, 7/2, 7/30, 9/17, 10/22) sans donner les valeurs : texte du wiki (mai 2026) possiblement périmé."
     },
     "rates_ref": "rates.json → artifact-rates (guide /sololv/4 : stat principale par emplacement, bonus par niveau d'équipement) et artifact-enchantment-rate (/sololv/144) ; règles : game_rules.json → artifacts",
-    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16"
+    "main_stat_options_source": "guide officiel Netmarble /sololv/4 (Artifact Rates), identique pour tous les sets ; vérifié le 2026-11-16",
+    "balance_history": [
+      {
+        "date": "2024-11-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/67238",
+        "section": "Artifact Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\n2 Set Effect\n\nWhen the user has 50% HP or less, their damage dealt increases by 15%.\n\nWhen the user has 50% HP or less, their damage dealt increases by 30%.\n\n4 Set Effect\n\nHP condition changes to 70% and Damage Dealt Increase effect increases to 30%.\n\nHP condition changes to 70% and Damage Dealt Increase effect increases to 30%."
+      }
+    ]
   },
   {
     "id": "behemoth-set",

@@ -211,6 +211,14 @@
         "wiki_reflects_patch": null,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
+    ],
+    "balance_history": [
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nIl Bacio della Morte\n(Burst Skill)\n\n(Skill Attack Range Significantly Increased)"
+      }
     ]
   },
   {
@@ -419,7 +427,21 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-07-03",
+        "url": "https://forum.netmarble.com/slv_en/view/32/91211",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nTouch of Winter\n\n(Basic Attack)\n\n190% / 195% / 200% of the user’s Attack\n\n207% / 212% / 216% of the user’s Attack\n\nFrost Arrow\n\n(Core Attack)\n\n1050% of the user’s Attack\n\n1137% of the user’s Attack\n\nWinter Storm\n(Basic Skill 1)\n\n1040% of the user’s Attack\n\n1130% of the user’s Attack\n\nIce Needle\n\n(Basic Skill 2)\n\n1850% of the user’s Attack\n\n2004% of the user’s Attack\n\nEternal Frost\n\n(QTE Skill)\n\n1000% of the user’s Attack\n\n1080% of the user’s Attack\n\nIce Detonation\n\n(Support Skill)\n\n600% of the user’s Attack\n\n 675% of the user’s Attack\n\nAbsolute Zero\n\n(Ultimate Skill)\n\n3100% of the user’s Attack\n\nThe skill applies 5 instances of the [Frost] effect on the user.\n\n3370% of the user’s Attack\n\nThe skill applies 6 instances of the [Frost] effect on the user.\n\nAdvancement Tier 0\n\n[Frost]\n\n[Bitter Cold Spear]’s damage increases by 60% per [Frost] instance that’s been consumed (increasing up to 180%).\n\nDuration: Infinite (Stacking up to 5 times)\n\n[Frost]\n\n[Bitter Cold Spear]’s damage increases by 120% per [Frost] instance that’s been consumed (increasing up to 360%).\n\nDuration: Infinite (Stacking up to 6 times)"
+      },
+      {
+        "date": "2026-02-12",
+        "url": "https://forum.netmarble.com/slv_en/view/32/100828",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nWinter Storm\n\n(Basic 1)\n\nCooldown Reduction: 8 seconds\n\nCooldown Reduction: 5 seconds\n\nTier 1\n\nIncreases Critical Hit Rate by 20% when [Shield] is active\n\nIncreases Critical Hit Rate by 20% when [Shield] is active\n\n[Absolute Zero] applies [Winter Chill] on hit.\n\n[Winter Chill]\n\n- Deals 100% of Attack as damage every 3 seconds\n\nDuration: 30 seconds (Stacks up to 10 times)\n\nTier 3\n\nIncreases Damage Dealt to [Freeze] targets by 30%.\n\nIncreases Damage Dealt to [Freeze] targets by 30%.\n\nWhen [Frost Arrow] hits a target affected by [Winter Chill], it increases Hunter’s Attack by 12% for 60 seconds. (Stacks up to 3 times)\n\nTier 5\n\nIncreases [Bitter Cold Spear] Damage by 50% and applies [Freeze] on hit.\n\nIncreases [Bitter Cold Spear] Damage by 50% and applies [Freeze] on hit.\n\nIncreases Damage Dealt to targets affected by [Winter Chill] by 10% per stack of [Winter Chill].\n\n - CM Iron’s TIP: The [Winter Chill] effect applied by Alicia Blanche and Meri Laine stacks with each other, regardless of the caster."
+      }
+    ]
   },
   {
     "id": "amamiya-mirei",
@@ -627,7 +649,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-03-12",
+        "url": "https://forum.netmarble.com/slv_en/view/32/102815",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\nWhen the user has 66% or more of their maximum MP, it applies the [Kuroha’s Darkness] effect\n\nIncreases the user’s Attack by 4% for every additional 150 MP (up to 40%)\n\nWhen the user has 30% or more of their MP, it applies the [Kuroha’s Darkness] effect\n\nIncreases the user’s Attack by 6% for every additional 150 MP (up to 90%)\n\nTier 1\n\nWhile the [Possessed] effect is active, it increases the user’s Critical Hit Rate and Critical Hit damage by 20%\n\nWhen the user uses Kuroha’s Sword Technique Type 3: Wings of Night while the [Possessed] effect is active, it applies the [Deep Darkness] effect.\n\n[Deep Darkness]\n\nIncreases the user’s Attack and Critical Hit Rate by 12% (stacking up to 2 times)\n\nDuration: 10 second(s)\n\nWhen Kuroha’s Sword Technique Lethal Move: Moonless Night Overture hits, it activates the [Winter’s Edge] effect on the target\n\nWhile the [Possessed] effect is active, it increases the user’s Critical Hit Rate and Critical Hit damage by 20%\nUsing Kuroha’s Sword Technique Type 3: Wings of Night while the [Possessed] effect is active applies the [Deep Darkness] effect\n\n[Winter’s Edge]\nDeals damage equal to 100% of the user’s Attack every 3 seconds\nDuration: 30 second(s) (stacks up to 10 times)\n\n[Deep Darkness]\nIncreases Attack and Critical Hit Rate by 12% (stacks up to 2 times)\nDuration: 12 second(s)\n\nTier 2\n\nCharges the user’s Power Gauge by 40% when entering the stage\n\nWhen the user enters the stage their Power Gauge is charged by 40% and their Critical Hit damage increases by 40%\n\nTier 3\n\nWhen the user uses their Basic Attack or Core Attack it charges their MP and Power Gauge by 1% and decreases the cooldown of Kurohara’s Sword Technique Lethal Move: Moonless Night Overture by 2 second(s)\n\nUsing a Back Attack or Core Attack restores 2% of the user’s MP, 1% of the user’s Power Gauge charge, and reduces the cooldown of Kuroha’s Sword Technique Lethal Move: Moonless Night Overture by 2 second(s)\n\nWhen the user’s attack hits a target affected by [Winter’s Edge], the user gains the [Midnight Gale] effect\n\n[Midnight Gale]\n\nIncreases Defense Penetration by 0.2%\n\nIncreases Wind Overload damage by 1%\n\nDuration: Infinite (stacks up to 100 times)\n\nTier 4\n\nAmamiya Mirei’s Wind damage increases by 10% for every Wind member (stacking up to 3 times)\n\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member, and the stack limit is removed)\n\nAmamiya Mirei’s Wind damage increases by 12% for every Wind member (stacking up to 3 times)\n\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member, and the stack limit is removed)\n\nTier 5\n\nWhile [Possessed], the user gains the [Raven’s Confession] effect\n\n[Raven’s Confession]\n\nIncreases the damage of Kuroha’s Sword Technique Type 3: Wing of Night and Kuroha’s Sword Technique 4: Raven’s Cry by 80%\n\nWhile [Possessed], the user gains the [Raven’s Confession] effect\n\n[Raven’s Confession]\n\nIncreases the damage of Kuroha’s Sword Technique Type 3: Wing of Night and Kuroha’s Sword Technique 4: Raven’s Cry by 80%\n\nIncreases the user’s back attack damage by 30%\n\nBunny Bunbun\n\n〈Amamiya Mirei Exclusive Weapon〉\n\nTier 0-5\n\nWhen the user enters a stage, it charges their Power Gauge by 10% / 20% / 30% / 40% 50% / 60%\n\nThe user’s Power Gauge gains 60% charge when the user enters the stage\n\n - CM Iron’s TIP: The [Winter’s Edge] effect applied by Amamiya Mirei and Sugimoto Reiji stacks with each other, regardless of who triggers it."
+      }
+    ]
   },
   {
     "id": "anna-ruiz",
@@ -1043,7 +1073,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 1\n\n(Affected targets added)\n\nU sing The Angel’s Stay activates the [Holy Barrier] effect on the Light team member with the highest Total Power Sung Jinwoo and Light team members\n\nTier 3\n\n(Effect duration extended)\n\n[Blessed Light]\nDuration : 10 30 second(s)\n\nTier 5\n\n(Effect duration extended)\n\n[Harmony]\nDuration : 15 30 second(s)\n\n[Karma]\nDuration : 15 30 second(s)\n\nSaint’s Benediction\n〈Antoine Martinez’s Exclusive Weapon〉\nBased on Tier 5\n\n(Effect value increased and affected targets added)\n\nThe user’s HP increases by 12% 30%\nThe entire team’s Light damage increases by 15% 30%"
+      }
+    ]
   },
   {
     "id": "baek-yoonho",
@@ -1258,7 +1296,51 @@
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
     ],
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nWhite Flame Strike (Basic Attacks)\n\nStage 1 Damage: 174% of the user’s Defense\n\nStage 2 Damage: 182% of the user’s Defense\n\nStage 3 Damage: 195% of the user’s Defense\n\nStage 1 Damage: 184% of the user’s Defense\n\nStage 2 Damage: 193% of the user’s Defense\n\nStage 3 Damage: 205% of the user’s Defense\n\nWhite Flame Pummel\n\n(Core Attack)\n\nDamage: 783% of the user’s Defense\n\nDamage: 820% of the user’s Defense\n\nFerocious Spirit (Q)\n\nDamage: 885% of the user’s Defense\n\nDamage: 926% of the user’s Defense\n\nWhite Flame Gale Kick (E)\n\nDamage: 1650% of the user’s Defense\n\nDamage: 1730% of the user’s Defense\n\nDamnation (QTE)\n\nDamage: 1009% of the user’s Defense\n\nDamage: 1052% of the user’s Defense\n\n-\n\nImproved to be executed close to the enemy\n\nWhite Flame Storm Kick\n\n(Support Skill)\n\nDamage: 623% of the user’s Defense\n\nDamage: 654% of the user’s Defense\n\nTruth: White Flame Strike\n\n(Ultimate Skill)\n\nDamage: 3297% of the user’s Defense\n\nDamage: 3456% of the user’s Defense\n\nAdvancement Tier 3\n\nWhen Damnation is used, applies the [Unlock White Flames] effect.\n\n[Unlock White Flames] Increases the user’s Light damage by 30%.\n\nWhen Damnation is used, applies the [Unlock White Flames] effect.\n\n[Unlock White Flames] Increases the user’s Light damage by 40%.\n\nAdvancement Tier 4\n\nIncreases the user’s Critical Hit rate by 8%.\n\nIncreases the user’s Critical Hit rate by 16%.\n\nAdvancement Tier 5\n\nWhen the user enters the stage, recovers Power Gauge by 100% and increases the damage of Violent Explosion by 80%.\n\nWhen the user enters the stage, recovers Power Gauge by 100% and increases the damage of Violent Explosion by 100%."
+      },
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nPassive\n\n[Defense Decrease] is applied when the White Flames effect is stacked 3 times.\n\nDecreases Defense by 20%.\n\nDuration: 10 second(s)\n\n[Defense Decrease] is applied when the White Flames effect is stacked 3 times.\n\nDecreases Defense by 20%.\n\nDuration: 12 second(s)\n\nAdvancement Tier 3\n\nWhen the user uses [Bottomless Pit], it grants the [Unlock White Flames] effect.\n\nWhen the user uses [Bottomless Pit or White Flame Gale Kick], it grants the [Unlock White Flames] effect.\n\nDamnation (QTE)\n\nDeals medium Break damage.\n\nDeals medium Break damage.\n\n* The corresponding effect will be buffed.\n\nHowever, there will be no changes in the description."
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\n[White Flames]\n\n-\n\nAdded additional 2.5% defense decrease effect to the [White Flames] effect.\n\n[Unlock White Flames]\n\n-\n\nAdded [Super Armor] when [Unlock White Flames] effect is active.\n\nTruth: White Flame Strike\n\n-\n\nImproved to not use the granted [White Flames] when dealing Violent Explosion damage after using [Truth: White Flame Strike]."
+      },
+      {
+        "date": "2024-11-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/67238",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nPassive Details\n\n- [White Flames]\n\nWhen 3 instances of the effect have been stacked it activities the [Violent Explosion] effect dealing damage equal to 400% of the user’s defense and inflicting the [Defense Decrease] effect on the target.\n\nWhile [White Flames] is active the target’s Defense decreases by an additional 2.5% (stacking up to 2 times).\n\nDuration: Infinite\n\n- [White Flames]\n\nWhen 2 instances of effect have stacked, it activates the [Violent Explosion] effect, dealing damage equal to 600% of the user’s Defense and applies [Defense Decrease] to the target.\n\nWhen [Violent Explosion] is used on the target it decreases their Defense by an additional 5%.\n\nDuration: Infinite (up to 1 instance)\n\nAdvancement Tier 3\n\n-\n\n- When the user uses Truth: White Flame Strike it applies the [Heavy Break] effect.\n\nAdvancement Tier 5\n\n- When the user enters the stage, recovers Power Gauge by 100% and increases the damage of Violent Explosion by 100%.\n\n- When the user enters the stage, recovers Power Gauge by 100% and increases the damage of Violent Explosion by 200%.\n\nFerocious Spirit\n\n(Basic Skill 1)\n\n- Damage: 926% of the user’s Defense\n\n- Damage: 1018% of the user’s Defense\n\nWhite Flame Gale Kick\n\n(Basic Skill 2)\n\n- Damage: 1730% of the user’s Defense\n\n- Damage: 1903% of the user’s Defense\n\nWhite Flame Storm Kick\n\n(Support Skill)\n\n- Deals Violent Explosion damage equal to 400% of Defense and applies the [Defense Decrease] effect to the target.\n\n- Deals Violent Explosion damage equal to 600% of Defense and applies the [Defense Decrease] effect to the target.\n\nTruth: White Flame Strike\n\n(Ultimate Skill)\n\n- Deals Violent Explosion damage equal to 400% of Defense and applies the [Defense Decrease] effect to the target.\n\n- Deals Violent Explosion damage equal to 600% of Defense and applies the [Defense Decrease] effect to the target."
+      },
+      {
+        "date": "2025-07-03",
+        "url": "https://forum.netmarble.com/slv_en/view/32/91211",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nWhite Flame Strike\n\n(Basic Attack)\n\n184% / 193% / 205% of the user’s Defense\n\n207% / 216% / 228% of the user’s Defense\n\nWhite Flame Pummel\n\n(Core Attack)\n\n820% of the user’s Defense\n\n898% of the user’s Defense\n\nFerocious Spirit\n(Basic Skill 1)\n\n1018% of the user’s Defense\n\n1100% of the user’s Defense\n\nWhite Flame Gale Kick\n\n(Basic Skill 2)\n\n1903% of the user’s Defense\n\n2060% of the user’s Defense\n\nBottomless Pit\n\n(QTE Skill)\n\n1052% of the user’s Defense\n\n1140% of the user’s Defense\n\nWhite Flame Storm Kick\n\n(Support Skill)\n\n654% of the user’s Defense\n\n720% of the user’s Defense\n\nTruth: White Flame Strike\n\n(Ultimate SKill)\n\n3456% of the user’s Defense\n\n3790% of the user’s Defense"
+      },
+      {
+        "date": "2025-11-20",
+        "url": "https://forum.netmarble.com/slv_en/view/32/97654",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAdjusted\n\nAdvancement Tier 5\n\nWhen the user enters the stage, recovers Power Gauge by 100% and increases the damage of [Violent Explosion] by 200%.\n\nWhen the user enters the stage, recovers Power Gauge by 100% and increases the damage of [Violent Explosion] by 400%."
+      },
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nWhite Flame Storm Kick\n(Supporter Skill)\n\n(Values Increased)\n\n[Defense Decrease]\nDecrease the target’s Defense by 20% 70%\nDuration : 12 25 second(s)"
+      }
+    ]
   },
   {
     "id": "cha-hae-in",
@@ -1464,7 +1546,57 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nSwift Sword\n\n(Basic Attacks)\n\nStage 1 Damage: 200% of the user’s Attack\n\nStage 2 Damage: 212% of the user’s Attack\n\nStage 3 Damage: 227% of the user’s Attack\n\nStage 1 Damage: 210% of the user’s Attack\n\nStage 2 Damage: 222% of the user’s Attack\n\nStage 3 Damage: 237% of the user’s Attack\n\nSword Dance\n\n(Core Attack)\n\n Damage: 1086% of the user’s Attack\n\n Damage: 1137% of the user’s Attack\n\nThe Dancer (Q)\n\n Damage: 354% of the user’s Attack\n\n Damage: 373% of the user’s Attack\n\nSword of Light (E)\n\n Damage: 1776% of the user’s Attack\n\n Damage: 1850% of the user’s Attack\n\nRampant of Light (QTE)\n\n Damage: 1126% of the user’s Attack\n\n Damage: 1170% of the user’s Attack\n\nLight Strike\n\n(Support Skill)\n\n Damage: 630% of the user’s Attack\n\n Damage: 658% of the user’s Attack\n\nLight of the End (Ultimate Skill)\n\n Damage: 2593% of the user’s Attack\n\n Damage: 2722% of the user’s Attack"
+      },
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nThe Dancer (Q)\n\nDamage: 373% of the user’s Attack\n\nDamage: 412% of the user’s Attack\n\nAdvancement Tier 1\n\n-\n\nGrants [Super Armor] while [Waltz of the Sword] is active.\n\nAdvancement Tier 5\n\nThe damage of [Light of the End] increases by 20% depending on how many instances of [The Dancer] effect the user has applied (stacking up to 5 times)\n\nThe damage and Critical Hit Rate of [Light of the End] increases by 20% and 2% respectively, depending on how many instances of [The Dancer] effect the user has applied (stacking up to 5 times)."
+      },
+      {
+        "date": "2024-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/43529",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nThe Dancer\n\nWhen the user lands a Critical Hit, it applies the [Waltz of the Sword] effect.\n\n(Cooldown: 20 second(s))\n\nWhen this skill hits it applies the [Waltz of the Sword] effect. (Cooldown: 12 second(s))\n\nWhen this skill hits it becomes [Unrecoverable].\n\n[Waltz of the Sword]\n\nIn [Team Fight] mode the duration becomes 6 second(s).\n\n* Increased the recognition range of the [The Dancer] skill usage during Auto Battle."
+      },
+      {
+        "date": "2025-06-05",
+        "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 3\n\n[Sword’s Resolve]\n\n- Heavenly Strike chances to Heavy Attack: Heavenly Strike increasing its damage by 60%\n\n- Consumes all of the [Will of the Sword] gauge when the duration ends\n\n- Duration: 6 second(s)\n\n[Sword’s Resolve]\n\n- Heavenly Strike chances to Heavy Attack: Heavenly Strike increasing its damage by 170%\n\n- Consumes all of the [Will of the Sword] gauge when the duration ends\n\n- Duration: 6 second(s)"
+      },
+      {
+        "date": "2025-10-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/96913",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAdjusted\n\nExclusive Weapon\n\n<Valkyrie’s Oath>\n\nAdvancement Tier 0-5\n\n- The user’s Defense increases by 2 / 4 / 6 / 8 / 10 / 12%\n\n- When the [Will of the Sword] gauge recharge effect activates it triggers an effect that increases the user’s Defense by 1% (stacking up to 60 times)\n\n- Duration: Infinite\n\n- When the [Will of the Sword] gauge recharge effect activates it triggers an effect that increases the user’s Defense by 2 / 4 / 6 / 8 / 10 / 12% (stacking up to 30 times)\n\n- Duration: Infinite"
+      },
+      {
+        "date": "2025-11-20",
+        "url": "https://forum.netmarble.com/slv_en/view/32/97654",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAdjusted\n\nThe Dancer\n\n(Basic Skill 1)\n\n412% of the user’s Attack\n\nMP Consumption: 50\n\n1328% of the user’s Attack\n\nMP Consumption: 25\n\nSword of Light\n\n(Basic Skill 2)\n\n1850% of the user’s Attack\n\n2950% of the user’s Attack\n\nLight Strike\n\n(Support Skill)\n\n658% of the user’s Attack\n\n956% of the user’s Attack\n\nLight of the End\n\n(Ultimate Skill)\n\n2722% of the user’s Attack\n\n3756% of the user’s Attack\n\nAdvancement Tier 3\n\nWhen attacking a target inflicted with the [Brand] effect, increases the skill damage of [The Dancer and Sword of Light] by 50%.\n\nWhen attacking a target inflicted with the [Brand] effect, increases the skill damage of [The Dancer and Sword of Light] by 100%."
+      },
+      {
+        "date": "2026-04-09",
+        "url": "https://forum.netmarble.com/slv_en/view/32/103975",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nTier 3\n\nWhen the [Will of the Sword] gauge recharges to 100% it activates the [Sword’s Resolve] effect\n\n[Sword’s Resolve]\n\nHeavenly Strike changes to Heavy Attack: Heavenly Strike increasing its damage by 170%\n\nConsumes all of the [Will of the Sword] gauge when the duration ends\n\nDuration: 6 second(s)\n\nWhen the [Will of the Sword] gauge recharges to 100% it activates the [Sword’s Resolve] effect\n\nWhen the ally successfully puts a target in the [Break] state, it increases their Water damage by 15%\n\n[Sword’s Resolve]\n\nHeavenly Strike changes to Heavy Attack: Heavenly Strike increasing its damage by 170%\n\nConsumes all of the [Will of the Sword] gauge when the duration ends\n\nDuration: 6 second(s)\n\nTier 5\n\nThe [Will of the Sword] effect is enhanced\n\nWhen the user enters a stage it activates the [Pure Sword Princess] effect\n\n[Will of the Sword]\n\nApplies the effects below for every [Will of the Sword] gauge recharge level\n\nIncreases the user’s Defense by 10%\n\nIncreases the user’s Critical Hit damage by 4%\n\nDuration: 15 second(s) (stacking up to 6 times)\n\n[Pure Sword Princess]\n\nIncreases the damage of Sword Destiny by 60%\n\nIncreases the damage by Heavenly Strike and Heavy Attack: Heavenly Strike by 60%\n\nDuration: Infinite\n\nThe [Will of the Sword] effect is enhanced\n\nWhen the user enters a stage it activates the [Pure Sword Princess] effect\n\nWhen an ally successfully puts a target in the [Break] state, it increases the damage of Heavenly Strike, Heavy Attack: Heavenly Strike, Swordstorm and Quick Attack: Swordstorm by 20%\n\n[Will of the Sword]\n\nApplies the effects below for every [Will of the Sword] gauge recharge level\n\nIncreases the user’s Defense by 10%\n\nIncreases the user’s Critical Hit damage by 4%\n\nDuration: 15 second(s) (stacking up to 6 times)\n\n[Pure Sword Princess]\n\nIncreases the damage of Sword Destiny by 60%\n\nIncreases the damage by Heavenly Strike and Heavy Attack: Heavenly Strike by 60%\n\nDuration: Infinite"
+      },
+      {
+        "date": "2026-05-07",
+        "url": "https://forum.netmarble.com/slv_en/view/32/104871",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\nWhen The Dancer hits, the user had a 66% chance to [Brand] target\n\nWhen The Dancer hits it activates the [Brand] effect on the target\n\nTier 1\n\nThe max number of times [The Dancer] can stack increases to 5\n\n[Super Armo] is granted while [Waltz of the Sword] is active\n\nWhen Sword of Light hits it activates the [Lightsunder] effect on the target\n\nCritical Hit damage increases by 1% for every [Lightsunder] instance on targets affected by [Lightsunder]\n\nThe max number of times [The Dancer] can stack increases to 5\n\n[Super Armor] is granted while [Waltz of the Sword] is active\n\n[Lightsunder]\n\nDeals Damage equal to 100% of the user’s Attack every 3 seconds\n\nDuration: 30 second(s) (stacks up to 10 times)\n\nTier 4\n\nThe user’s Critical Hit damage increases by 16%.\n\nThe user’s Critical Hit damage increases by 20%.\n\nTier 5\n\nThe damage and Critical Hit Rate of Light of the End increases by 20% and 2% respectively, depending on how many instances of [The Dancer] effect the user has applied (stacking up to 5 times).\n\nIncreases the max amount of stacks of [The Dancer] to 8 stacks\n\nIncreases Power Gauge Acquisition Rate by 15% based on the number of [The Dancer] stacks.\n\nIncreases Light of the End damage by 20% and Critical Hit Rate by 2% (stacks up to 8 times)\n\nIncreases Light Overload damage by 2% for every [Lightsunder] stack to targets inflicted with Lightsunder\n\nReduces the cooldown of Light of the End by 3 second(s) when The Dancer hits a target in the [Light] [Overload] state\n\n- CM Iron's TIP: The 'Lightsunder' effect applied by Cha Hae-In, Akari Shimizu, and Antoine Martinez stacks regardless of the caster."
+      }
+    ]
   },
   {
     "id": "cha-hae-in-the-pure-sword-princess",
@@ -1679,7 +1811,15 @@
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
     ],
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nBasic\n\n(Values Increased)\n\nThe user deals Water elemental damage equal to  175% 220% of their Defense for every blade summoned as a part of the Heavenly Swords skill\n\nTier 3\n\n(Values Increased)\n\nWhen an ally successfully puts a target in the [Break] state, it increases their Water damage by 15% 60%\n\n[Sword’s Resolve]\nHeavenly Strike changes to Heavy Attack: Heavenly Strike, increasing its damage by 170% 200%\n\nTier 4\n\n(Values Increased)\n\nPure Sword Princess Cha Hae-In’s Critical Hit Rate increases by  7% 8% and her Critical Hit damage increases by  7% 8% for every Water team member (stacking up to 3 times)\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member, and the stack limit is removed)\n\nTier 5\n\n(New ‘Will of the Sword’ Effect Added)\n\n[Will of the Sword]\nApplies the effects below for every [Will of the Sword] gauge recharge level\nIncreases the user’s Defense by 10%\nIncreases the user’s Critical Hit Rate by 4%\nIncreases the user’s Critical Hit Damage by 4%\nIncreases Water damage by 10%\nDuration: 15 second(s) (stacks up to 6 times)\n\n(Values Increased)\n\n[Pure Sword Princess]\nIncreases damage of Sword of Destiny by 60% 100%\nIncreases the damage of Heavenly Strike and Heavy Attack: Heavenly Strike by 60% 100%"
+      }
+    ]
   },
   {
     "id": "charlotte",
@@ -1887,7 +2027,21 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-06-05",
+        "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nMeeh!\n\n(Basic Attack)\n\n315% / 327% / 345% of the user’s Defense\n\n382% / 394% / 410% of the user’s Defense\n\nTwinkle☆\n\n(Core Attack)\n\n1233% of the user’s Defense\n\n1488% of the user’s Defense\n\nIsla's Dance★\n(Basic Skill 1)\n\n1265% of the user’s Defense\n\n1524% of the user’s Defense\n\nHarper! Help!\n\n(Basic Skill 2)\n\n2770% of the user’s Defense\n\n3227% of the user’s Defense\n\nSparkle☆\n\n(QTE Skill)\n\n1100% of the user’s Defense\n\n1320% of the user’s Defense\n\nTricked Ya!\n\n(Support Skill)\n\n1486% of the user’s Defense\n\n1583% of the user’s Defense\n\nTake This!\n\n(Ultimate Skill)\n\n3803% of the user’s Defense\n\n4564% of the user’s Defense\n\nAdvancement Tier 1\n\nWhen the user uses the [Isla’s Dance★], it increases Dark damage by 15% for 20 second(s).\n\nWhen the user uses the [Isla’s Dance★], it increases Dark damage by 30% for 20 second(s).\n\nAdvancement Tier 2\n\nIncreases the user’s Defense by 12%.\n\nIncreases the user’s Defense by 16%."
+      },
+      {
+        "date": "2025-08-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nIsla’s Dance★\n\n(Basic Skill 1)\n\nWhen the doll explodes it deals additional damage equal to 350% of Charlotte’s Defense\n\nWhen the doll explodes it deals additional damage equal to 1050% of Charlotte’s Defense\n\nTricked Ya!\n\n(Support Skill)\n\nWhen the doll explodes it deals additional damage equal to 350% of Charlotte’s Defense\n\nWhen the doll explodes it deals additional damage equal to 1050% of Charlotte’s Defense\n\nAdvancement Tier 0\n\nThe user’s Critical Hit damage stat increases equal to 10% of the increased damage stat\n\nThe user’s Critical Hit damage stat increases equal to 20% of the increased damage stat\n\nIn [Team Fight] mode, increases damage dealt by 30%.\n\nAdvancement Tier 2\n\nIncreases the user’s Defense by 16%\n\nIncreases the user’s Defense by 20%\n\nAdvancement Tier 4\n\nBasic Attacks become faster and their damage increases by 60%.\n\nBasic Attacks become faster and their damage increases by 120%."
+      }
+    ]
   },
   {
     "id": "choi-jong-in",
@@ -2102,7 +2256,45 @@
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
     ],
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nSpark\n\n(Basic Attacks)\n\nStage 1 Damage: 124% of the user’s Attack\n\nStage 2 Damage: 148% of the user’s Attack\n\nStage 3 Damage: 158% of the user’s Attack\n\nStage 1 Damage: 140% of the user’s Attack\n\nStage 2 Damage: 166% of the user’s Attack\n\nStage 3 Damage: 176% of the user’s Attack\n\nBlast\n\n(Core Attack)\n\n Damage: 617% of the user’s Attack\n\n Damage: 682% of the user’s Attack\n\nRain of Flames (Q)\n\n Damage: 1410% of the user’s Attack\n\n Damage: 1550% of the user’s Attack\n\nFlame Spear (E)\n\n Damage: 1410% of the user’s Attack\n\n Damage: 1550% of the user’s Attack\n\nCelestial Fire Dragon (QTE)\n\n Damage: 846% of the user’s Attack\n\n Damage: 936% of the user’s Attack\n\nFire Barrage\n\n(Support Skill)\n\n Damage: 793% of the user’s Attack\n\n Damage: 802% of the user’s Attack\n\nEnd of Days\n\n(Ultimate Skills)\n\n Damage: 2162% of the user’s Attack\n\n Damage: 2370% of the user’s Attack"
+      },
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nAdvancement Tier 2\n\nIncreases the user’s Attack by 8%\n\nIncreases the user’s Attack by 10%\n\nAdvancement Tier 5\n\nWhile [Tagging Out], the cooldown of [End of Days] passes 3 times faster and recovers Power Gauge by 0.5% every second.\n\nWhile [Tagging Out], the cooldown of [End of Days] passes 3 times faster and recovers Power Gauge by 0.8% every second.\n\n-\n\nWhen in [Team Fight] mode, the cooldown of [End of Days] passes 1.5 times faster and recharges the power Gauge by 0.4% every second."
+      },
+      {
+        "date": "2024-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/43529",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nPassive Details\n\n[The Ultimate Hunter]\n\nIncreases the user’s Attack and Defense Penetration by 12%.\n\n[The Ultimate Hunter]\n\nIncreases the user’s Attack and Defense Penetration by 16%.\n\nAdvancement Tier 2\n\nIncreases the user’s Attack by 10%.\n\nIncreases the user’s Attack by 12%.\n\nAdvancement Tier 4\n\n-\n\nIncreases the user’s Fire damage by 16%.\n\nAdvancement Tier 5\n\nWhen in [Team Fight] mode, the cooldown of End of Days passes 1.5 times faster and recharges Power Gauge by 0.4% every second.\n\nWhen in [Team Fight] mode, the cooldown of [End of Days, Rain of Flames, and Flame Spear] pass 2 times faster and the Power Gauge recharges by 0.4% every second.\n\nSpark\n\n(Basic Attacks)\n\nRecharges Core Attack upon using Spark (Basic Attacks) 6 times.\n\nRecharges Core Attack upon using Spark (Basic Attacks) 4 times.\n\nRain of Flames\n\n-\n\nIncreased skill hit range\n\nMega Crater\n\n(Enforced Rain of Flames)\n\n-\n\nIncreased skill hit range\n\nFlame Spear\n\n-\n\nIncreased skill hit range"
+      },
+      {
+        "date": "2024-10-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/62691",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nPassive Details\n\n- Choi Jong-In cannot deal Critical Hits, but his Attack increases by 40%.\n\n- [The Ultimate Hunter]\n\nIncreases the user’s Attack and Defense Penetration by 16%.\n\n- Choi Jong-In cannot deal Critical Hits, but his Attack increases by 50%.\n\n- [The Ultimate Hunter]\n\nIncreases the user’s Attack and Defense Penetration by 20%.\n\nAdvancement 3\n\n- Increases the damage of [End of Days] by 50%.\n\n- Increases the damage of [End of Days] by 60%.\n\n[Burn] Effect\n(Core/Support/QTE Skill Effect)\n\n- Deals damage equal to 50% of the user’s Attack every 3 second(s).\n\n- Deals damage equal to 100% of the user’s Attack every 3 second(s).\n\nEquivalent Exchange\n\n〈Choi Jong-In Exclusive Weapon〉\n\nAdvancement 1 - 5\n\n- Increases the user’s Attack by 5% / 7.5% / 10% / 12.5% / 15% / 18%.\n\n- Increases the user’s Attack by 5% / 8% / 11% / 14% / 17% / 20%."
+      },
+      {
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nSpark\n\n(Basic Attack)\n\nBased on Lv.10\n\n(Increased damage coefficient)\n\nStage 1 Damage : 210% 360% of the user’s Attack\n\nStage 2 Damage : 249% 399% of the user’s Attack\n\nStage 3 Damage : 264% 414% of the user’s Attack\n\nBlast\n\n(Core Attack)\n\nBased on Lv.10\n\n(Increased damage coefficient )\n\nDamage: 1023% 2523% of the user’s Attack\n\nRain of Flames\n\n(Basic Skill 1)\n\nBased on Lv.10\n\n(Increased damage coefficient)\n\nDamage: 2325% 3825% of the user’s Attack\n\nFlame Spear\n\n(Basic Skill 2)\n\nBased on Lv.10\n\n(Increased damage coefficient)\n\nDamage: 2325% 3825% of the user’s Attack\n\nEnd of Days\n\n(Ultimate Skill)\n\nBased on Lv.10\n\n(Increased damage coefficient)\n\nDamage: 3555% 6705% of the user’s Attack\n\nBasic Passive\n\n(Increased effect values, expanded skill target range, and added new effect)\n\nChoi Jong-In cannot deal Critical Hits, but his Attack increases by 50% 100%\n\nWhen [End of Days, Celestial Fire Dragon] is used, it applies [The Ultimate Hunter] effect\n\n[The Ultimate Hunter]\n\nIncreases the user’s Attack and Defense Penetration by 20% 30%\n\nIncreases the Defense Penetration stat equal to 100% of the user’s Critical Hit Rate and Critical Hit damage stats\n\nDuration : 15 seconds\n\nTier 1\n\n(Added new effect)\n\nWhen an ally successfully puts the target in a [Break] state [Mega Crater]‘s damage increases by 200% (Duration: Infinite)\n\nTier 2\n\n(Increased effect values)\n\nIncreases the user’s Attack by 12% 50%\n\nTier 3\n\n(Increased effect values and expanded skill target range)\n\nThe damage of [End of Days, Flame Spear] increases by 60% 200%\n\nTier 4\n\n(Increased effect values)\n\nIncreases the user’s Fire damage by 16% 100%\n\nTier 5\n\n(Increased effect values)\n\nIn [Team Fight] mode, the cooldown of End of Days, Rain of Flames, and Flame Spear passes by 3 times 5 times  faster and the Power Gauge regains 0.4% 5% charge every second\n\nEquivalent Exchange\n\n〈Choi Jong-In’s Exclusive Weapon〉\n\nBased on Tier 5\n\n(Increased effect values)\n\nIncreases the user’s Attack by 20% 30%"
+      },
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nFire Barrage\n(Supporter Skill)\n\n(Values Increased)\n\n[Defense Decrease]\nDecrease the target’s Defense by 15% 70%\nDuration : 15 25 second(s)"
+      }
+    ]
   },
   {
     "id": "christopher-reed",
@@ -2310,7 +2502,21 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 1\n\n(New effect added)\n\nTransforms Foul Play to Hard Tackle\n\nWhen Hard Tackle hits inflicts 1 instance of the Wildfire effect\n\nWhen [Spiritual Body Manifestation] is active it grants an effect that increases Fire team members’ Basic Skill damage by 15% for 30 second(s)\n\n[Wildfire]\n\nDeals damage equal to 100% of Defense every 3 second(s)\n\nDuration: 30 second(s)(stacks up to 10 times)\n\nTier 3\n\n(New effect added)\n\nWhen  Hard Tackle hits it now applies 2 instances of the [Wildfire] effect\n\nTier 5\n\n(New effect added)\n\nUsing Zero to Hundred resets the cooldown of Nitro Kick and Hard Tackle\n\nWhen Hard Tackle hits it now applies 5 instances of the [Wildfire] effect\n\nStrategy for Victory\n\n〈Christopher Reed Exclusive Weapon〉\n\nTier 5\n\n(Buff duration extended)\n\nUsing Zero to Hundred increases the user’s Defense Penetration by 15% for 20 second(s) 60 second(s)\n\nRising Star\n\n(Basic Attack)\n\n※ Elemental Accumulation Volume Increased\n\nOffensive Pass\n\n(Core Attack)\n\n※ Elemental Accumulation Volume Increased\n\nNitro Kick\n\n(Basic Skill 1)\n\n※ Elemental Accumulation Volume Increased\n\nFoul Play\n\n(Basic Skill 2)\n\n※ Elemental Accumulation Volume Increased\n\nZero to a Hundred\n\n(Ultimate Skill)\n\n※ Elemental Accumulation Volume Increased\n\n※ The [Wildfire] effect applied by Christopher Reed and Liu Zhigang will now stack, regardless of the caster.\n\n※ The Elemental Accumulation displayed for Christopher Reed's Basic Attack, Core Attack, Basic Skills, Enhanced Basic Skills, and Ultimate Skills will remain the same; however, the actual Elemental Accumulation Amount applied in-game has been increased."
+      },
+      {
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nBasic Passive\n\n(Eased condition for using Finishing Catch)\n\nFinishing Catch becomes available upon a successful Extreme Evasion or when activating [Spiritual Body Manifestation]\n\n(Added affected targets)\n\nUsing Nitro Kick, Foul Play, or Hard Tackle while in [Team Fight] mode grants Fire team members the [Touchdown] effect\n\n[Finishing Catch]\n\nUsing the skill grants Fire team members the [Touchdown] effect\n\n(Extended duration and increased maximum stacks)\n\n[Touchdown]\n\nIncreases Fire Overload damage by 15%\n\nThe Fire [Elemental Accumulation] effect increases by 5%\n\nDuration: 60 90 seconds (stacks up to  3 4 times)\n\nTier 1\n\n(Increased effect values)\n\nFinishing Catch damage increases by 25% 100% to targets inflicted by [Burn]\n\nWhen [Spiritual Body Manifestation] is active it grants an effect that increases Fire team members’ Basic Skill damage by 15% 30% for 30 second(s)\n\nTier 3\n\n(Increased effect values)\n\n[Competitive Spirit]\n\nIncreases Finishing Catch damage by 15% 165%\n\nTier 4\n\n(Added affected targets)\n\n[Fire] team member The entire team’s Fire damage increases by 5% for every Fire ally in the party\n\n(Added new effect)\n\nAdditionally increases Fire team members’ Fire damage by 5%\n\nTier 5\n\n(Eased cooldown limit)\n\nWhen Christopher Reed or an ally successfully triggers the [Fire] [Overload] effect, he recovers 20% of this Power Gauge charge and resets the cooldown of Zero to Hundred (Cooldown: 25 20 seconds)\n\nWhen Christopher’s attack hits a target inflicted with the [Fire] [Overload] effect, it inflicts [Blazing Shock] on the target (Cooldown: 25 20 seconds)\n\n(Increased effect values and added new effect)\n\n[Blazing Shock]\n\nIncreases Fire Overload damage taken by 20% 30%\n\nIncreases taken [Fire] damage by 15%\n\nStrategy for Victory\n\n〈Christopher Reed’s Exclusive Weapon〉\n\nBased on Tier 5\n\n(Increased effect values)\n\nUsing Zero to Hundred increases the user’s Defense Penetration by 15% 30% for 60 seconds\n\n(Added affected targets)\n\nUsing Zero to Hundred increases Fire team members’ Fire damage by 15% for 60 seconds"
+      }
+    ]
   },
   {
     "id": "diana-lopez",
@@ -2523,6 +2729,14 @@
         "summary": "Chicxulub : portée fortement augmentée",
         "wiki_reflects_patch": null,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      }
+    ],
+    "balance_history": [
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nChicxulub\n(Burst Skill)\n\n(Skill Attack Range Significantly Increased)"
       }
     ]
   },
@@ -2741,7 +2955,15 @@
       }
     ],
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 5\n\n(New Effect Added)\n\nUsing Prison d’Argent grants Water Elemental Buster team members the [Insatiable Hunger]\n\n[Insatiable Hunger]\nIncreases Burst Damage by 40%\nSlightly increases the Burst damage accumulation rate\nDuration: 60 seconds"
+      }
+    ]
   },
   {
     "id": "emma-laurent",
@@ -2958,7 +3180,33 @@
       }
     ],
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nAdvancement Tier 0\n\nWhen the user uses a [Basic Attacks] and gets hit, the [Heat Absorption] effect is applied once.\n\nWhen the user uses a [Basic Attacks] and gets hit, the [Heat Absorption] effect is applied twice."
+      },
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nBurning Pride\n\n(Ultimate Skill)\n\nDamage: 1555% of the user’s Max HP\n\nDamage: 1777% of the user’s Max HP"
+      },
+      {
+        "date": "2024-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/43529",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nPassive Details\n\n[Heat emission]\n\nAt 15 instances, the [Heat Emission] effect applies to team members as well.\n\n[Heat Emission]\n\nAt 15 instances, the [Heat Emission] effect applies to team members as well and increases their Fire damage by 7.77%.\n\nAdvancement Tier 3\n\n-\n\nApplies 5 instances of [Heat Absorption] when entering the stage.\n\n* Displays Shield effect when gaining Shield through [Heat Absorption]."
+      },
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nRoaring Flames\n(Supporter Skill)\n\n(Values Increased / New Effect Added)\n\n[Flame’s Wrath]\nIncreases Defense Penetration by 10%\nThe user’s Fire damage increases by 15% 20%\nIncreases damage dealt to targets affect by [Break] by 30%\nDuration : 20 second(s)"
+      }
+    ]
   },
   {
     "id": "esil-radiru",
@@ -3166,7 +3414,27 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026) ; rapprochement par ressemblance de nom (esil-radir), à confirmer.",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-03-12",
+        "url": "https://forum.netmarble.com/slv_en/view/32/102815",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\n[Break] effectiveness in the [Workshop of Brilliant Light] increases by 24%\n\n[Enhanced Lance Throw]\n\nIncreases the damage of Lance Throw and [Break] effectiveness by 80% (stacking up to 5 times)\n\nAfter Lance Throw is activated, all effects of [Enhanced Lance Throw] are removed.\n\nDuration: Infinite (stacking up to 5 times)\n\n[Break] effectiveness in the [Workshop of Brilliant Light] increases by 200%\n\n[Lance Throw]\n\nIncreases the damage of Lance Throw and [Break] effectiveness by 160% (stacking up to 5 times)\n\nAfter Lance Throw is activated, all effects of [Enhanced Lance Throw] are removed.\n\nDuration: Infinite (stacking up to 5 times)\n\nRadiru Spearmanship\n\n(Basic Attack)\n\n197% / 205% / 216% of the user’s Attack\n\n216% / 225% / 237% of the user’s Attack\n\nStabbing Spikes\n\n(Core Attack)\n\n1091% of the user’s Attack\n\n1200% of the user’s Attack\n\nGlorious Wounds\n\n(Basic Skill 1)\n\n1060% of the user’s Attack\n\n1378% of the user’s Attack\n\nDeath's Rush\n\n(Basic Skill 2)\n\n2090% of the user’s Attack\n\n2298% of the user’s Attack\n\nCascading Glory\n\n(QTE Skil )\n\n1020% of the user’s Attack\n\n1173% of the user’s Attack\n\nSupport Fire\n\n(Supporter Skill)\n\n867% of the user’s Attack\n\n953% of the user’s Attack\n\nForetold Victory\n\n(Ultimate Skill)\n\n3409% of the user’s Attack\n\n3920% of the user’s Attack\n\n※ All values listed in the table are based on Skill Level 1."
+      },
+      {
+        "date": "2026-04-09",
+        "url": "https://forum.netmarble.com/slv_en/view/32/103975",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\nWhen Esil Radiru successfully puts a target in a [Break] state it increases the duration of the [Break] state by 3 second(s)\n\nWhen Esil Radiru or an ally successfully puts a target in a [Break] state it increases the duration of the [Break] state by 3 second(s)\n\nTier 1\n\nWhile the effects of Foretold Victory are active the effects of Lance Throw are enhanced.\n\nThe damage of Lance Throw increases by 100%.\n\nWhen Lance Throw hits it inflicts the [Prey] effect 2 time(s).\n\nThe [Prey] effect triggered by Lance Throw can only be applied up to 10 times.\n\nWhile the effects of Foretold Victory are active the effects of Lance Throw are enhanced.\n\nUsing Foretold Victory increases Attack by 100%\n\nDuration: 60 second(s)\n\nThe damage of Lance Throw increases by 100%.\n\nWhen Lance Throw hits it inflicts the [Prey] effect 2 time(s).\n\nThe [Prey] effect triggered by Lance Throw can only be applied up to 10 times.\n\nTier 5\n\nWhen the user uses Death’s Rush enhanced Lance Throw is activated one additional time.\n\nWhen Lance Throw hits the target within 10 second(s) while they’re in a [Break] state it triggers [Prey on the Weak] instead of [Prey].\n\nEnhances [Prey on the Weak] effect.\n\n[Prey on the Weak]\n\nIncreases the target’s Fire damage taken by 0.3%.\n\nDamage taken increases by 0.3%.\n\nDuration: 90 second(s) (stacking up to 100 times)\n\nUsing Death’s Rush triggers an enhanced Lance Throw\n\nWhen Lance Throw hits it activates the [Prey on the Weak] effect instead of the [Prey effect]\n\nThe [Prey on the Weak] effect is enhanced when Esil\n\nWhen Esil Radiru or an ally successfully puts a target in a [Break] state, it activates the [Pride] effect\n\nUsing Foretold Victory increases Fire damage by 200% (Duration: 60 second(s))\n\n[Prey on the Weak]\n\nIncreases the target’s Fire damage taken by 0.3%.\n\nDamage taken increases by 0.3%.\n\nDuration: 90 second(s) (stacking up to 100 times)\n\n[Pride]\n\nIncreases Glorious Wounds and Death’s Rush damage by 65%\n\nIncreases Foretold Victory damage by 65%\n\nDuration : Infinite"
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nSupport Fire\n\n(Supporter Skill)\n\n(New Effect Added)\n\nUsing this skill increases Sung Jinwoo’s Fire Weapon Skill damage by 20% for 25 second(s)"
+      }
+    ]
   },
   {
     "id": "fern",
@@ -3374,7 +3642,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-10-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/96913",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAdjusted\n\nDemon-killing Magic (Zoltraak) - Balanced\n\n(Core Attack)\n\n1055% of the user’s Attack\n\n1060% of the user’s Attack\n\nDemon-killing Magic (Zoltraak) - Barrage\n\n(Basic Skill 1)\n\n1865% of the user’s Attack\n\n1866% of the user’s Attack\n\nDemon-killing Magic (Zoltraak) - Rapid Fire\n\n(Basic Skill 2)\n\n1960% of the user’s Attack\n\n1962% of the user’s Attack\n\nDemon-killing Magic (Zoltraak) - Mighty\n\n(Ultimate Skill)\n\n3560% of the user’s Attack\n\n3566% of the user’s Attack\n\nAdvancement Tier 2\n\n- The user’s [Fire] damage increases by 20%\n\n- The user’s [Fire] damage increases by 20%\n\n- Activates [increase in Fire damage taken] when [Basic Skill 2] hits\n\n[increase in Fire damage taken]\n\n- Increases [Fire] damage taken by 0.3%\n\n- Duration: 30 second(s) (stacks up to  60 time(s))\n\nAdvancement Tier 4\n\n- The user’s Critical Hit Rate increases by 10% and Critical Hit damage by 20%\n\n- The user’s Critical Hit Rate increases by 10% and Critical Hit damage by 20%\n\n- When [Basic Skill 2] hits, the [Increase in Fire damage taken] effect per stack has been adjusted from 0.3% to 0.5%.\n\n[increase in Fire damage taken]\n\n- Increases [Fire] damage taken by 0.5%\n\n- Duration: 30 second(s) (stacks up to  60 time(s))"
+      }
+    ]
   },
   {
     "id": "frieren",
@@ -3582,7 +3858,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-10-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/96913",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAdjusted\n\nBasic Magic Attack (Zoltraak) - Multi-Hit\n\n(Basic Attack)\n\n137% / 142% / 147% of the user’s Defense\n\n257% / 266% / 270% of the user’s Defense\n\nBasic Magic Attack (Zoltraak) - Concentrated\n\n(Core Attack)\n\n975% of the user’s Defense\n\n1515% of the user’s Defense\n\nDestructive Lightning Magic (Judradjim)\n\n(Basic Skill 1)\n\n1820% of the user’s Defense\n\n3020% of the user’s Defense\n\nHellish Flame Magic (Vollzanbel)\n\n(Basic Skill2)\n\n1942% of the user’s Defense\n\n3542% of the user’s Defense\n\nDefense Magic\n\n(Support Skill)\n\n(Level 1 - 20)\n\n- If the entire team, excluding Sung Jinwoo, consists of [Water] team members, Sung Jinwoo’s Attack and Defense increases by 15%.\n\n- - If the entire team, excluding Sung Jinwoo, consists of [Water] team members, Sung Jinwoo’s Attack and Defense increases by / 15.2 / 15.4 / 15.6 / 15.8 / 16 / 16.2 / 16.4 / 16.7 / 17 / 17.3 / 17.6 / 17.9 / 18.2 / 18.5 / 18.8 / 19.1 / 19.4 / 19.7 / 20%.\n\nBasic Magic Attack (Zoltraak) - Penetration\n\n(QTE Skill)\n\n954% of the user’s Defense\n\n2254% of the user’s Defense\n\nBasic Magic Attack (Zoltraak) - Ultimate\n\n(Ultimate Skill)\n\n3226% of the user’s Defense\n\n4366% of the user’s Defense\n\nExclusive Weapon\n\n<Frieren’s Staff>\n\nAdvancement Tier 0-5\n\n- The user’s Defense increases by 5 / 10 / 15 / 20 / 25 / 30%\n\n- Team members’ Ultimate Skill damage increases by 5 / 10 / 15 / 20 / 25 / 30%\n\n- The user’s Defense increases by 5 / 10 / 20 / 30 / 40 / 50%\n\n- Team members’ [Basic Skill and Ultimate Skill] damage increases by 5 / 10 / 15 / 20 / 25 / 30%\n\nAdvancement Tier 0\n\n[Mana Power Control]\n\n- Increases the user’s Defense by 20%\n\n- When the user has 50% or more of their MP, it increases their Defense by 20%\n\n- Skill Mana Consumption decreases by 20%\n- Duration: Infinite\n\n[Mana Power Control]\n\n- Increases the user’s Defense by 25%\n\n- When the user has 50% or more of their MP, it increases their Defense by 25%\n\n- Skill Mana Consumption decreases by 20%\n- Duration: Infinite\n\nAdvancement Tier 1\n\n[Vollzanbel]\n\n- Decreases Defense by 5%\n\n- Increases their chance of receiving Critical Hit damage by 5%\n\n- Increases Critical Hit damage taken by 5%\n- Duration: 20 second(s)\n\n[Vollzanbel]\n\n- Decreases Defense by 5%\n\n- Increases their chance of receiving Critical Hit damage by 5%\n\n- Increases Critical Hit damage taken by 5%\n\n- Increases damage from Frieren by 35%\n- Duration: 20 second(s)\n\nAdvancement Tier 3\n\n[Mana Power Control]\n\n- Increases the user’s Defense by 40%\n\n- When the user has 50% or more of their MP, it increases their Defense by 40%\n\n- Skill Mana Consumption decreases by 30%\n- Duration: Infinite\n\n[Mana Power Control]\n\n- Increases the user’s Defense by 50%\n\n- When the user has 50% or more of their MP, it increases their Defense by 50%\n\n- Skill Mana Consumption decreases by 30%\n- Duration: Infinite\n\nAdvancement Tier 5\n\n[Vollzanbel]\n\n- Decreases Defense by 10%\n\n- Increases their chance of receiving Critical Hit damage by 15%\n\n- Increases Critical Hit damage taken by 15%\n- Duration: 20 second(s)\n\n[Vollzanbel]\n\n- Decreases Defense by 10%\n\n- Increases their chance of receiving Critical Hit damage by 15%\n\n- Increases Critical Hit damage taken by 15%\n\n- Increases damage from Frieren by 70%\n- Duration: 30 second(s)"
+      }
+    ]
   },
   {
     "id": "gina",
@@ -3790,7 +4074,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nBasic\n\n(Effect Stats Increased)\n\n[Mana Circulation]\n\nIncreases Attack by 15% 20%\n\nIncreases Fire damage by 15% 20%\n\nDuration: 15 20 second(s)\n\nTier 2\n\n(Effect Stats Increased)\n\nWhen a [Shield] is granted to a team member that team member’s damage dealt increases by 10% 20%\n\nTier 3\n\n([Gravity Boost] Damage Taken Increase effect added)\n\n[Gravity Boost]\n\nIncreases the target’s Fire damage taken by 10%\n\nIncreases the target’s damage taken by 10%\n\nDuration: 20 second(s)\n\nTier 4\n\n(Team-wide Attack Increase effect added)\n\nAll members’ Attack and Defense Penetration increases by 4%\n\n([Fire Element] Teammate Attack Increase effect and increased Defense Penetration stats added)\n\nIncreased Attack and Defense Penetration of [Fire] team members increases by an additional 4% 8%\n\nTier 5\n\n([Space-time Gap] affected skills and increased Damage Increase values added)\n\n[Space-time Gap]\n\nThe damage of Path of Extinction and Liberation increases by 60% 120%\n\nPath of Extinction and Liberation increases by 60% 120% when hitting targets with the [Gravity Boost] effect applied\n\nConcentrated Gravity\n\n(Supporter Skill)\n\n(New Effect Added)\n\nIf the entire team, excluding Sung Jinwoo, is comprised of Fire team members, it activates an effect that increases Sung Jinwoo’s Attack by 20%\n\nThe Glamour of Self-worth\n\n〈Gina Exclusive Weapon〉\n\nTier 5 Based\n\n(Attack Increase stats and Maximum Buff Stacks Increased)\n\nThe user’s Attack increases by 12% 24%\n\nWhen [Mana Circulation] activates it increases all team members’ Attack and Fire damage by 1% (stacking up to 10 20 times)"
+      }
+    ]
   },
   {
     "id": "go-gunhee",
@@ -3996,7 +4288,27 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-07-03",
+        "url": "https://forum.netmarble.com/slv_en/view/32/91211",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nChairman’s Will\n\n(Basic Attack)\n\n197% / 203% / 213% of the user’s Defense.\n\n223% / 230% / 240% of the user’s Defense.\n\nAbdominal Crush\n\n(Core Attack)\n\n1147% of the user’s Defense.\n\n1267% of the user’s Defense.\n\nFighting Spirit\n(Basic Skill 1)\n\n1158% of the user’s Defense.\n\n1398% of the user’s Defense.\n\nPower of Brilliant Light\n\n(Basic Skill 2)\n\n1617% of the user’s Defense.\n\n1930% of the user’s Defense.\n\nClean Sweep\n\n(QTE Skill)\n\n916% of the user’s Defense.\n\n1007% of the user’s Defense.\n\nInstant Destruction\n\n(Support Skill)\n\n650% of the user’s Defense.\n\n706% of the user’s Defense.\n\nSupernova\n\n(Ultimate SKill)\n\n3053% of the user’s Defense.\n\n3358% of the user’s Defense."
+      },
+      {
+        "date": "2025-11-20",
+        "url": "https://forum.netmarble.com/slv_en/view/32/97654",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAdjusted\n\nAbdominal Crush\n\n(Core Attack)\n\n-\n\n* The break damage will increase slightly.\n\nFighting Spirit\n\n(Basic Skill 1)\n\nPower of Brilliant Light\n\n(Basic Skill 2)\n\nInstant Destruction\n\n(Support Skill)\n\n[Aura of Brilliant Light]\n\n- Increases the user’s Defense by 10%\n\n- The user gains a [Shield] equal to 10% of Sung Jinwoo’s Defense\n\n- The user’s [Light] damage increases by 10%.\n\n- Duration: 20 second(s)\n\n[Aura of Brilliant Light]\n\n- Increases the user’s Defense by 20%\n\n- The user gains a [Shield] equal to 10% of Sung Jinwoo’s Defense\n\n- The user’s [Light] damage increases by 20%.\n\n- Duration: 20 second(s)\n\nAdvancement Tier 0\n\n[The Fragment of Brilliant Light]\n\n- The user’s [Core Attack] becomes [Heavy Attack: Abdominal Crush] and their damage increases by 60%.\n\n- [Fighting Spirit] becomes [Heavy Attack: Fighting Spirit] and increases the user’s damage by 60%.\n\n[The Fragment of Brilliant Light]\n\n- The user’s [Core Attack] becomes [Heavy Attack: Abdominal Crush] and their damage increases by 75%.\n\n- [Fighting Spirit] becomes [Heavy Attack: Fighting Spirit] and increases the user’s damage by 80%.\n\nAdvancement Tier 3\n\n[Ruler’s Aura]\n\n- The user’s Damage Taken decreases by 20%.\n\n[Ruler’s Aura]\n\n- The user’s Damage Taken decreases by 25%.\n\nAdvancement Tier 4\n\nIncreases the user’s Defense by 12%.\n\nIncreases the user’s Defense by 16%.\n\nAdvancement Tier 5\n\n[Will of the Fragment]\n\n- Increases the user’s Critical Hit Damage by 30% and [QTE] damage by 150%.\n\n[Will of the Fragment]\n\n- Increases the user’s Critical Hit Damage by 30% and [QTE] damage by 200%.\n\nA Conviction and a Calling\n\n<Go Gunhee’s Exclusive Weapon>\n\nAdvancement Tier 0-5\n\nThe user’s Defense increases by 4%/5%/6%/7%/9%/12%.\n\nThe user’s Defense increases by 8%/10%/12%/14%/16%/20%."
+      },
+      {
+        "date": "2026-05-07",
+        "url": "https://forum.netmarble.com/slv_en/view/32/104871",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\n[The Fragment of Brilliant Light]\n\nActivates the user’s Core Attack 1 time.\n\nThe user’s Core Attack becomes Heavy Attack: Abdominal Crush and their damage increases by 75%.\n\nFighting Spirit becomes Heavy Attack: Fighting Spirit and increases the user’s damage by 80%.\n\nDuration : 15 second(s)\n\n[The Fragment of Brilliant Light]\n\nActivates the user’s Core Attack 1 time.\n\nThe user’s Core Attack becomes Heavy Attack: Abdominal Crush and their damage increases by 120%.\n\nFighting Spirit becomes Heavy Attack: Fighting Spirit and increases the user’s damage by 120%.\n\nDuration : 15 second(s)\n\nTier 3\n\n[Ruler’s Aura]\n\nIncreases the user’s Defense by 50%.\n\nThe user gains a Shield equal to 20% of Go Gunhee’s Defense.\n\nThe user’s Damage Taken decreases by 25%.\n\nDuration: 15 second(s)\n\n[Ruler’s Aura]\n\nIncreases the user’s Defense by 80%.\n\nThe user gains a Shield equal to 20% of Go Gunhee’s Defense.\n\nThe user’s Damage Taken decreases by 25%.\n\nDuration: 15 second(s)\n\nTier 4\n\nIncreases the user’s Defense by 16%.\n\nIncreases the user’s Defense by 32%.\n\nTier 5\n\nThe damage of Supernova increases by 60% when dealt to targets that possess a Break Gauge.\n\nWhen Supernova hits a target that doesn’t have a Break Gauge it grants the [Will of the Fragment] effect to team members.\n\n[Will of the Fragment]\n\nIncreases the user’s Critical Hit damage by 30% and QTE damage by 200%\n\nDuration: 20 second(s)\n\nIncreases Supernova damage by 80%\n\nWhen Supernova hits, it grants [Will of the Fragment] to team members\n\n[Will of the Fragment]\n\nIncreases the user’s Critical Hit damage by 30% and QTE damage by 200%\n\nDuration: 60 second(s)\n\nInstant Destruction\n\n(Supporter Skill)\n\n[Aura of Brilliant Light]\n\nDecreases the user’s Damage by 20%.\n\nThe user gains a [Shield] equal to 10% of Sung Jinwoo’s Defense\n\nThe user’s Light damage increases by 20%\n\nDuration: 20 second(s)\n\n[Aura of Brilliant Light]\n\nIncreases the user’s Attack by 20%.\n\nDecreases the user’s Damage by 20%.\n\nThe user gains a [Shield] equal to 10% of Sung Jinwoo’s Defense\n\nThe user’s Light damage increases by 20%\n\nIncreases the user’s Critical Hit Damage by 20%\n\nDuration: 20 second(s)\n\nA Conviction and Calling\n\n(Go Gunhee Exclusive Weapon)\n\nWhen Fighting Spirit or Heavy Attack: Fighting Spirit hits, increases the target’s Light damage taken by 4% / 5% / 6% / 7% / 9% / 12%\n\nWhen Fighting Spirit or Heavy Attack: Fighting Spirit hits, increases the target’s Light damage taken by 4% / 5% / 6% / 7% / 9% / 15% and their chance of receiving Critical Hit damage by 4% / 5% / 7% / 9% / 11% / 15%"
+      }
+    ]
   },
   {
     "id": "goto-ryuji",
@@ -4202,7 +4514,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 3\n\n(New Effect Added)\n\nThe [Arrogance] effect is enhanced.\n\n[Arrogance]\nIncreases Critical Hit damage by 30%\nIncreases [Basic Skill] damage by 30%\nIncreases [Ultimate Skill] damage by 30%\nIncreases Skill Mana Consumption by 20%\nDuration : 20 second(s)\n\nTier 5\n\n(New Effect Added)\n\nWhen Devastate Prey hits it inflicts the target with the [Domination] effect\n\n[Domination]\nIncreases damage taken by 20%\nIncreases the target’s [Wind] damage taken by 20%\nDecreases Defense by 5%\nDuration : 60 second(s)\n\nDistorted Dreams\n〈Goto Ryuji’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased)\n\nThe user’s HP increases by 12% 30%"
+      }
+    ]
   },
   {
     "id": "han-se-mi",
@@ -4410,7 +4730,21 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-06-05",
+        "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 5\n\n[Natural Unity]\n\nIncreases the user’s Attack by 10%.\n\nIncreases Wind damage by 20%.\n\nDuration: 25 second(s).\n\n[Natural Unity]\n\nIncreases the user’s Attack and Defense by 10%.\n\nIncreases Wind damage by 20%.\n\nDuration: 25 second(s)."
+      },
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nGolden Meadow\n(Basic Skill 2)\n\n(New Effect Added & Cooldown Decreased)\n\nUsing this skill removes the entire team’s [debuffs]\nCooldown : 30 25 seconds\n\n(Protection Zone Duration Extended)\n\n[Protection Zone] Duration : 15 25 seconds\n\nDivine Field\n(Supporter Skill)\n\n(New Effect Added)\n\nIf all team members, except for Sung Jinwoo, are [Wind] team members, it increases Jinwoo’s Attack, Critical Hit Rate, and Critical Hit damage by 12%\n\nPassive\n\n(Breath Reset Cooldown Condition Removed)\n\nUsing [Sharp Sprouts, Golden Meadow, or Vines of Vitality] grants the team members the [Breath] effect\n\n(New Effect Added)\n\nWhen [Sharp Sprouts] hits it inflicts 2 [Winter’s Edge] instances\n\n[Winter’s Edge]\nDeals damage equal to 50% of Max HP every 3 second(s)\nDuration : 30 second(s) (stacks up to 10 times)\n\nTier 1\n\n(Effect Activation Conditions Eased)\n\nThe [Sharp Breath] effect is granted to team members when they use their QTE Skill or Ultimate Skill\n\nTier 2\n\n(New Effect Added)\n\nIncreases Wind Overload damage by 25% for the Wind team member with the highest Defense\n\nTier 3\n\n(New Effect Added)\n\nThe [Breath] effect is enhanced.\n\n[Breath]\nIncreases [Basic Skill] damage by 10%\nAdditionally increases Wind team members’ Basic Skill damage by 20%\nAdditionally increases Wind team members’ Ultimate Skill damage by 20%\nDuration:40 second(s) (stacks up to 2 times)\n\nTier 4\n\n(New Effect Added)\n\nThe Wind damage of Wind team members increases by 4% for every Wind ally\n\nTier 5\n\n(New Effect Added)\n\nThe [Sharp Breath] effect is enhanced.\nUsing [Sharp Sprouts or Vines of Vitality] grants Wind Elemental Buster members with [Nature’s Torrent]\nWhen Sharp Sprouts hits, the skill now inflicts 5 [Winter’s Edge] instances\n\n[Sharp Breath]\nApplies the following effects every second:\nCritical Hit Rate : 2% (stacks up to 20%)\nCritical Hit Damage : 4% (stacks up to 40%)\nRestores the user’s Power Gauge by 1%\nDuration : 40 second(s)\n\n[Nature’s Torrent]\nIncreases [Burst] damage 40%\nSlightly increases [Burst] damage accumulation rate\nDuration : 40 second(s)\n\n[Winter’s Edge]\nDeals damage equal to 50% of Max HP every 3 seconds\nDuration : 30 second(s) (stacks up to 10 times)\n\n(Natural Unity Value Increased & New Effect Added)\n\n[Natural Unity]\nIncreases Attack and Defense by 10% 20%\nIncreases Wind Overload damage by 20%\nDuration : 25 60 second(s)\n\nComing of Age\n〈Han Se-Mi’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased & Duration Extended)\n\nIncreases the user’s HP by 10% 50%\nIncreases damage taken by 5% for 10 30 second(s) to targets hit by Han Se-Mi’s skill"
+      }
+    ]
   },
   {
     "id": "han-song-yi",
@@ -4824,7 +5158,27 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-06-05",
+        "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nHammer Attack\n\n(Basic Attack)\n\n155% / 160% / 166% of the user’s Max HP\n\n193% / 197% / 204% of the user’s Max HP\n\nHammer Dash!\n\n(Core Attack)\n\n522% of the user’s Max HP\n\n626% of the user’s Max HP\n\nHammer Drift!\n(Basic Skill 1)\n\n704% of the user’s Max HP\n\n824% of the user’s Max HP\n\nThe Tenderizer!\n\n(Basic Skill 2)\n\n1249% of the user’s Max HP\n\n1467% of the user’s Max HP\n\nHammer Rush\n\n(QTE Skill)\n\n270% of the user’s Max HP\n\n327% of the user’s Max HP\n\nHarper's Thunder\n\n(Support Skill)\n\n300% of the user’s Max HP\n\n360% of the user’s Max HP\n\nHarper's Mjölnir\n\n(Ultimate Skill)\n\n1603% of the user’s Max HP\n\n1923% of the user’s Max HP\n\nAdvancement Tier 5\n\n[Porkchopped]\n\nUltimate Skill damage taken from Dark hunters increases by 2&. (Stacks up to 16 times.)\n\nDuration: 30 second(s)\n\n[Porkchopped]\n\nUltimate Skill damage taken from Dark hunters increases by 2&. (Stacks up to 32 times.)\n\nDuration: 30 second(s)"
+      },
+      {
+        "date": "2025-08-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nHammer Drift!\n(Basic Skill 1)\n\nDeals [medium Break] damage\n\nDeals [heavy Break] damage\n\nThe Tenderizer!\n\n(Basic Skill 2)\n\nDeals [almighty Break] damage\n\nDeals [almighty Break] damage\n\n* Increased break damage\n\nHarper’s Thunder\n\n(Support Skill)\n\nDeals [medium Break] damage\n\nDeals [heavy Break] damage\n\nAdvancement Tier 1\n\nThe max number of hits for The Tenderizer! increases by 4 and the skill damage increases by 120%.\n\nThe max number of hits for The Tenderizer! increases by 4 and the skill damage increases by 160%."
+      },
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 3\n\n(New effect added)\n\n[London Drift]\n\nGrants [Super Armor] while the effect is active"
+      }
+    ]
   },
   {
     "id": "holy-guardian-barrier-go-gunhee",
@@ -5237,7 +5591,33 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nS-Rank Fist\n\n(Basic Attacks)\n\nStage 1 Damage: 163% of the user’s Defense\n\nStage 2 Damage: 170% of the user’s Defense\n\nStage 3 Damage: 182% of the user’s Defense\n\nStage 1 Damage: 183% of the user’s Defense\n\nStage 2 Damage: 190% of the user’s Defense\n\nStage 3 Damage: 202% of the user’s Defense\n\nS-Rank Influence (Core Attack)\n\nDamage: 723% of the user’s Defense\n\nDamage: 800% of the user’s Defense\n\nUrge to Kill (Q)\n\nDamage: 612% of the user’s Defense\n\nDamage: 680% of the user’s Defense\n\nGreed Scavenger (E)\n\nDamage: 1880% of the user’s Defense\n\nDamage: 2053% of the user’s Defense\n\n-\n\nIncreased skill range\n\nSteel Blow (QTE)\n\nDamage: 1368% of the user’s Defense\n\nDamage: 1460% of the user’s Defense\n\nCold-blooded Connection\n\n(Support Skill)\n\nDamage: 1013% of the user’s Defense\n\nDamage: 1091% of the user’s Defense\n\nMerciless\n\n(Ultimate Skill)\n\nDamage: 3732% of the user’s Defense\n\nDamage: 4034% of the user’s Defense\n\nAdvancement Tier 1\n\n-\n\nAdded [Super Armor] in the charge skill [Greed Scavenger]\n\nAdvancement Tier 2\n\nIncreases the user’s Defense by 5%\n\nIncreases the user’s Defense by 8%\n\nAdvancement Tier 4\n\nIncreases the user’s Merciless damage by 30%\n\nIncreases the user’s Merciless damage by 40%\n\nAdvancement Tier 5\n\nIncreases the user’s Merciless damage by 70% while Impulsive Revenge is active.\n\nIncreases the user’s Merciless damage by 80% while Impulsive Revenge is active."
+      },
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nAdvancement Tier 3\n\nEvery time [Greed Scavenger] is used, obtains the [Madness] effect.\n\nEach time the user uses [Urge to Kill or Greed Scavenger], it grants the [Madness] effect.\n\nA Gentle Touch\n\n〈Hwang Dongsoo’s Exclusive Weapon〉\n\nAdvancement Tier 4\n\nThe user’s Wind damage increases by 9%.\n\nThe user’s Wind damage increases by 10%."
+      },
+      {
+        "date": "2025-06-05",
+        "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nS-Rank Fist\n\n(Basic Attack)\n\n183% / 190% / 202% of the user’s Defense\n\n224% / 232% / 243% of the user’s Defense\n\nS-Rank Influence\n\n(Core Attack)\n\n800% of the user’s Defense\n\n950% of the user’s Defense\n\nUrge to Kill\n\n(Basic Skill 1)\n\n680% of the user’s Defense\n\n816% of the user’s Defense\n\nGreed Scavenger\n\n(Basic Skill 2)\n\n2053% of the user’s Defense\n\n2398% of the user’s Defense\n\nSteel Blow\n\n(QTE Skill)\n\n1460% of the user’s Defense\n\n1640% of the user’s Defense\n\nCold-blooded Connection\n\n(Support Skill)\n\n1091% of the user’s Defense\n\n1232% of the user’s Defense\n\nMerciless\n\n(Ultimate Skill)\n\n4034% of the user’s Defense\n\n4640% of the user’s Defense"
+      },
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nCold-blooded Connection\n(Supporter Skill)\n\n(New Effect Added)\n\nUsing this skill grants the entire team the [Unquenchable Greed] effect\n\n[Unquenchable Greed]\nIncreases Critical Hit Rate by 5%\nIncreases Critical Hit damage by 10%\nDuration : 20 second(s)"
+      }
+    ]
   },
   {
     "id": "hwang-dongsuk",
@@ -5653,7 +6033,27 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-08-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 2\n\nIncreases entire team’s Defense by 5%\n\nIncreases entire team’s Defense by 12%"
+      },
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 2\n\n(Stats Increased)\n\nIncreases Dark team members’ Attack by 5% 12% of Isla Wright’s Basic Defense\n\nTier 5\n\n(New effect added)\n\nUsing the Ultimate Skill while in [Team Fight] Mode activates both [The World and Death] effects\n\n(Stats Increased)\n\n[Death Shepherd]\n\nIncreases damage by0.2% 0.3% for every 1% reduction to the target’s HP (stacking up to 16% 24%)\n\nUnexpected Luck\n\n〈Isla Wright’s Exclusive Weapon〉\n\nTier 5 based\n\n(Stats Increased)\n\nThe user’s Defense increases by 4% 12%\n\nThe entire team’s Defense increases by 4% 5% for every Dark team member on the team\n\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member)\n\nFor every Dark ally in the party Dark team members’ Attack increases by 4% 5%"
+      },
+      {
+        "date": "2026-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nHoroscope\n\n(Core Attack)\n\n(Increased effect values and extended duration)\n\n[The Magician]\n\nGrants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team\n\nDuration : 12 24 seconds\n\nCrossing Stars\n\n(Support Skill)\n\n(Increased effect values and extended duration)\n\n[The Magician]\n\nGrants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team\n\nDuration : 12 24 seconds\n\nArcana : The World\n\n(Ultimate Skill)\n\n(Extended duration)\n\n[The World]\n\nDuration : 8 30 seconds\n\nTier 5\n\n(Increased effect values and extended duration)\n\n[The World]\n\nHP equal to 25% 30% of Isla Wright’s Defense is instantly restored to the entire team\n\nGrants a [Shield] equal to 25% 30% of Isla Wright’s Defense to the entire team\n\nDuration : 8 30 seconds"
+      }
+    ]
   },
   {
     "id": "jo-kyuhwan",
@@ -5859,7 +6259,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nLight Emission\n\n(Basic Attacks)\n\nStage 1 Damage: 103% of the user’s Attack\n\nStage 2 Damage: 110% of the user’s Attack\n\nStage 3 Damage: 118% of the user’s Attack\n\nStage 1 Damage: 120% of the user’s Attack\n\nStage 2 Damage: 125% of the user’s Attack\n\nStage 3 Damage: 134% of the user’s Attack\n\nOrb of Light\n\n(Core Attack)\n\nDamage: 510% of the user’s Attack\n\nDamage: 562% of the user’s Attack\n\nRadiating Beam (Q)\n\nDamage: 608% of the user’s Attack\n\nDamage: 670% of the user’s Attack\n\nLight(E)\n\nDamage: 906% of the user’s Attack\n\nDamage: 1002% of the user’s Attack\n\nDisk of Light (QTE)\n\nDamage: 630% of the user’s Attack\n\nDamage: 694% of the user’s Attack\n\nFlashbang\n\n(Support Skill)\n\nDamage: 452% of the user’s Attack\n\nDamage: 496% of the user’s Attack\n\nLaser Guidance (Ultimate Skill)\n\nDamage: 1730% of the user’s Attack\n\nDamage: 1940% of the user’s Attack"
+      }
+    ]
   },
   {
     "id": "jung-yerim",
@@ -6890,7 +7298,21 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-05-07",
+        "url": "https://forum.netmarble.com/slv_en/view/32/104871",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nNight cleaving Flash\n\n〈Laura Walker Exclusive Weapon〉\n\nTier 0~5\n\nIncreases Attack by 5% / 6% / 7% / 8% / 9% / 12%\n\nUsing Corporate Escort or Apex Administrator increases the entire team’s Light damage by 5% / 10% / 15% / 20% / 25% / 30% for 30 second(s)\n\nIncreases Attack by 5% / 6% / 7% / 8% / 9% / 12%\n\nUsing Corporate Escort or Apex Administrator increases the entire team’s Light damage by 5% / 10% / 15% / 20% / 25% / 30% for 30 second(s)\n\nWhen a team member uses a skill with [Break],\n\nincreases the entire team’s Defense by 2%(stacks up to 5 times)"
+      },
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nBasic\n\n(Effect Value Increased)\n\n[Scout]\nContinuously restores HP equal to 2% 3% of Laura Walker’s Attack every 3 second(s)\n\nTier 3\n\n(Effect Value Increased)\n\nUsing Checkpoint restores 50% 100% of the user’s Power Gauge\n\n[Scout]\nContinuously restores HP equal to 4% 6% of Laura Walker’s Attack every 3 second(s)\n\n[Assistant]\nIncreases Attack and Defense by 1.7% 2%\nDuration : 10 second(s)(stacking up to 10 times)\n\nTier 4\n\n(New effect added)\n\nFor every Light ally on the team and Light team members’ damage dealt increases by 5%\n\nTier 5\n\n(Effect Value Increased)\n\n[Professional]\nIncreases damage dealt by 200% 250%"
+      }
+    ]
   },
   {
     "id": "lee-bora",
@@ -7098,7 +7520,33 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nDarkness Emission (Basic Attacks)\n\nStage 1 Damage: 156% of the user’s Attack\n\nStage 2 Damage: 165% of the user’s Attack\n\nStage 3 Damage: 178% of the user’s Attack\n\nStage 1 Damage: 174% of the user’s Attack\n\nStage 2 Damage: 183% of the user’s Attack\n\nStage 3 Damage: 196% of the user’s Attack\n\nTracking Charm\n\n(Core Attack)\n\nDamage: 958% of the user’s Attack\n\nDamage: 1046% of the user’s Attack\n\nStrengthening Charm (Q)\n\nDamage: 810% of the user’s Attack\n\nDamage: 901% of the user’s Attack\n\nSummoning Charm: Phantom Foxes\n\nDamage: 255% of the user’s Attack\n\nDamage: 280% of the user’s Attack\n\n-\n\nPartially applied Lee Bora’s critical hit rate and critical hit damage to Phantom Foxes\n\nTempest\n\n(QTE)\n\nDamage: 915% of the user’s Attack\n\nDamage: 1006% of the user’s Attack\n\nQuick Attack: Tempest\n\n(Support Skill)\n\nDamage: 250% of the user’s Attack\n\nDamage: 307% of the user’s Attack\n\nDark Charm: Meg (Ultimate Skill)\n\nDamage: 2972% of the user’s Attack\n\nDamage: 3270% of the user’s Attack"
+      },
+      {
+        "date": "2025-08-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nDarkness Emission\n\n(Basic Attack)\n\n174% / 183% / 196% of the user’s Attack\n\n256% / 265% / 278% of the user’s Attack\n\nTracking Charm\n\n(Core Attack)\n\n1046% of the user’s Attack\n\n1163% of the user’s Attack\n\nStrengthening Charm\n(Basic Skill 1)\n\n901% of the user’s Attack\n\n1920% of the user’s Attack\n\nSummoning Charm: Phantom Foxes\n\n(Basic Skill 2)\n\n[Phantom Foxes]\n\nMagic Arrow Damage: 280% of the user’s Attack\n\nSummon Duration: 12 seconds\n\n[Phantom Foxes]\n\nMagic Arrow Damage: 400% of the user’s Attack\n\nSummon Duration: 12 seconds\n\nTempest\n\n(QTE Skill)\n\n1006% of the user’s Attack\n\n1144% of the user’s Attack\n\nQuick Attack: Tempest\n\n(Support Skill)\n\n307% of the user’s Attack\n\n1402% of the user’s Attack\n\nDark Charm: Meg (Ultimate Skill)\n\n3270% of the user’s Attack\n\n3715% of the user’s Attack\n\nAdvancement Tier 1\n\nThe damage of each Phantom Fox also increases by 50%\n\nThe damage of each Phantom Fox also increases by 80%"
+      },
+      {
+        "date": "2025-10-23",
+        "url": "https://forum.netmarble.com/slv_en/view/32/96532",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 2\n\nThe user’s Critical Hit Rate and Critical Hit damage increases by 6%\n\nThe user’s Critical Hit Rate and Critical Hit damage increases by 6%\n\nFor every [Dark] ally in the party, [Dark] team members’ Critical Hit damage increases by 2%\n\nAdvancement Tier 3\n\nStrengthening Charm Skill Effect Change\n\nThis skill effect can now be used up to 2 times\n\nThe skill’s range and damage increases by 40%\n\nStrengthening Charm Skill Effect Change\n\nThis skill effect can now be used up to 2 times\n\nThe skill’s range and damage increases by 40%\n\nUsing a [Strengthening Charm] increases [Dark] team members’ Attack by 5% and max HP by 5% for 10 second(s) (stacking up to 2 time(s))\n\nAdvancement Tier 4\n\nThe cooldown of [Dark Charm: Meg] decreases by 25%\n\nThe cooldown of [Dark Charm: Meg] decreases by 25%\n\n[Dark] team members’ damage taken decreases by 30%\n\nAdvancement Tier 5\n\nThe base damage of [Dark Charm: Meg’s] small Megs increases by 75%\n\nThe base damage of [Dark Charm: Meg’s] small Megs increases by 75%\n\nIf the user drops to 1 or fewer HP within the Enhancement Circle, they become [Immortal] for 2 second(s)\n\nWhen the [Immortal] effect ends, the user regains HP equal to 50% of Lee Bora’s Attack\n\nThis effect activates only once during battle"
+      },
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 0\n\n(Effect Duration Extended)\n\n[Charm]\n\nThe target’s damage taken increases by 15%\n\nDuration : 15 30 second(s)\n\nTier 1\n\n(Stats Increased)\n\n[Phantom Fox]’s damage increases by 80% 200%\n\n(New effect added)\n\nWhen Strengthening Charm hits it inflicts 1 [Infestation] instance on the target\n\n[Infestation]\n\nDeals damage equal to 100% of the user’s Attack every 3 seconds\n\nDuration: 30 second(s) (stacking up to 10 times)\n\nTier 3\n\n(Effect Duration Extended)\n\nUsing a Strengthening Charm increases Dark team members’ Attack by 5% and Max HP by 5% for 10 30 second(s) (stacking up to 2 times)\n\n(New effect added)\n\nUsing Strengthening Charm grants a [Healing Charm] to Dark team members\n\n[Healing Charm]\n\nRestores 2% of the target’s HP and 2% of the target’s MP every 3 second(s)\n\nDuration: 30 second(s)\n\nTier 5\n\n(New effect added)\n\n[Healing Charm] is enhanced\n\nWhen Dark Charm: Meg hits it inflicts 3 [Infestation] instances on the target\n\n[Healing Charm]\n\nRestores 2% of the target’s HP and 2% of the target’s MP every 3 second(s)\n\nWhen the [HP Recovery] effect activates, the [Spiritual Infusion] effect also activates\n\nDuration: 30 second(s)\n\n[Spiritual Infusion]\n\nIncreases Attack by 1%\n\nDuration : Infinite(stacking up to 50 times)\n\n[Infestation]\n\nDeals damage equal to 100% of the user’s Attack every 3 second(s)\n\nDuration : 30 second(s) (stacking up to 10 times)\n\nStrengthening charm\n\n(Basic Skill 1)\n\nLv.10 based\n\n(Stats Increased)\n\n[Enhancement Circle]\n\nIncreases magic arrow damage of [Phantom Foxes] by 20% 100% and changes to penetration attack\n\nSummoning Charm : Phantom Foxes\n\n(Basic Skill 2)\n\nLv.10 based\n\n(Stats Increased)\n\n[Phantom Foxes]\n\nMagic Arrow Damage : 600% 1200% of the user’s Attack\n\nQuick Attack: Tempest\n\n(Supporter Skill)\n\nLv.20 based\n\n(Effect Duration Extended)\n\n[Charm]\n\nIncreases damage taken by 15%\n\nDuration : 15 30 seconds(s)\n\n(New Effect Added)\n\nIf the team, excluding Sung Jinwoo, are Dark team members, Jinwoo’s Attack, Critical Hit Rate, and Critical Hit damage increase by 12%\n\nSolid Logic\n\n〈Lee Bora’s Exclusive Weapon〉\n\nTier 5 based\n\n(Stats Increased & Duration Extended)\n\nIncreases the user’s Attack by 10% 20%\n\nTargets hit by the user’s Strengthening Charm have both the damage they take from Critical Hits and their chance of receiving Critical Hit damage increase by 10% for 10 30 second(s).\n\n※ The [Infestation] effect applied by Lee Bora, Sian Halat, and Agnes Rivera stacks with each other, regardless of the caster."
+      }
+    ]
   },
   {
     "id": "lee-joohee",
@@ -7517,6 +7965,14 @@
         "wiki_reflects_patch": null,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
+    ],
+    "balance_history": [
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nRadiant Burst\n(Burst Skill)\n\n(Skill Attack Range Significantly Increased)"
+      }
     ]
   },
   {
@@ -7725,7 +8181,21 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-03-12",
+        "url": "https://forum.netmarble.com/slv_en/view/32/102815",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\n[Hunter's Cage]\n\nIncreases target’s damage taken from Lennart Niermann by 15%\n\nDuration: 20 second(s)\n\n[Hunter's Cage]\n\nIncreases target’s damage taken from Lennart Niermann by 30%\n\nDuration: 20 second(s)\n\nTier 3\n\nWhen the user uses Fenriszahn, Kaisers Rache, or Todes-Symphonie, it increases the duration of the attack zone that’s created by 3 second(s)\n\nWhen Wind team members, including the user, use their Basic Skill, Lennart Niermann recovers 3% of his MP and his Power Gauge gains 5% charge\n\nUsing Fenriszahn, Kasiers Rache, or Todes-Symphonie increases the duration of the attack zone that’s created by 3 second(s)\n\nWhen Wind team members, including the user, use their Basic Skill, Lennart Niermann recovers 3% of his MP and 5% of his Power Gauge charge\n\nWhen an ally successfully puts the target into a [Break] state, the user gains the [Mark] effect\n\n[Mark]\n\nIncreases Wind damage by 20%\n\nIncreases Defense Penetration by 10%\n\nDuration: Infinite\n\nTier 5\n\n[Hunter's Cage] effects are enhanced\n\nThe user gains 10 instances of the [Analysis] effect when entering a stage\n\nThe cooldown of Todes-Symphonie decreases by 25 second(s)\n\n[Hunter's Cage, and Mark] effects are enhanced\n\nThe user gains 10 instances of the [Analysis] effect when entering a stage\n\nThe cooldown of Todes-Symphonie decreases by 25 second(s)\n\n[Hunter’s Cage]\n\nIncreases the target’s damage taken from Lennart Niermann by 60%\n\nDuration: 40 second(s)\n\n[Mark]\n\nIncreases Wind damage by 30%\n\nIncreases Defense Penetration by 15%\n\nDuration: Infinite"
+      },
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 2\n\n(New Effect Added)\n\nLennart Niermann’s Wind damage increases by 10% for every Wind ally\n\nTier 5\n\n(Mark Effect Values Increased)\n\n[Mark]\nIncreases Defense Penetration by 15% 30%"
+      }
+    ]
   },
   {
     "id": "lim-tae-gyu",
@@ -7931,7 +8401,45 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026) ; rapprochement wiki/slagate par ressemblance de nom (slug lim-taegyu), à confirmer.",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nDark Shot\n\n(Basic Attacks)\n\nStage 1 Damage: 140% of the user’s Attack\n\nStage 2 Damage: 150% of the user’s Attack\n\nStage 3 Damage: 160% of the user’s Attack\n\nStage 1 Damage: 160% of the user’s Attack\n\nStage 2 Damage: 167% of the user’s Attack\n\nStage 3 Damage: 178% of the user’s Attack\n\nVolley Fire\n\n(Core Attack)\n\nDamage: 433% of the user’s Attack\n\nDamage: 510% of the user’s Attack\n\nShoot and Maneuver (Q)\n\nDamage: 427% of the user’s Attack\n\nDamage: 503% of the user’s Attack\n\nTyphoon Fire (E)\n\nDamage: 1490% of the user’s Attack\n\nDamage: 1632% of the user’s Attack\n\nAirborne Burst (QTE)\n\nDamage: 863% of the user’s Attack\n\nDamage: 932% of the user’s Attack\n\nHeavy Attack: Typhoon Fire (Support Skill)\n\nDamage: 585% of the user’s Attack\n\nDamage: 630% of the user’s Attack\n\nQuick Attack: Typhoon Fire (Ultimate Skill)\n\nDamage: 1003% of the user’s Attack\n\nDamage: 1157% of the user’s Attack\n\nAdvancement Tier 3\n\nWhen Magic Boost is active, increases the effects of Core Attack, Typhoon Fire, Quick Attack: Typhoon Fire by 20%\n\nWhen Magic Boost is active, increases the effects of Core Attack, Typhoon Fire, Quick Attack: Typhoon Fire by 30%\n\nAdvancement Tier 4\n\nIncreases the user’s Attack by 8%\n\nIncreases the user’s Attack by 12%\n\nAdvancement Tier 5\n\nEvery time the user’s Core Attack hits, increases Attack by 2% (stacking up to 7 times).\n\nEvery time the user’s Core Attack hits, increases Attack by 4% (stacking up to 7 times)."
+      },
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nPassive\n\nWhen the user’s Basic Attack hits, fires 2 Magic Arrows.\n\nDamage: Deals damage equal to 50% of the user’s Attack per arrow.\n\nWhen the user’s Basic Attack hits, fires 2 Magic Arrows.\n\nDamage: Deals damage equal to 60% of the user’s Attack per arrow.\n\nAdvancement Tier 3\n\n-\n\nWhen the user uses [Shoot and Maneuver], it grants the [Magic Boost] effect. (Cooldown: 20 second(s))"
+      },
+      {
+        "date": "2024-10-31",
+        "url": "https://forum.netmarble.com/slv_en/view/32/64912",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nPassive Details\n\n[Magic Boost]\n\n- Damage: Deals damage equal to 60%  of the user’s Attack per arrow.\n\n- Increases the damage of [Core Attack], [Typhoon Fire], and [Quick Attack: Typhoon Fire] 15%.\n\n[Magic Boost]\n\n- Damage: Deals damage equal to 120% of the user’s Attack per arrow.\n\n- Increases the damage of [Core Attack], [Typhoon Fire], and [Quick Attack: Typhoon Fire] 30%.\n\nAdvancement Tier 3\n\n- When [Magic Boost] is active, it increases the effect of the user’s [Core Attack, Typhoon Fire, and Quick Attack: Typhoon Fire] by 30%.\n\n- When [Magic Boost] is active, it increases the effect of the user’s [Core Attack, Typhoon Fire, and Quick Attack: Typhoon Fire] by 50%.\n\nAdvancement Tier 5\n\n- Every time the [Core Attack] hits, increases Attack by 4% (stacking up to 7 times).\n\n- Every time the [Core Attack] hits, increases Attack by 4% (stacking up to 10 times).\n\nIntercept\n\n〈Lim Tae-Gyu’s Exclusive Weapon〉\n\nAdvancement Tier 1-5\n\n- When they use a Basic Attack within 10 second(s) after using [Quick Attack: Typhoon Fire], it increases their Attack by 6% for 30 second(s) (stacking up to 2/3/4/5/6/8 times).\n\n- When they use a Basic Attack within 10 second(s) after using [Quick Attack: Typhoon Fire], it increases their Attack by 8% for 30 second(s) (stacking up to 2/3/4/5/6/8 times)."
+      },
+      {
+        "date": "2025-06-05",
+        "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nDark Shot\n\n(Basic Attack)\n\n160% / 167% / 178% of the user’s Attack\n\n194% / 202% / 214% of the user’s Attack\n\nVolley Fire\n\n(Core Attack)\n\n510% of the user’s Attack\n\n663% of the user’s Attack\n\nShoot and Maneuver\n(Basic Skill 1)\n\n503% of the user’s Attack\n\n656% of the user’s Attack\n\nTyphoon Fire\n\n(Basic Skill 2)\n\n1632% of the user’s Attack\n\n1920% of the user’s Attack\n\nAirborne Burst\n\n(QTE Skill)\n\n932% of the user’s Attack\n\n1070% of the user’s Attack\n\nHeavy Attack: Typhoon Fire\n\n(Support Skill)\n\n630% of the user’s Attack\n\n680% of the user’s Attack\n\nQuick Attack: Typhoon Fire\n\n(Ultimate Skill)\n\n[Quick Attack: Typhoon Fire] Damage: 1157% of the user’s Attack\n\nThe user can fire up to 8 projectiles.\n\nDuration: 10 second(s)\n\n[Quick Attack: Typhoon Fire] Damage: 1368% of the user’s Attack\n\nThe user can fire up to 8 projectiles.\n\nDuration: 10 second(s)"
+      },
+      {
+        "date": "2025-08-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nHeavy Attack: Typhoon Fire\n\n(Support Skill)\n\n[Mana Power Amplification]\n\nIncreases the user’s Core Attack damage by 20%\n\nDuration: 15 second(s)\n\n[Mana Power Amplification]\n\nIncreases the user’s Core Attack damage by 50%\n\nDuration: 15 second(s)\n\nQuick Attack: Typhoon Fire\n\n(Ultimate Skill)\n\nQuick Attack: Typhoon Fire Damage: 1368% of the user’s Attack\n\nThe user can fire up to 8 projectiles.\n\nDuration: 10 second(s)\n\nQuick Attack: Typhoon Fire Damage: 1640% of the user’s Attack\n\nDeals medium Break damage.\n\nThe user can fire up to 8 projectiles.\n\nDuration: 10 second(s)\n\nAdvancement Tier 0\n\nWhen the skill hits, the user fires 3 Magic Arrows.\n\nWhen the user’s Basic Attack hits, fires 2 Magic Arrows\n\nDamage: Deals damage equal to 120% of the user’s Attack per arrow.\n\nWhen the skill hits, the user fires 3 Magic Arrows.\n\nWhen the user’s Basic Attack hits, fires 2 Magic Arrows\n\nDamage: Deals damage equal to 1050% of the user’s Attack per arrow.\n\nAdvancement Tier 3\n\nWhen [Magic Boost] is active, it increases the user’s Core Attack, Typhoon Fire, and Quick Attack: Typhoon Fire damage by 50%.\n\nWhen the user uses Shoot and Maneuver, it grants the [Magic Boost] effect (Cooldown: 20 second(s))\n\nWhen [Magic Boost] is active, it increases the user’s Core Attack, Typhoon Fire, and Quick Attack: Typhoon Fire damage by 80%.\n\nWhen the user uses Shoot and Maneuver, it grants the [Magic Boost] effect (Cooldown: 15 second(s))\n\nAdvancement Tier 5\n\nEvery time the user’s Core Attack hits, increases Attack by 4% (stacking up to 10 times).\n\nDuration: Infinite\n\nWhen the user enters a stage, their Power Gauge charges by 100%.\n\nEvery time the user’s Core Attack hits, increases Attack by 4% (stacking up to 30 times).\n\nDuration: Infinite"
+      },
+      {
+        "date": "2025-10-23",
+        "url": "https://forum.netmarble.com/slv_en/view/32/96532",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nDark Shot\n\n(Basic Attack)\n\n194% / 202% / 214% of the user’s Attack\n\n194% / 202% / 214% of the user’s Attack\n\nDeals [weak Break] damage\n\nVolley Fire\n\n(Core Attack)\n\n-\n\n* Increases skill motion speed\n\nTyphoon Fire\n\n(Basic Skill 2)\n\n-\n\n* Increases skill motion speed\n\nQuick Attack: Typhoon Fire\n\n(Ultimate Skill)\n\nQuick Attack: Typhoon Fire Damage: 1640% of the user’s Attack Deals medium Break damage.\n\nThe user can fire up to 8 projectiles.\n\nDuration: 10 second(s)\n\nQuick Attack: Typhoon Fire Damage: 1640% of the user’s Attack Deals medium Break damage. (* slightly increased break damage)\n\nThe user can fire up to 8 projectiles.\n\nDuration: 10 second(s)\n\n* Increased Quick Attack: Typhoon Fire skill motion speed after using the ultimate skill.\n\nAdvancement Tier 1\n\nThe [Shoot and Maneuver] skill effect is enhanced\n\nThe skill’s speed and damage increase by 25% and can be used up to 3 times.\n\nThe [Shoot and Maneuver] skill effect is enhanced\n\nThe skill’s speed and damage increase by 25% and can be used up to 3 times.\n\nUsing Volley Fire or Quick Attack: Typhoon Fire, increases allies all team members’ Critical Hit Rate by 0.7% and Critical Hit Damage by 1% for 10 second(s) (stacks up to 8 times)\n\n[Revised 10/23 (Thu) 03:17 (UTC+0)]\n\nAdvancement Tier 3\n\nWhen [Magic Boost] is active it increases the user’s Volley Fire, Typhoon Fire, and Quick Attack: Typhoon Fire damage by 80%\n\nUsing [Shoot and Maneuver] grants the [Magic Boost] effect (Cooldown: 15 second(s))\n\nWhen [Magic Boost] is active it increases the user’s Volley Fire, Typhoon Fire, and Quick Attack: Typhoon Fire damage by 80%\n\nUsing [Shoot and Maneuver] grants the [Magic Boost] effect (Cooldown: 15 second(s))\n\nWhen [Typhoon Fire] hits, activates an effect on the target that increases their Critical Hit damage received by 7% for 12 second(s)\n\n[Added 10/23 (Thu) 03:17 (UTC+0)]\n\nWe have fixed the incorrect details regarding Lim Tae-Gyu’s newly added advancement tier 1 effect.\n\nWe sincerely apologize for the confusion."
+      }
+    ]
   },
   {
     "id": "liu-zhigang",
@@ -8148,7 +8656,15 @@
       }
     ],
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nVeiled Intent\n(Burst Skill)\n\n(Skill Attack Range Significantly Increased)"
+      }
+    ]
   },
   {
     "id": "meilin-fisher",
@@ -8365,7 +8881,21 @@
       }
     ],
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-04-09",
+        "url": "https://forum.netmarble.com/slv_en/view/32/103975",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nTier 1\n\nThe damage of Up! increases by 64%.\n\nWhen the user uses Up! grants the [Cat Butler] effect to the team member with the highest Attack.\n\n[So Cute!] effect’s ability enhancement\n\n[Cat Butler]\n\nMeilin Fisher takes 64% of the user’s damage taken directly.\n\nGrants the [Super Armor] effect.\n\nDuration: 8 second(s)\n\n[So Cute!]\n\nIncreases the user’s Core Attack damage by 32%.\n\nDuration: 8 second(s)\n\nThe damage of Up! increases by 64%.\n\nWhen the user uses Up! grants the [Cat Butler] effect to the team member with the highest Attack.\n\nUsing Rear Lash grants a [Shield] equal to 20% of Meilin Fisher’s Max HP to the team member with the highest Defense\n\n[So Cute!] effects ability is enhanced\n\n[So Cute!] effect’s ability enhancement\n\n[Cat Butler]\n\nMeilin Fisher takes 64% of the user’s damage taken directly.\n\nGrants the [Super Armor] effect.\n\nDuration: 8 second(s)\n\n[So Cute!]\n\nIncreases the user’s Core Attack damage by 32%.\n\nDuration: 8 second(s)\n\nTier 3\n\nWhen Rear Lash hits, all team members’ Power Gauges are charged by 8%.\n\nWhen Rear Lash hits Elite or higher monsters, all team members’ Power Gauges are charged by 8%.\n\nWhen Rear Lash hits, all team members’ Power Gauges are charged by 8%.\n\nWhen Rear Lash hits Elite or higher monsters, all team members’ Power Gauges are charged by 8%.\n\nWhen an ally uses a skill with the [Break] effect, Water team members’ Critical Hit damage increases by 0.5% (stacks up to 50 times)\n\nTier 5\n\n[Pumped Up!] effect’s ability enhancement\n\n[Pumped Up!]\n\nIncreases the user’s Attack by 16%.\n\nIncreases the user’s Defense by 16%.\n\nIncreases the user’s Critical Hit Rate by 16%.\n\nIncreases the user’s Core Attack damage by 16%.\n\nDecreases the user’s Damage Taken by 16%.\n\nDuration: 24 second(s)\n\n[[Pumped Up!] effect’s ability enhancement\n\n[Pumped Up!]\n\nIncreases the user’s Attack by 16%.\n\nIncreases the user’s Defense by 20%.\n\nIncreases the user’s Critical Hit Rate by 16%.\n\nIncreases the user’s Core Attack damage by 16%.\n\nDecreases the user’s Damage Taken by 16%\n\nIncreases Water Basic Skill damage by 15%\n\nDuration: 24 second(s)\n\nHelp, Berry!\n\n[Berry, I’m Pumped Up!]\n\nIncreases the user’s Attack by 16%.\n\nDecreases the user’s Damage Taken by 16%.\n\nDuration: 16 second(s)\n\n[Berry, I’m Pumped Up!]\n\nIncreases the user’s Attack by 16%.\n\nDecreases the user’s Damage Taken by 16%.\n\nIncreases Waterdamage by 30%\n\nDuration: 30 second(s)"
+      },
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nHelp! Berry!\n(Supporter Skill)\n\n(New Effect Added)\n\nIf the entire team, excluding Sung Jinwoo, are [Water] team members, Sung Jinwoo’s Attack and Defense increase by 16%\n\n(Effect Duration Extended)\n\n[Berry, I’m Pumped Up!]\nIncreases the user’s Attack by 16%\nDecreases the user’s damage taken by 16%\nIncreases Water damage by 30% 32%\nDuration : 30 32 second(s)\n\nBasic\n\n(Effect Duration Extended)\n\n[Cuddle Puddle]\nIncreases Water damage taken by 8%\nDuration : 16 32 second(s)\n\n[Bye, Meow!]\nIncreases Attack by 8%\nIncreases Defense by 8%\nDuration : 30 32 second(s) (stacking up to 3 times)\n\nTier 3\n\n(Max Stacks Increased)\n\nWhen an ally uses skill with the [Break] effect, Water team members’ Critical Hit damage increases by 0.5% (stacks up to 50 64 times)\n\nTier 4\n\n(Values Increased)\n\nThe user’s HP increases by 8% 32%\n\nTier 5\n\n(Values Increased)\n\n[Pumped Up!]\nIncreases the user’s Attack by 16% 24%\nIncreases the user’s Defense by  20% 24%\nIncreases the user’s Critical Hit Rate by 16%\nIncreases the user’s Core Attack damage by 16%\nDecreases the user’s damage taken by 16%\nIncreases Water Basic Skill damage by 15% 16%\nDuration: 24 64 second(s)\n\nHook, Line, and Sinker\n〈Meilin Fisher’s Exclusive Weapon〉\nBased on Tier 5\n\n(New Effect Added)\n\nUsing [Up!] grants the team member with the highest Defense an effect that increases their damage by 1% per 2000 of Meilin Fisher’s Max HP for 32 second(s) (Max Damage Increase Rate: 16%)\n\n(Effect Duration Extended)\n\nUsing Side Whip grants the team member with the highest Attack an effect that increases their damage by 1% per 2000 of Meilin Fisher’s Max HP for 12 32 second(s) (Max Damage Increase Rate:16%)"
+      }
+    ]
   },
   {
     "id": "meri-laine",
@@ -8573,7 +9103,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nShredding Drop\n\n(Basic Attack)\n\n※ Elemental Accumulation Amount Increased\n※ Core Gauge Gain Increased\n\n※ The activation requirement for Meri Laine's Core Attack has been eased from 6 Basic Attacks to 3.\n\n※ The Elemental Accumulation displayed for Meri Laine's Basic Attack will remain the same; however, the actual Elemental Accumulation Amount applied in-game has been increased."
+      }
+    ]
   },
   {
     "id": "min-byung-gu",
@@ -8781,7 +9319,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nAdvancement Tier 2\n\nThe user’s HP increases by 5%\n\nThe user’s HP increases by 8%"
+      }
+    ]
   },
   {
     "id": "minnie",
@@ -9197,7 +9743,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-08-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nEcho Strike\n\n(Basic Attack)\n\n114% / 120% / 128% of the user’s Defense\n\n126% / 130% / 140% of the user’s Defense\n\nMidtone Slash\n\n(Core Attack)\n\n820% of the user’s Defense\n\n876% of the user’s Defense\n\nDescending Glissando\n(Basic Skill 1)\n\n1192% of the user’s Defense\n\n1316% of the user’s Defense\n\nDoubletime Lunge\n\n(Basic Skill 2)\n\n1563% of the user’s Defense\n\n1705% of the user’s Defense\n\nDual Aria\n\n(QTE Skill)\n\n1036% of the user’s Defense\n\n1140% of the user’s Defense\n\nHeadliner\n\n(Ultimate Skill)\n\n2901% of the user’s Defense\n\n3191% of the user’s Defense\n\nAdvancement Tier 0\n\n-\n\nThe entire team gains the [Forever] effect when entering the Encore Mission and Instance Dungeon\n\n[Forever]\n\nIncrease damage dealt by 5%\n\nDuration: Infinite (stacks up to 3 times)"
+      }
+    ]
   },
   {
     "id": "nam-chae-young",
@@ -9609,7 +10163,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nAxe Strike!\n\n(Basic Attacks)\n\nStage 1 Damage: 188% of the user’s Defense\n\nStage 2 Damage: 197% of the user’s Defense\n\nStage 3 Damage: 212% of the user’s Defense\n\nStage 1 Damage: 205% of the user’s Defense\n\nStage 2 Damage: 214% of the user’s Defense\n\nStage 3 Damage: 230% of the user’s Defense\n\nSpinning Strike!\n\n(Core Attack)\n\nDamage: 720% of the user’s Defense\n\nDamage: 790% of the user’s Defense\n\nDownward Strike! (Q)\n\nDamage: 1127% of the user’s Defense\n\nDamage: 1210% of the user’s Defense\n\nCharge Attack! (E)\n\nDamage: 1262% of the user’s Defense\n\nDamage: 1391% of the user’s Defense\n\nWhirlwind Strike! (QTE)\n\nDamage: 746% of the user’s Defense\n\nDamage: 813% of the user’s Defense\n\nSpinning Downward Strike!\n\n(Support Skill)\n\nDamage: 440% of the user’s Defense\n\nDamage: 484% of the user’s Defense\n\nAnother Worldline (Ultimate Skill)\n\nDamage: 2237% of the user’s Defense\n\nDamage: 2460% of the user’s Defense"
+      }
+    ]
   },
   {
     "id": "park-heejin",
@@ -9859,7 +10421,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nWater Dragon Rush (Q)\n\n-\n\nIncreased skill range\n\nLightning Kick (E)\n\n-\n\nIncreased skill range\n\nAdvancement Tier 3\n\nThe user recovers 40 MP upon applying [Water Dragon Training].\n\nThe user recovers 50 MP upon applying [Water Dragon Training]."
+      }
+    ]
   },
   {
     "id": "seorin",
@@ -10076,7 +10646,21 @@
       }
     ],
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-10-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/96913",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAdjusted\n\nAdvancement Tier 3\n\n[Black Tea?]\n\n- Increases Defense by 20%\n\n- Increases Max HP by 20%\n\n- Recovers MP by 1.5 every 5 second(s)\n\n- Duration: Infinite\n\n[Black Tea?]\n\n- Increases Defense by 35%\n\n- Increases Max HP by 35%\n\n- Recovers MP by 3 every 5 second(s)\n\n- Duration: Infinite"
+      },
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nFrozen Drift\n(Supporter Skill)\n\n(Effect Duration Extended)\n\n[Overdrive]\nIncreases damage dealt by 33%\nDuration  : 20 60 second(s)\n\nTier 3\n\n(New ‘Black Tea?’ Effect Added)\n\n[Black Tea?]\nIncreases Defense by 35%\nIncreases Max HP by 35%\nIncreases Water damage by 35%\n3% of MP is restored every 5 second(s)\nDuration : Infinite\n\nTier 5\n\n(Max Stacks Increased)\n\n[Subzero]\nIncreases Water Damage taken by 2%\nDuration : 30 second(s) (stacking up to 10 20 times)\n\nMelody of Iron and Blood\n〈Seorin’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased)\n\nIncreases the user’s HP by 12% 30%"
+      }
+    ]
   },
   {
     "id": "shimizu-akari",
@@ -10284,7 +10868,33 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-07-03",
+        "url": "https://forum.netmarble.com/slv_en/view/32/91211",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAxe of Punishment\n\n(Basic Attack)\n\n116% / 120% / 124% of the user’s maximum HP\n\n140% / 143% / 148% of the user’s maximum HP\n\nJudgment Strike\n\n(Core Attack)\n\n465% of the user’s maximum HP\n\n562% of the user’s maximum HP\n\nDevastate\n(Basic Skill 1)\n\n624% of the user’s maximum HP\n\n 882% of the user’s maximum HP\n\nLight of Dawn\n\n(Basic Skill 2)\n\n1156% of the user’s maximum HP\n\n1482% of the user’s maximum HP\n\nHeart Strike of Blazing Fire\n\n(QTE Skill)\n\n952% of the user’s maximum HP\n\n1043% of the user’s maximum HP\n\nGuiding Light\n\n(Support Skill)\n\n270% of the user’s maximum HP\n\n330% of the user’s maximum HP\n\nRing of Fire\n\n(Ultimate Skill)\n\n1523% of the user’s maximum HP\n\n1830% of the user’s maximum HP\n\nAdvancement Tier 1\n\n[Truth-seeker of Divine Flame]\n\n[When Light of Dawn or Heavy Attack: Devastate hit they inflict 2 instances of the [Divine Flame] effect on their target(s).\n\n[Truth-seeker of Divine Flame]\n\n[When Light of Dawn or Heavy Attack: Devastate hit they inflict 3 instances of the [Divine Flame] effect on their target(s).\n\nAdvancement Tier 4\n\nLight team members' Light damage increases by 3% for every Light team member in the party.\n\nThe Defense of the team member with the highest Defense increases by 3%.\n\nLight team members' Light damage increases by 5% for every Light team member in the party. [Added 7/3 (Thu) 02:53 (UTC+0)]\n\nThe Defense of the team member with the highest Defense increases by 10%."
+      },
+      {
+        "date": "2025-11-20",
+        "url": "https://forum.netmarble.com/slv_en/view/32/97654",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAdjusted\n\nAdvancement Tier 3\n\n[Ring of Fire]\n\n- Duration: 24 second(s)\n\n[Ring of Fire]\n\n- Duration: 60 second(s)"
+      },
+      {
+        "date": "2026-05-07",
+        "url": "https://forum.netmarble.com/slv_en/view/32/104871",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nBasic\n\n[Truth-seeker of Divine Flame] is activated at the start of battle\n\nUsing Light of Dawn turns Devastate into Heavy Attack: Devastate, increasing the damage by 100%\n\nWhen hit while using Dash, activates [Extreme Evasion], inflicts damage to nearby enemies, and activates [Stun]\n\n[Truth-seeker of Divine Flame] is activated at the start of battle\n\nUsing Light of Dawn turns Devastate into Heavy Attack: Devastate, increasing the damage by 100%\n\nWhen Light of Dawn hits, inflicts 2 [Lightsunder] stacks\n\nWhen an ally successfully inflicts [Light] [Overload], grants an effect to the Light team member with the highest Attack that increases their Light Overload damage by 10% for 24 second(s)\n\nWhen hit while using Dash, activates [Extreme Evasion], inflicts damage to nearby enemies, and activates [Stun]\n\n[Lightsunder]\n\nDeals damage equal to 50% of Max HP every 3 seconds\n\nDuration: 30 second(s) (stacks up to 10 time )\n\nTier 1\n\nThe [Holy Fire] effect is enhanced.\n\n[Holy Fire]\n\nActivates the [Echo of Light] effect.\n\nCharges the user’s Power Gauge by 1.6% every 1 second(s).\n\nDecreases damage taken by 12%.\n\nDuration: 24 second(s)\n\nThe [Holy Fire] effect is enhanced.\n\n[Holy Fire]\n\nActivates the [Echo of Light] effect.\n\nCharges the user’s Power Gauge by 5% every 1 second(s).\n\nDecreases damage taken by 12%.\n\nDuration: 24 second(s)\n\nTier 4\n\nLight team members’ Light damage increases by 8% for every Light team member in the party\n\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member)\n\nThe Defense of the team member with the highest Defense increases by 10%\n\nLight team members’ Light damage increases by 8% for every Light team member in the party\n\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member)\n\nThe Defense of the team member with the highest Defense increases by 10%\n\nThe Attack of the Light team member with the highest Attack increases by 10%\n\nTier 5\n\nThe Brilliance effect is enhanced.\n\n[Brilliance]\n\nIncreases damage dealt by 16%\n\nIncreases the Critical Hit Rate of the Basic Skill and Ultimate Skill by 16%\n\nInstantly recovers HP equal to 16% of Shimizu Akari’s Max HP\n\nDuration: 24 second(s)\n\nWhen an ally successfully inflicts[Light] [Overload], grants and effect to the Light team member with the highest Attack that increases their Light Overload damage by 20% for 24 second(s)\n\nChanges to inflict 5 stacks of [Lightsunder] when Light of Dawn hits\n\nEnhances [Brilliance]\n\n[Brilliance]\n\nIncreases damage dealt by 30%\n\nIncreases the Critical Hit Rate of the Basic Skill and Ultimate Skill by 16%\n\nIncreases Light Overload damage by 10%\n\nInstantly recovers HP equal to 16% of Shimizu Akari’s Max HP\n\nDuration: 60 second(s)\n\nGuarding Light\n\n(Supporter Skill)\n\n[Halo of Light]\n\nIncreases damage dealt by 10%\n\nIncreases the Critical Hit Rate of Basic Skills and the Ultimate Skill by 10%\n\nInstantly recovers HP equal to 10% of Shimizu Akari’s Max HP\n\nDuration: 24 second(s)\n\n[Halo of Light]\n\nIncreases damage dealt by 10%\n\nIncreases the user’s Critical Hit damage by 10%\n\nIncreases Light Overload damage 10%\n\nIncreases the Critical Hit Rate of Basic Skills and the Ultimate Skill by 10%\n\nInstantly recovers HP equal to 10% of Shimizu Akari’s Max HP\n\nDuration: 30 second(s)\n\nThe Price of a Promise\n\n〈Shimizu Akari Exclusive Weapon〉\n\nTier 0~5\n\nIncreases the user’s HP by 4%\n\nWhen the [Echo of Light] effect is activated on Light team members, increases Light damage of all team members by 2% / 3% / 4% / 5% / 6% / 8%  for 8 second(s).\n\nIncreases the user’s HP by 4%\n\nWhen the [Echo of Light] effect is activated on Light team members, increases Light damage of all team members by 2% / 4% / 6% / 8% / 10% / 12%  for 8 second(s)."
+      },
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "※ When Shimizu Akari's [Ring of Fire] skill hits, the [Divine Flame] effect will no longer be consumed. Additionally, reaching maximum stacks of [Divine Flame] will no longer change the skill into [Ring of Fire], allowing both effects to remain active simultaneously.\n\nCategory\n\nChanged\n\nRing of Fire\n(Ultimate Skill)\n\n(Select tooltips removed)\n\n[Ring of Fire]\n\nIncreases the target’s Light damage taken by 12%\nWhen this effect is applied it removes all [Divine Flame] effects and they cannot be reapplied\n\nWhen the effect ends the user gains 5 instances of the [Divine Flame] effect\nDuration : 24 second(s)\n※ Improved to allow faster chaining into the next Hunter's QTE skill after using a skill\n\nTier 2\n\n(Effect Value Increased)\n\nIncreases the user’s HP by 5% 10%\nIncreases Shield gained by Light team members by 5% 20%\n\nTier 3\n\n(New effect added, select tooltips removed, effect duration extended)\n\n[Divine Flame]\nIncreases Light damage taken by 1.6% (stacks up to 10 times)\nApplies the [Unrecoverable] effect on the target\nWhen the stack maximum is reached it activates the [Ring of Fire] effect\nDuration : 24 36 second(s)\n\n[Ring of Fire]\nIncreases Light damage by 20%\nIncreases Light Critical Hit damage taken by  20%\nWhen this effect is applied it removes all [Divine Flame] effects and they cannot be reapplied\nWhen the effect ends the user gains 5 instances of the [Divine Flame] effect\nDuration : 60 second(s)\n\n[Unrecoverable]\nTargets are unable to recover their HP\nDuration: 30 second(s)\n\nTier 4\n\n(Effect Value Increased)\n\nLight team members’ Light damage increases by 8% 10% for every Light team member in the party\n(In Guild Boss mode, the effect now stacks once per ally instead of once per team member)\n\nThe Defense of the team member with the highest Defense increases by 10% 20%\n\nThe Attack of the Light team member with the highest Attack increases by 10% 20%\n\nTier 5\n\n(New effect added below)\n\nUsing Ring of Fire grants the [Mantra] effect on Light Elemental Buster team members\n\n[Mantra]\nIncreases the Burst damage by 32%\nSlightly increases Burst damage accumulation rate\nDuration : 60 second(s)\n\n(Effect Value Increased)\n\n[Brilliance]\nIncreases damage dealt by 30% 50%\nIncreases the Critical Hit Rate of the user’s Basic Skill and Ultimate Skill by 16%\nIncreases Light Overload damage by 10% 16%\nDuration : 60 second(s)\n\nThe Price of a Promise\n〈Shimizu Akari’s Exclusive Weapon〉\nBased on Tier 5\n\n(Effect value increased and new effect added)\n\nThe user’s HP increases by 12% 50%\nWhen the [Echo of Light] effect is activated on Light team members, the entire team’s Light damage increases by 16% and Light Overload damage increases by 16% for 8 second(s)"
+      }
+    ]
   },
   {
     "id": "shuhua",
@@ -10492,7 +11102,15 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-08-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement Tier 0\n\n-\n\nThe entire team gains the [Forever] effect when entering the Encore Mission and Instance Dungeon\n\n[Forever]\n\nIncrease damage dealt by 5%\n\nDuration: Infinite (stacks up to 3 times)\n\nAdvancement Tier 3\n\n[Performance]\n\nIncreases the user’s Core Attack damage by 50%\n\nGrants a [Shield] equal to 10% of the user’s Attack\n\nDuration: 3 second(s)\n\n[Performance]\n\nIncreases the user’s Core Attack damage by 55%\n\nGrants a [Shield] equal to 15% of the user’s Attack\n\nDuration: 3 second(s)"
+      }
+    ]
   },
   {
     "id": "sian-halat",
@@ -10700,7 +11318,27 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026) ; rapprochement wiki/slagate par ressemblance de nom (slug sian-halat-igris), à confirmer.",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 1\n\n(new effect to Enhanced Basic Skill Added)\n\nWhen the [Flawless Swordsmanship] Gauge reaches 50% or more, Royal Swordsmanship: Black Flash and Royal Swordsmanship: Rush become Royal Swordsmanship:Fullmoon and Bloodstorm, increasing their damage by 100% and increase Dark Elemental Accumulation effect by 10%\n\nRoyal Swordsmanship: Chain Attack\n\n(Basic Attack)\n\n※ Elemental Accumulation Amount Increased\n\nRoyal Swordsmanship: Judgment\n\n(Core Attack)\n\n※ Elemental Accumulation Amount Increased\n\n※ The Elemental Accumulation displayed for Sian Halat's Basic Attack and Core Attack will remain the same; however, the actual Elemental Accumulation Amount applied in-game has been increased."
+      },
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 1\n\n([Flawless Swordsmanship] Gauge charge rate increases )\n\n※ Each time Royal Swordsmanship: Black Flash or Royal Swordsmanship: Rush hits, the [Flawless Swordsmanship] Gauge charge rate increases.\n\n(New effect added)\n\nWhen [Royal Swordsmanship: Black Flash, Royal Swordsmanship: Full Moon] hits it inflicts 1 [Infestation] instance on the target\n\n[Infestation]\n\nDeals damage equal to 100% of Attack every 3 seconds\n\nDuration: 30 second(s) (stacks up to 10 times)\n\nTier 3\n\n(New effect added)\n\nWhen [Royal Swordsmanship: Rush, Royal Swordsmanship: Blood Storm] hits it inflicts 1 [Infestation] instance on the target\n\n[Infestation]\n\nDeals damage equal to 100% of Attack every 3 seconds\n\nDuration: 30 second(s) (stacks up to 10 times)\n\nTier 5\n\n([Flawless Swordsmanship] Gauge charge rate additionally increases)\n\n※ Each time Royal Swordsmanship: Black Flash or Royal Swordsmanship: Rush hits, the [Flawless Swordsmanship] Gauge charge rate additionally increases.\n\n(New effect added)\n\nWhen Knight’s Pride hits it grants 1 [Infestation] instance\n\n[Infestation]\n\nDeals damage equal to 100% of Attack every 3 seconds\n\nDuration: 30 second(s) (stacks up to 10 times)\n\n※ Although the description regarding the [Flawless Swordsmanship] Gauge charge rate is not displayed after Sian Halat reaches Advancement Tier 1 and Tier 5, the actual [Flawless Swordsmanship] Gauge charge rate will be increased upon using the skill.\n\n※ The [Infestation] effect applied by Lee Bora, Sian Halat, and Agnes Rivera stacks with each other, regardless of the caster."
+      },
+      {
+        "date": "2026-08-27",
+        "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 1\n\n(Effect duration extended)\n\n[Scarlet Domination]\nDuration : 20 40 second(s)"
+      }
+    ]
   },
   {
     "id": "silver-mane-baek-yoonho",
@@ -10906,7 +11544,45 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026) ; rapprochement wiki/slagate par ressemblance de nom (slug baek-beast), à confirmer.",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nMagic Beast's Claws (Basic Attacks)\n\nStage 1 Damage: 126% of the user’s Attack\n\nStage 2 Damage: 137% of the user’s Attack\n\nStage 3 Damage: 154% of the user’s Attack\n\nStage 1 Damage: 140% of the user’s Attack\n\nStage 2 Damage: 152% of the user’s Attack\n\nStage 3 Damage: 170% of the user’s Attack\n\n-\n\nImproved cancel frame of Basic Attacks\n\n-\n\nImproved range of Basic Attacks while in Beast Form\n\n-\n\nImproved rigidity of Basic Attacks while in beast form\n\nSlaughter\n\n(Core Attack)\n\nDamage: 592% of the user’s Attack\n\nDamage: 660% of the user’s Attack\n\nViolent Assault (Q)\n\nDamage: 1077% of the user’s Attack\n\nDamage: 1164% of the user’s Attack\n\n Extreme Attack: Beast Form\n\nDamage: 192% of the user’s Attack\n\nDamage: 213% of the user’s Attack\n\n-\n\nImproved cancel frame of Basic Attacks\n\nMagic Beast's Ambush (QTE)\n\nDamage: 1093% of the user’s Attack\n\nDamage: 1202% of the user’s Attack\n\nMagic Beast's Instinct (Support Skill)\n\nDamage: 570% of the user’s Attack\n\nDamage: 630% of the user’s Attack\n\nDivinity\n\n(Ultimate Skill)\n\nDamage: 2346% of the user’s Attack\n\nDamage: 2557% of the user’s Attack\n\nAdvancement Tier 1\n\n-\n\nDecreases damage taken by 15% when your HP is below 30%"
+      },
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nAdvancement Tier 0\n\n(Passive)\n\n-\n\nInflicts [Curse of the Magic Beast] to targets immune to [Bleed].\n\n[Curse of the Magic Beast]\n\nDeals damage equal to 50% of Silver Mane Baek Yoonho’s Max HP every 3 second(s).\n\nDuration: 30 second(s)\n\nIncreases the damage of [Basic Attack or Core Attack] by 20% when dealing damage to targets with [Bleed] effect.\n\nIncreases the damage of [Basic Attack and Core Attack] by 20% when dealing damage to targets with [Bleed or Curse of the Magic Beast] effect.\n\nAdvancement Tier 3\n\nIncreases the [Basic Attack and Core Attack] damage increase effect to targets inflicted with [Bleeding] to 40%.\n\nIncreases the [Basic Attack and Core Attack] damage increase effect to targets inflicted with [Bleeding or Curse of the Magic Beast] to 40%."
+      },
+      {
+        "date": "2024-08-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nPassive Details\n\nIncreases the damage of [Magic Beast’s Claws and Slaughter] by 20% when dealing damage to targets with the [Bleed or Curse of the Magic Beast] effect applied.\n\nIncreases the damage of [Magic Beast’s Claws and Slaughter] by 40% when dealing damage to targets with the [Bleed or Curse of the Magic Beast] effect applied.\n\n* Applied advancement tier 3 effect as passive.\n\nAdvancement Tier 1\n\n- When the user uses [Extreme Attack: Beast Form] it increases their Critical Hit Rate and Critical Hit Damage by 3% every 1 second(s) for 10 second(s).\n\n- When the user uses [Extreme Attack: Beast Form] it increases their Critical Hit Rate and Critical Hit Damage by 3% every 1 second(s) for 12 second(s).\n\n- When the user uses [Extreme Attack: Beast Form] they take damage equal to 10% of their current HP, but gain a [Shield] equal to 20% of their Max HP.\n\n-[Extreme Attack: Beast Form] ignores the user’s [Shield] effect and deals damage to the user.\n\nAdvancement Tier 3\n\n- Increases the Basic Attack and Core Attack damage increases effect to targets inflicted with the [Bleed or Curse of the Magic Beast] effect to 40%.\n\nRemoved the existing skill damage increase effect (applied to the Passive details), and applied new effects below.\n\n- The user starts the battle with their HP reduced by 50%.\n\n- When the Battle starts the user gains a [Shield] equal to 50% of their Max HP.\n\nDuration: Infinite\n\nExtreme Attack: Beast Form\n\n- MP Consumption: 250\n\n- Increases the user’s Basic Attack damage and Attack Speed by 30%.\n\nIncreases damage taken by 15%.\n\n- Deals continuous damage equal to 4% of current HP every 3 seconds.\n\nDuration: 10 second(s)\n\n- MP Consumption: 150\n\n- Increases the user’s Basic Attack and Attack Speed by 30%.\n\n- Increases damage taken by 15%.\n\n- Removed the Deals continuous damage equal to 4% of current HP every 3 second(s) effect.\n\nDuration: 12 second(s)\n\nMagic Beast’s Claws\n\n- Damage: 140% / 152% / 170%\n\nRecharges Core Attack after 6 Basic Attacks.\n\n- Damage: 209% / 214% / 220%\n\nRecharges Core Attack after 4 Basic Attacks.\n\nHowling White Tiger’s Soul\n\n〈Silver Mane Baek Yoonho’s Exclusive Weapon〉\n\n-\n\n- If the target is immune to [Bleed] it deals damage equal to 2.5%/5%/10%/15%/20%/25% (advancement tier 0-5) of Silver Mane Baek Yoonho’s Max HP.\n\n* The damage increase rate will be applied gradually based on the advancement tier.\n\n- Cooldown 1 → reduced to 0.5 second(s)"
+      },
+      {
+        "date": "2024-10-31",
+        "url": "https://forum.netmarble.com/slv_en/view/32/64912",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nPassive Details\n\n- Increases the damage of [Magic Beast’s Claws and Slaughter] by 40% when dealing damage to targets with the [Bleed or Curse of the Magic Beast] effect(s) applied.\n\n[Curse of the Magic Beast]\n\n- Deals damage equal to 50% of Silver Mabe Baek Yoonho’s Max HP every 3 second(s).\n\n- Increases the damage of [Magic Beast’s Claws and Slaughter] by 60% when dealing damage to targets with the [Bleed or Curse of the Magic Beast] effect(s) applied.\n\n[Curse of the Magic Beast]\n\n- Deals damage equal to 200% of Silver Mabe Baek Yoonho’s Max HP every 3 second(s).\n\nAdvancement Tier 2\n\n- The user’s HP increases by 10%.\n\n- The user’s HP increases by 16%.\n\nAdvancement Tier 3\n\n- When the battle starts the user gains a [Shield] equal to 50% of their Max HP.\n\n- When the battle starts the user gains a [Shield] equal to 60% of their Max HP.\n\nAdvancement Tier 4\n\n- The user’s [Basic Attack] damage increases by 40%.\n\n- The user’s [Basic Attack] damage increases by 80%.\n\nAdvancement Tier 5\n\n- Changes the user’s Skill Damage Increase equal to 80% of lost HP Ratio.\n\n- Changes the user’s Skill Damage Increase equal to 120% of lost HP Ratio.\n\nHowling White Tiger’s Soul\n\n〈Silver Mane Baek Yoonho’s Exclusive Weapon〉\n\nAdvancement Tier 0-5\n\n- Increases the user’s Basic Attack damage by 8/12/16/20/24/30%.\n\n- When the user’s [Basic Attack] hits they take damage equal to 0.5% of their current HP but deal damage equal to 0.2/0.25/0.3/0.35/0.4/0.5%of their current HP to targets.\n\n- Increases the user’s Basic Attack damage by 22.5/32.5/42.5/52.5/65/80%.\n\n- When the user’s [Basic Attack] hits they take damage equal to 0.1% of their current HP but deal damage equal to 0.2/0.25/0.3/0.35/0.4/0.5%of their current HP to targets."
+      },
+      {
+        "date": "2025-06-05",
+        "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nMagic Beast's Claws\n\n(Basic Attack)\n\n209% / 214% / 220% of the user’s Attack\n\n227% / 232% / 237% of the user’s Attack\n\nSlaughter\n\n(Core Attack)\n\n660% of the user’s Attack\n\n793% of the user’s Attack\n\nViolent Approach\n(Basic Skill 1)\n\n1164% of the user’s Attack\n\n1340% of the user’s Attack\n\nExtreme Attack: Beast Form\n\n(Basic Skill 2)\n\n213% of the user’s Attack\n\n254% of the user’s Attack\n\nMagic Beast's Ambush\n\n(QTE Skill)\n\n1202% of the user’s Attack\n\n1420% of the user’s Attack\n\nMagic Beast's Instinct\n\n(Support Skill)\n\n630% of the user’s Attack\n\n743% of the user’s Attack\n\nDivinity\n\n(Ultimate Skill)\n\n2557% of the user’s Attack\n\n2977% of the user’s Attack"
+      },
+      {
+        "date": "2025-08-28",
+        "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nMagic Beast’s Claws\n\n(Basic Attack)\n\n227% / 232% / 237% of the user’s Attack\n\n457% / 465% / 475% of the user’s Attack\n\nSlaughter\n\n(Core Attack)\n\n793%of the user’s Attack\n\n847% of the user’s Attack\n\nViolent Approach\n(Basic Skill 1)\n\n1340%of the user’s Attack\n\n1907% of the user’s Attack\n\nExtreme Attack: Beast Form\n\n(Basic Skill 2)\n\nDamage: 254% of the user’s Attack\n\n[Extreme Attack: Beast Form]\n\nThe user gains [Super Armor] while its effect\n\nIncreases Attack Speed by 30%\n\nIncreases damage taken by 15%\n\nDuration: 12 second(s)\n\nDamage: 390% of the user’s Attack\n\n[Extreme Attack: Beast Form]\n\nThe user gains [Super Armor] while its effect\n\nIncreases the user’s Attack by 100%\n\nIncreases Attack Speed by 30%\n\nIncreases damage taken by 15%\n\nDuration: 12 second(s)\n\nMagic Beast’s Instinct\n\n(Support Skill)\n\nDamage: 743% of the user’s Attack\n\n[Quick Attack: Beast Form]\n\nIncreases the user’s Attack by 20%.\n\nIncreases damage taken by 10%.\n\nDuration: 15 second(s)\n\nDamage: 1486% of the user’s Attack\n\n[Quick Attack: Beast Form]\n\nIncreases the user’s Attack by 30%.\n\nIncreases damage taken by 10%.\n\nDuration: 15 second(s)\n\nDivinity\n\n(Ultimate Skill)\n\nDamage: 2977% of the user’s Attack\n\nDamage: 4345% of the user’s Attack\n\nAdvancement Tier 0\n\nThe user’s Skill Damage increases proportionally to 50% of the user’s reduced HP\n\n[Curse of the Magic Beast]\n\nDeals damage equal to 200% of Silver Mane Baek Yoonho’s Max HP every 3 second(s).\n\nDuration: 30 second(s)\n\nThe user’s Skill Damage increases proportionally to 100% of the user’s reduced HP\n\n[Curse of the Magic Beast]\n\nDeals damage equal to 1000% of Silver Mane Baek Yoonho’s Max HP every 3 second(s).\n\nDuration: 30 second(s)\n\nAdvancement Tier 1\n\nWhen the user uses Extreme Attack: Beast Form they take damage equal to 10% of their current HP, but gain a [Shield] equal to 20% of their Max HP.\n\nWhen the user uses Extreme Attack: Beast Form they take damage equal to 10% of their current HP, but gain a [Shield] equal to 30% of their Max HP.\n\nAdvancement Tier 2\n\nThe user’s HP increases by 16%.\n\nThe user’s HP increases by 50%.\n\nAdvancement Tier 4\n\nThe user’s Basic Attack damage increases by 80%.\n\nThe user’s Basic Attack and Core Attack damage increases by 100%.\n\nAdvancement Tier 5\n\nChanges the user’s Skill Damage Increase equal to 120% of lost HP Ratio.\n\nChanges the user’s Skill Damage Increase equal to 200% of lost HP Ratio.\n\nHowling White Tiger’s Soul\n\n<Silver Mane Baek Yonnho’s exclusive weapon>\n\nAdvancement Tier 0-5\n\nIncreases the user’s Basic Attack damage by 22.5/32.5/42.5/52.5/65/80%\n\nIf the target is immune to [Bleed] it deals damage equal to 2.5/5/10/15/20/25% of Silver Mane Baek Yoonho’s Max HP.\n\n(Cooldown: 0.5 second(s))\n\nIncreases the user’s Basic Attack and Core Attack damage by 22.5/32.5/42.5/52.5/65/80%\n\nIf the target is immune to [Bleed] it deals damage equal to 30/60/120/180/240/300% of Silver Mane Baek Yoonho’s Max HP.\n\n(Cooldown: 0.5 second(s))"
+      }
+    ]
   },
   {
     "id": "son-kihoon",
@@ -11156,7 +11832,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nScorching Heat\n\n(Basic Attacks)\n\nStage 1 Damage: 192% of the user’s Attack\n\nStage 2 Damage: 203% of the user’s Attack\n\nStage 3 Damage: 220% of the user’s Attack\n\nStage 1 Damage: 210% of the user’s Attack\n\nStage 2 Damage: 220% of the user’s Attack\n\nStage 3 Damage: 236% of the user’s Attack\n\nIncinerate\n\n(Core Attack)\n\nDamage: 513% of the user’s Attack\n\nDamage: 566% of the user’s Attack\n\nHellfire (Q)\n\nDamage: 496% of the user’s Attack\n\nDamage: 550% of the user’s Attack\n\nIaido Type 4: Red Lotus Flower (E)\n\nStage 1 Damage: 293% of the user’s Attack\n\nStage 2 Damage: 325% of the user’s Attack\n\nStage 3 Damage: 358% of the user’s Attack\n\nStage 1 Damage: 321% of the user’s Attack\n\nStage 2 Damage: 357% of the user’s Attack\n\nStage 3 Damage: 393% of the user’s Attack\n\nScorching Heat Penetration (QTE)\n\nDamage: 460% of the user’s Attack\n\nDamage: 516% of the user’s Attack\n\nWeakening Attack: Hellfire\n\n(Support Skill)\n\nDamage: 210% of the user’s Attack\n\nDamage: 250% of the user’s Attack\n\nSpecial Iaido: Fire Demon\n\n(Ultimate Skill)\n\nDamage: 1935% of the user’s Attack\n\nDamage: 2130% of the user’s Attack"
+      }
+    ]
   },
   {
     "id": "soyeon",
@@ -11780,7 +12464,21 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nQuickblade - Origin\n\n(Basic Attack)\n\n※ Elemental Accumulation Amount Increased\n\n※ The Elemental Accumulation displayed for Sugimoto Reiji's Basic Attack will remain the same; however, the actual Elemental Accumulation Amount applied in-game has been increased."
+      },
+      {
+        "date": "2026-09-17",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 5\n\n(New Effect Added)\n\nWhen [Punisher, Eclipse Slash, Extinction Blade] hit they inflict the [Windblade Rend] effect on the target\n\n[Windblade Rend]\nIncreases target’s [Wind] damage taken by 15%\nIncreases the target’s [Wind][Overload] damage taken by 15%\nDuration : 20 second(s) (stacks up to 3 times)\n\nEtched to the Bone\n〈Sugimoto Reiji’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased)\n\nThe user’s HP increases by 12% 30%"
+      }
+    ]
   },
   {
     "id": "sung-il-hwan",
@@ -11986,7 +12684,15 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-07-02",
+        "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 3\n\n(New effect added)\n\nWhen Dark Finale or Apocalyptic Might hits a target in a [Break] state it activates the [Suppressed] effect\n\nTier 4\n\n(New effect added)\n\nFor every Dark Breaker ally on the team, Sung Il-Hwan’s Attack increases by 5%"
+      }
+    ]
   },
   {
     "id": "sung-jinah",
@@ -12400,7 +13106,27 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2026-03-12",
+        "url": "https://forum.netmarble.com/slv_en/view/32/102815",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nTier 1\n\nWhen an enemy dies near the user the user gains 1 instances of the [Instinct] effect\n\nThe user gains 5 instances of the [Instinct] effect when they successfully put the enemy in a [Break] state\n\nThe user gains 1 instances of the [Instinct] effect when an enemy dies near them\n\nThe user gains 5 instances of the [Instinct] effect when they successfully put the enemy in a [Break] state\n\nThe user’s damage dealt increases by 24% when an ally successfully puts the enemy in the [Break] state (Duration: Infinite)\n\nTier 3\n\nWhen the user uses Munechika they gain the [Super Armor] effect for 5 second(s)\n\nUsing Fire: Kamaitachi decreases the cooldown of Munechika by 5 second(s)\n\nUsing Munechika grants the user [Super Armor] for 5 second(s)\n\nUsing Fire: Kamaitachi decreases the cooldown of Munechika by 5 second(s)\n\nIncreases Defense Penetration by 10% and Ultimate Skill damage by 100%\n\nTier 5\n\nThe [Instinct] and [Sixth Sense] effects are enhanced\n\n[Instinct]\n\nIncreases Attack by 5%\n\nThe user’s Critical Hit Rate and Critical Hit damage increase by 1.5%\n\nWhen the [Instinct] effect has stacked 10 times, it transforms into the [Sixth Sense] effect\n\nDuration: Infinite (stacks up to 10 times)\n\n[Sixth Sense]\n\nThe user’s Attack increases by 77%\n\nThe user’s Critical Hit Rate and Critical Hit Damage increase by 20%\n\nIf the user falls to 30% or less of their MP their MP Consumption decreases by 50%\n\nDuration: Infinite\n\nThe [Instinct] and [Sixth Sense] effects are enhanced\n\nWhen a Fire team member, excluding the user, uses their Ultimate Skill, they gain 5 instances of the [Instinct] effect\n\n[Instinct]\n\nIncreases Attack by 5%\n\nThe user’s Critical Hit Rate and Critical Hit damage increase by 1.5%\n\nWhen the [Instinct] effect has stacked 10 times, it transforms into the [Sixth Sense] effect\n\nDuration: Infinite (stacks up to 10 times)\n\n[Sixth Sense]\n\nThe user’s Attack increases by 77%\n\nThe user’s Critical Hit Rate and Critical Hit Damage increase by 20%\n\nIf the user’s MP is 50% or lower, their MP Consumption decreases by 50%\n\nDuration: Infinite"
+      },
+      {
+        "date": "2026-04-09",
+        "url": "https://forum.netmarble.com/slv_en/view/32/103975",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nTier 1\n\n[Instinct]\n\nIncreases the user’s Critical Hit Rate by 1%\n\nWhen [Instinct] has stacked 10 times, it becomes the [Sixth Sense] effect\n\nDuration: Infinite (stacks up to 10 times)\n\n[Sixth Sense]\n\nIncreases the user’s Critical Hit Rate by 20%.\n\nIf the user has 20% or fewer MP, their MP Consumption decreases by 40%\n\nDuration: Infinite\n\n[Instinct]\n\nIncreases the user’s Critical Hit Rate by 1%\n\nWhen [Instinct] has stacked 10 times, it becomes the [Sixth Sense] effect\n\nDuration: Infinite (stacks up to 10 times)\n\n[Sixth Sense]\n\nIncreases the user’s Critical Hit Rate by 25%.\n\nIf the user has 20% or fewer MP, their MP Consumption decreases by 40%\n\nDuration: Infinite\n\nTier 5\n\n[Instinct]\n\nIncreases the user’s Critical Hit Rate by 5%\n\nThe user’s Critical Hit Rate and Critical Hit damage increase by 1.5%\n\nWhen [Instinct] has stacked 10 times, it becomes the [Sixth Sense] effect\n\nDuration: Infinite (stacks up to 10 times)\n\n[Sixth Sense]\n\nIncreases the user’s Critical Hit Rate by 77%.\n\nThe user’s Critical Hit Rate and Critical Hit damage increase by 20%\n\nIf the user has 50% or fewer MP, their MP Consumption decreases by 50%\n\nDuration: Infinite\n\n[Instinct]\n\nIncreases the user’s Critical Hit Rate by 5%\n\nThe user’s Critical Hit Rate and Critical Hit damage increase by 1.5%\n\nWhen [Instinct] has stacked 10 times, it becomes the [Sixth Sense] effect\n\nDuration: Infinite (stacks up to 10 times)\n\n[Sixth Sense]\n\nIncreases the user’s Critical Hit Rate by 102%.\n\nThe user’s Critical Hit Rate and Critical Hit damage increase by 27.5%\n\nIf the user has 50% or fewer MP, their MP Consumption decreases by 50%\n\nDuration: Infinite"
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nBasic\n\n(Effect Stats Increased)\n\n[Fire]\n\nThe damage of Tsuchigumo increases by 70% 100%\n\nTier 2\n\n(Effect Stats Increased)\n\nThe user’s Critical Hit damage increases by 16% 20%\n\nTier 5\n\n(Effect Stats Increased)\n\n[Sixth Sense]\n\nThe user’s Attack increases by 102% 120%\n\nThe user’s Critical Hit Rate and Critical Hit Damage increases by 27.5% 30%\n\nThe Path a Hero Must Take\n\n〈Tawata Kanae Exclusive Weapon〉Tier 5 Based\n\n(Effect Stats Increased)\n\nThe user’s Attack increases by 12% 20%"
+      }
+    ]
   },
   {
     "id": "thomas-andre",
@@ -12608,7 +13334,27 @@
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2025-07-03",
+        "url": "https://forum.netmarble.com/slv_en/view/32/91211",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nCold-blooded Pummel\n\n(Basic Attack)\n\n150% / 154% / 160% of the user’s Defense\n\n166% / 170% / 177% of the user’s Defense\n\nGigantic Hammer Slam\n\n(Core Attack)\n\n1090% of the user’s Defense\n\n1170% of the user’s Defense\n\nAbsolute Demolition\n(Basic Skill 1)\n\n1300% of the user’s Defense\n\n1360% of the user’s Defense\n\nColossal Crush\n\n(Basic Skill 2)\n\n1300% of the user’s Defense\n\n1413% of the user’s Defense\n\nVolley Crash\n\n(QTE Skill)\n\n1053% of the user’s Defense\n\n1127% of the user’s Defense\n\nReturn of the King\n\n(Support Skill)\n\n691% of the user’s Defense\n\n738% of the user’s Defense\n\nRuler’s Judgment\n\n(Ultimate Skill)\n\n[Black Hole Crash] Damage: 3510% of the user’s Defense\n\n[Black Hole Crash] Damage: 3756% of the user’s Defense\n\nAdvancement Tier 0\n\n[Ruler’s Judgment] becomes available when [Overwhelming Power] has stacked 5 times.\n\n(Cooldown: 36 second(s))\n\nIn [Team Fight] mode the user’s damage dealt increases by 24%.\n\n[Overwhelming Power]\n\nThe user’s Defense increases by 10%.\n\n[Ruler’s Judgment] becomes available when [Overwhelming Power] has stacked 5 times.\n\n(Cooldown: 24 second(s))\n\nIn [Team Fight] mode the user’s damage dealt increases by 50%.\n\n[Overwhelming Power]\n\nThe user’s Defense increases by 15%.\n\nAdvancement Tier 2\n\nWhen a [Shield] effect is active, it increases the user’s Critical Hit Rate and Critical Hit damage by 10%.\n\nWhen a [Shield] effect is active, it increases the user’s Critical Hit Rate and Critical Hit damage by 25%.\n\nAdvancement Tier 3\n\nFor every 1,000 [Shield] effects applied, the damage of Overgrowth increases by 100% (increasing up to a maximum of 1000%).\n\nFor every 1,000 [Shield] effects applied, the damage of Overgrowth increases by 100% (increasing up to a maximum of 2000%).\n\nAdvancement Tier 4\n\nIncreases Defense by 16%.\n\nIncreases Defense by 20%."
+      },
+      {
+        "date": "2025-11-20",
+        "url": "https://forum.netmarble.com/slv_en/view/32/97654",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAdjusted\n\nRuler's Judgment\n\n(Ultimate Skill)\n\n[Steel Tyrant]\n\n- Duration: 25 second(s)\n\n[Steel Tyrant]\n\n- Duration: 30 second(s)\n\nAdvancement Tier 0\n\n[Overwhelming Power]\n\n- The user’s Defense increases by 15%.\n\n- The user’s Shield Acquisition Chance increases by 2%\n\n- Duration: 25 second(s) (stacking up to 5 times)\n\n[Overwhelming Power]\n\n- The user’s Defense increases by 30%.\n\n- The user’s Shield Acquisition Chance increases by 2%\n\n- Duration: 25 second(s) (stacking up to 5 times)"
+      },
+      {
+        "date": "2026-05-07",
+        "url": "https://forum.netmarble.com/slv_en/view/32/104871",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nTier 2\n\nShield Acquisition Chance increases by 8%\n\nWhen a [Shield] is active it increases the user’s Critical Hit Rate and Critical Hit damage by 25%\n\nShield Acquisition Chance increases by 8%\n\nWhen a [Shield] is active it increases the user’s Critical Hit Rate and Critical Hit damage by 25%\n\nWhen an ally successfully puts the target into a [Break] state it increases Critical Hit Rate and Critical Hit damage by 20%\n\nTier 5\n\nWhile the [Steel Tyrant] effect is active it increases the damage of Black Hole Crash by 125%\n\nWhile the [Steel Tyrant] effect is active it increases the damage of Black Hole Crash by 300%\n\n※ The Mana consumption for Thomas Andre's Basic Skill 1 and Basic Skill 2 has been decreased by 50% compared to before."
+      }
+    ]
   },
   {
     "id": "woo-jinchul",
@@ -12814,7 +13560,27 @@
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-05-29",
+        "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nFist of Justice\n\n(Basic Attacks)\n\nStage 1 Damage: 190% of the user’s Defense\n\nStage 2 Damage: 193% of the user’s Defense\n\nStage 3 Damage: 200% of the user’s Defense\n\nStage 1 Damage: 200% of the user’s Defense\n\nStage 2 Damage: 204% of the user’s Defense\n\nStage 3 Damage: 209% of the user’s Defense\n\n-\n\nImproved battle control frame\n\nSuppress\n\n(Core Attack)\n\nDamage: 338% of the user’s Defense\n\nDamage: 356% of the user’s Defense\n\n-\n\nImproved battle control frame\n\nMediation of Power (Q)\n\nDamage: 347% of the user’s Defense\n\nDamage: 366% of the user’s Defense\n\n-\n\nAdded [Super Armor]\n\n-\n\nImproved battle control frame\n\nIron Fist (E)\n\nDamage: 1180% of the user’s Defense\n\nDamage: 1240% of the user’s Defense\n\n-\n\nIncreased skill range\n\n Judgment (QTE)\n\nDamage: 800% of the user’s Defense\n\nDamage: 840% of the user’s Defense\n\nJustice Enforcement (Support Skill)\n\nDamage: 812% of the user’s Defense\n\nDamage: 843% of the user’s Defense\n\nSerious Punch (Ultimate Skill)\n\nDamage: 2884% of the user’s Defense\n\nDamage: 3028% of the user’s Defense\n\nAdvancement Tier 0\n\nWhen the user uses Dash, increases the damage of Suppress, Mediation of Power, Iron Fist by 25% for 5 second(s).\n\nWhen the user uses Dash, increases the damage of Suppress, Mediation of Power, and Iron Fist by 30% for 6 seconds.\n\nAdvancement Tier 1\n\nThe effects of Mediation of Power change: Increases [Break] effect by 100%.\nCan be used up to 3 times.\n\nHowever, increases the cooldown by 2 seconds.\n\nThe effects of Mediation of Power change: Increases [Break] effect and damage by 100%.\nCan be used up to 3 times.\n\nHowever, increases the cooldown by 1 second.\n\n* Only the word “Damage” is added, and the skill effect is the same as before.\n\nAdvancement Tier 2\n\nJinchul’s Defense Penetration increases by 6%.\n\nJinchul’s Defense Penetration increases by 8%.\n\nAdvancement Tier 5\n\nWhen the user uses Mediation of Power, increases Defense by 5% (stacking up to 10 times)\n\nWhen the user uses Mediation of Power, increases Defense by 5% (stacking up to 12 times)"
+      },
+      {
+        "date": "2024-07-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nSuppress\n\n(Core Attack)\n\n-\n\nGrants [Super Armor] while using this skill.\n\nSerious Punch (Ultimate Skill)\n\n-\n\nMovement after the skill usage will be improved.\n\nAdvancement Tier 1\n\nThe effects of [Mediation of Power] change:\n\nIncreases [Break] effect and damage by 100%.\n\nCan be used up to 3 times.\n\nHowever, increases the cooldown by 1 second.\n\nThe effects of [Mediation of Power] change:\n\nIncreases [Break] effect and damage by 100%.\n\nCan be used up to 3 times.\n\nDeleted increase in cooldown penalty.\n\nAdvancement Tier 3\n\nWhen the user uses [Dash or Extreme Evasion], it decreases the cooldown of [Mediation of Power, Iron Fist] by 2 second(s) and activates the user’s [Core Attack].\n\nWhen the user uses [Dash, Extreme Evasion, or Judgment], it decreases the cooldown of [Mediation of Power, Iron Fist] by 2 second(s) and activates the user’s Core Attack.\n\nWhen the user uses [Judgment], it activates the user’s [Basic Passive] and enhances the effect.\n\n- The user’s damage increase effect enhances to 35%.\n\n- Increases duration to 7 second(s).\n\nAnother Level\n\n〈Woo Jinchul’s Exclusive Weapon〉\n\nAdvancement Tier 1-5\n\nThe user’s attacks ignore n% of the target’s Defense.\n\nWhen [Mediation of Power] is used, increases damage dealt to the target by n% for 3 second(s) (stacking up to 3 times).\n\nThe user’s attacks ignore n% of the target’s Defense.\n\nWhen [Mediation of Power] is used, increases damage dealt to the target by n% for 5 second(s) (stacking up to 3 times).\n\n* The duration for the increase in damage dealt effect will be increased regardless of the Advancement Tier."
+      },
+      {
+        "date": "2024-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/43529",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nPassive Details\n\nWhen the user uses [Dash], it increases the damage of [Suppress, Mediation of Power, Iron Fist] by 30% for 6 second(s).\n\nWhen the user uses [Dash], it increases the damage of [Suppress, Mediation of Power, Iron Fist] by 30% for 6 second(s) and grants them [Super Armor].\n\nDecreases the cooldown of [Dash] by 1 second(s).\n\nAdvancement Tier 2\n\nThe user’s Defense Penetration increases by 8%.\n\nThe user’s Defense Penetration increases by 10%.\n\nAdvancement Tier 5\n\n-\n\nWhen the user uses their [Basic Attack] 4 time(s) it activates their [Tier 3 Passive].\n\n* The [Basic Passive] effect activated by [Judgement] skill effect in advancement tier 3 will not be applied.\n\nFist of Justice\n\n(Basic Attacks)\n\n-\n\nDeals [weak Break] damage.\n\n* Improved the after hit delay of Stage 3.\n\nSuppress\n\n-\n\nWhen this skill hits it inflicts [Stun] on the target for 3 second(s). (Cooldown: 20 second(s))\n\nMediation of Power\n\n-\n\nWhen the user uses this skill it grants a Shield equal to 2% of Woo Jinchul’s Defense to team members for 20 second(s) (stacking up to 3 times).\n\nAnother Level\n\n<Woo Jinchul’s Exclusive Weapon>\n\nAdvancement Tier 1-5\n\n-\n\nWhen the enemy enters the [Break] state, all team members’ Wind damage increases by 4/5/6/7/8/12%, excluding the user of this skill (Duration: Infinite)\n\n* Damage increase values are applied differently depending on the advancement tier."
+      }
+    ]
   },
   {
     "id": "yoo-jinho",
@@ -13071,7 +13837,33 @@
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
       }
     ],
-    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+    "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
+    "balance_history": [
+      {
+        "date": "2024-07-30",
+        "url": "https://forum.netmarble.com/slv_en/view/32/43529",
+        "section": "Hunter Balance Adjustments",
+        "text_en": "Category\n\nBefore\n\nAfter\n\nPassive Details\n\n-\n\n[Magic Reaction]\n\nDecreases the target’s Recovery Rate by 4%.\n\n(stacking up to 20 times)\n\nAdvancement Tier 1\n\nWhen [Kill Shot] hits, it activates the user’s [Core Attack] and increases their [Core Attack] damage by 30% for 6 second(s). (Cooldown: 16 second(s))\n\nWhen the user’s [Core Attack] hits, it grants [Madness] effect. (Cooldown: 16 second(s))\n\nWhen the user uses [Kill Shot] it activates the user’s [Core Attack] and increases their [Core Attack] damage by 30% for 6 second(s). (Cooldown: 16 second(s))\n\nWhen the user uses their [Core Attack], it grants the [Madness] effect. (Cooldown: 16 second(s))\n\n[Madness]\n\nWhile the user uses Hell Fire they gain the [Super Armor] effect.\n\nAdvancement Tier 3\n\nWhen [Trick Shot] hits it grants the [Attack Increase] effect.\n\nWhen the user uses [Trick Shot] it grants the [Attack Increase] effect.\n\nKill Shot\n\nHell Fire\n\nPerfect Shot\n\n-\n\nIncreased skill range\n\nAdjusted to keep an enemy in sight until hitting the enemy.\n\nTrick Shot\n\nPerfect Shot\n\n-\n\nDecreased skill casting duration when casting skill."
+      },
+      {
+        "date": "2024-10-10",
+        "url": "https://forum.netmarble.com/slv_en/view/32/62691",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nBefore\n\nChanged\n\nPassive Details\n\n- [Magic Firearm]\n\nMagic firearms appear around Soohyun which deal damage equal to 40% of her Attack.\n\n- [Magic Firearm]\n\nMagic firearms appear around Soohyun which deal damage equal to 160% of her Attack.\n\nAdvancement 1\n\n- When the user uses [Kill Shot] it activates the user's [Core Attack] and increases their [Core Attack] damage by 30% for 6 second(s). (Cooldown: 16 Second(s))\n\n- [Madness]\n\n[Kill Shot] changes to [Hell Fire] and increases the user's damage by 30%.\n\n- When the user uses [Kill Shot] it activates the user's [Core Attack] and increases their [Core Attack] damage by 40% for 6 second(s). (Cooldown: 16 Second(s))\n\n- [Madness]\n\n[Kill Shot] changes to [Hell Fire] and increases the user's damage by 40%.\n\nAdvancement 2\n\n- The user's Defense Penetration increases by 10%.\n\n- The user's Defense Penetration increases by 12%.\n\nAdvancement 5\n\n- Increases the damage of [Kill Shot] and [Hell Fire] by 4% for each instance of [Magic Reaction] on the targets suffering from the [Magic Reaction] effect. (Up to 80%)\n\n- Increases the damage of [Kill Shot] and [Hell Fire] by 6% for each instance of [Magic Reaction] on the targets suffering from the [Magic Reaction] effect. (Up to 120%)"
+      },
+      {
+        "date": "2026-06-04",
+        "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nModel Markswoman\n\n(Basic Attack)\n\nLv.10 Based\n\n(Damage Multiplier Increased)\n\nTier 1 damage : 222% 340.5% of Attack\n\nTier 2 damage : 237% 355.5% of Attack\n\nTier 3 damage : 258% 375% of Attack\n\n※ Core Gauge Gain Increased\n\nPerfect Shot\n\n(Core Attack)\n\nLv.10 Based\n\n(Damage Multiplier Increased)\n\nDamage: 1200% 2355% of Attack\n\nTrick Shot\n\n(Basic Skill 1)\n\nLv.10 Based\n\n(Damage Multiplier Increased)\n\nDamage: 1200% 2512.5% of Attack\n\n※ Core Gauge Gain Increased\n\nKill Shot\n\n(Basic Skill 2)\n\nLv.10 Based\n\n(Damage Multiplier Increased)\n\nDamage: 2175% 2536.5% of Attack\n\n※ Core Gauge Gain Increased\n\nPulse Fire\n\n(Supporter Skill)\n\nLv.20 Based\n\n(Damage Multiplier Increased)\n\nDamage: 1644.44% 2248.78% of Attack\n\nFiring Swarm\n\n(QTE Skill)\n\nLv.10 Based\n\n(Damage Multiplier Increased)\n\nDamage: 1200% 1617% of Attack\n\nZeroed-in Blast\n\n(Ultimate Skill)\n\nLv.10 Based\n\n(Damage Multiplier Increased)\n\nDamage: 4125% 6315% of Attack\n\nBasic\n\n(Effect Stats Increased)\n\n[Spotlight]\n\nThe user’s Defense Penetration increases by 24%\n\nThe user’s Damage Increase stat increases equal to 24% 100% of their Defense Penetration\n\nDuration: 24 second(s)\n\n[Magic Firearm]\n\nMagic firearms appear around Soohyun which deal damage equal to 160% 500% of her Attack\n\nWhen these attacks hit, they inflict the [Magic Reaction] effect\n\nDuration: 5 second(s)\n\n[Magic Reaction]\n\nIncreases Fire damage taken by 1% 1.5%\n\nDecreases the target’s Recovery Rate by 4% 5%\n\nDuration: 60 second(s) (stacking up to 20 times)\n\nTier 1\n\n(Damage Increases and Cooldown Decreased)\n\nWhen the user uses Kill Shot it activates the user’s Core Attack and increases their Core Attack damage by 40% 200% for 6 second(s).\n\n(Cooldown:  16 second(s) 12 second(s))\n\nTier 3\n\n(Effect Stats Increased)\n\n[Attack Increase]\n\nIncreases Attack by 24% 48%\n\nDuration : 12 second(s) 16 second(s)\n\n(New Effect Added)\n\nAttacking a target affected by [Wildfire] increases Fire Overload damage by 10% per [Wildfire] instance applied\n\nTier 4\n\n(Effect Stats Increased)\n\nIncreases Attack by 12% 20%\n\nTier 5\n\n(New Effect Added)\n\nAttacking a target affected by [Wildfire] increases Zeroed-in Blast damage by 20% per [Wildfire] instance applied\n\nOverdrive\n\n〈Yoo Soohyun Exclusive Weapon〉\n\nTier 5 Based\n\n(New Effect Added)\n\nCore Attack and Zeroed-in Blast damage increases by 48%"
+      },
+      {
+        "date": "2026-10-22",
+        "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 1\n\n(Values Increased)\n\nWhen the user uses Kill Shot it activates the user’s Core Attack and increases their Core Attack damage by 200% for 6 12 second(s).\n(Cooldown: 12 second(s))\n\nWhen the user uses Core Attack, it grants the [Madness] effect. (Cooldown: 12 6 second(s))\n\nTier 2\n\n(New Effect Added)\n\nFor every Fire ally in the party, Yoo Soohyun’s Fire damage increases by 12%\n\nTier 3\n\n(Activation Effect Changed)\n\nUsing Trick Shot grants the [Attack Increase] [Superstar] effect\n\n[Damage Increase]\nDamage increases by 48%\nDuration : 16 second(s)\n\n[Superstar]\nIncreases Attack by 60%\nIncreases Critical Hit Rate by 30%\nDuration : 16 second(s)\n\nTier 4\n\n(New Effect Added)\n\nFor every Fire ally in the party, Yoo Soohyun’s Attack increases by 10%"
+      }
+    ]
   },
   {
     "id": "yuqi",

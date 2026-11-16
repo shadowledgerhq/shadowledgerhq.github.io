@@ -239,6 +239,5254 @@
    "titre": "9/25 (Thu) Update Details [Updated 9/25 (Thu) 06:16 (UTC+0)]",
    "date": "2025-09-25",
    "vu_le": "2026-11-15"
+  },
+  "122": {
+   "id": "122",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/122",
+   "titre": "3/22 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-03-22",
+   "vu_le": "2026-11-16"
+  },
+  "358": {
+   "id": "358",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/358",
+   "titre": "3/25 (Mon) Response to Packet Tampering Attempts Notice",
+   "date": "2024-03-25",
+   "vu_le": "2026-11-16"
+  },
+  "372": {
+   "id": "372",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/372",
+   "titre": "3/25 (Mon) Server Patch Notice [Completed]",
+   "date": "2024-03-25",
+   "vu_le": "2026-11-16"
+  },
+  "469": {
+   "id": "469",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/469",
+   "titre": "March Sanctions Against Unauthorized Program Usage [Updated 3/28 (Thu) 10:00 (UTC+0)]",
+   "date": "2024-03-26",
+   "vu_le": "2026-11-16"
+  },
+  "555": {
+   "id": "555",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/555",
+   "titre": "3/28 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-03-28",
+   "vu_le": "2026-11-16"
+  },
+  "1109": {
+   "id": "1109",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/1109",
+   "titre": "4/1 (Mon) Data Patch Notice [Completed]",
+   "date": "2024-04-01",
+   "vu_le": "2026-11-16"
+  },
+  "1250": {
+   "id": "1250",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/1250",
+   "titre": "4/2 (Tue) AOS Payment Issue Notice [Resolved]",
+   "date": "2024-04-01",
+   "vu_le": "2026-11-16"
+  },
+  "1491": {
+   "id": "1491",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/1491",
+   "titre": "April Sanctions Against Abnormal Gameplay [Updated 4/29 (Mon) 10:56 (UTC+0)]",
+   "date": "2024-04-03",
+   "vu_le": "2026-11-16"
+  },
+  "1564": {
+   "id": "1564",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/1564",
+   "titre": "4/3 (Wed) iOS Payment Issue Notice [Resolved]",
+   "date": "2024-04-03",
+   "vu_le": "2026-11-16"
+  },
+  "1580": {
+   "id": "1580",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/1580",
+   "titre": "4/4 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-04-04",
+   "vu_le": "2026-11-16"
+  },
+  "1622": {
+   "id": "1622",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/1622",
+   "titre": "4/4 (Thu) 09:15 (UTC+0) Server Patch Notice [Completed]",
+   "date": "2024-04-04",
+   "vu_le": "2026-11-16"
+  },
+  "1900": {
+   "id": "1900",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/1900",
+   "titre": "4/6 (Sat) Server Patch Notice [Completed]",
+   "date": "2024-04-06",
+   "vu_le": "2026-11-16"
+  },
+  "2508": {
+   "id": "2508",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/2508",
+   "titre": "4/11 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-04-11",
+   "vu_le": "2026-11-16"
+  },
+  "3051": {
+   "id": "3051",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/3051",
+   "titre": "Developer Note: New Hunter Arrival & Gameplay Update",
+   "date": "2024-04-15",
+   "vu_le": "2026-11-16"
+  },
+  "3032": {
+   "id": "3032",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/3032",
+   "titre": "4/15 (Mon) Netmarble Launcher Update Notice [Completed]",
+   "date": "2024-04-15",
+   "vu_le": "2026-11-16"
+  },
+  "3060": {
+   "id": "3060",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/3060",
+   "titre": "4/17 (Wed) Regular Maintenance Notice [Updated 4/18 (Thu) 01:21 (UTC+0)]",
+   "date": "2024-04-16",
+   "vu_le": "2026-11-16"
+  },
+  "3063": {
+   "id": "3063",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/3063",
+   "titre": "4/17 (Wed) Update Details [Updated 4/17 (Wed)10:08 (UTC+0)]",
+   "date": "2024-04-17",
+   "vu_le": "2026-11-16"
+  },
+  "3354": {
+   "id": "3354",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/3354",
+   "titre": "4/17 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-04-17",
+   "vu_le": "2026-11-16"
+  },
+  "3404": {
+   "id": "3404",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/3404",
+   "titre": "4/17 (Wed) 11:00 (UTC+0) Data Patch Notice [Completed]",
+   "date": "2024-04-17",
+   "vu_le": "2026-11-16"
+  },
+  "3437": {
+   "id": "3437",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/3437",
+   "titre": "4/17 (Wed) 12:30 (UTC+0) Data Patch Notice [Completed]",
+   "date": "2024-04-17",
+   "vu_le": "2026-11-16"
+  },
+  "3552": {
+   "id": "3552",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/3552",
+   "titre": "4/18 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-04-18",
+   "vu_le": "2026-11-16"
+  },
+  "3589": {
+   "id": "3589",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/3589",
+   "titre": "4/18 (Thu) 08:50 (UTC+0) Data Patch Notice [Completed]",
+   "date": "2024-04-18",
+   "vu_le": "2026-11-16"
+  },
+  "3616": {
+   "id": "3616",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/3616",
+   "titre": "PC Black Screen Issue Solution Notice",
+   "date": "2024-04-18",
+   "vu_le": "2026-11-16"
+  },
+  "3728": {
+   "id": "3728",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/3728",
+   "titre": "4/19 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-04-19",
+   "vu_le": "2026-11-16"
+  },
+  "4363": {
+   "id": "4363",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/4363",
+   "titre": "4/24 (Wed) Netmarble Launcher Maintenance Notice [Completed]",
+   "date": "2024-04-24",
+   "vu_le": "2026-11-16"
+  },
+  "4441": {
+   "id": "4441",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/4441",
+   "titre": "4/25 (Thu) Netmarble Launcher (PC) Update Notice",
+   "date": "2024-04-25",
+   "vu_le": "2026-11-16"
+  },
+  "4476": {
+   "id": "4476",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/4476",
+   "titre": "4/25 (Thu) Notice Regarding Incorrect Restrictions on Some Hunters [Resolved]",
+   "date": "2024-04-25",
+   "vu_le": "2026-11-16"
+  },
+  "4519": {
+   "id": "4519",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/4519",
+   "titre": "Developer Note: The Winds of Change [Updated 4/26 (Fri) 11:00 (UTC+0)]",
+   "date": "2024-04-26",
+   "vu_le": "2026-11-16"
+  },
+  "4541": {
+   "id": "4541",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/4541",
+   "titre": "4/28 (Sun) Temporary Maintenance Notice [Updated 4/29 06:58 (UTC+0)]",
+   "date": "2024-04-27",
+   "vu_le": "2026-11-16"
+  },
+  "5023": {
+   "id": "5023",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5023",
+   "titre": "5/2 (Thu) Netmarble Launcher Recommended Update Notice",
+   "date": "2024-05-02",
+   "vu_le": "2026-11-16"
+  },
+  "5031": {
+   "id": "5031",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5031",
+   "titre": "5/3 (Fri) Official Forum Service Maintenance Notice [Completed]",
+   "date": "2024-05-02",
+   "vu_le": "2026-11-16"
+  },
+  "5036": {
+   "id": "5036",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5036",
+   "titre": "May Bans Against Unauthorized Program Usage [Updated 5/3 (Fri) 07:00 (UTC+0)]",
+   "date": "2024-05-02",
+   "vu_le": "2026-11-16"
+  },
+  "5030": {
+   "id": "5030",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5030",
+   "titre": "5/3 (Fri) Official Webshop Maintenance Notice",
+   "date": "2024-05-03",
+   "vu_le": "2026-11-16"
+  },
+  "5087": {
+   "id": "5087",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5087",
+   "titre": "Official Forum Renewal Notice [Updated 5/7 (Tue) 03:12 (UTC+0)]",
+   "date": "2024-05-03",
+   "vu_le": "2026-11-16"
+  },
+  "5219": {
+   "id": "5219",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5219",
+   "titre": "Notice of Incorrectly Applied Pricing for a Package (Google Play Store)",
+   "date": "2024-05-04",
+   "vu_le": "2026-11-16"
+  },
+  "5287": {
+   "id": "5287",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5287",
+   "titre": "5/7 (Tue) Regular Maintenance Notice",
+   "date": "2024-05-06",
+   "vu_le": "2026-11-16"
+  },
+  "4810": {
+   "id": "4810",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/4810",
+   "titre": "Pre-Registration Rewards Notice",
+   "date": "2024-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "5296": {
+   "id": "5296",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5296",
+   "titre": "[Solo Leveling:ARISE] Pre-Download & Schedule Notice",
+   "date": "2024-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "5298": {
+   "id": "5298",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5298",
+   "titre": "PC Version Update Guide",
+   "date": "2024-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "5299": {
+   "id": "5299",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5299",
+   "titre": "Notice Regarding Game Usage and Account Trading",
+   "date": "2024-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "5396": {
+   "id": "5396",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5396",
+   "titre": "5/8 (Wed) Netmarble System Stabilization Maintenance Notice",
+   "date": "2024-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "5442": {
+   "id": "5442",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5442",
+   "titre": "5/7 (Tue) Intermittent Freeze During Pre-Download Notice",
+   "date": "2024-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "5514": {
+   "id": "5514",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/5514",
+   "titre": "5/8 (Wed) Update Details [Updated on 5/8 (Wed) 06:48 (UTC+0)]",
+   "date": "2024-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "5340": {
+   "id": "5340",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5340",
+   "titre": "[Solo Leveling:ARISE] Global Launch Notice [Updated on 5/8 (Wed) 03:45 (UTC+0)]",
+   "date": "2024-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "5525": {
+   "id": "5525",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5525",
+   "titre": "Notice Regarding Solutions to Some Issues in iOS Environment",
+   "date": "2024-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "5539": {
+   "id": "5539",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5539",
+   "titre": "Special Summons & Hunters Association Premium Subscription Notice [Updated 11/20 (Thu) 02:09 (UTC+0)",
+   "date": "2024-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "5608": {
+   "id": "5608",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5608",
+   "titre": "5/8 (Wed) Payment Error Notice",
+   "date": "2024-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "5646": {
+   "id": "5646",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5646",
+   "titre": "Grand Launch Celebration! New Packages",
+   "date": "2024-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "5688": {
+   "id": "5688",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5688",
+   "titre": "Solo Leveling:ARISE Google Play Games Opening & Steam Wishlist Notice",
+   "date": "2024-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "5728": {
+   "id": "5728",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/5728",
+   "titre": "5/8 (Wed) Server Patch Notice [Completed]",
+   "date": "2024-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "6139": {
+   "id": "6139",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/6139",
+   "titre": "5/8 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "6740": {
+   "id": "6740",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/6740",
+   "titre": "5/9 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-05-09",
+   "vu_le": "2026-11-16"
+  },
+  "7304": {
+   "id": "7304",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/7304",
+   "titre": "Developer Note: A Thank You Letter from the <Solo Leveling:ARISE> Team",
+   "date": "2024-05-10",
+   "vu_le": "2026-11-16"
+  },
+  "7161": {
+   "id": "7161",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/7161",
+   "titre": "5/10 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-05-10",
+   "vu_le": "2026-11-16"
+  },
+  "7247": {
+   "id": "7247",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/7247",
+   "titre": "5/10 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-05-10",
+   "vu_le": "2026-11-16"
+  },
+  "7922": {
+   "id": "7922",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/7922",
+   "titre": "Redeem Code Usage Unavailable on AOS Issue Notice [Completed]",
+   "date": "2024-05-11",
+   "vu_le": "2026-11-16"
+  },
+  "9131": {
+   "id": "9131",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/9131",
+   "titre": "5/13 (Mon) Server Patch Notice [Completed]",
+   "date": "2024-05-13",
+   "vu_le": "2026-11-16"
+  },
+  "9158": {
+   "id": "9158",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/9158",
+   "titre": "Notice Regarding Unauthorized Program Usage",
+   "date": "2024-05-13",
+   "vu_le": "2026-11-16"
+  },
+  "10952": {
+   "id": "10952",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/10952",
+   "titre": "5/17 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-05-17",
+   "vu_le": "2026-11-16"
+  },
+  "12169": {
+   "id": "12169",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/12169",
+   "titre": "5/21 (Tue) Netmarble System Stabilization Maintenance Notice [Completed]",
+   "date": "2024-05-20",
+   "vu_le": "2026-11-16"
+  },
+  "12235": {
+   "id": "12235",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/12235",
+   "titre": "May Bans Against Unauthorized Program Usage [Updated 5/20 (Mon) 10:30 (UTC+0)]",
+   "date": "2024-05-20",
+   "vu_le": "2026-11-16"
+  },
+  "12457": {
+   "id": "12457",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/12457",
+   "titre": "Developer Note: Cold-Blooded Ice Queen Coming! [Updated 5/22 (Wed) 02:37 (UTC+0)]",
+   "date": "2024-05-21",
+   "vu_le": "2026-11-16"
+  },
+  "12409": {
+   "id": "12409",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/12409",
+   "titre": "5/21 (Tue) Netmarble Launcher (PC) Update Notice",
+   "date": "2024-05-21",
+   "vu_le": "2026-11-16"
+  },
+  "12525": {
+   "id": "12525",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/12525",
+   "titre": "5/21 (Tue) Bans Against Unauthorized Program Usage",
+   "date": "2024-05-21",
+   "vu_le": "2026-11-16"
+  },
+  "12863": {
+   "id": "12863",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/12863",
+   "titre": "5/22 (Wed) Bans Against Unauthorized Program Usage",
+   "date": "2024-05-22",
+   "vu_le": "2026-11-16"
+  },
+  "13245": {
+   "id": "13245",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/13245",
+   "titre": "5/23 (Thu) Bans Against Unauthorized Program Usage",
+   "date": "2024-05-23",
+   "vu_le": "2026-11-16"
+  },
+  "13813": {
+   "id": "13813",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/13813",
+   "titre": "Celebration Coin Exchange Shop Related Adjustments Notice",
+   "date": "2024-05-24",
+   "vu_le": "2026-11-16"
+  },
+  "13827": {
+   "id": "13827",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/13827",
+   "titre": "5/24 (Fri) Bans Against Unauthorized Program Usage",
+   "date": "2024-05-24",
+   "vu_le": "2026-11-16"
+  },
+  "14358": {
+   "id": "14358",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/14358",
+   "titre": "5/26 (Sun) Unavailable Access to the Game Issue Notice [Resolved 05/26 (Sun) 02:00 (UTC+0)]",
+   "date": "2024-05-26",
+   "vu_le": "2026-11-16"
+  },
+  "14548": {
+   "id": "14548",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/14548",
+   "titre": "5/26 (Sun) Email Verification Instability [Normalized]",
+   "date": "2024-05-26",
+   "vu_le": "2026-11-16"
+  },
+  "14654": {
+   "id": "14654",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/14654",
+   "titre": "5/28 (Tue) Regular Maintenance Notice [Completed]",
+   "date": "2024-05-27",
+   "vu_le": "2026-11-16"
+  },
+  "14975": {
+   "id": "14975",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/14975",
+   "titre": "5/28 (Tue) Bans Against Unauthorized Program Usage",
+   "date": "2024-05-28",
+   "vu_le": "2026-11-16"
+  },
+  "14670": {
+   "id": "14670",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/14670",
+   "titre": "5/29 (Wed) Update Details [Updated 6/4 (Wed) 10:28 (UTC+0)]",
+   "date": "2024-05-29",
+   "vu_le": "2026-11-16"
+  },
+  "14697": {
+   "id": "14697",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+   "titre": "5/29 (Wed) Hunter & Weapon Balance Adjustment Notice",
+   "date": "2024-05-29",
+   "vu_le": "2026-11-16"
+  },
+  "15368": {
+   "id": "15368",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/15368",
+   "titre": "5/29 (Wed) Bans Against Unauthorized Program Usage",
+   "date": "2024-05-29",
+   "vu_le": "2026-11-16"
+  },
+  "15372": {
+   "id": "15372",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/15372",
+   "titre": "5/29 (Wed) Server Patch Notice [Completed] [Updated 6/19 (Wed) 06:28 (UTC+0)]",
+   "date": "2024-05-29",
+   "vu_le": "2026-11-16"
+  },
+  "15400": {
+   "id": "15400",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/15400",
+   "titre": "Guidance on Changing Mobile Control Options",
+   "date": "2024-05-29",
+   "vu_le": "2026-11-16"
+  },
+  "15414": {
+   "id": "15414",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/15414",
+   "titre": "5/29 (Wed) Data Patch Notice [Updated 5/29 (Wed) 14:25 (UTC+0)]",
+   "date": "2024-05-29",
+   "vu_le": "2026-11-16"
+  },
+  "15639": {
+   "id": "15639",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/15639",
+   "titre": "5/30 (Thu) iOS Recommended Update Notice",
+   "date": "2024-05-30",
+   "vu_le": "2026-11-16"
+  },
+  "15909": {
+   "id": "15909",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/15909",
+   "titre": "5/31 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-05-31",
+   "vu_le": "2026-11-16"
+  },
+  "16600": {
+   "id": "16600",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/16600",
+   "titre": "Developer Note: Notice from the Hunters Association [Updated 6/4 (Tue) 11:07 (UTC+0)]",
+   "date": "2024-06-03",
+   "vu_le": "2026-11-16"
+  },
+  "16547": {
+   "id": "16547",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/16547",
+   "titre": "6/3 (Mon) Bans Against Unauthorized Program Usage",
+   "date": "2024-06-03",
+   "vu_le": "2026-11-16"
+  },
+  "16611": {
+   "id": "16611",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/16611",
+   "titre": "6/11 (Tue) Netmarble (PC) and Google Play Games Launcher Update No [Updated 6/4 (Tue) 06:57 (UTC+0)]",
+   "date": "2024-06-03",
+   "vu_le": "2026-11-16"
+  },
+  "16524": {
+   "id": "16524",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/16524",
+   "titre": "6/5 (Wed) New Packages [Updated 6/4 (Tue) 10:37 (UTC+0)]",
+   "date": "2024-06-04",
+   "vu_le": "2026-11-16"
+  },
+  "16727": {
+   "id": "16727",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/16727",
+   "titre": "6/4 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-06-04",
+   "vu_le": "2026-11-16"
+  },
+  "16782": {
+   "id": "16782",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/16782",
+   "titre": "6/4 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-06-04",
+   "vu_le": "2026-11-16"
+  },
+  "16946": {
+   "id": "16946",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/16946",
+   "titre": "Developer Note: Notice from the <Solo Leveling:ARISE> Team",
+   "date": "2024-06-05",
+   "vu_le": "2026-11-16"
+  },
+  "16924": {
+   "id": "16924",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/16924",
+   "titre": "6/5 (Wed) Bans Against Unauthorized Program Usage",
+   "date": "2024-06-05",
+   "vu_le": "2026-11-16"
+  },
+  "16936": {
+   "id": "16936",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/16936",
+   "titre": "6/5 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-06-05",
+   "vu_le": "2026-11-16"
+  },
+  "17226": {
+   "id": "17226",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/17226",
+   "titre": "6/6 (Thu) Notice Regarding Daily Support Products",
+   "date": "2024-06-07",
+   "vu_le": "2026-11-16"
+  },
+  "17231": {
+   "id": "17231",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/17231",
+   "titre": "6/8 (Sat) New Packages",
+   "date": "2024-06-07",
+   "vu_le": "2026-11-16"
+  },
+  "17246": {
+   "id": "17246",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/17246",
+   "titre": "6/7 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-06-07",
+   "vu_le": "2026-11-16"
+  },
+  "18033": {
+   "id": "18033",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/18033",
+   "titre": "6/7 (Fri) Bans Against Unauthorized Program Usage",
+   "date": "2024-06-07",
+   "vu_le": "2026-11-16"
+  },
+  "25579": {
+   "id": "25579",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/25579",
+   "titre": "6/10 (Mon) Server Patch Notice [Completed]",
+   "date": "2024-06-10",
+   "vu_le": "2026-11-16"
+  },
+  "25728": {
+   "id": "25728",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/25728",
+   "titre": "Additional Notice After the 6/10 (Mon) Patch",
+   "date": "2024-06-10",
+   "vu_le": "2026-11-16"
+  },
+  "26143": {
+   "id": "26143",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/26143",
+   "titre": "Solo Leveling:ARISE Now Available on Google Play Pass [Updated 6/5 (Thu) 08:06 (UTC+0)]",
+   "date": "2024-06-11",
+   "vu_le": "2026-11-16"
+  },
+  "26216": {
+   "id": "26216",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/26216",
+   "titre": "6/11 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-06-11",
+   "vu_le": "2026-11-16"
+  },
+  "26795": {
+   "id": "26795",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/26795",
+   "titre": "Developer Note: Finally, to Demons' Castle!",
+   "date": "2024-06-12",
+   "vu_le": "2026-11-16"
+  },
+  "26746": {
+   "id": "26746",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/26746",
+   "titre": "6/12 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-06-12",
+   "vu_le": "2026-11-16"
+  },
+  "27114": {
+   "id": "27114",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/27114",
+   "titre": "6/13 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-06-13",
+   "vu_le": "2026-11-16"
+  },
+  "27094": {
+   "id": "27094",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/27094",
+   "titre": "Special Stories of Hunters, [Hunter: Origin] Notice",
+   "date": "2024-06-14",
+   "vu_le": "2026-11-16"
+  },
+  "27139": {
+   "id": "27139",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/27139",
+   "titre": "6/14 (Fri) Bans Against Unauthorized Program Usage",
+   "date": "2024-06-14",
+   "vu_le": "2026-11-16"
+  },
+  "27940": {
+   "id": "27940",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/27940",
+   "titre": "6/19 (Wed) Regular Maintenance Notice [Completed]",
+   "date": "2024-06-17",
+   "vu_le": "2026-11-16"
+  },
+  "28177": {
+   "id": "28177",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/28177",
+   "titre": "6/19 (Wed) Update Details",
+   "date": "2024-06-19",
+   "vu_le": "2026-11-16"
+  },
+  "28425": {
+   "id": "28425",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/28425",
+   "titre": "6/19 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-06-19",
+   "vu_le": "2026-11-16"
+  },
+  "28501": {
+   "id": "28501",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/28501",
+   "titre": "Workshop of Brilliant Light Invitation Recharge Issue Notice [Updated 7/2 (Tue) 08:15 (UTC+0)]",
+   "date": "2024-06-19",
+   "vu_le": "2026-11-16"
+  },
+  "28612": {
+   "id": "28612",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/28612",
+   "titre": "6/20 (Thu) Data Patch Notice",
+   "date": "2024-06-20",
+   "vu_le": "2026-11-16"
+  },
+  "28682": {
+   "id": "28682",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/28682",
+   "titre": "Notice on the 6/13 Survey",
+   "date": "2024-06-20",
+   "vu_le": "2026-11-16"
+  },
+  "28842": {
+   "id": "28842",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/28842",
+   "titre": "Developer Note: Second Half of 2024 Road Map",
+   "date": "2024-06-21",
+   "vu_le": "2026-11-16"
+  },
+  "29350": {
+   "id": "29350",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/29350",
+   "titre": "6/25 (Tue) Data Patch Notice [Completed] [Updated 6/25 (Tue) 23:58 (UTC+0)]",
+   "date": "2024-06-25",
+   "vu_le": "2026-11-16"
+  },
+  "29352": {
+   "id": "29352",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/29352",
+   "titre": "6/26 (Wed) New Packages",
+   "date": "2024-06-25",
+   "vu_le": "2026-11-16"
+  },
+  "29515": {
+   "id": "29515",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/29515",
+   "titre": "Notice on Blessing Effects Application in the Workshop of Brilliant Light",
+   "date": "2024-06-25",
+   "vu_le": "2026-11-16"
+  },
+  "29812": {
+   "id": "29812",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/29812",
+   "titre": "Developer Note: Guild Summoning",
+   "date": "2024-06-26",
+   "vu_le": "2026-11-16"
+  },
+  "29699": {
+   "id": "29699",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/29699",
+   "titre": "50th Day Celebration! Collection Event Issue Notice",
+   "date": "2024-06-26",
+   "vu_le": "2026-11-16"
+  },
+  "29709": {
+   "id": "29709",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/29709",
+   "titre": "6/26 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-06-26",
+   "vu_le": "2026-11-16"
+  },
+  "29776": {
+   "id": "29776",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/29776",
+   "titre": "6/26 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-06-26",
+   "vu_le": "2026-11-16"
+  },
+  "30156": {
+   "id": "30156",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/30156",
+   "titre": "6/28 (Fri) Server Patch Notice [Completed]",
+   "date": "2024-06-28",
+   "vu_le": "2026-11-16"
+  },
+  "31091": {
+   "id": "31091",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/31091",
+   "titre": "Developer Note: A Preview of Changes",
+   "date": "2024-07-05",
+   "vu_le": "2026-11-16"
+  },
+  "31610": {
+   "id": "31610",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/31610",
+   "titre": "Bans Against Unauthorized Program Usage [Updated 10/15 (Tue) 08:06 (UTC+0)]",
+   "date": "2024-07-08",
+   "vu_le": "2026-11-16"
+  },
+  "31709": {
+   "id": "31709",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/31709",
+   "titre": "7/10 (Wed) Regular Maintenance Notice [Completed] [Updated on 7/12 (Fri) 08:22 (UTC+0)]",
+   "date": "2024-07-09",
+   "vu_le": "2026-11-16"
+  },
+  "31781": {
+   "id": "31781",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/31781",
+   "titre": "7/10 (Wed) Update Details [Updated on 7/24 (Wed) 01:56 (UTC+0)]",
+   "date": "2024-07-10",
+   "vu_le": "2026-11-16"
+  },
+  "31759": {
+   "id": "31759",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+   "titre": "7/10 (Wed) Hunter & Rune Skill Balance Adjustments Notice",
+   "date": "2024-07-10",
+   "vu_le": "2026-11-16"
+  },
+  "32024": {
+   "id": "32024",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/32024",
+   "titre": "7/10 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-07-10",
+   "vu_le": "2026-11-16"
+  },
+  "32245": {
+   "id": "32245",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/32245",
+   "titre": "Developer Note: Developer Note Broadcast Summary",
+   "date": "2024-07-11",
+   "vu_le": "2026-11-16"
+  },
+  "32294": {
+   "id": "32294",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/32294",
+   "titre": "7/11 (Thu) Data Patch Notice [Updated 7/12 (Fri) 02:09 (UTC+0)]",
+   "date": "2024-07-11",
+   "vu_le": "2026-11-16"
+  },
+  "32419": {
+   "id": "32419",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/32419",
+   "titre": "7/12 (Fri) Server Patch Notice [Completed]",
+   "date": "2024-07-12",
+   "vu_le": "2026-11-16"
+  },
+  "32970": {
+   "id": "32970",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/32970",
+   "titre": "7/17 (Wed) New Packages",
+   "date": "2024-07-16",
+   "vu_le": "2026-11-16"
+  },
+  "32972": {
+   "id": "32972",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/32972",
+   "titre": "Solo Leveling: ARISE Steam Wishlist Notice",
+   "date": "2024-07-16",
+   "vu_le": "2026-11-16"
+  },
+  "32973": {
+   "id": "32973",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/32973",
+   "titre": "7/16 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-07-16",
+   "vu_le": "2026-11-16"
+  },
+  "33111": {
+   "id": "33111",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/33111",
+   "titre": "Developer Note & Developer Livestream Schedule Notice",
+   "date": "2024-07-17",
+   "vu_le": "2026-11-16"
+  },
+  "33274": {
+   "id": "33274",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/33274",
+   "titre": "7/18 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-07-18",
+   "vu_le": "2026-11-16"
+  },
+  "33398": {
+   "id": "33398",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/33398",
+   "titre": "Developer Note: One Step Further",
+   "date": "2024-07-19",
+   "vu_le": "2026-11-16"
+  },
+  "41076": {
+   "id": "41076",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/41076",
+   "titre": "7/23 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-07-23",
+   "vu_le": "2026-11-16"
+  },
+  "41937": {
+   "id": "41937",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/41937",
+   "titre": "7/24 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-07-24",
+   "vu_le": "2026-11-16"
+  },
+  "42951": {
+   "id": "42951",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/42951",
+   "titre": "7/31 (Wed) Regular Maintenance Notice [Completed]",
+   "date": "2024-07-30",
+   "vu_le": "2026-11-16"
+  },
+  "43529": {
+   "id": "43529",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/43529",
+   "titre": "7/31 (Wed) Hunter & Blessing Stone Balance Adjustments Notice [Updated 7/30 (Tue) 03:20 (UTC+0)]",
+   "date": "2024-07-30",
+   "vu_le": "2026-11-16"
+  },
+  "43557": {
+   "id": "43557",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/43557",
+   "titre": "7/31 (Wed) Update Details",
+   "date": "2024-07-31",
+   "vu_le": "2026-11-16"
+  },
+  "43675": {
+   "id": "43675",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/43675",
+   "titre": "7/31 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-07-31",
+   "vu_le": "2026-11-16"
+  },
+  "43975": {
+   "id": "43975",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/43975",
+   "titre": "7/29 (Mon) Developer Note Livestream Video Summary",
+   "date": "2024-08-01",
+   "vu_le": "2026-11-16"
+  },
+  "44015": {
+   "id": "44015",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/44015",
+   "titre": "8/1 (Thu) Patch & Recommended Build Update Notice [Completed]",
+   "date": "2024-08-01",
+   "vu_le": "2026-11-16"
+  },
+  "44050": {
+   "id": "44050",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/44050",
+   "titre": "Workshop of Brilliant Light, Instance Dungeon, and Encore Missions Difficulty Adjustment [Completed]",
+   "date": "2024-08-01",
+   "vu_le": "2026-11-16"
+  },
+  "44939": {
+   "id": "44939",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/44939",
+   "titre": "Advancement Effects for Certain Hunters Related Notice",
+   "date": "2024-08-05",
+   "vu_le": "2026-11-16"
+  },
+  "45141": {
+   "id": "45141",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/45141",
+   "titre": "8/5 (Mon) Data Patch Notice [Resolved Hunter Advancement Effect Issue and Compensation] [Completed]",
+   "date": "2024-08-05",
+   "vu_le": "2026-11-16"
+  },
+  "47432": {
+   "id": "47432",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/47432",
+   "titre": "8/6 (Tue) Data Patch & 8/7 (Wed) Scheduled Updates Notice [Completed]",
+   "date": "2024-08-06",
+   "vu_le": "2026-11-16"
+  },
+  "47563": {
+   "id": "47563",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/47563",
+   "titre": "Incorrect Distribution of Compensation for Certain Hunters’ Advancement Effect Issue [Resolved]",
+   "date": "2024-08-06",
+   "vu_le": "2026-11-16"
+  },
+  "48572": {
+   "id": "48572",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/48572",
+   "titre": "Mission! Workshop of Brilliant Light Vulcan (Hard Mode) Event Completion and Reward Distribution",
+   "date": "2024-08-07",
+   "vu_le": "2026-11-16"
+  },
+  "48574": {
+   "id": "48574",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/48574",
+   "titre": "8/8 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-08-07",
+   "vu_le": "2026-11-16"
+  },
+  "50538": {
+   "id": "50538",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/50538",
+   "titre": "8/13 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-08-13",
+   "vu_le": "2026-11-16"
+  },
+  "50680": {
+   "id": "50680",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/50680",
+   "titre": "8/14 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-08-14",
+   "vu_le": "2026-11-16"
+  },
+  "50728": {
+   "id": "50728",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/50728",
+   "titre": "Early Access Servers - Pre-Announcement on Server Merge [Updated 8/19 (Mon) 10:19 (UTC+0)]",
+   "date": "2024-08-14",
+   "vu_le": "2026-11-16"
+  },
+  "51371": {
+   "id": "51371",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/51371",
+   "titre": "8/19 (Mon) Netmarble Launcher (PC) Update Notice",
+   "date": "2024-08-19",
+   "vu_le": "2026-11-16"
+  },
+  "51377": {
+   "id": "51377",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/51377",
+   "titre": "8/19 (Mon) Data Patch Notice [Completed]",
+   "date": "2024-08-19",
+   "vu_le": "2026-11-16"
+  },
+  "51527": {
+   "id": "51527",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/51527",
+   "titre": "8/22 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2024-08-20",
+   "vu_le": "2026-11-16"
+  },
+  "51675": {
+   "id": "51675",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/51675",
+   "titre": "8/13 (Tue) Developer Note Livestream Video Summary",
+   "date": "2024-08-21",
+   "vu_le": "2026-11-16"
+  },
+  "51798": {
+   "id": "51798",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/51798",
+   "titre": "8/22 (Thu) Update Details [Updated 8/29 (Thu) 01:28 (UTC+0)]",
+   "date": "2024-08-22",
+   "vu_le": "2026-11-16"
+  },
+  "51707": {
+   "id": "51707",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+   "titre": "8/22 (Thu) In-Game Balance Adjustment Notice",
+   "date": "2024-08-22",
+   "vu_le": "2026-11-16"
+  },
+  "51848": {
+   "id": "51848",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/51848",
+   "titre": "Web Shop Delay Opening Notice [Completed]",
+   "date": "2024-08-22",
+   "vu_le": "2026-11-16"
+  },
+  "51907": {
+   "id": "51907",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/51907",
+   "titre": "8/22 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-08-22",
+   "vu_le": "2026-11-16"
+  },
+  "51999": {
+   "id": "51999",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/51999",
+   "titre": "Unusable Pre-Claimed Guild Name Issue Notice",
+   "date": "2024-08-22",
+   "vu_le": "2026-11-16"
+  },
+  "52174": {
+   "id": "52174",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/52174",
+   "titre": "8/22 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-08-22",
+   "vu_le": "2026-11-16"
+  },
+  "52540": {
+   "id": "52540",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/52540",
+   "titre": "8/23 (Fri) Data Patch Notice",
+   "date": "2024-08-23",
+   "vu_le": "2026-11-16"
+  },
+  "52769": {
+   "id": "52769",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/52769",
+   "titre": "8/22 Update Issues Follow-up Measures",
+   "date": "2024-08-23",
+   "vu_le": "2026-11-16"
+  },
+  "53738": {
+   "id": "53738",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/53738",
+   "titre": "9/1 Netmarble’s Revision Privacy Policy",
+   "date": "2024-08-26",
+   "vu_le": "2026-11-16"
+  },
+  "53749": {
+   "id": "53749",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/53749",
+   "titre": "8/26 (Mon) Data Patch Notice",
+   "date": "2024-08-26",
+   "vu_le": "2026-11-16"
+  },
+  "54046": {
+   "id": "54046",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/54046",
+   "titre": "8/27 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-08-27",
+   "vu_le": "2026-11-16"
+  },
+  "54114": {
+   "id": "54114",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/54114",
+   "titre": "Partner Creator Plus X MARBLEX Affiliation Notice",
+   "date": "2024-08-27",
+   "vu_le": "2026-11-16"
+  },
+  "54122": {
+   "id": "54122",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/54122",
+   "titre": "8/27 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-08-27",
+   "vu_le": "2026-11-16"
+  },
+  "54350": {
+   "id": "54350",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/54350",
+   "titre": "8/28 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-08-28",
+   "vu_le": "2026-11-16"
+  },
+  "54558": {
+   "id": "54558",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/54558",
+   "titre": "Developer Note: The Emergence of Monarch of White Flames [Updated 8/30 (Fri) 10:51 (UTC+0)]",
+   "date": "2024-08-29",
+   "vu_le": "2026-11-16"
+  },
+  "55313": {
+   "id": "55313",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/55313",
+   "titre": "9/2 (Mon) Data Patch Notice [Completed]",
+   "date": "2024-09-02",
+   "vu_le": "2026-11-16"
+  },
+  "55594": {
+   "id": "55594",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/55594",
+   "titre": "9/4 (Wed) AOS Payment Issue Notice [Resolved 9/4 13:13(Wed) (UTC+0)]",
+   "date": "2024-09-04",
+   "vu_le": "2026-11-16"
+  },
+  "55786": {
+   "id": "55786",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/55786",
+   "titre": "9/6 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-09-06",
+   "vu_le": "2026-11-16"
+  },
+  "55787": {
+   "id": "55787",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/55787",
+   "titre": "Price Adjustment In Certain Countries Notice",
+   "date": "2024-09-06",
+   "vu_le": "2026-11-16"
+  },
+  "56294": {
+   "id": "56294",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/56294",
+   "titre": "9/12 (Thu) In-Game Balance Adjustment",
+   "date": "2024-09-10",
+   "vu_le": "2026-11-16"
+  },
+  "56500": {
+   "id": "56500",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/56500",
+   "titre": "Developer Note: Regarding the Upcoming Update and Recent Feedback",
+   "date": "2024-09-11",
+   "vu_le": "2026-11-16"
+  },
+  "56501": {
+   "id": "56501",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/56501",
+   "titre": "9/9 (Mon) Developer Note Livestream Video Summary",
+   "date": "2024-09-11",
+   "vu_le": "2026-11-16"
+  },
+  "56477": {
+   "id": "56477",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/56477",
+   "titre": "9/12 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2024-09-11",
+   "vu_le": "2026-11-16"
+  },
+  "56610": {
+   "id": "56610",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/56610",
+   "titre": "9/12 (Thu) Update Details [Updated 9/20 (Fri) 10:00 (UTC+0)]",
+   "date": "2024-09-12",
+   "vu_le": "2026-11-16"
+  },
+  "56955": {
+   "id": "56955",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/56955",
+   "titre": "Issues After the 9/12 (Thu) Update",
+   "date": "2024-09-12",
+   "vu_le": "2026-11-16"
+  },
+  "57043": {
+   "id": "57043",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/57043",
+   "titre": "9/12 (Thu) Data Patch Notice",
+   "date": "2024-09-12",
+   "vu_le": "2026-11-16"
+  },
+  "57126": {
+   "id": "57126",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/57126",
+   "titre": "9/12 (Thu) Data Patch Notice",
+   "date": "2024-09-12",
+   "vu_le": "2026-11-16"
+  },
+  "57449": {
+   "id": "57449",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/57449",
+   "titre": "Encore Missions & Instance Dungeon Rotation Notice [Updated 4/3 (Thu) 01:01 (UTC+0)]",
+   "date": "2024-09-13",
+   "vu_le": "2026-11-16"
+  },
+  "57510": {
+   "id": "57510",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/57510",
+   "titre": "9/13 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-09-13",
+   "vu_le": "2026-11-16"
+  },
+  "60969": {
+   "id": "60969",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/60969",
+   "titre": "9/19 (Thu) Server Patch Notice [Completed]",
+   "date": "2024-09-19",
+   "vu_le": "2026-11-16"
+  },
+  "61123": {
+   "id": "61123",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/61123",
+   "titre": "9/20 (Fri) Compensations Regarding Artifact Crafting Notice",
+   "date": "2024-09-20",
+   "vu_le": "2026-11-16"
+  },
+  "61609": {
+   "id": "61609",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/61609",
+   "titre": "9/24 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-09-24",
+   "vu_le": "2026-11-16"
+  },
+  "61688": {
+   "id": "61688",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/61688",
+   "titre": "9/25 (Wed) Recommended Update Notice",
+   "date": "2024-09-25",
+   "vu_le": "2026-11-16"
+  },
+  "61711": {
+   "id": "61711",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/61711",
+   "titre": "9/25 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-09-25",
+   "vu_le": "2026-11-16"
+  },
+  "62282": {
+   "id": "62282",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/62282",
+   "titre": "Developer Note: Upcoming Changes [Updated 10/4 (Fri) 06:00 (UTC+0)]",
+   "date": "2024-10-02",
+   "vu_le": "2026-11-16"
+  },
+  "62680": {
+   "id": "62680",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/62680",
+   "titre": "10/10 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2024-10-08",
+   "vu_le": "2026-11-16"
+  },
+  "62692": {
+   "id": "62692",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/62692",
+   "titre": "10/10 (Thu) Update Details [Updated 10/10 (Thu) 10:00 (UTC+0)]",
+   "date": "2024-10-10",
+   "vu_le": "2026-11-16"
+  },
+  "62691": {
+   "id": "62691",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/62691",
+   "titre": "10/10 (Thu) In-Game Balance Adjustment Notice",
+   "date": "2024-10-10",
+   "vu_le": "2026-11-16"
+  },
+  "62848": {
+   "id": "62848",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/62848",
+   "titre": "10/10 (Thu) Data Patch Notice [Purchase Counts Applied 10/10 (Thu) 07:30 (UTC+0)]",
+   "date": "2024-10-10",
+   "vu_le": "2026-11-16"
+  },
+  "62865": {
+   "id": "62865",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/62865",
+   "titre": "10/10 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-10-10",
+   "vu_le": "2026-11-16"
+  },
+  "62898": {
+   "id": "62898",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/62898",
+   "titre": "10/10 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-10-10",
+   "vu_le": "2026-11-16"
+  },
+  "63016": {
+   "id": "63016",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/63016",
+   "titre": "10/11 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-10-11",
+   "vu_le": "2026-11-16"
+  },
+  "63317": {
+   "id": "63317",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/63317",
+   "titre": "10/16 (Wed) Redeem Code Service Maintenance Notice",
+   "date": "2024-10-15",
+   "vu_le": "2026-11-16"
+  },
+  "63785": {
+   "id": "63785",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/63785",
+   "titre": "10/16 (Wed) iOS Payment Issue Notice [Resolved 10/16 15:46(Wed) (UTC+0)]",
+   "date": "2024-10-16",
+   "vu_le": "2026-11-16"
+  },
+  "64324": {
+   "id": "64324",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/64324",
+   "titre": "10/21 (Mon) Server Patch Notice [Completed]",
+   "date": "2024-10-21",
+   "vu_le": "2026-11-16"
+  },
+  "64385": {
+   "id": "64385",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/64385",
+   "titre": "10/22 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-10-22",
+   "vu_le": "2026-11-16"
+  },
+  "64900": {
+   "id": "64900",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/64900",
+   "titre": "10/29 (Tue) Developer Note Livestream Video Summary",
+   "date": "2024-10-30",
+   "vu_le": "2026-11-16"
+  },
+  "64885": {
+   "id": "64885",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/64885",
+   "titre": "10/31 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2024-10-30",
+   "vu_le": "2026-11-16"
+  },
+  "64944": {
+   "id": "64944",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/64944",
+   "titre": "10/31 (Thu) Update Details [Updated 10/31 (Thu) 03:06 (UTC+0)]",
+   "date": "2024-10-31",
+   "vu_le": "2026-11-16"
+  },
+  "64912": {
+   "id": "64912",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/64912",
+   "titre": "10/31 (Thu) In-Game Balance Adjustment Notice",
+   "date": "2024-10-31",
+   "vu_le": "2026-11-16"
+  },
+  "65164": {
+   "id": "65164",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/65164",
+   "titre": "11/1 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-11-01",
+   "vu_le": "2026-11-16"
+  },
+  "65167": {
+   "id": "65167",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/65167",
+   "titre": "11/1 (Fri) Recommended Update Notice [Updated 11/4 (Mon) 02:00 (UTC+0)]",
+   "date": "2024-11-01",
+   "vu_le": "2026-11-16"
+  },
+  "65231": {
+   "id": "65231",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/65231",
+   "titre": "11/1 (Fri) Unable to Access the Game After the Recommended Update [Resolved 11/1(Fri) 06:25 (UTC+0)]",
+   "date": "2024-11-01",
+   "vu_le": "2026-11-16"
+  },
+  "65246": {
+   "id": "65246",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/65246",
+   "titre": "11/1 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-11-01",
+   "vu_le": "2026-11-16"
+  },
+  "65551": {
+   "id": "65551",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/65551",
+   "titre": "Mission! Workshop of Brilliant Light Baran (Hard Mode) Event Completion and Reward Distribution",
+   "date": "2024-11-04",
+   "vu_le": "2026-11-16"
+  },
+  "65554": {
+   "id": "65554",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/65554",
+   "titre": "11/4 (Mon) Data Patch Notice [Completed]",
+   "date": "2024-11-04",
+   "vu_le": "2026-11-16"
+  },
+  "65643": {
+   "id": "65643",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/65643",
+   "titre": "11/6 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-11-05",
+   "vu_le": "2026-11-16"
+  },
+  "65734": {
+   "id": "65734",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/65734",
+   "titre": "11/6 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-11-06",
+   "vu_le": "2026-11-16"
+  },
+  "66062": {
+   "id": "66062",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66062",
+   "titre": "11/12 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-11-12",
+   "vu_le": "2026-11-16"
+  },
+  "66114": {
+   "id": "66114",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66114",
+   "titre": "2024 Korea Game Awards Grand Prize Winner Announcement [Updated 11/20 (Wed) 09:43 (UTC+0)]",
+   "date": "2024-11-13",
+   "vu_le": "2026-11-16"
+  },
+  "66168": {
+   "id": "66168",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66168",
+   "titre": "<Jeju Island Raid> Recruiting Hunters! [Hidden Reward Revealed 12/17 (Tue) 08:44 (UTC+0)]",
+   "date": "2024-11-14",
+   "vu_le": "2026-11-16"
+  },
+  "66638": {
+   "id": "66638",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66638",
+   "titre": "11/18 (Mon) Payment Issue Notice [Resolved 11/18 (Mon) 05:27 (UTC+0)]",
+   "date": "2024-11-18",
+   "vu_le": "2026-11-16"
+  },
+  "66725": {
+   "id": "66725",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66725",
+   "titre": "11/20 (Wed) Data Patch Notice [Completed]",
+   "date": "2024-11-20",
+   "vu_le": "2026-11-16"
+  },
+  "66743": {
+   "id": "66743",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66743",
+   "titre": "2024 Korea Game Awards Grand Prize Winner Celebration Special Gift Distribution Notice [Updated]",
+   "date": "2024-11-20",
+   "vu_le": "2026-11-16"
+  },
+  "66816": {
+   "id": "66816",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66816",
+   "titre": "11/21 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-11-21",
+   "vu_le": "2026-11-16"
+  },
+  "66823": {
+   "id": "66823",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/66823",
+   "titre": "11/20 (Wed) Developer Livestream Video Summary [Updated 11/25 (Mon) 05:31 (UTC+0)]",
+   "date": "2024-11-22",
+   "vu_le": "2026-11-16"
+  },
+  "66880": {
+   "id": "66880",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66880",
+   "titre": "Guild Contribution Improvement Related Announcement",
+   "date": "2024-11-22",
+   "vu_le": "2026-11-16"
+  },
+  "66893": {
+   "id": "66893",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66893",
+   "titre": "Mission! Workshop of Brilliant Light Baran (Hard Mode) Event Current Status",
+   "date": "2024-11-22",
+   "vu_le": "2026-11-16"
+  },
+  "66882": {
+   "id": "66882",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/66882",
+   "titre": "Mission! Workshop of Brilliant Light Baran (Hard Mode) Event Completion and Reward Distribution",
+   "date": "2024-11-25",
+   "vu_le": "2026-11-16"
+  },
+  "67060": {
+   "id": "67060",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/67060",
+   "titre": "Artifact Crafting Related Compensation Distribution Notice",
+   "date": "2024-11-25",
+   "vu_le": "2026-11-16"
+  },
+  "67169": {
+   "id": "67169",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/67169",
+   "titre": "11/28 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2024-11-27",
+   "vu_le": "2026-11-16"
+  },
+  "67278": {
+   "id": "67278",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/67278",
+   "titre": "11/28 (Thu) Update Details [Updated 12/10 (Tue) 01:09 (UTC+0)]",
+   "date": "2024-11-28",
+   "vu_le": "2026-11-16"
+  },
+  "67238": {
+   "id": "67238",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/67238",
+   "titre": "11/28 (Thu) In-Game Balance Adjustment Notice",
+   "date": "2024-11-28",
+   "vu_le": "2026-11-16"
+  },
+  "67328": {
+   "id": "67328",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/67328",
+   "titre": "11/28 (Thu) Server Patch Notice [Completed]",
+   "date": "2024-11-28",
+   "vu_le": "2026-11-16"
+  },
+  "67371": {
+   "id": "67371",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/67371",
+   "titre": "11/28 (Thu) Server Patch Notice [Completed]",
+   "date": "2024-11-28",
+   "vu_le": "2026-11-16"
+  },
+  "67516": {
+   "id": "67516",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/67516",
+   "titre": "11/29 (Fri) Server Patch Notice [Completed]",
+   "date": "2024-11-29",
+   "vu_le": "2026-11-16"
+  },
+  "67806": {
+   "id": "67806",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/67806",
+   "titre": "12/2 (Mon) Data Patch Notice [Completed]",
+   "date": "2024-12-02",
+   "vu_le": "2026-11-16"
+  },
+  "67890": {
+   "id": "67890",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/67890",
+   "titre": "12/3 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-12-03",
+   "vu_le": "2026-11-16"
+  },
+  "68018": {
+   "id": "68018",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/68018",
+   "titre": "Unable Access to the Battlefield of Time Content [Fixed]",
+   "date": "2024-12-05",
+   "vu_le": "2026-11-16"
+  },
+  "68125": {
+   "id": "68125",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/68125",
+   "titre": "12/6 (Fri) Server Patch Notice [Completed]",
+   "date": "2024-12-06",
+   "vu_le": "2026-11-16"
+  },
+  "68509": {
+   "id": "68509",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/68509",
+   "titre": "12/11 (Wed) Server Patch Notice [Distribution Completed]",
+   "date": "2024-12-11",
+   "vu_le": "2026-11-16"
+  },
+  "68520": {
+   "id": "68520",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/68520",
+   "titre": "Faction of the Shield Related Announcement",
+   "date": "2024-12-11",
+   "vu_le": "2026-11-16"
+  },
+  "68847": {
+   "id": "68847",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/68847",
+   "titre": "12/17 (Tue) Netmarble Launcher Required Update Announcement",
+   "date": "2024-12-17",
+   "vu_le": "2026-11-16"
+  },
+  "69015": {
+   "id": "69015",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/69015",
+   "titre": "12/19 (Thu) Regular Maintenance Notice [Updated 1/8 (Wed) 05:08 (UTC+0)]",
+   "date": "2024-12-18",
+   "vu_le": "2026-11-16"
+  },
+  "69022": {
+   "id": "69022",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/69022",
+   "titre": "12/19 (Thu) Update Details [Updated 1/8 (Wed) 05:12 (UTC+0)]",
+   "date": "2024-12-19",
+   "vu_le": "2026-11-16"
+  },
+  "69128": {
+   "id": "69128",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/69128",
+   "titre": "Actions Taken to Resolve Incorrect Simulation Gate & Challenges Rewards",
+   "date": "2024-12-19",
+   "vu_le": "2026-11-16"
+  },
+  "69160": {
+   "id": "69160",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/69160",
+   "titre": "12/19 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-12-19",
+   "vu_le": "2026-11-16"
+  },
+  "69193": {
+   "id": "69193",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/69193",
+   "titre": "12/19 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-12-19",
+   "vu_le": "2026-11-16"
+  },
+  "69350": {
+   "id": "69350",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/69350",
+   "titre": "12/18 (Wed) Developer Livestream Video Summary",
+   "date": "2024-12-20",
+   "vu_le": "2026-11-16"
+  },
+  "69334": {
+   "id": "69334",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/69334",
+   "titre": "12/20 (Fri) Data Patch Notice",
+   "date": "2024-12-20",
+   "vu_le": "2026-11-16"
+  },
+  "69371": {
+   "id": "69371",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/69371",
+   "titre": "[Resolved] Unable Access to the Game in Mobile Devices Notice [Updated 12/20 (Fri) 08:33 (UTC+0)]",
+   "date": "2024-12-20",
+   "vu_le": "2026-11-16"
+  },
+  "69717": {
+   "id": "69717",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/69717",
+   "titre": "12/23 (Mon) Data Patch Notice [Completed]",
+   "date": "2024-12-23",
+   "vu_le": "2026-11-16"
+  },
+  "69938": {
+   "id": "69938",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/69938",
+   "titre": "12/26 (Thu) Data Patch Notice [Completed]",
+   "date": "2024-12-26",
+   "vu_le": "2026-11-16"
+  },
+  "70014": {
+   "id": "70014",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/70014",
+   "titre": "12/27 (Fri) Data Patch Notice [Completed]",
+   "date": "2024-12-27",
+   "vu_le": "2026-11-16"
+  },
+  "70174": {
+   "id": "70174",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/70174",
+   "titre": "12/31 (Tue) Data Patch Notice [Completed] [Compensation Reward Revealed 1/2 (Thu) 08:07 (UTC+0)]",
+   "date": "2024-12-31",
+   "vu_le": "2026-11-16"
+  },
+  "70262": {
+   "id": "70262",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/70262",
+   "titre": "12/31 (Tue) Data Patch Notice [Completed]",
+   "date": "2024-12-31",
+   "vu_le": "2026-11-16"
+  },
+  "70702": {
+   "id": "70702",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/70702",
+   "titre": "Solo Leveling:ARISE CHAMPIONSHIP 2025 Pre-Announcement",
+   "date": "2025-01-07",
+   "vu_le": "2026-11-16"
+  },
+  "70852": {
+   "id": "70852",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/70852",
+   "titre": "Developer Note: Train to Become a Formidable Combatant",
+   "date": "2025-01-10",
+   "vu_le": "2026-11-16"
+  },
+  "71049": {
+   "id": "71049",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/71049",
+   "titre": "1/16 (Thu) Regular Maintenance & Netmarble Service Regular Maintenance Notice",
+   "date": "2025-01-14",
+   "vu_le": "2026-11-16"
+  },
+  "71119": {
+   "id": "71119",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/71119",
+   "titre": "1/14 (Tue) Developer Livestream Video Summary",
+   "date": "2025-01-15",
+   "vu_le": "2026-11-16"
+  },
+  "71046": {
+   "id": "71046",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/71046",
+   "titre": "Solo Leveling:ARISE X PelicanaUSA Partnership Announcement [Extended]",
+   "date": "2025-01-15",
+   "vu_le": "2026-11-16"
+  },
+  "71145": {
+   "id": "71145",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/71145",
+   "titre": "1/16 (Thu) Update Details",
+   "date": "2025-01-16",
+   "vu_le": "2026-11-16"
+  },
+  "71346": {
+   "id": "71346",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/71346",
+   "titre": "1/16 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-01-16",
+   "vu_le": "2026-11-16"
+  },
+  "71726": {
+   "id": "71726",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/71726",
+   "titre": "1/17 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-01-17",
+   "vu_le": "2026-11-16"
+  },
+  "71784": {
+   "id": "71784",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/71784",
+   "titre": "1/17 (Fri) PC Version Data Patch Notice [Completed]",
+   "date": "2025-01-17",
+   "vu_le": "2026-11-16"
+  },
+  "72251": {
+   "id": "72251",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/72251",
+   "titre": "1/23 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-01-22",
+   "vu_le": "2026-11-16"
+  },
+  "72370": {
+   "id": "72370",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/72370",
+   "titre": "Developer Note: WANTED",
+   "date": "2025-01-23",
+   "vu_le": "2026-11-16"
+  },
+  "72351": {
+   "id": "72351",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/72351",
+   "titre": "1/24 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-01-24",
+   "vu_le": "2026-11-16"
+  },
+  "73154": {
+   "id": "73154",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/73154",
+   "titre": "[Korea] Solo Leveling:ARISE 2/11 (Tue) Developer Livestream Announcement",
+   "date": "2025-02-05",
+   "vu_le": "2026-11-16"
+  },
+  "73851": {
+   "id": "73851",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/73851",
+   "titre": "2/11 (Tue) Netmarble Launcher (PC) Update Notice",
+   "date": "2025-02-10",
+   "vu_le": "2026-11-16"
+  },
+  "73854": {
+   "id": "73854",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/73854",
+   "titre": "[Korea] Solo Leveling:ARISE 2/11 (Tue) Developer Livestream Announcement [Reminder]",
+   "date": "2025-02-10",
+   "vu_le": "2026-11-16"
+  },
+  "73867": {
+   "id": "73867",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/73867",
+   "titre": "Solo Leveling:ARISE Championship 2025 Details Notice [Updated 2/21 (Fri) 09:13 (UTC+0)]",
+   "date": "2025-02-11",
+   "vu_le": "2026-11-16"
+  },
+  "73951": {
+   "id": "73951",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/73951",
+   "titre": "2/13 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-02-11",
+   "vu_le": "2026-11-16"
+  },
+  "74139": {
+   "id": "74139",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/74139",
+   "titre": "2/11 (Tue) Developer Livestream Video Summary",
+   "date": "2025-02-12",
+   "vu_le": "2026-11-16"
+  },
+  "74118": {
+   "id": "74118",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/74118",
+   "titre": "2/13 (Thu) Update Details [Updated 2/21 (Fri) 02:10 (UTC+0)]",
+   "date": "2025-02-13",
+   "vu_le": "2026-11-16"
+  },
+  "74348": {
+   "id": "74348",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/74348",
+   "titre": "Intermittent Unavailable Progression in Certain Content After the Update [Completed]",
+   "date": "2025-02-13",
+   "vu_le": "2026-11-16"
+  },
+  "74586": {
+   "id": "74586",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/74586",
+   "titre": "2/13 (Thu) Recommended Update Notice",
+   "date": "2025-02-13",
+   "vu_le": "2026-11-16"
+  },
+  "74725": {
+   "id": "74725",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/74725",
+   "titre": "Intermittently Unable to Progress Content After the Update Additional Announcement [Completed]",
+   "date": "2025-02-13",
+   "vu_le": "2026-11-16"
+  },
+  "75298": {
+   "id": "75298",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/75298",
+   "titre": "2/17 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-02-17",
+   "vu_le": "2026-11-16"
+  },
+  "75377": {
+   "id": "75377",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/75377",
+   "titre": "Mission! Workshop of Brilliant Light Deimos (Hard) WANTED 3,000 Clears & Rewards Notice",
+   "date": "2025-02-18",
+   "vu_le": "2026-11-16"
+  },
+  "75382": {
+   "id": "75382",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/75382",
+   "titre": "2/18 (Tue) Data Patch Notice [Completed]",
+   "date": "2025-02-18",
+   "vu_le": "2026-11-16"
+  },
+  "75599": {
+   "id": "75599",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/75599",
+   "titre": "2/20 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-02-20",
+   "vu_le": "2026-11-16"
+  },
+  "75914": {
+   "id": "75914",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/75914",
+   "titre": "Developer Note: ReAwakening",
+   "date": "2025-02-21",
+   "vu_le": "2026-11-16"
+  },
+  "75615": {
+   "id": "75615",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/75615",
+   "titre": "Solo Leveling:ARISE Championship 2025 Preliminaries Notice",
+   "date": "2025-02-21",
+   "vu_le": "2026-11-16"
+  },
+  "75953": {
+   "id": "75953",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/75953",
+   "titre": "Measures Regarding the Battlefield of Time Challenge Stage Unlock Issue [Completed]",
+   "date": "2025-02-21",
+   "vu_le": "2026-11-16"
+  },
+  "78098": {
+   "id": "78098",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/78098",
+   "titre": "2/25 (Tue) Data Patch Notice [Completed]",
+   "date": "2025-02-25",
+   "vu_le": "2026-11-16"
+  },
+  "79278": {
+   "id": "79278",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/79278",
+   "titre": "[Korea] Solo Leveling:ARISE 3/11 (Tue) Developer Livestream Announcement",
+   "date": "2025-03-06",
+   "vu_le": "2026-11-16"
+  },
+  "79371": {
+   "id": "79371",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/79371",
+   "titre": "3/7 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-03-07",
+   "vu_le": "2026-11-16"
+  },
+  "79372": {
+   "id": "79372",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/79372",
+   "titre": "Mission! Workshop of Brilliant Light Deimos (Hard Mode) 6,000 Clears and Reward Distribution",
+   "date": "2025-03-07",
+   "vu_le": "2026-11-16"
+  },
+  "79379": {
+   "id": "79379",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/79379",
+   "titre": "Solo Leveling:ARISE Championship 2025 Finals Participation Notice",
+   "date": "2025-03-10",
+   "vu_le": "2026-11-16"
+  },
+  "79709": {
+   "id": "79709",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/79709",
+   "titre": "[Korea] Solo Leveling:ARISE 3/11 (Tue) Developer Livestream Announcement",
+   "date": "2025-03-10",
+   "vu_le": "2026-11-16"
+  },
+  "79785": {
+   "id": "79785",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/79785",
+   "titre": "3/13 (Thu) In-Game Balance Adjustments Pre-Announcement",
+   "date": "2025-03-11",
+   "vu_le": "2026-11-16"
+  },
+  "79801": {
+   "id": "79801",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/79801",
+   "titre": "3/13 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-03-11",
+   "vu_le": "2026-11-16"
+  },
+  "79899": {
+   "id": "79899",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/79899",
+   "titre": "3/11 (Tue) Developer Livestream Video Summary",
+   "date": "2025-03-12",
+   "vu_le": "2026-11-16"
+  },
+  "79893": {
+   "id": "79893",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/79893",
+   "titre": "Solo Leveling:ARISE Championship 2025 Finalists Announcement [Updated 3/27 (Thu) 01:30 (UTC+0)]",
+   "date": "2025-03-12",
+   "vu_le": "2026-11-16"
+  },
+  "79953": {
+   "id": "79953",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/79953",
+   "titre": "3/13 (Thu) Update Details [Updated 3/27 (Thu) 04:48 (UTC+0)]",
+   "date": "2025-03-13",
+   "vu_le": "2026-11-16"
+  },
+  "79985": {
+   "id": "79985",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/79985",
+   "titre": "3/13 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-03-13",
+   "vu_le": "2026-11-16"
+  },
+  "80109": {
+   "id": "80109",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/80109",
+   "titre": "3/13 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-03-13",
+   "vu_le": "2026-11-16"
+  },
+  "80148": {
+   "id": "80148",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/80148",
+   "titre": "3/13 (Thu) Server Optimization Notice [Completed]",
+   "date": "2025-03-13",
+   "vu_le": "2026-11-16"
+  },
+  "80142": {
+   "id": "80142",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/80142",
+   "titre": "3/14 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-03-14",
+   "vu_le": "2026-11-16"
+  },
+  "80650": {
+   "id": "80650",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/80650",
+   "titre": "3/17 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-03-17",
+   "vu_le": "2026-11-16"
+  },
+  "80665": {
+   "id": "80665",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/80665",
+   "titre": "3/18 (Tue) Netmarble Launcher Update Notice",
+   "date": "2025-03-17",
+   "vu_le": "2026-11-16"
+  },
+  "80752": {
+   "id": "80752",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/80752",
+   "titre": "Solo Leveling:ARISE Championship 2025 Finals Group Announcement [Updated 3/27 (Thu) 01:30 (UTC+0)]",
+   "date": "2025-03-18",
+   "vu_le": "2026-11-16"
+  },
+  "80765": {
+   "id": "80765",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/80765",
+   "titre": "3/18 (Tue) Data Patch Notice [Completed]",
+   "date": "2025-03-18",
+   "vu_le": "2026-11-16"
+  },
+  "80869": {
+   "id": "80869",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/80869",
+   "titre": "Notice of Issues occurred after the Data Patch on March 18th.",
+   "date": "2025-03-18",
+   "vu_le": "2026-11-16"
+  },
+  "80815": {
+   "id": "80815",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/80815",
+   "titre": "3/19 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-03-19",
+   "vu_le": "2026-11-16"
+  },
+  "81007": {
+   "id": "81007",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/81007",
+   "titre": "3/27 (Thu) Terms of Service Adjustment Notice",
+   "date": "2025-03-19",
+   "vu_le": "2026-11-16"
+  },
+  "81029": {
+   "id": "81029",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/81029",
+   "titre": "3/19 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-03-19",
+   "vu_le": "2026-11-16"
+  },
+  "81111": {
+   "id": "81111",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/81111",
+   "titre": "3/20 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-03-20",
+   "vu_le": "2026-11-16"
+  },
+  "81224": {
+   "id": "81224",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/81224",
+   "titre": "3/21 (Fri) Server Patch Notice [Completed]",
+   "date": "2025-03-21",
+   "vu_le": "2026-11-16"
+  },
+  "81615": {
+   "id": "81615",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/81615",
+   "titre": "Solo Leveling:ARISE Championship 2025 Finals Teaser Video Announcement",
+   "date": "2025-03-25",
+   "vu_le": "2026-11-16"
+  },
+  "81909": {
+   "id": "81909",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/81909",
+   "titre": "Developer Note: Dimensional Advancement",
+   "date": "2025-03-28",
+   "vu_le": "2026-11-16"
+  },
+  "81916": {
+   "id": "81916",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/81916",
+   "titre": "3/28 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-03-28",
+   "vu_le": "2026-11-16"
+  },
+  "81933": {
+   "id": "81933",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/81933",
+   "titre": "Measures Taken According to the Community Operation Policy",
+   "date": "2025-03-28",
+   "vu_le": "2026-11-16"
+  },
+  "82149": {
+   "id": "82149",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/82149",
+   "titre": "Unstable Network Connection Error In Some Countries",
+   "date": "2025-03-30",
+   "vu_le": "2026-11-16"
+  },
+  "82227": {
+   "id": "82227",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/82227",
+   "titre": "3/31 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-03-31",
+   "vu_le": "2026-11-16"
+  },
+  "82540": {
+   "id": "82540",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/82540",
+   "titre": "Solo Leveling:ARISE Championship 2025 Finals Viewing & Online Broadcast Notice",
+   "date": "2025-04-04",
+   "vu_le": "2026-11-16"
+  },
+  "83187": {
+   "id": "83187",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/83187",
+   "titre": "4/10 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-04-08",
+   "vu_le": "2026-11-16"
+  },
+  "83325": {
+   "id": "83325",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/83325",
+   "titre": "4/10 (Thu) Update Details [Updated 4/10 (Thu) 06:04 (UTC+0)]",
+   "date": "2025-04-10",
+   "vu_le": "2026-11-16"
+  },
+  "83354": {
+   "id": "83354",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/83354",
+   "titre": "4/10 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-04-10",
+   "vu_le": "2026-11-16"
+  },
+  "83357": {
+   "id": "83357",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/83357",
+   "titre": "4/10 (Thu) Server Patch Notice [Completed]",
+   "date": "2025-04-10",
+   "vu_le": "2026-11-16"
+  },
+  "83388": {
+   "id": "83388",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/83388",
+   "titre": "4/10 (Thu) Server Patch Notice [Completed]",
+   "date": "2025-04-10",
+   "vu_le": "2026-11-16"
+  },
+  "83406": {
+   "id": "83406",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/83406",
+   "titre": "4/10 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-04-10",
+   "vu_le": "2026-11-16"
+  },
+  "83518": {
+   "id": "83518",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/83518",
+   "titre": "Solo Leveling:ARISE Championship 2025 Online Live Broadcast Announcement",
+   "date": "2025-04-12",
+   "vu_le": "2026-11-16"
+  },
+  "83519": {
+   "id": "83519",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/83519",
+   "titre": "Solo Leveling:ARISE Championship 2025 Finals Result Announcement",
+   "date": "2025-04-12",
+   "vu_le": "2026-11-16"
+  },
+  "83606": {
+   "id": "83606",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/83606",
+   "titre": "4/12 (Sat) Server Patch Notice [Completed]",
+   "date": "2025-04-12",
+   "vu_le": "2026-11-16"
+  },
+  "83607": {
+   "id": "83607",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/83607",
+   "titre": "4/12 (Sat) Recommended Build Update Notice",
+   "date": "2025-04-12",
+   "vu_le": "2026-11-16"
+  },
+  "85144": {
+   "id": "85144",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/85144",
+   "titre": "4/15 (Tue) Data Patch Notice [Completed]",
+   "date": "2025-04-15",
+   "vu_le": "2026-11-16"
+  },
+  "85252": {
+   "id": "85252",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/85252",
+   "titre": "4/16 (Wed) Data Patch Notice [Updated 4/17 (Thu) 02:52 (UTC+0)]",
+   "date": "2025-04-16",
+   "vu_le": "2026-11-16"
+  },
+  "85325": {
+   "id": "85325",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/85325",
+   "titre": "4/18 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-04-18",
+   "vu_le": "2026-11-16"
+  },
+  "85682": {
+   "id": "85682",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/85682",
+   "titre": "4/22 (Tue) Data Patch Notice [Completed]",
+   "date": "2025-04-22",
+   "vu_le": "2026-11-16"
+  },
+  "85772": {
+   "id": "85772",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/85772",
+   "titre": "4/23 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-04-23",
+   "vu_le": "2026-11-16"
+  },
+  "85874": {
+   "id": "85874",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/85874",
+   "titre": "Developer Note: [D-14] 1st Anniversary",
+   "date": "2025-04-24",
+   "vu_le": "2026-11-16"
+  },
+  "85887": {
+   "id": "85887",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/85887",
+   "titre": "4/24 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-04-24",
+   "vu_le": "2026-11-16"
+  },
+  "86157": {
+   "id": "86157",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/86157",
+   "titre": "4/28 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-04-28",
+   "vu_le": "2026-11-16"
+  },
+  "86430": {
+   "id": "86430",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/86430",
+   "titre": "[Korea] Solo Leveling:ARISE 5/7 (Wed) Developer Livestream Announcement",
+   "date": "2025-05-02",
+   "vu_le": "2026-11-16"
+  },
+  "86438": {
+   "id": "86438",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/86438",
+   "titre": "Rendez-vous le 07/05 (mer) pour le live des développeurs !",
+   "date": "2025-05-02",
+   "vu_le": "2026-11-16"
+  },
+  "86454": {
+   "id": "86454",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/86454",
+   "titre": "5/8 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-05-06",
+   "vu_le": "2026-11-16"
+  },
+  "86833": {
+   "id": "86833",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/86833",
+   "titre": "5/8 (Thu) Update Details [Updated 5/19 (Mon) 02:50 (UTC+0)]",
+   "date": "2025-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "86985": {
+   "id": "86985",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/86985",
+   "titre": "5/8 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "87008": {
+   "id": "87008",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/87008",
+   "titre": "5/8 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "87165": {
+   "id": "87165",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/87165",
+   "titre": "5/7 (Wed) Developer Livestream Video Summary",
+   "date": "2025-05-09",
+   "vu_le": "2026-11-16"
+  },
+  "87149": {
+   "id": "87149",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/87149",
+   "titre": "5/9 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-05-09",
+   "vu_le": "2026-11-16"
+  },
+  "87699": {
+   "id": "87699",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/87699",
+   "titre": "5/13 (Tue) Server Stability Issue Notice [Resolved]",
+   "date": "2025-05-13",
+   "vu_le": "2026-11-16"
+  },
+  "87716": {
+   "id": "87716",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/87716",
+   "titre": "5/13 (Tue) Data Patch Notice [Completed]",
+   "date": "2025-05-13",
+   "vu_le": "2026-11-16"
+  },
+  "87839": {
+   "id": "87839",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/87839",
+   "titre": "5/15 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-05-15",
+   "vu_le": "2026-11-16"
+  },
+  "87846": {
+   "id": "87846",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/87846",
+   "titre": "Netmarble Rewards Program Terms and Conditions Revision Announcement",
+   "date": "2025-05-15",
+   "vu_le": "2026-11-16"
+  },
+  "87945": {
+   "id": "87945",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/87945",
+   "titre": "5/16 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-05-16",
+   "vu_le": "2026-11-16"
+  },
+  "88307": {
+   "id": "88307",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/88307",
+   "titre": "5/21 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-05-21",
+   "vu_le": "2026-11-16"
+  },
+  "88317": {
+   "id": "88317",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/88317",
+   "titre": "5/21 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-05-21",
+   "vu_le": "2026-11-16"
+  },
+  "88371": {
+   "id": "88371",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/88371",
+   "titre": "5/23 (Fri) Server Stability Issue Notice [Resolved]",
+   "date": "2025-05-23",
+   "vu_le": "2026-11-16"
+  },
+  "88466": {
+   "id": "88466",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/88466",
+   "titre": "PC & Web Shop New Payment Confirmation Feature Notice",
+   "date": "2025-05-23",
+   "vu_le": "2026-11-16"
+  },
+  "88476": {
+   "id": "88476",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/88476",
+   "titre": "5/23 (Fri) AOS/PC Recommended Build Update Notice",
+   "date": "2025-05-23",
+   "vu_le": "2026-11-16"
+  },
+  "88772": {
+   "id": "88772",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/88772",
+   "titre": "5/28 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-05-28",
+   "vu_le": "2026-11-16"
+  },
+  "88833": {
+   "id": "88833",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/88833",
+   "titre": "Developer Note: New Power and the Upcoming Summer!",
+   "date": "2025-05-29",
+   "vu_le": "2026-11-16"
+  },
+  "89127": {
+   "id": "89127",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89127",
+   "titre": "6/5 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-06-03",
+   "vu_le": "2026-11-16"
+  },
+  "89285": {
+   "id": "89285",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/89285",
+   "titre": "6/5 (Thu) Update Details [Updated 6/5 (Thu) 07:20 (UTC+0)]",
+   "date": "2025-06-05",
+   "vu_le": "2026-11-16"
+  },
+  "89282": {
+   "id": "89282",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+   "titre": "6/5 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2025-06-05",
+   "vu_le": "2026-11-16"
+  },
+  "89329": {
+   "id": "89329",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89329",
+   "titre": "6/5 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-06-05",
+   "vu_le": "2026-11-16"
+  },
+  "89414": {
+   "id": "89414",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89414",
+   "titre": "6/5 (Thu) Server Patch Notice [Completed]",
+   "date": "2025-06-05",
+   "vu_le": "2026-11-16"
+  },
+  "89517": {
+   "id": "89517",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89517",
+   "titre": "6/7 (Sat) Server Patch Notice [Updated 6/7 (Sat) 05:30 (UTC+0)]",
+   "date": "2025-06-07",
+   "vu_le": "2026-11-16"
+  },
+  "89647": {
+   "id": "89647",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89647",
+   "titre": "6/9 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-06-09",
+   "vu_le": "2026-11-16"
+  },
+  "89650": {
+   "id": "89650",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89650",
+   "titre": "6/9 (Mon) Data Patch Notice",
+   "date": "2025-06-09",
+   "vu_le": "2026-11-16"
+  },
+  "89652": {
+   "id": "89652",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89652",
+   "titre": "Workshop of Brilliant Light Yogumunt (Hard) WANTED 3,000 Clears & Rewards Notice",
+   "date": "2025-06-09",
+   "vu_le": "2026-11-16"
+  },
+  "89666": {
+   "id": "89666",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89666",
+   "titre": "6/9 (Mon) Recommended Build Update Notice [Updated 6/10 (Tu) 01:30 (UTC+0)]",
+   "date": "2025-06-09",
+   "vu_le": "2026-11-16"
+  },
+  "89728": {
+   "id": "89728",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89728",
+   "titre": "6/11 (Wed) Data Patch Notice [Updated 6/12 (Thu) 01:33 (UTC+0)]",
+   "date": "2025-06-11",
+   "vu_le": "2026-11-16"
+  },
+  "89821": {
+   "id": "89821",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89821",
+   "titre": "Solo Leveling:ARISE Epic Games Store Release & Celebration Event Packages [Updated 6/11 (Wed)]",
+   "date": "2025-06-11",
+   "vu_le": "2026-11-16"
+  },
+  "89850": {
+   "id": "89850",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/89850",
+   "titre": "6/11 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-06-11",
+   "vu_le": "2026-11-16"
+  },
+  "89965": {
+   "id": "89965",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/89965",
+   "titre": "Developer Note: What Solo Leveling:ARISE Means to Us",
+   "date": "2025-06-12",
+   "vu_le": "2026-11-16"
+  },
+  "90020": {
+   "id": "90020",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/90020",
+   "titre": "6/13 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-06-13",
+   "vu_le": "2026-11-16"
+  },
+  "90205": {
+   "id": "90205",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/90205",
+   "titre": "6/25 (Wed) Terms of Service Adjustment Notice",
+   "date": "2025-06-16",
+   "vu_le": "2026-11-16"
+  },
+  "90236": {
+   "id": "90236",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/90236",
+   "titre": "End of [WANTED] Workshop of Brilliant Light Yogumunt (Hard) Event & Data Patch Notice [Completed]",
+   "date": "2025-06-17",
+   "vu_le": "2026-11-16"
+  },
+  "90292": {
+   "id": "90292",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/90292",
+   "titre": "6/25 (Wed) Developer Livestream Announcement",
+   "date": "2025-06-18",
+   "vu_le": "2026-11-16"
+  },
+  "90821": {
+   "id": "90821",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/90821",
+   "titre": "6/24 (Tue) Data Patch Notice [Completed]",
+   "date": "2025-06-24",
+   "vu_le": "2026-11-16"
+  },
+  "90844": {
+   "id": "90844",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/90844",
+   "titre": "6/24 (Tue) Server Stability Issue Notice [Resolved]",
+   "date": "2025-06-24",
+   "vu_le": "2026-11-16"
+  },
+  "90832": {
+   "id": "90832",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/90832",
+   "titre": "[D-day] 6/25 (Wed) Developer Livestream Announcement",
+   "date": "2025-06-25",
+   "vu_le": "2026-11-16"
+  },
+  "90976": {
+   "id": "90976",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/90976",
+   "titre": "6/26 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-06-26",
+   "vu_le": "2026-11-16"
+  },
+  "91027": {
+   "id": "91027",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/91027",
+   "titre": "6/25 (Wed) Developer Livestream Summary",
+   "date": "2025-06-27",
+   "vu_le": "2026-11-16"
+  },
+  "91176": {
+   "id": "91176",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/91176",
+   "titre": "7/3 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-07-01",
+   "vu_le": "2026-11-16"
+  },
+  "91217": {
+   "id": "91217",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/91217",
+   "titre": "7/3 (Thu) Update Details",
+   "date": "2025-07-03",
+   "vu_le": "2026-11-16"
+  },
+  "91211": {
+   "id": "91211",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/91211",
+   "titre": "7/3 (Thu) In-Game Balance Adjustments Notice [Updated 7/3 (Thu) 02:53 (UTC+0)]",
+   "date": "2025-07-03",
+   "vu_le": "2026-11-16"
+  },
+  "91290": {
+   "id": "91290",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/91290",
+   "titre": "7/3 (Thu) Recommended Build Update Notice [Updated 7/4 (Fri) 01:29 (UTC+0)]",
+   "date": "2025-07-03",
+   "vu_le": "2026-11-16"
+  },
+  "91495": {
+   "id": "91495",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/91495",
+   "titre": "7/7 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-07-07",
+   "vu_le": "2026-11-16"
+  },
+  "91499": {
+   "id": "91499",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/91499",
+   "titre": "7/7 (Mon) Recommended Build Update Notice",
+   "date": "2025-07-07",
+   "vu_le": "2026-11-16"
+  },
+  "91617": {
+   "id": "91617",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/91617",
+   "titre": "Intermittent Login and Payment Issues on the PC Version Notice [Updated 7/17 (Thu) 01:43 (UTC+0)]",
+   "date": "2025-07-10",
+   "vu_le": "2026-11-16"
+  },
+  "92236": {
+   "id": "92236",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/92236",
+   "titre": "7/15 (Tue) Netmarble’s Revision Privacy Policy",
+   "date": "2025-07-14",
+   "vu_le": "2026-11-16"
+  },
+  "92383": {
+   "id": "92383",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/92383",
+   "titre": "Developer Note: The Architect’s Trial",
+   "date": "2025-07-16",
+   "vu_le": "2026-11-16"
+  },
+  "92378": {
+   "id": "92378",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/92378",
+   "titre": "7/16 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-07-16",
+   "vu_le": "2026-11-16"
+  },
+  "92670": {
+   "id": "92670",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/92670",
+   "titre": "7/30 (Wed) Developer Livestream Announcement [Updated 7/29 (Tue) 09:49 (UTC+0)]",
+   "date": "2025-07-23",
+   "vu_le": "2026-11-16"
+  },
+  "92836": {
+   "id": "92836",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/92836",
+   "titre": "PC Version Login and New Account Registration Unavailable Issue Notice [Resolved]",
+   "date": "2025-07-29",
+   "vu_le": "2026-11-16"
+  },
+  "92837": {
+   "id": "92837",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/92837",
+   "titre": "7/31 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-07-29",
+   "vu_le": "2026-11-16"
+  },
+  "92858": {
+   "id": "92858",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/92858",
+   "titre": "[D-day] 7/30 (Wed) Developer Livestream Announcement",
+   "date": "2025-07-30",
+   "vu_le": "2026-11-16"
+  },
+  "92917": {
+   "id": "92917",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/92917",
+   "titre": "7/31 (Thu) Update Details [Updated 7/31 (Thu) 04:44 (UTC+0)]",
+   "date": "2025-07-31",
+   "vu_le": "2026-11-16"
+  },
+  "92872": {
+   "id": "92872",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/92872",
+   "titre": "7/31 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2025-07-31",
+   "vu_le": "2026-11-16"
+  },
+  "92952": {
+   "id": "92952",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/92952",
+   "titre": "7/31 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-07-31",
+   "vu_le": "2026-11-16"
+  },
+  "93017": {
+   "id": "93017",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93017",
+   "titre": "8/1 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-08-01",
+   "vu_le": "2026-11-16"
+  },
+  "93204": {
+   "id": "93204",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/93204",
+   "titre": "7/30 (Wed) Developer Livestream Summary",
+   "date": "2025-08-04",
+   "vu_le": "2026-11-16"
+  },
+  "93256": {
+   "id": "93256",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93256",
+   "titre": "8/5 (Tue) Data Patch Notice [Completed]",
+   "date": "2025-08-05",
+   "vu_le": "2026-11-16"
+  },
+  "93286": {
+   "id": "93286",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93286",
+   "titre": "8/7 (Thu) Recommended Build Update Notice",
+   "date": "2025-08-06",
+   "vu_le": "2026-11-16"
+  },
+  "93352": {
+   "id": "93352",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93352",
+   "titre": "8/7 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-08-07",
+   "vu_le": "2026-11-16"
+  },
+  "93400": {
+   "id": "93400",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/93400",
+   "titre": "Developer Note: A Path Together",
+   "date": "2025-08-08",
+   "vu_le": "2026-11-16"
+  },
+  "93541": {
+   "id": "93541",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93541",
+   "titre": "Unable to Access Web Shop & Official Website Issue Notice [Resolved]",
+   "date": "2025-08-12",
+   "vu_le": "2026-11-16"
+  },
+  "93576": {
+   "id": "93576",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93576",
+   "titre": "8/13 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-08-13",
+   "vu_le": "2026-11-16"
+  },
+  "93790": {
+   "id": "93790",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93790",
+   "titre": "8/18 (Mon) Server Patch Notice [Completed]",
+   "date": "2025-08-18",
+   "vu_le": "2026-11-16"
+  },
+  "93800": {
+   "id": "93800",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93800",
+   "titre": "Price Adjustment In Certain Countries Notice",
+   "date": "2025-08-18",
+   "vu_le": "2026-11-16"
+  },
+  "93817": {
+   "id": "93817",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93817",
+   "titre": "8/19 (Tue) Data Patch Notice [Completed]",
+   "date": "2025-08-19",
+   "vu_le": "2026-11-16"
+  },
+  "93856": {
+   "id": "93856",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/93856",
+   "titre": "8/20 (Wed) Data Patch Notice [Updated 8/21 (Thu) 9:24 (UTC+0)]",
+   "date": "2025-08-20",
+   "vu_le": "2026-11-16"
+  },
+  "94025": {
+   "id": "94025",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94025",
+   "titre": "8/26 (Tue) Developer Livestream Announcement",
+   "date": "2025-08-25",
+   "vu_le": "2026-11-16"
+  },
+  "94065": {
+   "id": "94065",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94065",
+   "titre": "8/28 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-08-26",
+   "vu_le": "2026-11-16"
+  },
+  "94092": {
+   "id": "94092",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/94092",
+   "titre": "8/26 (Tue) Developer Livestream Summary",
+   "date": "2025-08-27",
+   "vu_le": "2026-11-16"
+  },
+  "94138": {
+   "id": "94138",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/94138",
+   "titre": "8/28 (Thu) Update Details",
+   "date": "2025-08-28",
+   "vu_le": "2026-11-16"
+  },
+  "94122": {
+   "id": "94122",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+   "titre": "8/28 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2025-08-28",
+   "vu_le": "2026-11-16"
+  },
+  "94163": {
+   "id": "94163",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94163",
+   "titre": "[Added Solution] Netmarble PC Launcher Intermittent Update Delay Issue Notice",
+   "date": "2025-08-28",
+   "vu_le": "2026-11-16"
+  },
+  "94221": {
+   "id": "94221",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94221",
+   "titre": "8/28 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-08-28",
+   "vu_le": "2026-11-16"
+  },
+  "94379": {
+   "id": "94379",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94379",
+   "titre": "8/29 (Fri) Recommended Build Update Notice [Updated 9/3 (Wed) 07:32 (UTC+0)]",
+   "date": "2025-08-29",
+   "vu_le": "2026-11-16"
+  },
+  "94383": {
+   "id": "94383",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94383",
+   "titre": "8/29 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-08-29",
+   "vu_le": "2026-11-16"
+  },
+  "94551": {
+   "id": "94551",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94551",
+   "titre": "9/1 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-09-01",
+   "vu_le": "2026-11-16"
+  },
+  "94619": {
+   "id": "94619",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94619",
+   "titre": "9/3 (Wed) Server Patch Notice [Completed]",
+   "date": "2025-09-03",
+   "vu_le": "2026-11-16"
+  },
+  "94682": {
+   "id": "94682",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/94682",
+   "titre": "Developer Note: The Monarch of Steel Valtair [Updated 9/5 (Fri) 11:42 (UTC+0)]",
+   "date": "2025-09-05",
+   "vu_le": "2026-11-16"
+  },
+  "94785": {
+   "id": "94785",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94785",
+   "titre": "9/10 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-09-10",
+   "vu_le": "2026-11-16"
+  },
+  "94847": {
+   "id": "94847",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/94847",
+   "titre": "9/11 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-09-11",
+   "vu_le": "2026-11-16"
+  },
+  "95055": {
+   "id": "95055",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95055",
+   "titre": "9/17 (Wed) Server Instability Issue Notice [Resolved]",
+   "date": "2025-09-17",
+   "vu_le": "2026-11-16"
+  },
+  "95130": {
+   "id": "95130",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95130",
+   "titre": "9/22 (Mon) Developer Livestream Announcement",
+   "date": "2025-09-19",
+   "vu_le": "2026-11-16"
+  },
+  "95240": {
+   "id": "95240",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/95240",
+   "titre": "9/22 (Mon) Developer Livestream Summary",
+   "date": "2025-09-23",
+   "vu_le": "2026-11-16"
+  },
+  "95236": {
+   "id": "95236",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95236",
+   "titre": "9/25 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-09-23",
+   "vu_le": "2026-11-16"
+  },
+  "95320": {
+   "id": "95320",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95320",
+   "titre": "9/25 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-09-25",
+   "vu_le": "2026-11-16"
+  },
+  "95342": {
+   "id": "95342",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95342",
+   "titre": "9/25 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-09-25",
+   "vu_le": "2026-11-16"
+  },
+  "95412": {
+   "id": "95412",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95412",
+   "titre": "Price Adjustment In Certain Countries Notice",
+   "date": "2025-09-26",
+   "vu_le": "2026-11-16"
+  },
+  "95418": {
+   "id": "95418",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95418",
+   "titre": "9/26 (Fri) Server Patch Notice [Completed]",
+   "date": "2025-09-26",
+   "vu_le": "2026-11-16"
+  },
+  "95421": {
+   "id": "95421",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95421",
+   "titre": "9/26 (Fri) iOS Recommended Build Update Notice",
+   "date": "2025-09-26",
+   "vu_le": "2026-11-16"
+  },
+  "95583": {
+   "id": "95583",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95583",
+   "titre": "9/29 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-09-29",
+   "vu_le": "2026-11-16"
+  },
+  "95622": {
+   "id": "95622",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95622",
+   "titre": "9/30 (Tue) Data Patch Notice [Copmleted]",
+   "date": "2025-09-30",
+   "vu_le": "2026-11-16"
+  },
+  "95675": {
+   "id": "95675",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/95675",
+   "titre": "Developer Note: Next Episode",
+   "date": "2025-10-01",
+   "vu_le": "2026-11-16"
+  },
+  "95763": {
+   "id": "95763",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95763",
+   "titre": "10/2 (Thu) Data Patch Notice [Copmleted]",
+   "date": "2025-10-02",
+   "vu_le": "2026-11-16"
+  },
+  "95783": {
+   "id": "95783",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/95783",
+   "titre": "10/2 (Thu) data Patch Notice [Copmleted]",
+   "date": "2025-10-02",
+   "vu_le": "2026-11-16"
+  },
+  "96118": {
+   "id": "96118",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96118",
+   "titre": "10/10 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-10-10",
+   "vu_le": "2026-11-16"
+  },
+  "96221": {
+   "id": "96221",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96221",
+   "titre": "10/13 (Mon) Server Patch Notice [Completed]",
+   "date": "2025-10-13",
+   "vu_le": "2026-11-16"
+  },
+  "96344": {
+   "id": "96344",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96344",
+   "titre": "10/21 (Tue) Developer Livestream Announcement",
+   "date": "2025-10-17",
+   "vu_le": "2026-11-16"
+  },
+  "96423": {
+   "id": "96423",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96423",
+   "titre": "Epic Games Server Instability Issue Notice [Resolved]",
+   "date": "2025-10-20",
+   "vu_le": "2026-11-16"
+  },
+  "96466": {
+   "id": "96466",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96466",
+   "titre": "10/23 (Thu) Regular Maintenance Notice [Updated 10/23 (Thu) 02:28 (UTC+0)]",
+   "date": "2025-10-21",
+   "vu_le": "2026-11-16"
+  },
+  "96516": {
+   "id": "96516",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/96516",
+   "titre": "10/21 (Tue) Developer Livestream Summary",
+   "date": "2025-10-22",
+   "vu_le": "2026-11-16"
+  },
+  "96504": {
+   "id": "96504",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96504",
+   "titre": "10/21 (Tue) Netmarble Launcher Update Notice",
+   "date": "2025-10-22",
+   "vu_le": "2026-11-16"
+  },
+  "96532": {
+   "id": "96532",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96532",
+   "titre": "10/23 (Thu) In-Game Balance Adjustments Notice [Updated 10/23 (Thu) 03:17 (UTC+0)]",
+   "date": "2025-10-23",
+   "vu_le": "2026-11-16"
+  },
+  "96619": {
+   "id": "96619",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96619",
+   "titre": "10/23 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-10-23",
+   "vu_le": "2026-11-16"
+  },
+  "96632": {
+   "id": "96632",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96632",
+   "titre": "10/23 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-10-23",
+   "vu_le": "2026-11-16"
+  },
+  "96680": {
+   "id": "96680",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96680",
+   "titre": "10/24 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-10-24",
+   "vu_le": "2026-11-16"
+  },
+  "96690": {
+   "id": "96690",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96690",
+   "titre": "10/24 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-10-24",
+   "vu_le": "2026-11-16"
+  },
+  "96863": {
+   "id": "96863",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/96863",
+   "titre": "Developer Note: November and Beyond",
+   "date": "2025-10-28",
+   "vu_le": "2026-11-16"
+  },
+  "96913": {
+   "id": "96913",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96913",
+   "titre": "10/29 (Wed) In-Game Balance Adjustment Notice",
+   "date": "2025-10-29",
+   "vu_le": "2026-11-16"
+  },
+  "96914": {
+   "id": "96914",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/96914",
+   "titre": "10/29 (Wed) Patch & Recommended Build Update Notice",
+   "date": "2025-10-29",
+   "vu_le": "2026-11-16"
+  },
+  "97016": {
+   "id": "97016",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97016",
+   "titre": "Guide to Resolving the PC Version/Web Shop Login Issue [Updated 12/17 (Wed) 01:43 (UTC+0)]",
+   "date": "2025-10-31",
+   "vu_le": "2026-11-16"
+  },
+  "97183": {
+   "id": "97183",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97183",
+   "titre": "11/5 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-11-05",
+   "vu_le": "2026-11-16"
+  },
+  "97211": {
+   "id": "97211",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97211",
+   "titre": "Intermittent Payment Error Issue Notice [Resolved]",
+   "date": "2025-11-06",
+   "vu_le": "2026-11-16"
+  },
+  "97220": {
+   "id": "97220",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97220",
+   "titre": "11/6 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-11-06",
+   "vu_le": "2026-11-16"
+  },
+  "97271": {
+   "id": "97271",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97271",
+   "titre": "11/11 (Tue) Netmarble Launcher Update Notice",
+   "date": "2025-11-10",
+   "vu_le": "2026-11-16"
+  },
+  "97379": {
+   "id": "97379",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/97379",
+   "titre": "Developer Note: New Combat System Attribute Infusion & Overload",
+   "date": "2025-11-11",
+   "vu_le": "2026-11-16"
+  },
+  "97367": {
+   "id": "97367",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97367",
+   "titre": "Xsolla Payment System Maintenance Notice",
+   "date": "2025-11-12",
+   "vu_le": "2026-11-16"
+  },
+  "97468": {
+   "id": "97468",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97468",
+   "titre": "11/13 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-11-13",
+   "vu_le": "2026-11-16"
+  },
+  "97624": {
+   "id": "97624",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97624",
+   "titre": "11/20 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2025-11-18",
+   "vu_le": "2026-11-16"
+  },
+  "97654": {
+   "id": "97654",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97654",
+   "titre": "11/20 (Thu) In-Game Balance Adjustment Notice",
+   "date": "2025-11-20",
+   "vu_le": "2026-11-16"
+  },
+  "97705": {
+   "id": "97705",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97705",
+   "titre": "11/20 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-11-20",
+   "vu_le": "2026-11-16"
+  },
+  "97741": {
+   "id": "97741",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97741",
+   "titre": "11/21 (Fri) Workshop of Brilliant Light Valtair (Hard) 1,000 Clears & Data Patch Notice",
+   "date": "2025-11-21",
+   "vu_le": "2026-11-16"
+  },
+  "97744": {
+   "id": "97744",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97744",
+   "titre": "11/21 (Fri) Server Patch Notice [Completed]",
+   "date": "2025-11-21",
+   "vu_le": "2026-11-16"
+  },
+  "97748": {
+   "id": "97748",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97748",
+   "titre": "11/21 (Fri) Server Patch Notice [Completed] [Added 11/25 10:10 (UTC+0)]",
+   "date": "2025-11-21",
+   "vu_le": "2026-11-16"
+  },
+  "97875": {
+   "id": "97875",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97875",
+   "titre": "[WANTED] Workshop of Brilliant Light Valtair (Hard) 3,000 Clears & Reward Notice",
+   "date": "2025-11-24",
+   "vu_le": "2026-11-16"
+  },
+  "97876": {
+   "id": "97876",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/97876",
+   "titre": "11/24 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-11-24",
+   "vu_le": "2026-11-16"
+  },
+  "98108": {
+   "id": "98108",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/98108",
+   "titre": "Developer Note: New Rules of Combat",
+   "date": "2025-12-03",
+   "vu_le": "2026-11-16"
+  },
+  "98103": {
+   "id": "98103",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98103",
+   "titre": "12/3 (Wed) Data Patch Notice [Completed]",
+   "date": "2025-12-03",
+   "vu_le": "2026-11-16"
+  },
+  "98140": {
+   "id": "98140",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98140",
+   "titre": "12/4 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-12-04",
+   "vu_le": "2026-11-16"
+  },
+  "98151": {
+   "id": "98151",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98151",
+   "titre": "12/4 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-12-04",
+   "vu_le": "2026-11-16"
+  },
+  "98189": {
+   "id": "98189",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98189",
+   "titre": "12/5 (Fri) Data Patch Notice [Completed]",
+   "date": "2025-12-05",
+   "vu_le": "2026-11-16"
+  },
+  "98263": {
+   "id": "98263",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98263",
+   "titre": "End of [WANTED] Workshop of Brilliant Light Valtair (Hard) Event & Data Patch Notice [Completed]",
+   "date": "2025-12-08",
+   "vu_le": "2026-11-16"
+  },
+  "98300": {
+   "id": "98300",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98300",
+   "titre": "12/11 (Thu) Developer Livestream Notice",
+   "date": "2025-12-10",
+   "vu_le": "2026-11-16"
+  },
+  "98323": {
+   "id": "98323",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98323",
+   "titre": "SLC 2026 & Offline Event Pre-Announcement",
+   "date": "2025-12-11",
+   "vu_le": "2026-11-16"
+  },
+  "98337": {
+   "id": "98337",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98337",
+   "titre": "12/11 (Thu) Server Instability Issue Notice [Resolved 12/11 (Thu) 07:43 (UTC+0)]",
+   "date": "2025-12-11",
+   "vu_le": "2026-11-16"
+  },
+  "98374": {
+   "id": "98374",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98374",
+   "titre": "Epic Games Store Intermittent Payment Error Issue Notice [Resolved]",
+   "date": "2025-12-12",
+   "vu_le": "2026-11-16"
+  },
+  "98455": {
+   "id": "98455",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/98455",
+   "titre": "12/11 (Thu) Developer Livestream Summary",
+   "date": "2025-12-16",
+   "vu_le": "2026-11-16"
+  },
+  "98489": {
+   "id": "98489",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98489",
+   "titre": "12/18 (Thu) Regular Maintenance Notice",
+   "date": "2025-12-16",
+   "vu_le": "2026-11-16"
+  },
+  "98631": {
+   "id": "98631",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98631",
+   "titre": "12/18 (Thu) Data Patch Notice [Completed] (Added 1/21 (Wed) 06:15(UTC+0))",
+   "date": "2025-12-18",
+   "vu_le": "2026-11-16"
+  },
+  "98659": {
+   "id": "98659",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98659",
+   "titre": "12/18 (Thu) Data Patch Notice [Completed]",
+   "date": "2025-12-18",
+   "vu_le": "2026-11-16"
+  },
+  "98664": {
+   "id": "98664",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98664",
+   "titre": "12/19 (Fri) Recommended Build Update Notice",
+   "date": "2025-12-19",
+   "vu_le": "2026-11-16"
+  },
+  "98868": {
+   "id": "98868",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98868",
+   "titre": "12/22 (Mon) Data Patch Notice [Completed]",
+   "date": "2025-12-22",
+   "vu_le": "2026-11-16"
+  },
+  "98964": {
+   "id": "98964",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/98964",
+   "titre": "Epic Games Server Instability Issue Notice [Resolved]",
+   "date": "2025-12-25",
+   "vu_le": "2026-11-16"
+  },
+  "99178": {
+   "id": "99178",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/99178",
+   "titre": "Price Adjustments and Payment Currency Changes in Certain Countries Notice",
+   "date": "2025-12-31",
+   "vu_le": "2026-11-16"
+  },
+  "99180": {
+   "id": "99180",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/99180",
+   "titre": "1/6 (Tue) Netmarble Launcher Update Notice",
+   "date": "2026-01-05",
+   "vu_le": "2026-11-16"
+  },
+  "99332": {
+   "id": "99332",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/99332",
+   "titre": "1/5 (Mon) Data Patch Notice",
+   "date": "2026-01-05",
+   "vu_le": "2026-11-16"
+  },
+  "99181": {
+   "id": "99181",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/99181",
+   "titre": "1/8 (Thu) Netmarble Regular Service Maintenance Notice [Completed]",
+   "date": "2026-01-06",
+   "vu_le": "2026-11-16"
+  },
+  "99407": {
+   "id": "99407",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/99407",
+   "titre": "Developer Note: Our First Greeting of 2026",
+   "date": "2026-01-08",
+   "vu_le": "2026-11-16"
+  },
+  "99554": {
+   "id": "99554",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/99554",
+   "titre": "1/15 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2026-01-13",
+   "vu_le": "2026-11-16"
+  },
+  "99644": {
+   "id": "99644",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/99644",
+   "titre": "1/15 (Thu) data Patch Notice [Completed]",
+   "date": "2026-01-15",
+   "vu_le": "2026-11-16"
+  },
+  "99663": {
+   "id": "99663",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/99663",
+   "titre": "1/16 (Fri) Server Patch Notice [Completed]",
+   "date": "2026-01-16",
+   "vu_le": "2026-11-16"
+  },
+  "100097": {
+   "id": "100097",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100097",
+   "titre": "1/21 (Wed) Data Patch Notice [Completed]",
+   "date": "2026-01-21",
+   "vu_le": "2026-11-16"
+  },
+  "100404": {
+   "id": "100404",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/100404",
+   "titre": "Developer Note: Retake the City Update",
+   "date": "2026-01-27",
+   "vu_le": "2026-11-16"
+  },
+  "100471": {
+   "id": "100471",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100471",
+   "titre": "2/10 (Tue) Developer Livestream Notice",
+   "date": "2026-02-03",
+   "vu_le": "2026-11-16"
+  },
+  "100585": {
+   "id": "100585",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100585",
+   "titre": "2/10 (Tue) Forum Maintenance Notice",
+   "date": "2026-02-03",
+   "vu_le": "2026-11-16"
+  },
+  "100586": {
+   "id": "100586",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100586",
+   "titre": "2/5 (Thu) Redeem Code system maintenance notice [Completed]",
+   "date": "2026-02-03",
+   "vu_le": "2026-11-16"
+  },
+  "100726": {
+   "id": "100726",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100726",
+   "titre": "Solo Leveling:Arise Championship 2026 Details Notice [Updated 2/12 (Thu) 01:20 (UTC+0)]",
+   "date": "2026-02-10",
+   "vu_le": "2026-11-16"
+  },
+  "100755": {
+   "id": "100755",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100755",
+   "titre": "2/12 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2026-02-10",
+   "vu_le": "2026-11-16"
+  },
+  "100810": {
+   "id": "100810",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/100810",
+   "titre": "2/10 (Tue) Developer Livestream Summary",
+   "date": "2026-02-11",
+   "vu_le": "2026-11-16"
+  },
+  "100828": {
+   "id": "100828",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100828",
+   "titre": "2/12 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-02-12",
+   "vu_le": "2026-11-16"
+  },
+  "100906": {
+   "id": "100906",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100906",
+   "titre": "2/12 (Thu) Data Patch Notice [Completed]",
+   "date": "2026-02-12",
+   "vu_le": "2026-11-16"
+  },
+  "100910": {
+   "id": "100910",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100910",
+   "titre": "2/12 (Thu) Data Patch Notice [Completed]",
+   "date": "2026-02-12",
+   "vu_le": "2026-11-16"
+  },
+  "100930": {
+   "id": "100930",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100930",
+   "titre": "Upcoming Balance Adjustment for Meri Laine",
+   "date": "2026-02-12",
+   "vu_le": "2026-11-16"
+  },
+  "100975": {
+   "id": "100975",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100975",
+   "titre": "2/13 (Fri) data Patch Notice [Completed]",
+   "date": "2026-02-13",
+   "vu_le": "2026-11-16"
+  },
+  "100983": {
+   "id": "100983",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/100983",
+   "titre": "2/13 (Fri) data Patch Notice [Completed]",
+   "date": "2026-02-13",
+   "vu_le": "2026-11-16"
+  },
+  "101005": {
+   "id": "101005",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/101005",
+   "titre": "2/13 (Fri) Server Patch Notice [Completed]",
+   "date": "2026-02-13",
+   "vu_le": "2026-11-16"
+  },
+  "101008": {
+   "id": "101008",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/101008",
+   "titre": "Solo Leveling:ARISE Championship 2026 Qualifier Information",
+   "date": "2026-02-19",
+   "vu_le": "2026-11-16"
+  },
+  "101409": {
+   "id": "101409",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/101409",
+   "titre": "2/19 (Thu) data Patch Notice",
+   "date": "2026-02-19",
+   "vu_le": "2026-11-16"
+  },
+  "101411": {
+   "id": "101411",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/101411",
+   "titre": "2/19 (Thu) data Patch Notice [Completed]",
+   "date": "2026-02-19",
+   "vu_le": "2026-11-16"
+  },
+  "101436": {
+   "id": "101436",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/101436",
+   "titre": "2/20 (Fri) data Patch Notice [Completed]",
+   "date": "2026-02-20",
+   "vu_le": "2026-11-16"
+  },
+  "101909": {
+   "id": "101909",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/101909",
+   "titre": "2/25 (Wed) data Patch Notice [Completed]",
+   "date": "2026-02-25",
+   "vu_le": "2026-11-16"
+  },
+  "101973": {
+   "id": "101973",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/101973",
+   "titre": "Developer Note: Back to the Action Essence",
+   "date": "2026-02-27",
+   "vu_le": "2026-11-16"
+  },
+  "102795": {
+   "id": "102795",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/102795",
+   "titre": "3/12 (Thu) Regular Maintenance Notice",
+   "date": "2026-03-10",
+   "vu_le": "2026-11-16"
+  },
+  "102815": {
+   "id": "102815",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/102815",
+   "titre": "3/12 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-03-12",
+   "vu_le": "2026-11-16"
+  },
+  "102897": {
+   "id": "102897",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/102897",
+   "titre": "3/12 (Thu) Data Patch Notice [Completed]",
+   "date": "2026-03-12",
+   "vu_le": "2026-11-16"
+  },
+  "102574": {
+   "id": "102574",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/102574",
+   "titre": "Notice of Qualification for the Solo Leveling:ARISE Championship 2026 Finals",
+   "date": "2026-03-13",
+   "vu_le": "2026-11-16"
+  },
+  "102973": {
+   "id": "102973",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/102973",
+   "titre": "3/13 (Fri) Data Patch Notice [Completed]",
+   "date": "2026-03-13",
+   "vu_le": "2026-11-16"
+  },
+  "102979": {
+   "id": "102979",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/102979",
+   "titre": "Xsolla Payment System Maintenance Notice",
+   "date": "2026-03-13",
+   "vu_le": "2026-11-16"
+  },
+  "102988": {
+   "id": "102988",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/102988",
+   "titre": "3/13 (Fri) Server Patch Notice [Completed]",
+   "date": "2026-03-13",
+   "vu_le": "2026-11-16"
+  },
+  "103021": {
+   "id": "103021",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103021",
+   "titre": "3/14 (Sat) Data Patch Notice [Completed]",
+   "date": "2026-03-14",
+   "vu_le": "2026-11-16"
+  },
+  "103088": {
+   "id": "103088",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103088",
+   "titre": "Data Patch and 1000 Clear Milestone for Workshop of Brilliant Light Rockpasa(Hard) (Completed)",
+   "date": "2026-03-16",
+   "vu_le": "2026-11-16"
+  },
+  "103096": {
+   "id": "103096",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103096",
+   "titre": "3/16 (Mon) data Patch Notice (Completed)",
+   "date": "2026-03-16",
+   "vu_le": "2026-11-16"
+  },
+  "103133": {
+   "id": "103133",
+   "board": "13",
+   "url": "https://forum.netmarble.com/slv_en/view/13/103133",
+   "titre": "Developer Note: Notice on Artifact Farming",
+   "date": "2026-03-17",
+   "vu_le": "2026-11-16"
+  },
+  "103125": {
+   "id": "103125",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103125",
+   "titre": "3/17 (Tue) data Patch Notice (Completed)",
+   "date": "2026-03-17",
+   "vu_le": "2026-11-16"
+  },
+  "103200": {
+   "id": "103200",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103200",
+   "titre": "Finalists for the Solo Leveling:ARISE Championship 2026",
+   "date": "2026-03-20",
+   "vu_le": "2026-11-16"
+  },
+  "103234": {
+   "id": "103234",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103234",
+   "titre": "[WANTED] Workshop of Brilliant Light Rockpasa (Hard) 3,000 Clears & Reward Notice",
+   "date": "2026-03-20",
+   "vu_le": "2026-11-16"
+  },
+  "103244": {
+   "id": "103244",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103244",
+   "titre": "3/20 (Fri) data Patch Notice [Completed]",
+   "date": "2026-03-20",
+   "vu_le": "2026-11-16"
+  },
+  "103494": {
+   "id": "103494",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103494",
+   "titre": "3/24 (Tue) data Patch Notice [Completed]",
+   "date": "2026-03-24",
+   "vu_le": "2026-11-16"
+  },
+  "103549": {
+   "id": "103549",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103549",
+   "titre": "3/25 (Wed) Server Patch Notice [Completed]",
+   "date": "2026-03-25",
+   "vu_le": "2026-11-16"
+  },
+  "103587": {
+   "id": "103587",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103587",
+   "titre": "3/26 (Thu) data Patch Notice [Completed]",
+   "date": "2026-03-26",
+   "vu_le": "2026-11-16"
+  },
+  "103606": {
+   "id": "103606",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103606",
+   "titre": "3/26 (Thu) data Patch Notice [Completed]",
+   "date": "2026-03-26",
+   "vu_le": "2026-11-16"
+  },
+  "103713": {
+   "id": "103713",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103713",
+   "titre": "End of [WANTED] Workshop of Brilliant Light Rockpasa (Hard) Clear Event",
+   "date": "2026-03-30",
+   "vu_le": "2026-11-16"
+  },
+  "103736": {
+   "id": "103736",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103736",
+   "titre": "3/31 (Tue) Server Patch Notice [Completed]",
+   "date": "2026-03-31",
+   "vu_le": "2026-11-16"
+  },
+  "103738": {
+   "id": "103738",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103738",
+   "titre": "Advance Notice on Draw Support and SSR Rate Up Changes",
+   "date": "2026-04-02",
+   "vu_le": "2026-11-16"
+  },
+  "103938": {
+   "id": "103938",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103938",
+   "titre": "4/9 (Thu) Regular Maintenance Notice [Completed]",
+   "date": "2026-04-07",
+   "vu_le": "2026-11-16"
+  },
+  "103975": {
+   "id": "103975",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/103975",
+   "titre": "4/9 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-04-09",
+   "vu_le": "2026-11-16"
+  },
+  "104030": {
+   "id": "104030",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104030",
+   "titre": "4/9 (Thu) data Patch Notice",
+   "date": "2026-04-09",
+   "vu_le": "2026-11-16"
+  },
+  "104080": {
+   "id": "104080",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104080",
+   "titre": "4/10 (Fri) data Patch Notice [Completed]",
+   "date": "2026-04-10",
+   "vu_le": "2026-11-16"
+  },
+  "104184": {
+   "id": "104184",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104184",
+   "titre": "4/13 (Mon) data Patch Notice [Completed]",
+   "date": "2026-04-13",
+   "vu_le": "2026-11-16"
+  },
+  "104231": {
+   "id": "104231",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104231",
+   "titre": "4/14 (Tue) data Patch Notice [Completed] (Added 4/16 06:00 (UTC+0))",
+   "date": "2026-04-14",
+   "vu_le": "2026-11-16"
+  },
+  "104283": {
+   "id": "104283",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104283",
+   "titre": "Epic Store Intermittent Payment Error Issue Notice (Resolved)",
+   "date": "2026-04-16",
+   "vu_le": "2026-11-16"
+  },
+  "104319": {
+   "id": "104319",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104319",
+   "titre": "2nd Anniversary EVOLUTION Offline Event & SLC 2026 Finals Viewing (Online/Offline)",
+   "date": "2026-04-17",
+   "vu_le": "2026-11-16"
+  },
+  "104447": {
+   "id": "104447",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104447",
+   "titre": "4/22 (Wed) data Patch Notice",
+   "date": "2026-04-22",
+   "vu_le": "2026-11-16"
+  },
+  "104509": {
+   "id": "104509",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104509",
+   "titre": "Solo Leveling:ARISE Championship 2026 Grand Finals Results (Updated 4/25 (Sat))",
+   "date": "2026-04-25",
+   "vu_le": "2026-11-16"
+  },
+  "104412": {
+   "id": "104412",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104412",
+   "titre": "Xsolla Payment System Maintenance Notice",
+   "date": "2026-04-27",
+   "vu_le": "2026-11-16"
+  },
+  "104639": {
+   "id": "104639",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104639",
+   "titre": "Advance Notice on Exchange Shop Revamp",
+   "date": "2026-04-30",
+   "vu_le": "2026-11-16"
+  },
+  "104644": {
+   "id": "104644",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104644",
+   "titre": "Advance Notice on 2nd Anniversary Update Contents Revamp",
+   "date": "2026-04-30",
+   "vu_le": "2026-11-16"
+  },
+  "104792": {
+   "id": "104792",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104792",
+   "titre": "5/6 (Tue) Developer Livestream Notice",
+   "date": "2026-05-04",
+   "vu_le": "2026-11-16"
+  },
+  "104784": {
+   "id": "104784",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104784",
+   "titre": "5/7 (Thu) Regular Maintenance Notice (Completed)",
+   "date": "2026-05-05",
+   "vu_le": "2026-11-16"
+  },
+  "104871": {
+   "id": "104871",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104871",
+   "titre": "5/7 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "104959": {
+   "id": "104959",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104959",
+   "titre": "5/7 (Thu) data Patch Notice (Completed)",
+   "date": "2026-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "104966": {
+   "id": "104966",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104966",
+   "titre": "Notice Regarding Faction of the Shield Measures Detection (Edited on 5/7 15:14 (UTC+0))",
+   "date": "2026-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "104967": {
+   "id": "104967",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104967",
+   "titre": "5/7 (Thu) Recommended Build Update Notice (Edited on 5/8 (Fri) 01:30 (UTC+0))",
+   "date": "2026-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "104979": {
+   "id": "104979",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/104979",
+   "titre": "5/7 (Thu) data Patch Notice (Completed)",
+   "date": "2026-05-07",
+   "vu_le": "2026-11-16"
+  },
+  "105074": {
+   "id": "105074",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105074",
+   "titre": "5/8 (Fri) data Patch Notice (Completed) (Updated on 5/12 (Tue) 10:37 (UTC+0))",
+   "date": "2026-05-08",
+   "vu_le": "2026-11-16"
+  },
+  "105158": {
+   "id": "105158",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105158",
+   "titre": "5/9 (Sat) data Patch Notice (Completed)",
+   "date": "2026-05-09",
+   "vu_le": "2026-11-16"
+  },
+  "105289": {
+   "id": "105289",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105289",
+   "titre": "5/11 (Mon) data Patch Notice [Completed]",
+   "date": "2026-05-11",
+   "vu_le": "2026-11-16"
+  },
+  "105386": {
+   "id": "105386",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105386",
+   "titre": "5/13 (Wed) data Patch Notice",
+   "date": "2026-05-13",
+   "vu_le": "2026-11-16"
+  },
+  "105390": {
+   "id": "105390",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105390",
+   "titre": "2nd Anniversary Promise: Guidelines for a Fair and Pleasant Solo Leveling:ARISE",
+   "date": "2026-05-13",
+   "vu_le": "2026-11-16"
+  },
+  "105435": {
+   "id": "105435",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105435",
+   "titre": "Epic Store Intermittent Payment Error Issue Notice (Fixed)",
+   "date": "2026-05-14",
+   "vu_le": "2026-11-16"
+  },
+  "105465": {
+   "id": "105465",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105465",
+   "titre": "5/15 (Fri) data Patch Notice [Completed]",
+   "date": "2026-05-15",
+   "vu_le": "2026-11-16"
+  },
+  "105599": {
+   "id": "105599",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105599",
+   "titre": "5/19 (Tue) Netmarble Launcher Update Notice",
+   "date": "2026-05-18",
+   "vu_le": "2026-11-16"
+  },
+  "105470": {
+   "id": "105470",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105470",
+   "titre": "Advance Notice: End of the Fixed Support Draw",
+   "date": "2026-05-19",
+   "vu_le": "2026-11-16"
+  },
+  "105684": {
+   "id": "105684",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105684",
+   "titre": "Notice Regarding Measures Against Account Sharing and Boosting",
+   "date": "2026-05-20",
+   "vu_le": "2026-11-16"
+  },
+  "105714": {
+   "id": "105714",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105714",
+   "titre": "5/22 (Fri) Server Patch Notice [Completed]",
+   "date": "2026-05-22",
+   "vu_le": "2026-11-16"
+  },
+  "105882": {
+   "id": "105882",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105882",
+   "titre": "5/26(Tue) Epic Games Maintenance Notice",
+   "date": "2026-05-26",
+   "vu_le": "2026-11-16"
+  },
+  "105916": {
+   "id": "105916",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105916",
+   "titre": "Advance Notice: Subscription Exchange Overhaul and Dungeon Entry Key Cost Adjustment",
+   "date": "2026-05-28",
+   "vu_le": "2026-11-16"
+  },
+  "105952": {
+   "id": "105952",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105952",
+   "titre": "6/2 (Tue) Developer Livestream Notice",
+   "date": "2026-05-28",
+   "vu_le": "2026-11-16"
+  },
+  "105985": {
+   "id": "105985",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/105985",
+   "titre": "6/2 (Tue) Netmarble Launcher Update Notice",
+   "date": "2026-06-01",
+   "vu_le": "2026-11-16"
+  },
+  "106078": {
+   "id": "106078",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106078",
+   "titre": "6/4 (Thu) Regular Maintenance Notice (Completed)",
+   "date": "2026-06-02",
+   "vu_le": "2026-11-16"
+  },
+  "106107": {
+   "id": "106107",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+   "titre": "6/4 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-06-04",
+   "vu_le": "2026-11-16"
+  },
+  "106222": {
+   "id": "106222",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106222",
+   "titre": "6/4 (Thu) data Patch Notice (Completed)",
+   "date": "2026-06-04",
+   "vu_le": "2026-11-16"
+  },
+  "106248": {
+   "id": "106248",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106248",
+   "titre": "6/4 (Thu) data Patch Notice (Completed)",
+   "date": "2026-06-04",
+   "vu_le": "2026-11-16"
+  },
+  "106365": {
+   "id": "106365",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106365",
+   "titre": "Notice Regarding Faction of the Shield Measures Detection (Resolved)",
+   "date": "2026-06-05",
+   "vu_le": "2026-11-16"
+  },
+  "106559": {
+   "id": "106559",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106559",
+   "titre": "6/8 (Mon) data Patch Notice",
+   "date": "2026-06-08",
+   "vu_le": "2026-11-16"
+  },
+  "106560": {
+   "id": "106560",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106560",
+   "titre": "6/9 (Tue) Netmarble Launcher Update Notice",
+   "date": "2026-06-08",
+   "vu_le": "2026-11-16"
+  },
+  "106614": {
+   "id": "106614",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106614",
+   "titre": "Follow-up Measures for the Artifact Crafting/Modification Ticket Sale Issue",
+   "date": "2026-06-09",
+   "vu_le": "2026-11-16"
+  },
+  "106620": {
+   "id": "106620",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106620",
+   "titre": "6/10 (Wed) Recommended Build Update Notice",
+   "date": "2026-06-10",
+   "vu_le": "2026-11-16"
+  },
+  "106655": {
+   "id": "106655",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106655",
+   "titre": "6/10 (Wed) data Patch Notice (Completed)",
+   "date": "2026-06-10",
+   "vu_le": "2026-11-16"
+  },
+  "106860": {
+   "id": "106860",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106860",
+   "titre": "6/15 (Mon) data Patch Notice (Completed)",
+   "date": "2026-06-15",
+   "vu_le": "2026-11-16"
+  },
+  "106947": {
+   "id": "106947",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106947",
+   "titre": "6/18 (Thu) data Patch Notice (Completed)",
+   "date": "2026-06-18",
+   "vu_le": "2026-11-16"
+  },
+  "106980": {
+   "id": "106980",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/106980",
+   "titre": "6/19 (Fri) data Patch Notice (Completed)",
+   "date": "2026-06-19",
+   "vu_le": "2026-11-16"
+  },
+  "107077": {
+   "id": "107077",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107077",
+   "titre": "6/23 (Tue) data Patch Notice (Completed)",
+   "date": "2026-06-23",
+   "vu_le": "2026-11-16"
+  },
+  "107073": {
+   "id": "107073",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107073",
+   "titre": "6/25(Thu) Epic Games Maintenance Notice",
+   "date": "2026-06-24",
+   "vu_le": "2026-11-16"
+  },
+  "107097": {
+   "id": "107097",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107097",
+   "titre": "7/2 Update Contents Preview",
+   "date": "2026-06-25",
+   "vu_le": "2026-11-16"
+  },
+  "107219": {
+   "id": "107219",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107219",
+   "titre": "7/2 (Thu) Regular Maintenance Notice (Completed)",
+   "date": "2026-06-30",
+   "vu_le": "2026-11-16"
+  },
+  "107226": {
+   "id": "107226",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+   "titre": "7/2 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-07-02",
+   "vu_le": "2026-11-16"
+  },
+  "107286": {
+   "id": "107286",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107286",
+   "titre": "7/2 (Thu) Server Patch Notice (Completed)",
+   "date": "2026-07-02",
+   "vu_le": "2026-11-16"
+  },
+  "107358": {
+   "id": "107358",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107358",
+   "titre": "7/3 (Fri) data Patch Notice (Edited on 7/3(Fri) 07:07 (UTC+0)) (Completed)",
+   "date": "2026-07-03",
+   "vu_le": "2026-11-16"
+  },
+  "107362": {
+   "id": "107362",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107362",
+   "titre": "Notice: Data Patch and 1000 Clear Milestone for Workshop of Brilliant Light Legia(Hard) (Completed)",
+   "date": "2026-07-03",
+   "vu_le": "2026-11-16"
+  },
+  "107493": {
+   "id": "107493",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107493",
+   "titre": "7/7 (Tue) data Patch Notice (Completed)",
+   "date": "2026-07-07",
+   "vu_le": "2026-11-16"
+  },
+  "107451": {
+   "id": "107451",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107451",
+   "titre": "Xsolla Payment System Maintenance Notice",
+   "date": "2026-07-08",
+   "vu_le": "2026-11-16"
+  },
+  "107500": {
+   "id": "107500",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107500",
+   "titre": "[WANTED] Workshop of Brilliant Light Legia (Hard) 3,000 Clears & Reward Notice",
+   "date": "2026-07-08",
+   "vu_le": "2026-11-16"
+  },
+  "107514": {
+   "id": "107514",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107514",
+   "titre": "7/9 (Thu) Web Shop Maintenance Notice (Completed)",
+   "date": "2026-07-08",
+   "vu_le": "2026-11-16"
+  },
+  "107626": {
+   "id": "107626",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107626",
+   "titre": "7/14 (Tue) Server Patch Notice (Completed)",
+   "date": "2026-07-14",
+   "vu_le": "2026-11-16"
+  },
+  "107651": {
+   "id": "107651",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107651",
+   "titre": "7/14 (Tue) Netmarble Launcher Update Notice",
+   "date": "2026-07-14",
+   "vu_le": "2026-11-16"
+  },
+  "107668": {
+   "id": "107668",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107668",
+   "titre": "Temporary Workaround for Launcher Screen Display Issue After Netmarble Launcher Update",
+   "date": "2026-07-15",
+   "vu_le": "2026-11-16"
+  },
+  "107685": {
+   "id": "107685",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107685",
+   "titre": "End of [WANTED] Workshop of Brilliant Light Legia(Hard) Event&Data Patch(Edited on 7/16 (Thu) 04:45)",
+   "date": "2026-07-16",
+   "vu_le": "2026-11-16"
+  },
+  "107686": {
+   "id": "107686",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107686",
+   "titre": "7/16 (Thu) data Patch Notice (Completed)",
+   "date": "2026-07-16",
+   "vu_le": "2026-11-16"
+  },
+  "107797": {
+   "id": "107797",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107797",
+   "titre": "Advance Notice: End of the Proof of the Strong",
+   "date": "2026-07-22",
+   "vu_le": "2026-11-16"
+  },
+  "107800": {
+   "id": "107800",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107800",
+   "titre": "7/28 (Tue) Developer Livestream Notice (Updated on 7/27 04:59 UTC+0)",
+   "date": "2026-07-23",
+   "vu_le": "2026-11-16"
+  },
+  "107805": {
+   "id": "107805",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107805",
+   "titre": "7/27 (Mon) Netmarble Launcher Update Notice",
+   "date": "2026-07-24",
+   "vu_le": "2026-11-16"
+  },
+  "107912": {
+   "id": "107912",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107912",
+   "titre": "7/30 (Thu) Regular Maintenance Notice (Updated on 7/29 (Wed) 09:20 (UTC+0)) [Completed]",
+   "date": "2026-07-28",
+   "vu_le": "2026-11-16"
+  },
+  "107922": {
+   "id": "107922",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+   "titre": "7/30 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-07-30",
+   "vu_le": "2026-11-16"
+  },
+  "107984": {
+   "id": "107984",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/107984",
+   "titre": "7/30 (Thu) data Patch Notice (Completed)",
+   "date": "2026-07-30",
+   "vu_le": "2026-11-16"
+  },
+  "108031": {
+   "id": "108031",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108031",
+   "titre": "7/30 (Thu) data Patch Notice [Completed]",
+   "date": "2026-07-30",
+   "vu_le": "2026-11-16"
+  },
+  "108082": {
+   "id": "108082",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108082",
+   "titre": "7/31 (Fri) data Patch Notice [Completed]",
+   "date": "2026-07-31",
+   "vu_le": "2026-11-16"
+  },
+  "108212": {
+   "id": "108212",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108212",
+   "titre": "8/3 (Mon) data Patch Notice (Completed)",
+   "date": "2026-08-03",
+   "vu_le": "2026-11-16"
+  },
+  "108244": {
+   "id": "108244",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108244",
+   "titre": "8/4 (Tue) data Patch Notice (Completed)",
+   "date": "2026-08-04",
+   "vu_le": "2026-11-16"
+  },
+  "108284": {
+   "id": "108284",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108284",
+   "titre": "8/6 (Thu) data Patch Notice [Completed]",
+   "date": "2026-08-06",
+   "vu_le": "2026-11-16"
+  },
+  "108387": {
+   "id": "108387",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108387",
+   "titre": "8/11 (Tue) data Patch Notice",
+   "date": "2026-08-11",
+   "vu_le": "2026-11-16"
+  },
+  "108468": {
+   "id": "108468",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108468",
+   "titre": "8/13 (Thu) Server Stability Issue Notice [Resolved 8/13(Thu) 17:42 (UTC+0)]",
+   "date": "2026-08-13",
+   "vu_le": "2026-11-16"
+  },
+  "108589": {
+   "id": "108589",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108589",
+   "titre": "8/27 Update Contents Preview",
+   "date": "2026-08-20",
+   "vu_le": "2026-11-16"
+  },
+  "108618": {
+   "id": "108618",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108618",
+   "titre": "8/21 (Fri) data Patch Notice (Completed)",
+   "date": "2026-08-21",
+   "vu_le": "2026-11-16"
+  },
+  "108655": {
+   "id": "108655",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108655",
+   "titre": "8/25 (Tue) Developer Livestream Notice",
+   "date": "2026-08-24",
+   "vu_le": "2026-11-16"
+  },
+  "108680": {
+   "id": "108680",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108680",
+   "titre": "8/27 (Thu) Regular Maintenance Notice (Completed)",
+   "date": "2026-08-25",
+   "vu_le": "2026-11-16"
+  },
+  "108732": {
+   "id": "108732",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+   "titre": "8/27 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-08-27",
+   "vu_le": "2026-11-16"
+  },
+  "108782": {
+   "id": "108782",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108782",
+   "titre": "8/27 (Thu) Data Patch & Recommended Build Update Notice (Completed) (Edited on 8/28(Fri) 2:00)",
+   "date": "2026-08-27",
+   "vu_le": "2026-11-16"
+  },
+  "108809": {
+   "id": "108809",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108809",
+   "titre": "8/28 (Fri) data Patch Notice (Completed)",
+   "date": "2026-08-28",
+   "vu_le": "2026-11-16"
+  },
+  "108915": {
+   "id": "108915",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108915",
+   "titre": "8/31 (Mon) data Patch Notice (Completed)",
+   "date": "2026-08-31",
+   "vu_le": "2026-11-16"
+  },
+  "108972": {
+   "id": "108972",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108972",
+   "titre": "9/2 (Wed) data Patch Notice (Completed)",
+   "date": "2026-09-02",
+   "vu_le": "2026-11-16"
+  },
+  "108998": {
+   "id": "108998",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/108998",
+   "titre": "9/3 (Thu) data Patch Notice (Completed)",
+   "date": "2026-09-03",
+   "vu_le": "2026-11-16"
+  },
+  "109024": {
+   "id": "109024",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109024",
+   "titre": "9/4 (Fri) data Patch Notice (Completed) (Edited on 9/4(Fri) 9:22)",
+   "date": "2026-09-04",
+   "vu_le": "2026-11-16"
+  },
+  "109079": {
+   "id": "109079",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109079",
+   "titre": "9/8 (Tue) Netmarble Launcher Update Notice",
+   "date": "2026-09-07",
+   "vu_le": "2026-11-16"
+  },
+  "109084": {
+   "id": "109084",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109084",
+   "titre": "Notice on Measures Taken Against Accounts Violating Terms of Service",
+   "date": "2026-09-07",
+   "vu_le": "2026-11-16"
+  },
+  "109109": {
+   "id": "109109",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109109",
+   "titre": "Notice on Actions Taken Against Policy-Violating Accounts",
+   "date": "2026-09-09",
+   "vu_le": "2026-11-16"
+  },
+  "109115": {
+   "id": "109115",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109115",
+   "titre": "9/9 (Wed) data Patch Notice (Completed)",
+   "date": "2026-09-09",
+   "vu_le": "2026-11-16"
+  },
+  "109083": {
+   "id": "109083",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109083",
+   "titre": "Advance Notice: Purchase Cost Adjustment for Select Chroma Costumes (Sent on 9/17 08:10 (UTC+0))",
+   "date": "2026-09-10",
+   "vu_le": "2026-11-16"
+  },
+  "109135": {
+   "id": "109135",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109135",
+   "titre": "9/10 (Thu) data Patch Notice (Completed)",
+   "date": "2026-09-10",
+   "vu_le": "2026-11-16"
+  },
+  "109149": {
+   "id": "109149",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109149",
+   "titre": "Follow-up: Notice on Actions Taken Against Policy-Violating Accounts (Edited on 10/21 04:58(UTC))",
+   "date": "2026-09-10",
+   "vu_le": "2026-11-16"
+  },
+  "109165": {
+   "id": "109165",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109165",
+   "titre": "9/17 Update Contents Preview (Edited on 9/15 03:30 (UTC+0))",
+   "date": "2026-09-11",
+   "vu_le": "2026-11-16"
+  },
+  "109173": {
+   "id": "109173",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109173",
+   "titre": "9/11 (Fri) Server Patch Notice (Completed)",
+   "date": "2026-09-11",
+   "vu_le": "2026-11-16"
+  },
+  "109211": {
+   "id": "109211",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109211",
+   "titre": "Price Adjustments and Payment Currency Changes in Certain Countries Notice",
+   "date": "2026-09-14",
+   "vu_le": "2026-11-16"
+  },
+  "109237": {
+   "id": "109237",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109237",
+   "titre": "9/17 (Thu) Regular Maintenance Notice (Completed)",
+   "date": "2026-09-15",
+   "vu_le": "2026-11-16"
+  },
+  "109277": {
+   "id": "109277",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+   "titre": "9/17 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-09-17",
+   "vu_le": "2026-11-16"
+  },
+  "109306": {
+   "id": "109306",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109306",
+   "titre": "Prior Notice: End of Special Commision",
+   "date": "2026-09-17",
+   "vu_le": "2026-11-16"
+  },
+  "109308": {
+   "id": "109308",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109308",
+   "titre": "Prior Notice: End of Epic Games Store Support and Available Platforms",
+   "date": "2026-09-17",
+   "vu_le": "2026-11-16"
+  },
+  "109314": {
+   "id": "109314",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109314",
+   "titre": "9/17 (Thu) data Patch Notice (Completed)",
+   "date": "2026-09-17",
+   "vu_le": "2026-11-16"
+  },
+  "109346": {
+   "id": "109346",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109346",
+   "titre": "9/18 (Fri) data Patch Notice (Completed)",
+   "date": "2026-09-18",
+   "vu_le": "2026-11-16"
+  },
+  "109472": {
+   "id": "109472",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109472",
+   "titre": "9/21 (Mon) Netmarble Launcher Update Notice",
+   "date": "2026-09-21",
+   "vu_le": "2026-11-16"
+  },
+  "109604": {
+   "id": "109604",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109604",
+   "titre": "Notice: Guild Boss Rage Score Fix and Normalization",
+   "date": "2026-09-28",
+   "vu_le": "2026-11-16"
+  },
+  "109622": {
+   "id": "109622",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109622",
+   "titre": "Notice: Follow-up Patch & Compensation for Guild Boss Rage Issue (Completed)",
+   "date": "2026-09-30",
+   "vu_le": "2026-11-16"
+  },
+  "109720": {
+   "id": "109720",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109720",
+   "titre": "10/7 (Wed) Data Patch Notice (Completed)",
+   "date": "2026-10-07",
+   "vu_le": "2026-11-16"
+  },
+  "109730": {
+   "id": "109730",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109730",
+   "titre": "Prior Notice: End of Buff Exchange in Guild Exchange Shop",
+   "date": "2026-10-08",
+   "vu_le": "2026-11-16"
+  },
+  "109834": {
+   "id": "109834",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109834",
+   "titre": "10/14 (Wed) data Patch Notice (Completed)",
+   "date": "2026-10-14",
+   "vu_le": "2026-11-16"
+  },
+  "109842": {
+   "id": "109842",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109842",
+   "titre": "Advance Notice on Legacy Seal Consolidation",
+   "date": "2026-10-15",
+   "vu_le": "2026-11-16"
+  },
+  "109855": {
+   "id": "109855",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109855",
+   "titre": "10/22 Update Contents Preview",
+   "date": "2026-10-15",
+   "vu_le": "2026-11-16"
+  },
+  "109868": {
+   "id": "109868",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109868",
+   "titre": "10/16 (Fri) data Patch Notice",
+   "date": "2026-10-16",
+   "vu_le": "2026-11-16"
+  },
+  "109878": {
+   "id": "109878",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109878",
+   "titre": "10/19 (Mon) Developer Livestream Notice",
+   "date": "2026-10-16",
+   "vu_le": "2026-11-16"
+  },
+  "109947": {
+   "id": "109947",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109947",
+   "titre": "10/22 (Thu) Regular Maintenance Notice (Edited on 10/22(Thu) 06:53 (UTC+0)) (Completed)",
+   "date": "2026-10-20",
+   "vu_le": "2026-11-16"
+  },
+  "109948": {
+   "id": "109948",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109948",
+   "titre": "Maintenance régulière du 22/10 (jeu) (Modifié le 22/10 à 06:59 (UTC+0)) [Terminé]",
+   "date": "2026-10-20",
+   "vu_le": "2026-11-16"
+  },
+  "109972": {
+   "id": "109972",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109972",
+   "titre": "2.5th Anniversary Redeem Codes Roundup",
+   "date": "2026-10-22",
+   "vu_le": "2026-11-16"
+  },
+  "109983": {
+   "id": "109983",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+   "titre": "10/22 (Thu) In-Game Balance Adjustments Notice",
+   "date": "2026-10-22",
+   "vu_le": "2026-11-16"
+  },
+  "110051": {
+   "id": "110051",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110051",
+   "titre": "10/22 (Thu) data Patch Notice (Completed)",
+   "date": "2026-10-22",
+   "vu_le": "2026-11-16"
+  },
+  "110122": {
+   "id": "110122",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110122",
+   "titre": "10/23 (Fri) Data Patch & Recommended Build Update Notice (Completed)",
+   "date": "2026-10-23",
+   "vu_le": "2026-11-16"
+  },
+  "110320": {
+   "id": "110320",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110320",
+   "titre": "10/26 (Mon) data Patch Notice (Completed)",
+   "date": "2026-10-26",
+   "vu_le": "2026-11-16"
+  },
+  "110376": {
+   "id": "110376",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110376",
+   "titre": "10/28 (Wed) data Patch Notice (Completed)",
+   "date": "2026-10-28",
+   "vu_le": "2026-11-16"
+  },
+  "110405": {
+   "id": "110405",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110405",
+   "titre": "10/29 (Thu) data Patch Notice (Completed)",
+   "date": "2026-10-29",
+   "vu_le": "2026-11-16"
+  },
+  "110464": {
+   "id": "110464",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110464",
+   "titre": "Xsolla Payment System Maintenance Notice",
+   "date": "2026-10-30",
+   "vu_le": "2026-11-16"
+  },
+  "110589": {
+   "id": "110589",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110589",
+   "titre": "11/4 (Wed) data Patch Notice (Completed)",
+   "date": "2026-11-04",
+   "vu_le": "2026-11-16"
+  },
+  "110644": {
+   "id": "110644",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110644",
+   "titre": "11/6 (Fri) data Patch Notice (Completed) (Edited on 11/16 07:30 (UTC+0))",
+   "date": "2026-11-06",
+   "vu_le": "2026-11-16"
+  },
+  "110838": {
+   "id": "110838",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110838",
+   "titre": "11/19 Update Content Preview",
+   "date": "2026-11-13",
+   "vu_le": "2026-11-16"
   }
  },
  "derniere_verification": "2026-11-16"

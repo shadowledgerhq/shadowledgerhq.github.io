@@ -558,5 +558,1754 @@
       }
     ],
     "version_source": "https://solo-leveling-910785.en.uptodown.com/android/versions (Uptodown, client Android ; rapprochement par date de publication, non confirmé par Netmarble)"
+  },
+  {
+    "id": "equilibrage-2024-05-29-14697",
+    "kind": "balance",
+    "version": null,
+    "date": "2024-05-29",
+    "name": {
+      "fr": "Notice d'équilibrage du 2024-05-29",
+      "en": "5/29 (Wed) Hunter & Weapon Balance Adjustment Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/14697",
+    "source": "https://forum.netmarble.com/slv_en/view/32/14697",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "min-byung-gu",
+        "change": "Category Before After Advancement Tier 2 The user’s HP increases by 5% The user’s HP increases by 8%"
+      },
+      {
+        "category": "hunters",
+        "id": "baek-yoonho",
+        "change": "Category Before After White Flame Strike (Basic Attacks) Stage 1 Damage: 174% of the user’s Defense Stage 2 Damage: 182% of the user’s Defense Stage 3 Damage: 1"
+      },
+      {
+        "category": "hunters",
+        "id": "seo-jiwoo",
+        "change": "Category Before After Water Dragon Rush (Q) - Increased skill range Lightning Kick (E) - Increased skill range Advancement Tier 3 The user recovers 40 MP upon a"
+      },
+      {
+        "category": "hunters",
+        "id": "emma-laurent",
+        "change": "Category Before After Advancement Tier 0 When the user uses a [Basic Attacks] and gets hit, the [Heat Absorption] effect is applied once. When the user uses a ["
+      },
+      {
+        "category": "hunters",
+        "id": "woo-jinchul",
+        "change": "Category Before After Fist of Justice (Basic Attacks) Stage 1 Damage: 190% of the user’s Defense Stage 2 Damage: 193% of the user’s Defense Stage 3 Damage: 200%"
+      },
+      {
+        "category": "hunters",
+        "id": "silver-mane-baek-yoonho",
+        "change": "Category Before After Magic Beast's Claws (Basic Attacks) Stage 1 Damage: 126% of the user’s Attack Stage 2 Damage: 137% of the user’s Attack Stage 3 Damage: 15"
+      },
+      {
+        "category": "hunters",
+        "id": "lee-bora",
+        "change": "Category Before After Darkness Emission (Basic Attacks) Stage 1 Damage: 156% of the user’s Attack Stage 2 Damage: 165% of the user’s Attack Stage 3 Damage: 178%"
+      },
+      {
+        "category": "hunters",
+        "id": "lim-tae-gyu",
+        "change": "Category Before After Dark Shot (Basic Attacks) Stage 1 Damage: 140% of the user’s Attack Stage 2 Damage: 150% of the user’s Attack Stage 3 Damage: 160% of the "
+      },
+      {
+        "category": "hunters",
+        "id": "cha-hae-in",
+        "change": "Category Before After Swift Sword (Basic Attacks) Stage 1 Damage: 200% of the user’s Attack Stage 2 Damage: 212% of the user’s Attack Stage 3 Damage: 227% of th"
+      },
+      {
+        "category": "hunters",
+        "id": "choi-jong-in",
+        "change": "Category Before After Spark (Basic Attacks) Stage 1 Damage: 124% of the user’s Attack Stage 2 Damage: 148% of the user’s Attack Stage 3 Damage: 158% of the user"
+      },
+      {
+        "category": "hunters",
+        "id": "hwang-dongsoo",
+        "change": "Category Before After S-Rank Fist (Basic Attacks) Stage 1 Damage: 163% of the user’s Defense Stage 2 Damage: 170% of the user’s Defense Stage 3 Damage: 182% of "
+      },
+      {
+        "category": "hunters",
+        "id": "park-beom-shik",
+        "change": "Category Before After Axe Strike! (Basic Attacks) Stage 1 Damage: 188% of the user’s Defense Stage 2 Damage: 197% of the user’s Defense Stage 3 Damage: 212% of "
+      },
+      {
+        "category": "hunters",
+        "id": "song-chiyul",
+        "change": "Category Before After Scorching Heat (Basic Attacks) Stage 1 Damage: 192% of the user’s Attack Stage 2 Damage: 203% of the user’s Attack Stage 3 Damage: 220% of"
+      },
+      {
+        "category": "hunters",
+        "id": "jo-kyuhwan",
+        "change": "Category Before After Light Emission (Basic Attacks) Stage 1 Damage: 103% of the user’s Attack Stage 2 Damage: 110% of the user’s Attack Stage 3 Damage: 118% of"
+      },
+      {
+        "category": "weapons",
+        "id": "vulcans-rage",
+        "change": "Category Before After Basic Attack - Improved rigidity - Improved battle control frame Stage 1 Damage: 128% of the user’s Attack Stage 2 Damage: 135% of the use"
+      },
+      {
+        "category": "weapons",
+        "id": "demon-kings-longsword",
+        "change": "Category Before After Lightning (Skill) - Massively reduced skill execution time Thank you."
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2024-07-10-31759",
+    "kind": "balance",
+    "version": null,
+    "date": "2024-07-10",
+    "name": {
+      "fr": "Notice d'équilibrage du 2024-07-10",
+      "en": "7/10 (Wed) Hunter & Rune Skill Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/31759",
+    "source": "https://forum.netmarble.com/slv_en/view/32/31759",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "choi-jong-in",
+        "change": "Category Before After Advancement Tier 2 Increases the user’s Attack by 8% Increases the user’s Attack by 10% Advancement Tier 5 While [Tagging Out], the cooldo"
+      },
+      {
+        "category": "hunters",
+        "id": "lim-tae-gyu",
+        "change": "Category Before After Passive When the user’s Basic Attack hits, fires 2 Magic Arrows. Damage: Deals damage equal to 50% of the user’s Attack per arrow. When th"
+      },
+      {
+        "category": "hunters",
+        "id": "hwang-dongsoo",
+        "change": "Category Before After Advancement Tier 3 Every time [Greed Scavenger] is used, obtains the [Madness] effect. Each time the user uses [Urge to Kill or Greed Scav"
+      },
+      {
+        "category": "hunters",
+        "id": "woo-jinchul",
+        "change": "Category Before After Suppress (Core Attack) - Grants [Super Armor] while using this skill. Serious Punch (Ultimate Skill) - Movement after the skill usage will"
+      },
+      {
+        "category": "hunters",
+        "id": "baek-yoonho",
+        "change": "Category Before After Passive [Defense Decrease] is applied when the White Flames effect is stacked 3 times. Decreases Defense by 20%. Duration: 10 second(s) [D"
+      },
+      {
+        "category": "hunters",
+        "id": "emma-laurent",
+        "change": "Category Before After Burning Pride (Ultimate Skill) Damage: 1555% of the user’s Max HP Damage: 1777% of the user’s Max HP"
+      },
+      {
+        "category": "hunters",
+        "id": "silver-mane-baek-yoonho",
+        "change": "Category Before After Advancement Tier 0 (Passive) - Inflicts [Curse of the Magic Beast] to targets immune to [Bleed]. [Curse of the Magic Beast] Deals damage e"
+      },
+      {
+        "category": "hunters",
+        "id": "cha-hae-in",
+        "change": "Category Before After The Dancer (Q) Damage: 373% of the user’s Attack Damage: 412% of the user’s Attack Advancement Tier 1 - Grants [Super Armor] while [Waltz "
+      },
+      {
+        "category": "sjw_skills",
+        "id": "vital-strike",
+        "change": "Rune Before After Internal Wound Damage: 290%/312%/442% of the user’s Attack Damage: 418%/520%/744% of the user’s Attack"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "mutilate",
+        "change": "Rune Before After Phantom Damage: 270%/356%/380% of Jinwoo’s Attack and 270%/356%/380% of Jinwoo’s Max HP Damage: 334%/382%/473% of Jinwoo’s Attack and 334%/382"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "dagger-toss",
+        "change": "Rune Before After Bombardment Damage: 373%/408%/445% of Jinwoo’s Attack Damage: 428%/487%/563% of Jinwoo’s Attack"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "double-slash",
+        "change": "Rune Before After Multiply MP Consumption: 100 MP Consumption: 50 When defeating an enemy, there is a 50%/70%/100% chance to reset the skill’s cooldown (Cooldow"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "vertical-arts",
+        "change": "Rune Before After Sequent Explosions Damage: 315%/322%/340% of Jinwoo’s Attack Damage: 406%/414%/440% of Jinwoo’s Attack - Decreased cooldown between the first "
+      },
+      {
+        "category": "sjw_skills",
+        "id": "multistrike",
+        "change": "Rune Before After Rush When the final hit lands, deals weak Break damage every 3 second(s) for 9 second(s). When the final hit lands, deals weak Break damage ev"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "the-commanders-touch",
+        "change": "Rune Before After Finisher Damage: 546%/574%/730% of the user’s Attack Damage: 700%/823%/1092% of the user’s Attack Liberation Damage: 296%/357%/416% of the use"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2024-07-30-43529",
+    "kind": "balance",
+    "version": null,
+    "date": "2024-07-30",
+    "name": {
+      "fr": "Notice d'équilibrage du 2024-07-30",
+      "en": "7/31 (Wed) Hunter & Blessing Stone Balance Adjustments Notice [Updated 7/30 (Tue) 03:20 (UTC+0)]"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/43529",
+    "source": "https://forum.netmarble.com/slv_en/view/32/43529",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "yoo-soohyun",
+        "change": "Category Before After Passive Details - [Magic Reaction] Decreases the target’s Recovery Rate by 4%. (stacking up to 20 times) Advancement Tier 1 When [Kill Sho"
+      },
+      {
+        "category": "hunters",
+        "id": "woo-jinchul",
+        "change": "Category Before After Passive Details When the user uses [Dash], it increases the damage of [Suppress, Mediation of Power, Iron Fist] by 30% for 6 second(s). Wh"
+      },
+      {
+        "category": "hunters",
+        "id": "choi-jong-in",
+        "change": "Category Before After Passive Details [The Ultimate Hunter] Increases the user’s Attack and Defense Penetration by 12%. [The Ultimate Hunter] Increases the user"
+      },
+      {
+        "category": "hunters",
+        "id": "cha-hae-in",
+        "change": "Category Before After The Dancer When the user lands a Critical Hit, it applies the [Waltz of the Sword] effect. (Cooldown: 20 second(s)) When this skill hits i"
+      },
+      {
+        "category": "hunters",
+        "id": "emma-laurent",
+        "change": "Category Before After Passive Details [Heat emission] At 15 instances, the [Heat Emission] effect applies to team members as well. [Heat Emission] At 15 instanc"
+      },
+      {
+        "category": "blessings",
+        "id": "blessing-stone-balance-adjustments",
+        "change": "- Balance for certain Blessing Stones will be adjusted. ▶ Title: Wolf Assassin Category Before After Rare The damage you deal to Normal Monsters increases by 6%"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2024-08-22-51707",
+    "kind": "balance",
+    "version": null,
+    "date": "2024-08-22",
+    "name": {
+      "fr": "Notice d'équilibrage du 2024-08-22",
+      "en": "8/22 (Thu) In-Game Balance Adjustment Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/51707",
+    "source": "https://forum.netmarble.com/slv_en/view/32/51707",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "baek-yoonho",
+        "change": "Category Before After [White Flames] - Added additional 2.5% defense decrease effect to the [White Flames] effect. [Unlock White Flames] - Added [Super Armor] w"
+      },
+      {
+        "category": "hunters",
+        "id": "silver-mane-baek-yoonho",
+        "change": "Category Before After Passive Details Increases the damage of [Magic Beast’s Claws and Slaughter] by 20% when dealing damage to targets with the [Bleed or Curse"
+      },
+      {
+        "category": "weapons",
+        "id": "vulcans-rage",
+        "change": "Category Before After Basic Attack Stage 1 Damage: 140% of Jinwoo’s Attack Stage 2 Damage: 146% of Jinwoo’s Attack Stage 3 Damage: 155% of Jinwoo’s Attack Stage"
+      },
+      {
+        "category": "weapons",
+        "id": "phoenix-soul",
+        "change": "Category Before After Basic Attack Stage 1 Damage: 93% of Jinwoo’s Attack Stage 2 Damage: 97% of Jinwoo’s Attack Stage 3 Damage: 103% of Jinwoo’s Attack Stage 1"
+      },
+      {
+        "category": "weapons",
+        "id": "thetis-grimoire",
+        "change": "Category Before After Basic Attack Stage 1 Damage: 70% of Jinwoo’s Attack Stage 2 Damage: 73% of Jinwoo’s Attack Stage 3 Damage: 77% of Jinwoo’s Attack Stage 1 "
+      },
+      {
+        "category": "weapons",
+        "id": "skadi",
+        "change": "Category Before After Basic Attack Stage 1 Damage: 91% of Jinwoo’s Attack Stage 2 Damage: 94% of Jinwoo’s Attack Stage 3 Damage: 100% of Jinwoo’s Attack Stage 1"
+      },
+      {
+        "category": "weapons",
+        "id": "demon-kings-longsword",
+        "change": "Category Before After Basic Attack Stage 1 Damage: 93% of Jinwoo’s Attack Stage 2 Damage: 97% of Jinwoo’s Attack Stage 3 Damage: 104% of Jinwoo’s Attack Stage 1"
+      },
+      {
+        "category": "weapons",
+        "id": "the-huntsman",
+        "change": "Category Before After Basic Attack Stage 1 Damage: 91% of the user’s Attack Stage 2 Damage: 94% of the user’s Attack Stage 3 Damage: 100% of the user’s Attack S"
+      },
+      {
+        "category": "weapons",
+        "id": "demonic-plum-flower-sword",
+        "change": "Category Before After Basic Attack Stage 1 Damage: 94% of Jinwoo’s Attack Stage 2 Damage: 100% of Jinwoo’s Attack Stage 3 Damage: 106% of Jinwoo’s Attack Stage "
+      },
+      {
+        "category": "weapons",
+        "id": "shadow-scythe",
+        "change": "Category Before After Basic Attack Stage 1 Damage: 116% of Jinwoo’s Attack Stage 2 Damage: 120% of Jinwoo’s Attack Stage 3 Damage: 128% of Jinwoo’s Attack Stage"
+      },
+      {
+        "category": "weapons",
+        "id": "moonshadow",
+        "change": "Category Before After Basic Attack Stage 1 Damage: 98% of Jinwoo’s Attack Stage 2 Damage: 102% of Jinwoo’s Attack Stage 3 Damage: 108% of Jinwoo’s Attack Stage "
+      },
+      {
+        "category": "sjw_skills",
+        "id": "vital-strike",
+        "change": "Rune Before After Decimate Damage: 393%/ 490%/ 622% of Jinwoo’s Attack Damage: 450%/ 580%/ 760% of Jinwoo’s Attack Hone In Damage: 568%/ 650%/ 745% of Jinwoo’s "
+      },
+      {
+        "category": "sjw_skills",
+        "id": "mutilate",
+        "change": "Rune Before After Phantom Damage: 334%/ 382%/ 473% of Jinwoo’s Attack and Max HP Damage: 347%/ 400%/ 500% of Jinwoo’s Attack and Max HP Strike Damage: 435%/ 537"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "dagger-toss",
+        "change": "Rune Before After Detonation Damage per dagger: 52%/ 60%/ 66% of Jinwoo’s Attack Damage per dagger: 60%/ 72%/ 82% of Jinwoo’s Attack Ascension Damage: 395%/ 403"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "double-slash",
+        "change": "Rune Before After Full Moon Wheel Damage: 408% / 493% / 600% of Jinwoo’s Attack Damage: 470% / 586% / 734% of Jinwoo’s Attack Multiply Damage: 378% / 396% / 466"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "cutting-rush",
+        "change": "Rune Before After Annihilation Damage: 680% / 692% / 730% of Jinwoo’s Attack Damage: 767% / 804% / 872% of Jinwoo’s Attack"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "vertical-arts",
+        "change": "Rune Before After Reap Damage: 298% / 348% / 390% of Jinwoo’s Attack Damage: 330% / 400% / 463% of Jinwoo’s Attack"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "multistrike",
+        "change": "Rune Before After Percussion Damage: 408% / 450% / 502% of Jinwoo’s Attack Damage: 454% / 515% / 592% of Jinwoo’s Attack Pummel Damage: 340% / 432% / 480% of Ji"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "the-commanders-touch",
+        "change": "Rune Before After Finisher Damage: 700% / 823% / 1092% of Jinwoo’s Attack Damage: 736% / 878% / 1185% of Jinwoo’s Attack Liberation Damage: 320% / 390% / 460% o"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "crushing-blow",
+        "change": "Rune Before After Chained Break Damage: 358% / 395% / 488% of Jinwoo’s Attack Damage: 400% / 455% / 582% of Jinwoo’s Attack Enlightened Break Damage: 309% / 317"
+      },
+      {
+        "category": "blessings",
+        "id": "blessing-stone-balance-adjustment",
+        "change": "- Balance for certain Blessing Stones will be adjusted. ▶ Boss Slayer Rank Before After Legendary Your damage dealt to Bosses increases by 20%, but the cooldown"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-burning-curse",
+        "change": "Rank Before After 4 Set Effect Applies the [Rescue] effect. - If the user has 25% HP or less, they recover 25% of their HP. - Activates only once per dungeon. A"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-burning-blessing",
+        "change": "Rank Before After 8 Set Effect [Enhanced Blessing] effect is enhanced to [Burning Blessing]. [Burning Blessing] - Activates when tag out or using a Support Skil"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2024-09-10-56294",
+    "kind": "balance",
+    "version": null,
+    "date": "2024-09-10",
+    "name": {
+      "fr": "Notice d'équilibrage du 2024-09-10",
+      "en": "9/12 (Thu) In-Game Balance Adjustment"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/56294",
+    "source": "https://forum.netmarble.com/slv_en/view/32/56294",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "sjw_skills",
+        "id": "vital-strike",
+        "change": "Rune Before Changed Hone In Damage: 640%/ 755%/ 892% of Jinwoo’s Attack Damage: 802% / 1043% / 1350% of Jinwoo’s Attack On Point Damage: 512%/ 622%/ 791% of Jin"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "dagger-toss",
+        "change": "Rune Before Changed Detonation Damage per dagger: 60%/ 72%/ 82% of Jinwoo’s Attack Damage per dagger: 97% / 136% / 177% of Jinwoo’s Attack Electric Shock Damage"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "double-slash",
+        "change": "Rune Before Changed Full Moon Wheel Damage: 470% / 586% / 734% of Jinwoo’s Attack Damage: 630% / 883% / 1230% of Jinwoo’s Attack"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "the-commanders-touch",
+        "change": "Rune Before Changed Black Hole Damage: 22% / 25% / 30% of Jinwoo’s Attack Damage: 30% / 37% / 50% of Jinwoo’s Attack"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "crushing-blow",
+        "change": "Rune Before Changed Enlightened Break Damage: 354% / 373% / 466% of Jinwoo’s Attack Damage: 530% / 655% / 945% of Jinwoo’s Attack"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "bugs-related-to-certain-rune-skills-will",
+        "change": "- The issue where skill link effects can be stacked when using certain weapons after equipping Sonic Stream - Magnifying Slashes will be fixed. - The issue wher"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "artifact-balance-adjustment",
+        "change": "- The Artifact option “Mana Recovery Increase” will be newly added. - The Artifact sub option “Healing Given Increase” option will change into “Mana Recovery In"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2024-10-10-62691",
+    "kind": "balance",
+    "version": null,
+    "date": "2024-10-10",
+    "name": {
+      "fr": "Notice d'équilibrage du 2024-10-10",
+      "en": "10/10 (Thu) In-Game Balance Adjustment Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/62691",
+    "source": "https://forum.netmarble.com/slv_en/view/32/62691",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "yoo-soohyun",
+        "change": "Category Before Changed Passive Details - [Magic Firearm] Magic firearms appear around Soohyun which deal damage equal to 40% of her Attack. - [Magic Firearm] M"
+      },
+      {
+        "category": "hunters",
+        "id": "choi-jong-in",
+        "change": "Category Before Changed Passive Details - Choi Jong-In cannot deal Critical Hits, but his Attack increases by 40%. - [The Ultimate Hunter] Increases the user’s "
+      },
+      {
+        "category": "weapons",
+        "id": "demon-kings-longsword",
+        "change": "Category Before Changed Advancement 0 - [Shield] Creates a [Shield] equal to 20% of the user’s Max HP. - [Storm of White Flames] Increases the user’s Attack by "
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2024-10-31-64912",
+    "kind": "balance",
+    "version": null,
+    "date": "2024-10-31",
+    "name": {
+      "fr": "Notice d'équilibrage du 2024-10-31",
+      "en": "10/31 (Thu) In-Game Balance Adjustment Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/64912",
+    "source": "https://forum.netmarble.com/slv_en/view/32/64912",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "lim-tae-gyu",
+        "change": "Category Before Changed Passive Details [Magic Boost] - Damage: Deals damage equal to 60% of the user’s Attack per arrow. - Increases the damage of [Core Attack"
+      },
+      {
+        "category": "hunters",
+        "id": "silver-mane-baek-yoonho",
+        "change": "Category Before Changed Passive Details - Increases the damage of [Magic Beast’s Claws and Slaughter] by 40% when dealing damage to targets with the [Bleed or C"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "sonic-stream",
+        "change": "Category Before Changed Double Down - Damage: 947%/1050%/1216% of Jinwoo’s Attack. - When your Attack hits an enemy that doesn’t have a Break Gauge it increases"
+      },
+      {
+        "category": "shadows",
+        "id": "stat-increase-rate-compared-to-the-origi",
+        "change": "Army of Shadows Level Stat Increase Rate 1 23% 5 41% 10 56% 15 63% 20 63% 25 59% 30 57% 35 47% 40 37% 45 27% 50 19% 55 10% 60 or higher 1%"
+      },
+      {
+        "category": "weapons",
+        "id": "stat-increase-rate-compared-to-the-origi",
+        "change": "Weapon Level R Rank SR Rank 1 200% 67% 5 138% 53% 10 100% 41% 15 79% 33% 20 66% 27% 25 57% 23% 30 50% 19% 35 44% 16% 40 40% 14% 45 36% 12% 50 33% 10% 55 30% 9% "
+      },
+      {
+        "category": "weapons",
+        "id": "combat-power-transfer-increase-rate-for-",
+        "change": "Armory Level R Rank SR Rank Before Adjusted Before Adjusted Increase in Bonus Combat Power 250 500 500 1000 0 10% 30% 20% 30% 1 16% 46% 31% 49% 2 21% 61% 42% 68"
+      },
+      {
+        "category": "general",
+        "id": "increase-rate-based-on-gem-tier-and-opti",
+        "change": "Gem Option Tier 1 Gem Tier 2 Gem Tier 3 Gem Before Adjusted Before Adjusted Before Adjusted Attack (%) 0.5% 1.25% 0.75% 1.75% 1.75% 2.25% Additional Attack 27 7"
+      },
+      {
+        "category": "hunters",
+        "id": "stat-increase-per-upgrade-adjustment-com",
+        "change": "Upgrade Tier SR Rank SSR Rank Before Adjusted Before Adjusted Tier 1 0.2% 1.3% 0.6% 3.8% Tier 2 0.4% 1.4% 1.3% 4.2% Tier 3 0.6% 1.6% 1.9% 4.7% Tier 4 0.8% 1.7% "
+      },
+      {
+        "category": "hunters",
+        "id": "combat-power-increase-rate-based-on-hunt",
+        "change": "Advancement Tier SR Rank SSR Rank Before Adjusted Before Adjusted Advancement Tier 0 0% 5% 0% 15% Advancement Tier 1 2% 6.7% 5% 20% Advancement Tier 2 3% 8% 10%"
+      },
+      {
+        "category": "hunters",
+        "id": "combat-power-increase-rate-based-on-sr-s",
+        "change": "Advancement Tier SR Rank SSR Rank Before Adjusted Before Adjusted Advancement Tier 0 0% 3% 0% 7.5% Advancement Tier 1 1.2% 4% 3% 10% Advancement Tier 2 2.4% 4.8"
+      },
+      {
+        "category": "general",
+        "id": "story-normal-main-side-chapter-difficult",
+        "change": "- The monster level and recommended combat power in the Main/Side Stories after Chapter 6 will decrease. Please refer to the table below for more details. [Main"
+      },
+      {
+        "category": "general",
+        "id": "battlefield-of-chaos-tier-1-12-difficult",
+        "change": "- The monster level and recommended combat power will decrease for Battlefield of Chaos tier 1-12. Please refer to the table below for more details. Tier Level "
+      },
+      {
+        "category": "general",
+        "id": "instance-dungeon-encore-missions-difficu",
+        "change": "- The monster level and recommended combat power will decrease for each difficulty. Please refer to the table below for more details. Tier Level (Before) Recomm"
+      },
+      {
+        "category": "general",
+        "id": "proof-of-the-strong-difficulty-adjustmen",
+        "change": "- The monster level and recommended combat power will decrease each Proof Level. Please refer to the table below for more details. Proof Level Level (Before) Re"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2024-11-28-67238",
+    "kind": "balance",
+    "version": null,
+    "date": "2024-11-28",
+    "name": {
+      "fr": "Notice d'équilibrage du 2024-11-28",
+      "en": "11/28 (Thu) In-Game Balance Adjustment Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/67238",
+    "source": "https://forum.netmarble.com/slv_en/view/32/67238",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "baek-yoonho",
+        "change": "Category Before Changed Passive Details - [White Flames] When 3 instances of the effect have been stacked it activities the [Violent Explosion] effect dealing d"
+      },
+      {
+        "category": "weapons",
+        "id": "truth-demon-knights-spear",
+        "change": "Category Before Changed Advancement Tier 5 [Holy Knight’s Curse] - At 5 instances it deals additional damage equal to 1000% of the user’s Attack. - When the add"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "black-lions-set",
+        "change": "Category Before Changed 4 Set Effect When the user’s attacks hit their Attack and Defense increase by 3% for 6 second(s). (Stacking up to 8 times) (Cooldown: 0."
+      },
+      {
+        "category": "artifact_sets",
+        "id": "black-lions-set",
+        "change": "Category Before Changed 4 Set Effect When attacking, the user ignores 15% of the target’s Defense. When attacking, the user ignores 18% of the target’s Defense."
+      },
+      {
+        "category": "artifact_sets",
+        "id": "champion-on-the-field-red-eyed",
+        "change": "Category Before Changed 2 Set Effect Increases the user’s Attack by 5% for 4 second(s) when landing a Critical Hit (Cooldown: 1 second(s)). Increases the user’s"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "executioner-behemoth",
+        "change": "Category Before Changed 2 Set Effect When attacking enemies with 40% or less HP, increases the user’s damage dealt by 8%. When attacking enemies with 40% or les"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "skeleton-set",
+        "change": "Category Before Changed 2 Set Effect When the user has 50% HP or less, their damage dealt increases by 15%. When the user has 50% HP or less, their damage dealt"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "outstanding-ability-obsidian",
+        "change": "Category Before Changed 2 Set Effect When the user has 70% of their MP, their damage dealt increases by 10%. When the user has 70% of their MP, their damage dea"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "certain-sung-jinwoo-weapon-and-skill-run",
+        "change": "- “Applies [Airborne] / [Knockdown] effect when hit” effect will be added to certain Sung Jinwoo weapons and Skill Runes, but deleted from certain Skills. Pleas"
+      },
+      {
+        "category": "general",
+        "id": "story-hard-reverse-chapter-difficulty-ad",
+        "change": "- In the Story Hard and Reverse difficulty modes, the monster levels and recommended combat power for the following chapters/stages will be adjusted downward. P"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2025-03-11-79785",
+    "kind": "balance",
+    "version": null,
+    "date": "2025-03-11",
+    "name": {
+      "fr": "Notice d'équilibrage du 2025-03-11",
+      "en": "3/13 (Thu) In-Game Balance Adjustments Pre-Announcement"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/79785",
+    "source": "https://forum.netmarble.com/slv_en/view/32/79785",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "sjw_skills",
+        "id": "double-slash",
+        "change": "Rune Before Changed Full Moon Wheel MP Consumption: 100 Damage dealt to Normal Monsters increases by 45%/75%/120%. MP Consumption: 80 Damage dealt to Boss or El"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "crushing-blow",
+        "change": "Rune Before Changed Chained Break MP Consumption: 100 MP Consumption: 80 Enlightened Break MP Consumption: 100 MP Consumption: 80 Countering Break MP Consumptio"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "multistrike",
+        "change": "Rune Before Changed Rush MP Consumption: 100 Damage: 520%/655%/900% of Jinwoo’s Attack MP Consumption: 80 Damage: 624%/786%/1080% of Jinwoo’s Attack Percussion "
+      },
+      {
+        "category": "sjw_skills",
+        "id": "dagger-toss",
+        "change": "Rune Before Changed Detonation MP Consumption: 100 Damage per dagger: 97%/136%/177% of Jinwoo’s Attack [Burn] Deals damage equal to 30%/50%/80% of Attack (stack"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "mutilate",
+        "change": "Rune Before Changed Cold Storm Damage: 883%/1328%/1992% of Jinwoo’s Attack [Frostbite] Deals damage equal to 150%/250%/400% of the user’s Attack Damage: 927%/13"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "deaths-dance",
+        "change": "Rune Before Changed High-speed Rotation MP Consumption: 60 Damage: 220%/270%/350% of Jinwoo’s Attack MP Consumption: 40 Damage: 330%/405%/525% of Jinwoo’s Attac"
+      },
+      {
+        "category": "blessings",
+        "id": "blessing-stone-balance-adjustment",
+        "change": "- The balance for certain Blessing Stones will be adjusted. ▶ Monarch's Domain Type Before Changed Empowerment Shadow’s Attack within the domain increases by 40"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2025-06-05-89282",
+    "kind": "balance",
+    "version": null,
+    "date": "2025-06-05",
+    "name": {
+      "fr": "Notice d'équilibrage du 2025-06-05",
+      "en": "6/5 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/89282",
+    "source": "https://forum.netmarble.com/slv_en/view/32/89282",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "cha-hae-in",
+        "change": "Category Before Changed Advancement Tier 3 [Sword’s Resolve] - Heavenly Strike chances to Heavy Attack: Heavenly Strike increasing its damage by 60% - Consumes "
+      },
+      {
+        "category": "hunters",
+        "id": "charlotte",
+        "change": "Category Before Changed Meeh! (Basic Attack) 315% / 327% / 345% of the user’s Defense 382% / 394% / 410% of the user’s Defense Twinkle☆ (Core Attack) 1233% of t"
+      },
+      {
+        "category": "hunters",
+        "id": "harper",
+        "change": "Category Before Changed Hammer Attack (Basic Attack) 155% / 160% / 166% of the user’s Max HP 193% / 197% / 204% of the user’s Max HP Hammer Dash! (Core Attack) "
+      },
+      {
+        "category": "hunters",
+        "id": "silver-mane-baek-yoonho",
+        "change": "Category Before Changed Magic Beast's Claws (Basic Attack) 209% / 214% / 220% of the user’s Attack 227% / 232% / 237% of the user’s Attack Slaughter (Core Attac"
+      },
+      {
+        "category": "hunters",
+        "id": "lim-tae-gyu",
+        "change": "Category Before Changed Dark Shot (Basic Attack) 160% / 167% / 178% of the user’s Attack 194% / 202% / 214% of the user’s Attack Volley Fire (Core Attack) 510% "
+      },
+      {
+        "category": "hunters",
+        "id": "hwang-dongsoo",
+        "change": "Category Before Changed S-Rank Fist (Basic Attack) 183% / 190% / 202% of the user’s Defense 224% / 232% / 243% of the user’s Defense S-Rank Influence (Core Atta"
+      },
+      {
+        "category": "hunters",
+        "id": "han-se-mi",
+        "change": "Category Before Changed Advancement Tier 5 [Natural Unity] Increases the user’s Attack by 10%. Increases Wind damage by 20%. Duration: 25 second(s). [Natural Un"
+      },
+      {
+        "category": "weapons",
+        "id": "skadi",
+        "change": "Category Before Changed Advancement Tier 1 [Skadi’s Domain] - When any attack lands while in the domain it deals damage equal to 50% of the attacker’s Attack. ("
+      },
+      {
+        "category": "weapons",
+        "id": "truth-kasakas-venom-fang",
+        "change": "Category Before Changed Advancement Tier 3 [Kasaka’s Deadly Poison] - Deals damage equal to 200% of the user’s Attack every 3 second(s). - Decreases the target’"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2025-07-03-91211",
+    "kind": "balance",
+    "version": null,
+    "date": "2025-07-03",
+    "name": {
+      "fr": "Notice d'équilibrage du 2025-07-03",
+      "en": "7/3 (Thu) In-Game Balance Adjustments Notice [Updated 7/3 (Thu) 02:53 (UTC+0)]"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/91211",
+    "source": "https://forum.netmarble.com/slv_en/view/32/91211",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "thomas-andre",
+        "change": "Category Before Changed Cold-blooded Pummel (Basic Attack) 150% / 154% / 160% of the user’s Defense 166% / 170% / 177% of the user’s Defense Gigantic Hammer Sla"
+      },
+      {
+        "category": "hunters",
+        "id": "go-gunhee",
+        "change": "Category Before Changed Chairman’s Will (Basic Attack) 197% / 203% / 213% of the user’s Defense. 223% / 230% / 240% of the user’s Defense. Abdominal Crush (Core"
+      },
+      {
+        "category": "hunters",
+        "id": "shimizu-akari",
+        "change": "Category Before Changed Axe of Punishment (Basic Attack) 116% / 120% / 124% of the user’s maximum HP 140% / 143% / 148% of the user’s maximum HP Judgment Strike"
+      },
+      {
+        "category": "hunters",
+        "id": "baek-yoonho",
+        "change": "Category Before Changed White Flame Strike (Basic Attack) 184% / 193% / 205% of the user’s Defense 207% / 216% / 228% of the user’s Defense White Flame Pummel ("
+      },
+      {
+        "category": "hunters",
+        "id": "alicia-blanche",
+        "change": "Category Before Changed Touch of Winter (Basic Attack) 190% / 195% / 200% of the user’s Attack 207% / 212% / 216% of the user’s Attack Frost Arrow (Core Attack)"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2025-07-31-92872",
+    "kind": "balance",
+    "version": null,
+    "date": "2025-07-31",
+    "name": {
+      "fr": "Notice d'équilibrage du 2025-07-31",
+      "en": "7/31 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/92872",
+    "source": "https://forum.netmarble.com/slv_en/view/32/92872",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "weapons",
+        "id": "fan-of-the-fire-demon",
+        "change": "Category Before Changed Advancement Tier 1 [High Fever] - Jinwoo’s Fire damage increases by 50% when he hits a target with the [High Fever] effect. - The user r"
+      },
+      {
+        "category": "weapons",
+        "id": "gold-tailed-fox",
+        "change": "Category Before Changed Advancement Tier 1 [Golden Wound] - When the user attacks a target with the [Golden Wound] effect applied it increases the user’s Light "
+      },
+      {
+        "category": "weapons",
+        "id": "truth-kasakas-venom-fang",
+        "change": "Category Before Changed Advancement Tier 5 The damage of [Vanishing Shade] increases by 150%. The damage of [Vanishing Shade] increases by 200%."
+      },
+      {
+        "category": "hunters",
+        "id": "support-skill-adjustment-for-certain-hun",
+        "change": "- The specific buffs’ name and balance for certain support skills of certain Hunters will be adjusted. * Only items with adjustments are separated as Before / C"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2025-08-28-94122",
+    "kind": "balance",
+    "version": null,
+    "date": "2025-08-28",
+    "name": {
+      "fr": "Notice d'équilibrage du 2025-08-28",
+      "en": "8/28 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/94122",
+    "source": "https://forum.netmarble.com/slv_en/view/32/94122",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "charlotte",
+        "change": "Category Before Changed Isla’s Dance★ (Basic Skill 1) When the doll explodes it deals additional damage equal to 350% of Charlotte’s Defense When the doll explo"
+      },
+      {
+        "category": "hunters",
+        "id": "harper",
+        "change": "Category Before Changed Hammer Drift! (Basic Skill 1) Deals [medium Break] damage Deals [heavy Break] damage The Tenderizer! (Basic Skill 2) Deals [almighty Bre"
+      },
+      {
+        "category": "hunters",
+        "id": "isla-wright",
+        "change": "Category Before Changed Advancement Tier 2 Increases entire team’s Defense by 5% Increases entire team’s Defense by 12%"
+      },
+      {
+        "category": "hunters",
+        "id": "silver-mane-baek-yoonho",
+        "change": "Category Before Changed Magic Beast’s Claws (Basic Attack) 227% / 232% / 237% of the user’s Attack 457% / 465% / 475% of the user’s Attack Slaughter (Core Attac"
+      },
+      {
+        "category": "hunters",
+        "id": "lim-tae-gyu",
+        "change": "Category Before Changed Heavy Attack: Typhoon Fire (Support Skill) [Mana Power Amplification] Increases the user’s Core Attack damage by 20% Duration: 15 second"
+      },
+      {
+        "category": "hunters",
+        "id": "lee-bora",
+        "change": "Category Before Changed Darkness Emission (Basic Attack) 174% / 183% / 196% of the user’s Attack 256% / 265% / 278% of the user’s Attack Tracking Charm (Core At"
+      },
+      {
+        "category": "hunters",
+        "id": "shuhua",
+        "change": "Category Before Changed Advancement Tier 0 - The entire team gains the [Forever] effect when entering the Encore Mission and Instance Dungeon [Forever] Increase"
+      },
+      {
+        "category": "hunters",
+        "id": "miyeon",
+        "change": "Category Before Changed Echo Strike (Basic Attack) 114% / 120% / 128% of the user’s Defense 126% / 130% / 140% of the user’s Defense Midtone Slash (Core Attack)"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "iron-will",
+        "change": "Category Before Changed 4set Effect Increases [Ultimate Skill] damage by 50% 1 time only (Cooldown: 20 second(S)) Increases Ultimate Skill damage by 50%."
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2025-10-23-96532",
+    "kind": "balance",
+    "version": null,
+    "date": "2025-10-23",
+    "name": {
+      "fr": "Notice d'équilibrage du 2025-10-23",
+      "en": "10/23 (Thu) In-Game Balance Adjustments Notice [Updated 10/23 (Thu) 03:17 (UTC+0)]"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/96532",
+    "source": "https://forum.netmarble.com/slv_en/view/32/96532",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "lim-tae-gyu",
+        "change": "Category Before Changed Dark Shot (Basic Attack) 194% / 202% / 214% of the user’s Attack 194% / 202% / 214% of the user’s Attack Deals [weak Break] damage Volle"
+      },
+      {
+        "category": "hunters",
+        "id": "lee-bora",
+        "change": "Category Before Changed Advancement Tier 2 The user’s Critical Hit Rate and Critical Hit damage increases by 6% The user’s Critical Hit Rate and Critical Hit da"
+      },
+      {
+        "category": "weapons",
+        "id": "divine-quarterstaff",
+        "change": "Category Before Changed Heavenly Order Strike Damage: 1556% of Jinwoo’s Attack Damage: 2178% of Jinwoo’s Attack"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2025-10-29-96913",
+    "kind": "balance",
+    "version": null,
+    "date": "2025-10-29",
+    "name": {
+      "fr": "Notice d'équilibrage du 2025-10-29",
+      "en": "10/29 (Wed) In-Game Balance Adjustment Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/96913",
+    "source": "https://forum.netmarble.com/slv_en/view/32/96913",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "frieren",
+        "change": "Category Before Adjusted Basic Magic Attack (Zoltraak) - Multi-Hit (Basic Attack) 137% / 142% / 147% of the user’s Defense 257% / 266% / 270% of the user’s Defe"
+      },
+      {
+        "category": "hunters",
+        "id": "fern",
+        "change": "Category Before Adjusted Demon-killing Magic (Zoltraak) - Balanced (Core Attack) 1055% of the user’s Attack 1060% of the user’s Attack Demon-killing Magic (Zolt"
+      },
+      {
+        "category": "hunters",
+        "id": "cha-hae-in",
+        "change": "Category Before Adjusted Exclusive Weapon <Valkyrie’s Oath> Advancement Tier 0-5 - The user’s Defense increases by 2 / 4 / 6 / 8 / 10 / 12% - When the [Will of "
+      },
+      {
+        "category": "hunters",
+        "id": "seorin",
+        "change": "Category Before Adjusted Advancement Tier 3 [Black Tea?] - Increases Defense by 20% - Increases Max HP by 20% - Recovers MP by 1.5 every 5 second(s) - Duration:"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2025-11-20-97654",
+    "kind": "balance",
+    "version": null,
+    "date": "2025-11-20",
+    "name": {
+      "fr": "Notice d'équilibrage du 2025-11-20",
+      "en": "11/20 (Thu) In-Game Balance Adjustment Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/97654",
+    "source": "https://forum.netmarble.com/slv_en/view/32/97654",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "cha-hae-in",
+        "change": "Category Before Adjusted The Dancer (Basic Skill 1) 412% of the user’s Attack MP Consumption: 50 1328% of the user’s Attack MP Consumption: 25 Sword of Light (B"
+      },
+      {
+        "category": "hunters",
+        "id": "go-gunhee",
+        "change": "Category Before Adjusted Abdominal Crush (Core Attack) - * The break damage will increase slightly. Fighting Spirit (Basic Skill 1) Power of Brilliant Light (Ba"
+      },
+      {
+        "category": "hunters",
+        "id": "shimizu-akari",
+        "change": "Category Before Adjusted Advancement Tier 3 [Ring of Fire] - Duration: 24 second(s) [Ring of Fire] - Duration: 60 second(s)"
+      },
+      {
+        "category": "hunters",
+        "id": "thomas-andre",
+        "change": "Category Before Adjusted Ruler's Judgment (Ultimate Skill) [Steel Tyrant] - Duration: 25 second(s) [Steel Tyrant] - Duration: 30 second(s) Advancement Tier 0 [O"
+      },
+      {
+        "category": "hunters",
+        "id": "baek-yoonho",
+        "change": "Category Before Adjusted Advancement Tier 5 When the user enters the stage, recovers Power Gauge by 100% and increases the damage of [Violent Explosion] by 200%"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-02-12-100828",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-02-12",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-02-12",
+      "en": "2/12 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/100828",
+    "source": "https://forum.netmarble.com/slv_en/view/32/100828",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "alicia-blanche",
+        "change": "Category Before Changed Winter Storm (Basic 1) Cooldown Reduction: 8 seconds Cooldown Reduction: 5 seconds Tier 1 Increases Critical Hit Rate by 20% when [Shiel"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-02-12-100930",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-02-12",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-02-12",
+      "en": "Upcoming Balance Adjustment for Meri Laine"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/100930",
+    "source": "https://forum.netmarble.com/slv_en/view/32/100930",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "general",
+        "id": "upcoming-changes",
+        "change": "- Meri Laine improvements(Added ‘Super Armor’) effect during skill usage. * To reduce the control burden of Meri Laine and improve usability, she will no longer"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-03-12-102815",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-03-12",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-03-12",
+      "en": "3/12 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/102815",
+    "source": "https://forum.netmarble.com/slv_en/view/32/102815",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "amamiya-mirei",
+        "change": "Category Before Changed Basic When the user has 66% or more of their maximum MP, it applies the [Kuroha’s Darkness] effect Increases the user’s Attack by 4% for"
+      },
+      {
+        "category": "hunters",
+        "id": "lennart-niermann",
+        "change": "Category Before Changed Basic [Hunter's Cage] Increases target’s damage taken from Lennart Niermann by 15% Duration: 20 second(s) [Hunter's Cage] Increases targ"
+      },
+      {
+        "category": "hunters",
+        "id": "tawata-kanae",
+        "change": "Category Before Changed Tier 1 When an enemy dies near the user the user gains 1 instances of the [Instinct] effect The user gains 5 instances of the [Instinct]"
+      },
+      {
+        "category": "hunters",
+        "id": "esil-radiru",
+        "change": "Category Before Changed Basic [Break] effectiveness in the [Workshop of Brilliant Light] increases by 24% [Enhanced Lance Throw] Increases the damage of Lance T"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-04-09-103975",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-04-09",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-04-09",
+      "en": "4/9 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/103975",
+    "source": "https://forum.netmarble.com/slv_en/view/32/103975",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "cha-hae-in",
+        "change": "Category Before Changed Tier 3 When the [Will of the Sword] gauge recharges to 100% it activates the [Sword’s Resolve] effect [Sword’s Resolve] Heavenly Strike "
+      },
+      {
+        "category": "hunters",
+        "id": "meilin-fisher",
+        "change": "Category Before Changed Tier 1 The damage of Up! increases by 64%. When the user uses Up! grants the [Cat Butler] effect to the team member with the highest Att"
+      },
+      {
+        "category": "hunters",
+        "id": "esil-radiru",
+        "change": "Category Before Changed Basic When Esil Radiru successfully puts a target in a [Break] state it increases the duration of the [Break] state by 3 second(s) When "
+      },
+      {
+        "category": "hunters",
+        "id": "tawata-kanae",
+        "change": "Category Before Changed Tier 1 [Instinct] Increases the user’s Critical Hit Rate by 1% When [Instinct] has stacked 10 times, it becomes the [Sixth Sense] effect"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-the-architects-blue-poison",
+        "change": "Category Before Changed 4 Set Effect Applies the [Poison] effect [Poison] - Increases Basic Skill damage by 20% - Increases Attack and Defense by 1% every 1 sec"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-glorious-arrogance",
+        "change": "Category Before Changed 4 Set Effect Applies the [Arrogance] effect [Arrogance] - Increases the damage of the skills with the [Break] effect by 30% - When an at"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "kamish-s-obsession",
+        "change": "Category Before Changed 8 Set Effect The [Obsession] effect is enhanced to become the [Burning Obsession] effect [Burning Obsession] Increases the user and the "
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-noble-flesh",
+        "change": "Category Before Changed 4 Set Effect The [Fortification] effect is applied when a Basic Skill or Ultimate Skill hits [Fortification] - Increases the user and th"
+      },
+      {
+        "category": "general",
+        "id": "elemental-damage-calculation-method-impr",
+        "change": "- The 'Increased Elemental Damage Taken' effect from certain Hunters and weapons, which was previously included in the skill damage calculation formula, has bee"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-05-07-104871",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-05-07",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-05-07",
+      "en": "5/7 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/104871",
+    "source": "https://forum.netmarble.com/slv_en/view/32/104871",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "cha-hae-in",
+        "change": "Category Before Changed Basic When The Dancer hits, the user had a 66% chance to [Brand] target When The Dancer hits it activates the [Brand] effect on the targ"
+      },
+      {
+        "category": "hunters",
+        "id": "go-gunhee",
+        "change": "Category Before Changed Basic [The Fragment of Brilliant Light] Activates the user’s Core Attack 1 time. The user’s Core Attack becomes Heavy Attack: Abdominal "
+      },
+      {
+        "category": "hunters",
+        "id": "shimizu-akari",
+        "change": "Category Before Changed Basic [Truth-seeker of Divine Flame] is activated at the start of battle Using Light of Dawn turns Devastate into Heavy Attack: Devastat"
+      },
+      {
+        "category": "hunters",
+        "id": "laura-walker",
+        "change": "Category Before Changed Night cleaving Flash 〈Laura Walker Exclusive Weapon〉 Tier 0~5 Increases Attack by 5% / 6% / 7% / 8% / 9% / 12% Using Corporate Escort or"
+      },
+      {
+        "category": "hunters",
+        "id": "thomas-andre",
+        "change": "Category Before Changed Tier 2 Shield Acquisition Chance increases by 8% When a [Shield] is active it increases the user’s Critical Hit Rate and Critical Hit da"
+      },
+      {
+        "category": "general",
+        "id": "additional-improvements-to-elemental-dam",
+        "change": "- The damage calculation method for certain Hunters and Weapon effects will be further improved. ※ After the improvement, you will be able to experience higher "
+      },
+      {
+        "category": "weapons",
+        "id": "winter-fang",
+        "change": "Categroy Before Changed Basic When the user’s Current Power Gauge is at 30% or higher while using Wolf’s Shadow, Wolf’s Shadow becomes Wolf’s Echo for 3 second("
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-06-04-106107",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-06-04",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-06-04",
+      "en": "6/4 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/106107",
+    "source": "https://forum.netmarble.com/slv_en/view/32/106107",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "christopher-reed",
+        "change": "Category Changed Tier 1 (New effect added) Transforms Foul Play to Hard Tackle When Hard Tackle hits inflicts 1 instance of the Wildfire effect When [Spiritual "
+      },
+      {
+        "category": "hunters",
+        "id": "yoo-soohyun",
+        "change": "Category Changed Model Markswoman (Basic Attack) Lv.10 Based (Damage Multiplier Increased) Tier 1 damage : 222% 340.5% of Attack Tier 2 damage : 237% 355.5% of "
+      },
+      {
+        "category": "hunters",
+        "id": "tawata-kanae",
+        "change": "Category Changed Basic (Effect Stats Increased) [Fire] The damage of Tsuchigumo increases by 70% 100% Tier 2 (Effect Stats Increased) The user’s Critical Hit da"
+      },
+      {
+        "category": "hunters",
+        "id": "gina",
+        "change": "Category Changed Basic (Effect Stats Increased) [Mana Circulation] Increases Attack by 15% 20% Increases Fire damage by 15% 20% Duration: 15 20 second(s) Tier 2"
+      },
+      {
+        "category": "hunters",
+        "id": "esil-radiru",
+        "change": "Category Changed Support Fire (Supporter Skill) (New Effect Added) Using this skill increases Sung Jinwoo’s Fire Weapon Skill damage by 20% for 25 second(s)"
+      },
+      {
+        "category": "hunters",
+        "id": "meri-laine",
+        "change": "Category Changed Shredding Drop (Basic Attack) ※ Elemental Accumulation Amount Increased ※ Core Gauge Gain Increased ※ The activation requirement for Meri Laine"
+      },
+      {
+        "category": "hunters",
+        "id": "sian-halat",
+        "change": "Category Changed Tier 1 (new effect to Enhanced Basic Skill Added) When the [Flawless Swordsmanship] Gauge reaches 50% or more, Royal Swordsmanship: Black Flash"
+      },
+      {
+        "category": "hunters",
+        "id": "sugimoto-reiji",
+        "change": "Category Changed Quickblade - Origin (Basic Attack) ※ Elemental Accumulation Amount Increased ※ The Elemental Accumulation displayed for Sugimoto Reiji's Basic "
+      },
+      {
+        "category": "weapons",
+        "id": "the-huntsman",
+        "change": "Category Changed Tier 0 (Attack Increased) Using Judgement Time transforms their Core Attack into Time to Hunt for 6 second(s) and increases damage by 100% 300%"
+      },
+      {
+        "category": "general",
+        "id": "successor-of-the-white-flames-myro",
+        "change": "Category Changed Pianissimo (Ultimate Skill) (Descriptions of effects that do not actually trigger have been removed.) - Using this skill ends [Unique Domain - "
+      },
+      {
+        "category": "general",
+        "id": "ssr-thomas-andre",
+        "change": "Category Changed Ruler’s Judgment (Ultimate Skill) (Included descriptions of the effects currently applied ) [Steel Tyrant] Reduces the cooldown of Absolute Dem"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-the-architects-blue-poison",
+        "change": "Category Changed 8 set effects (New effect added) Increases allies’ damage dealt by 30% in [Team Fight] Mode (stacks up to 2 times)"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-glorious-arrogance",
+        "change": "Category Changed 8 set effects (New effect added) Increases allies’ Critical Hit damage dealt by 15% in [Team Fight] Mode (stacks up to 2 times)"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "kamish-s-obsession",
+        "change": "Category Changed 8 set effects (New effect added) Increases allies’ Overload damage by 15% in [Team Fight] Mode (stacks up to 2 times)"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-noble-flesh",
+        "change": "Category Changed 8 set effects (New effect added) Increases allies’ Attack, Defense, and HP by 15% in [Team Fight] Mode (stacks up to 2 times)"
+      },
+      {
+        "category": "general",
+        "id": "stat-distribution",
+        "change": "Category Changed 1 Vitality Defense increase values: Increased by 200% compared to before HP increase values: Increased by 900% compared to before 1 Agility Cri"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "deaths-dance",
+        "change": "Rune Category Changed High-speed Rotation (Wind) (New effect added) When your Attack hits an enemy that doesn’t have a Break Gauge, it increases the damage of H"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "vertical-arts",
+        "change": "Rune Category Changed Gale (Wind) (Increased Transcendent grade values and added a new effect ) The user’s damage dealt to Normal monsters increases by 10% / 15"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "phantom-strike",
+        "change": "Rune Category Changed Quickstrike (Wind) (Effect values and a new effect added) Quickstrike damage dealt to targets affected by [Wind][Overload] increases by 25"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "multistrike--rush",
+        "change": "Rune Category Changed Explosion (Fire) (New effect added) Explosion damage increases by 60% / 100% / 160% / 180% while [Shield] is active"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "vital-strike",
+        "change": "Rune Category Changed On Point (Water) (New effect added) On Point increases damage by 60% / 100% / 160% / 180% while [Shield] is active"
+      },
+      {
+        "category": "sjw_skills",
+        "id": "sonic-stream",
+        "change": "Rune Category Changed Double Down (Light) (New effect added) Double Down damage is increased by an additional 90% /160% / 240% / 280% in Team Fight Mode"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-07-02-107226",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-07-02",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-07-02",
+      "en": "7/2 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/107226",
+    "source": "https://forum.netmarble.com/slv_en/view/32/107226",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "lee-bora",
+        "change": "Category Changed Tier 0 (Effect Duration Extended) [Charm] The target’s damage taken increases by 15% Duration : 15 30 second(s) Tier 1 (Stats Increased) [Phant"
+      },
+      {
+        "category": "hunters",
+        "id": "sung-il-hwan",
+        "change": "Category Changed Tier 3 (New effect added) When Dark Finale or Apocalyptic Might hits a target in a [Break] state it activates the [Suppressed] effect Tier 4 (N"
+      },
+      {
+        "category": "hunters",
+        "id": "isla-wright",
+        "change": "Category Changed Tier 2 (Stats Increased) Increases Dark team members’ Attack by 5% 12% of Isla Wright’s Basic Defense Tier 5 (New effect added) Using the Ultim"
+      },
+      {
+        "category": "hunters",
+        "id": "sian-halat",
+        "change": "Category Changed Tier 1 ([Flawless Swordsmanship] Gauge charge rate increases ) ※ Each time Royal Swordsmanship: Black Flash or Royal Swordsmanship: Rush hits, "
+      },
+      {
+        "category": "hunters",
+        "id": "harper",
+        "change": "Category Changed Tier 3 (New effect added) [London Drift] Grants [Super Armor] while the effect is active"
+      },
+      {
+        "category": "weapons",
+        "id": "ssr-vulkan-s-rage",
+        "change": "Category Changed Tier 0 (New effect: Vulcan’s Blessing added) [Vulcan’s Blessing] Increases [Basic Attack, Core Attack] damage by 100% (Concentration Stats Incr"
+      },
+      {
+        "category": "weapons",
+        "id": "ssr-soma-asura",
+        "change": "Category Changed Weapon Type (Weapon Type Changed) Sword Dagger ※ Please note that only the weapon types for SSR Soma & Asura will be changed. This modification"
+      },
+      {
+        "category": "blessings",
+        "id": "intuit",
+        "change": "(Stats Increased) Your Attack stat increases by 2 3 / 4 5 / 6 8 / 7 10 for every 1 point of Intelligence you have. (Increasing up to a maximum of 300 450 / 700 "
+      },
+      {
+        "category": "blessings",
+        "id": "lightning-speed",
+        "change": "(Stats Increased) Your Attack stat increases by 2 3 / 4 5 / 6 8 / 7 10 for every 1 point of Agility you have. (Increasing up to a maximum of 300 450 / 700 1050 "
+      },
+      {
+        "category": "blessings",
+        "id": "ricochet",
+        "change": "(Stats Increased) Your Additional Attack stat increases by 50% 80% / 90% 140% / 130% 200% / 150% 240% of your Max MP when you enter a stage. (Increases your Max"
+      },
+      {
+        "category": "blessings",
+        "id": "title-demon-slayer",
+        "change": "(New effect added) Your MP increases by an additional 500 / 700 / 1200 / 1400 when in [Team Fight] Mode"
+      },
+      {
+        "category": "blessings",
+        "id": "finisher-touch",
+        "change": "(Stats Increased) In [Team Fight] mode, if all of your equipped weapons are of the same element, the damage of your weapon skills increases by and additional 10"
+      },
+      {
+        "category": "blessings",
+        "id": "sandbag",
+        "change": "(Conditions Eased & Stats Increased) Jinwoo’s Attack will decrease by 10% for 180 120 / 150 90 / 130 70 / 120 60 second(s) Then his Attack increases by40% 50% f"
+      },
+      {
+        "category": "blessings",
+        "id": "first-strike-barrage",
+        "change": "(Max Stacks Increased) Upon landing a hit 60 / 50 / 40 / 35 time(s) your Attack increases by 1% / 1.5% / 2% / 2.25% (Stacks up to 10 15 times)"
+      },
+      {
+        "category": "blessings",
+        "id": "irresistible-force",
+        "change": "(Stats Increased) When you use a skill with the [Break] effect your Attack increases by 3% 4% / 5% 7% / 7% 10% / 8% 12% for 6 7 second(s) (Stacks up to 3 times)"
+      },
+      {
+        "category": "blessings",
+        "id": "acrobat",
+        "change": "(New effect added) Successfully using Extreme Evasion grants you 2 instances of the [Acrobat] effect"
+      },
+      {
+        "category": "blessings",
+        "id": "advanced-dagger-technique",
+        "change": "(New effect added) When attacking with enemies who have 70% or less of their HP while you have a [dagger] equipped your damage dealt increases by and additional"
+      },
+      {
+        "category": "blessings",
+        "id": "swift-strike",
+        "change": "(Conditions Eased & Stats Increased) When you use Extreme Evasion successfully, your damage increases by 11% / 14% 18% / 24% 28% / 29% 33% for 5 8 second(s) (Co"
+      },
+      {
+        "category": "blessings",
+        "id": "assassins-proficiency",
+        "change": "(Stats Increased) Your back attack damage increases by 9% 11% / 14% 18% / 24% 28% / 29% 33% (New effect added) When Death or Collapse hits an enemy from behind,"
+      },
+      {
+        "category": "blessings",
+        "id": "we-are-one",
+        "change": "(New effect added) In [Team Fight] Mode, if there are 3 hunters with the same element on the team, it increases your Attack, Defense, and HP by an additional 5%"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-07-30-107922",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-07-30",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-07-30",
+      "en": "7/30 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/107922",
+    "source": "https://forum.netmarble.com/slv_en/view/32/107922",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "isla-wright",
+        "change": "Category Changed Horoscope (Core Attack) (Increased effect values and extended duration) [The Magician] Grants a [Shield] equal to 12% 24% of Isla Wright’s Defe"
+      },
+      {
+        "category": "hunters",
+        "id": "choi-jong-in",
+        "change": "Category Changed Spark (Basic Attack) Based on Lv.10 (Increased damage coefficient) Stage 1 Damage : 210% 360% of the user’s Attack Stage 2 Damage : 249% 399% o"
+      },
+      {
+        "category": "hunters",
+        "id": "christopher-reed",
+        "change": "Category Changed Basic Passive (Eased condition for using Finishing Catch) Finishing Catch becomes available upon a successful Extreme Evasion or when activatin"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-the-architects-blue-poison",
+        "change": "Category Changed 8 Set Effect (Increased effect values) When equipped by [Sung Jinwoo or a Striker] class hunter, their damage dealt increases by 50% 120%"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-surturs-flame",
+        "change": "Category Changed 8 Set Effect (Increased effect values) When an Elemental Buster class hunter equips this, it increases their Overload damage dealt by 50% 100%"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-08-27-108732",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-08-27",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-08-27",
+      "en": "8/27 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/108732",
+    "source": "https://forum.netmarble.com/slv_en/view/32/108732",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "shimizu-akari",
+        "change": "※ When Shimizu Akari's [Ring of Fire] skill hits, the [Divine Flame] effect will no longer be consumed. Additionally, reaching maximum stacks of [Divine Flame] "
+      },
+      {
+        "category": "hunters",
+        "id": "laura-walker",
+        "change": "Category Changed Basic (Effect Value Increased) [Scout] Continuously restores HP equal to 2% 3% of Laura Walker’s Attack every 3 second(s) Tier 3 (Effect Value "
+      },
+      {
+        "category": "hunters",
+        "id": "antoine-martinez",
+        "change": "Category Changed Tier 1 (Affected targets added) U sing The Angel’s Stay activates the [Holy Barrier] effect on the Light team member with the highest Total Pow"
+      },
+      {
+        "category": "hunters",
+        "id": "sian-halat",
+        "change": "Category Changed Tier 1 (Effect duration extended) [Scarlet Domination] Duration : 20 40 second(s)"
+      },
+      {
+        "category": "weapons",
+        "id": "skadi",
+        "change": "※ The [Skadi's Curse] effect has been enhanced, and landing the [Last Hunt] skill will no longer consume the [Skadi's Curse] effect. Category Changed Tier 0 (La"
+      },
+      {
+        "category": "weapons",
+        "id": "winter-fang",
+        "change": "Category Changed Tier 5 (New effect added and value increased) [Dusk, Silver Mark, and Isolation] effects are enhanced [Silver Mark] The damage of [White Wolf’s"
+      },
+      {
+        "category": "weapons",
+        "id": "transfiguration-key",
+        "change": "Category Changed Basic Attack ※ Elemental Accumulation amount increased Core Attack ※ Elemental Accumulation [Elemental Accumulation : Low Medium] ※ The actual "
+      },
+      {
+        "category": "weapons",
+        "id": "winchester-roke",
+        "change": "Category Changed Tier 5 (New effect added) When all the user’s equipped weapons are Dark element weapons and Winchester Roke’s Basic Attack is used, it activate"
+      },
+      {
+        "category": "weapons",
+        "id": "moonlit-gale",
+        "change": "Category Changed Basic Attack ※ Elemental Accumulation amount increased Core Attack ※ Elemental Accumulation amount increased [Elemental Accumulation : Low Medi"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-surturs-flame",
+        "change": "Category Changed 8 Set Effect (Initial effect enhanced and stack effect changed) A successful Overload increases the user’s Burst damage dealt by 20% (stacking "
+      },
+      {
+        "category": "artifact_sets",
+        "id": "the-architect-s-blue-helmet",
+        "change": "Category Changed 8 Set Effect (New effect added) In [Team Fight] mode, when [Sung Jinwoo or a Striker] class hunter equips this, it increases allies’ damage dea"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-glorious-arrogance",
+        "change": "Category Changed 8 Set Effect (New effect added) In [Team Fight] mode, when a [Breaker] class hunter equips this, it increases allies’ Critical Hit damage by 40"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "kamish-s-obsession",
+        "change": "Category Changed 8 Set Effect (New effect added) In [Team Fight] mode, when an [Elemental Stacker] class hunter equips this, it increases allies’ Overload damag"
+      },
+      {
+        "category": "artifact_sets",
+        "id": "set-of-noble-flesh",
+        "change": "Category Changed 8 Set Effect (New effect added) In [Team Fight] mode, when a [Supporter] class hunter equips this, it increases allies’ Attack, Defense, and HP"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-09-17-109277",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-09-17",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-09-17",
+      "en": "9/17 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/109277",
+    "source": "https://forum.netmarble.com/slv_en/view/32/109277",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "general",
+        "id": "sung-jinwoo-skill-improvements",
+        "change": "- The balance of select Sung Jinwoo skills has been adjusted. Category Changed Shadow Step (QTE Skill) (Effect Duration Increased) The hit enemy’s Defense decre"
+      },
+      {
+        "category": "hunters",
+        "id": "han-se-mi",
+        "change": "Category Changed Golden Meadow (Basic Skill 2) (New Effect Added & Cooldown Decreased) Using this skill removes the entire team’s [debuffs] Cooldown : 30 25 sec"
+      },
+      {
+        "category": "hunters",
+        "id": "sugimoto-reiji",
+        "change": "Category Changed Tier 5 (New Effect Added) When [Punisher, Eclipse Slash, Extinction Blade] hit they inflict the [Windblade Rend] effect on the target [Windblad"
+      },
+      {
+        "category": "hunters",
+        "id": "goto-ryuji",
+        "change": "Category Changed Tier 3 (New Effect Added) The [Arrogance] effect is enhanced. [Arrogance] Increases Critical Hit damage by 30% Increases [Basic Skill] damage b"
+      },
+      {
+        "category": "hunters",
+        "id": "lennart-niermann",
+        "change": "Category Changed Tier 2 (New Effect Added) Lennart Niermann’s Wind damage increases by 10% for every Wind ally Tier 5 (Mark Effect Values Increased) [Mark] Incr"
+      },
+      {
+        "category": "hunters",
+        "id": "hwang-dongsoo",
+        "change": "Category Changed Cold-blooded Connection (Supporter Skill) (New Effect Added) Using this skill grants the entire team the [Unquenchable Greed] effect [Unquencha"
+      },
+      {
+        "category": "weapons",
+        "id": "demonic-plum-flower-sword",
+        "change": "Category Changed Tier 0 (Full Bloom New Effect Added) [Full Bloom] It also increases the usage speed of Plum Flower Swift Flight by 20% Increases Plum Flower Sw"
+      },
+      {
+        "category": "blessings",
+        "id": "sandbag",
+        "change": "(Buff Duration Extended) Jinwoo’s Attack will decrease by 120 / 90 / 70 / 60 second(s) Then his Attack increases by 50% for 240 300 / 330 / 350 / 360 second(s)"
+      },
+      {
+        "category": "blessings",
+        "id": "double-edged-sword",
+        "change": "(Values Increased) When your attacks hit your Attack increases by 2% 3.5% / 3% 5% / 4% 6.5% / 4.5% 8%, but the Attack of the targets you hit also increases by 3"
+      },
+      {
+        "category": "blessings",
+        "id": "finisher-touch",
+        "change": "(Values Increased) In [Team Fight] mode, if all of your equipped weapons are of the same element, the damage of your weapon skills increases by an additional 25"
+      },
+      {
+        "category": "blessings",
+        "id": "chains-of-blood",
+        "change": "(Values Increased) Your Attack damage increases equal to 14% 30% / 22% 50% / 36% 70% / 42% 80% of your lost HP ratio, but your damage taken also increases by 10"
+      },
+      {
+        "category": "blessings",
+        "id": "hp-extraction",
+        "change": "(Cooldown Decreased) You will recover 7% of your HP when hitting Elite or higher monsters(Cooldown: 30 20 second(s))"
+      },
+      {
+        "category": "blessings",
+        "id": "irreversible-road",
+        "change": "(Values Increased) Your Defense increases by 4% 6% / 12% 18% / 20% 30% / 24% 36% If your equipped weapons are of the same element your Defense increases by an a"
+      },
+      {
+        "category": "blessings",
+        "id": "la-vie-en-marche",
+        "change": "(Values Increased) If your HP is 51% or higher, your Defence increases by 15% 30% / 25% 40% / 35% 50% / 40% 55%"
+      }
+    ]
+  },
+  {
+    "id": "equilibrage-2026-10-22-109983",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-10-22",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-10-22",
+      "en": "10/22 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/109983",
+    "source": "https://forum.netmarble.com/slv_en/view/32/109983",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "elena-renault",
+        "change": "Category Changed Tier 5 (New Effect Added) Using Prison d’Argent grants Water Elemental Buster team members the [Insatiable Hunger] [Insatiable Hunger] Increase"
+      },
+      {
+        "category": "hunters",
+        "id": "yoo-soohyun",
+        "change": "Category Changed Tier 1 (Values Increased) When the user uses Kill Shot it activates the user’s Core Attack and increases their Core Attack damage by 200% for 6"
+      },
+      {
+        "category": "hunters",
+        "id": "cha-hae-in-the-pure-sword-princess",
+        "change": "Category Changed Basic (Values Increased) The user deals Water elemental damage equal to 175% 220% of their Defense for every blade summoned as a part of the He"
+      },
+      {
+        "category": "hunters",
+        "id": "seorin",
+        "change": "Category Changed Frozen Drift (Supporter Skill) (Effect Duration Extended) [Overdrive] Increases damage dealt by 33% Duration : 20 60 second(s) Tier 3 (New ‘Bla"
+      },
+      {
+        "category": "hunters",
+        "id": "meilin-fisher",
+        "change": "Category Changed Help! Berry! (Supporter Skill) (New Effect Added) If the entire team, excluding Sung Jinwoo, are [Water] team members, Sung Jinwoo’s Attack and"
+      },
+      {
+        "category": "hunters",
+        "id": "choi-jong-in",
+        "change": "Category Changed Fire Barrage (Supporter Skill) (Values Increased) [Defense Decrease] Decrease the target’s Defense by 15% 70% Duration : 15 25 second(s)"
+      },
+      {
+        "category": "hunters",
+        "id": "baek-yoonho",
+        "change": "Category Changed White Flame Storm Kick (Supporter Skill) (Values Increased) [Defense Decrease] Decrease the target’s Defense by 20% 70% Duration : 12 25 second"
+      },
+      {
+        "category": "hunters",
+        "id": "emma-laurent",
+        "change": "Category Changed Roaring Flames (Supporter Skill) (Values Increased / New Effect Added) [Flame’s Wrath] Increases Defense Penetration by 10% The user’s Fire dam"
+      },
+      {
+        "category": "hunters",
+        "id": "liu-zhigang",
+        "change": "Category Changed Veiled Intent (Burst Skill) (Skill Attack Range Significantly Increased)"
+      },
+      {
+        "category": "hunters",
+        "id": "agnes-rivera",
+        "change": "Category Changed Il Bacio della Morte (Burst Skill) (Skill Attack Range Significantly Increased)"
+      },
+      {
+        "category": "hunters",
+        "id": "lee-joohee-pilgrim-of-the-labyrinth",
+        "change": "Category Changed Radiant Burst (Burst Skill) (Skill Attack Range Significantly Increased)"
+      },
+      {
+        "category": "hunters",
+        "id": "diana-lopez",
+        "change": "Category Changed Chicxulub (Burst Skill) (Skill Attack Range Significantly Increased)"
+      },
+      {
+        "category": "shadows",
+        "id": "iron",
+        "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (New Effect Added) All team members' Defense increases by 18%"
+      },
+      {
+        "category": "shadows",
+        "id": "tank",
+        "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (New Effect Added) All team members' Max HP increases by 18%"
+      },
+      {
+        "category": "shadows",
+        "id": "blades",
+        "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (Values Increased) All team members' Attack increases by 7% 18%"
+      },
+      {
+        "category": "shadows",
+        "id": "bigrock",
+        "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (Values Increased) All team members' Basic Skill damage increases by 12% 24%"
+      },
+      {
+        "category": "shadows",
+        "id": "skull",
+        "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (Values Increased) All team members' Mana Power increases by 12% 24%"
+      },
+      {
+        "category": "shadows",
+        "id": "tusk",
+        "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (Values Increased) All team members' Core Attack skill damage increases by 40% 60%"
+      },
+      {
+        "category": "shadows",
+        "id": "kaisel",
+        "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (Values Increased) All team members' Ultimate Skill Damage increases by 9% 24%"
+      },
+      {
+        "category": "shadows",
+        "id": "jima",
+        "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (Values Increased) All team members' Attack increases by 5% 13%"
+      },
+      {
+        "category": "shadows",
+        "id": "beru",
+        "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (Values Increased) All team members' Attack and Critical Hit Damage increase by 5% 10%"
+      }
+    ]
   }
 ]
