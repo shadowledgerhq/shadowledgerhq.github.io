@@ -2823,12 +2823,51 @@
       "Effects by Amplification Tier: runes apply only while equipped; Blessing Stones always apply while owned."
     ],
     "values_by_level": {
-      "rules_only": true
+      "rules_only": false,
+      "see": "amplification_success_rates"
     },
     "icon": null,
-    "source": "https://guide.netmarble.com/sololv/153 (guide officiel Netmarble, EN seul, écrit sur la version test)",
+    "source": "https://guide.netmarble.com/sololv/153 (guide officiel Netmarble, EN seul, écrit sur la version test) ; https://guide.netmarble.com/sololv/180 (Probabilités « Amplification Rate », EN)",
     "verified_at": "2026-11-16",
     "game_version": null,
-    "notes": "Règles seulement : aucune valeur par palier d'amplification (taux de succès, agents, effets) dans le guide ; voir page Probabilités « Amplification Rate »."
+    "notes": "Taux de succès d'amplification par palier cible saisis (guide /sololv/180). Valeurs d'effet par palier d'amplification toujours absentes.",
+    "amplification_success_rates": {
+      "unit": "%",
+      "min_agents": 250,
+      "max_agents": 450,
+      "by_goal_tier": [
+        {
+          "goal_tier": 1,
+          "base_rate_pct": 50,
+          "gain_per_extra_agent_pct": 0.25,
+          "max_rate_pct": 100
+        },
+        {
+          "goal_tier": 2,
+          "base_rate_pct": 50,
+          "gain_per_extra_agent_pct": 0.25,
+          "max_rate_pct": 100
+        },
+        {
+          "goal_tier": 3,
+          "base_rate_pct": 45,
+          "gain_per_extra_agent_pct": 0.225,
+          "max_rate_pct": 90
+        },
+        {
+          "goal_tier": 4,
+          "base_rate_pct": 40,
+          "gain_per_extra_agent_pct": 0.2,
+          "max_rate_pct": 80
+        },
+        {
+          "goal_tier": 5,
+          "base_rate_pct": 35,
+          "gain_per_extra_agent_pct": 0.175,
+          "max_rate_pct": 70
+        }
+      ],
+      "note_en": "Displayed values are rounded. Minimum quantity (250) gives the basic rate; each extra agent adds the per-agent gain, up to 450 agents (checked: base + 200 × gain = max rate for tiers 1-5)."
+    }
   }
 ]
