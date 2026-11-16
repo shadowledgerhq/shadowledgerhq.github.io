@@ -113,7 +113,45 @@
       ],
       "source": "captures d'Alexis du 16/11/2026 (écrans Noyaux : niveau supérieur, amélioration, limit break ; client FR 1.5.16)",
       "verified_at": "2026-11-16"
-    }
+    },
+    "observed_samples": [
+      {
+        "rarity": "legendary",
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Attack": 5473,
+          "Damage Increase": 6644
+        },
+        "passive_condition": "Wind hunter / Fire hunter (2 exemplaires)",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Attack": 5473,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Light hunter (équipé)",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Attack": 5473,
+          "Defense Penetration": 6644
+        },
+        "passive_condition": "Wind hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "arrogant-rulers-reflection",
@@ -179,6 +217,54 @@
         "passive_condition": "Sung Jinwoo",
         "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16)",
         "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 1,
+        "stat_enhancement_level_pct": 15,
+        "stats": {
+          "Additional Attack": 858,
+          "Defense Penetration": 729
+        },
+        "passive_condition": "Dark hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 10,
+        "stat_enhancement_level_pct": 62,
+        "stats": {
+          "Attack (%)": 21.63,
+          "Defense Penetration": 3281
+        },
+        "passive_condition": "Sung Jinwoo",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 10,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Attack (%)": 36.79,
+          "Critical Hit Rate": 4799
+        },
+        "passive_condition": "Dark hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Attack": 5473,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Wind hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
       }
     ]
   },
@@ -202,7 +288,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Augmente l'Attaque de 6 % à 50 % de PM ou moins.",
       "en": "Increases Attack by 4-5-6% when MP is 50% or below."
     },
     "values_by_rarity": {
@@ -232,7 +318,34 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16) : valeur Légendaire 6 % (concorde avec le wiki 4-5-6).",
+    "observed_samples": [
+      {
+        "rarity": "legendary",
+        "level": 10,
+        "stat_enhancement_level_pct": 71,
+        "stats": {
+          "Additional Attack": 2995,
+          "Damage Increase": 3286
+        },
+        "passive_condition": "Water hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 10,
+        "stat_enhancement_level_pct": 64,
+        "stats": {
+          "Additional Attack": 3189,
+          "Critical Hit Damage": 2410
+        },
+        "passive_condition": "Wind hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "eyes-of-the-watcher",
@@ -254,7 +367,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Augmente les Dégâts de coup critique des attaques de noyau de 20 %.",
       "en": "Increases the Critical Hit damage of Core Attacks by 6-12-20%."
     },
     "values_by_rarity": {
@@ -284,7 +397,34 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16) : valeur Légendaire 20 % (concorde avec le wiki 6-12-20).",
+    "observed_samples": [
+      {
+        "rarity": "legendary",
+        "level": 10,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional Attack": 3953,
+          "Defense Penetration": 4799
+        },
+        "passive_condition": "Wind hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Attack (%)": 53.34,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Water hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "nameless-demons-deception",
@@ -413,6 +553,18 @@
         },
         "passive_condition": "Fire hunter",
         "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      },
+      {
+        "rarity": "legendary",
+        "level": 10,
+        "stat_enhancement_level_pct": 67,
+        "stats": {
+          "Additional Attack": 2566,
+          "Defense Penetration": 3437
+        },
+        "passive_condition": "Light hunter",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
         "verified_at": "2026-11-16"
       }
     ]
@@ -1055,14 +1207,34 @@
       "6 familles de noyaux (filtre « Type de noyau ») : démon anonyme, spectre antique, Gardien (« Veilleur » dans le wiki/slagate : à vérifier), Prédateur écarlate, Dominateur arrogant, Protecteur féroce ; 3 emplacements par famille = 18 noyaux (esprit/mind, corps/body, âme/spirit : correspondance FR à vérifier).",
       "Filtre : Type de noyau, Stats (nombre d'options incluses + effets : Attaque/Défense/PV supplémentaires et en %, Taux et Dégâts de coup critique, Hausse des dégâts, Pénétration de défense, …), Effet exclu, Condition d'activation de l'effet (Tout ou condition précise).",
       "Condition d'activation du passif (une par noyau, tirée à l'obtention) : « S'active lorsque Sung Jinwoo en est équipé » ou « lorsqu'un chasseur de type [Feu] (Eau, Vent, Lumière, Ténèbres) en est équipé » (6 × 16,6667 %, voir rates.json → core-rate).",
-      "« Niveau d'amélioration de stat » = progression des stats actuelles vers leur maximum au palier de niveau max courant : « MAX » quand les stats atteignent le maximum. Formule déduite (moyenne des rapports valeur actuelle / valeur max sur les 2 stats), concordante sur 3 points (70 %, 87 %, 91 %) : à vérifier.",
       "Limit break : niveau max 10 → 15 → 20 (→ 25 depuis le patch du 17/09/2026, 3e limit break non vu). Conditions : atteindre le niveau max ET le niveau d'amélioration de stat MAX. Coûts vus : 10→15 = 20 matériaux (icône violette) + 100 000 or ; 15→20 = 20 matériaux (icône rouge) + 300 000 or. Le limit break relève les valeurs MAX des stats (et ramène l'amélioration de stat sous 100 %). Noms des matériaux non lus.",
       "Niveau supérieur : coût 200 or par point d'EXP ; matériaux de progression : +10 EXP, +50 EXP, +250 EXP (+ d'autres noyaux, ex. noyau Légendaire niv. 1 ≈ 80 EXP, déduit). Vu : niv. 10→15 = 2 300 EXP (460 000 or) ; niv. 15→17 = 2 580 EXP (516 000 or) ; EXP à niv. 10 : 230 par niveau pour le suivant, 1 130 pour passer du niv. 17 au 18 (lecture « 740/1130 »). Chaque niveau relève les 2 stats d'une valeur aléatoire dans une plage affichée (niv. 10→15 : Attaque % +1,75~16,55, coup critique +175~1845 ; niv. 15→17 : +0,56~2,06 et +58~258).",
       "Amélioration (au niveau max, jusqu'à MAX) : « améliore un bonus de stat d'une valeur aléatoire » (1 des 2 stats) ; coût par tentative 15 000 or + 5 matériaux ; plage par tentative à niv. 15 : Attaque % +0,3~1,55, coup critique +40~200 ; options « Améliorer automatiquement » et « Amélioration instantanée » (jusqu'au palier max, s'arrête si manque de matériaux ou d'or). Vu : 87 % → MAX en 16 tentatives (240 000 or) = +7,61 % Attaque, +687 coup critique.",
-      "Quelques noyaux affichent un portrait de chasseur (équipé) ; la puissance totale du chasseur est mise à jour après chaque étape."
+      "Quelques noyaux affichent un portrait de chasseur (équipé) ; la puissance totale du chasseur est mise à jour après chaque étape.",
+      "« Niveau d'amélioration de stat » (%) = floor( moyenne sur les 2 stats de (valeur − minimum initial Légendaire) / (valeur max du palier de niveau max − minimum initial) ). Minimums initiaux Légendaires (rates.json) : Attaque supplémentaire 120, Attaque % 0,70, stats de l'option 2 (coup critique, dégâts critiques, hausse des dégâts, pénétration) 150. Formule vérifiée sur 11 relevés (2, 9, 15, 22, 62, 64, 67, 70, 71, 87, 91, 92 %), tous exacts ; MAX = 100 %.",
+      "Inventaire : 632 → 626 noyaux après avoir consommé 6 noyaux Légendaires niv. 1 comme matériau d'EXP (confirme le décompte)."
     ],
     "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16) ; guide Netmarble /sololv/141 (rates.json, game_rules.json) ; captures d'Alexis du 16/11/2026 (écrans Noyaux : niveau supérieur, amélioration, limit break ; client FR 1.5.16)",
     "verified_at": "2026-11-16",
-    "game_version": "1.5.16"
+    "game_version": "1.5.16",
+    "max_values_legendary_by_level_cap": {
+      "10": {
+        "Attack (%)": 36.79,
+        "Additional Attack": 3953,
+        "option 2 (Critical Hit Rate, Critical Hit Damage, Damage Increase, Defense Penetration)": 4799
+      },
+      "15": {
+        "Attack (%)": 53.34,
+        "Additional Attack": 5473,
+        "option 2": 6644
+      },
+      "20": {
+        "Attack (%)": 58.49,
+        "option 2": 7289
+      },
+      "note": "Identiques pour toutes les familles de noyaux vues (Désir du Protecteur féroce, Réflexion du Dominateur arrogant, Yeux du Veilleur) ; l'option 2 partage la même échelle pour les 4 stats ; Défense/PV non vus ; 20 : Attaque supplémentaire inconnue ; 25 : inconnu.",
+      "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
+      "verified_at": "2026-11-16"
+    }
   }
 ]
