@@ -10,7 +10,7 @@ Preuves lues (lectures `confidence: sur` ; builds pour BOT et HOTM) :
 Un bloc garde sa source d'origine ; le calcul est ajouté dans `bloc.deduit` (source « écrans », video_ids, date).
 v25 : `sjw_skills`, `blessings`, `shadows` suivent la même règle, preuve = champ `found` à true du build reconnu de l'étape 2 ;
 `sjw` false (connu ou déduit) -> `sjw_skills` et `blessings` false (note « déduit de sjw: false »), jamais l'inverse. Absence de SJW
-au BOT : seulement si la zone des 2 armes de SJW du bandeau RESULT est lue VIDE (`zone_vide`, `config.bot.zone_armes_sjw`) sur
+au BOT : seulement si la zone des 2 cases de GAUCHE du bandeau RESULT (aligné à droite : sans armes de SJW elles sont vides) est lue VIDE (`zone_vide`, `config.bot.zone_armes_sjw`) sur
 ≥ 5 runs sûres de 5 chaînes (`detail.armes_sjw_vides` de la lecture BOT) ; une icône non reconnue ne prouve rien.
 Les anciens noms `bot_season` / `bot_challenge` sont migrés vers `bot` (v10 : un seul classement BOT)."""
 from pathlib import Path

@@ -209,11 +209,13 @@ def test_v25_zone_vide():
     assert R.zone_vide(im, [0.1, 0.1, 0.1, 0.1]) is None                        # zone minuscule : inconnu
 
 
-def test_v25_zone_armes_bot_sur_la_vraie_capture():
-    """Capture RESULT du BOT (client JA, 15/11/2026) : les 2 armes de SJW sont visibles dans la zone calée -> pas « vide »."""
+def test_v25_zone_armes_bot_sur_les_vraies_captures():
+    """Bandeau RESULT du BOT aligné à droite : 5 cases pleines -> zone de gauche non vide ; 3 chasseurs seulement (SJW sans armes)
+    -> les 2 cases de gauche sont vides (captures client JA du 15-16/11/2026)."""
     from PIL import Image
     zone = charger_config()["bot"]["zone_armes_sjw"]
-    img = Image.open(Path(__file__).resolve().parents[2] / "docs" / "essais" / "composition" / "bot_results_ja.png")
-    assert len(zone) == 4 and 0.3 < zone[0] < zone[2] < 0.6 and 0.8 < zone[1] < zone[3] < 1
-    assert R.zone_vide(img, zone) is False
-    assert R.zone_vide(img, [0.60, 0.86, 0.70, 0.93]) is True        # fond sombre uniforme hors du bandeau
+    dossier = Path(__file__).resolve().parents[2] / "docs" / "essais" / "composition"
+    assert len(zone) == 4 and 0.2 < zone[0] < zone[2] < 0.4 and 0.8 < zone[1] < zone[3] < 1
+    assert R.zone_vide(Image.open(dossier / "bot_results_ja.png"), zone) is False
+    assert R.zone_vide(Image.open(dossier / "bot_results_sans_sjw_ja.png"), zone) is True
+    assert R.zone_vide(Image.open(dossier / "bot_results_ja.png"), [0.60, 0.86, 0.70, 0.93]) is True       # fond sombre hors du bandeau

@@ -54,8 +54,8 @@
     "semaines_jeu": 4,
     "semaines_calcul": 1,
     "challenge": ["challenge", "チャレンジ", "챌린지"],
-    "zone_armes_sjw": [0.385, 0.855, 0.482, 0.937],
-    "_zone_armes_sjw": "[À CONFIRMER] SPEC v25 §4.5 : zone (fractions x0, y0, x1, y1) des 2 armes de SJW (4e et 5e cases) du bandeau du bas de l'écran RESULT du BOT, mesurée le 15/11/2026 sur docs/essais/composition/bot_results_ja.png (client JA, 1155×651) : les 3 cases de chasseurs SSR sont à gauche (x 0,236-0,382), les 2 armes à droite. Vide = SJW absent, mais AUCUN exemple de case vide n'est disponible : le fond rouge en dégradé a lui-même un écart-type de ~27 (arme visible 25-47), donc `regles_deduites.zone_vide` (seuil 8, fond uniforme) ne se prononce pas encore et le pipeline ne lit pas cet écran (BOT lu par le titre) : aucune absence de SJW n'est déduite."
+    "zone_armes_sjw": [0.236, 0.855, 0.332, 0.937],
+    "_zone_armes_sjw": "SPEC v25 §4.5, calée le 16/11/2026 sur 2 captures RESULT du BOT (client JA) : docs/essais/composition/bot_results_ja.png (5 cases pleines) et bot_results_sans_sjw_ja.png (3 chasseurs seulement). Le bandeau est ALIGNÉ À DROITE : sans armes de SJW, les 3 icônes de chasseurs glissent dans les 3 cases de droite et les 2 cases de GAUCHE (x 0,236-0,332) restent vides (écart-type 3 contre 60-76 quand elles sont pleines). Zone vide (`regles_deduites.zone_vide`, seuil 8) = pas d'armes de SJW = SJW absent. Le pipeline ne lit pas encore l'écran RESULT du BOT (lu par le titre) : `detail.armes_sjw_vides` à renseigner lors de cette lecture ; ≥ 5 runs sûres de 5 chaînes requises pour conclure."
   },
   "doublon_modes": ["poc"],
   "modes_classement": ["poc", "bot", "gb", "hotm"],
