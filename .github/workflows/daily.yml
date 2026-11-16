@@ -46,5 +46,4 @@ jobs:
           git add data
           if git diff --cached --quiet; then echo "Rien à enregistrer."; exit 0; fi
           git commit -m "données: passage quotidien $(date -u +%Y-%m-%d)"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          python3 pipeline/pousser_github.py
