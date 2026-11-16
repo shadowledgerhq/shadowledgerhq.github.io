@@ -1488,6 +1488,7 @@
   }
  },
  "echelles_icone": {
+  "artifact_pieces": [0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
   "defaut": [
    0.5,
    0.6,
