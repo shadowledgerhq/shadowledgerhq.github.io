@@ -2878,21 +2878,47 @@
     ],
     "type": null,
     "element": "fire",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de feu et de Bris tout-puissants. [En l'air]. Applique un [Bouclier] (20/30/50/60 % des PV max, 5 s). Dégâts supplémentaires de 25/50/100/125 % de l'Attaque. Dégâts d'explosion +60/100/160/180 % tant que le Bouclier est actif.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        794.0,
+        1142.0,
+        1474.0,
+        1640.0
+      ],
+      "shield_pct_max_hp_by_rarity": [
+        20,
+        30,
+        50,
+        60
+      ],
+      "shield_duration_s": 5,
+      "extra_damage_pct_of_attack_by_rarity": [
+        25,
+        50,
+        100,
+        125
+      ],
+      "explosion_damage_bonus_while_shield_pct_by_rarity": [
+        60,
+        100,
+        160,
+        180
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--explosion.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--darkfall",
@@ -2912,21 +2938,29 @@
     ],
     "type": null,
     "element": "dark",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de ténèbres. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2212.0,
+        2782.0,
+        3282.0,
+        3567.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--darkfall.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--severing-flash",
@@ -2946,21 +2980,34 @@
     ],
     "type": null,
     "element": "fire",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de feu. Applique de l'Accumulation élémentaire moyenne. [En l'air]. Dégâts de Surcharge de la compétence d'arme de feu +20/30/40/45 % pendant 15 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        477.0,
+        605.0,
+        753.0,
+        817.0
+      ],
+      "fire_weapon_skill_overload_damage_bonus_pct_15s_by_rarity": [
+        20,
+        30,
+        40,
+        45
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--severing-flash.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--darkness-obliteration-kick",
@@ -3222,21 +3269,36 @@
     ],
     "type": null,
     "element": "water",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "100",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts d'eau. Dernière attaque : [En l'air]. La première attaque inflige [Gel] (3 s). Seconde attaque : taux de coup critique +100 %, dégâts de coup critique +60/100/160/180 %.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        565.0,
+        732.0,
+        1059.0,
+        1302.0
+      ],
+      "second_hit_crit_rate_bonus_pct": 100,
+      "second_hit_crit_damage_bonus_pct_by_rarity": [
+        60,
+        100,
+        160,
+        180
+      ],
+      "freeze_duration_s": 3
+    },
     "icon": "data/icons/sjw_skills/rune--frozen-flow.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--cold-ice",
@@ -3256,21 +3318,41 @@
     ],
     "type": null,
     "element": "water",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts d'eau et de Bris tout-puissants. Applique [Engelure] (100/200/300/400 % de l'Attaque toutes les 3 s, durée 3 s). Dégâts infligés aux cibles dans un rayon de 5 m +3/7/10/12 %.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        260.0,
+        374.0,
+        458.0,
+        500.0
+      ],
+      "engelure_damage_pct_of_attack_per_3s_by_rarity": [
+        100,
+        200,
+        300,
+        400
+      ],
+      "engelure_duration_s": 3,
+      "radius_5m_damage_bonus_pct_by_rarity": [
+        3,
+        7,
+        10,
+        12
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--cold-ice.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--surging-tide",

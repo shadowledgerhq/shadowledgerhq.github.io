@@ -1,5 +1,5 @@
 # Rapport de contrôle de la base — 2026-11-16
-Total : 497 entrées, **0 erreur(s)**, 554 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
+Total : 497 entrées, **0 erreur(s)**, 559 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
 
 | Fichier | Entrées | Erreurs | Avertissements |
 | --- | ---: | ---: | ---: |
@@ -11,7 +11,7 @@ Total : 497 entrées, **0 erreur(s)**, 554 avertissement(s). Généré par `pipe
 | patches | 8 | 0 | 38 |
 | proof_modifiers | 17 | 0 | 34 |
 | shadows | 15 | 0 | 0 |
-| sjw_skills | 98 | 0 | 52 |
+| sjw_skills | 98 | 0 | 57 |
 | stats | 16 | 0 | 64 |
 | statues | 5 | 0 | 5 |
 | subjugation_support | 18 | 0 | 36 |
@@ -21,7 +21,7 @@ Total : 497 entrées, **0 erreur(s)**, 554 avertissement(s). Généré par `pipe
 Avertissements par type (à suivre dans le temps) :
 - 217 × icône absente (null)
 - 87 × name.fr vide
-- 68 × source non URL (capture ou texte)
+- 73 × source non URL (capture ou texte)
 - 59 × pierre sans effets
 - 49 × name.en vide
 - 36 × slot vide
