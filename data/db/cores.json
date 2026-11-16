@@ -1042,7 +1042,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Les soins prodigués par l'utilisateur augmentent de 8 %.",
       "en": "The user's healing given increases by 4/6/8%."
     },
     "values_by_rarity": {
@@ -1072,7 +1072,22 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16) : valeur Légendaire concordante avec le wiki.",
+    "observed_samples": [
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional HP": 10946,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Dark hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "arrogant-rulers-gaze",
@@ -1094,7 +1109,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "L'efficacité de [Bris] de l'utilisateur augmente de 10 %.",
       "en": "The user's [Break] effectiveness increases by 6/8/10%."
     },
     "values_by_rarity": {
@@ -1124,7 +1139,22 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16) : valeur Légendaire concordante avec le wiki.",
+    "observed_samples": [
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional HP": 10946,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Dark hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "punishment-of-the-crimson-apex",
@@ -1146,7 +1176,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Lorsque les PM de l'utilisateur sont à 20 % ou moins, il récupère l'équivalent de 30 % de ses PM max. Cet effet ne s'active qu'une fois par combat.",
       "en": "When the user has 20% of their MP or less they recover MP equal to 20-25-30% of their maximum MP. This effect activates only once during combat."
     },
     "values_by_rarity": {
@@ -1176,7 +1206,22 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16) : valeur Légendaire concordante avec le wiki.",
+    "observed_samples": [
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional HP": 10946,
+          "Critical Hit Damage": 6644
+        },
+        "passive_condition": "Water hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "teeth-of-the-watcher",
@@ -1198,7 +1243,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Diminue le Taux de récupération de PM de 10 % et la Consommation de PM des compétences de 12 %.",
       "en": "Decreases MP Recovery Rate by 10% and MP Consumption of Basic Skills by 6-9-12%."
     },
     "values_by_rarity": {
@@ -1228,7 +1273,22 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16) : valeur Légendaire concordante avec le wiki. Le wiki précisait « compétences de base » : le client FR dit « des compétences » (à vérifier).",
+    "observed_samples": [
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional HP": 10946,
+          "Critical Hit Rate": 6644
+        },
+        "passive_condition": "Dark hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "nameless-demons-magisphere",
@@ -1250,7 +1310,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Lorsqu'il utilise sa compétence ultime, il récupère des PM équivalents à 5 % de ses PM max (temps de rechargement : 20 seconde(s)).",
       "en": "When the user uses their Ultimate Skill, it grants recovers MP equal to 2-3-5% by of their Max MP. (Cooldown: 20 second(s))"
     },
     "values_by_rarity": {
@@ -1280,7 +1340,22 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16) : valeur Légendaire concordante avec le wiki.",
+    "observed_samples": [
+      {
+        "level": 10,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional HP": 7906,
+          "Critical Hit Rate": 4799
+        },
+        "passive_condition": "Light hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "ancient-wraiths-mana-power",
@@ -1302,7 +1377,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Lorsque son attaque de base touche sa cible 3 fois, sa jauge de puissance se remplit de 3 % (temps de rechargement : 10 seconde(s)).",
       "en": "When the user's Basic Attack hits 3 time(s), it restores 1-2-3% of their Power Gauge. (Cooldown: 10 second(s))"
     },
     "values_by_rarity": {
@@ -1332,7 +1407,22 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16) : valeur Légendaire concordante avec le wiki.",
+    "observed_samples": [
+      {
+        "level": 15,
+        "stat_enhancement_level_pct": "MAX",
+        "stats": {
+          "Additional HP": 10946,
+          "Damage Increase": 6644
+        },
+        "passive_condition": "Dark hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, onglet Âme ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ]
   },
   {
     "id": "core-rules",
@@ -1353,7 +1443,7 @@
       "Amélioration (au niveau max, jusqu'à MAX) : « améliore un bonus de stat d'une valeur aléatoire » (1 des 2 stats) ; coût par tentative 15 000 or + 5 matériaux ; plage par tentative à niv. 15 : Attaque % +0,3~1,55, coup critique +40~200 ; options « Améliorer automatiquement » et « Amélioration instantanée » (jusqu'au palier max, s'arrête si manque de matériaux ou d'or). Vu : 87 % → MAX en 16 tentatives (240 000 or) = +7,61 % Attaque, +687 coup critique.",
       "Quelques noyaux affichent un portrait de chasseur (équipé) ; la puissance totale du chasseur est mise à jour après chaque étape.",
       "« Niveau d'amélioration de stat » (%) = floor( moyenne sur les 2 stats de (valeur − minimum initial Légendaire) / (valeur max du palier de niveau max − minimum initial) ). Minimums initiaux Légendaires (rates.json) : Attaque supplémentaire 120, Attaque % 0,70, stats de l'option 2 (coup critique, dégâts critiques, hausse des dégâts, pénétration) 150. Formule vérifiée sur 11 relevés (2, 9, 15, 22, 62, 64, 67, 70, 71, 87, 91, 92 %), tous exacts ; MAX = 100 %.",
-      "Inventaire : 632 → 626 noyaux après avoir consommé 6 noyaux Légendaires niv. 1 comme matériau d'EXP (confirme le décompte).",
+      "Libellés FR des passifs : « Passif de l'esprit » (Esprit/mind), « Passif du corps » (Corps/body), « Passif de l'âme » (Âme/spirit).",
       "Libellés FR des passifs : « Passif de l'esprit » (emplacement Esprit/mind) et « Passif du corps » (Corps/body) ; l'onglet Âme/spirit n'a pas été vu."
     ],
     "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, client FR 1.5.16) ; guide Netmarble /sololv/141 (rates.json, game_rules.json) ; captures d'Alexis du 16/11/2026 (écrans Noyaux : niveau supérieur, amélioration, limit break ; client FR 1.5.16)",
@@ -1364,20 +1454,22 @@
         "Attack (%)": 36.79,
         "Additional Attack": 3953,
         "option 2 (Critical Hit Rate, Critical Hit Damage, Damage Increase, Defense Penetration)": 4799,
-        "Additional Defense": 3953
+        "Additional Defense": 3953,
+        "Additional HP": 7906
       },
       "15": {
         "Attack (%)": 53.34,
         "Additional Attack": 5473,
         "option 2": 6644,
         "Additional Defense": 5473,
-        "Defense (%)": 53.34
+        "Defense (%)": 53.34,
+        "Additional HP": 10946
       },
       "20": {
         "Attack (%)": 58.49,
         "option 2": 7289
       },
-      "note": "Identiques pour toutes les familles et emplacements vus (Esprit : Désir du Protecteur féroce, Réflexion du Dominateur arrogant, Yeux du Veilleur ; Corps : Corne du démon anonyme, Désirs du Prédateur écarlate, Volonté du Dominateur arrogant) : la stat principale (Attaque/Défense, flat ou %) et l'option 2 suivent la même échelle ; PV non vus ; 20 : Attaque/Défense supplémentaire inconnues ; 25 : inconnu.",
+      "note": "Identiques pour les 3 emplacements et toutes les familles vues (Esprit, Corps, Âme) : la stat principale flat (Attaque/Défense 3953/5473 ; PV 7906/10946 aux paliers 10/15, rapport ×2 entre PV et Attaque), le % (36,79/53,34/58,49) et l'option 2 (4799/6644/7289) suivent la même échelle ; PV % non vu ; 20 : flat inconnu ; 25 : inconnu.",
       "source": "captures d'Alexis du 16/11/2026 (écran Noyaux, tri par niveau / amélioration de stat ; client FR 1.5.16)",
       "verified_at": "2026-11-16"
     }
