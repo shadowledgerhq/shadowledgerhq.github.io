@@ -1405,7 +1405,7 @@
     "name": {
       "fr": "Jima",
       "en": "Jima",
-      "ko": "",
+      "ko": "지마",
       "ja": "ガーナ"
     },
     "rarity": null,
@@ -1576,14 +1576,15 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "namu.wiki 그림자 군단(나 혼자만 레벨업) (via recherche web, nom du manhwa ; pas confirmé dans le jeu : à vérifier) — 2026-11-16"
   },
   {
     "id": "kaisel",
     "name": {
       "fr": "Kaisel",
       "en": "Kaisel",
-      "ko": "",
+      "ko": "카이셀",
       "ja": "カイセル"
     },
     "rarity": null,
@@ -1754,7 +1755,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "namu.wiki 그림자 군단(나 혼자만 레벨업) (via recherche web, nom du manhwa ; pas confirmé dans le jeu : à vérifier) — 2026-11-16"
   },
   {
     "id": "skull",
