@@ -126,7 +126,7 @@
     "exact": true,
     "confidence": "sur",
     "rank": 3,
-    "notes": "lecture fusionnée (5 images); contrôle sans Hunter Rank; chrono HUD déduit (t=214); séparateur perdu (OCR); groupes inconnus : 2e run non additionnée (137, Oj_-5x6700s); une seule run; boss non contrôlé",
+    "notes": "lecture fusionnée (5 images); contrôle sans Hunter Rank; chrono HUD déduit (t=214); séparateur perdu (OCR); écart titre/écran : titre 159; groupes inconnus : 2e run non additionnée (137, Oj_-5x6700s); une seule run; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "T5dR6iJAn-Y",
@@ -139,45 +139,6 @@
         "damage": 7907273299084,
         "damage_exact": true,
         "hud_rage_count": 120
-      }
-    ]
-  },
-  {
-    "run_id": "gb-2026-11-12-OPcjwjYkuME",
-    "week": "2026-11-12",
-    "mode": "gb",
-    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
-    "player": "SNG",
-    "channel": "SNG",
-    "video_id": "OPcjwjYkuME",
-    "video_ids": [
-      "OPcjwjYkuME"
-    ],
-    "published_at": "2026-11-13T18:00:21+01:00",
-    "lang": "en",
-    "score": {
-      "total": 351,
-      "runs": [
-        351
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : RC: 351; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "OPcjwjYkuME",
-        "published_at": "2026-11-13T18:00:21+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false,
-        "damage": null,
-        "damage_exact": null
       }
     ]
   },
@@ -217,6 +178,45 @@
         "exact": false,
         "damage": null,
         "damage_exact": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-12-OPcjwjYkuME",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "OPcjwjYkuME",
+    "video_ids": [
+      "OPcjwjYkuME"
+    ],
+    "published_at": "2026-11-13T18:00:21+01:00",
+    "lang": "en",
+    "score": {
+      "total": 176,
+      "runs": [
+        176
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "écart OCR zone/image : final_score; écart OCR zone/image : rage_count; contrôle GB : somme 30263550677307 ≠ Final Score 30458500980570; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "OPcjwjYkuME",
+        "published_at": "2026-11-13T18:00:21+01:00",
+        "t": 220,
+        "stage": "Giant Statue",
+        "team": null,
+        "score_source": "video-complete",
+        "exact": false,
+        "damage": 30458500980570,
+        "damage_exact": true
       }
     ]
   },

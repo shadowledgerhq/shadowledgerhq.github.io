@@ -1,10 +1,13 @@
-# Rapport — semaine 2026-11-12 — passage daily — 2026-11-16 20:50 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-16 22:36 (Paris)
 
-Aucun passage du PC pour cette semaine (`_rapport_pc.md` absent).
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 15 · en_cours restantes : 70 (dont 42 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 31 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Conflit git résolu automatiquement
 
-- Quota : 1704 unités
-- Ce passage : 14 vidéo(s) nouvelle(s), 0 rejetée(s), 10 score(s) provisoire(s)
-- Semaine : 79 en cours (dont 65 pour le PC), 11 terminée(s), 11 rejetée(s)
+- Semaine : 70 en cours (dont 49 pour le PC), 20 terminée(s), 11 rejetée(s)
 - Classements : bot 13, gb 7, hotm-gate-inconnue 4, poc 4
 
 ## À vérifier (25)
@@ -21,10 +24,10 @@ Aucun passage du PC pour cette semaine (`_rapport_pc.md` absent).
 - bot · SlayOnLow · 40.077 · HWebrRc_l0o · score provisoire (titre) : 40.077 SECONDS; boss non contrôlé
 - bot · OhchiGameS · 44.0 · OppPeyQ--7s · score provisoire (description) : 44s; boss non contrôlé
 - bot · Akihiro · 130.266 · VFDbdYFzor4 · score provisoire (description) : 02:10.266; boss non contrôlé
-- gb · SNG · 351 · OPcjwjYkuME · score provisoire (titre) : RC: 351; une seule run trouvée; boss non contrôlé
 - gb · mitchell leveling · 177 · trinzgj3FV4 · score provisoire (titre) : 177 RC; une seule run trouvée; boss non contrôlé
+- gb · SNG · 176 · OPcjwjYkuME · écart OCR zone/image : final_score; écart OCR zone/image : rage_count; contrôle GB : somme 30263550677307 ≠ Final Score 30458500980570; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; une seule run trouvée; boss non contrôlé
 - gb · Eden(이든) · 162 · vYtRCpFtSOk · lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; boss non contrôlé
-- gb · HS Retro Gaming · 19 · lGDbzyIJcjY · écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (3 images); conflit de lecture : final_score; une seule run trouvée; boss non contrôlé
+- gb · HS Retro Gaming · 19 · lGDbzyIJcjY · écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; boss non contrôlé
 - hotm-gate-inconnue · OhchiGameS · 94000 · RVkSt2bWn_U · score provisoire (titre) : 94000; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · RAVANPLAYZ · 91500 · 8qqgrjiYhck · score provisoire (titre) : 91500; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · SNG · 85000 · SdiCUFy5FbE · score provisoire (titre) : 85k; porte HOTM illisible; boss non contrôlé
@@ -44,4 +47,15 @@ Aucun passage du PC pour cette semaine (`_rapport_pc.md` absent).
 - rien
 
 ## Erreurs et alertes
-- tri 1 relu (règles v18) : 0 vidéo(s) modifiée(s) sur 8
+- Aqj1crEcrD4 : 429 / anti-bot YouTube, reportée au prochain passage
+- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
+- 38 vidéo(s) reportée(s) pour les images (limite 15)
+- Aqj1crEcrD4 : durée PT35M2S hors limite (30 min), images non traitées
+- SDMrcxG50LI : durée PT37M45S hors limite (30 min), images non traitées
+- K4786mdlgXg : durée PT44M26S hors limite (30 min), images non traitées
+- PawKtXDQjdc : durée PT33M44S hors limite (30 min), images non traitées
+- 09SuKtzmeK0 : libellés pt-BR inconnus (aucun écran GB reconnu)
+- FT-lF1TdPIs : libellés en inconnus (aucun écran GB reconnu)
+- LcTotNDEP7o : libellés pt-BR inconnus (aucun écran GB reconnu)
+- 70 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- passage incomplet : anti-bot ; relance : aucune (une relance a déjà été programmée ce soir) : prochain passage normal

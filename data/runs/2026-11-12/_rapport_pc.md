@@ -24,3 +24,13 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - **Passage complet : non** (git : git pull : fatal: unable to access 'https://github.com/shadowledgerhq/shadowledgerhq.github.io.git/': Could not resolve host: github.com)
 - Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
 - Erreurs bloquantes : git : git pull : fatal: unable to access 'https://github.com/shadowledgerhq/shadowledgerhq.github.io.git/': Could not resolve host: github.com
+
+<!-- passage-pc pc-daily 2026-11-16T21:36:12.506626+00:00 -->
+## Passage pc-daily — 2026-11-16 22:36 (Paris)
+
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 15 · en_cours restantes : 70 (dont 42 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 31 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Conflit git résolu automatiquement
