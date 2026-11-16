@@ -43,6 +43,8 @@ def lecture_bot(meta, ecran, config, source="video-complete"):
     lec.update(score=round(score, 3), score_source=source, exact=ok, confidence="sur" if ok else "a_verifier",
                stage=ecran.get("stage"), t=ecran.get("t"), player_ingame=ecran.get("player_ingame"),
                detail={"phases": phases, "play_time": ecran.get("play_time")})
+    if ecran.get("armes_sjw_vides") is not None:      # v26 : True = 2 cases de gauche du bandeau vides = pas d'armes de SJW
+        lec["detail"]["armes_sjw_vides"] = bool(ecran["armes_sjw_vides"])
     lec["notes"] += [f"contrôle BOT : {p}" for p in pb]
     lec["bot_season_week"] = lire_saison_semaine(meta.get("title"), config)
     if titre_challenge(meta.get("title"), config):  # v10 : ancien mode supprimé

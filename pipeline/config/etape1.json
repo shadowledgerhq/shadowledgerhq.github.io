@@ -54,6 +54,12 @@
     "semaines_jeu": 4,
     "semaines_calcul": 1,
     "challenge": ["challenge", "チャレンジ", "챌린지"],
+    "libelles": {
+      "_doc": "SPEC §3.1 (v26) : libellés du RESULT BOT par langue. `titre` = titre de l'écran (le boss est lu dessous) ; `play_time` = temps de jeu arrondi ; `ignores` = boutons, jamais lus. `Phase1` / `Phase 1` : même libellé dans toutes les langues (comparaison sans accents, casse ni espaces). Anglais, coréen : [À CONFIRMER] sur capture ; japonais vu le 16/11/2026 (docs/essais/composition/bot_results_sans_sjw_ja.png).",
+      "en": {"titre": ["Results"], "play_time": ["Play Time"], "ignores": []},
+      "ja": {"titre": ["RESULT"], "play_time": ["進行時間"], "ignores": ["もう一度プレイ", "出る", "戦闘オプション"]},
+      "ko": {"titre": ["결과"], "play_time": ["진행 시간"], "ignores": []}
+    },
     "zone_armes_sjw": [0.236, 0.855, 0.332, 0.937],
     "_zone_armes_sjw": "SPEC v25 §4.5, calée le 16/11/2026 sur 2 captures RESULT du BOT (client JA) : docs/essais/composition/bot_results_ja.png (5 cases pleines) et bot_results_sans_sjw_ja.png (3 chasseurs seulement). Le bandeau est ALIGNÉ À DROITE : sans armes de SJW, les 3 icônes de chasseurs glissent dans les 3 cases de droite et les 2 cases de GAUCHE (x 0,236-0,332) restent vides (écart-type 3 contre 60-76 quand elles sont pleines). Zone vide (`regles_deduites.zone_vide`, seuil 8) = pas d'armes de SJW = SJW absent. Le pipeline ne lit pas encore l'écran RESULT du BOT (lu par le titre) : `detail.armes_sjw_vides` à renseigner lors de cette lecture ; ≥ 5 runs sûres de 5 chaînes requises pour conclure."
   },

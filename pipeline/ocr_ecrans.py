@@ -92,6 +92,24 @@ _RAGE = re.compile(r"rage\s*[gc]oun?t?\b", re.IGNORECASE)
 _GROS_NOMBRES = re.compile(r"\d{4,}(?:[,.]\d{3})*|\d{1,3}(?:[,.]\d{3})+")
 
 
+def compact(texte):
+    """v26 : texte sans accents, en minuscules, sans aucun espace (`Phase 1` = `Phase1`, `進行 時間` = `進行時間`)."""
+    return re.sub(r"\s+", "", sans_accents(texte or "").lower())
+
+
+def libelles_bot(cle, config=None):
+    """Libellés BOT (`config.bot.libelles.<langue>.<cle>`) de toutes les langues, sans doublon."""
+    res = []
+    for lib in (((config or _config()).get("bot") or {}).get("libelles") or {}).values():
+        if isinstance(lib, dict):
+            res += [x for x in lib.get(cle, []) if x not in res]
+    return res
+
+
+def _rx_libelles(libelles):
+    return "|".join(_motif(l) for l in libelles)
+
+
 def normaliser(texte):
     """v11 : tolère les fautes d'OCR courantes du Rage Count (`Rage Gount`, `RageCount`, `Rage Coun`)."""
     return _RAGE.sub("Rage Count", texte or "")
@@ -111,7 +129,7 @@ def _ligne_apres(titre, texte):
     return m.group(1).strip() if m else None
 
 
-def detecter(texte):
+def detecter(texte, config=None):
     """Type d'écran d'après ses libellés, ou None. `gb_record` avant `gb_results` ; HOTM avant POC."""
     t = normaliser(texte)
     bas = t.lower()
@@ -126,8 +144,9 @@ def detecter(texte):
         # v11 : HUD pendant la run (jamais un écran de résultat) ; v15 : libellés par langue ; chrono illisible sur l'image
         # entière : HUD « incertain », confirmé par la lecture ciblée du chrono (zones_hud)
         return "gb_combat" if chrono_hud(t) is not None else "gb_combat_incertain"
-    if "phase 1" in bas and "play time" in bas and _TEMPS.search(t):
-        return "bot"
+    cp = compact(t)
+    if "phase1" in cp and _TEMPS.search(t) and any(compact(l) in cp for l in (libelles_bot("play_time", config) or ["Play Time"])):
+        return "bot"        # v26 : `Phase1` sans espace accepté partout ; `Play Time` / `進行時間` selon la langue
     if "합산" in t and ("증명" in t or "클리어" in t):
         return "hotm"
     if "이번" in t and ("플레이어 스코어" in t or "계승자 스코어" in t):
@@ -207,13 +226,16 @@ def lire_gb_combat(texte, config=None):
             "chrono": chrono_hud(t), "stage": None, "langue": langue, "rage_optionnel": bool(lib and lib[5])}
 
 
-def lire_bot(texte):
+def lire_bot(texte, config=None):
     temps = [int(m) * 60 + int(s) + int(ms) / 1000 for m, s, ms in _TEMPS.findall(texte)]
     phases, chrono = temps, None
     if len(temps) >= 2 and abs(temps[-1] - temps[-2]) < 1e-3:   # le bandeau du bas répète la dernière phase
         phases, chrono = temps[:-1], temps[-1]
-    pt = re.search(r"play\s*time\D{0,5}(\d{1,2}):(\d{2})", texte, re.IGNORECASE)
-    return {"stage": _ligne_apres(r"\bResults\b", texte), "phases": phases, "chrono": chrono,
+    pt_rx = _rx_libelles(libelles_bot("play_time", config) or ["Play Time"])
+    pt = re.search(rf"(?:{pt_rx})\D{{0,5}}(\d{{1,2}}):(\d{{2}})", texte, re.IGNORECASE)
+    titre = _rx_libelles(libelles_bot("titre", config) or ["Results"])
+    boss = _ligne_apres(rf"(?<![A-Za-z])(?:{titre})(?![A-Za-z])", texte)
+    return {"stage": boss, "phases": phases, "chrono": chrono,
             "play_time": int(pt.group(1)) * 60 + int(pt.group(2)) if pt else None,
             "player_ingame": None, "armes_sjw": None}   # pseudo et armes : [EN ATTENTE] (icônes, recadrage)
 
@@ -391,10 +413,10 @@ def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
     """Texte OCR d'une image -> lectures de la vidéo (liste, éventuellement vide). `zones` : textes lus dans les
     zones ciblées de l'écran Results (pc.lire_zones_results)."""
     texte = normaliser(texte)
-    type_ecran = detecter(texte)
+    type_ecran = detecter(texte, config)
     if type_ecran is None:
         return []
-    ecran = {**(lire_gb_combat(texte, config) if type_ecran in ("gb_combat", "gb_combat_incertain") else LECTEURS[type_ecran](texte)), "t": t}
+    ecran = {**(lire_gb_combat(texte, config) if type_ecran in ("gb_combat", "gb_combat_incertain") else LECTEURS[type_ecran](texte, config) if type_ecran == "bot" else LECTEURS[type_ecran](texte)), "t": t}
     if type_ecran in ("gb_results", "gb_results_partiel"):
         ecran["stage"] = _boss_du_hud(texte, config) or ecran["stage"]     # v12 : nom normalisé si le boss est connu
         if zones is not None:
@@ -417,6 +439,7 @@ def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
         ecran["stage"] = _boss_du_hud(texte, config)
         lectures = [ecrans.lecture_gb_combat(meta, ecran, config, source)]
     elif type_ecran == "bot":
+        ecran["armes_sjw_vides"] = (zones or {}).get("armes_sjw_vides")      # v26 : zone des armes de SJW du bandeau lue vide (pc.zone_armes_bot)
         lectures = [ecrans.lecture_bot(meta, ecran, config, source)]
     elif type_ecran == "gb_results":
         lectures = [ecrans.lecture_gb_results(meta, ecran, config, source)]
@@ -754,11 +777,16 @@ def fusionner_results(lectures, config=None):
 def dedoublonner_lectures(lectures):
     """Une même image d'écran est lue à plusieurs instants (1 image / 2 s) : une seule lecture par
     (vidéo, mode, groupe/équipe, score, dégâts) ; la plus tôt dans la vidéo est gardée."""
-    vues, sortie = set(), []
+    vues, sortie, gardees = set(), [], {}
     for l in sorted(lectures, key=lambda l: (l.get("t") is None, l.get("t") or 0)):
         cle = (l["video_id"], l["mode"], l.get("team"), l["score"], l.get("damage"), l["score_source"] == "record",
                l["t"] if (l.get("detail") or {}).get("ecran") == "combat" else None)
         if cle not in vues:
             vues.add(cle)
             sortie.append(l)
+            gardees[cle] = l
+        elif l["mode"] == "bot" and (l.get("detail") or {}).get("armes_sjw_vides") is not None:
+            g = gardees[cle].setdefault("detail", {})          # v26 : la zone des armes lue sur une image doublon n'est pas perdue
+            if g.get("armes_sjw_vides") is None:
+                g["armes_sjw_vides"] = l["detail"]["armes_sjw_vides"]
     return sortie

@@ -523,7 +523,7 @@ def suffisant(lectures, vid, modes):
     return all(len([l for l in sures if l["mode"] == m]) >= (2 if m in ("poc", "gb") else 1) for m in modes)
 
 
-MARQUEURS_ECRAN = ("results", "phase 1", "play time", "rage count", "personal record", "final score", "hunter rank",
+MARQUEURS_ECRAN = ("results", "phase 1", "phase1", "play time", "進行時間", "rage count", "personal record", "final score", "hunter rank",
                    "your points have been registered", "warning", "합산", "증명", "클리어", "이번", "플레이어 스코어", "계승자")
 
 
@@ -535,15 +535,16 @@ def langues_ocr(meta, cfg):
         for l in par_mode.get(m, cfg["ocr_langues"]).split("+"):
             if l not in langs:
                 langs.append(l)
-    for l in (cfg.get("ocr_langues_video") or {}).get(meta.get("lang") or "", "").split("+"):     # ex. vidéo coréenne : + kor
-        if l and l not in langs and "gb" in meta.get("mode_guess", []):
+    langue_video = (meta.get("lang") or "").lower().replace("_", "-").split("-")[0]
+    for l in (cfg.get("ocr_langues_video") or {}).get(langue_video, "").split("+"):     # ex. vidéo coréenne : + kor
+        if l and l not in langs and ("gb" in meta.get("mode_guess", []) or "bot" in meta.get("mode_guess", [])):   # v26 : RESULT BOT japonais
             langs.append(l)
     return "+".join(langs) or cfg["ocr_langues"]
 
 
 def ressemble_ecran(texte):
     bas = ocr_ecrans.normaliser(texte).lower()
-    return any(m in bas for m in MARQUEURS_ECRAN) or ("points" in bas and "boss rage" in bas)
+    return any(m in bas for m in MARQUEURS_ECRAN) or "phase1" in ocr_ecrans.compact(texte) or ("points" in bas and "boss rage" in bas)
 
 
 def _ocr_image(outils, png, langs, cfg, st, complet=False, collecte=False):
@@ -601,6 +602,21 @@ def lire_zones_results(outils, png, config, type_ecran="gb_results", texte=None,
                 textes.append("")
         sortie[nom] = ocr_ecrans.consensus_zone(nom, textes, config)
     return sortie
+
+
+def zone_armes_bot(png, config):
+    """v26 : écran RESULT du BOT (16:9) -> True si les 2 cases de gauche du bandeau (`config.bot.zone_armes_sjw`) sont vides
+    (SJW absent), False si une icône s'y trouve, None si l'image est illisible ou d'un autre format (jamais une preuve)."""
+    try:
+        from PIL import Image
+        import regles_deduites
+        with Image.open(png) as im:
+            im = im.convert("RGB")
+        if abs(im.size[0] / im.size[1] - 16 / 9) > 0.02:
+            return None
+        return regles_deduites.zone_vide(im, (config.get("bot") or {}).get("zone_armes_sjw"))
+    except (OSError, ImportError, ZeroDivisionError):
+        return None
 
 
 RESULTATS_TYPES = ("gb_results", "gb_results_partiel")
@@ -718,6 +734,8 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                             inconnus.append(t)
                             journal(f"  écran de score sans libellé reconnu gardé à t={t} s (docs/essais/ocr/libelles_inconnus)")
                         zones = lire_zones_results(outils, png, config, type_img, texte, langs) if type_img in ZONES_TYPES else None
+                        if type_img == "bot":
+                            zones = {"armes_sjw_vides": zone_armes_bot(png, config)}
                         vus[h] = (texte, zones)
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
                     if ocr_ecrans.detecter(texte) in RESULTATS_TYPES:
