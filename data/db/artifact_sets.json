@@ -203,7 +203,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       }
     ]
   },
@@ -405,7 +406,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       }
     ]
   },
@@ -2447,7 +2449,8 @@
         "unit": "time",
         "date": "2025-08-28",
         "url": "https://forum.netmarble.com/slv_en/view/32/94122",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "analyse_douteuse"
       }
     ]
   },

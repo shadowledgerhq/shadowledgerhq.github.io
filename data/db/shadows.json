@@ -554,7 +554,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       }
     ]
   },
@@ -752,7 +753,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       }
     ]
   },
@@ -1660,7 +1662,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       }
     ]
   },
@@ -2055,7 +2058,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       }
     ]
   },
@@ -2440,7 +2444,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       }
     ]
   },

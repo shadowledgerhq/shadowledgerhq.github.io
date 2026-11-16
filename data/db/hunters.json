@@ -1093,7 +1093,8 @@
         "unit": "second(s)",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Duration : 15 30 second(s)",
@@ -1102,7 +1103,8 @@
         "unit": "second(s)",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Duration : 15 30 second(s)",
@@ -1111,7 +1113,8 @@
         "unit": "second(s)",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "The user’s HP increases by 12% 30%",
@@ -1120,7 +1123,8 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "The entire team’s Light damage increases by 15% 30%",
@@ -1129,7 +1133,8 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       }
     ]
   },
@@ -1399,7 +1404,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Duration : 12 25 second(s)",
@@ -1408,7 +1414,8 @@
         "unit": "second(s)",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       }
     ]
   },
@@ -1908,7 +1915,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Heavenly Strike changes to Heavy Attack: Heavenly Strike, increasing its damage by 170% 200%",
@@ -1917,7 +1925,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Pure Sword Princess Cha Hae-In’s Critical Hit Rate increases by 7% 8% and her Critical Hit damage increases by 7% 8% for every Water team me",
@@ -2440,7 +2449,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Stage 2 Damage : 249% 399% of the user’s Attack",
@@ -2449,7 +2459,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Stage 3 Damage : 264% 414% of the user’s Attack",
@@ -2458,7 +2469,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Damage: 1023% 2523% of the user’s Attack",
@@ -2467,7 +2479,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Damage: 2325% 3825% of the user’s Attack",
@@ -2476,7 +2489,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Damage: 2325% 3825% of the user’s Attack",
@@ -2485,7 +2499,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Damage: 3555% 6705% of the user’s Attack",
@@ -2494,7 +2509,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Choi Jong-In cannot deal Critical Hits, but his Attack increases by 50% 100%",
@@ -2512,7 +2528,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Increases the user’s Attack by 12% 50%",
@@ -2521,7 +2538,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "The damage of [End of Days, Flame Spear] increases by 60% 200%",
@@ -2530,7 +2548,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Increases the user’s Fire damage by 16% 100%",
@@ -2557,7 +2576,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Decrease the target’s Defense by 15% 70%",
@@ -2566,7 +2586,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Duration : 15 25 second(s)",
@@ -2575,7 +2596,8 @@
         "unit": "second(s)",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       }
     ]
   },
@@ -2808,7 +2830,8 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Duration: 60 90 seconds (stacks up to 3 4 times)",
@@ -2826,7 +2849,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "When [Spiritual Body Manifestation] is active it grants an effect that increases Fire team members’ Basic Skill damage by 15% 30% for 30 sec",
@@ -2835,7 +2859,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "analyse_douteuse"
       },
       {
         "line": "Increases Finishing Catch damage by 15% 165%",
@@ -2844,7 +2869,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "When Christopher Reed or an ally successfully triggers the [Fire] [Overload] effect, he recovers 20% of this Power Gauge charge and resets t",
@@ -2853,7 +2879,8 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "analyse_douteuse"
       },
       {
         "line": "When Christopher’s attack hits a target inflicted with the [Fire] [Overload] effect, it inflicts [Blazing Shock] on the target (Cooldown: 25",
@@ -2862,7 +2889,8 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "analyse_douteuse"
       },
       {
         "line": "Increases Fire Overload damage taken by 20% 30%",
@@ -2871,7 +2899,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Using Zero to Hundred increases the user’s Defense Penetration by 15% 30% for 60 seconds",
@@ -2880,7 +2909,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       }
     ]
   },
@@ -3583,7 +3613,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       }
     ]
   },
@@ -4491,7 +4522,8 @@
         "unit": "second(s)",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "When a [Shield] is granted to a team member that team member’s damage dealt increases by 10% 20%",
@@ -4545,7 +4577,8 @@
         "unit": "times",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "analyse_douteuse"
       }
     ]
   },
@@ -5230,7 +5263,8 @@
         "unit": "seconds",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "[Protection Zone] Duration : 15 25 seconds",
@@ -5239,7 +5273,8 @@
         "unit": "seconds",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Increases Attack and Defense by 10% 20%",
@@ -5248,7 +5283,8 @@
         "unit": "%",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Duration : 25 60 second(s)",
@@ -5257,7 +5293,8 @@
         "unit": "second(s)",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Increases the user’s HP by 10% 50%",
@@ -5266,7 +5303,8 @@
         "unit": "%",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Increases damage taken by 5% for 10 30 second(s) to targets hit by Han Se-Mi’s skill",
@@ -6633,7 +6671,8 @@
         "unit": "%",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "For every Dark ally in the party Dark team members’ Attack increases by 4% 5%",
@@ -6642,7 +6681,8 @@
         "unit": "%",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Grants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team",
@@ -6651,7 +6691,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Duration : 12 24 seconds",
@@ -6660,7 +6701,8 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Grants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team",
@@ -6669,7 +6711,8 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Duration : 12 24 seconds",
@@ -6678,7 +6721,8 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Duration : 8 30 seconds",
@@ -6687,7 +6731,8 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "HP equal to 25% 30% of Isla Wright’s Defense is instantly restored to the entire team",
@@ -6714,7 +6759,8 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       }
     ]
   },
@@ -7985,7 +8031,8 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Using Checkpoint restores 50% 100% of the user’s Power Gauge",
@@ -8302,7 +8349,8 @@
         "unit": "%",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Duration : 15 30 seconds(s)",
@@ -8311,7 +8359,8 @@
         "unit": "seconds",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Increases the user’s Attack by 10% 20%",
@@ -8320,7 +8369,8 @@
         "unit": "%",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_ancienne_seule"
       },
       {
         "line": "Targets hit by the user’s Strengthening Charm have both the damage they take from Critical Hits and their chance of receiving Critical Hit d",
@@ -8990,7 +9040,8 @@
         "unit": "%",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       }
     ]
   },
@@ -9703,7 +9754,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Duration : 30 32 second(s)",
@@ -9748,7 +9800,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_ancienne_seule"
       },
       {
         "line": "Increases the user’s Attack by 16% 24%",
@@ -9757,7 +9810,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Increases the user’s Defense by 20% 24%",
@@ -9766,7 +9820,8 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Increases Water Basic Skill damage by 15% 16%",
@@ -9784,7 +9839,8 @@
         "unit": "second(s)",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Using Side Whip grants the team member with the highest Attack an effect that increases their damage by 1% per 2000 of Meilin Fisher’s Max H",
@@ -11583,7 +11639,8 @@
         "unit": "times",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Increases the user’s HP by 12% 30%",
@@ -11837,7 +11894,8 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Increases Shield gained by Light team members by 5% 20%",
@@ -11846,7 +11904,8 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Duration : 24 36 second(s)",
@@ -11855,7 +11914,8 @@
         "unit": "second(s)",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Light team members’ Light damage increases by 8% 10% for every Light team member in the party",
@@ -11864,7 +11924,8 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "The Defense of the team member with the highest Defense increases by 10% 20%",
@@ -11873,7 +11934,8 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "The Attack of the Light team member with the highest Attack increases by 10% 20%",
@@ -11882,7 +11944,8 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "Increases damage dealt by 30% 50%",
@@ -11900,7 +11963,8 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "The user’s HP increases by 12% 50%",
@@ -13518,7 +13582,8 @@
         "unit": "%",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       }
     ]
   },
@@ -14178,7 +14243,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "The user’s Critical Hit damage increases by 16% 20%",
@@ -14214,7 +14280,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       }
     ]
   },
@@ -14964,7 +15031,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Damage: 1200% 2512.5% of Attack",
@@ -14973,7 +15041,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Damage: 2175% 2536.5% of Attack",
@@ -14982,7 +15051,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Damage: 1644.44% 2248.78% of Attack",
@@ -14991,7 +15061,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Damage: 1200% 1617% of Attack",
@@ -15000,7 +15071,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Damage: 4125% 6315% of Attack",
@@ -15009,7 +15081,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "The user’s Damage Increase stat increases equal to 24% 100% of their Defense Penetration",
@@ -15036,7 +15109,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Decreases the target’s Recovery Rate by 4% 5%",
@@ -15045,7 +15119,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "When the user uses Kill Shot it activates the user’s Core Attack and increases their Core Attack damage by 40% 200% for 6 second(s).",
@@ -15063,7 +15138,8 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_aucune"
       },
       {
         "line": "Increases Attack by 12% 20%",
@@ -15081,7 +15157,8 @@
         "unit": "second",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       },
       {
         "line": "When the user uses Core Attack, it grants the [Madness] effect. (Cooldown: 12 6 second(s))",
@@ -15090,7 +15167,8 @@
         "unit": "second(s)",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier"
+        "status": "a_verifier",
+        "verif": "db_les_deux"
       }
     ]
   },
