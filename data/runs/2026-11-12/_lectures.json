@@ -948,14 +948,14 @@
         25475511452
       ],
       "hunter_ranks_lus": 6,
-      "n_images": 10,
+      "n_images": 15,
       "successor_score": null,
       "successeur_present": false,
       "votes": {
         "stage": [
           [
             "Estátua Gigante",
-            8
+            12
           ]
         ],
         "final_score": [
@@ -973,53 +973,53 @@
         "play_time": [
           [
             "03:00",
-            10
+            15
           ]
         ],
         "hunter_rank_1": [
           [
             545355914947,
-            10
+            15
           ]
         ],
         "hunter_rank_2": [
           [
             459719757408,
-            10
+            15
           ]
         ],
         "hunter_rank_3": [
           [
             160594165676,
-            10
+            15
           ]
         ],
         "hunter_rank_4": [
           [
             924330651491,
-            6
+            9
           ],
           [
             421330651491,
-            4
+            6
           ]
         ],
         "hunter_rank_5": [
           [
             95702114632,
-            10
+            15
           ]
         ],
         "hunter_rank_6": [
           [
             25475511452,
-            10
+            15
           ]
         ],
         "player_score": [
           [
             1688587202020,
-            2
+            3
           ]
         ]
       },
@@ -1064,7 +1064,7 @@
       "par_t": []
     },
     "notes": [
-      "lecture fusionnée (10 images)",
+      "lecture fusionnée (15 images)",
       "compteur animé",
       "contrôle sans Hunter Rank",
       "Hunter Rank incohérents ignorés (HUD)"
@@ -1574,11 +1574,11 @@
       "hud_rage_count": 120
     },
     "notes": [
+      "écart titre/écran : titre 159",
       "lecture fusionnée (5 images)",
       "contrôle sans Hunter Rank",
       "chrono HUD déduit (t=214)",
-      "séparateur perdu (OCR)",
-      "écart titre/écran : titre 159"
+      "séparateur perdu (OCR)"
     ]
   },
   {
@@ -1880,22 +1880,22 @@
         43356454581
       ],
       "hunter_ranks_lus": 6,
-      "n_images": 8,
+      "n_images": 12,
       "successor_score": null,
       "successeur_present": false,
       "votes": {
         "player_score": [
           [
             5576483862754,
-            2
+            3
           ],
           [
             9076463862754,
-            2
+            3
           ],
           [
             9076469862754,
-            2
+            3
           ]
         ],
         "final_score": [
@@ -1913,73 +1913,73 @@
         "play_time": [
           [
             "03:00",
-            6
+            9
           ]
         ],
         "hunter_rank_1": [
           [
             3686927733296,
-            2
+            3
           ],
           [
             3686927733236,
-            4
+            6
           ]
         ],
         "hunter_rank_2": [
           [
             879686193825,
-            2
+            3
           ],
           [
             873686133825,
-            4
+            6
           ]
         ],
         "hunter_rank_3": [
           [
             2790549509,
-            2
+            3
           ],
           [
             802730549509,
-            2
+            3
           ],
           [
             302730549509,
-            2
+            3
           ]
         ],
         "hunter_rank_4": [
           [
             125782887452,
-            6
+            9
           ]
         ],
         "hunter_rank_5": [
           [
             52090149391,
-            4
+            6
           ],
           [
             62090149391,
-            2
+            3
           ]
         ],
         "hunter_rank_6": [
           [
             43956454581,
-            2
+            3
           ],
           [
             43356454581,
-            4
+            6
           ]
         ],
         "stage": [
           [
             "거대 석상",
-            6
+            9
           ]
         ]
       },
@@ -2024,7 +2024,7 @@
       "par_t": []
     },
     "notes": [
-      "lecture fusionnée (8 images)",
+      "lecture fusionnée (12 images)",
       "conflit de lecture : player_score",
       "conflit de lecture : hunter_rank_3"
     ]
@@ -2124,24 +2124,24 @@
         751863896022
       ],
       "hunter_ranks_lus": 6,
-      "n_images": 16,
+      "n_images": 24,
       "successor_score": null,
       "successeur_present": false,
       "votes": {
         "stage": [
           [
             "Giant Statue",
-            8
+            12
           ]
         ],
         "player_score": [
           [
             795244088074,
-            14
+            21
           ],
           [
             795246088074,
-            2
+            3
           ]
         ],
         "final_score": [
@@ -2171,51 +2171,51 @@
         "play_time": [
           [
             "03:00",
-            16
+            24
           ]
         ],
         "hunter_rank_1": [
           [
             98988392559253,
-            4
+            6
           ],
           [
             58388392559253,
-            2
+            3
           ]
         ],
         "hunter_rank_2": [
           [
             2330503854251,
-            6
+            9
           ]
         ],
         "hunter_rank_3": [
           [
             990407426593,
-            4
+            6
           ],
           [
             90407426593,
-            2
+            3
           ]
         ],
         "hunter_rank_4": [
           [
             734202919145,
-            6
+            9
           ]
         ],
         "hunter_rank_5": [
           [
             508571686524,
-            6
+            9
           ]
         ],
         "hunter_rank_6": [
           [
             751863896022,
-            2
+            3
           ]
         ]
       },
@@ -2303,7 +2303,7 @@
       "écart OCR zone/image : rage_count",
       "écart OCR zone/image : player_score",
       "écart OCR zone/image : final_score",
-      "lecture fusionnée (16 images)",
+      "lecture fusionnée (24 images)",
       "RC discordant écarté : 2 (t=232)",
       "contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862",
       "contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score",
@@ -2396,43 +2396,10 @@
       "separateur_perdu": false,
       "hud_rage_count": 124,
       "t_debut": 20,
-      "t_fin": 140
-    },
-    "notes": [
-      "HUD : Boss Rage Count x124, chrono 18.09"
-    ]
-  },
-  {
-    "video_id": "trinzgj3FV4",
-    "channel_id": "UCxldiYWaZHULXjH0MBqZBKQ",
-    "channel_title": "mitchell leveling",
-    "published_at": "2026-11-14T02:56:22Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 180,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat",
-      "hud_points": null,
-      "chrono_hud": 21.9,
-      "separateur_perdu": false,
-      "hud_rage_count": 14,
-      "t_debut": 160,
       "t_fin": 180
     },
     "notes": [
-      "HUD : Boss Rage Count x14, chrono 21.9"
+      "HUD : Boss Rage Count x124, chrono 18.09"
     ]
   },
   {
@@ -2956,11 +2923,11 @@
       "rc_images": 3,
       "final_images": 6,
       "rc_t": {
+        "15": 487,
         "175": 480,
         "2": 481,
         "75": 485,
-        "115": 486,
-        "15": 487
+        "115": 486
       },
       "sequence": {
         "rage_count": [
