@@ -3801,7 +3801,7 @@
   },
   {
     "id": "qte--attaque-surprise",
-    "kind": "skill",
+    "kind": "rune",
     "name": {
       "fr": "Attaque surprise",
       "en": "",
@@ -3815,19 +3815,29 @@
       "neutral",
       "break"
     ],
-    "cooldown": null,
+    "cooldown": 25.0,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "22": 4340.9
+      }
+    },
     "icon": "data/icons/sjw_skills/qte--attaque-surprise.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-14",
-    "game_version": null,
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break).",
+    "parent_skill": "qte-collapse",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text": {
+      "fr": "Jinwoo se téléporte au-dessus de l'ennemi et le frappe vers le bas pour l'écraser. Bris légers. [Renverse] la cible si la dernière attaque touche. Applique l'effet [Résonance]."
+    },
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "qte--compression",
-    "kind": "skill",
+    "kind": "rune",
     "name": {
       "fr": "Compression",
       "en": "",
@@ -3840,19 +3850,29 @@
     "tags": [
       "break"
     ],
-    "cooldown": null,
+    "cooldown": 25.0,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "22": 2534.27
+      }
+    },
     "icon": "data/icons/sjw_skills/qte--compression.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-14",
-    "game_version": null,
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break).",
+    "parent_skill": "qte-collapse",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text": {
+      "fr": "En commençant par l'ennemi devant lui, Jinwoo frappe vers le bas avec une énergie puissante ; une explosion inflige ensuite des dégâts de zone. [Renverse] la cible si la dernière attaque touche. Lorsque la dernière attaque touche sa cible, sa […]"
+    },
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "qte--extinction",
-    "kind": "skill",
+    "kind": "rune",
     "name": {
       "fr": "Extinction",
       "en": "",
@@ -3865,15 +3885,25 @@
     "tags": [
       "neutral"
     ],
-    "cooldown": null,
+    "cooldown": 25.0,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "21": 3071.14
+      }
+    },
     "icon": "data/icons/sjw_skills/qte--extinction.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-14",
-    "game_version": null,
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break).",
+    "parent_skill": "qte-death",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text": {
+      "fr": "Jinwoo poursuit la cible en l'air et entaille sur une vaste zone, puis frappe violemment le sol. Applique [En l'air] et [Attaque réduite]."
+    },
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "qte--foulee-de-lombre",
@@ -3890,19 +3920,27 @@
     "tags": [
       "neutral"
     ],
-    "cooldown": null,
+    "cooldown": 15.0,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "10": 327.42
+      }
+    },
     "icon": "data/icons/sjw_skills/qte--foulee-de-lombre.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-14",
-    "game_version": null,
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break). 16/11 : QTE autonome (onglet 1, Niv. 10, sans emplacement de rune).",
+    "text": {
+      "fr": "Jinwoo trouve une ouverture et se place derrière l'ennemi pour lui tendre un piège. Condition d'utilisation : réussir une [Évasion extrême], déclencher l'état [Bris] ou utiliser une [compétence d'ombre]. Condition spéciale : s'active lorsqu'un successeur [rejoint le combat]. [Foulée de l'ombre] s'active après utilisation. L'ennemi est grandement ralenti pendant 3 secondes. La défense de l'ennemi touché est réduite de […]"
+    },
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "qte--frappe-de-glace",
-    "kind": "skill",
+    "kind": "rune",
     "name": {
       "fr": "Frappe de glace",
       "en": "",
@@ -3915,19 +3953,29 @@
     "tags": [
       "water"
     ],
-    "cooldown": null,
+    "cooldown": 25.0,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "21": 2477.16
+      }
+    },
     "icon": "data/icons/sjw_skills/qte--frappe-de-glace.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-14",
-    "game_version": null,
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break).",
+    "parent_skill": "qte-death",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text": {
+      "fr": "Jinwoo invoque une prison de glace qui transperce l'ennemi, puis entaille une vaste zone et frappe violemment vers le bas. Dégâts d'eau. Applique [En l'air]. Lorsque cette compétence touche sa cible, elle […]"
+    },
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "qte--grain",
-    "kind": "skill",
+    "kind": "rune",
     "name": {
       "fr": "Grain",
       "en": "",
@@ -3941,19 +3989,29 @@
       "neutral",
       "break"
     ],
-    "cooldown": null,
+    "cooldown": 25.0,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "21": 2834.08
+      }
+    },
     "icon": "data/icons/sjw_skills/qte--grain.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-14",
-    "game_version": null,
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break).",
+    "parent_skill": "qte-death",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text": {
+      "fr": "Après plusieurs coups de taille à la vitesse de la lumière, Jinwoo exécute une entaille en X vers l'avant. Bris moyens. Applique [En l'air]. Lorsque la dernière attaque touche sa cible, […]"
+    },
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "qte--surtension",
-    "kind": "skill",
+    "kind": "rune",
     "name": {
       "fr": "Surtension",
       "en": "",
@@ -3966,19 +4024,29 @@
     "tags": [
       "fire"
     ],
-    "cooldown": null,
+    "cooldown": 25.0,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "22": 2689.2
+      }
+    },
     "icon": "data/icons/sjw_skills/qte--surtension.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-14",
-    "game_version": null,
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break).",
+    "parent_skill": "qte-collapse",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text": {
+      "fr": "Jinwoo insuffle de la magie de feu dans sa paume droite et frappe le sol pour déchaîner une attaque de zone, puis une énorme explosion soulève le sol. Dégâts de feu. [Renverse] la cible si la première attaque touche."
+    },
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "qte--violent-orage",
-    "kind": "skill",
+    "kind": "rune",
     "name": {
       "fr": "Violent orage",
       "en": "",
@@ -3991,19 +4059,29 @@
     "tags": [
       "wind"
     ],
-    "cooldown": null,
+    "cooldown": 25.0,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "22": 4188.73
+      }
+    },
     "icon": "data/icons/sjw_skills/qte--violent-orage.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-14",
-    "game_version": null,
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break).",
+    "parent_skill": "qte-collapse",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text": {
+      "fr": "Jinwoo lance plusieurs éclairs du ciel, suivis d'un puissant coup de tonnerre. Dégâts de vent. [Renverse] la cible si la dernière attaque touche. Lorsque l'attaque touche un ennemi sans jauge de bris, les dégâts de […]"
+    },
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "qte--eviction",
-    "kind": "skill",
+    "kind": "rune",
     "name": {
       "fr": "Éviction",
       "en": "",
@@ -4016,15 +4094,25 @@
     "tags": [
       "neutral"
     ],
-    "cooldown": null,
+    "cooldown": 25.0,
     "effects": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "21": 2509.12
+      }
+    },
     "icon": "data/icons/sjw_skills/qte--eviction.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-14",
-    "game_version": null,
-    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break).",
+    "parent_skill": "qte-death",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text": {
+      "fr": "Jinwoo se cache et crée des ombres dans une large zone, puis entaille rapidement l'ennemi ; les ombres attaquent ensuite toutes en même temps pour infliger d'importants dégâts. Applique [En l'air]. Lors de l'utilisation d'Éviction, les PV de […]"
+    },
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "dagger-rush",
@@ -4161,5 +4249,57 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence ultime NON POSSÉDÉE sur le compte d'Alexis (verrouillée, Niv. 1), affichée sous le nom « Toucher du maître » (même nom que la compétence de base à 4 runes : à vérifier, doublon d'affichage possible). Id provisoire."
+  },
+  {
+    "id": "qte-collapse",
+    "kind": "skill",
+    "name": {
+      "fr": "Effondrement",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [
+      "qte--attaque-surprise",
+      "qte--surtension",
+      "qte--violent-orage",
+      "qte--compression"
+    ],
+    "cooldown": 25,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE (onglet 2, Niv. 22 sur le compte d'Alexis), 4 emplacements de runes. Condition : réussir une attaque qui [renverse] la cible. Nom EN officiel inconnu (id provisoire)."
+  },
+  {
+    "id": "qte-death",
+    "kind": "skill",
+    "name": {
+      "fr": "Mort",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "qte",
+    "runes": [
+      "qte--eviction",
+      "qte--extinction",
+      "qte--grain",
+      "qte--frappe-de-glace"
+    ],
+    "cooldown": 25,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence QTE (onglet 3, Niv. 21), 4 emplacements de runes. Condition : réussir une attaque qui applique [En l'air]. Nom EN officiel inconnu (id provisoire)."
   }
 ]
