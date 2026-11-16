@@ -171,7 +171,7 @@
     "id": "double-slash",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Double entaille",
       "en": "Double Slash",
       "ko": ""
     },
@@ -189,9 +189,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "crushing-blow--chained-break",
@@ -365,7 +366,7 @@
     "id": "crushing-blow",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Coup dévastateur",
       "en": "Crushing Blow",
       "ko": ""
     },
@@ -383,9 +384,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "dagger-toss--detonation",
@@ -559,7 +561,7 @@
     "id": "dagger-toss",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Lancer de dague",
       "en": "Dagger Toss",
       "ko": ""
     },
@@ -577,9 +579,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "multistrike--rush",
@@ -753,7 +756,7 @@
     "id": "multistrike",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Frappes multiples",
       "en": "Multistrike",
       "ko": ""
     },
@@ -771,9 +774,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "vertical-arts--sequent-explosions",
@@ -961,7 +965,7 @@
     "id": "vertical-arts",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Arts verticaux",
       "en": "Vertical Arts",
       "ko": ""
     },
@@ -979,9 +983,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "cutting-rush--annihilation",
@@ -1155,7 +1160,7 @@
     "id": "cutting-rush",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Ruée acérée",
       "en": "Cutting Rush",
       "ko": ""
     },
@@ -1173,9 +1178,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "vital-strike--decimate",
@@ -1349,7 +1355,7 @@
     "id": "vital-strike",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Frappe vitale",
       "en": "Vital Strike",
       "ko": ""
     },
@@ -1367,9 +1373,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "mutilate--cold-storm",
@@ -1543,7 +1550,7 @@
     "id": "mutilate",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Mutilation",
       "en": "Mutilate",
       "ko": ""
     },
@@ -1561,9 +1568,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "deaths-dance--earth-shock",
@@ -1737,7 +1745,7 @@
     "id": "deaths-dance",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Danse de la mort",
       "en": "Death's Dance",
       "ko": ""
     },
@@ -1755,9 +1763,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "the-commanders-touch--black-hole",
@@ -1931,7 +1940,7 @@
     "id": "the-commanders-touch",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Toucher du maître",
       "en": "The Commander's Touch",
       "ko": ""
     },
@@ -1949,9 +1958,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "armor-break--multishadow-strike",
@@ -2125,7 +2135,7 @@
     "id": "armor-break",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Bris d'armure",
       "en": "Armor Break",
       "ko": ""
     },
@@ -2135,7 +2145,8 @@
       "armor-break--multishadow-strike",
       "armor-break--decimation",
       "armor-break--vacuum-wave",
-      "armor-break--iceberg"
+      "armor-break--iceberg",
+      "rune--void-punch"
     ],
     "cooldown": null,
     "effects": [],
@@ -2143,9 +2154,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "sonic-stream--double-down",
@@ -2319,7 +2331,7 @@
     "id": "sonic-stream",
     "kind": "skill",
     "name": {
-      "fr": "",
+      "fr": "Flot sonique",
       "en": "Sonic Stream",
       "ko": ""
     },
@@ -2337,9 +2349,10 @@
     "icon": null,
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence de Sung Jin Woo connue seulement par ses runes sur le wiki (type basique/QTE/ultime, niveau de base : non indiqués).",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--blazing-annihilation",
@@ -2483,7 +2496,7 @@
   {
     "id": "rune--asura-kick",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "piercing-thrust",
     "name": {
       "fr": "Coup de pied azur",
       "en": "Asura Kick",
@@ -2525,7 +2538,8 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune équipée sous la compétence parente"
   },
   {
     "id": "rune--flowing-water-kick",
@@ -2696,7 +2710,7 @@
   {
     "id": "rune--void-punch",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "armor-break",
     "name": {
       "fr": "Coup de poing du vide",
       "en": "Void Punch",
@@ -2741,7 +2755,8 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune équipée sous la compétence parente"
   },
   {
     "id": "rune--dispersion",
@@ -3080,7 +3095,7 @@
   {
     "id": "rune--blitzstrike",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "phantom-strike",
     "name": {
       "fr": "Frappe blitz",
       "en": "Blitzstrike",
@@ -3122,7 +3137,8 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune équipée sous la compétence parente"
   },
   {
     "id": "rune--quickstrike",
@@ -3317,7 +3333,7 @@
   {
     "id": "rune--cold-ice",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "dagger-rush",
     "name": {
       "fr": "Glace gelée",
       "en": "Cold Ice",
@@ -3366,7 +3382,8 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune équipée sous la compétence parente"
   },
   {
     "id": "rune--surging-tide",
@@ -3919,5 +3936,74 @@
     "verified_at": "2026-11-14",
     "game_version": null,
     "notes": "Compétence QTE de Sung Jin Woo (liste « qte » de l'API slagate). Nom EN, effets et valeurs à saisir ; `tags` = éléments/effets listés par l'API (ex. neutral, break)."
+  },
+  {
+    "id": "dagger-rush",
+    "kind": "skill",
+    "name": {
+      "fr": "Ruée de dague",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "rune--cold-ice"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée)."
+  },
+  {
+    "id": "phantom-strike",
+    "kind": "skill",
+    "name": {
+      "fr": "Frappe fantôme",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "rune--blitzstrike"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée)."
+  },
+  {
+    "id": "piercing-thrust",
+    "kind": "skill",
+    "name": {
+      "fr": "Poussée perforante",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": null,
+    "runes": [
+      "rune--asura-kick"
+    ],
+    "cooldown": null,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée)."
   }
 ]
