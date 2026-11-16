@@ -554,8 +554,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : valeur_apres_patch_22_10 = 24 déjà saisie."
       }
     ]
   },
@@ -753,8 +754,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : valeur_apres_patch_22_10 = 18 déjà saisie."
       }
     ]
   },
@@ -2446,8 +2448,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : valeur_apres_patch_22_10 = 60 déjà saisie."
       }
     ]
   },

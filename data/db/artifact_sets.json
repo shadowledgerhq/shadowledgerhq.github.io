@@ -81,7 +81,7 @@
         "fr": ""
       },
       "8": {
-        "en": "The [Poison] effect is enhanced to the [Blue Poison] effect. [Blue Poison] - Increases Defense Penetration by 20%. - Increases Core Attack, Basic Skill, and Ultimate Skill damage by 30%. - Increases Attack and Defense by 2.5% every 1 second(s) (stacks up to 30 times). - Duration: Permanent When equipped by [Sung Jinwoo] or a [Striker] class hunter, their damage dealt increases by 50%. [Poison] effect cannot be activated. Increases allies' damage dealt by 30% in [Team Fight] Mode (stacks up to 2 times).",
+        "en": "The [Poison] effect is enhanced to the [Blue Poison] effect. [Blue Poison] - Increases Defense Penetration by 20%. - Increases Core Attack, Basic Skill, and Ultimate Skill damage by 30%. - Increases Attack and Defense by 2.5% every 1 second(s) (stacks up to 30 times). - Duration: Permanent When equipped by [Sung Jinwoo] or a [Striker] class hunter, their damage dealt increases by 120%. [Poison] effect cannot be activated. Increases allies' damage dealt by 30% in [Team Fight] Mode (stacks up to 2 times).",
         "fr": ""
       }
     },
@@ -159,7 +159,7 @@
     "icon": "data/icons/artifact_pieces/set-of-the-architects-blue-poison--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-16",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
@@ -203,8 +203,9 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-16 : effet 8 pièces corrigé d'après la notice du 30/07/2026 (ancienne valeur trouvée dans le texte)."
       }
     ]
   },
@@ -290,7 +291,7 @@
         "fr": ""
       },
       "8": {
-        "en": "The [Blazing Annihilation] effect is enhanced to the [Cataclysmic Blaze] effect. [Cataclysmic Blaze] - Increases the user's Attack and Defense by 50%. - A successful Overload increases the user's Burst damage by 20% (stacking up to 5 times). - Duration: Permanent When an Elemental Buster class hunter equips this, it increases their Overload damage dealt by 50%. [Blazing Annihilation] cannot be activated. Increases allies' Elemental Weakness damage by 30% in [Team Fight] Mode (stacks up to 2 times).",
+        "en": "The [Blazing Annihilation] effect is enhanced to the [Cataclysmic Blaze] effect. [Cataclysmic Blaze] - Increases the user's Attack and Defense by 50%. - A successful Overload increases the user's Burst damage by 20% (stacking up to 5 times). - Duration: Permanent When an Elemental Buster class hunter equips this, it increases their Overload damage dealt by 100%. [Blazing Annihilation] cannot be activated. Increases allies' Elemental Weakness damage by 30% in [Team Fight] Mode (stacks up to 2 times).",
         "fr": ""
       }
     },
@@ -368,7 +369,7 @@
     "icon": "data/icons/artifact_pieces/set-of-surturs-flame--helmet.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Artifacts (modèle Template:Artifact_Complete_Sets)",
     "wiki_revision": "2026-06-06T22:48:51Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-16",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; FR à traduire depuis le jeu. Nom copié tel quel du wiki (orthographe source).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
@@ -406,8 +407,9 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-16 : effet 8 pièces corrigé d'après la notice du 30/07/2026 (ancienne valeur trouvée dans le texte)."
       }
     ]
   },

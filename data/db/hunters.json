@@ -3650,8 +3650,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : Feu +20 % déjà dans [Flame's Wrath]."
       }
     ]
   },
@@ -5302,8 +5303,9 @@
         "unit": "seconds",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : recharge 25 s déjà dans Golden Meadow."
       },
       {
         "line": "[Protection Zone] Duration : 15 25 seconds",
@@ -5312,8 +5314,9 @@
         "unit": "seconds",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : durée de la zone 25 s déjà dans Golden Meadow."
       },
       {
         "line": "Increases Attack and Defense by 10% 20%",
@@ -6713,8 +6716,9 @@
         "unit": "%",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : +5 % déjà dans l'arme Unexpected Luck (palier 2)."
       },
       {
         "line": "For every Dark ally in the party Dark team members’ Attack increases by 4% 5%",
@@ -6723,8 +6727,9 @@
         "unit": "%",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : +5 % déjà dans l'arme Unexpected Luck (palier 2)."
       },
       {
         "line": "Grants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team",
@@ -6744,8 +6749,9 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : durée 24 s déjà dans [The Magician]."
       },
       {
         "line": "Grants a [Shield] equal to 12% 24% of Isla Wright’s Defense to the entire team",
@@ -6765,8 +6771,9 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : durée 24 s déjà dans [The Magician]."
       },
       {
         "line": "Duration : 8 30 seconds",
@@ -6775,8 +6782,9 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : durée 30 s déjà dans [The World]."
       },
       {
         "line": "HP equal to 25% 30% of Isla Wright’s Defense is instantly restored to the entire team",
@@ -6803,8 +6811,9 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : durée 30 s déjà dans [The World]."
       }
     ]
   },
@@ -8394,8 +8403,9 @@
         "unit": "%",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : Phantom Foxes 1200 % déjà (niv. 10)."
       },
       {
         "line": "Duration : 15 30 seconds(s)",
@@ -8404,8 +8414,9 @@
         "unit": "seconds",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : [Charm] 30 s déjà dans le passif."
       },
       {
         "line": "Increases the user’s Attack by 10% 20%",
@@ -13642,8 +13653,9 @@
         "unit": "%",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : PV +30 % déjà dans l'arme Etched to the Bone (palier 2)."
       }
     ]
   },
@@ -15177,8 +15189,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : Magic Reaction 1,5 % déjà dans le passif."
       },
       {
         "line": "Decreases the target’s Recovery Rate by 4% 5%",
@@ -15187,8 +15200,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : Recovery Rate 5 % déjà dans le passif."
       },
       {
         "line": "When the user uses Kill Shot it activates the user’s Core Attack and increases their Core Attack damage by 40% 200% for 6 second(s).",
@@ -15206,8 +15220,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : valeur remplacée par l'avis du 22/10 (Superstar Attaque 60 %, 16 s), déjà dans la fiche."
       },
       {
         "line": "Increases Attack by 12% 20%",

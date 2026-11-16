@@ -1,4 +1,4 @@
-# SUIVI — 9 Base de données — 2026-11-16 (session 7 : db_les_deux, douteux et noms EN traités ; session 6 : noyaux ; détail complet dans suivi/archives/base-de-donnees_2026-11-16_detail.md)
+# SUIVI — 9 Base de données — 2026-11-16 (session 7 : a_verifier tous relus, noms EN traités ; session 6 : noyaux ; détail complet dans suivi/archives/base-de-donnees_2026-11-16_detail.md)
 ## Fait
 - Base : 1 319+ entrées dans 18 fichiers de `data/db/`, 449 icônes, `check_db` OK (0 erreur). Guide officiel Netmarble lu (rates.json, game_rules.json, mode_rewards.json) ; 686 notes du forum EN (netmarble_notes.json) ; 27 notices d'équilibrage (balance_history, patches.json) ; bénédictions 59/59 ; gemmes, statues, runes (83/83 avec parent et valeurs), compétences de Jinwoo.
 - Veille Netmarble : `tools/veille_netmarble.py` (boards 13, 14, 32) + tâche planifiée `trig_012uiWvELXgfSfsFxx5JcrWC` (07:43 UTC) ; 16/11 : « Rien de nouveau », pas de `a_traiter.md`.
@@ -10,7 +10,7 @@
 - Noms EN : Shadow Step confirmé (wiki Fandom Runes + notes 2024). Overshadow et Power Unlocked = noms officiels du guide Netmarble, correspondance 1 à 1 par élimination (slagate n'a pas de EN pour QTE/pierres) : à vérifier en jeu. Commander's Authority : nom confirmé (notes 12/10 et 22/10), lien avec « Toucher du maître » à vérifier.
 ## À faire
 - Texte FR de 3 noyaux Corps : Armure du Protecteur féroce (noir/rouge), Membres du Veilleur (violet), Main droite du spectre antique (bleu glacé) ; couleurs déduites des familles.
-- 36 `a_verifier` restants : Choi Jong-In 11 (fiche wiki antérieure au patch du 30/07, valeurs dans `patch_adjustments`, report en texte quand coeff. niv. 1 connus), 24 `db_aucune` ambigus (Isla Wright 6, Yoo Soohyun 3, Han Se-mi 2, Lee Bora 2, Vulcan's Rage 2, ombres Bigrock/Blades/Tusk, Skadi, Huntsman, 2 sets d'artefacts, Emma Laurent, Sugimoto), 1 palier non stocké (Lee Bora T5). 5 douteux et 12 db_aucune soldés ; sets d'artefacts rééquilibrés 4 fois sans valeurs publiées.
+- 15 `a_verifier` restants, tous documentés : 12 `fiche_anterieure_au_patch` (Choi Jong-In 11, patch 30/07 ; Skadi 1, patch 27/08 ; valeurs dans `patch_adjustments`, à reporter en texte quand les coeff. niv. 1 / paliers seront connus), 3 `palier_non_stocke` (Lee Bora T5, Vulcan's Rage T3/T5). Les 21 autres `db_aucune` relus : déjà appliqués, sauf 2 sets d'artefacts (effet 8 pièces corrigé : Blue Poison 120 %, Surtur's Flame 100 %).
 - Vides sans source publique : effets d'amplification des paliers 4-5, bonus d'enregistrement des runes (sauf 3 compétences), noms des matériaux de noyau, 86 armes sans icône, noms FR d'armes de chasseurs, JA/KO de gemmes.
 ## Besoin d'Alexis
 - Rien. Abandonnés par Alexis : captures des paliers 4-5 d'amplification (pas d'accès), 3e limit break des noyaux (pas de ressources), noyaux Rare/Héroïque.
