@@ -82,7 +82,7 @@
     "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
     "published_at": "2026-11-12T12:00:07Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
+    "updated_at": "2026-11-15",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -758,13 +758,13 @@
     "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
     "published_at": "2026-11-12T13:50:20Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -790,13 +790,13 @@
     "channel_id": "UCTT1mxm4hcC2xh02qgNl3ZQ",
     "published_at": "2026-11-12T12:34:03Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -816,13 +816,13 @@
     "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
     "published_at": "2026-11-12T10:51:56Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -846,13 +846,13 @@
     "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
     "published_at": "2026-11-12T10:43:26Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -873,13 +873,13 @@
     "channel_id": "UChQ74OK6FGrn69TOtVAnUbw",
     "published_at": "2026-11-12T10:35:54Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -899,13 +899,13 @@
     "channel_id": "UCmAHTNBTlbFgZQjiHXFE13A",
     "published_at": "2026-11-12T04:30:04Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -925,13 +925,13 @@
     "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
     "published_at": "2026-11-12T01:07:38Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -955,13 +955,13 @@
     "channel_id": "UC0-FmfncaRF6ma6XeHuQIxw",
     "published_at": "2026-11-13T10:02:28Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "hotm"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -980,13 +980,13 @@
     "channel_id": "UC0-FmfncaRF6ma6XeHuQIxw",
     "published_at": "2026-11-12T18:32:40Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "hotm"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -1005,13 +1005,13 @@
     "channel_id": "UC0-FmfncaRF6ma6XeHuQIxw",
     "published_at": "2026-11-12T10:22:57Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "hotm"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -1030,13 +1030,13 @@
     "channel_id": "UCVQGCRMJgcp8SL8or2gSzQQ",
     "published_at": "2026-11-13T00:07:13Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-16",
-    "last_tri": 4,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "hotm"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
