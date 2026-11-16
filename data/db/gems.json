@@ -218,7 +218,6 @@
     "levels": null,
     "effects": [],
     "values_by_level": {
-      "rang 6, qualité B": 205,
       "rang 5, qualité B": 155,
       "rang 5, qualité C": 145,
       "rang 5, qualité D": 130,
@@ -226,10 +225,14 @@
       "rang 4, sans lettre (bord violet)": 120,
       "rang 3, sans lettre (bord bleu)": 85,
       "rang 2, sans lettre (bord gris)": 70,
-      "rang 1, sans lettre (bord gris)": 40
+      "rang 1, sans lettre (bord gris)": 40,
+      "rang 6, qualité A": 220,
+      "rang 6, qualité B": 205,
+      "rang 6, qualité C": 195,
+      "rang 6, qualité D": 190
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16) ; rang 1 : captures du 15/11/2026 fournies par Alexis",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16) ; rang 1 : captures du 15/11/2026 fournies par Alexis ; rang 6 : captures « Promotion de gemme » du 16/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de la gemme dans l'inventaire : « Gemme de réduction de la consommation de PM ». Nom en jeu : « Baisse du coût de PM »."
@@ -249,7 +252,6 @@
     "levels": null,
     "effects": [],
     "values_by_level": {
-      "rang 6, qualité A": 120,
       "rang 5, qualité A": 90,
       "rang 5, qualité B": 80,
       "rang 5, qualité C": 70,
@@ -257,10 +259,14 @@
       "rang 4, sans lettre (bord violet)": 60,
       "rang 3, sans lettre (bord bleu)": 45,
       "rang 2, sans lettre (bord gris)": 40,
-      "rang 1, sans lettre (bord gris)": 25
+      "rang 1, sans lettre (bord gris)": 25,
+      "rang 6, qualité A": 120,
+      "rang 6, qualité B": 110,
+      "rang 6, qualité C": 100,
+      "rang 6, qualité D": 95
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16) ; rang 1 : captures du 15/11/2026 fournies par Alexis",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeur : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16) ; rang 1 : captures du 15/11/2026 fournies par Alexis ; rang 6 : captures « Promotion de gemme » du 16/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Nom de gemme en jeu : « Gemme d'énergie de mana extra »."
@@ -287,10 +293,14 @@
       "rang 1, sans lettre (bord gris)": "0,1 %",
       "rang 5, qualité D": "0,28 %",
       "rang 4, sans lettre (bord violet)": "0,25 %",
-      "rang 3, sans lettre (bord bleu)": "0,2 %"
+      "rang 3, sans lettre (bord bleu)": "0,2 %",
+      "rang 6, qualité A": "0,45 %",
+      "rang 6, qualité B": "0,42 %",
+      "rang 6, qualité C": "0,4 %",
+      "rang 6, qualité D": "0,38 %"
     },
     "icon": null,
-    "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16) ; rang 1 : captures du 15/11/2026 fournies par Alexis",
+    "source": "capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; + 20 captures « Fenêtre d'info sur l'objet » fournies par Alexis le 15/11/2026 (client FR, LIVE_1.5.16) ; rang 1 : captures du 15/11/2026 fournies par Alexis ; rang 6 : captures « Promotion de gemme » du 16/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "12e type de gemme, absent du calculateur de slagate : « Gemme de vitesse », violette, bonus « Vitesse (%) ». Rang 1 = 0,1 %. Absente des totaux « Infos sur la gemme » et de la constellation (la constellation I/II ne comporte que PM supplémentaires et baisse du coût de PM en violet)."
@@ -585,7 +595,8 @@
       "Promotion rang 5 → 6 (capture 15/11) : coût 100 000 or + 20 Fragments des Flammes incandescentes (gemmes rouges ; fragment par couleur) + 1 gemme de rang 5 de même couleur ; la qualité (A/B/C/D) de l'objectif est conservée.",
       "Matériau de promotion des gemmes bleues (PV) : Fragment du Point du jour ×20 (capture 16/11) ; rouges : Fragment des Flammes incandescentes ×20.",
       "Matériau de promotion des gemmes vertes (défense) : Fragment des Défunts ×20 (capture 16/11).",
-      "Matériau de promotion des gemmes jaunes : Fragment de la Terre aride ×20 (capture 16/11)."
+      "Matériau de promotion des gemmes jaunes : Fragment de la Terre aride ×20 (capture 16/11).",
+      "Matériau de promotion des gemmes violettes : Fragment de l'Ombre violette ×20 (capture 16/11)."
     ],
     "source": "https://guide.netmarble.com/sololv/120 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Jewel)",
     "verified_at": "2026-11-15",
