@@ -2647,7 +2647,12 @@
     },
     "category": "survival",
     "api_type": "survie",
-    "rarity": null,
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
     "text": {
       "fr": "La sensation de ne faire qu'un avec une arme est une métamorphose brutale mais magnifique. Lorsque vous utilisez une compétence d'arme 4 fois, vous obtenez un [Bouclier] équivalent à 16 % de vos PV max pendant 10 seconde(s) (temps de rechargement : 20 seconde(s)).",
       "en": ""
@@ -2655,13 +2660,26 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          6,
+          10,
+          14,
+          16
+        ]
+      ],
+      "skill_uses_required": 4,
+      "shield_duration_s": 10,
+      "cooldown_s": 20,
+      "unit": "% des PV max en bouclier"
+    },
     "icon": "data/icons/blessings/r-sonance-darme.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16), 4 raretés vues",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
   },
   {
     "id": "soutien-mutuel",
@@ -2672,7 +2690,12 @@
     },
     "category": "survival",
     "api_type": "survie",
-    "rarity": null,
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
     "text": {
       "fr": "« Si tout le monde s'en sort ... » « Ça suffit, les remarques fatalistes. Ça me rend dingue ! » En mode [Combat d'équipe], les soins prodigués aux membres de votre équipe augmentent de 30 %.",
       "en": ""
@@ -2680,13 +2703,23 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          5,
+          15,
+          25,
+          30
+        ]
+      ],
+      "unit": "% de soins prodigués à l'équipe en Combat d'équipe"
+    },
     "icon": "data/icons/blessings/soutien-mutuel.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16), 4 raretés vues",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer. 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
   },
   {
     "id": "surpression",
@@ -2738,7 +2771,12 @@
     },
     "category": "empowerment",
     "api_type": "booster",
-    "rarity": null,
+    "rarity": [
+      "rare",
+      "heroic",
+      "legendary",
+      "transcendent"
+    ],
     "text": {
       "fr": "Parfois, un plus un donne plus que deux. Si toutes vos armes équipées sont du même élément, les dégâts de compétence de votre arme augmentent de 75 %. En mode [Combat d'équipe], si toutes vos armes équipées sont du même élément, les dégâts de compétence de votre arme augmentent de 150 % supplémentaires.",
       "en": ""
@@ -2746,12 +2784,28 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          25,
+          45,
+          65,
+          75
+        ],
+        [
+          50,
+          90,
+          130,
+          150
+        ]
+      ],
+      "unit": "% dégâts de compétence d'arme (armes du même élément) ; % supplémentaires en Combat d'équipe"
+    },
     "icon": "data/icons/blessings/finisher-touch.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16), 4 raretés vues",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN : note Netmarble du 11/06/2026 (Developer Notes). 16/11 : valeurs par rareté saisies depuis le Codex (client FR)."
   }
 ]
