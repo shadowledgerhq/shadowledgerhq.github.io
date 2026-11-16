@@ -2345,21 +2345,29 @@
     ],
     "type": null,
     "element": "fire",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de feu. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2212.0,
+        2782.0,
+        3282.0,
+        3567.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--blazing-annihilation.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--aurora",
@@ -2421,21 +2429,42 @@
     ],
     "type": null,
     "element": "wind",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de vent et de Bris lourds. [En l'air] ; [Renverse] à la dernière attaque. Dégâts de coup critique reçus par la cible +2 % pendant 10 s (cumulable 3/5/7/8 fois). Dégâts +20/30/50/60 % contre une faiblesse élémentaire.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        580.0,
+        683.0,
+        790.0,
+        844.0
+      ],
+      "crit_damage_taken_bonus_pct_per_stack": 2,
+      "crit_debuff_duration_s": 10,
+      "crit_debuff_max_stacks_by_rarity": [
+        3,
+        5,
+        7,
+        8
+      ],
+      "damage_bonus_vs_weakness_pct_by_rarity": [
+        20,
+        30,
+        50,
+        60
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--breach.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--asura-kick",
@@ -2668,21 +2697,37 @@
     ],
     "type": null,
     "element": "dark",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 8.0,
+    "mp_cost": "100",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de ténèbres et de Bris moyens. [renverse]. Utilisable jusqu'à 3 fois. Dégâts de ténèbres subis par la cible +5/6/7/8 % pendant 12 s (cumulable 3 fois).",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        395.0,
+        626.0,
+        858.0,
+        1023.0
+      ],
+      "dark_damage_taken_bonus_pct_by_rarity": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "debuff_duration_s": 12,
+      "debuff_max_stacks": 3,
+      "max_uses": 3
+    },
     "icon": "data/icons/sjw_skills/rune--void-punch.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--dispersion",
@@ -2702,21 +2747,34 @@
     ],
     "type": null,
     "element": "dark",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de ténèbres et de Bris tout-puissants. [En l'air]. Quand une attaque touche un ennemi sans jauge de bris : dégâts de Dispersion +90/160/240/280 % pendant 7 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        693.0,
+        788.0,
+        908.0,
+        968.0
+      ],
+      "damage_bonus_vs_no_break_gauge_pct_7s_by_rarity": [
+        90,
+        160,
+        240,
+        280
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--dispersion.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--tidal-surge",
@@ -2736,21 +2794,29 @@
     ],
     "type": null,
     "element": "water",
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts d'eau. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        2212.0,
+        2782.0,
+        3282.0,
+        3567.0
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--tidal-surge.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
+    "power_gauge_cost_pct": 100
   },
   {
     "id": "rune--heaven-annihilation",
