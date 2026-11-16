@@ -90,15 +90,21 @@ def _bloc_couvert(lignes):
     return all(e.startswith("anti-bot YouTube") for e in erreurs)
 
 
-def critere_gel3(d, week, passage, instant, top10_n, bloquantes):
-    """Critère de gel n° 3 (SPEC v29) : 2 passages planifiés de suite (les plus récents) dont le bloc indique « Top 10 couvert :
-    oui », sans autre erreur bloquante que l'anti-bot. Retourne le texte de la ligne du bloc (le bloc courant compte)."""
+def _bloc_ignore(texte):
+    """Bloc qui ne compte pas pour le critère de gel n° 3 et ne remet rien à zéro : relance automatique, passage refusé par le verrou."""
+    return ("Type : relance automatique" in texte or "c'était déjà la relance" in texte or "passage refusé" in texte)
+
+
+def critere_gel3(d, week, passage, instant, top10_n, bloquantes, relance=False):
+    """Critère de gel n° 3 (SPEC v29.1) : les 2 derniers passages PLANIFIÉS (pc-daily 20h30, pc-weekly jeudi 01h15) dont le bloc indique
+    « Top 10 couvert : oui », sans autre erreur bloquante que l'anti-bot. Les relances automatiques et les passages refusés par le
+    verrou ne comptent pas et ne remettent rien à zéro ; un passage planifié non couvert remet le compteur à 0/2. Retourne le texte
+    de la ligne du bloc (le bloc courant compte, sauf s'il est une relance)."""
     p = d.data / chemin(week)
     autres = [x for x in _trier(_morceaux(p.read_text(encoding="utf-8") if p.exists() else ""))
               if not (x[0] == passage and x[1] == instant)]
-    ok_courant = top10_n == 0 and all(b.startswith("anti-bot YouTube") for b in bloquantes)
-    suite = [ok_courant]
-    for pas, _, texte in reversed([x for x in autres if x[0] in ("pc-daily", "pc-weekly") and x[1] < instant]):
+    suite = [] if relance else [top10_n == 0 and all(b.startswith("anti-bot YouTube") for b in bloquantes)]
+    for _, _, texte in reversed([x for x in autres if x[0] in ("pc-daily", "pc-weekly") and x[1] < instant and not _bloc_ignore(x[2])]):
         suite.append(_bloc_couvert(texte.split("\n")))
     n = 0
     for ok in suite:

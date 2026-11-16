@@ -139,7 +139,7 @@ def _titre_bot_lu(cp, config=None):
 def candidat_bot(texte, config=None):
     """v27 : l'image mérite la lecture par zone du RESULT du BOT : titre lu, ou au moins 2 temps `mm:ss.mmm`, ou le mot « phase »
     (l'OCR de l'image entière lit mal ces écrans japonais : `Phase1` -> « Men 4 »)."""
-    if ecran_exclu(texte, config):
+    if ecran_exclu(texte, config) or manual_sans_titre(texte, config):
         return False
     t = normaliser(texte)
     cp = compact(t)
@@ -199,6 +199,13 @@ def ecran_exclu(texte, config=None):
     return any(compact(m) in cp for m in ((config or _config()).get("ecrans_exclus") or {}).get("marqueurs") or [])
 
 
+def manual_sans_titre(texte, config=None):
+    """v29.1 : HUD de combat du BOT (bouton MANUAL, chrono, « NEW Phase 2 00:21.042 −05.244 ») : le texte contient MANUAL sans titre
+    RESULT / 結果. Jamais un écran de score BOT, jamais collecté (le HUD du GB, lui, est reconnu par ses libellés avant)."""
+    cp = compact(normaliser(texte))
+    return "manual" in cp and not _titre_bot_lu(cp, config)
+
+
 def detecter(texte, config=None):
     """Type d'écran d'après ses libellés, ou None. `gb_record` avant `gb_results` ; HOTM avant POC. v29 : écran exclu -> None."""
     if ecran_exclu(texte, config):
@@ -217,7 +224,7 @@ def detecter(texte, config=None):
         # entière : HUD « incertain », confirmé par la lecture ciblée du chrono (zones_hud)
         return "gb_combat" if chrono_hud(t) is not None else "gb_combat_incertain"
     cp = compact(t)
-    if "phase1" in cp and _TEMPS.search(t) and any(compact(l) in cp for l in (libelles_bot("play_time", config) or ["Play Time"])):
+    if "phase1" in cp and _TEMPS.search(t) and not manual_sans_titre(texte, config) and any(compact(l) in cp for l in (libelles_bot("play_time", config) or ["Play Time"])):
         return "bot"        # v26 : `Phase1` sans espace accepté partout ; `Play Time` / `進行時間` selon la langue
     if len(_TEMPS.findall(t)) >= 2 and _titre_bot_lu(cp, config):
         return "bot"        # v27 : repli, titre RESULT/結果 + au moins 2 temps `mm:ss.mmm` (Phase1 / temps de jeu mal lus) -> `a_verifier`

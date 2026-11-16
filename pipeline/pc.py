@@ -1317,9 +1317,11 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                 relance=texte_relance)
 
     def rapport():
-        gel3 = rapport_pc.critere_gel3(d, week, f"pc-{passage}", instant, top10_n, etat["bloquantes"])
+        gel3 = rapport_pc.critere_gel3(d, week, f"pc-{passage}", instant, top10_n, etat["bloquantes"], relance=bool(relance))
         lignes = entete_etat(etat["complet"], etat["traitees"], restantes, a_traiter, etat["bloquantes"], texte_relance,
                              (horloge() - debut_passage) / 60, top10_n, gel3)
+        if relance:
+            lignes.append("- Type : relance automatique (ne compte pas pour le critère de gel n° 3)")
         if git is not None and getattr(git, "conflit_resolu", False):
             lignes.append("- Conflit git résolu automatiquement")
         rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)      # v26 : bloc daté, jamais effacé, propre au PC

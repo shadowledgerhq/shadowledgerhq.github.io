@@ -120,3 +120,31 @@ def test_ecrans_exclus_jamais_un_ecran_de_score_ni_collectes():
     assert not ocr_ecrans.ecran_exclu((DOSSIER_OCR / "T5dR6iJAn-Y_227.txt").read_text(encoding="utf-8"))
     # le « Record » de l'écran de composition BOT ne devient jamais un score
     assert ocr_ecrans.detecter("FormTeam Player Mode\nRecord 00:31.271\nPhase1 00:05.000 Phase2 00:12.000\nPlay Time 00:31") is None
+
+
+def test_gel3_relances_et_passages_refuses_ne_comptent_pas():
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Donnees(Path(tmp))
+        couvert = ["- Top 10 couvert : oui (0 vidéo candidate au top 10 restante)", "- Erreurs bloquantes : aucune"]
+        rapport_pc.ecrire_bloc(d, SEM, "pc-daily", _instant(10, 0), couvert)
+        rapport_pc.ecrire_bloc(d, SEM, "pc-daily", _instant(12, 0), ["- Top 10 couvert : non (2 vidéos candidates au top 10 restantes)", "- Type : relance automatique (x)"])
+        rapport_pc.ecrire_bloc(d, SEM, "pc-daily", _instant(13, 0), ["- Passage complet : non", "- Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà"])
+        # la relance non couverte et le passage refusé ne remettent rien à zéro : 10:00 couvert + courant couvert = 2/2
+        assert rapport_pc.critere_gel3(d, SEM, "pc-daily", _instant(20, 0), 0, []).startswith("2/2")
+        # un passage planifié non couvert remet à 0/2
+        rapport_pc.ecrire_bloc(d, SEM, "pc-daily", _instant(14, 0), ["- Top 10 couvert : non (1 vidéo candidate au top 10 restante)", "- Erreurs bloquantes : aucune"])
+        assert rapport_pc.critere_gel3(d, SEM, "pc-daily", _instant(20, 0), 0, []).startswith("1/2")
+        # le passage courant est une relance : il ne compte pas (seulement les précédents planifiés)
+        assert rapport_pc.critere_gel3(d, SEM, "pc-daily", _instant(20, 0), 0, [], relance=True).startswith("0/2")
+
+
+def test_manual_sans_titre_result_jamais_un_ecran_de_score_bot():
+    import libelles_inconnus
+    import ocr_ecrans
+    t = (DOSSIER_OCR / "uTe6xbn1bc8_32.txt").read_text(encoding="utf-8")               # HUD de combat du BOT (MANUAL, NEW Phase 2 00:21.042)
+    assert ocr_ecrans.manual_sans_titre(t) and ocr_ecrans.detecter(t) is None and not ocr_ecrans.candidat_bot(t)
+    assert not libelles_inconnus.ressemble_score(t) and not libelles_inconnus.a_garder(t, None, [])
+    assert not ocr_ecrans.manual_sans_titre("RESULT MANUAL\nPhase1 00:05.000 Phase2 00:12.000 Play Time 00:31")   # titre RESULT : pas exclu
+    # le HUD du GB (MANUAL aussi) reste reconnu par ses libellés
+    hud = (DOSSIER_OCR.parent / "Oj_-5x6700s_tri3_212.txt").read_text(encoding="utf-8")
+    assert "manual" in hud.lower()
