@@ -1293,6 +1293,12 @@ def bilan_essai(d, week, ids, config):
     return {"par_video": bilan, "lignes_gb": lignes}
 
 
+def normaliser_argv(argv):
+    """v26 : la tâche de relance anti-bot lance `lancer_pc.bat daily relance` (mot nu) ; l'option est `--relance`. Le 15/11 à 02:32
+    `pc.py: error: unrecognized arguments: relance` : la relance n'a jamais tourné."""
+    return ["--relance" if x == "relance" else x for x in argv]
+
+
 def _echec_bloc(a, cause):
     """v26 : écrit le bloc « Passage complet : non » d'un passage daily/weekly qui échoue (jamais d'exception, jamais de push
     après une erreur git : le prochain passage commite le bloc, `Git.tirer`)."""
@@ -1326,7 +1332,7 @@ if __name__ == "__main__":
     ap.add_argument("--refaire", action="store_true", help="avec --video : retraite la vidéo même si elle est déjà faite")
     ap.add_argument("--garder-ocr", action="store_true", help="écrit le texte lu par tesseract et l'image dans logs/ocr/ (diagnostic)")
     ap.add_argument("--maintenant", help="instant simulé ISO 8601 (tests)")
-    a = ap.parse_args()
+    a = ap.parse_args(normaliser_argv(sys.argv[1:]))
     config = charger_config()
     verrou = Verrou(RACINE / "logs" / "pc.lock")
     ok, detenteur = verrou.prendre(a.passage + (f" --video {a.video[0]}" if a.video else ""))

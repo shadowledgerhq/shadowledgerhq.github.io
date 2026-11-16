@@ -127,6 +127,12 @@ def test_conflit_git_resolu_automatiquement():
         assert (gh / f"data/runs/{SEM}/_rapport_pc.md").exists()
 
 
+def test_relance_mot_nu_de_la_tache_planifiee():
+    """La tâche lance `pc.py daily relance` : le mot nu devient `--relance` (erreur argparse du 15/11 à 02:32)."""
+    assert pc.normaliser_argv(["daily", "relance"]) == ["daily", "--relance"]
+    assert pc.normaliser_argv(["weekly", "--video", "x"]) == ["weekly", "--video", "x"]
+
+
 if __name__ == "__main__":
     for n, f in list(globals().items()):
         if n.startswith("test_"):
