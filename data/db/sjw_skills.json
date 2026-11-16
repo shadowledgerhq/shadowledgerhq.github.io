@@ -20,7 +20,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo lance vers l'avant une dague qui tournoie sur place pendant un certain temps. [Effet d'amplification : palier 1] Augmente de 3 % les dégâts finaux de la compétence [Roue de pleine lune]. Inflige [En l'air] si la compétence touche.",
       "en": "Jinwoo throws a dagger outward from himself like a top, allowing it to rotate in a wide circle around itself for a period of time."
     },
     "effects": [],
@@ -36,10 +36,11 @@
     "icon": "data/icons/sjw_skills/double-slash--full-moon-wheel.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "double-slash--multiply",
@@ -62,7 +63,7 @@
     "cooldown": 10.0,
     "mp_cost": "30",
     "text": {
-      "fr": "",
+      "fr": "Lorsque cette compétence touche sa cible, sa portée est augmentée et Jinwoo utilise à nouveau cette compétence. Inflige [En l'air] si la dernière attaque touche. Si Jinwoo élimine l'ennemi avec cette compétence, 100 % de chances que son temps de rechargement soit réinitialisé […]",
       "en": "When this skill hits, the range is expanded and Jinwoo uses this skill on more time."
     },
     "effects": [],
@@ -78,10 +79,11 @@
     "icon": "data/icons/sjw_skills/double-slash--multiply.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "double-slash--flame-slash",
@@ -104,7 +106,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo s'accroupit en concentrant l'énergie de la flamme, puis tournoie rapidement avant de charger l'ennemi et de le taillader. Dégâts de feu. Inflige [En l'air] si la dernière attaque touche. Lorsque cette compétence est utilisée, elle augmente le taux de coup critique de 15 % […]",
       "en": "Jinwoo crouches, collects fire energy, and performs a swift spin, then charges forward and slashes."
     },
     "effects": [],
@@ -120,10 +122,11 @@
     "icon": "data/icons/sjw_skills/double-slash--flame-slash.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "double-slash--whirlwind-rush",
@@ -215,7 +218,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo avance et inflige plusieurs Coups dévastateurs. Dégâts de vent, Bris moyens. [Renverse] la cible si la dernière attaque touche.",
       "en": "After moving forward, Jinwoo delivers multiple Crushing Blows."
     },
     "effects": [],
@@ -231,10 +234,11 @@
     "icon": "data/icons/sjw_skills/crushing-blow--chained-break.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "crushing-blow--enlightened-break",
@@ -257,7 +261,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo inflige un Coup dévastateur contenant une énergie de lumière, puis lance un Orbe de lumière. Dégâts de lumière, Bris moyens. Inflige [En l'air] lorsque cette […]",
       "en": "Jinwoo unleashes a light energy-infused Crushing Blow, then throws a light orb."
     },
     "effects": [],
@@ -273,10 +277,11 @@
     "icon": "data/icons/sjw_skills/crushing-blow--enlightened-break.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "crushing-blow--countering-break",
@@ -299,7 +304,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo peut contre-attaquer ; une contre-attaque réussie inflige de lourds dégâts. Dégâts de ténèbres, Bris légers. Lorsque la dernière attaque touche sa cible, […]",
       "en": "Jinwoo is able to counterattack when performing a Crushing Blow. A successful counterattack will inflict great damage to the enemy."
     },
     "effects": [],
@@ -315,10 +320,11 @@
     "icon": "data/icons/sjw_skills/crushing-blow--countering-break.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "crushing-blow--ascension-break",
@@ -410,7 +416,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo lance vers l'avant plusieurs dagues enflammées qui forment un éventail (dégâts par dague). Dégâts de feu. Applique l'effet [Brûlure]. Lors de l'enregistrement de cette rune […]",
       "en": "Jinwoo throws a handful of flame daggers that spread out in a fan shape in front of him."
     },
     "effects": [],
@@ -426,10 +432,11 @@
     "icon": "data/icons/sjw_skills/dagger-toss--detonation.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "dagger-toss--electric-shock",
@@ -494,7 +501,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo saute en l'air et lance plusieurs dagues en reculant. Augmente de 300 % les dégâts infligés aux ennemis en état de [Bris]. Lors de l'enregistrement de cette rune de compétence, le niveau de compétence de Lancer de dague augmente de +3.",
       "en": "Jinwoo jumps into the air and throws daggers consecutively while moving back."
     },
     "effects": [],
@@ -510,10 +517,11 @@
     "icon": "data/icons/sjw_skills/dagger-toss--ascension.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "dagger-toss--bombardment",
@@ -605,7 +613,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo fonce en avant et assène une série de coups de poing, suivie d'un coup de pied circulaire. Dégâts d'eau, Bris moyens. Inflige [En l'air] si la dernière attaque touche. Lors de l'utilisation de cette compétence, les […]",
       "en": "Jinwoo charges forward and throws a series of punches, followed by a spinning kick."
     },
     "effects": [],
@@ -621,10 +629,11 @@
     "icon": "data/icons/sjw_skills/multistrike--rush.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "multistrike--percussion",
@@ -647,7 +656,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo fonce en avant, projette l'ennemi dans les airs d'un coup de pied, lui assène une série de coups de poing puis un puissant coup de poing qui provoque une explosion. Dégâts de feu, Bris moyens. Lorsque cette compétence touche sa cible, elle […]",
       "en": "Jinwoo charges forward and, after kicking the target into the air, throws a series of punches. Afterwards, he throws a powerful punch, causing an explosion."
     },
     "effects": [],
@@ -663,10 +672,11 @@
     "icon": "data/icons/sjw_skills/multistrike--percussion.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "multistrike--illusion",
@@ -689,7 +699,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Des clones apparaissent tandis que Jinwoo avance et attaque en continu. Dégâts de ténèbres, Bris moyens. Inflige [En l'air] si la dernière attaque touche. Jinwoo est [invincible] pendant l'utilisation.",
       "en": "Clones appear as Jinwoo moves forward and attacks continuously."
     },
     "effects": [],
@@ -705,10 +715,11 @@
     "icon": "data/icons/sjw_skills/multistrike--illusion.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "multistrike--pummel",
@@ -800,7 +811,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo saute en arrière puis effectue une attaque de zone en retombant ; la zone explose une fois de plus. Dégâts d'eau. [Renverse] la cible. Inflige [En l'air] si la dernière attaque touche.",
       "en": "Jinwoo Leaps backward, and then lands to deal an area-of-effect attack. The area of effect explodes once more afterward."
     },
     "effects": [],
@@ -816,10 +827,11 @@
     "icon": "data/icons/sjw_skills/vertical-arts--sequent-explosions.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "vertical-arts--crosshairs",
@@ -842,7 +854,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo saute en arrière puis saute à nouveau, puis lance une attaque énergétique en forme de X avec son épée de feu. Dégâts de feu. Inflige [En l'air] si la compétence touche. Dégâts aux boss et aux monstres de type Élite +140 %.",
       "en": "Jinwoo leaps backward, then leaps again. After, he fires X-shaped flame sword energy."
     },
     "effects": [],
@@ -858,10 +870,11 @@
     "icon": "data/icons/sjw_skills/vertical-arts--crosshairs.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "vertical-arts--reap",
@@ -940,7 +953,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo crée un typhon qui attire les ennemis, puis assène une puissante attaque de zone. Dégâts de vent. La cible est [renversée]. Les dégâts augmentent selon le nombre de cibles touchées […]",
       "en": "Jinwoo creates a typhoon to pull in enemies. After, he inflicts a powerful area-of-effect attack."
     },
     "effects": [],
@@ -956,10 +969,11 @@
     "icon": "data/icons/sjw_skills/vertical-arts--gale.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "vertical-arts",
@@ -1009,7 +1023,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo s'immobilise puis envoie de l'énergie d'épée rouge devant lui. Inflige l'effet [En l'air] lorsque la compétence touche. Augmente de 250 % les dégâts infligés aux ennemis en état de [Bris]. Lors de l'enregistrement de cette rune […]",
       "en": "Jinwoo plants his feet and unleashes a red blast of sword energy."
     },
     "effects": [],
@@ -1025,10 +1039,11 @@
     "icon": "data/icons/sjw_skills/cutting-rush--annihilation.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "cutting-rush--effulgence",
@@ -1051,7 +1066,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo se téléporte vers l'avant et inflige d'importants dégâts de zone. La cible est [renversée]. Lorsque la compétence touche, son temps de rechargement se réinitialise (temps de rechargement : 15 s). Lorsque cette compétence est utilisée, elle […]",
       "en": "Jinwoo teleports forward and deals a wide burst of area-of-effect damage."
     },
     "effects": [],
@@ -1067,10 +1082,11 @@
     "icon": "data/icons/sjw_skills/cutting-rush--effulgence.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "cutting-rush--sunder",
@@ -1135,7 +1151,7 @@
     "cooldown": 10.0,
     "mp_cost": "100",
     "text": {
-      "fr": "",
+      "fr": "Après avoir effectué une Ruée acérée, Jinwoo se téléporte derrière l'ennemi et lui inflige une entaille ascendante. Inflige [En l'air] si la dernière attaque touche. Après une attaque dans le dos réussie, 60 % de chances d'appliquer un taux de coup critique de 100 % à la prochaine attaque.",
       "en": "After performing Cutting Rush, Jinwoo teleports behind the enemy and performs an upward slash."
     },
     "effects": [],
@@ -1151,10 +1167,11 @@
     "icon": "data/icons/sjw_skills/cutting-rush--escalate.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
-    "game_version": null,
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "cutting-rush",
