@@ -1416,7 +1416,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "En se cachant, Jinwoo crée une tempête glacée qui frappe rapidement l'ennemi devant lui. Dégâts d'eau. Applique [Engelure] et [Gel].",
       "en": "While hiding, Jinwoo creates a cold storm, quickly cutting down the enemy in front of him."
     },
     "effects": [],
@@ -1435,7 +1435,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "mutilate--phantom",
@@ -1458,7 +1459,7 @@
     "cooldown": 15.0,
     "mp_cost": "60",
     "text": {
-      "fr": "",
+      "fr": "En se cachant, Jinwoo invoque plusieurs ombres qui frappent rapidement l'ennemi. Dégâts : X % de l'Attaque de Jinwoo + X % de ses PV max. Le temps de rechargement se réinitialise lorsque la cible est touchée (15 s).",
       "en": "While hiding, Jinwoo summons multiple Shadows, quickly cutting down the enemy."
     },
     "effects": [],
@@ -1477,7 +1478,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "mutilate--strike",
@@ -1500,7 +1502,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Après avoir effectué une entaille, Jinwoo disparaît et inflige un énorme coup d'épée qui frappe l'ennemi comme un éclair. Inflige [En l'air] si la dernière attaque touche, ainsi que [Attaque réduite] et [Défense réduite].",
       "en": "After slashing the target once, Jinwoo vanishes and makes a huge slice into the target while striking down like a thunderbolt."
     },
     "effects": [],
@@ -1519,7 +1521,8 @@
     "verified_at": "2026-11-16",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki. Valeurs de dégâts (690/1012/1648/1966 %), recharge 15 s et PM 150 confirmées par le Codex FR le 16/11/2026 ; Attaque/Défense réduites 8/12/16/20 % (12 s) ; effet Mort : dégâts +10/20/30/35 % (5 s, recharge 15 s).",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "mutilate--stroke-of-lightning",
@@ -1611,7 +1614,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo tournoie à l'horizontale et, après avoir attaqué, saute et frappe le sol. Dégâts de lumière, Bris lourds. [Renverse] la cible si la dernière attaque touche. Augmente les dégâts de coup critique de 60 % […]",
       "en": "Jinwoo spins horizontally and, after attacking, he jumps and strikes the ground."
     },
     "effects": [],
@@ -1630,7 +1633,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "deaths-dance--high-speed-rotation",
@@ -1695,7 +1699,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo effectue une attaque tournoyante en avançant, puis tournoie à l'horizontale et frappe le sol, ce qui provoque 3 explosions. Dégâts de ténèbres, Bris lourds. Inflige [En l'air] si la dernière attaque touche. Les dégâts infligés aux boss et aux monstres […]",
       "en": "Jinwoo performs a spinning attack while moving forward. After, he rotates horizontally and strikes the ground, causing 3 explosions."
     },
     "effects": [],
@@ -1714,7 +1718,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "deaths-dance--wildfire",
@@ -1737,7 +1742,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo avance avec l'énergie de la flamme et effectue une attaque tournoyante, puis saute et frappe violemment le sol. Dégâts de feu, Bris lourds. La cible est [renversée] si la dernière attaque touche. Les dégâts augmentent de 180 % lorsque des […]",
       "en": "Jinwoo moves forward with the energy of the flame and performs a spinning attack. After, he jumps and strikes the ground powerfully."
     },
     "effects": [],
@@ -1756,7 +1761,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "deaths-dance",
@@ -1772,7 +1778,8 @@
       "deaths-dance--earth-shock",
       "deaths-dance--high-speed-rotation",
       "deaths-dance--eruption",
-      "deaths-dance--wildfire"
+      "deaths-dance--wildfire",
+      "rune--torrent-cleave"
     ],
     "cooldown": null,
     "effects": [],
@@ -3011,7 +3018,7 @@
   {
     "id": "rune--severing-flash",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "phantom-strike",
     "name": {
       "fr": "Flash coupant",
       "en": "Severing Flash",
@@ -3053,7 +3060,8 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les 5 emplacements de la compétence"
   },
   {
     "id": "rune--darkness-obliteration-kick",
@@ -3160,7 +3168,7 @@
   {
     "id": "rune--quickstrike",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "phantom-strike",
     "name": {
       "fr": "Frappe rapide",
       "en": "Quickstrike",
@@ -3202,12 +3210,13 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les 5 emplacements de la compétence"
   },
   {
     "id": "rune--silent-strike",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "phantom-strike",
     "name": {
       "fr": "Frappe silencieuse",
       "en": "Silent Strike",
@@ -3249,12 +3258,13 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les 5 emplacements de la compétence"
   },
   {
     "id": "rune--veiled-strike",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "phantom-strike",
     "name": {
       "fr": "Frappe voilée",
       "en": "Veiled Strike",
@@ -3296,7 +3306,8 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les 5 emplacements de la compétence"
   },
   {
     "id": "rune--frozen-flow",
@@ -3607,7 +3618,7 @@
   {
     "id": "rune--torrent-cleave",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "deaths-dance",
     "name": {
       "fr": "Rapière torrentielle",
       "en": "Torrent Cleave",
@@ -3649,7 +3660,8 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : 5e emplacement de Danse de la mort"
   },
   {
     "id": "rune--storm",
@@ -3988,7 +4000,11 @@
     "rarity": null,
     "type": null,
     "runes": [
-      "rune--blitzstrike"
+      "rune--severing-flash",
+      "rune--veiled-strike",
+      "rune--quickstrike",
+      "rune--blitzstrike",
+      "rune--silent-strike"
     ],
     "cooldown": null,
     "effects": [],
