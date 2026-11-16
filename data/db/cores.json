@@ -446,7 +446,7 @@
     "sub_stat_options": null,
     "effects": [],
     "text": {
-      "fr": "",
+      "fr": "Lors de l'utilisation de la compétence ultime, les Dégâts de coup critique de l'utilisateur augmentent de 20 % pendant 8 secondes.",
       "en": "When the user uses their Ultimate Skill, it increases the Critical Hit Damage of their Basic Skill by 6-12-20% for 8 second(s)."
     },
     "values_by_rarity": {
@@ -466,9 +466,9 @@
     "icon": "data/icons/cores/nameless-demons-deception.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
     "wiki_revid": 14829,
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-16",
     "game_version": null,
-    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
+    "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR). 16/11 : le texte FR du jeu parle des Dégâts de coup critique de l'utilisateur ; le wiki EN dit « de leur compétence de base » : le texte du jeu fait foi, écart du wiki à vérifier.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
     "max_level": {
       "value": 25,
@@ -476,7 +476,22 @@
       "patch": "2026-09-17",
       "note": "20 selon le wiki, avant le patch"
     },
-    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core"
+    "rates_ref": "rates.json → core-rate (guide /sololv/140) : options 1 et 2 par type (Mind/Body/Spirit) et rareté, valeurs min-max, conditions d'activation du passif (6 × 16,6667 %) ; règles niveau/amélioration/limit break : game_rules.json → core",
+    "observed_samples": [
+      {
+        "level": 10,
+        "stat_enhancement_level_pct": 66,
+        "stats": {
+          "Additional Attack": 2538,
+          "Damage Increase": 3356
+        },
+        "passive_condition": "Fire hunter",
+        "rarity": "legendary",
+        "source": "captures d'Alexis du 16/11/2026 (écran Noyaux ; client FR 1.5.16)",
+        "verified_at": "2026-11-16"
+      }
+    ],
+    "text_fr_source": "captures d'Alexis du 16/11/2026 (écran Noyaux ; client FR 1.5.16) (onglet Esprit) : durée 8 s et valeur Légendaire 20 % concordantes avec le wiki."
   },
   {
     "id": "ancient-wraiths-obession",
@@ -937,7 +952,7 @@
     "icon": "data/icons/cores/nameless-demons-horn.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
     "wiki_revid": 14829,
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-16",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
@@ -1447,7 +1462,7 @@
     "icon": "data/icons/cores/nameless-demons-magisphere.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Cores",
     "wiki_revid": 14829,
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-16",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu. Niveau max 20 selon le wiki ; passé à 25 au patch du 17/09/2026 (Netmarble). Valeurs de stats par niveau et FR à compléter. Nom FR (casse/orthographe) aligné sur le Codex du jeu (capture d'Alexis, 15/11/2026, client FR).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
