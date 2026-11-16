@@ -1478,9 +1478,9 @@
     "icon": "data/icons/sjw_skills/mutilate--strike.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
     "wiki_revid": 17612,
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-16",
     "game_version": null,
-    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
+    "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki. Valeurs de dégâts (690/1012/1648/1966 %), recharge 15 s et PM 150 confirmées par le Codex FR le 16/11/2026 ; Attaque/Défense réduites 8/12/16/20 % (12 s) ; effet Mort : dégâts +10/20/30/35 % (5 s, recharge 15 s).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
   },
   {
@@ -2455,21 +2455,34 @@
     ],
     "type": null,
     "element": "light",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de lumière et de [Bris tout-puissants]. Dernière attaque : [En l'air]. Jinwoo devient [invincible] pendant l'utilisation. Augmente les dégâts de lumière de 10/16/22/25 % pendant 12 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        462.0,
+        564.0,
+        668.0,
+        721.0
+      ],
+      "light_damage_bonus_pct_12s_by_rarity": [
+        10,
+        16,
+        22,
+        25
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--asura-kick.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--flowing-water-kick",
@@ -2489,21 +2502,42 @@
     ],
     "type": null,
     "element": "water",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts d'eau. Dernière attaque : [renverse]. Chaque coup applique [Au fil de l'eau] : dégâts de la compétence +50/70/90/100 %, dégâts d'eau +10/16/22/25 %, 3 s, cumulable 3 fois.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1016.0,
+        1308.0,
+        1679.0,
+        2160.0
+      ],
+      "flow_skill_damage_bonus_pct_by_rarity": [
+        50,
+        70,
+        90,
+        100
+      ],
+      "flow_water_damage_bonus_pct_by_rarity": [
+        10,
+        16,
+        22,
+        25
+      ],
+      "flow_duration_s": 3,
+      "flow_max_stacks": 3
+    },
     "icon": "data/icons/sjw_skills/rune--flowing-water-kick.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--gale-kick",
@@ -2523,21 +2557,43 @@
     ],
     "type": null,
     "element": "wind",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de vent et de Bris lourds. Dernière attaque : [En l'air]. Applique un [Bouclier] (PV max : 12/16/20/22 %, 5 s). Chaque coup : +1 % de dégâts infligés pendant 8 s, cumulable 12/16/20/22 fois.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1012.0,
+        1266.0,
+        1560.0,
+        1854.0
+      ],
+      "shield_pct_max_hp_by_rarity": [
+        12,
+        16,
+        20,
+        22
+      ],
+      "shield_duration_s": 5,
+      "damage_bonus_per_hit_pct": 1,
+      "damage_bonus_duration_s": 8,
+      "damage_bonus_max_stacks_by_rarity": [
+        12,
+        16,
+        20,
+        22
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--gale-kick.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--firestorm-kick",
@@ -2837,21 +2893,41 @@
     ],
     "type": null,
     "element": "dark",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de ténèbres. Renverse la cible. Une attaque de noyau ou compétence de base active [Frappe de l'ombre] : dégâts de ténèbres de la compétence +5/9/13/15 %, dégâts aux boss et Élites +20/30/40/50 %, 15 s, cumulable (maximum non lu, texte tronqué). La compétence supprime les cumuls.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        1026.0,
+        1322.0,
+        1696.0,
+        2183.0
+      ],
+      "shadow_strike_dark_damage_bonus_pct_by_rarity": [
+        5,
+        9,
+        13,
+        15
+      ],
+      "shadow_strike_boss_elite_damage_bonus_pct_by_rarity": [
+        20,
+        30,
+        40,
+        50
+      ],
+      "shadow_strike_duration_s": 15
+    },
     "icon": "data/icons/sjw_skills/rune--darkness-obliteration-kick.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--blitzstrike",
