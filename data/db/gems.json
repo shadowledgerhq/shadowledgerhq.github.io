@@ -116,7 +116,6 @@
     "levels": null,
     "effects": [],
     "values_by_level": {
-      "rang 6, qualité A": 965,
       "rang 5, qualité A": 725,
       "rang 5, qualité B": 630,
       "rang 5, qualité C": 580,
@@ -124,10 +123,14 @@
       "rang 4, sans lettre (bord violet)": 485,
       "rang 3, sans lettre (bord bleu)": 345,
       "rang 2, sans lettre (bord gris)": 290,
-      "rang 1, sans lettre (bord gris)": 165
+      "rang 1, sans lettre (bord gris)": 165,
+      "rang 6, qualité A": 965,
+      "rang 6, qualité B": 870,
+      "rang 6, qualité C": 820,
+      "rang 6, qualité D": 775
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis ; rang 6 : captures « Promotion de gemme » du 16/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Pénétration de défense rang 6 A = 965 : cohérent avec les totaux des constellations (2 gemmes = 1 930 ; 3 = 2 895)."
@@ -154,10 +157,14 @@
       "rang 4, sans lettre (bord violet)": 485,
       "rang 3, sans lettre (bord bleu)": 345,
       "rang 2, sans lettre (bord gris)": 290,
-      "rang 1, sans lettre (bord gris)": 165
+      "rang 1, sans lettre (bord gris)": 165,
+      "rang 6, qualité A": 965,
+      "rang 6, qualité B": 870,
+      "rang 6, qualité C": 820,
+      "rang 6, qualité D": 775
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis ; rang 6 : captures « Promotion de gemme » du 16/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Abréviation non développée par la source : signification à confirmer. Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu. Rang 6 non relevé ; les totaux de constellation (2 895 = 3 × 965) suggèrent 965 au rang 6 A, à confirmer."
@@ -184,10 +191,14 @@
       "rang 5, qualité D": 1065,
       "rang 4, sans lettre (bord violet)": 970,
       "rang 3, sans lettre (bord bleu)": 695,
-      "rang 1, sans lettre (bord gris)": 325
+      "rang 1, sans lettre (bord gris)": 325,
+      "rang 6, qualité A": 1800,
+      "rang 6, qualité B": 1660,
+      "rang 6, qualité C": 1590,
+      "rang 6, qualité D": 1520
     },
     "icon": null,
-    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis",
+    "source": "https://slagate.com/builds (panneau « Gemmes », lecture de page autorisée par Alexis le 13/11/2026) ; couleur et noms FR : capture d'écran du jeu (client français, LIVE_1.5.16) fournie par Alexis le 15/11/2026 ; valeurs : capture d'écran du jeu (client français, écran Gemme > Gemme sélectionnée) fournie par Alexis le 15/11/2026 ; valeurs rangs 2-5 : capture d'écran du jeu (client FR, fenêtre d'info sur l'objet) fournie par Alexis le 15/11/2026 ; rang 1 : captures du 15/11/2026 fournies par Alexis ; rang 6 : captures « Promotion de gemme » du 16/11/2026 fournies par Alexis",
     "verified_at": "2026-11-15",
     "game_version": "1.5.16",
     "notes": "Type de bonus listé par le calculateur de gemmes de slagate (le panneau contient aussi des valeurs saisies par défaut, qui ne sont pas des données du jeu : non reprises). Couleur lue sur l'écran Gemmes (icône du bonus dans la constellation). Nom de gemme d'inventaire non vu."
@@ -573,7 +584,8 @@
       "Capture officielle : gemme d'attaque supplémentaire rang 3 = 140 (concorde avec la base).",
       "Promotion rang 5 → 6 (capture 15/11) : coût 100 000 or + 20 Fragments des Flammes incandescentes (gemmes rouges ; fragment par couleur) + 1 gemme de rang 5 de même couleur ; la qualité (A/B/C/D) de l'objectif est conservée.",
       "Matériau de promotion des gemmes bleues (PV) : Fragment du Point du jour ×20 (capture 16/11) ; rouges : Fragment des Flammes incandescentes ×20.",
-      "Matériau de promotion des gemmes vertes (défense) : Fragment des Défunts ×20 (capture 16/11)."
+      "Matériau de promotion des gemmes vertes (défense) : Fragment des Défunts ×20 (capture 16/11).",
+      "Matériau de promotion des gemmes jaunes : Fragment de la Terre aride ×20 (capture 16/11)."
     ],
     "source": "https://guide.netmarble.com/sololv/120 (guide officiel Netmarble, EN, « rédigé sur une version de test », lu le 2026-11-15 ; page Jewel)",
     "verified_at": "2026-11-15",
