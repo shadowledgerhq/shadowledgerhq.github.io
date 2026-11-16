@@ -43,7 +43,8 @@ def charger_db(racine=RACINE):
     db = {}
     for nom in ("hunters", "weapons", "artifact_sets", "cores", "shadows", "successors", "sjw_skills", "blessings",
                 "subjugation_support", "proof_modifiers", "stats"):
-        db[nom] = {o["id"]: o for o in _json(Path(racine) / "data" / "db" / f"{nom}.json", []) if isinstance(o, dict) and "id" in o}
+        db[nom] = {o["id"]: o for o in _json(Path(racine) / "data" / "db" / f"{nom}.json", []) if isinstance(o, dict) and "id" in o
+                    and o.get("kind") != "rules"}      # entrées de règles (discussion 9) : pas des éléments reconnaissables
     return db
 
 

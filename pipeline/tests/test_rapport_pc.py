@@ -138,3 +138,30 @@ if __name__ == "__main__":
         if n.startswith("test_"):
             f()
     print("OK")
+
+
+def test_v28_pull_reessaye_quand_le_reseau_coupe():
+    """Réseau coupé (« Could not resolve host ») : 3 nouvelles tentatives espacées, puis succès ou abandon ; pas de conflit simulé."""
+    class Faux(pc.Git):
+        def __init__(self, echecs):
+            super().__init__(".", dormir=lambda s: pauses.append(s))
+            self.echecs, self.appels = echecs, []
+
+        def _run(self, *args):
+            self.appels.append(args[0])
+            if args[0] == "pull" and self.echecs > 0:
+                self.echecs -= 1
+                raise pc.GitErreur("git pull : fatal: unable to access 'https://github.com/x.git/': Could not resolve host: github.com")
+            return ""
+    pauses = []
+    g = Faux(2)
+    g._rebase()
+    assert pauses == [30, 90] and g.appels.count("pull") == 3 and not getattr(g, "conflit_resolu", False)
+    pauses.clear()
+    g = Faux(9)
+    try:
+        g._rebase()
+        assert False
+    except pc.GitErreur as e:
+        assert "resolve host" in str(e)
+    assert pauses == [30, 90, 180] and g.appels.count("pull") == 4

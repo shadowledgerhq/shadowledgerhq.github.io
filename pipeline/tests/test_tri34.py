@@ -592,6 +592,54 @@ def test_v13_cas_lGDbzyIJcjY_de_bout_en_bout():
 SALON_RECORD = "< Guild Boss ? mn!\n© Time tettin season 6d 9h Personal Record @\nTotal Score Challenge Count 2\n32,842,054480,310 | totatragecoune 332\nGroup? 167 17.281\n(BR) rage rewards 100,000\n"
 
 
+
+def test_v28_hud_de_fin_cherche_en_amont_du_results():
+    """Textes OCR réels du 14/11 : HUD à 228 s et 238 s, Results à 252 s (valeurs, titre/boss illisibles), puis images de
+    l'animation sans valeurs lisibles ; les zones ciblées complètent. RC 19 sûr, new_record, ligne gb a_verifier."""
+    config = charger_config()
+    with __import__("tempfile").TemporaryDirectory() as tmp:
+        d = monde(tmp)
+        videos = d.videos(SEM)
+        videos["a"].update(mode_guess=["gb"], duration="PT4M14S")           # 254 s
+        d.ecrire(f"runs/{SEM}/_videos.json", videos)
+
+        class Faux(OutilsImages):
+            zones = {("a", 253): Z_253}      # 252 s : titre et boss seuls (Rage Count sur une seule image), comme la vraie vidéo
+
+            def images(self, chemin, segments, dossier, prefixe="f", hauteur=None):
+                self.appels.append(("img", self.cur, tuple(segments), prefixe))
+                return [(d_ + i, f"{self.cur}@{d_ + i}") for d_, n, p in segments for i in range(0, n, p)]
+
+            def ocr(self, png, langues=None, psm=6, timeout=120, extra=None):
+                if png == "a@238" and [a for a in self.appels if a[0] == "img"][-1][3].startswith("a"):
+                    return HUD_FIN
+                if "#" not in png and self.appels and self.appels[-1][0] == "img" and self.appels[-1][3] != "f":
+                    self.ext = True                                          # images de recherche de l'écran Results
+                if "#" not in png and getattr(self, "ext", False) and png in ("a@252", "a@253"):
+                    return {"a@252": RESULTS_252_EXT, "a@253": RESULTS_253_REEL}[png]
+                if "#" in png:
+                    base, zone = png.split("#")
+                    vid, t = base.split("@")
+                    return self.zones.get((vid, int(t)), {}).get(zone, "")
+                return super().ocr(png, langues, psm, timeout)
+        HUD_FIN = HUD_238.replace("1593,669,209", "1596,246,179")
+        o = Faux({"a": {252: RESULTS_252}})
+        lignes = []
+        pc.lancer("daily", INSTANT, d, config, o, maximum=1, journal=lignes.append, ocr_debug=Path(tmp) / "dbg")
+        assert o.appels and any(a[0] == "img" and a[3].startswith("a") and a[2] == ((222, 30, 1),) for a in o.appels), o.appels
+        # le HUD de fin (238 s, Points 1 596 246 179) est lu en amont ; le Rage Count, lui, reste sur UNE image (252 s : bannière seule) :
+        # le contrôle v13 (RC sur ≥ 2 images) garde `a_verifier`, comme sur la vraie vidéo
+        lec = [x for x in d.lectures(SEM) if x["video_id"] == "a" and x["mode"] == "gb" and x.get("score") is not None]
+        assert len(lec) == 1 and lec[0]["score"] == 19 and lec[0]["confidence"] == "a_verifier"
+        assert lec[0]["detail"]["hud_rage_count"] == 12            # le HUD de 238 s est rattaché à la run
+        assert "contrôle sans Hunter Rank : Rage Count lu sur une seule image" in lec[0]["notes"]
+        assert not any("sans HUD de fin de run" in n for n in lec[0]["notes"])
+        assert d.processed()["a"]["pc"]["hud_amont"] == [252]
+        # 2e passage : aucune relecture de l'écran Results
+        o2 = Faux({"a": {252: RESULTS_252}})
+        pc.lancer("daily", INSTANT, d, config, o2, maximum=1)
+        assert not [a for a in o2.appels if a[0] == "img" and a[3].startswith("a")]      # une seule recherche en amont
+
 def test_v14_salon_guild_boss_pas_un_results():
     """Salon Guild Boss (essai du 14/11, nh2D7xZ7dOQ à 2 s) : le bouton « Rage Rewards » n'est pas un écran Results."""
     assert ocr_ecrans.detecter(SALON_RECORD) == "gb_record"            # OCR abîmé (« Total Rage Gount », « Group? ») toléré
