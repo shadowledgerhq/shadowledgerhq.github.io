@@ -4232,7 +4232,7 @@
       "fr": "Jinwoo trouve une ouverture et se place derrière l'ennemi pour lui tendre un piège. Condition d'utilisation : réussir une [Évasion extrême], déclencher l'état [Bris] ou utiliser une [compétence d'ombre]. Condition spéciale : s'active lorsqu'un successeur [rejoint le combat]. [Foulée de l'ombre] s'active après utilisation. L'ennemi est grandement ralenti pendant 3 secondes. La défense de l'ennemi touché est réduite de […]"
     },
     "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
-    "name_en_source": "notes Netmarble 22/11/2024 (« core QTE skill Shadow Step ») : déduit, à vérifier"
+    "name_en_source": "Wiki Fandom https://solo-leveling-arise.fandom.com/wiki/Runes (rune de contre-attaque : « resets the cooldown of Shadow Step ») + notes Netmarble 22/11/2024 (« core QTE skill Shadow Step ») : nom EN confirmé le 16/11/2026 ; correspondance avec « Foulée de l'ombre » (seul QTE autonome sans rune) déduite"
   },
   {
     "id": "qte--frappe-de-glace",
@@ -4413,7 +4413,7 @@
       "fr": "Jinwoo se cache et crée des ombres dans une large zone, puis entaille rapidement l'ennemi ; les ombres attaquent ensuite toutes en même temps pour infliger d'importants dégâts. Applique [En l'air]. Lors de l'utilisation d'Éviction, les PV de […]"
     },
     "text_fr_source": "capture de l'écran « Équiper une compétence » (onglets des compétences QTE 1-3) fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran",
-    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; attribué par élimination (nom FR non littéral), à vérifier en jeu"
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (liste des runes de QTE, rareté Épique, nom officiel « Overshadow » ; correspondance 1 à 1 avec le dernier QTE sans nom EN, nom FR non littéral) : confiance élevée, aucune source indépendante (16/11/2026), à vérifier en jeu"
   },
   {
     "id": "dagger-rush",

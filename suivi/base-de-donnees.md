@@ -1,4 +1,4 @@
-# SUIVI — 9 Base de données — 2026-11-16 (session 7 : db_les_deux soldés ; session 6 : noyaux ; détail complet dans suivi/archives/base-de-donnees_2026-11-16_detail.md)
+# SUIVI — 9 Base de données — 2026-11-16 (session 7 : db_les_deux, douteux et noms EN traités ; session 6 : noyaux ; détail complet dans suivi/archives/base-de-donnees_2026-11-16_detail.md)
 ## Fait
 - Base : 1 319+ entrées dans 18 fichiers de `data/db/`, 449 icônes, `check_db` OK (0 erreur). Guide officiel Netmarble lu (rates.json, game_rules.json, mode_rewards.json) ; 686 notes du forum EN (netmarble_notes.json) ; 27 notices d'équilibrage (balance_history, patches.json) ; bénédictions 59/59 ; gemmes, statues, runes (83/83 avec parent et valeurs), compétences de Jinwoo.
 - Veille Netmarble : `tools/veille_netmarble.py` (boards 13, 14, 32) + tâche planifiée `trig_012uiWvELXgfSfsFxx5JcrWC` (07:43 UTC) ; 16/11 : « Rien de nouveau », pas de `a_traiter.md`.
@@ -7,10 +7,10 @@
 - Session 7 (16/11) : veille « Rien de nouveau » (pas de a_traiter.md). 37 `db_les_deux` + 2 `db_ancienne_seule` relus dans les notices : 36 déjà appliqués (faux positifs, Meilin Fisher inclus : PV T4 32 %, T5 24/24/64 s en base), 2 appliqués (Vulcan's Rage 20→10 instances, Winter Fang Silver Mark 70→80 %), 1 non stockable (Lee Bora T5 Attaque 10→20 %, `palier_non_stocke`). Champs `verif`/`verif_note` ; `classer_a_verifier.py` ignore les entrées avec `verif_note`.
 ## En cours
 - Intégrer les notes détaillées du patch du 19/11 dès que `data/veille/a_traiter.md` existe (annonce 110809 seule pour l'instant).
-- Noms EN à confirmer : Overshadow, Power Unlocked (absents des 686 notes), Shadow Step (cité en 2024, lien déduit), Commander's Authority.
+- Noms EN : Shadow Step confirmé (wiki Fandom Runes + notes 2024). Overshadow et Power Unlocked = noms officiels du guide Netmarble, correspondance 1 à 1 par élimination (slagate n'a pas de EN pour QTE/pierres) : à vérifier en jeu. Commander's Authority : nom confirmé (notes 12/10 et 22/10), lien avec « Toucher du maître » à vérifier.
 ## À faire
 - Texte FR de 3 noyaux Corps : Armure du Protecteur féroce (noir/rouge), Membres du Veilleur (violet), Main droite du spectre antique (bleu glacé) ; couleurs déduites des familles.
-- 53 `a_verifier` restants (48 db_aucune, 5 analyse_douteuse) ; sets d'artefacts rééquilibrés 4 fois sans valeurs publiées.
+- 36 `a_verifier` restants : Choi Jong-In 11 (fiche wiki antérieure au patch du 30/07, valeurs dans `patch_adjustments`, report en texte quand coeff. niv. 1 connus), 24 `db_aucune` ambigus (Isla Wright 6, Yoo Soohyun 3, Han Se-mi 2, Lee Bora 2, Vulcan's Rage 2, ombres Bigrock/Blades/Tusk, Skadi, Huntsman, 2 sets d'artefacts, Emma Laurent, Sugimoto), 1 palier non stocké (Lee Bora T5). 5 douteux et 12 db_aucune soldés ; sets d'artefacts rééquilibrés 4 fois sans valeurs publiées.
 - Vides sans source publique : effets d'amplification des paliers 4-5, bonus d'enregistrement des runes (sauf 3 compétences), noms des matériaux de noyau, 86 armes sans icône, noms FR d'armes de chasseurs, JA/KO de gemmes.
 ## Besoin d'Alexis
 - Rien. Abandonnés par Alexis : captures des paliers 4-5 d'amplification (pas d'accès), 3e limit break des noyaux (pas de ressources), noyaux Rare/Héroïque.

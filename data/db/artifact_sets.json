@@ -2449,8 +2449,9 @@
         "unit": "time",
         "date": "2025-08-28",
         "url": "https://forum.netmarble.com/slv_en/view/32/94122",
-        "status": "a_verifier",
-        "verif": "analyse_douteuse"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : effet 4 pièces déjà sans « 1 fois / recharge 20 s » (+50 % dégâts ultime)."
       }
     ]
   },

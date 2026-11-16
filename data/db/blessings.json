@@ -3068,7 +3068,7 @@
     "notes": "Absente du wiki Fandom. Nom FR et texte FR de l'API slagate ; texte FR = valeur de la rareté max. Nom EN officiel à confirmer.",
     "values_note": "Série : dégâts de Surcharge de Jinwoo (%) ; Accumulation élémentaire -30 % (fixe).",
     "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)",
-    "name_en_source": "https://guide.netmarble.com/sololv/116 (page Fuse Rate, liste des pierres transcendées) ; attribué par élimination (nom FR non littéral), à vérifier en jeu"
+    "name_en_source": "https://guide.netmarble.com/sololv/116 (liste officielle des pierres transcendées : « Power Unlocked » est la seule des 59 pierres sans équivalent FR dans la base) ; description FR (« La puissance d'un chasseur est limitée… ») cohérente ; confiance élevée, aucune source indépendante (16/11/2026), à vérifier en jeu"
   },
   {
     "id": "finisher-touch",

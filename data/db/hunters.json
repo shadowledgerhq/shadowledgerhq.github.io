@@ -1409,8 +1409,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : baisse de DEF 70 % / 25 s déjà dans la compétence de soutien."
       },
       {
         "line": "Duration : 12 25 second(s)",
@@ -1921,8 +1922,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouvelle valeur déjà au palier 3."
       },
       {
         "line": "Heavenly Strike changes to Heavy Attack: Heavenly Strike, increasing its damage by 170% 200%",
@@ -1931,8 +1933,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouvelle valeur déjà au palier 3."
       },
       {
         "line": "Pure Sword Princess Cha Hae-In’s Critical Hit Rate increases by 7% 8% and her Critical Hit damage increases by 7% 8% for every Water team me",
@@ -2406,6 +2409,13 @@
         "summary": "Fire Barrage : baisse de DEF 15→70 %, 15→25 s",
         "wiki_reflects_patch": true,
         "note": "Valeurs après patch = celles de l'avis Netmarble ; si wiki_reflects_patch est false/null, le texte de la fiche peut être antérieur au patch."
+      },
+      {
+        "patch": "2026-07-30",
+        "source": "https://forum.netmarble.com/slv_en/view/32/107922",
+        "wiki_reflects_patch": false,
+        "summary": "Coefficients niv. 10 : Spark 360/399/414 %, Blast 2523 %, Rain of Flames 3825 %, Flame Spear 3825 %, End of Days 6705 % (valeurs de l'avis, niv. 1 non publié) ; passif de base : Attaque +100 % (sans critique), The Ultimate Hunter Attaque et Pénétration de DEF +30 % ; T1 nouvel effet Mega Crater (+200 % si un allié provoque un Break) ; T2 Attaque +50 % ; T3 End of Days et Flame Spear +200 % ; T4 Feu +100 % ; T5 (Team Fight) cooldown ×5, jauge +5 %/s ; arme Equivalent Exchange (palier 5) Attaque +30 %.",
+        "note": "Valeurs de l'avis Netmarble ; le texte de la fiche est antérieur au patch. À reporter dans le texte quand les valeurs niv. 1 seront connues."
       }
     ],
     "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026",
@@ -2456,7 +2466,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Stage 2 Damage : 249% 399% of the user’s Attack",
@@ -2466,7 +2477,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Stage 3 Damage : 264% 414% of the user’s Attack",
@@ -2476,7 +2488,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Damage: 1023% 2523% of the user’s Attack",
@@ -2486,7 +2499,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Damage: 2325% 3825% of the user’s Attack",
@@ -2496,7 +2510,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Damage: 2325% 3825% of the user’s Attack",
@@ -2506,7 +2521,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Damage: 3555% 6705% of the user’s Attack",
@@ -2516,7 +2532,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Choi Jong-In cannot deal Critical Hits, but his Attack increases by 50% 100%",
@@ -2535,7 +2552,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Increases the user’s Attack by 12% 50%",
@@ -2545,7 +2563,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "The damage of [End of Days, Flame Spear] increases by 60% 200%",
@@ -2555,7 +2574,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Increases the user’s Fire damage by 16% 100%",
@@ -2583,7 +2603,8 @@
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
         "status": "a_verifier",
-        "verif": "db_aucune"
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-16 : la fiche (wiki) contient encore l'ancienne valeur ; patch du 30/07/2026 non reporté, voir patch_adjustments."
       },
       {
         "line": "Decrease the target’s Defense by 15% 70%",
@@ -2592,8 +2613,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : baisse de DEF 70 % déjà dans la compétence de soutien (patch 22/10)."
       },
       {
         "line": "Duration : 15 25 second(s)",
@@ -2837,8 +2859,9 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouvelle valeur déjà dans le passif de base."
       },
       {
         "line": "Duration: 60 90 seconds (stacks up to 3 4 times)",
@@ -2867,8 +2890,9 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "analyse_douteuse"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : valeur 30 % déjà dans la fiche (palier 1)."
       },
       {
         "line": "Increases Finishing Catch damage by 15% 165%",
@@ -2888,8 +2912,9 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "analyse_douteuse"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : recharge 20 s déjà dans la fiche (palier 5)."
       },
       {
         "line": "When Christopher’s attack hits a target inflicted with the [Fire] [Overload] effect, it inflicts [Blazing Shock] on the target (Cooldown: 25",
@@ -2898,8 +2923,9 @@
         "unit": "seconds",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "analyse_douteuse"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : recharge 20 s déjà dans la fiche (palier 5)."
       },
       {
         "line": "Increases Fire Overload damage taken by 20% 30%",
@@ -4589,8 +4615,9 @@
         "unit": "times",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "analyse_douteuse"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : cumul 20 déjà dans l'arme The Glamour of Self-worth (palier 2)."
       }
     ]
   },
@@ -9059,8 +9086,9 @@
         "unit": "%",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouvelle valeur déjà au palier 5."
       }
     ]
   },
@@ -9773,8 +9801,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : dégâts Eau 32 % déjà dans la compétence de soutien."
       },
       {
         "line": "Duration : 30 32 second(s)",
@@ -15064,8 +15093,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouveau coefficient (niv. 10) déjà dans la fiche."
       },
       {
         "line": "Damage: 1200% 2512.5% of Attack",
@@ -15074,8 +15104,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouveau coefficient (niv. 10) déjà dans la fiche."
       },
       {
         "line": "Damage: 2175% 2536.5% of Attack",
@@ -15084,8 +15115,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouveau coefficient (niv. 10) déjà dans la fiche."
       },
       {
         "line": "Damage: 1644.44% 2248.78% of Attack",
@@ -15094,8 +15126,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouveau coefficient (niv. 10) déjà dans la fiche."
       },
       {
         "line": "Damage: 1200% 1617% of Attack",
@@ -15104,8 +15137,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouveau coefficient (niv. 10) déjà dans la fiche."
       },
       {
         "line": "Damage: 4125% 6315% of Attack",
@@ -15114,8 +15148,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_aucune"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle du 2026-11-16 dans la notice d'origine : nouveau coefficient (niv. 10) déjà dans la fiche."
       },
       {
         "line": "The user’s Damage Increase stat increases equal to 24% 100% of their Defense Penetration",
