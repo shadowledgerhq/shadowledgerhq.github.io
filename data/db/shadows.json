@@ -1031,7 +1031,7 @@
     "name": {
       "fr": "Avarice",
       "en": "Greed",
-      "ko": "",
+      "ko": "그리드",
       "ja": "グリード"
     },
     "rarity": null,
@@ -1055,7 +1055,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/447814 (vérifié le 2026-11-15)",
+    "name_ko_source": "Texte de la fiche Greed (Pinterest/forum Netmarble EN 21/16256 « Greed (그리드) is the shadow of Hwang Dongsoo ») ; à vérifier en jeu (vérifié le 2026-11-16)"
   },
   {
     "id": "igris",
