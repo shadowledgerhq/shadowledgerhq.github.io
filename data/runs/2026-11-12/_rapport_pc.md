@@ -14,6 +14,13 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
 - Vidéos traitées ce passage : 14 · en_cours restantes : 60 (dont 39 à traiter par le PC)
-- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot) ; 1pGA1EBZrDw : images : yt-dlp code 1 : l: (6) Could not resolve host: rr3---sn-hpa7znsz.googlevideo.com (Could not contact DNS servers). See https://curl.se/libcurl/c/libcurl-errors.html first for more details.. Giving up after 10 retries
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot) ; 1pGA1EBZrDw : images : yt-dlp code 1 : l: (6) Could not resolve host: rr3---sn-hpa7znsz.googlevideo.com (Could not contact DNS servers). See https://curl.se/libcurl/c/libcurl-errors.html first for more details.. Giving up after 10 retries ; git : git pull : fatal: unable to access 'https://github.com/shadowledgerhq/shadowledgerhq.github.io.git/': Could not resolve host: github.com
 - Durée du passage : 141 min
 - Relance automatique : 16/11/2026 22:04 (une seule fois par soir)
+
+<!-- passage-pc pc-daily 2026-11-16T21:26:12.328655+00:00 -->
+## Passage pc-daily — 2026-11-16 22:26 (Paris)
+
+- **Passage complet : non** (git : git pull : fatal: unable to access 'https://github.com/shadowledgerhq/shadowledgerhq.github.io.git/': Could not resolve host: github.com)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : git : git pull : fatal: unable to access 'https://github.com/shadowledgerhq/shadowledgerhq.github.io.git/': Could not resolve host: github.com
