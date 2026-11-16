@@ -512,7 +512,8 @@
         763.0,
         871.0,
         925.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 3
     },
     "icon": "data/icons/sjw_skills/dagger-toss--ascension.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
@@ -2224,7 +2225,8 @@
         1157.0,
         1332.0,
         1419.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 1
     },
     "icon": "data/icons/sjw_skills/sonic-stream--double-down.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
@@ -2267,7 +2269,8 @@
         1439.0,
         2295.0,
         2723.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 3
     },
     "icon": "data/icons/sjw_skills/sonic-stream--sonic-explosion.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
@@ -2310,7 +2313,8 @@
         998.0,
         1162.0,
         1244.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 2
     },
     "icon": "data/icons/sjw_skills/sonic-stream--wind-shroud.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
@@ -2353,7 +2357,8 @@
         372.0,
         390.0,
         400.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 1
     },
     "icon": "data/icons/sjw_skills/sonic-stream--magnifying-slashes.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Runes",
@@ -2395,7 +2400,7 @@
   {
     "id": "rune--blazing-annihilation",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "kings-domain",
     "name": {
       "fr": "Annihilation flamboyante",
       "en": "Blazing Annihilation",
@@ -2413,7 +2418,7 @@
     "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "Inflige des dégâts de feu. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
+      "fr": "Personne ne peut envahir le Domaine du roi. Dégâts élémentaires de feu. 100 % de la jauge de puissance ; recharge 60 s. À l'enregistrement, le niveau de Domaine du roi augmente de +3.",
       "en": ""
     },
     "effects": [],
@@ -2424,7 +2429,8 @@
         2782.0,
         3282.0,
         3567.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 3
     },
     "icon": "data/icons/sjw_skills/rune--blazing-annihilation.png",
     "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
@@ -2432,12 +2438,14 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--aurora",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "commanders-touch-ultimate",
     "name": {
       "fr": "Aurore",
       "en": "Aurora",
@@ -2474,7 +2482,8 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : pentagone. ",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--breach",
@@ -2857,7 +2866,7 @@
   {
     "id": "rune--tidal-surge",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "kings-domain",
     "name": {
       "fr": "Déflagration déferlante",
       "en": "Tidal Surge",
@@ -2875,7 +2884,7 @@
     "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "Inflige des dégâts d'eau. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
+      "fr": "Personne ne peut envahir le Domaine du roi. Dégâts élémentaires d'eau. 100 % de la jauge de puissance ; recharge 60 s. À l'enregistrement, le niveau de Domaine du roi augmente de +3.",
       "en": ""
     },
     "effects": [],
@@ -2886,7 +2895,8 @@
         2782.0,
         3282.0,
         3567.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 3
     },
     "icon": "data/icons/sjw_skills/rune--tidal-surge.png",
     "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
@@ -2894,12 +2904,14 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--heaven-annihilation",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "commanders-touch-ultimate",
     "name": {
       "fr": "Dévastation des Cieux",
       "en": "Heaven Annihilation",
@@ -2936,7 +2948,8 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : ronde (forme à confirmer). ",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--explosion",
@@ -3003,7 +3016,7 @@
   {
     "id": "rune--darkfall",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "kings-domain",
     "name": {
       "fr": "Fin du jour",
       "en": "Darkfall",
@@ -3021,7 +3034,7 @@
     "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "Inflige des dégâts de ténèbres. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
+      "fr": "Personne ne peut envahir le Domaine du roi. Dégâts élémentaires de ténèbres. 100 % de la jauge de puissance ; recharge 60 s. À l'enregistrement, le niveau de Domaine du roi augmente de +3.",
       "en": ""
     },
     "effects": [],
@@ -3032,7 +3045,8 @@
         2782.0,
         3282.0,
         3567.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 3
     },
     "icon": "data/icons/sjw_skills/rune--darkfall.png",
     "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
@@ -3040,7 +3054,9 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--severing-flash",
@@ -3447,7 +3463,7 @@
   {
     "id": "rune--surging-tide",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "commanders-touch-ultimate",
     "name": {
       "fr": "Marée résurgente",
       "en": "Surging Tide",
@@ -3484,12 +3500,13 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : losange. ",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--void",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "commanders-touch-ultimate",
     "name": {
       "fr": "Néant",
       "en": "Void",
@@ -3526,11 +3543,12 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : hexagone. ",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--darkness-obliteration",
-    "kind": "rune",
+    "kind": "skill",
     "parent_skill": null,
     "name": {
       "fr": "Ombre : Tragédie",
@@ -3538,34 +3556,36 @@
       "ko": "은영 : 참극",
       "ja": "隠影：惨劇"
     },
-    "rarity": [
-      "rare",
-      "heroic",
-      "legendary",
-      "transcendent"
-    ],
-    "type": null,
+    "rarity": null,
+    "type": "ultimate",
     "element": null,
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "En une fraction de seconde, Jinwoo taillade l'ennemi plusieurs fois, puis il se place derrière l'ennemi pour le poignarder violemment.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "1": 3282.0
+      }
+    },
     "icon": "data/icons/sjw_skills/rune--darkness-obliteration.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu). 16/11 : introuvable dans le Codex de runes de compétence (Alexis, 83 entrées vues) ; nom en « X : Y », peut-être une compétence évoluée/autre type. À vérifier."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence ultime (et non une rune) : Niv. 1 sur le compte d'Alexis, 3282.0 % de l'Attaque, recharge 60 s, jauge de puissance 100 %, sans emplacement de rune ni élément affiché. Id « rune-- » conservé (nom d'icône, héritage slagate). Valeurs par niveau : à compléter.",
+    "gauge_cost_pct": 100,
+    "runes": [],
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--daybreak",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "kings-domain",
     "name": {
       "fr": "Point du jour",
       "en": "Daybreak",
@@ -3583,7 +3603,7 @@
     "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "Inflige des dégâts de lumière. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
+      "fr": "Personne ne peut envahir le Domaine du roi. Dégâts élémentaires de lumière. 100 % de la jauge de puissance ; recharge 60 s. À l'enregistrement, le niveau de Domaine du roi augmente de +2.",
       "en": ""
     },
     "effects": [],
@@ -3594,7 +3614,8 @@
         2782.0,
         3282.0,
         3567.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 2
     },
     "icon": "data/icons/sjw_skills/rune--daybreak.png",
     "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
@@ -3602,12 +3623,14 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--stormrage",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "commanders-touch-ultimate",
     "name": {
       "fr": "Rage tempétueuse",
       "en": "Stormrage",
@@ -3644,7 +3667,8 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Noms/icône : slagate. Valeurs identiques pour les 5 runes élémentaires, par rareté Rare-Héroïque-Légendaire-Transcendance (Codex, rune non possédée : niveau min. présumé, à vérifier). Compétence parente inconnue (coût en jauge de puissance 100 % : probablement une ultime). Forme de l'icône : bouclier/triangle. ",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--torrent-cleave",
@@ -3697,7 +3721,7 @@
   {
     "id": "rune--storm",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "kings-domain",
     "name": {
       "fr": "Tempête",
       "en": "Storm",
@@ -3715,7 +3739,7 @@
     "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "Inflige des dégâts de vent. Consommation de la jauge de puissance : 100 %. Recharge 60 s.",
+      "fr": "Personne ne peut envahir le Domaine du roi. Dégâts élémentaires de vent. 100 % de la jauge de puissance ; recharge 60 s. À l'enregistrement, le niveau de Domaine du roi augmente de +2.",
       "en": ""
     },
     "effects": [],
@@ -3726,7 +3750,8 @@
         2782.0,
         3282.0,
         3567.0
-      ]
+      ],
+      "parent_skill_level_bonus_on_register": 2
     },
     "icon": "data/icons/sjw_skills/rune--storm.png",
     "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
@@ -3734,11 +3759,13 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue. Coût en jauge de puissance 100 % (ultime probable).",
-    "power_gauge_cost_pct": 100
+    "power_gauge_cost_pct": 100,
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "rune--truth-mutilate",
-    "kind": "rune",
+    "kind": "skill",
     "parent_skill": null,
     "name": {
       "fr": "Vérité : Mutilation",
@@ -3746,29 +3773,31 @@
       "ko": "진 : 난도",
       "ja": "真：乱刀"
     },
-    "rarity": [
-      "rare",
-      "heroic",
-      "legendary",
-      "transcendent"
-    ],
-    "type": null,
+    "rarity": null,
+    "type": "ultimate",
     "element": null,
-    "cooldown": null,
+    "cooldown": 60.0,
     "mp_cost": null,
     "text": {
-      "fr": "",
+      "fr": "Après s'être caché dans l'ombre, Jinwoo entaille toute la zone autour de lui.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_at_skill_level": {
+        "10": 6239.34
+      }
+    },
     "icon": "data/icons/sjw_skills/rune--truth-mutilate.png",
     "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu). 16/11 : introuvable dans le Codex de runes de compétence (Alexis, 83 entrées vues) ; nom en « X : Y », peut-être une compétence évoluée/autre type. À vérifier."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence ultime (et non une rune) : Niv. 10 sur le compte d'Alexis, 6239.34 % de l'Attaque, recharge 60 s, jauge de puissance 100 %, sans emplacement de rune ni élément affiché. Id « rune-- » conservé (nom d'icône, héritage slagate). Valeurs par niveau : à compléter.",
+    "gauge_cost_pct": 100,
+    "runes": [],
+    "text_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "qte--attaque-surprise",
@@ -4076,5 +4105,61 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Compétence absente du wiki Fandom : nom FR vu en jeu, nom EN officiel inconnu (id provisoire). Runes connues : seulement celles dont le parent est confirmé par capture (rune équipée)."
+  },
+  {
+    "id": "kings-domain",
+    "kind": "skill",
+    "name": {
+      "fr": "Domaine du roi",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "ultimate",
+    "runes": [
+      "rune--blazing-annihilation",
+      "rune--tidal-surge",
+      "rune--storm",
+      "rune--daybreak",
+      "rune--darkfall"
+    ],
+    "cooldown": 60,
+    "gauge_cost_pct": 100,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence ultime de Jinwoo (Niv. 23 sur le compte d'Alexis, 10+13). Nom EN officiel inconnu (id provisoire). 5 emplacements : feu, eau, vent, lumière, ténèbres. Dégâts dépendent du niveau (Tempête 7983,57 % au niv. 23)."
+  },
+  {
+    "id": "commanders-touch-ultimate",
+    "kind": "skill",
+    "name": {
+      "fr": "Toucher du maître",
+      "en": "",
+      "ko": ""
+    },
+    "rarity": null,
+    "type": "ultimate",
+    "runes": [
+      "rune--heaven-annihilation",
+      "rune--surging-tide",
+      "rune--stormrage",
+      "rune--aurora",
+      "rune--void"
+    ],
+    "cooldown": 60,
+    "gauge_cost_pct": 100,
+    "effects": [],
+    "values_by_level": {},
+    "icon": null,
+    "source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "name_fr_source": "capture de l'écran « Équiper une compétence » (onglet des compétences ultimes) fournie par Alexis le 16/11/2026 (client FR, 1.5.16)",
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Compétence ultime NON POSSÉDÉE sur le compte d'Alexis (verrouillée, Niv. 1), affichée sous le nom « Toucher du maître » (même nom que la compétence de base à 4 runes : à vérifier, doublon d'affichage possible). Id provisoire."
   }
 ]
