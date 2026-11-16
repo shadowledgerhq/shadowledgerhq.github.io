@@ -9,6 +9,7 @@
 - Soutien de subjugation : semaine 12/11 (capture) ; preuves HOTM : semaine 05/11 seulement.
 - 15/11, demande discussion 2 (spec v3 §5 n°15-17) : noms JA/KO des chasseurs (slagate : JA 38/66, KO 60/66 ; `tools/apply_ja_ko.py`) ; `statues.json` (5 statues = « Figure » chez Netmarble : nom FR/EN, cible, 3 options à 9 choix, grades E→S, effet unique ; sans valeurs par rang) ; `gems.json` (11 types de bonus du calculateur slagate, couleurs/niveaux vides) ; schéma mis à jour. 
 ## En cours
+- 16/11 recherche autonome : KO ombres 10/15 (Greed = 그리드 ajouté) ; restent Kaisel, Beste, Skull, Jima, Brute (wiki Fandom sans hangul, forum KR/namu inaccessibles ou sans liste). Sets d'artefacts : aucune valeur nouvelle (forum 23/96386 et Fandom = texte déjà en base). 29 runes récentes : source introuvable. Aucune action possible sans captures d'Alexis ou notes du 19/11.
 - 16/11 : gemmes COMPLÈTES. Hausse des soins donnés/reçus : n'existent qu'aux rangs 1-4 (confirmé par Alexis), rien à ajouter ; tous les autres types ont rangs 1-6.
 - 16/11 (12 captures) : rang 6 violets : vitesse A 0,45 / B 0,42 / C 0,4 / D 0,38 % ; PM suppl. 120/110/100/95 ; coût PM 220/205/195/190 ; matériau = Fragment de l'Ombre violette ×20. Reste rang 6 : bleus soins donnés/reçus uniquement.
 - 16/11 (12 captures) : rang 6 jaunes : pénétration et DCC A 965 / B 870 / C 820 / D 775 ; précision A 1800 / B 1660 / C 1590 / D 1520 ; matériau = Fragment de la Terre aride ×20. Reste rang 6 : bleus soins donnés/reçus, violets (vitesse, PM suppl., coût PM : valeurs B/D etc. partielles).
