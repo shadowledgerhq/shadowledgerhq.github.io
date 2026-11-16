@@ -813,10 +813,10 @@
        0.3251
       ],
       "necklace": [
-       0.3553,
-       0.2353,
-       0.4142,
-       0.3251
+       0.3453,
+       0.2403,
+       0.4042,
+       0.3301
       ],
       "chestplate": [
        0.2903,
@@ -825,10 +825,10 @@
        0.4226
       ],
       "bracelet": [
-       0.3553,
-       0.3328,
-       0.4142,
-       0.4226
+       0.3453,
+       0.3378,
+       0.4042,
+       0.4276
       ],
       "gloves": [
        0.2903,
@@ -837,10 +837,10 @@
        0.531
       ],
       "ring": [
-       0.3553,
-       0.4412,
-       0.4142,
-       0.531
+       0.3453,
+       0.4462,
+       0.4042,
+       0.536
       ],
       "boots": [
        0.2903,
@@ -849,10 +849,10 @@
        0.6393
       ],
       "earrings": [
-       0.3553,
-       0.5495,
-       0.4142,
-       0.6393
+       0.3453,
+       0.5545,
+       0.4042,
+       0.6443
       ]
      }
     },
@@ -865,10 +865,10 @@
        0.3251
       ],
       "necklace": [
-       0.4896,
-       0.2353,
-       0.5485,
-       0.3251
+       0.4796,
+       0.2403,
+       0.5385,
+       0.3301
       ],
       "chestplate": [
        0.4246,
@@ -877,10 +877,10 @@
        0.4226
       ],
       "bracelet": [
-       0.4896,
-       0.3328,
-       0.5485,
-       0.4226
+       0.4796,
+       0.3378,
+       0.5385,
+       0.4276
       ],
       "gloves": [
        0.4246,
@@ -889,10 +889,10 @@
        0.531
       ],
       "ring": [
-       0.4896,
-       0.4412,
-       0.5485,
-       0.531
+       0.4796,
+       0.4462,
+       0.5385,
+       0.536
       ],
       "boots": [
        0.4246,
@@ -901,10 +901,10 @@
        0.6393
       ],
       "earrings": [
-       0.4896,
-       0.5495,
-       0.5485,
-       0.6393
+       0.4796,
+       0.5545,
+       0.5385,
+       0.6443
       ]
      }
     },
@@ -917,10 +917,10 @@
        0.3251
       ],
       "necklace": [
-       0.6239,
-       0.2353,
-       0.6828,
-       0.3251
+       0.6139,
+       0.2403,
+       0.6728,
+       0.3301
       ],
       "chestplate": [
        0.5589,
@@ -929,10 +929,10 @@
        0.4226
       ],
       "bracelet": [
-       0.6239,
-       0.3328,
-       0.6828,
-       0.4226
+       0.6139,
+       0.3378,
+       0.6728,
+       0.4276
       ],
       "gloves": [
        0.5589,
@@ -941,10 +941,10 @@
        0.531
       ],
       "ring": [
-       0.6239,
-       0.4412,
-       0.6828,
-       0.531
+       0.6139,
+       0.4462,
+       0.6728,
+       0.536
       ],
       "boots": [
        0.5589,
@@ -953,10 +953,10 @@
        0.6393
       ],
       "earrings": [
-       0.6239,
-       0.5495,
-       0.6828,
-       0.6393
+       0.6139,
+       0.5545,
+       0.6728,
+       0.6443
       ]
      }
     },
@@ -1488,7 +1488,14 @@
   }
  },
  "echelles_icone": {
-  "artifact_pieces": [0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+  "artifact_pieces": [
+   0.5,
+   0.6,
+   0.7,
+   0.8,
+   0.9,
+   1.0
+  ],
   "defaut": [
    0.5,
    0.6,
@@ -2089,5 +2096,6 @@
   "rapport": 2,
   "min_corr_biblio": 40
  },
- "_portraits": "[À CONFIRMER] lie l'écran de stats d'un chasseur (nom lu par l'OCR) à sa carte de la composition par points d'intérêt (`pipeline/portraits.py`) : portrait = partie gauche de l'écran de stats, carte = zone du visage élargie (y 0,15-0,5) ; accepté si ≥ `min_corr` correspondances et ≥ `rapport` × la 2e carte. Mesuré 15/11 sur v0tuXJNxudk : 84 contre 19 et 4. Cartes apprises (`data/icons/hunters_cartes/`, une par chasseur identifié par nom + portrait) : `min_corr_biblio` 40 (le bruit monte à ~30 avec une seule carte connue), et la carte doit dominer ≥ `rapport` × les autres cartes / les autres positions."
+ "_portraits": "[À CONFIRMER] lie l'écran de stats d'un chasseur (nom lu par l'OCR) à sa carte de la composition par points d'intérêt (`pipeline/portraits.py`) : portrait = partie gauche de l'écran de stats, carte = zone du visage élargie (y 0,15-0,5) ; accepté si ≥ `min_corr` correspondances et ≥ `rapport` × la 2e carte. Mesuré 15/11 sur v0tuXJNxudk : 84 contre 19 et 4. Cartes apprises (`data/icons/hunters_cartes/`, une par chasseur identifié par nom + portrait) : `min_corr_biblio` 40 (le bruit monte à ~30 avec une seule carte connue), et la carte doit dominer ≥ `rapport` × les autres cartes / les autres positions.",
+ "_zones_artefacts_bot_chasseurs": "Colonne de DROITE des chasseurs (collier, bracelet, bague, boucles) décalée de -0,010 en x et +0,005 en y le 16/11/2026 : calée sur 5MI-RLj7FSk (sets lus à l'œil : noble flesh, kamish's obsession, glorious arrogance ; score moyen de la colonne 0,40 -> 0,68-0,76). [À CONFIRMER] sur d'autres vidéos BOT."
 }
