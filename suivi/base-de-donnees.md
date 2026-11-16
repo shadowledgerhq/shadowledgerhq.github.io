@@ -9,6 +9,7 @@
 - Soutien de subjugation : semaine 12/11 (capture) ; preuves HOTM : semaine 05/11 seulement.
 - 15/11, demande discussion 2 (spec v3 §5 n°15-17) : noms JA/KO des chasseurs (slagate : JA 38/66, KO 60/66 ; `tools/apply_ja_ko.py`) ; `statues.json` (5 statues = « Figure » chez Netmarble : nom FR/EN, cible, 3 options à 9 choix, grades E→S, effet unique ; sans valeurs par rang) ; `gems.json` (11 types de bonus du calculateur slagate, couleurs/niveaux vides) ; schéma mis à jour. 
 ## En cours
+- 16/11 (12 captures) : rang 6 verts : DEF % A 5 / B 4,6 / C 4,4 / D 4,2 % ; DEF suppl. 450/410/390/370 ; réduction des dégâts 230/210/200/190 ; matériau = Fragment des Défunts ×20. Reste rang 6 : bleus soins donnés/reçus, jaunes, violets.
 - 16/11 (8 captures) : rang 6 bleus : PV suppl. A 450 / B 410 / C 390 / D 370 ; PV % A 5 / B 4,6 / C 4,4 / D 4,2 % ; matériau bleu = Fragment du Point du jour ×20. Reste rang 6 : bleus soins donnés/reçus, verts, jaunes, violets.
 - 16/11 (8 captures Promotion de gemme) : rang 6 rouges : ATK % A 5 / B 4,6 / C 4,4 / D 4,2 % ; ATK suppl. A 450 / B 410 / C 390 / D 370 ; coût de promotion 100 000 or + 20 fragments + 1 gemme rang 5 (règle ajoutée). Reste rang 6 des autres types (PV, DEF, jaunes, verts, violets, soins).
 - 15/11 (15 captures) : rang 1 saisi pour les 15 types de gemmes (bord gris, sans lettre) : % = 1,25 (ATK/PV/DEF), suppl. 70, soins donnés/reçus 0,25 %, précision 325, DCC/pénétration 165, réduction dégâts 40, vitesse 0,1 %, PM suppl. 25, coût PM 40. Reste : rang 6 des types non vus, rang 2 manquants éventuels.
