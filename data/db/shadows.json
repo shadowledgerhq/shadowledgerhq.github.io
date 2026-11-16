@@ -1662,8 +1662,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       }
     ]
   },
@@ -2058,8 +2059,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       }
     ]
   },

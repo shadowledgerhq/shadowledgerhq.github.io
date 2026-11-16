@@ -1093,8 +1093,9 @@
         "unit": "second(s)",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Duration : 15 30 second(s)",
@@ -1103,8 +1104,9 @@
         "unit": "second(s)",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Duration : 15 30 second(s)",
@@ -1113,8 +1115,9 @@
         "unit": "second(s)",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "The user’s HP increases by 12% 30%",
@@ -1123,8 +1126,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "The entire team’s Light damage increases by 15% 30%",
@@ -1133,8 +1137,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       }
     ]
   },
@@ -1414,8 +1419,9 @@
         "unit": "second(s)",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       }
     ]
   },
@@ -2596,8 +2602,9 @@
         "unit": "second(s)",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       }
     ]
   },
@@ -2849,8 +2856,9 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "When [Spiritual Body Manifestation] is active it grants an effect that increases Fire team members’ Basic Skill damage by 15% 30% for 30 sec",
@@ -2869,8 +2877,9 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "When Christopher Reed or an ally successfully triggers the [Fire] [Overload] effect, he recovers 20% of this Power Gauge charge and resets t",
@@ -2899,8 +2908,9 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Using Zero to Hundred increases the user’s Defense Penetration by 15% 30% for 60 seconds",
@@ -2909,8 +2919,9 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       }
     ]
   },
@@ -4522,8 +4533,9 @@
         "unit": "second(s)",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "When a [Shield] is granted to a team member that team member’s damage dealt increases by 10% 20%",
@@ -5283,8 +5295,9 @@
         "unit": "%",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Duration : 25 60 second(s)",
@@ -5293,8 +5306,9 @@
         "unit": "second(s)",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Increases the user’s HP by 10% 50%",
@@ -5303,8 +5317,9 @@
         "unit": "%",
         "date": "2026-09-17",
         "url": "https://forum.netmarble.com/slv_en/view/32/109277",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Increases damage taken by 5% for 10 30 second(s) to targets hit by Han Se-Mi’s skill",
@@ -6691,8 +6706,9 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Duration : 12 24 seconds",
@@ -6711,8 +6727,9 @@
         "unit": "%",
         "date": "2026-07-30",
         "url": "https://forum.netmarble.com/slv_en/view/32/107922",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Duration : 12 24 seconds",
@@ -8031,8 +8048,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Using Checkpoint restores 50% 100% of the user’s Power Gauge",
@@ -8370,7 +8388,8 @@
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
         "status": "a_verifier",
-        "verif": "db_ancienne_seule"
+        "verif": "palier_non_stocke",
+        "verif_note": "2026-11-16 : la fiche (texte wiki) ne contient pas cet effet du palier 5 ; valeur de la notice non intégrable sans le texte complet."
       },
       {
         "line": "Targets hit by the user’s Strengthening Charm have both the damage they take from Critical Hits and their chance of receiving Critical Hit d",
@@ -9800,8 +9819,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_ancienne_seule"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Increases the user’s Attack by 16% 24%",
@@ -9810,8 +9830,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Increases the user’s Defense by 20% 24%",
@@ -9820,8 +9841,9 @@
         "unit": "%",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Increases Water Basic Skill damage by 15% 16%",
@@ -9839,8 +9861,9 @@
         "unit": "second(s)",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Using Side Whip grants the team member with the highest Attack an effect that increases their damage by 1% per 2000 of Meilin Fisher’s Max H",
@@ -11639,8 +11662,9 @@
         "unit": "times",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Increases the user’s HP by 12% 30%",
@@ -11894,8 +11918,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Increases Shield gained by Light team members by 5% 20%",
@@ -11904,8 +11929,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Duration : 24 36 second(s)",
@@ -11914,8 +11940,9 @@
         "unit": "second(s)",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Light team members’ Light damage increases by 8% 10% for every Light team member in the party",
@@ -11924,8 +11951,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "The Defense of the team member with the highest Defense increases by 10% 20%",
@@ -11934,8 +11962,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "The Attack of the Light team member with the highest Attack increases by 10% 20%",
@@ -11944,8 +11973,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "Increases damage dealt by 30% 50%",
@@ -11963,8 +11993,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "The user’s HP increases by 12% 50%",
@@ -14243,8 +14274,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "The user’s Critical Hit damage increases by 16% 20%",
@@ -14280,8 +14312,9 @@
         "unit": "%",
         "date": "2026-06-04",
         "url": "https://forum.netmarble.com/slv_en/view/32/106107",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       }
     ]
   },
@@ -15157,8 +15190,9 @@
         "unit": "second",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       },
       {
         "line": "When the user uses Core Attack, it grants the [Madness] effect. (Cooldown: 12 6 second(s))",
@@ -15167,8 +15201,9 @@
         "unit": "second(s)",
         "date": "2026-10-22",
         "url": "https://forum.netmarble.com/slv_en/view/32/109983",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "deja_applique",
+        "verif_note": "Contrôle manuel du 2026-11-16 dans la notice d'origine : la valeur est déjà dans la fiche (palier/compétence concerné), l'ancienne valeur citée vient d'un autre effet."
       }
     ]
   },

@@ -14,7 +14,7 @@ for f in ("hunters", "weapons", "shadows", "artifact_sets", "blessings", "sjw_sk
     for e in d:
         blob = json.dumps({k: v for k, v in e.items() if k not in ("balance_history", "values_balance_applied", "balance_changes", "notes")}, ensure_ascii=False)
         for c in e.get("balance_changes", []) or []:
-            if c.get("status") != "a_verifier": continue
+            if c.get("status") != "a_verifier" or c.get("verif_note"): continue
             co, cn = len(motif(c["old"], c["unit"]).findall(blob)), len(motif(c["new"], c["unit"]).findall(blob))
             douteux = (len(c["line"]) >= 138) or (c["unit"] in ("time", "times") and "%" in c["line"]) or (c["unit"] in ("second", "seconds") and "%" in c["line"].split(c["unit"])[0][-60:] and c["line"].count("%") > 1)
             v = "analyse_douteuse" if douteux else "db_ancienne_seule" if co and not cn else "db_les_deux" if co and cn else "db_aucune"

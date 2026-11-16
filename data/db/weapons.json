@@ -8646,7 +8646,7 @@
         "tier": 0,
         "text": {
           "fr": "",
-          "en": "When the user uses Fire of Destruction it applies the [Vulcan's Blessing] effect. [Vulcan's Blessing] It creates a [Shield] equal to 10% of the user's Attack and applies the [Concentration] effect for every Basic Attack and Core Attack that hits the enemy. Duration: 10 second(s). [Concentration] When the duration ends or the effect is removed, [Vulcan's Blessing] explodes and deals damage equal to 1000% of the user's Attack (stacking up to 10 times). When it explodes, it deals additional 100% damage per instance of [Concentration]. When [Vulcan's Blessing] is at 20 instances, [Vulcan's Blessing] instantly explodes and recreates [Shield] equal to 10% of the user's Attack. Duration: Infinite"
+          "en": "When the user uses Fire of Destruction it applies the [Vulcan's Blessing] effect. [Vulcan's Blessing] It creates a [Shield] equal to 10% of the user's Attack and applies the [Concentration] effect for every Basic Attack and Core Attack that hits the enemy. Duration: 10 second(s). [Concentration] When the duration ends or the effect is removed, [Vulcan's Blessing] explodes and deals damage equal to 1000% of the user's Attack (stacking up to 10 times). When it explodes, it deals additional 100% damage per instance of [Concentration]. When [Vulcan's Blessing] is at 10 instances, [Vulcan's Blessing] instantly explodes and recreates [Shield] equal to 10% of the user's Attack. Duration: Infinite"
         }
       }
     ],
@@ -8702,7 +8702,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Vulcan%27s_Rage",
     "wiki_revid": 14911,
     "wiki_timestamp": "2026-02-22T02:05:19Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-16",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
@@ -8766,8 +8766,9 @@
         "unit": "",
         "date": "2026-07-02",
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-16 : ancienne valeur trouvée dans la fiche, remplacée par celle de la notice."
       },
       {
         "line": "Duration: 15 20 second(s)",
@@ -9058,7 +9059,7 @@
         "tier": 5,
         "text": {
           "fr": "",
-          "en": "The Dusk and Silver Mark effects are enhanced [Dusk] Increases the Critical Hit Rate of Wolf's Shadow, Wolf's Echo, and White Wolf's Night by 25% Increases the Critical Hit damage of Wolf's Shadow, Wolf's Echo, and White Wolf's Night by 80% Increases Water damage of Wolf's Shadow, Wolf's Echo, and White Wolf's Night by 80% Duration: 10 second(s) [Silver Mark] Increases the damage of White Wolf's Night by 70% Duration: 10 second(s) (stacking up to 2 times)"
+          "en": "The Dusk and Silver Mark effects are enhanced [Dusk] Increases the Critical Hit Rate of Wolf's Shadow, Wolf's Echo, and White Wolf's Night by 25% Increases the Critical Hit damage of Wolf's Shadow, Wolf's Echo, and White Wolf's Night by 80% Increases Water damage of Wolf's Shadow, Wolf's Echo, and White Wolf's Night by 80% Duration: 10 second(s) [Silver Mark] Increases the damage of White Wolf's Night by 80% Duration: 10 second(s) (stacking up to 2 times)"
         }
       }
     ],
@@ -9114,7 +9115,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Winter_Fang",
     "wiki_revid": 16892,
     "wiki_timestamp": "2026-05-12T00:24:27Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-16",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
@@ -9145,8 +9146,9 @@
         "unit": "%",
         "date": "2026-08-27",
         "url": "https://forum.netmarble.com/slv_en/view/32/108732",
-        "status": "a_verifier",
-        "verif": "db_les_deux"
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-16 : ancienne valeur trouvée dans la fiche, remplacée par celle de la notice."
       }
     ]
   },
