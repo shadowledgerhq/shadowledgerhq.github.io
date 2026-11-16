@@ -544,7 +544,7 @@
     "cooldown": 10.0,
     "mp_cost": "80",
     "text": {
-      "fr": "",
+      "fr": "Lorsque Jinwoo lève sa dague, elle crée une zone où s'abattent plusieurs dagues. [Renverse] la cible. Les dégâts infligés sont augmentés de 120 % face aux cibles renversées.",
       "en": "When Jinwoo raises his dagger into the air, a zone is created within a certain range and multiple daggers fall on top of it."
     },
     "effects": [],
@@ -563,7 +563,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "dagger-toss",
@@ -1813,7 +1814,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo crée un trou noir devant lui, qui reste actif pendant un long moment et attire les ennemis vers le centre. Selon le nombre de cibles touchées, augmente de 25 % les dégâts infligés aux monstres de type Normal (jusqu'à 10 cibles).",
       "en": "Jinwoo creates a long-lasting black hole in front of him that draws enemies towards it center."
     },
     "effects": [],
@@ -1832,7 +1833,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "the-commanders-touch--liberation",
@@ -1855,7 +1857,7 @@
     "cooldown": 10.0,
     "mp_cost": "100",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo invoque une grande main qui écrase les ennemis. Inflige [À terre]. Utilisable jusqu'à 2 fois. Lorsque la compétence touche, l'Attaque de Jinwoo augmente de 5 % pendant 12 s (cumulable jusqu'à 2 fois).",
       "en": "Jinwoo summons a large hand that slams down on enemies."
     },
     "effects": [],
@@ -1874,7 +1876,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "the-commanders-touch--finisher",
@@ -1897,7 +1900,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo concentre une puissante énergie et crée une grande zone qui inflige des dégâts. [À terre] si la dernière attaque touche. Applique [Défense réduite]. Lors de l'enregistrement de cette rune de […]",
       "en": "Jinwoo gathers energy, then expands it across a wide area to inflict damage."
     },
     "effects": [],
@@ -1916,7 +1919,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "the-commanders-touch--absorption",
@@ -1939,7 +1943,7 @@
     "cooldown": 15.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Après avoir utilisé la compétence Toucher du maître, Jinwoo absorbe le mana de l'ennemi. Inflige [En l'air] si la première attaque touche ; [renverse] si la dernière touche. L'utilisateur récupère 10 % de ses PM et sa […]",
       "en": "After using The Commander's Touch skill, Jinwoo absorbs the enemy's mana."
     },
     "effects": [],
@@ -1958,7 +1962,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "the-commanders-touch",
@@ -2008,7 +2013,7 @@
     "cooldown": 20.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Après que le clone de Jinwoo a asséné des coups de poing de toutes parts, il apparaît devant l'ennemi pour porter le coup final. Dégâts : X % de l'Attaque + X % de la Défense de Jinwoo. Lumière, Bris tout-puissants. [Renverse] si la dernière attaque touche.",
       "en": "After Jinwoo's clone throws punches from all sides, it appears in front of the enemy to deliver the final blow."
     },
     "effects": [],
@@ -2027,7 +2032,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "armor-break--decimation",
@@ -2050,7 +2056,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo rassemble une énorme quantité d'énergie des flammes dans son poing droit pour porter un coup puissant. Feu, Bris tout-puissants. Inflige [En l'air] lorsque la compétence […]",
       "en": "Jinwoo gathers an extreme amount of energy of flame i nhis right fist and delivers a powerful blow."
     },
     "effects": [],
@@ -2069,7 +2075,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "armor-break--vacuum-wave",
@@ -2092,7 +2099,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Après avoir attiré les ennemis vers l'avant, Jinwoo les frappe. [Effet d'amplification : palier 1] Augmente de 3 % les dégâts finaux de la compétence [Onde de vide]. Dégâts de vent, Bris tout-puissants.",
       "en": "After pulling enemies in front, Jinwoo punches them down."
     },
     "effects": [],
@@ -2111,7 +2118,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "armor-break--iceberg",
@@ -2134,7 +2142,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo invoque un pilier de glace qui transperce les ennemis, puis le frappe pour propulser les ennemis en arrière. Dégâts d'eau, Bris tout-puissants. [Renverse] si la dernière attaque touche.",
       "en": "Jinwoo summons an Ice Pillar to pierce through enemies. After, he strikes the Ice Pillar to blow the enemies away."
     },
     "effects": [],
@@ -2153,7 +2161,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "armor-break",
@@ -2204,7 +2213,7 @@
     "cooldown": 20.0,
     "mp_cost": "150",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo entaille aléatoirement les ennemis en face de lui, puis porte un dernier coup de taille sur la même trajectoire. [Effet d'amplification : palier 1] Augmente de 3 % les dégâts finaux de la compétence [Double attaque descendante]. Dégâts de lumière.",
       "en": "Jinwoo randomly slashes at enemies in front of him, then slashes through the same trajectory once more."
     },
     "effects": [],
@@ -2223,7 +2232,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "sonic-stream--sonic-explosion",
@@ -2246,7 +2256,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Après avoir attaqué aléatoirement vers l'avant avec l'énergie des flammes, le chasseur saute en arrière et lance une dague qui fait exploser les ennemis. [Effet d'amplification : palier 3] Augmente de 9 % les dégâts finaux de la compétence [Explosion sonique].",
       "en": "Jinwoo slashes the area in front of himself in random motions with a flame energy-imbued dagger, then steps back and throws a dagger that detonates on impact to cause his enemies to explode."
     },
     "effects": [],
@@ -2265,7 +2275,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "sonic-stream--wind-shroud",
@@ -2288,7 +2299,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Jinwoo envoie aléatoirement de l'énergie de son épée devant lui. [Effet d'amplification : palier 2] Augmente de 6 % les dégâts finaux de la compétence [Voile venteux]. Dégâts de vent. Applique l'effet [Courant du vent] à chaque […]",
       "en": "Jinwoo creates flame-imbued energy blasts in front of himself with a sword."
     },
     "effects": [],
@@ -2307,7 +2318,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "sonic-stream--magnifying-slashes",
@@ -2330,7 +2342,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Attaque devant lui 3 fois avec des entailles toujours plus puissantes. [Effet d'amplification : palier 1] Augmente de 3 % les dégâts finaux de la compétence [Entailles croissantes]. Dégâts de ténèbres. Lorsque cette compétence est utilisée après […]",
       "en": "Jinwoo performs 3 increasingly powerful forward-facing slashes."
     },
     "effects": [],
@@ -2349,7 +2361,8 @@
     "verified_at": "2026-11-13",
     "game_version": null,
     "notes": "Valeurs au niveau min., par rareté Rare-Heroic-Legendary-Transcendent. Forme (rond/losange/triangle/pentagone) non indiquée par le wiki.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)"
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "sonic-stream",
@@ -2365,7 +2378,8 @@
       "sonic-stream--double-down",
       "sonic-stream--sonic-explosion",
       "sonic-stream--wind-shroud",
-      "sonic-stream--magnifying-slashes"
+      "sonic-stream--magnifying-slashes",
+      "rune--frozen-flow"
     ],
     "cooldown": null,
     "effects": [],
@@ -2465,7 +2479,7 @@
   {
     "id": "rune--breach",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "dagger-rush",
     "name": {
       "fr": "Brèche",
       "en": "Breach",
@@ -2483,7 +2497,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "Inflige des dégâts de vent et de Bris lourds. [En l'air] ; [Renverse] à la dernière attaque. Dégâts de coup critique reçus par la cible +2 % pendant 10 s (cumulable 3/5/7/8 fois). Dégâts +20/30/50/60 % contre une faiblesse élémentaire.",
+      "fr": "Jinwoo crée une zone qui immobilise les ennemis devant lui ; plusieurs dagues frappent ensuite au centre de la zone. Dégâts de vent, Bris lourds. Inflige [En l'air]. [Renverse] la cible si la dernière attaque touche.",
       "en": ""
     },
     "effects": [],
@@ -2515,7 +2529,9 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les emplacements de la compétence",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "rune--asura-kick",
@@ -2568,7 +2584,7 @@
   {
     "id": "rune--flowing-water-kick",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "piercing-thrust",
     "name": {
       "fr": "Coup de pied de l'eau circulante",
       "en": "Flowing Water Kick",
@@ -2586,7 +2602,7 @@
     "cooldown": 20,
     "mp_cost": "200",
     "text": {
-      "fr": "Inflige des dégâts d'eau. Dernière attaque : [renverse]. Chaque coup applique [Au fil de l'eau] : dégâts de la compétence +50/70/90/100 %, dégâts d'eau +10/16/22/25 %, 3 s, cumulable 3 fois.",
+      "fr": "Jinwoo se précipite sur l'ennemi, exécute un coup de pied rotatif puis l'écrase de son pied droit. Dégâts d'eau. [Renverse] la cible si la dernière attaque touche. Chaque coup applique l'effet [Au fil de l'eau].",
       "en": ""
     },
     "effects": [],
@@ -2618,12 +2634,14 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les emplacements de la compétence",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "rune--gale-kick",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "piercing-thrust",
     "name": {
       "fr": "Coup de pied de la bourrasque",
       "en": "Gale Kick",
@@ -2641,7 +2659,7 @@
     "cooldown": 20,
     "mp_cost": "200",
     "text": {
-      "fr": "Inflige des dégâts de vent et de Bris lourds. Dernière attaque : [En l'air]. Applique un [Bouclier] (PV max : 12/16/20/22 %, 5 s). Chaque coup : +1 % de dégâts infligés pendant 8 s, cumulable 12/16/20/22 fois.",
+      "fr": "Jinwoo déclenche une série de coups de pied à la vitesse de l'éclair. Dégâts de vent, Bris lourds. Applique [En l'air] si la dernière attaque touche.",
       "en": ""
     },
     "effects": [],
@@ -2674,12 +2692,14 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les emplacements de la compétence",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "rune--firestorm-kick",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "piercing-thrust",
     "name": {
       "fr": "Coup de pied de la tempête de feu",
       "en": "Firestorm Kick",
@@ -2697,7 +2717,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "Inflige des dégâts de feu. Dernière attaque : [En l'air]. Applique [Brûlure] (200/400/500/600 % de l'Attaque toutes les 3 s, 30 s, cumulable 1 fois). Dégâts de la compétence sur ennemis sous [Brûlure] : +100/140/180/200 %.",
+      "fr": "Après avoir accumulé l'énergie des flammes, Jinwoo assène un puissant coup de pied sauté qui transperce l'ennemi en ligne droite. Dégâts de feu. [En l'air] si la dernière attaque touche. Applique [Brûlure].",
       "en": ""
     },
     "effects": [],
@@ -2729,7 +2749,9 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les emplacements de la compétence",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "rune--void-punch",
@@ -2752,7 +2774,7 @@
     "cooldown": 8.0,
     "mp_cost": "100",
     "text": {
-      "fr": "Inflige des dégâts de ténèbres et de Bris moyens. [renverse]. Utilisable jusqu'à 3 fois. Dégâts de ténèbres subis par la cible +5/6/7/8 % pendant 12 s (cumulable 3 fois).",
+      "fr": "Jinwoo se fond dans les ténèbres, surgit instantanément au contact de l'ennemi et lui assène un coup d'une puissance écrasante. Dégâts de ténèbres, Bris moyens. [Renverse] la cible. Cette compétence peut être utilisée jusqu'à […]",
       "en": ""
     },
     "effects": [],
@@ -2780,12 +2802,13 @@
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
     "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
-    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune équipée sous la compétence parente"
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune équipée sous la compétence parente",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "rune--dispersion",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "dagger-rush",
     "name": {
       "fr": "Dispersion",
       "en": "Dispersion",
@@ -2803,7 +2826,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "Inflige des dégâts de ténèbres et de Bris tout-puissants. [En l'air]. Quand une attaque touche un ennemi sans jauge de bris : dégâts de Dispersion +90/160/240/280 % pendant 7 s.",
+      "fr": "Crée une zone devant Jinwoo qui immobilise les ennemis et s'étend en continu. Dégâts de ténèbres, Bris tout-puissants. Inflige [En l'air]. Lorsque l'attaque touche un ennemi sans jauge de bris, elle augmente les dégâts de […]",
       "en": ""
     },
     "effects": [],
@@ -2827,7 +2850,9 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les emplacements de la compétence",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "rune--tidal-surge",
@@ -2916,7 +2941,7 @@
   {
     "id": "rune--explosion",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "dagger-rush",
     "name": {
       "fr": "Explosion",
       "en": "Explosion",
@@ -2934,7 +2959,7 @@
     "cooldown": 20.0,
     "mp_cost": "200",
     "text": {
-      "fr": "Inflige des dégâts de feu et de Bris tout-puissants. [En l'air]. Applique un [Bouclier] (20/30/50/60 % des PV max, 5 s). Dégâts supplémentaires de 25/50/100/125 % de l'Attaque. Dégâts d'explosion +60/100/160/180 % tant que le Bouclier est actif.",
+      "fr": "Jinwoo crée une zone de dagues et attaque les ennemis. Dégâts de feu, Bris tout-puissants. Inflige [En l'air] si la dernière attaque touche.",
       "en": ""
     },
     "effects": [],
@@ -2971,7 +2996,9 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les emplacements de la compétence",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "rune--darkfall",
@@ -3066,7 +3093,7 @@
   {
     "id": "rune--darkness-obliteration-kick",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "piercing-thrust",
     "name": {
       "fr": "Foulage des ombres oblitérantes",
       "en": "Darkness Obliteration Kick",
@@ -3084,7 +3111,7 @@
     "cooldown": 20,
     "mp_cost": "200",
     "text": {
-      "fr": "Inflige des dégâts de ténèbres. Renverse la cible. Une attaque de noyau ou compétence de base active [Frappe de l'ombre] : dégâts de ténèbres de la compétence +5/9/13/15 %, dégâts aux boss et Élites +20/30/40/50 %, 15 s, cumulable (maximum non lu, texte tronqué). La compétence supprime les cumuls.",
+      "fr": "Jinwoo bondit dans les airs, invoque un clone, puis tous deux s'abattent simultanément sur l'ennemi. Dégâts de ténèbres. [Renverse] la cible. L'utilisation d'une attaque de noyau ou d'une compétence de base active l'effet [Frappe de […]",
       "en": ""
     },
     "effects": [],
@@ -3115,7 +3142,9 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (rune non possédée ou niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les emplacements de la compétence",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "rune--blitzstrike",
@@ -3312,7 +3341,7 @@
   {
     "id": "rune--frozen-flow",
     "kind": "rune",
-    "parent_skill": null,
+    "parent_skill": "sonic-stream",
     "name": {
       "fr": "Frimas fluide",
       "en": "Frozen Flow",
@@ -3330,7 +3359,7 @@
     "cooldown": 20.0,
     "mp_cost": "100",
     "text": {
-      "fr": "Inflige des dégâts d'eau. Dernière attaque : [En l'air]. La première attaque inflige [Gel] (3 s). Seconde attaque : taux de coup critique +100 %, dégâts de coup critique +60/100/160/180 %.",
+      "fr": "Jinwoo fonce sur l'ennemi à une vitesse fulgurante, le lacère et le gèle, puis l'accable sous une pluie de coups. Dégâts d'eau. Inflige [En l'air] si la dernière attaque touche. Si la première attaque de Frimas fluide touche, elle inflige [Gel].",
       "en": ""
     },
     "effects": [],
@@ -3356,7 +3385,9 @@
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "verified_at": "2026-11-16",
     "game_version": "1.5.16",
-    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue.",
+    "parent_skill_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) : rune dans les emplacements de la compétence",
+    "text_fr_source": "capture de l'écran « Équiper une compétence » fournie par Alexis le 16/11/2026 (client FR, 1.5.16) ; […] = texte tronqué à l'écran"
   },
   {
     "id": "rune--cold-ice",
@@ -3977,6 +4008,9 @@
     "rarity": null,
     "type": null,
     "runes": [
+      "rune--breach",
+      "rune--dispersion",
+      "rune--explosion",
       "rune--cold-ice"
     ],
     "cooldown": null,
@@ -4027,7 +4061,11 @@
     "rarity": null,
     "type": null,
     "runes": [
-      "rune--asura-kick"
+      "rune--gale-kick",
+      "rune--flowing-water-kick",
+      "rune--firestorm-kick",
+      "rune--asura-kick",
+      "rune--darkness-obliteration-kick"
     ],
     "cooldown": null,
     "effects": [],
