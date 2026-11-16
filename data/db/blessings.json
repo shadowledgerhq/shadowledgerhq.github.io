@@ -2345,14 +2345,31 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        [
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ]
+      ]
+    },
     "icon": "data/icons/blessings/spring-of-life.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
     "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "values_note": "Séries : PV récupérés/s (%) ; bonus supplémentaire si Vitalité ≥ 200.",
+    "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "devour",
@@ -2375,14 +2392,25 @@
     "flavor_en": "",
     "effects": [],
     "conditions": [],
-    "values_by_level": {},
+    "values_by_level": {
+      "values_by_rarity_rare_heroic_legendary_transcendent": [
+        [
+          0.2,
+          0.3,
+          0.4,
+          0.5
+        ]
+      ]
+    },
     "icon": "data/icons/blessings/devour.png",
     "source": "https://forum.netmarble.com/slv_en/view/14/109279",
     "verified_at": "2026-11-13",
     "game_version": "1.4.55",
     "notes": "Ajoutée au patch du 17/09/2026 (Netmarble : catégorie et raretés Rare→Transcendent). Effets non publiés dans les notes ni sur le wiki : à saisir depuis le jeu (capture). Rien d'inventé. Texte FR (API slagate) : la valeur affichée est celle de la rareté max ; l'API peut être plus récente que le wiki (ex. Irreversible Road : 36 % FR contre 24 % wiki).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "api_type": "survie"
+    "api_type": "survie",
+    "values_note": "Série : PV récupérés (%) quand une attaque touche ; recharge 1 s (fixe).",
+    "values_source": "captures « Codex de pierres de bénédiction » fournies par Alexis le 16/11/2026 (client FR, 1.5.16)"
   },
   {
     "id": "acrobat",
