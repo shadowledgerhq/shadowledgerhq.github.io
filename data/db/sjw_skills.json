@@ -2613,21 +2613,42 @@
     ],
     "type": null,
     "element": "fire",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de feu. Dernière attaque : [En l'air]. Applique [Brûlure] (200/400/500/600 % de l'Attaque toutes les 3 s, 30 s, cumulable 1 fois). Dégâts de la compétence sur ennemis sous [Brûlure] : +100/140/180/200 %.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        873.0,
+        1107.0,
+        1407.0,
+        1789.0
+      ],
+      "damage_bonus_vs_burn_pct_by_rarity": [
+        100,
+        140,
+        180,
+        200
+      ],
+      "burn_damage_pct_of_attack_per_3s_by_rarity": [
+        200,
+        400,
+        500,
+        600
+      ],
+      "burn_duration_s": 30,
+      "burn_max_stacks": 1
+    },
     "icon": "data/icons/sjw_skills/rune--firestorm-kick.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--void-punch",
@@ -2947,21 +2968,34 @@
     ],
     "type": null,
     "element": "light",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de lumière. Applique de l'Accumulation élémentaire moyenne. Applique [En l'air]. Les dégâts de Surcharge de la compétence de base de lumière augmentent de 5/15/25/30 % pendant 15 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        411.0,
+        511.0,
+        613.0,
+        664.0
+      ],
+      "light_basic_skill_overload_damage_bonus_pct_15s_by_rarity": [
+        5,
+        15,
+        25,
+        30
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--blitzstrike.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--quickstrike",
@@ -2981,21 +3015,34 @@
     ],
     "type": null,
     "element": "wind",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de vent. Applique de l'Accumulation élémentaire moyenne. Applique [En l'air]. Dégâts de la compétence sur cibles sous [Surcharge] de [Vent] : +40/60/80/100 %. Quand Jinwoo ou un allié inflige [Surcharge] de [Vent], la recharge est réinitialisée (20 s).",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        666.0,
+        819.0,
+        993.0,
+        1143.0
+      ],
+      "damage_bonus_vs_wind_overload_pct_by_rarity": [
+        40,
+        60,
+        80,
+        100
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--quickstrike.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--silent-strike",
@@ -3015,21 +3062,34 @@
     ],
     "type": null,
     "element": "dark",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts de ténèbres. Applique de l'Accumulation élémentaire moyenne. Applique [En l'air]. Les dégâts de l'attaque de noyau de ténèbres augmentent de 75/105/135/150 % pendant 15 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        403.0,
+        501.0,
+        602.0,
+        651.0
+      ],
+      "core_attack_dark_damage_bonus_pct_15s_by_rarity": [
+        75,
+        105,
+        135,
+        150
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--silent-strike.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--veiled-strike",
@@ -3049,21 +3109,34 @@
     ],
     "type": null,
     "element": "water",
-    "cooldown": null,
-    "mp_cost": null,
+    "cooldown": 20.0,
+    "mp_cost": "200",
     "text": {
-      "fr": "",
+      "fr": "Inflige des dégâts d'eau. Applique de l'Accumulation élémentaire moyenne. Applique [En l'air]. Les dégâts de coup critique d'eau augmentent de 15/25/35/40 % pendant 15 s.",
       "en": ""
     },
     "effects": [],
     "effects_text_en": "",
-    "values_by_level": {},
+    "values_by_level": {
+      "damage_pct_of_attack_by_rarity": [
+        580.0,
+        726.0,
+        889.0,
+        1035.0
+      ],
+      "water_crit_damage_bonus_pct_15s_by_rarity": [
+        15,
+        25,
+        35,
+        40
+      ]
+    },
     "icon": "data/icons/sjw_skills/rune--veiled-strike.png",
-    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "source": "captures « Codex de runes de compétence » fournies par Alexis le 16/11/2026 (client FR, 1.5.16) ; noms et icône : slagate",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "verified_at": "2026-11-13",
-    "game_version": null,
-    "notes": "Absente du wiki Fandom (page de juin). Noms FR/EN/KO/JA de l'API slagate ; compétence parente, effets et valeurs : à saisir (notes Netmarble ou jeu)."
+    "verified_at": "2026-11-16",
+    "game_version": "1.5.16",
+    "notes": "Absente du wiki. Valeurs par rareté (Rare, Héroïque, Légendaire, Transcendance), lues sur le Codex (niveau min. présumé : à vérifier). Compétence parente inconnue."
   },
   {
     "id": "rune--frozen-flow",
