@@ -245,6 +245,8 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
         ligne["player_ingame"] = principale.get("player_ingame")  # v4 : information seulement
     if mode == "gb":
         ligne["_degats"] = gb.somme_degats(choix)  # départage (retiré avant l'écriture)
+        ligne["_degats_exacts"] = all(r.get("damage") is not None and (r.get("detail") or {}).get("damage_exact", r.get("score_source") != "record")
+                                      for r in choix)        # v33 : dégâts contrôlés (somme Player's Score + Hunter Rank) ?
     detail = []
     for r in choix:
         d = {"video_id": r["video_id"], "published_at": iso_paris(r["published_at"]), "t": r["t"],
@@ -265,6 +267,9 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
     return ligne
 
 
+NOTE_EGALITE_DEGAT = "égalité départagée par un dégât non contrôlé"
+
+
 def ordonner(lignes, mode):
     """Runs classées par rang, puis runs rank null (§4.2, §5.1). GB : à RC égal, somme des dégâts (§4.1)."""
     signe = 1 if mode == "bot" else -1
@@ -273,6 +278,17 @@ def ordonner(lignes, mode):
         degats = -l.get("_degats", 0) if mode == "gb" else 0
         return (signe * l["score"]["total"], degats, l["_fin"], l["channel_id"])
 
+    if mode == "gb":        # v33 : un dégât non contrôlé ne départage jamais une égalité de RC (vote 5/3 du 17/11)
+        egaux = {}
+        for l in lignes:
+            if l["confidence"] == "sur":
+                egaux.setdefault(l["score"]["total"], []).append(l)
+        for groupe in egaux.values():
+            if len(groupe) > 1:
+                for l in groupe:
+                    if not l.get("_degats_exacts"):
+                        l["confidence"] = "a_verifier"
+                        l["notes"] = "; ".join(n for n in (l["notes"], NOTE_EGALITE_DEGAT) if n)
     classees = sorted((l for l in lignes if l["confidence"] == "sur"), key=cle)
     autres = sorted((l for l in lignes if l["confidence"] != "sur"), key=cle)
     for i, l in enumerate(classees, 1):
@@ -280,6 +296,7 @@ def ordonner(lignes, mode):
     for l in classees + autres:
         del l["_fin"]
         l.pop("_degats", None)
+        l.pop("_degats_exacts", None)
     return classees + autres
 
 

@@ -356,21 +356,39 @@ class Git:
 
     conflit_resolu = False          # v26 : un conflit sur data/ a été résolu automatiquement pendant ce passage (noté dans le rapport)
 
+    exports_deplaces = ()           # v33 : fichiers d'`exports/` du PC mis de côté dans `exports/_local/` pendant ce passage
+
     def _liberer_exports(self):
-        """v31 : fichiers NON suivis de `exports/` (Excel / PowerPoint régénérables) que `origin/main` contient aussi : supprimés avant la
-        fusion, sinon git refuse (« untracked working tree files would be overwritten », passage du 17/11). Retourne les fichiers retirés."""
+        """v33 : fichiers NON suivis de `exports/` (Excel / PowerPoint régénérables) que `origin/main` contient aussi : DÉPLACÉS dans
+        `exports/_local/` (ignoré par git) avant le pull / la fusion, sinon git refuse (« untracked working tree files would be
+        overwritten », passage du 17/11). Rien n'est supprimé. Noté dans le bloc du passage (`exports_deplaces`). Retourne les
+        fichiers déplacés (chemins d'origine)."""
         try:
             self._run("fetch", "origin", "main")
             locaux = [f for f in self._run("ls-files", "--others", "--exclude-standard", "exports").splitlines() if f.strip()]
             distants = set(self._run("ls-tree", "-r", "--name-only", "origin/main", "--", "exports").splitlines())
         except GitErreur:
             return []                                   # réseau coupé : le pull échouera de lui-même
-        retires = []
+        racine, deplaces = Path(self.racine), []
+        if any(f in distants for f in locaux):
+            try:        # ignoré par git même avant que le `.gitignore` du dépôt n'arrive sur le PC
+                excl = racine / ".git/info/exclude"
+                if "exports/_local/" not in (excl.read_text(encoding="utf-8") if excl.exists() else ""):
+                    excl.parent.mkdir(parents=True, exist_ok=True)
+                    with excl.open("a", encoding="utf-8") as fh:
+                        fh.write("\nexports/_local/\n")
+            except OSError:
+                pass
         for f in locaux:
-            if f in distants:
-                (Path(self.racine) / f).unlink(missing_ok=True)
-                retires.append(f)
-        return retires
+            if f in distants and not f.startswith("exports/_local/"):
+                cible = racine / "exports/_local" / Path(f).relative_to("exports")
+                if cible.exists():
+                    cible = cible.with_name(f"{cible.stem}.{int(time.time())}{cible.suffix}")
+                cible.parent.mkdir(parents=True, exist_ok=True)
+                shutil.move(str(racine / f), str(cible))
+                deplaces.append(f)
+        self.exports_deplaces = tuple(self.exports_deplaces) + tuple(deplaces)
+        return deplaces
 
     def _rebase(self):
         """pull --rebase ; en cas d'échec, le rebase est abandonné (pas d'état « rebase en cours » qui bloque la suite), puis
@@ -1140,6 +1158,12 @@ def semaine_du_passage(passage, instant):
     return courante if passage == "daily" else semaine_precedente(courante)
 
 
+def lignes_exports_deplaces(git):
+    """v33 : note du bloc quand des fichiers d'`exports/` du PC ont été mis de côté pour que le pull réussisse."""
+    f = tuple(getattr(git, "exports_deplaces", ()) or ())
+    return [f"- Exports du PC déplacés dans exports/_local/ pour le pull (git) : {len(f)} fichier(s) : " + ", ".join(f[:5])] if f else []
+
+
 def signaler_echec(passage, instant, cause, d=None, git=None, conflit_resolu=False):
     """Un passage qui n'aboutit pas (anti-bot, conflit git, JSON abîmé, crash, verrou refusé, passage interrompu) écrit quand même
     son bloc « Passage complet : non » + la cause dans `_rapport_pc.md` (jamais effacé) ; poussé si possible (v26, critère de gel
@@ -1149,6 +1173,7 @@ def signaler_echec(passage, instant, cause, d=None, git=None, conflit_resolu=Fal
     lignes = entete_etat(False, 0, 0, 0, [cause[:300]])
     if conflit_resolu or (git is not None and getattr(git, "conflit_resolu", False)):
         lignes.append("- Conflit git résolu automatiquement")
+    lignes += lignes_exports_deplaces(git)
     bloc = rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)
     try:          # `_rapport.md` : même en-tête qu'avant (le passage GitHub suivant le remplace par le dernier bloc du PC)
         chemin = f"runs/{week}/_rapport.md"
@@ -1390,6 +1415,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             lignes.append("- Type : relance automatique (ne compte pas pour le critère de gel n° 3)")
         if git is not None and getattr(git, "conflit_resolu", False):
             lignes.append("- Conflit git résolu automatiquement")
+        lignes += lignes_exports_deplaces(git)
         rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)      # v26 : bloc daté, jamais effacé, propre au PC
         ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes, lignes)
     rapport()

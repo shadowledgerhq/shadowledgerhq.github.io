@@ -61,6 +61,8 @@
 - **v32 écrite et codée (277 tests)** : `gb._rc_confirme_par_record` (RC `sûr` confirmé par le Personal Record, somme sautée, dégâts `damage_exact=false`, jamais de Player's Score déduit) ; zone `gb.zones.joueur` recalée (1080p) ; capture `docs/essais/ocr/nh2D7xZ7dOQ_zone_joueur_v32.png`. Recalcul : SlayOnLow 165 `sûr` rang 2. BOITE §1 : messages v31 et bilan passés en traité, nouveau message.
 - **Constat** : Final réel de nh2D = 15 763 121 797 048 (OCR 13,76T voté 6/7) ; Hunter Rank 5 et 6 mal lus. Zones `final`, `rang_5`, `rang_6` à recaler : en attente de la discussion 1.
 - Environnement d'essai : `pip install pytest opencv-python-headless` et `apt-get install tesseract-ocr` nécessaires dans le conteneur.
+## Fait (session 11, 17/11 — SPEC v33)
+- **v33 codée (285 tests)** : zones final/rang_5/rang_6, garde-fou du vote, exports déplacés dans `exports/_local/`, (c) HUD > RC. **Reste** : `rang_6` régresse sur awb-GlVIa7Q (251→751, 1 image sur 2) ; grille de zones à finir (scripts dans le scratchpad, non gardés), puis recaler et commiter.
 ## En cours
 - Subjugation POC : écran codé, jamais lu par le vrai OCR (v0tuXJNxudk à relancer avec `--garder-ocr` pour caler `ecrans.subjugation.cartes`).
 - Prochain : armes (icônes de la base manquantes, discussion 9), compétences POC (onglet à filmer), essai réel du RESULT BOT japonais (zones v27 en 720p du tri 4 : à vérifier, calées sur ~1150 px ; seuil de zone vide 8), fiabiliser les chiffres de stats (relecture croisée % / valeur). Reconnaissance d'artefacts : essayer d'autres vidéos BOT/POC avec les nouveaux masques ; collier (chaîne fine) et faux positifs 4 pièces à surveiller ; piste : préférence pour le set dominant du personnage.

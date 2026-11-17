@@ -192,6 +192,11 @@ def test_v31_export_non_suivi_du_pc_ne_bloque_plus_le_pull():
         g = pc.Git(pcw)
         g.tirer()
         assert (pcw / "exports/2026-11-12/classements.xlsx").read_text() == "distant"
+        assert (pcw / "exports/_local/2026-11-12/classements.xlsx").read_text() == "local"          # v33 : déplacé, pas supprimé
+        assert g.exports_deplaces == ("exports/2026-11-12/classements.xlsx",)
+        assert "exports/_local/" in pc.lignes_exports_deplaces(g)[0] and "1 fichier" in pc.lignes_exports_deplaces(g)[0]
+        assert pc.lignes_exports_deplaces(pc.Git(pcw)) == []
+        assert not [f for f in _git(pcw, "status", "--porcelain").splitlines() if "_local" in f]      # ignoré par git
         assert (pcw / "exports/2026-11-12/autre.xlsx").read_text() == "garde"
         assert (pcw / f"data/runs/{SEM}/_rapport_pc.md").read_text() == "bloc\n"
         assert g._liberer_exports() == []
