@@ -84,7 +84,7 @@
     "first_seen": "2026-11-13",
     "updated_at": "2026-11-15",
     "last_tri": 4,
-    "status": "termine",
+    "status": "en_cours",
     "modes": [
       "gb",
       "poc"
@@ -97,16 +97,12 @@
         1080
       ],
       "hud_suite": [],
-      "results_lus": [
-        [
-          252,
-          253
-        ]
-      ],
+      "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-16",
-      "tri4": "fait"
-    }
+      "tri4": "a_faire"
+    },
+    "relecture": "2026-11-17"
   },
   "Aqj1crEcrD4": {
     "week": "2026-11-12",
@@ -545,11 +541,11 @@
     "first_seen": "2026-11-13",
     "updated_at": "2026-11-17",
     "last_tri": 4,
-    "status": "termine",
+    "status": "en_cours",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 17,
     "pc": {
       "image_taille": [
@@ -559,15 +555,10 @@
       "hud_suite": [
         260
       ],
-      "results_lus": [
-        [
-          270,
-          312
-        ]
-      ],
+      "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-17",
-      "tri4": "fait",
+      "tri4": "a_faire",
       "sous_titres": "absent",
       "hud_amont": []
     },
@@ -828,7 +819,7 @@
     "first_seen": "2026-11-13",
     "updated_at": "2026-11-13",
     "last_tri": 1,
-    "status": "termine",
+    "status": "en_cours",
     "modes": [
       "gb"
     ],
@@ -840,16 +831,12 @@
         1080
       ],
       "hud_suite": [],
-      "results_lus": [
-        [
-          220,
-          279
-        ]
-      ],
+      "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-16",
-      "tri4": "fait"
-    }
+      "tri4": "a_faire"
+    },
+    "relecture": "2026-11-17"
   },
   "MJ2iz5TFmvM": {
     "week": "2026-11-12",
@@ -937,7 +924,7 @@
     "first_seen": "2026-11-13",
     "updated_at": "2026-11-13",
     "last_tri": 1,
-    "status": "termine",
+    "status": "en_cours",
     "modes": [
       "gb"
     ],
@@ -949,16 +936,12 @@
         1080
       ],
       "hud_suite": [],
-      "results_lus": [
-        [
-          20,
-          50
-        ]
-      ],
+      "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-16",
-      "tri4": "fait"
-    }
+      "tri4": "a_faire"
+    },
+    "relecture": "2026-11-17"
   },
   "NRFm25OqdUo": {
     "week": "2026-11-12",

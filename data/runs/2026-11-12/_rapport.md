@@ -1,4 +1,4 @@
-# Rapport — semaine 2026-11-12 — passage classement — 2026-11-17 02:37 (Paris)
+# Rapport — semaine 2026-11-12 — passage classement — 2026-11-17 08:54 (Paris)
 
 Dernier passage du PC (`_rapport_pc.md`, recopié) :
 
@@ -11,7 +11,7 @@ Dernier passage du PC (`_rapport_pc.md`, recopié) :
 - Durée du passage : 4 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 
-- Semaine : 60 en cours (dont 46 pour le PC), 30 terminée(s), 11 rejetée(s)
+- Semaine : 64 en cours (dont 50 pour le PC), 26 terminée(s), 11 rejetée(s)
 - Classements : bot 13, gb 7, hotm-gate-inconnue 4, poc 4
 
 ## À vérifier (26)
