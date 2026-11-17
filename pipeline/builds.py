@@ -449,7 +449,7 @@ def _hunters_par_bibliotheque(obs, images, zones_mode, banque, cfg):
 def _ombres_par_bibliotheque(obs, images, zones_mode, banque, cfg):
     """v33 : ombres reconnues par leur carte (`data/icons/shadows_cartes/<id>.png`, fournies par la discussion 9) : recadrage de chaque
     zone `shadows` de l'onglet personnages comparé aux cartes par points d'intérêt (SIFT + RANSAC, `portraits.apparier_cartes`,
-    seuil `portraits.min_corr_ombres`, défaut 25 : le bruit mesuré est ≤ 6, bonnes cartes 47 à 458). Une carte reconnue l'emporte sur la
+    seuil `portraits.min_corr_ombres`, défaut 20 (17/11 : carte greed recadrée par la discussion 9, 23 correspondances sur le BOT contre 0 pour les autres cartes) : le bruit mesuré est ≤ 6, bonnes cartes 47 à 458). Une carte reconnue l'emporte sur la
     lecture par icône (0,6 : peu fiable) ; note si elle la change. Jamais apprise automatiquement (l'identité vient de la base)."""
     import portraits as P
     zones = ((zones_mode or {}).get("personnages") or {}).get("shadows", {}).get("shadows") or []
@@ -460,7 +460,7 @@ def _ombres_par_bibliotheque(obs, images, zones_mode, banque, cfg):
         return
     w, h = base[0].size
     crops = {i + 1: base[0].crop((round(z[0] * w), round(z[1] * h), round(z[2] * w), round(z[3] * h))) for i, z in enumerate(zones)}
-    trouves, m = P.apparier_cartes(crops, cartes, cfg, "min_corr_ombres", 25)
+    trouves, m = P.apparier_cartes(crops, cartes, cfg, "min_corr_ombres", 20)
     if not trouves:
         return
     par_pos = {o.get("position"): o for o in obs.get("shadows") or []}

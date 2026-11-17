@@ -71,11 +71,11 @@ def test_sans_lecture_precise_rang_prudent_a_la_borne_haute():
 
 
 def test_lecture_precise_incompatible_est_un_desaccord_a_verifier():
-    r, _ = chrono_bot.reconcilier_video([prov("v", "UCX", 19.0, brut="19s"), prov("v", "UCX", 25.4, "miniature", "25.400")])
+    r, _ = chrono_bot.reconcilier_video([prov("v", "UCX", 19.0, brut="19s"), prov("v", "UCX", 25.437, "miniature", "25.437")])
     assert r["score"] == 19.0 and "titre/miniature en désaccord" in r["notes"] and r["_tri"] == 19.999
-    r, _ = chrono_bot.reconcilier_video([prov("v", "UCX", 19.558, brut="19.558"), prov("v", "UCX", 21.2, "miniature", "21.200")])
+    r, _ = chrono_bot.reconcilier_video([prov("v", "UCX", 19.558, brut="19.558"), prov("v", "UCX", 21.237, "miniature", "21.237")])
     assert r["score"] == 19.558 and "titre/miniature en désaccord" in r["notes"] and "_tri" not in r
-    r, _ = chrono_bot.reconcilier_video([prov("v", "UCX", 19.558, brut="19.558"), prov("v", "UCX", 19.9, "miniature", "19.900")])
+    r, _ = chrono_bot.reconcilier_video([prov("v", "UCX", 19.558, brut="19.558"), prov("v", "UCX", 19.912, "miniature", "19.912")])
     assert not any("désaccord" in n for n in r["notes"])          # moins de 1 s d'écart entre deux lectures précises
 
 
@@ -279,3 +279,15 @@ def test_miniature_seule_source_exige_trois_lectures(tmp_path, monkeypatch):
     titre = prov("g50", "UCX", 40.0, brut="40s")
     res = pc.traiter_miniature("g50", {**META, "video_id": "g50"}, None, CONFIG, [titre], {})
     assert [l["score_source"] for l in res] == ["titre", "miniature"]
+
+
+def test_chrono_fini_par_00_est_un_arrondi_a_verifier():
+    """Décision d'Alexis (17/11) : au BOT, un chrono de texte qui finit par 00 est un arrondi, à vérifier dans la vidéo."""
+    r, _ = chrono_bot.reconcilier_video([prov("v", "UCX", 19.9, brut="19.900")])
+    assert r["score"] == 19.9 and r["_tri"] == 19.999 and "chrono fini par 00 : arrondi probable, à vérifier dans la vidéo" in r["notes"]
+    r, _ = chrono_bot.reconcilier_video([prov("v", "UCX", 40.0, brut="40.000"), prov("v", "UCX", 39.97, "miniature", "39.970")])
+    assert r["score"] == 39.97 and "titre arrondi : 40.000" in r["notes"]          # 40.000 arrondi vers le haut : partie entière N − 1
+    r, _ = chrono_bot.reconcilier_video([prov("v", "UCX", 19.907, brut="19.907")])
+    assert "_tri" not in r                                                         # 19.907 : lecture précise
+    ecran = lec("e", "UCX", "bot", 20.0, score_source="debut-fin", t=5)
+    assert chrono_bot.reconcilier([ecran])[0] is ecran                              # un écran Results n'est jamais touché

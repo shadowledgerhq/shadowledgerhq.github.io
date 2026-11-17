@@ -9,6 +9,8 @@ miniature) :
       prudent` ; le score affiché reste celui qui a été lu (clé de tri dans `_tri`) ;
   (c) une lecture précise incompatible (hors de l'intervalle, ou deux lectures précises qui diffèrent d'au moins 1 s) : `a_verifier`, note
       `titre/miniature en désaccord` (noms des deux sources).
+(v34.1, décision d'Alexis) Un chrono BOT lu dans un texte qui finit par `00` (`19.900`, `40.000`) est un arrondi : traité comme une lecture
+au dixième ([19,900 ; 19,999]), note `chrono fini par 00 : arrondi probable, à vérifier dans la vidéo`. Ne vaut pas pour un écran Results.
 Fonctions pures, testées (`tests/test_v34.py`)."""
 import re
 import scores
@@ -16,6 +18,7 @@ import scores
 SOURCES = ("titre", "description", "sous-titres", "miniature")
 PRIORITE = {s: i for i, s in enumerate(SOURCES)}
 NOTE_RANG_PRUDENT = "chrono incomplet : rang prudent"
+NOTE_00 = "chrono fini par 00 : arrondi probable, à vérifier dans la vidéo"
 ARRONDI = {"titre": "titre arrondi", "description": "description arrondie", "sous-titres": "sous-titres arrondis",
            "miniature": "miniature arrondie"}
 _RE_SCORE = re.compile(r"^score provisoire \((titre|description|sous-titres|miniature)\) : (.+)$")
@@ -33,8 +36,9 @@ def _lecture_brut(source, brut, plage=None):
     for c in scores.chronos(brut or ""):
         if plage and not plage[0] <= c["valeur"] <= plage[1]:
             continue
-        lo, hi = bornes(c["valeur"], c["decimales"])
-        return {"source": source, "brut": c["brut"], "valeur": c["valeur"], "lo": lo, "hi": hi, "precis": lo == hi}
+        arrondi00 = c["decimales"] == 3 and round(c["valeur"] * 1000) % 100 == 0       # v34.1 : `19.900`, `40.000` = arrondi au dixième
+        lo, hi = bornes(c["valeur"], 1 if arrondi00 else c["decimales"])
+        return {"source": source, "brut": c["brut"], "valeur": c["valeur"], "lo": lo, "hi": hi, "precis": lo == hi, "arrondi00": arrondi00}
     return None
 
 
@@ -115,6 +119,8 @@ def reconcilier_video(runs):
         _noter(out, f"{principale['source']}/{precises[0]['source']} en désaccord")
     out["_tri"] = principale["hi"]                                    # (b) rang prudent
     _noter(out, NOTE_RANG_PRUDENT)
+    if principale.get("arrondi00"):
+        _noter(out, NOTE_00)
     return out, ecartees
 
 

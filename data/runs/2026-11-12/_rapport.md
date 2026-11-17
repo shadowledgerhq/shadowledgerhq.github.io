@@ -1,4 +1,4 @@
-# Rapport — semaine 2026-11-12 — passage classement — 2026-11-17 11:58 (Paris)
+# Rapport — semaine 2026-11-12 — passage classement — 2026-11-17 14:33 (Paris)
 
 Dernier passage du PC (`_rapport_pc.md`, recopié) :
 
