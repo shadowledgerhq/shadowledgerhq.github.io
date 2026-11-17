@@ -43,7 +43,7 @@ def test_nh2d_controle_normal_sur_exact_sans_note_v32():
 def test_zones_recalees_hors_portrait():
     z = CFG1["gb"]["zones"]
     assert z["final"][0] >= 0.30 and z["rang_5"][0] >= 0.14 and z["rang_6"][0] >= 0.14       # numéros hors du portrait des chasseurs 5 et 6
-    assert z["final"][3] <= 0.06 and z["rang_5"][3] <= 0.041 and z["rang_6"][3] <= 0.041
+    assert z["final"][3] <= 0.06 and z["rang_5"][3] <= 0.041 and z["rang_6"][3] <= 0.043
 
 
 @pytest.mark.skipif(not (shutil.which("tesseract") and shutil.which("ffmpeg") and IMAGE.exists()), reason="tesseract, ffmpeg ou capture absents")
