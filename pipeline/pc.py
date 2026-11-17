@@ -356,10 +356,27 @@ class Git:
 
     conflit_resolu = False          # v26 : un conflit sur data/ a été résolu automatiquement pendant ce passage (noté dans le rapport)
 
+    def _liberer_exports(self):
+        """v31 : fichiers NON suivis de `exports/` (Excel / PowerPoint régénérables) que `origin/main` contient aussi : supprimés avant la
+        fusion, sinon git refuse (« untracked working tree files would be overwritten », passage du 17/11). Retourne les fichiers retirés."""
+        try:
+            self._run("fetch", "origin", "main")
+            locaux = [f for f in self._run("ls-files", "--others", "--exclude-standard", "exports").splitlines() if f.strip()]
+            distants = set(self._run("ls-tree", "-r", "--name-only", "origin/main", "--", "exports").splitlines())
+        except GitErreur:
+            return []                                   # réseau coupé : le pull échouera de lui-même
+        retires = []
+        for f in locaux:
+            if f in distants:
+                (Path(self.racine) / f).unlink(missing_ok=True)
+                retires.append(f)
+        return retires
+
     def _rebase(self):
         """pull --rebase ; en cas d'échec, le rebase est abandonné (pas d'état « rebase en cours » qui bloque la suite), puis
         le conflit sur data/ est résolu automatiquement (`_resoudre_conflit`) : version distante pour les fichiers du passage
         GitHub, version du PC pour les tris 3-4. Une seule tentative ; si elle échoue, GitErreur."""
+        self._liberer_exports()
         essai = 0
         while True:
             try:
@@ -391,6 +408,7 @@ class Git:
         locale = self._run("rev-parse", "HEAD").strip()
         try:
             self._run("fetch", "origin", "main")
+            self._liberer_exports()
             base = self._run("merge-base", locale, "origin/main").strip()
             changes = [c for c in self._run("diff", "--name-only", base, locale).splitlines() if c.strip()]
             self._run("merge", "-X", "theirs", "--no-edit", "-m", "données: conflit git résolu automatiquement (PC)", "origin/main")

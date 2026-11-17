@@ -165,3 +165,33 @@ def test_v28_pull_reessaye_quand_le_reseau_coupe():
     except pc.GitErreur as e:
         assert "resolve host" in str(e)
     assert pauses == [30, 90, 180] and g.appels.count("pull") == 4
+
+
+def test_v31_export_non_suivi_du_pc_ne_bloque_plus_le_pull():
+    """Passage du 17/11 : `exports/…/classements.xlsx` non suivi sur le PC, poussé entre-temps dans `origin/main` -> git refusait de
+    l'écraser. Le fichier régénérable est retiré avant la fusion ; les autres fichiers non suivis ne sont jamais touchés."""
+    with tempfile.TemporaryDirectory() as t:
+        t = Path(t)
+        _git(t, "init", "-q", "--bare", "-b", "main", "r.git")
+        for nom in ("pcw", "gh"):
+            _git(t, "clone", "-q", "r.git", nom)
+            for k, v in (("user.email", "a@b"), ("user.name", "t")):
+                _git(t / nom, "config", k, v)
+        pcw, gh = t / "pcw", t / "gh"
+        Donnees(gh).ecrire("processed.json", {})
+        _git(gh, "checkout", "-q", "-b", "main")
+        _git(gh, "add", "."); _git(gh, "commit", "-qm", "init"); _git(gh, "push", "-q", "origin", "main")
+        _git(pcw, "pull", "-q", "origin", "main")
+        (gh / "exports/2026-11-12").mkdir(parents=True)
+        (gh / "exports/2026-11-12/classements.xlsx").write_text("distant")
+        _git(gh, "add", "."); _git(gh, "commit", "-qm", "export"); _git(gh, "push", "-q", "origin", "main")
+        (pcw / "exports/2026-11-12").mkdir(parents=True)
+        (pcw / "exports/2026-11-12/classements.xlsx").write_text("local")
+        (pcw / "exports/2026-11-12/autre.xlsx").write_text("garde")                      # non suivi et absent du distant : jamais touché
+        Donnees(pcw).ecrire(f"runs/{SEM}/_rapport_pc.md", "bloc\n")                      # travail du PC non commité
+        g = pc.Git(pcw)
+        g.tirer()
+        assert (pcw / "exports/2026-11-12/classements.xlsx").read_text() == "distant"
+        assert (pcw / "exports/2026-11-12/autre.xlsx").read_text() == "garde"
+        assert (pcw / f"data/runs/{SEM}/_rapport_pc.md").read_text() == "bloc\n"
+        assert g._liberer_exports() == []
