@@ -33,9 +33,9 @@
   ],
   "a-923ClD9Rc": [
     [
-      "durée = chrono ± 0,5 s",
+      "durée − temps sans HUD = chrono ± 0,5 s",
       false,
-      "durée 91.5 s, chrono 19.558 s, écart +71.94 s"
+      "durée 91.5 s − sans HUD 20.0 s = 71.5 s, chrono 19.558 s, écart +51.94 s"
     ],
     [
       "fin avant la composition",
@@ -45,7 +45,7 @@
     [
       "≥ 1 événement SJW",
       true,
-      "16 événement(s)"
+      "5 événement(s)"
     ],
     [
       "≥ 1 événement par chasseur actif",
