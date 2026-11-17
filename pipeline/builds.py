@@ -90,22 +90,23 @@ def elements_attendus(mode, regles, hunter_mode, cfg):
         elif hunter_mode is None:
             plafonds.append("hunter_mode inconnu")
             sjw_regle = False
+    def etat_regle(cle):
+        """v5 : `true` -> attendu, `false` -> interdit (None), `null`/absent -> inconnu (facultatif, jamais d'alerte « interdit »)."""
+        v = None if r is None else r.get(cle)
+        return "fac" if v is None else (True if v else None)
+
     if sjw_possible:
-        sjw_on = bool(r and r.get("sjw")) if r is not None else None
-        if r is None or not sjw_regle:
-            etat = "fac"
-        else:
-            etat = True if sjw_on else None
+        etat = "fac" if not sjw_regle else etat_regle("sjw")
         for k in CLES_SJW:
             exp[k] = etat
         if etat is True:
             exp["sjw_stats"] = stats
-            exp["sjw_skills"] = True if r.get("sjw_skills") else None
-            exp["blessings"] = True if r.get("blessings") else None
+            exp["sjw_skills"] = etat_regle("sjw_skills")
+            exp["blessings"] = etat_regle("blessings")
         elif etat == "fac":
             exp["sjw_stats"] = "fac"
     for k, cle_regle in (("shadows", "shadows"), ("successor", "successor")):
-        exp[k] = "fac" if r is None else (True if r.get(cle_regle) else None)
+        exp[k] = etat_regle(cle_regle)
     if mode == "poc":
         exp["subjugation_support"] = "fac"
     if mode == "hotm":
@@ -292,6 +293,13 @@ def construire_build(ctx, obs, regles, cfg, db):
             break
     for k in sorted(set(interdits)):
         alertes.append(f"élément interdit détecté : {k}")
+    element = ctx.get("element")             # v5 : repris de `runs_detail[i].element` (étape 1), jamais lu par l'étape 2
+    if element and mode in ("poc", "gb"):
+        vus = Counter(db.get("hunters", {}).get(h["id"], {}).get("element") for h in hunters if h["id"])
+        vus.pop(None, None)
+        premiers = vus.most_common(2)
+        if premiers and (len(premiers) == 1 or premiers[0][1] > premiers[1][1]) and premiers[0][0] != element:
+            alertes.append("élément de la run incohérent")
     # --- ids inconnus (erreur de contrôle)
     erreurs = []
 
@@ -367,7 +375,7 @@ def construire_build(ctx, obs, regles, cfg, db):
         "gate": ctx.get("gate"), "hunter_mode": hunter_mode, "rank": ctx.get("rank"),
         "line_provisional": bool(ctx.get("line_provisional")), "provisional_rank": ctx.get("provisional_rank"), "player": ctx.get("player"),
         "channel_id": ctx.get("channel_id"), "video_id": ctx.get("video_id"), "t_result": ctx.get("t_result"),
-        "t_composition": obs.get("t_composition"), "team": ctx.get("team"),
+        "t_composition": obs.get("t_composition"), "team": ctx.get("team"), "element": ctx.get("element"),
         "rules": {"week": ctx["week"], **{k: (regles or {}).get(k) for k in ("sjw", "sjw_skills", "blessings", "shadows", "successor")}} if regles else None,
         "status": statut, "confidence": confiance, "sjw": sjw, "hunters": hunters,
         "set_bonuses": {**({"sjw": _bonus_sets(sjw["artifacts"], db)} if sjw else {}),
@@ -405,13 +413,20 @@ def _zones_cartes(zones_mode):
     return {int(k.split("_")[1]): v["hunter_face"] for k, v in pers.items() if k.startswith("hunter_") and v.get("hunter_face")}
 
 
+def _retirer_non_reconnu(obs, owner, element, slot=None):
+    obs["unmatched"] = [u for u in obs.get("unmatched") or []
+                        if not (u.get("owner") == owner and u.get("element") == element and u.get("slot") == slot)]
+
+
 def _hunters_par_bibliotheque(obs, images, zones_mode, banque, cfg):
-    """Chasseur sans identité : on compare sa carte (points d'intérêt) aux cartes apprises (`data/icons/hunters_cartes/`, `portraits.py`)."""
+    """Cartes de référence (`data/icons/hunters_cartes/`, `portraits.py`), prioritaires sur l'icône (SPEC v5 §2.1) : nom écrit
+    (`via_portrait`, écran de stats) > carte > icône. Une carte reconnue l'emporte sur l'icône lue ; note `hunter_N reconnu par sa
+    carte, icône lue : <id>`. Sans carte ni nom : l'icône (ou `unmatched`)."""
     import portraits as P
-    sans = [h for h in obs["hunters"] if not h.get("id") and h.get("position")]
+    candidats = [h for h in obs["hunters"] if h.get("position") and not h.get("via_portrait")]
     base = (images.get("personnages") or [])[:1]
     zones = _zones_cartes(zones_mode)
-    if not sans or not base or not zones:
+    if not candidats or not base or not zones:
         return
     cartes = P.charger_cartes(banque.dossier)
     if not cartes:
@@ -419,11 +434,13 @@ def _hunters_par_bibliotheque(obs, images, zones_mode, banque, cfg):
     pos = sorted(zones)
     crops = dict(zip(pos, P.decouper_cartes(base[0], [zones[p] for p in pos], cfg)))
     trouves, m = P.apparier_cartes(crops, cartes, cfg)
-    for h in sans:
+    for h in candidats:
         ident = trouves.get(h.get("position"))
-        if ident:
+        if ident and h.get("id") != ident:
+            avant = h.get("id")
             h["id"] = ident
-            obs["notes"].append(f"chasseur {ident} reconnu par sa carte apprise (position {h['position']}, {m[h['position']][ident]} correspondances)")
+            _retirer_non_reconnu(obs, f"hunter_{h['position']}", "hunters")
+            obs["notes"].append(f"hunter_{h['position']} reconnu par sa carte, icône lue : {avant or 'aucune'} ({m[h['position']][ident]} correspondances)")
 
 
 def _ombres_par_bibliotheque(obs, images, zones_mode, banque, cfg):
@@ -453,8 +470,8 @@ def _ombres_par_bibliotheque(obs, images, zones_mode, banque, cfg):
         if o.get("id") != ident:
             avant = o.get("id")
             o["id"] = ident
-            obs["notes"].append(f"ombre {ident} reconnue par sa carte (position {pos}, {m[pos][ident]} correspondances)"
-                                + (f", icône lue : {avant}" if avant else ""))
+            _retirer_non_reconnu(obs, "shadows", "shadows", pos - 1)
+            obs["notes"].append(f"shadow_{pos} reconnu par sa carte, icône lue : {avant or 'aucune'} ({m[pos][ident]} correspondances)")
     obs["shadows"] = sorted(obs["shadows"], key=lambda o: o.get("position") or 0)
 
 
@@ -672,6 +689,7 @@ def contextes(nom_mode, ligne, week):
                "line_provisional": bool(ligne.get("line_provisional")), "provisional_rank": ligne.get("provisional_rank"),
                "player": ligne.get("player"), "channel_id": ligne.get("channel_id"),
                "video_id": d.get("video_id") or ligne.get("video_id"), "t_result": d.get("t"), "team": d.get("team"),
+               "element": d.get("element"),
                "published_at": d.get("published_at") or ligne.get("published_at"), "score": ligne.get("score"), "lang": ligne.get("lang")}
 
 
@@ -730,8 +748,46 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
             if not chemin.exists() or chemin.read_text(encoding="utf-8") != texte:
                 chemin.write_text(texte, encoding="utf-8")
             builds.append(b)
+    for nom_mode, ligne in selection:        # v33 : build d'une run qui n'existe plus dans la ligne (ex. nh2D : 2 runs du Personal Record -> 1 run filmée)
+        n = len(ligne.get("runs_detail") or [{}])
+        for f in (racine / "data" / "builds" / week / nom_mode).glob(f"{ligne['run_id']}-*.json"):
+            suffixe = f.stem[len(ligne["run_id"]) + 1:]
+            if suffixe.isdigit() and int(suffixe) > n:
+                f.unlink()
+    for b in controler_chasseurs_communs(builds):            # v5 : contrôle entre les builds d'une même ligne
+        f = racine / "data" / "builds" / week / (b.get("dossier") or b["mode"]) / f"{b['run_id']}-{b['run_index']}.json"
+        f.write_text(json.dumps(b, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     ecrire_rapport(week, builds, racine)
     return builds
+
+
+NOTE_COMMUN = "chasseur commun aux 2 runs : "
+
+
+def controler_chasseurs_communs(builds):
+    """SPEC v5 §2.3 : POC et GB, deux builds de la même ligne (2 groupes / 2 équipes) avec un chasseur en commun : le jeu l'interdit
+    (erreur de rattachement ou de lecture) -> `a_verifier` sur les deux builds, note `chasseur commun aux 2 runs : <id>`. Idempotent ;
+    retourne les builds modifiés."""
+    par_ligne = {}
+    for b in builds:
+        if b.get("mode") in ("poc", "gb"):
+            par_ligne.setdefault((b.get("dossier"), b["run_id"]), []).append(b)
+    modifies = []
+    for liste in par_ligne.values():
+        for i, a in enumerate(liste):
+            for b in liste[i + 1:]:
+                if a.get("run_index") == b.get("run_index"):
+                    continue
+                communs = sorted({h["id"] for h in a["hunters"] if h.get("id")} & {h["id"] for h in b["hunters"] if h.get("id")})
+                for ident in communs:
+                    for x in (a, b):
+                        note = NOTE_COMMUN + ident
+                        if note not in x["notes"].split("; "):
+                            x["notes"] = "; ".join(n for n in (x["notes"], note) if n)
+                            x["confidence"] = "a_verifier"
+                            if x not in modifies:
+                                modifies.append(x)
+    return modifies
 
 
 def ecrire_crops(b, obs, racine, chemin_build, taille=96):
@@ -810,6 +866,13 @@ def rapport(week, builds, fichiers_pptx=()):
         L.append("- À vérifier : " + (", ".join(f"{b['run_id']}-{b['run_index']} ({b['notes']})" for b in av) if av else "aucun"))
         um = Counter(u["element"] for b in bm for u in b["unmatched"])
         L.append("- Icônes non reconnues : " + (", ".join(f"{k} ×{v}" for k, v in sorted(um.items())) if um else "aucune"))
+        chemins = {}
+        for b in bm:        # v5 : recadrages non reconnus par catégorie (chemins), pour la discussion 9
+            for u in b["unmatched"]:
+                if u.get("crop"):
+                    chemins.setdefault(u["element"], []).append(u["crop"])
+        for k in sorted(chemins):
+            L.append(f"  - {k} : " + ", ".join(dict.fromkeys(chemins[k])))
         inter = [f"{b['run_id']}-{b['run_index']} : {n}" for b in bm for n in b["notes"].split("; ") if n.startswith("élément interdit")]
         L.append("- Éléments interdits détectés : " + ("; ".join(inter) if inter else "aucun"))
         err = [f"{b['run_id']}-{b['run_index']} : {e}" for b in bm for e in b.get("erreurs", [])]

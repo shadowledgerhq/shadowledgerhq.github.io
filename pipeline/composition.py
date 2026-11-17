@@ -381,6 +381,35 @@ def _positions_portraits(images, ecrans, ctx, cfg, journal):
         return []
 
 
+MODES_AUTO = ("poc", "hotm", "hotm_sans_sjw", "gb")       # BOT : zones déjà calibrées
+
+
+def sauver_images_auto(racine, mode, vid, images, t, cfg, journal=None):
+    """SPEC v5 §5 : enregistre les images de composition extraites des vidéos du top 10 dans
+    `docs/essais/composition/auto/<mode>/<video_id>_<onglet>_<t>.png` : 1 par onglet (la plus grande), jamais écrasée. La discussion 2
+    y définit les zones des onglets POC 2-5, HOTM et GB. Réduit à `extraction.auto_largeur_max` px de large (défaut 1920) et plafonné à
+    `extraction.auto_max_par_onglet` images par (mode, onglet) (défaut 3, poids du dépôt). Retourne les chemins écrits."""
+    e = cfg.get("extraction") or {}
+    if mode not in MODES_AUTO or not e.get("sauver_auto", True):
+        return []
+    dossier = Path(racine) / "docs" / "essais" / "composition" / "auto" / mode
+    ecrits = []
+    for onglet, ims in sorted((images or {}).items()):
+        if not ims or list(dossier.glob(f"{vid}_{onglet}_*.png")) or len(list(dossier.glob(f"*_{onglet}_*.png"))) >= e.get("auto_max_par_onglet", 3):
+            continue
+        im = max(ims, key=lambda i: i.size[0] * i.size[1]).convert("RGB")
+        lmax = e.get("auto_largeur_max", 1920)
+        if im.size[0] > lmax:
+            im = im.resize((lmax, round(im.size[1] * lmax / im.size[0])))
+        dossier.mkdir(parents=True, exist_ok=True)
+        f = dossier / f"{vid}_{onglet}_{int(t[0]) if t else 0}.png"
+        im.save(f, optimize=True)
+        ecrits.append(f)
+    if ecrits and journal:
+        journal(f"  composition {vid} : {len(ecrits)} image(s) gardée(s) dans docs/essais/composition/auto/{mode}/")
+    return ecrits
+
+
 def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
     """Fournisseur d'images pour `builds.calculer(fournisseur=…)` : télécharge chaque vidéo une fois (`outils.telecharger`),
     extrait 1 image / `pas_s` s de 0 à `t_result` (`outils.images`), garde les images de l'écran de composition. Retourne
@@ -419,6 +448,12 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                         if fin:                                  # onglet absent à 0,5 s : on garde le choix à pas_s
                             cache[cle] = ({**cache[cle][0], **fin}, fenetre, None, ecrans)
                     ecrans.extend(_positions_portraits(cache[cle][0], ecrans, ctx, cfg, journal))
+                    try:         # v5 : images gardées pour que la discussion 2 définisse les zones (échec sans conséquence)
+                        from donnees import RACINE
+                        mode_auto = "hotm_sans_sjw" if ctx.get("mode") == "hotm" and ctx.get("hunter_mode") is True else ctx.get("mode")
+                        sauver_images_auto(RACINE, mode_auto, vid, cache[cle][0], cache[cle][1], cfg, journal)
+                    except OSError:
+                        pass
                     if ocr_debug:                    # diagnostic (--garder-ocr) : images de composition retenues, pour définir les zones des onglets
                         Path(ocr_debug).mkdir(parents=True, exist_ok=True)
                         for onglet, ims in cache[cle][0].items():

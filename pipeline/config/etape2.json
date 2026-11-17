@@ -1378,6 +1378,26 @@
    "fr": "Groupe",
    "en": "Group"
   },
+  "element_fire": {
+   "fr": "Feu",
+   "en": "Fire"
+  },
+  "element_water": {
+   "fr": "Eau",
+   "en": "Water"
+  },
+  "element_wind": {
+   "fr": "Vent",
+   "en": "Wind"
+  },
+  "element_light": {
+   "fr": "Lumière",
+   "en": "Light"
+  },
+  "element_dark": {
+   "fr": "Ténèbres",
+   "en": "Dark"
+  },
   "porte": {
    "fr": "Porte",
    "en": "Gate"

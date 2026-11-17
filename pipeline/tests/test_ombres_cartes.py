@@ -27,7 +27,7 @@ def _lancer(mode, capture, obs=None, dossier=RACINE / "data/icons"):
 def test_poc_beste_et_greed_reconnus_position_3_inconnue():
     obs = _lancer("poc", "poc_personnages_ja")
     assert [(o["position"], o["id"]) for o in obs["shadows"]] == [(1, "beste"), (2, "greed")]
-    assert any("ombre greed reconnue par sa carte (position 2" in n for n in obs["notes"])
+    assert any("shadow_2 reconnu par sa carte, icône lue : aucune" in n for n in obs["notes"])
 
 
 def test_bot_beste_et_greed_reconnus():

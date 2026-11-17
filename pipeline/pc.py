@@ -500,6 +500,8 @@ class Git:
         chemins = ["data"]
         if (Path(self.racine) / "docs" / "essais" / "ocr" / "libelles_inconnus").exists():
             chemins.append("docs/essais/ocr/libelles_inconnus")          # v24 : écrans de score à libellés inconnus
+        if (Path(self.racine) / "docs" / "essais" / "composition" / "auto").exists():
+            chemins.append("docs/essais/composition/auto")               # v33 : images de composition extraites (zones à définir)
         self._run("add", *chemins)
         if not self._run("status", "--porcelain", *chemins).strip():
             if self.conflit_resolu:                      # v26 : fusion locale (conflit résolu) pas encore poussée
