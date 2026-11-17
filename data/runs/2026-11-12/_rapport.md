@@ -1,13 +1,14 @@
-# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-16 22:36 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-17 00:45 (Paris)
 
+- Top 10 couvert : non (31 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
-- Vidéos traitées ce passage : 15 · en_cours restantes : 70 (dont 42 à traiter par le PC)
+- Vidéos traitées ce passage : 15 · en_cours restantes : 60 (dont 31 à traiter par le PC)
 - Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
-- Durée du passage : 31 min
-- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
-- Conflit git résolu automatiquement
+- Durée du passage : 59 min
+- Relance automatique : 17/11/2026 02:45 (une seule fois par soir)
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 
-- Semaine : 70 en cours (dont 49 pour le PC), 20 terminée(s), 11 rejetée(s)
+- Semaine : 60 en cours (dont 45 pour le PC), 30 terminée(s), 11 rejetée(s)
 - Classements : bot 13, gb 7, hotm-gate-inconnue 4, poc 4
 
 ## À vérifier (25)
@@ -15,7 +16,7 @@
 - bot · aaaaaaaaaaaa · 19.558 · a-923ClD9Rc · score provisoire (titre) : 19.558; semaine confirmée (titre); boss non contrôlé
 - bot · 𐐂露依Rui ルイ 𐐚 · 19.754 · Lt84IhMjBvM · score provisoire (titre) : 19.754s; semaine confirmée (titre); boss non contrôlé
 - bot · PADWAE · 19.9 · 5MI-RLj7FSk · score provisoire (titre) : 19.9s; boss non contrôlé
-- bot · MOBgame · 20.0 · nwP8dSSfo1o · score provisoire (description) : 20秒; boss non contrôlé
+- bot · MOBgame · 20.331 · nwP8dSSfo1o · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · SNG · 23.223 · tOzRUlmZ2JI · score provisoire (titre) : 23;223s; boss non contrôlé
 - bot · 리히온 · 28.0 · uwJfPTJI8ZE · score provisoire (titre) : 28초; boss non contrôlé
 - bot · LATOYA Gaming · 28.349 · ysfa3H023n8 · score provisoire (titre) : 28.349; boss non contrôlé
@@ -47,15 +48,13 @@
 - rien
 
 ## Erreurs et alertes
-- Aqj1crEcrD4 : 429 / anti-bot YouTube, reportée au prochain passage
+- RVkSt2bWn_U : 429 / anti-bot YouTube, reportée au prochain passage
 - 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
-- 38 vidéo(s) reportée(s) pour les images (limite 15)
+- 27 vidéo(s) reportée(s) pour les images (limite 15)
 - Aqj1crEcrD4 : durée PT35M2S hors limite (30 min), images non traitées
 - SDMrcxG50LI : durée PT37M45S hors limite (30 min), images non traitées
 - K4786mdlgXg : durée PT44M26S hors limite (30 min), images non traitées
 - PawKtXDQjdc : durée PT33M44S hors limite (30 min), images non traitées
-- 09SuKtzmeK0 : libellés pt-BR inconnus (aucun écran GB reconnu)
-- FT-lF1TdPIs : libellés en inconnus (aucun écran GB reconnu)
-- LcTotNDEP7o : libellés pt-BR inconnus (aucun écran GB reconnu)
-- 70 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- cfZRPdtAGmg : libellés ko inconnus (aucun écran GB reconnu)
+- 60 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- passage incomplet : anti-bot ; relance : 17/11/2026 02:45 (une seule fois par soir)

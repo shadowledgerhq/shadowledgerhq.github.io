@@ -153,31 +153,6 @@
     ]
   },
   {
-    "video_id": "nwP8dSSfo1o",
-    "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
-    "channel_title": "MOBgame",
-    "published_at": "2026-11-15T02:21:12Z",
-    "lang": "ja",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 20.0,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : 20秒"
-    ]
-  },
-  {
     "video_id": "SdiCUFy5FbE",
     "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
     "channel_title": "SNG",
@@ -3166,6 +3141,260 @@
       "lecture fusionnée (10 images)",
       "conflit de lecture : rage_count",
       "conflit de lecture : hunter_rank_2"
+    ]
+  },
+  {
+    "video_id": "2AJljDc_nN4",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-16T05:00:22Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 480,
+    "stage": null,
+    "team": null,
+    "score": 44,
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": false,
+      "player_score": 42083645420136,
+      "hunter_ranks": [
+        1016702879045,
+        539904032806,
+        463343372160,
+        null,
+        null,
+        null
+      ],
+      "hunter_ranks_lus": 3,
+      "n_images": 7,
+      "successor_score": null,
+      "successeur_present": false,
+      "duree_video_s": 544,
+      "votes": {
+        "player_score": [
+          [
+            42083645420136,
+            7
+          ]
+        ],
+        "rage_count": [
+          [
+            44,
+            7
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            7
+          ]
+        ],
+        "hunter_rank_1": [
+          [
+            1016702879045,
+            7
+          ]
+        ],
+        "hunter_rank_2": [
+          [
+            539904032806,
+            5
+          ],
+          [
+            939904032606,
+            1
+          ],
+          [
+            939904032806,
+            1
+          ]
+        ],
+        "hunter_rank_3": [
+          [
+            463343372160,
+            6
+          ],
+          [
+            463343372161,
+            1
+          ]
+        ]
+      },
+      "rc_images": 7,
+      "final_images": 0,
+      "rc_t": {
+        "44": 480
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            480,
+            44
+          ],
+          [
+            484,
+            44
+          ],
+          [
+            485,
+            44
+          ],
+          [
+            488,
+            44
+          ],
+          [
+            489,
+            44
+          ],
+          [
+            490,
+            44
+          ],
+          [
+            493,
+            44
+          ]
+        ],
+        "final_score": []
+      },
+      "par_t": [
+        [
+          480,
+          {
+            "player_score": 42083645420136,
+            "rage_count": 44,
+            "play_time": "03:00",
+            "hunter_rank_1": 1016702879045,
+            "hunter_rank_2": 539904032806,
+            "hunter_rank_3": 463343372160
+          }
+        ],
+        [
+          484,
+          {
+            "player_score": 42083645420136,
+            "rage_count": 44,
+            "play_time": "03:00",
+            "hunter_rank_1": 1016702879045,
+            "hunter_rank_2": 939904032606,
+            "hunter_rank_3": 463343372161
+          }
+        ],
+        [
+          485,
+          {
+            "player_score": 42083645420136,
+            "rage_count": 44,
+            "play_time": "03:00",
+            "hunter_rank_1": 1016702879045,
+            "hunter_rank_2": 939904032806,
+            "hunter_rank_3": 463343372160
+          }
+        ],
+        [
+          488,
+          {
+            "player_score": 42083645420136,
+            "rage_count": 44,
+            "play_time": "03:00",
+            "hunter_rank_1": 1016702879045,
+            "hunter_rank_2": 539904032806,
+            "hunter_rank_3": 463343372160
+          }
+        ],
+        [
+          489,
+          {
+            "player_score": 42083645420136,
+            "rage_count": 44,
+            "play_time": "03:00",
+            "hunter_rank_1": 1016702879045,
+            "hunter_rank_2": 539904032806,
+            "hunter_rank_3": 463343372160
+          }
+        ],
+        [
+          490,
+          {
+            "player_score": 42083645420136,
+            "rage_count": 44,
+            "play_time": "03:00",
+            "hunter_rank_1": 1016702879045,
+            "hunter_rank_2": 539904032806,
+            "hunter_rank_3": 463343372160
+          }
+        ],
+        [
+          493,
+          {
+            "player_score": 42083645420136,
+            "rage_count": 44,
+            "play_time": "03:00",
+            "hunter_rank_1": 1016702879045,
+            "hunter_rank_2": 539904032806,
+            "hunter_rank_3": 463343372160
+          }
+        ]
+      ],
+      "t_debut": 480,
+      "t_fin": 493
+    },
+    "notes": [
+      "écart OCR zone/image : player_score",
+      "lecture fusionnée (7 images)",
+      "contrôle sans Hunter Rank : boss illisible",
+      "contrôle sans Hunter Rank : Final Score illisible",
+      "contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run"
+    ]
+  },
+  {
+    "video_id": "nwP8dSSfo1o",
+    "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
+    "channel_title": "MOBgame",
+    "published_at": "2026-11-15T02:21:12Z",
+    "lang": "ja",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 182,
+    "stage": null,
+    "team": null,
+    "score": 20.331,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        14.915,
+        20.331
+      ],
+      "play_time": null,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        182
+      ]
+    },
+    "notes": [
+      "boss non contrôlé",
+      "BOT ja : temps de jeu non lu"
     ]
   }
 ]

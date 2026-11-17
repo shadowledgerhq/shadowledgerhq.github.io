@@ -1429,14 +1429,27 @@
     "channel_id": "UCMmsU8yY-9wIH1QHGZDWYZg",
     "published_at": "2026-11-12T10:49:20Z",
     "first_seen": "2026-11-14",
-    "updated_at": "2026-11-14",
-    "last_tri": 1,
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "libelles_inconnus": "ko",
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "nZrcGHSDcvs": {
     "week": "2026-11-12",
@@ -1720,14 +1733,26 @@
     "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
     "published_at": "2026-11-15T02:21:12Z",
     "first_seen": "2026-11-15",
-    "updated_at": "2026-11-15",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "bot"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "d162Zp0KL6Y": {
     "week": "2026-11-12",
@@ -1762,85 +1787,162 @@
     "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
     "published_at": "2026-11-15T17:00:33Z",
     "first_seen": "2026-11-15",
-    "updated_at": "2026-11-15",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "hotm"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "RVkSt2bWn_U": {
     "week": "2026-11-12",
     "channel_id": "UCFcYmsvelaU0rxAXo_srFhg",
     "published_at": "2026-11-15T09:43:50Z",
     "first_seen": "2026-11-15",
-    "updated_at": "2026-11-15",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "hotm"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "GI-WEhZz6Ng": {
     "week": "2026-11-12",
     "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
     "published_at": "2026-11-16T15:53:14Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-16",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "hotm"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "LQM4VbJ3vpc": {
     "week": "2026-11-12",
     "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
     "published_at": "2026-11-15T22:28:31Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-16",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        608,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "2AJljDc_nN4": {
     "week": "2026-11-12",
     "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
     "published_at": "2026-11-16T05:00:22Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-16",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [
+        [
+          480,
+          539
+        ]
+      ],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "VFDbdYFzor4": {
     "week": "2026-11-12",
     "channel_id": "UCjNngJRDRC7QSyZ76FlvKfQ",
     "published_at": "2026-11-15T20:24:32Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-16",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "bot",
       "poc"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "XDyfEbfp2Hg": {
     "week": "2026-11-12",
@@ -1917,14 +2019,26 @@
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "published_at": "2026-11-16T12:00:36Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-16",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "bot"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        608,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "Bi5TrN5d1_E": {
     "week": "2026-11-12",
@@ -1945,14 +2059,26 @@
     "channel_id": "UCFcYmsvelaU0rxAXo_srFhg",
     "published_at": "2026-11-16T11:43:51Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-16",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "bot"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   },
   "RXGoXZggzWM": {
     "week": "2026-11-12",
@@ -1973,13 +2099,25 @@
     "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
     "published_at": "2026-11-16T12:07:08Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-16",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-17",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "hotm"
     ],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait"
+    }
   }
 }

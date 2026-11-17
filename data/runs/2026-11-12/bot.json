@@ -169,27 +169,27 @@
     "published_at": "2026-11-15T03:21:12+01:00",
     "lang": "ja",
     "score": {
-      "total": 20.0,
+      "total": 20.331,
       "runs": [
-        20.0
+        20.331
       ],
       "unit": "seconds"
     },
-    "score_source": "description",
+    "score_source": "debut-fin",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 20秒; boss non contrôlé",
+    "notes": "boss non contrôlé; BOT ja : temps de jeu non lu",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
         "video_id": "nwP8dSSfo1o",
         "published_at": "2026-11-15T03:21:12+01:00",
-        "t": null,
+        "t": 182,
         "stage": null,
         "team": null,
-        "score_source": "description",
+        "score_source": "debut-fin",
         "exact": false
       }
     ]
