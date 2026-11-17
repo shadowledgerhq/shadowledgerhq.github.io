@@ -131,6 +131,29 @@ def lire_recharge(texte):
     return float(f"{m.group(1)}.{m.group(2)}") if m.lastindex == 2 else float(m.group(1))
 
 
+def ocr_recharge(outils, tmp):
+    """`ocr(image PIL) -> texte` pour `releves_run` : chiffre de recharge d'un bouton (tesseract, chiffres seulement, une ligne, agrandi 4x,
+    niveaux de gris). `outils.ocr` = `pc.Outils.ocr`. Ne lève jamais : texte vide si l'OCR échoue (cooldown_read reste null)."""
+    from pathlib import Path
+    compteur = [0]
+
+    def ocr(image):
+        try:
+            from PIL import ImageOps
+            im = ImageOps.autocontrast(image.convert("L"))
+            im = im.resize((max(1, im.width * 4), max(1, im.height * 4)))
+            compteur[0] += 1
+            png = Path(tmp) / f"_recharge_{compteur[0]}.png"
+            im.save(png)
+            try:
+                return outils.ocr(png, langues="eng", psm=7, timeout=30, extra=["-c", "tessedit_char_whitelist=0123456789.,:"])
+            finally:
+                png.unlink(missing_ok=True)
+        except Exception:
+            return ""
+    return ocr
+
+
 # --- identité et confiance -----------------------------------------------------------------------------------------------
 
 def recharge_base(db, hunter, slot, skill_id=None):

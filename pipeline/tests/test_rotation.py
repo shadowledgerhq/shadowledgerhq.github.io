@@ -244,3 +244,32 @@ def test_traiter_images_appelle_apres_sur_la_video_deja_telechargee():
 
 if __name__ == "__main__":
     sys.exit(pytest.main([__file__, "-q"]))
+
+
+def test_ocr_recharge_lit_un_chiffre_avec_le_vrai_tesseract(tmp_path):
+    import shutil
+    import subprocess
+    if not shutil.which("tesseract"):
+        import pytest
+        pytest.skip("tesseract absent")
+    from PIL import Image, ImageDraw, ImageFont
+
+    class Outils:
+        def ocr(self, png, langues=None, psm=6, timeout=120, extra=None):
+            return subprocess.run(["tesseract", str(png), "stdout", "-l", langues, "--psm", str(psm), *(extra or [])],
+                                  capture_output=True, text=True, timeout=timeout).stdout
+
+    im = Image.new("RGB", (60, 30), (30, 30, 30))
+    ImageDraw.Draw(im).text((8, 4), "7.3", fill=(255, 255, 255), font=ImageFont.load_default(size=20))
+    lu = R.ocr_recharge(Outils(), tmp_path)(im)
+    assert R.lire_recharge(lu) == 7.3, lu
+    assert not list(tmp_path.glob("_recharge_*.png"))
+
+
+def test_ocr_recharge_ne_leve_jamais(tmp_path):
+    from PIL import Image
+
+    class Casse:
+        def ocr(self, *a, **k):
+            raise RuntimeError("tesseract")
+    assert R.ocr_recharge(Casse(), tmp_path)(Image.new("RGB", (10, 10))) == ""
