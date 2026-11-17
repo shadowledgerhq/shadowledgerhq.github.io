@@ -5,7 +5,7 @@
 - Constat : 0 chasseur identifié sur 33 ; armes des chasseurs « icône absente » partout ; successeur jamais reconnu ; ombre 01 = beste sur 6 BOT
 ## En cours
 - Pas de relevé manuel : rotation = relevé automatique (data/rotations/, discussions 3 et 8)
-- Discussion 8 : relancer builds avec les cartes, enregistrer les images extraites dans docs/essais/composition/auto/
+- Relance des builds 2026-11-12 sur le PC (v5 codée, 303 tests)
 - Discussion 9 : cartes de tous les chasseurs et des successeurs, icônes des armes de chasseurs
 ## À faire
 - Définir les zones POC (onglets 2-5), HOTM, GB sur les images auto/
