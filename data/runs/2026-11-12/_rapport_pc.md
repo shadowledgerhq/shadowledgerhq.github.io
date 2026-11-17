@@ -159,6 +159,7 @@ error: The following untracked working tree files would be overwritten by checko
 - Durée du passage : 109 min
 - Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Conflit git résolu automatiquement
 - Relectures posées (règles plus anciennes, top 10 provisoire sans Results lu) : a-923ClD9Rc (bot), Lt84IhMjBvM (bot), 5MI-RLj7FSk (bot), tOzRUlmZ2JI (bot), uwJfPTJI8ZE (bot), duX8KmoDdYw (bot), wFFdg1gcZpE (bot)
 - Résumé GB : lGDbzyIJcjY · HS Retro Gaming · aucun Results lu · 19 RC à vérifier · wind · contrôle sans Hunter Rank : Rage Count lu sur une seule image
 - Résumé GB : nh2D7xZ7dOQ · SlayOnLow · Results lu (270-312 s) · 165 RC sûr · groupe 2 · light
