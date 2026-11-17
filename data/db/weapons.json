@@ -3058,7 +3058,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/arachnids-hand-crossbow.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Arachnid%27s_Hand_Crossbow",
     "wiki_revid": 12988,
     "wiki_timestamp": "2025-06-05T15:23:21Z",
@@ -3069,7 +3069,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Arachnid's Hand Crossbow Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "barukas-dagger",
@@ -3177,7 +3178,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/barukas-dagger.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Baruka%27s_Dagger",
     "wiki_revid": 12289,
     "wiki_timestamp": "2025-05-08T19:31:35Z",
@@ -3188,7 +3189,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Baruka's Dagger Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "black-falcon",
@@ -3268,7 +3270,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/black-falcon.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Black_Falcon",
     "wiki_revid": 14902,
     "wiki_timestamp": "2026-02-22T01:54:14Z",
@@ -3279,7 +3281,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Black Falcon Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "burning-demons-grimoire",
@@ -3387,7 +3390,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/burning-demons-grimoire.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Burning_Demon%27s_Grimoire",
     "wiki_revid": 12979,
     "wiki_timestamp": "2025-06-05T15:16:48Z",
@@ -3398,7 +3401,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Burning Demon's Grimoire Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "demon-kings-daggers",
@@ -3598,7 +3602,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/demon-kings-longsword.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Demon_King%27s_Longsword",
     "wiki_revid": 10483,
     "wiki_timestamp": "2025-03-25T21:00:06Z",
@@ -3630,7 +3634,8 @@
         "text_en": "Category\n\nBefore\n\nChanged\n\nAdvancement 0\n\n- [Shield]\n\nCreates a [Shield] equal to 20% of the user’s Max HP.\n\n- [Storm of White Flames]\n\nIncreases the user’s Attack by 8%.\n\nCreates a lightning that deals damage equal to 120% of the user’s Attack in nearby areas every 0.75 second.\n\n- [Shield]\n\nCreates a [Shield] equal to 50% of the user’s Max HP.\n\n- [Storm of White Flames]\n\nIncreases the user’s Attack by 12%.\n\nCreates a lightning that deals damage equal to 200% of the user’s Attack in nearby areas every 0.75 second.\n\nAdvancement 1\n\n- [Stroke of Lightning]\n\nDeals damage equal to 60% of Attack.\n\n- [Stroke of Lightning]\n\nDeals damage equal to 100% of Attack.\n\nAdvancement 3\n\n-\n\n- The damage of [Storm of White Flames] increases by 30%. (New)\n\n- Wind damage increases by 10% while [Storm of White Flames] is active. (New)\n\nAdvancement 5\n\n- [Final Thunderbolt]\n\nApplies upon a successful [Counterattack].\n\n- [Benediction of the White Flames] Applies when [Counterattack] fails.\n\n- [Final Thunderbolt]\n\nA large lightning bolt falls on the target dealing damage equal to 800% of the user’s Attack to nearby enemies.\n\n- When [Lightning] hits it applies the [Benediction of White Flames] effect and [Final Thunderbolt].\n\n- [Final Thunderbolt]\n\nA large lightning bolt falls on the target dealing damage equal to 1,600% of the user’s Attack to nearby enemies.\n\n- [Stroke of Lightning] effect enhancement (New)\n\n[Stroke of Lightning] is enhanced.\n\nEach time the user hits the same target 3 time(s) it applies the [Stroke of Lightning] effect on the target.\n\n- [Stroke of Lightning]\n\nDeals damage equal to 200% of the user’s Attack.\n\nCooldown: 0.3 second(s)"
       }
     ],
-    "balance_changes": []
+    "balance_changes": [],
+    "icon_source": "Fandom wiki, fichier « Demon King's Longsword Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "demon-knights-spear",
@@ -3738,7 +3743,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/demon-knights-spear.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Demon_Knight%27s_Spear",
     "wiki_revid": 12971,
     "wiki_timestamp": "2025-06-05T15:08:05Z",
@@ -3749,7 +3754,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Demon Knight's Spear Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "demonic-plum-flower-sword",
@@ -4121,7 +4127,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/dragonscale-broadsword.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Dragonscale_Broadsword",
     "wiki_revid": 14907,
     "wiki_timestamp": "2026-02-22T02:04:42Z",
@@ -4132,7 +4138,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Dragonscale Broadsword Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "ennios-roar",
@@ -4544,7 +4551,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/frostbite-falchion.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Frostbite_Falchion",
     "wiki_revid": 12975,
     "wiki_timestamp": "2025-06-05T15:12:19Z",
@@ -4555,7 +4562,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Frostbite Falchion Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "gold-tailed-fox",
@@ -4792,7 +4800,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/grave-keepers-scythe.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Grave_Keeper%27s_Scythe",
     "wiki_revid": 12981,
     "wiki_timestamp": "2025-06-05T15:18:19Z",
@@ -4803,7 +4811,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Grave Keeper's Scythe Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "heros-sword",
@@ -5010,7 +5019,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/ice-elfs-bow.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Ice_Elf%27s_Bow",
     "wiki_revid": 12985,
     "wiki_timestamp": "2025-06-05T15:21:17Z",
@@ -5021,7 +5030,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Ice Elf's Bow Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "juicy-grilled-skewer",
@@ -5221,7 +5231,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/kasakas-venom-fang.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Kasaka%27s_Venom_Fang",
     "wiki_revid": 8685,
     "wiki_timestamp": "2025-02-20T17:26:26Z",
@@ -5232,7 +5242,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Kasaka's Venom Fang Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "kim-sangshiks-sword",
@@ -5340,7 +5351,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/kim-sangshiks-sword.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Kim_Sangshik%27s_Sword",
     "wiki_revid": 14603,
     "wiki_timestamp": "2026-02-14T00:06:33Z",
@@ -5351,7 +5362,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Kim Sangshik's Sword Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "knight-killer",
@@ -5459,7 +5471,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/knight-killer.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Knight_Killer",
     "wiki_revid": 8686,
     "wiki_timestamp": "2025-02-20T17:27:36Z",
@@ -5470,7 +5482,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Knight Killer Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "knights-sword",
@@ -5578,7 +5591,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/knights-sword.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Knight%27s_Sword",
     "wiki_revid": 12980,
     "wiki_timestamp": "2025-06-05T15:17:45Z",
@@ -5589,7 +5602,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Knight's Sword Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "lizard-glaive",
@@ -5697,7 +5711,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/lizard-glaive.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Lizard_Glaive",
     "wiki_revid": 12983,
     "wiki_timestamp": "2025-06-05T15:19:27Z",
@@ -5708,7 +5722,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Lizard Glaive Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "lustrous-dragon-sword",
@@ -5816,7 +5831,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/lustrous-dragon-sword.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Lustrous_Dragon_Sword",
     "wiki_revid": 12972,
     "wiki_timestamp": "2025-06-05T15:09:05Z",
@@ -5827,7 +5842,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Lustrous Dragon Sword Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "lycan-slayer",
@@ -5935,7 +5951,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/lycan-slayer.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Lycan_Slayer",
     "wiki_revid": 14898,
     "wiki_timestamp": "2026-02-22T01:52:44Z",
@@ -5946,7 +5962,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Lycan Slayer Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "moonlit-gale",
@@ -6256,7 +6273,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/naga-guardian-dragons-trident.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Naga_Guardian_Dragon%27s_Trident",
     "wiki_revid": 9369,
     "wiki_timestamp": "2025-03-12T06:58:05Z",
@@ -6267,7 +6284,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Naga Guardian Dragon's Trident Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "orb-of-avarice",
@@ -6375,7 +6393,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/orb-of-avarice.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Orb_of_Avarice",
     "wiki_revid": 12976,
     "wiki_timestamp": "2025-06-05T15:13:50Z",
@@ -6386,7 +6404,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Orb of Avarice Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "orcs-broadsword",
@@ -6494,7 +6513,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/orcs-broadsword.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Orc%27s_Broadsword",
     "wiki_revid": 14908,
     "wiki_timestamp": "2026-02-22T02:04:54Z",
@@ -6505,7 +6524,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Orc's Broadsword Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "phantomblade",
@@ -6872,7 +6892,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/radiru-familys-longbow.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Radiru_Family%27s_Longbow",
     "wiki_revid": 12974,
     "wiki_timestamp": "2025-06-05T15:10:46Z",
@@ -6883,7 +6903,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Radiru Family's Longbow Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "razans-blade",
@@ -6991,7 +7012,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/razans-blade.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Razan%27s_Blade",
     "wiki_revid": 12984,
     "wiki_timestamp": "2025-06-05T15:20:06Z",
@@ -7002,7 +7023,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Razan's Blade Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "rock-golem-hammer",
@@ -7110,7 +7132,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/rock-golem-hammer.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Rock_Golem_Hammer",
     "wiki_revid": 14909,
     "wiki_timestamp": "2026-02-22T02:04:59Z",
@@ -7121,7 +7143,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Rock Golem Hammer Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "sandstorm-cube",
@@ -7229,7 +7252,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/sandstorm-cube.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Sandstorm_Cube",
     "wiki_revid": 12982,
     "wiki_timestamp": "2025-06-05T15:18:55Z",
@@ -7240,7 +7263,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Sandstorm Cube Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "secured-marlin-surfboard",
@@ -7348,7 +7372,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/secured-marlin-surfboard.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Secured_Marlin_Surfboard",
     "wiki_revid": 10477,
     "wiki_timestamp": "2025-03-25T20:57:11Z",
@@ -7359,7 +7383,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Secured Marlin Surfboard Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "shadow-scythe",
@@ -8911,7 +8936,7 @@
       }
     ],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/west-wind.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/West_Wind",
     "wiki_revid": 14901,
     "wiki_timestamp": "2026-02-22T01:54:08Z",
@@ -8922,7 +8947,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « West Wind Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "winchester-roke",
