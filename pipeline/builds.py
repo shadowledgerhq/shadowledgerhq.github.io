@@ -426,6 +426,38 @@ def _hunters_par_bibliotheque(obs, images, zones_mode, banque, cfg):
             obs["notes"].append(f"chasseur {ident} reconnu par sa carte apprise (position {h['position']}, {m[h['position']][ident]} correspondances)")
 
 
+def _ombres_par_bibliotheque(obs, images, zones_mode, banque, cfg):
+    """v33 : ombres reconnues par leur carte (`data/icons/shadows_cartes/<id>.png`, fournies par la discussion 9) : recadrage de chaque
+    zone `shadows` de l'onglet personnages comparé aux cartes par points d'intérêt (SIFT + RANSAC, `portraits.apparier_cartes`,
+    seuil `portraits.min_corr_ombres`, défaut 25 : le bruit mesuré est ≤ 6, bonnes cartes 47 à 458). Une carte reconnue l'emporte sur la
+    lecture par icône (0,6 : peu fiable) ; note si elle la change. Jamais apprise automatiquement (l'identité vient de la base)."""
+    import portraits as P
+    zones = ((zones_mode or {}).get("personnages") or {}).get("shadows", {}).get("shadows") or []
+    base = (images.get("personnages") or [])[:1]
+    dossier = getattr(banque, "dossier", None)
+    cartes = P.charger_cartes(dossier, P.DOSSIER_OMBRES) if dossier else {}
+    if not zones or not base or not cartes:
+        return
+    w, h = base[0].size
+    crops = {i + 1: base[0].crop((round(z[0] * w), round(z[1] * h), round(z[2] * w), round(z[3] * h))) for i, z in enumerate(zones)}
+    trouves, m = P.apparier_cartes(crops, cartes, cfg, "min_corr_ombres", 25)
+    if not trouves:
+        return
+    par_pos = {o.get("position"): o for o in obs.get("shadows") or []}
+    for pos, ident in sorted(trouves.items()):
+        o = par_pos.get(pos)
+        if o is None:
+            o = {"position": pos, "id": None}
+            obs["shadows"] = (obs.get("shadows") or []) + [o]
+            par_pos[pos] = o
+        if o.get("id") != ident:
+            avant = o.get("id")
+            o["id"] = ident
+            obs["notes"].append(f"ombre {ident} reconnue par sa carte (position {pos}, {m[pos][ident]} correspondances)"
+                                + (f", icône lue : {avant}" if avant else ""))
+    obs["shadows"] = sorted(obs["shadows"], key=lambda o: o.get("position") or 0)
+
+
 def apprendre_cartes(obs, images, cfg, banque, mode_cle):
     """Enregistre la carte de chaque chasseur identifié par nom + portrait (jamais écrasée) : bibliothèque apprise."""
     import portraits as P
@@ -569,6 +601,7 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
     _hunters_par_bibliotheque(obs, images, zones_mode, banque, cfg)
     if any(k[0] == "shadows" for k in valeurs):
         obs["shadows"] = [{"position": i + 1, "id": v} for i, v in sorted(get("shadows", "shadows"))]
+    _ombres_par_bibliotheque(obs, images, zones_mode, banque, cfg)
     if any(k[0] == "successor" for k in valeurs):
         obs["successor"] = {"id": get("successor", "successor")[0][1], "level": None}
     if any(k[0] == "poc" for k in valeurs):

@@ -64,6 +64,7 @@
 ## Fait (session 11, 17/11 — SPEC v33)
 - **v33 codée (285 tests)** : zones final/rang_5/rang_6, garde-fou du vote, exports déplacés dans `exports/_local/`, (c) HUD > RC. `rang_6` = [0.146, 0.725, 0.105, 0.042] (grille de 18 zones) ; reste Oj_-5x6700s image 232 lue 911 au lieu de 511 (à surveiller).
 - Nuit du 17/11 : `pc.resume_gb` (lignes « Résumé GB » du bloc) ; relecture posée sur vYtRCpFtSOk, awb-GlVIa7Q, lGDbzyIJcjY, nh2D7xZ7dOQ ; simulation des captures : pas de lecture fausse promue, confusions de chiffres isolées. 286 tests.
+- **Ombres par cartes branchées** (`builds._ombres_par_bibliotheque`, `portraits.charger_cartes(sous_dossier)`) : POC beste/greed, BOT beste/greed sur captures réelles ; position 3 POC et BOT toujours à identifier par la base. [À CONFIRMER] sur d'autres vidéos (calé sur 2 captures).
 ## En cours
 - Subjugation POC : écran codé, jamais lu par le vrai OCR (v0tuXJNxudk à relancer avec `--garder-ocr` pour caler `ecrans.subjugation.cartes`).
 - Prochain : armes (icônes de la base manquantes, discussion 9), compétences POC (onglet à filmer), essai réel du RESULT BOT japonais (zones v27 en 720p du tri 4 : à vérifier, calées sur ~1150 px ; seuil de zone vide 8), fiabiliser les chiffres de stats (relecture croisée % / valeur). Reconnaissance d'artefacts : essayer d'autres vidéos BOT/POC avec les nouveaux masques ; collier (chaîne fine) et faux positifs 4 pièces à surveiller ; piste : préférence pour le set dominant du personnage.

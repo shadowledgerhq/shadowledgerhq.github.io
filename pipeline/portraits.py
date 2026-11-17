@@ -88,10 +88,14 @@ def dossier_cartes(icones_dir):
     return Path(icones_dir) / DOSSIER_CARTES[-1]
 
 
-def charger_cartes(icones_dir):
+DOSSIER_OMBRES = "shadows_cartes"      # v33 : cartes d'ombres (recadrages des zones `shadows`), fournies par la base de données (discussion 9)
+
+
+def charger_cartes(icones_dir, sous_dossier=None):
+    """Cartes `<id>.png` de `data/icons/<sous_dossier>` (défaut : `hunters_cartes`)."""
     from PIL import Image
     sortie = {}
-    d = dossier_cartes(icones_dir)
+    d = Path(icones_dir) / sous_dossier if sous_dossier else dossier_cartes(icones_dir)
     for f in sorted(d.glob("*.png")) if d.exists() else []:
         try:
             with Image.open(f) as im:
@@ -101,12 +105,12 @@ def charger_cartes(icones_dir):
     return sortie
 
 
-def apparier_cartes(cartes_vues, bibliotheque, cfg):
+def apparier_cartes(cartes_vues, bibliotheque, cfg, cle_min="min_corr_biblio", defaut_min=40):
     """`cartes_vues` = {position: image} ; `bibliotheque` = {id: image}. Retourne ({position: id}, matrice {position: {id: n}}).
     Un couple (position, id) est retenu si n ≥ `min_corr_biblio` (défaut 40 : le bruit atteint ~30 avec une seule carte connue)
     et n ≥ `rapport` × le meilleur des autres : autre chasseur de la bibliothèque sur cette carte, même chasseur sur une autre carte."""
     c = cfg.get("portraits") or {}
-    mini, rapport = c.get("min_corr_biblio", 40), c.get("rapport", 2)
+    mini, rapport = c.get(cle_min, defaut_min), c.get("rapport", 2)
     m = {p: {k: correspondances(im, ref) for k, ref in bibliotheque.items()} for p, im in cartes_vues.items()}
     sortie = {}
     for p, ligne in m.items():

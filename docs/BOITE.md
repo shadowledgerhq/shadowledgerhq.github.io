@@ -22,7 +22,7 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 
 ## 2 — Étape 2 — Builds
 
-(aucun message)
+- [à traiter] 2026-11-17 — de Code — **Ombres reconnues par carte** : `data/icons/shadows_cartes/<id>.png` (fournies par la discussion 9 : beste, greed) est branché (`builds._ombres_par_bibliotheque`, SIFT + RANSAC comme `hunters_cartes`, seuil `portraits.min_corr_ombres` = 25 ; bruit mesuré ≤ 6). Sur les captures : POC position 1 beste (458 correspondances), position 2 greed (118), position 3 inconnue ; BOT beste (218), greed (47). La carte l'emporte sur la lecture par icône (note « ombre X reconnue par sa carte… icône lue : Y »). Pas d'apprentissage automatique (l'identité vient de la base). Ajouter une ombre = déposer sa carte recadrée (zone `shadows` de l'onglet personnages) dans ce dossier. 5 tests (`test_ombres_cartes.py`).
 
 ## 3 — Étape 3 — Theorycraft & vidéos
 
