@@ -484,8 +484,8 @@
       "tri4": "fait",
       "tri2": "fait",
       "hud_amont": [],
-      "rotation": "absent",
-      "rotation_version": 1
+      "rotation": "fait",
+      "rotation_version": 2
     },
     "relecture": "2026-11-17",
     "relecture_auto": 18

@@ -1,11 +1,10 @@
-# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-17 19:56 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-17 20:02 (Paris)
 
 - Top 10 couvert : non (30 vidéos candidates au top 10 restantes)
-- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- **Passage complet : non** (vidéos restantes à traiter)
 - Vidéos traitées ce passage : 1 · en_cours restantes : 60 (dont 30 à traiter par le PC)
-- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Erreurs bloquantes : aucune
 - Durée du passage : 1 min
-- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Résumé GB : nh2D7xZ7dOQ · SlayOnLow · Results lu (270-312 s) · 165 RC sûr · groupe 2 · light
 - Résumé GB : cfZRPdtAGmg · aucun Results lu · pas classée
@@ -53,7 +52,4 @@
 - rien
 
 ## Erreurs et alertes
-- wJ9CwjKwyco : 429 / anti-bot YouTube, reportée au prochain passage
-- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
 - 60 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : aucune (une relance a déjà été programmée ce soir) : prochain passage normal

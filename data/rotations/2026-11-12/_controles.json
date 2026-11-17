@@ -1,0 +1,34 @@
+{
+  "wJ9CwjKwyco": [
+    [
+      "durée = chrono ± 0,5 s",
+      false,
+      "durée 37.0 s, chrono 19.926 s, écart +17.07 s"
+    ],
+    [
+      "fin avant la composition",
+      true,
+      "fin 37.0 s, composition 38 s"
+    ],
+    [
+      "≥ 1 événement SJW",
+      true,
+      "35 événement(s)"
+    ],
+    [
+      "≥ 1 événement par chasseur actif",
+      false,
+      "actifs ['inconnu'], avec événement []"
+    ],
+    [
+      "aucune recharge relancée trop tôt",
+      true,
+      "ok"
+    ],
+    [
+      "phases du Results entre les bornes",
+      true,
+      "phases [9.281, 14.986, 19.926]"
+    ]
+  ]
+}
