@@ -102,6 +102,8 @@ Format complet (champs, statuts `build_complet | build_partiel | pas_de_build`, 
 
 ### Rotation (data/rotations/<semaine>/<mode>/<video_id>.json)
 
+Format **provisoire**, non codé : la spécification (`docs/SPEC_ROTATION.md`, avec un exemple réel) viendra de la discussion 3.
+
 ```json
 {
   "video_id": "dQw4w9WgXcQ",

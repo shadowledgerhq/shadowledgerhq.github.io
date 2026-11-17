@@ -69,6 +69,7 @@
 - **v5 codée (303 tests)** : cartes > icône (chasseurs, ombres), `element` + slide « Run Feu », règles `null`, chasseur commun, élément incohérent, images auto (`composition.sauver_images_auto`, max 3 par mode/onglet), rapport des recadrages non reconnus, suppression des builds de runs disparues. **Relance des builds 2026-11-12 : à faire sur le PC** (`py -3 pipeline\pc.py builds --semaine 2026-11-12 --refaire`, après `git pull origin main`).
 ## Fait (session 11, 17/11 — cartes)
 - `remnant_powers_cartes` branché (BOT, `min_corr_remanentes` 12 [À CONFIRMER]), recadrages non reconnus en 480 px + carte entière des chasseurs, nom OCR prioritaire sur l'icône et apprentissage automatique de `hunters_cartes` (`ecrans_hors_compo.integrer`). 311 tests.
+- Docs alignés (CLAUDE.md, CONTEXTE.md, skill) ; **rotations : en attente de `docs/SPEC_ROTATION.md`** (discussion 3, via Alexis), rien à coder avant.
 ## En cours
 - Subjugation POC : écran codé, jamais lu par le vrai OCR (v0tuXJNxudk à relancer avec `--garder-ocr` pour caler `ecrans.subjugation.cartes`).
 - Prochain : armes (icônes de la base manquantes, discussion 9), compétences POC (onglet à filmer), essai réel du RESULT BOT japonais (zones v27 en 720p du tri 4 : à vérifier, calées sur ~1150 px ; seuil de zone vide 8), fiabiliser les chiffres de stats (relecture croisée % / valeur). Reconnaissance d'artefacts : essayer d'autres vidéos BOT/POC avec les nouveaux masques ; collier (chaîne fine) et faux positifs 4 pièces à surveiller ; piste : préférence pour le set dominant du personnage.

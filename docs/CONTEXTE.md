@@ -162,7 +162,7 @@ shadowledgerhq.github.io/
 └── .github/workflows/       daily.yml (20h), weekly.yml (jeudi 01h)
 ```
 
-**Format d'une rotation** (`data/rotations/<semaine>/<mode>/<video_id>.json`) : `{"video_id": "", "week": "", "mode": "", "run_start_t": 0, "events": [{"t": 0, "hunter": "", "slot": "", "source": "", "confidence": "sur | a_verifier"}], "limites": ""}`. `t` = secondes depuis `run_start_t` ; `hunter` = `id` de la base ; `slot` = compétence utilisée ; `source` = comment l'événement a été relevé ; `limites` = ce que le relevé ne couvre pas. Un événement non relevé n'est pas écrit (jamais complété à la main).
+**Format d'une rotation** (`data/rotations/<semaine>/<mode>/<video_id>.json`) — **provisoire, non codé** (spécification à venir : `docs/SPEC_ROTATION.md`, discussion 3) : `{"video_id": "", "week": "", "mode": "", "run_start_t": 0, "events": [{"t": 0, "hunter": "", "slot": "", "source": "", "confidence": "sur | a_verifier"}], "limites": ""}`. `t` = secondes depuis `run_start_t` ; `hunter` = `id` de la base ; `slot` = compétence utilisée ; `source` = comment l'événement a été relevé ; `limites` = ce que le relevé ne couvre pas. Un événement non relevé n'est pas écrit (jamais complété à la main).
 
 ## 7. Discussions du Projet SLA
 
