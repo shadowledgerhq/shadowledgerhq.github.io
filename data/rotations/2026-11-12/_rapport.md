@@ -14,10 +14,10 @@
   - ÉCHEC : ≥ 1 événement par chasseur actif (actifs ['inconnu'], avec événement [])
   - OK : aucune recharge relancée trop tôt (ok)
   - OK : phases du Results entre les bornes (phases [9.341, 14.792, 18.754])
-- bot · wJ9CwjKwyco · run 1 : 11 événement(s), 11 à vérifier, durée 37.0 s, limites : chasseurs-inconnus
-  - ÉCHEC : durée − temps sans HUD = chrono ± 0,5 s (durée 37.0 s − sans HUD 11.5 s = 25.5 s, chrono 19.926 s, écart +5.57 s)
+- bot · wJ9CwjKwyco · run 1 : 12 événement(s), 12 à vérifier, durée 37.0 s, limites : chasseurs-inconnus
+  - OK : durée ≥ chrono − 0,5 s (durée 37.0 s, chrono 19.926 s (×1.9))
   - OK : fin avant la composition (fin 37.0 s, composition 38 s)
-  - OK : ≥ 1 événement SJW (3 événement(s))
-  - ÉCHEC : ≥ 1 événement par chasseur actif (actifs ['inconnu'], avec événement [])
+  - OK : ≥ 1 événement SJW (4 événement(s))
+  - NON ÉVALUABLE : ≥ 1 événement par chasseur actif identifié (actifs identifiés [], avec événement [])
   - OK : aucune recharge relancée trop tôt (ok)
-  - OK : phases du Results entre les bornes (phases [9.281, 14.986, 19.926])
+  - NON ÉVALUABLE : t_game croissant, ≤ chrono, phases dans la fenêtre (chrono du HUD non lu)

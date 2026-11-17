@@ -20,6 +20,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 14.0,
+          "t_game": null,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -31,6 +32,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
+          "t_game": null,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -42,6 +44,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 15.0,
+          "t_game": null,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -53,6 +56,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
+          "t_game": null,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -64,6 +68,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 14.0,
+          "t_game": null,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -75,6 +80,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 18.0,
+          "t_game": null,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -86,6 +92,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
+          "t_game": null,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -97,6 +104,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
+          "t_game": null,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -108,6 +116,19 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 60.0,
+          "t_game": null,
+          "source": "hud-recharge",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 24.5,
+          "t_run": 24.5,
+          "hunter": "sjw",
+          "slot": "sjw_skill_2",
+          "skill_id": null,
+          "trigger": null,
+          "cooldown_read": 14.0,
+          "t_game": null,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -119,6 +140,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
+          "t_game": null,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -130,6 +152,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 14.0,
+          "t_game": null,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         }
