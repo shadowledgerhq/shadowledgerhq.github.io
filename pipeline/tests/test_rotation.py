@@ -235,13 +235,16 @@ def test_bornes_incertaines_sans_results_lu(tmp_path):
 
 def test_selection_top3_bot_et_etat_pc_rotation():
     sem = "2026-11-12"
-    top = R.a_traiter(sem, {})                                  # l'ordre suit bot.json (change à chaque classement) : pas de ids figés
+    CFG0 = {**CFG, "videos_calibration": []}
+    cal = R.a_traiter(sem, {}, cfg=CFG)                         # + vidéos de calibration (wJ9, a-923) hors top 3
+    assert {"wJ9CwjKwyco", "a-923ClD9Rc"} <= set(cal)
+    top = R.a_traiter(sem, {}, cfg=CFG0)                        # l'ordre suit bot.json (change à chaque classement) : pas de ids figés
     assert len(top) == 3 and len(set(top)) == 3
     fait = {top[2]: {"pc": {"rotation": "fait", "rotation_version": CFG["version"]}}, top[0]: {"pc": {"rotation": "erreur", "rotation_version": CFG["version"]}}}
-    assert R.a_traiter(sem, fait) == [top[1]]
+    assert R.a_traiter(sem, fait, cfg=CFG0) == [top[1]]
     ancienne = {top[2]: {"pc": {"rotation": "absent", "rotation_version": 0}}}                          # version de la calibration augmentée : refait
-    assert top[2] in R.a_traiter(sem, ancienne)
-    assert R.a_traiter(sem, {}, cfg={**CFG, "budget_par_mode": 2}) == top[:2]
+    assert top[2] in R.a_traiter(sem, ancienne, cfg=CFG0)
+    assert R.a_traiter(sem, {}, cfg={**CFG0, "budget_par_mode": 2}) == top[:2]
     assert R.a_traiter(sem, {}, cfg={**CFG, "modes": ["poc"], "top": 3}) != []                           # un autre mode se branche par la configuration
 
 

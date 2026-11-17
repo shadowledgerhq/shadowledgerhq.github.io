@@ -509,7 +509,10 @@ def selection(semaine, racine=RACINE, cfg=None, config_builds=None):
     top = builds.modes_du_top(semaine, racine, config_builds or builds.charger_config())
     sortie = []
     for mode in cfg.get("modes", ["bot"]):
-        sortie += [(mode, l) for n, l in top if (l.get("mode") or n.split("-")[0]) == mode][:cfg.get("top", 3)]
+        du_mode = [l for n, l in top if (l.get("mode") or n.split("-")[0]) == mode]
+        sortie += [(mode, l) for l in du_mode[:cfg.get("top", 3)]]
+        # vidéos de calibration (wJ9, a-923) : relevées même hors du top 3, tant que le relevé n'est pas validé (SPEC_ROTATION §4)
+        sortie += [(mode, l) for l in du_mode[cfg.get("top", 3):] if l.get("video_id") in cfg.get("videos_calibration", [])]
     return sortie
 
 
@@ -522,7 +525,7 @@ def a_traiter(semaine, processed, racine=RACINE, cfg=None, config_builds=None):
         vid = ligne.get("video_id")
         p = (processed.get(vid) or {}).get("pc") or {}
         deja = p.get("rotation") in ("fait", "absent", "erreur") and p.get("rotation_version", 0) >= cfg.get("version", 1)
-        if vid and not deja and par_mode.get(mode, 0) < cfg.get("budget_par_mode", 3) and vid not in sortie:
+        if vid and not deja and vid not in sortie and (par_mode.get(mode, 0) < cfg.get("budget_par_mode", 3) or vid in cfg.get("videos_calibration", [])):
             par_mode[mode] = par_mode.get(mode, 0) + 1
             sortie.append(vid)
     return sortie
