@@ -41,7 +41,7 @@ def _json(f, defaut):
 def charger_db(racine=RACINE):
     """{fichier: {id: objet}} pour les catégories utilisées ; `stats` aussi."""
     db = {}
-    for nom in ("hunters", "weapons", "artifact_sets", "cores", "shadows", "successors", "sjw_skills", "blessings",
+    for nom in ("hunters", "weapons", "artifact_sets", "cores", "shadows", "successors", "remnant_powers", "sjw_skills", "blessings",
                 "subjugation_support", "proof_modifiers", "stats"):
         db[nom] = {o["id"]: o for o in _json(Path(racine) / "data" / "db" / f"{nom}.json", []) if isinstance(o, dict) and "id" in o
                     and o.get("kind") != "rules"}      # entrées de règles (discussion 9) : pas des éléments reconnaissables
@@ -253,6 +253,8 @@ def construire_build(ctx, obs, regles, cfg, db):
         ombres.append({"position": len(ombres) + 1, "id": None})
     succ_o = obs.get("successor") or {}
     successor = {"id": succ_o.get("id"), "level": succ_o.get("level"), "stats": dict(succ_o.get("stats") or {})}
+    if mode == "bot" and successor["id"] in db.get("remnant_powers", {}):      # BOT : emplacement de droite = puissance rémanente (`remnant_powers.json`)
+        successor["category"] = "remnant_powers"
     found["shadows"] = sum(1 for o in ombres if o["id"]) == 3
     counts["shadows"] = _ratio(sum(1 for o in ombres if o["id"]), 3)
     found["successor"] = bool(successor["id"])
@@ -327,7 +329,7 @@ def construire_build(ctx, obs, regles, cfg, db):
             verifier("blessings", b["id"], "blessings")
     for o in ombres:
         verifier("shadows", o["id"], "shadows")
-    verifier("successors", successor["id"], "successors")
+    verifier(successor.get("category") or "successors", successor["id"], successor.get("category") or "successors")
     for s in support or []:
         verifier("subjugation_support", s, "subjugation_support")
     for m in (proof or {}).get("modifiers") or []:
@@ -426,13 +428,14 @@ def _hunters_par_bibliotheque(obs, images, zones_mode, banque, cfg):
     candidats = [h for h in obs["hunters"] if h.get("position") and not h.get("via_portrait")]
     base = (images.get("personnages") or [])[:1]
     zones = _zones_cartes(zones_mode)
-    if not candidats or not base or not zones:
-        return
-    cartes = P.charger_cartes(banque.dossier)
-    if not cartes:
+    if not base or not zones:
         return
     pos = sorted(zones)
     crops = dict(zip(pos, P.decouper_cartes(base[0], [zones[p] for p in pos], cfg)))
+    obs["_cartes_pleines"] = crops          # carte entière de chaque chasseur : recadrage des `unmatched` en grand (jamais dans le JSON)
+    cartes = P.charger_cartes(banque.dossier) if candidats else {}
+    if not cartes:
+        return
     trouves, m = P.apparier_cartes(crops, cartes, cfg)
     for h in candidats:
         ident = trouves.get(h.get("position"))
@@ -473,6 +476,32 @@ def _ombres_par_bibliotheque(obs, images, zones_mode, banque, cfg):
             _retirer_non_reconnu(obs, "shadows", "shadows", pos - 1)
             obs["notes"].append(f"shadow_{pos} reconnu par sa carte, icône lue : {avant or 'aucune'} ({m[pos][ident]} correspondances)")
     obs["shadows"] = sorted(obs["shadows"], key=lambda o: o.get("position") or 0)
+
+
+def _remanente_par_bibliotheque(obs, images, zones_mode, banque, cfg, db):
+    """BOT : puissance rémanente (emplacement `successor`) reconnue par sa carte `data/icons/remnant_powers_cartes/<id>.png` (Slagate,
+    fournies par la discussion 9), comme les ombres : SIFT + RANSAC, seuil `portraits.min_corr_remanentes` (défaut 12 : l'illustration du
+    jeu est un recadrage de plus bas niveau que la carte, bruit mesuré ≤ 6 [À CONFIRMER] sur des images 1080p). Une carte reconnue l'emporte
+    sur l'icône. Sans carte, l'id lu par l'icône n'est gardé que s'il existe dans `remnant_powers` (sinon `successors` : autre chose)."""
+    import portraits as P
+    succ = obs.get("successor") or {}
+    if succ.get("id") and succ["id"] not in (db or {}).get("remnant_powers", {}):
+        obs["successor"] = {**succ, "id": None}                      # id d'une autre catégorie (successeur de SJW) : pas une puissance rémanente
+    zone = ((zones_mode or {}).get("personnages") or {}).get("successor", {}).get("successor")
+    base = (images.get("personnages") or [])[:1]
+    dossier = getattr(banque, "dossier", None)
+    cartes = P.charger_cartes(dossier, "remnant_powers_cartes") if dossier else {}
+    if not zone or not base or not cartes:
+        return
+    w, h = base[0].size
+    crop = base[0].crop((round(zone[0] * w), round(zone[1] * h), round(zone[2] * w), round(zone[3] * h)))
+    trouves, m = P.apparier_cartes({1: crop}, cartes, cfg, "min_corr_remanentes", 12)
+    ident = trouves.get(1)
+    if ident:
+        avant = (obs.get("successor") or {}).get("id")
+        obs["successor"] = {**(obs.get("successor") or {}), "id": ident}
+        obs["unmatched"] = [u for u in obs.get("unmatched") or [] if u.get("element") != "successor"]
+        obs["notes"].append(f"successor reconnu par sa carte, icône lue : {avant or 'aucune'} ({m[1][ident]} correspondances)")
 
 
 def apprendre_cartes(obs, images, cfg, banque, mode_cle):
@@ -621,6 +650,8 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
     _ombres_par_bibliotheque(obs, images, zones_mode, banque, cfg)
     if any(k[0] == "successor" for k in valeurs):
         obs["successor"] = {"id": get("successor", "successor")[0][1], "level": None}
+    if mode == "bot":
+        _remanente_par_bibliotheque(obs, images, zones_mode, banque, cfg, db)
     if any(k[0] == "poc" for k in valeurs):
         obs["subjugation_support"] = [v for _, v in sorted(get("poc", "subjugation_support"))]
     # pièce isolée : un set porté par une seule pièce parmi au moins 4 reconnues (SPEC §2.1 ; valeur gardée)
@@ -740,7 +771,7 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
             obs["analyse_terminee"] = analyse_terminee(processed, ctx["video_id"])
             b = construire_build(ctx, obs, regles_mode(rules, ctx["mode"]), cfg, db)
             b["dossier"] = nom_mode
-            ecrire_crops(b, obs, racine, chemin)
+            ecrire_crops(b, obs, racine, chemin, **(cfg.get("crops") or {}))
             if b["status"] == "pas_de_build" and not b["notes"]:
                 b["notes"] = "aucun élément trouvé"
             chemin.parent.mkdir(parents=True, exist_ok=True)
@@ -790,12 +821,19 @@ def controler_chasseurs_communs(builds):
     return modifies
 
 
-def ecrire_crops(b, obs, racine, chemin_build, taille=96):
-    """SPEC §125 : recadrage de chaque icône non reconnue (`unmatched`) en JPEG ≤ `taille` px dans `_crops/` à côté du build ;
-    `crop` = chemin relatif à la racine du dépôt. Sert à montrer l'image vue dans la vidéo quand aucun nom n'est sûr (PPTX)."""
+def ecrire_crops(b, obs, racine, chemin_build, taille=480, qualite=88):
+    """SPEC §125 : recadrage de chaque icône non reconnue (`unmatched`) en JPEG ≤ `taille` px (480 ; 96 px avant, trop petit pour identifier
+    une carte) dans `_crops/` à côté du build ; `crop` = chemin relatif à la racine du dépôt. Sert à montrer l'image vue dans la vidéo
+    quand aucun nom n'est sûr (PPTX) et à la discussion 9 pour fournir les cartes. Un chasseur non reconnu : sa carte entière (`_cartes_pleines`)."""
     crops = obs.get("_crops") or {}
+    cartes = obs.get("_cartes_pleines") or {}
     for u in b.get("unmatched") or []:
         img = crops.get((u.get("owner"), u.get("element"), u.get("slot")))
+        if u.get("element") == "hunters" and str(u.get("owner") or "").startswith("hunter_"):
+            try:
+                img = cartes.get(int(u["owner"].split("_")[1]), img)
+            except ValueError:
+                pass
         if img is None:
             continue
         nom = "_".join(str(x) for x in (f"{b['run_id']}-{b['run_index']}", u.get("element"), u.get("owner"), u.get("slot")) if x is not None)
@@ -804,7 +842,7 @@ def ecrire_crops(b, obs, racine, chemin_build, taille=96):
         im = img.convert("RGB")
         im.thumbnail((taille, taille))
         f = dossier / f"{nom}.jpg"
-        im.save(f, quality=70)
+        im.save(f, quality=qualite)
         u["crop"] = f.relative_to(racine).as_posix()
 
 

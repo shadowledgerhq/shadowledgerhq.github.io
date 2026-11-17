@@ -2100,6 +2100,10 @@
   "compo_pas": 3,
   "compo_ocr_max": 12
  },
+ "crops": {
+  "taille": 480,
+  "qualite": 88
+ },
  "portraits": {
   "zone_stats": [
    0.0,
@@ -2112,6 +2116,7 @@
    0.5
   ],
   "carte_marge_x": 0.01,
+  "min_corr_remanentes": 12,
   "min_corr": 25,
   "rapport": 2,
   "min_corr_biblio": 40, "min_corr_ombres": 25

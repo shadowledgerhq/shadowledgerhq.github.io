@@ -394,8 +394,9 @@ def slide_successeur(d, b, row):
     s = d.diapo(lib(d.cfg, "successeur", d.lang), b, row, _notes(b))
     su = b["successor"]
     if su.get("id"):
-        nom, it = nom_affiche(d.db, "successors", su["id"], d.lang)
-        d.case(s, 5.9, 2.3, nom, chemin_icone(d.db, "successors", su["id"], d.racine), None, su.get("level"), it, taille=1.5)
+        cat = su.get("category") or "successors"          # BOT : puissance rémanente
+        nom, it = nom_affiche(d.db, cat, su["id"], d.lang)
+        d.case(s, 5.9, 2.3, nom, chemin_icone(d.db, cat, su["id"], d.racine), None, su.get("level"), it, taille=1.5)
     else:
         d.case(s, 5.9, 2.3, "", None, _etat(d, b, "successor", "successor"), taille=1.5)
     if su.get("stats"):                                              # v3 : stats du successeur, seulement si lues
