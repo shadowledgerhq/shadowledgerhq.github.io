@@ -111,6 +111,74 @@ def changements_portrait(vignettes, cfg):
     return sortie
 
 
+# --- détection par le chiffre de recharge (v3) --------------------------------------------------------------------------
+
+def hud_present(vignettes, seuil=0.4):
+    """`vignettes` = [(t, tableau)] d'un bouton qui ne change jamais (esquive, zone `ancre`) -> {t: bool} : le HUD est affiché quand la vignette
+    ressemble (corrélation ≥ `seuil`) à la vignette médiane de la série (le HUD est affiché la plupart du temps). Cinématiques d'ultime,
+    écrans noirs et Results : faux. Mesuré sur wJ9CwjKwyco : HUD ≥ 0,85 (≥ 0,5 si le bouton porte un chiffre), sans HUD ≤ 0,23."""
+    np = _np()
+    if not vignettes:
+        return {}
+    mediane = np.median(np.array([v.ravel() for _, v in vignettes]), axis=0)
+
+    def corr(a, b):
+        a, b = a - a.mean(), b - b.mean()
+        d = float(np.linalg.norm(a) * np.linalg.norm(b))
+        return float(a @ b) / d if d > 0 else 0.0
+    return {t: corr(v.ravel(), mediane) >= seuil for t, v in vignettes}
+
+
+def etats_par_chiffres(lectures, pret_min=2):
+    """`lectures` = [(t, valeur | None | "hors")] d'un bouton (valeur = chiffre de recharge lu, None = aucun chiffre, "hors" = HUD absent) ->
+    [(t, "pret" | "recharge")] sans les images « hors ». Un « prêt » isolé (moins de `pret_min` images sans chiffre de suite) dans une recharge
+    est un chiffre mal lu : il reste « recharge »."""
+    lues = [(t, v) for t, v in lectures if v != "hors"]
+    etats = [(t, "pret" if v is None else "recharge") for t, v in lues]
+    i = 0
+    while i < len(etats):
+        if etats[i][1] == "pret":
+            j = i
+            while j < len(etats) and etats[j][1] == "pret":
+                j += 1
+            if 0 < i and j < len(etats) and j - i < pret_min:
+                etats[i:j] = [(t, "recharge") for t, _ in etats[i:j]]
+            i = j
+        else:
+            i += 1
+    return etats
+
+
+def lecture_chiffres(frames, zone, ocr, presents, pas_s=0.5, maxi=99):
+    """Une lecture du chiffre de recharge toutes les `pas_s` s : [(t, valeur | None | "hors")]. Valeur hors 0-`maxi` = None."""
+    sortie, dernier = [], None
+    for t, im in frames:
+        if dernier is not None and t - dernier < pas_s - 1e-6:
+            continue
+        dernier = t
+        if presents and not presents.get(t, True):
+            sortie.append((t, "hors"))
+            continue
+        v = lire_recharge(ocr(recadrer(im, zone)))
+        sortie.append((t, v if v is not None and 0 <= v <= maxi else None))
+    return sortie
+
+
+def transitions_chiffres(lectures, confirmation=2):
+    """Instants (1re image avec chiffre) où un bouton passe de « prêt » à « en recharge », avec le chiffre lu. Un bouton déjà en recharge à la
+    1re image n'a pas d'instant de lancement connu : aucun événement. -> [(t, valeur)]"""
+    etats = etats_par_chiffres(lectures)
+    val = {t: v for t, v in lectures}
+    if not etats:
+        return []
+    sortie, prec = [], etats[0][1]
+    for i, (t, e) in enumerate(etats):
+        if i and prec == "pret" and e == "recharge" and all(x[1] == "recharge" for x in etats[i:i + confirmation]) and len(etats[i:i + confirmation]) == confirmation:
+            sortie.append((t, val[t]))
+        prec = e
+    return sortie
+
+
 def fusionner_doublons(evenements, ecart=0.5):
     """Deux détections du MÊME bouton (`slot`) à moins de `ecart` s = un seul événement (le plus tôt)."""
     gardes, dernier = [], {}
@@ -209,10 +277,13 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
     db, evenements, limites = db or {}, [], []
     if not frames:
         return [], ["bornes-incertaines"]
+    presents = {}
+    if zones.get("ancre"):
+        presents = hud_present([(t, vignette(im, zones["ancre"])) for t, im in frames], cfg.get("ancre_corr", 0.4))
     # portrait actif : segments (début, id)
     actif = [(frames[0][0], "inconnu")]
     if zones.get("portrait"):
-        vign = [(t, vignette(im, zones["portrait"])) for t, im in frames]
+        vign = [(t, vignette(im, zones["portrait"])) for t, im in frames if presents.get(t, True)]
         coupes = [frames[0][0]] + changements_portrait(vign, cfg)
         par_t = dict(frames)
         actif = [(t, identifier_portrait(recadrer(par_t[t], zones["portrait"]), cartes, cfg)) for t in coupes]
@@ -231,8 +302,16 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
         return courant
 
     par_t = dict(frames)
+    par_chiffres = cfg.get("detection") == "ocr" and ocr is not None
     for bouton in BOUTONS_HUNTER + BOUTONS_SJW:
         if not zones.get(bouton):
+            continue
+        sjw = bouton.startswith("sjw_")
+        if par_chiffres:
+            lect = lecture_chiffres(frames, zones[bouton], ocr, presents, cfg.get("ocr_pas_s", 0.5))
+            for t, lu in transitions_chiffres(lect):
+                evenements.append({"t": t, "hunter": "sjw" if sjw else hunter_a(t), "slot": bouton,
+                                   "skill_id": (skills_sjw or {}).get(bouton) if sjw else None, "trigger": None, "cooldown_read": lu, "source": "hud-recharge"})
             continue
         serie = [(t, luminance(im, zones[bouton])) for t, im in frames]
         for t in transitions_recharge(etats_bouton(serie, cfg)):
@@ -240,7 +319,6 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
             if ocr:
                 i = next((k for k, (tt, _) in enumerate(frames) if tt == t), None)
                 lu = lire_recharge(ocr(recadrer(frames[min(i + 1, len(frames) - 1)][1], zones[bouton]))) if i is not None else None
-            sjw = bouton.startswith("sjw_")
             evenements.append({"t": t, "hunter": "sjw" if sjw else hunter_a(t), "slot": bouton,
                                "skill_id": (skills_sjw or {}).get(bouton) if sjw else None, "trigger": None, "cooldown_read": lu, "source": "hud-recharge"})
     if zones.get("core"):
@@ -421,7 +499,7 @@ def planche_zones(ctx, images, zones, cfg, racine=RACINE):
     if not cfg.get("planche") or not images:
         return None
     from PIL import Image, ImageDraw
-    noms = [b for b in BOUTONS_HUNTER + BOUTONS_SJW + ("portrait",) if zones.get(b)]
+    noms = [b for b in BOUTONS_HUNTER + BOUTONS_SJW + ("portrait", "ancre") if zones.get(b)]
     if not noms:
         return None
     ts = sorted(images)
@@ -462,7 +540,11 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
         ecrire(ctx, fichier(ctx, [run]), racine)
         journal("  rotation : HUD non calibré (config/rotation.json), recadrages de calibration gardés")
         return "absent"
-    visibles = [t for t, im in sorted(images.items()) if any(luminance(im, zones[b]) >= cfg.get("visible_luminance", 30) for b in zones if b in BOUTONS_HUNTER + BOUTONS_SJW)]
+    if zones.get("ancre"):
+        pres = hud_present([(t, vignette(im, zones["ancre"])) for t, im in sorted(images.items())], cfg.get("ancre_corr", 0.4))
+        visibles = [t for t in sorted(pres) if pres[t]]
+    else:
+        visibles = [t for t, im in sorted(images.items()) if any(luminance(im, zones[b]) >= cfg.get("visible_luminance", 30) for b in zones if b in BOUTONS_HUNTER + BOUTONS_SJW)]
     if not visibles:
         run = construire_run(1, None, None, [], ["hud-non-trouve"])
         ecrire(ctx, fichier(ctx, [run]), racine)

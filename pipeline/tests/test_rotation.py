@@ -13,7 +13,7 @@ from PIL import Image
 
 import rotation as R
 
-CFG = R.charger_config()
+CFG = dict(R.charger_config(), detection="luminance", planche=False)   # les tests de luminance restent ; l'OCR a ses tests ci-dessous
 Z = {"skill_1": [0.70, 0.80, 0.78, 0.95], "skill_2": [0.80, 0.80, 0.88, 0.95], "ultimate": [0.90, 0.60, 0.98, 0.75],
      "sjw_skill_1": [0.05, 0.80, 0.12, 0.95], "core": [0.45, 0.02, 0.55, 0.05], "portrait": [0.02, 0.30, 0.10, 0.50], "qte": [0.4, 0.4, 0.6, 0.5]}
 HUNTER_DB = {"hunters": {"h1": {"skills": [{"type": "skill_1", "cooldown": 8.0}, {"type": "skill_2", "cooldown": 16.0}, {"type": "ultimate", "cooldown": 45.0}]}},
@@ -284,3 +284,40 @@ def test_planche_zones_ecrit_planche_et_series(tmp_path):
     s = json.loads((f.parent / "wJ9CwjKwyco_series.json").read_text(encoding="utf-8"))
     assert s["lignes"] == ["skill_1"] and len(s["luminance"]["skill_1"]) == 3
     assert R.planche_zones(_ctx(), imgs, {"skill_1": [0.8, 0.8, 0.9, 0.9]}, dict(CFG, planche=False), racine=tmp_path) is None
+
+
+def test_hud_present_separe_hud_et_cinematique():
+    import numpy as np
+    rng = np.random.default_rng(1)
+    icone = rng.random((16, 16)) * 200
+    vig = [(0.0, icone), (0.5, icone + 3), (1.0, rng.random((16, 16)) * 200), (1.5, icone + 1), (2.0, icone)]
+    assert R.hud_present(vig) == {0.0: True, 0.5: True, 1.0: False, 1.5: True, 2.0: True}
+
+
+def test_etats_par_chiffres_ignore_hors_hud_et_pont_un_chiffre_manque():
+    lect = [(0.0, None), (0.5, 15), (1.0, 15), (1.5, None), (2.0, 14), (2.5, "hors"), (3.0, "hors"), (3.5, None), (4.0, None), (4.5, None)]
+    etats = R.etats_par_chiffres(lect)
+    assert [e for _, e in etats] == ["pret", "recharge", "recharge", "recharge", "recharge", "pret", "pret", "pret"]
+    assert [t for t, _ in etats][:5] == [0.0, 0.5, 1.0, 1.5, 2.0]
+
+
+def test_transitions_chiffres_lance_avec_valeur_et_ignore_recharge_initiale():
+    deja = [(0.0, 9), (0.5, 8), (1.0, None), (1.5, None), (2.0, 15), (2.5, 14), (3.0, 14)]
+    assert R.transitions_chiffres(deja) == [(2.0, 15)]                     # le chiffre 9 de la 1re image : lancement inconnu, aucun événement
+    assert R.transitions_chiffres([(0.0, 5), (0.5, 4), (1.0, 3)]) == []
+    assert R.transitions_chiffres([]) == []
+
+
+def test_releves_run_par_chiffres_pas_de_bruit_de_luminance():
+    zones = {"skill_1": [0.0, 0.0, 0.1, 0.1], "ancre": [0.9, 0.9, 1.0, 1.0]}
+    cfg = dict(CFG, detection="ocr", ocr_pas_s=0.5)
+    frames = []
+    for k in range(40):                                                        # 4 s à 10 images/s ; la luminance du bouton saute sans raison
+        im = Image.new("RGB", (160, 90), (30, 30, 30))
+        im.paste((255, 255, 255), (150, 82, 160, 90))
+        im.paste(((k * 37) % 255,) * 3, (0, 0, 16, 9))
+        frames.append((k / 10, im))
+    lectures = iter([""] * 2 + ["15", "15", "14", "14", "13", "13"])
+    ev, lim = R.releves_run(frames, zones, cfg, ocr=lambda im: next(lectures, "12"))
+    lancers = [(e["slot"], e["t"], e["cooldown_read"]) for e in ev if e["slot"] == "skill_1"]
+    assert lancers == [("skill_1", 1.0, 15.0)]
