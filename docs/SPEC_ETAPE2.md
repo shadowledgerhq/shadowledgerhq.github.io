@@ -310,6 +310,8 @@ Puis, une seule fois en fin de fichier : **Sources** (voir §3.4).
 | Mise en page, libellés FR/EN | Cette spec + `config.libelles` | Discussion 8 |
 | Contrôle des builds produits | Checklist du skill + §6 | Discussion 2 |
 
+**Aucun relevé manuel (v5, demande d'Alexis du 15/11)** : tout élément vient du pipeline ou de la base ; un élément non lu reste `null` / « Non trouvé », jamais complété à la main. L'ordre des compétences en combat n'est pas dans le build : il vient du relevé automatique de rotation (`data/rotations/`, discussion 3 et 8), qui réutilise l'identification des chasseurs de l'étape 2 (cartes de référence).
+
 Le tri 1 (texte) **ne remplit aucun élément** en v1 : une description qui liste un build n'est pas vérifiable à l'image. On la garde dans `notes` comme indice.
 
 ## 5. [EN ATTENTE] — à coder en « non géré » propre

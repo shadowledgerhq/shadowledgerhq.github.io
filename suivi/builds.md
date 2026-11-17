@@ -4,6 +4,7 @@
 - Contrôle des builds 2026-11-12 (générés le 15/11, avant les cartes) : BOT 8 partiel + 1 pas_de_build (provisoires), POC 1 + 1, GB 4 pas_de_build (composition GB non décrite) ; aucun id introuvable, aucun interdit
 - Constat : 0 chasseur identifié sur 33 ; armes des chasseurs « icône absente » partout ; successeur jamais reconnu ; ombre 01 = beste sur 6 BOT
 ## En cours
+- Pas de relevé manuel : rotation = relevé automatique (data/rotations/, discussions 3 et 8)
 - Discussion 8 : relancer builds avec les cartes, enregistrer les images extraites dans docs/essais/composition/auto/
 - Discussion 9 : cartes de tous les chasseurs et des successeurs, icônes des armes de chasseurs
 ## À faire
