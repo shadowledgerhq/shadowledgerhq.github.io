@@ -1,38 +1,37 @@
-# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-17 02:45 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-17 19:56 (Paris)
 
-- Top 10 couvert : non (27 vidéos candidates au top 10 restantes)
+- Top 10 couvert : non (30 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
-- Vidéos traitées ce passage : 9 · en_cours restantes : 57 (dont 27 à traiter par le PC)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 60 (dont 30 à traiter par le PC)
 - Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
-- Durée du passage : 1025 min
-- Relance automatique : aucune (c'était déjà la relance) : prochain passage normal
+- Durée du passage : 1 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
-- Type : relance automatique (ne compte pas pour le critère de gel n° 3)
-- Conflit git résolu automatiquement
+- Résumé GB : nh2D7xZ7dOQ · SlayOnLow · Results lu (270-312 s) · 165 RC sûr · groupe 2 · light
+- Résumé GB : cfZRPdtAGmg · aucun Results lu · pas classée
 
-- Semaine : 61 en cours (dont 47 pour le PC), 29 terminée(s), 11 rejetée(s)
+- Semaine : 60 en cours (dont 46 pour le PC), 30 terminée(s), 11 rejetée(s)
 - Classements : bot 13, gb 7, hotm-gate-inconnue 4, poc 4
 
-## À vérifier (27)
-- bot · X SLA · 19.0 · wJ9CwjKwyco · publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 19s; boss non contrôlé
+## À vérifier (26)
 - bot · aaaaaaaaaaaa · 19.558 · a-923ClD9Rc · score provisoire (titre) : 19.558; semaine confirmée (titre); boss non contrôlé
 - bot · 𐐂露依Rui ルイ 𐐚 · 19.754 · Lt84IhMjBvM · score provisoire (titre) : 19.754s; semaine confirmée (titre); boss non contrôlé
-- bot · PADWAE · 19.9 · 5MI-RLj7FSk · score provisoire (titre) : 19.9s; boss non contrôlé
+- bot · X SLA · 19.926 · wJ9CwjKwyco · publiée juste après le reset : semaine précédente ?; boss non contrôlé; BOT ja : temps de jeu non lu
+- bot · PADWAE · 19.9 · 5MI-RLj7FSk · score provisoire (titre) : 19.9s; chrono incomplet : rang prudent; boss non contrôlé
 - bot · MOBgame · 20.331 · nwP8dSSfo1o · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · SNG · 23.223 · tOzRUlmZ2JI · score provisoire (titre) : 23;223s; boss non contrôlé
-- bot · 리히온 · 28.0 · uwJfPTJI8ZE · score provisoire (titre) : 28초; boss non contrôlé
 - bot · LATOYA Gaming · 28.349 · ysfa3H023n8 · score provisoire (titre) : 28.349; boss non contrôlé
-- bot · Keos · 29.0 · duX8KmoDdYw · score provisoire (titre) : 29s; boss non contrôlé
-- bot · Raksefon · 35.0 · wFFdg1gcZpE · score provisoire (description) : 35 sec; description non relue (règles v3); boss non contrôlé
+- bot · 리히온 · 28.0 · uwJfPTJI8ZE · score provisoire (titre) : 28초; chrono incomplet : rang prudent; boss non contrôlé
+- bot · Keos · 29.0 · duX8KmoDdYw · score provisoire (titre) : 29s; chrono incomplet : rang prudent; boss non contrôlé
+- bot · Raksefon · 35.0 · wFFdg1gcZpE · score provisoire (description) : 35 sec; description non relue (règles v3); chrono incomplet : rang prudent; boss non contrôlé
 - bot · SlayOnLow · 40.077 · HWebrRc_l0o · score provisoire (titre) : 40.077 SECONDS; boss non contrôlé
-- bot · OhchiGameS · 44.0 · OppPeyQ--7s · score provisoire (description) : 44s; boss non contrôlé
+- bot · OhchiGameS · 44.0 · OppPeyQ--7s · score provisoire (description) : 44s; chrono incomplet : rang prudent; boss non contrôlé
 - bot · Akihiro · 130.266 · VFDbdYFzor4 · score provisoire (description) : 02:10.266; boss non contrôlé
-- gb · Eden(이든) · 322 · vYtRCpFtSOk · lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (36 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Light / Fire); boss non contrôlé
-- gb · Ahmad1195 · 189 · awb-GlVIa7Q · écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (72 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée; boss non contrôlé
-- gb · mitchell leveling · 177 · trinzgj3FV4 · score provisoire (titre) : 177 RC; une seule run trouvée; boss non contrôlé
-- gb · SNG · 176 · OPcjwjYkuME · écart OCR zone/image : final_score; écart OCR zone/image : rage_count; contrôle GB : somme 30263550677307 ≠ Final Score 30458500980570; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; une seule run trouvée; boss non contrôlé
-- gb · SlayOnLow · 165 · nh2D7xZ7dOQ · écart OCR zone/image : rage_count; écart OCR zone/image : final_score; lecture fusionnée (8 images); conflit de lecture : player_score; groupe 2 d'après le Personal Record (RC égal); une seule run trouvée; boss non contrôlé
-- gb · HS Retro Gaming · 19 · lGDbzyIJcjY · écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; boss non contrôlé
+- gb · Eden(이든) · 322 · vYtRCpFtSOk · lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (36 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Light / Fire)
+- gb · Ahmad1195 · 189 · awb-GlVIa7Q · écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (72 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée
+- gb · mitchell leveling · 177 · trinzgj3FV4 · score provisoire (titre) : 177 RC; une seule run trouvée
+- gb · SNG · 176 · OPcjwjYkuME · écart OCR zone/image : final_score; écart OCR zone/image : rage_count; contrôle GB : somme 30263550677307 ≠ Final Score 30458500980570; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; une seule run trouvée
+- gb · HS Retro Gaming · 19 · lGDbzyIJcjY · écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée
 - hotm-gate-inconnue · OhchiGameS · 94000 · RVkSt2bWn_U · score provisoire (titre) : 94000; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · RAVANPLAYZ · 91500 · 8qqgrjiYhck · score provisoire (titre) : 91500; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · SNG · 85000 · SdiCUFy5FbE · score provisoire (titre) : 85k; porte HOTM illisible; boss non contrôlé
@@ -44,7 +43,6 @@
 
 ## Alertes boss
 - bot : boss non contrôlé (< 3 vidéos)
-- gb : boss non contrôlé (< 3 vidéos)
 - hotm-gate-inconnue : boss non contrôlé (< 3 vidéos)
 - poc : boss non contrôlé (< 3 vidéos)
 
@@ -55,14 +53,7 @@
 - rien
 
 ## Erreurs et alertes
-- Aqj1crEcrD4 : 429 / anti-bot YouTube, reportée au prochain passage
+- wJ9CwjKwyco : 429 / anti-bot YouTube, reportée au prochain passage
 - 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
-- 16 vidéo(s) reportée(s) pour les images (limite 15)
-- Aqj1crEcrD4 : durée PT35M2S hors limite (30 min), images non traitées
-- SDMrcxG50LI : durée PT37M45S hors limite (30 min), images non traitées
-- K4786mdlgXg : durée PT44M26S hors limite (30 min), images non traitées
-- PawKtXDQjdc : durée PT33M44S hors limite (30 min), images non traitées
-- mTdGlZh3zXA : images tri 4 partielles (budget 15 min), reprises au prochain passage
-- budget de temps du passage atteint (180 min) : 6 vidéo(s) d'images reportée(s)
-- 57 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : aucune (c'était déjà la relance) : prochain passage normal
+- 60 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- passage incomplet : anti-bot ; relance : aucune (une relance a déjà été programmée ce soir) : prochain passage normal

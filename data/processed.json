@@ -466,11 +466,11 @@
     "first_seen": "2026-11-13",
     "updated_at": "2026-11-17",
     "last_tri": 4,
-    "status": "en_cours",
+    "status": "termine",
     "modes": [
       "bot"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 17,
     "pc": {
       "image_taille": [
@@ -479,10 +479,13 @@
       ],
       "hud_suite": [],
       "results_lus": [],
-      "tri3": "a_faire",
-      "date": "2026-11-15",
-      "tri4": "a_faire",
-      "tri2": "fait"
+      "tri3": "fait",
+      "date": "2026-11-17",
+      "tri4": "fait",
+      "tri2": "fait",
+      "hud_amont": [],
+      "rotation": "absent",
+      "rotation_version": 1
     },
     "relecture": "2026-11-17",
     "relecture_auto": 18

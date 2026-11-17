@@ -97,21 +97,21 @@
       ],
       "unit": "seconds"
     },
-    "score_source": "miniature",
+    "score_source": "debut-fin",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (miniature) : 19.926; publiée juste après le reset : semaine précédente ?; titre arrondi : 19s; boss non contrôlé",
+    "notes": "publiée juste après le reset : semaine précédente ?; boss non contrôlé; BOT ja : temps de jeu non lu",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
         "video_id": "wJ9CwjKwyco",
         "published_at": "2026-11-12T02:50:30+01:00",
-        "t": null,
+        "t": 37,
         "stage": null,
         "team": null,
-        "score_source": "miniature",
+        "score_source": "debut-fin",
         "exact": false
       }
     ]

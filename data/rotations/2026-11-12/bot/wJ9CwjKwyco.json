@@ -1,0 +1,20 @@
+{
+  "spec": 1,
+  "video_id": "wJ9CwjKwyco",
+  "week": "2026-11-12",
+  "mode": "bot",
+  "gate": null,
+  "run_id": "bot-2026-11-12-wJ9CwjKwyco",
+  "runs": [
+    {
+      "run_index": 1,
+      "run_start_t": null,
+      "run_end_t": null,
+      "duration_s": null,
+      "events": [],
+      "limites": [
+        "hud-non-trouve"
+      ]
+    }
+  ]
+}

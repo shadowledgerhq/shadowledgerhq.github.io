@@ -99,3 +99,16 @@ error: The following untracked working tree files would be overwritten by checko
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Type : relance automatique (ne compte pas pour le critère de gel n° 3)
 - Conflit git résolu automatiquement
+
+<!-- passage-pc pc-daily 2026-11-17T18:56:12.345316+00:00 -->
+## Passage pc-daily — 2026-11-17 19:56 (Paris)
+
+- Top 10 couvert : non (30 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 60 (dont 30 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 1 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Résumé GB : nh2D7xZ7dOQ · SlayOnLow · Results lu (270-312 s) · 165 RC sûr · groupe 2 · light
+- Résumé GB : cfZRPdtAGmg · aucun Results lu · pas classée

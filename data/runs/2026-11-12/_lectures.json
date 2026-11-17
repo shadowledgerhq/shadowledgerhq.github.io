@@ -282,32 +282,6 @@
     ]
   },
   {
-    "video_id": "wJ9CwjKwyco",
-    "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
-    "channel_title": "X SLA",
-    "published_at": "2026-11-12T01:50:30Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 19.0,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "publiée juste après le reset : semaine précédente ?",
-      "score provisoire (titre) : 19s"
-    ]
-  },
-  {
     "video_id": "duX8KmoDdYw",
     "channel_id": "UCjHQXaVhgDfEYtZ_FgMhmUw",
     "channel_title": "Keos",
@@ -3952,35 +3926,6 @@
     ]
   },
   {
-    "video_id": "wJ9CwjKwyco",
-    "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
-    "channel_title": "X SLA",
-    "published_at": "2026-11-12T01:50:30Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 19.926,
-    "score_source": "miniature",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "texte_miniature": true,
-      "votes_miniature": 4
-    },
-    "notes": [
-      "publiée juste après le reset : semaine précédente ?",
-      "score provisoire (miniature) : 19.926"
-    ]
-  },
-  {
     "video_id": "Bi5TrN5d1_E",
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "channel_title": "LATOYA Gaming",
@@ -4007,6 +3952,46 @@
     "notes": [
       "score provisoire (miniature) : 12.391",
       "miniature, autres valeurs lues : 21.382"
+    ]
+  },
+  {
+    "video_id": "wJ9CwjKwyco",
+    "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
+    "channel_title": "X SLA",
+    "published_at": "2026-11-12T01:50:30Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 37,
+    "stage": null,
+    "team": null,
+    "score": 19.926,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        9.281,
+        14.986,
+        19.926
+      ],
+      "play_time": null,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        37
+      ]
+    },
+    "notes": [
+      "publiée juste après le reset : semaine précédente ?",
+      "boss non contrôlé",
+      "BOT ja : temps de jeu non lu"
     ]
   }
 ]
