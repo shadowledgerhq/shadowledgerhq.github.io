@@ -406,6 +406,72 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
     return evaluer_confiance(evenements, db, cfg.get("tolerance_recharge_s", 1.0)), limites
 
 
+def lire_chrono(texte):
+    """Chrono du combat lu par l'OCR -> secondes (float) ou None. Formats `mm:ss.mmm`, `ss.mmm` (jamais d'entier seul : trop de faux positifs)."""
+    import re
+    t = (texte or "").replace(",", ".").replace(";", ":").strip()
+    m = re.search(r"(\d{1,2}):(\d{2})\.(\d{1,3})", t)
+    if m:
+        return round(int(m.group(1)) * 60 + int(m.group(2)) + int(m.group(3).ljust(3, "0")) / 1000, 3)
+    m = re.search(r"(?<!\d)(\d{1,2})\.(\d{3})(?!\d)", t)
+    return round(int(m.group(1)) + int(m.group(2)) / 1000, 3) if m else None
+
+
+def preparer_chrono(image, seuil=170, hauteur=60):
+    """Zone du chrono -> noir sur blanc pour tesseract (chiffres blancs : min(R, V, B), seuil, agrandi à `hauteur` px)."""
+    return preparer_chiffre(image, seuil, (0.0, 0.0, 1.0, 1.0), hauteur)
+
+
+def ocr_chrono(outils, tmp, seuil=170):
+    """`ocr(image PIL) -> texte` du chrono (chiffres, `:` et `.`) ; ne lève jamais."""
+    from pathlib import Path
+    compteur = [0]
+
+    def ocr(image):
+        try:
+            compteur[0] += 1
+            png = Path(tmp) / f"_chrono_{compteur[0]}.png"
+            preparer_chrono(image, seuil).save(png)
+            try:
+                return outils.ocr(png, langues="eng", psm=7, timeout=30, extra=["-c", "tessedit_char_whitelist=0123456789:."])
+            finally:
+                png.unlink(missing_ok=True)
+        except Exception:
+            return ""
+    return ocr
+
+
+def ajouter_t_game(evenements, recadrages_chrono, ocr, tolerance=0.5):
+    """`t_game` de chaque événement : chrono lu sur le recadrage 1080p le plus proche de l'événement (± `tolerance` s), None si le chrono n'est pas
+    affiché ou illisible. `recadrages_chrono` = {t: image PIL de la zone `chrono`} (HUD présent seulement). Modifie et retourne `evenements`."""
+    cache = {}
+    for e in evenements:
+        e["t_game"] = None
+        if not recadrages_chrono or ocr is None:
+            continue
+        t = min(recadrages_chrono, key=lambda x: abs(x - e["t"]))
+        if abs(t - e["t"]) > tolerance + 1e-6:
+            continue
+        if t not in cache:
+            cache[t] = lire_chrono(ocr(recadrages_chrono[t]))
+        e["t_game"] = cache[t]
+    return evenements
+
+
+def debut_derniere_run(presents, t_fin, coupure_s=10.0, pas=0.5):
+    """Début (s) du dernier groupe de segments de HUD avant `t_fin` : on remonte tant que la coupure entre deux segments est ≤ `coupure_s`
+    (cinématique d'ultime ≈ 6-7 s) ; une coupure plus longue = une autre tentative (a-923ClD9Rc : coupure de 13,5 s à 43-56,5 s). None si pas de HUD."""
+    ts = sorted(t for t, v in (presents or {}).items() if v and t < t_fin)
+    if not ts:
+        return None
+    debut = ts[-1]
+    for t in reversed(ts[:-1]):
+        if debut - t > coupure_s + pas + 1e-6:
+            break
+        debut = t
+    return debut
+
+
 def temps_sans_hud(presents, t_debut, t_fin, pas):
     """Secondes sans HUD entre les bornes (écran noir, cinématique d'ultime) : le chrono de jeu s'y arrête. `presents` = {t: bool} (ancre) ;
     None si la présence du HUD n'est pas connue. Chaque image compte `pas` s."""
@@ -420,7 +486,7 @@ def construire_run(index, t_debut, t_fin, evenements, limites, sans_hud_s=None):
     sortie = []
     for e in sorted(evenements, key=lambda e: e["t"]):
         x = {"t": round(e["t"], 2), "t_run": round(e["t"] - t_debut, 2), "hunter": e["hunter"], "slot": e["slot"], "skill_id": e.get("skill_id"),
-             "trigger": e.get("trigger") if e["slot"] == "tag" else None, "cooldown_read": e.get("cooldown_read"), "source": e["source"],
+             "trigger": e.get("trigger") if e["slot"] == "tag" else None, "cooldown_read": e.get("cooldown_read"), "t_game": e.get("t_game"), "source": e["source"],
              "confidence": e.get("confidence", "a_verifier")}
         sortie.append(x)
     run = {"run_index": index, "run_start_t": round(t_debut, 2) if t_debut is not None else None,
@@ -439,27 +505,24 @@ def fichier(ctx, runs):
 # --- critères d'acceptation (SPEC §4, BOT) ---------------------------------------------------------------------------------
 
 def controles_bot(fich, chrono_s=None, t_composition=None, phases=(), db=None, tolerance=1.0):
-    """[(nom, ok | None, détail)] : durée = chrono ± 0,5 s, fin avant la composition, ≥ 1 événement SJW et 1 par chasseur actif, aucune recharge
-    relancée trop tôt, phases du Results entre les bornes. `None` = non évaluable (donnée absente)."""
+    """[(nom, ok | None, détail)] — critères SPEC_ROTATION §4 (v1.4). `None` = non évaluable (donnée absente ou inconnue).
+    1 durée ≥ chrono − 0,5 s ; 2 fin avant la composition (temps connu et > 0) ; 3 ≥ 1 événement SJW ; 4 ≥ 1 événement par chasseur actif
+    identifié ; 5 aucune recharge relancée trop tôt ; 6 `t_game` (si lu) croissant, dernier ≤ chrono, phases du Results dans [1er t_game ; chrono]."""
     db = db or {}
     r = (fich.get("runs") or [{}])[0]
     ev = r.get("events") or []
     sortie = []
     d = r.get("duration_s")
-    sh = r.get("sans_hud_s")
-    if sh is not None and d is not None:
-        jeu = d - sh   # le chrono de jeu s'arrête pendant les cinématiques (SPEC_ROTATION §7)
-        sortie.append(("durée − temps sans HUD = chrono ± 0,5 s", None if chrono_s is None else abs(jeu - chrono_s) <= 0.5,
-                       f"durée {d} s − sans HUD {sh} s = {round(jeu, 2)} s, chrono {chrono_s} s" + ("" if chrono_s is None else f", écart {jeu - chrono_s:+.2f} s")))
-    else:
-        sortie.append(("durée = chrono ± 0,5 s", None if d is None or chrono_s is None else abs(d - chrono_s) <= 0.5, f"durée {d} s, chrono {chrono_s} s" + ("" if d is None or chrono_s is None else f", écart {d - chrono_s:+.2f} s")))
+    sortie.append(("durée ≥ chrono − 0,5 s", None if d is None or chrono_s is None else d >= chrono_s - 0.5,
+                   f"durée {d} s, chrono {chrono_s} s" + ("" if d is None or chrono_s is None else f" (×{d / chrono_s:.1f})")))
     fin = r.get("run_end_t")
-    sortie.append(("fin avant la composition", None if fin is None or t_composition is None else fin < t_composition, f"fin {fin} s, composition {t_composition} s"))
+    connu = bool(t_composition)          # 0 ou None = temps de composition inconnu (a-923, Lt84)
+    sortie.append(("fin avant la composition", None if fin is None or not connu else fin < t_composition, f"fin {fin} s, composition {t_composition} s"))
     sjw = any(e["hunter"] == "sjw" for e in ev)
     sortie.append(("≥ 1 événement SJW", sjw if ev else None, f"{sum(1 for e in ev if e['hunter'] == 'sjw')} événement(s)"))
     chasseurs = {e["hunter"] for e in ev if e["hunter"] not in ("sjw", "inconnu")}
-    actifs = {e["hunter"] for e in ev if e["slot"] == "tag" and e["hunter"] != "sjw"}
-    sortie.append(("≥ 1 événement par chasseur actif", None if not actifs else actifs <= chasseurs, f"actifs {sorted(actifs)}, avec événement {sorted(chasseurs)}"))
+    actifs = {e["hunter"] for e in ev if e["slot"] == "tag" and e["hunter"] not in ("sjw", "inconnu")}
+    sortie.append(("≥ 1 événement par chasseur actif identifié", None if not actifs else actifs <= chasseurs, f"actifs identifiés {sorted(actifs)}, avec événement {sorted(chasseurs)}"))
     trop_tot, derniers = [], {}
     for e in ev:
         base = recharge_base(db, e["hunter"], e["slot"], e.get("skill_id"))
@@ -468,9 +531,18 @@ def controles_bot(fich, chrono_s=None, t_composition=None, phases=(), db=None, t
             trop_tot.append(f"{e['hunter']}/{e['slot']} à {e['t']} s")
         derniers[cle] = e["t"]
     sortie.append(("aucune recharge relancée trop tôt", (not trop_tot) if ev else None, "; ".join(trop_tot) or "ok"))
+    tg = [e["t_game"] for e in sorted(ev, key=lambda e: e["t"]) if e.get("t_game") is not None]
     ph = [p for p in phases if p is not None]
-    debut = r.get("run_start_t")
-    sortie.append(("phases du Results entre les bornes", None if not ph or debut is None or fin is None else all(debut <= debut + p <= fin + 0.5 for p in ph), f"phases {ph}"))
+    if not tg or chrono_s is None:
+        sortie.append(("t_game croissant, ≤ chrono, phases dans la fenêtre", None, "chrono du HUD non lu"))
+    else:
+        croissant = all(b >= a for a, b in zip(tg, tg[1:]))
+        borne = tg[-1] <= chrono_s
+        # le dernier chrono de phase = le chrono : « dans [1er t_game ; dernier t_game] » est impossible tant que le dernier t_game < chrono → fenêtre [1er ; chrono]
+        phases_ok = all(tg[0] <= p <= chrono_s + 0.5 for p in ph) if ph else None
+        ok = croissant and borne and (phases_ok is not False)
+        sortie.append(("t_game croissant, ≤ chrono, phases dans la fenêtre", ok,
+                       f"{len(tg)} lecture(s) {tg[0]}→{tg[-1]} s ; croissant {croissant} ; dernier ≤ chrono {borne} ; phases {ph} ({'non évaluable' if phases_ok is None else phases_ok})"))
     return sortie
 
 
@@ -589,6 +661,25 @@ def diagnostic_crops(ctx, frames, cfg, racine=RACINE):
     return ecrits
 
 
+def diagnostic_chrono(ctx, frames, cfg, racine=RACINE):
+    """`zones.chrono` non calibrée : 3 recadrages du HAUT de l'image (≤ 960 px, jamais l'image entière, SPEC §2.7) pour trouver le chrono du combat,
+    dans `_crops/` ; à supprimer au commit qui fixe la zone. Retourne les chemins écrits."""
+    if not frames:
+        return []
+    dossier = Path(racine) / "data" / "rotations" / ctx["week"] / ctx["mode"] / "_crops"
+    dossier.mkdir(parents=True, exist_ok=True)
+    pas = max(1, len(frames) // 4)
+    ecrits = []
+    for k in (1, 2, 3):
+        t, im = frames[min(k * pas, len(frames) - 1)]
+        c = recadrer(im.convert("RGB"), cfg.get("diagnostic_chrono_zone", [0.0, 0.0, 1.0, 0.45]))
+        c.thumbnail((960, 960))
+        f = dossier / f"{ctx['video_id']}_chrono_{int(t * 10):05d}.jpg"
+        c.save(f, quality=85)
+        ecrits.append(f)
+    return ecrits
+
+
 def planche_zones(ctx, images, zones, cfg, racine=RACINE, extra=None):
     """Calibration : une planche (lignes = boutons calibrés, colonnes = une image tous les `scan_pas_s`) des recadrages des SEULES zones de boutons
     (jamais l'image entière, SPEC §2.7) + les séries de luminance, dans `_crops/` du mode. Seulement si `cfg.planche` est vrai. Retourne le chemin."""
@@ -619,7 +710,7 @@ def planche_zones(ctx, images, zones, cfg, racine=RACINE, extra=None):
     return f
 
 
-def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr=None, cartes=None, racine=RACINE, duree_s=None, t_composition=None):
+def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr=None, cartes=None, racine=RACINE, duree_s=None, t_composition=None, ocr_t=None):
     """Relevé d'UNE vidéo déjà téléchargée. Retourne l'état de `pc.rotation` : `fait` | `absent` | `erreur`. Bornes : début = 1re image où un bouton de
     compétence est visible (balayage à `scan_pas_s`), fin = `ctx.t_result` (Results lu aux tris 3-4) sinon dernière image avec HUD (`bornes-incertaines`)."""
     zones = {k: v for k, v in (cfg.get("zones") or {}).items() if v}
@@ -655,8 +746,13 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
     else:
         t_fin = visibles[-1] + cfg.get("scan_pas_s", 0.5)
         limites.append("bornes-incertaines")
+    if presents_scan:           # v1.4 : la run = dernier groupe de segments de HUD avant la fin (écran Results), pas tout le HUD
+        debut2 = debut_derniere_run(presents_scan, t_fin, cfg.get("coupure_run_s", 10.0), cfg.get("scan_pas_s", 0.5))
+        if debut2 is not None and debut2 > t_debut:
+            limites.append("essais-precedents")
+            t_debut = debut2
     pas = 1 / cfg.get("fps", 10)
-    lectures, extra = None, None
+    lectures, extra, chrono_crops = None, None, {}
     if cfg.get("detection") == "ocr" and ocr and cfg.get("hauteur_ocr"):
         boutons = [b for b in BOUTONS_HUNTER + BOUTONS_SJW if zones.get(b)]
         pas_ocr = cfg.get("ocr_pas_s", 0.5)
@@ -664,16 +760,25 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
         for t, chemin_png in outils.images(chemin, [(t_debut, max(t_fin - t_debut, pas_ocr), pas_ocr)], tmp, prefixe="ro", hauteur=cfg["hauteur_ocr"]):
             with Image.open(chemin_png) as im:
                 im = im.convert("RGB")
-                recadrages.append((t, {n: recadrer(im, zones[n]).copy() for n in boutons + (["ancre"] if zones.get("ancre") else [])}))
+                recadrages.append((t, {n: recadrer(im, zones[n]).copy() for n in boutons + (["ancre"] if zones.get("ancre") else []) + (["chrono"] if zones.get("chrono") else [])}))
         pres = hud_present([(t, vignette(zs["ancre"], [0, 0, 1, 1])) for t, zs in recadrages], cfg.get("ancre_corr", 0.4)) if zones.get("ancre") else {}
         brut = []
         lectures = lectures_ocr(recadrages, boutons, ocr, pres, brut)
+        chrono_crops = {t: zs["chrono"] for t, zs in recadrages if "chrono" in zs and pres.get(t, True)}
         extra = {"hauteur": cfg["hauteur_ocr"], "hud": {str(t): bool(v) for t, v in pres.items()},
                  "brut": {b: [[t, x] for bb, t, x in brut if bb == b] for b in boutons}}
     planche_zones(ctx, images, zones, cfg, racine, extra)
     frames = [(t, Image.open(p).convert("RGB")) for t, p in outils.images(chemin, [(t_debut, max(t_fin - t_debut, pas), pas)], tmp, prefixe="rf", hauteur=cfg.get("hauteur", 720))]
     sjw = ctx.get("skills_sjw") or {}
     evenements, lim = releves_run(frames, zones, cfg, db, cartes, sjw, ocr, t_debut, lectures)
+    if zones.get("chrono"):                 # t_game : chrono du combat lu dans le HUD (SPEC §2.4)
+        ajouter_t_game(evenements, chrono_crops, ocr_t, cfg.get("t_game_tolerance_s", 0.5))
+    else:                                   # zone à calibrer : grands recadrages du haut de l'image (≤ 960 px, 3 instants)
+        diagnostic_chrono(ctx, frames, cfg, racine)
+    chrono = ctx.get("chrono_s")
+    duree = (t_fin - t_debut) if t_fin is not None else None
+    if chrono and duree and duree > cfg.get("duree_max_facteur", 2.5) * chrono:
+        limites.append("bornes-incertaines")
     run = construire_run(1, t_debut, t_fin, evenements, limites + lim, temps_sans_hud(presents_scan, t_debut, t_fin, cfg.get("scan_pas_s", 0.5)))
     fich = fichier(ctx, [run])
     controles = [list(c) for c in controles_bot(fich, ctx.get("chrono_s"), t_composition if t_composition is not None else ctx.get("t_composition"),

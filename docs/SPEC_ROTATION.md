@@ -1,4 +1,4 @@
-# SPEC_ROTATION — relevé automatique de l'ordre des compétences — v1.3 (2026-11-17)
+# SPEC_ROTATION — relevé automatique de l'ordre des compétences — v1.4 (2026-11-18)
 
 Demandeur : discussion 3 (Theorycraft). Code : discussion 8. Aucune action manuelle d'Alexis.
 But : pour les meilleures runs, la liste horodatée des compétences utilisées pendant la run. Elle sert de timeline aux vidéos de l'étape 3b.
@@ -10,7 +10,7 @@ But : pour les meilleures runs, la liste horodatée des compétences utilisées 
 - Budget de départ : 3 vidéos par mode et par passage.
 
 ## 2. Méthode
-1. Bornes de la run : run_start_t = première image où le HUD est visible, c'est-à-dire où un bouton de compétence a une luminance ≥ 30 (seuil `visible_luminance`, réglable dans rotation.json) ; run_end_t = écran Results (runs_detail[i].t, détection existante, ecrans.py). Sans Results lu (ligne provisoire) : run_end_t = dernière image avec HUD et limite bornes-incertaines. Si un chrono provisoire existe (bot.json, titre ou miniature), l'écart duration_s − chrono est écrit dans _rapport.md. Les images hors bornes sont ignorées. Vidéo à 2 runs (POC, GB) : un objet par run dans runs[], dans l'ordre de runs_detail.
+1. Bornes de la run : run_start_t = première image où le HUD est visible, c'est-à-dire où un bouton de compétence a une luminance ≥ 30 (seuil `visible_luminance`, réglable dans rotation.json) ; run_end_t = écran Results (runs_detail[i].t, détection existante, ecrans.py). Sans Results lu (ligne provisoire) : run_end_t = dernière image avec HUD et limite bornes-incertaines. Si un chrono provisoire existe (bot.json, titre ou miniature), l'écart duration_s − chrono est écrit dans _rapport.md. Les images hors bornes sont ignorées. **v1.4** : duration_s (temps vidéo) n'est jamais comparé au chrono à 0,5 s près (le HUD reste affiché pendant les transitions de phase et les ralentis). La run = le dernier groupe de segments de HUD avant le Results : on remonte les segments tant que la coupure ≤ `coupure_run_s` (10 s ; une cinématique d'ultime dure 6-7 s) ; une coupure plus longue = un essai précédent (limite `essais-precedents`, a-923ClD9Rc : 12,5-43 s puis 56,5-104 s). duration_s > 2,5 × chrono → limite bornes-incertaines (signalée, pas un échec). Vidéo à 2 runs (POC, GB) : un objet par run dans runs[], dans l'ordre de runs_detail.
 2. Échantillonnage : 10 images/s entre les bornes, en 720p.
 3. Calibration du HUD (format 16:9), dans pipeline/config/rotation.json : zones des boutons skill_1, skill_2, ultimate (chasseur actif), des boutons de SJW, des portraits de l'équipe et de la jauge de noyau. Établie à partir des images de wJ9CwjKwyco (client anglais), puis vérifiée sur a-923ClD9Rc (client japonais) et Lt84IhMjBvM. Format autre que 16:9 : limites ["format"] et aucun événement.
 4. Détection (entre deux images successives) :
@@ -23,14 +23,16 @@ But : pour les meilleures runs, la liste horodatée des compétences utilisées 
 6. Identité : hunter = id de la base si le portrait correspond (cartes de référence de la discussion 9, data/icons/hunters_cartes/, comparées par SIFT ; pas data/icons/hunters/, dont les illustrations ne sont pas celles des cartes du jeu), sjw pour Sung Jin Woo, sinon inconnu. Les compétences SJW (sjw.skills du build) donnent l'id de la compétence (skill_id) quand il est connu.
 7. Images de tiers : aucune image complète de la vidéo n'est poussée. Seuls les recadrages des boutons et portraits (comme data/builds/.../_crops/) peuvent l'être, dans data/rotations/<semaine>/<mode>/_crops/. Exception, pour la calibration seulement : de grands recadrages du bas de l'image (≤ 960 px, 3 instants par vidéo) sont permis ; ils sont supprimés du dépôt dans le commit qui fixe les zones.
 
+8. **t_game (v1.4)** : chrono du combat lu par l'OCR dans le HUD (zone `zones.chrono`, formats `mm:ss.mmm` ou `ss.mmm`) sur le recadrage 1080p le plus proche de chaque événement (± `t_game_tolerance_s` 0,5 s), seulement si le HUD est affiché ; illisible ou zone non calibrée = null. t_run reste le temps vidéo. Tant que `zones.chrono` est null, le passage garde 3 recadrages du haut de l'image (≤ 960 px) dans `_crops/` pour la calibrer (supprimés au commit de la zone).
+
 ## 3. Sortie : data/rotations/<semaine>/<mode>/<video_id>.json
 {"spec": 1, "video_id": "wJ9CwjKwyco", "week": "2026-11-12", "mode": "bot", "gate": null, "run_id": "bot-2026-11-12-wJ9CwjKwyco",
  "runs": [{"run_index": 1, "run_start_t": 0.0, "run_end_t": 0.0, "duration_s": 0.0,
-   "events": [{"t": 0.0, "t_run": 0.0, "hunter": "sjw | <id> | inconnu", "slot": "skill_1", "skill_id": null, "trigger": null, "cooldown_read": null, "source": "hud-recharge", "confidence": "a_verifier"}],
+   "events": [{"t": 0.0, "t_run": 0.0, "hunter": "sjw | <id> | inconnu", "slot": "skill_1", "skill_id": null, "trigger": null, "cooldown_read": null, "t_game": null, "source": "hud-recharge", "confidence": "a_verifier"}],
    "limites": []}]}
 - slot : skill_1, skill_2, ultimate, core, tag, sjw_skill_1, sjw_skill_2, sjw_ultimate, sjw_qte.
 - source : hud-recharge, portrait, jauge, ocr. confidence : sur, a_verifier.
-- t = secondes dans la vidéo ; t_run = t − run_start_t. trigger seulement pour tag (qte | inconnu).
+- t = secondes dans la vidéo ; t_game = chrono du combat (s) lu dans le HUD ou null ; t_run = t − run_start_t. trigger seulement pour tag (qte | inconnu).
 - limites : format, hud-non-trouve, bornes-incertaines, chasseurs-inconnus.
 - Rapport du passage : data/rotations/<semaine>/_rapport.md (vidéos, nombre d'événements, a_verifier, limites).
 
@@ -40,11 +42,13 @@ Déjà connu (à vérifier) :
 - chrono de la run : 19,926 s, lu sur la miniature (i.ytimg.com, 17/11/2026). bot.json indique 19,0 s (lu dans le titre). La capture Results de REFERENCE_ECRANS_BOT.md (13/11 : Baruka, phases cumulées 9,281 / 14,986 / 19,926 s) correspond probablement à cette run ;
 - SJW : arme The Huntsman, QTE 1 Foulée de l'ombre (build provisoire).
 Le cloud n'a pas pu télécharger la vidéo : les événements de wJ9CwjKwyco et de a-923ClD9Rc sont produits par le 2e passage PC (après calibration), puis recopiés ici en v2.
-Critères d'acceptation :
-- duration_s = 19,9 ± 0,5 s et run_end_t < 38 s (avant la composition) ;
-- au moins un événement pour SJW et un pour chaque chasseur actif ;
-- aucune compétence relancée avant la fin de sa recharge connue ;
-- les phases du Results (9,281 / 14,986 s) tombent entre run_start_t et run_end_t.
+Critères d'acceptation (v1.4, contrôles du rapport ; « non évaluable » n'est pas un échec) :
+1. duration_s ≥ chrono − 0,5 s ; si duration_s > 2,5 × chrono : limite bornes-incertaines (signalée, pas un échec) ;
+2. fin avant la composition si son temps est connu (> 0), sinon non évaluable (a-923 et Lt84 : composition = 0 s) ;
+3. au moins un événement pour SJW ;
+4. au moins un événement par chasseur actif identifié ; chasseur inconnu : non évaluable ;
+5. aucune compétence relancée avant la fin de sa recharge connue ;
+6. si t_game est lu : croissant, dernier t_game ≤ chrono, phases du Results dans [premier t_game ; chrono] (la dernière phase = le chrono : l'intervalle [premier ; dernier t_game] ne peut pas la contenir) ; sinon non évaluable.
 
 ## 5. Tests
 - Tests unitaires (pipeline/tests/) : bouton prêt/en recharge sur images synthétiques, fusion des doublons à moins de 0,5 s, calcul de t_run.

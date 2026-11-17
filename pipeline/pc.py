@@ -1141,7 +1141,7 @@ def passage_rotation(vid, week, outils, chemin, tmp, meta, d, journal):
             cartes = portraits.charger_cartes(RACINE / "data" / "icons") or None
         except Exception:
             cartes = None
-        etat = rotation.passage_video(outils, chemin, ctx, cfg, db, tmp, journal, ocr=rotation.ocr_recharge(outils, tmp), cartes=cartes, racine=RACINE,
+        etat = rotation.passage_video(outils, chemin, ctx, cfg, db, tmp, journal, ocr=rotation.ocr_recharge(outils, tmp), ocr_t=rotation.ocr_chrono(outils, tmp), cartes=cartes, racine=RACINE,
                                       duree_s=duree_minutes(meta.get("duration")) and duree_minutes(meta.get("duration")) * 60)
         journal(f"  rotation {vid} : {etat}")
         return etat

@@ -155,27 +155,56 @@ def test_v7_ralenti_et_recharge_de_chasseur_plausible():
 # --- critères d'acceptation BOT ------------------------------------------------------------------------------------------------
 
 def test_controles_bot():
-    run = R.construire_run(1, 4.0, 23.9, [{"t": 6.0, "hunter": "sjw", "slot": "sjw_skill_1", "source": "hud-recharge", "confidence": "sur"},
-                                           {"t": 7.0, "hunter": "h1", "slot": "skill_1", "source": "hud-recharge", "confidence": "sur"},
-                                           {"t": 9.0, "hunter": "h1", "slot": "tag", "source": "portrait", "trigger": "inconnu"}], [])
-    c = {n: ok for n, ok, _ in R.controles_bot(R.fichier({"video_id": "v", "week": "w", "mode": "bot"}, [run]), 19.926, 38.0, (9.281, 14.986), HUNTER_DB)}
+    ev = [{"t": 6.0, "hunter": "sjw", "slot": "sjw_skill_1", "source": "hud-recharge", "confidence": "sur", "t_game": 2.0},
+          {"t": 7.0, "hunter": "h1", "slot": "skill_1", "source": "hud-recharge", "confidence": "sur", "t_game": 3.0},
+          {"t": 9.0, "hunter": "h1", "slot": "tag", "source": "portrait", "trigger": "inconnu", "t_game": 5.0}]
+    run = R.construire_run(1, 4.0, 23.9, ev, [])
+    assert run["events"][0]["t_game"] == 2.0 and list(run["events"][0]).index("t_game") == list(run["events"][0]).index("cooldown_read") + 1
+    f = R.fichier({"video_id": "v", "week": "w", "mode": "bot"}, [run])
+    c = {n: ok for n, ok, _ in R.controles_bot(f, 19.926, 38.0, (9.281, 14.986, 19.926), HUNTER_DB)}
     assert all(v is True for v in c.values()), c
-    c = {n: ok for n, ok, _ in R.controles_bot(R.fichier({"video_id": "v", "week": "w", "mode": "bot"}, [run]), 25.0, 20.0, (9.281, 30.0), HUNTER_DB)}
-    assert c["durée = chrono ± 0,5 s"] is False and c["fin avant la composition"] is False and c["phases du Results entre les bornes"] is False
+    # durée 3× le chrono : pas un échec (limite bornes-incertaines ailleurs) ; composition 0 = non évaluable ; chasseur inconnu = non évaluable
+    c = {n: ok for n, ok, _ in R.controles_bot(f, 5.0, 0, (), HUNTER_DB)}
+    assert c["durée ≥ chrono − 0,5 s"] is True and c["fin avant la composition"] is None
+    c = {n: ok for n, ok, _ in R.controles_bot(f, 25.0, 20.0, (9.281, 30.0), HUNTER_DB)}
+    assert c["durée ≥ chrono − 0,5 s"] is False and c["fin avant la composition"] is False
+    inconnu = R.construire_run(1, 0.0, 30.0, [{"t": 1.0, "hunter": "inconnu", "slot": "tag", "source": "portrait"}], [])
+    c = {n: ok for n, ok, _ in R.controles_bot(R.fichier({"video_id": "v", "week": "w", "mode": "bot"}, [inconnu]), 19.9)}
+    assert c["≥ 1 événement par chasseur actif identifié"] is None and c["t_game croissant, ≤ chrono, phases dans la fenêtre"] is None
+    # t_game : décroissant, ou dernier > chrono = échec
+    for tg in ([5.0, 3.0], [1.0, 21.0]):
+        e2 = [{"t": 1.0 + i, "hunter": "sjw", "slot": "sjw_skill_1", "source": "x", "t_game": v} for i, v in enumerate(tg)]
+        c = {n: ok for n, ok, _ in R.controles_bot(R.fichier({"video_id": "v", "week": "w", "mode": "bot"}, [R.construire_run(1, 0.0, 30.0, e2, [])]), 19.9)}
+        assert c["t_game croissant, ≤ chrono, phases dans la fenêtre"] is False
     assert R.controles_bot({"runs": [R.construire_run(1, None, None, [], ["hud-non-trouve"])]})[0][1] is None
 
 
-def test_temps_sans_hud_et_controle_chrono():
-    # wJ9 : 0-37 s de vidéo, HUD absent de 16,5 à 24 s (cinématique) et de 31,5 à 37 s ; chrono 19,926 s
+def test_lire_chrono_et_t_game():
+    assert R.lire_chrono("00:12.345") == 12.345 and R.lire_chrono("12.3") is None and R.lire_chrono("1:05.5") == 65.5
+    assert R.lire_chrono("19.926") == 19.926 and R.lire_chrono("") is None and R.lire_chrono("abc") is None
+    from PIL import Image
+    crops = {1.0: Image.new("RGB", (4, 4)), 2.0: Image.new("RGB", (4, 4), "white")}
+    lectures = {id(crops[1.0]): "00:03.500", id(crops[2.0]): "bruit"}
+    ev = [{"t": 1.1, "slot": "skill_1"}, {"t": 2.0, "slot": "skill_2"}, {"t": 9.0, "slot": "ultimate"}]
+    R.ajouter_t_game(ev, crops, lambda im: lectures[id(im)])
+    assert [e["t_game"] for e in ev] == [3.5, None, None]       # illisible ou hors tolérance : null
+    assert [e["t_game"] for e in R.ajouter_t_game([{"t": 1.0}], {}, None)] == [None]
+
+
+def test_debut_derniere_run_coupure_longue():
+    # a-923ClD9Rc : HUD 12,5-29, 35-43, 56,5-88, 88,5-104 → la run = dernier groupe (coupure 43-56,5 > 10 s)
+    pres = {t / 2: (12.5 <= t / 2 < 29 or 35 <= t / 2 < 43 or 56.5 <= t / 2 < 104) for t in range(0, 220)}
+    assert R.debut_derniere_run(pres, 104.0) == 56.5
+    # wJ9CwjKwyco : HUD 0-17 puis 23-31,5 (cinématique de 6 s) → une seule run depuis 0
+    pres = {t / 2: (t / 2 < 17 or 23 <= t / 2 < 31.5) for t in range(0, 74)}
+    assert R.debut_derniere_run(pres, 37.0) == 0.0
+    assert R.debut_derniere_run({}, 10.0) is None
+
+
+def test_temps_sans_hud():
     pres = {t / 2: not (16.5 <= t / 2 < 24 or t / 2 >= 31.5) for t in range(0, 74)}
     sh = R.temps_sans_hud(pres, 0.0, 37.0, 0.5)
-    assert sh == 13.0, sh
-    run = R.construire_run(1, 0.0, 37.0, [], [], sh)
-    assert run["sans_hud_s"] == 13.0
-    c = {n: (ok, d) for n, ok, d in R.controles_bot(R.fichier({"video_id": "v", "week": "w", "mode": "bot"}, [run]), 24.0)}
-    assert c["durée − temps sans HUD = chrono ± 0,5 s"][0] is True, c
-    c = {n: ok for n, ok, _ in R.controles_bot(R.fichier({"video_id": "v", "week": "w", "mode": "bot"}, [run]), 19.926)}
-    assert c["durée − temps sans HUD = chrono ± 0,5 s"] is False
+    assert sh == 13.0 and R.construire_run(1, 0.0, 37.0, [], [], sh)["sans_hud_s"] == 13.0
     assert R.temps_sans_hud({}, 0, 10, 0.5) is None and "sans_hud_s" not in R.construire_run(1, 0, 1, [], [])
 
 
@@ -219,7 +248,7 @@ def test_passage_video_ecrit_le_fichier_de_la_spec(tmp_path):
     assert (r["run_start_t"], r["run_end_t"]) == (2.0, 12.0) and r["duration_s"] == 10.0
     assert [(e["slot"], e["t"], e["t_run"]) for e in r["events"] if e["slot"] != "tag"] == [("skill_1", 4.0, 2.0), ("sjw_skill_1", 6.0, 4.0)]
     rap = (tmp_path / "data/rotations/2026-11-12/_rapport.md").read_text(encoding="utf-8")
-    assert "bot · wJ9CwjKwyco · run 1" in rap and "ÉCHEC : durée = chrono ± 0,5 s" in rap and "OK : phases du Results entre les bornes" in rap
+    assert "bot · wJ9CwjKwyco · run 1" in rap and "OK : durée ≥ chrono − 0,5 s" in rap and "NON ÉVALUABLE : t_game" in rap
 
 
 def test_hud_non_calibre_limite_et_recadrages_de_calibration(tmp_path):
