@@ -31,6 +31,9 @@ from etape1 import ecrire_rapport, ouvrir_semaine
 from semaine import PARIS, id_semaine, iso_utc, maintenant, parse_iso, semaine_precedente
 import libelles_inconnus
 import ocr_ecrans
+import elements
+import elements_hud
+import hunters_results
 import ordre_pc
 import rapport_pc
 from tri1 import lectures_texte
@@ -534,6 +537,43 @@ def _est_ecran(l):
     return l["score_source"] in SOURCES_ECRAN or (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")
 
 
+def _elements_hud(png, config, lectures):
+    """v31 : couleur des losanges d'élément du panneau d'équipe, attachée (`detail.elements_hud`) aux lectures de HUD de l'image."""
+    cfg = (config or {}).get("elements_hud")
+    cibles = [l for l in lectures if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
+    if cfg and cibles:
+        els = elements_hud.lire_losanges(png, cfg)
+        for l in cibles:
+            l["detail"]["elements_hud"] = els
+
+
+def _chasseurs_results(png, texte, config, meta, lectures):
+    """v31 : identité des chasseurs par les portraits des 6 lignes du Results (banque `data/icons/hunters_results`) -> `detail.hunter_ids`
+    + note « chasseurs reconnus : n/6 ». Apprend la banque quand un build `sûr` de la même run donne l'identité. Banque vide : rien."""
+    cibles = [l for l in lectures if _est_results_gb(l) and l.get("score") is not None]
+    if not cibles:
+        return
+    try:
+        from PIL import Image
+        with Image.open(png) as im:
+            img = im.convert("RGB").copy()
+        succ = ocr_ecrans.mise_en_page_results(texte, config) == "successeur"
+        week = id_semaine(parse_iso(meta["published_at"]))
+        builds = elements.charger_builds(RACINE / "data", week)
+        ids_b = elements.ids_du_build(builds, {"mode": "gb", "video_id": meta["video_id"], "t": cibles[0].get("t")})
+        if ids_b:
+            import portraits
+            hunters_results.apprendre(RACINE, ids_b, hunters_results.decouper(img, hunters_results.zones_portraits(config, succ)),
+                                      portraits.charger_cartes(RACINE / "data" / "icons"), config)
+        ids, n = hunters_results.lire(img, config, RACINE, succ)
+    except Exception:
+        return
+    if ids and n:
+        for l in cibles:
+            l["detail"]["hunter_ids"] = [i for i in ids if i]
+            l["notes"].append(f"chasseurs reconnus : {n}/6")
+
+
 def _est_results_gb(l):
     return l["mode"] == "gb" and l["score_source"] in SOURCES_RESULTATS and (l.get("detail") or {}).get("ecran") != "combat"
 
@@ -813,7 +853,10 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
         if type_ecran in ZONES_TYPES and zones_lues < gb_cfg.get("zones_max_images", 12):   # les zones sont chères (plusieurs OCR par zone)
             zones = lire_zones_results(outils, png, config, type_ecran, texte, langs)
             zones_lues += 1
-        lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
+        ls = ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
+        _elements_hud(png, config, ls)
+        _chasseurs_results(png, texte, config, meta, ls)
+        lectures += [l for l in ls
                      if _est_results_gb(l) or (l["mode"] == "gb" and l["score_source"] == "record")      # + Personal Record du salon
                      or (l.get("detail") or {}).get("ecran") == "combat_sans_chrono"]                     # + HUD au chrono illisible (SPEC v19)
         Path(png).unlink(missing_ok=True)
@@ -897,7 +940,9 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
                     if ocr_ecrans.detecter(texte) in RESULTATS_TYPES:
                         detectes.append(t)
-                    nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
+                    nl = ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
+                    _elements_hud(png, config, nl)
+                    nouvelles += nl
                     Path(png).unlink(missing_ok=True)
                 lectures = fusionner_ecrans(lectures, vid, nouvelles, config, duree_s=minutes * 60)
                 # v21 : HUD de fin de run (chrono lu ≤ 5 s) -> les 2 images suivantes (1 img/s) : le HUD y a souvent un chrono illisible
@@ -915,8 +960,9 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                             continue
                         texte_s = _ocr_image(outils, png_s, langs, cfg, st, complet=True)
                         _garder(ocr_debug, vid, "suite_hud", t_s, texte_s, png_s)
-                        suite += [l for l in ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
-                                  if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
+                        ls = ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
+                        _elements_hud(png_s, config, ls)
+                        suite += [l for l in ls if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
                         Path(png_s).unlink(missing_ok=True)
                     st["images"] += 2
                     lectures = fusionner_ecrans(lectures, vid, suite, config, duree_s=minutes * 60)
@@ -959,8 +1005,9 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                     for t_s, png_s in outils.images(chemin, [(debut_a, t_r - debut_a, 1)], tmp, prefixe=f"a{t_r}_"):
                         texte_s = _ocr_image(outils, png_s, langs, cfg, st, complet=True)
                         _garder(ocr_debug, vid, "hud_amont", t_s, texte_s, png_s)
-                        suite += [l for l in ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
-                                  if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
+                        ls = ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
+                        _elements_hud(png_s, config, ls)
+                        suite += [l for l in ls if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
                         Path(png_s).unlink(missing_ok=True)
                     st["images"] += t_r - debut_a
                     journal(f"  HUD de fin cherché de {debut_a} à {t_r} s : {len(suite)} lecture(s)")

@@ -20,9 +20,16 @@ def monde(lectures, titres=None, hunters=None):
 def test_elements_du_titre_multilingue():
     f = lambda t: elements.elements_du_titre(t, CONFIG)
     assert f("GUILD BOSS 156 RC - FIRE team") == ["fire"] and f("Giant Statue Light + Wind") == ["light", "wind"]
-    assert f("Lightning build") == [] and f("Água / Fogo") == ["water", "fire"] and f("闇属性 のみ") == ["dark"]
-    assert f("불 속성 파티") == ["fire"] and f("물을 사용") == ["water"] and f("불가능") == []
+    assert f("Lightning build") == [] and f("Água / Fogo") == ["water", "fire"] and f("闇 のみ") == ["dark"] and f("闇属性") == []
+    assert f("불 속성 파티") == ["fire"] and f("물을 사용") == [] and f("불가능") == []
     assert f("Luz Fuego") == ["light", "fire"] and f("Ténèbres vs Eau") == ["dark", "water"]
+
+
+def test_v31_mots_d_un_caractere_isoles_seulement():
+    f = lambda t: elements.elements_du_titre(t, CONFIG)
+    assert f("水篠旬") == [] and f("괴물") == [] and f("화상 불꽃") == [] and f("旬水1") == []
+    assert f("석상 불 160") == ["fire"] and f("Statue Light 162") == ["light"] and f("불, 물") == ["fire", "water"]
+    assert f("GB 불160") == ["fire"] and f("闇") == ["dark"] and f("바람 암흑") == ["wind", "dark"]      # plus d'un caractère : règle inchangée
 
 
 def test_deux_videos_un_element_chacune_sont_additionnees_et_sures():

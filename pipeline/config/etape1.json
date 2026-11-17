@@ -8,6 +8,12 @@
     "wind": ["Wind", "Vent", "Vento", "Viento", "風", "바람"],
     "dark": ["Dark", "Ténèbres", "Trevas", "Oscuridad", "闇", "암흑"]
   },
+  "elements_hud": {
+    "_doc": "SPEC v31 §3.1 : élément de chaque chasseur lu sur la COULEUR du losange en haut à gauche de chaque portrait du panneau d'équipe du HUD de combat (colonne de droite, A팀/B팀). Zones en fractions (x, y, largeur, hauteur) d'une image 16:9, centrées sur (1725 ; 356 / 452 / 548) en 1920x1080 (capture MJ2iz5TFmvM_recherche_202). `teintes` : plages de teinte HSV en degrés ; `sat_min`/`val_min` : pixels vifs seulement ; `pixels_min` : en dessous, losange illisible (null). Teintes mesurées sur les HUD de docs/essais/ocr : fire ~0 (MJ2iz5TFmvM, T5dR6iJAn-Y), light ~44-52 (nh2D7xZ7dOQ, awb-GlVIa7Q, Oj_-5x6700s), wind ~87-120 (lGDbzyIJcjY) ; water (bleu) et dark (violet) NON VUS : plages théoriques. [À CALIBRER]",
+    "zones": [[0.8953, 0.3241, 0.0063, 0.0111], [0.8953, 0.4130, 0.0063, 0.0111], [0.8953, 0.5019, 0.0063, 0.0111]],
+    "teintes": {"fire": [[345, 360], [0, 12]], "light": [[32, 62]], "wind": [[78, 140]], "water": [[190, 250]], "dark": [[255, 310]]},
+    "sat_min": 0.45, "val_min": 0.5, "pixels_min": 8
+  },
   "ecrans_exclus": {
     "_doc": "SPEC v29 : écrans à ne JAMAIS prendre pour un écran de score (ni détectés, ni lus par zone, ni collectés dans libelles_inconnus). Un marqueur trouvé dans le texte OCR (comparé sans accents, casse ni espaces) exclut l'image. Vus : composition BOT (FormTeam / Player Mode : son « Record » est un ancien record), fiches de chasseur, écrans de statue coréens, équipement automatique, page Netmarble, classement en direct du BOT (temps d'autres joueurs).",
     "marqueurs": ["FormTeam", "Player Mode", "Total Power", "Lv.170/170", "조각상", "전투력", "자동 장착", "My Page", "Real-time Rank", "Realtime Rank"]

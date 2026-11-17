@@ -347,7 +347,7 @@ def calculer(week, d=None, config=None, horloge=None):
 
     titres_v = {v: m.get("title", "") for v, m in d.videos(week).items()}      # v30 : éléments des runs (titre, chasseurs vus)
     db_hunters = {h["id"]: h.get("element") for h in d.lire("db/hunters.json", []) if isinstance(h, dict) and "id" in h}
-    elements.annoter(runs, titres_v, config, db_hunters)
+    elements.annoter(runs, titres_v, config, db_hunters, elements.charger_builds(d.data, week))
 
     # Vidéos qui n'ont plus aucune run : rejetées (doublon / semaine précédente).
     rejected, processed = d.rejected(week), d.processed()

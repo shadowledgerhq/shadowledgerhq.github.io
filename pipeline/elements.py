@@ -1,14 +1,19 @@
 """SPEC v30 §4.1 : élément d'une run GB / POC (Light, Fire, Water, Wind, Dark) et distinction des groupes / équipes.
 
 Sources de l'élément d'une run, dans cet ordre (l'écran prime sur le titre) :
- 1. chasseurs vus à l'écran : `detail.hunter_ids` (identifiants de `data/db/hunters.json`, lus par l'étape 2 ; [À VÉRIFIER] pas encore
-    alimenté de façon fiable) -> élément majoritaire ;
+ 1. chasseurs vus à l'écran : `detail.hunter_ids` (identifiants de `data/db/hunters.json` : (a) build `sûr` de l'étape 2 de la même run,
+    sinon (b) portraits des 6 lignes « Hunter Rank » du Results, `hunters_results.py`) -> élément majoritaire ; sinon, sans identité,
+    `detail.elements_hud` (couleur des losanges du HUD, `elements_hud.py`) -> élément strictement majoritaire (≥ 2 losanges, ≥ 2 images) ;
  2. titre qui cite UN seul élément, vidéo à UNE seule run filmée du mode ;
  3. titre qui cite 2 éléments, vidéo à 2 runs filmées : chaque élément du titre va à la run dont les chasseurs l'ont ; si une seule
     run est lue à l'écran (et son élément figure dans le titre), l'autre reçoit l'élément restant.
 Écran et titre en contradiction : `_contradiction`, la ligne passe `a_verifier`."""
+import json
 import re
 import unicodedata
+from pathlib import Path
+
+import elements_hud
 from collections import Counter
 
 ELEMENTS = ("light", "fire", "water", "wind", "dark")
@@ -17,7 +22,6 @@ EN = {"light": "Light", "fire": "Fire", "water": "Water", "wind": "Wind", "dark"
 SOURCES_TEXTE = ("titre", "description", "sous-titres")
 NOTE_CONTRADICTION = "élément du titre contredit par l'écran"
 _HANGUL = "가-힣"
-_PARTICULES = "속성|속|을|를|이|가|의|은|는|로|으로|에|과|와"
 
 
 def _sans_accents(t):
@@ -26,11 +30,14 @@ def _sans_accents(t):
 
 
 def _motif(mot):
+    """v31 : un mot d'UN seul caractère (빛 불 물 光 火 水 風 闇) ne compte que isolé : bordé par un début / une fin de titre, une espace,
+    une ponctuation ou un chiffre (`水篠旬`, `괴물`, `화상` : aucun élément ; `석상 불 160` : fire). Les mots plus longs (바람, 암흑, mots
+    latins) gardent la règle précédente (mot latin entier ; sous-chaîne pour le CJK)."""
     m = _sans_accents(mot)
+    if len(m) == 1 and not re.fullmatch(r"[a-z]", m):
+        return rf"(?<![^\W\d_]){re.escape(m)}(?![^\W\d_])"       # isolé : pas de lettre (hangul, kana, kanji…) accolée ; chiffres et ponctuation permis
     if re.fullmatch(r"[a-z]+", m):
         return rf"(?<![a-z]){m}(?![a-z])"
-    if re.search(f"[{_HANGUL}]", m) and len(m) == 1:      # une syllabe (불, 물, 빛) : seule ou suivie d'une particule courante
-        return rf"(?<![{_HANGUL}]){m}(?:{_PARTICULES})?(?![{_HANGUL}])"
     return re.escape(m)
 
 
@@ -56,13 +63,36 @@ def element_majoritaire(ids, hunters):
     return el if not reste or reste[0][1] < n else None
 
 
+def charger_builds(racine_data, week):
+    """v31 (a) : builds de l'étape 2 de la semaine, `sûrs` : [(mode, video_id, t_result, [ids de chasseurs])]."""
+    sortie = []
+    for f in sorted((Path(racine_data) / "builds" / week).glob("*/*.json")):
+        try:
+            b = json.loads(f.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        ids = [h.get("id") for h in b.get("hunters") or [] if h.get("id")]
+        if b.get("confidence") == "sur" and ids and b.get("status") != "pas_de_build":
+            sortie.append((b.get("mode"), b.get("video_id"), b.get("t_result"), ids))
+    return sortie
+
+
+def ids_du_build(builds, r, delai=10):
+    """Identifiants des chasseurs du build `sûr` de la même run (même vidéo et même mode ; `t_result` à `delai` s du `t` de la run, ou
+    seul build de la vidéo pour une seule run) ; [] sinon."""
+    memes = [b for b in builds or [] if b[0] == r["mode"] and b[1] == r["video_id"]]
+    proches = [b for b in memes if b[2] is not None and r.get("t") is not None and abs(b[2] - r["t"]) <= delai]
+    return (proches or (memes if len(memes) == 1 else [(None, None, None, [])]))[0][3]
+
+
 def _filmee(r):
     return r.get("score_source") not in SOURCES_TEXTE and r.get("score_source") != "record"
 
 
-def annoter(runs, titres, config, hunters):
+def annoter(runs, titres, config, hunters, builds=None):
     """GB et POC : renseigne `element`, `element_source` (`ecran` | `titre` | `titre+ecran` | None) et `_contradiction` (+ note) sur
-    les runs FILMÉES de chaque vidéo. `titres` : {video_id: titre}. Modifie `runs` en place."""
+    les runs FILMÉES de chaque vidéo. `titres` : {video_id: titre} ; `builds` : `charger_builds`. Modifie `runs` en place.
+    Priorité : `hunter_ids` (build sûr, sinon portraits du Results) > `elements_hud` > titre."""
     par_video = {}
     for r in runs:
         r.setdefault("element", None)
@@ -72,7 +102,10 @@ def annoter(runs, titres, config, hunters):
     for vid, rs in par_video.items():
         tit = elements_du_titre(titres.get(vid, ""), config)
         for r in rs:
-            el = element_majoritaire((r.get("detail") or {}).get("hunter_ids"), hunters)
+            ids = ids_du_build(builds, r) or (r.get("detail") or {}).get("hunter_ids")
+            if ids:
+                r["detail"] = {**(r.get("detail") or {}), "hunter_ids": list(ids)}
+            el = element_majoritaire(ids, hunters) or elements_hud.element_de_la_run((r.get("detail") or {}).get("elements_hud_images") or [])
             if el:
                 r["element"], r["element_source"] = el, "ecran"
                 if tit and el not in tit:
