@@ -274,3 +274,13 @@ def test_ocr_recharge_ne_leve_jamais(tmp_path):
         def ocr(self, *a, **k):
             raise RuntimeError("tesseract")
     assert R.ocr_recharge(Casse(), tmp_path)(Image.new("RGB", (10, 10))) == ""
+
+
+def test_planche_zones_ecrit_planche_et_series(tmp_path):
+    imgs = {t: Image.new("RGB", (1280, 720), (40 + int(t) * 10,) * 3) for t in (0.0, 0.5, 1.0)}
+    cfg = dict(CFG, planche=True)
+    f = R.planche_zones(_ctx(), imgs, {"skill_1": [0.8, 0.8, 0.9, 0.9]}, cfg, racine=tmp_path)
+    assert f.exists() and Image.open(f).size == (46 * 3, 14 + 50)
+    s = json.loads((f.parent / "wJ9CwjKwyco_series.json").read_text(encoding="utf-8"))
+    assert s["lignes"] == ["skill_1"] and len(s["luminance"]["skill_1"]) == 3
+    assert R.planche_zones(_ctx(), imgs, {"skill_1": [0.8, 0.8, 0.9, 0.9]}, dict(CFG, planche=False), racine=tmp_path) is None

@@ -415,6 +415,34 @@ def diagnostic_crops(ctx, frames, cfg, racine=RACINE):
     return ecrits
 
 
+def planche_zones(ctx, images, zones, cfg, racine=RACINE):
+    """Calibration : une planche (lignes = boutons calibrés, colonnes = une image tous les `scan_pas_s`) des recadrages des SEULES zones de boutons
+    (jamais l'image entière, SPEC §2.7) + les séries de luminance, dans `_crops/` du mode. Seulement si `cfg.planche` est vrai. Retourne le chemin."""
+    if not cfg.get("planche") or not images:
+        return None
+    from PIL import Image, ImageDraw
+    noms = [b for b in BOUTONS_HUNTER + BOUTONS_SJW + ("portrait",) if zones.get(b)]
+    if not noms:
+        return None
+    ts = sorted(images)
+    lc, hc = 46, 50
+    feuille = Image.new("RGB", (lc * len(ts), 14 + hc * len(noms)), "black")
+    dessin = ImageDraw.Draw(feuille)
+    for j, t in enumerate(ts):
+        if abs(t - round(t)) < 1e-6 and int(round(t)) % 2 == 0:
+            dessin.text((j * lc + 2, 1), f"{t:g}s", fill=(255, 255, 0))
+        for i, nom in enumerate(noms):
+            feuille.paste(recadrer(images[t].convert("RGB"), zones[nom]).resize((lc, hc)), (j * lc, 14 + i * hc))
+    dossier = Path(racine) / "data" / "rotations" / ctx["week"] / ctx["mode"] / "_crops"
+    dossier.mkdir(parents=True, exist_ok=True)
+    f = dossier / f"{ctx['video_id']}_planche.jpg"
+    feuille.convert("RGB").save(f, quality=80)
+    (dossier / f"{ctx['video_id']}_series.json").write_text(json.dumps(
+        {"pas_s": cfg.get("scan_pas_s", 0.5), "lignes": noms, "t": ts, "luminance": {n: [round(luminance(images[t], zones[n]), 1) for t in ts] for n in noms}},
+        indent=0), encoding="utf-8")
+    return f
+
+
 def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr=None, cartes=None, racine=RACINE, duree_s=None, t_composition=None):
     """Relevé d'UNE vidéo déjà téléchargée. Retourne l'état de `pc.rotation` : `fait` | `absent` | `erreur`. Bornes : début = 1re image où un bouton de
     compétence est visible (balayage à `scan_pas_s`), fin = `ctx.t_result` (Results lu aux tris 3-4) sinon dernière image avec HUD (`bornes-incertaines`)."""
@@ -439,6 +467,7 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
         run = construire_run(1, None, None, [], ["hud-non-trouve"])
         ecrire(ctx, fichier(ctx, [run]), racine)
         return "absent"
+    planche_zones(ctx, images, zones, cfg, racine)
     t_debut = visibles[0]
     if ctx.get("t_result"):
         t_fin = float(ctx["t_result"])

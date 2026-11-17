@@ -1,6 +1,6 @@
 {
   "_doc": "SPEC_ROTATION.md v1.2. Zones du HUD (16:9) en fractions [x0,y0,x1,y1], calées le 17/11 sur 3 recadrages 720p de wJ9CwjKwyco (client anglais, PC, touches affichées sous les boutons). Géométrie vérifiée (planche des 7 zones : chaque zone contient bien un hexagone entier) ; ASSIGNATION À VÉRIFIER : skill_1 = F, skill_2 = C, ultimate = LEFT SHIFT (hexagone orange), sjw_skill_1 = Q, sjw_skill_2 = E, sjw_ultimate = Z (recharge 60 lue), portrait = T. Non calibrés (null) : sjw_qte, core (jauge de noyau : barre bleue 2000/2000 ? à vérifier), qte ; R et souris non utilisés. À vérifier sur a-923ClD9Rc (japonais) et Lt84IhMjBvM.",
-  "version": 2,
+  "version": 3,
   "modes": [
     "bot"
   ],
@@ -85,5 +85,6 @@
         1.0
       ]
     }
-  }
+  },
+  "planche": true
 }
