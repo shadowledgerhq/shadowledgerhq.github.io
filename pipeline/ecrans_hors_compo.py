@@ -350,15 +350,23 @@ def integrer(obs, lectures, db, cfg):
             else:
                 hs = obs.setdefault("hunters", [])
                 h = next((x for x in hs if x.get("id") == ident), None)
-                if h is None and pos:                          # carte de la composition liée au portrait : on complète cette position
-                    h = next((x for x in hs if x.get("position") == pos and not x.get("id")), None)
-                    if h is not None:
-                        h["id"], h["via_portrait"] = ident, True
-                        notes.append(f"chasseur {ident} placé en position {pos} par son portrait")
-                    elif not any(x.get("position") == pos for x in hs):
-                        h = {"position": pos, "id": ident, "weapon": {}, "artifacts": [], "cores": [], "stats": {}, "via_portrait": True}
-                        hs.append(h)
-                        notes.append(f"chasseur {ident} placé en position {pos} par son portrait")
+                if pos and not (h is not None and h.get("via_portrait") and h.get("position") != pos):
+                    # v33 : nom écrit + portrait = identité sûre de la carte `pos`, même si l'icône y avait lu un autre chasseur
+                    # (nom > carte > icône) ; `via_portrait` déclenche l'apprentissage de la carte (`apprendre_cartes`, jamais écrasée).
+                    cible = next((x for x in hs if x.get("position") == pos), None)
+                    if cible is None:
+                        cible = {"position": pos, "id": None, "weapon": {}, "artifacts": [], "cores": [], "stats": {}}
+                        hs.append(cible)
+                    avant = cible.get("id")
+                    if avant != ident:
+                        if h is not None and h is not cible:        # même chasseur lu par l'icône sur une autre carte : le nom + portrait tranche
+                            h["id"] = None
+                            notes.append(f"chasseur {ident} : icône lue en position {h.get('position')} retirée (nom écrit en position {pos})")
+                        cible["id"] = ident
+                        notes.append(f"chasseur {ident} placé en position {pos} par son portrait"
+                                     + (f" (nom écrit ≠ icône lue : {avant})" if avant else ""))
+                    cible["via_portrait"] = True
+                    h = cible
                 if h is None:
                     h = {"position": None, "id": ident, "weapon": {}, "artifacts": [], "cores": [], "stats": {}}
                     hs.append(h)

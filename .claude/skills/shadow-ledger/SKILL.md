@@ -28,6 +28,8 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 - Les documents du dépôt (`docs/`, `data/`, `suivi/`) ne ressortent pas dans la recherche du Projet SLA : dans une discussion claude.ai, les lire en clonant le dépôt public `https://github.com/shadowledgerhq/shadowledgerhq.github.io` (ou via la source GitHub synchronisée du projet).
 - Arborescence décrite dans CONTEXTE.md (section 6). Spécification détaillée de l'étape 1 : SPEC_ETAPE1.md (projet et `docs/` du dépôt).
 - Toute spécification est poussée dans `docs/` du dépôt **avant** d'être envoyée à la discussion Code. Code pousse toujours sur une branche `claude/…` (fusion automatique dans `main`).
+- **Boîte** : un message des discussions 8 ou 9 vers les discussions 1 à 7 s'écrit dans `docs/BOITE.md`, section du destinataire, format `- [à traiter] AAAA-MM-JJ — de Code — message` ; le destinataire le passe en `[traité AAAA-MM-JJ]`.
+- **Aucun relevé manuel** : ne jamais écrire « à relever à la main » ; une donnée non relevée reste `null` ou « à vérifier ».
 - Noms de fichiers en minuscules, sans accents ni espaces, mots séparés par `-`.
 - Codes de mode dans les fichiers : `poc`, `bot`, `gb`, `hotm`.
 - Dates au format AAAA-MM-JJ ; heures en heure de Paris, sauf dans les workflows (UTC).
@@ -51,7 +53,7 @@ Fichiers : `poc.json`, `gb.json`, `bot.json`, `hotm-gate-<n>.json`.
   "published_at": "2026-11-13T18:02:00+01:00",
   "lang": "ko",
   "score": {"total": 4268000000, "runs": [2134000000, 2134000000], "unit": "damage"},
-  "score_source": "titre | description | sous-titres | miniature | debut-fin | video-complete | record",
+  "score_source": "titre | description | sous-titres | miniature | debut-fin | video-complete",
   "exact": true,
   "confidence": "sur | a_verifier",
   "rank": 1,
@@ -64,7 +66,7 @@ Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 - `channel_id` = clé du joueur. `video_id` = vidéo de la meilleure run ; `video_ids` = toutes les vidéos utilisées (les 2 runs POC/GB peuvent venir de 2 vidéos).
 - `rank` : seulement pour les lignes `confidence: sur` ; sinon `null`. POC et GB : une seule run `sur` suffit pour être classé (note `une seule run`) ; la 2e run, trouvée plus tard, complète le total.
 - Notes normalisées (champ `notes`) : `une seule run`, `compteur animé` (valeurs croissantes d'une animation, seule la finale compte), `groupe N d'après le Personal Record (RC égal)`, `groupes distingués par les chasseurs`, `groupes distingués par le titre (Light / Fire)`, `élément associé titre + chasseurs`, `élément du titre contredit par l'écran` (v30).
-- `score_source: record` = écran `Personal Record` du GB : lu et contrôlé, mais JAMAIS une run classée (v30) ; il sert à attribuer le groupe d'un Results de même RC. Seul l'écran RESULT donne un score sûr.
+- Le `Personal Record` du GB n'est jamais une run publiée : il est lu et contrôlé, et sert seulement à attribuer le groupe d'un Results de même RC. Seul l'écran RESULT donne un score sûr, sans exception.
 - GB et POC (v30) : `runs_detail[i].element` (`light|fire|water|wind|dark|null`) et `element_source` (`ecran|titre|titre+ecran`). L'élément d'une run sert à distinguer 2 runs d'un même joueur quand le groupe / l'équipe n'est pas lu ; le titre PEUT citer un élément (config `elements_titre`), l'écran prime sur le titre.
 
 Champs supplémentaires :
@@ -77,7 +79,8 @@ Champs supplémentaires :
   (`t` = secondes dans la vidéo ; `stage` = libellé du boss ou du stage lu à l'écran ; `team` = POC : équipe 1, 2 ou `null` ; GB : groupe 1, 2 ou `null`).
   - POC, en plus : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
   - HOTM, en plus : `{"clear": 0, "proof_bonus": 0, "proof_level": null}` ; contrôle : clear + proof_bonus = score.
-  - GB, en plus : `{"damage": 0, "damage_exact": true, "damage_source": "results | record | hud"}` (`damage` = `Final Score` ; `damage_exact` = `false` si arrondi — `Personal Record` 17.28T, titre ou HUD — et `null` si aucun dégât lu ; `damage_source: record` = ancien cas (v29 et avant, plus produit) ; `team` = groupe, connu aussi par `No history`) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; contrôle Personal Record : `Total Rage Count` = RC groupe 1 + RC groupe 2.
+  - GB, en plus : `{"damage": 0, "damage_exact": true, "damage_source": "results | hud"}` (`damage` = `Final Score` ; `damage_exact` = `false` si le contrôle de somme échoue ou est sauté, si le dégât est arrondi (titre, HUD) et `null` si aucun dégât lu ; `team` = groupe attribué par le Personal Record, ou `null`) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score`. Un dégât non contrôlé ne départage jamais une égalité de RC.
+  - POC et GB, en plus : `{"element": "light | fire | water | wind | dark | null", "element_source": "ecran | titre | titre+ecran | null"}`.
 - Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition. Jamais le score de l'écran de composition, quel que soit le mode.
 
 ### Autres fichiers de l'étape 1 (détail : SPEC_ETAPE1.md §5)
@@ -95,24 +98,24 @@ Champs supplémentaires :
 
 ### Build (data/builds/<semaine>/<mode>/<run_id>-<n>.json)
 
+Format complet (champs, statuts `build_complet | build_partiel | pas_de_build`, `found`, `counts`, `element`, `unmatched`, notes) : **`docs/SPEC_ETAPE2.md` §1.2**. Les identifiants (`id`, `weapon`…) sont ceux de la base de données. Un élément non lu reste `null` ou « non trouvé » : jamais complété à la main. `element` du build = `runs_detail[i].element` de l'étape 1.
+
+### Rotation (data/rotations/<semaine>/<mode>/<video_id>.json)
+
+Format **provisoire**, non codé : la spécification (`docs/SPEC_ROTATION.md`, avec un exemple réel) viendra de la discussion 3.
+
 ```json
 {
-  "run_id": "poc-2026-11-12-dQw4w9WgXcQ",
-  "run_index": 1,
-  "status": "build_complet | build_partiel | pas_de_build",
-  "hunters": [{"id": "", "weapon": "", "artifact_sets": [], "cores": [], "stats": {}}],
-  "shadows": [],
-  "successor": null,
-  "sjw": {"skills": [], "blessings": []},
-  "found": {"hunters": true, "shadows": false},
-  "found_at": {"hunters": "tri-3"},
-  "sources": []
+  "video_id": "dQw4w9WgXcQ",
+  "week": "2026-11-12",
+  "mode": "poc",
+  "run_start_t": 0,
+  "events": [{"t": 0, "hunter": "id-base", "slot": "skill_1", "source": "", "confidence": "sur | a_verifier"}],
+  "limites": ""
 }
 ```
 
-Les identifiants (`id`, `weapon`…) sont ceux de la base de données. Stats : principales uniquement.
-
-`sjw.skills` = liste de 6 objets `{"slot": "", "id": "", "level": null}` (`level` peut rester `null`), slots : `skill_1`, `skill_2`, `ultimate`, `qte_1`, `qte_2`, `qte_3`.
+Relevée automatiquement (jamais à la main) ; `t` en secondes depuis `run_start_t` ; un événement non relevé n'est pas écrit.
 
 ### Objet de la base (data/db/<categorie>.json, liste)
 
@@ -160,6 +163,7 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 1. Ouvrir une discussion neuve quand l'actuelle devient longue.
 2. Envoyer le prompt de démarrage de la discussion (PROMPTS_DISCUSSIONS.md) + le dernier SUIVI.md.
 3. Reprendre à « En cours », sans refaire « Fait ».
+4. **Compteur** : commencer chaque réponse par « Message n/15 » (n = numéro de la réponse précédente + 1). À n = 15, ajouter « ⚠ Discussion longue » et donner un seul message prêt à coller : ligne de rôle (PROMPTS_DISCUSSIONS.md), SUIVI à jour, prochaine action précise.
 
 ## 6. Économie de crédits
 
@@ -168,6 +172,7 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - Lire seulement les fichiers et la partie de la base utiles à la tâche.
 - Ce qui se répète se code (Python, GitHub Actions) au lieu d'être fait à la main par Claude.
 - Une question à Alexis seulement si la réponse change ce qu'on fait.
+- **Autonomie** : ne jamais demander à Alexis une information trouvable soi-même (dépôt, slagate.com, forum Netmarble, vidéos YouTube, recherche web). Introuvable : hypothèse la plus prudente, marquée « à vérifier » avec sa source, et on continue. Décision : proposer son choix par défaut et avancer. « Besoin d'Alexis » = seulement ce que lui seul peut faire (CONTEXTE.md, section 9).
 
 ## 7. Checklists de contrôle
 
@@ -177,7 +182,8 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - [ ] Une seule ligne par chaîne (HOTM : par porte) ; pas de ré-upload en double.
 - [ ] POC et GB : total = meilleure run de chaque groupe / équipe / élément (2 au plus ; GB : runs filmées seulement) ; une seule run sûre est classée avec la note `une seule run`.
 - [ ] POC : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
-- [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; `Total Rage Count` = groupe 1 + groupe 2.
+- [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` (écran Results).
+- [ ] GB : seules les runs filmées sont classées (le Personal Record n'attribue que le groupe) ; chaque run POC / GB porte `element` et `element_source` (`null` si inconnu).
 - [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas (GB : égalité de RC départagée par les dégâts).
 - [ ] Les scores `exact: false` ou `a_verifier` sont signalés.
 - [ ] Aucun écart improbable (ex. score 10 fois au-dessus du 2e) sans vérification.
@@ -186,8 +192,9 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - [ ] 10 builds par mode (×2 runs pour POC et GB) ou raison de l'absence.
 - [ ] Chaque identifiant existe dans la base de données.
 - [ ] Statut cohérent avec le champ `found`.
-- [ ] Éléments interdits dans le mode absents.
-- [ ] Un PowerPoint par vidéo du top 10.
+- [ ] Éléments interdits dans le mode absents (interdit = règle `false` seulement ; `null` = inconnu, jamais interdit).
+- [ ] Un PowerPoint par vidéo du top 10 et par langue (FR et EN).
+- [ ] Aucun élément complété à la main : un élément non lu reste `null` / « non trouvé ».
 
 ### Base de données (étape 3a)
 - [ ] Nom FR et EN renseignés.

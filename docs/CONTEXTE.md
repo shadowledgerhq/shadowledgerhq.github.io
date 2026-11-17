@@ -1,6 +1,6 @@
 # Projet SLA — Shadow Ledger : contexte de référence
 
-Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Mis à jour le 14/11/2026 (alignement sur SPEC_ETAPE1 v16 : POC et GB classés avec une seule run sûre ; GB : Personal Record prioritaire ; BOT : un seul classement, saison de 4 + 1 semaines).
+Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Mis à jour le 17/11/2026 (alignement sur SPEC_ETAPE1 v33 et SPEC_ETAPE2 v5 : GB = runs filmées seulement, Personal Record = identification du groupe, élément de la run, `data/rules` déduits des écrans, rotations relevées automatiquement ; v16 : POC et GB classés avec une seule run sûre ; BOT : un seul classement, saison de 4 + 1 semaines).
 
 ## 1. Le projet en une phrase
 
@@ -18,6 +18,7 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 | Source des builds | slagate.com (portail fan FR de Sohoven). **Autorisation obtenue.** Autres sites seulement si l'info manque ou est douteuse. |
 | Domaine | `shadowledgerhq.github.io` au début ; domaine personnel plus tard si le projet marche. |
 | Autonomie | Claude ne demande à Alexis que ce que lui seul peut faire (section 9). Information introuvable : hypothèse la plus prudente, marquée « à vérifier » avec sa source. Décision : choix par défaut proposé, et on avance. |
+| Aucun relevé manuel | Jamais « à relever à la main » : une donnée non relevée reste `null` ou « à vérifier ». |
 
 ## 3. Les 4 modes
 
@@ -25,13 +26,14 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 | --- | --- | --- | --- |
 | POC | Power Of Calamity | Dégâts max. Une run = une équipe : total = meilleure run de l'équipe 1 + meilleure run de l'équipe 2 | 2 (une par équipe) |
 | BOT | Battlefield Of Time | Chrono le plus court, **un seul classement par semaine** (le mode Challenge a été retiré du jeu en mai 2026, source forum Netmarble). Saison = 4 semaines de jeu (1 boss par semaine) + 1 semaine de calcul sans classement | 1 |
-| GB | Guild Boss | Rage Count (RC) le plus élevé. Une run = un groupe (6 chasseurs, équipes A + B, + SJW) : total = meilleure run du groupe 1 + meilleure run du groupe 2. Égalité de RC : départage par la somme des dégâts. Écran *Personal Record* accepté comme source | 2 (une par groupe) |
+| GB | Guild Boss | Rage Count (RC) le plus élevé. Une run = un groupe (6 chasseurs, équipes A + B, + SJW). **Seules les runs filmées (écran Results) comptent** : total = meilleure run filmée de chaque groupe (groupe 1 + groupe 2). Égalité de RC : départage par la somme des dégâts contrôlés. L'écran *Personal Record* sert seulement à identifier le groupe d'une run filmée, jamais à classer | 2 (une par groupe) |
 | HOTM | Hall Of The Monarchs | Points les plus élevés, **par porte** : un classement par porte (제 n관문 / 第n関門), pas de classement HOTM global | 1 par porte |
 
 - Reset de tous les modes : **jeudi 01h00, heure de Paris**.
 - Une **semaine** est identifiée par la date du jeudi où elle commence (ex. `2026-11-12`).
 - BOT, cycle de saison (dates **calculées**, à vérifier sur les vidéos) : S20 a commencé le 22/10/2026 ; semaine de calcul le 19/11/2026 ; S21 le 26/11/2026. Le titre `S<n>-<w>` (saison n, semaine w) sert de contrôle de semaine.
-- Éléments autorisés (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : **ils changent chaque semaine** (ex. relevé pour la semaine du 05/11/2026, à revérifier : BOT sans Sung Jin Woo, compétences ni bénédictions, mais avec ombres et successeur). Ils sont enregistrés dans `data/rules/<semaine>.json`, un bloc par classement (`poc`, `bot`, `gb`, `hotm`), avec source et date de vérification.
+- Éléments autorisés (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : **ils changent chaque semaine**. Ils sont enregistrés dans `data/rules/<semaine>.json`, un bloc par classement (`poc`, `bot`, `gb`, `hotm`), **déduits des écrans par le pipeline** (jamais relevés à la main) : `true` dès qu'une run sûre montre l'élément, `false` si ≥ 5 runs sûres de 5 chaînes différentes ne le montrent pas, sinon `null` (inconnu : jamais traité comme interdit). Source et date de vérification dans chaque bloc.
+- **Rythme des boss** (à vérifier sur les données) : BOT chaque jeudi ; POC par saison ; GB par mise à jour régulière ; HOTM toutes les 2 semaines. Le boss reste déduit des données chaque semaine (`_boss.json`).
 
 ## 4. Les étapes
 
@@ -54,20 +56,20 @@ Règles :
 - Boss de la semaine **déduit des données** : libellé le plus fréquent parmi les runs sûres, à partir de 3 vidéos (`_boss.json`). Run avec un autre libellé → `a_verifier` ; libellé de la semaine précédente → `rejected`.
 - Toutes régions et langues (OCR multilingue, formats 1.2B / 억 / 万).
 - Champ `confiance` : `sur` ou `a_verifier`.
-- GB, Personal Record (v15) : un Personal Record contrôlé **prime** sur un écran Results en conflit (le Results sert alors au départage et au rattachement du groupe ; note « écart Results/record »). `No history` = groupe non joué (le groupe joué est connu). Si un seul groupe a joué, le `Total Score` du record = le `Final Score` exact de la run.
+- **Élément de la run** (`runs_detail[i].element`, `element_source`) : POC et GB, `light|fire|water|wind|dark|null`, lu à l'écran (losanges du HUD, chasseurs reconnus) et/ou dans le titre. Il distingue 2 runs d'un même joueur quand le groupe ou l'équipe n'est pas lu.
 - Compteurs animés (RC, Final Score) : seule la valeur finale compte ; les valeurs croissantes lues avant sont des étapes de l'animation (note « compteur animé »).
-- Seul l'écran RESULT donne un score sûr. **Exception GB** : l'écran *Personal Record* est accepté si `Total Rage Count` = RC du groupe 1 + RC du groupe 2 et si `Time Left in Season` prouve que la capture date de la semaine en cours (sinon `rejected`, raison `semaine_precedente`).
+- **Seul l'écran RESULT donne un score sûr, sans exception.** GB : le `Personal Record` est lu et contrôlé (`Time Left in Season` prouve la bonne semaine, sinon `rejected`, raison `semaine_precedente`) mais il ne donne aucun score : il attribue seulement le groupe d'une run filmée de même RC.
 - POC et HOTM : le score retenu est « 이번 기록 » (score de cette run) de l'écran RESULT, **jamais** « 기존 기록 » (ancien record) ni le score de l'écran de composition.
 - BOT : score = chrono de la dernière phase de l'écran `Results` (= chrono du bandeau du bas). Un seul classement (`bot.json`). Titre `S<n>-<w>` de la semaine précédente → `rejected` (`semaine_precedente`) ; vidéo BOT publiée pendant la semaine de calcul → `a_verifier`.
 - Contrôles de cohérence :
   - POC : total = SJW + successeur + 3 chasseurs ;
   - HOTM : total = 클리어 (clear) + 증명 보너스 (bonus de preuve) ;
   - BOT : phases cumulées croissantes, dernière phase = chrono du bandeau = `Play Time` tronqué à la seconde ;
-  - GB : `Player's Score` + les 6 `Hunter Rank` = `Final Score` (écran Results) ; `Total Rage Count` = groupe 1 + groupe 2 (Personal Record).
+  - GB : `Player's Score` + les 6 `Hunter Rank` = `Final Score` (écran Results).
 - Vidéo publiée moins de 3 h après le reset : note d'alerte « semaine précédente ? », jamais un rejet.
 - Légendes ajoutées par l'auteur de la vidéo (titre, texte incrusté) : au mieux un score provisoire, à confirmer sur l'écran RESULT.
 - HOTM : une ligne par joueur **et par porte** ; porte illisible (écran et titre) → `hotm-gate-inconnue.json`, jamais publié.
-- *Décisions d'Alexis des 13 et 14/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` v16 (aussi dans les documents du Projet SLA).
+- *Décisions d'Alexis des 13 et 14/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` (v33 au 17/11/2026, aussi dans les documents du Projet SLA).
 
 ### Étape 2 — Builds du top 10 (automatisée en grande partie)
 
@@ -95,6 +97,7 @@ Règles :
 - Chaque choix est justifié (pourquoi ce perso, ce set, cette rotation, ce timing).
 - Voix : **clone de la voix d'Alexis** (outil gratuit à licence commerciale, ex. Chatterbox ou OpenVoice ; licence à vérifier). Échantillon de voix fourni par Alexis.
 - Script rédigé en FR et en EN.
+- **Rotation** : relevée **automatiquement** dans les vidéos du top 10 (`data/rotations/`, format en section 6), jamais à la main. Un guide POC, GB ou HOTM peut servir **plusieurs semaines** tant que le boss et les règles ne changent pas.
 
 ### Étape 4 — Réseaux sociaux
 
@@ -148,6 +151,7 @@ shadowledgerhq.github.io/
 │   │                        _meta.json (fenêtre, gel), _boss.json (boss déduit), _rapport.md (rapport du passage)
 │   ├── channels.json        chaînes YouTube suivies (channel_id, nom, playlist d'uploads, ajout manuel ou auto)
 │   ├── builds/<semaine>/<mode>/   un JSON par build
+│   ├── rotations/<semaine>/<mode>/<video_id>.json   rotation relevée automatiquement
 │   ├── rejected/<semaine>.json
 │   └── processed.json       vidéos déjà traitées ; `pc.sous_titres` = fait | absent | erreur
 ├── pipeline/                scripts Python
@@ -157,6 +161,8 @@ shadowledgerhq.github.io/
 ├── suivi/                   un SUIVI.md par discussion
 └── .github/workflows/       daily.yml (20h), weekly.yml (jeudi 01h)
 ```
+
+**Format d'une rotation** (`data/rotations/<semaine>/<mode>/<video_id>.json`) — **provisoire, non codé** (spécification à venir : `docs/SPEC_ROTATION.md`, discussion 3) : `{"video_id": "", "week": "", "mode": "", "run_start_t": 0, "events": [{"t": 0, "hunter": "", "slot": "", "source": "", "confidence": "sur | a_verifier"}], "limites": ""}`. `t` = secondes depuis `run_start_t` ; `hunter` = `id` de la base ; `slot` = compétence utilisée ; `source` = comment l'événement a été relevé ; `limites` = ce que le relevé ne couvre pas. Un événement non relevé n'est pas écrit (jamais complété à la main).
 
 ## 7. Discussions du Projet SLA
 
@@ -192,11 +198,11 @@ Les discussions 8 et 9 se font dans Claude Code (claude.ai/code), sur le dépôt
 
 Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la traite pas. Il indique la discussion à ouvrir et donne **un seul message prêt à coller**, dans cet ordre : (1) la ligne de rôle de la discussion cible, reprise de `PROMPTS_DISCUSSIONS.md` ; (2) la demande, avec le contexte utile (fichiers, décisions, ce qui est attendu). Il le fait aussi quand une discussion devient trop longue : **au 15e message d'Alexis** (puis à chaque nouveau message), il le signale en tête de réponse, recommande d'ouvrir une nouvelle discussion et donne un seul message prêt à coller : la ligne de rôle, le SUIVI à jour et la prochaine action précise.
 
-**Boîte aux lettres (15/11/2026).** Les discussions 8 (Code) et 9 (Base de données) écrivent dans le dépôt ; les discussions 1 à 7 n'y accèdent pas en continu. Tout message de 8 ou 9 pour les discussions 1 à 7 s'écrit dans `docs/BOITE.md`, dans la section du destinataire, au format `- [à traiter] AAAA-MM-JJ — de Code — message`. Le destinataire lit sa section au démarrage et passe les messages traités à `[traité]`. Alexis n'a pas à faire le courrier.
+**Boîte aux lettres (15/11/2026, rappel 17/11/2026).** Les discussions 8 (Code) et 9 (Base de données) écrivent dans le dépôt ; les discussions 1 à 7 n'y accèdent pas en continu. Tout message de 8 ou 9 pour les discussions 1 à 7 s'écrit dans `docs/BOITE.md`, dans la section du destinataire, au format `- [à traiter] AAAA-MM-JJ — de Code — message`. Le destinataire lit sa section au démarrage et passe les messages traités à `[traité]`. Alexis n'a pas à faire le courrier.
 
-**Compteur (15/11/2026).** « Compteur : commence chaque réponse par "Message n/15" (n = numéro de ta réponse précédente + 1). À partir de n = 15, ajoute "⚠ Discussion longue" et donne un seul message prêt à coller pour une nouvelle discussion : ligne de rôle (PROMPTS_DISCUSSIONS.md), SUIVI à jour, prochaine action précise. »
+**Compteur (15/11/2026, rappel 17/11/2026).** « Compteur : commence chaque réponse par "Message n/15" (n = numéro de ta réponse précédente + 1). À partir de n = 15, ajoute "⚠ Discussion longue" et donne un seul message prêt à coller pour une nouvelle discussion : ligne de rôle (PROMPTS_DISCUSSIONS.md), SUIVI à jour, prochaine action précise. »
 
-**Autonomie (15/11/2026).** « Ne demande jamais à Alexis une information que tu peux trouver toi-même (dépôt, slagate.com, forum Netmarble, vidéos YouTube, recherche web). Si c'est introuvable : hypothèse la plus prudente, marquée "à vérifier" avec sa source, et continue. Pour une décision : propose ton choix par défaut et avance. "Besoin d'Alexis" = seulement ce que lui seul peut faire (section 9). »
+**Autonomie (15/11/2026, rappel 17/11/2026) et aucun relevé manuel.** Jamais « à relever à la main » : une donnée non relevée reste `null` ou « à vérifier ». « Ne demande jamais à Alexis une information que tu peux trouver toi-même (dépôt, slagate.com, forum Netmarble, vidéos YouTube, recherche web). Si c'est introuvable : hypothèse la plus prudente, marquée "à vérifier" avec sa source, et continue. Pour une décision : propose ton choix par défaut et avance. "Besoin d'Alexis" = seulement ce que lui seul peut faire (section 9). »
 
 ## 8. Ordre de réalisation
 
@@ -219,5 +225,5 @@ Tout le reste (images de référence, libellés, listes d'éléments, données d
 
 ## 10. Points ouverts
 
-- Le boss change-t-il chaque jeudi ? **Oui pour le BOT** (1 boss par semaine, source Netmarble). Une vidéo-guide BOT publiée le mercredi ne sert donc qu'un jour : la publier en début de semaine (vendredi ou samedi). POC, GB et HOTM : à déduire des données par la discussion 1.
+- Le boss change-t-il chaque jeudi ? **Oui pour le BOT** (1 boss par semaine, source Netmarble). Une vidéo-guide BOT publiée le mercredi ne sert donc qu'un jour : la publier en début de semaine (vendredi ou samedi). POC par saison, GB par mise à jour régulière, HOTM toutes les 2 semaines (à vérifier) : boss déduit des données par la discussion 1.
 - Déclaration des revenus (statut micro-entrepreneur) quand les plateformes paieront.

@@ -310,8 +310,12 @@ def slide_titre(d, b, row):
     d.texte(s, 0.6, 2.0, 1.4, 1.4, rang_texte(b), 36, X.NUIT, gras=True, align="c", ancre="m")
     l = [f"{lib(cfg, 'joueur', lang)} : {b.get('player') or ''}", f"{lib(cfg, 'score', lang)} : {score_texte(row)}"]
     if b["mode"] in ("poc", "gb"):
-        l.append(f"{lib(cfg, 'run', lang)} {b['run_index']}/{max(1, len((row or {}).get('runs_detail') or [1]))} · "
-                 f"{lib(cfg, 'equipe' if b['mode'] == 'poc' else 'groupe', lang)} {b.get('team') or '?'}")
+        n_runs = max(1, len((row or {}).get('runs_detail') or [1]))
+        if b.get("team") is None and b.get("element"):       # v5 : groupe inconnu -> « Run Feu »
+            l.append(f"{lib(cfg, 'run', lang)} {lib(cfg, 'element_' + b['element'], lang)} ({b['run_index']}/{n_runs})")
+        else:
+            l.append(f"{lib(cfg, 'run', lang)} {b['run_index']}/{n_runs} · "
+                     f"{lib(cfg, 'equipe' if b['mode'] == 'poc' else 'groupe', lang)} {b.get('team') or '?'}")
     if b["mode"] == "hotm":
         sj = {False: "avec_sjw", True: "sans_sjw"}.get(b.get("hunter_mode"))
         l.append(f"{lib(cfg, 'porte', lang)} {b.get('gate') if b.get('gate') is not None else '?'}" + (f" · {lib(cfg, sj, lang)}" if sj else ""))
@@ -390,8 +394,9 @@ def slide_successeur(d, b, row):
     s = d.diapo(lib(d.cfg, "successeur", d.lang), b, row, _notes(b))
     su = b["successor"]
     if su.get("id"):
-        nom, it = nom_affiche(d.db, "successors", su["id"], d.lang)
-        d.case(s, 5.9, 2.3, nom, chemin_icone(d.db, "successors", su["id"], d.racine), None, su.get("level"), it, taille=1.5)
+        cat = su.get("category") or "successors"          # BOT : puissance rémanente
+        nom, it = nom_affiche(d.db, cat, su["id"], d.lang)
+        d.case(s, 5.9, 2.3, nom, chemin_icone(d.db, cat, su["id"], d.racine), None, su.get("level"), it, taille=1.5)
     else:
         d.case(s, 5.9, 2.3, "", None, _etat(d, b, "successor", "successor"), taille=1.5)
     if su.get("stats"):                                              # v3 : stats du successeur, seulement si lues

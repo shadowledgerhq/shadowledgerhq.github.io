@@ -1378,6 +1378,26 @@
    "fr": "Groupe",
    "en": "Group"
   },
+  "element_fire": {
+   "fr": "Feu",
+   "en": "Fire"
+  },
+  "element_water": {
+   "fr": "Eau",
+   "en": "Water"
+  },
+  "element_wind": {
+   "fr": "Vent",
+   "en": "Wind"
+  },
+  "element_light": {
+   "fr": "Lumière",
+   "en": "Light"
+  },
+  "element_dark": {
+   "fr": "Ténèbres",
+   "en": "Dark"
+  },
   "porte": {
    "fr": "Porte",
    "en": "Gate"
@@ -2080,6 +2100,10 @@
   "compo_pas": 3,
   "compo_ocr_max": 12
  },
+ "crops": {
+  "taille": 480,
+  "qualite": 88
+ },
  "portraits": {
   "zone_stats": [
    0.0,
@@ -2092,9 +2116,10 @@
    0.5
   ],
   "carte_marge_x": 0.01,
+  "min_corr_remanentes": 12,
   "min_corr": 25,
   "rapport": 2,
-  "min_corr_biblio": 40
+  "min_corr_biblio": 40, "min_corr_ombres": 20
  },
  "_portraits": "[À CONFIRMER] lie l'écran de stats d'un chasseur (nom lu par l'OCR) à sa carte de la composition par points d'intérêt (`pipeline/portraits.py`) : portrait = partie gauche de l'écran de stats, carte = zone du visage élargie (y 0,15-0,5) ; accepté si ≥ `min_corr` correspondances et ≥ `rapport` × la 2e carte. Mesuré 15/11 sur v0tuXJNxudk : 84 contre 19 et 4. Cartes apprises (`data/icons/hunters_cartes/`, une par chasseur identifié par nom + portrait) : `min_corr_biblio` 40 (le bruit monte à ~30 avec une seule carte connue), et la carte doit dominer ≥ `rapport` × les autres cartes / les autres positions.",
  "_zones_artefacts_bot_chasseurs": "Colonne de DROITE des chasseurs (collier, bracelet, bague, boucles) décalée de -0,010 en x et +0,005 en y le 16/11/2026 : calée sur 5MI-RLj7FSk (sets lus à l'œil : noble flesh, kamish's obsession, glorious arrogance ; score moyen de la colonne 0,40 -> 0,68-0,76). [À CONFIRMER] sur d'autres vidéos BOT."

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "baran",
+    "name": {
+      "fr": "Baran",
+      "en": "",
+      "ko": ""
+    },
+    "type": "remnant_power",
+    "description": {
+      "fr": "Baran frappe vers le bas à l'aide d'une épée géante forgée par la foudre.\n\nDégâts : 7000 % de l'Attaque de Baran\nDélai d'attente préalable : 5 seconde(s)\nUtilisations disponibles : 1 fois\n\nInflige des dégâts de Bris tout-puissants.\n\nLorsque cette compétence touche sa cible, elle la [renverse].\n\nLes dégâts augmentent de 500 % dans les [étages supérieurs de la Forteresse démoniaque de l'Atelier de la lumière brillante].",
+      "en": ""
+    },
+    "icon": "data/icons/remnant_powers/baran.png",
+    "card": "data/icons/remnant_powers_cartes/baran.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-17",
+    "notes": "Puissance rémanente (« 残影の力 », emplacement à droite de l'écran de composition BOT). Nom FR et description de Slagate ; nom EN à compléter. Carte = illustration du jeu telle qu'affichée (identité = nom écrit par Slagate)."
+  },
+  {
+    "id": "legia",
+    "name": {
+      "fr": "Légia",
+      "en": "",
+      "ko": ""
+    },
+    "type": "remnant_power",
+    "description": {
+      "fr": "Légia canalise l'énergie de mana dans son\npoing et assène un puissant coup de poing.\n\nDégâts : 7000 % de l'Attaque de Légia\nDélai d'attente préalable : 5 seconde(s)\nUtilisations disponibles : 1 fois\nInflige des dégâts de Bris tout-puissants.\nLorsque cette compétence touche sa cible,\nelle lui inflige l'effet [En l'air].\nLes dégâts augmentent de 500 % dans\n[Atelier de la lumière brillante : La première\nterre].",
+      "en": ""
+    },
+    "icon": "data/icons/remnant_powers/legia.png",
+    "card": "data/icons/remnant_powers_cartes/legia.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-17",
+    "notes": "Puissance rémanente (« 残影の力 », emplacement à droite de l'écran de composition BOT). Nom FR et description de Slagate ; nom EN à compléter. Carte = illustration du jeu telle qu'affichée (identité = nom écrit par Slagate)."
+  },
+  {
+    "id": "rockpasa",
+    "name": {
+      "fr": "Rockpasa",
+      "en": "",
+      "ko": ""
+    },
+    "type": "remnant_power",
+    "description": {
+      "fr": "Rockpasa saute haut dans les airs, accumule de l'énergie de mana dans son poing et assène un puissant coup vers le bas.\n\nDégâts : 7000 % de l'Attaque de Rockpasa\nDélai d'attente préalable : 5 seconde(s)\nUtilisations disponibles : 1\n\nInflige des dégâts de Bris tout-puissants.\n\nLorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].\n\nDans [Atelier de la lumière brillante : Arène de la folie], les dégâts augmentent de 500 %.",
+      "en": ""
+    },
+    "icon": "data/icons/remnant_powers/rockpasa.png",
+    "card": "data/icons/remnant_powers_cartes/rockpasa.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-17",
+    "notes": "Puissance rémanente (« 残影の力 », emplacement à droite de l'écran de composition BOT). Nom FR et description de Slagate ; nom EN à compléter. Carte = illustration du jeu telle qu'affichée (identité = nom écrit par Slagate)."
+  },
+  {
+    "id": "yogmund",
+    "name": {
+      "fr": "Yogmund",
+      "en": "",
+      "ko": ""
+    },
+    "type": "remnant_power",
+    "description": {
+      "fr": "Yogmund émerge de la faille interdimensionnelle et anéantit la totalité de la première ligne.\n\nDégâts : 7000 % de l'Attaque de Yogmund\nDélai d'attente préalable : 5 seconde(s)\nUtilisations disponibles : 1\n\nInflige des dégâts de Bris tout-puissants.\n\nLorsque la dernière attaque touche sa cible, elle lui applique l'effet [En l'air].\n\nDans [Atelier de la lumière brillante : Le Sanctuaire dénaturé], les dégâts augmentent de 500 %.",
+      "en": ""
+    },
+    "icon": "data/icons/remnant_powers/yogmund.png",
+    "card": "data/icons/remnant_powers_cartes/yogmund.png",
+    "source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "verified_at": "2026-11-17",
+    "notes": "Puissance rémanente (« 残影の力 », emplacement à droite de l'écran de composition BOT). Nom FR et description de Slagate ; nom EN à compléter. Carte = illustration du jeu telle qu'affichée (identité = nom écrit par Slagate)."
+  }
+]

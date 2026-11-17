@@ -86,7 +86,8 @@ def ids_du_build(builds, r, delai=10):
 
 
 def _filmee(r):
-    return r.get("score_source") not in SOURCES_TEXTE and r.get("score_source") != "record"
+    return (r.get("score_source") not in SOURCES_TEXTE and r.get("score_source") != "record"
+            and not (r.get("detail") or {}).get("texte_miniature"))      # v34 : le texte d'une miniature n'est pas une run filmée
 
 
 def annoter(runs, titres, config, hunters, builds=None):

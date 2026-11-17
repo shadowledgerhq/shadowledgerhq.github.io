@@ -1,6 +1,8 @@
 # Spécification — Étape 2 : builds du top 10 et PowerPoint
 
-Version 4 — 15/11/2026 — discussion 2 (Builds). Destinataire : discussion 8 (Code).
+Version 6 — 17/11/2026 — discussion 2 (Builds). Destinataire : discussion 8 (Code).
+Nouveauté v6 : emplacement « successeur » = puissance rémanente (`残影の力`) au BOT, champ `successor.category` (§1.2) ; apprentissage des cartes de chasseurs par le nom écrit validé (§2.1). Reprend ce que la discussion 8 a codé le 17/11.
+Nouveauté v5 : reconnaissance par cartes de référence (chasseurs, ombres) prioritaire (§2.1) ; élément de la run et contrôle des groupes GB/POC (§1.2, §2.3) ; règles `null` = inconnu (§2.3) ; zones établies à partir des images extraites par le pipeline, plus de captures demandées à Alexis (§5).
 Nouveauté v4 : builds sur classement provisoire quand un mode n'a aucune ligne classée (§0), demandé par la discussion 3 pour le BOT de la semaine 2026-11-12.
 Nouveautés v3 : écrans hors composition (§1.4 : fiche de SJW, stats 能力値情報, statues 彫像, gemmes 宝石情報, soutien 討伐支援), reconnaissance par le **nom écrit** quand il est visible (§2.1), stats du successeur, slides Statues et Gemmes (§3.2). Stats toujours facultatives. Source : captures POC (client JA, `docs/essais/composition/poc_*_ja.png`) et description de la discussion 8 (15/11/2026).
 Nouveautés v2 : écran de composition et onglets réels (§1.3), stats facultatives (décision d'Alexis), position des compétences de SJW et des artefacts, reconnaissance avec la banque actuelle seulement (décision d'Alexis, §2.1), §5 et §7 mis à jour. Source des positions : 5 captures BOT (client JA, `docs/essais/composition/bot_*_ja.png`) et capture HOTM de SJW (13/11/2026).
@@ -59,7 +61,7 @@ Ce format remplace l'exemple du skill §3 (« Build »). Pour le HOTM, `<mode>` 
 
 ```json
 {
-  "spec": 3,
+  "spec": 5,
   "run_id": "poc-2026-11-12-XXXXXXXXXXX",
   "run_index": 1,
   "week": "2026-11-12",
@@ -75,6 +77,7 @@ Ce format remplace l'exemple du skill §3 (« Build »). Pour le HOTM, `<mode>` 
   "t_result": 183,
   "t_composition": [4, 12],
   "team": 1,
+  "element": "dark",
   "rules": {"week": "2026-11-12", "sjw": true, "sjw_skills": true, "blessings": true, "shadows": true, "successor": true},
   "status": "build_complet | build_partiel | pas_de_build",
   "confidence": "sur | a_verifier",
@@ -92,7 +95,7 @@ Ce format remplace l'exemple du skill §3 (« Build »). Pour le HOTM, `<mode>` 
   ],
   "set_bonuses": {"sjw": [{"set_id": "…", "pieces": 4}], "hunter_1": []},
   "shadows": [{"position": 1, "id": "…"}],
-  "successor": {"id": "…", "level": null, "stats": {}},
+  "successor": {"id": "…", "category": "successors | remnant_powers", "level": null, "stats": {}},
   "subjugation_support": null,
   "proof": null,
   "statues": [{"position": 1, "grade": "D", "options": [{"text_read": "…", "lang": "ja", "grade": "S", "id": null}]}],
@@ -118,12 +121,14 @@ Règles du format :
 - **Compétences de SJW** : 6 emplacements, déjà codés dans `pipeline/sjw.py` (`skill_1`, `skill_2`, `ultimate`, `qte_1`, `qte_2`, `qte_3`) ; `level` vaut `null` si aucun niveau n'est affiché.
 - **Bénédictions** : 8 objets `{id, level}`.
 - **Stats** : clés = `id` de `stats.json`. Valeur `raw` → entier. Valeur `percent_with_rating` → `{"percent", "rating"}`, lue au format `50% (19191)`. Une stat non lue est absente de l'objet.
+- **`element` (v5)** : repris de `runs_detail[i].element` de l'étape 1 (light, fire, water, wind, dark ou `null`), jamais lu par l'étape 2 ; sert au titre de la slide 1 (« Run Feu » au lieu de « Groupe 1 » quand le groupe est inconnu).
 - **GB** : `hunters` contient 6 entrées, `team_slot` vaut `"A1"` à `"B3"`, et `team` = groupe 1/2 de la run (repris de l'étape 1).
 - **`set_bonuses`** : calculé par le code à partir des 8 pièces (nombre de pièces par set), jamais lu. Les paliers d'effet (2/4/8) viennent de `artifact_sets.json`.
 - **POC** : `subjugation_support` = liste de 3 `id` (colonnes 1 à 3) ou `null`.
 - **HOTM** : `proof` = `{"level": 931, "modifiers": [{"id": "…", "level": 5}]}` ou `null`. Contrôle : somme des coûts = `level` ; sinon note `contrôle preuve`.
 - **Statues (v3)** : 5 objets dans l'ordre de l'écran ; `grade` de la statue et de chaque option = lettre lue (`E`, `D`, `C`, `B`, `A`, `S`). Le texte de l'option est gardé tel qu'il est lu (`text_read`, `lang`) ; `id` reste `null` tant que la base n'a pas de catégorie statues (§5). Jamais de traduction.
 - **Gemmes (v3)** : `colors` = 5 objets (`position` 1 à 5 dans l'ordre de l'écran, `color` = nom de couleur seulement si la base le définit, sinon `null`, `level` lu). `bonuses` = bonus totaux affichés, `stat` = `id` de `stats.json` (ATQ % → `attack`, PV % → `hp`, DEF % → `defense`, pénétration → `defense-penetration`, mana → `mana`), `unit` = `percent` ou `flat` selon l'affichage.
+- **Successeur / puissance rémanente (v6)** : l'emplacement affiché `残影の力` à droite de la composition. Au BOT, c'est une **puissance rémanente** : `category: remnant_powers`, `id` dans `remnant_powers.json`, reconnue par sa carte (`data/icons/remnant_powers_cartes/`, seuil `portraits.min_corr_remanentes` = 12 **[À CONFIRMER]** : bruit mesuré ≤ 6, bonne carte à 7 seulement sur une capture 720p, à revoir sur vraies vidéos 1080p). Autres modes : `category: successors` tant qu'aucune capture ne montre le contraire **[À CONFIRMER]**. La slide 7 s'intitule « Puissance rémanente / Remnant Power » quand `category` = `remnant_powers`.
 - **Stats du successeur (v3)** : `successor.stats`, même format que les stats des personnages.
 - **`found`** : `true` = complet ; `false` = attendu mais incomplet ; `null` = non attendu ou facultatif non trouvé. `counts` = nombre trouvé / nombre attendu pour les éléments multiples.
 - **`unmatched`** : icônes vues mais non reconnues (score sous le seuil, §2.1). On garde le meilleur candidat et le recadrage (`data/builds/<semaine>/<mode>/_crops/…png`, non publié). Elles ne comptent pas comme trouvées.
@@ -194,7 +199,8 @@ On compare avec les icônes actuelles de `data/icons/` (pas de banque de variant
 - **Bande de doute** : un résultat entre le seuil et `config.seuil_sur.<categorie>` (défaut seuil + 0,10) est gardé, mais le build passe en `confidence: a_verifier`, note `reconnaissance faible : <élément>`.
 - **Vote** : un emplacement lu sur plusieurs images (même onglet à plusieurs instants, ou ombres/successeur sur plusieurs onglets) → vote majoritaire ; égalité → `null` + note `conflit : <élément>`. Pièces d'artefact : un set est en général porté par 2, 4 ou 8 pièces ; une pièce isolée d'un set différent de ses voisines garde sa valeur mais ajoute la note `pièce isolée : <slot>`.
 - **Reconnaissance par le nom écrit (v3, prioritaire)** : quand un nom est écrit à l'écran (armes de la fiche de SJW, nom du personnage sur l'écran de stats ou sur sa fiche), on le lit par OCR et on le compare aux noms de la base (`name.ja`, `name.ko`, `name.en`, `name.fr`). Comparaison après normalisation (NFKC, sans espaces, sans `・`, `·`, casse ignorée) : égalité exacte → trouvé (`found_by: name`) ; ressemblance ≥ `config.seuil_nom` = 0,90 **[À CONFIRMER]** et un seul candidat → trouvé, note `nom approché : <lu>` ; sinon `unmatched` avec le texte lu. Le nom prime sur l'icône ; s'ils diffèrent → `a_verifier`, note `nom/icône en désaccord`. Nécessite `name.ja` et `name.ko` dans la base (§5, point 15).
-- **Icônes non reconnues (v3)** : on **garde `unmatched`** pour les portraits, les armes et le successeur (décision d'Alexis du 14/11 : banque actuelle seulement, pas de variantes vues en jeu). La reconnaissance par le nom couvre une partie de ces cas quand le joueur ouvre une fiche.
+- **Cartes de référence (v5, prioritaires)** : `data/icons/hunters_cartes/<id>.png` et `data/icons/shadows_cartes/<id>.png` = carte recadrée telle qu'affichée sur l'onglet `personnages`, identité tirée de la base. Comparaison SIFT + RANSAC (déjà codée) ; seuils `portraits.min_corr` / `min_corr_ombres` (25) **[À CONFIRMER]**. La carte l'emporte sur l'icône (note `<élément> reconnu par sa carte, icône lue : <id>`). Ordre de priorité : nom écrit > carte > icône. Une carte ne remplace pas la banque : elle est fournie par la discussion 9 (slagate.com ou source citée), ou **apprise par le pipeline (v6) seulement quand un nom écrit a été lu** (écran de stats) et rattaché à une position de la composition : la carte de cette position est enregistrée dans `hunters_cartes/` (`portraits.apprendre`, jamais écrasée), note `nom écrit ≠ icône lue` si l'icône disait autre chose. Jamais d'apprentissage sans nom écrit. Recadrages non reconnus : 480 px, carte entière pour un chasseur (`config.crops`), pour que la discussion 9 identifie les manquants.
+- **Icônes non reconnues** : sans nom ni carte, l'élément reste `unmatched` (portraits, armes, successeur). Le rapport liste les recadrages non reconnus par catégorie pour que la discussion 9 ajoute les cartes manquantes.
 - **Chasseurs** : la banque contient des portraits, l'écran montre l'illustration pleine carte. On compare la zone du visage (haut de la carte, `config.zones.<mode>.personnages.<propriétaire>.hunter_face`). Si cela ne passe pas le seuil → `unmatched` (pas de déduction par l'arme ou l'élément).
 - Icône absente de la banque (`icon: null` dans la base) : l'objet ne peut pas être reconnu. Note `icône absente : <categorie>`.
 
@@ -211,7 +217,9 @@ On compare avec les icônes actuelles de `data/icons/` (pas de banque de variant
 
 ### 2.3 Confiance et alertes
 - `confidence: a_verifier` dans les cas suivants, avec la note entre parenthèses ; le statut n'est pas modifié :
-  - élément interdit par les règles mais détecté (`élément interdit détecté : <élément>`) ;
+  - élément interdit par les règles mais détecté (`élément interdit détecté : <élément>`) — **seulement si la règle vaut `false`** ; `null` = inconnu, jamais interdit (v5, `data/rules` déduit des écrans, SPEC_ETAPE1 v24 §4.5) ;
+  - (v5) POC et GB : deux builds de la même ligne (2 groupes ou 2 équipes) qui ont un chasseur en commun (`chasseur commun aux 2 runs : <id>`) — le jeu l'interdit, c'est donc une erreur de rattachement ou de lecture ;
+  - (v5) `element` du build différent de l'élément majoritaire des chasseurs reconnus (`élément de la run incohérent`).
   - HOTM `hunter_mode: true` mais SJW vu (`SJW vu en mode sans SJW`) ;
   - chasseur en double dans l'équipe (`doublon : <id>`) ;
   - arme exclusive portée par un autre chasseur que le sien (`weapons.hunter_id` ≠ `id`, `arme d'un autre chasseur`).
@@ -287,7 +295,7 @@ Puis, une seule fois en fin de fichier : **Sources** (voir §3.4).
 - Données du jeu : `data/db` (Shadow Ledger), sources de la base : slagate.com (autorisation de Sohoven), wiki Fandom (CC BY-SA), forum Netmarble ; version du jeu (`patches.json`, dernière version).
 - Crédits des icônes : contenu de `data/icons/CREDITS.md`, résumé.
 - Mention : « Build relevé automatiquement à partir de la vidéo ; éléments non trouvés signalés. » / « Build read automatically from the video; missing elements are flagged. »
-- Date de génération, `spec` = 3.
+- Date de génération, `spec` = 5.
 
 ## 4. Origine des données
 
@@ -304,16 +312,18 @@ Puis, une seule fois en fin de fichier : **Sources** (voir §3.4).
 | Mise en page, libellés FR/EN | Cette spec + `config.libelles` | Discussion 8 |
 | Contrôle des builds produits | Checklist du skill + §6 | Discussion 2 |
 
+**Aucun relevé manuel (v5, demande d'Alexis du 15/11)** : tout élément vient du pipeline ou de la base ; un élément non lu reste `null` / « Non trouvé », jamais complété à la main. L'ordre des compétences en combat n'est pas dans le build : il vient du relevé automatique de rotation (`data/rotations/`, discussion 3 et 8), qui réutilise l'identification des chasseurs de l'étape 2 (cartes de référence).
+
 Le tri 1 (texte) **ne remplit aucun élément** en v1 : une description qui liste un build n'est pas vérifiable à l'image. On la garde dans `notes` comme indice.
 
 ## 5. [EN ATTENTE] — à coder en « non géré » propre
 
 | # | Manque | Ce que le code fait en attendant | Qui débloque |
 | --- | --- | --- | --- |
-| 1 | **Zones des onglets** : BOT à calibrer sur les 5 captures (`docs/essais/composition/`) ; POC, HOTM avec SJW, HOTM sans SJW, GB sans captures | BOT : zones de tous les onglets à partir des captures JA. Autres modes : zones vides, note `zones <mode>/<onglet> non définies`, `pas_de_build` (raison) | Alexis : 5 captures (onglets 1 à 5) de l'écran de composition, **pleine résolution sans recadrage**, pour POC, HOTM avec SJW, HOTM sans SJW (4 onglets), GB (Team A et Team B) |
+| 1 | **Zones des onglets** : BOT et POC/personnages calibrés ; POC (onglets 2-5), HOTM avec et sans SJW, GB à calibrer | Zones absentes → note `zones <mode>/<onglet> non définies` | **v5 : plus de captures demandées à Alexis** (règle « Autonomie »). Le pipeline enregistre les images de composition extraites des vidéos du top 10 dans `docs/essais/composition/auto/<mode>/<video_id>_<onglet>_<t>.png` (1 par onglet, meilleure résolution) ; la discussion 2 y définit les zones, la discussion 8 les code. |
 | 2 | **Seuils et masques par catégorie** | `seuil_icone.<categorie>` 0,55, `seuil_sur` +0,10, `ecart_icone` 0,05, `masques` [À CONFIRMER] | Essai sur les captures BOT puis 3 vidéos ; résultats à la discussion 2 |
 | 3 | **Règles POC et GB** (`modes.poc` et `modes.gb` à `null`) | SJW, ombres, successeur traités comme facultatifs ; statut plafonné `build_partiel`, note `règles <mode> inconnues` | Alexis |
-| 4 | **Écrans de composition GB** (Team A/B, 6 chasseurs, SJW ?) : non décrits | Mode `gb` reconnu, aucun élément cherché, note `composition GB non décrite`, `pas_de_build` | Alexis : captures |
+| 4 | **Écrans de composition GB** (Team A/B, 6 chasseurs, SJW ?) : non décrits | Mode `gb` reconnu, aucun élément cherché, note `composition GB non décrite`, `pas_de_build` | Images extraites des vidéos GB du classement (`auto/gb/`, ci-dessus), puis discussion 2 |
 | 5 | **Icônes absentes de la banque** (196 `icon: null` au 14/11, surtout armes ; **pas de dossier `successors/`**) | L'objet ne peut pas être reconnu : `unmatched`, note `icône absente : <categorie>` | Discussion 9 (demande envoyée par la discussion 2) |
 | 6 | **Stats** : écran de stats rarement filmé | **Réglé (v2)** : facultatives, `stats_obligatoires = false`. Zones de l'écran de stats non calibrées → non lues, case « Non trouvé » | Une capture de l'écran de stats en 1080p suffira plus tard |
 | 7 | **Compétences des chasseurs** (8 icônes chacun) | **Réglé (v2)** : hors build pour l'instant (« plus tard ») ; non cherchées, pas de slide | — |
@@ -368,3 +378,7 @@ Checklist de la discussion 2 :
 16. (v3) Build sans statues ni gemmes → aucune slide 11-12, statut inchangé.
 17. (v3) Nom et icône en désaccord → `confidence: a_verifier`.
 18. (v4) Semaine 2026-11-12, BOT sans ligne classée → builds pour les 9 lignes `a_verifier` (wJ9CwjKwyco en `provisional_rank` 1), `line_provisional: true`, bandeau dans le PowerPoint. GB (lignes classées) inchangé.
+19. (v5) Carte de référence et icône en désaccord → la carte l'emporte, note. Aucune carte ni nom → `unmatched`.
+20. (v5) Règle `null` + élément vu → pas d'alerte « interdit » ; règle `false` + élément vu → `a_verifier`.
+21. (v5) Deux runs GB d'une même ligne avec un chasseur commun → `a_verifier` sur les deux builds.
+22. (v5) `element` repris de `runs_detail[i].element` (`null` si absent).

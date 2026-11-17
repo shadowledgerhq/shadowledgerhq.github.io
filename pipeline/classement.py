@@ -12,6 +12,7 @@ import sys
 from collections import defaultdict
 from datetime import timezone
 
+import chrono_bot
 import elements
 import gb
 import regles_deduites
@@ -43,8 +44,8 @@ def _pub(r):
 
 
 def _cle_score(r, mode):
-    """Clé de comparaison d'une run : score ; au GB (v5) RC puis dégâts."""
-    return gb.cle_run(r) if mode == "gb" else r["score"]
+    """Clé de comparaison d'une run : score ; au GB (v5) RC puis dégâts ; au BOT (v34) borne haute d'un chrono incomplet (`_tri`)."""
+    return gb.cle_run(r) if mode == "gb" else r.get("_tri", r["score"])
 
 
 def _meilleur(runs, mode):
@@ -99,8 +100,20 @@ def _norm_nom(t):
 def boss_id(stage, config):
     """v18 : identifiant commun d'un nom de boss (`config.gb.boss_alias`, comparaison sans accents, casse ni espaces) ;
     nom inconnu : le nom lui-même. `stage` garde le texte lu."""
-    alias = {_norm_nom(n): i for n, i in ((config.get("gb") or {}).get("boss_alias") or {}).items()}
+    alias = {_norm_nom(n): i for n, i in {**((config.get("gb") or {}).get("boss_alias") or {}),
+                                           **((config.get("bot") or {}).get("boss_alias") or {})}.items() if not n.startswith("_")}
     return alias.get(_norm_nom(stage), stage)
+
+
+NOTE_RESET = "publiée juste après le reset"
+
+
+def _juste_apres_reset(r, heures):
+    """Vidéo publiée moins de `heures` h après le reset de sa semaine (v34 : boss BOT, `config.bot.reset_boss_heures`)."""
+    if not r.get("published_at"):
+        return False
+    pub = _pub(r)
+    return 0 <= (pub - bornes(id_semaine(pub))[0]).total_seconds() < heures * 3600
 
 
 def controler_boss(runs, cles, config, boss_prec):
@@ -123,10 +136,16 @@ def controler_boss(runs, cles, config, boss_prec):
         boss.append({"classement": cle, "mode": exemple["mode"], "gate": exemple.get("gate"),
                      "stage": texte_stage[ref],
                      "videos": len(videos_par_stage[ref])})
+        heures_boss = (config.get("bot") or {}).get("reset_boss_heures") if cle == "bot" else None
         for r in runs:
-            if r["_cle"] != cle or not r["stage"] or boss_id(r["stage"], config) == ref:
+            if r["_cle"] != cle or not r["stage"]:
                 continue
-            if boss_id(r["stage"], config) == ref_prec.get(cle):
+            proche = bool(heures_boss) and _juste_apres_reset(r, heures_boss)
+            if boss_id(r["stage"], config) == ref:
+                if proche:      # v34 : boss de la semaine confirmé : l'alerte « semaine précédente ? » tombe
+                    r["notes"][:] = [n for n in r["notes"] if not n.startswith(NOTE_RESET)]
+                continue
+            if proche or boss_id(r["stage"], config) == ref_prec.get(cle):          # v34 : < 6 h après le reset, autre boss = semaine précédente
                 precedentes.append(r)
             else:
                 r["confidence"] = "a_verifier"
@@ -237,6 +256,8 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
         "rank": None,
         "notes": "; ".join(notes),
     }
+    if mode == "bot" and principale.get("_tri") is not None:
+        ligne["_tri"] = principale["_tri"]         # v34 : chrono incomplet trié à sa borne haute (retiré avant l'écriture)
     if mode == "hotm":
         ligne["gate"] = principale.get("gate")
         ligne["hunter_mode"] = principale.get("hunter_mode")
@@ -276,7 +297,7 @@ def ordonner(lignes, mode):
 
     def cle(l):
         degats = -l.get("_degats", 0) if mode == "gb" else 0
-        return (signe * l["score"]["total"], degats, l["_fin"], l["channel_id"])
+        return (signe * l.get("_tri", l["score"]["total"]), degats, l["_fin"], l["channel_id"])
 
     if mode == "gb":        # v33 : un dégât non contrôlé ne départage jamais une égalité de RC (vote 5/3 du 17/11)
         egaux = {}
@@ -295,6 +316,7 @@ def ordonner(lignes, mode):
         l["rank"] = i
     for l in classees + autres:
         del l["_fin"]
+        l.pop("_tri", None)
         l.pop("_degats", None)
         l.pop("_degats_exacts", None)
     return classees + autres
@@ -349,6 +371,7 @@ def calculer(week, d=None, config=None, horloge=None):
         runs.append(r)
     videos_avant = {r["video_id"] for r in runs}
 
+    runs = chrono_bot.reconcilier(runs)               # v34 : chronos BOT incomplets, lectures de plusieurs sources
     runs, saisons_prec = controler_saison_record(runs, week, config)
     runs, records_seuls = gb.attribuer_groupes(runs)      # v30 : le Personal Record ne classe plus aucune run
     runs, semaines_prec, alertes_semaine_bot = controler_semaine_bot(runs, week, config)

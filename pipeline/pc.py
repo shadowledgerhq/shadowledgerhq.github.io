@@ -30,12 +30,15 @@ from donnees import RACINE, Donnees, JsonAbime, ajouter_rejet, charger_config, l
 from etape1 import ecrire_rapport, ouvrir_semaine
 from semaine import PARIS, id_semaine, iso_utc, maintenant, parse_iso, semaine_precedente
 import libelles_inconnus
+import miniature
 import ocr_ecrans
+import rotation
 import elements
 import elements_hud
 import hunters_results
 import ordre_pc
 import rapport_pc
+import relectures
 from tri1 import lectures_texte
 
 
@@ -500,6 +503,8 @@ class Git:
         chemins = ["data"]
         if (Path(self.racine) / "docs" / "essais" / "ocr" / "libelles_inconnus").exists():
             chemins.append("docs/essais/ocr/libelles_inconnus")          # v24 : écrans de score à libellés inconnus
+        if (Path(self.racine) / "docs" / "essais" / "composition" / "auto").exists():
+            chemins.append("docs/essais/composition/auto")               # v33 : images de composition extraites (zones à définir)
         self._run("add", *chemins)
         if not self._run("status", "--porcelain", *chemins).strip():
             if self.conflit_resolu:                      # v26 : fusion locale (conflit résolu) pas encore poussée
@@ -568,9 +573,15 @@ def segments_tri(tri, duree_s, cfg):
     return [(0, debut, pas), (int(duree_s - fin), fin, pas)]
 
 
+def est_texte(l):
+    """Lecture issue d'un texte : titre, description, sous-titres, ou texte OCR de la miniature (v34 : `detail.texte_miniature`)."""
+    return l["score_source"] in SOURCES_TEXTE or bool((l.get("detail") or {}).get("texte_miniature"))
+
+
 def _est_ecran(l):
-    """Lecture issue d'une image : écran reconnu, ou HUD de combat (sans score ni source depuis la v13)."""
-    return l["score_source"] in SOURCES_ECRAN or (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")
+    """Lecture issue d'une image : écran reconnu, ou HUD de combat (sans score ni source depuis la v13). Le texte lu sur la miniature
+    (v34) n'est PAS un écran."""
+    return (l["score_source"] in SOURCES_ECRAN and not est_texte(l)) or (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")
 
 
 def _elements_hud(png, config, lectures):
@@ -621,7 +632,7 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None, duree_s=None):
     (`ocr_ecrans.regrouper_hud`). Les lectures de l'écran Results sont regroupées en écrans, la plus complète est
     gardée et contrôlée (`ocr_ecrans.fusionner_results`)."""
     modes = {l["mode"] for l in nouvelles if l.get("score") is not None}
-    reste = [l for l in lectures if not (l["video_id"] == vid and l["mode"] in modes and l["score_source"] in SOURCES_TEXTE)]
+    reste = [l for l in lectures if not (l["video_id"] == vid and l["mode"] in modes and est_texte(l))]
     ecran = [l for l in reste + nouvelles if l["video_id"] == vid and _est_ecran(l)]
     # v29 : contexte de l'exception « RC lu sur la dernière image » (SPEC §3.1) : RC du titre / de la description et durée de la
     # vidéo, gardés dans `detail` des lectures Results (les lectures de texte disparaissent à la fusion, la durée n'est pas relue)
@@ -639,7 +650,7 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None, duree_s=None):
     # v18 : l'écran contrôlé prime sur le titre ; si la valeur du titre diffère, note `écart titre/écran : titre <valeur>`
     titres = {}
     for l in lectures:
-        if l["video_id"] == vid and l["mode"] in modes and l["score_source"] in SOURCES_TEXTE and l.get("score") is not None:
+        if l["video_id"] == vid and l["mode"] in modes and est_texte(l) and l.get("score") is not None:
             titres.setdefault(l["mode"], []).append(l["score"])
     for mode, valeurs in titres.items():
         lus = [l for l in ecran if l["mode"] == mode and l.get("score") is not None]
@@ -905,13 +916,14 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
 
 
 def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda m: None, ocr_debug=None,
-                   horloge=time.monotonic):
+                   horloge=time.monotonic, apres=None):
     """Tri 3, puis tri 4 si le tri 3 ne suffit pas. Retourne (lectures, avertissement | None, reporte).
     Par image : doublon exact ignoré ; tri 3 = OCR complet de toutes les images ; tri 4 = OCR rapide (image réduite,
     `psm` clairsemé) puis complet seulement si le texte ressemble à un écran RESULT ; image trop lente = ignorée.
     v11 : HUD GB avec chrono ≤ 15 s -> recherche de l'écran `Results` dans les 30 s suivantes (1 image/s).
     Budget de temps par vidéo (`budget_video_min`) : dépassé, la vidéo reste « partielle » et est reprise au passage
-    suivant (`essais_max` fois, puis considérée faite)."""
+    suivant (`essais_max` fois, puis considérée faite).
+    v33 : `apres(chemin, tmp)` est appelée une fois les tris faits, sur la vidéo DÉJÀ téléchargée (relevé de rotation, SPEC_ROTATION §1)."""
     cfg = config["pc"]["images"]
     minutes = duree_minutes(meta.get("duration"))
     if minutes is None or minutes > cfg["max_minutes"]:
@@ -1064,6 +1076,8 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                 if tri == 3 and suffisant(lectures, vid, set(meta.get("mode_guess", []))):
                     pc["tri4"] = "inutile"
                     break
+            if apres is not None:
+                apres(chemin, tmp)
         except OutilAbsent:
             raise
         except Exception as e:
@@ -1073,12 +1087,74 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
     # v15 : GB sans aucun écran reconnu après le tri 4 : libellés de la langue inconnus, la vidéo reste `en_cours`
     if "gb" in meta.get("mode_guess", []) and pc.get("tri4") in ("fait", "inutile") and not any(
             l["video_id"] == vid and l["mode"] == "gb" and (l.get("score") is not None or (l.get("detail") or {}).get("ecran") == "combat")
-            and l["score_source"] not in SOURCES_TEXTE for l in lectures):
+            and not est_texte(l) for l in lectures):
         langue = meta.get("lang") or "?"
         pc["libelles_inconnus"] = langue
         return lectures, f"{vid} : libellés {langue} inconnus (aucun écran GB reconnu)", False
     pc.pop("libelles_inconnus", None)
     return lectures, None, False
+
+
+def traiter_miniature(vid, meta, outils, config, lectures, pc, journal=lambda m: None, telecharger=None):
+    """v34, tri 2 : texte OCR de la miniature (`miniature.py`) lu avec les règles du tri 1 -> lecture provisoire (`score_source: miniature`,
+    `exact: false`, `a_verifier`) ; une miniature qui ressemble à un écran RESULT est en plus lue comme un écran. Une fois par vidéo
+    (`pc.tri2` = `fait` | `absent` ; une erreur de l'OCR ne marque rien). Retourne les lectures."""
+    cfg = miniature.reglages(config)
+    if pc.get("tri2") in ("fait", "absent") or not cfg["actif"]:
+        return lectures
+    with tempfile.TemporaryDirectory() as tmp:
+        try:
+            nouvelles, plein, etat = miniature.lire(vid, meta, outils, config, tmp, langues_ocr(meta, config["pc"]["images"]), telecharger, journal)
+        except OutilAbsent:
+            raise
+    if etat == "erreur":
+        return lectures
+    pc["tri2"] = etat
+    ecrans = ocr_ecrans.lectures_depuis_texte(plein, meta, config, "miniature") if plein and ocr_ecrans.detecter(plein) in RESULTATS_TYPES else []
+    lectures = [l for l in lectures if not (l["video_id"] == vid and (l.get("detail") or {}).get("texte_miniature"))]
+    avec_ecran = {l["mode"] for l in lectures if l["video_id"] == vid and _est_ecran(l) and l.get("score") is not None}
+    avec_texte = {l["mode"] for l in lectures if l["video_id"] == vid and l.get("score") is not None and est_texte(l)}
+    gardees = []
+    for n in nouvelles:
+        seule = n["mode"] not in avec_texte       # la miniature est la seule source de score : accord plus strict (`accord_seul`, 3)
+        if n["mode"] not in avec_ecran and (not seule or n["detail"].get("votes_miniature", 0) >= cfg["accord_seul"]):
+            lectures.append(n)
+            gardees.append(n)
+    if any(e.get("score") is not None for e in ecrans):
+        lectures = fusionner_ecrans(lectures, vid, [e for e in ecrans if e.get("score") is not None], config)
+    if gardees:
+        journal("  miniature : " + ", ".join(f"{n['mode']} {n['score']}" for n in gardees))
+    return lectures
+
+
+def passage_rotation(vid, week, outils, chemin, tmp, meta, d, journal):
+    """Relevé de la rotation d'une vidéo déjà téléchargée (SPEC_ROTATION) ; ne lève jamais : `erreur` + trace dans le journal."""
+    try:
+        cfg = rotation.charger_config()
+        ctx = rotation.contexte(week, vid, RACINE, cfg)
+        if ctx is None:
+            return "absent"
+        db = builds_db()
+        cartes = None
+        try:
+            import portraits
+            cartes = portraits.charger_cartes(RACINE / "data" / "icons") or None
+        except Exception:
+            cartes = None
+        etat = rotation.passage_video(outils, chemin, ctx, cfg, db, tmp, journal, ocr=rotation.ocr_recharge(outils, tmp), cartes=cartes, racine=RACINE,
+                                      duree_s=duree_minutes(meta.get("duration")) and duree_minutes(meta.get("duration")) * 60)
+        journal(f"  rotation {vid} : {etat}")
+        return etat
+    except OutilAbsent:
+        raise
+    except Exception as e:
+        journal(f"  rotation {vid} : erreur {e}")
+        return "erreur"
+
+
+def builds_db():
+    import builds as B
+    return B.charger_db(RACINE)
 
 
 def rejeter_sans_score(d, week, jour):
@@ -1202,6 +1278,31 @@ def bloquante(avert):
     return " : images : " in t or "ffmpeg" in t
 
 
+def resume_gb(d, semaine, jour, maximum=5):
+    """v33 : résumé lisible en tête du bloc : une ligne par vidéo GB traitée ce jour par le PC (Results lu ? RC, statut, groupe, motif
+    principal si `a_verifier`). Au plus `maximum` lignes. Lit `processed.json` (`pc.date`, `pc.results_lus`) et `gb.json` (déjà recalculé)."""
+    try:
+        lignes_gb = d.lire(f"runs/{semaine}/gb.json", [])
+    except Exception:
+        lignes_gb = []
+    traitees = [(v, p) for v, p in d.processed().items()
+                if p.get("week") == semaine and "gb" in (p.get("modes") or []) and (p.get("pc") or {}).get("date") == jour]
+    sortie = []
+    for vid, p in traitees:
+        lus = (p.get("pc") or {}).get("results_lus") or []
+        ligne = next((l for l in lignes_gb if vid in (l.get("video_ids") or [l.get("video_id")])), None)
+        results = f"Results lu ({lus[0][0]}-{lus[0][1]} s)" if lus else "aucun Results lu"
+        if ligne is None:
+            sortie.append(f"- Résumé GB : {vid} · {results} · pas classée")
+            continue
+        det = (ligne.get("runs_detail") or [{}])[0]
+        motif = next((n for n in (ligne.get("notes") or "").split("; ") if n and not n.startswith(("lecture fusionnée", "boss non", "écart OCR"))), "")
+        sortie.append(f"- Résumé GB : {vid} · {ligne.get('player')} · {results} · {ligne['score']['total']} RC {'sûr' if ligne['confidence'] == 'sur' else 'à vérifier'}"
+                      + (f" · groupe {det['team']}" if det.get("team") else "") + (f" · {det['element']}" if det.get("element") else "")
+                      + ("" if ligne["confidence"] == "sur" or not motif else f" · {motif}"))
+    return sortie[:maximum] + ([f"- Résumé GB : … et {len(sortie) - maximum} autre(s) vidéo(s)"] if len(sortie) > maximum else [])
+
+
 def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None, duree_min=None, top10=None, gel3=None):
     """Lignes placées en tête du rapport poussé (SPEC §6, critère de gel n° 3). v29 : `top10` = nombre de vidéos candidates au
     top 10 encore en attente (ligne « Top 10 couvert », en tête) ; `gel3` = texte du critère de gel n° 3 (passages couverts)."""
@@ -1267,10 +1368,16 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     journal(f"Passage PC {passage} — semaine {week}")
 
     traitees, images_traitees, antibot, bloquantes = 0, 0, False, []
+    relectures_posees = []
     if meta.get("frozen"):
         alertes.append(f"semaine {week} déjà gelée : rien à traiter")
     else:
         processed, videos, lectures = d.processed(), d.videos(week), d.lectures(week)
+        if not seulement:           # v34 : relecture automatique du top 10 provisoire (règles plus anciennes, aucun Results lu)
+            relectures_posees = relectures.poser(d, week, config, processed, jour)
+            if relectures_posees:
+                journal("Relectures posées : " + ", ".join(f"{v} ({m})" for v, m in relectures_posees))
+                d.ecrire("processed.json", processed)
         if refaire:  # diagnostic : la vidéo choisie est retraitée comme si rien n'avait été fait
             for v in (seulement or ()):
                 if v in processed:
@@ -1326,8 +1433,15 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             bloquantes.append(f"outil absent : {e}")
         cfg_img = pc_cfg["images"]
         if cfg_img["actif"] if images is None else images:
-            a_images = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours" and p.get("pc_needed")
-                        and (not seulement or v in seulement) and v in videos and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile")]
+            try:        # v33 : rotations (SPEC_ROTATION) : top 3 du BOT, vidéo déjà téléchargée par les tris 3-4 (ou seulement pour la rotation)
+                rotation_cfg = rotation.charger_config()
+                a_rotation = set(rotation.a_traiter(week, processed, RACINE, rotation_cfg))
+            except Exception as e:
+                a_rotation, rotation_cfg = set(), {"version": 1}
+                alertes.append(f"rotation : sélection impossible ({e})")
+            a_images = [v for v, p in processed.items() if p.get("week") == week and v in videos and (not seulement or v in seulement)
+                        and ((p["status"] == "en_cours" and p.get("pc_needed") and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile"))
+                             or v in a_rotation)]
             a_images = ordre_pc.ordonner(d, week, a_images)[0]       # v29 : idem pour les images (anti-bot : on s'arrête quand on peut)
             lim_img = min(maximum, cfg_img["max_videos"]) if maximum else cfg_img["max_videos"]  # --max limite aussi les images
             if len(a_images) > lim_img:
@@ -1343,8 +1457,19 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                     journal(f"[{n}/{len(lot)}] {vid} « {titre(vid)} » : images ({', '.join(videos[vid].get('mode_guess', []))})")
                     etat = dict(processed[vid].get("pc") or {})
                     t0 = horloge()
+                    apres = None
+                    if vid in a_rotation:
+                        def apres(chemin, tmp, vid=vid, etat=etat):
+                            etat["rotation"] = passage_rotation(vid, week, outils, chemin, tmp, videos[vid], d, journal)
+                            etat["rotation_version"] = rotation_cfg.get("version", 1)
+                    try:
+                        lectures = traiter_miniature(vid, videos[vid], outils, config, lectures, etat, journal)       # v34 : tri 2
+                    except OutilAbsent:
+                        raise
+                    except Exception as e:
+                        journal(f"  miniature : {e}")
                     lectures, avert, reporte = traiter_images(vid, videos[vid], outils, config, lectures, etat, jour,
-                                                              journal, ocr_debug, horloge)
+                                                              journal, ocr_debug, horloge, apres)
                     journal(f"  → {int(horloge() - t0)} s" + (f" — {avert}" if avert else ""))
                     if avert:
                         alertes.append(avert)
@@ -1416,6 +1541,8 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         if git is not None and getattr(git, "conflit_resolu", False):
             lignes.append("- Conflit git résolu automatiquement")
         lignes += lignes_exports_deplaces(git)
+        lignes += relectures.lignes_rapport(relectures_posees)
+        lignes += resume_gb(d, week, jour)
         rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)      # v26 : bloc daté, jamais effacé, propre au PC
         ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes, lignes)
     rapport()

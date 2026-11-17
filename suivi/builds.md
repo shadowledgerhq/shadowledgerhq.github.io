@@ -1,15 +1,16 @@
-# SUIVI — 2 Builds — 2026-11-15
+# SUIVI — 2 Builds — 2026-11-17
 ## Fait
-- SPEC_ETAPE2 v1 et v2 codées par la discussion 8
-- SPEC_ETAPE2 v3 : écrans hors composition (fiche SJW, stats 能力値情報, statues 彫像, gemmes 宝石情報, soutien 討伐支援), reconnaissance par le nom écrit, stats du successeur, slides Statues et Gemmes ; stats toujours facultatives ; icônes non reconnues gardées en unmatched
+- SPEC_ETAPE2 v5 : cartes de référence prioritaires (nom > carte > icône), élément de la run, chasseur commun entre 2 runs = a_verifier, règle null = inconnu, zones tirées des images extraites par le pipeline
+- Contrôle des builds 2026-11-12 (générés le 15/11, avant les cartes) : BOT 8 partiel + 1 pas_de_build (provisoires), POC 1 + 1, GB 4 pas_de_build (composition GB non décrite) ; aucun id introuvable, aucun interdit
+- Constat : 0 chasseur identifié sur 33 ; armes des chasseurs « icône absente » partout ; successeur jamais reconnu ; ombre 01 = beste sur 6 BOT
 ## En cours
-- v4 : builds sur classement provisoire (BOT 2026-11-12) à coder par la discussion 8 ; essai pc.py sur les 4 vidéos BOT de tête
-- Implémentation v3 par la discussion 8
+- Pas de relevé manuel : rotation = relevé automatique (data/rotations/, discussions 3 et 8)
+- Relance des builds 2026-11-12 sur le PC (v5 codée, 303 tests)
+- Discussion 9 : cartes de tous les chasseurs et des successeurs, icônes des armes de chasseurs
 ## À faire
-- Contrôler les builds POC/BOT produits (§6)
-- Demander à la discussion 9 : name.ja/name.ko, catégories statues et gems, icônes successeurs, type des compétences SJW
+- Définir les zones POC (onglets 2-5), HOTM, GB sur les images auto/
+- Recontrôler les builds après relance
 ## Besoin d'Alexis
-- Captures POC des onglets artefacts, compétences, bénédictions, noyaux ; captures HOTM (avec/sans SJW) et GB
-- Règles POC et GB de la semaine
+- Transmettre les messages aux discussions 8 et 9
 ## Demandes de modif du skill
-- Format Build → SPEC_ETAPE2 §1.2 ; hunter_mode booléen ; bot_season → bot ; checklist « un PowerPoint par vidéo et par langue »
+- Format Build → SPEC_ETAPE2 §1.2 ; checklist « éléments interdits » : seulement règle false (null = inconnu) ; « un PowerPoint par vidéo et par langue »
