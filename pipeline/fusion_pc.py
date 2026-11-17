@@ -11,6 +11,7 @@ PROPRES_PC = (
     r"^data/builds/",                               # builds (étape 2, PC)
     r"^data/icons/hunters_cartes/",                 # bibliothèque de cartes apprise (PC)
     r"^docs/essais/composition/auto/",              # images de composition extraites (PC)
+    r"^data/rotations/",                            # rotations relevées (PC)
 )
 
 

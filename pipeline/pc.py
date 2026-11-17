@@ -31,6 +31,7 @@ from etape1 import ecrire_rapport, ouvrir_semaine
 from semaine import PARIS, id_semaine, iso_utc, maintenant, parse_iso, semaine_precedente
 import libelles_inconnus
 import ocr_ecrans
+import rotation
 import elements
 import elements_hud
 import hunters_results
@@ -907,13 +908,14 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
 
 
 def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda m: None, ocr_debug=None,
-                   horloge=time.monotonic):
+                   horloge=time.monotonic, apres=None):
     """Tri 3, puis tri 4 si le tri 3 ne suffit pas. Retourne (lectures, avertissement | None, reporte).
     Par image : doublon exact ignoré ; tri 3 = OCR complet de toutes les images ; tri 4 = OCR rapide (image réduite,
     `psm` clairsemé) puis complet seulement si le texte ressemble à un écran RESULT ; image trop lente = ignorée.
     v11 : HUD GB avec chrono ≤ 15 s -> recherche de l'écran `Results` dans les 30 s suivantes (1 image/s).
     Budget de temps par vidéo (`budget_video_min`) : dépassé, la vidéo reste « partielle » et est reprise au passage
-    suivant (`essais_max` fois, puis considérée faite)."""
+    suivant (`essais_max` fois, puis considérée faite).
+    v33 : `apres(chemin, tmp)` est appelée une fois les tris faits, sur la vidéo DÉJÀ téléchargée (relevé de rotation, SPEC_ROTATION §1)."""
     cfg = config["pc"]["images"]
     minutes = duree_minutes(meta.get("duration"))
     if minutes is None or minutes > cfg["max_minutes"]:
@@ -1066,6 +1068,8 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                 if tri == 3 and suffisant(lectures, vid, set(meta.get("mode_guess", []))):
                     pc["tri4"] = "inutile"
                     break
+            if apres is not None:
+                apres(chemin, tmp)
         except OutilAbsent:
             raise
         except Exception as e:
@@ -1081,6 +1085,36 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
         return lectures, f"{vid} : libellés {langue} inconnus (aucun écran GB reconnu)", False
     pc.pop("libelles_inconnus", None)
     return lectures, None, False
+
+
+def passage_rotation(vid, week, outils, chemin, tmp, meta, d, journal):
+    """Relevé de la rotation d'une vidéo déjà téléchargée (SPEC_ROTATION) ; ne lève jamais : `erreur` + trace dans le journal."""
+    try:
+        cfg = rotation.charger_config()
+        ctx = rotation.contexte(week, vid, RACINE, cfg)
+        if ctx is None:
+            return "absent"
+        db = builds_db()
+        cartes = None
+        try:
+            import portraits
+            cartes = portraits.charger_cartes(RACINE / "data" / "icons") or None
+        except Exception:
+            cartes = None
+        etat = rotation.passage_video(outils, chemin, ctx, cfg, db, tmp, journal, ocr=None, cartes=cartes, racine=RACINE,
+                                      duree_s=duree_minutes(meta.get("duration")) and duree_minutes(meta.get("duration")) * 60)
+        journal(f"  rotation {vid} : {etat}")
+        return etat
+    except OutilAbsent:
+        raise
+    except Exception as e:
+        journal(f"  rotation {vid} : erreur {e}")
+        return "erreur"
+
+
+def builds_db():
+    import builds as B
+    return B.charger_db(RACINE)
 
 
 def rejeter_sans_score(d, week, jour):
@@ -1353,8 +1387,15 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             bloquantes.append(f"outil absent : {e}")
         cfg_img = pc_cfg["images"]
         if cfg_img["actif"] if images is None else images:
-            a_images = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours" and p.get("pc_needed")
-                        and (not seulement or v in seulement) and v in videos and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile")]
+            try:        # v33 : rotations (SPEC_ROTATION) : top 3 du BOT, vidéo déjà téléchargée par les tris 3-4 (ou seulement pour la rotation)
+                rotation_cfg = rotation.charger_config()
+                a_rotation = set(rotation.a_traiter(week, processed, RACINE, rotation_cfg))
+            except Exception as e:
+                a_rotation, rotation_cfg = set(), {"version": 1}
+                alertes.append(f"rotation : sélection impossible ({e})")
+            a_images = [v for v, p in processed.items() if p.get("week") == week and v in videos and (not seulement or v in seulement)
+                        and ((p["status"] == "en_cours" and p.get("pc_needed") and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile"))
+                             or v in a_rotation)]
             a_images = ordre_pc.ordonner(d, week, a_images)[0]       # v29 : idem pour les images (anti-bot : on s'arrête quand on peut)
             lim_img = min(maximum, cfg_img["max_videos"]) if maximum else cfg_img["max_videos"]  # --max limite aussi les images
             if len(a_images) > lim_img:
@@ -1370,8 +1411,13 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                     journal(f"[{n}/{len(lot)}] {vid} « {titre(vid)} » : images ({', '.join(videos[vid].get('mode_guess', []))})")
                     etat = dict(processed[vid].get("pc") or {})
                     t0 = horloge()
+                    apres = None
+                    if vid in a_rotation:
+                        def apres(chemin, tmp, vid=vid, etat=etat):
+                            etat["rotation"] = passage_rotation(vid, week, outils, chemin, tmp, videos[vid], d, journal)
+                            etat["rotation_version"] = rotation_cfg.get("version", 1)
                     lectures, avert, reporte = traiter_images(vid, videos[vid], outils, config, lectures, etat, jour,
-                                                              journal, ocr_debug, horloge)
+                                                              journal, ocr_debug, horloge, apres)
                     journal(f"  → {int(horloge() - t0)} s" + (f" — {avert}" if avert else ""))
                     if avert:
                         alertes.append(avert)

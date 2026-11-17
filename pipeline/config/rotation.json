@@ -1,0 +1,42 @@
+{
+ "_doc": "SPEC_ROTATION.md v1. Zones du HUD (format 16:9) en fractions [x0, y0, x1, y1] : null = [À CALIBRER] sur les images de wJ9CwjKwyco (client anglais), puis vérifier sur a-923ClD9Rc (japonais) et Lt84IhMjBvM. Tant qu'aucun bouton n'a de zone, le fichier porte limites [hud-non-trouve] (aucun événement inventé) et des recadrages de grandes zones (diagnostic) sont gardés pour la calibration.",
+ "version": 1,
+ "modes": ["bot"],
+ "top": 3,
+ "budget_par_mode": 3,
+ "fps": 10,
+ "hauteur": 720,
+ "scan_pas_s": 0.5,
+ "duree_max_s": 120,
+ "fusion_s": 0.5,
+ "tolerance_recharge_s": 1.0,
+ "pret_ratio": 0.6,
+ "variation_min": 0.2,
+ "visible_luminance": 30,
+ "jauge_pleine": 0.6,
+ "jauge_vide": 0.2,
+ "jauge_duree_s": 0.3,
+ "jauge_seuil_pixel": 128,
+ "portrait_diff": 25,
+ "qte_luminance": 150,
+ "zones": {
+  "skill_1": null,
+  "skill_2": null,
+  "ultimate": null,
+  "sjw_skill_1": null,
+  "sjw_skill_2": null,
+  "sjw_ultimate": null,
+  "sjw_qte": null,
+  "core": null,
+  "portrait": null,
+  "qte": null
+ },
+ "diagnostic": {
+  "images": 3,
+  "largeur": 960,
+  "zones": {
+   "droite": [0.5, 0.45, 1.0, 1.0],
+   "gauche": [0.0, 0.45, 0.5, 1.0]
+  }
+ }
+}

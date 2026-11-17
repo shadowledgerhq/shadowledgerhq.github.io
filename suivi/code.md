@@ -70,6 +70,8 @@
 ## Fait (session 11, 17/11 — cartes)
 - `remnant_powers_cartes` branché (BOT, `min_corr_remanentes` 12 [À CONFIRMER]), recadrages non reconnus en 480 px + carte entière des chasseurs, nom OCR prioritaire sur l'icône et apprentissage automatique de `hunters_cartes` (`ecrans_hors_compo.integrer`). 311 tests.
 - Docs alignés (CLAUDE.md, CONTEXTE.md, skill) ; **rotations : en attente de `docs/SPEC_ROTATION.md`** (discussion 3, via Alexis), rien à coder avant.
+## Fait (session 12, 17/11 — SPEC_ROTATION v1)
+- `docs/SPEC_ROTATION.md` créée ; `pipeline/rotation.py` + `config/rotation.json` ; branchement PC (`pc.rotation`, `traiter_images(apres=)`) ; 19 tests. **Zones du HUD à calibrer** (aucune image de HUD en dépôt) : le 1er passage PC sur wJ9CwjKwyco (`py -3 pipeline\pc.py daily --video wJ9CwjKwyco`) garde des recadrages de calibration dans `data/rotations/2026-11-12/bot/_crops/` ; calibrer puis augmenter `rotation.json.version`.
 ## En cours
 - Subjugation POC : écran codé, jamais lu par le vrai OCR (v0tuXJNxudk à relancer avec `--garder-ocr` pour caler `ecrans.subjugation.cartes`).
 - Prochain : armes (icônes de la base manquantes, discussion 9), compétences POC (onglet à filmer), essai réel du RESULT BOT japonais (zones v27 en 720p du tri 4 : à vérifier, calées sur ~1150 px ; seuil de zone vide 8), fiabiliser les chiffres de stats (relecture croisée % / valeur). Reconnaissance d'artefacts : essayer d'autres vidéos BOT/POC avec les nouveaux masques ; collier (chaîne fine) et faux positifs 4 pièces à surveiller ; piste : préférence pour le set dominant du personnage.
