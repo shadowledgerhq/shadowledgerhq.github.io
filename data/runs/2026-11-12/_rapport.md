@@ -1,4 +1,8 @@
-# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-17 01:58 (Paris)
+# Rapport — semaine 2026-11-12 — passage classement — 2026-11-17 02:20 (Paris)
+
+Dernier passage du PC (`_rapport_pc.md`, recopié) :
+
+## Passage pc-daily — 2026-11-17 01:58 (Paris)
 
 - Top 10 couvert : non (31 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (vidéos restantes à traiter)
@@ -10,7 +14,7 @@
 - Semaine : 60 en cours (dont 46 pour le PC), 30 terminée(s), 11 rejetée(s)
 - Classements : bot 13, gb 7, hotm-gate-inconnue 4, poc 4
 
-## À vérifier (27)
+## À vérifier (26)
 - bot · X SLA · 19.0 · wJ9CwjKwyco · publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 19s; boss non contrôlé
 - bot · aaaaaaaaaaaa · 19.558 · a-923ClD9Rc · score provisoire (titre) : 19.558; semaine confirmée (titre); boss non contrôlé
 - bot · 𐐂露依Rui ルイ 𐐚 · 19.754 · Lt84IhMjBvM · score provisoire (titre) : 19.754s; semaine confirmée (titre); boss non contrôlé
@@ -24,12 +28,11 @@
 - bot · SlayOnLow · 40.077 · HWebrRc_l0o · score provisoire (titre) : 40.077 SECONDS; boss non contrôlé
 - bot · OhchiGameS · 44.0 · OppPeyQ--7s · score provisoire (description) : 44s; boss non contrôlé
 - bot · Akihiro · 130.266 · VFDbdYFzor4 · score provisoire (description) : 02:10.266; boss non contrôlé
-- gb · Eden(이든) · 322 · vYtRCpFtSOk · lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (36 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Light / Fire); boss non contrôlé
-- gb · Ahmad1195 · 189 · awb-GlVIa7Q · écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (72 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée; boss non contrôlé
-- gb · mitchell leveling · 177 · trinzgj3FV4 · score provisoire (titre) : 177 RC; une seule run trouvée; boss non contrôlé
-- gb · SNG · 176 · OPcjwjYkuME · écart OCR zone/image : final_score; écart OCR zone/image : rage_count; contrôle GB : somme 30263550677307 ≠ Final Score 30458500980570; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; une seule run trouvée; boss non contrôlé
-- gb · SlayOnLow · 165 · nh2D7xZ7dOQ · écart OCR zone/image : rage_count; écart OCR zone/image : final_score; lecture fusionnée (8 images); conflit de lecture : player_score; groupe 2 d'après le Personal Record (RC égal); une seule run trouvée; boss non contrôlé
-- gb · HS Retro Gaming · 19 · lGDbzyIJcjY · écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; boss non contrôlé
+- gb · Eden(이든) · 322 · vYtRCpFtSOk · lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (36 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Light / Fire)
+- gb · Ahmad1195 · 189 · awb-GlVIa7Q · écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (72 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée
+- gb · mitchell leveling · 177 · trinzgj3FV4 · score provisoire (titre) : 177 RC; une seule run trouvée
+- gb · SNG · 176 · OPcjwjYkuME · écart OCR zone/image : final_score; écart OCR zone/image : rage_count; contrôle GB : somme 30263550677307 ≠ Final Score 30458500980570; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; une seule run trouvée
+- gb · HS Retro Gaming · 19 · lGDbzyIJcjY · écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée
 - hotm-gate-inconnue · OhchiGameS · 94000 · RVkSt2bWn_U · score provisoire (titre) : 94000; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · RAVANPLAYZ · 91500 · 8qqgrjiYhck · score provisoire (titre) : 91500; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · SNG · 85000 · SdiCUFy5FbE · score provisoire (titre) : 85k; porte HOTM illisible; boss non contrôlé
@@ -41,7 +44,6 @@
 
 ## Alertes boss
 - bot : boss non contrôlé (< 3 vidéos)
-- gb : boss non contrôlé (< 3 vidéos)
 - hotm-gate-inconnue : boss non contrôlé (< 3 vidéos)
 - poc : boss non contrôlé (< 3 vidéos)
 
@@ -52,4 +54,4 @@
 - rien
 
 ## Erreurs et alertes
-- 60 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- rien

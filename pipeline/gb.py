@@ -45,6 +45,37 @@ def _est_results(r):
     return r.get("score_source") in ("debut-fin", "video-complete") and (r.get("detail") or {}).get("ecran") != "combat"
 
 
+NOTE_RC_CONFIRME = "RC confirmé par le Personal Record ; contrôle de somme impossible (Player's Score illisible)"
+
+
+def _rc_confirme_par_record(run, records):
+    """SPEC v32 §3.2 : le RC d'une run filmée est `sûr` même si le contrôle de somme est sauté (Player's Score en conflit ou
+    illisible), à 3 conditions : (a) RC lu sur ≥ 2 images, sans conflit de lecture (égalité de votes) ; (b) RC égal à celui d'UN
+    groupe d'un Personal Record `sûr` de la même vidéo (Total Rage Count = somme des groupes ; `Time Left` déjà contrôlé par
+    controler_saison_record) ; (c) aucun RC contradictoire dans le titre (note `écart titre/écran`) ni dans le HUD de fin (RC du
+    HUD > RC du Results : un compteur ne décroît pas). Jamais de valeur déduite : les dégâts restent le Final Score voté,
+    `damage_exact` passe à false. Une somme fausse (note `contrôle GB`) n'est jamais contournée."""
+    if run.get("confidence") == "sur":
+        return run
+    notes, d = run.get("notes", []), dict(run.get("detail") or {})
+    if not any(n == "conflit de lecture : player_score" for n in notes) and d.get("player_score") is not None:
+        return run                                  # le contrôle de somme n'est pas « sauté » pour ce motif
+    if any(n.startswith(("conflit de lecture : rage_count", "contrôle GB", "écart titre/écran")) for n in notes):
+        return run
+    if (d.get("rc_images") or 0) < 2:
+        return run
+    sains = [x for x in records if x.get("team") in (1, 2) and x.get("confidence") == "sur"]
+    total = next(((x.get("detail") or {}).get("total_rage_count") for x in sains
+                  if (x.get("detail") or {}).get("total_rage_count") is not None), None)
+    if total is None or total != sum(x["score"] for x in sains) or len({x["team"] for x in sains}) != len(sains):
+        return run
+    hud = d.get("hud_rage_count")
+    if hud is not None and hud > run["score"]:
+        return run
+    d["damage_exact"] = False
+    return {**run, "confidence": "sur", "exact": False, "detail": d, "notes": notes + [NOTE_RC_CONFIRME]}
+
+
 def attribuer_groupes(runs):
     """SPEC v30 §4.7 : le Personal Record ne classe plus aucune run. Il sert seulement à attribuer un groupe (`team`) à une run
     `Results` de la MÊME vidéo : si le RC du Results est égal au RC d'UN SEUL groupe du Personal Record contrôlé (`sûr`), ce groupe
@@ -61,6 +92,7 @@ def attribuer_groupes(runs):
             if len(memes) == 1:
                 g = memes[0]["team"]
                 r = {**r, "team": g, "notes": list(r.get("notes", [])) + [f"groupe {g} d'après le Personal Record (RC égal)"]}
+                r = _rc_confirme_par_record(r, [x for x in records if x["video_id"] == r["video_id"]])
         sortie.append(r)
     avec_results = {r["video_id"] for r in sortie if _est_results(r)}
     return sortie, sorted({x["video_id"] for x in records} - avec_results)
