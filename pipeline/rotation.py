@@ -183,16 +183,19 @@ def lectures_ocr(recadrages, boutons, ocr, presents, brut=None):
 
 def purger_constantes(lectures, maxi=3):
     """Un chiffre identique sur plus de `maxi` lectures de suite n'est pas un compte à rebours (il change chaque seconde) mais une partie de l'icône
-    lue comme un chiffre (wJ9CwjKwyco : l'icône de E lue « 4 » sur 20 s de suite) : ces lectures deviennent None."""
-    sortie, i = list(lectures), 0
-    while i < len(sortie):
-        v = sortie[i][1]
-        j = i
-        while j < len(sortie) and sortie[j][1] == v:
-            j += 1
-        if v not in (None, "hors") and j - i > maxi:
-            sortie[i:j] = [(t, None) for t, _ in sortie[i:j]]
-        i = max(j, i + 1)
+    lue comme un chiffre (wJ9CwjKwyco : l'icône de E lue « 4 » sur 20 s de suite) : ces lectures deviennent None. Les lectures vides (None) et
+    les images sans HUD entre deux lectures identiques ne coupent pas la suite (E lue « 14 » 6 fois en 3,5 s avec des trous : v6)."""
+    sortie = list(lectures)
+    vus = [i for i, (_, v) in enumerate(sortie) if v not in (None, "hors")]
+    k = 0
+    while k < len(vus):
+        m = k
+        while m < len(vus) and sortie[vus[m]][1] == sortie[vus[k]][1]:
+            m += 1
+        if m - k > maxi:
+            for i in vus[k:m]:
+                sortie[i] = (sortie[i][0], None)
+        k = max(m, k + 1)
     return sortie
 
 
@@ -212,7 +215,7 @@ def _suite_de_recharge(lectures, t, lu):
     return lu < v0 and ecoule <= v0 + 1.5
 
 
-def transitions_chiffres(lectures, confirmation=2):
+def transitions_chiffres(lectures, confirmation=2, ratio_relance=0.6):
     """Instants (1re image avec chiffre) où un bouton passe de « prêt » à « en recharge », avec la recharge lue (médiane des 3 premières lectures de
     la recharge : un chiffre mal lu au début ne la fausse pas). Un bouton déjà en recharge à la 1re image n'a pas d'instant de lancement connu :
     aucun événement. -> [(t, valeur)]"""
@@ -225,7 +228,13 @@ def transitions_chiffres(lectures, confirmation=2):
     for i, (t, e) in enumerate(etats):
         if i and prec == "pret" and e == "recharge" and all(x[1] == "recharge" for x in etats[i:i + confirmation]) and len(etats[i:i + confirmation]) == confirmation:
             premiers = [v for tt, v in val if tt >= t][:3]
-            lu = sorted(premiers)[len(premiers) // 2] if premiers else None
+            # v6 : le chiffre le plus haut des 3 premières lectures (un chiffre de tête perdu : « 15 » lu « 4 » ; au-delà de 60 = faux)
+            plausibles = [v for v in premiers if v <= 60]
+            lu = max(plausibles) if plausibles else None
+            haut = max([v for tt, v in val if tt < t and v <= 60] or [0])
+            if lu is not None and haut and lu < ratio_relance * haut:       # recharge déjà entamée (lancement manqué pendant une coupure) : pas un lancement
+                prec = e
+                continue
             if not _suite_de_recharge(lectures, t, lu):
                 sortie.append((t, lu))
         prec = e

@@ -134,6 +134,16 @@ def test_sjw_confiance_par_skill_id_et_base_absente():
     assert [e["confidence"] for e in ev] == ["sur", "a_verifier"]
 
 
+def test_v6_lectures_reelles_wj9():
+    # extraits de `_crops/wJ9CwjKwyco_ocr.json` (PC, 17/11) : chiffre de tête perdu (« 4 » pour 15), trous dans une suite constante (E « 14 »)
+    N = None
+    f = [(2.0, N), (2.5, 15), (3.0, 4), (3.5, N), (4.0, 1), (4.5, 13), (5.0, 12), (15.5, 2), (16.0, "hors"), (23.5, 7), (24.5, 7), (25.5, 0.5), (26.5, 1)]
+    assert R.transitions_chiffres(f) == [(2.5, 15)]          # médiane (4) avant v6 ; 7 à 23,5 = recharge entamée, pas un lancement
+    e = [(27.5, 14), (28.0, N), (28.5, 14), (29.0, 14), (29.5, N), (30.0, 14), (30.5, 14)]
+    assert R.transitions_chiffres(e) == []                   # même chiffre 5 fois : icône
+    assert R.transitions_chiffres([(0.0, N), (0.5, N), (1.0, 14), (1.5, 14), (2.0, 13), (2.5, 13)]) == [(1.0, 14)]
+
+
 # --- critères d'acceptation BOT ------------------------------------------------------------------------------------------------
 
 def test_controles_bot():
