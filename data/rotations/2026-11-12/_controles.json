@@ -67,17 +67,17 @@
     [
       "durée = chrono ± 0,5 s",
       false,
-      "durée 89.0 s, chrono 19.754 s, écart +69.25 s"
+      "durée 93.5 s, chrono 18.754 s, écart +74.75 s"
     ],
     [
       "fin avant la composition",
       false,
-      "fin 97.5 s, composition 0 s"
+      "fin 102.0 s, composition 0 s"
     ],
     [
       "≥ 1 événement SJW",
       true,
-      "23 événement(s)"
+      "8 événement(s)"
     ],
     [
       "≥ 1 événement par chasseur actif",
@@ -91,8 +91,8 @@
     ],
     [
       "phases du Results entre les bornes",
-      null,
-      "phases []"
+      true,
+      "phases [9.341, 14.792, 18.754]"
     ]
   ]
 }

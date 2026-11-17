@@ -9,39 +9,17 @@
     {
       "run_index": 1,
       "run_start_t": 8.5,
-      "run_end_t": 97.5,
-      "duration_s": 89.0,
+      "run_end_t": 102.0,
+      "duration_s": 93.5,
       "events": [
         {
-          "t": 11.5,
-          "t_run": 3.0,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 7.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 12.0,
-          "t_run": 3.5,
+          "t": 10.0,
+          "t_run": 1.5,
           "hunter": "sjw",
           "slot": "sjw_skill_1",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 1.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 12.0,
-          "t_run": 3.5,
-          "hunter": "sjw",
-          "slot": "sjw_skill_2",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 2.0,
+          "cooldown_read": 14.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -57,46 +35,35 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 14.5,
-          "t_run": 6.0,
-          "hunter": "sjw",
-          "slot": "sjw_skill_2",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 3.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
           "t": 16.0,
           "t_run": 7.5,
           "hunter": "sjw",
           "slot": "sjw_ultimate",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 3.0,
+          "cooldown_read": 7.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
         {
-          "t": 18.5,
-          "t_run": 10.0,
-          "hunter": "inconnu",
-          "slot": "ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 2.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 21.0,
-          "t_run": 12.5,
+          "t": 18.0,
+          "t_run": 9.5,
           "hunter": "inconnu",
           "slot": "skill_2",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 2.0,
+          "cooldown_read": 14.0,
+          "source": "hud-recharge",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 20.0,
+          "t_run": 11.5,
+          "hunter": "sjw",
+          "slot": "sjw_ultimate",
+          "skill_id": null,
+          "trigger": null,
+          "cooldown_read": 9.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -112,17 +79,6 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 23.5,
-          "t_run": 15.0,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 6.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
           "t": 30.8,
           "t_run": 22.3,
           "hunter": "inconnu",
@@ -134,68 +90,24 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 32.0,
-          "t_run": 23.5,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 6.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 34.0,
-          "t_run": 25.5,
+          "t": 33.0,
+          "t_run": 24.5,
           "hunter": "inconnu",
           "slot": "skill_2",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 3.0,
+          "cooldown_read": 8.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
         {
-          "t": 35.0,
-          "t_run": 26.5,
+          "t": 33.5,
+          "t_run": 25.0,
           "hunter": "inconnu",
-          "slot": "ultimate",
+          "slot": "skill_1",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 2.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 35.5,
-          "t_run": 27.0,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 7.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 37.5,
-          "t_run": 29.0,
-          "hunter": "sjw",
-          "slot": "sjw_skill_2",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 7.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 38.0,
-          "t_run": 29.5,
-          "hunter": "sjw",
-          "slot": "sjw_skill_1",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 2.0,
+          "cooldown_read": 14.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -211,79 +123,13 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 47.5,
-          "t_run": 39.0,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 3.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 48.5,
-          "t_run": 40.0,
-          "hunter": "sjw",
-          "slot": "sjw_skill_2",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 2.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
           "t": 51.5,
           "t_run": 43.0,
           "hunter": "inconnu",
           "slot": "skill_1",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 3.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 53.5,
-          "t_run": 45.0,
-          "hunter": "sjw",
-          "slot": "sjw_skill_1",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 0.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 54.0,
-          "t_run": 45.5,
-          "hunter": "sjw",
-          "slot": "sjw_skill_2",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 2.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 54.5,
-          "t_run": 46.0,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 7.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 57.0,
-          "t_run": 48.5,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 7.0,
+          "cooldown_read": 14.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -299,54 +145,21 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 60.0,
-          "t_run": 51.5,
-          "hunter": "sjw",
-          "slot": "sjw_skill_2",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 32.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
           "t": 61.5,
           "t_run": 53.0,
-          "hunter": "sjw",
-          "slot": "sjw_skill_1",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 8.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 64.0,
-          "t_run": 55.5,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 7.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 65.0,
-          "t_run": 56.5,
           "hunter": "inconnu",
           "slot": "skill_1",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 8.0,
+          "cooldown_read": 4.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
         {
-          "t": 65.5,
-          "t_run": 57.0,
-          "hunter": "inconnu",
-          "slot": "skill_2",
+          "t": 62.5,
+          "t_run": 54.0,
+          "hunter": "sjw",
+          "slot": "sjw_ultimate",
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 7.0,
@@ -357,17 +170,6 @@
           "t": 67.0,
           "t_run": 58.5,
           "hunter": "sjw",
-          "slot": "sjw_skill_2",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 2.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 69.0,
-          "t_run": 60.5,
-          "hunter": "sjw",
           "slot": "sjw_ultimate",
           "skill_id": null,
           "trigger": null,
@@ -376,24 +178,24 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 71.5,
-          "t_run": 63.0,
-          "hunter": "inconnu",
-          "slot": "skill_2",
+          "t": 70.0,
+          "t_run": 61.5,
+          "hunter": "sjw",
+          "slot": "sjw_ultimate",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 7.0,
+          "cooldown_read": 9.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
         {
-          "t": 72.0,
-          "t_run": 63.5,
-          "hunter": "inconnu",
-          "slot": "ultimate",
+          "t": 76.0,
+          "t_run": 67.5,
+          "hunter": "sjw",
+          "slot": "sjw_skill_1",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 4.0,
+          "cooldown_read": 1.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -420,17 +222,6 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 84.0,
-          "t_run": 75.5,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 86.0,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
           "t": 84.6,
           "t_run": 76.1,
           "hunter": "inconnu",
@@ -442,41 +233,40 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 89.0,
-          "t_run": 80.5,
+          "t": 87.0,
+          "t_run": 78.5,
           "hunter": "inconnu",
-          "slot": "skill_2",
+          "slot": "skill_1",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 3.0,
+          "cooldown_read": 0.8,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
         {
-          "t": 91.5,
-          "t_run": 83.0,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
+          "t": 90.5,
+          "t_run": 82.0,
+          "hunter": "inconnu",
+          "slot": "skill_1",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 99.0,
+          "cooldown_read": 14.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
         {
           "t": 96.0,
           "t_run": 87.5,
-          "hunter": "inconnu",
-          "slot": "skill_2",
+          "hunter": "sjw",
+          "slot": "sjw_skill_1",
           "skill_id": null,
           "trigger": null,
-          "cooldown_read": 3.0,
+          "cooldown_read": 12.0,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         }
       ],
       "limites": [
-        "bornes-incertaines",
         "chasseurs-inconnus"
       ]
     }

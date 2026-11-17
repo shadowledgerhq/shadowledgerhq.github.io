@@ -181,3 +181,18 @@ error: The following untracked working tree files would be overwritten by checko
 - Résumé GB : vYtRCpFtSOk · Eden(이든) · aucun Results lu · 322 RC à vérifier · light · contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262
 - Résumé GB : awb-GlVIa7Q · Ahmad1195 · aucun Results lu · 189 RC à vérifier · groupe 1 · light · RC discordant écarté : 2 (t=232)
 - Résumé GB : cfZRPdtAGmg · aucun Results lu · pas classée
+
+<!-- passage-pc pc-daily 2026-11-17T22:54:29.086339+00:00 -->
+## Passage pc-daily — 2026-11-17 23:54 (Paris)
+
+- Top 10 couvert : non (42 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 73 (dont 42 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 5 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Résumé GB : lGDbzyIJcjY · HS Retro Gaming · aucun Results lu · 19 RC à vérifier · wind · contrôle sans Hunter Rank : Rage Count lu sur une seule image
+- Résumé GB : nh2D7xZ7dOQ · SlayOnLow · Results lu (270-312 s) · 165 RC sûr · groupe 2 · light
+- Résumé GB : vYtRCpFtSOk · Eden(이든) · aucun Results lu · 322 RC à vérifier · light · contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262
+- Résumé GB : awb-GlVIa7Q · Ahmad1195 · aucun Results lu · 189 RC à vérifier · groupe 1 · light · RC discordant écarté : 2 (t=232)
+- Résumé GB : cfZRPdtAGmg · aucun Results lu · pas classée

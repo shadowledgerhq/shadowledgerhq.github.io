@@ -224,7 +224,7 @@
     "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
     "published_at": "2026-11-13T10:12:06Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-15",
+    "updated_at": "2026-11-17",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -245,7 +245,7 @@
       "tri2": "fait",
       "hud_amont": [],
       "rotation": "fait",
-      "rotation_version": 4
+      "rotation_version": 5
     }
   },
   "uwJfPTJI8ZE": {

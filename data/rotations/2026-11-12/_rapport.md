@@ -7,13 +7,13 @@
   - ÉCHEC : ≥ 1 événement par chasseur actif (actifs ['inconnu'], avec événement [])
   - OK : aucune recharge relancée trop tôt (ok)
   - NON ÉVALUABLE : phases du Results entre les bornes (phases [])
-- bot · Lt84IhMjBvM · run 1 : 42 événement(s), 42 à vérifier, durée 89.0 s, limites : bornes-incertaines, chasseurs-inconnus
-  - ÉCHEC : durée = chrono ± 0,5 s (durée 89.0 s, chrono 19.754 s, écart +69.25 s)
-  - ÉCHEC : fin avant la composition (fin 97.5 s, composition 0 s)
-  - OK : ≥ 1 événement SJW (23 événement(s))
+- bot · Lt84IhMjBvM · run 1 : 23 événement(s), 23 à vérifier, durée 93.5 s, limites : chasseurs-inconnus
+  - ÉCHEC : durée = chrono ± 0,5 s (durée 93.5 s, chrono 18.754 s, écart +74.75 s)
+  - ÉCHEC : fin avant la composition (fin 102.0 s, composition 0 s)
+  - OK : ≥ 1 événement SJW (8 événement(s))
   - ÉCHEC : ≥ 1 événement par chasseur actif (actifs ['inconnu'], avec événement [])
   - OK : aucune recharge relancée trop tôt (ok)
-  - NON ÉVALUABLE : phases du Results entre les bornes (phases [])
+  - OK : phases du Results entre les bornes (phases [9.341, 14.792, 18.754])
 - bot · wJ9CwjKwyco · run 1 : 12 événement(s), 12 à vérifier, durée 37.0 s, limites : chasseurs-inconnus
   - ÉCHEC : durée = chrono ± 0,5 s (durée 37.0 s, chrono 19.926 s, écart +17.07 s)
   - OK : fin avant la composition (fin 37.0 s, composition 38 s)
