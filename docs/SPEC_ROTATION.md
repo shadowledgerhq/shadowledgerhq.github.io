@@ -1,4 +1,4 @@
-# SPEC_ROTATION — relevé automatique de l'ordre des compétences — v1.2 (2026-11-17)
+# SPEC_ROTATION — relevé automatique de l'ordre des compétences — v1.3 (2026-11-17)
 
 Demandeur : discussion 3 (Theorycraft). Code : discussion 8. Aucune action manuelle d'Alexis.
 But : pour les meilleures runs, la liste horodatée des compétences utilisées pendant la run. Elle sert de timeline aux vidéos de l'étape 3b.
@@ -49,6 +49,12 @@ Critères d'acceptation :
 ## 5. Tests
 - Tests unitaires (pipeline/tests/) : bouton prêt/en recharge sur images synthétiques, fusion des doublons à moins de 0,5 s, calcul de t_run.
 - Test de bout en bout sur wJ9CwjKwyco, puis a-923ClD9Rc et Lt84IhMjBvM : fichiers produits, critères du §4 vérifiés dans le rapport.
+
+## 7. Mesures sur wJ9CwjKwyco (v1.3, 17/11 soir)
+- Calibration faite (PC, 720p, touches affichées) : F = skill_1, C = skill_2, LEFT SHIFT = ultimate, Q = sjw_skill_1, E = sjw_skill_2, Z = sjw_ultimate (60 s), T = portrait ; R, souris, jauge de noyau, QTE non calibrés. Assignation confirmée par les chiffres de recharge lus sur la planche.
+- La luminance ne sépare pas « prêt » et « recharge » (effets du jeu derrière les hexagones : 91 événements pour ~15 réels). Détection v1.3 : chiffre de recharge lu par l'OCR (pixels blancs du centre, 1080p, 1 lecture / 0,5 s), lancement = 1re lecture après « prêt », cooldown_read = médiane des 3 premières lectures ; même chiffre > 3 lectures de suite = icône, ignoré ; chiffres manqués puis compteur plus bas = suite de la recharge ; recharge déjà en cours à la 1re image = aucun événement.
+- HUD affiché ou non : corrélation du bouton d'esquive (zone `ancre`, icône fixe) à sa vignette médiane ≥ 0,4. Les images sans HUD (écran noir, cinématique d'ultime : wJ9 16,5-23 s) sont ignorées.
+- **Le chrono de jeu s'arrête pendant les cinématiques** : wJ9 = 37,0 s de vidéo pour 19,926 s de chrono (les chiffres de recharge reprennent à 24 s là où ils s'étaient arrêtés à 16,5 s). Le contrôle « durée = chrono ± 0,5 s » est donc faux pour une run avec cinématique : à remplacer par durée − (temps sans HUD) = chrono ± 0,5 s [À CODER à la validation du relevé].
 
 ## 6. Limites connues
 - Attaques de base non relevées ; distinction QTE / soutien incertaine.

@@ -198,6 +198,47 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-12-qySXyOxUehE",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCT9h3NfvJJ6eT7_Iri6CwFg",
+    "player": "Sohoven",
+    "channel": "Sohoven",
+    "video_id": "qySXyOxUehE",
+    "video_ids": [
+      "qySXyOxUehE"
+    ],
+    "published_at": "2026-11-16T20:30:24+01:00",
+    "lang": "fr",
+    "score": {
+      "total": 185,
+      "runs": [
+        185
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 185 RC; une seule run trouvée",
+    "runs_detail": [
+      {
+        "video_id": "qySXyOxUehE",
+        "published_at": "2026-11-16T20:30:24+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-12-trinzgj3FV4",
     "week": "2026-11-12",
     "mode": "gb",

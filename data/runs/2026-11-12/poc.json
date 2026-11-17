@@ -154,5 +154,44 @@
         "element_source": null
       }
     ]
+  },
+  {
+    "run_id": "poc-2026-11-12-cK1YiH9qwnI",
+    "week": "2026-11-12",
+    "mode": "poc",
+    "channel_id": "UCgt9PtN0OSu4jlRWEPXwnsw",
+    "player": "INVINCIBLE_YT",
+    "channel": "INVINCIBLE_YT",
+    "video_id": "cK1YiH9qwnI",
+    "video_ids": [
+      "cK1YiH9qwnI"
+    ],
+    "published_at": "2026-11-17T10:54:08+01:00",
+    "lang": "hi",
+    "score": {
+      "total": 4100000000000,
+      "runs": [
+        4100000000000
+      ],
+      "unit": "damage"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 4.1T; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "cK1YiH9qwnI",
+        "published_at": "2026-11-17T10:54:08+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "element": null,
+        "element_source": null
+      }
+    ]
   }
 ]
