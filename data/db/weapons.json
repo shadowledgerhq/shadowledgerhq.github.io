@@ -33,7 +33,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/a-conviction-and-a-calling.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/A_Conviction_and_a_Calling",
     "wiki_revid": 16796,
     "wiki_timestamp": "2026-05-07T17:26:00Z",
@@ -44,7 +44,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « A Conviction and a Calling Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "a-gentle-touch",
@@ -80,7 +81,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/a-gentle-touch.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/A_Gentle_Touch",
     "wiki_revid": 8225,
     "wiki_timestamp": "2025-02-14T21:06:22Z",
@@ -91,7 +92,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « A Gentle Touch Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "a-guardians-will",
@@ -127,7 +129,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/a-guardians-will.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/A_Guardian%27s_Will",
     "wiki_revid": 8254,
     "wiki_timestamp": "2025-02-14T21:45:59Z",
@@ -138,7 +140,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « A Guardian's Will Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "another-level",
@@ -174,7 +177,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/another-level.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Another_Level",
     "wiki_revid": 8231,
     "wiki_timestamp": "2025-02-14T21:13:33Z",
@@ -185,7 +188,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Another Level Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "blazing-flash",
@@ -221,7 +225,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/blazing-flash.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blazing_Flash",
     "wiki_revid": 17107,
     "wiki_timestamp": "2026-05-15T22:54:30Z",
@@ -232,7 +236,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Blazing Flash Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "blue-monsoon",
@@ -268,7 +273,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/blue-monsoon.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Blue_Monsoon",
     "wiki_revid": 13756,
     "wiki_timestamp": "2026-01-31T22:57:53Z",
@@ -279,7 +284,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Blue Monsoon Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "bunny-bunbun",
@@ -315,7 +321,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/bunny-bunbun.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Bunny_Bunbun",
     "wiki_revid": 16982,
     "wiki_timestamp": "2026-05-14T00:49:41Z",
@@ -326,7 +332,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Bunny Bunbun Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "coming-of-age",
@@ -363,7 +370,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/coming-of-age.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Coming_of_Age",
     "wiki_revid": 17814,
     "wiki_timestamp": "2026-09-24T14:42:08Z",
@@ -375,7 +382,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
+    "icon_source": "Fandom wiki, fichier « Coming of Age Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "crimson-shadow",
@@ -411,7 +419,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/crimson-shadow.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Crimson_Shadow",
     "wiki_revid": 17677,
     "wiki_timestamp": "2026-06-25T20:54:57Z",
@@ -422,7 +430,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Crimson Shadow Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "decisions",
@@ -458,7 +467,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/decisions.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Decisions",
     "wiki_revid": 8243,
     "wiki_timestamp": "2025-02-14T21:34:13Z",
@@ -469,7 +478,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Decisions Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "distorted-dreams",
@@ -505,7 +515,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/distorted-dreams.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Distorted_Dreams",
     "wiki_revid": 17807,
     "wiki_timestamp": "2026-09-24T14:19:11Z",
@@ -516,7 +526,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Distorted Dreams Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "equivalent-exchange",
@@ -552,7 +563,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/equivalent-exchange.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Equivalent_Exchange",
     "wiki_revid": 8223,
     "wiki_timestamp": "2025-02-14T21:03:59Z",
@@ -563,7 +574,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Equivalent Exchange Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "etched-to-the-bone",
@@ -599,7 +611,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/etched-to-the-bone.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Etched_to_the_Bone",
     "wiki_revid": 17809,
     "wiki_timestamp": "2026-09-24T14:21:45Z",
@@ -610,7 +622,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Etched to the Bone Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "eternal-slumber",
@@ -647,7 +660,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/eternal-slumber.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Eternal_Slumber",
     "wiki_revid": 8228,
     "wiki_timestamp": "2025-02-14T21:08:30Z",
@@ -659,7 +672,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
+    "icon_source": "Fandom wiki, fichier « Eternal Slumber Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "ferns-staff",
@@ -696,7 +710,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/ferns-staff.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Fern%27s_Staff",
     "wiki_revid": 16216,
     "wiki_timestamp": "2026-03-21T23:39:20Z",
@@ -708,7 +722,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
+    "icon_source": "Fandom wiki, fichier « Fern's Staff Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "first-bloom",
@@ -744,7 +759,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/first-bloom.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/First_Bloom",
     "wiki_revid": 8234,
     "wiki_timestamp": "2025-02-14T21:17:28Z",
@@ -755,7 +770,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « First Bloom Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "frierens-staff",
@@ -792,7 +808,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/frierens-staff.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Frieren%27s_Staff",
     "wiki_revid": 15902,
     "wiki_timestamp": "2026-03-18T22:44:24Z",
@@ -804,7 +820,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
+    "icon_source": "Fandom wiki, fichier « Frieren's Staff Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "glorious-demise",
@@ -840,7 +857,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/glorious-demise.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Glorious_Demise",
     "wiki_revid": 12994,
     "wiki_timestamp": "2025-06-05T15:31:33Z",
@@ -851,7 +868,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Glorious Demise Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "hook-line-and-sinker",
@@ -887,7 +905,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/hook-line-and-sinker.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Hook%2C_Line%2C_and_Sinker",
     "wiki_revid": 17826,
     "wiki_timestamp": "2026-10-22T18:30:26Z",
@@ -906,7 +924,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Hook, Line, and Sinker Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "howling-white-tigers-soul",
@@ -942,7 +961,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/howling-white-tigers-soul.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Howling_White_Tiger%27s_Soul",
     "wiki_revid": 14284,
     "wiki_timestamp": "2026-02-08T01:05:41Z",
@@ -953,7 +972,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Howling White Tiger's Soul Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "ice-witch",
@@ -989,7 +1009,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/ice-witch.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Ice_Witch",
     "wiki_revid": 8219,
     "wiki_timestamp": "2025-02-14T21:02:00Z",
@@ -1000,7 +1020,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Ice Witch Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "intercept",
@@ -1036,7 +1057,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/intercept.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Intercept",
     "wiki_revid": 8227,
     "wiki_timestamp": "2025-02-14T21:07:40Z",
@@ -1047,7 +1068,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Intercept Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "intuition",
@@ -1083,7 +1105,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/intuition.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Intuition",
     "wiki_revid": 8251,
     "wiki_timestamp": "2025-02-14T21:42:15Z",
@@ -1094,7 +1116,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Intuition Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "iron-resolve",
@@ -1130,7 +1153,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/iron-resolve.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Iron_Resolve",
     "wiki_revid": 17676,
     "wiki_timestamp": "2026-06-25T16:51:50Z",
@@ -1141,7 +1164,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Iron Resolve Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "la-famiglia",
@@ -1177,7 +1201,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/la-famiglia.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/La_Famiglia",
     "wiki_revid": 17759,
     "wiki_timestamp": "2026-07-07T01:42:40Z",
@@ -1188,7 +1212,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « La Famiglia Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "lonely-wanderer",
@@ -1224,7 +1249,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/lonely-wanderer.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Lonely_Wanderer",
     "wiki_revid": 8258,
     "wiki_timestamp": "2025-02-14T21:50:55Z",
@@ -1235,7 +1260,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Lonely Wanderer Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "melody-of-iron-and-blood",
@@ -1271,7 +1297,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/melody-of-iron-and-blood.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Melody_of_Iron_and_Blood",
     "wiki_revid": 17823,
     "wiki_timestamp": "2026-10-22T18:14:50Z",
@@ -1290,7 +1316,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Melody of Iron and Blood Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "mischievous",
@@ -1327,7 +1354,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/mischievous.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Mischievous",
     "wiki_revid": 8214,
     "wiki_timestamp": "2025-02-14T21:00:51Z",
@@ -1339,7 +1366,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
+    "icon_source": "Fandom wiki, fichier « Mischievous Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "nice-to-meet-you",
@@ -1375,7 +1403,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/nice-to-meet-you.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Nice_to_Meet_You",
     "wiki_revid": 13121,
     "wiki_timestamp": "2025-07-18T06:43:23Z",
@@ -1386,7 +1414,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Nice to Meet You Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "night-cleaving-flash",
@@ -1422,7 +1451,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/night-cleaving-flash.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Night-cleaving_Flash",
     "wiki_revid": 17924,
     "wiki_timestamp": "2026-10-26T20:05:23Z",
@@ -1433,7 +1462,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Night-cleaving Flash Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "night-thoughts",
@@ -1469,7 +1499,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/night-thoughts.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Night-Thoughts",
     "wiki_revid": 8224,
     "wiki_timestamp": "2025-02-14T21:04:54Z",
@@ -1480,7 +1510,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Night-Thoughts Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "nightcleaver",
@@ -1517,7 +1548,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/nightcleaver.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Nightcleaver",
     "wiki_revid": 17798,
     "wiki_timestamp": "2026-08-21T15:52:15Z",
@@ -1529,7 +1560,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
+    "icon_source": "Fandom wiki, fichier « Nightcleaver Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "overdrive",
@@ -1565,7 +1597,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/overdrive.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Overdrive",
     "wiki_revid": 17578,
     "wiki_timestamp": "2026-06-05T23:50:15Z",
@@ -1576,7 +1608,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Overdrive Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "prankster",
@@ -1613,7 +1646,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/prankster.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Prankster",
     "wiki_revid": 8207,
     "wiki_timestamp": "2025-02-14T20:58:55Z",
@@ -1625,7 +1658,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
+    "icon_source": "Fandom wiki, fichier « Prankster Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "purple-butterflys-dream",
@@ -1661,7 +1695,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/purple-butterflys-dream.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Purple_Butterfly%27s_Dream",
     "wiki_revid": 17083,
     "wiki_timestamp": "2026-05-15T22:09:58Z",
@@ -1672,7 +1706,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Purple Butterfly's Dream.png » (illustration de l'arme, pas d'icône dédiée ; CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "saints-benediction",
@@ -1708,7 +1743,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/saints-benediction.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Saint%27s_Benediction",
     "wiki_revid": 17923,
     "wiki_timestamp": "2026-10-26T20:04:38Z",
@@ -1719,7 +1754,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Saint's Benediction Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "slayers-mercy",
@@ -1755,7 +1791,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/slayers-mercy.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Slayer%27s_Mercy",
     "wiki_revid": 8252,
     "wiki_timestamp": "2025-02-14T21:42:48Z",
@@ -1766,7 +1802,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Slayer's Mercy Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "solid-logic",
@@ -1802,7 +1839,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/solid-logic.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Solid_Logic",
     "wiki_revid": 17769,
     "wiki_timestamp": "2026-07-07T08:16:02Z",
@@ -1813,7 +1850,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Solid Logic Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "someones-downfall",
@@ -1849,7 +1887,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/someones-downfall.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Someone%27s_Downfall",
     "wiki_revid": 8253,
     "wiki_timestamp": "2025-02-14T21:42:59Z",
@@ -1860,7 +1898,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Someone's Downfall Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "soul-plunderer",
@@ -1896,7 +1935,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/soul-plunderer.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Soul_Plunderer",
     "wiki_revid": 8257,
     "wiki_timestamp": "2025-02-14T21:49:10Z",
@@ -1907,7 +1946,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Soul Plunderer Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "starks-axe",
@@ -1944,7 +1984,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/starks-axe.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Stark%27s_Axe",
     "wiki_revid": 16217,
     "wiki_timestamp": "2026-03-21T23:46:22Z",
@@ -1956,7 +1996,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
+    "icon_source": "Fandom wiki, fichier « Stark's Axe Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "still-got-it",
@@ -1992,7 +2033,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/still-got-it.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Still_Got_It",
     "wiki_revid": 8250,
     "wiki_timestamp": "2025-02-14T21:41:55Z",
@@ -2003,7 +2044,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Still Got It Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "strategy-for-victory",
@@ -2039,7 +2081,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/strategy-for-victory.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Strategy_for_Victory",
     "wiki_revid": 17796,
     "wiki_timestamp": "2026-08-01T09:14:43Z",
@@ -2050,7 +2092,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Strategy for Victory Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "suppressed-white-tigers-soul",
@@ -2086,7 +2129,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/suppressed-white-tigers-soul.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Suppressed_White_Tiger%27s_Soul",
     "wiki_revid": 8222,
     "wiki_timestamp": "2025-02-14T21:03:36Z",
@@ -2097,7 +2140,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Suppressed White Tiger's Soul Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "sweet-life",
@@ -2133,7 +2177,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/sweet-life.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Sweet_Life",
     "wiki_revid": 8256,
     "wiki_timestamp": "2025-02-14T21:46:36Z",
@@ -2144,7 +2188,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Sweet Life Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "sword-of-light",
@@ -2180,7 +2225,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/sword-of-light.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Sword_of_Light",
     "wiki_revid": 17797,
     "wiki_timestamp": "2026-08-21T15:50:18Z",
@@ -2191,7 +2236,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Sword of Light Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "the-battlefields-guiding-star",
@@ -2227,7 +2273,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/the-battlefields-guiding-star.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/The_Battlefield%27s_Guiding_Star",
     "wiki_revid": 17092,
     "wiki_timestamp": "2026-05-15T22:19:03Z",
@@ -2238,7 +2284,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « The Battlefield's Guiding Star Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "the-glamour-of-self-worth",
@@ -2274,7 +2321,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/the-glamour-of-self-worth.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/The_Glamour_of_Self-worth",
     "wiki_revid": 17591,
     "wiki_timestamp": "2026-06-06T22:09:02Z",
@@ -2285,7 +2332,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « The Glamour of Self-worth Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "the-path-a-hero-must-take",
@@ -2321,7 +2369,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/the-path-a-hero-must-take.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/The_Path_a_Hero_Must_Take",
     "wiki_revid": 17577,
     "wiki_timestamp": "2026-06-05T23:48:26Z",
@@ -2332,7 +2380,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « The Path a Hero Must Take Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "the-place-bathed-in-moonlight",
@@ -2368,7 +2417,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/the-place-bathed-in-moonlight.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/The_Place_Bathed_in_Moonlight",
     "wiki_revid": 17104,
     "wiki_timestamp": "2026-05-15T22:34:34Z",
@@ -2379,7 +2428,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « The Place Bathed in Moonlight Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "the-price-of-a-promise",
@@ -2415,7 +2465,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/the-price-of-a-promise.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/The_Price_of_a_Promise",
     "wiki_revid": 17920,
     "wiki_timestamp": "2026-10-26T19:42:23Z",
@@ -2426,7 +2476,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « The Price of a Promise Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "the-true-king",
@@ -2462,7 +2513,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/the-true-king.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/The_True_King",
     "wiki_revid": 8211,
     "wiki_timestamp": "2025-02-14T21:00:06Z",
@@ -2473,7 +2524,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « The True King Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "the-weight-of-responsibility",
@@ -2509,7 +2561,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/the-weight-of-responsibility.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/The_Weight_of_Responsibility",
     "wiki_revid": 13718,
     "wiki_timestamp": "2026-01-31T03:11:57Z",
@@ -2520,7 +2572,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « The Weight of Responsibility Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "unbreakable-will",
@@ -2556,7 +2609,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/unbreakable-will.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Unbreakable_Will",
     "wiki_revid": 13776,
     "wiki_timestamp": "2026-01-31T23:35:11Z",
@@ -2567,7 +2620,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Unbreakable Will Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "unexpected-luck",
@@ -2603,7 +2657,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/unexpected-luck.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Unexpected_Luck",
     "wiki_revid": 17833,
     "wiki_timestamp": "2026-10-25T01:33:48Z",
@@ -2614,7 +2668,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Unexpected Luck Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "unparalleled-bravery",
@@ -2651,7 +2706,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/unparalleled-bravery.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Unparalleled_Bravery",
     "wiki_revid": 8229,
     "wiki_timestamp": "2025-02-14T21:09:27Z",
@@ -2663,7 +2718,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)"
+    "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
+    "icon_source": "Fandom wiki, fichier « Unparalleled Bravery Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "unstoppable-frenzy",
@@ -2699,7 +2755,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/unstoppable-frenzy.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Unstoppable_Frenzy",
     "wiki_revid": 8255,
     "wiki_timestamp": "2025-02-14T21:46:25Z",
@@ -2710,7 +2766,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Unstoppable Frenzy Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "valkyries-oath",
@@ -2746,7 +2803,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/valkyries-oath.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Valkyrie%27s_Oath",
     "wiki_revid": 17983,
     "wiki_timestamp": "2026-10-27T14:47:36Z",
@@ -2757,7 +2814,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Valkyrie's Oath Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "what-never-was",
@@ -2793,7 +2851,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/what-never-was.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/What_Never_Was",
     "wiki_revid": 8241,
     "wiki_timestamp": "2025-02-14T21:32:57Z",
@@ -2804,7 +2862,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « What Never Was Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "winterbreaker",
@@ -2840,7 +2899,7 @@
     ],
     "skills": [],
     "effects": [],
-    "icon": null,
+    "icon": "data/icons/weapons/winterbreaker.png",
     "source": "https://solo-leveling-arise.fandom.com/wiki/Winterbreaker",
     "wiki_revid": 14555,
     "wiki_timestamp": "2026-02-12T06:29:33Z",
@@ -2851,7 +2910,8 @@
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
-    }
+    },
+    "icon_source": "Fandom wiki, fichier « Winterbreaker Icon.png » (CC BY-SA), récupéré le 2026-11-17"
   },
   {
     "id": "allons-orb",
