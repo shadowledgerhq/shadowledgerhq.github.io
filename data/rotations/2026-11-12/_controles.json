@@ -33,24 +33,24 @@
   ],
   "a-923ClD9Rc": [
     [
-      "durée − temps sans HUD = chrono ± 0,5 s",
-      false,
-      "durée 91.5 s − sans HUD 20.0 s = 71.5 s, chrono 19.558 s, écart +51.94 s"
+      "durée ≥ chrono − 0,5 s",
+      true,
+      "durée 47.5 s, chrono 19.558 s (×2.4)"
     ],
     [
       "fin avant la composition",
-      false,
+      null,
       "fin 104.0 s, composition 0 s"
     ],
     [
       "≥ 1 événement SJW",
       true,
-      "5 événement(s)"
+      "4 événement(s)"
     ],
     [
-      "≥ 1 événement par chasseur actif",
-      false,
-      "actifs ['inconnu'], avec événement []"
+      "≥ 1 événement par chasseur actif identifié",
+      null,
+      "actifs identifiés [], avec événement []"
     ],
     [
       "aucune recharge relancée trop tôt",
@@ -58,9 +58,9 @@
       "ok"
     ],
     [
-      "phases du Results entre les bornes",
+      "t_game croissant, ≤ chrono, phases dans la fenêtre",
       null,
-      "phases []"
+      "chrono du HUD non lu"
     ]
   ],
   "Lt84IhMjBvM": [

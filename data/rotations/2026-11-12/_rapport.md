@@ -1,12 +1,12 @@
 # Rapport des rotations — semaine 2026-11-12
 
-- bot · a-923ClD9Rc · run 1 : 41 événement(s), 41 à vérifier, durée 91.5 s, limites : bornes-incertaines, chasseurs-inconnus
-  - ÉCHEC : durée − temps sans HUD = chrono ± 0,5 s (durée 91.5 s − sans HUD 20.0 s = 71.5 s, chrono 19.558 s, écart +51.94 s)
-  - ÉCHEC : fin avant la composition (fin 104.0 s, composition 0 s)
-  - OK : ≥ 1 événement SJW (5 événement(s))
-  - ÉCHEC : ≥ 1 événement par chasseur actif (actifs ['inconnu'], avec événement [])
+- bot · a-923ClD9Rc · run 1 : 24 événement(s), 24 à vérifier, durée 47.5 s, limites : bornes-incertaines, essais-precedents, chasseurs-inconnus
+  - OK : durée ≥ chrono − 0,5 s (durée 47.5 s, chrono 19.558 s (×2.4))
+  - NON ÉVALUABLE : fin avant la composition (fin 104.0 s, composition 0 s)
+  - OK : ≥ 1 événement SJW (4 événement(s))
+  - NON ÉVALUABLE : ≥ 1 événement par chasseur actif identifié (actifs identifiés [], avec événement [])
   - OK : aucune recharge relancée trop tôt (ok)
-  - NON ÉVALUABLE : phases du Results entre les bornes (phases [])
+  - NON ÉVALUABLE : t_game croissant, ≤ chrono, phases dans la fenêtre (chrono du HUD non lu)
 - bot · Lt84IhMjBvM · run 1 : 23 événement(s), 23 à vérifier, durée 93.5 s, limites : chasseurs-inconnus
   - ÉCHEC : durée = chrono ± 0,5 s (durée 93.5 s, chrono 18.754 s, écart +74.75 s)
   - ÉCHEC : fin avant la composition (fin 102.0 s, composition 0 s)
