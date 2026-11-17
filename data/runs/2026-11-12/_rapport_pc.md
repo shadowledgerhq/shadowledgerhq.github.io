@@ -76,3 +76,13 @@ error: The following untracked working tree files would be overwritten by checko
 - Durée du passage : 0 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Conflit git résolu automatiquement
+
+<!-- passage-pc pc-daily 2026-11-17T00:58:16.361870+00:00 -->
+## Passage pc-daily — 2026-11-17 01:58 (Paris)
+
+- Top 10 couvert : non (31 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 2 · en_cours restantes : 60 (dont 31 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 4 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
