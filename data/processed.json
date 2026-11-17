@@ -82,14 +82,14 @@
     "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
     "published_at": "2026-11-12T12:00:07Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-15",
     "last_tri": 4,
     "status": "termine",
     "modes": [
       "gb",
       "poc"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -113,7 +113,7 @@
     "channel_id": "UCDH2srpTdjw6YIagjUtu2_w",
     "published_at": "2026-11-12T21:00:23Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-13",
     "last_tri": 1,
     "status": "en_cours",
     "modes": [
@@ -182,7 +182,7 @@
     "channel_id": "UCDH2srpTdjw6YIagjUtu2_w",
     "published_at": "2026-11-12T02:00:07Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-13",
     "last_tri": 1,
     "status": "en_cours",
     "modes": [
@@ -224,7 +224,7 @@
     "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
     "published_at": "2026-11-13T10:12:06Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-15",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -246,16 +246,14 @@
       "hud_amont": [],
       "rotation": "fait",
       "rotation_version": 4
-    },
-    "relecture": "2026-11-17",
-    "relecture_auto": 18
+    }
   },
   "uwJfPTJI8ZE": {
     "week": "2026-11-12",
     "channel_id": "UCXTmMgefIJnkOksH7acBrXQ",
     "published_at": "2026-11-13T05:44:18Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-15",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -275,16 +273,14 @@
       "tri4": "fait",
       "tri2": "fait",
       "hud_amont": []
-    },
-    "relecture": "2026-11-17",
-    "relecture_auto": 18
+    }
   },
   "tOzRUlmZ2JI": {
     "week": "2026-11-12",
     "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
     "published_at": "2026-11-12T19:12:47Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-15",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -304,9 +300,7 @@
       "tri4": "fait",
       "tri2": "fait",
       "hud_amont": []
-    },
-    "relecture": "2026-11-17",
-    "relecture_auto": 18
+    }
   },
   "g50pPUDoTvw": {
     "week": "2026-11-12",
@@ -338,7 +332,7 @@
     "channel_id": "UCUZMOC3aAvVNk3-oBZUtTsw",
     "published_at": "2026-11-12T13:57:26Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-15",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -358,9 +352,7 @@
       "tri4": "fait",
       "tri2": "fait",
       "hud_amont": []
-    },
-    "relecture": "2026-11-17",
-    "relecture_auto": 18
+    }
   },
   "wSFAPACPk5E": {
     "week": "2026-11-12",
@@ -392,7 +384,7 @@
     "channel_id": "UCYNsWXOKkyjkkm-pFvt0vAQ",
     "published_at": "2026-11-12T12:01:40Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-15",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -414,9 +406,7 @@
       "hud_amont": [],
       "rotation": "fait",
       "rotation_version": 4
-    },
-    "relecture": "2026-11-17",
-    "relecture_auto": 18
+    }
   },
   "E4lHBPoZeKs": {
     "week": "2026-11-12",
@@ -448,7 +438,7 @@
     "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
     "published_at": "2026-11-12T03:07:23Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-15",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -468,9 +458,7 @@
       "tri4": "fait",
       "tri2": "fait",
       "hud_amont": []
-    },
-    "relecture": "2026-11-17",
-    "relecture_auto": 18
+    }
   },
   "PncUhejH3E8": {
     "week": "2026-11-12",
@@ -533,7 +521,7 @@
     "channel_id": "UCjHQXaVhgDfEYtZ_FgMhmUw",
     "published_at": "2026-11-13T05:13:05Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-15",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -553,9 +541,7 @@
       "tri4": "fait",
       "tri2": "fait",
       "hud_amont": []
-    },
-    "relecture": "2026-11-17",
-    "relecture_auto": 18
+    }
   },
   "vnxe8g3WLuA": {
     "week": "2026-11-12",
@@ -870,8 +856,8 @@
     "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
     "published_at": "2026-11-12T10:51:56Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
-    "last_tri": 3,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "gb"
@@ -978,8 +964,8 @@
     "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
     "published_at": "2026-11-12T01:07:38Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
-    "last_tri": 3,
+    "updated_at": "2026-11-13",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "gb"
@@ -1189,7 +1175,7 @@
     "channel_id": "UCSk07KtnPz8Prb6xS2aNnVA",
     "published_at": "2026-11-14T15:30:01Z",
     "first_seen": "2026-11-14",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-14",
     "last_tri": 1,
     "status": "en_cours",
     "modes": [
@@ -1256,7 +1242,7 @@
     "channel_id": "UCDH2srpTdjw6YIagjUtu2_w",
     "published_at": "2026-11-13T21:00:19Z",
     "first_seen": "2026-11-14",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-14",
     "last_tri": 1,
     "status": "en_cours",
     "modes": [
@@ -1657,11 +1643,11 @@
     "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
     "published_at": "2026-11-15T13:51:00Z",
     "first_seen": "2026-11-15",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-15",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
