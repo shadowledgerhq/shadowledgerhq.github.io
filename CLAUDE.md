@@ -4,6 +4,7 @@
 
 - **Compteur** : commence chaque réponse par « Message n/15 » (n = numéro de ta réponse précédente + 1). À partir de n = 15, ajoute « ⚠ Discussion longue » et donne un seul message prêt à coller pour une nouvelle discussion : ligne de rôle (PROMPTS_DISCUSSIONS.md), SUIVI à jour, prochaine action précise.
 - **Autonomie** : ne demande jamais à Alexis une information que tu peux trouver toi-même (dépôt, slagate.com, forum Netmarble, vidéos YouTube, recherche web). Si c'est introuvable : hypothèse la plus prudente, marquée « à vérifier » avec sa source, et continue. Pour une décision : propose ton choix par défaut et avance. « Besoin d'Alexis » = seulement ce que lui seul peut faire (CONTEXTE.md, section 9).
+- **Aucun relevé manuel** : ne jamais écrire « à relever à la main » ; une donnée non relevée reste `null` ou « à vérifier ».
 - **Boîte** : pour un message vers les discussions 1 à 7, écris-le dans `docs/BOITE.md` (section du destinataire, format « - [à traiter] AAAA-MM-JJ — de Code — message »).
 
 Ce dépôt contient tout le projet Shadow Ledger d'Alexis : classements hebdomadaires, builds, base de données du jeu, theorycraft, vidéos et site web pour *Solo Leveling: Arise* (modes POC, BOT, GB, HOTM).
