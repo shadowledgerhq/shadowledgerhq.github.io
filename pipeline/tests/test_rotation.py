@@ -144,6 +144,14 @@ def test_v6_lectures_reelles_wj9():
     assert R.transitions_chiffres([(0.0, N), (0.5, N), (1.0, 14), (1.5, 14), (2.0, 13), (2.5, 13)]) == [(1.0, 14)]
 
 
+def test_v7_ralenti_et_recharge_de_chasseur_plausible():
+    # a-923ClD9Rc 75-84 s : ralenti 0,5x, 4 lectures par chiffre (14, 13, 12) : un vrai compte à rebours
+    f = [(74.5, None)] + [(75.0 + 0.5 * i, 14 - i // 4) for i in range(12)]
+    assert R.transitions_chiffres(f) == [(75.0, 14)]
+    # 5 lectures identiques ou plus = icône
+    assert R.transitions_chiffres([(0.0, None), (0.5, None)] + [(1.0 + 0.5 * i, 14) for i in range(5)]) == []
+
+
 # --- critères d'acceptation BOT ------------------------------------------------------------------------------------------------
 
 def test_controles_bot():

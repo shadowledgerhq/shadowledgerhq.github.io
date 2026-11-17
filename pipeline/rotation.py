@@ -181,8 +181,8 @@ def lectures_ocr(recadrages, boutons, ocr, presents, brut=None):
     return sortie
 
 
-def purger_constantes(lectures, maxi=3):
-    """Un chiffre identique sur plus de `maxi` lectures de suite n'est pas un compte à rebours (il change chaque seconde) mais une partie de l'icône
+def purger_constantes(lectures, maxi=4):
+    """Un chiffre identique sur plus de `maxi` (4 : 4 lectures par chiffre en ralenti 0,5x vu sur a-923ClD9Rc) lectures de suite n'est pas un compte à rebours (il change chaque seconde) mais une partie de l'icône
     lue comme un chiffre (wJ9CwjKwyco : l'icône de E lue « 4 » sur 20 s de suite) : ces lectures deviennent None. Les lectures vides (None) et
     les images sans HUD entre deux lectures identiques ne coupent pas la suite (E lue « 14 » 6 fois en 3,5 s avec des trous : v6)."""
     sortie = list(lectures)
@@ -381,7 +381,10 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
         sjw = bouton.startswith("sjw_")
         if lectures is not None or par_chiffres:
             lect = lectures.get(bouton, []) if lectures is not None else lecture_chiffres(frames, zones[bouton], ocr, presents, cfg.get("ocr_pas_s", 0.5))
+            cap = None if sjw else cfg.get("recharge_max_chasseur_s", 26)   # v6 : recharge de chasseur max 25 s dans la base (hunters.json) ; au-delà = chiffre mal lu
             for t, lu in transitions_chiffres(lect):
+                if cap and lu is not None and lu > cap:
+                    continue
                 evenements.append({"t": t, "hunter": "sjw" if sjw else hunter_a(t), "slot": bouton,
                                    "skill_id": (skills_sjw or {}).get(bouton) if sjw else None, "trigger": None, "cooldown_read": lu, "source": "hud-recharge"})
             continue
