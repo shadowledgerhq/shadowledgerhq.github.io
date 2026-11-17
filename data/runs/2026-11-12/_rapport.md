@@ -1,31 +1,14 @@
-# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-17 01:44 (Paris)
-
-- **Passage complet : non** (git : conflit git non résolu : git pull : ch            main       -> FETCH_HEAD
-   cce1fab..2553b34  main       -> origin/main
-error: The following untracked working tree files would be overwritten by checkout:
-	exports/2026-11-12 | git merge : error: The)
-- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
-- Erreurs bloquantes : git : conflit git non résolu : git pull : ch            main       -> FETCH_HEAD
-   cce1fab..2553b34  main       -> origin/main
-error: The following untracked working tree files would be overwritten by checkout:
-	exports/2026-11-12 | git merge : error: The
+# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-17 01:55 (Paris)
 
 - Top 10 couvert : non (31 vidéos candidates au top 10 restantes)
-- **Passage complet : non** (anti-bot YouTube (passage incomplet)
-- Vidéos traitées ce passage : 15 · en_cours restantes : 60 (dont 31 à traiter par le PC)
-- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot) ; git : conflit git non résolu : git pull : ch            main       -> FETCH_HEAD
-   cce1fab..2553b34  main       -> origin/main
-error: The following untracked working tree files would be overwritten by checkout:
-	exports/2026-11-12 | git merge : error: The following untracked working tree files would be overwritten by merge:
-	exports/2026-11-12/classements.xlsx
-Please move or remove them before you merge.
-Aborting
-Merge with strategy ort failed.
-- Durée du passage : 59 min
-- Relance automatique : 17/11/2026 02:45 (une seule fois par soir)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 60 (dont 31 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 0 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Conflit git résolu automatiquement
 
-- Semaine : 60 en cours (dont 45 pour le PC), 30 terminée(s), 11 rejetée(s)
+- Semaine : 60 en cours (dont 46 pour le PC), 30 terminée(s), 11 rejetée(s)
 - Classements : bot 13, gb 7, hotm-gate-inconnue 4, poc 4
 
 ## À vérifier (25)
@@ -65,21 +48,4 @@ Merge with strategy ort failed.
 - rien
 
 ## Erreurs et alertes
-- RVkSt2bWn_U : 429 / anti-bot YouTube, reportée au prochain passage
-- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
-- 27 vidéo(s) reportée(s) pour les images (limite 15)
-- Aqj1crEcrD4 : durée PT35M2S hors limite (30 min), images non traitées
-- SDMrcxG50LI : durée PT37M45S hors limite (30 min), images non traitées
-- K4786mdlgXg : durée PT44M26S hors limite (30 min), images non traitées
-- PawKtXDQjdc : durée PT33M44S hors limite (30 min), images non traitées
-- cfZRPdtAGmg : libellés ko inconnus (aucun écran GB reconnu)
 - 60 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : 17/11/2026 02:45 (une seule fois par soir)
-- git : conflit git non résolu : git pull : ch            main       -> FETCH_HEAD
-   cce1fab..2553b34  main       -> origin/main
-error: The following untracked working tree files would be overwritten by checkout:
-	exports/2026-11-12 | git merge : error: The following untracked working tree files would be overwritten by merge:
-	exports/2026-11-12/classements.xlsx
-Please move or remove them before you merge.
-Aborting
-Merge with strategy ort failed.

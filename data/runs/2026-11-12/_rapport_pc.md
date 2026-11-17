@@ -65,3 +65,14 @@ error: The following untracked working tree files would be overwritten by checko
    cce1fab..2553b34  main       -> origin/main
 error: The following untracked working tree files would be overwritten by checkout:
 	exports/2026-11-12 | git merge : error: The
+
+<!-- passage-pc pc-daily 2026-11-17T00:55:54.222122+00:00 -->
+## Passage pc-daily — 2026-11-17 01:55 (Paris)
+
+- Top 10 couvert : non (31 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 60 (dont 31 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 0 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Conflit git résolu automatiquement
