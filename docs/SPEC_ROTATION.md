@@ -48,7 +48,7 @@ Critères d'acceptation (v1.4, contrôles du rapport ; « non évaluable » n'es
 3. au moins un événement pour SJW ;
 4. au moins un événement par chasseur actif identifié ; chasseur inconnu : non évaluable ;
 5. aucune compétence relancée avant la fin de sa recharge connue ;
-6. si t_game est lu : croissant, dernier t_game ≤ chrono, phases du Results dans [premier t_game ; chrono] (la dernière phase = le chrono : l'intervalle [premier ; dernier t_game] ne peut pas la contenir) ; sinon non évaluable.
+6. si t_game est lu : croissant, dernier t_game ≤ chrono, et phases du Results dans [premier t_game ; chrono + 0,5 s] (validé par la discussion 3, 18/11 : la dernière phase = le chrono, donc l'intervalle [premier ; dernier t_game] ne peut pas la contenir) ; sinon non évaluable.
 
 ## 5. Tests
 - Tests unitaires (pipeline/tests/) : bouton prêt/en recharge sur images synthétiques, fusion des doublons à moins de 0,5 s, calcul de t_run.
