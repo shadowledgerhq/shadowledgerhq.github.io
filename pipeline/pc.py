@@ -1202,6 +1202,31 @@ def bloquante(avert):
     return " : images : " in t or "ffmpeg" in t
 
 
+def resume_gb(d, semaine, jour, maximum=5):
+    """v33 : résumé lisible en tête du bloc : une ligne par vidéo GB traitée ce jour par le PC (Results lu ? RC, statut, groupe, motif
+    principal si `a_verifier`). Au plus `maximum` lignes. Lit `processed.json` (`pc.date`, `pc.results_lus`) et `gb.json` (déjà recalculé)."""
+    try:
+        lignes_gb = d.lire(f"runs/{semaine}/gb.json", [])
+    except Exception:
+        lignes_gb = []
+    traitees = [(v, p) for v, p in d.processed().items()
+                if p.get("week") == semaine and "gb" in (p.get("modes") or []) and (p.get("pc") or {}).get("date") == jour]
+    sortie = []
+    for vid, p in traitees:
+        lus = (p.get("pc") or {}).get("results_lus") or []
+        ligne = next((l for l in lignes_gb if vid in (l.get("video_ids") or [l.get("video_id")])), None)
+        results = f"Results lu ({lus[0][0]}-{lus[0][1]} s)" if lus else "aucun Results lu"
+        if ligne is None:
+            sortie.append(f"- Résumé GB : {vid} · {results} · pas classée")
+            continue
+        det = (ligne.get("runs_detail") or [{}])[0]
+        motif = next((n for n in (ligne.get("notes") or "").split("; ") if n and not n.startswith(("lecture fusionnée", "boss non", "écart OCR"))), "")
+        sortie.append(f"- Résumé GB : {vid} · {ligne.get('player')} · {results} · {ligne['score']['total']} RC {'sûr' if ligne['confidence'] == 'sur' else 'à vérifier'}"
+                      + (f" · groupe {det['team']}" if det.get("team") else "") + (f" · {det['element']}" if det.get("element") else "")
+                      + ("" if ligne["confidence"] == "sur" or not motif else f" · {motif}"))
+    return sortie[:maximum] + ([f"- Résumé GB : … et {len(sortie) - maximum} autre(s) vidéo(s)"] if len(sortie) > maximum else [])
+
+
 def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None, duree_min=None, top10=None, gel3=None):
     """Lignes placées en tête du rapport poussé (SPEC §6, critère de gel n° 3). v29 : `top10` = nombre de vidéos candidates au
     top 10 encore en attente (ligne « Top 10 couvert », en tête) ; `gel3` = texte du critère de gel n° 3 (passages couverts)."""
@@ -1416,6 +1441,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         if git is not None and getattr(git, "conflit_resolu", False):
             lignes.append("- Conflit git résolu automatiquement")
         lignes += lignes_exports_deplaces(git)
+        lignes += resume_gb(d, week, jour)
         rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)      # v26 : bloc daté, jamais effacé, propre au PC
         ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes, lignes)
     rapport()

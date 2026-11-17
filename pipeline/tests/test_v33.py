@@ -7,6 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import pc
 import pytest
 import classement
 import ocr_ecrans
@@ -91,3 +92,17 @@ def test_pas_d_egalite_pas_de_changement():
 
 if __name__ == "__main__":
     sys.exit(pytest.main([__file__, "-q"]))
+
+
+def test_resume_gb_en_tete_du_bloc():
+    """v33 : une ligne par vidéo GB traitée ce jour (Results lu ?, RC, statut, groupe, élément)."""
+    import donnees
+    d = preparer([])
+    d.ecrire("processed.json", {"v1": {"week": W, "modes": ["gb"], "status": "termine", "pc": {"date": "2026-11-17", "results_lus": [[270, 312]]}},
+                                "v2": {"week": W, "modes": ["gb"], "status": "en_cours", "pc": {"date": "2026-11-17", "results_lus": []}},
+                                "v3": {"week": W, "modes": ["gb"], "status": "termine", "pc": {"date": "2026-11-16", "results_lus": [[1, 2]]}}})
+    d.ecrire(f"runs/{W}/gb.json", [{"video_id": "v1", "video_ids": ["v1"], "player": "SlayOnLow", "score": {"total": 165}, "confidence": "sur",
+                                   "notes": "lecture fusionnée (8 images)", "runs_detail": [{"team": 2, "element": "light"}]}])
+    lignes = pc.resume_gb(d, W, "2026-11-17")
+    assert lignes == ["- Résumé GB : v1 · SlayOnLow · Results lu (270-312 s) · 165 RC sûr · groupe 2 · light",
+                      "- Résumé GB : v2 · aucun Results lu · pas classée"]
