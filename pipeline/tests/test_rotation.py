@@ -192,7 +192,8 @@ def test_passage_video_ecrit_le_fichier_de_la_spec(tmp_path):
 
 def test_hud_non_calibre_limite_et_recadrages_de_calibration(tmp_path):
     with tempfile.TemporaryDirectory() as tmp:
-        etat = R.passage_video(Outils(_hud), "v.mp4", _ctx(), CFG, HUNTER_DB, tmp, racine=tmp_path)
+        non_calibre = dict(CFG, zones={k: None for k in CFG["zones"]})                                  # la config réelle est calibrée (v2)
+        etat = R.passage_video(Outils(_hud), "v.mp4", _ctx(), non_calibre, HUNTER_DB, tmp, racine=tmp_path)
     assert etat == "absent"
     r = json.loads((tmp_path / "data/rotations/2026-11-12/bot/wJ9CwjKwyco.json").read_text(encoding="utf-8"))["runs"][0]
     assert r["limites"] == ["hud-non-trouve"] and r["events"] == []
@@ -221,7 +222,7 @@ def test_bornes_incertaines_sans_results_lu(tmp_path):
 def test_selection_top3_bot_et_etat_pc_rotation():
     sem = "2026-11-12"
     assert R.a_traiter(sem, {}) == ["a-923ClD9Rc", "Lt84IhMjBvM", "wJ9CwjKwyco"]      # v34 : ordre du fichier (X SLA 19.926 3e)
-    fait = {"wJ9CwjKwyco": {"pc": {"rotation": "fait", "rotation_version": 1}}, "a-923ClD9Rc": {"pc": {"rotation": "erreur", "rotation_version": 1}}}
+    fait = {"wJ9CwjKwyco": {"pc": {"rotation": "fait", "rotation_version": CFG["version"]}}, "a-923ClD9Rc": {"pc": {"rotation": "erreur", "rotation_version": CFG["version"]}}}
     assert R.a_traiter(sem, fait) == ["Lt84IhMjBvM"]
     ancienne = {"wJ9CwjKwyco": {"pc": {"rotation": "absent", "rotation_version": 0}}}                   # version de la calibration augmentée : refait
     assert "wJ9CwjKwyco" in R.a_traiter(sem, ancienne)

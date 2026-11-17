@@ -1,42 +1,89 @@
 {
- "_doc": "SPEC_ROTATION.md v1. Zones du HUD (format 16:9) en fractions [x0, y0, x1, y1] : null = [À CALIBRER] sur les images de wJ9CwjKwyco (client anglais), puis vérifier sur a-923ClD9Rc (japonais) et Lt84IhMjBvM. Tant qu'aucun bouton n'a de zone, le fichier porte limites [hud-non-trouve] (aucun événement inventé) et des recadrages de grandes zones (diagnostic) sont gardés pour la calibration.",
- "version": 1,
- "modes": ["bot"],
- "top": 3,
- "budget_par_mode": 3,
- "fps": 10,
- "hauteur": 720,
- "scan_pas_s": 0.5,
- "duree_max_s": 120,
- "fusion_s": 0.5,
- "tolerance_recharge_s": 1.0,
- "pret_ratio": 0.6,
- "variation_min": 0.2,
- "visible_luminance": 30,
- "jauge_pleine": 0.6,
- "jauge_vide": 0.2,
- "jauge_duree_s": 0.3,
- "jauge_seuil_pixel": 128,
- "portrait_diff": 25,
- "qte_luminance": 150,
- "zones": {
-  "skill_1": null,
-  "skill_2": null,
-  "ultimate": null,
-  "sjw_skill_1": null,
-  "sjw_skill_2": null,
-  "sjw_ultimate": null,
-  "sjw_qte": null,
-  "core": null,
-  "portrait": null,
-  "qte": null
- },
- "diagnostic": {
-  "images": 3,
-  "largeur": 960,
+  "_doc": "SPEC_ROTATION.md v1.2. Zones du HUD (16:9) en fractions [x0,y0,x1,y1], calées le 17/11 sur 3 recadrages 720p de wJ9CwjKwyco (client anglais, PC, touches affichées sous les boutons). Géométrie vérifiée (planche des 7 zones : chaque zone contient bien un hexagone entier) ; ASSIGNATION À VÉRIFIER : skill_1 = F, skill_2 = C, ultimate = LEFT SHIFT (hexagone orange), sjw_skill_1 = Q, sjw_skill_2 = E, sjw_ultimate = Z (recharge 60 lue), portrait = T. Non calibrés (null) : sjw_qte, core (jauge de noyau : barre bleue 2000/2000 ? à vérifier), qte ; R et souris non utilisés. À vérifier sur a-923ClD9Rc (japonais) et Lt84IhMjBvM.",
+  "version": 2,
+  "modes": [
+    "bot"
+  ],
+  "top": 3,
+  "budget_par_mode": 3,
+  "fps": 10,
+  "hauteur": 720,
+  "scan_pas_s": 0.5,
+  "duree_max_s": 120,
+  "fusion_s": 0.5,
+  "tolerance_recharge_s": 1.0,
+  "pret_ratio": 0.6,
+  "variation_min": 0.2,
+  "visible_luminance": 30,
+  "jauge_pleine": 0.6,
+  "jauge_vide": 0.2,
+  "jauge_duree_s": 0.3,
+  "jauge_seuil_pixel": 128,
+  "portrait_diff": 25,
+  "qte_luminance": 150,
   "zones": {
-   "droite": [0.5, 0.45, 1.0, 1.0],
-   "gauche": [0.0, 0.45, 0.5, 1.0]
+    "skill_1": [
+      0.8648,
+      0.7736,
+      0.9008,
+      0.8431
+    ],
+    "skill_2": [
+      0.918,
+      0.7736,
+      0.9539,
+      0.8431
+    ],
+    "ultimate": [
+      0.8117,
+      0.7736,
+      0.8477,
+      0.8431
+    ],
+    "sjw_skill_1": [
+      0.7844,
+      0.8764,
+      0.8203,
+      0.9458
+    ],
+    "sjw_skill_2": [
+      0.8352,
+      0.8764,
+      0.8711,
+      0.9458
+    ],
+    "sjw_ultimate": [
+      0.7336,
+      0.8764,
+      0.7695,
+      0.9458
+    ],
+    "sjw_qte": null,
+    "core": null,
+    "portrait": [
+      0.7086,
+      0.7736,
+      0.7445,
+      0.8431
+    ],
+    "qte": null
+  },
+  "diagnostic": {
+    "images": 3,
+    "largeur": 960,
+    "zones": {
+      "droite": [
+        0.5,
+        0.45,
+        1.0,
+        1.0
+      ],
+      "gauche": [
+        0.0,
+        0.45,
+        0.5,
+        1.0
+      ]
+    }
   }
- }
 }
