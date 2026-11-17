@@ -13,7 +13,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 | --- | --- |
 | POC | Power Of Calamity. Classement : dégâts max ; une run = une équipe, total = équipe 1 + équipe 2. |
 | BOT | Battlefield Of Time. Chrono le plus court (secondes) = dernière phase de l'écran `Results`. **Un seul classement** par semaine (Challenge retiré du jeu en mai 2026). Saison = 4 semaines de jeu (1 boss/semaine) + 1 semaine de calcul sans classement ; semaine de saison notée `S<n>-<w>`. |
-| GB | Guild Boss. Classement : Rage Count le plus élevé ; une run = un groupe (6 chasseurs + SJW), total = groupe 1 + groupe 2 ; égalité départagée par la somme des dégâts. Écran `Personal Record` accepté comme source. |
+| GB | Guild Boss. Classement : Rage Count le plus élevé ; une run = un groupe (6 chasseurs + SJW), total = groupe 1 + groupe 2 ; égalité départagée par la somme des dégâts. Seules les runs FILMÉES (écran Results lu) sont classées (v30) : le `Personal Record` ne classe plus aucune run, il attribue seulement un groupe à un Results de même RC. |
 | HOTM | Hall Of The Monarchs. Un classement **par porte** (제 n관문 / 第n関門) : points les plus élevés. 1 run par porte. |
 | RC | Rage Count, unité de score du GB. |
 | SJW | Sung Jin Woo. |
@@ -63,8 +63,9 @@ Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 
 - `channel_id` = clé du joueur. `video_id` = vidéo de la meilleure run ; `video_ids` = toutes les vidéos utilisées (les 2 runs POC/GB peuvent venir de 2 vidéos).
 - `rank` : seulement pour les lignes `confidence: sur` ; sinon `null`. POC et GB : une seule run `sur` suffit pour être classé (note `une seule run`) ; la 2e run, trouvée plus tard, complète le total.
-- Notes normalisées (champ `notes`) : `une seule run`, `compteur animé` (valeurs croissantes d'une animation, seule la finale compte), `écart Results/record : <valeur Results>` (le Personal Record contrôlé prime).
-- `score_source: record` = écran `Personal Record` du GB (seul cas où un écran autre que RESULT donne un score sûr).
+- Notes normalisées (champ `notes`) : `une seule run`, `compteur animé` (valeurs croissantes d'une animation, seule la finale compte), `groupe N d'après le Personal Record (RC égal)`, `groupes distingués par les chasseurs`, `groupes distingués par le titre (Light / Fire)`, `élément associé titre + chasseurs`, `élément du titre contredit par l'écran` (v30).
+- `score_source: record` = écran `Personal Record` du GB : lu et contrôlé, mais JAMAIS une run classée (v30) ; il sert à attribuer le groupe d'un Results de même RC. Seul l'écran RESULT donne un score sûr.
+- GB et POC (v30) : `runs_detail[i].element` (`light|fire|water|wind|dark|null`) et `element_source` (`ecran|titre|titre+ecran`). L'élément d'une run sert à distinguer 2 runs d'un même joueur quand le groupe / l'équipe n'est pas lu ; le titre PEUT citer un élément (config `elements_titre`), l'écran prime sur le titre.
 
 Champs supplémentaires :
 - `"gate"` (HOTM uniquement) : numéro de la porte, **entier** (`3` pour 제 3관문 / 第3関門).
@@ -76,7 +77,7 @@ Champs supplémentaires :
   (`t` = secondes dans la vidéo ; `stage` = libellé du boss ou du stage lu à l'écran ; `team` = POC : équipe 1, 2 ou `null` ; GB : groupe 1, 2 ou `null`).
   - POC, en plus : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
   - HOTM, en plus : `{"clear": 0, "proof_bonus": 0, "proof_level": null}` ; contrôle : clear + proof_bonus = score.
-  - GB, en plus : `{"damage": 0, "damage_exact": true, "damage_source": "results | record | hud"}` (`damage` = `Final Score` ; `damage_exact` = `false` si arrondi — `Personal Record` 17.28T, titre ou HUD — et `null` si aucun dégât lu ; `damage_source: record` = `Total Score` du Personal Record quand un seul groupe a joué ; `team` = groupe, connu aussi par `No history`) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; contrôle Personal Record : `Total Rage Count` = RC groupe 1 + RC groupe 2.
+  - GB, en plus : `{"damage": 0, "damage_exact": true, "damage_source": "results | record | hud"}` (`damage` = `Final Score` ; `damage_exact` = `false` si arrondi — `Personal Record` 17.28T, titre ou HUD — et `null` si aucun dégât lu ; `damage_source: record` = ancien cas (v29 et avant, plus produit) ; `team` = groupe, connu aussi par `No history`) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; contrôle Personal Record : `Total Rage Count` = RC groupe 1 + RC groupe 2.
 - Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition. Jamais le score de l'écran de composition, quel que soit le mode.
 
 ### Autres fichiers de l'étape 1 (détail : SPEC_ETAPE1.md §5)
@@ -174,7 +175,7 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - [ ] Toutes les vidéos ont une date de publication postérieure au dernier reset.
 - [ ] Le boss / la saison visible correspond à la semaine (GB `Personal Record` : `Time Left in Season` cohérent avec la date de publication ; BOT : `S<n>-<w>` du titre = semaine attendue, aucune run classée en semaine de calcul).
 - [ ] Une seule ligne par chaîne (HOTM : par porte) ; pas de ré-upload en double.
-- [ ] POC et GB : total = somme des runs (POC : une run par équipe ; GB : une run par groupe) ; une seule run sûre est classée avec la note `une seule run`.
+- [ ] POC et GB : total = meilleure run de chaque groupe / équipe / élément (2 au plus ; GB : runs filmées seulement) ; une seule run sûre est classée avec la note `une seule run`.
 - [ ] POC : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
 - [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; `Total Rage Count` = groupe 1 + groupe 2.
 - [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas (GB : égalité de RC départagée par les dégâts).

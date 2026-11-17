@@ -24,45 +24,47 @@ RESULTS = {"stage": "Giant Statue", "t": 40, "rage_count": 165, "final_score": 1
            "hunter_ranks": [2 * T] * 6, "play_time": "03:00", "new_record": True}
 
 
-def test_exemple_4_7_la_run_remplace_le_groupe_2():
-    """SPEC §4.7 : Personal Record 167 + 165 = 332, puis Results 165 RC / 15 763 121 797 048 : remplace le groupe 2, total 332."""
+def test_v30_personal_record_ne_classe_aucune_run():
+    """SPEC v30 §4.7 : Personal Record 167 + 165 dans v1 (sans Results) : aucune run classée ; un Results de RC 165 dans une AUTRE
+    vidéo n'est pas rattaché au record : classé seul (165), jamais 332."""
     rec = ecrans.lectures_gb_record(meta("v1", heure=10), RECORD, CONFIG)
     assert [(r["team"], r["score"], r["confidence"], r["exact"]) for r in rec] == [(1, 167, "sur", True), (2, 165, "sur", True)]
-    assert rec[0]["damage"] == 17_280_000_000_000 and rec[1]["damage"] == 15_550_000_000_000 and rec[1]["detail"]["damage_exact"] is False
     res = ecrans.lecture_gb_results(meta("v2", heure=12), RESULTS, CONFIG)
     assert res["confidence"] == "sur" and res["exact"] and res["damage"] == 15_763_121_797_048 and res["team"] is None
     d = preparer(rec + [res])
-    calculer(W, d, CONFIG, HORLOGE)
-    gb = lire(d, "gb")
-    assert len(gb) == 1
-    l = gb[0]
-    assert l["score"] == {"total": 332, "runs": [167, 165], "unit": "rage_count"}
-    assert l["confidence"] == "sur" and l["rank"] == 1 and l["exact"] is True
-    assert sorted(l["video_ids"]) == ["v1", "v2"]
-    d1, d2 = l["runs_detail"]
-    assert (d1["team"], d1["video_id"], d1["score_source"], d1["damage_exact"]) == (1, "v1", "record", False)
-    assert (d2["team"], d2["video_id"], d2["damage"], d2["damage_exact"]) == (2, "v2", 15_763_121_797_048, True)  # la run Results a remplacé le groupe 2
-    assert "groupe 2 d'après le Personal Record" in l["notes"]
+    r = calculer(W, d, CONFIG, HORLOGE)
+    gb_l = lire(d, "gb")
+    assert len(gb_l) == 1
+    l = gb_l[0]
+    assert l["score"] == {"total": 165, "runs": [165], "unit": "rage_count"}
+    assert l["confidence"] == "sur" and l["rank"] == 1 and l["video_ids"] == ["v2"] and l["runs_detail"][0]["team"] is None
+    assert r["records_seuls"] == ["v1 : Personal Record seul : aucune run filmée"]
 
-
-def test_results_meme_run_que_le_record():
-    # même RC et mêmes dégâts arrondis (15.55T) : c'est la même run, rattachée au groupe 2
-    res = ecrans.lecture_gb_results(meta("v2", heure=12), {**RESULTS, "final_score": 15_551_000_000_000, "player_score": 3_551_000_000_000}, CONFIG)
+def test_results_de_meme_rc_qu_un_seul_groupe_du_record_recoit_ce_groupe():
+    """v30 §4.7 (2a) : même vidéo, RC du Results égal au RC d'un seul groupe du record -> `team` attribué ; total = ce Results seul."""
+    res = ecrans.lecture_gb_results(meta("v1", heure=12), RESULTS, CONFIG)                    # RC 165 = groupe 2
     d = preparer(ecrans.lectures_gb_record(meta("v1"), RECORD, CONFIG) + [res])
-    calculer(W, d, CONFIG, HORLOGE)
+    r = calculer(W, d, CONFIG, HORLOGE)
     l = lire(d, "gb")[0]
-    assert l["score"]["total"] == 332 and l["runs_detail"][1]["damage"] == 15_551_000_000_000 and l["runs_detail"][1]["team"] == 2
-
+    assert l["score"]["total"] == 165 and l["score"]["runs"] == [165] and l["runs_detail"][0]["team"] == 2
+    assert "groupe 2 d'après le Personal Record (RC égal)" in l["notes"] and r["records_seuls"] == []
+    # RC égal aux DEUX groupes : ambigu, pas d'attribution
+    egal = {**RECORD, "groups": {1: {"rage_count": 165, "damage": "17.28T"}, 2: {"rage_count": 165, "damage": "15.55T"}}, "total_rage_count": 330}
+    d = preparer(ecrans.lectures_gb_record(meta("v1"), egal, CONFIG) + [res])
+    calculer(W, d, CONFIG, HORLOGE)
+    assert lire(d, "gb")[0]["runs_detail"][0]["team"] is None
+    # RC différent des deux groupes : pas d'attribution
+    d = preparer(ecrans.lectures_gb_record(meta("v1"), RECORD, CONFIG) + [ecrans.lecture_gb_results(meta("v1", heure=12), {**RESULTS, "rage_count": 170}, CONFIG)])
+    calculer(W, d, CONFIG, HORLOGE)
+    assert lire(d, "gb")[0]["runs_detail"][0]["team"] is None
 
 def test_controle_total_rage_count():
     rec = ecrans.lectures_gb_record(meta("v1"), {**RECORD, "total_rage_count": 333}, CONFIG)
     assert all(r["confidence"] == "a_verifier" and not r["exact"] for r in rec)
     d = preparer(rec)
-    calculer(W, d, CONFIG, HORLOGE)
-    l = lire(d, "gb")[0]
-    assert l["rank"] is None and l["confidence"] == "a_verifier" and l["score"]["total"] == 332
+    res = calculer(W, d, CONFIG, HORLOGE)
+    assert not (d.data / "runs" / W / "gb.json").exists() and res["records_seuls"]      # v30 : le Personal Record ne classe rien
     assert ecrans.lectures_gb_record(meta("v1"), {**RECORD, "total_rage_count": None}, CONFIG)[0]["confidence"] == "a_verifier"   # illisible
-
 
 def test_saison_du_record():
     # Time Left 1d 2h : capture estimée le 17/11 22:00Z, après la publication du 13/11 : saison précédente -> rejeté
@@ -74,13 +76,12 @@ def test_saison_du_record():
     # temps restant illisible -> a_verifier, pas rejeté
     d = preparer(ecrans.lectures_gb_record(meta("v1"), {**RECORD, "time_left": None}, CONFIG))
     calculer(W, d, CONFIG, HORLOGE)
-    l = lire(d, "gb")[0]
-    assert l["rank"] is None and "saison illisible (Time Left in Season)" in l["notes"] and d.rejected(W) == []
+    assert not (d.data / "runs" / W / "gb.json").exists() and d.rejected(W) == []       # v30 : jamais classé, mais pas rejeté
     # v7 : marge selon la plus petite unité affichée (reset 19/11 00:00Z ; publié 14/11 00:00Z)
     def garde(time_left, jour=14, heure=0):
         d = preparer(ecrans.lectures_gb_record(meta("v1", jour=jour, heure=heure), {**RECORD, "time_left": time_left}, CONFIG))
         calculer(W, d, CONFIG, HORLOGE)
-        return (d.data / "runs" / W / "gb.json").exists()
+        return d.rejected(W) == []          # v30 : le Personal Record ne classe plus ; « gardé » = pas rejeté (bonne saison)
     assert garde("4d 23h") and not garde("4d 22h")                        # heures : 60 min (capture à +60 min gardée, +120 min rejetée)
     assert garde("4d 23h 59m") and not garde("4d 23h 58m")                # minutes : 1 min
     assert garde("5d", jour=13, heure=12) and not garde("5d", jour=12, heure=20)   # jours seulement : 24 h (capture à +12 h gardée, +28 h rejetée)
@@ -127,15 +128,11 @@ def test_gb_meme_groupe_jamais_additionne_et_groupe_illisible():
     assert l["score"]["total"] == 167 and l["rank"] == 1 and "groupes inconnus : 2e run non additionnée (165, b2)" in l["notes"]   # v18
 
 
-def test_tie_break_avec_total_score_exact_du_record():
+def test_total_score_du_record_ne_sert_plus_au_classement():
     a = ecrans.lectures_gb_record(meta("v1"), {**RECORD, "total_score": 33 * T}, CONFIG)
-    b = [{**r, "channel_id": "UCY", "channel_title": "Joueur Y", "video_id": "w1", "detail": {**r["detail"], "total_score": 34 * T}} for r in
-         ecrans.lectures_gb_record(meta("w1"), RECORD, CONFIG)]
-    d = preparer(a + b)
+    d = preparer(a)
     calculer(W, d, CONFIG, HORLOGE)
-    gb = lire(d, "gb")
-    assert [l["channel_id"] for l in gb] == ["UCY", "UCX"] and gb[0]["runs_detail"][0]["video_id"] == "w1"   # Total Score 34T > 33T
-
+    assert not (d.data / "runs" / W / "gb.json").exists()
 
 def test_controle_results_gb():
     ok, pb = ecrans.controle_gb_results(3 * T, [T] * 6, 9 * T)

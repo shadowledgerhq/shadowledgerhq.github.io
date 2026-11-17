@@ -53,27 +53,31 @@ def _en_run(l, **kw):
     return {**l, "channel_id": "UCawb", "video_id": "awb", "published_at": "2026-11-12T01:07:38Z", **kw}
 
 
-def test_record_prioritaire_sur_un_results_en_conflit():
+def test_v30_results_et_record_de_la_meme_video():
+    """v30 : le Personal Record ne classe plus ; il attribue un groupe au Results de même RC (une seule run classée)."""
     rec = _record()
     res = _en_run(_res(RESULTS_253_REEL, 227, {**Z_253, "rage": "183", "final": "64,299,126,425,862"}), confidence="a_verifier", exact=False,
                   notes=["conflit de lecture : rage_count"])
     d = preparer([_en_run(rec), res])
     calculer(W, d, CONFIG, HORLOGE)
     (l,) = lire(d, "gb")
-    assert (l["score"]["total"], l["rank"], l["confidence"]) == (189, 1, "sur")                  # plus de 189 + 183 additionnés
-    assert any("Personal Record fait foi" in n for n in l["notes"].split("; ")) and "une seule run" in l["notes"]
-    # Results SÛR de même RC que l'unique groupe joué : même run ; dégâts différents -> le record l'emporte
+    assert (l["score"]["total"], l["rank"], l["confidence"]) == (183, None, "a_verifier")        # le Results seul, jamais 189 + 183
+    # Results SÛR de même RC que l'unique groupe joué : groupe 1 attribué, dégâts du Results (plus d'« écart Results/record »)
     sur = _en_run(_res(RESULTS_253_REEL, 227, {**Z_253, "rage": "189", "final": "64,299,126,425,862"}), confidence="sur", exact=True)
     d = preparer([_en_run(rec), sur])
     calculer(W, d, CONFIG, HORLOGE)
     (l,) = lire(d, "gb")
-    assert l["score"]["total"] == 189 and l["runs_detail"][0]["damage"] == 64299126429862 and "écart Results/record : 64299126425862" in l["notes"]
-    # record NON contrôlé : aucune priorité (règles habituelles)
+    assert l["score"]["total"] == 189 and l["runs_detail"][0]["team"] == 1 and l["runs_detail"][0]["damage"] == 64299126425862
+    assert "groupe 1 d'après le Personal Record (RC égal)" in l["notes"] and "écart Results/record" not in l["notes"]
+    # record NON contrôlé : aucune attribution
     non = _en_run({**rec, "confidence": "a_verifier", "exact": False})
-    assert len(gb.record_prioritaire([non, res])) == 2
+    d = preparer([non, sur])
+    calculer(W, d, CONFIG, HORLOGE)
+    assert lire(d, "gb")[0]["runs_detail"][0]["team"] is None
     # un Results d'une autre vidéo n'est pas concerné
-    autre = {**res, "video_id": "autre"}
-    assert len(gb.record_prioritaire([_en_run(rec), autre])) == 2
+    d = preparer([_en_run(rec), {**sur, "video_id": "autre"}])
+    calculer(W, d, CONFIG, HORLOGE)
+    assert lire(d, "gb")[0]["runs_detail"][0]["team"] is None
 
 
 # --- Personal Record du salon : zones ciblées -----------------------------------------------------------

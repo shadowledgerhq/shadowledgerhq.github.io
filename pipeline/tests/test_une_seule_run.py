@@ -49,7 +49,7 @@ Group 2 No history
 """
 
 
-def test_awb_record_un_seul_groupe_classe_189():
+def test_awb_record_seul_ne_classe_aucune_run():
     m = meta_gb("awb-GlVIa7Q")
     ecran = ocr_ecrans.lire_gb_record(AWB)
     assert ecran["groups"][2] == {"no_history": True} and ecran["groups"][1]["rage_count"] == 189
@@ -58,14 +58,11 @@ def test_awb_record_un_seul_groupe_classe_189():
     assert (r["team"], r["score"], r["score_source"], r["confidence"], r["exact"]) == (1, 189, "record", "sur", True)
     assert r["damage"] == 64299126429862 and r["detail"]["damage_exact"] is True and r["detail"]["damage_source"] == "record"
     d = preparer([{**r, "channel_id": "UCawb", "video_id": "awb", "published_at": "2026-11-12T01:07:38Z"}])
-    calculer(W, d, CONFIG, HORLOGE)
-    (l,) = lire(d, "gb")
-    assert (l["score"]["total"], l["rank"], l["confidence"]) == (189, 1, "sur") and "une seule run" in l["notes"]
-    assert l["runs_detail"][0]["team"] == 1 and l["runs_detail"][0]["damage"] == 64299126429862 and l["runs_detail"][0]["damage_exact"] is True
-    assert l["runs_detail"][0]["damage_source"] == "record"
+    res = calculer(W, d, CONFIG, HORLOGE)
+    assert not (d.data / "runs" / W / "gb.json").exists() and res["records_seuls"] == ["awb : Personal Record seul : aucune run filmée"]   # v30
 
 
-def test_nh2d_record_deux_groupes_classe_332():
+def test_nh2d_record_deux_groupes_seul_ne_classe_aucune_run():
     m = meta_gb("nh2D7xZ7dOQ")
     ecran = {"groups": {1: {"rage_count": 167, "damage": "17.28T"}, 2: {"rage_count": 165, "damage": "15.55T"}},
              "total_rage_count": 332, "total_score": 32842054460310, "challenge_count": 2, "time_left": "6d 9h", "t": 2}
@@ -74,8 +71,7 @@ def test_nh2d_record_deux_groupes_classe_332():
     assert all(r["detail"].get("damage_source") is None for r in rs)            # deux groupes joués : dégâts arrondis par groupe
     d = preparer([{**r, "channel_id": "UCnh", "video_id": "nh", "published_at": "2026-11-13T10:14:16Z"} for r in rs])
     calculer(W, d, CONFIG, HORLOGE)
-    (l,) = lire(d, "gb")
-    assert (l["score"]["total"], l["rank"], l["confidence"]) == (332, 1, "sur") and "une seule run" not in l["notes"]
+    assert not (d.data / "runs" / W / "gb.json").exists()          # v30 : jamais 332 = 167 + 165 sans écran Results
 
 
 def test_record_non_controle_ne_donne_pas_le_total_score():

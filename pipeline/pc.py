@@ -593,8 +593,9 @@ def _lever_alerte_reset(ecran, config):
 
 
 def suffisant(lectures, vid, modes):
-    """Le tri 3 suffit : BOT et HOTM = 1 lecture sûre ; POC et GB = 2 runs sûres (2 groupes / équipes)."""
-    sures = [l for l in lectures if l["video_id"] == vid and l["confidence"] == "sur"]
+    """Le tri 3 suffit : BOT et HOTM = 1 lecture sûre ; POC et GB = 2 runs sûres (2 groupes / équipes). v30 : le Personal Record du GB
+    ne classe plus de run (`score_source: record`) : il ne compte pas, la vidéo continue ses tris jusqu'à un écran Results."""
+    sures = [l for l in lectures if l["video_id"] == vid and l["confidence"] == "sur" and l.get("score_source") != "record"]
     if not modes:
         return False
     return all(len([l for l in sures if l["mode"] == m]) >= (2 if m in ("poc", "gb") else 1) for m in modes)
