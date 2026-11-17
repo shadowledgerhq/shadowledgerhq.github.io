@@ -124,3 +124,15 @@ error: The following untracked working tree files would be overwritten by checko
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Résumé GB : nh2D7xZ7dOQ · SlayOnLow · Results lu (270-312 s) · 165 RC sûr · groupe 2 · light
 - Résumé GB : cfZRPdtAGmg · aucun Results lu · pas classée
+
+<!-- passage-pc pc-daily 2026-11-17T19:07:08.498258+00:00 -->
+## Passage pc-daily — 2026-11-17 20:07 (Paris)
+
+- Top 10 couvert : non (30 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 60 (dont 30 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 3 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Résumé GB : nh2D7xZ7dOQ · SlayOnLow · Results lu (270-312 s) · 165 RC sûr · groupe 2 · light
+- Résumé GB : cfZRPdtAGmg · aucun Results lu · pas classée
