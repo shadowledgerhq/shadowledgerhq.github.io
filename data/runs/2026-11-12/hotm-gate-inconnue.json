@@ -154,5 +154,44 @@
         "exact": false
       }
     ]
+  },
+  {
+    "run_id": "hotm-gate-inconnue-2026-11-12-VrrJ8cPgET4",
+    "week": "2026-11-12",
+    "mode": "hotm",
+    "channel_id": "UCWl9fBoznIu59xO6prxZwNw",
+    "player": "Lobbyman - Your Game, Your Rules",
+    "channel": "Lobbyman - Your Game, Your Rules",
+    "video_id": "VrrJ8cPgET4",
+    "video_ids": [
+      "VrrJ8cPgET4"
+    ],
+    "published_at": "2026-11-16T22:17:37+01:00",
+    "lang": "zxx",
+    "score": {
+      "total": 4000,
+      "runs": [
+        4000
+      ],
+      "unit": "points"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 4,000; porte HOTM illisible; boss non contrôlé",
+    "gate": null,
+    "hunter_mode": null,
+    "runs_detail": [
+      {
+        "video_id": "VrrJ8cPgET4",
+        "published_at": "2026-11-16T22:17:37+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false
+      }
+    ]
   }
 ]
