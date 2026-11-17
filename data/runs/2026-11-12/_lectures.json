@@ -923,14 +923,14 @@
         25475511452
       ],
       "hunter_ranks_lus": 6,
-      "n_images": 15,
+      "n_images": 30,
       "successor_score": null,
       "successeur_present": false,
       "votes": {
         "stage": [
           [
             "Estátua Gigante",
-            12
+            24
           ]
         ],
         "final_score": [
@@ -948,53 +948,53 @@
         "play_time": [
           [
             "03:00",
-            15
+            30
           ]
         ],
         "hunter_rank_1": [
           [
             545355914947,
-            15
+            30
           ]
         ],
         "hunter_rank_2": [
           [
             459719757408,
-            15
+            30
           ]
         ],
         "hunter_rank_3": [
           [
             160594165676,
-            15
+            30
           ]
         ],
         "hunter_rank_4": [
           [
             924330651491,
-            9
+            18
           ],
           [
             421330651491,
-            6
+            12
           ]
         ],
         "hunter_rank_5": [
           [
             95702114632,
-            15
+            30
           ]
         ],
         "hunter_rank_6": [
           [
             25475511452,
-            15
+            30
           ]
         ],
         "player_score": [
           [
             1688587202020,
-            3
+            6
           ]
         ]
       },
@@ -1039,7 +1039,7 @@
       "par_t": []
     },
     "notes": [
-      "lecture fusionnée (15 images)",
+      "lecture fusionnée (30 images)",
       "compteur animé",
       "contrôle sans Hunter Rank",
       "Hunter Rank incohérents ignorés (HUD)"
@@ -1855,22 +1855,22 @@
         43356454581
       ],
       "hunter_ranks_lus": 6,
-      "n_images": 12,
+      "n_images": 24,
       "successor_score": null,
       "successeur_present": false,
       "votes": {
         "player_score": [
           [
             5576483862754,
-            3
+            6
           ],
           [
             9076463862754,
-            3
+            6
           ],
           [
             9076469862754,
-            3
+            6
           ]
         ],
         "final_score": [
@@ -1888,73 +1888,73 @@
         "play_time": [
           [
             "03:00",
-            9
+            18
           ]
         ],
         "hunter_rank_1": [
           [
             3686927733296,
-            3
+            6
           ],
           [
             3686927733236,
-            6
+            12
           ]
         ],
         "hunter_rank_2": [
           [
             879686193825,
-            3
+            6
           ],
           [
             873686133825,
-            6
+            12
           ]
         ],
         "hunter_rank_3": [
           [
             2790549509,
-            3
+            6
           ],
           [
             802730549509,
-            3
+            6
           ],
           [
             302730549509,
-            3
+            6
           ]
         ],
         "hunter_rank_4": [
           [
             125782887452,
-            9
+            18
           ]
         ],
         "hunter_rank_5": [
           [
             52090149391,
-            6
+            12
           ],
           [
             62090149391,
-            3
+            6
           ]
         ],
         "hunter_rank_6": [
           [
             43956454581,
-            3
+            6
           ],
           [
             43356454581,
-            6
+            12
           ]
         ],
         "stage": [
           [
             "거대 석상",
-            9
+            18
           ]
         ]
       },
@@ -1999,7 +1999,7 @@
       "par_t": []
     },
     "notes": [
-      "lecture fusionnée (12 images)",
+      "lecture fusionnée (24 images)",
       "conflit de lecture : player_score",
       "conflit de lecture : hunter_rank_3"
     ]
@@ -2099,24 +2099,24 @@
         751863896022
       ],
       "hunter_ranks_lus": 6,
-      "n_images": 24,
+      "n_images": 48,
       "successor_score": null,
       "successeur_present": false,
       "votes": {
         "stage": [
           [
             "Giant Statue",
-            12
+            24
           ]
         ],
         "player_score": [
           [
             795244088074,
-            21
+            42
           ],
           [
             795246088074,
-            3
+            6
           ]
         ],
         "final_score": [
@@ -2146,51 +2146,51 @@
         "play_time": [
           [
             "03:00",
-            24
+            48
           ]
         ],
         "hunter_rank_1": [
           [
             98988392559253,
-            6
+            12
           ],
           [
             58388392559253,
-            3
+            6
           ]
         ],
         "hunter_rank_2": [
           [
             2330503854251,
-            9
+            18
           ]
         ],
         "hunter_rank_3": [
           [
             990407426593,
-            6
+            12
           ],
           [
             90407426593,
-            3
+            6
           ]
         ],
         "hunter_rank_4": [
           [
             734202919145,
-            9
+            18
           ]
         ],
         "hunter_rank_5": [
           [
             508571686524,
-            9
+            18
           ]
         ],
         "hunter_rank_6": [
           [
             751863896022,
-            3
+            6
           ]
         ]
       },
@@ -2278,7 +2278,7 @@
       "écart OCR zone/image : rage_count",
       "écart OCR zone/image : player_score",
       "écart OCR zone/image : final_score",
-      "lecture fusionnée (24 images)",
+      "lecture fusionnée (48 images)",
       "RC discordant écarté : 2 (t=232)",
       "contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862",
       "contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score",

@@ -545,7 +545,7 @@
     "first_seen": "2026-11-13",
     "updated_at": "2026-11-15",
     "last_tri": 3,
-    "status": "en_cours",
+    "status": "termine",
     "modes": [
       "gb"
     ],
@@ -560,7 +560,7 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "a_faire"
+      "tri4": "inutile"
     }
   },
   "LgiyodBs5nY": {
@@ -1429,13 +1429,13 @@
     "channel_id": "UCMmsU8yY-9wIH1QHGZDWYZg",
     "published_at": "2026-11-12T10:49:20Z",
     "first_seen": "2026-11-14",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-14",
+    "last_tri": 1,
     "status": "en_cours",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -1733,13 +1733,13 @@
     "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
     "published_at": "2026-11-15T02:21:12Z",
     "first_seen": "2026-11-15",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-15",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "bot"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -1787,13 +1787,13 @@
     "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
     "published_at": "2026-11-15T17:00:33Z",
     "first_seen": "2026-11-15",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-15",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "hotm"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -1813,13 +1813,13 @@
     "channel_id": "UCFcYmsvelaU0rxAXo_srFhg",
     "published_at": "2026-11-15T09:43:50Z",
     "first_seen": "2026-11-15",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-15",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "hotm"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -1839,13 +1839,13 @@
     "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
     "published_at": "2026-11-16T15:53:14Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-16",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "hotm"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -1865,13 +1865,13 @@
     "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
     "published_at": "2026-11-15T22:28:31Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-16",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "poc"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -1891,13 +1891,13 @@
     "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
     "published_at": "2026-11-16T05:00:22Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-16",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "poc"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -1922,14 +1922,14 @@
     "channel_id": "UCjNngJRDRC7QSyZ76FlvKfQ",
     "published_at": "2026-11-15T20:24:32Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-16",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "bot",
       "poc"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -2019,13 +2019,13 @@
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "published_at": "2026-11-16T12:00:36Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-16",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "bot"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -2059,13 +2059,13 @@
     "channel_id": "UCFcYmsvelaU0rxAXo_srFhg",
     "published_at": "2026-11-16T11:43:51Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-16",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "bot"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -2099,13 +2099,13 @@
     "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
     "published_at": "2026-11-16T12:07:08Z",
     "first_seen": "2026-11-16",
-    "updated_at": "2026-11-17",
-    "last_tri": 4,
+    "updated_at": "2026-11-16",
+    "last_tri": 1,
     "status": "termine",
     "modes": [
       "hotm"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "image_taille": [
