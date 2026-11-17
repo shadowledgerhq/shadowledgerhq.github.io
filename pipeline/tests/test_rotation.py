@@ -147,6 +147,20 @@ def test_controles_bot():
     assert R.controles_bot({"runs": [R.construire_run(1, None, None, [], ["hud-non-trouve"])]})[0][1] is None
 
 
+def test_temps_sans_hud_et_controle_chrono():
+    # wJ9 : 0-37 s de vidéo, HUD absent de 16,5 à 24 s (cinématique) et de 31,5 à 37 s ; chrono 19,926 s
+    pres = {t / 2: not (16.5 <= t / 2 < 24 or t / 2 >= 31.5) for t in range(0, 74)}
+    sh = R.temps_sans_hud(pres, 0.0, 37.0, 0.5)
+    assert sh == 13.0, sh
+    run = R.construire_run(1, 0.0, 37.0, [], [], sh)
+    assert run["sans_hud_s"] == 13.0
+    c = {n: (ok, d) for n, ok, d in R.controles_bot(R.fichier({"video_id": "v", "week": "w", "mode": "bot"}, [run]), 24.0)}
+    assert c["durée − temps sans HUD = chrono ± 0,5 s"][0] is True, c
+    c = {n: ok for n, ok, _ in R.controles_bot(R.fichier({"video_id": "v", "week": "w", "mode": "bot"}, [run]), 19.926)}
+    assert c["durée − temps sans HUD = chrono ± 0,5 s"] is False
+    assert R.temps_sans_hud({}, 0, 10, 0.5) is None and "sans_hud_s" not in R.construire_run(1, 0, 1, [], [])
+
+
 # --- passage d'une vidéo (faux outils : images synthétiques) ---------------------------------------------------------------------
 
 class Outils:
@@ -221,12 +235,13 @@ def test_bornes_incertaines_sans_results_lu(tmp_path):
 
 def test_selection_top3_bot_et_etat_pc_rotation():
     sem = "2026-11-12"
-    assert R.a_traiter(sem, {}) == ["a-923ClD9Rc", "Lt84IhMjBvM", "wJ9CwjKwyco"]      # v34 : ordre du fichier (X SLA 19.926 3e)
-    fait = {"wJ9CwjKwyco": {"pc": {"rotation": "fait", "rotation_version": CFG["version"]}}, "a-923ClD9Rc": {"pc": {"rotation": "erreur", "rotation_version": CFG["version"]}}}
-    assert R.a_traiter(sem, fait) == ["Lt84IhMjBvM"]
-    ancienne = {"wJ9CwjKwyco": {"pc": {"rotation": "absent", "rotation_version": 0}}}                   # version de la calibration augmentée : refait
-    assert "wJ9CwjKwyco" in R.a_traiter(sem, ancienne)
-    assert R.a_traiter(sem, {}, cfg={**CFG, "budget_par_mode": 2}) == ["a-923ClD9Rc", "Lt84IhMjBvM"]
+    top = R.a_traiter(sem, {})                                  # l'ordre suit bot.json (change à chaque classement) : pas de ids figés
+    assert len(top) == 3 and len(set(top)) == 3
+    fait = {top[2]: {"pc": {"rotation": "fait", "rotation_version": CFG["version"]}}, top[0]: {"pc": {"rotation": "erreur", "rotation_version": CFG["version"]}}}
+    assert R.a_traiter(sem, fait) == [top[1]]
+    ancienne = {top[2]: {"pc": {"rotation": "absent", "rotation_version": 0}}}                          # version de la calibration augmentée : refait
+    assert top[2] in R.a_traiter(sem, ancienne)
+    assert R.a_traiter(sem, {}, cfg={**CFG, "budget_par_mode": 2}) == top[:2]
     assert R.a_traiter(sem, {}, cfg={**CFG, "modes": ["poc"], "top": 3}) != []                           # un autre mode se branche par la configuration
 
 

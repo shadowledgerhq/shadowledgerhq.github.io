@@ -36,8 +36,8 @@ def test_18_bot_sans_ligne_classee_builds_provisoires():
     assert cfg["builds_provisoires"] is True
     res = B.calculer(SEM, racine=t, cfg=cfg, banque=object())
     prov = sorted((b for b in res if b["mode"] == "bot"), key=lambda b: b["provisional_rank"])
-    assert len(prov) >= 9 and prov[0]["video_id"] == "a-923ClD9Rc" and prov[0]["provisional_rank"] == 1
-    assert [b["video_id"] for b in prov[:4]] == ["a-923ClD9Rc", "Lt84IhMjBvM", "wJ9CwjKwyco", "5MI-RLj7FSk"]      # v34 : X SLA 19.926 (miniature) avant PADWAE 19.9 (rang prudent 19.999)
+    assert len(prov) >= 9 and [b["provisional_rank"] for b in prov] == list(range(1, len(prov) + 1))
+    assert {"a-923ClD9Rc", "Lt84IhMjBvM", "wJ9CwjKwyco", "5MI-RLj7FSk"} <= {b["video_id"] for b in prov}      # l'ordre suit bot.json (change à chaque classement)
     assert all(b["line_provisional"] and b["rank"] is None and b["confidence"] == "a_verifier"
                and "ligne non classée (score provisoire)" in b["notes"] for b in prov)
     # GB a des lignes classées : inchangé, aucun provisoire ; POC (aucune ligne classée) suit la même règle §0
@@ -45,22 +45,24 @@ def test_18_bot_sans_ligne_classee_builds_provisoires():
     assert gb and not any(b["line_provisional"] for b in gb) and all(b["rank"] in (1, 2, 3) for b in gb)
     assert all(b["line_provisional"] for b in res if b["mode"] == "poc")
     fichiers = P.exporter(SEM, racine=t, cfg=cfg)
-    f = t / "exports" / SEM / "builds" / "bot" / "p01-a-923ClD9Rc-fr.pptx"
+    v1 = prov[0]["video_id"]
+    f = t / "exports" / SEM / "builds" / "bot" / f"p01-{v1}-fr.pptx"
     assert f.exists() and len([x for x in fichiers if "/bot/p" in x.replace("\\", "/")]) == 2 * len(prov)
     textes = _pptx_textes(f)
     assert any("CLASSEMENT PROVISOIRE" in x for x in textes) and any(x.startswith("~1") or x == "~1" for x in textes)
-    en = _pptx_textes(t / "exports" / SEM / "builds" / "bot" / "p01-a-923ClD9Rc-en.pptx")
+    en = _pptx_textes(t / "exports" / SEM / "builds" / "bot" / f"p01-{v1}-en.pptx")
     assert any("PROVISIONAL RANKING" in x for x in en)
 
     # une ligne du mode devient classée : builds et PowerPoint provisoires supprimés au passage suivant
-    bot[0]["rank"], bot[0]["confidence"] = 1, "sur"
+    ligne = next(r for r in bot if r["video_id"] == v1)
+    ligne["rank"], ligne["confidence"] = 1, "sur"
     (t / f"data/runs/{SEM}/bot.json").write_text(json.dumps(bot, ensure_ascii=False), encoding="utf-8")
     res = B.calculer(SEM, racine=t, cfg=cfg, banque=object())
     assert [b["rank"] for b in res if b["mode"] == "bot"] == [1] and not any(b["line_provisional"] for b in res if b["mode"] != "poc")
     assert not [f for f in (t / f"data/builds/{SEM}/bot").glob("*.json") if json.loads(f.read_text(encoding="utf-8")).get("line_provisional")]
     P.exporter(SEM, racine=t, cfg=cfg)
     assert not list((t / "exports" / SEM / "builds" / "bot").glob("p*.pptx"))
-    assert (t / "exports" / SEM / "builds" / "bot" / "01-a-923ClD9Rc-fr.pptx").exists()
+    assert (t / "exports" / SEM / "builds" / "bot" / f"01-{v1}-fr.pptx").exists()
 
 
 def test_provisoire_desactive():

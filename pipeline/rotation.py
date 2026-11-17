@@ -394,18 +394,30 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
     return evaluer_confiance(evenements, db, cfg.get("tolerance_recharge_s", 1.0)), limites
 
 
-def construire_run(index, t_debut, t_fin, evenements, limites):
-    """Objet `runs[i]` de la SPEC §3 : `t_run` = t − run_start_t ; trigger seulement pour `tag`."""
+def temps_sans_hud(presents, t_debut, t_fin, pas):
+    """Secondes sans HUD entre les bornes (écran noir, cinématique d'ultime) : le chrono de jeu s'y arrête. `presents` = {t: bool} (ancre) ;
+    None si la présence du HUD n'est pas connue. Chaque image compte `pas` s."""
+    if not presents or t_debut is None or t_fin is None:
+        return None
+    ts = [t for t in presents if t_debut <= t < t_fin]
+    return round(sum(pas for t in ts if not presents[t]), 2) if ts else None
+
+
+def construire_run(index, t_debut, t_fin, evenements, limites, sans_hud_s=None):
+    """Objet `runs[i]` de la SPEC §3 : `t_run` = t − run_start_t ; trigger seulement pour `tag`. `sans_hud_s` : temps sans HUD (optionnel)."""
     sortie = []
     for e in sorted(evenements, key=lambda e: e["t"]):
         x = {"t": round(e["t"], 2), "t_run": round(e["t"] - t_debut, 2), "hunter": e["hunter"], "slot": e["slot"], "skill_id": e.get("skill_id"),
              "trigger": e.get("trigger") if e["slot"] == "tag" else None, "cooldown_read": e.get("cooldown_read"), "source": e["source"],
              "confidence": e.get("confidence", "a_verifier")}
         sortie.append(x)
-    return {"run_index": index, "run_start_t": round(t_debut, 2) if t_debut is not None else None,
-            "run_end_t": round(t_fin, 2) if t_fin is not None else None,
-            "duration_s": round(t_fin - t_debut, 2) if t_debut is not None and t_fin is not None else None,
-            "events": sortie, "limites": list(dict.fromkeys(limites))}
+    run = {"run_index": index, "run_start_t": round(t_debut, 2) if t_debut is not None else None,
+           "run_end_t": round(t_fin, 2) if t_fin is not None else None,
+           "duration_s": round(t_fin - t_debut, 2) if t_debut is not None and t_fin is not None else None,
+           "events": sortie, "limites": list(dict.fromkeys(limites))}
+    if sans_hud_s is not None:
+        run["sans_hud_s"] = sans_hud_s
+    return run
 
 
 def fichier(ctx, runs):
@@ -422,7 +434,13 @@ def controles_bot(fich, chrono_s=None, t_composition=None, phases=(), db=None, t
     ev = r.get("events") or []
     sortie = []
     d = r.get("duration_s")
-    sortie.append(("durée = chrono ± 0,5 s", None if d is None or chrono_s is None else abs(d - chrono_s) <= 0.5, f"durée {d} s, chrono {chrono_s} s" + ("" if d is None or chrono_s is None else f", écart {d - chrono_s:+.2f} s")))
+    sh = r.get("sans_hud_s")
+    if sh is not None and d is not None:
+        jeu = d - sh   # le chrono de jeu s'arrête pendant les cinématiques (SPEC_ROTATION §7)
+        sortie.append(("durée − temps sans HUD = chrono ± 0,5 s", None if chrono_s is None else abs(jeu - chrono_s) <= 0.5,
+                       f"durée {d} s − sans HUD {sh} s = {round(jeu, 2)} s, chrono {chrono_s} s" + ("" if chrono_s is None else f", écart {jeu - chrono_s:+.2f} s")))
+    else:
+        sortie.append(("durée = chrono ± 0,5 s", None if d is None or chrono_s is None else abs(d - chrono_s) <= 0.5, f"durée {d} s, chrono {chrono_s} s" + ("" if d is None or chrono_s is None else f", écart {d - chrono_s:+.2f} s")))
     fin = r.get("run_end_t")
     sortie.append(("fin avant la composition", None if fin is None or t_composition is None else fin < t_composition, f"fin {fin} s, composition {t_composition} s"))
     sjw = any(e["hunter"] == "sjw" for e in ev)
@@ -590,6 +608,7 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
     """Relevé d'UNE vidéo déjà téléchargée. Retourne l'état de `pc.rotation` : `fait` | `absent` | `erreur`. Bornes : début = 1re image où un bouton de
     compétence est visible (balayage à `scan_pas_s`), fin = `ctx.t_result` (Results lu aux tris 3-4) sinon dernière image avec HUD (`bornes-incertaines`)."""
     zones = {k: v for k, v in (cfg.get("zones") or {}).items() if v}
+    presents_scan = None
     fin_max = min(ctx.get("t_result") or duree_s or 60, cfg.get("duree_max_s", 120))
     balayage = outils.images(chemin, [(0, fin_max, cfg.get("scan_pas_s", 0.5))], tmp, prefixe="rs", hauteur=cfg.get("hauteur", 720))
     from PIL import Image
@@ -608,6 +627,7 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
     if zones.get("ancre"):
         pres = hud_present([(t, vignette(im, zones["ancre"])) for t, im in sorted(images.items())], cfg.get("ancre_corr", 0.4))
         visibles = [t for t in sorted(pres) if pres[t]]
+        presents_scan = dict(pres)
     else:
         visibles = [t for t, im in sorted(images.items()) if any(luminance(im, zones[b]) >= cfg.get("visible_luminance", 30) for b in zones if b in BOUTONS_HUNTER + BOUTONS_SJW)]
     if not visibles:
@@ -639,7 +659,7 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
     frames = [(t, Image.open(p).convert("RGB")) for t, p in outils.images(chemin, [(t_debut, max(t_fin - t_debut, pas), pas)], tmp, prefixe="rf", hauteur=cfg.get("hauteur", 720))]
     sjw = ctx.get("skills_sjw") or {}
     evenements, lim = releves_run(frames, zones, cfg, db, cartes, sjw, ocr, t_debut, lectures)
-    run = construire_run(1, t_debut, t_fin, evenements, limites + lim)
+    run = construire_run(1, t_debut, t_fin, evenements, limites + lim, temps_sans_hud(presents_scan, t_debut, t_fin, cfg.get("scan_pas_s", 0.5)))
     fich = fichier(ctx, [run])
     controles = [list(c) for c in controles_bot(fich, ctx.get("chrono_s"), t_composition if t_composition is not None else ctx.get("t_composition"),
                                                 ctx.get("phases") or (), db, cfg.get("tolerance_recharge_s", 1.0))] if ctx["mode"] == "bot" else None
