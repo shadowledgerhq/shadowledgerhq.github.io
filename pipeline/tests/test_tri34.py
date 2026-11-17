@@ -159,20 +159,22 @@ def test_passage_images_suffisant_puis_gel():
         o = OutilsImages({"a": {0: GB_RECORD, 2: GB_RECORD, 4: GB_RECORD}})
         r = pc.lancer("daily", INSTANT, d, config, o)
         p = d.processed()
-        # a : le Personal Record (2 groupes sûrs) suffit -> pas de tri 4, vidéo terminée ; une seule lecture par groupe
-        assert p["a"]["pc"]["tri3"] == "fait" and p["a"]["pc"]["tri4"] == "inutile" and p["a"]["status"] == "termine" and p["a"]["pc_needed"] is False
+        # a : le Personal Record (2 groupes sûrs) ne classe plus de run (v30) : le tri 4 est fait aussi, vidéo terminée sans run ; une lecture par groupe
+        assert p["a"]["pc"]["tri3"] == "fait" and p["a"]["pc"]["tri4"] == "fait" and p["a"]["status"] == "termine" and p["a"]["pc_needed"] is False
         lectures = [l for l in d.lectures(SEM) if l["video_id"] == "a"]
         assert sorted((l["team"], l["score"], l["score_source"]) for l in lectures) == [(1, 167, "record"), (2, 165, "record")]
         # b : rien de reconnu au tri 3 -> tri 4, puis fini sans score ; reste en_cours jusqu'au gel
         assert p["b"]["pc"]["tri3"] == "fait" and p["b"]["pc"]["tri4"] == "fait" and p["b"]["status"] == "en_cours" and p["b"]["last_tri"] == 4
         assert any(a[0] == "img" and a[1] == "b" and a[2] == ((0, 300, 10),) for a in o.appels)
         gb = (Path(tmp) / f"data/runs/{SEM}/gb.json")
-        assert gb.exists()
+        assert not gb.exists()                       # v30 : un Personal Record seul ne classe aucune run
         # 2e passage : rien n'est retraité (idempotent)
         o2 = OutilsImages({})
         pc.lancer("daily", INSTANT, d, config, o2)
         assert [a for a in o2.appels if a[0] == "dl"] == []   # aucune vidéo n'est retraitée (tri3/tri4 déjà faits)
         # gel : b (sans score) -> rejected pas_de_score ; lignes provisoires annotées « non vérifié »
+        from test_classement import lec as _lec         # v30 : une run GB sûre filmée (Results) pour que la semaine ne soit pas « toute provisoire »
+        d.ecrire(f"runs/{SEM}/_lectures.json", d.lectures(SEM) + [_lec("a", videos["a"]["channel_id"], "gb", 150, jour=13)])
         config["pc"]["geler"] = True
         r = pc.lancer("weekly", JEUDI, d, config, OutilsImages({}))
         assert d.meta(SEM)["frozen"] is True
@@ -205,7 +207,7 @@ def test_ocr_rapide_filtre_et_max_images():
         r = pc.lancer("daily", INSTANT, d, config, o, maximum=2, journal=lignes.append)
         assert [a[1] for a in o.appels if a[0] == "dl"] == ["a", "b"]                 # --max limite aussi les images
         psms = [a[1] for a in o.appels if a[0] == "ocr"]
-        assert psms.count(11) >= 2 and psms.count(6) == 1                           # complet seulement sur l'écran candidat
+        assert psms.count(11) >= 2 and 1 <= psms.count(6) <= 2                      # complet seulement sur l'écran candidat (v30 : le tri 4 relit le record)
         assert all(a[2] == "eng" for a in o.appels if a[0] == "ocr")                # GB : anglais seul
         assert any("OCR complet" in l for l in lignes) and any(l.startswith("[2/2] b") for l in lignes)
         assert d.processed()["c"].get("pc") is None

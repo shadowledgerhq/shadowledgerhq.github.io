@@ -17,7 +17,8 @@ RACINE = Path(__file__).resolve().parents[1]
 MODES = ("poc", "bot", "gb", "hotm")
 NOMS = {"poc": "POC · Power Of Calamity", "bot": "BOT · Battlefield Of Time", "gb": "GB · Guild Boss",
         "hotm": "HOTM · Hall Of The Monarchs"}
-EQUIPE = {"poc": "Éq. ", "gb": "G"}
+EQUIPE = {"poc": "Équipe ", "gb": "Groupe "}
+ELEMENT_FR = {"light": "Lumière", "fire": "Feu", "water": "Eau", "wind": "Vent", "dark": "Ténèbres"}
 SEMAINES_ESSAI = {"2026-11-12"}          # semaine d'essai : jamais gelée ni publiée (SPEC §6)
 CREDIT = "Scores lus sur les vidéos YouTube des joueurs cités."
 # Largeurs de colonnes (caractères)
@@ -58,8 +59,18 @@ def valeur_run(v, unite):
     return entier(v)
 
 
+def etiquette_run(d, mode):
+    """v30 : élément de la run en français (`Lumière`, `Feu (titre)` si l'élément vient du titre seul) ; sinon `Groupe 1/2` (GB) ou
+    `Équipe 1/2` (POC) ; sinon `?`."""
+    el = ELEMENT_FR.get(d.get("element"))
+    if el:
+        return el + (" (titre)" if d.get("element_source") == "titre" else "")
+    return f"{EQUIPE[mode]}{d['team']}" if d.get("team") in (1, 2) else "?"
+
+
 def detail_runs(r):
-    """POC et GB : toujours remplie, `Éq. 1 : … · Éq. 2 : …` / `G1 : 167 · G2 : 165` ; inconnu -> `Éq. ? :` / `G? :`. Vide ailleurs."""
+    """POC et GB : toujours remplie, `Lumière : 167 · Feu (titre) : 165` ; sans élément `Groupe 1 : …` / `Équipe 1 : …` ; inconnu `? : …`.
+    Vide ailleurs."""
     mode = r.get("mode")
     if mode not in EQUIPE:
         return ""
@@ -68,8 +79,7 @@ def detail_runs(r):
     details = r.get("runs_detail") or []
     pieces = []
     for i, v in enumerate(valeurs):
-        eq = details[i].get("team") if len(details) == len(valeurs) else None
-        pieces.append(f"{EQUIPE[mode]}{eq if eq else '?'} : {valeur_run(v, unite)}")
+        pieces.append(f"{etiquette_run(details[i] if len(details) == len(valeurs) else {}, mode)} : {valeur_run(v, unite)}")
     return " · ".join(pieces)
 
 

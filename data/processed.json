@@ -545,11 +545,11 @@
     "first_seen": "2026-11-13",
     "updated_at": "2026-11-15",
     "last_tri": 3,
-    "status": "termine",
+    "status": "en_cours",
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 17,
     "pc": {
       "image_taille": [
@@ -560,7 +560,7 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "inutile"
+      "tri4": "a_faire"
     }
   },
   "LgiyodBs5nY": {

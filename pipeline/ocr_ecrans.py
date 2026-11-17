@@ -638,6 +638,11 @@ def regrouper_hud(lectures, config=None):
         for run in runs:
             dernier = min(run, key=lambda x: x["detail"]["chrono_hud"])
             rcs = [x["detail"]["hud_rage_count"] for x in run if x["detail"].get("hud_rage_count") is not None]
+            par_t = {}                           # v31 : élément lu sur le losange de chaque portrait, par image (`t`)
+            for x in run:
+                dx = x["detail"]
+                for t_i, els in (dx.get("elements_hud_par_t") or ({str(x["t"]): dx["elements_hud"]} if dx.get("elements_hud") else {})).items():
+                    par_t[t_i] = els
             d = {**dernier["detail"], "hud_rage_count": max(rcs) if rcs else None,
                  "t_debut": min(x["detail"].get("t_debut", x["t"]) for x in run), "t_fin": max(x["detail"].get("t_fin", x["t"]) for x in run)}
             # v20 (SPEC v19) : Points d'un HUD sans chrono lisible qui suit de ≤ 2 s un HUD au chrono lu ≤ 5 s, sans autre écran
@@ -650,6 +655,8 @@ def regrouper_hud(lectures, config=None):
                             for o in lectures if ecran_de(o) not in ("combat", "combat_sans_chrono"))):
                         deduits.append({"t": sc["t"], "points": sc["detail"]["hud_points"],
                                         "separateur_perdu": bool(sc["detail"].get("separateur_perdu"))})
+            if par_t:
+                d["elements_hud_par_t"] = par_t
             if deduits:
                 d["points_deduits"] = max(deduits, key=lambda x: x["t"])
             points = d.get("hud_points") if d["chrono_hud"] <= chrono_max else None
@@ -723,7 +730,10 @@ def fusionner_results(lectures, config=None):
     if courant:
         ecrans_res.append(courant)
     sortie = list(autres)
+    fin_precedent = {}                                # v31 : fin du Results précédent de la vidéo (rattachement des HUD à la run)
     for groupe in ecrans_res:
+        vid_g, deb_g = groupe[0]["video_id"], min(debut(l) for l in groupe)
+        prec_g, fin_precedent[vid_g] = fin_precedent.get(vid_g, -1), max(fin(l) for l in groupe)
         if not any(l.get("score") is not None for l in groupe):
             continue                                  # écran vu sans Rage Count lisible : rien à classer
         # v23 : une image = un `t` distinct. Les votes sont comptés par image (`detail.par_t`), jamais par lecture : une vidéo
@@ -816,12 +826,29 @@ def fusionner_results(lectures, config=None):
              "t_debut": min(debut(l) for l in groupe), "t_fin": max(fin(l) for l in groupe)}
         rc_texte = sorted({v for l in groupe for v in ((l.get("detail") or {}).get("rc_texte") or [])})
         duree_v = max([(l.get("detail") or {}).get("duree_video_s") or 0 for l in groupe] or [0])
+        ids_h = sorted({i for l in groupe for i in ((l.get("detail") or {}).get("hunter_ids") or [])})
+        if ids_h:                                   # v31 : chasseurs reconnus par les portraits du Results (réunion des images)
+            d["hunter_ids"] = ids_h
         if rc_texte:
             d["rc_texte"] = rc_texte
         if duree_v:
             d["duree_video_s"] = duree_v
         # v29 : exception « RC lu sur une seule image, la dernière de la vidéo » (le titre ou la description donne le même RC)
         derniere_ok = bool(duree_v and d["t_fin"] >= duree_v - 1 and rc in rc_texte)
+        images_hud = {}                              # v31 : HUD lus avant ce Results, sans autre Results entre eux
+        for h in autres:
+            dh = h.get("detail") or {}
+            if h["video_id"] != vid_g or dh.get("ecran") not in ("combat", "combat_sans_chrono"):
+                continue
+            for t_i, els in (dh.get("elements_hud_par_t") or ({str(h["t"]): dh["elements_hud"]} if dh.get("elements_hud") else {})).items():
+                if prec_g < int(t_i) < deb_g:
+                    images_hud[int(t_i)] = els
+        if images_hud:
+            d["elements_hud_images"] = [images_hud[t_i] for t_i in sorted(images_hud)]
+            d["elements_hud"] = [e for t_i in sorted(images_hud) for e in images_hud[t_i] if e]
+        else:
+            d.pop("elements_hud_images", None)
+            d.pop("elements_hud", None)
         d.pop("ecran", None)
         d.pop("completude", None)
         d.pop("lectures_identiques", None)

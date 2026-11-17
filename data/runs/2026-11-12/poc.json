@@ -32,7 +32,9 @@
         "stage": null,
         "team": null,
         "score_source": "titre",
-        "exact": false
+        "exact": false,
+        "element": null,
+        "element_source": null
       }
     ]
   },
@@ -69,7 +71,9 @@
         "stage": null,
         "team": null,
         "score_source": "description",
-        "exact": false
+        "exact": false,
+        "element": null,
+        "element_source": null
       }
     ]
   },
@@ -106,7 +110,9 @@
         "stage": null,
         "team": null,
         "score_source": "titre",
-        "exact": false
+        "exact": false,
+        "element": null,
+        "element_source": null
       }
     ]
   },
@@ -143,7 +149,9 @@
         "stage": null,
         "team": null,
         "score_source": "titre",
-        "exact": false
+        "exact": false,
+        "element": null,
+        "element_source": null
       }
     ]
   }

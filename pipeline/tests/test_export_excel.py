@@ -20,11 +20,14 @@ def test_formats():
     assert ex.entier(131449789393717) == "131 449 789 393 717" and ex.arrondi(7.9e12) == "7,90 T"
     assert ex.notes_propres("a; boss non contrôlé; b") == "a; b"
     poc = run("poc", "P", 3, "damage", runs=[2, 1], runs_detail=[{"team": 1}, {"team": 2}])
-    assert ex.detail_runs(poc) == "Éq. 1 : 2 · Éq. 2 : 1"
+    assert ex.detail_runs(poc) == "Équipe 1 : 2 · Équipe 2 : 1"
     gb = run("gb", "G", 156, "rage_count", runs_detail=[{"team": None, "damage": 7907273299084, "damage_exact": True}])
-    assert ex.detail_runs(gb) == "G? : 156" and ex.degats_gb(gb) == (7907273299084, True)
+    assert ex.detail_runs(gb) == "? : 156" and ex.degats_gb(gb) == (7907273299084, True)
     gb2 = run("gb", "H", 332, "rage_count", runs=[167, 165], runs_detail=[{"team": 1, "damage": 17.28e12, "damage_exact": False}, {"team": 2, "damage": 15.55e12, "damage_exact": True}])
-    assert ex.detail_runs(gb2) == "G1 : 167 · G2 : 165" and ex.degats_gb(gb2)[1] is False
+    el = {"mode": "gb", "score": {"runs": [156, 137], "unit": "rage_count"},
+          "runs_detail": [{"team": None, "element": "fire", "element_source": "titre"}, {"team": 2, "element": "light", "element_source": "titre+ecran"}]}
+    assert ex.detail_runs(el) == "Feu (titre) : 156 · Lumière : 137"                       # v30 : élément en français, « (titre) » si titre seul
+    assert ex.detail_runs(gb2) == "Groupe 1 : 167 · Groupe 2 : 165" and ex.degats_gb(gb2)[1] is False
     assert ex.detail_runs(run("bot", "B", 19.9, "seconds")) == ""
     assert ex.joueur(run("bot", "B", 19.9, "seconds", player_ingame="Pseudo")) == "B (Pseudo)" and ex.joueur(run("poc", "B", 1, "damage", player_ingame="x")) == "B"
 
@@ -59,7 +62,7 @@ def test_fichier():
         wb = openpyxl.load_workbook(ex.exporter("2026-11-12", racine=tmp))
         assert wb.sheetnames == ["Shadow Ledger", "POC", "BOT", "GB", "HOTM", "Rejetées"]
         poc_ws = wb["POC"]
-        assert poc_ws["D6"].value == 20 * 10**12 and poc_ws["D6"].number_format == "#,##0" and poc_ws["E6"].value.startswith("Éq. ?")      # entier complet
+        assert poc_ws["D6"].value == 20 * 10**12 and poc_ws["D6"].number_format == "#,##0" and poc_ws["E6"].value.startswith("? :")      # entier complet
         valeurs = [poc_ws.cell(k, 2).value for k in range(6, 22)]
         assert "À vérifier" in valeurs and valeurs.index("À vérifier") == 12                    # séparation après les 12 classés
         assert poc_ws["B6"].fill.fgColor.rgb.endswith(ex.TOP10) and not poc_ws["B16"].fill.fgColor.rgb.endswith(ex.TOP10)   # Top 10 marqué (10 lignes)

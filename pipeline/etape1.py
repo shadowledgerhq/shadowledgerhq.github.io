@@ -196,6 +196,7 @@ def ecrire_rapport(d, week, passage, instant, resume, res, alertes, entete=None)
         if len(av) > 50:
             l.append(f"- … et {len(av) - 50} autre(s)")
         l += ["", "## Alertes boss"] + [f"- {a}" for a in res["alertes_boss"] or ["rien"]]
+        l += ["", "## Personal Record seul (v30)"] + [f"- {a}" for a in res.get("records_seuls") or ["rien"]]
         l += ["", "## Semaine BOT (titre S<n>-<w>)"] + [f"- {a}" for a in res.get("alertes_semaine_bot") or ["rien"]]
     erreurs = (resume["erreurs"] if resume else []) + alertes
     l += ["", "## Erreurs et alertes"] + [f"- {e}" for e in erreurs or ["rien"]]

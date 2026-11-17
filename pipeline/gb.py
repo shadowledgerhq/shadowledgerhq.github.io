@@ -1,7 +1,7 @@
 """GB : Rage Count, groupes, écran Personal Record (SPEC_ETAPE1 §4.1 et §4.7, v5-v6).
 
 Fonctions pures, utilisées par classement.py :
-- rattacher_groupes(runs)  -> rattache les runs `Results` (groupe inconnu) à un groupe du Personal Record
+- attribuer_groupes(runs)  -> v30 : retire le Personal Record (jamais classé) ; il attribue un groupe aux runs `Results` de même RC
 - cle_run(run)             -> (RC, dégâts) : « meilleure run » d'un groupe
 - somme_degats(runs)       -> départage des égalités de RC total
 - saison_precedente(...)   -> Personal Record d'une saison précédente (Time Left in Season)
@@ -45,64 +45,25 @@ def _est_results(r):
     return r.get("score_source") in ("debut-fin", "video-complete") and (r.get("detail") or {}).get("ecran") != "combat"
 
 
-def record_prioritaire(runs):
-    """SPEC §4.1 (v15) : quand un Personal Record CONTRÔLÉ (`sur` : Total Rage Count = somme des groupes joués) est lu dans
-    la même vidéo, il prime sur un écran Results pour le RC de chaque groupe. Le Results sert au départage et au
-    rattachement ; il n'est jamais additionné au record :
-    - Results incertain (`a_verifier`) de même RC qu'un groupe, ou en `conflit de lecture` : écarté, le record fait foi ;
-    - Results sûr de même RC que l'unique groupe joué : même run. Dégâts différents de ceux du record (le `Total Score`
-      exact) -> le record l'emporte, note `écart Results/record : <valeur Results>`.
-    Les autres cas suivent les règles de rattachement habituelles. Retourne une copie de `runs`."""
-    records = [r for r in runs if r.get("score_source") == "record" and r.get("confidence") == "sur" and r.get("team") in (1, 2)]
-    if not records:
-        return runs
-    notes_record, sortie = {}, []
-    for r in runs:
-        if _est_results(r) and r.get("team") is None:
-            recs = [x for x in records if x["video_id"] == r["video_id"]]
-            meme_rc = [x for x in recs if x["score"] == r["score"]]
-            conflit = any(n.startswith("conflit de lecture") for n in r.get("notes", []))
-            solo = len(recs) == 1 and (recs[0].get("detail") or {}).get("damage_source") == "record"
-            if recs and r["confidence"] != "sur" and (meme_rc or conflit):
-                notes_record.setdefault(id((meme_rc or recs)[0]), []).append(
-                    f"Results incertain écarté (RC {r['score']}) : le Personal Record fait foi")
-                continue
-            if solo and meme_rc:
-                if r.get("damage") != recs[0].get("damage"):
-                    notes_record.setdefault(id(recs[0]), []).append(f"écart Results/record : {r.get('damage')}")
-                continue
-        sortie.append(r)
-    return [{**r, "notes": r["notes"] + [n for n in notes_record[id(r)] if n not in r["notes"]]} if id(r) in notes_record else r
-            for r in sortie]
-
-
-def rattacher_groupes(runs):
-    """§4.7 : une run `Results` (team None) est rattachée à un groupe du Personal Record si
-    - son RC et ses dégâts arrondis correspondent à ceux du record (même run), ou
-    - son RC est égal à celui d'un seul groupe et ses dégâts sont supérieurs (nouveau record du groupe,
-      cas `New Record Achieved!` : à RC égal, plus de dégâts).
-    Sinon elle reste `team: None`. Retourne une copie de `runs` ; les runs rattachées gardent une note."""
-    runs = record_prioritaire(runs)
-    records = {r["team"]: r for r in runs if r.get("score_source") == "record" and r.get("team") in (1, 2)}
+def attribuer_groupes(runs):
+    """SPEC v30 §4.7 : le Personal Record ne classe plus aucune run. Il sert seulement à attribuer un groupe (`team`) à une run
+    `Results` de la MÊME vidéo : si le RC du Results est égal au RC d'UN SEUL groupe du Personal Record contrôlé (`sûr`), ce groupe
+    est attribué (note). Total Score, Total Rage Count et dégâts arrondis du record ne servent plus. Retourne
+    (runs sans les lignes du Personal Record, vidéos dont le Personal Record est seul : aucun Results lu)."""
+    records = [r for r in runs if r.get("score_source") == "record"]
     sortie = []
     for r in runs:
-        if r.get("team") is not None or r.get("score_source") == "record" or not records:
-            sortie.append(r)
+        if r.get("score_source") == "record":
             continue
-        memes = [g for g, rec in records.items() if rec["score"] == r["score"] and _memes_degats_arrondis(r, rec)]
-        meme_rc = [g for g, rec in records.items() if rec["score"] == r["score"]]
-        groupe, raison = None, None
-        if len(memes) == 1:
-            groupe, raison = memes[0], "même run que le Personal Record"
-        elif len(meme_rc) == 1 and degats(r) > degats(records[meme_rc[0]]):
-            groupe, raison = meme_rc[0], "RC égal au groupe et dégâts supérieurs au Personal Record"
-        if groupe is None:
-            sortie.append(r)
-            continue
-        r = {**r, "team": groupe, "notes": list(r.get("notes", []))}
-        r["notes"].append(f"groupe {groupe} d'après le Personal Record ({raison})")
+        if _est_results(r) and r.get("team") is None:
+            memes = [x for x in records if x["video_id"] == r["video_id"] and x.get("team") in (1, 2)
+                     and x.get("confidence") == "sur" and x["score"] == r["score"]]
+            if len(memes) == 1:
+                g = memes[0]["team"]
+                r = {**r, "team": g, "notes": list(r.get("notes", [])) + [f"groupe {g} d'après le Personal Record (RC égal)"]}
         sortie.append(r)
-    return sortie
+    avec_results = {r["video_id"] for r in sortie if _est_results(r)}
+    return sortie, sorted({x["video_id"] for x in records} - avec_results)
 
 
 def temps_restant(texte):

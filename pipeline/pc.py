@@ -31,6 +31,9 @@ from etape1 import ecrire_rapport, ouvrir_semaine
 from semaine import PARIS, id_semaine, iso_utc, maintenant, parse_iso, semaine_precedente
 import libelles_inconnus
 import ocr_ecrans
+import elements
+import elements_hud
+import hunters_results
 import ordre_pc
 import rapport_pc
 from tri1 import lectures_texte
@@ -353,10 +356,27 @@ class Git:
 
     conflit_resolu = False          # v26 : un conflit sur data/ a été résolu automatiquement pendant ce passage (noté dans le rapport)
 
+    def _liberer_exports(self):
+        """v31 : fichiers NON suivis de `exports/` (Excel / PowerPoint régénérables) que `origin/main` contient aussi : supprimés avant la
+        fusion, sinon git refuse (« untracked working tree files would be overwritten », passage du 17/11). Retourne les fichiers retirés."""
+        try:
+            self._run("fetch", "origin", "main")
+            locaux = [f for f in self._run("ls-files", "--others", "--exclude-standard", "exports").splitlines() if f.strip()]
+            distants = set(self._run("ls-tree", "-r", "--name-only", "origin/main", "--", "exports").splitlines())
+        except GitErreur:
+            return []                                   # réseau coupé : le pull échouera de lui-même
+        retires = []
+        for f in locaux:
+            if f in distants:
+                (Path(self.racine) / f).unlink(missing_ok=True)
+                retires.append(f)
+        return retires
+
     def _rebase(self):
         """pull --rebase ; en cas d'échec, le rebase est abandonné (pas d'état « rebase en cours » qui bloque la suite), puis
         le conflit sur data/ est résolu automatiquement (`_resoudre_conflit`) : version distante pour les fichiers du passage
         GitHub, version du PC pour les tris 3-4. Une seule tentative ; si elle échoue, GitErreur."""
+        self._liberer_exports()
         essai = 0
         while True:
             try:
@@ -388,6 +408,7 @@ class Git:
         locale = self._run("rev-parse", "HEAD").strip()
         try:
             self._run("fetch", "origin", "main")
+            self._liberer_exports()
             base = self._run("merge-base", locale, "origin/main").strip()
             changes = [c for c in self._run("diff", "--name-only", base, locale).splitlines() if c.strip()]
             self._run("merge", "-X", "theirs", "--no-edit", "-m", "données: conflit git résolu automatiquement (PC)", "origin/main")
@@ -534,6 +555,43 @@ def _est_ecran(l):
     return l["score_source"] in SOURCES_ECRAN or (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")
 
 
+def _elements_hud(png, config, lectures):
+    """v31 : couleur des losanges d'élément du panneau d'équipe, attachée (`detail.elements_hud`) aux lectures de HUD de l'image."""
+    cfg = (config or {}).get("elements_hud")
+    cibles = [l for l in lectures if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
+    if cfg and cibles:
+        els = elements_hud.lire_losanges(png, cfg)
+        for l in cibles:
+            l["detail"]["elements_hud"] = els
+
+
+def _chasseurs_results(png, texte, config, meta, lectures):
+    """v31 : identité des chasseurs par les portraits des 6 lignes du Results (banque `data/icons/hunters_results`) -> `detail.hunter_ids`
+    + note « chasseurs reconnus : n/6 ». Apprend la banque quand un build `sûr` de la même run donne l'identité. Banque vide : rien."""
+    cibles = [l for l in lectures if _est_results_gb(l) and l.get("score") is not None]
+    if not cibles:
+        return
+    try:
+        from PIL import Image
+        with Image.open(png) as im:
+            img = im.convert("RGB").copy()
+        succ = ocr_ecrans.mise_en_page_results(texte, config) == "successeur"
+        week = id_semaine(parse_iso(meta["published_at"]))
+        builds = elements.charger_builds(RACINE / "data", week)
+        ids_b = elements.ids_du_build(builds, {"mode": "gb", "video_id": meta["video_id"], "t": cibles[0].get("t")})
+        if ids_b:
+            import portraits
+            hunters_results.apprendre(RACINE, ids_b, hunters_results.decouper(img, hunters_results.zones_portraits(config, succ)),
+                                      portraits.charger_cartes(RACINE / "data" / "icons"), config)
+        ids, n = hunters_results.lire(img, config, RACINE, succ)
+    except Exception:
+        return
+    if ids and n:
+        for l in cibles:
+            l["detail"]["hunter_ids"] = [i for i in ids if i]
+            l["notes"].append(f"chasseurs reconnus : {n}/6")
+
+
 def _est_results_gb(l):
     return l["mode"] == "gb" and l["score_source"] in SOURCES_RESULTATS and (l.get("detail") or {}).get("ecran") != "combat"
 
@@ -593,8 +651,9 @@ def _lever_alerte_reset(ecran, config):
 
 
 def suffisant(lectures, vid, modes):
-    """Le tri 3 suffit : BOT et HOTM = 1 lecture sûre ; POC et GB = 2 runs sûres (2 groupes / équipes)."""
-    sures = [l for l in lectures if l["video_id"] == vid and l["confidence"] == "sur"]
+    """Le tri 3 suffit : BOT et HOTM = 1 lecture sûre ; POC et GB = 2 runs sûres (2 groupes / équipes). v30 : le Personal Record du GB
+    ne classe plus de run (`score_source: record`) : il ne compte pas, la vidéo continue ses tris jusqu'à un écran Results."""
+    sures = [l for l in lectures if l["video_id"] == vid and l["confidence"] == "sur" and l.get("score_source") != "record"]
     if not modes:
         return False
     return all(len([l for l in sures if l["mode"] == m]) >= (2 if m in ("poc", "gb") else 1) for m in modes)
@@ -812,7 +871,10 @@ def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, 
         if type_ecran in ZONES_TYPES and zones_lues < gb_cfg.get("zones_max_images", 12):   # les zones sont chères (plusieurs OCR par zone)
             zones = lire_zones_results(outils, png, config, type_ecran, texte, langs)
             zones_lues += 1
-        lectures += [l for l in ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
+        ls = ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
+        _elements_hud(png, config, ls)
+        _chasseurs_results(png, texte, config, meta, ls)
+        lectures += [l for l in ls
                      if _est_results_gb(l) or (l["mode"] == "gb" and l["score_source"] == "record")      # + Personal Record du salon
                      or (l.get("detail") or {}).get("ecran") == "combat_sans_chrono"]                     # + HUD au chrono illisible (SPEC v19)
         Path(png).unlink(missing_ok=True)
@@ -896,7 +958,9 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
                     if ocr_ecrans.detecter(texte) in RESULTATS_TYPES:
                         detectes.append(t)
-                    nouvelles += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
+                    nl = ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
+                    _elements_hud(png, config, nl)
+                    nouvelles += nl
                     Path(png).unlink(missing_ok=True)
                 lectures = fusionner_ecrans(lectures, vid, nouvelles, config, duree_s=minutes * 60)
                 # v21 : HUD de fin de run (chrono lu ≤ 5 s) -> les 2 images suivantes (1 img/s) : le HUD y a souvent un chrono illisible
@@ -914,8 +978,9 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                             continue
                         texte_s = _ocr_image(outils, png_s, langs, cfg, st, complet=True)
                         _garder(ocr_debug, vid, "suite_hud", t_s, texte_s, png_s)
-                        suite += [l for l in ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
-                                  if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
+                        ls = ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
+                        _elements_hud(png_s, config, ls)
+                        suite += [l for l in ls if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
                         Path(png_s).unlink(missing_ok=True)
                     st["images"] += 2
                     lectures = fusionner_ecrans(lectures, vid, suite, config, duree_s=minutes * 60)
@@ -958,8 +1023,9 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                     for t_s, png_s in outils.images(chemin, [(debut_a, t_r - debut_a, 1)], tmp, prefixe=f"a{t_r}_"):
                         texte_s = _ocr_image(outils, png_s, langs, cfg, st, complet=True)
                         _garder(ocr_debug, vid, "hud_amont", t_s, texte_s, png_s)
-                        suite += [l for l in ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
-                                  if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
+                        ls = ocr_ecrans.lectures_depuis_texte(texte_s, meta, config, source, t_s)
+                        _elements_hud(png_s, config, ls)
+                        suite += [l for l in ls if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
                         Path(png_s).unlink(missing_ok=True)
                     st["images"] += t_r - debut_a
                     journal(f"  HUD de fin cherché de {debut_a} à {t_r} s : {len(suite)} lecture(s)")

@@ -12,6 +12,7 @@ import sys
 from collections import defaultdict
 from datetime import timezone
 
+import elements
 import gb
 import regles_deduites
 from bot_saison import controler_semaine_bot
@@ -136,23 +137,21 @@ def controler_boss(runs, cles, config, boss_prec):
 
 # --- §4.1 sélection des runs d'un joueur ---------------------------------------
 
+def _somme_cle(a, b, mode):
+    ka, kb = _cle_score(a, mode), _cle_score(b, mode)
+    return tuple(x + y for x, y in zip(ka, kb)) if mode == "gb" else ka + kb
+
+
 def _choisir_poc(runs, mode="poc"):
-    """(runs choisies, ok). ok = une run de l'équipe (GB : groupe) 1 + une de l'équipe 2."""
-    par_equipe = {e: _tri_score([r for r in runs if r["team"] == e], mode) for e in (1, 2)}
-    if par_equipe[1] and par_equipe[2]:
-        return [par_equipe[1][0], par_equipe[2][0]], True
-    choix, equipes = [], set()
-    for r in _tri_score(runs, mode):
-        if r["team"] in (1, 2):
-            if r["team"] in equipes:
-                continue  # deux runs de la même équipe ne s'additionnent jamais
-            equipes.add(r["team"])
-        elif any(c["team"] not in (1, 2) for c in choix):
-            continue      # v18 : deux runs de groupe / d'équipe inconnu ne s'additionnent jamais (même joueur, même groupe possible)
-        choix.append(r)
-        if len(choix) == 2:
-            break
-    return choix, False
+    """(runs choisies, ok). v30 : la meilleure PAIRE de runs de groupes / équipes distincts (équipe lue, sinon élément ; un chasseur commun
+    vu à l'écran = même groupe). ok = paire distinguée sûrement. Paire « peut » (une équipe connue, l'autre non) : ok faux, ligne
+    `a_verifier`. Aucune paire : la meilleure run seule (règle v17)."""
+    for niveau, ok in (("oui", True), ("peut", False)):
+        paires = [(a, b) for i, a in enumerate(runs) for b in runs[i + 1:] if elements.distinctes(a, b) == niveau]
+        if paires:
+            a, b = max(paires, key=lambda p: _somme_cle(p[0], p[1], mode))
+            return sorted([a, b], key=lambda r: (r["team"] if r["team"] in (1, 2) else 9, tuple(-x if isinstance(x, (int, float)) else x for x in (_cle_score(r, mode) if mode == "gb" else (r["score"],))))), ok
+    return ([_meilleur(runs, mode)] if runs else []), False
 
 
 def choisir_runs(runs, mode):
@@ -163,8 +162,6 @@ def choisir_runs(runs, mode):
 
 def ligne_joueur(runs_j, cle, config):
     mode = runs_j[0]["mode"]
-    if mode == "gb":
-        runs_j = gb.rattacher_groupes(runs_j)  # §4.7 : Results rattachées au groupe du Personal Record
     exactes = [r for r in runs_j if r["exact"]]
     utiles = exactes or runs_j  # §4.3 : provisoire remplacé par toute run exacte
     sures = [r for r in utiles if r["confidence"] == "sur"]
@@ -189,12 +186,17 @@ def ligne_joueur(runs_j, cle, config):
         notes.append("une seule run")
     elif mode in ("poc", "gb") and len(choix) < 2:
         notes.append("une seule run trouvée")
-    if mode in ("poc", "gb") and len(choix) == 2 and not ok and any(r["team"] is None for r in choix):
+    if (mode in ("poc", "gb") and len(choix) == 2 and not ok and any(r["team"] is None for r in choix)
+            and elements.distinctes(*choix) != "oui"):
         notes.append("équipe illisible" if mode == "poc" else "groupe illisible")
+    if mode in ("poc", "gb") and len(choix) == 2 and elements.distinctes(*choix) == "oui":
+        n = elements.note_distinction(*choix)         # v30 : groupes distingués par l'élément (chasseurs et / ou titre)
+        if n:
+            notes.append(n)
     if _inconnue(cle, config):
         notes.append("porte HOTM illisible")
         ok = False
-    sur = ok and all(r["confidence"] == "sur" for r in choix)
+    sur = ok and all(r["confidence"] == "sur" for r in choix) and not any(r.get("_contradiction") for r in choix)
     return choix, sur, notes
 
 
@@ -252,6 +254,8 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
             d["damage"] = r.get("damage")
             d["damage_exact"] = (None if r.get("damage") is None  # v7 : pas de dégâts lus -> pas d'exactitude
                                  else (r.get("detail") or {}).get("damage_exact", r.get("score_source") != "record"))
+        if mode in ("poc", "gb"):        # v30 : élément de la run (`light|fire|water|wind|dark` | null) et sa source
+            d["element"], d["element_source"] = r.get("element"), r.get("element_source")
         for k in CLES_DETAIL.get(mode, ()):
             if k in r.get("detail", {}):
                 d[k] = r["detail"][k]
@@ -329,6 +333,7 @@ def calculer(week, d=None, config=None, horloge=None):
     videos_avant = {r["video_id"] for r in runs}
 
     runs, saisons_prec = controler_saison_record(runs, week, config)
+    runs, records_seuls = gb.attribuer_groupes(runs)      # v30 : le Personal Record ne classe plus aucune run
     runs, semaines_prec, alertes_semaine_bot = controler_semaine_bot(runs, week, config)
     runs, doublons = dedoublonner(runs, config)
     cles = sorted({r["_cle"] for r in runs})
@@ -339,6 +344,10 @@ def calculer(week, d=None, config=None, horloge=None):
         avant = next((p for p in boss_prec if p.get("classement") == b["classement"]
                       and boss_id(p["stage"], config) == boss_id(b["stage"], config)), None)
         b["premiere_semaine"] = (avant.get("premiere_semaine") or semaine_precedente(week)) if avant else week
+
+    titres_v = {v: m.get("title", "") for v, m in d.videos(week).items()}      # v30 : éléments des runs (titre, chasseurs vus)
+    db_hunters = {h["id"]: h.get("element") for h in d.lire("db/hunters.json", []) if isinstance(h, dict) and "id" in h}
+    elements.annoter(runs, titres_v, config, db_hunters, elements.charger_builds(d.data, week))
 
     # Vidéos qui n'ont plus aucune run : rejetées (doublon / semaine précédente).
     rejected, processed = d.rejected(week), d.processed()
@@ -415,7 +424,8 @@ def calculer(week, d=None, config=None, horloge=None):
                      for r in runs if any(n.startswith("boss différent") for n in r["notes"])]
     return {"gelee": False, "week": week, "fichiers": {c: len(l) for c, l in fichiers.items()},
             "a_verifier": a_verifier, "rejets": nouveaux_rejets, "boss": boss,
-            "alertes_boss": alertes_boss, "alertes_semaine_bot": alertes_semaine_bot}
+            "alertes_boss": alertes_boss, "alertes_semaine_bot": alertes_semaine_bot,
+            "records_seuls": [f"{v} : Personal Record seul : aucune run filmée" for v in records_seuls]}
 
 
 if __name__ == "__main__":
