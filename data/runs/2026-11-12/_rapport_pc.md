@@ -86,3 +86,15 @@ error: The following untracked working tree files would be overwritten by checko
 - Erreurs bloquantes : aucune
 - Durée du passage : 4 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-daily 2026-11-17T01:45:03.343934+00:00 -->
+## Passage pc-daily — 2026-11-17 02:45 (Paris)
+
+- Top 10 couvert : non (27 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 9 · en_cours restantes : 57 (dont 27 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 1024 min
+- Relance automatique : aucune (c'était déjà la relance) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Type : relance automatique (ne compte pas pour le critère de gel n° 3)
