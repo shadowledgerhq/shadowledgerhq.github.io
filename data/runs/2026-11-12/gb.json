@@ -317,7 +317,8 @@
         "damage": 1601097999,
         "damage_exact": true,
         "element": "wind",
-        "element_source": "titre"
+        "element_source": "titre+ecran",
+        "hud_rage_count": 12
       }
     ]
   }

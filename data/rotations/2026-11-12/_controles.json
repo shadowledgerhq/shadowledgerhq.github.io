@@ -30,5 +30,69 @@
       true,
       "phases [9.281, 14.986, 19.926]"
     ]
+  ],
+  "a-923ClD9Rc": [
+    [
+      "durée = chrono ± 0,5 s",
+      false,
+      "durée 91.5 s, chrono 19.558 s, écart +71.94 s"
+    ],
+    [
+      "fin avant la composition",
+      false,
+      "fin 104.0 s, composition 0 s"
+    ],
+    [
+      "≥ 1 événement SJW",
+      true,
+      "16 événement(s)"
+    ],
+    [
+      "≥ 1 événement par chasseur actif",
+      false,
+      "actifs ['inconnu'], avec événement []"
+    ],
+    [
+      "aucune recharge relancée trop tôt",
+      true,
+      "ok"
+    ],
+    [
+      "phases du Results entre les bornes",
+      null,
+      "phases []"
+    ]
+  ],
+  "Lt84IhMjBvM": [
+    [
+      "durée = chrono ± 0,5 s",
+      false,
+      "durée 89.0 s, chrono 19.754 s, écart +69.25 s"
+    ],
+    [
+      "fin avant la composition",
+      false,
+      "fin 97.5 s, composition 0 s"
+    ],
+    [
+      "≥ 1 événement SJW",
+      true,
+      "23 événement(s)"
+    ],
+    [
+      "≥ 1 événement par chasseur actif",
+      false,
+      "actifs ['inconnu'], avec événement []"
+    ],
+    [
+      "aucune recharge relancée trop tôt",
+      true,
+      "ok"
+    ],
+    [
+      "phases du Results entre les bornes",
+      null,
+      "phases []"
+    ]
   ]
 }

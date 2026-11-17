@@ -1,5 +1,44 @@
 [
   {
+    "run_id": "bot-2026-11-12-Lt84IhMjBvM",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
+    "player": "𐐂露依Rui ルイ 𐐚",
+    "channel": "𐐂露依Rui ルイ 𐐚",
+    "video_id": "Lt84IhMjBvM",
+    "video_ids": [
+      "Lt84IhMjBvM"
+    ],
+    "published_at": "2026-11-13T11:12:06+01:00",
+    "lang": "zh",
+    "score": {
+      "total": 18.754,
+      "runs": [
+        18.754
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "boss non contrôlé; contrôle BOT : temps de jeu 19 ≠ dernière phase tronquée 18; semaine confirmée (titre)",
+    "bot_season_week": "S20-4",
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "Lt84IhMjBvM",
+        "published_at": "2026-11-13T11:12:06+01:00",
+        "t": 102,
+        "stage": null,
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": false
+      }
+    ]
+  },
+  {
     "run_id": "bot-2026-11-12-a-923ClD9Rc",
     "week": "2026-11-12",
     "mode": "bot",
@@ -30,45 +69,6 @@
       {
         "video_id": "a-923ClD9Rc",
         "published_at": "2026-11-12T13:01:40+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false
-      }
-    ]
-  },
-  {
-    "run_id": "bot-2026-11-12-Lt84IhMjBvM",
-    "week": "2026-11-12",
-    "mode": "bot",
-    "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
-    "player": "𐐂露依Rui ルイ 𐐚",
-    "channel": "𐐂露依Rui ルイ 𐐚",
-    "video_id": "Lt84IhMjBvM",
-    "video_ids": [
-      "Lt84IhMjBvM"
-    ],
-    "published_at": "2026-11-13T11:12:06+01:00",
-    "lang": "zh",
-    "score": {
-      "total": 19.754,
-      "runs": [
-        19.754
-      ],
-      "unit": "seconds"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : 19.754s; semaine confirmée (titre); boss non contrôlé",
-    "bot_season_week": "S20-4",
-    "player_ingame": null,
-    "runs_detail": [
-      {
-        "video_id": "Lt84IhMjBvM",
-        "published_at": "2026-11-13T11:12:06+01:00",
         "t": null,
         "stage": null,
         "team": null,
@@ -130,27 +130,27 @@
     "published_at": "2026-11-12T04:07:23+01:00",
     "lang": "en",
     "score": {
-      "total": 19.9,
+      "total": 19.977,
       "runs": [
-        19.9
+        19.977
       ],
       "unit": "seconds"
     },
-    "score_source": "titre",
+    "score_source": "debut-fin",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 19.9s; chrono incomplet : rang prudent; boss non contrôlé",
+    "notes": "boss non contrôlé; temps instable (animation ?)",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
         "video_id": "5MI-RLj7FSk",
         "published_at": "2026-11-12T04:07:23+01:00",
-        "t": null,
+        "t": 50,
         "stage": null,
         "team": null,
-        "score_source": "titre",
+        "score_source": "debut-fin",
         "exact": false
       }
     ]
@@ -190,45 +190,6 @@
         "stage": null,
         "team": null,
         "score_source": "debut-fin",
-        "exact": false
-      }
-    ]
-  },
-  {
-    "run_id": "bot-2026-11-12-tOzRUlmZ2JI",
-    "week": "2026-11-12",
-    "mode": "bot",
-    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
-    "player": "SNG",
-    "channel": "SNG",
-    "video_id": "tOzRUlmZ2JI",
-    "video_ids": [
-      "tOzRUlmZ2JI"
-    ],
-    "published_at": "2026-11-12T20:12:47+01:00",
-    "lang": "en",
-    "score": {
-      "total": 23.223,
-      "runs": [
-        23.223
-      ],
-      "unit": "seconds"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : 23;223s; boss non contrôlé",
-    "bot_season_week": null,
-    "player_ingame": null,
-    "runs_detail": [
-      {
-        "video_id": "tOzRUlmZ2JI",
-        "published_at": "2026-11-12T20:12:47+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
         "exact": false
       }
     ]
@@ -286,27 +247,27 @@
     "published_at": "2026-11-13T06:44:18+01:00",
     "lang": "ko",
     "score": {
-      "total": 28.0,
+      "total": 28.412,
       "runs": [
-        28.0
+        28.412
       ],
       "unit": "seconds"
     },
-    "score_source": "titre",
+    "score_source": "debut-fin",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 28초; chrono incomplet : rang prudent; boss non contrôlé",
+    "notes": "boss non contrôlé; BOT ja : temps de jeu non lu",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
         "video_id": "uwJfPTJI8ZE",
         "published_at": "2026-11-13T06:44:18+01:00",
-        "t": null,
+        "t": 677,
         "stage": null,
         "team": null,
-        "score_source": "titre",
+        "score_source": "debut-fin",
         "exact": false
       }
     ]
@@ -502,6 +463,45 @@
         "stage": null,
         "team": null,
         "score_source": "description",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-2026-11-12-tOzRUlmZ2JI",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "tOzRUlmZ2JI",
+    "video_ids": [
+      "tOzRUlmZ2JI"
+    ],
+    "published_at": "2026-11-12T20:12:47+01:00",
+    "lang": "en",
+    "score": {
+      "total": 623.273,
+      "runs": [
+        623.273
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "boss non contrôlé; contrôle BOT : temps de jeu 24 ≠ dernière phase tronquée 623",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "tOzRUlmZ2JI",
+        "published_at": "2026-11-12T20:12:47+01:00",
+        "t": 300,
+        "stage": null,
+        "team": null,
+        "score_source": "debut-fin",
         "exact": false
       }
     ]
