@@ -41,7 +41,27 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Top 10 couvert : non (31 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
 - Vidéos traitées ce passage : 15 · en_cours restantes : 60 (dont 31 à traiter par le PC)
-- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot) ; git : conflit git non résolu : git pull : ch            main       -> FETCH_HEAD
+   cce1fab..2553b34  main       -> origin/main
+error: The following untracked working tree files would be overwritten by checkout:
+	exports/2026-11-12 | git merge : error: The following untracked working tree files would be overwritten by merge:
+	exports/2026-11-12/classements.xlsx
+Please move or remove them before you merge.
+Aborting
+Merge with strategy ort failed.
 - Durée du passage : 59 min
 - Relance automatique : 17/11/2026 02:45 (une seule fois par soir)
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-daily 2026-11-17T00:44:37.539050+00:00 -->
+## Passage pc-daily — 2026-11-17 01:44 (Paris)
+
+- **Passage complet : non** (git : conflit git non résolu : git pull : ch            main       -> FETCH_HEAD
+   cce1fab..2553b34  main       -> origin/main
+error: The following untracked working tree files would be overwritten by checkout:
+	exports/2026-11-12 | git merge : error: The)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : git : conflit git non résolu : git pull : ch            main       -> FETCH_HEAD
+   cce1fab..2553b34  main       -> origin/main
+error: The following untracked working tree files would be overwritten by checkout:
+	exports/2026-11-12 | git merge : error: The
