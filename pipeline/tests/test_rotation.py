@@ -220,12 +220,12 @@ def test_bornes_incertaines_sans_results_lu(tmp_path):
 
 def test_selection_top3_bot_et_etat_pc_rotation():
     sem = "2026-11-12"
-    assert R.a_traiter(sem, {}) == ["wJ9CwjKwyco", "a-923ClD9Rc", "Lt84IhMjBvM"]
+    assert R.a_traiter(sem, {}) == ["a-923ClD9Rc", "Lt84IhMjBvM", "wJ9CwjKwyco"]      # v34 : ordre du fichier (X SLA 19.926 3e)
     fait = {"wJ9CwjKwyco": {"pc": {"rotation": "fait", "rotation_version": 1}}, "a-923ClD9Rc": {"pc": {"rotation": "erreur", "rotation_version": 1}}}
     assert R.a_traiter(sem, fait) == ["Lt84IhMjBvM"]
     ancienne = {"wJ9CwjKwyco": {"pc": {"rotation": "absent", "rotation_version": 0}}}                   # version de la calibration augmentée : refait
-    assert R.a_traiter(sem, ancienne)[0] == "wJ9CwjKwyco"
-    assert R.a_traiter(sem, {}, cfg={**CFG, "budget_par_mode": 2}) == ["wJ9CwjKwyco", "a-923ClD9Rc"]
+    assert "wJ9CwjKwyco" in R.a_traiter(sem, ancienne)
+    assert R.a_traiter(sem, {}, cfg={**CFG, "budget_par_mode": 2}) == ["a-923ClD9Rc", "Lt84IhMjBvM"]
     assert R.a_traiter(sem, {}, cfg={**CFG, "modes": ["poc"], "top": 3}) != []                           # un autre mode se branche par la configuration
 
 
