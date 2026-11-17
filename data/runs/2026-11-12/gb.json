@@ -25,7 +25,7 @@
     "exact": true,
     "confidence": "sur",
     "rank": 1,
-    "notes": "écart titre/écran : titre 159; lecture fusionnée (5 images); contrôle sans Hunter Rank; chrono HUD déduit (t=214); séparateur perdu (OCR); lecture fusionnée (45 images); compteur animé; Hunter Rank incohérents ignorés (HUD); groupes distingués par le titre (Fire / Light)",
+    "notes": "écart titre/écran : titre 159; lecture fusionnée (5 images); contrôle sans Hunter Rank; chrono HUD déduit (t=214); séparateur perdu (OCR); lecture fusionnée (90 images); compteur animé; Hunter Rank incohérents ignorés (HUD); groupes distingués par le titre (Fire / Light)",
     "runs_detail": [
       {
         "video_id": "T5dR6iJAn-Y",
@@ -125,7 +125,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (36 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Light / Fire)",
+    "notes": "lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (72 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Light / Fire)",
     "runs_detail": [
       {
         "video_id": "vYtRCpFtSOk",
@@ -180,7 +180,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (72 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée",
+    "notes": "écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (144 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée",
     "runs_detail": [
       {
         "video_id": "awb-GlVIa7Q",
