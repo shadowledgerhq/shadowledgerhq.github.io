@@ -1,9 +1,9 @@
 {
   "wJ9CwjKwyco": [
     [
-      "durée = chrono ± 0,5 s",
+      "durée − temps sans HUD = chrono ± 0,5 s",
       false,
-      "durée 37.0 s, chrono 19.926 s, écart +17.07 s"
+      "durée 37.0 s − sans HUD 11.5 s = 25.5 s, chrono 19.926 s, écart +5.57 s"
     ],
     [
       "fin avant la composition",
@@ -13,7 +13,7 @@
     [
       "≥ 1 événement SJW",
       true,
-      "6 événement(s)"
+      "5 événement(s)"
     ],
     [
       "≥ 1 événement par chasseur actif",
