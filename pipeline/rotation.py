@@ -258,7 +258,7 @@ def controles_bot(fich, chrono_s=None, t_composition=None, phases=(), db=None, t
     ev = r.get("events") or []
     sortie = []
     d = r.get("duration_s")
-    sortie.append(("durée = chrono ± 0,5 s", None if d is None or chrono_s is None else abs(d - chrono_s) <= 0.5, f"durée {d} s, chrono {chrono_s} s"))
+    sortie.append(("durée = chrono ± 0,5 s", None if d is None or chrono_s is None else abs(d - chrono_s) <= 0.5, f"durée {d} s, chrono {chrono_s} s" + ("" if d is None or chrono_s is None else f", écart {d - chrono_s:+.2f} s")))
     fin = r.get("run_end_t")
     sortie.append(("fin avant la composition", None if fin is None or t_composition is None else fin < t_composition, f"fin {fin} s, composition {t_composition} s"))
     sjw = any(e["hunter"] == "sjw" for e in ev)
