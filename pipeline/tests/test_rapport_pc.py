@@ -195,3 +195,17 @@ def test_v31_export_non_suivi_du_pc_ne_bloque_plus_le_pull():
         assert (pcw / "exports/2026-11-12/autre.xlsx").read_text() == "garde"
         assert (pcw / f"data/runs/{SEM}/_rapport_pc.md").read_text() == "bloc\n"
         assert g._liberer_exports() == []
+
+
+def test_v31_relecture_demandee_cote_github_n_est_pas_ecrasee_par_le_pc():
+    """17/11 : nh2D7xZ7dOQ remis `en_cours` / `tri4: a_faire` côté GitHub, mais la fusion rendait le `termine` / `inutile` du PC."""
+    import fusion_pc
+    distant = {"v": {"status": "en_cours", "pc_needed": True, "relecture": "2026-11-17", "pc": {"tri4": "a_faire", "results_lus": []}},
+               "w": {"status": "en_cours"}}
+    local = {"v": {"status": "termine", "pc_needed": False, "pc": {"tri4": "inutile"}}, "w": {"status": "termine", "pc": {"tri4": "fait"}}}
+    res = fusion_pc.fusionner_processed(distant, local)
+    assert res["v"]["status"] == "en_cours" and res["v"]["pc"]["tri4"] == "a_faire"            # relecture : le distant l'emporte
+    assert res["w"]["status"] == "termine" and res["w"]["pc"]["tri4"] == "fait"                # comportement habituel inchangé
+    # le PC a recopié le jeton : son avancement compte de nouveau
+    local["v"] = {"status": "termine", "relecture": "2026-11-17", "pc": {"tri4": "fait"}}
+    assert fusion_pc.fusionner_processed(distant, local)["v"]["status"] == "termine"

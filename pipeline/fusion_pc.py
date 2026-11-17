@@ -23,7 +23,9 @@ def fusion_json(chemin):
 
 
 def fusionner_processed(distant, local):
-    """Distant + ce que seul le PC écrit : `pc` (avancement des tris 3-4) et un statut final (termine/rejete) posé par le PC."""
+    """Distant + ce que seul le PC écrit : `pc` (avancement des tris 3-4) et un statut final (termine/rejete) posé par le PC.
+    Sauf si la vidéo distante porte un jeton `relecture` que la version du PC n'a pas : remise à zéro demandée (nh2D7xZ7dOQ, 17/11), le
+    PC ne l'écrase pas avec son ancien `termine` / `tri4: inutile`. Le jeton est ensuite recopié par le PC avec le reste de l'entrée."""
     res = {k: dict(v) if isinstance(v, dict) else v for k, v in (distant or {}).items()}
     for vid, l in (local or {}).items():
         d = res.get(vid)
@@ -32,6 +34,8 @@ def fusionner_processed(distant, local):
         if d is None:
             res[vid] = l
             continue
+        if d.get("relecture") and d["relecture"] != l.get("relecture"):
+            continue        # v31 : relecture demandée côté GitHub (jeton `relecture`) que le PC n'a pas encore vue : l'état distant l'emporte en entier
         if l.get("pc"):
             d["pc"] = l["pc"]
         if l.get("pc_needed") is not None and "pc_needed" not in d:
