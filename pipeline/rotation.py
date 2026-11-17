@@ -164,17 +164,70 @@ def lecture_chiffres(frames, zone, ocr, presents, pas_s=0.5, maxi=99):
     return sortie
 
 
+def lectures_ocr(recadrages, boutons, ocr, presents, brut=None):
+    """`recadrages` = [(t, {zone: image PIL recadrée})] (1080p, toutes les `ocr_pas_s` s) -> {bouton: [(t, valeur | None | "hors")]}. `brut` (liste,
+    optionnelle) reçoit (bouton, t, texte OCR) pour la calibration."""
+    sortie = {b: [] for b in boutons}
+    for t, zs in recadrages:
+        for b in boutons:
+            if presents and not presents.get(t, True):
+                sortie[b].append((t, "hors"))
+                continue
+            texte = ocr(zs[b])
+            if brut is not None:
+                brut.append((b, t, texte))
+            v = lire_recharge(texte)
+            sortie[b].append((t, v if v is not None and 0 <= v <= 99 else None))
+    return sortie
+
+
+def purger_constantes(lectures, maxi=3):
+    """Un chiffre identique sur plus de `maxi` lectures de suite n'est pas un compte à rebours (il change chaque seconde) mais une partie de l'icône
+    lue comme un chiffre (wJ9CwjKwyco : l'icône de E lue « 4 » sur 20 s de suite) : ces lectures deviennent None."""
+    sortie, i = list(lectures), 0
+    while i < len(sortie):
+        v = sortie[i][1]
+        j = i
+        while j < len(sortie) and sortie[j][1] == v:
+            j += 1
+        if v not in (None, "hors") and j - i > maxi:
+            sortie[i:j] = [(t, None) for t, _ in sortie[i:j]]
+        i = max(j, i + 1)
+    return sortie
+
+
+def _suite_de_recharge(lectures, t, lu):
+    """Vrai si la recharge qui commence en `t` (chiffre `lu`) n'est que la suite de la précédente : chiffres manqués par l'OCR pendant
+    quelques secondes, le compteur est plus bas qu'avant et le temps affiché écoulé (images sans HUD exclues : le chrono de jeu s'arrête)
+    ne dépasse pas ce qu'il restait (+ 1,5 s)."""
+    if lu is None:
+        return False
+    avant = [(i, v) for i, (tt, v) in enumerate(lectures) if tt < t and v not in (None, "hors")]
+    if not avant:
+        return False
+    i0, v0 = avant[-1]
+    i1 = next(i for i, (tt, _) in enumerate(lectures) if tt >= t)
+    pas = (lectures[1][0] - lectures[0][0]) if len(lectures) > 1 else 0.5
+    ecoule = sum(1 for _, v in lectures[i0 + 1:i1] if v != "hors") * pas
+    return lu < v0 and ecoule <= v0 + 1.5
+
+
 def transitions_chiffres(lectures, confirmation=2):
-    """Instants (1re image avec chiffre) où un bouton passe de « prêt » à « en recharge », avec le chiffre lu. Un bouton déjà en recharge à la
-    1re image n'a pas d'instant de lancement connu : aucun événement. -> [(t, valeur)]"""
+    """Instants (1re image avec chiffre) où un bouton passe de « prêt » à « en recharge », avec la recharge lue (médiane des 3 premières lectures de
+    la recharge : un chiffre mal lu au début ne la fausse pas). Un bouton déjà en recharge à la 1re image n'a pas d'instant de lancement connu :
+    aucun événement. -> [(t, valeur)]"""
+    lectures = purger_constantes(lectures)
     etats = etats_par_chiffres(lectures)
-    val = {t: v for t, v in lectures}
+    val = [(t, v) for t, v in lectures if v not in (None, "hors")]
     if not etats:
         return []
     sortie, prec = [], etats[0][1]
     for i, (t, e) in enumerate(etats):
         if i and prec == "pret" and e == "recharge" and all(x[1] == "recharge" for x in etats[i:i + confirmation]) and len(etats[i:i + confirmation]) == confirmation:
-            sortie.append((t, val[t]))
+            premiers = [v for tt, v in val if tt >= t][:3]
+            lu = sorted(premiers)[len(premiers) // 2] if premiers else None
+            if not _suite_de_recharge(lectures, t, lu):
+                sortie.append((t, lu))
         prec = e
     return sortie
 
@@ -199,22 +252,32 @@ def lire_recharge(texte):
     return float(f"{m.group(1)}.{m.group(2)}") if m.lastindex == 2 else float(m.group(1))
 
 
-def ocr_recharge(outils, tmp):
-    """`ocr(image PIL) -> texte` pour `releves_run` : chiffre de recharge d'un bouton (tesseract, chiffres seulement, une ligne, agrandi 4x,
-    niveaux de gris). `outils.ocr` = `pc.Outils.ocr`. Ne lève jamais : texte vide si l'OCR échoue (cooldown_read reste null)."""
+def preparer_chiffre(image, seuil=170, boite=(0.12, 0.22, 0.88, 0.78), hauteur=90):
+    """Chiffre de recharge d'un bouton -> image noir sur blanc pour tesseract : centre de l'hexagone, min(R, V, B) (les chiffres sont blancs)
+    agrandi à `hauteur` px (bicubique) puis seuillé à `seuil`, marge blanche. Essai tesseract 5 sur des chiffres 0-18, 60 (police grasse 16 px) :
+    hauteur 90 + psm 7 = 15/15 lus ; 60 ou 40 px, psm 8 ou 13 : des chiffres manqués. L'image entière en gris ne lisait presque rien."""
+    import numpy as np
+    from PIL import Image, ImageOps
+    w, h = image.size
+    c = image.convert("RGB").crop((round(boite[0] * w), round(boite[1] * h), round(boite[2] * w), round(boite[3] * h)))
+    g = Image.fromarray(np.asarray(c).astype(int).min(axis=2).astype("uint8"))
+    g = g.resize((max(1, round(g.width * hauteur / max(1, g.height))), hauteur), Image.BICUBIC)
+    return ImageOps.expand(Image.fromarray(np.where(np.asarray(g) >= seuil, 0, 255).astype("uint8")), border=30, fill=255)
+
+
+def ocr_recharge(outils, tmp, seuil=170):
+    """`ocr(image PIL) -> texte` pour `releves_run` : chiffre de recharge d'un bouton (`preparer_chiffre`, tesseract, chiffres seulement, un mot).
+    `outils.ocr` = `pc.Outils.ocr`. Ne lève jamais : texte vide si l'OCR échoue (cooldown_read reste null)."""
     from pathlib import Path
     compteur = [0]
 
     def ocr(image):
         try:
-            from PIL import ImageOps
-            im = ImageOps.autocontrast(image.convert("L"))
-            im = im.resize((max(1, im.width * 4), max(1, im.height * 4)))
             compteur[0] += 1
             png = Path(tmp) / f"_recharge_{compteur[0]}.png"
-            im.save(png)
+            preparer_chiffre(image, seuil).save(png)
             try:
-                return outils.ocr(png, langues="eng", psm=7, timeout=30, extra=["-c", "tessedit_char_whitelist=0123456789.,:"])
+                return outils.ocr(png, langues="eng", psm=7, timeout=30, extra=["-c", "tessedit_char_whitelist=0123456789."])
             finally:
                 png.unlink(missing_ok=True)
         except Exception:
@@ -270,7 +333,7 @@ def identifier_portrait(image, cartes, cfg):
 
 # --- une run -------------------------------------------------------------------------------------------------------------
 
-def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=None, t_debut=0.0):
+def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=None, t_debut=0.0, lectures=None):
     """`frames` = [(t, image PIL)] entre les bornes ; `zones` = {bouton: [x0,y0,x1,y1], "core": …, "portrait": …, "qte": …}. Retourne la liste des
     événements (sans `t_run` : ajouté par `construire_run`) et les limites. `skills_sjw` = {bouton SJW: skill_id} (build). `ocr(image) -> texte`
     optionnel pour `cooldown_read`."""
@@ -307,8 +370,8 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
         if not zones.get(bouton):
             continue
         sjw = bouton.startswith("sjw_")
-        if par_chiffres:
-            lect = lecture_chiffres(frames, zones[bouton], ocr, presents, cfg.get("ocr_pas_s", 0.5))
+        if lectures is not None or par_chiffres:
+            lect = lectures.get(bouton, []) if lectures is not None else lecture_chiffres(frames, zones[bouton], ocr, presents, cfg.get("ocr_pas_s", 0.5))
             for t, lu in transitions_chiffres(lect):
                 evenements.append({"t": t, "hunter": "sjw" if sjw else hunter_a(t), "slot": bouton,
                                    "skill_id": (skills_sjw or {}).get(bouton) if sjw else None, "trigger": None, "cooldown_read": lu, "source": "hud-recharge"})
@@ -493,7 +556,7 @@ def diagnostic_crops(ctx, frames, cfg, racine=RACINE):
     return ecrits
 
 
-def planche_zones(ctx, images, zones, cfg, racine=RACINE):
+def planche_zones(ctx, images, zones, cfg, racine=RACINE, extra=None):
     """Calibration : une planche (lignes = boutons calibrés, colonnes = une image tous les `scan_pas_s`) des recadrages des SEULES zones de boutons
     (jamais l'image entière, SPEC §2.7) + les séries de luminance, dans `_crops/` du mode. Seulement si `cfg.planche` est vrai. Retourne le chemin."""
     if not cfg.get("planche") or not images:
@@ -518,6 +581,8 @@ def planche_zones(ctx, images, zones, cfg, racine=RACINE):
     (dossier / f"{ctx['video_id']}_series.json").write_text(json.dumps(
         {"pas_s": cfg.get("scan_pas_s", 0.5), "lignes": noms, "t": ts, "luminance": {n: [round(luminance(images[t], zones[n]), 1) for t in ts] for n in noms}},
         indent=0), encoding="utf-8")
+    if extra:
+        (dossier / f"{ctx['video_id']}_ocr.json").write_text(json.dumps(extra, ensure_ascii=False, indent=0), encoding="utf-8")
     return f
 
 
@@ -549,7 +614,6 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
         run = construire_run(1, None, None, [], ["hud-non-trouve"])
         ecrire(ctx, fichier(ctx, [run]), racine)
         return "absent"
-    planche_zones(ctx, images, zones, cfg, racine)
     t_debut = visibles[0]
     if ctx.get("t_result"):
         t_fin = float(ctx["t_result"])
@@ -557,9 +621,24 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
         t_fin = visibles[-1] + cfg.get("scan_pas_s", 0.5)
         limites.append("bornes-incertaines")
     pas = 1 / cfg.get("fps", 10)
+    lectures, extra = None, None
+    if cfg.get("detection") == "ocr" and ocr and cfg.get("hauteur_ocr"):
+        boutons = [b for b in BOUTONS_HUNTER + BOUTONS_SJW if zones.get(b)]
+        pas_ocr = cfg.get("ocr_pas_s", 0.5)
+        recadrages = []
+        for t, chemin_png in outils.images(chemin, [(t_debut, max(t_fin - t_debut, pas_ocr), pas_ocr)], tmp, prefixe="ro", hauteur=cfg["hauteur_ocr"]):
+            with Image.open(chemin_png) as im:
+                im = im.convert("RGB")
+                recadrages.append((t, {n: recadrer(im, zones[n]).copy() for n in boutons + (["ancre"] if zones.get("ancre") else [])}))
+        pres = hud_present([(t, vignette(zs["ancre"], [0, 0, 1, 1])) for t, zs in recadrages], cfg.get("ancre_corr", 0.4)) if zones.get("ancre") else {}
+        brut = []
+        lectures = lectures_ocr(recadrages, boutons, ocr, pres, brut)
+        extra = {"hauteur": cfg["hauteur_ocr"], "hud": {str(t): bool(v) for t, v in pres.items()},
+                 "brut": {b: [[t, x] for bb, t, x in brut if bb == b] for b in boutons}}
+    planche_zones(ctx, images, zones, cfg, racine, extra)
     frames = [(t, Image.open(p).convert("RGB")) for t, p in outils.images(chemin, [(t_debut, max(t_fin - t_debut, pas), pas)], tmp, prefixe="rf", hauteur=cfg.get("hauteur", 720))]
     sjw = ctx.get("skills_sjw") or {}
-    evenements, lim = releves_run(frames, zones, cfg, db, cartes, sjw, ocr, t_debut)
+    evenements, lim = releves_run(frames, zones, cfg, db, cartes, sjw, ocr, t_debut, lectures)
     run = construire_run(1, t_debut, t_fin, evenements, limites + lim)
     fich = fichier(ctx, [run])
     controles = [list(c) for c in controles_bot(fich, ctx.get("chrono_s"), t_composition if t_composition is not None else ctx.get("t_composition"),

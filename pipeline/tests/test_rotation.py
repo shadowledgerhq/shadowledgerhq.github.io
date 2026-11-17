@@ -260,10 +260,11 @@ def test_ocr_recharge_lit_un_chiffre_avec_le_vrai_tesseract(tmp_path):
             return subprocess.run(["tesseract", str(png), "stdout", "-l", langues, "--psm", str(psm), *(extra or [])],
                                   capture_output=True, text=True, timeout=timeout).stdout
 
-    im = Image.new("RGB", (60, 30), (30, 30, 30))
-    ImageDraw.Draw(im).text((8, 4), "7.3", fill=(255, 255, 255), font=ImageFont.load_default(size=20))
-    lu = R.ocr_recharge(Outils(), tmp_path)(im)
-    assert R.lire_recharge(lu) == 7.3, lu
+    for texte, attendu in (("5", 5.0), ("9", 9.0), ("12", 12.0), ("60", 60.0)):                       # bouton de 46 x 50 px, chiffre blanc au centre (HUD 720p)
+        im = Image.new("RGB", (46, 50), (60, 70, 80))
+        ImageDraw.Draw(im).text((23, 25), texte, fill=(255, 255, 255), font=ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 16), anchor="mm")
+        lu = R.ocr_recharge(Outils(), tmp_path)(im)
+        assert R.lire_recharge(lu) == attendu, (texte, lu)
     assert not list(tmp_path.glob("_recharge_*.png"))
 
 
@@ -302,7 +303,7 @@ def test_etats_par_chiffres_ignore_hors_hud_et_pont_un_chiffre_manque():
 
 
 def test_transitions_chiffres_lance_avec_valeur_et_ignore_recharge_initiale():
-    deja = [(0.0, 9), (0.5, 8), (1.0, None), (1.5, None), (2.0, 15), (2.5, 14), (3.0, 14)]
+    deja = [(0.0, 9), (0.5, 8), (1.0, None), (1.5, None), (2.0, 15), (2.5, 15), (3.0, 14), (3.5, 14)]
     assert R.transitions_chiffres(deja) == [(2.0, 15)]                     # le chiffre 9 de la 1re image : lancement inconnu, aucun événement
     assert R.transitions_chiffres([(0.0, 5), (0.5, 4), (1.0, 3)]) == []
     assert R.transitions_chiffres([]) == []
@@ -321,3 +322,22 @@ def test_releves_run_par_chiffres_pas_de_bruit_de_luminance():
     ev, lim = R.releves_run(frames, zones, cfg, ocr=lambda im: next(lectures, "12"))
     lancers = [(e["slot"], e["t"], e["cooldown_read"]) for e in ev if e["slot"] == "skill_1"]
     assert lancers == [("skill_1", 1.0, 15.0)]
+
+
+def test_purger_constantes_et_mediane_des_premieres_lectures():
+    icone = [(k / 2, 4) for k in range(12)]                                    # icône lue « 4 » pendant 6 s : pas un compte à rebours
+    assert all(v is None for _, v in R.purger_constantes(icone))
+    assert R.purger_constantes([(0.0, 15), (0.5, 15), (1.0, 14)]) == [(0.0, 15), (0.5, 15), (1.0, 14)]
+    lect = [(0.0, None), (0.5, None), (1.0, 4), (1.5, 14), (2.0, 14), (2.5, 13), (3.0, 13)]       # 1re lecture « 4 » pour 14
+    assert R.transitions_chiffres(lect) == [(1.0, 14)]
+    assert R.transitions_chiffres(icone + [(7.0, None), (7.5, None), (8.0, 9), (8.5, 9), (9.0, 8)]) == [(8.0, 9)]
+
+
+def test_chiffres_manques_ne_font_pas_un_nouveau_lancement():
+    lect = [(0.0, None), (0.5, None), (1.0, 14), (1.5, 14), (2.0, 13), (2.5, None), (3.0, None), (3.5, None), (4.0, None),
+            (4.5, 10), (5.0, 10), (5.5, 9), (6.0, 9)]                           # 13 -> 10 : le compteur continue, aucun nouveau lancement
+    assert R.transitions_chiffres(lect) == [(1.0, 14)]
+    relance = lect[:5] + [(2.5 + k / 2, None) for k in range(1, 20)] + [(14.0, 14), (14.5, 14), (15.0, 13)]       # 10 s plus tard : nouveau lancement
+    assert R.transitions_chiffres(relance) == [(1.0, 14), (14.0, 14)]
+    hors = lect[:5] + [(2.5 + k / 2, "hors") for k in range(1, 40)] + [(22.5, 13), (23.0, 13), (23.5, 12)]       # cinématique : le chrono ne court pas
+    assert R.transitions_chiffres(hors) == [(1.0, 14)]
