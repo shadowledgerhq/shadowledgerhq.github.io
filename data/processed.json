@@ -231,7 +231,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "uwJfPTJI8ZE": {
@@ -256,7 +257,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "tOzRUlmZ2JI": {
@@ -281,7 +283,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "g50pPUDoTvw": {
@@ -306,7 +309,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "wFFdg1gcZpE": {
@@ -331,7 +335,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "wSFAPACPk5E": {
@@ -356,7 +361,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "a-923ClD9Rc": {
@@ -381,7 +387,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "E4lHBPoZeKs": {
@@ -406,7 +413,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "5MI-RLj7FSk": {
@@ -431,7 +439,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "PncUhejH3E8": {
@@ -456,7 +465,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "wJ9CwjKwyco": {
@@ -464,13 +474,13 @@
     "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
     "published_at": "2026-11-12T01:50:30Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-15",
+    "updated_at": "2026-11-17",
     "last_tri": 4,
-    "status": "termine",
+    "status": "en_cours",
     "modes": [
       "bot"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 17,
     "pc": {
       "image_taille": [
@@ -479,10 +489,13 @@
       ],
       "hud_suite": [],
       "results_lus": [],
-      "tri3": "fait",
+      "tri3": "a_faire",
       "date": "2026-11-15",
-      "tri4": "fait"
-    }
+      "tri4": "a_faire",
+      "tri2": "fait"
+    },
+    "relecture": "2026-11-17",
+    "relecture_auto": 18
   },
   "duX8KmoDdYw": {
     "week": "2026-11-12",
@@ -506,7 +519,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "vnxe8g3WLuA": {
@@ -531,7 +545,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "nh2D7xZ7dOQ": {
@@ -1250,7 +1265,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-16",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "HWebrRc_l0o": {
@@ -1275,7 +1291,8 @@
       "results_lus": [],
       "tri3": "fait",
       "date": "2026-11-16",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "09SuKtzmeK0": {
@@ -1587,7 +1604,10 @@
       "bot"
     ],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "3H9bI1bqZj8": {
     "week": "2026-11-12",
@@ -1691,7 +1711,10 @@
       "bot"
     ],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "aOBl6vdd7ss": {
     "week": "2026-11-12",
@@ -1705,7 +1728,10 @@
       "bot"
     ],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "DQXSGBtqiws": {
     "week": "2026-11-12",
@@ -1719,7 +1745,10 @@
       "bot"
     ],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "nwP8dSSfo1o": {
     "week": "2026-11-12",
@@ -1744,7 +1773,8 @@
       "hud_amont": [],
       "tri3": "fait",
       "date": "2026-11-17",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "d162Zp0KL6Y": {
@@ -1934,7 +1964,8 @@
       "hud_amont": [],
       "tri3": "fait",
       "date": "2026-11-17",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "XDyfEbfp2Hg": {
@@ -1963,7 +1994,10 @@
       "bot"
     ],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "p1lkYXYJX6M": {
     "week": "2026-11-12",
@@ -1977,7 +2011,10 @@
       "bot"
     ],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "77pbAyrW6no": {
     "week": "2026-11-12",
@@ -1991,7 +2028,10 @@
       "bot"
     ],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "K5U3T5XJGLo": {
     "week": "2026-11-12",
@@ -2005,7 +2045,10 @@
       "bot"
     ],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "ysfa3H023n8": {
     "week": "2026-11-12",
@@ -2030,7 +2073,8 @@
       "hud_amont": [],
       "tri3": "fait",
       "date": "2026-11-17",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "Bi5TrN5d1_E": {
@@ -2045,7 +2089,10 @@
       "bot"
     ],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "OppPeyQ--7s": {
     "week": "2026-11-12",
@@ -2070,7 +2117,8 @@
       "hud_amont": [],
       "tri3": "fait",
       "date": "2026-11-17",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait"
     }
   },
   "RXGoXZggzWM": {

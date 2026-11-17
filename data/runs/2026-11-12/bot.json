@@ -1,44 +1,5 @@
 [
   {
-    "run_id": "bot-2026-11-12-wJ9CwjKwyco",
-    "week": "2026-11-12",
-    "mode": "bot",
-    "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
-    "player": "X SLA",
-    "channel": "X SLA",
-    "video_id": "wJ9CwjKwyco",
-    "video_ids": [
-      "wJ9CwjKwyco"
-    ],
-    "published_at": "2026-11-12T02:50:30+01:00",
-    "lang": "en",
-    "score": {
-      "total": 19.0,
-      "runs": [
-        19.0
-      ],
-      "unit": "seconds"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 19s; boss non contrôlé",
-    "bot_season_week": null,
-    "player_ingame": null,
-    "runs_detail": [
-      {
-        "video_id": "wJ9CwjKwyco",
-        "published_at": "2026-11-12T02:50:30+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false
-      }
-    ]
-  },
-  {
     "run_id": "bot-2026-11-12-a-923ClD9Rc",
     "week": "2026-11-12",
     "mode": "bot",
@@ -117,6 +78,45 @@
     ]
   },
   {
+    "run_id": "bot-2026-11-12-wJ9CwjKwyco",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
+    "player": "X SLA",
+    "channel": "X SLA",
+    "video_id": "wJ9CwjKwyco",
+    "video_ids": [
+      "wJ9CwjKwyco"
+    ],
+    "published_at": "2026-11-12T02:50:30+01:00",
+    "lang": "en",
+    "score": {
+      "total": 19.926,
+      "runs": [
+        19.926
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "miniature",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (miniature) : 19.926; publiée juste après le reset : semaine précédente ?; titre arrondi : 19s; boss non contrôlé",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "wJ9CwjKwyco",
+        "published_at": "2026-11-12T02:50:30+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "miniature",
+        "exact": false
+      }
+    ]
+  },
+  {
     "run_id": "bot-2026-11-12-5MI-RLj7FSk",
     "week": "2026-11-12",
     "mode": "bot",
@@ -140,7 +140,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 19.9s; boss non contrôlé",
+    "notes": "score provisoire (titre) : 19.9s; chrono incomplet : rang prudent; boss non contrôlé",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
@@ -234,45 +234,6 @@
     ]
   },
   {
-    "run_id": "bot-2026-11-12-uwJfPTJI8ZE",
-    "week": "2026-11-12",
-    "mode": "bot",
-    "channel_id": "UCXTmMgefIJnkOksH7acBrXQ",
-    "player": "리히온",
-    "channel": "리히온",
-    "video_id": "uwJfPTJI8ZE",
-    "video_ids": [
-      "uwJfPTJI8ZE"
-    ],
-    "published_at": "2026-11-13T06:44:18+01:00",
-    "lang": "ko",
-    "score": {
-      "total": 28.0,
-      "runs": [
-        28.0
-      ],
-      "unit": "seconds"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : 28초; boss non contrôlé",
-    "bot_season_week": null,
-    "player_ingame": null,
-    "runs_detail": [
-      {
-        "video_id": "uwJfPTJI8ZE",
-        "published_at": "2026-11-13T06:44:18+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false
-      }
-    ]
-  },
-  {
     "run_id": "bot-2026-11-12-ysfa3H023n8",
     "week": "2026-11-12",
     "mode": "bot",
@@ -312,6 +273,45 @@
     ]
   },
   {
+    "run_id": "bot-2026-11-12-uwJfPTJI8ZE",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCXTmMgefIJnkOksH7acBrXQ",
+    "player": "리히온",
+    "channel": "리히온",
+    "video_id": "uwJfPTJI8ZE",
+    "video_ids": [
+      "uwJfPTJI8ZE"
+    ],
+    "published_at": "2026-11-13T06:44:18+01:00",
+    "lang": "ko",
+    "score": {
+      "total": 28.0,
+      "runs": [
+        28.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 28초; chrono incomplet : rang prudent; boss non contrôlé",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "uwJfPTJI8ZE",
+        "published_at": "2026-11-13T06:44:18+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
     "run_id": "bot-2026-11-12-duX8KmoDdYw",
     "week": "2026-11-12",
     "mode": "bot",
@@ -335,7 +335,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 29s; boss non contrôlé",
+    "notes": "score provisoire (titre) : 29s; chrono incomplet : rang prudent; boss non contrôlé",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
@@ -374,7 +374,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 35 sec; description non relue (règles v3); boss non contrôlé",
+    "notes": "score provisoire (description) : 35 sec; description non relue (règles v3); chrono incomplet : rang prudent; boss non contrôlé",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
@@ -452,7 +452,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 44s; boss non contrôlé",
+    "notes": "score provisoire (description) : 44s; chrono incomplet : rang prudent; boss non contrôlé",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [

@@ -172,7 +172,7 @@ def chronos(texte):
             continue
         frac = int(ms.ljust(3, "0")) / 1000 if ms else 0.0
         valeur = round(h * 3600 + mi * 60 + s + frac, 3)
-        res.append({"valeur": valeur, "arrondi": not ms or len(ms) < 3,
+        res.append({"valeur": valeur, "arrondi": not ms or len(ms) < 3, "decimales": min(3, len(ms)) if ms else 0,
                     "brut": m.group(0).strip(), "pos": m.start()})
     return res
 
