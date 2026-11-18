@@ -35,17 +35,17 @@
     [
       "durée ≥ chrono − 0,5 s",
       true,
-      "durée 47.5 s, chrono 19.558 s (×2.4)"
+      "durée 41.4 s, chrono 19.558 s (×2.1)"
     ],
     [
       "fin avant la composition",
       null,
-      "fin 104.0 s, composition 0 s"
+      "fin 97.9 s, composition 0 s"
     ],
     [
       "≥ 1 événement SJW",
       true,
-      "4 événement(s)"
+      "1 événement(s)"
     ],
     [
       "≥ 1 événement par chasseur actif identifié",
@@ -60,7 +60,7 @@
     [
       "t_game croissant, ≤ chrono, phases dans la fenêtre",
       true,
-      "20 lecture(s) 2.219→19.558 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable)"
+      "7 lecture(s) 1.969→19.37 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable)"
     ]
   ],
   "Lt84IhMjBvM": [

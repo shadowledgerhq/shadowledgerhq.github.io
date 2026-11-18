@@ -299,3 +299,13 @@ error: The following untracked working tree files would be overwritten by checko
 - **Passage complet : non** (passage refusé : un autre passage PC tourne déjà (daily (PID 15152, depuis 7 min)))
 - Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
 - Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà (daily (PID 15152, depuis 7 min))
+
+<!-- passage-pc pc-daily 2026-11-18T23:38:53.745362+00:00 -->
+## Passage pc-daily — 2026-11-19 00:38 (Paris)
+
+- Top 10 couvert : non (56 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 88 (dont 56 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 4 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert

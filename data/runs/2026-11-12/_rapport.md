@@ -1,17 +1,11 @@
-# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-18 22:00 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-19 00:38 (Paris)
 
 - Top 10 couvert : non (56 vidéos candidates au top 10 restantes)
-- **Passage complet : non** (anti-bot YouTube (passage incomplet)
-- Vidéos traitées ce passage : 15 · en_cours restantes : 88 (dont 56 à traiter par le PC)
-- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
-- Durée du passage : 152 min
-- Relance automatique : 19/11/2026 00:00 (une seule fois par soir)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 88 (dont 56 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 4 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
-- Relectures posées (règles plus anciennes, top 10 provisoire sans Results lu) : a-923ClD9Rc (bot), Lt84IhMjBvM (bot), 5MI-RLj7FSk (bot), tOzRUlmZ2JI (bot)
-- Résumé GB : vYtRCpFtSOk · Eden(이든) · Results lu (220-279 s) · 322 RC à vérifier · light · contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262
-- Résumé GB : awb-GlVIa7Q · Ahmad1195 · Results lu (20-50 s) · 189 RC à vérifier · groupe 1 · light · RC discordant écarté : 2 (t=232)
-- Résumé GB : qySXyOxUehE · Sohoven · aucun Results lu · 185 RC à vérifier · score provisoire (titre) : 185 RC
-- Résumé GB : xoycsD2CqSc · RAVANPLAYZ · Results lu (623-633 s) · 2 RC à vérifier · fire · conflit de lecture : rage_count
 
 - Semaine : 88 en cours (dont 73 pour le PC), 38 terminée(s), 13 rejetée(s)
 - Classements : bot 17, gb 9, hotm-gate-inconnue 5, poc 5
@@ -64,10 +58,4 @@
 - rien
 
 ## Erreurs et alertes
-- znpyCNWml3I : 429 / anti-bot YouTube, reportée au prochain passage
-- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
-- 58 vidéo(s) reportée(s) pour les images (limite 15)
-- zFsAGI_xyOQ : libellés ko inconnus (aucun écran GB reconnu)
-- qySXyOxUehE : libellés fr inconnus (aucun écran GB reconnu)
 - 88 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : 19/11/2026 00:00 (une seule fois par soir)

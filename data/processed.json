@@ -391,7 +391,7 @@
     "channel_id": "UCYNsWXOKkyjkkm-pFvt0vAQ",
     "published_at": "2026-11-12T12:01:40Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-18",
+    "updated_at": "2026-11-19",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -412,7 +412,7 @@
       "tri2": "fait",
       "hud_amont": [],
       "rotation": "fait",
-      "rotation_version": 10
+      "rotation_version": 11
     },
     "relecture": "2026-11-18",
     "relecture_auto": 18
