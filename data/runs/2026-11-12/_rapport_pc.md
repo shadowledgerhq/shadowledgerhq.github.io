@@ -276,3 +276,26 @@ error: The following untracked working tree files would be overwritten by checko
 - Erreurs bloquantes : aucune
 - Durée du passage : 4 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-daily 2026-11-18T21:00:27.438295+00:00 -->
+## Passage pc-daily — 2026-11-18 22:00 (Paris)
+
+- Top 10 couvert : non (56 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 15 · en_cours restantes : 88 (dont 56 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 152 min
+- Relance automatique : 19/11/2026 00:00 (une seule fois par soir)
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Relectures posées (règles plus anciennes, top 10 provisoire sans Results lu) : a-923ClD9Rc (bot), Lt84IhMjBvM (bot), 5MI-RLj7FSk (bot), tOzRUlmZ2JI (bot)
+- Résumé GB : vYtRCpFtSOk · Eden(이든) · Results lu (220-279 s) · 322 RC à vérifier · light · contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262
+- Résumé GB : awb-GlVIa7Q · Ahmad1195 · Results lu (20-50 s) · 189 RC à vérifier · groupe 1 · light · RC discordant écarté : 2 (t=232)
+- Résumé GB : qySXyOxUehE · Sohoven · aucun Results lu · 185 RC à vérifier · score provisoire (titre) : 185 RC
+- Résumé GB : xoycsD2CqSc · RAVANPLAYZ · Results lu (623-633 s) · 2 RC à vérifier · fire · conflit de lecture : rage_count
+
+<!-- passage-pc pc-daily 2026-11-18T21:07:31.678773+00:00 -->
+## Passage pc-daily — 2026-11-18 22:07 (Paris)
+
+- **Passage complet : non** (passage refusé : un autre passage PC tourne déjà (daily (PID 15152, depuis 7 min)))
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà (daily (PID 15152, depuis 7 min))

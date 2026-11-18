@@ -1,29 +1,29 @@
-# Rapport — semaine 2026-11-12 — passage daily — 2026-11-18 20:51 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-18 22:00 (Paris)
 
-Dernier passage du PC (`_rapport_pc.md`, recopié) :
-
-## Passage pc-daily — 2026-11-18 19:25 (Paris)
-
-- Top 10 couvert : non (42 vidéos candidates au top 10 restantes)
-- **Passage complet : non** (vidéos restantes à traiter)
-- Vidéos traitées ce passage : 1 · en_cours restantes : 73 (dont 42 à traiter par le PC)
-- Erreurs bloquantes : aucune
-- Durée du passage : 4 min
+- Top 10 couvert : non (56 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 15 · en_cours restantes : 88 (dont 56 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 152 min
+- Relance automatique : 19/11/2026 00:00 (une seule fois par soir)
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Relectures posées (règles plus anciennes, top 10 provisoire sans Results lu) : a-923ClD9Rc (bot), Lt84IhMjBvM (bot), 5MI-RLj7FSk (bot), tOzRUlmZ2JI (bot)
+- Résumé GB : vYtRCpFtSOk · Eden(이든) · Results lu (220-279 s) · 322 RC à vérifier · light · contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262
+- Résumé GB : awb-GlVIa7Q · Ahmad1195 · Results lu (20-50 s) · 189 RC à vérifier · groupe 1 · light · RC discordant écarté : 2 (t=232)
+- Résumé GB : qySXyOxUehE · Sohoven · aucun Results lu · 185 RC à vérifier · score provisoire (titre) : 185 RC
+- Résumé GB : xoycsD2CqSc · RAVANPLAYZ · Results lu (623-633 s) · 2 RC à vérifier · fire · conflit de lecture : rage_count
 
-- Quota : 1704 unités
-- Ce passage : 22 vidéo(s) nouvelle(s), 1 rejetée(s), 3 score(s) provisoire(s)
-- Semaine : 95 en cours (dont 81 pour le PC), 31 terminée(s), 13 rejetée(s)
+- Semaine : 88 en cours (dont 73 pour le PC), 38 terminée(s), 13 rejetée(s)
 - Classements : bot 17, gb 9, hotm-gate-inconnue 5, poc 5
 
 ## À vérifier (34)
-- gb · RAVANPLAYZ · 338 · xoycsD2CqSc · score provisoire (titre) : RAGE COUNT 338; une seule run trouvée
-- gb · Eden(이든) · 322 · vYtRCpFtSOk · lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (72 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Light / Fire)
-- gb · Ahmad1195 · 189 · awb-GlVIa7Q · écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (144 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée
+- gb · Eden(이든) · 322 · vYtRCpFtSOk · lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (72 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; élément associé titre + chasseurs
+- gb · Ahmad1195 · 189 · awb-GlVIa7Q · écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (144 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Final Score 64299126429862 hors de [Points HUD 84295496142280 ; × 1.02]; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée
 - gb · Sohoven · 185 · qySXyOxUehE · score provisoire (titre) : 185 RC; une seule run trouvée
 - gb · mitchell leveling · 177 · trinzgj3FV4 · score provisoire (titre) : 177 RC; une seule run trouvée
 - gb · SNG · 176 · OPcjwjYkuME · écart OCR zone/image : final_score; écart OCR zone/image : rage_count; contrôle GB : somme 30263550677307 ≠ Final Score 30458500980570; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; une seule run trouvée
 - gb · HS Retro Gaming · 19 · lGDbzyIJcjY · écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée
+- gb · RAVANPLAYZ · 2 · xoycsD2CqSc · écart OCR zone/image : player_score; lecture fusionnée (12 images); conflit de lecture : rage_count; une seule run trouvée
 - hotm-gate-inconnue · OhchiGameS · 94000 · RVkSt2bWn_U · score provisoire (titre) : 94000; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · RAVANPLAYZ · 91500 · 8qqgrjiYhck · score provisoire (titre) : 91500; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · SNG · 85000 · SdiCUFy5FbE · score provisoire (titre) : 85k; porte HOTM illisible; boss non contrôlé
@@ -34,7 +34,7 @@ Dernier passage du PC (`_rapport_pc.md`, recopié) :
 - poc · SNG · 52820000000000 · 2AJljDc_nN4 · score provisoire (titre) : 52.82T; une seule run trouvée; boss non contrôlé
 - poc · RaidenShadow · 4570000000000 · LQM4VbJ3vpc · score provisoire (titre) : 4,57T; une seule run trouvée; boss non contrôlé
 - poc · INVINCIBLE_YT · 4100000000000 · cK1YiH9qwnI · score provisoire (titre) : 4.1T; une seule run trouvée; boss non contrôlé
-- bot · 홀맨 · 19.517 · YSJFLd_OXww · score provisoire (titre) : 19.517s; boss non contrôlé
+- bot · 홀맨 · 14.515 · YSJFLd_OXww · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · aaaaaaaaaaaa · 19.558 · a-923ClD9Rc · score provisoire (titre) : 19.558; semaine confirmée (titre); boss non contrôlé
 - bot · 크리스 · 19.5 · znpyCNWml3I · score provisoire (titre) : 19.5s; chrono incomplet : rang prudent; boss non contrôlé
 - bot · 𐐂露依Rui ルイ 𐐚 · 19.754 · Lt84IhMjBvM · score provisoire (titre) : 19.754s; écran : partie entière mal lue (18 → 19 par Play Time et titre); semaine confirmée (titre); boss non contrôlé
@@ -64,4 +64,10 @@ Dernier passage du PC (`_rapport_pc.md`, recopié) :
 - rien
 
 ## Erreurs et alertes
-- rien
+- znpyCNWml3I : 429 / anti-bot YouTube, reportée au prochain passage
+- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
+- 58 vidéo(s) reportée(s) pour les images (limite 15)
+- zFsAGI_xyOQ : libellés ko inconnus (aucun écran GB reconnu)
+- qySXyOxUehE : libellés fr inconnus (aucun écran GB reconnu)
+- 88 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- passage incomplet : anti-bot ; relance : 19/11/2026 00:00 (une seule fois par soir)

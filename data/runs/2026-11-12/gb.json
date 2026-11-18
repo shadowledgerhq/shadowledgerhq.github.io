@@ -100,47 +100,6 @@
     ]
   },
   {
-    "run_id": "gb-2026-11-12-xoycsD2CqSc",
-    "week": "2026-11-12",
-    "mode": "gb",
-    "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
-    "player": "RAVANPLAYZ",
-    "channel": "RAVANPLAYZ",
-    "video_id": "xoycsD2CqSc",
-    "video_ids": [
-      "xoycsD2CqSc"
-    ],
-    "published_at": "2026-11-18T14:22:05+01:00",
-    "lang": "en",
-    "score": {
-      "total": 338,
-      "runs": [
-        338
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : RAGE COUNT 338; une seule run trouvée",
-    "runs_detail": [
-      {
-        "video_id": "xoycsD2CqSc",
-        "published_at": "2026-11-18T14:22:05+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false,
-        "damage": null,
-        "damage_exact": null,
-        "element": null,
-        "element_source": null
-      }
-    ]
-  },
-  {
     "run_id": "gb-2026-11-12-vYtRCpFtSOk",
     "week": "2026-11-12",
     "mode": "gb",
@@ -166,7 +125,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (72 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Light / Fire)",
+    "notes": "lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (72 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; élément associé titre + chasseurs",
     "runs_detail": [
       {
         "video_id": "vYtRCpFtSOk",
@@ -179,7 +138,8 @@
         "damage": 12859482380262,
         "damage_exact": true,
         "element": "light",
-        "element_source": "titre"
+        "element_source": "titre+ecran",
+        "hud_rage_count": 120
       },
       {
         "video_id": "MJ2iz5TFmvM",
@@ -221,7 +181,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (144 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée",
+    "notes": "écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (144 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Final Score 64299126429862 hors de [Points HUD 84295496142280 ; × 1.02]; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée",
     "runs_detail": [
       {
         "video_id": "awb-GlVIa7Q",
@@ -234,7 +194,8 @@
         "damage": 64299126429862,
         "damage_exact": true,
         "element": "light",
-        "element_source": "titre"
+        "element_source": "titre+ecran",
+        "hud_rage_count": 157
       }
     ]
   },
@@ -401,6 +362,48 @@
         "element": "wind",
         "element_source": "titre+ecran",
         "hud_rage_count": 12
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-12-xoycsD2CqSc",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
+    "player": "RAVANPLAYZ",
+    "channel": "RAVANPLAYZ",
+    "video_id": "xoycsD2CqSc",
+    "video_ids": [
+      "xoycsD2CqSc"
+    ],
+    "published_at": "2026-11-18T14:22:05+01:00",
+    "lang": "en",
+    "score": {
+      "total": 2,
+      "runs": [
+        2
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "écart OCR zone/image : player_score; lecture fusionnée (12 images); conflit de lecture : rage_count; une seule run trouvée",
+    "runs_detail": [
+      {
+        "video_id": "xoycsD2CqSc",
+        "published_at": "2026-11-18T14:22:05+01:00",
+        "t": 630,
+        "stage": "Giant Statue",
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": false,
+        "damage": 22832385367478,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 144
       }
     ]
   }

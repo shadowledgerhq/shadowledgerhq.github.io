@@ -2846,550 +2846,6 @@
     ]
   },
   {
-    "video_id": "vYtRCpFtSOk",
-    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
-    "channel_title": "Eden(이든)",
-    "published_at": "2026-11-12T10:51:56Z",
-    "lang": "ko",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 12859482380262,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 220,
-    "stage": "거대 석상",
-    "team": null,
-    "score": 162,
-    "score_source": "video-complete",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "damage_exact": true,
-      "play_time": "03:00",
-      "new_record": false,
-      "player_score": 2524909777122,
-      "hunter_ranks": [
-        9241675813363,
-        19008319055,
-        370200200655,
-        124363571339,
-        44836373256,
-        98138331472
-      ],
-      "hunter_ranks_lus": 6,
-      "n_images": 4,
-      "successor_score": null,
-      "successeur_present": false,
-      "votes": {
-        "stage": [
-          [
-            "거대 석상",
-            4
-          ]
-        ],
-        "player_score": [
-          [
-            2524909777122,
-            4
-          ]
-        ],
-        "final_score": [
-          [
-            12859482380262,
-            4
-          ]
-        ],
-        "rage_count": [
-          [
-            162,
-            4
-          ]
-        ],
-        "play_time": [
-          [
-            "03:00",
-            4
-          ]
-        ],
-        "hunter_rank_1": [
-          [
-            9241675813363,
-            3
-          ]
-        ],
-        "hunter_rank_2": [
-          [
-            515958313055,
-            1
-          ],
-          [
-            19008319055,
-            2
-          ]
-        ],
-        "hunter_rank_3": [
-          [
-            370200200655,
-            3
-          ],
-          [
-            3241679819063,
-            1
-          ]
-        ],
-        "hunter_rank_4": [
-          [
-            124363571339,
-            3
-          ]
-        ],
-        "hunter_rank_5": [
-          [
-            44836373256,
-            3
-          ]
-        ],
-        "hunter_rank_6": [
-          [
-            98138331472,
-            2
-          ],
-          [
-            38138331472,
-            1
-          ]
-        ]
-      },
-      "rc_images": 4,
-      "final_images": 4,
-      "rc_t": {
-        "162": 220
-      },
-      "sequence": {
-        "rage_count": [
-          [
-            220,
-            162
-          ],
-          [
-            224,
-            162
-          ],
-          [
-            225,
-            162
-          ],
-          [
-            226,
-            162
-          ]
-        ],
-        "final_score": [
-          [
-            220,
-            12859482380262
-          ],
-          [
-            224,
-            12859482380262
-          ],
-          [
-            225,
-            12859482380262
-          ],
-          [
-            226,
-            12859482380262
-          ]
-        ]
-      },
-      "par_t": [
-        [
-          220,
-          {
-            "stage": "거대 석상",
-            "player_score": 2524909777122,
-            "final_score": 12859482380262,
-            "rage_count": 162,
-            "play_time": "03:00",
-            "hunter_rank_1": 9241675813363,
-            "hunter_rank_2": 515958313055,
-            "hunter_rank_3": 370200200655,
-            "hunter_rank_4": 124363571339,
-            "hunter_rank_5": 44836373256,
-            "hunter_rank_6": 98138331472
-          }
-        ],
-        [
-          224,
-          {
-            "stage": "거대 석상",
-            "player_score": 2524909777122,
-            "final_score": 12859482380262,
-            "rage_count": 162,
-            "play_time": "03:00",
-            "hunter_rank_3": 3241679819063
-          }
-        ],
-        [
-          225,
-          {
-            "stage": "거대 석상",
-            "player_score": 2524909777122,
-            "final_score": 12859482380262,
-            "rage_count": 162,
-            "play_time": "03:00",
-            "hunter_rank_1": 9241675813363,
-            "hunter_rank_2": 19008319055,
-            "hunter_rank_3": 370200200655,
-            "hunter_rank_4": 124363571339,
-            "hunter_rank_5": 44836373256,
-            "hunter_rank_6": 98138331472
-          }
-        ],
-        [
-          226,
-          {
-            "stage": "거대 석상",
-            "player_score": 2524909777122,
-            "final_score": 12859482380262,
-            "rage_count": 162,
-            "play_time": "03:00",
-            "hunter_rank_1": 9241675813363,
-            "hunter_rank_2": 19008319055,
-            "hunter_rank_3": 370200200655,
-            "hunter_rank_4": 124363571339,
-            "hunter_rank_5": 44836373256,
-            "hunter_rank_6": 38138331472
-          }
-        ]
-      ],
-      "t_debut": 220,
-      "t_fin": 226,
-      "duree_video_s": 425
-    },
-    "notes": [
-      "lecture fusionnée (4 images)",
-      "contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262",
-      "contrôle sans Hunter Rank : Hunter Rank lus non décroissants"
-    ]
-  },
-  {
-    "video_id": "awb-GlVIa7Q",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "channel_title": "Ahmad1195",
-    "published_at": "2026-11-12T01:07:38Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 17,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 20,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat",
-      "hud_points": null,
-      "chrono_hud": 9.5,
-      "separateur_perdu": false,
-      "hud_rage_count": 154,
-      "t_debut": 4,
-      "t_fin": 200
-    },
-    "notes": [
-      "HUD : Boss Rage Count x154, chrono 9.5"
-    ]
-  },
-  {
-    "video_id": "awb-GlVIa7Q",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "channel_title": "Ahmad1195",
-    "published_at": "2026-11-12T01:07:38Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 17,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 30,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat_sans_chrono",
-      "hud_points": 431716931243,
-      "hud_rage_count": 60,
-      "separateur_perdu": false
-    },
-    "notes": []
-  },
-  {
-    "video_id": "awb-GlVIa7Q",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "channel_title": "Ahmad1195",
-    "published_at": "2026-11-12T01:07:38Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 17,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 64299126429862,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 227,
-    "stage": "Giant Statue",
-    "team": null,
-    "score": 189,
-    "score_source": "video-complete",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "damage_exact": true,
-      "play_time": "03:00",
-      "new_record": true,
-      "player_score": 795244088074,
-      "hunter_ranks": [
-        98988392559253,
-        2330503854251,
-        990407426593,
-        734202919145,
-        508571686524,
-        751863896022
-      ],
-      "hunter_ranks_lus": 6,
-      "n_images": 144,
-      "successor_score": null,
-      "successeur_present": false,
-      "votes": {
-        "stage": [
-          [
-            "Giant Statue",
-            72
-          ]
-        ],
-        "player_score": [
-          [
-            795244088074,
-            126
-          ],
-          [
-            795246088074,
-            18
-          ]
-        ],
-        "final_score": [
-          [
-            64299126429862,
-            4
-          ],
-          [
-            64299126425862,
-            3
-          ],
-          [
-            64295126425862,
-            1
-          ]
-        ],
-        "rage_count": [
-          [
-            189,
-            6
-          ],
-          [
-            2,
-            2
-          ]
-        ],
-        "play_time": [
-          [
-            "03:00",
-            144
-          ]
-        ],
-        "hunter_rank_1": [
-          [
-            98988392559253,
-            36
-          ],
-          [
-            58388392559253,
-            18
-          ]
-        ],
-        "hunter_rank_2": [
-          [
-            2330503854251,
-            54
-          ]
-        ],
-        "hunter_rank_3": [
-          [
-            990407426593,
-            36
-          ],
-          [
-            90407426593,
-            18
-          ]
-        ],
-        "hunter_rank_4": [
-          [
-            734202919145,
-            54
-          ]
-        ],
-        "hunter_rank_5": [
-          [
-            508571686524,
-            54
-          ]
-        ],
-        "hunter_rank_6": [
-          [
-            751863896022,
-            18
-          ]
-        ]
-      },
-      "rc_images": 6,
-      "final_images": 4,
-      "rc_t": {
-        "189": 227,
-        "2": 232
-      },
-      "sequence": {
-        "rage_count": [
-          [
-            227,
-            189
-          ],
-          [
-            228,
-            189
-          ],
-          [
-            229,
-            189
-          ],
-          [
-            230,
-            189
-          ],
-          [
-            231,
-            189
-          ],
-          [
-            232,
-            2
-          ],
-          [
-            233,
-            189
-          ],
-          [
-            234,
-            2
-          ]
-        ],
-        "final_score": [
-          [
-            227,
-            64299126429862
-          ],
-          [
-            228,
-            64299126429862
-          ],
-          [
-            229,
-            64299126429862
-          ],
-          [
-            230,
-            64299126425862
-          ],
-          [
-            231,
-            64295126425862
-          ],
-          [
-            232,
-            64299126429862
-          ],
-          [
-            233,
-            64299126425862
-          ],
-          [
-            234,
-            64299126425862
-          ]
-        ]
-      },
-      "t_debut": 227,
-      "t_fin": 234,
-      "par_t": [],
-      "duree_video_s": 318
-    },
-    "notes": [
-      "écart OCR zone/image : rage_count",
-      "écart OCR zone/image : player_score",
-      "écart OCR zone/image : final_score",
-      "lecture fusionnée (144 images)",
-      "RC discordant écarté : 2 (t=232)",
-      "contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862",
-      "contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score",
-      "contrôle sans Hunter Rank : Hunter Rank lus non décroissants"
-    ]
-  },
-  {
-    "video_id": "awb-GlVIa7Q",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "channel_title": "Ahmad1195",
-    "published_at": "2026-11-12T01:07:38Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 17,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 64299126429862,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 240,
-    "stage": null,
-    "team": 1,
-    "score": 189,
-    "score_source": "record",
-    "exact": true,
-    "confidence": "sur",
-    "detail": {
-      "damage_exact": true,
-      "damage_step": null,
-      "total_score": 64299126429862,
-      "total_rage_count": 189,
-      "challenge_count": 1,
-      "time_left": "6d 22h",
-      "damage_source": "record"
-    },
-    "notes": []
-  },
-  {
     "video_id": "lGDbzyIJcjY",
     "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
     "channel_title": "HS Retro Gaming",
@@ -3727,70 +3183,6 @@
     ]
   },
   {
-    "video_id": "5MI-RLj7FSk",
-    "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
-    "channel_title": "PADWAE",
-    "published_at": "2026-11-12T03:07:23Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 50,
-    "stage": null,
-    "team": null,
-    "score": 19.977,
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "phases": [
-        8.974,
-        15.115,
-        19.977
-      ],
-      "play_time": 19,
-      "armes_sjw_vides": false,
-      "v27": true,
-      "v27_sur": true,
-      "par_t": [
-        50
-      ]
-    },
-    "notes": [
-      "boss non contrôlé",
-      "temps instable (animation ?)"
-    ]
-  },
-  {
-    "video_id": "5MI-RLj7FSk",
-    "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
-    "channel_title": "PADWAE",
-    "published_at": "2026-11-12T03:07:23Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 19.9,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 19.9s"
-    ]
-  },
-  {
     "video_id": "77pbAyrW6no",
     "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
     "channel_title": "MOBgame",
@@ -3905,47 +3297,6 @@
     "damage": null,
     "gate": null,
     "hunter_mode": null,
-    "t": 102,
-    "stage": null,
-    "team": null,
-    "score": 18.754,
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "phases": [
-        9.341,
-        14.792,
-        18.754
-      ],
-      "play_time": 19,
-      "armes_sjw_vides": false,
-      "v27": true,
-      "v27_sur": false,
-      "par_t": [
-        102,
-        104
-      ],
-      "sans_score": true
-    },
-    "notes": [
-      "boss non contrôlé",
-      "contrôle BOT : temps de jeu 19 ≠ dernière phase tronquée 18"
-    ]
-  },
-  {
-    "video_id": "Lt84IhMjBvM",
-    "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
-    "channel_title": "𐐂露依Rui ルイ 𐐚",
-    "published_at": "2026-11-13T10:12:06Z",
-    "lang": "zh",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": "S20-4",
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
     "t": null,
     "stage": null,
     "team": null,
@@ -4035,31 +3386,6 @@
     "notes": [
       "score provisoire (description) : 02:10.266",
       "description non relue (règles v3)"
-    ]
-  },
-  {
-    "video_id": "YSJFLd_OXww",
-    "channel_id": "UCD4V_LbqLFHCDCX-tx9GJTw",
-    "channel_title": "홀맨",
-    "published_at": "2026-11-17T05:43:48Z",
-    "lang": "ko",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 19.517,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 19.517s"
     ]
   },
   {
@@ -4567,16 +3893,1833 @@
     "damage": null,
     "gate": null,
     "hunter_mode": null,
+    "t": 110,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 511975093094,
+      "hud_rage_count": 62,
+      "separateur_perdu": false,
+      "elements_hud": [
+        "fire",
+        "fire",
+        "fire"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "xoycsD2CqSc",
+    "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
+    "channel_title": "RAVANPLAYZ",
+    "published_at": "2026-11-18T13:22:05Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 20342080417868,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 617,
+    "stage": "Giant Statue",
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": 20342080417868,
+      "chrono_hud": 1.22,
+      "separateur_perdu": false,
+      "hud_rage_count": 144,
+      "elements_hud": [
+        "light",
+        "light",
+        "light"
+      ],
+      "t_debut": 100,
+      "t_fin": 617,
+      "elements_hud_par_t": {
+        "100": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "140": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "180": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "230": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "250": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "260": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "310": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "320": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "330": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "331": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "332": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "450": [
+          "light",
+          "light",
+          "light"
+        ],
+        "480": [
+          "light",
+          "light",
+          "light"
+        ],
+        "520": [
+          "light",
+          "light",
+          "light"
+        ],
+        "570": [
+          "light",
+          "light",
+          "light"
+        ],
+        "600": [
+          "light",
+          "light",
+          "light"
+        ],
+        "605": [
+          "light",
+          "light",
+          "light"
+        ],
+        "613": [
+          "light",
+          "light",
+          "light"
+        ],
+        "615": [
+          "light",
+          "light",
+          "light"
+        ],
+        "617": [
+          "light",
+          "light",
+          "light"
+        ]
+      },
+      "damage_exact": false,
+      "damage_source": "hud"
+    },
+    "notes": [
+      "HUD : Boss Rage Count x144, chrono 1.22"
+    ]
+  },
+  {
+    "video_id": "xoycsD2CqSc",
+    "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
+    "channel_title": "RAVANPLAYZ",
+    "published_at": "2026-11-18T13:22:05Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 22832385367478,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 630,
+    "stage": "Giant Statue",
+    "team": null,
+    "score": 2,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": true,
+      "player_score": 248058378289,
+      "hunter_ranks": [
+        19818470451538,
+        135511683382,
+        964846248359,
+        345969019359,
+        773550201949,
+        141579384602
+      ],
+      "hunter_ranks_lus": 6,
+      "n_images": 12,
+      "successor_score": null,
+      "successeur_present": false,
+      "duree_video_s": 635,
+      "votes": {
+        "stage": [
+          [
+            "Giant Statue",
+            12
+          ]
+        ],
+        "final_score": [
+          [
+            22832385367478,
+            12
+          ]
+        ],
+        "rage_count": [
+          [
+            7,
+            1
+          ],
+          [
+            17,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            12
+          ]
+        ],
+        "hunter_rank_5": [
+          [
+            773550201949,
+            11
+          ],
+          [
+            273550201949,
+            1
+          ]
+        ],
+        "hunter_rank_6": [
+          [
+            141579384602,
+            12
+          ]
+        ],
+        "player_score": [
+          [
+            248058378289,
+            10
+          ]
+        ],
+        "hunter_rank_1": [
+          [
+            19818470451538,
+            11
+          ]
+        ],
+        "hunter_rank_4": [
+          [
+            345969019359,
+            6
+          ],
+          [
+            945969019359,
+            5
+          ]
+        ],
+        "hunter_rank_3": [
+          [
+            964846248359,
+            5
+          ]
+        ],
+        "hunter_rank_2": [
+          [
+            135511683382,
+            4
+          ]
+        ]
+      },
+      "rc_images": 3,
+      "final_images": 12,
+      "rc_t": {
+        "7": 622,
+        "17": 628,
+        "2": 630,
+        "171": 629
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            622,
+            7
+          ],
+          [
+            628,
+            17
+          ],
+          [
+            629,
+            17
+          ],
+          [
+            630,
+            2
+          ],
+          [
+            631,
+            2
+          ],
+          [
+            632,
+            2
+          ]
+        ],
+        "final_score": [
+          [
+            620,
+            22832385367478
+          ],
+          [
+            622,
+            22832385367478
+          ],
+          [
+            623,
+            22832385367478
+          ],
+          [
+            624,
+            22832385367478
+          ],
+          [
+            625,
+            22832385367478
+          ],
+          [
+            626,
+            22832385367478
+          ],
+          [
+            627,
+            22832385367478
+          ],
+          [
+            628,
+            22832385367478
+          ],
+          [
+            629,
+            22832385367478
+          ],
+          [
+            630,
+            22832385367478
+          ],
+          [
+            631,
+            22832385367478
+          ],
+          [
+            632,
+            22832385367478
+          ]
+        ]
+      },
+      "par_t": [
+        [
+          620,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_4": 945969019359,
+            "hunter_rank_5": 273550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          622,
+          {
+            "stage": "Giant Statue",
+            "final_score": 22832385367478,
+            "rage_count": 7,
+            "play_time": "03:00",
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          623,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_4": 345969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          624,
+          {
+            "stage": "Giant Statue",
+            "final_score": 22832385367478,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_4": 345969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          625,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_4": 345969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          626,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_4": 345969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          627,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_4": 345969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          628,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "rage_count": 17,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_3": 964846248359,
+            "hunter_rank_4": 345969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          629,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "rage_count": 17,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_2": 135511683382,
+            "hunter_rank_3": 964846248359,
+            "hunter_rank_4": 945969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          630,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "rage_count": 2,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_2": 135511683382,
+            "hunter_rank_3": 964846248359,
+            "hunter_rank_4": 945969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          631,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "rage_count": 2,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_2": 135511683382,
+            "hunter_rank_3": 964846248359,
+            "hunter_rank_4": 945969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ],
+        [
+          632,
+          {
+            "stage": "Giant Statue",
+            "player_score": 248058378289,
+            "final_score": 22832385367478,
+            "rage_count": 2,
+            "play_time": "03:00",
+            "hunter_rank_1": 19818470451538,
+            "hunter_rank_2": 135511683382,
+            "hunter_rank_3": 964846248359,
+            "hunter_rank_4": 945969019359,
+            "hunter_rank_5": 773550201949,
+            "hunter_rank_6": 141579384602
+          }
+        ]
+      ],
+      "t_debut": 620,
+      "t_fin": 632,
+      "rc_texte": [
+        338
+      ],
+      "elements_hud_images": [
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ]
+      ],
+      "elements_hud": [
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light"
+      ],
+      "hud_rage_count": 144
+    },
+    "notes": [
+      "écart OCR zone/image : player_score",
+      "lecture fusionnée (12 images)",
+      "conflit de lecture : rage_count"
+    ]
+  },
+  {
+    "video_id": "vYtRCpFtSOk",
+    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+    "channel_title": "Eden(이든)",
+    "published_at": "2026-11-12T10:51:56Z",
+    "lang": "ko",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 192,
+    "stage": "거대 석상",
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 10650049649271,
+      "hud_rage_count": null,
+      "separateur_perdu": false,
+      "elements_hud": [
+        "light",
+        "light",
+        "light"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "vYtRCpFtSOk",
+    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+    "channel_title": "Eden(이든)",
+    "published_at": "2026-11-12T10:51:56Z",
+    "lang": "ko",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 208,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": null,
+      "chrono_hud": 1.6400000000000001,
+      "separateur_perdu": false,
+      "hud_rage_count": 120,
+      "elements_hud": [
+        "light",
+        "light",
+        "light"
+      ],
+      "t_debut": 194,
+      "t_fin": 208,
+      "elements_hud_par_t": {
+        "194": [
+          "light",
+          "light",
+          "light"
+        ],
+        "195": [
+          "light",
+          "light",
+          "light"
+        ],
+        "205": [
+          "light",
+          "light",
+          "light"
+        ],
+        "208": [
+          "light",
+          "light",
+          "light"
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x120, chrono 1.6400000000000001"
+    ]
+  },
+  {
+    "video_id": "vYtRCpFtSOk",
+    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+    "channel_title": "Eden(이든)",
+    "published_at": "2026-11-12T10:51:56Z",
+    "lang": "ko",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 12859482380262,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 220,
+    "stage": "거대 석상",
+    "team": null,
+    "score": 162,
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": false,
+      "player_score": 2524909777122,
+      "hunter_ranks": [
+        9241675813363,
+        19008319055,
+        370200200655,
+        124363571339,
+        44836373256,
+        98138331472
+      ],
+      "hunter_ranks_lus": 6,
+      "n_images": 4,
+      "successor_score": null,
+      "successeur_present": false,
+      "votes": {
+        "stage": [
+          [
+            "거대 석상",
+            4
+          ]
+        ],
+        "player_score": [
+          [
+            2524903777122,
+            1
+          ],
+          [
+            2924909777122,
+            1
+          ],
+          [
+            2524909777122,
+            2
+          ]
+        ],
+        "final_score": [
+          [
+            12859482380262,
+            4
+          ]
+        ],
+        "rage_count": [
+          [
+            162,
+            4
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            4
+          ]
+        ],
+        "hunter_rank_1": [
+          [
+            9241675813363,
+            3
+          ]
+        ],
+        "hunter_rank_2": [
+          [
+            515958313055,
+            1
+          ],
+          [
+            19008319055,
+            2
+          ]
+        ],
+        "hunter_rank_3": [
+          [
+            370200200655,
+            3
+          ],
+          [
+            3241679819063,
+            1
+          ]
+        ],
+        "hunter_rank_4": [
+          [
+            124363571339,
+            3
+          ]
+        ],
+        "hunter_rank_5": [
+          [
+            44836373256,
+            3
+          ]
+        ],
+        "hunter_rank_6": [
+          [
+            98138331472,
+            2
+          ],
+          [
+            38138331472,
+            1
+          ]
+        ]
+      },
+      "rc_images": 4,
+      "final_images": 4,
+      "rc_t": {
+        "162": 220
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            220,
+            162
+          ],
+          [
+            224,
+            162
+          ],
+          [
+            225,
+            162
+          ],
+          [
+            226,
+            162
+          ]
+        ],
+        "final_score": [
+          [
+            220,
+            12859482380262
+          ],
+          [
+            224,
+            12859482380262
+          ],
+          [
+            225,
+            12859482380262
+          ],
+          [
+            226,
+            12859482380262
+          ]
+        ]
+      },
+      "par_t": [
+        [
+          220,
+          {
+            "stage": "거대 석상",
+            "player_score": 2524903777122,
+            "final_score": 12859482380262,
+            "rage_count": 162,
+            "play_time": "03:00",
+            "hunter_rank_1": 9241675813363,
+            "hunter_rank_2": 515958313055,
+            "hunter_rank_3": 370200200655,
+            "hunter_rank_4": 124363571339,
+            "hunter_rank_5": 44836373256,
+            "hunter_rank_6": 98138331472
+          }
+        ],
+        [
+          224,
+          {
+            "stage": "거대 석상",
+            "player_score": 2924909777122,
+            "final_score": 12859482380262,
+            "rage_count": 162,
+            "play_time": "03:00",
+            "hunter_rank_3": 3241679819063
+          }
+        ],
+        [
+          225,
+          {
+            "stage": "거대 석상",
+            "player_score": 2524909777122,
+            "final_score": 12859482380262,
+            "rage_count": 162,
+            "play_time": "03:00",
+            "hunter_rank_1": 9241675813363,
+            "hunter_rank_2": 19008319055,
+            "hunter_rank_3": 370200200655,
+            "hunter_rank_4": 124363571339,
+            "hunter_rank_5": 44836373256,
+            "hunter_rank_6": 98138331472
+          }
+        ],
+        [
+          226,
+          {
+            "stage": "거대 석상",
+            "player_score": 2524909777122,
+            "final_score": 12859482380262,
+            "rage_count": 162,
+            "play_time": "03:00",
+            "hunter_rank_1": 9241675813363,
+            "hunter_rank_2": 19008319055,
+            "hunter_rank_3": 370200200655,
+            "hunter_rank_4": 124363571339,
+            "hunter_rank_5": 44836373256,
+            "hunter_rank_6": 38138331472
+          }
+        ]
+      ],
+      "t_debut": 220,
+      "t_fin": 226,
+      "duree_video_s": 425,
+      "elements_hud_images": [
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ]
+      ],
+      "elements_hud": [
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light"
+      ],
+      "hud_rage_count": 120
+    },
+    "notes": [
+      "lecture fusionnée (4 images)",
+      "contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262",
+      "contrôle sans Hunter Rank : Hunter Rank lus non décroissants"
+    ]
+  },
+  {
+    "video_id": "YSJFLd_OXww",
+    "channel_id": "UCD4V_LbqLFHCDCX-tx9GJTw",
+    "channel_title": "홀맨",
+    "published_at": "2026-11-17T05:43:48Z",
+    "lang": "ko",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 38,
+    "stage": null,
+    "team": null,
+    "score": 14.515,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        9.373,
+        14.515
+      ],
+      "play_time": null,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        38,
+        40,
+        42,
+        44
+      ]
+    },
+    "notes": [
+      "boss non contrôlé",
+      "BOT ja : temps de jeu non lu"
+    ]
+  },
+  {
+    "video_id": "Lt84IhMjBvM",
+    "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
+    "channel_title": "𐐂露依Rui ルイ 𐐚",
+    "published_at": "2026-11-13T10:12:06Z",
+    "lang": "zh",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": "S20-4",
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 102,
+    "stage": null,
+    "team": null,
+    "score": 18.754,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        9.341,
+        14.792,
+        18.754
+      ],
+      "play_time": 19,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        102,
+        104
+      ],
+      "sans_score": true
+    },
+    "notes": [
+      "boss non contrôlé",
+      "contrôle BOT : temps de jeu 19 ≠ dernière phase tronquée 18"
+    ]
+  },
+  {
+    "video_id": "awb-GlVIa7Q",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-12T01:07:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 17,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 30,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 431716931243,
+      "hud_rage_count": 60,
+      "separateur_perdu": false
+    },
+    "notes": []
+  },
+  {
+    "video_id": "awb-GlVIa7Q",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-12T01:07:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 84295496142280,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 224,
+    "stage": "Giant Statue",
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": 84295496142280,
+      "chrono_hud": 0.17,
+      "separateur_perdu": false,
+      "hud_rage_count": 157,
+      "elements_hud": [
+        "light",
+        "light",
+        "light"
+      ],
+      "t_debut": 4,
+      "t_fin": 224,
+      "elements_hud_par_t": {
+        "20": [
+          "light",
+          "light",
+          "light"
+        ],
+        "40": [
+          "light",
+          "light",
+          "light"
+        ],
+        "70": [
+          "light",
+          "light",
+          "light"
+        ],
+        "120": [
+          "light",
+          "light",
+          "light"
+        ],
+        "140": [
+          "light",
+          "light",
+          "light"
+        ],
+        "160": [
+          "light",
+          "light",
+          "light"
+        ],
+        "190": [
+          "light",
+          "light",
+          "light"
+        ],
+        "200": [
+          "light",
+          "light",
+          "light"
+        ],
+        "197": [
+          "light",
+          "light",
+          "light"
+        ],
+        "199": [
+          "light",
+          "light",
+          "light"
+        ],
+        "201": [
+          "light",
+          "light",
+          "light"
+        ],
+        "206": [
+          "light",
+          "light",
+          "light"
+        ],
+        "208": [
+          "light",
+          "light",
+          "light"
+        ],
+        "220": [
+          "light",
+          "light",
+          "light"
+        ],
+        "221": [
+          "light",
+          "light",
+          "light"
+        ],
+        "224": [
+          "light",
+          "light",
+          "light"
+        ]
+      },
+      "damage_exact": false,
+      "damage_source": "hud"
+    },
+    "notes": [
+      "HUD : Boss Rage Count x157, chrono 0.17"
+    ]
+  },
+  {
+    "video_id": "awb-GlVIa7Q",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-12T01:07:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 17,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 64299126429862,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 227,
+    "stage": "Giant Statue",
+    "team": null,
+    "score": 189,
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": true,
+      "player_score": 795244088074,
+      "hunter_ranks": [
+        98988392559253,
+        2330503854251,
+        990407426593,
+        734202919145,
+        508571686524,
+        751863896022
+      ],
+      "hunter_ranks_lus": 6,
+      "n_images": 144,
+      "successor_score": null,
+      "successeur_present": false,
+      "votes": {
+        "stage": [
+          [
+            "Giant Statue",
+            72
+          ]
+        ],
+        "player_score": [
+          [
+            795244088074,
+            126
+          ],
+          [
+            795246088074,
+            18
+          ]
+        ],
+        "final_score": [
+          [
+            64299126429862,
+            4
+          ],
+          [
+            64299126425862,
+            3
+          ],
+          [
+            64295126425862,
+            1
+          ]
+        ],
+        "rage_count": [
+          [
+            189,
+            6
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            144
+          ]
+        ],
+        "hunter_rank_1": [
+          [
+            98988392559253,
+            36
+          ],
+          [
+            58388392559253,
+            18
+          ]
+        ],
+        "hunter_rank_2": [
+          [
+            2330503854251,
+            54
+          ]
+        ],
+        "hunter_rank_3": [
+          [
+            990407426593,
+            36
+          ],
+          [
+            90407426593,
+            18
+          ]
+        ],
+        "hunter_rank_4": [
+          [
+            734202919145,
+            54
+          ]
+        ],
+        "hunter_rank_5": [
+          [
+            508571686524,
+            54
+          ]
+        ],
+        "hunter_rank_6": [
+          [
+            751863896022,
+            18
+          ]
+        ]
+      },
+      "rc_images": 6,
+      "final_images": 4,
+      "rc_t": {
+        "189": 227,
+        "2": 232
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            227,
+            189
+          ],
+          [
+            228,
+            189
+          ],
+          [
+            229,
+            189
+          ],
+          [
+            230,
+            189
+          ],
+          [
+            231,
+            189
+          ],
+          [
+            232,
+            2
+          ],
+          [
+            233,
+            189
+          ],
+          [
+            234,
+            2
+          ]
+        ],
+        "final_score": [
+          [
+            227,
+            64299126429862
+          ],
+          [
+            228,
+            64299126429862
+          ],
+          [
+            229,
+            64299126429862
+          ],
+          [
+            230,
+            64299126425862
+          ],
+          [
+            231,
+            64295126425862
+          ],
+          [
+            232,
+            64299126429862
+          ],
+          [
+            233,
+            64299126425862
+          ],
+          [
+            234,
+            64299126425862
+          ]
+        ]
+      },
+      "t_debut": 227,
+      "t_fin": 234,
+      "par_t": [],
+      "duree_video_s": 318,
+      "elements_hud_images": [
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ],
+        [
+          "light",
+          "light",
+          "light"
+        ]
+      ],
+      "elements_hud": [
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light"
+      ],
+      "hud_rage_count": 157
+    },
+    "notes": [
+      "écart OCR zone/image : rage_count",
+      "écart OCR zone/image : player_score",
+      "écart OCR zone/image : final_score",
+      "lecture fusionnée (144 images)",
+      "RC discordant écarté : 2 (t=232)",
+      "contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862",
+      "contrôle sans Hunter Rank : Final Score 64299126429862 hors de [Points HUD 84295496142280 ; × 1.02]",
+      "contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score",
+      "contrôle sans Hunter Rank : Hunter Rank lus non décroissants"
+    ]
+  },
+  {
+    "video_id": "awb-GlVIa7Q",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-12T01:07:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 17,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 64299126429862,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 240,
+    "stage": null,
+    "team": 1,
+    "score": 189,
+    "score_source": "record",
+    "exact": true,
+    "confidence": "sur",
+    "detail": {
+      "damage_exact": true,
+      "damage_step": null,
+      "total_score": 64299126429862,
+      "total_rage_count": 189,
+      "challenge_count": 1,
+      "time_left": "6d 22h",
+      "damage_source": "record"
+    },
+    "notes": []
+  },
+  {
+    "video_id": "qySXyOxUehE",
+    "channel_id": "UCT9h3NfvJJ6eT7_Iri6CwFg",
+    "channel_title": "Sohoven",
+    "published_at": "2026-11-16T19:30:24Z",
+    "lang": "fr",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 847,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 44629571227285,
+      "hud_rage_count": 152,
+      "separateur_perdu": false,
+      "elements_hud": [
+        "light",
+        "light",
+        "light"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "2oendtlUxUE",
+    "channel_id": "UCWOEmw563xHM0ZUlzZlG30A",
+    "channel_title": "LIT",
+    "published_at": "2026-11-18T07:35:58Z",
+    "lang": "en-US",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
     "t": null,
     "stage": null,
     "team": null,
-    "score": 338,
-    "score_source": "titre",
+    "score": 19.949,
+    "score_source": "miniature",
     "exact": false,
     "confidence": "a_verifier",
-    "detail": {},
+    "detail": {
+      "texte_miniature": true,
+      "votes_miniature": 3,
+      "brut_miniature": "19,949"
+    },
     "notes": [
-      "score provisoire (titre) : RAGE COUNT 338"
+      "score provisoire (miniature) : 19.949",
+      "miniature : virgule lue comme point"
+    ]
+  },
+  {
+    "video_id": "5MI-RLj7FSk",
+    "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
+    "channel_title": "PADWAE",
+    "published_at": "2026-11-12T03:07:23Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 50,
+    "stage": null,
+    "team": null,
+    "score": 19.977,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        8.974,
+        15.115,
+        19.977
+      ],
+      "play_time": 19,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": true,
+      "par_t": [
+        50
+      ]
+    },
+    "notes": [
+      "boss non contrôlé",
+      "temps instable (animation ?)"
     ]
   }
 ]

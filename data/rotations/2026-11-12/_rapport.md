@@ -21,3 +21,20 @@
   - NON ÉVALUABLE : ≥ 1 événement par chasseur actif identifié (actifs identifiés [], avec événement [])
   - OK : aucune recharge relancée trop tôt (ok)
   - OK : t_game croissant, ≤ chrono, phases dans la fenêtre (12 lecture(s) 2.366→19.384 s ; croissant True ; dernier ≤ chrono True ; phases [9.281, 14.986, 19.926] (True))
+- bot · YSJFLd_OXww · run 1 : 13 événement(s), 13 à vérifier, durée 31.0 s, limites : bornes-incertaines, chasseurs-inconnus
+  - OK : durée ≥ chrono − 0,5 s (durée 31.0 s, chrono 19.517 s (×1.6))
+  - NON ÉVALUABLE : fin avant la composition (fin 34.5 s, composition None s)
+  - OK : ≥ 1 événement SJW (3 événement(s))
+  - NON ÉVALUABLE : ≥ 1 événement par chasseur actif identifié (actifs identifiés [], avec événement [])
+  - OK : aucune recharge relancée trop tôt (ok)
+  - OK : t_game croissant, ≤ chrono, phases dans la fenêtre (7 lecture(s) 2.912→17.945 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable))
+- bot · znpyCNWml3I · run 1 : 17 événement(s), 17 à vérifier, durée 30.5 s, limites : bornes-incertaines, chasseurs-inconnus
+  - OK : durée ≥ chrono − 0,5 s (durée 30.5 s, chrono 19.5 s (×1.6))
+  - OK : fin avant la composition (fin 33.0 s, composition 42 s)
+  - OK : ≥ 1 événement SJW (2 événement(s))
+  - NON ÉVALUABLE : ≥ 1 événement par chasseur actif identifié (actifs identifiés [], avec événement [])
+  - OK : aucune recharge relancée trop tôt (ok)
+  - OK : t_game croissant, ≤ chrono, phases dans la fenêtre (13 lecture(s) 2.262→19.249 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable))
+- poc · 1pGA1EBZrDw · run 1 : 0 événement(s), 0 à vérifier, durée None s, limites : format
+- poc · 2AJljDc_nN4 · run 1 : 88 événement(s), 88 à vérifier, durée 103.0 s, limites : bornes-incertaines, chasseurs-inconnus
+- poc · zFsAGI_xyOQ · run 1 : 100 événement(s), 100 à vérifier, durée 96.0 s, limites : bornes-incertaines, chasseurs-inconnus

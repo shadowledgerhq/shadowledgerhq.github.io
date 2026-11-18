@@ -1,0 +1,179 @@
+{
+  "spec": 1,
+  "video_id": "YSJFLd_OXww",
+  "week": "2026-11-12",
+  "mode": "bot",
+  "gate": null,
+  "run_id": "bot-2026-11-12-YSJFLd_OXww",
+  "runs": [
+    {
+      "run_index": 1,
+      "run_start_t": 3.5,
+      "run_end_t": 34.5,
+      "duration_s": 31.0,
+      "events": [
+        {
+          "t": 4.0,
+          "t_run": 0.5,
+          "hunter": "sjw",
+          "slot": "sjw_skill_1",
+          "skill_id": null,
+          "trigger": null,
+          "cooldown_read": 15.0,
+          "t_game": null,
+          "source": "hud-recharge",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 6.0,
+          "t_run": 2.5,
+          "hunter": "inconnu",
+          "slot": "skill_1",
+          "skill_id": null,
+          "trigger": null,
+          "cooldown_read": 19.0,
+          "t_game": 2.912,
+          "source": "hud-recharge",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 9.4,
+          "t_run": 5.9,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": 6.412,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 13.0,
+          "t_run": 9.5,
+          "hunter": "inconnu",
+          "slot": "skill_2",
+          "skill_id": null,
+          "trigger": null,
+          "cooldown_read": 14.0,
+          "t_game": 9.914,
+          "source": "hud-recharge",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 16.3,
+          "t_run": 12.8,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": 13.408,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 19.0,
+          "t_run": 15.5,
+          "hunter": "sjw",
+          "slot": "sjw_ultimate",
+          "skill_id": null,
+          "trigger": null,
+          "cooldown_read": 60.0,
+          "t_game": null,
+          "source": "hud-recharge",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 19.2,
+          "t_run": 15.7,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": null,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 25.8,
+          "t_run": 22.3,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": 15.531,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 27.5,
+          "t_run": 24.0,
+          "hunter": "inconnu",
+          "slot": "ultimate",
+          "skill_id": null,
+          "trigger": null,
+          "cooldown_read": 10.0,
+          "t_game": 15.945,
+          "source": "hud-recharge",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 29.4,
+          "t_run": 25.9,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": 17.945,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 30.8,
+          "t_run": 27.3,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": null,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 31.0,
+          "t_run": 27.5,
+          "hunter": "sjw",
+          "slot": "sjw_skill_2",
+          "skill_id": null,
+          "trigger": null,
+          "cooldown_read": 14.0,
+          "t_game": null,
+          "source": "hud-recharge",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 31.3,
+          "t_run": 27.8,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": null,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        }
+      ],
+      "limites": [
+        "bornes-incertaines",
+        "chasseurs-inconnus"
+      ],
+      "sans_hud_s": 6.0
+    }
+  ]
+}

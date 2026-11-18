@@ -94,5 +94,69 @@
       true,
       "phases [9.341, 14.792, 18.754]"
     ]
+  ],
+  "znpyCNWml3I": [
+    [
+      "durée ≥ chrono − 0,5 s",
+      true,
+      "durée 30.5 s, chrono 19.5 s (×1.6)"
+    ],
+    [
+      "fin avant la composition",
+      true,
+      "fin 33.0 s, composition 42 s"
+    ],
+    [
+      "≥ 1 événement SJW",
+      true,
+      "2 événement(s)"
+    ],
+    [
+      "≥ 1 événement par chasseur actif identifié",
+      null,
+      "actifs identifiés [], avec événement []"
+    ],
+    [
+      "aucune recharge relancée trop tôt",
+      true,
+      "ok"
+    ],
+    [
+      "t_game croissant, ≤ chrono, phases dans la fenêtre",
+      true,
+      "13 lecture(s) 2.262→19.249 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable)"
+    ]
+  ],
+  "YSJFLd_OXww": [
+    [
+      "durée ≥ chrono − 0,5 s",
+      true,
+      "durée 31.0 s, chrono 19.517 s (×1.6)"
+    ],
+    [
+      "fin avant la composition",
+      null,
+      "fin 34.5 s, composition None s"
+    ],
+    [
+      "≥ 1 événement SJW",
+      true,
+      "3 événement(s)"
+    ],
+    [
+      "≥ 1 événement par chasseur actif identifié",
+      null,
+      "actifs identifiés [], avec événement []"
+    ],
+    [
+      "aucune recharge relancée trop tôt",
+      true,
+      "ok"
+    ],
+    [
+      "t_game croissant, ≤ chrono, phases dans la fenêtre",
+      true,
+      "7 lecture(s) 2.912→17.945 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable)"
+    ]
   ]
 }

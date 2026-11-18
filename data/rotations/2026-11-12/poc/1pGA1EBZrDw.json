@@ -1,0 +1,20 @@
+{
+  "spec": 1,
+  "video_id": "1pGA1EBZrDw",
+  "week": "2026-11-12",
+  "mode": "poc",
+  "gate": null,
+  "run_id": "poc-2026-11-12-1pGA1EBZrDw",
+  "runs": [
+    {
+      "run_index": 1,
+      "run_start_t": null,
+      "run_end_t": null,
+      "duration_s": null,
+      "events": [],
+      "limites": [
+        "format"
+      ]
+    }
+  ]
+}
