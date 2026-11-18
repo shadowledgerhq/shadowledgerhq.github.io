@@ -20,6 +20,7 @@ from semaine import (PARIS, bornes, dans_creneau, id_semaine, iso_utc, maintenan
                      semaine_precedente)
 from bot_saison import NOTE_CHALLENGE, lire_saison_semaine, titre_challenge
 from hotm_ecran import lire_porte
+import scores
 from tri1 import candidats_en_chapitres, lectures_texte, remplacer_lectures
 from youtube import ApiYouTube, recherche
 
@@ -134,6 +135,11 @@ def relire(d, config, week, api=None, ids=None):
                 if candidats_en_chapitres(l):  # chapitres : le score n'en est pas un, lecture retirée
                     res["chapitres_retires"] = res.get("chapitres_retires", 0) + 1
                     res["descriptions_non_relues"] += 1
+                    continue
+                if l["mode"] == "bot" and l["notes"] and l["notes"][0].startswith("score provisoire (description) : ") \
+                        and not scores.chronos(l["notes"][0].split(" : ", 1)[1]):
+                    res["descriptions_non_relues"] += 1       # v35 : « 10,000 » (virgule + 3 chiffres sans unité) n'est plus un chrono au BOT : lecture retirée
+                    res["chronos_retires"] = res.get("chronos_retires", 0) + 1
                     continue
                 res["descriptions_non_relues"] += 1
                 if "description non relue (règles v3)" not in l["notes"]:

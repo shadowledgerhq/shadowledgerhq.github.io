@@ -159,3 +159,64 @@ def reconcilier(runs):
 def _premiere(groupe):
     """La run de priorité la plus haute du groupe (celle qui sert de base à `reconcilier_video`)."""
     return sorted(groupe, key=lambda r: PRIORITE.get(r.get("score_source"), 9))[0]
+
+
+# --- v35 : lecture d'écran BOT qui échoue à son contrôle ------------------------------------------------------------------------
+
+NOTE_ECART_IMPROBABLE = "écart improbable : à confirmer par l'écran"
+SOURCES_TEXTE = ("titre", "description", "sous-titres", "miniature")
+
+
+def echec_controle_bot(l):
+    """Lecture d'écran BOT dont le contrôle a échoué (note `contrôle BOT : …`, ex. `temps de jeu 19 ≠ dernière phase tronquée 18`) : elle ne
+    donne JAMAIS un score (ni sûr ni provisoire) ; `temps de jeu non lu` et `temps instable` ne sont pas des échecs de contrôle."""
+    return (l.get("mode") == "bot" and l.get("score_source") not in SOURCES_TEXTE and (l.get("detail") or {}).get("phases") is not None
+            and l.get("confidence") != "sur" and any(n.startswith("contrôle BOT :") for n in l.get("notes", [])))
+
+
+def _est_texte(l):
+    return l.get("score_source") in SOURCES_TEXTE or bool((l.get("detail") or {}).get("texte_miniature"))
+
+
+def appliquer_echecs_ecran(lectures):
+    """Marque `detail.sans_score` (idempotent, retiré si la lecture est devenue sûre) sur les lectures d'écran BOT en échec de contrôle ; elles
+    restent dans `_lectures.json` avec leur note. Cas particulier : si la SEULE différence avec une lecture de texte de la même vidéo est la
+    partie entière (millièmes identiques) et que la partie entière du texte est égale au Play Time, la lecture de texte est gardée, `a_verifier`,
+    avec la note `écran : partie entière mal lue (18 → 19 par Play Time et titre)`. Modifie sur place ; retourne les lectures marquées."""
+    echecs = []
+    for l in lectures:
+        if l.get("mode") != "bot" or l.get("score_source") in SOURCES_TEXTE or (l.get("detail") or {}).get("phases") is None:
+            continue
+        d = l.setdefault("detail", {})
+        if echec_controle_bot(l):
+            d["sans_score"] = True
+            echecs.append(l)
+        else:
+            d.pop("sans_score", None)
+    for l in echecs:
+        phases = [p for p in l["detail"].get("phases") or [] if isinstance(p, (int, float))]
+        pt = l["detail"].get("play_time")
+        if not phases or not isinstance(pt, int):
+            continue
+        p = phases[-1]
+        for t in lectures:
+            if t.get("video_id") != l["video_id"] or t.get("mode") != "bot" or not _est_texte(t) or t.get("score") is None:
+                continue
+            s = t["score"]
+            if round(s % 1, 3) == round(p % 1, 3) and int(s) == pt and int(p) != pt:
+                note = f"écran : partie entière mal lue ({int(p)} → {int(s)} par Play Time et titre)"
+                if note not in t["notes"]:
+                    t["notes"].append(note)
+                t["confidence"], t["exact"] = "a_verifier", False
+    return echecs
+
+
+def ecart_improbable(totaux, seuil=0.7, minimum=5):
+    """Valeur en dessous de laquelle un score BOT provisoire est improbable : `seuil` × médiane des scores provisoires (`totaux`, ≥ `minimum`
+    lignes), sinon None."""
+    v = sorted(totaux)
+    if len(v) < minimum:
+        return None
+    n = len(v)
+    med = v[n // 2] if n % 2 else (v[n // 2 - 1] + v[n // 2]) / 2
+    return seuil * med

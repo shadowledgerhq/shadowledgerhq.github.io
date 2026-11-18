@@ -310,8 +310,16 @@ def ordonner(lignes, mode):
                     if not l.get("_degats_exacts"):
                         l["confidence"] = "a_verifier"
                         l["notes"] = "; ".join(n for n in (l["notes"], NOTE_EGALITE_DEGAT) if n)
+    if mode == "bot":       # v35 : écart improbable (< 70 % de la médiane des scores provisoires, ≥ 5 lignes) : hors du top 10 provisoire
+        prov = [l for l in lignes if l["confidence"] != "sur"]
+        limite = chrono_bot.ecart_improbable([l["score"]["total"] for l in prov])
+        for l in prov:
+            if limite is not None and l["score_source"] in chrono_bot.SOURCES_TEXTE and l["score"]["total"] < limite:
+                if chrono_bot.NOTE_ECART_IMPROBABLE not in l["notes"]:
+                    l["notes"] = "; ".join(n for n in (l["notes"], chrono_bot.NOTE_ECART_IMPROBABLE) if n)
     classees = sorted((l for l in lignes if l["confidence"] == "sur"), key=cle)
-    autres = sorted((l for l in lignes if l["confidence"] != "sur"), key=cle)
+    autres = sorted((l for l in lignes if l["confidence"] != "sur"),
+                    key=lambda l: (chrono_bot.NOTE_ECART_IMPROBABLE in l["notes"],) + cle(l))
     for i, l in enumerate(classees, 1):
         l["rank"] = i
     for l in classees + autres:
@@ -363,8 +371,10 @@ def calculer(week, d=None, config=None, horloge=None):
     rejetes = d.tous_rejetes()
     runs = []
     modes_classes = config.get("modes_classement", ["poc", "bot", "hotm"])  # v3 : GB lu mais pas classé
-    for lec in gb.appliquer_hud(d.lectures(week)):  # v12 : dégâts provisoires du HUD attachés aux lectures GB
-        if lec["video_id"] in rejetes or lec.get("score") is None or lec["mode"] not in modes_classes:
+    lectures_semaine = d.lectures(week)
+    chrono_bot.appliquer_echecs_ecran(lectures_semaine)     # v35 : un écran BOT en échec de contrôle ne donne jamais un score
+    for lec in gb.appliquer_hud(lectures_semaine):  # v12 : dégâts provisoires du HUD attachés aux lectures GB
+        if lec["video_id"] in rejetes or lec.get("score") is None or lec["mode"] not in modes_classes or (lec.get("detail") or {}).get("sans_score"):
             continue
         r = {**lec, "notes": list(lec.get("notes", []))}
         r["_cle"] = cle_classement(r, config)

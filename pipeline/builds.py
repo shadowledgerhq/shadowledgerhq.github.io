@@ -684,7 +684,8 @@ def modes_du_top(week, racine=RACINE, cfg=None):
         if classees:
             sortie += [(nom, r) for r in classees]
         elif cfg.get("builds_provisoires"):
-            cand = [r for r in lignes if r.get("confidence") == "a_verifier" and isinstance((r.get("score") or {}).get("total"), (int, float))]
+            cand = [r for r in lignes if r.get("confidence") == "a_verifier" and isinstance((r.get("score") or {}).get("total"), (int, float))
+                    and "écart improbable" not in (r.get("notes") or "")]       # v35 : jamais dans le top 10 provisoire avant confirmation par l'écran
             # v34 : l'ordre du fichier fait foi (`classement.ordonner`, rang prudent des chronos BOT incomplets) : pas de nouveau tri par score
             for i, r in enumerate(cand[:cfg_top], 1):
                 sortie.append((nom, dict(r, rank=None, line_provisional=True, provisional_rank=i)))

@@ -46,7 +46,7 @@ def analyser(d, week):
         for rang, x in enumerate(tri):
             if x.get("confidence") == "sur":
                 continue
-            cand = dixieme is None or _meilleur(x["score"]["total"], dixieme, unite)
+            cand = dixieme is None or _meilleur(x["score"]["total"], dixieme, unite) or "écart improbable" in (x.get("notes") or "")   # v35 : reste prioritaire
             for v in (x.get("video_ids") or [x.get("video_id")]):
                 if v is None:
                     continue

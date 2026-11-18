@@ -102,6 +102,9 @@ def voter(textes, mode, config, accord_min=2):
     compte, brut, ordre = Counter(), {}, []
     for texte in textes:
         vus = set()
+        # v35 : sur une miniature lue en chiffres seulement (liste blanche), la virgule entre deux chiffres est un point mal lu (« 19,926 ») ;
+        # la règle « virgule + 3 chiffres = chrono seulement avec une unité » vaut pour les textes (titre, description), pas pour cet OCR
+        texte = re.sub(r"(?<=\d),(?=\d)", ".", texte)
         for c in scores.candidats(texte, mode, p, config):
             if mode == "bot" and c.get("decimales") != 3:          # BOT : seul un chrono à millièmes (`19.926`) est lu sur une miniature
                 continue
@@ -126,8 +129,21 @@ def _texte_canonique(mode, vote):
     return vote["brut"]
 
 
+MOTS_ECRAN_RESULTS = ("phase", "result", "結果")
+
+
+def est_capture_results(textes):
+    """v35 : la miniature est une capture d'écran Results (mots Phase / RESULT / Results / 結果 lus par l'OCR, majuscules et espaces ignorés) :
+    elle n'est jamais lue comme du texte, seule la détection d'écran du tri 2 (dernière phase, `pc.traiter_miniature`) s'applique."""
+    bas = re.sub(r"\s+", "", " ".join(t for t in textes if t)).lower()
+    return any(m in bas for m in MOTS_ECRAN_RESULTS)
+
+
 def lectures_texte(vid, meta, textes, config):
-    """Lectures provisoires (une par mode du `mode_guess` qui a un score voté), `score_source = "miniature"`."""
+    """Lectures provisoires (une par mode du `mode_guess` qui a un score voté), `score_source = "miniature"`. Aucune pour une capture d'écran
+    Results (v35, `est_capture_results`)."""
+    if est_capture_results(textes):
+        return []
     cfg = reglages(config)
     sortie = []
     for mode in meta.get("mode_guess", []):

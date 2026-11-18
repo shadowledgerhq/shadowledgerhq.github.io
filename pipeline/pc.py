@@ -31,6 +31,7 @@ from etape1 import ecrire_rapport, ouvrir_semaine
 from semaine import PARIS, id_semaine, iso_utc, maintenant, parse_iso, semaine_precedente
 import libelles_inconnus
 import miniature
+import chrono_bot
 import ocr_ecrans
 import rotation
 import elements
@@ -631,7 +632,7 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None, duree_s=None):
     v12 : le HUD GB (lectures sans score) ne remplace rien ; ses lectures sont regroupées par run
     (`ocr_ecrans.regrouper_hud`). Les lectures de l'écran Results sont regroupées en écrans, la plus complète est
     gardée et contrôlée (`ocr_ecrans.fusionner_results`)."""
-    modes = {l["mode"] for l in nouvelles if l.get("score") is not None}
+    modes = {l["mode"] for l in nouvelles if l.get("score") is not None and not chrono_bot.echec_controle_bot(l)}     # v35 : un écran BOT en échec de contrôle ne remplace rien
     reste = [l for l in lectures if not (l["video_id"] == vid and l["mode"] in modes and est_texte(l))]
     ecran = [l for l in reste + nouvelles if l["video_id"] == vid and _est_ecran(l)]
     # v29 : contexte de l'exception « RC lu sur la dernière image » (SPEC §3.1) : RC du titre / de la description et durée de la
@@ -660,7 +661,12 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None, duree_s=None):
             if l["confidence"] == "sur" and not any(n.startswith("écart titre/écran") for n in l["notes"]):
                 l["notes"].append(f"écart titre/écran : titre {valeurs[0]}")
     _lever_alerte_reset(ecran, config)
-    return autres + ecran
+    # v35 : écran BOT en échec de contrôle = jamais un score (`detail.sans_score`), gardé avec sa note ; les lectures de texte de la vidéo restent
+    texte_bot = [l for l in lectures if l["video_id"] == vid and l["mode"] == "bot" and est_texte(l)]
+    chrono_bot.appliquer_echecs_ecran(ecran + texte_bot)
+    valides = [l for l in ecran if l["mode"] == "bot" and l.get("score") is not None and not (l.get("detail") or {}).get("sans_score")]
+    restaurer = [] if valides else [l for l in texte_bot if not any(l is x for x in autres)]
+    return autres + restaurer + ecran
 
 
 def _lever_alerte_reset(ecran, config):

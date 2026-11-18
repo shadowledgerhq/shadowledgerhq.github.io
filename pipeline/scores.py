@@ -35,8 +35,8 @@ _RE_NOMBRE = re.compile(
 
 def _chrono(avec_millis):
     """Regex des chronos. `avec_millis` (BOT) ajoute v3 : \\d{1,3}[.;:,]\\d{3} = secondes.millisecondes,
-    avec ou sans unité (19.558 / 23;223s) ; hors BOT cette forme est un nombre à milliers (131,449,789)."""
-    s4 = (r"|(?P<s4>\d{1,3})[.;:,](?P<ms4>\d{3})(?!\d|[.;:,]\d)(?:\s*(?:seconds?|secs?|s|초|秒))?"
+    avec ou sans unité (19.558 / 23;223s) ; v35 : avec la virgule, l'unité (s, sec, seconds, 초, 秒) est obligatoire ; hors BOT cette forme est un nombre à milliers (131,449,789)."""
+    s4 = (r"|(?P<s4>\d{1,3})(?P<sep4>[.;:,])(?P<ms4>\d{3})(?!\d|[.;:,]\d)(?:\s*(?P<u4>seconds?|secs?|s|초|秒))?"
           if avec_millis else "")
     return re.compile(
         r"(?<![A-Za-z\d.,:;])(?:"
@@ -165,6 +165,8 @@ def chronos(texte):
         elif g["s1"] is not None:
             h, mi, s, ms = int(g["h1"] or 0), int(g["m1"]), int(g["s1"]), g["ms1"]
         elif g.get("s4") is not None:
+            if g["sep4"] == "," and not g["u4"]:
+                continue        # v35 : « 10,000 » sans unité = nombre à séparateur de milliers, pas un chrono (le point et le point-virgule restent des chronos)
             h, mi, s, ms = 0, 0, int(g["s4"]), g["ms4"]
         else:
             h, mi, s, ms = 0, 0, int(g["s2"]), g["ms2"]

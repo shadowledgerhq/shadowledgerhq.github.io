@@ -1,56 +1,5 @@
 [
   {
-    "video_id": "wFFdg1gcZpE",
-    "channel_id": "UCUZMOC3aAvVNk3-oBZUtTsw",
-    "channel_title": "Raksefon",
-    "published_at": "2026-11-12T13:57:26Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 17,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 35.0,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : 35 sec",
-      "description non relue (règles v3)"
-    ]
-  },
-  {
-    "video_id": "a-923ClD9Rc",
-    "channel_id": "UCYNsWXOKkyjkkm-pFvt0vAQ",
-    "channel_title": "aaaaaaaaaaaa",
-    "published_at": "2026-11-12T12:01:40Z",
-    "lang": "ja",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": "S20-4",
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 19.558,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 19.558"
-    ]
-  },
-  {
     "video_id": "LkzfH-j1bLI",
     "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
     "channel_title": "RaidenShadow",
@@ -156,57 +105,6 @@
     ]
   },
   {
-    "video_id": "PncUhejH3E8",
-    "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
-    "channel_title": "PADWAE",
-    "published_at": "2026-11-12T02:04:46Z",
-    "lang": "ja",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 25.9,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "publiée juste après le reset : semaine précédente ?",
-      "score provisoire (titre) : 25.9s"
-    ]
-  },
-  {
-    "video_id": "duX8KmoDdYw",
-    "channel_id": "UCjHQXaVhgDfEYtZ_FgMhmUw",
-    "channel_title": "Keos",
-    "published_at": "2026-11-13T05:13:05Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 29.0,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 29s"
-    ]
-  },
-  {
     "video_id": "1pGA1EBZrDw",
     "channel_id": "UCj01oba-0Kuz8yj3dwC_ZXw",
     "channel_title": "creative joker",
@@ -229,31 +127,6 @@
     "detail": {},
     "notes": [
       "score provisoire (description) : 100T"
-    ]
-  },
-  {
-    "video_id": "HWebrRc_l0o",
-    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
-    "channel_title": "SlayOnLow",
-    "published_at": "2026-11-14T13:09:00Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 40.077,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 40.077 SECONDS"
     ]
   },
   {
@@ -461,132 +334,6 @@
     ]
   },
   {
-    "video_id": "VFDbdYFzor4",
-    "channel_id": "UCjNngJRDRC7QSyZ76FlvKfQ",
-    "channel_title": "Akihiro",
-    "published_at": "2026-11-15T20:24:32Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 130.266,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : 02:10.266"
-    ]
-  },
-  {
-    "video_id": "77pbAyrW6no",
-    "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
-    "channel_title": "MOBgame",
-    "published_at": "2026-11-16T04:36:58Z",
-    "lang": "ja",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 23.0,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : 23秒",
-      "autres candidats : 00:23.416"
-    ]
-  },
-  {
-    "video_id": "ysfa3H023n8",
-    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
-    "channel_title": "LATOYA Gaming",
-    "published_at": "2026-11-16T12:00:36Z",
-    "lang": "und",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 28.349,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 28.349"
-    ]
-  },
-  {
-    "video_id": "Bi5TrN5d1_E",
-    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
-    "channel_title": "LATOYA Gaming",
-    "published_at": "2026-11-16T10:00:31Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 28.349,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 28.349"
-    ]
-  },
-  {
-    "video_id": "OppPeyQ--7s",
-    "channel_id": "UCFcYmsvelaU0rxAXo_srFhg",
-    "channel_title": "OhchiGameS",
-    "published_at": "2026-11-16T11:43:51Z",
-    "lang": "ja",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 44.0,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : 44s"
-    ]
-  },
-  {
     "video_id": "RXGoXZggzWM",
     "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
     "channel_title": "RAVANPLAYZ",
@@ -637,63 +384,6 @@
     ]
   },
   {
-    "video_id": "a-923ClD9Rc",
-    "channel_id": "UCYNsWXOKkyjkkm-pFvt0vAQ",
-    "channel_title": "aaaaaaaaaaaa",
-    "published_at": "2026-11-12T12:01:40Z",
-    "lang": "ja",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": "S20-4",
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 19.558,
-    "score_source": "miniature",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "texte_miniature": true,
-      "votes_miniature": 3
-    },
-    "notes": [
-      "score provisoire (miniature) : 19.558"
-    ]
-  },
-  {
-    "video_id": "Bi5TrN5d1_E",
-    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
-    "channel_title": "LATOYA Gaming",
-    "published_at": "2026-11-16T10:00:31Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 12.391,
-    "score_source": "miniature",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "texte_miniature": true,
-      "votes_miniature": 2
-    },
-    "notes": [
-      "score provisoire (miniature) : 12.391",
-      "miniature, autres valeurs lues : 21.382"
-    ]
-  },
-  {
     "video_id": "cK1YiH9qwnI",
     "channel_id": "UCgt9PtN0OSu4jlRWEPXwnsw",
     "channel_title": "INVINCIBLE_YT",
@@ -741,106 +431,6 @@
     "detail": {},
     "notes": [
       "score provisoire (description) : 4,000"
-    ]
-  },
-  {
-    "video_id": "p7RLV-rhuQg",
-    "channel_id": "UC8_J1WiVqloIG-XWwmHq1Gg",
-    "channel_title": "HunterOnHive",
-    "published_at": "2026-11-17T08:38:41Z",
-    "lang": "hi",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 10.0,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : 10,000"
-    ]
-  },
-  {
-    "video_id": "znpyCNWml3I",
-    "channel_id": "UC1EoAXobnTv17L2T2UngUiw",
-    "channel_title": "크리스",
-    "published_at": "2026-11-17T06:36:27Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 19.5,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 19.5s"
-    ]
-  },
-  {
-    "video_id": "YSJFLd_OXww",
-    "channel_id": "UCD4V_LbqLFHCDCX-tx9GJTw",
-    "channel_title": "홀맨",
-    "published_at": "2026-11-17T05:43:48Z",
-    "lang": "ko",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 19.517,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 19.517s"
-    ]
-  },
-  {
-    "video_id": "DuXEITpoJWg",
-    "channel_id": "UC3c-byo2-3Q0msvNiGlnmmg",
-    "channel_title": "danburrito",
-    "published_at": "2026-11-17T01:23:38Z",
-    "lang": "en-US",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 27.0,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 0:27"
     ]
   },
   {
@@ -2666,44 +2256,6 @@
     ]
   },
   {
-    "video_id": "nwP8dSSfo1o",
-    "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
-    "channel_title": "MOBgame",
-    "published_at": "2026-11-15T02:21:12Z",
-    "lang": "ja",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 182,
-    "stage": null,
-    "team": null,
-    "score": 20.331,
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "phases": [
-        14.915,
-        20.331
-      ],
-      "play_time": null,
-      "armes_sjw_vides": false,
-      "v27": true,
-      "v27_sur": false,
-      "par_t": [
-        182
-      ]
-    },
-    "notes": [
-      "boss non contrôlé",
-      "BOT ja : temps de jeu non lu"
-    ]
-  },
-  {
     "video_id": "nh2D7xZ7dOQ",
     "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
     "channel_title": "SlayOnLow",
@@ -3294,46 +2846,6 @@
     ]
   },
   {
-    "video_id": "wJ9CwjKwyco",
-    "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
-    "channel_title": "X SLA",
-    "published_at": "2026-11-12T01:50:30Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 37,
-    "stage": null,
-    "team": null,
-    "score": 19.926,
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "phases": [
-        9.281,
-        14.986,
-        19.926
-      ],
-      "play_time": null,
-      "armes_sjw_vides": false,
-      "v27": true,
-      "v27_sur": false,
-      "par_t": [
-        37
-      ]
-    },
-    "notes": [
-      "publiée juste après le reset : semaine précédente ?",
-      "boss non contrôlé",
-      "BOT ja : temps de jeu non lu"
-    ]
-  },
-  {
     "video_id": "vYtRCpFtSOk",
     "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
     "channel_title": "Eden(이든)",
@@ -3562,85 +3074,6 @@
       "lecture fusionnée (4 images)",
       "contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262",
       "contrôle sans Hunter Rank : Hunter Rank lus non décroissants"
-    ]
-  },
-  {
-    "video_id": "Lt84IhMjBvM",
-    "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
-    "channel_title": "𐐂露依Rui ルイ 𐐚",
-    "published_at": "2026-11-13T10:12:06Z",
-    "lang": "zh",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": "S20-4",
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 102,
-    "stage": null,
-    "team": null,
-    "score": 18.754,
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "phases": [
-        9.341,
-        14.792,
-        18.754
-      ],
-      "play_time": 19,
-      "armes_sjw_vides": false,
-      "v27": true,
-      "v27_sur": false,
-      "par_t": [
-        102,
-        104
-      ]
-    },
-    "notes": [
-      "boss non contrôlé",
-      "contrôle BOT : temps de jeu 19 ≠ dernière phase tronquée 18"
-    ]
-  },
-  {
-    "video_id": "5MI-RLj7FSk",
-    "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
-    "channel_title": "PADWAE",
-    "published_at": "2026-11-12T03:07:23Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 50,
-    "stage": null,
-    "team": null,
-    "score": 19.977,
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "phases": [
-        8.974,
-        15.115,
-        19.977
-      ],
-      "play_time": 19,
-      "armes_sjw_vides": false,
-      "v27": true,
-      "v27_sur": true,
-      "par_t": [
-        50
-      ]
-    },
-    "notes": [
-      "boss non contrôlé",
-      "temps instable (animation ?)"
     ]
   },
   {
@@ -3955,45 +3388,6 @@
       "damage_source": "record"
     },
     "notes": []
-  },
-  {
-    "video_id": "tOzRUlmZ2JI",
-    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
-    "channel_title": "SNG",
-    "published_at": "2026-11-12T19:12:47Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 300,
-    "stage": null,
-    "team": null,
-    "score": 623.273,
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "phases": [
-        11.525,
-        18.583,
-        623.273
-      ],
-      "play_time": 24,
-      "armes_sjw_vides": true,
-      "v27": true,
-      "v27_sur": false,
-      "par_t": [
-        300
-      ]
-    },
-    "notes": [
-      "boss non contrôlé",
-      "contrôle BOT : temps de jeu 24 ≠ dernière phase tronquée 623"
-    ]
   },
   {
     "video_id": "lGDbzyIJcjY",
@@ -4333,6 +3727,523 @@
     ]
   },
   {
+    "video_id": "5MI-RLj7FSk",
+    "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
+    "channel_title": "PADWAE",
+    "published_at": "2026-11-12T03:07:23Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 50,
+    "stage": null,
+    "team": null,
+    "score": 19.977,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        8.974,
+        15.115,
+        19.977
+      ],
+      "play_time": 19,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": true,
+      "par_t": [
+        50
+      ]
+    },
+    "notes": [
+      "boss non contrôlé",
+      "temps instable (animation ?)"
+    ]
+  },
+  {
+    "video_id": "5MI-RLj7FSk",
+    "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
+    "channel_title": "PADWAE",
+    "published_at": "2026-11-12T03:07:23Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 19.9,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 19.9s"
+    ]
+  },
+  {
+    "video_id": "77pbAyrW6no",
+    "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
+    "channel_title": "MOBgame",
+    "published_at": "2026-11-16T04:36:58Z",
+    "lang": "ja",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 23.0,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (description) : 23秒",
+      "autres candidats : 00:23.416",
+      "description non relue (règles v3)"
+    ]
+  },
+  {
+    "video_id": "Bi5TrN5d1_E",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "channel_title": "LATOYA Gaming",
+    "published_at": "2026-11-16T10:00:31Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 28.349,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 28.349"
+    ]
+  },
+  {
+    "video_id": "DuXEITpoJWg",
+    "channel_id": "UC3c-byo2-3Q0msvNiGlnmmg",
+    "channel_title": "danburrito",
+    "published_at": "2026-11-17T01:23:38Z",
+    "lang": "en-US",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 27.0,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 0:27"
+    ]
+  },
+  {
+    "video_id": "HWebrRc_l0o",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "channel_title": "SlayOnLow",
+    "published_at": "2026-11-14T13:09:00Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 40.077,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 40.077 SECONDS"
+    ]
+  },
+  {
+    "video_id": "Lt84IhMjBvM",
+    "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
+    "channel_title": "𐐂露依Rui ルイ 𐐚",
+    "published_at": "2026-11-13T10:12:06Z",
+    "lang": "zh",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": "S20-4",
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 102,
+    "stage": null,
+    "team": null,
+    "score": 18.754,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        9.341,
+        14.792,
+        18.754
+      ],
+      "play_time": 19,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        102,
+        104
+      ],
+      "sans_score": true
+    },
+    "notes": [
+      "boss non contrôlé",
+      "contrôle BOT : temps de jeu 19 ≠ dernière phase tronquée 18"
+    ]
+  },
+  {
+    "video_id": "Lt84IhMjBvM",
+    "channel_id": "UCpumN785NVCPhvCN-l_3FiA",
+    "channel_title": "𐐂露依Rui ルイ 𐐚",
+    "published_at": "2026-11-13T10:12:06Z",
+    "lang": "zh",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": "S20-4",
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 19.754,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 19.754s",
+      "écran : partie entière mal lue (18 → 19 par Play Time et titre)"
+    ]
+  },
+  {
+    "video_id": "OppPeyQ--7s",
+    "channel_id": "UCFcYmsvelaU0rxAXo_srFhg",
+    "channel_title": "OhchiGameS",
+    "published_at": "2026-11-16T11:43:51Z",
+    "lang": "ja",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 44.0,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (description) : 44s",
+      "description non relue (règles v3)"
+    ]
+  },
+  {
+    "video_id": "PncUhejH3E8",
+    "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
+    "channel_title": "PADWAE",
+    "published_at": "2026-11-12T02:04:46Z",
+    "lang": "ja",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 25.9,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "publiée juste après le reset : semaine précédente ?",
+      "score provisoire (titre) : 25.9s"
+    ]
+  },
+  {
+    "video_id": "VFDbdYFzor4",
+    "channel_id": "UCjNngJRDRC7QSyZ76FlvKfQ",
+    "channel_title": "Akihiro",
+    "published_at": "2026-11-15T20:24:32Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 130.266,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (description) : 02:10.266",
+      "description non relue (règles v3)"
+    ]
+  },
+  {
+    "video_id": "YSJFLd_OXww",
+    "channel_id": "UCD4V_LbqLFHCDCX-tx9GJTw",
+    "channel_title": "홀맨",
+    "published_at": "2026-11-17T05:43:48Z",
+    "lang": "ko",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 19.517,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 19.517s"
+    ]
+  },
+  {
+    "video_id": "a-923ClD9Rc",
+    "channel_id": "UCYNsWXOKkyjkkm-pFvt0vAQ",
+    "channel_title": "aaaaaaaaaaaa",
+    "published_at": "2026-11-12T12:01:40Z",
+    "lang": "ja",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": "S20-4",
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 19.558,
+    "score_source": "miniature",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "texte_miniature": true,
+      "votes_miniature": 3
+    },
+    "notes": [
+      "score provisoire (miniature) : 19.558"
+    ]
+  },
+  {
+    "video_id": "a-923ClD9Rc",
+    "channel_id": "UCYNsWXOKkyjkkm-pFvt0vAQ",
+    "channel_title": "aaaaaaaaaaaa",
+    "published_at": "2026-11-12T12:01:40Z",
+    "lang": "ja",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": "S20-4",
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 19.558,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 19.558"
+    ]
+  },
+  {
+    "video_id": "duX8KmoDdYw",
+    "channel_id": "UCjHQXaVhgDfEYtZ_FgMhmUw",
+    "channel_title": "Keos",
+    "published_at": "2026-11-13T05:13:05Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 29.0,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 29s"
+    ]
+  },
+  {
+    "video_id": "nwP8dSSfo1o",
+    "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
+    "channel_title": "MOBgame",
+    "published_at": "2026-11-15T02:21:12Z",
+    "lang": "ja",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 182,
+    "stage": null,
+    "team": null,
+    "score": 20.331,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        14.915,
+        20.331
+      ],
+      "play_time": null,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        182
+      ]
+    },
+    "notes": [
+      "boss non contrôlé",
+      "BOT ja : temps de jeu non lu"
+    ]
+  },
+  {
+    "video_id": "tOzRUlmZ2JI",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-12T19:12:47Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 300,
+    "stage": null,
+    "team": null,
+    "score": 623.273,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        11.525,
+        18.583,
+        623.273
+      ],
+      "play_time": 24,
+      "armes_sjw_vides": true,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        300
+      ],
+      "sans_score": true
+    },
+    "notes": [
+      "boss non contrôlé",
+      "contrôle BOT : temps de jeu 24 ≠ dernière phase tronquée 623"
+    ]
+  },
+  {
+    "video_id": "tOzRUlmZ2JI",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-12T19:12:47Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 23.223,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 23;223s"
+    ]
+  },
+  {
     "video_id": "uwJfPTJI8ZE",
     "channel_id": "UCXTmMgefIJnkOksH7acBrXQ",
     "channel_title": "리히온",
@@ -4364,7 +4275,8 @@
       "v27_sur": false,
       "par_t": [
         410
-      ]
+      ],
+      "sans_score": true
     },
     "notes": [
       "boss non contrôlé",
@@ -4422,6 +4334,173 @@
     "notes": [
       "boss non contrôlé",
       "BOT ja : temps de jeu non lu"
+    ]
+  },
+  {
+    "video_id": "uwJfPTJI8ZE",
+    "channel_id": "UCXTmMgefIJnkOksH7acBrXQ",
+    "channel_title": "리히온",
+    "published_at": "2026-11-13T05:44:18Z",
+    "lang": "ko",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 28.0,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 28초"
+    ]
+  },
+  {
+    "video_id": "wFFdg1gcZpE",
+    "channel_id": "UCUZMOC3aAvVNk3-oBZUtTsw",
+    "channel_title": "Raksefon",
+    "published_at": "2026-11-12T13:57:26Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 17,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 35.0,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (description) : 35 sec",
+      "description non relue (règles v3)"
+    ]
+  },
+  {
+    "video_id": "wJ9CwjKwyco",
+    "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
+    "channel_title": "X SLA",
+    "published_at": "2026-11-12T01:50:30Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 37,
+    "stage": null,
+    "team": null,
+    "score": 19.926,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        9.281,
+        14.986,
+        19.926
+      ],
+      "play_time": null,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        37
+      ]
+    },
+    "notes": [
+      "publiée juste après le reset : semaine précédente ?",
+      "boss non contrôlé",
+      "BOT ja : temps de jeu non lu"
+    ]
+  },
+  {
+    "video_id": "wJ9CwjKwyco",
+    "channel_id": "UCFdJyPY7ZqE5WfQJAkOsRuQ",
+    "channel_title": "X SLA",
+    "published_at": "2026-11-12T01:50:30Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 19.0,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "publiée juste après le reset : semaine précédente ?",
+      "score provisoire (titre) : 19s"
+    ]
+  },
+  {
+    "video_id": "ysfa3H023n8",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "channel_title": "LATOYA Gaming",
+    "published_at": "2026-11-16T12:00:36Z",
+    "lang": "und",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 28.349,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 28.349"
+    ]
+  },
+  {
+    "video_id": "znpyCNWml3I",
+    "channel_id": "UC1EoAXobnTv17L2T2UngUiw",
+    "channel_title": "크리스",
+    "published_at": "2026-11-17T06:36:27Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 19.5,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 19.5s"
     ]
   }
 ]
