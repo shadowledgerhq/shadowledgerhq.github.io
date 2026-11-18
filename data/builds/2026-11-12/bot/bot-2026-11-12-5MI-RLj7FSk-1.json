@@ -8,16 +8,17 @@
   "hunter_mode": null,
   "rank": null,
   "line_provisional": true,
-  "provisional_rank": 4,
+  "provisional_rank": 7,
   "player": "PADWAE",
   "channel_id": "UCpZghIB4XlahSHHidbFN0tA",
   "video_id": "5MI-RLj7FSk",
-  "t_result": null,
+  "t_result": 50,
   "t_composition": [
     2,
     8
   ],
   "team": null,
+  "element": null,
   "rules": {
     "week": "2026-11-12",
     "sjw": true,
@@ -42,42 +43,42 @@
     "artifacts": [
       {
         "slot": "helmet",
-        "set_id": null,
+        "set_id": "set-of-the-architects-blue-poison",
         "level": null
       },
       {
         "slot": "chestplate",
-        "set_id": null,
+        "set_id": "set-of-the-architects-blue-poison",
         "level": null
       },
       {
         "slot": "gloves",
-        "set_id": null,
+        "set_id": "set-of-the-architects-blue-poison",
         "level": null
       },
       {
         "slot": "boots",
-        "set_id": null,
+        "set_id": "set-of-the-architects-blue-poison",
         "level": null
       },
       {
         "slot": "necklace",
-        "set_id": "viridescent-set",
+        "set_id": "set-of-burning-greed",
         "level": null
       },
       {
         "slot": "bracelet",
-        "set_id": null,
+        "set_id": "set-of-the-architects-blue-poison",
         "level": null
       },
       {
         "slot": "ring",
-        "set_id": null,
+        "set_id": "set-of-the-architects-blue-poison",
         "level": null
       },
       {
         "slot": "earrings",
-        "set_id": null,
+        "set_id": "set-of-the-architects-blue-poison",
         "level": null
       }
     ],
@@ -172,7 +173,7 @@
       "team_slot": null,
       "id": null,
       "weapon": {
-        "id": null,
+        "id": "prankster",
         "level": null
       },
       "artifacts": [
@@ -183,32 +184,32 @@
         },
         {
           "slot": "chestplate",
-          "set_id": null,
+          "set_id": "set-of-noble-flesh",
           "level": null
         },
         {
           "slot": "gloves",
-          "set_id": null,
+          "set_id": "set-of-noble-flesh",
           "level": null
         },
         {
           "slot": "boots",
-          "set_id": null,
+          "set_id": "set-of-noble-flesh",
           "level": null
         },
         {
           "slot": "necklace",
-          "set_id": "set-of-chaotic-wish",
+          "set_id": null,
           "level": null
         },
         {
           "slot": "bracelet",
-          "set_id": "set-of-chaotic-infamy",
+          "set_id": "set-of-noble-flesh",
           "level": null
         },
         {
           "slot": "ring",
-          "set_id": null,
+          "set_id": "set-of-noble-flesh",
           "level": null
         },
         {
@@ -241,7 +242,7 @@
       "team_slot": null,
       "id": null,
       "weapon": {
-        "id": null,
+        "id": "prankster",
         "level": null
       },
       "artifacts": [
@@ -252,17 +253,17 @@
         },
         {
           "slot": "chestplate",
-          "set_id": "clerics-set",
+          "set_id": "set-of-kamishs-obession",
           "level": null
         },
         {
           "slot": "gloves",
-          "set_id": null,
+          "set_id": "set-of-kamishs-obession",
           "level": null
         },
         {
           "slot": "boots",
-          "set_id": null,
+          "set_id": "set-of-kamishs-obession",
           "level": null
         },
         {
@@ -272,17 +273,17 @@
         },
         {
           "slot": "bracelet",
-          "set_id": "set-of-chaotic-infamy",
+          "set_id": "set-of-kamishs-obession",
           "level": null
         },
         {
           "slot": "ring",
-          "set_id": null,
+          "set_id": "set-of-kamishs-obession",
           "level": null
         },
         {
           "slot": "earrings",
-          "set_id": "set-of-chaotic-wish",
+          "set_id": "set-of-kamishs-obession",
           "level": null
         }
       ],
@@ -310,18 +311,18 @@
       "team_slot": null,
       "id": null,
       "weapon": {
-        "id": null,
+        "id": "someones-downfall",
         "level": null
       },
       "artifacts": [
         {
           "slot": "helmet",
-          "set_id": null,
+          "set_id": "set-of-glorious-arrogance",
           "level": null
         },
         {
           "slot": "chestplate",
-          "set_id": null,
+          "set_id": "set-of-glorious-arrogance",
           "level": null
         },
         {
@@ -331,27 +332,27 @@
         },
         {
           "slot": "boots",
-          "set_id": "set-of-chaotic-wish",
+          "set_id": "set-of-glorious-arrogance",
           "level": null
         },
         {
           "slot": "necklace",
-          "set_id": null,
+          "set_id": "set-of-glorious-arrogance",
           "level": null
         },
         {
           "slot": "bracelet",
-          "set_id": null,
+          "set_id": "set-of-glorious-arrogance",
           "level": null
         },
         {
           "slot": "ring",
-          "set_id": null,
+          "set_id": "set-of-glorious-arrogance",
           "level": null
         },
         {
           "slot": "earrings",
-          "set_id": null,
+          "set_id": "set-of-glorious-arrogance",
           "level": null
         }
       ],
@@ -378,50 +379,44 @@
   "set_bonuses": {
     "sjw": [
       {
-        "set_id": "viridescent-set",
+        "set_id": "set-of-burning-greed",
         "pieces": 1,
         "tiers": []
+      },
+      {
+        "set_id": "set-of-the-architects-blue-poison",
+        "pieces": 7,
+        "tiers": [
+          4
+        ]
       }
     ],
     "hunter_1": [
       {
-        "set_id": "set-of-chaotic-infamy",
-        "pieces": 1,
-        "tiers": []
-      },
-      {
-        "set_id": "set-of-chaotic-wish",
-        "pieces": 1,
-        "tiers": []
+        "set_id": "set-of-noble-flesh",
+        "pieces": 5,
+        "tiers": [
+          4
+        ]
       }
     ],
     "hunter_2": [
       {
-        "set_id": "clerics-set",
-        "pieces": 1,
-        "tiers": []
-      },
-      {
-        "set_id": "set-of-chaotic-infamy",
-        "pieces": 1,
-        "tiers": []
-      },
-      {
-        "set_id": "set-of-chaotic-wish",
-        "pieces": 1,
-        "tiers": []
+        "set_id": "set-of-kamishs-obession",
+        "pieces": 6,
+        "tiers": [
+          4
+        ]
       }
     ],
     "hunter_3": [
       {
-        "set_id": "set-of-chaotic-wish",
-        "pieces": 1,
-        "tiers": []
-      },
-      {
         "set_id": "set-of-glorious-arrogance",
-        "pieces": 1,
-        "tiers": []
+        "pieces": 8,
+        "tiers": [
+          4,
+          8
+        ]
       }
     ]
   },
@@ -432,17 +427,18 @@
     },
     {
       "position": 2,
-      "id": null
+      "id": "brute"
     },
     {
       "position": 3,
-      "id": null
+      "id": "igris"
     }
   ],
   "successor": {
-    "id": null,
+    "id": "rockpasa",
     "level": null,
-    "stats": {}
+    "stats": {},
+    "category": "remnant_powers"
   },
   "subjugation_support": null,
   "proof": null,
@@ -451,18 +447,18 @@
   "found": {
     "sjw": true,
     "sjw_weapons": false,
-    "sjw_artifacts": false,
+    "sjw_artifacts": true,
     "sjw_cores": false,
     "sjw_stats": null,
     "sjw_skills": false,
     "blessings": false,
     "hunters": false,
-    "weapons": false,
+    "weapons": true,
     "artifacts": false,
     "cores": false,
     "stats": null,
-    "shadows": false,
-    "successor": false,
+    "shadows": true,
+    "successor": true,
     "subjugation_support": null,
     "proof": null,
     "successor_stats": null,
@@ -471,17 +467,17 @@
   },
   "counts": {
     "sjw_weapons": "1/2",
-    "sjw_artifacts": "1/8",
+    "sjw_artifacts": "8/8",
     "sjw_cores": "0/3",
     "sjw_stats": "0/15",
     "sjw_skills": "1/6",
     "blessings": "0/8",
     "hunters": "0/3",
-    "weapons": "0/3",
-    "artifacts": "7/24",
+    "weapons": "3/3",
+    "artifacts": "19/24",
     "cores": "0/9",
     "stats": "0/45",
-    "shadows": "1/3"
+    "shadows": "3/3"
   },
   "found_at": {},
   "unmatched": [
@@ -490,7 +486,7 @@
       "owner": "sjw",
       "slot": 0,
       "best_id": "truth-demon-knights-spear",
-      "score": 0.694,
+      "score": 0.688,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_weapons_sjw_0.jpg"
     },
     {
@@ -498,7 +494,7 @@
       "owner": "hunter_1",
       "slot": null,
       "best_id": "han-song-yi",
-      "score": 0.61,
+      "score": 0.613,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_hunters_hunter_1.jpg"
     },
     {
@@ -506,7 +502,7 @@
       "owner": "hunter_2",
       "slot": null,
       "best_id": "cha-hae-in",
-      "score": 0.528,
+      "score": 0.532,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_hunters_hunter_2.jpg"
     },
     {
@@ -518,227 +514,51 @@
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_hunters_hunter_3.jpg"
     },
     {
-      "element": "shadows",
-      "owner": "shadows",
-      "slot": 1,
-      "best_id": "brute",
-      "score": 0.604,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_shadows_shadows_1.jpg"
-    },
-    {
-      "element": "shadows",
-      "owner": "shadows",
-      "slot": 2,
-      "best_id": "iron",
-      "score": 0.561,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_shadows_shadows_2.jpg"
-    },
-    {
-      "element": "successor",
-      "owner": "successor",
-      "slot": null,
-      "best_id": "myro",
-      "score": 0.349,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_successor_successor.jpg"
-    },
-    {
-      "element": "sjw_artifacts",
-      "owner": "sjw",
-      "slot": "helmet",
-      "best_id": "set-of-chaotic-desire--helmet",
-      "score": 0.702,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_artifacts_sjw_helmet.jpg"
-    },
-    {
-      "element": "sjw_artifacts",
-      "owner": "sjw",
-      "slot": "chestplate",
-      "best_id": "new-hunters-set--chestplate",
-      "score": 0.626,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_artifacts_sjw_chestplate.jpg"
-    },
-    {
-      "element": "sjw_artifacts",
-      "owner": "sjw",
-      "slot": "bracelet",
-      "best_id": "set-of-chaotic-infamy--bracelet",
-      "score": 0.519,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_artifacts_sjw_bracelet.jpg"
-    },
-    {
-      "element": "sjw_artifacts",
-      "owner": "sjw",
-      "slot": "gloves",
-      "best_id": "set-of-chaotic-wish--gloves",
-      "score": 0.707,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_artifacts_sjw_gloves.jpg"
-    },
-    {
-      "element": "sjw_artifacts",
-      "owner": "sjw",
-      "slot": "ring",
-      "best_id": "set-of-the-architects-blue-poison--ring",
-      "score": 0.468,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_artifacts_sjw_ring.jpg"
-    },
-    {
-      "element": "sjw_artifacts",
-      "owner": "sjw",
-      "slot": "boots",
-      "best_id": "set-of-glorious-arrogance--boots",
-      "score": 0.722,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_artifacts_sjw_boots.jpg"
-    },
-    {
-      "element": "sjw_artifacts",
-      "owner": "sjw",
-      "slot": "earrings",
-      "best_id": "set-of-chaotic-desire--earrings",
-      "score": 0.512,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_artifacts_sjw_earrings.jpg"
-    },
-    {
       "element": "artifacts",
       "owner": "hunter_1",
       "slot": "helmet",
-      "best_id": "set-of-chaotic-desire--helmet",
-      "score": 0.599,
+      "best_id": "set-of-noble-flesh--helmet",
+      "score": 0.443,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_1_helmet.jpg"
     },
     {
       "element": "artifacts",
       "owner": "hunter_1",
-      "slot": "chestplate",
-      "best_id": "new-hunters-set--chestplate",
-      "score": 0.65,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_1_chestplate.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_1",
-      "slot": "gloves",
-      "best_id": "set-of-chaotic-wish--gloves",
-      "score": 0.686,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_1_gloves.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_1",
-      "slot": "ring",
-      "best_id": "set-of-the-architects-blue-poison--ring",
-      "score": 0.517,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_1_ring.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_1",
-      "slot": "boots",
-      "best_id": "set-of-chaotic-desire--boots",
-      "score": 0.612,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_1_boots.jpg"
+      "slot": "necklace",
+      "best_id": "obsidian-set--necklace",
+      "score": 0.605,
+      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_1_necklace.jpg"
     },
     {
       "element": "artifacts",
       "owner": "hunter_1",
       "slot": "earrings",
-      "best_id": "skeleton-set--earrings",
-      "score": 0.546,
+      "best_id": "set-of-noble-flesh--earrings",
+      "score": 0.599,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_1_earrings.jpg"
     },
     {
       "element": "artifacts",
       "owner": "hunter_2",
       "slot": "helmet",
-      "best_id": "almighty-kargalgans-set--helmet",
-      "score": 0.542,
+      "best_id": "set-of-glorious-arrogance--helmet",
+      "score": 0.473,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_2_helmet.jpg"
     },
     {
       "element": "artifacts",
       "owner": "hunter_2",
       "slot": "necklace",
-      "best_id": "set-of-burning-greed--necklace",
-      "score": 0.565,
+      "best_id": "behemoth-set--necklace",
+      "score": 0.489,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_2_necklace.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_2",
-      "slot": "gloves",
-      "best_id": "set-of-chaotic-wish--gloves",
-      "score": 0.699,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_2_gloves.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_2",
-      "slot": "ring",
-      "best_id": "beast-set--ring",
-      "score": 0.519,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_2_ring.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_2",
-      "slot": "boots",
-      "best_id": "set-of-chaotic-wish--boots",
-      "score": 0.609,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_2_boots.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_3",
-      "slot": "helmet",
-      "best_id": "set-of-chaotic-infamy--helmet",
-      "score": 0.673,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_3_helmet.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_3",
-      "slot": "necklace",
-      "best_id": "obsidian-set--necklace",
-      "score": 0.521,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_3_necklace.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_3",
-      "slot": "chestplate",
-      "best_id": "clerics-set--chestplate",
-      "score": 0.574,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_3_chestplate.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_3",
-      "slot": "bracelet",
-      "best_id": "peridot-set--bracelet",
-      "score": 0.479,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_3_bracelet.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_3",
-      "slot": "ring",
-      "best_id": "beast-set--ring",
-      "score": 0.516,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_3_ring.jpg"
-    },
-    {
-      "element": "artifacts",
-      "owner": "hunter_3",
-      "slot": "earrings",
-      "best_id": "set-of-the-architects-blue-poison--earrings",
-      "score": 0.473,
-      "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_artifacts_hunter_3_earrings.jpg"
     },
     {
       "element": "sjw_skills",
       "owner": "sjw",
       "slot": "ultimate",
       "best_id": "the-commanders-touch--finisher",
-      "score": 0.394,
+      "score": 0.403,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_skills_sjw_ultimate.jpg"
     },
     {
@@ -746,7 +566,7 @@
       "owner": "sjw",
       "slot": "skill_2",
       "best_id": "double-slash--multiply",
-      "score": 0.428,
+      "score": 0.434,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_skills_sjw_skill_2.jpg"
     },
     {
@@ -754,7 +574,7 @@
       "owner": "sjw",
       "slot": "skill_1",
       "best_id": "rune--severing-flash",
-      "score": 0.408,
+      "score": 0.429,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_skills_sjw_skill_1.jpg"
     },
     {
@@ -762,7 +582,7 @@
       "owner": "sjw",
       "slot": "qte_3",
       "best_id": "qte--foulee-de-lombre",
-      "score": 0.45,
+      "score": 0.469,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_skills_sjw_qte_3.jpg"
     },
     {
@@ -770,7 +590,7 @@
       "owner": "sjw",
       "slot": "qte_2",
       "best_id": "qte--extinction",
-      "score": 0.498,
+      "score": 0.519,
       "crop": "data/builds/2026-11-12/bot/_crops/bot-2026-11-12-5MI-RLj7FSk-1_sjw_skills_sjw_qte_2.jpg"
     }
   ],
@@ -790,11 +610,9 @@
     "shadows": true,
     "successor": true
   },
-  "plafonds": [
-    "analyse en cours"
-  ],
+  "plafonds": [],
   "erreurs": [],
-  "notes": "ligne non classée (score provisoire); images bot/benedictions absentes; images bot/noyaux absentes; icône absente : weapons; analyse en cours; reconnaissance faible : artifacts; reconnaissance faible : sjw_skills",
+  "notes": "ligne non classée (score provisoire); images bot/benedictions absentes; images bot/noyaux absentes; shadow_2 reconnu par sa carte, icône lue : aucune (68 correspondances); shadow_3 reconnu par sa carte, icône lue : aucune (73 correspondances); successor reconnu par sa carte, icône lue : aucune (14 correspondances); pièce isolée : necklace (sjw); reconnaissance faible : weapons; reconnaissance faible : sjw_artifacts; reconnaissance faible : artifacts; reconnaissance faible : sjw_skills",
   "sources": [
     {
       "type": "video",

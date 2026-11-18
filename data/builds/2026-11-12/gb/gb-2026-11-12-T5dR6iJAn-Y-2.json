@@ -1,0 +1,535 @@
+{
+  "spec": 3,
+  "run_id": "gb-2026-11-12-T5dR6iJAn-Y",
+  "run_index": 2,
+  "week": "2026-11-12",
+  "mode": "gb",
+  "gate": null,
+  "hunter_mode": null,
+  "rank": 1,
+  "line_provisional": false,
+  "provisional_rank": null,
+  "player": "RaidenShadow",
+  "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+  "video_id": "Oj_-5x6700s",
+  "t_result": 230,
+  "t_composition": null,
+  "team": null,
+  "element": "light",
+  "rules": {
+    "week": "2026-11-12",
+    "sjw": true,
+    "sjw_skills": null,
+    "blessings": null,
+    "shadows": null,
+    "successor": null
+  },
+  "status": "pas_de_build",
+  "confidence": "sur",
+  "sjw": null,
+  "hunters": [
+    {
+      "position": 1,
+      "team_slot": "A1",
+      "id": null,
+      "weapon": {
+        "id": null,
+        "level": null
+      },
+      "artifacts": [
+        {
+          "slot": "helmet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "chestplate",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "gloves",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "boots",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "necklace",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "bracelet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "ring",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "earrings",
+          "set_id": null,
+          "level": null
+        }
+      ],
+      "cores": [
+        {
+          "slot": "mind",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "body",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "spirit",
+          "id": null,
+          "level": null
+        }
+      ],
+      "stats": {}
+    },
+    {
+      "position": 2,
+      "team_slot": "A2",
+      "id": null,
+      "weapon": {
+        "id": null,
+        "level": null
+      },
+      "artifacts": [
+        {
+          "slot": "helmet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "chestplate",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "gloves",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "boots",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "necklace",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "bracelet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "ring",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "earrings",
+          "set_id": null,
+          "level": null
+        }
+      ],
+      "cores": [
+        {
+          "slot": "mind",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "body",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "spirit",
+          "id": null,
+          "level": null
+        }
+      ],
+      "stats": {}
+    },
+    {
+      "position": 3,
+      "team_slot": "A3",
+      "id": null,
+      "weapon": {
+        "id": null,
+        "level": null
+      },
+      "artifacts": [
+        {
+          "slot": "helmet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "chestplate",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "gloves",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "boots",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "necklace",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "bracelet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "ring",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "earrings",
+          "set_id": null,
+          "level": null
+        }
+      ],
+      "cores": [
+        {
+          "slot": "mind",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "body",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "spirit",
+          "id": null,
+          "level": null
+        }
+      ],
+      "stats": {}
+    },
+    {
+      "position": 4,
+      "team_slot": "B1",
+      "id": null,
+      "weapon": {
+        "id": null,
+        "level": null
+      },
+      "artifacts": [
+        {
+          "slot": "helmet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "chestplate",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "gloves",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "boots",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "necklace",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "bracelet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "ring",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "earrings",
+          "set_id": null,
+          "level": null
+        }
+      ],
+      "cores": [
+        {
+          "slot": "mind",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "body",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "spirit",
+          "id": null,
+          "level": null
+        }
+      ],
+      "stats": {}
+    },
+    {
+      "position": 5,
+      "team_slot": "B2",
+      "id": null,
+      "weapon": {
+        "id": null,
+        "level": null
+      },
+      "artifacts": [
+        {
+          "slot": "helmet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "chestplate",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "gloves",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "boots",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "necklace",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "bracelet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "ring",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "earrings",
+          "set_id": null,
+          "level": null
+        }
+      ],
+      "cores": [
+        {
+          "slot": "mind",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "body",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "spirit",
+          "id": null,
+          "level": null
+        }
+      ],
+      "stats": {}
+    },
+    {
+      "position": 6,
+      "team_slot": "B3",
+      "id": null,
+      "weapon": {
+        "id": null,
+        "level": null
+      },
+      "artifacts": [
+        {
+          "slot": "helmet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "chestplate",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "gloves",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "boots",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "necklace",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "bracelet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "ring",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "earrings",
+          "set_id": null,
+          "level": null
+        }
+      ],
+      "cores": [
+        {
+          "slot": "mind",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "body",
+          "id": null,
+          "level": null
+        },
+        {
+          "slot": "spirit",
+          "id": null,
+          "level": null
+        }
+      ],
+      "stats": {}
+    }
+  ],
+  "set_bonuses": {
+    "hunter_1": [],
+    "hunter_2": [],
+    "hunter_3": [],
+    "hunter_4": [],
+    "hunter_5": [],
+    "hunter_6": []
+  },
+  "shadows": [
+    {
+      "position": 1,
+      "id": null
+    },
+    {
+      "position": 2,
+      "id": null
+    },
+    {
+      "position": 3,
+      "id": null
+    }
+  ],
+  "successor": {
+    "id": null,
+    "level": null,
+    "stats": {}
+  },
+  "subjugation_support": null,
+  "proof": null,
+  "statues": null,
+  "gems": null,
+  "found": {
+    "sjw": false,
+    "sjw_weapons": false,
+    "sjw_artifacts": false,
+    "sjw_cores": false,
+    "sjw_stats": null,
+    "sjw_skills": null,
+    "blessings": null,
+    "hunters": false,
+    "weapons": false,
+    "artifacts": false,
+    "cores": false,
+    "stats": null,
+    "shadows": null,
+    "successor": null,
+    "subjugation_support": null,
+    "proof": null,
+    "successor_stats": null,
+    "statues": null,
+    "gems": null
+  },
+  "counts": {
+    "hunters": "0/6",
+    "weapons": "0/6",
+    "artifacts": "0/48",
+    "cores": "0/18",
+    "stats": "0/90",
+    "shadows": "0/3"
+  },
+  "found_at": {},
+  "unmatched": [],
+  "attendus": {
+    "sjw": true,
+    "sjw_weapons": true,
+    "sjw_artifacts": true,
+    "sjw_cores": true,
+    "sjw_stats": "fac",
+    "sjw_skills": "fac",
+    "blessings": "fac",
+    "hunters": true,
+    "weapons": true,
+    "artifacts": true,
+    "cores": true,
+    "stats": "fac",
+    "shadows": "fac",
+    "successor": "fac"
+  },
+  "plafonds": [],
+  "erreurs": [],
+  "notes": "composition GB non décrite; images de composition non disponibles",
+  "sources": [
+    {
+      "type": "video",
+      "video_id": "Oj_-5x6700s",
+      "t": null
+    }
+  ],
+  "dossier": "gb"
+}

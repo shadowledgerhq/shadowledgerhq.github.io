@@ -15,7 +15,15 @@
   "t_result": null,
   "t_composition": null,
   "team": null,
-  "rules": null,
+  "element": null,
+  "rules": {
+    "week": "2026-11-12",
+    "sjw": null,
+    "sjw_skills": null,
+    "blessings": null,
+    "shadows": true,
+    "successor": null
+  },
   "status": "pas_de_build",
   "confidence": "a_verifier",
   "sjw": null,
@@ -269,7 +277,7 @@
     "artifacts": false,
     "cores": false,
     "stats": null,
-    "shadows": null,
+    "shadows": false,
     "successor": null,
     "subjugation_support": null,
     "proof": null,
@@ -300,14 +308,11 @@
     "artifacts": true,
     "cores": true,
     "stats": "fac",
-    "shadows": "fac",
+    "shadows": true,
     "successor": "fac",
     "subjugation_support": "fac"
   },
-  "plafonds": [
-    "règles poc inconnues",
-    "analyse en cours"
-  ],
+  "plafonds": [],
   "erreurs": [],
   "notes": "ligne non classée (score provisoire); images poc/personnages absentes; images poc/artefacts absentes; images poc/competences absentes; images poc/benedictions absentes; images poc/noyaux absentes; composition non filmée; images de composition non disponibles",
   "sources": [

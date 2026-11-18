@@ -6,7 +6,7 @@
   "mode": "gb",
   "gate": null,
   "hunter_mode": null,
-  "rank": 3,
+  "rank": 1,
   "line_provisional": false,
   "provisional_rank": null,
   "player": "RaidenShadow",
@@ -15,7 +15,15 @@
   "t_result": 229,
   "t_composition": null,
   "team": null,
-  "rules": null,
+  "element": "fire",
+  "rules": {
+    "week": "2026-11-12",
+    "sjw": true,
+    "sjw_skills": null,
+    "blessings": null,
+    "shadows": null,
+    "successor": null
+  },
   "status": "pas_de_build",
   "confidence": "sur",
   "sjw": null,
@@ -467,10 +475,10 @@
   "statues": null,
   "gems": null,
   "found": {
-    "sjw": null,
-    "sjw_weapons": null,
-    "sjw_artifacts": null,
-    "sjw_cores": null,
+    "sjw": false,
+    "sjw_weapons": false,
+    "sjw_artifacts": false,
+    "sjw_cores": false,
     "sjw_stats": null,
     "sjw_skills": null,
     "blessings": null,
@@ -498,10 +506,10 @@
   "found_at": {},
   "unmatched": [],
   "attendus": {
-    "sjw": "fac",
-    "sjw_weapons": "fac",
-    "sjw_artifacts": "fac",
-    "sjw_cores": "fac",
+    "sjw": true,
+    "sjw_weapons": true,
+    "sjw_artifacts": true,
+    "sjw_cores": true,
     "sjw_stats": "fac",
     "sjw_skills": "fac",
     "blessings": "fac",
@@ -513,10 +521,7 @@
     "shadows": "fac",
     "successor": "fac"
   },
-  "plafonds": [
-    "règles gb inconnues",
-    "analyse en cours"
-  ],
+  "plafonds": [],
   "erreurs": [],
   "notes": "composition GB non décrite; images de composition non disponibles",
   "sources": [
