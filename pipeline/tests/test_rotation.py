@@ -191,6 +191,18 @@ def test_lire_chrono_et_t_game():
     assert [e["t_game"] for e in R.ajouter_t_game([{"t": 1.0}], {}, None)] == [None]
 
 
+def test_ocr_chrono_vote_entre_seuils():
+    class O:
+        def __init__(self, textes): self.textes = list(textes)
+        def ocr(self, png, **kw): return self.textes.pop(0)
+    from PIL import Image
+    im = Image.new("RGB", (80, 20), "black")
+    with tempfile.TemporaryDirectory() as tmp:
+        assert R.lire_chrono(R.ocr_chrono(O(["06:06780", "00:06.760", "00:06.760"]), tmp)(im)) == 6.76     # seuil 170 faux, 190 et 210 d'accord
+        assert R.ocr_chrono(O(["00:06.760", "00:07.100", ""]), tmp)(im) == ""                              # deux lectures différentes : jamais deviné
+        assert R.lire_chrono(R.ocr_chrono(O(["01:05.500"] * 3), tmp)(im)) == 65.5
+
+
 def test_debut_derniere_run_coupure_longue():
     # a-923ClD9Rc : HUD 12,5-29, 35-43, 56,5-88, 88,5-104 → la run = dernier groupe (coupure 43-56,5 > 10 s)
     pres = {t / 2: (12.5 <= t / 2 < 29 or 35 <= t / 2 < 43 or 56.5 <= t / 2 < 104) for t in range(0, 220)}

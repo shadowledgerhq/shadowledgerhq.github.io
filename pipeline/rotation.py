@@ -422,22 +422,33 @@ def preparer_chrono(image, seuil=170, hauteur=60):
     return preparer_chiffre(image, seuil, (0.0, 0.0, 1.0, 1.0), hauteur)
 
 
-def ocr_chrono(outils, tmp, seuil=170):
-    """`ocr(image PIL) -> texte` du chrono (chiffres, `:` et `.`) ; ne lève jamais."""
+def ocr_chrono(outils, tmp, seuils=(170, 190, 210)):
+    """`ocr(image PIL) -> texte` du chrono (chiffres, `:` et `.`) : 3 seuils de binarisation, valeur acceptée si ≥ 2 lectures de format valide sont
+    identiques (essai sur 5 recadrages réels : 170 seul manque `00:06.760`, 190-210 le lisent ; fond clair « New Record » : illisible = vide, jamais
+    deviné) ; sinon texte vide. Ne lève jamais."""
     from pathlib import Path
+    from collections import Counter
     compteur = [0]
 
     def ocr(image):
-        try:
-            compteur[0] += 1
-            png = Path(tmp) / f"_chrono_{compteur[0]}.png"
-            preparer_chrono(image, seuil).save(png)
+        lues = []
+        for seuil in seuils:
             try:
-                return outils.ocr(png, langues="eng", psm=7, timeout=30, extra=["-c", "tessedit_char_whitelist=0123456789:."])
-            finally:
-                png.unlink(missing_ok=True)
-        except Exception:
+                compteur[0] += 1
+                png = Path(tmp) / f"_chrono_{compteur[0]}.png"
+                preparer_chrono(image, seuil).save(png)
+                try:
+                    v = lire_chrono(outils.ocr(png, langues="eng", psm=7, timeout=30, extra=["-c", "tessedit_char_whitelist=0123456789:."]))
+                finally:
+                    png.unlink(missing_ok=True)
+                if v is not None:
+                    lues.append(v)
+            except Exception:
+                continue
+        if not lues:
             return ""
+        v, n = Counter(lues).most_common(1)[0]
+        return f"00:{v:06.3f}" if n >= 2 and v < 60 else (f"{int(v // 60):02d}:{v % 60:06.3f}" if n >= 2 else "")
     return ocr
 
 
