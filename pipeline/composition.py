@@ -313,6 +313,7 @@ def _affiner_onglet(outils, cfg, chemin, onglet, temps, tmp):
         for i in idx:
             with Image.open(trouvees[i][1]) as im:
                 sortie.append(im.convert("RGB"))
+        _affiner_onglet.temps = [round(float(trouvees[i][0]), 2) for i in idx]       # trace : instants des images gardées à 0,1 s
         return sortie
     except Exception:
         return None
@@ -336,10 +337,13 @@ def _affiner(outils, cfg, chemin, fenetre, tmp, journal):
             petites.append((t, rgb))
         choix = choisir_stables(petites, cfg)
         sortie = {}
+        _affiner.temps = {}
         for o, idx in choix.items():
             sortie[o] = None
+            _affiner_onglet.temps = None
             if e.get("pas_tres_fin_s"):        # essai du 15/11 : onglet « artefacts » capté seulement en fondu à 0,5 s -> passe à 0,1 s
                 sortie[o] = _affiner_onglet(outils, cfg, chemin, o, [trouvees[i][0] for i in idx], tmp)
+            _affiner.temps[o] = {"pas_0_5": [round(float(trouvees[i][0]), 2) for i in idx], "pas_0_1": getattr(_affiner_onglet, "temps", None) if sortie[o] else None}
             if not sortie[o]:
                 sortie[o] = []
                 for i in idx:
@@ -461,11 +465,13 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                     ecrans = _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes)
                     cache[cle] = (*choisir_images(images_t, cfg), None, ecrans)
                     d = choisir_images.diagnostic
+                    _affiner.temps = {}
                     traces[cle] = {"video": video_info, "fenetre_s": [debut, fin], "images": d["images"], "vues": d["vues"], "retenues": d["retenues"]}
                     if e.get("pas_fin_s") and cache[cle][1]:
                         fin, fenetre = _affiner(outils, cfg, chemin, cache[cle][1], tmp, journal)
                         if fin:                                  # onglet absent à 0,5 s : on garde le choix à pas_s
                             cache[cle] = ({**cache[cle][0], **fin}, fenetre, None, ecrans)
+                            traces[cle]["affinage"] = dict(getattr(_affiner, "temps", {}) or {})
                     ecrans.extend(_positions_portraits(cache[cle][0], ecrans, ctx, cfg, journal))
                     try:         # v5 : images gardées pour que la discussion 2 définisse les zones (échec sans conséquence)
                         from donnees import RACINE

@@ -294,8 +294,8 @@ def test_bornes_incertaines_sans_results_lu(tmp_path):
 
 def test_selection_top3_bot_et_etat_pc_rotation():
     sem = "2026-11-12"
-    CFG0 = {**CFG, "videos_calibration": []}
-    cal = R.a_traiter(sem, {}, cfg={**CFG, "videos_calibration": ["wJ9CwjKwyco", "a-923ClD9Rc"]})   # le mécanisme reste : vidéos hors top 3 relevées
+    CFG0 = {**CFG, "videos_calibration": [], "modes": ["bot"]}        # ce test suit le BOT seul ; les autres modes ont leurs tests plus bas
+    cal = R.a_traiter(sem, {}, cfg={**CFG, "modes": ["bot"], "videos_calibration": ["wJ9CwjKwyco", "a-923ClD9Rc"]})   # le mécanisme reste : vidéos hors top 3 relevées
     assert {"wJ9CwjKwyco", "a-923ClD9Rc"} <= set(cal) and "videos_calibration" not in CFG
     top = R.a_traiter(sem, {}, cfg=CFG0)                        # l'ordre suit bot.json (change à chaque classement) : pas de ids figés
     assert len(top) == 3 and len(set(top)) == 3
@@ -318,6 +318,76 @@ def test_traiter_images_appelle_apres_sur_la_video_deja_telechargee():
                       apres=lambda chemin, tmp: vu.append((Path(chemin).name, Path(tmp).exists())))
     assert vu == [("wJ9CwjKwyco", True)] and [a for a in o.appels if a[0] == "dl"] == [("dl", "wJ9CwjKwyco")]          # un seul téléchargement
     assert not any(a[0] == "img" for a in o.appels)                                                         # tris déjà faits : aucune image relue
+
+
+# --- POC, GB, HOTM (v2.1) ----------------------------------------------------------------------------------------------------
+
+def _racine_modes(tmp_path):
+    d = tmp_path / "data" / "runs" / "2026-11-12"
+    d.mkdir(parents=True)
+    def ligne(mode, vid, rang, gate=None, videos=None, ts=None):
+        videos = videos or [vid]
+        return {"run_id": f"{mode}-2026-11-12-{vid}", "mode": mode, "video_id": vid, "rank": rang, "confidence": "sur", "gate": gate,
+                "score": {"total": 10, "runs": [10], "unit": "points"},
+                "runs_detail": [{"video_id": v, "t": (ts or [None] * 9)[i]} for i, v in enumerate(videos)]}
+    fichiers = {"bot": [ligne("bot", f"b{i}", i) for i in range(1, 5)],
+                "poc": [ligne("poc", f"p{i}", i) for i in range(1, 5)],
+                "gb": [ligne("gb", "g1", 1, videos=["g1", "g1b"]), ligne("gb", "g2", 2), ligne("gb", "g3", 3), ligne("gb", "g4", 4)],
+                "hotm-gate-1": [ligne("hotm", f"h1{i}", i, gate=1) for i in range(1, 5)],
+                "hotm-gate-2": [ligne("hotm", f"h2{i}", i, gate=2) for i in range(1, 3)]}
+    for nom, lignes in fichiers.items():
+        (d / f"{nom}.json").write_text(json.dumps(lignes), encoding="utf-8")
+    return tmp_path
+
+
+def test_selection_top3_de_chaque_mode_et_de_chaque_porte(tmp_path):
+    racine = _racine_modes(tmp_path)
+    cfg = dict(R.charger_config(), modes=["bot", "poc", "gb", "hotm"], videos_calibration=[])
+    sel = R.selection("2026-11-12", racine, cfg)
+    assert [m for m, _ in sel] == ["bot"] * 3 + ["poc"] * 3 + ["gb"] * 3 + ["hotm"] * 5          # BOT d'abord ; HOTM : 3 (porte 1) + 2 (porte 2)
+    assert [l["video_id"] for m, l in sel if m == "hotm"] == ["h11", "h12", "h13", "h21", "h22"]
+
+
+def test_a_traiter_toutes_les_videos_de_la_ligne_et_budget_par_groupe(tmp_path):
+    racine = _racine_modes(tmp_path)
+    cfg = dict(R.charger_config(), modes=["bot", "poc", "gb", "hotm"], videos_calibration=[], budget_par_mode=2)
+    sortie = R.a_traiter("2026-11-12", {}, racine, cfg)
+    assert sortie == ["b1", "b2", "p1", "p2", "g1", "g1b", "g2", "h11", "h12", "h21", "h22"]       # 2 lignes par groupe ; g1 = 2 vidéos
+    fait = {"g1": {"pc": {"rotation": "fait", "rotation_version": cfg["version"]}}}
+    assert "g1" not in R.a_traiter("2026-11-12", fait, racine, cfg) and "g1b" in R.a_traiter("2026-11-12", fait, racine, cfg)
+
+
+def test_contexte_run_de_la_video_dans_la_ligne(tmp_path):
+    racine = _racine_modes(tmp_path)
+    cfg = dict(R.charger_config(), modes=["bot", "poc", "gb", "hotm"], videos_calibration=[])
+    c = R.contexte("2026-11-12", "g1b", racine, cfg)
+    assert c["mode"] == "gb" and [r["run_index"] for r in c["runs_video"]] == [2] and c["chrono_s"] is None
+    assert R.contexte("2026-11-12", "h21", racine, cfg)["gate"] == 2 and R.contexte("2026-11-12", "inconnue", racine, cfg) is None
+
+
+def test_deux_runs_dans_une_meme_video_deux_entrees_runs(tmp_path):
+    def hud2(t, taille):
+        if t < 2.0 or 12.0 <= t < 14.0:
+            return image(taille=taille)                                              # écran sans HUD (avant la run 1, Results 1 puis chargement)
+        return _hud(t if t < 12.0 else t - 12.0, taille)
+    ctx = _ctx(mode="poc", t_result=12.0, chrono_s=None, runs_video=[{"run_index": 2, "t_result": 26.0}, {"run_index": 1, "t_result": 12.0}])
+    cfg = {**CFG, "zones": Z, "fps": 10, "scan_pas_s": 0.5}
+    with tempfile.TemporaryDirectory() as tmp:
+        etat = R.passage_video(Outils(hud2), "v.mp4", ctx, cfg, HUNTER_DB, tmp, racine=tmp_path)
+    assert etat == "fait"
+    d = json.loads((tmp_path / "data/rotations/2026-11-12/poc/wJ9CwjKwyco.json").read_text(encoding="utf-8"))
+    r1, r2 = d["runs"]
+    assert (r1["run_index"], r1["run_start_t"], r1["run_end_t"]) == (1, 2.0, 12.0)
+    assert (r2["run_index"], r2["run_start_t"], r2["run_end_t"]) == (2, 14.0, 26.0)              # la 2e run commence après le Results de la 1re
+    assert [e["t"] for e in r2["events"] if e["slot"] == "skill_1"] == [16.0] and [e["t"] for e in r1["events"] if e["slot"] == "skill_1"] == [4.0]
+
+
+def test_par_mode_reduit_fps_et_ecart_duree_max(tmp_path):
+    cfg = {**CFG, "zones": Z, "fps": 10, "scan_pas_s": 0.5, "par_mode": {"gb": {"fps": 2, "duree_max_s": 420}}}
+    o = Outils(_hud)
+    with tempfile.TemporaryDirectory() as tmp:
+        R.passage_video(o, "v.mp4", _ctx(mode="gb", chrono_s=None), cfg, HUNTER_DB, tmp, racine=tmp_path)
+    assert o.appels[1][2] == pytest.approx(0.5)                                                      # 2 images/s en GB (mémoire), 10 au BOT
 
 
 if __name__ == "__main__":

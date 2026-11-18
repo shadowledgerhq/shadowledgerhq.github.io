@@ -598,56 +598,84 @@ def ecrire(ctx, fich, racine=RACINE, controles=None):
 # --- sélection et passage PC ---------------------------------------------------------------------------------------------
 
 def selection(semaine, racine=RACINE, cfg=None, config_builds=None):
-    """[(mode, ligne)] : top `top` (3) des modes de `cfg.modes` (BOT d'abord ; lignes provisoires acceptées), dans l'ordre du classement."""
+    """[(mode, ligne)] : top `top` (3) de chaque groupe (mode ; pour HOTM, mode + porte) des modes de `cfg.modes` (BOT d'abord, puis POC, GB, HOTM ;
+    lignes provisoires acceptées), dans l'ordre du classement. v2.1 : POC, GB et HOTM comme le BOT."""
     import builds
     cfg = cfg or charger_config()
     top = builds.modes_du_top(semaine, racine, config_builds or builds.charger_config())
     sortie = []
     for mode in cfg.get("modes", ["bot"]):
-        du_mode = [l for n, l in top if (l.get("mode") or n.split("-")[0]) == mode]
-        sortie += [(mode, l) for l in du_mode[:cfg.get("top", 3)]]
-        # vidéos de calibration (wJ9, a-923) : relevées même hors du top 3, tant que le relevé n'est pas validé (SPEC_ROTATION §4)
-        sortie += [(mode, l) for l in du_mode[cfg.get("top", 3):] if l.get("video_id") in cfg.get("videos_calibration", [])]
+        du_mode = [(n, l) for n, l in top if (l.get("mode") or n.split("-")[0]) == mode]
+        groupes = {}
+        for n, l in du_mode:                      # HOTM : un groupe par porte (fichier hotm-gate-<n>) ; sinon un seul groupe
+            groupes.setdefault(n, []).append(l)
+        for lignes in groupes.values():
+            sortie += [(mode, l) for l in lignes[:cfg.get("top", 3)]]
+            # vidéos de calibration : relevées même hors du top 3 (mécanisme gardé, liste vide depuis la v2)
+            sortie += [(mode, l) for l in lignes[cfg.get("top", 3):] if l.get("video_id") in cfg.get("videos_calibration", [])]
     return sortie
 
 
+def videos_de_la_ligne(ligne):
+    """video_id de TOUTES les vidéos de la ligne (une run par vidéo ou plusieurs dans une même vidéo), dans l'ordre des runs ; au moins `video_id`."""
+    ids = [d.get("video_id") for d in (ligne.get("runs_detail") or []) if d.get("video_id")]
+    ids = list(dict.fromkeys(ids)) or [ligne.get("video_id")]
+    return [v for v in ids if v]
+
+
 def a_traiter(semaine, processed, racine=RACINE, cfg=None, config_builds=None):
-    """video_id à relever ce passage : sélection du top 3 par mode, sans `pc.rotation` (fait | absent | erreur) à la version courante,
-    au plus `budget_par_mode` par mode (SPEC §1)."""
+    """video_id à relever ce passage : lignes du top 3 de chaque groupe (mode, porte), sans `pc.rotation` (fait | absent | erreur) à la version
+    courante, au plus `budget_par_mode` LIGNES par groupe (SPEC §1) ; toutes les vidéos d'une ligne sont relevées (une run par vidéo)."""
     cfg = cfg or charger_config()
-    par_mode, sortie = {}, []
+    par_groupe, sortie = {}, []
     for mode, ligne in selection(semaine, racine, cfg, config_builds):
-        vid = ligne.get("video_id")
-        p = (processed.get(vid) or {}).get("pc") or {}
-        deja = p.get("rotation") in ("fait", "absent", "erreur") and p.get("rotation_version", 0) >= cfg.get("version", 1)
-        if vid and not deja and vid not in sortie and (par_mode.get(mode, 0) < cfg.get("budget_par_mode", 3) or vid in cfg.get("videos_calibration", [])):
-            par_mode[mode] = par_mode.get(mode, 0) + 1
-            sortie.append(vid)
+        groupe = (mode, ligne.get("gate"))
+        restantes = []
+        for vid in videos_de_la_ligne(ligne):
+            p = (processed.get(vid) or {}).get("pc") or {}
+            deja = p.get("rotation") in ("fait", "absent", "erreur") and p.get("rotation_version", 0) >= cfg.get("version", 1)
+            if not deja and vid not in sortie:
+                restantes.append(vid)
+        if restantes and (par_groupe.get(groupe, 0) < cfg.get("budget_par_mode", 3) or ligne.get("video_id") in cfg.get("videos_calibration", [])):
+            par_groupe[groupe] = par_groupe.get(groupe, 0) + 1
+            sortie += restantes
     return sortie
 
 
 def contexte(semaine, vid, racine=RACINE, cfg=None, config_builds=None):
-    """Contexte d'une vidéo de la sélection : mode, gate, run_id, ligne, t (Results lu au tri 3-4 si connu), chrono (BOT)."""
+    """Contexte d'une vidéo de la sélection : mode, gate, run_id, ligne, t (Results lu au tri 3-4 si connu), chrono (BOT).
+    v2.1 : `runs_video` = les runs de la ligne qui sont dans CETTE vidéo [{run_index (1 = 1re run de la ligne), t_result, t_composition, skills_sjw}]
+    (POC, GB : une run par équipe / groupe ; plusieurs runs dans une même vidéo possibles)."""
     for mode, ligne in selection(semaine, racine, cfg, config_builds):
-        if ligne.get("video_id") == vid:
-            d = (ligne.get("runs_detail") or [{}])[0]
-            ctx = {"video_id": vid, "week": semaine, "mode": mode, "gate": ligne.get("gate"), "run_id": ligne.get("run_id"),
-                   "ligne": ligne, "t_result": d.get("t"), "chrono_s": ligne["score"]["total"] if mode == "bot" else None}
-            b = Path(racine) / "data" / "builds" / semaine / (ligne.get("dossier") or mode) / f"{ligne.get('run_id')}-1.json"
+        if vid not in videos_de_la_ligne(ligne):
+            continue
+        detail = ligne.get("runs_detail") or [{}]
+        idx = [i for i, d in enumerate(detail, 1) if d.get("video_id") == vid] or [1]
+        d = detail[idx[0] - 1]
+        ctx = {"video_id": vid, "week": semaine, "mode": mode, "gate": ligne.get("gate"), "run_id": ligne.get("run_id"),
+               "ligne": ligne, "t_result": d.get("t"), "chrono_s": ligne["score"]["total"] if mode == "bot" else None}
+        ctx["runs_video"] = []
+        for i in idx:
+            run = {"run_index": i, "t_result": detail[i - 1].get("t")}
+            b = Path(racine) / "data" / "builds" / semaine / (ligne.get("dossier") or mode) / f"{ligne.get('run_id')}-{i}.json"
             if b.exists():          # début de l'écran de composition (le build provisoire) : la run se termine avant
                 bj = json.loads(b.read_text(encoding="utf-8"))
                 tc = bj.get("t_composition")
-                ctx["t_composition"] = tc[0] if tc else None
+                run["t_composition"] = tc[0] if tc else None
                 par_slot = {x.get("slot"): x.get("id") for x in ((bj.get("sjw") or {}).get("skills") or [])}
-                ctx["skills_sjw"] = {"sjw_skill_1": par_slot.get("skill_1"), "sjw_skill_2": par_slot.get("skill_2"),
+                run["skills_sjw"] = {"sjw_skill_1": par_slot.get("skill_1"), "sjw_skill_2": par_slot.get("skill_2"),
                                      "sjw_ultimate": par_slot.get("ultimate"), "sjw_qte": par_slot.get("qte_1")}       # id de la compétence (build)
-            lec = Path(racine) / "data" / "runs" / semaine / "_lectures.json"
-            if lec.exists():
-                for l in json.loads(lec.read_text(encoding="utf-8")):
-                    if l.get("video_id") == vid and l.get("mode") == "bot" and (l.get("detail") or {}).get("phases"):
-                        ctx["phases"] = [p for p in l["detail"]["phases"] if isinstance(p, (int, float))]
-                        break
-            return ctx
+            ctx["runs_video"].append(run)
+        if ctx["runs_video"] and "t_composition" in ctx["runs_video"][0]:
+            ctx["t_composition"] = ctx["runs_video"][0]["t_composition"]
+            ctx["skills_sjw"] = ctx["runs_video"][0]["skills_sjw"]
+        lec = Path(racine) / "data" / "runs" / semaine / "_lectures.json"
+        if mode == "bot" and lec.exists():
+            for l in json.loads(lec.read_text(encoding="utf-8")):
+                if l.get("video_id") == vid and l.get("mode") == "bot" and (l.get("detail") or {}).get("phases"):
+                    ctx["phases"] = [p for p in l["detail"]["phases"] if isinstance(p, (int, float))]
+                    break
+        return ctx
     return None
 
 
@@ -723,76 +751,95 @@ def planche_zones(ctx, images, zones, cfg, racine=RACINE, extra=None):
 
 def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr=None, cartes=None, racine=RACINE, duree_s=None, t_composition=None, ocr_t=None):
     """Relevé d'UNE vidéo déjà téléchargée. Retourne l'état de `pc.rotation` : `fait` | `absent` | `erreur`. Bornes : début = 1re image où un bouton de
-    compétence est visible (balayage à `scan_pas_s`), fin = `ctx.t_result` (Results lu aux tris 3-4) sinon dernière image avec HUD (`bornes-incertaines`)."""
+    compétence est visible (balayage à `scan_pas_s`), fin = `t_result` (Results lu aux tris 3-4) sinon dernière image avec HUD (`bornes-incertaines`).
+    v2.1 : une entrée de `runs[]` par run de la ligne présente dans la vidéo (`ctx.runs_video`, triées par Results) ; la 2e run d'une même vidéo
+    commence après le Results de la 1re. Réglages propres au mode : `cfg.par_mode.<mode>` (fps, durée max : POC/GB/HOTM durent plus que le BOT)."""
+    cfg = {**cfg, **((cfg.get("par_mode") or {}).get(ctx["mode"]) or {})}
     zones = {k: v for k, v in (cfg.get("zones") or {}).items() if v}
     presents_scan = None
-    fin_max = min(ctx.get("t_result") or duree_s or 60, cfg.get("duree_max_s", 120))
+    runs_spec = sorted(ctx.get("runs_video") or [{"run_index": 1, "t_result": ctx.get("t_result"), "t_composition": ctx.get("t_composition"),
+                                                  "skills_sjw": ctx.get("skills_sjw")}], key=lambda r: (r.get("t_result") is None, r.get("t_result") or 0))
+    fins = [r["t_result"] for r in runs_spec if r.get("t_result")]
+    fin_max = min(max(fins) if fins else (duree_s or 60), cfg.get("duree_max_s", 120))
     balayage = outils.images(chemin, [(0, fin_max, cfg.get("scan_pas_s", 0.5))], tmp, prefixe="rs", hauteur=cfg.get("hauteur", 720))
     from PIL import Image
     images = {t: Image.open(p).convert("RGB") for t, p in balayage}
-    limites = []
+
+    def sans_releve(limite):
+        ecrire(ctx, fichier(ctx, [construire_run(r["run_index"], None, None, [], [limite]) for r in runs_spec]), racine)
+
     if images and not format_16_9(next(iter(images.values())).size):
-        run = construire_run(1, None, None, [], ["format"])
-        ecrire(ctx, fichier(ctx, [run]), racine)
+        sans_releve("format")
         return "absent"
     if not any(zones.get(b) for b in BOUTONS_HUNTER + BOUTONS_SJW):
         diagnostic_crops(ctx, sorted(images.items()), cfg, racine)
-        run = construire_run(1, None, None, [], ["hud-non-trouve"])
-        ecrire(ctx, fichier(ctx, [run]), racine)
+        sans_releve("hud-non-trouve")
         journal("  rotation : HUD non calibré (config/rotation.json), recadrages de calibration gardés")
         return "absent"
     if zones.get("ancre"):
         pres = hud_present([(t, vignette(im, zones["ancre"])) for t, im in sorted(images.items())], cfg.get("ancre_corr", 0.4))
-        visibles = [t for t in sorted(pres) if pres[t]]
+        visibles_tous = [t for t in sorted(pres) if pres[t]]
         presents_scan = dict(pres)
     else:
-        visibles = [t for t, im in sorted(images.items()) if any(luminance(im, zones[b]) >= cfg.get("visible_luminance", 30) for b in zones if b in BOUTONS_HUNTER + BOUTONS_SJW)]
-    if not visibles:
-        run = construire_run(1, None, None, [], ["hud-non-trouve"])
-        ecrire(ctx, fichier(ctx, [run]), racine)
+        visibles_tous = [t for t, im in sorted(images.items()) if any(luminance(im, zones[b]) >= cfg.get("visible_luminance", 30) for b in zones if b in BOUTONS_HUNTER + BOUTONS_SJW)]
+    if not visibles_tous:
+        sans_releve("hud-non-trouve")
         return "absent"
-    t_debut = visibles[0]
-    if ctx.get("t_result"):
-        t_fin = float(ctx["t_result"])
-    else:
-        t_fin = visibles[-1] + cfg.get("scan_pas_s", 0.5)
-        limites.append("bornes-incertaines")
-    if presents_scan:           # v1.4 : la run = dernier groupe de segments de HUD avant la fin (écran Results), pas tout le HUD
-        debut2 = debut_derniere_run(presents_scan, t_fin, cfg.get("coupure_run_s", 10.0), cfg.get("scan_pas_s", 0.5))
-        if debut2 is not None and debut2 > t_debut:
-            limites.append("essais-precedents")
-            t_debut = debut2
     pas = 1 / cfg.get("fps", 10)
-    lectures, extra, chrono_crops = None, None, {}
-    if cfg.get("detection") == "ocr" and ocr and cfg.get("hauteur_ocr"):
-        boutons = [b for b in BOUTONS_HUNTER + BOUTONS_SJW if zones.get(b)]
-        pas_ocr = cfg.get("ocr_pas_s", 0.5)
-        recadrages = []
-        for t, chemin_png in outils.images(chemin, [(t_debut, max(t_fin - t_debut, pas_ocr), pas_ocr)], tmp, prefixe="ro", hauteur=cfg["hauteur_ocr"]):
-            with Image.open(chemin_png) as im:
-                im = im.convert("RGB")
-                recadrages.append((t, {n: recadrer(im, zones[n]).copy() for n in boutons + (["ancre"] if zones.get("ancre") else []) + (["chrono"] if zones.get("chrono") else [])}))
-        pres = hud_present([(t, vignette(zs["ancre"], [0, 0, 1, 1])) for t, zs in recadrages], cfg.get("ancre_corr", 0.4)) if zones.get("ancre") else {}
-        brut = []
-        lectures = lectures_ocr(recadrages, boutons, ocr, pres, brut)
-        chrono_crops = {t: zs["chrono"] for t, zs in recadrages if "chrono" in zs and pres.get(t, True)}
-        extra = {"hauteur": cfg["hauteur_ocr"], "hud": {str(t): bool(v) for t, v in pres.items()},
-                 "brut": {b: [[t, x] for bb, t, x in brut if bb == b] for b in boutons}}
-    planche_zones(ctx, images, zones, cfg, racine, extra)
-    frames = [(t, Image.open(p).convert("RGB")) for t, p in outils.images(chemin, [(t_debut, max(t_fin - t_debut, pas), pas)], tmp, prefixe="rf", hauteur=cfg.get("hauteur", 720))]
-    sjw = ctx.get("skills_sjw") or {}
-    evenements, lim = releves_run(frames, zones, cfg, db, cartes, sjw, ocr, t_debut, lectures)
-    if zones.get("chrono"):                 # t_game : chrono du combat lu dans le HUD (SPEC §2.4)
-        ajouter_t_game(evenements, chrono_crops, ocr_t, cfg.get("t_game_tolerance_s", 0.5))
-    else:                                   # zone à calibrer : grands recadrages du haut de l'image (≤ 960 px, 3 instants)
-        diagnostic_chrono(ctx, frames, cfg, racine)
-    chrono = ctx.get("chrono_s")
-    duree = (t_fin - t_debut) if t_fin is not None else None
-    if chrono and duree and duree > cfg.get("duree_max_facteur", 2.5) * chrono:
-        limites.append("bornes-incertaines")
-    run = construire_run(1, t_debut, t_fin, evenements, limites + lim, temps_sans_hud(presents_scan, t_debut, t_fin, cfg.get("scan_pas_s", 0.5)))
-    fich = fichier(ctx, [run])
-    controles = [list(c) for c in controles_bot(fich, ctx.get("chrono_s"), t_composition if t_composition is not None else ctx.get("t_composition"),
-                                                ctx.get("phases") or (), db, cfg.get("tolerance_recharge_s", 1.0))] if ctx["mode"] == "bot" else None
+    sjw_defaut = ctx.get("skills_sjw") or {}
+    runs, t_min = [], 0.0
+    for spec in runs_spec:
+        limites = []
+        visibles = [t for t in visibles_tous if t >= t_min]
+        if not visibles:                                  # aucune image de HUD pour cette run (fin de la run précédente trop proche)
+            runs.append(construire_run(spec["run_index"], None, None, [], ["hud-non-trouve"]))
+            continue
+        t_debut = visibles[0]
+        if spec.get("t_result"):
+            t_fin = float(spec["t_result"])
+        else:
+            t_fin = visibles[-1] + cfg.get("scan_pas_s", 0.5)
+            limites.append("bornes-incertaines")
+        if presents_scan:           # v1.4 : la run = dernier groupe de segments de HUD avant la fin (écran Results), pas tout le HUD
+            debut2 = debut_derniere_run({t: v for t, v in presents_scan.items() if t >= t_min}, t_fin, cfg.get("coupure_run_s", 10.0), cfg.get("scan_pas_s", 0.5))
+            if debut2 is not None and debut2 > t_debut:
+                limites.append("essais-precedents")
+                t_debut = debut2
+        lectures, chrono_crops = None, {}
+        if cfg.get("detection") == "ocr" and ocr and cfg.get("hauteur_ocr"):
+            boutons = [b for b in BOUTONS_HUNTER + BOUTONS_SJW if zones.get(b)]
+            pas_ocr = cfg.get("ocr_pas_s", 0.5)
+            recadrages = []
+            for t, chemin_png in outils.images(chemin, [(t_debut, max(t_fin - t_debut, pas_ocr), pas_ocr)], tmp, prefixe="ro", hauteur=cfg["hauteur_ocr"]):
+                with Image.open(chemin_png) as im:
+                    im = im.convert("RGB")
+                    recadrages.append((t, {n: recadrer(im, zones[n]).copy() for n in boutons + (["ancre"] if zones.get("ancre") else []) + (["chrono"] if zones.get("chrono") else [])}))
+                Path(chemin_png).unlink(missing_ok=True)       # v2.1 : runs longues, ne pas garder tous les PNG 1080p en tmp
+            pres = hud_present([(t, vignette(zs["ancre"], [0, 0, 1, 1])) for t, zs in recadrages], cfg.get("ancre_corr", 0.4)) if zones.get("ancre") else {}
+            brut = []
+            lectures = lectures_ocr(recadrages, boutons, ocr, pres, brut)
+            chrono_crops = {t: zs["chrono"] for t, zs in recadrages if "chrono" in zs and pres.get(t, True)}
+            extra = {"hauteur": cfg["hauteur_ocr"], "hud": {str(t): bool(v) for t, v in pres.items()},
+                     "brut": {b: [[t, x] for bb, t, x in brut if bb == b] for b in boutons}}
+        else:
+            extra = None
+        if spec is runs_spec[0]:
+            planche_zones(ctx, images, zones, cfg, racine, extra)
+        frames = [(t, Image.open(p).convert("RGB")) for t, p in outils.images(chemin, [(t_debut, max(t_fin - t_debut, pas), pas)], tmp, prefixe="rf", hauteur=cfg.get("hauteur", 720))]
+        sjw = spec.get("skills_sjw") or sjw_defaut
+        evenements, lim = releves_run(frames, zones, cfg, db, cartes, sjw, ocr, t_debut, lectures)
+        if zones.get("chrono"):                 # t_game : chrono du combat lu dans le HUD (SPEC §2.4)
+            ajouter_t_game(evenements, chrono_crops, ocr_t, cfg.get("t_game_tolerance_s", 0.5))
+        elif spec is runs_spec[0]:              # zone à calibrer : grands recadrages du haut de l'image (≤ 960 px, 3 instants)
+            diagnostic_chrono(ctx, frames, cfg, racine)
+        chrono = ctx.get("chrono_s")
+        duree = (t_fin - t_debut) if t_fin is not None else None
+        if chrono and duree and duree > cfg.get("duree_max_facteur", 2.5) * chrono:
+            limites.append("bornes-incertaines")
+        runs.append(construire_run(spec["run_index"], t_debut, t_fin, evenements, limites + lim, temps_sans_hud(presents_scan, t_debut, t_fin, cfg.get("scan_pas_s", 0.5))))
+        t_min = t_fin
+    fich = fichier(ctx, runs)
+    tc = t_composition if t_composition is not None else ctx.get("t_composition")
+    controles = [list(c) for c in controles_bot(fich, ctx.get("chrono_s"), tc, ctx.get("phases") or (), db, cfg.get("tolerance_recharge_s", 1.0))] if ctx["mode"] == "bot" else None
     ecrire(ctx, fich, racine, controles)
     return "fait"

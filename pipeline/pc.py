@@ -1441,14 +1441,18 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         if cfg_img["actif"] if images is None else images:
             try:        # v33 : rotations (SPEC_ROTATION) : top 3 du BOT, vidéo déjà téléchargée par les tris 3-4 (ou seulement pour la rotation)
                 rotation_cfg = rotation.charger_config()
-                a_rotation = set(rotation.a_traiter(week, processed, RACINE, rotation_cfg))
+                ordre_rotation = rotation.a_traiter(week, processed, RACINE, rotation_cfg)      # BOT d'abord, puis POC, GB, HOTM
+                a_rotation = set(ordre_rotation)
             except Exception as e:
-                a_rotation, rotation_cfg = set(), {"version": 1}
+                ordre_rotation, a_rotation, rotation_cfg = [], set(), {"version": 1}
                 alertes.append(f"rotation : sélection impossible ({e})")
             a_images = [v for v, p in processed.items() if p.get("week") == week and v in videos and (not seulement or v in seulement)
                         and ((p["status"] == "en_cours" and p.get("pc_needed") and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile"))
                              or v in a_rotation)]
             a_images = ordre_pc.ordonner(d, week, a_images)[0]       # v29 : idem pour les images (anti-bot : on s'arrête quand on peut)
+            places = [i for i, v in enumerate(a_images) if v in a_rotation]      # v36 : entre elles, les vidéos de rotation passent BOT, POC, GB, HOTM
+            for i, v in zip(places, sorted((a_images[i] for i in places), key=ordre_rotation.index)):
+                a_images[i] = v
             lim_img = min(maximum, cfg_img["max_videos"]) if maximum else cfg_img["max_videos"]  # --max limite aussi les images
             if len(a_images) > lim_img:
                 alertes.append(f"{len(a_images) - lim_img} vidéo(s) reportée(s) pour les images (limite {lim_img})")

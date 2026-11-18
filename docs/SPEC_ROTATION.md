@@ -4,7 +4,7 @@ Demandeur : discussion 3 (Theorycraft). Code : discussion 8. Aucune action manue
 But : pour les meilleures runs, la liste horodatée des compétences utilisées pendant la run. Elle sert de timeline aux vidéos de l'étape 3b.
 
 ## 1. Périmètre
-- BOT d'abord : top 3 de data/runs/<semaine>/bot.json (lignes provisoires acceptées). POC, GB et HOTM (top 3 par classement ou par porte) seulement une fois le BOT validé.
+- BOT d'abord : top 3 de data/runs/<semaine>/bot.json (lignes provisoires acceptées). POC, GB et HOTM (top 3 par classement ou par porte) (BOT validé en v2 ; activés le 18/11 : top 3 par mode, HOTM par porte, v2.1).
 - Où : passage PC (pipeline/pc.py), après les tris 3-4, sur la vidéo déjà téléchargée (aucun second téléchargement). Le cloud ne peut pas télécharger YouTube (blocage anti-bot) : le PC est obligatoire.
 - Une vidéo n'est traitée qu'une fois : data/processed.json, pc.rotation = fait | absent | erreur.
 - Budget de départ : 3 vidéos par mode et par passage.
