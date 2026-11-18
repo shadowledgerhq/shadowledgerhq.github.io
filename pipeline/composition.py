@@ -82,6 +82,7 @@ def choisir_images(images_t, cfg):
         if o:
             par.setdefault(o, []).append((t, im))
     sortie, temps = {}, []
+    diag["vues"], diag["retenues"] = {}, {}               # trace : images vues par onglet, instants (s) des images gardées
     ignorer = cfg["extraction"].get("ignorer_debut", 0)
     ecart = cfg["extraction"].get("visite_ecart_s", 3)
     for o, l in par.items():
@@ -90,6 +91,8 @@ def choisir_images(images_t, cfg):
         pas = max(1, len(l) // n)
         choisies = l[::pas][:n]
         sortie[o] = [im for _, im in choisies]
+        diag["vues"][o] = len(par[o])
+        diag["retenues"][o] = [round(float(t), 2) for t, _ in choisies]
     choisir_images.diagnostic = diag
     return sortie, ([min(temps), max(temps)] if temps else None)
 
@@ -410,6 +413,20 @@ def sauver_images_auto(racine, mode, vid, images, t, cfg, journal=None):
     return ecrits
 
 
+def info_video(chemin):
+    """Trace du fichier téléchargé (nom, taille en Mo, largeur × hauteur) : une qualité plus basse explique une reconnaissance moins bonne."""
+    info = {"fichier": Path(chemin).name}
+    try:
+        info["mo"] = round(Path(chemin).stat().st_size / 1e6, 1)
+        import cv2
+        cap = cv2.VideoCapture(str(chemin))
+        info["taille"] = f"{int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))}x{int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))}"
+        cap.release()
+    except Exception:                                   # trace seulement : jamais d'échec du build
+        pass
+    return info
+
+
 def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
     """Fournisseur d'images pour `builds.calculer(fournisseur=…)` : télécharge chaque vidéo une fois (`outils.telecharger`),
     extrait 1 image / `pas_s` s de 0 à `t_result` (`outils.images`), garde les images de l'écran de composition. Retourne
@@ -420,7 +437,7 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
     from PIL import Image
     journal = journal or (lambda m: None)
     e = cfg["extraction"]
-    cache = {}
+    cache, traces = {}, {}
 
     def lire(ctx):
         vid, t_fin = ctx["video_id"], ctx.get("t_result")
@@ -432,6 +449,7 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                 with tempfile.TemporaryDirectory() as tmp:
                     journal(f"  composition {vid} : téléchargement…")
                     chemin = outils.telecharger(vid, tmp)
+                    video_info = info_video(chemin)
                     images_t, autres, toutes = [], [], []
                     for t, png in outils.images(chemin, [(debut, fin - debut, e["pas_s"])], tmp, "c"):
                         with Image.open(png) as im:
@@ -443,6 +461,7 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                     ecrans = _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes)
                     cache[cle] = (*choisir_images(images_t, cfg), None, ecrans)
                     d = choisir_images.diagnostic
+                    traces[cle] = {"video": video_info, "fenetre_s": [debut, fin], "images": d["images"], "vues": d["vues"], "retenues": d["retenues"]}
                     if e.get("pas_fin_s") and cache[cle][1]:
                         fin, fenetre = _affiner(outils, cfg, chemin, cache[cle][1], tmp, journal)
                         if fin:                                  # onglet absent à 0,5 s : on garde le choix à pas_s
@@ -463,8 +482,10 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                                 im.save(Path(ocr_debug) / f"{vid}_compo_{onglet}_{k}.jpg", quality=85)
                     journal(f"  composition {vid} : {d['images']} images, écran vu sur {d['ecran']}, onglet douteux sur {d['onglet_douteux']}, "
                             f"onglets : {', '.join(f'{o} ×{len(l)}' for o, l in cache[cle][0].items()) or 'aucun'}")
+                    journal(f"  composition {vid} : trace {json.dumps(traces[cle], ensure_ascii=False)}")
             except Exception as ex:                      # 429, ffmpeg, vidéo privée : build `pas_de_build`, raison notée
                 cache[cle] = ({}, None, str(ex)[:160], [])
         images, t, err, ecrans = cache[cle]
-        return images, {"t_composition": t, "erreur": err, "ecrans": ecrans, "ocr_resume": list(getattr(_lire_hors_composition, "resume", []))}
+        return images, {"t_composition": t, "erreur": err, "ecrans": ecrans, "ocr_resume": list(getattr(_lire_hors_composition, "resume", [])),
+                        "trace_images": traces.get(cle)}
     return lire

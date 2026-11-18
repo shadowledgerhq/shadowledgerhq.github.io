@@ -42,6 +42,23 @@ def test_choisir_images():
     assert C.choisir_images([(0, autre_ecran())], CFG) == ({}, None)
 
 
+def test_trace_des_images_retenues():
+    suite = [(0, autre_ecran()), (2, capture("noyaux")), (4, capture("noyaux")), (6, capture("noyaux")), (10, capture("artefacts"))]
+    images, _ = C.choisir_images(suite, CFG)
+    d = C.choisir_images.diagnostic
+    assert d["vues"] == {"noyaux": 3, "artefacts": 1} and set(d["retenues"]) == {"noyaux", "artefacts"}
+    assert all(len(d["retenues"][o]) == len(images[o]) for o in images) and d["retenues"]["artefacts"] == [10.0]
+
+
+def test_info_video_ne_leve_jamais():
+    with tempfile.TemporaryDirectory() as tmp:
+        f = Path(tmp) / "x.mp4"
+        f.write_bytes(b"pas une video")
+        info = C.info_video(f)
+        assert info["fichier"] == "x.mp4" and "mo" in info
+    assert C.info_video(Path("/inexistant/x.mp4"))["fichier"] == "x.mp4"
+
+
 class FauxOutils:
     """Vidéo simulée : une image toutes les 2 s (autre écran, puis les onglets des captures)."""
     def __init__(self, sequence):

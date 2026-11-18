@@ -877,6 +877,7 @@ def build_essai(video_id, mode, racine=RACINE, cfg=None, banque=None, fournisseu
         apprendre_cartes(obs, images, cfg, banque, cle_cfg)
     obs["t_composition"] = extra.get("t_composition")
     obs["ocr_resume"] = extra.get("ocr_resume")
+    obs["trace_images"] = extra.get("trace_images")
     if extra.get("erreur"):
         obs["notes"].append(f"images de composition non disponibles : {extra['erreur']}")
     elif not images:
@@ -888,6 +889,8 @@ def build_essai(video_id, mode, racine=RACINE, cfg=None, banque=None, fournisseu
     b = construire_build(ctx, obs, regles, cfg, db)
     if obs.get("ocr_resume"):
         b["ocr_resume"] = obs["ocr_resume"]                 # diagnostic de l'essai seulement : textes lus par l'OCR rapide
+    if obs.get("trace_images"):
+        b["trace_images"] = obs["trace_images"]             # diagnostic de l'essai seulement : vidéo téléchargée, instants des images gardées
     return b
 
 
