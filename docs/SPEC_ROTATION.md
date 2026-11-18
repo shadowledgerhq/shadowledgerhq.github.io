@@ -1,4 +1,4 @@
-# SPEC_ROTATION — relevé automatique de l'ordre des compétences — v1.4 (2026-11-18)
+# SPEC_ROTATION — relevé automatique de l'ordre des compétences — v2 (2026-11-18)
 
 Demandeur : discussion 3 (Theorycraft). Code : discussion 8. Aucune action manuelle d'Alexis.
 But : pour les meilleures runs, la liste horodatée des compétences utilisées pendant la run. Elle sert de timeline aux vidéos de l'étape 3b.
@@ -41,7 +41,10 @@ Déjà connu (à vérifier) :
 - vidéo de 49 s (_videos.json) ; écran de composition à 38-46 s (build provisoire) ;
 - chrono de la run : 19,926 s, lu sur la miniature (i.ytimg.com, 17/11/2026). bot.json indique 19,0 s (lu dans le titre). La capture Results de REFERENCE_ECRANS_BOT.md (13/11 : Baruka, phases cumulées 9,281 / 14,986 / 19,926 s) correspond probablement à cette run ;
 - SJW : arme The Huntsman, QTE 1 Foulée de l'ombre (build provisoire).
-Le cloud n'a pas pu télécharger la vidéo : les événements de wJ9CwjKwyco et de a-923ClD9Rc sont produits par le 2e passage PC (après calibration), puis recopiés ici en v2.
+Relevé réel (passage PC v9, 18/11 soir ; `data/rotations/2026-11-12/bot/`) :
+- wJ9CwjKwyco : run 0-37 s, 12 événements (4 SJW), `t_game` lu sur 12 sur 12 (2,366 → 19,384 s), phases du Results 9,281 / 14,986 / 19,926 s dans la fenêtre. Critères 1, 3, 5, 6 OK ; 2 et 4 non évaluables.
+- a-923ClD9Rc (GUIDE « ▶▶0.5x », ralentis) : run 56,5-104 s (dernier groupe de HUD), 24 événements (4 SJW), `t_game` lu sur 20 sur 24 (2,219 → 19,558 s, croissant, dernier = chrono), phases du Results non lues (non évaluable). Critères 1, 3, 5, 6 OK ; 2 et 4 non évaluables ; limites `bornes-incertaines` (durée 2,4 × le chrono : ralentis) et `essais-precedents`.
+Validé : les critères ci-dessus passent sur les deux vidéos de calibration. Chasseurs inconnus (`chasseurs-inconnus`) : événements de chasseurs non relevés tant que la composition n'est pas lue.
 Critères d'acceptation (v1.4, contrôles du rapport ; « non évaluable » n'est pas un échec) :
 1. duration_s ≥ chrono − 0,5 s ; si duration_s > 2,5 × chrono : limite bornes-incertaines (signalée, pas un échec) ;
 2. fin avant la composition si son temps est connu (> 0), sinon non évaluable (a-923 et Lt84 : composition = 0 s) ;

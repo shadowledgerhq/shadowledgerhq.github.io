@@ -9,10 +9,6 @@
   "duree_max_facteur": 2.5,
   "t_game_tolerance_s": 0.5,
   "recharge_max_chasseur_s": 26,
-  "videos_calibration": [
-    "wJ9CwjKwyco",
-    "a-923ClD9Rc"
-  ],
   "budget_par_mode": 3,
   "fps": 10,
   "hauteur": 720,
