@@ -295,8 +295,8 @@ def test_bornes_incertaines_sans_results_lu(tmp_path):
 def test_selection_top3_bot_et_etat_pc_rotation():
     sem = "2026-11-12"
     CFG0 = {**CFG, "videos_calibration": []}
-    cal = R.a_traiter(sem, {}, cfg=CFG)                         # + vidéos de calibration (wJ9, a-923) hors top 3
-    assert {"wJ9CwjKwyco", "a-923ClD9Rc"} <= set(cal)
+    cal = R.a_traiter(sem, {}, cfg={**CFG, "videos_calibration": ["wJ9CwjKwyco", "a-923ClD9Rc"]})   # le mécanisme reste : vidéos hors top 3 relevées
+    assert {"wJ9CwjKwyco", "a-923ClD9Rc"} <= set(cal) and "videos_calibration" not in CFG
     top = R.a_traiter(sem, {}, cfg=CFG0)                        # l'ordre suit bot.json (change à chaque classement) : pas de ids figés
     assert len(top) == 3 and len(set(top)) == 3
     fait = {top[2]: {"pc": {"rotation": "fait", "rotation_version": CFG["version"]}}, top[0]: {"pc": {"rotation": "erreur", "rotation_version": CFG["version"]}}}
