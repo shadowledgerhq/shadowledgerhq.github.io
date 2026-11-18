@@ -99,7 +99,7 @@ def voter(textes, mode, config, accord_min=2):
     p = scores.plage(mode, config)
     if p is None:
         return None
-    compte, brut, ordre, virgule = Counter(), {}, [], set()
+    compte, brut, ordre, virgule, originaux = Counter(), {}, [], set(), {}
     for original in textes:
         vus = set()
         # v35.1 : sur une miniature lue en chiffres seuls (liste blanche) au BOT, la virgule entre deux chiffres est un point mal lu (`19,926` =
@@ -113,6 +113,7 @@ def voter(textes, mode, config, accord_min=2):
             vus.add(c["valeur"])
             if "," in original[c["pos"]:c["pos"] + len(c["brut"])]:
                 virgule.add(c["valeur"])
+                originaux.setdefault(c["valeur"], original[c["pos"]:c["pos"] + len(c["brut"])])
             compte[c["valeur"]] += 1
             brut.setdefault(c["valeur"], c["brut"])
             if c["valeur"] not in ordre:
@@ -121,7 +122,7 @@ def voter(textes, mode, config, accord_min=2):
     if not retenus:
         return None
     v = max(retenus, key=lambda x: (compte[x], -ordre.index(x)))
-    return {"valeur": v, "brut": brut[v], "votes": compte[v], "autres": [x for x in retenus if x != v], "virgule": v in virgule}
+    return {"valeur": v, "brut": brut[v], "votes": compte[v], "autres": [x for x in retenus if x != v], "virgule": v in virgule, "brut_original": originaux.get(v, brut[v])}
 
 
 def _texte_canonique(mode, vote):
@@ -159,6 +160,7 @@ def lectures_texte(vid, meta, textes, config):
         for lec in lecs:
             lec["detail"]["texte_miniature"] = True
             lec["detail"]["votes_miniature"] = vote["votes"]
+            lec["detail"]["brut_miniature"] = vote.get("brut_original")      # lecture brute (avec la virgule) : le recalcul peut noter la virgule sans relire
             if vote.get("virgule"):
                 lec["notes"].append(NOTE_VIRGULE)
             if vote["autres"]:

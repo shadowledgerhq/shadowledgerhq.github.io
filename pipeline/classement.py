@@ -372,6 +372,7 @@ def calculer(week, d=None, config=None, horloge=None):
     runs = []
     modes_classes = config.get("modes_classement", ["poc", "bot", "hotm"])  # v3 : GB lu mais pas classé
     lectures_semaine = d.lectures(week)
+    chrono_bot.noter_virgule_miniature(lectures_semaine)    # v35.1 : note ajoutée aux miniatures déjà stockées (sans relire la miniature)
     chrono_bot.appliquer_echecs_ecran(lectures_semaine)     # v35 : un écran BOT en échec de contrôle ne donne jamais un score
     for lec in gb.appliquer_hud(lectures_semaine):  # v12 : dégâts provisoires du HUD attachés aux lectures GB
         if lec["video_id"] in rejetes or lec.get("score") is None or lec["mode"] not in modes_classes or (lec.get("detail") or {}).get("sans_score"):

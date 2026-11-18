@@ -220,3 +220,16 @@ def ecart_improbable(totaux, seuil=0.7, minimum=5):
     n = len(v)
     med = v[n // 2] if n % 2 else (v[n // 2 - 1] + v[n // 2]) / 2
     return seuil * med
+
+
+def noter_virgule_miniature(lectures, note="miniature : virgule lue comme point"):
+    """v35.1, au recalcul : une lecture de miniature déjà stockée dont le texte lu (`detail.brut_miniature`, ou `detail.texte_miniature` s'il
+    contient du texte) a une virgule reçoit la note, sans relire la miniature. Modifie sur place ; retourne le nombre de lectures notées."""
+    n = 0
+    for l in lectures:
+        d = l.get("detail") or {}
+        brut = d.get("brut_miniature") or (d.get("texte_miniature") if isinstance(d.get("texte_miniature"), str) else "")
+        if d.get("texte_miniature") and "," in (brut or "") and note not in l.get("notes", []):
+            l.setdefault("notes", []).append(note)
+            n += 1
+    return n

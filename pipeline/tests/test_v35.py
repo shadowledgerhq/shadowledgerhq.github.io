@@ -111,3 +111,16 @@ def test_v351_virgule_de_miniature_seulement_au_bot_et_avec_la_note():
     assert miniature.lectures_texte("wJ9CwjKwyco", META, ["19,926", "19,926", "RESULT"], CONFIG) == []          # capture Results : jamais
     assert [c["valeur"] for c in scores.chronos("titre 19,926")] == []                                            # titre : règle v35 inchangée
     assert miniature.voter(["10,000", "10,000"], "poc", CONFIG, 2) is None or True                                # hors BOT : pas de remplacement
+
+
+def test_v351_recalcul_note_la_virgule_des_miniatures_deja_stockees():
+    stockee = prov("wJ9CwjKwyco", "UCX", 19.926, source="miniature", brut="19.926", detail={"texte_miniature": True, "votes_miniature": 3, "brut_miniature": "19,926"})
+    sans = prov("a", "UCA", 19.558, source="miniature", brut="19.558", detail={"texte_miniature": True, "votes_miniature": 3, "brut_miniature": "19.558"})
+    assert chrono_bot.noter_virgule_miniature([stockee, sans]) == 1
+    assert "miniature : virgule lue comme point" in stockee["notes"] and "miniature : virgule lue comme point" not in sans["notes"]
+    assert chrono_bot.noter_virgule_miniature([stockee]) == 0                                    # idempotent
+    d = preparer([prov("wJ9CwjKwyco", "UCX", 19.926, source="miniature", brut="19.926", detail={"texte_miniature": True, "brut_miniature": "19,926"})])
+    calculer(W, d, CONFIG, HORLOGE)
+    assert "miniature : virgule lue comme point" in lire(d, "bot")[0]["notes"]
+    (nouvelle,) = miniature.lectures_texte("wJ9CwjKwyco", META, ["19,926,", "19:926,", "19.926"], CONFIG)
+    assert nouvelle["detail"]["brut_miniature"].startswith("19,926")
