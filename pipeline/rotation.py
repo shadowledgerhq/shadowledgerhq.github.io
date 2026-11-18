@@ -205,7 +205,7 @@ def purger_constantes(lectures, maxi=4):
     return sortie
 
 
-def _suite_de_recharge(lectures, t, lu, base=None):
+def _suite_de_recharge(lectures, t, lu, base=None, marge_s=2.0):
     """Vrai si la recharge qui commence en `t` (chiffre `lu`) n'est que la suite de la précédente : chiffres manqués par l'OCR pendant
     quelques secondes, le compteur est plus bas qu'avant et le temps affiché écoulé (images sans HUD exclues : le chrono de jeu s'arrête)
     ne dépasse pas ce qu'il restait (+ 1,5 s)."""
@@ -218,14 +218,14 @@ def _suite_de_recharge(lectures, t, lu, base=None):
     i1 = next(i for i, (tt, _) in enumerate(lectures) if tt >= t)
     pas = (lectures[1][0] - lectures[0][0]) if len(lectures) > 1 else 0.5
     ecoule = sum(1 for _, v in lectures[i0 + 1:i1] if v != "hors") * pas
-    if base:                   # v2.1 (recharge de base connue) : le compteur affichait encore v0 s, aucune relance possible (chiffre mal lu : « 36 » pour « 06 », a-923ClD9Rc)
+    if base:                   # v2.2 (recharge de base connue) : le compteur affichait encore v0 s à t0, aucun lancement avant t0 + v0 − marge_s (2 s : réductions de recharge, ex. Phantom Slash) ; un chiffre plus haut lu entre-temps = erreur d'OCR (« 36 » pour « 06 », a-923ClD9Rc)
         hors = sum(1 for _, v in lectures[i0 + 1:i1] if v == "hors") * pas
-        if (t - lectures[i0][0]) - hors < v0 - 1.0:
+        if (t - lectures[i0][0]) - hors < v0 - marge_s:
             return True
     return lu < v0 and ecoule <= v0 + 1.5
 
 
-def transitions_chiffres(lectures, confirmation=2, ratio_relance=0.6, base_a=None, compte=None):
+def transitions_chiffres(lectures, confirmation=2, ratio_relance=0.6, base_a=None, compte=None, marge_s=2.0):
     """Instants (1re image avec chiffre) où un bouton passe de « prêt » à « en recharge », avec la recharge lue (médiane des 3 premières lectures de
     la recharge : un chiffre mal lu au début ne la fausse pas). Un bouton déjà en recharge à la 1re image n'a pas d'instant de lancement connu :
     aucun événement. v2.1 : `base_a(t)` = recharge de base du bouton (s) ou None ; une 1re lecture < `ratio_relance` × base = recharge déjà en cours,
@@ -249,7 +249,7 @@ def transitions_chiffres(lectures, confirmation=2, ratio_relance=0.6, base_a=Non
                     compte.append(t)
                 prec = e
                 continue
-            if not _suite_de_recharge(lectures, t, lu, base):
+            if not _suite_de_recharge(lectures, t, lu, base, marge_s):
                 sortie.append((t, lu))
         prec = e
     return sortie
@@ -405,7 +405,7 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
         if lectures is not None or par_chiffres:
             lect = lectures.get(bouton, []) if lectures is not None else lecture_chiffres(frames, zones[bouton], ocr, presents, cfg.get("ocr_pas_s", 0.5))
             cap = None if sjw else cfg.get("recharge_max_chasseur_s", 26)   # v6 : recharge de chasseur max 25 s dans la base (hunters.json) ; au-delà = chiffre mal lu
-            for t, lu in transitions_chiffres(lect, base_a=lambda t, b=bouton: base_de(b, t), compte=entamees):
+            for t, lu in transitions_chiffres(lect, base_a=lambda t, b=bouton: base_de(b, t), compte=entamees, marge_s=cfg.get("recharge_marge_s", 2.0)):
                 if cap and lu is not None and lu > cap:
                     continue
                 evenements.append({"t": t, "hunter": "sjw" if sjw else hunter_a(t), "slot": bouton,
@@ -766,6 +766,25 @@ def diagnostic_chrono(ctx, frames, cfg, racine=RACINE):
     return ecrits
 
 
+def diagnostic_portrait(ctx, frames, zone, evenements, cfg, racine=RACINE):
+    """v2.2 : UN recadrage du portrait (zone seule, ≤ 480 px, SPEC §2.7) par vidéo dans `_crops/`, pris 1 s après le 1er `tag` (le chiffre de recharge du
+    changement y est affiché) sinon au milieu de la run, pour confirmer la position du chiffre (`portrait_masque`). Retourne le chemin ou None."""
+    if not frames or not zone:
+        return None
+    dossier = Path(racine) / "data" / "rotations" / ctx["week"] / ctx["mode"] / "_crops"
+    f = dossier / f"{ctx['video_id']}_portrait.jpg"
+    if f.exists():
+        return f
+    tags = [e["t"] for e in evenements if e.get("slot") == "tag"]
+    cible = tags[0] + 1.0 if tags else frames[len(frames) // 2][0]
+    t, im = min(frames, key=lambda x: abs(x[0] - cible))
+    dossier.mkdir(parents=True, exist_ok=True)
+    c = recadrer(im.convert("RGB"), zone)
+    c.thumbnail((480, 480))
+    c.save(f, quality=90)
+    return f
+
+
 def planche_zones(ctx, images, zones, cfg, racine=RACINE, extra=None):
     """Calibration : une planche (lignes = boutons calibrés, colonnes = une image tous les `scan_pas_s`) des recadrages des SEULES zones de boutons
     (jamais l'image entière, SPEC §2.7) + les séries de luminance, dans `_crops/` du mode. Seulement si `cfg.planche` est vrai. Retourne le chemin."""
@@ -880,6 +899,8 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
         elif spec is runs_spec[0]:              # zone à calibrer : grands recadrages du haut de l'image (≤ 960 px, 3 instants)
             diagnostic_chrono(ctx, frames, cfg, racine)
         entamees = getattr(releves_run, "recharges_entamees", 0)
+        if zones.get("portrait"):
+            diagnostic_portrait(ctx, frames, zones["portrait"], evenements, cfg, racine)
         evenements, t_cut = appliquer_v21(evenements, ctx.get("chrono_s"), cfg)         # v2.1 : fin de run au chrono final, `tag` espacés de `tag_min_s`
         if t_cut is not None and t_cut < t_fin:
             t_fin = t_cut

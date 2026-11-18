@@ -549,3 +549,22 @@ def test_chiffres_manques_ne_font_pas_un_nouveau_lancement():
     assert R.transitions_chiffres(relance) == [(1.0, 14), (14.0, 14)]
     hors = lect[:5] + [(2.5 + k / 2, "hors") for k in range(1, 40)] + [(22.5, 13), (23.0, 13), (23.5, 12)]       # cinématique : le chrono ne court pas
     assert R.transitions_chiffres(hors) == [(1.0, 14)]
+
+
+def test_v22_marge_de_2_s_avant_un_nouveau_lancement():
+    lect = [(0.0, 10)] + [(0.5 * i, None) for i in range(1, 20)]
+    assert R._suite_de_recharge(lect, 7.5, 10, base=60) is True          # 7,5 s < 0 + 10 − 2 : pas un lancement
+    assert R._suite_de_recharge(lect, 8.5, 10, base=60) is False         # ≥ 8 s : lancement possible (réduction de recharge)
+    assert R._suite_de_recharge(lect, 7.5, 10, base=60, marge_s=0.0) is True and R._suite_de_recharge(lect, 9.0, 10, base=60, marge_s=0.0) is True
+    assert R._suite_de_recharge(lect, 7.5, 10, base=None) is False       # base inconnue : règle précédente
+
+
+def test_v22_un_recadrage_du_portrait_par_video(tmp_path):
+    frames = [(float(i), Image.new("RGB", (1920, 1080), (i * 10, 0, 0))) for i in range(10)]
+    ctx = {"week": "2026-11-12", "mode": "bot", "video_id": "VID"}
+    f = R.diagnostic_portrait(ctx, frames, [0.1, 0.1, 0.3, 0.3], [{"slot": "tag", "t": 3.0}], {}, racine=tmp_path)
+    assert f == tmp_path / "data/rotations/2026-11-12/bot/_crops/VID_portrait.jpg" and f.exists()
+    with Image.open(f) as im:
+        assert max(im.size) <= 480
+    assert R.diagnostic_portrait(ctx, frames, [0.1, 0.1, 0.3, 0.3], [], {}, racine=tmp_path) == f       # un seul par vidéo
+    assert R.diagnostic_portrait(ctx, [], [0.1, 0.1, 0.3, 0.3], [], {}, racine=tmp_path) is None
