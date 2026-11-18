@@ -100,6 +100,47 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-12-xoycsD2CqSc",
+    "week": "2026-11-12",
+    "mode": "gb",
+    "channel_id": "UCWrd_-Ei9eW2ng4jkwAiaLA",
+    "player": "RAVANPLAYZ",
+    "channel": "RAVANPLAYZ",
+    "video_id": "xoycsD2CqSc",
+    "video_ids": [
+      "xoycsD2CqSc"
+    ],
+    "published_at": "2026-11-18T14:22:05+01:00",
+    "lang": "en",
+    "score": {
+      "total": 338,
+      "runs": [
+        338
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : RAGE COUNT 338; une seule run trouvée",
+    "runs_detail": [
+      {
+        "video_id": "xoycsD2CqSc",
+        "published_at": "2026-11-18T14:22:05+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-12-vYtRCpFtSOk",
     "week": "2026-11-12",
     "mode": "gb",

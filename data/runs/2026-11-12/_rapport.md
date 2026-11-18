@@ -1,4 +1,8 @@
-# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-18 19:25 (Paris)
+# Rapport — semaine 2026-11-12 — passage daily — 2026-11-18 20:51 (Paris)
+
+Dernier passage du PC (`_rapport_pc.md`, recopié) :
+
+## Passage pc-daily — 2026-11-18 19:25 (Paris)
 
 - Top 10 couvert : non (42 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (vidéos restantes à traiter)
@@ -7,10 +11,13 @@
 - Durée du passage : 4 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 
-- Semaine : 73 en cours (dont 59 pour le PC), 31 terminée(s), 12 rejetée(s)
-- Classements : bot 16, gb 8, hotm-gate-inconnue 5, poc 5
+- Quota : 1704 unités
+- Ce passage : 22 vidéo(s) nouvelle(s), 1 rejetée(s), 3 score(s) provisoire(s)
+- Semaine : 95 en cours (dont 81 pour le PC), 31 terminée(s), 13 rejetée(s)
+- Classements : bot 17, gb 9, hotm-gate-inconnue 5, poc 5
 
-## À vérifier (32)
+## À vérifier (34)
+- gb · RAVANPLAYZ · 338 · xoycsD2CqSc · score provisoire (titre) : RAGE COUNT 338; une seule run trouvée
 - gb · Eden(이든) · 322 · vYtRCpFtSOk · lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (72 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Light / Fire)
 - gb · Ahmad1195 · 189 · awb-GlVIa7Q · écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (144 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée
 - gb · Sohoven · 185 · qySXyOxUehE · score provisoire (titre) : 185 RC; une seule run trouvée
@@ -32,6 +39,7 @@
 - bot · 크리스 · 19.5 · znpyCNWml3I · score provisoire (titre) : 19.5s; chrono incomplet : rang prudent; boss non contrôlé
 - bot · 𐐂露依Rui ルイ 𐐚 · 19.754 · Lt84IhMjBvM · score provisoire (titre) : 19.754s; écran : partie entière mal lue (18 → 19 par Play Time et titre); semaine confirmée (titre); boss non contrôlé
 - bot · X SLA · 19.926 · wJ9CwjKwyco · publiée juste après le reset : semaine précédente ?; boss non contrôlé; BOT ja : temps de jeu non lu
+- bot · LIT · 19.949 · 2oendtlUxUE · score provisoire (titre) : 19.949s; boss non contrôlé
 - bot · PADWAE · 19.977 · 5MI-RLj7FSk · boss non contrôlé; temps instable (animation ?)
 - bot · MOBgame · 20.331 · nwP8dSSfo1o · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · SNG · 23.223 · tOzRUlmZ2JI · score provisoire (titre) : 23;223s; boss non contrôlé
@@ -42,7 +50,7 @@
 - bot · Raksefon · 35.0 · wFFdg1gcZpE · score provisoire (description) : 35 sec; description non relue (règles v3); chrono incomplet : rang prudent; boss non contrôlé
 - bot · SlayOnLow · 40.077 · HWebrRc_l0o · score provisoire (titre) : 40.077 SECONDS; boss non contrôlé
 - bot · OhchiGameS · 44.0 · OppPeyQ--7s · score provisoire (description) : 44s; description non relue (règles v3); chrono incomplet : rang prudent; boss non contrôlé
-- bot · Akihiro · 130.266 · VFDbdYFzor4 · score provisoire (description) : 02:10.266; description non relue (règles v3); boss non contrôlé
+- bot · Akihiro · 118.443 · CpanVlD1UeE · score provisoire (description) : 01:58.443; titre arrondi : 1:58; boss non contrôlé
 
 ## Alertes boss
 - bot : boss non contrôlé (< 3 vidéos)
@@ -56,4 +64,4 @@
 - rien
 
 ## Erreurs et alertes
-- 73 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- rien

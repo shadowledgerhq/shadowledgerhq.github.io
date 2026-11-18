@@ -195,6 +195,45 @@
     ]
   },
   {
+    "run_id": "bot-2026-11-12-2oendtlUxUE",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCWOEmw563xHM0ZUlzZlG30A",
+    "player": "LIT",
+    "channel": "LIT",
+    "video_id": "2oendtlUxUE",
+    "video_ids": [
+      "2oendtlUxUE"
+    ],
+    "published_at": "2026-11-18T08:35:58+01:00",
+    "lang": "en-US",
+    "score": {
+      "total": 19.949,
+      "runs": [
+        19.949
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 19.949s; boss non contrôlé",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "2oendtlUxUE",
+        "published_at": "2026-11-18T08:35:58+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
     "run_id": "bot-2026-11-12-5MI-RLj7FSk",
     "week": "2026-11-12",
     "mode": "bot",
@@ -585,22 +624,22 @@
     ]
   },
   {
-    "run_id": "bot-2026-11-12-VFDbdYFzor4",
+    "run_id": "bot-2026-11-12-CpanVlD1UeE",
     "week": "2026-11-12",
     "mode": "bot",
     "channel_id": "UCjNngJRDRC7QSyZ76FlvKfQ",
     "player": "Akihiro",
     "channel": "Akihiro",
-    "video_id": "VFDbdYFzor4",
+    "video_id": "CpanVlD1UeE",
     "video_ids": [
-      "VFDbdYFzor4"
+      "CpanVlD1UeE"
     ],
-    "published_at": "2026-11-15T21:24:32+01:00",
+    "published_at": "2026-11-17T22:30:45+01:00",
     "lang": "en",
     "score": {
-      "total": 130.266,
+      "total": 118.443,
       "runs": [
-        130.266
+        118.443
       ],
       "unit": "seconds"
     },
@@ -608,13 +647,13 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 02:10.266; description non relue (règles v3); boss non contrôlé",
+    "notes": "score provisoire (description) : 01:58.443; titre arrondi : 1:58; boss non contrôlé",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
-        "video_id": "VFDbdYFzor4",
-        "published_at": "2026-11-15T21:24:32+01:00",
+        "video_id": "CpanVlD1UeE",
+        "published_at": "2026-11-17T22:30:45+01:00",
         "t": null,
         "stage": null,
         "team": null,
