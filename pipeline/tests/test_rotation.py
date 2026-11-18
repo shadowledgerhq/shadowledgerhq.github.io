@@ -390,6 +390,67 @@ def test_par_mode_reduit_fps_et_ecart_duree_max(tmp_path):
     assert o.appels[1][2] == pytest.approx(0.5)                                                      # 2 images/s en GB (mémoire), 10 au BOT
 
 
+# --- v2.1 : non-régression sur a-923ClD9Rc (lectures et événements réels du passage PC du 18/11) -----------------------------
+
+A923 = Path(__file__).resolve().parents[2] / "data" / "rotations" / "2026-11-12" / "bot"
+
+
+def _lectures_a923(bouton):
+    ocr = json.loads((A923 / "_crops" / "a-923ClD9Rc_ocr.json").read_text(encoding="utf-8"))
+    hud = ocr["hud"]
+    return [(t, "hors" if not hud.get(str(t), True) else (v if (v := R.lire_recharge(x)) is not None and 0 <= v <= 99 else None)) for t, x in ocr["brut"][bouton]]
+
+
+@pytest.mark.skipif(not (A923 / "_crops" / "a-923ClD9Rc_ocr.json").exists(), reason="lectures réelles de a-923ClD9Rc absentes du dépôt")
+def test_v21_a923_ultime_une_seule_recharge_deja_en_cours():
+    lect = _lectures_a923("sjw_ultimate")
+    assert [t for t, _ in R.transitions_chiffres(lect)] != []                                                    # avant v2.1 : 2 faux lancements
+    entamees = []
+    assert R.transitions_chiffres(lect, base_a=lambda t: 60, compte=entamees) == []                              # ultime SJW : base 60 s
+    assert entamees == [81.5]                                                                                    # 1 recharge entamée comptée ; le « 36 » = suite de la recharge
+
+
+def test_v21_premiere_lecture_sous_0_6_de_la_base_et_base_inconnue():
+    lect = [(0.0, None), (0.5, None), (1.0, 8), (1.5, 8), (2.0, 7), (2.5, 7)]
+    assert R.transitions_chiffres(lect, base_a=lambda t: 60) == [] and R.transitions_chiffres(lect, base_a=lambda t: None) == [(1.0, 8)]      # base inconnue : règle précédente
+    assert R.transitions_chiffres([(0.0, None), (0.5, None), (1.0, 60), (1.5, 60), (2.0, 59), (2.5, 59)], base_a=lambda t: 60) == [(1.0, 60)]
+
+
+def test_v21_fin_de_run_au_chrono_final_et_tag_min_s():
+    cfg = {"t_game_tolerance_s": 0.5, "tag_min_s": 4.0}
+    ev = lambda t, tg, slot="tag": {"t": t, "t_game": tg, "slot": slot}
+    liste = [ev(88.4, 15.925), ev(89.3, 15.925), ev(92.9, 17.38), ev(96.9, 19.37), ev(97.9, 19.558), ev(100.3, 19.558), ev(101.0, 19.558, "sjw_skill_1")]
+    sortie, t_fin = R.appliquer_v21(liste, 19.558, cfg)
+    assert t_fin == 97.9 and [e["t"] for e in sortie] == [88.4, 92.9, 96.9]                          # le 101,0 sort de la run ; les tag à moins de 4 s aussi
+    assert R.appliquer_v21(liste, 25.0, cfg)[1] is None                                              # dernier t_game ≠ chrono : règle précédente
+    assert R.appliquer_v21([ev(1.0, None), ev(2.0, None)], 19.558, cfg)[1] is None and R.appliquer_v21([], 19.558, cfg) == ([], None)
+
+
+@pytest.mark.skipif(not (A923 / "a-923ClD9Rc.json").exists(), reason="relevé réel de a-923ClD9Rc absent du dépôt")
+def test_v21_a923_evenements_reels_non_regression():
+    d = json.loads((A923 / "a-923ClD9Rc.json").read_text(encoding="utf-8"))["runs"][0]
+    sortie, t_fin = R.appliquer_v21(d["events"], 19.558, R.charger_config())
+    assert t_fin == 97.9                                                                              # fin à 97,9 s (SPEC v2.1)
+    tags = [e["t"] for e in sortie if e["slot"] == "tag"]
+    assert all(b - a >= 4.0 for a, b in zip(tags, tags[1:]))                                          # aucun couple de tag à moins de 4 s
+    assert all(e["t_game"] is None or e["t_game"] < 19.558 or e["t"] == t_fin for e in sortie)       # rien après t_game 19.558 sauf le premier qui l'atteint
+    assert not [e for e in sortie if e["t"] > t_fin]
+
+
+def test_v21_portrait_masque_ignore_le_chiffre_de_recharge():
+    np = pytest.importorskip("numpy")
+    zone = [0.0, 0.0, 1.0, 1.0]
+    base = Image.new("RGB", (64, 64), (90, 90, 90))
+    avec_chiffre = base.copy()
+    avec_chiffre.paste((255, 255, 255), (22, 22, 42, 42))                                              # chiffre de recharge au centre
+    cfg = {"portrait_diff": 25, "fusion_s": 0.5}
+    v = lambda im: R.vignette(im, zone, masque=[0.25, 0.25, 0.75, 0.75])
+    assert R.changements_portrait([(0.0, R.vignette(base, zone)), (0.5, R.vignette(avec_chiffre, zone))], dict(cfg, portrait_diff=5)) == [0.5]     # sans masque : faux changement
+    assert R.changements_portrait([(0.0, v(base)), (0.5, v(avec_chiffre))], dict(cfg, portrait_diff=5)) == []                                   # masqué : aucun
+    autre = Image.new("RGB", (64, 64), (230, 230, 230))
+    assert R.changements_portrait([(0.0, v(base)), (0.5, v(autre))], cfg) == [0.5]                                                                # un vrai changement reste vu
+
+
 if __name__ == "__main__":
     sys.exit(pytest.main([__file__, "-q"]))
 

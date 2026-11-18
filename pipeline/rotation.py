@@ -48,9 +48,15 @@ def remplissage(image, zone, seuil=128):
     return float((a >= seuil).mean())
 
 
-def vignette(image, zone, taille=16):
+def vignette(image, zone, taille=16, masque=None):
+    """Vignette `taille` × `taille` (gris) de la zone. `masque` = [x0, y0, x1, y1] (fractions de la zone) : ces cellules valent NaN (v2.1 : chiffre de
+    recharge du changement de personnage, masqué dans la comparaison des portraits ; les comparaisons utilisent nanmean)."""
     np = _np()
-    return np.asarray(recadrer(image, zone).convert("L").resize((taille, taille)), dtype=float)
+    v = np.asarray(recadrer(image, zone).convert("L").resize((taille, taille)), dtype=float)
+    if masque:
+        x0, y0, x1, y1 = masque
+        v[int(y0 * taille):int(-(-y1 * taille // 1)), int(x0 * taille):int(-(-x1 * taille // 1))] = float("nan")
+    return v
 
 
 def format_16_9(taille, tolerance=0.02):
@@ -104,7 +110,7 @@ def changements_portrait(vignettes, cfg):
     np = _np()
     sortie, prec, dernier = [], None, -1e9
     for t, v in vignettes:
-        if prec is not None and float(np.abs(v - prec).mean()) > cfg.get("portrait_diff", 25) and t - dernier >= cfg.get("fusion_s", 0.5):
+        if prec is not None and float(np.nanmean(np.abs(v - prec))) > cfg.get("portrait_diff", 25) and t - dernier >= cfg.get("fusion_s", 0.5):
             sortie.append(t)
             dernier = t
         prec = v
@@ -199,7 +205,7 @@ def purger_constantes(lectures, maxi=4):
     return sortie
 
 
-def _suite_de_recharge(lectures, t, lu):
+def _suite_de_recharge(lectures, t, lu, base=None):
     """Vrai si la recharge qui commence en `t` (chiffre `lu`) n'est que la suite de la précédente : chiffres manqués par l'OCR pendant
     quelques secondes, le compteur est plus bas qu'avant et le temps affiché écoulé (images sans HUD exclues : le chrono de jeu s'arrête)
     ne dépasse pas ce qu'il restait (+ 1,5 s)."""
@@ -212,13 +218,18 @@ def _suite_de_recharge(lectures, t, lu):
     i1 = next(i for i, (tt, _) in enumerate(lectures) if tt >= t)
     pas = (lectures[1][0] - lectures[0][0]) if len(lectures) > 1 else 0.5
     ecoule = sum(1 for _, v in lectures[i0 + 1:i1] if v != "hors") * pas
+    if base:                   # v2.1 (recharge de base connue) : le compteur affichait encore v0 s, aucune relance possible (chiffre mal lu : « 36 » pour « 06 », a-923ClD9Rc)
+        hors = sum(1 for _, v in lectures[i0 + 1:i1] if v == "hors") * pas
+        if (t - lectures[i0][0]) - hors < v0 - 1.0:
+            return True
     return lu < v0 and ecoule <= v0 + 1.5
 
 
-def transitions_chiffres(lectures, confirmation=2, ratio_relance=0.6):
+def transitions_chiffres(lectures, confirmation=2, ratio_relance=0.6, base_a=None, compte=None):
     """Instants (1re image avec chiffre) où un bouton passe de « prêt » à « en recharge », avec la recharge lue (médiane des 3 premières lectures de
     la recharge : un chiffre mal lu au début ne la fausse pas). Un bouton déjà en recharge à la 1re image n'a pas d'instant de lancement connu :
-    aucun événement. -> [(t, valeur)]"""
+    aucun événement. v2.1 : `base_a(t)` = recharge de base du bouton (s) ou None ; une 1re lecture < `ratio_relance` × base = recharge déjà en cours,
+    aucun événement ; `compte` (liste) reçoit les instants de ces recharges entamées. -> [(t, valeur)]"""
     lectures = purger_constantes(lectures)
     etats = etats_par_chiffres(lectures)
     val = [(t, v) for t, v in lectures if v not in (None, "hors")]
@@ -232,10 +243,13 @@ def transitions_chiffres(lectures, confirmation=2, ratio_relance=0.6):
             plausibles = [v for v in premiers if v <= 60]
             lu = max(plausibles) if plausibles else None
             haut = max([v for tt, v in val if tt < t and v <= 60] or [0])
-            if lu is not None and haut and lu < ratio_relance * haut:       # recharge déjà entamée (lancement manqué pendant une coupure) : pas un lancement
+            base = base_a(t) if base_a else None
+            if lu is not None and ((haut and lu < ratio_relance * haut) or (base and lu < ratio_relance * base)):
+                if compte is not None:          # recharge déjà entamée (lancement manqué pendant une coupure) : pas un lancement
+                    compte.append(t)
                 prec = e
                 continue
-            if not _suite_de_recharge(lectures, t, lu):
+            if not _suite_de_recharge(lectures, t, lu, base):
                 sortie.append((t, lu))
         prec = e
     return sortie
@@ -355,7 +369,7 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
     # portrait actif : segments (début, id)
     actif = [(frames[0][0], "inconnu")]
     if zones.get("portrait"):
-        vign = [(t, vignette(im, zones["portrait"])) for t, im in frames if presents.get(t, True)]
+        vign = [(t, vignette(im, zones["portrait"], masque=cfg.get("portrait_masque"))) for t, im in frames if presents.get(t, True)]
         coupes = [frames[0][0]] + changements_portrait(vign, cfg)
         par_t = dict(frames)
         actif = [(t, identifier_portrait(recadrer(par_t[t], zones["portrait"]), cartes, cfg)) for t in coupes]
@@ -374,6 +388,15 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
         return courant
 
     par_t = dict(frames)
+    entamees = []
+    releves_run.recharges_entamees = 0
+
+    def base_de(bouton, t):
+        """Recharge de base du bouton à l'instant t (base de données ; SJW sans compétence connue : `recharge_base_defaut`, ex. ultime 60 s)."""
+        if bouton.startswith("sjw_"):
+            return recharge_base(db, "sjw", bouton, (skills_sjw or {}).get(bouton)) or (cfg.get("recharge_base_defaut") or {}).get(bouton)
+        return recharge_base(db, hunter_a(t), bouton)
+
     par_chiffres = cfg.get("detection") == "ocr" and ocr is not None
     for bouton in BOUTONS_HUNTER + BOUTONS_SJW:
         if not zones.get(bouton):
@@ -382,7 +405,7 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
         if lectures is not None or par_chiffres:
             lect = lectures.get(bouton, []) if lectures is not None else lecture_chiffres(frames, zones[bouton], ocr, presents, cfg.get("ocr_pas_s", 0.5))
             cap = None if sjw else cfg.get("recharge_max_chasseur_s", 26)   # v6 : recharge de chasseur max 25 s dans la base (hunters.json) ; au-delà = chiffre mal lu
-            for t, lu in transitions_chiffres(lect):
+            for t, lu in transitions_chiffres(lect, base_a=lambda t, b=bouton: base_de(b, t), compte=entamees):
                 if cap and lu is not None and lu > cap:
                     continue
                 evenements.append({"t": t, "hunter": "sjw" if sjw else hunter_a(t), "slot": bouton,
@@ -400,6 +423,7 @@ def releves_run(frames, zones, cfg, db=None, cartes=None, skills_sjw=None, ocr=N
         serie = [(t, remplissage(im, zones["core"], cfg.get("jauge_seuil_pixel", 128))) for t, im in frames]
         for t in transitions_jauge(serie, cfg):
             evenements.append({"t": t, "hunter": hunter_a(t), "slot": "core", "skill_id": None, "trigger": None, "cooldown_read": None, "source": "jauge"})
+    releves_run.recharges_entamees = len(entamees)
     evenements = fusionner_doublons(evenements, cfg.get("fusion_s", 0.5))
     if any(e["hunter"] == "inconnu" for e in evenements if e["slot"] in BOUTONS_HUNTER + ("core", "tag")) and "chasseurs-inconnus" not in limites:
         limites.append("chasseurs-inconnus")
@@ -467,6 +491,28 @@ def ajouter_t_game(evenements, recadrages_chrono, ocr, tolerance=0.5):
             cache[t] = lire_chrono(ocr(recadrages_chrono[t]))
         e["t_game"] = cache[t]
     return evenements
+
+
+def appliquer_v21(evenements, chrono_s, cfg):
+    """SPEC §2.1 et §2.4 (v2.1). 1) Fin de run au chrono final : si le dernier `t_game` lu = `chrono_s` ± `t_game_tolerance_s`, la run se termine au 1er
+    événement dont `t_game` atteint le chrono ; ce qui suit sort de la run. 2) Deux `tag` à moins de `tag_min_s` (4 s) = un seul, le premier. La coupure
+    se fait AVANT le filtre des `tag` (le dernier événement lu, tag compris, fixe la fin). -> (événements, t_fin | None)."""
+    ev = sorted(evenements, key=lambda e: e["t"])
+    t_fin = None
+    lus = [e for e in ev if e.get("t_game") is not None]
+    if chrono_s and lus and abs(lus[-1]["t_game"] - chrono_s) <= cfg.get("t_game_tolerance_s", 0.5):
+        premier = next((e for e in ev if e.get("t_game") is not None and e["t_game"] >= chrono_s - 0.05), None)
+        if premier is not None:
+            t_fin = premier["t"]
+            ev = [e for e in ev if e["t"] <= t_fin]
+    sortie, dernier = [], None
+    for e in ev:
+        if e["slot"] == "tag":
+            if dernier is not None and e["t"] - dernier < cfg.get("tag_min_s", 4.0):
+                continue
+            dernier = e["t"]
+        sortie.append(e)
+    return sortie, t_fin
 
 
 def debut_derniere_run(presents, t_fin, coupure_s=10.0, pas=0.5):
@@ -573,7 +619,8 @@ def rapport(semaine, racine=RACINE):
         for r in d["runs"]:
             ev = r["events"]
             lignes.append(f"- {d['mode']} · {d['video_id']} · run {r['run_index']} : {len(ev)} événement(s), "
-                          f"{sum(1 for e in ev if e['confidence'] != 'sur')} à vérifier, durée {r['duration_s']} s, limites : {', '.join(r['limites']) or 'aucune'}")
+                          f"{sum(1 for e in ev if e['confidence'] != 'sur')} à vérifier, durée {r['duration_s']} s, limites : {', '.join(r['limites']) or 'aucune'}"
+                          + (f", recharges-entamees : {r['recharges_entamees']}" if r.get("recharges_entamees") else ""))
             for nom, ok, detail in controles.get(d["video_id"]) or []:
                 lignes.append(f"  - {'OK' if ok else ('NON ÉVALUABLE' if ok is None else 'ÉCHEC')} : {nom} ({detail})")
     return "\n".join(lignes) + "\n"
@@ -832,11 +879,17 @@ def passage_video(outils, chemin, ctx, cfg, db, tmp, journal=lambda m: None, ocr
             ajouter_t_game(evenements, chrono_crops, ocr_t, cfg.get("t_game_tolerance_s", 0.5))
         elif spec is runs_spec[0]:              # zone à calibrer : grands recadrages du haut de l'image (≤ 960 px, 3 instants)
             diagnostic_chrono(ctx, frames, cfg, racine)
+        entamees = getattr(releves_run, "recharges_entamees", 0)
+        evenements, t_cut = appliquer_v21(evenements, ctx.get("chrono_s"), cfg)         # v2.1 : fin de run au chrono final, `tag` espacés de `tag_min_s`
+        if t_cut is not None and t_cut < t_fin:
+            t_fin = t_cut
         chrono = ctx.get("chrono_s")
         duree = (t_fin - t_debut) if t_fin is not None else None
         if chrono and duree and duree > cfg.get("duree_max_facteur", 2.5) * chrono:
             limites.append("bornes-incertaines")
         runs.append(construire_run(spec["run_index"], t_debut, t_fin, evenements, limites + lim, temps_sans_hud(presents_scan, t_debut, t_fin, cfg.get("scan_pas_s", 0.5))))
+        if entamees:
+            runs[-1]["recharges_entamees"] = entamees
         t_min = t_fin
     fich = fichier(ctx, runs)
     tc = t_composition if t_composition is not None else ctx.get("t_composition")
