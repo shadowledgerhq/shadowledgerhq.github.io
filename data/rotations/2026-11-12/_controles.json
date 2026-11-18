@@ -7,8 +7,8 @@
     ],
     [
       "fin avant la composition",
-      true,
-      "fin 37.0 s, composition 38 s"
+      null,
+      "fin 37.0 s, composition None s"
     ],
     [
       "≥ 1 événement SJW",
@@ -27,8 +27,8 @@
     ],
     [
       "t_game croissant, ≤ chrono, phases dans la fenêtre",
-      null,
-      "chrono du HUD non lu"
+      true,
+      "12 lecture(s) 2.366→19.384 s ; croissant True ; dernier ≤ chrono True ; phases [9.281, 14.986, 19.926] (True)"
     ]
   ],
   "a-923ClD9Rc": [
