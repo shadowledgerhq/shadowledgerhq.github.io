@@ -59,8 +59,8 @@
     ],
     [
       "t_game croissant, ≤ chrono, phases dans la fenêtre",
-      null,
-      "chrono du HUD non lu"
+      true,
+      "20 lecture(s) 2.219→19.558 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable)"
     ]
   ],
   "Lt84IhMjBvM": [

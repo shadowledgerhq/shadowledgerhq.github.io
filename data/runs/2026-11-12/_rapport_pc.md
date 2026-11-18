@@ -266,3 +266,13 @@ error: The following untracked working tree files would be overwritten by checko
 - Erreurs bloquantes : aucune
 - Durée du passage : 2 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-daily 2026-11-18T18:25:50.300631+00:00 -->
+## Passage pc-daily — 2026-11-18 19:25 (Paris)
+
+- Top 10 couvert : non (42 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 73 (dont 42 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 4 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert

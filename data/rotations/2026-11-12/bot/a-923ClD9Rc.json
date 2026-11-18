@@ -20,7 +20,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 14.0,
-          "t_game": null,
+          "t_game": 2.219,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -32,7 +32,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 6.219,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -44,7 +44,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 10.0,
-          "t_game": null,
+          "t_game": 6.962,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -68,7 +68,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 8.0,
-          "t_game": null,
+          "t_game": 13.456,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -80,7 +80,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 36.0,
-          "t_game": null,
+          "t_game": 15.461,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         },
@@ -92,7 +92,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 15.925,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -104,7 +104,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 15.925,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -116,7 +116,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 16.376,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -128,7 +128,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 16.605,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -140,7 +140,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 17.38,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -164,7 +164,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 17.869,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -176,7 +176,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 18.124,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -200,7 +200,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 18.62,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -212,7 +212,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 18.888,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -224,7 +224,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 19.125,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -236,7 +236,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 19.37,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -260,7 +260,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 19.558,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -272,7 +272,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 19.558,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -284,7 +284,7 @@
           "skill_id": null,
           "trigger": "inconnu",
           "cooldown_read": null,
-          "t_game": null,
+          "t_game": 19.558,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -296,7 +296,7 @@
           "skill_id": null,
           "trigger": null,
           "cooldown_read": 14.0,
-          "t_game": null,
+          "t_game": 19.558,
           "source": "hud-recharge",
           "confidence": "a_verifier"
         }

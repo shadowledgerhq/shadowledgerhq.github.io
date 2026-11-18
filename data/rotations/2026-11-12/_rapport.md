@@ -6,7 +6,7 @@
   - OK : ≥ 1 événement SJW (4 événement(s))
   - NON ÉVALUABLE : ≥ 1 événement par chasseur actif identifié (actifs identifiés [], avec événement [])
   - OK : aucune recharge relancée trop tôt (ok)
-  - NON ÉVALUABLE : t_game croissant, ≤ chrono, phases dans la fenêtre (chrono du HUD non lu)
+  - OK : t_game croissant, ≤ chrono, phases dans la fenêtre (20 lecture(s) 2.219→19.558 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable))
 - bot · Lt84IhMjBvM · run 1 : 23 événement(s), 23 à vérifier, durée 93.5 s, limites : chasseurs-inconnus
   - ÉCHEC : durée = chrono ± 0,5 s (durée 93.5 s, chrono 18.754 s, écart +74.75 s)
   - ÉCHEC : fin avant la composition (fin 102.0 s, composition 0 s)
