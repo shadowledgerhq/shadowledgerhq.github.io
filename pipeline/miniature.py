@@ -99,18 +99,20 @@ def voter(textes, mode, config, accord_min=2):
     p = scores.plage(mode, config)
     if p is None:
         return None
-    compte, brut, ordre = Counter(), {}, []
-    for texte in textes:
+    compte, brut, ordre, virgule = Counter(), {}, [], set()
+    for original in textes:
         vus = set()
-        # v35 : sur une miniature lue en chiffres seulement (liste blanche), la virgule entre deux chiffres est un point mal lu (« 19,926 ») ;
-        # la règle « virgule + 3 chiffres = chrono seulement avec une unité » vaut pour les textes (titre, description), pas pour cet OCR
-        texte = re.sub(r"(?<=\d),(?=\d)", ".", texte)
+        # v35.1 : sur une miniature lue en chiffres seuls (liste blanche) au BOT, la virgule entre deux chiffres est un point mal lu (`19,926` =
+        # 19.926, sans unité exigée) ; la règle v35 « virgule + 3 chiffres = chrono seulement avec une unité » vaut pour titre, description et sous-titres
+        texte = re.sub(r"(?<=\d),(?=\d)", ".", original) if mode == "bot" else original
         for c in scores.candidats(texte, mode, p, config):
             if mode == "bot" and c.get("decimales") != 3:          # BOT : seul un chrono à millièmes (`19.926`) est lu sur une miniature
                 continue
             if scores.est_hypothese(texte, c["pos"], c["pos"] + len(c["brut"]), config) or c["valeur"] in vus:
                 continue
             vus.add(c["valeur"])
+            if "," in original[c["pos"]:c["pos"] + len(c["brut"])]:
+                virgule.add(c["valeur"])
             compte[c["valeur"]] += 1
             brut.setdefault(c["valeur"], c["brut"])
             if c["valeur"] not in ordre:
@@ -119,7 +121,7 @@ def voter(textes, mode, config, accord_min=2):
     if not retenus:
         return None
     v = max(retenus, key=lambda x: (compte[x], -ordre.index(x)))
-    return {"valeur": v, "brut": brut[v], "votes": compte[v], "autres": [x for x in retenus if x != v]}
+    return {"valeur": v, "brut": brut[v], "votes": compte[v], "autres": [x for x in retenus if x != v], "virgule": v in virgule}
 
 
 def _texte_canonique(mode, vote):
@@ -129,6 +131,7 @@ def _texte_canonique(mode, vote):
     return vote["brut"]
 
 
+NOTE_VIRGULE = "miniature : virgule lue comme point"
 MOTS_ECRAN_RESULTS = ("phase", "result", "結果")
 
 
@@ -156,6 +159,8 @@ def lectures_texte(vid, meta, textes, config):
         for lec in lecs:
             lec["detail"]["texte_miniature"] = True
             lec["detail"]["votes_miniature"] = vote["votes"]
+            if vote.get("virgule"):
+                lec["notes"].append(NOTE_VIRGULE)
             if vote["autres"]:
                 lec["notes"].append("miniature, autres valeurs lues : " + ", ".join(str(x) for x in vote["autres"]))
             sortie.append(lec)

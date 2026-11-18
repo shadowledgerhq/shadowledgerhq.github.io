@@ -136,6 +136,7 @@ def test_lecture_de_miniature_est_provisoire():
     (lecture,) = miniature.lectures_texte("wJ9CwjKwyco", META, ["19,926,", "19:926,", "19.926"], CONFIG)
     assert (lecture["score"], lecture["score_source"], lecture["exact"], lecture["confidence"]) == (19.926, "miniature", False, "a_verifier")
     assert lecture["detail"]["texte_miniature"] is True and "score provisoire (miniature) : 19.926" in lecture["notes"]
+    assert "miniature : virgule lue comme point" in lecture["notes"]            # v35.1 : `19,926` lu 19.926, avec la note
     assert pc.est_texte(lecture) and not pc._est_ecran(lecture)
 
 

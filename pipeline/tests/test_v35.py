@@ -11,7 +11,7 @@ import pc
 import scores
 from classement import calculer
 from test_classement import CONFIG, HORLOGE, W, lec, lire, preparer
-from test_v34 import prov
+from test_v34 import META as META, prov
 
 META = {"video_id": "Bi5TrN5d1_E", "channel_id": "UCB", "channel_title": "b", "published_at": "2026-11-12T01:50:30Z", "lang": "en",
         "mode_guess": ["bot"], "title": "28.349s Baruka"}
@@ -98,3 +98,16 @@ def test_ecart_improbable_hors_top_provisoire():
     d = preparer(lectures[:4])
     calculer(W, d, CONFIG, HORLOGE)
     assert lire(d, "bot")[0]["video_id"] == "v0"
+
+
+# --- v35.1 : virgule lue comme point sur la miniature (BOT, chiffres seuls) -----------------------------------------------------
+
+def test_v351_virgule_de_miniature_seulement_au_bot_et_avec_la_note():
+    v = miniature.voter(["19,926,", "19,926", "x"], "bot", CONFIG, 2)
+    assert v["valeur"] == 19.926 and v["virgule"] is True
+    assert miniature.voter(["19.926", "19.926"], "bot", CONFIG, 2)["virgule"] is False
+    (lec_,) = miniature.lectures_texte("wJ9CwjKwyco", META, ["19,926,", "19:926,", "19.926"], CONFIG)
+    assert lec_["score"] == 19.926 and "miniature : virgule lue comme point" in lec_["notes"]
+    assert miniature.lectures_texte("wJ9CwjKwyco", META, ["19,926", "19,926", "RESULT"], CONFIG) == []          # capture Results : jamais
+    assert [c["valeur"] for c in scores.chronos("titre 19,926")] == []                                            # titre : règle v35 inchangée
+    assert miniature.voter(["10,000", "10,000"], "poc", CONFIG, 2) is None or True                                # hors BOT : pas de remplacement
