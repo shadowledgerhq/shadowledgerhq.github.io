@@ -9354,5 +9354,78 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     }
+  },
+  {
+    "rarity": "ssr",
+    "skills": [],
+    "effects": [],
+    "verified_at": "2026-11-19",
+    "game_version": null,
+    "id": "kamish-wrath",
+    "name": {
+      "fr": "Courroux de Kamish",
+      "en": "Kamish's Wrath",
+      "ko": ""
+    },
+    "kind": "sung_jinwoo",
+    "hunter_id": null,
+    "exclusive_hunter_en": null,
+    "element": "fire",
+    "weapon_type": "Dagger",
+    "base_stats": {},
+    "passive": [],
+    "icon": "data/icons/weapons/kamish-wrath.png",
+    "source": "https://forum.netmarble.com/slv_en/view/14/110997",
+    "notes": "Ajout du patch du 19/11/2026. Aucune fiche wiki ni valeur chiffrée disponible à cette date : compétences, paliers et statistiques à compléter (null/vides), rien d'inventé. Non vérifié en jeu. Type « Dagger » : dagues jumelles en prise inversée, spécialisée dégâts Fire (Developer Note 13/110809). Nom FR et icône : API slagate (id 38, image client-maj-2026-11-19). Obtenable par Custom Draw, Weapon Custom Draw et Special Summons ; échangeable contre Kamish's Roar pendant l'événement (Essence Stones).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "icon_source": "API slagate (GSWeapon_KamishWrath_PortraitBig), récupérée le 2026-11-19"
+  },
+  {
+    "rarity": "ssr",
+    "skills": [],
+    "effects": [],
+    "verified_at": "2026-11-19",
+    "game_version": null,
+    "id": "kamish-roar",
+    "name": {
+      "fr": "Rugissement de Kamish",
+      "en": "Kamish's Roar",
+      "ko": ""
+    },
+    "kind": "sung_jinwoo",
+    "hunter_id": null,
+    "exclusive_hunter_en": null,
+    "element": "fire",
+    "weapon_type": "Polearm",
+    "base_stats": {},
+    "passive": [],
+    "icon": "data/icons/weapons/kamish-roar.png",
+    "source": "https://forum.netmarble.com/slv_en/view/14/110997",
+    "notes": "Ajout du patch du 19/11/2026. Aucune fiche wiki ni valeur chiffrée disponible à cette date : compétences, paliers et statistiques à compléter (null/vides), rien d'inventé. Non vérifié en jeu. Type « Polearm » = hypothèse (attaques d'estoc ; image « GSWeapon_KamishLance »), à vérifier en jeu. Spécialisée accumulation d'éléments Fire (Developer Note 13/110809). Nom FR et icône : API slagate (id 39).",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "icon_source": "API slagate (GSWeapon_KamishLance_PortraitBig), récupérée le 2026-11-19"
+  },
+  {
+    "rarity": "ssr",
+    "skills": [],
+    "effects": [],
+    "verified_at": "2026-11-19",
+    "game_version": null,
+    "id": "rosa-nera",
+    "name": {
+      "fr": "",
+      "en": "Rosa Nera",
+      "ko": ""
+    },
+    "kind": "hunter",
+    "hunter_id": "thalia-de-rossi",
+    "exclusive_hunter_en": "Thalia De Rossi",
+    "element": "dark",
+    "weapon_type": null,
+    "base_stats": {},
+    "passive": [],
+    "icon": null,
+    "source": "https://forum.netmarble.com/slv_en/view/14/110997",
+    "notes": "Ajout du patch du 19/11/2026. Aucune fiche wiki ni valeur chiffrée disponible à cette date : compétences, paliers et statistiques à compléter (null/vides), rien d'inventé. Non vérifié en jeu. Arme exclusive de Thalia De Rossi, obtenable par fabrication (Crafting) ou événements. Absente de l'API slagate au 19/11 : nom FR et icône à compléter."
   }
 ]

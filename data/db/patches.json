@@ -3,7 +3,7 @@
     "id": "2026-11-19-annonce",
     "version": null,
     "date": "2026-11-19",
-    "status": "annonce",
+    "status": "remplacee",
     "name": {
       "fr": "Mise à jour de novembre 2026 : annonce des développeurs (Colère de Kamish)",
       "en": "Developer Note: Kamish's Wrath Arrives (11/12 preview)"
@@ -13,7 +13,7 @@
     "source": "https://forum.netmarble.com/slv_en/view/13/110809",
     "verified_at": "2026-11-16",
     "game_version": null,
-    "notes": "Note publiée le 12/11/2026 : aperçu, pas encore les notes de mise à jour. Date de sortie non indiquée par Netmarble (19/11 selon Alexis, à confirmer) ; contenu « susceptible de changer ». Aucune valeur chiffrée : rien ajouté aux autres catégories (hunters, weapons…) avant les notes détaillées. Données de jeu non vérifiées en jeu.",
+    "notes": "Note publiée le 12/11/2026 : aperçu, pas encore les notes de mise à jour. Date de sortie non indiquée par Netmarble (19/11 selon Alexis, à confirmer) ; contenu « susceptible de changer ». Aucune valeur chiffrée : rien ajouté aux autres catégories (hunters, weapons…) avant les notes détaillées. Données de jeu non vérifiées en jeu. 19/11/2026 : remplacée par la fiche « 2026-11-19 » (notes de mise à jour publiées). Les fiches thalia-de-rossi, kamish-wrath, kamish-roar existent maintenant dans la base (sans valeurs chiffrées).",
     "changes": [
       {
         "category": "weapons",
@@ -2337,6 +2337,163 @@
         "category": "hunters",
         "id": "harper",
         "change": "Category Changed Tier 4 (New Effect Added) For every Dark ally in the party, Dark team members’ Critical Hit damage increases by 3% Tier 5 (New Effect Added) [P"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-19",
+    "version": null,
+    "date": "2026-11-19",
+    "name": {
+      "fr": "Mise à jour du 19/11/2026 (Colère de Kamish, refonte du Pouvoir du fléau)",
+      "en": "11/19 (Thu) Update Details"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/14/110997",
+    "extra_urls": [
+      "https://forum.netmarble.com/slv_en/view/32/110996",
+      "https://forum.netmarble.com/slv_en/view/32/111023",
+      "https://forum.netmarble.com/slv_en/view/32/111028",
+      "https://forum.netmarble.com/slv_en/view/32/110969"
+    ],
+    "source": "https://forum.netmarble.com/slv_en/view/14/110997",
+    "verified_at": "2026-11-19",
+    "game_version": null,
+    "notes": "Résumé de la note « Update Details » (version du 19/11 07:31 UTC+0, mise à jour 06:03 pour les récompenses de saison BOT), à contrôler sur l'URL. Numéro de version non indiqué par Netmarble. Aucune valeur chiffrée pour Kamish's Wrath/Roar, Thalia De Rossi et Rosa Nera : fiches créées sans compétences ni statistiques. Valeurs d'équilibrage : notice 110996 (balance_history et patch_adjustments des fiches).",
+    "changes": [
+      {
+        "category": "poc",
+        "id": "power-of-calamity",
+        "change": "refonte : les 3 difficultés deviennent une structure par paliers (Tier) ; Ennio et Cthulli alternent à chaque palier ; boss vaincu (PV à 0) = palier suivant, reprise au palier max à chaque nouvelle saison, tous les chasseurs repartent du palier 1 après la mise à jour ; toutes les faiblesses élémentaires s'appliquent ; les équipes 1 et 2 partagent la réserve de PV du boss (PV restants reportés d'une équipe à l'autre) ; récompenses de progression et de palier ; classement en pourcentage (top %) au lieu du rang exact"
+      },
+      {
+        "category": "weapons",
+        "id": "kamish-wrath",
+        "change": "ajout : arme de SJW SSR Fire « Kamish's Wrath » (Custom Draw, Weapon Custom Draw, Special Summons)"
+      },
+      {
+        "category": "weapons",
+        "id": "kamish-roar",
+        "change": "ajout : arme de SJW SSR Fire « Kamish's Roar » (mêmes sources) ; échange Wrath/Roar contre des Essence Stones pendant l'événement"
+      },
+      {
+        "category": "hunters",
+        "id": "thalia-de-rossi",
+        "change": "ajout : SSR Dark Supporter (Rate Up Draw, Hunter Preview) ; arme exclusive Rosa Nera (fabrication ou événements) ; histoire originale, fiche secrète, Codex, liens (Bonds) ajoutés ; 3 chromas de costume"
+      },
+      {
+        "category": "weapons",
+        "id": "rosa-nera",
+        "change": "ajout : arme exclusive de Thalia De Rossi"
+      },
+      {
+        "category": "hunters",
+        "id": "sung-il-hwan",
+        "change": "équilibrage (notice 32/110996) : durées [Marked]/[Suppressed] 30→60 s, palier 4 : +5→+30 % d'Attaque par allié Dark Breaker, arme exclusive : dégâts critiques +30→+40 %"
+      },
+      {
+        "category": "hunters",
+        "id": "charlotte",
+        "change": "équilibrage (notice 32/110996) : multiplicateurs Lv.10 relevés, palier 1/2/4/5 modifiés, arme exclusive Défense 12→30 %"
+      },
+      {
+        "category": "hunters",
+        "id": "harper",
+        "change": "équilibrage (notice 32/110996) : paliers 4 et 5, arme exclusive PV 12→30 %"
+      },
+      {
+        "category": "hunters",
+        "id": "diana-lopez",
+        "change": "ajout aux listes Custom Draw, Special Summons (à partir des Special Summons ouvrant après le 01/12 00:00 UTC) et échange de Special Certificates de l'Association des chasseurs"
+      },
+      {
+        "category": "stats",
+        "id": "armory",
+        "change": "Armurerie améliorée : bonus d'Attaque/Défense/PV pour SJW, chasseurs et successeurs selon le rang et le palier d'avancement des armes enregistrées (jusqu'au palier 10), inclus dans la Puissance totale"
+      },
+      {
+        "category": "stats",
+        "id": "battle-tier",
+        "change": "palier de combat maximum étendu de 150 à 200 (récompenses de succès à chaque palier)"
+      },
+      {
+        "category": "general",
+        "id": "gem-page-3",
+        "change": "Gem Page 3 : 8 emplacements par couleur, 40 au total ; débloquée quand tous les emplacements des pages 1 et 2 portent des gemmes de palier 5 ou plus ; déblocage par étapes successives"
+      },
+      {
+        "category": "general",
+        "id": "gate-reward-groups",
+        "change": "groupes de récompenses des Gates réorganisés (types et quantités inchangés) ; les puces d'amélioration d'artefact (Artifact Enhancement Chips) ne sont plus des récompenses de Gate"
+      },
+      {
+        "category": "general",
+        "id": "shadow-enforcer-rewards",
+        "change": "« Seals of Unity » ajoutés aux récompenses de la mission secrète 48 h de Shadow Enforcer"
+      },
+      {
+        "category": "general",
+        "id": "deep-containment-zone",
+        "change": "nouvelle saison de la Zone de confinement profonde, nouveau boss « [Experiment] Vulcan » ; faiblesses élémentaires et rapports d'anomalie mis à jour"
+      },
+      {
+        "category": "guild_boss",
+        "id": "dargo",
+        "change": "nouveau boss de guilde « Dargo the Horn of the Azure Sea » ; élément Fire recommandé fixe jusqu'à la saison suivante, puis Dark, Water, Dark, Wind ajoutés semaine après semaine (ordre de la notice)"
+      },
+      {
+        "category": "general",
+        "id": "hall-of-the-monarchs",
+        "change": "nouvelle saison le 03/12 00:00 UTC (cadres de saison mis à jour) ; accès pendant l'inter-saison pour voir le classement et réclamer les récompenses"
+      },
+      {
+        "category": "general",
+        "id": "architects-test",
+        "change": "nouvelle saison : niveaux d'épreuve étendus jusqu'au Tier 9 ; nouvelles règles de l'Architecte et éléments forts/faibles par niveau"
+      },
+      {
+        "category": "general",
+        "id": "edge-of-illusion-and-dreams",
+        "change": "nouvelle saison : équilibrage modifié, Battle Tier recommandé augmenté, récompenses augmentées, « Seals of Unity » dès la difficulté Deep Sleep, récompenses coop remplacées par des Essence Stones"
+      },
+      {
+        "category": "general",
+        "id": "ranking-rewards-timing",
+        "change": "récompenses des classements hebdomadaires et de saison (POC, HOTM, Battlefield of Infinity) distribuées 24 h après la fin de la saison, après contrôle des comptes anormaux ; BOT : récompenses hebdomadaires inchangées, récompenses de saison 1 semaine après la semaine 4 ; saison 20 (depuis le 22/10) distribuée par courrier après la maintenance"
+      },
+      {
+        "category": "general",
+        "id": "special-operation-list",
+        "change": "buff de la liste d'opérations spéciales étendu à la Zone de confinement profonde, au POC, au Guild Boss et au Battlefield of Infinity"
+      },
+      {
+        "category": "general",
+        "id": "chance-packs",
+        "change": "nouveaux Chance Packs au System Shop (runes de compétence légendaires, pierres de bénédiction légendaires, agent d'amplification, niveau de noyau légendaire, entraînement coop, Time Crystal, extrait de Mana Power, Abyssal Crystal, conversion de figurines)"
+      },
+      {
+        "category": "settings",
+        "id": "quality-and-display",
+        "change": "ressources Haute qualité / Standard (≈ 40 % de stockage en moins en Standard, option « Apply Standard Resources »), téléchargement en arrière-plan sur Android, option « Simplify Damage Numbers »"
+      },
+      {
+        "category": "general",
+        "id": "misc-improvements",
+        "change": "Points de balayage : limite d'achat quotidien 500→1 000 ; guilde solo « Ahjin » pour les comptes sans historique de guilde ; sélection de 4 SSR avant les Special Summons (garantie d'un des 4 au résultat confirmé, à partir du 01/12 00:00 UTC) ; préréglages Guild Boss 10→20 ; carte « Monarch of Fangs Adan » renommée « (Spiritual Body Manifestation) »"
+      },
+      {
+        "category": "general",
+        "id": "bug-fixes",
+        "change": "correctifs : QTE de Velvet à l'entraînement, caméra BOT / mobile, durée de Break du successeur Myro vs Monarque des ombres, Puissance totale des chasseurs en histoires secondaires, etc."
+      },
+      {
+        "category": "general",
+        "id": "data-patch-2026-11-19",
+        "change": "patch de données du 19/11 11:10 UTC+0 (notice 32/111023) : écran noir/personnages déformés au début de certains donjons ; effets visuels de l'attaque de noyau de Kamish's Roar dans le Weapon Codex (PC/AOS : mise à jour ultérieure)"
+      },
+      {
+        "category": "general",
+        "id": "image-display-issue",
+        "change": "notice 32/111028 : images affichées anormalement après la mise à jour du 19/11, cause en cours d'analyse (contournement : Reset Data ou options graphiques)"
       }
     ]
   }

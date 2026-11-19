@@ -1,5 +1,5 @@
 # Rapport de contrôle de la base — 2026-11-19
-Total : 1330 entrées, **0 erreur(s)**, 2011 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
+Total : 1335 entrées, **0 erreur(s)**, 2029 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
 
 | Fichier | Entrées | Erreurs | Avertissements |
 | --- | ---: | ---: | ---: |
@@ -8,10 +8,10 @@ Total : 1330 entrées, **0 erreur(s)**, 2011 avertissement(s). Généré par `pi
 | cores | 19 | 0 | 2 |
 | game_rules | 74 | 0 | 74 |
 | gems | 19 | 0 | 44 |
-| hunters | 66 | 0 | 0 |
+| hunters | 67 | 0 | 0 |
 | mode_rewards | 15 | 0 | 30 |
 | netmarble_notes | 691 | 0 | 1382 |
-| patches | 36 | 0 | 68 |
+| patches | 37 | 0 | 84 |
 | proof_modifiers | 17 | 0 | 34 |
 | rates | 12 | 0 | 12 |
 | remnant_powers | 4 | 0 | 8 |
@@ -21,10 +21,10 @@ Total : 1330 entrées, **0 erreur(s)**, 2011 avertissement(s). Généré par `pi
 | statues | 5 | 0 | 5 |
 | subjugation_support | 18 | 0 | 36 |
 | successors | 3 | 0 | 0 |
-| weapons | 115 | 0 | 11 |
+| weapons | 118 | 0 | 13 |
 
 Avertissements par type (à suivre dans le temps) :
-- 932 × icône absente (null)
-- 781 × name.fr vide
+- 933 × icône absente (null)
+- 782 × name.fr vide
 - 92 × source non URL (capture ou texte)
 - 60 × pierre sans effets

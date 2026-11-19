@@ -15704,5 +15704,34 @@
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
     "name_ja_source": "https://slagate.com/builds (page affichée en japonais) ; lecture de page autorisée par Alexis le 13/11/2026",
     "name_ko_source": "https://slagate.com/builds (page affichée en coréen) ; lecture de page autorisée par Alexis le 13/11/2026"
+  },
+  {
+    "id": "thalia-de-rossi",
+    "name": {
+      "fr": "Thalia De Rossi",
+      "en": "Thalia De Rossi",
+      "ko": ""
+    },
+    "rarity": "ssr",
+    "role": "supporter",
+    "type_en": "elemental overload supporter",
+    "element": "dark",
+    "class": null,
+    "weapon_type": null,
+    "exclusive_weapon": "Rosa Nera",
+    "release_date_en": "19 November 2026",
+    "skills": [],
+    "passives": [],
+    "base_stats": null,
+    "advancement": [],
+    "icon": "data/icons/hunters/thalia-de-rossi.png",
+    "source": "https://forum.netmarble.com/slv_en/view/14/110997",
+    "verified_at": "2026-11-19",
+    "game_version": null,
+    "notes": "Ajout du patch du 19/11/2026. Aucune fiche wiki ni valeur chiffrée disponible à cette date : compétences, paliers et statistiques à compléter (null/vides), rien d'inventé. Non vérifié en jeu. Supporter Dark « Overload » de la guilde Rivera (Developer Note 13/110809) : boucliers et soins, buff Overload, hausse des dégâts critiques subis par l'ennemi, augmente les dégâts d'attaque de noyau de SJW ; synergie avec Agnes Rivera. Rôle « supporter » : fiche officielle du 19/11. Nom FR (identique) et portrait : API slagate (id 80). Obtenable par Rate Up Draw.",
+    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
+    "icon_source": "API slagate (hunter-portrait), récupérée le 2026-11-19",
+    "balance_history": [],
+    "balance_changes": []
   }
 ]
