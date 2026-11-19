@@ -1,10 +1,10 @@
-# Rapport — semaine 2026-11-12 — passage pc-weekly — 2026-11-19 19:33 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-weekly — 2026-11-19 19:50 (Paris)
 
 - Top 10 couvert : non (89 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (vidéos restantes à traiter)
 - Vidéos traitées ce passage : 1 · en_cours restantes : 123 (dont 89 à traiter par le PC)
 - Erreurs bloquantes : aucune
-- Durée du passage : 14 min
+- Durée du passage : 17 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 
 - Semaine : 123 en cours (dont 106 pour le PC), 42 terminée(s), 15 rejetée(s)

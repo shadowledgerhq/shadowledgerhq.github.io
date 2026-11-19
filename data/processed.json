@@ -584,13 +584,13 @@
     "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
     "published_at": "2026-11-13T10:14:16Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-17",
+    "updated_at": "2026-11-19",
     "last_tri": 4,
     "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 17,
     "pc": {
       "image_taille": [
@@ -610,7 +610,10 @@
       "date": "2026-11-17",
       "tri4": "fait",
       "sous_titres": "absent",
-      "hud_amont": []
+      "hud_amont": [],
+      "tri2": "fait",
+      "rotation": "fait",
+      "rotation_version": 11
     },
     "relecture": "2026-11-17"
   },
