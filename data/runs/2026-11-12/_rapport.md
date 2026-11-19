@@ -1,14 +1,16 @@
-# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-19 00:46 (Paris)
+# Rapport — semaine 2026-11-12 — passage weekly — 2026-11-19 01:47 (Paris)
 
-- Top 10 couvert : non (50 vidéos candidates au top 10 restantes)
-- **Passage complet : non** (anti-bot YouTube (passage incomplet)
-- Vidéos traitées ce passage : 15 · en_cours restantes : 84 (dont 50 à traiter par le PC)
-- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
-- Durée du passage : 58 min
-- Relance automatique : 19/11/2026 02:46 (une seule fois par soir)
-- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+Dernier passage du PC (`_rapport_pc.md`, recopié) :
 
-- Semaine : 84 en cours (dont 67 pour le PC), 42 terminée(s), 13 rejetée(s)
+## Passage pc-weekly — 2026-11-19 01:18 (Paris)
+
+- **Passage complet : non** (passage refusé : un autre passage PC tourne déjà (daily (PID 716, depuis 33 min)))
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà (daily (PID 716, depuis 33 min))
+
+- Quota : 1705 unités
+- Ce passage : 39 vidéo(s) nouvelle(s), 2 rejetée(s), 0 score(s) provisoire(s)
+- Semaine : 123 en cours (dont 106 pour le PC), 42 terminée(s), 15 rejetée(s)
 - Classements : bot 17, gb 9, hotm-gate-inconnue 5, poc 5
 
 ## À vérifier (33)
@@ -58,13 +60,4 @@
 - rien
 
 ## Erreurs et alertes
-- tOzRUlmZ2JI : 429 / anti-bot YouTube, reportée au prochain passage
-- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
-- 49 vidéo(s) reportée(s) pour les images (limite 15)
-- zFsAGI_xyOQ : libellés ko inconnus (aucun écran GB reconnu)
-- Aqj1crEcrD4 : durée PT35M2S hors limite (30 min), images non traitées
-- SDMrcxG50LI : durée PT37M45S hors limite (30 min), images non traitées
-- K4786mdlgXg : durée PT44M26S hors limite (30 min), images non traitées
-- PawKtXDQjdc : durée PT33M44S hors limite (30 min), images non traitées
-- 84 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : 19/11/2026 02:46 (une seule fois par soir)
+- rien
