@@ -140,7 +140,7 @@
 - Relance des 6 vidéos par Alexis (v17), puis bilan à la discussion 1.
 - Essai réel des tris 3-4 sur le PC, puis recadrages par zone et `pc.geler = true` ; tri 2 (miniatures, daily). Pseudo en jeu et armes de SJW (BOT) : icônes, [EN ATTENTE]. POC : les 5 composants (3 chasseurs) non lus, donc jamais « sûr ».
 ## Besoin d'Alexis
-- (fait 19/11) Essai 5MI relancé (étape 2 v5 + affinage 0,1 s) : artefacts 19/24 (7/24 avant), SJW 8/8 ; régression du fondu d'ouverture résolue. Restent : chasseurs 0/3, armes 1/2, compétences SJW 1/6, noyaux/bénédictions non filmés (limites de reconnaissance, pas de sélection d'image). Prochain : passage normal `py -3 pipeline\pc.py daily`, puis lire les rapports.
+- (fait 19/11) Essai 5MI relancé (étape 2 v5 + affinage 0,1 s) : artefacts 19/24 (7/24 avant), SJW 8/8 ; régression du fondu d'ouverture résolue. Restent : chasseurs 0/3, armes 1/2, compétences SJW 1/6, noyaux/bénédictions non filmés (limites de reconnaissance, pas de sélection d'image). Rotations semaine 2026-11-12 (top 3 changé après v36 ; lancer par `pc.py weekly --video <ID>`, `daily` ne traite que la semaine courante) : BOT Bi5TrN5d1_E (13 évén.), GB T5dR6iJAn-Y (69), Oj_-5x6700s run 2 (46), nh2D7xZ7dOQ (73) faites, aucun contrôle en échec. Lt84 et YSJFLd ne sont plus au top 3. `pc.geler` reste false. Prochain : prochain passage normal avec vidéos de la semaine 2026-11-19.
 - (fait) Relancer les 6 vidéos (v17), coller `docs/essais/ocr/_resume_6videos.json` à la discussion 1 avec `docs/MESSAGE_DISCUSSION_1_v17.md`.
 ## Demandes de modif du skill
 - `.claude/skills/shadow-ledger/SKILL.md` et `docs/CONTEXTE.md` décrivent encore BOT « deux classements » (`bot-season`/`bot-challenge`, `bot-variante-inconnue`) : à aligner sur la v10 (discussion 1).
