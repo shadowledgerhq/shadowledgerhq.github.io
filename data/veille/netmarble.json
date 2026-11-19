@@ -5495,7 +5495,23 @@
    "titre": "11/19 (Thu) Regular Maintenance Notice",
    "date": null,
    "vu_le": "2026-11-18"
+  },
+  "110997": {
+   "id": "110997",
+   "board": "14",
+   "url": "https://forum.netmarble.com/slv_en/view/14/110997",
+   "titre": "11/19 (Thu) Update Details (Updated on 11/19 06:03 UTC+0)",
+   "date": null,
+   "vu_le": "2026-11-19"
+  },
+  "110996": {
+   "id": "110996",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+   "titre": "11/19 (Thu) In-Game Balance Adjustments Notice",
+   "date": null,
+   "vu_le": "2026-11-19"
   }
  },
- "derniere_verification": "2026-11-18"
+ "derniere_verification": "2026-11-19"
 }
