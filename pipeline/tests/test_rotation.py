@@ -292,19 +292,32 @@ def test_bornes_incertaines_sans_results_lu(tmp_path):
 
 # --- sélection et branchement PC -------------------------------------------------------------------------------------------------
 
-def test_selection_top3_bot_et_etat_pc_rotation():
-    sem = "2026-11-12"
+def _racine_bot_provisoire(tmp):
+    """Copie de data/runs de la semaine avec le BOT sans ligne classée (cas testé ; le vrai classement en a une depuis le 19/11)."""
+    import shutil
+    src = R.RACINE / "data" / "runs" / "2026-11-12"
+    dst = Path(tmp) / "data" / "runs" / "2026-11-12"
+    shutil.copytree(src, dst)
+    bot = json.loads((dst / "bot.json").read_text(encoding="utf-8"))
+    for r in bot:
+        r["rank"] = None
+    (dst / "bot.json").write_text(json.dumps(bot), encoding="utf-8")
+    return Path(tmp)
+
+
+def test_selection_top3_bot_et_etat_pc_rotation(tmp_path):
+    sem, rac = "2026-11-12", _racine_bot_provisoire(tmp_path)
     CFG0 = {**CFG, "videos_calibration": [], "modes": ["bot"]}        # ce test suit le BOT seul ; les autres modes ont leurs tests plus bas
-    cal = R.a_traiter(sem, {}, cfg={**CFG, "modes": ["bot"], "videos_calibration": ["wJ9CwjKwyco", "a-923ClD9Rc"]})   # le mécanisme reste : vidéos hors top 3 relevées
+    cal = R.a_traiter(sem, {}, racine=rac, cfg={**CFG, "modes": ["bot"], "videos_calibration": ["wJ9CwjKwyco", "a-923ClD9Rc"]})   # le mécanisme reste : vidéos hors top 3 relevées
     assert {"wJ9CwjKwyco", "a-923ClD9Rc"} <= set(cal) and "videos_calibration" not in CFG
-    top = R.a_traiter(sem, {}, cfg=CFG0)                        # l'ordre suit bot.json (change à chaque classement) : pas de ids figés
+    top = R.a_traiter(sem, {}, racine=rac, cfg=CFG0)            # l'ordre suit bot.json (change à chaque classement) : pas de ids figés
     assert len(top) == 3 and len(set(top)) == 3
     fait = {top[2]: {"pc": {"rotation": "fait", "rotation_version": CFG["version"]}}, top[0]: {"pc": {"rotation": "erreur", "rotation_version": CFG["version"]}}}
-    assert R.a_traiter(sem, fait, cfg=CFG0) == [top[1]]
+    assert R.a_traiter(sem, fait, racine=rac, cfg=CFG0) == [top[1]]
     ancienne = {top[2]: {"pc": {"rotation": "absent", "rotation_version": 0}}}                          # version de la calibration augmentée : refait
-    assert top[2] in R.a_traiter(sem, ancienne, cfg=CFG0)
-    assert R.a_traiter(sem, {}, cfg={**CFG0, "budget_par_mode": 2}) == top[:2]
-    assert R.a_traiter(sem, {}, cfg={**CFG, "modes": ["poc"], "top": 3}) != []                           # un autre mode se branche par la configuration
+    assert top[2] in R.a_traiter(sem, ancienne, racine=rac, cfg=CFG0)
+    assert R.a_traiter(sem, {}, racine=rac, cfg={**CFG0, "budget_par_mode": 2}) == top[:2]
+    assert R.a_traiter(sem, {}, racine=rac, cfg={**CFG, "modes": ["poc"], "top": 3}) != []              # un autre mode se branche par la configuration
 
 
 def test_traiter_images_appelle_apres_sur_la_video_deja_telechargee():
@@ -430,11 +443,12 @@ def test_v21_fin_de_run_au_chrono_final_et_tag_min_s():
 def test_v21_a923_evenements_reels_non_regression():
     d = json.loads((A923 / "a-923ClD9Rc.json").read_text(encoding="utf-8"))["runs"][0]
     sortie, t_fin = R.appliquer_v21(d["events"], 19.558, R.charger_config())
-    assert t_fin == 97.9                                                                              # fin à 97,9 s (SPEC v2.1)
+    assert t_fin in (None, 97.9)                                                                      # 97,9 s sur l'ancien relevé ; None si le relevé est déjà coupé (v2.2)
+    assert not [e for e in sortie if e["slot"] == "sjw_ultimate" and 13.0 < (e["t_game"] or 0) < 16.0]  # pas de faux ultime du « 36 »
     tags = [e["t"] for e in sortie if e["slot"] == "tag"]
     assert all(b - a >= 4.0 for a, b in zip(tags, tags[1:]))                                          # aucun couple de tag à moins de 4 s
     assert all(e["t_game"] is None or e["t_game"] < 19.558 or e["t"] == t_fin for e in sortie)       # rien après t_game 19.558 sauf le premier qui l'atteint
-    assert not [e for e in sortie if e["t"] > t_fin]
+    assert t_fin is None or not [e for e in sortie if e["t"] > t_fin]
 
 
 def test_v21_portrait_masque_ignore_le_chiffre_de_recharge():
@@ -568,3 +582,10 @@ def test_v22_un_recadrage_du_portrait_par_video(tmp_path):
         assert max(im.size) <= 480
     assert R.diagnostic_portrait(ctx, frames, [0.1, 0.1, 0.3, 0.3], [], {}, racine=tmp_path) == f       # un seul par vidéo
     assert R.diagnostic_portrait(ctx, [], [0.1, 0.1, 0.3, 0.3], [], {}, racine=tmp_path) is None
+
+
+def test_chrono_fiable_ignore_le_score_a_verifier_debut_fin():
+    ok = {"confidence": "sur", "score_source": "video-complete", "score": {"total": 19.5}}
+    assert R.chrono_fiable(ok) == 19.5
+    assert R.chrono_fiable({**ok, "confidence": "a_verifier", "score_source": "debut-fin", "score": {"total": 14.515}}) is None
+    assert R.chrono_fiable({**ok, "confidence": "a_verifier"}) == 19.5       # a_verifier d'une autre source (guide, miniature) : gardé

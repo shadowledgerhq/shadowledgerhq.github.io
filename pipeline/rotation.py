@@ -689,6 +689,14 @@ def a_traiter(semaine, processed, racine=RACINE, cfg=None, config_builds=None):
     return sortie
 
 
+def chrono_fiable(ligne):
+    """Chrono BOT (s) de la ligne, sauf lecture non fiable : score `a_verifier` lu par `debut-fin` (temps de jeu non lu : YSJFLd_OXww = 14,515 s,
+    une phase intermédiaire au lieu de 19,517 s) -> None (aucun contrôle ni coupure au chrono, SPEC §2.1)."""
+    if ligne.get("confidence") == "a_verifier" and ligne.get("score_source") == "debut-fin":
+        return None
+    return (ligne.get("score") or {}).get("total")
+
+
 def contexte(semaine, vid, racine=RACINE, cfg=None, config_builds=None):
     """Contexte d'une vidéo de la sélection : mode, gate, run_id, ligne, t (Results lu au tri 3-4 si connu), chrono (BOT).
     v2.1 : `runs_video` = les runs de la ligne qui sont dans CETTE vidéo [{run_index (1 = 1re run de la ligne), t_result, t_composition, skills_sjw}]
@@ -700,7 +708,7 @@ def contexte(semaine, vid, racine=RACINE, cfg=None, config_builds=None):
         idx = [i for i, d in enumerate(detail, 1) if d.get("video_id") == vid] or [1]
         d = detail[idx[0] - 1]
         ctx = {"video_id": vid, "week": semaine, "mode": mode, "gate": ligne.get("gate"), "run_id": ligne.get("run_id"),
-               "ligne": ligne, "t_result": d.get("t"), "chrono_s": ligne["score"]["total"] if mode == "bot" else None}
+               "ligne": ligne, "t_result": d.get("t"), "chrono_s": chrono_fiable(ligne) if mode == "bot" else None}
         ctx["runs_video"] = []
         for i in idx:
             run = {"run_index": i, "t_result": detail[i - 1].get("t")}

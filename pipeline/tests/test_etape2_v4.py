@@ -20,6 +20,12 @@ def _racine_temp():
         src = B.RACINE / rel
         if src.exists():
             shutil.copytree(src, t / rel)
+    f = t / f"data/runs/{SEM}/bot.json"            # cas testé : BOT sans ligne classée (le vrai classement en a une depuis le 19/11)
+    if f.exists():
+        bot = json.loads(f.read_text(encoding="utf-8"))
+        for r in bot:
+            r["rank"] = None
+        f.write_text(json.dumps(bot), encoding="utf-8")
     return t
 
 
