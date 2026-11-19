@@ -62,7 +62,14 @@
 "32.5": true,
 "33.0": true,
 "33.5": true,
-"34.0": true
+"34.0": true,
+"34.5": false,
+"35.0": false,
+"35.5": false,
+"36.0": false,
+"36.5": false,
+"37.0": false,
+"37.5": false
 },
 "brut": {
 "skill_1": [

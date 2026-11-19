@@ -3210,56 +3210,6 @@
     ]
   },
   {
-    "video_id": "Bi5TrN5d1_E",
-    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
-    "channel_title": "LATOYA Gaming",
-    "published_at": "2026-11-16T10:00:31Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 28.349,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 28.349"
-    ]
-  },
-  {
-    "video_id": "DuXEITpoJWg",
-    "channel_id": "UC3c-byo2-3Q0msvNiGlnmmg",
-    "channel_title": "danburrito",
-    "published_at": "2026-11-17T01:23:38Z",
-    "lang": "en-US",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 27.0,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 0:27"
-    ]
-  },
-  {
     "video_id": "HWebrRc_l0o",
     "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
     "channel_title": "SlayOnLow",
@@ -3502,46 +3452,6 @@
     "notes": [
       "boss non contrôlé",
       "BOT ja : temps de jeu non lu"
-    ]
-  },
-  {
-    "video_id": "tOzRUlmZ2JI",
-    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
-    "channel_title": "SNG",
-    "published_at": "2026-11-12T19:12:47Z",
-    "lang": "en",
-    "mode": "bot",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 300,
-    "stage": null,
-    "team": null,
-    "score": 623.273,
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "phases": [
-        11.525,
-        18.583,
-        623.273
-      ],
-      "play_time": 24,
-      "armes_sjw_vides": true,
-      "v27": true,
-      "v27_sur": false,
-      "par_t": [
-        300
-      ],
-      "sans_score": true
-    },
-    "notes": [
-      "boss non contrôlé",
-      "contrôle BOT : temps de jeu 24 ≠ dernière phase tronquée 623"
     ]
   },
   {
@@ -5720,6 +5630,190 @@
     "notes": [
       "boss non contrôlé",
       "temps instable (animation ?)"
+    ]
+  },
+  {
+    "video_id": "tOzRUlmZ2JI",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-12T19:12:47Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 300,
+    "stage": null,
+    "team": null,
+    "score": 623.273,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        11.525,
+        18.583,
+        623.273
+      ],
+      "play_time": 24,
+      "armes_sjw_vides": true,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        300
+      ],
+      "sans_score": true
+    },
+    "notes": [
+      "boss non contrôlé",
+      "contrôle BOT : temps de jeu 24 ≠ dernière phase tronquée 623"
+    ]
+  },
+  {
+    "video_id": "DuXEITpoJWg",
+    "channel_id": "UC3c-byo2-3Q0msvNiGlnmmg",
+    "channel_title": "danburrito",
+    "published_at": "2026-11-17T01:23:38Z",
+    "lang": "en-US",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 62,
+    "stage": null,
+    "team": null,
+    "score": 26.941,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        12.501,
+        19.848,
+        26.941
+      ],
+      "play_time": null,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": false,
+      "par_t": [
+        62,
+        66
+      ]
+    },
+    "notes": [
+      "boss non contrôlé",
+      "BOT ja : temps de jeu non lu"
+    ]
+  },
+  {
+    "video_id": "Bi5TrN5d1_E",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "channel_title": "LATOYA Gaming",
+    "published_at": "2026-11-16T10:00:31Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 60,
+    "stage": null,
+    "team": null,
+    "score": 28.349,
+    "score_source": "video-complete",
+    "exact": true,
+    "confidence": "sur",
+    "detail": {
+      "phases": [
+        12.391,
+        21.382,
+        28.349
+      ],
+      "play_time": 28,
+      "armes_sjw_vides": false,
+      "v27": true,
+      "v27_sur": true,
+      "par_t": [
+        60,
+        66
+      ]
+    },
+    "notes": [
+      "boss non contrôlé"
+    ]
+  },
+  {
+    "video_id": "Bi5TrN5d1_E",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "channel_title": "LATOYA Gaming",
+    "published_at": "2026-11-16T10:00:31Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 64,
+    "stage": null,
+    "team": null,
+    "score": 21.382,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        12.381,
+        21.382
+      ],
+      "play_time": 28,
+      "armes_sjw_vides": false,
+      "sans_score": true
+    },
+    "notes": [
+      "contrôle BOT : écran BOT illisible (phases, chrono ou Play Time)"
+    ]
+  },
+  {
+    "video_id": "Bi5TrN5d1_E",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "channel_title": "LATOYA Gaming",
+    "published_at": "2026-11-16T10:00:31Z",
+    "lang": "en",
+    "mode": "bot",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 68,
+    "stage": "Baruka —_— *",
+    "team": null,
+    "score": 12.381,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "phases": [
+        12.381
+      ],
+      "play_time": 28,
+      "armes_sjw_vides": false,
+      "sans_score": true
+    },
+    "notes": [
+      "contrôle BOT : écran BOT illisible (phases, chrono ou Play Time)"
     ]
   }
 ]

@@ -1,5 +1,44 @@
 [
   {
+    "run_id": "bot-2026-11-12-Bi5TrN5d1_E",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "player": "LATOYA Gaming",
+    "channel": "LATOYA Gaming",
+    "video_id": "Bi5TrN5d1_E",
+    "video_ids": [
+      "Bi5TrN5d1_E"
+    ],
+    "published_at": "2026-11-16T11:00:31+01:00",
+    "lang": "en",
+    "score": {
+      "total": 28.349,
+      "runs": [
+        28.349
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "video-complete",
+    "exact": true,
+    "confidence": "sur",
+    "rank": 1,
+    "notes": "boss non contrôlé",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "Bi5TrN5d1_E",
+        "published_at": "2026-11-16T11:00:31+01:00",
+        "t": 60,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": true
+      }
+    ]
+  },
+  {
     "run_id": "bot-2026-11-12-YSJFLd_OXww",
     "week": "2026-11-12",
     "mode": "bot",
@@ -364,66 +403,27 @@
     "published_at": "2026-11-17T02:23:38+01:00",
     "lang": "en-US",
     "score": {
-      "total": 27.0,
+      "total": 26.941,
       "runs": [
-        27.0
+        26.941
       ],
       "unit": "seconds"
     },
-    "score_source": "titre",
+    "score_source": "debut-fin",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 0:27; chrono incomplet : rang prudent; boss non contrôlé",
+    "notes": "boss non contrôlé; BOT ja : temps de jeu non lu",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
         "video_id": "DuXEITpoJWg",
         "published_at": "2026-11-17T02:23:38+01:00",
-        "t": null,
+        "t": 62,
         "stage": null,
         "team": null,
-        "score_source": "titre",
-        "exact": false
-      }
-    ]
-  },
-  {
-    "run_id": "bot-2026-11-12-Bi5TrN5d1_E",
-    "week": "2026-11-12",
-    "mode": "bot",
-    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
-    "player": "LATOYA Gaming",
-    "channel": "LATOYA Gaming",
-    "video_id": "Bi5TrN5d1_E",
-    "video_ids": [
-      "Bi5TrN5d1_E"
-    ],
-    "published_at": "2026-11-16T11:00:31+01:00",
-    "lang": "en",
-    "score": {
-      "total": 28.349,
-      "runs": [
-        28.349
-      ],
-      "unit": "seconds"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : 28.349; boss non contrôlé",
-    "bot_season_week": null,
-    "player_ingame": null,
-    "runs_detail": [
-      {
-        "video_id": "Bi5TrN5d1_E",
-        "published_at": "2026-11-16T11:00:31+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
+        "score_source": "debut-fin",
         "exact": false
       }
     ]

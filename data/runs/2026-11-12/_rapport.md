@@ -1,16 +1,17 @@
-# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-19 00:38 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-19 00:46 (Paris)
 
-- Top 10 couvert : non (56 vidéos candidates au top 10 restantes)
-- **Passage complet : non** (vidéos restantes à traiter)
-- Vidéos traitées ce passage : 1 · en_cours restantes : 88 (dont 56 à traiter par le PC)
-- Erreurs bloquantes : aucune
-- Durée du passage : 4 min
+- Top 10 couvert : non (50 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 15 · en_cours restantes : 84 (dont 50 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 58 min
+- Relance automatique : 19/11/2026 02:46 (une seule fois par soir)
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 
-- Semaine : 88 en cours (dont 73 pour le PC), 38 terminée(s), 13 rejetée(s)
+- Semaine : 84 en cours (dont 67 pour le PC), 42 terminée(s), 13 rejetée(s)
 - Classements : bot 17, gb 9, hotm-gate-inconnue 5, poc 5
 
-## À vérifier (34)
+## À vérifier (33)
 - gb · Eden(이든) · 322 · vYtRCpFtSOk · lecture fusionnée (4 images); contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; lecture fusionnée (72 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_3; élément associé titre + chasseurs
 - gb · Ahmad1195 · 189 · awb-GlVIa7Q · écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (144 images); RC discordant écarté : 2 (t=232); contrôle GB : somme 105099186429862 ≠ Final Score 64299126429862; contrôle sans Hunter Rank : Final Score 64299126429862 hors de [Points HUD 84295496142280 ; × 1.02]; contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée
 - gb · Sohoven · 185 · qySXyOxUehE · score provisoire (titre) : 185 RC; une seule run trouvée
@@ -37,8 +38,7 @@
 - bot · PADWAE · 19.977 · 5MI-RLj7FSk · boss non contrôlé; temps instable (animation ?)
 - bot · MOBgame · 20.331 · nwP8dSSfo1o · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · SNG · 23.223 · tOzRUlmZ2JI · score provisoire (titre) : 23;223s; boss non contrôlé
-- bot · danburrito · 27.0 · DuXEITpoJWg · score provisoire (titre) : 0:27; chrono incomplet : rang prudent; boss non contrôlé
-- bot · LATOYA Gaming · 28.349 · Bi5TrN5d1_E · score provisoire (titre) : 28.349; boss non contrôlé
+- bot · danburrito · 26.941 · DuXEITpoJWg · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · 리히온 · 28.412 · uwJfPTJI8ZE · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · Keos · 29.0 · duX8KmoDdYw · score provisoire (titre) : 29s; chrono incomplet : rang prudent; boss non contrôlé
 - bot · Raksefon · 35.0 · wFFdg1gcZpE · score provisoire (description) : 35 sec; description non relue (règles v3); chrono incomplet : rang prudent; boss non contrôlé
@@ -58,4 +58,13 @@
 - rien
 
 ## Erreurs et alertes
-- 88 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- tOzRUlmZ2JI : 429 / anti-bot YouTube, reportée au prochain passage
+- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
+- 49 vidéo(s) reportée(s) pour les images (limite 15)
+- zFsAGI_xyOQ : libellés ko inconnus (aucun écran GB reconnu)
+- Aqj1crEcrD4 : durée PT35M2S hors limite (30 min), images non traitées
+- SDMrcxG50LI : durée PT37M45S hors limite (30 min), images non traitées
+- K4786mdlgXg : durée PT44M26S hors limite (30 min), images non traitées
+- PawKtXDQjdc : durée PT33M44S hors limite (30 min), images non traitées
+- 84 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- passage incomplet : anti-bot ; relance : 19/11/2026 02:46 (une seule fois par soir)

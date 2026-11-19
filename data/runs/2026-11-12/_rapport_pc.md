@@ -309,3 +309,21 @@ error: The following untracked working tree files would be overwritten by checko
 - Erreurs bloquantes : aucune
 - Durée du passage : 4 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-daily 2026-11-18T23:46:26.165765+00:00 -->
+## Passage pc-daily — 2026-11-19 00:46 (Paris)
+
+- Top 10 couvert : non (50 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 15 · en_cours restantes : 84 (dont 50 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 58 min
+- Relance automatique : 19/11/2026 02:46 (une seule fois par soir)
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-weekly 2026-11-19T00:18:57.130497+00:00 -->
+## Passage pc-weekly — 2026-11-19 01:18 (Paris)
+
+- **Passage complet : non** (passage refusé : un autre passage PC tourne déjà (daily (PID 716, depuis 33 min)))
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà (daily (PID 716, depuis 33 min))

@@ -9,8 +9,8 @@
     {
       "run_index": 1,
       "run_start_t": 2.5,
-      "run_end_t": 33.0,
-      "duration_s": 30.5,
+      "run_end_t": 30.3,
+      "duration_s": 27.8,
       "events": [
         {
           "t": 4.0,
@@ -49,18 +49,6 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 8.1,
-          "t_run": 5.6,
-          "hunter": "inconnu",
-          "slot": "tag",
-          "skill_id": null,
-          "trigger": "inconnu",
-          "cooldown_read": null,
-          "t_game": 6.254,
-          "source": "portrait",
-          "confidence": "a_verifier"
-        },
-        {
           "t": 11.5,
           "t_run": 9.0,
           "hunter": "inconnu",
@@ -85,30 +73,6 @@
           "confidence": "a_verifier"
         },
         {
-          "t": 14.5,
-          "t_run": 12.0,
-          "hunter": "sjw",
-          "slot": "sjw_ultimate",
-          "skill_id": null,
-          "trigger": null,
-          "cooldown_read": 8.0,
-          "t_game": 12.752,
-          "source": "hud-recharge",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 17.9,
-          "t_run": 15.4,
-          "hunter": "inconnu",
-          "slot": "tag",
-          "skill_id": null,
-          "trigger": "inconnu",
-          "cooldown_read": null,
-          "t_game": null,
-          "source": "portrait",
-          "confidence": "a_verifier"
-        },
-        {
           "t": 24.2,
           "t_run": 21.7,
           "hunter": "inconnu",
@@ -117,54 +81,6 @@
           "trigger": "inconnu",
           "cooldown_read": null,
           "t_game": 15.314,
-          "source": "portrait",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 24.9,
-          "t_run": 22.4,
-          "hunter": "inconnu",
-          "slot": "tag",
-          "skill_id": null,
-          "trigger": "inconnu",
-          "cooldown_read": null,
-          "t_game": 15.314,
-          "source": "portrait",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 26.3,
-          "t_run": 23.8,
-          "hunter": "inconnu",
-          "slot": "tag",
-          "skill_id": null,
-          "trigger": "inconnu",
-          "cooldown_read": null,
-          "t_game": 16.252,
-          "source": "portrait",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 26.9,
-          "t_run": 24.4,
-          "hunter": "inconnu",
-          "slot": "tag",
-          "skill_id": null,
-          "trigger": "inconnu",
-          "cooldown_read": null,
-          "t_game": 16.756,
-          "source": "portrait",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 28.0,
-          "t_run": 25.5,
-          "hunter": "inconnu",
-          "slot": "tag",
-          "skill_id": null,
-          "trigger": "inconnu",
-          "cooldown_read": null,
-          "t_game": 17.749,
           "source": "portrait",
           "confidence": "a_verifier"
         },
@@ -179,49 +95,14 @@
           "t_game": 18.268,
           "source": "portrait",
           "confidence": "a_verifier"
-        },
-        {
-          "t": 29.1,
-          "t_run": 26.6,
-          "hunter": "inconnu",
-          "slot": "tag",
-          "skill_id": null,
-          "trigger": "inconnu",
-          "cooldown_read": null,
-          "t_game": 18.743,
-          "source": "portrait",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 29.7,
-          "t_run": 27.2,
-          "hunter": "inconnu",
-          "slot": "tag",
-          "skill_id": null,
-          "trigger": "inconnu",
-          "cooldown_read": null,
-          "t_game": 19.249,
-          "source": "portrait",
-          "confidence": "a_verifier"
-        },
-        {
-          "t": 30.2,
-          "t_run": 27.7,
-          "hunter": "inconnu",
-          "slot": "tag",
-          "skill_id": null,
-          "trigger": "inconnu",
-          "cooldown_read": null,
-          "t_game": null,
-          "source": "portrait",
-          "confidence": "a_verifier"
         }
       ],
       "limites": [
         "bornes-incertaines",
         "chasseurs-inconnus"
       ],
-      "sans_hud_s": 6.0
+      "sans_hud_s": 6.0,
+      "recharges_entamees": 6
     }
   ]
 }
