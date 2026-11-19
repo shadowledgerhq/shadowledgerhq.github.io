@@ -1,15 +1,12 @@
-# Rapport — semaine 2026-11-12 — passage weekly — 2026-11-19 01:47 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-weekly — 2026-11-19 02:18 (Paris)
 
-Dernier passage du PC (`_rapport_pc.md`, recopié) :
+- Top 10 couvert : non (89 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 123 (dont 89 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 0 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 
-## Passage pc-weekly — 2026-11-19 01:18 (Paris)
-
-- **Passage complet : non** (passage refusé : un autre passage PC tourne déjà (daily (PID 716, depuis 33 min)))
-- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
-- Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà (daily (PID 716, depuis 33 min))
-
-- Quota : 1705 unités
-- Ce passage : 39 vidéo(s) nouvelle(s), 2 rejetée(s), 0 score(s) provisoire(s)
 - Semaine : 123 en cours (dont 106 pour le PC), 42 terminée(s), 15 rejetée(s)
 - Classements : bot 17, gb 9, hotm-gate-inconnue 5, poc 5
 
@@ -31,15 +28,15 @@ Dernier passage du PC (`_rapport_pc.md`, recopié) :
 - poc · SNG · 52820000000000 · 2AJljDc_nN4 · score provisoire (titre) : 52.82T; une seule run trouvée; boss non contrôlé
 - poc · RaidenShadow · 4570000000000 · LQM4VbJ3vpc · score provisoire (titre) : 4,57T; une seule run trouvée; boss non contrôlé
 - poc · INVINCIBLE_YT · 4100000000000 · cK1YiH9qwnI · score provisoire (titre) : 4.1T; une seule run trouvée; boss non contrôlé
-- bot · 홀맨 · 14.515 · YSJFLd_OXww · boss non contrôlé; BOT ja : temps de jeu non lu
+- bot · 홀맨 · 19.517 · YSJFLd_OXww · score provisoire (titre) : 19.517s; borne basse de l'écran 14.515 : compatible; boss non contrôlé
 - bot · aaaaaaaaaaaa · 19.558 · a-923ClD9Rc · score provisoire (titre) : 19.558; semaine confirmée (titre); boss non contrôlé
 - bot · 크리스 · 19.5 · znpyCNWml3I · score provisoire (titre) : 19.5s; chrono incomplet : rang prudent; boss non contrôlé
 - bot · 𐐂露依Rui ルイ 𐐚 · 19.754 · Lt84IhMjBvM · score provisoire (titre) : 19.754s; écran : partie entière mal lue (18 → 19 par Play Time et titre); semaine confirmée (titre); boss non contrôlé
 - bot · X SLA · 19.926 · wJ9CwjKwyco · publiée juste après le reset : semaine précédente ?; boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · LIT · 19.949 · 2oendtlUxUE · score provisoire (titre) : 19.949s; boss non contrôlé
 - bot · PADWAE · 19.977 · 5MI-RLj7FSk · boss non contrôlé; temps instable (animation ?)
-- bot · MOBgame · 20.331 · nwP8dSSfo1o · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · SNG · 23.223 · tOzRUlmZ2JI · score provisoire (titre) : 23;223s; boss non contrôlé
+- bot · MOBgame · 23.0 · 77pbAyrW6no · score provisoire (description) : 23秒; autres candidats : 00:23.416; description non relue (règles v3); chrono incomplet : rang prudent; boss non contrôlé
 - bot · danburrito · 26.941 · DuXEITpoJWg · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · 리히온 · 28.412 · uwJfPTJI8ZE · boss non contrôlé; BOT ja : temps de jeu non lu
 - bot · Keos · 29.0 · duX8KmoDdYw · score provisoire (titre) : 29s; chrono incomplet : rang prudent; boss non contrôlé
@@ -60,4 +57,5 @@ Dernier passage du PC (`_rapport_pc.md`, recopié) :
 - rien
 
 ## Erreurs et alertes
-- rien
+- 123 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- semaine 2026-11-12 NON gelée (pc.geler = false : tris 3-4 non gérés)
