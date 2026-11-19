@@ -4,13 +4,16 @@
 - crée une entrée `data/db/patches.json` « équilibrage » par notice ;
 - bénédictions : applique les nouvelles valeurs (Rare/Héroïque/Légendaire/Transcendante) seulement si les anciennes
   valeurs de la notice égalent celles de la base (sinon : signalé, rien modifié).
-Usage : python3 tools/apply_balance_notes.py [--ecrire]   (sans --ecrire : simulation + rapport)"""
+Usage : python3 tools/apply_balance_notes.py [--ecrire] [--depuis AAAA-MM-JJ]   (sans --ecrire : simulation + rapport ;
+--depuis : ne traite que les notices de cette date ou après, pour ne pas écraser les vérifications manuelles des anciennes)"""
 import json, re, sys
 from pathlib import Path
 R = Path(__file__).resolve().parent.parent / "data" / "db"
 ECRIRE = "--ecrire" in sys.argv
 L = lambda f: json.loads((R / f"{f}.json").read_text(encoding="utf-8"))
 notes = [e for e in L("netmarble_notes") if re.search(r"Balance Adjust", e["name"]["en"], re.I)]
+if "--depuis" in sys.argv:
+    _d = sys.argv[sys.argv.index("--depuis") + 1]; notes = [e for e in notes if e["date"] >= _d]
 notes.sort(key=lambda e: (e["date"], e["id"]))
 norm = lambda s: re.sub(r"[^a-z0-9]", "", re.sub(r"^(ssr|sr|r)\s+", "", s.strip().lower()).replace("’", "").replace("'", ""))
 CAT = [("hunter", "hunters"), ("blessing", "blessings"), ("rune", "sjw_skills"), ("weapon", "weapons"),

@@ -2307,5 +2307,37 @@
         "change": "Category Changed Shadow's Authority (Leader Skill) Based on General rank (Values Increased) All team members' Attack and Critical Hit Damage increase by 5% 10%"
       }
     ]
+  },
+  {
+    "id": "equilibrage-2026-11-19-110996",
+    "kind": "balance",
+    "version": null,
+    "date": "2026-11-19",
+    "name": {
+      "fr": "Notice d'équilibrage du 2026-11-19",
+      "en": "11/19 (Thu) In-Game Balance Adjustments Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+    "source": "https://forum.netmarble.com/slv_en/view/32/110996",
+    "verified_at": "2026-11-16",
+    "game_version": null,
+    "notes": "Résumé automatique (début du texte de chaque changement) ; texte intégral dans netmarble_notes.json et `balance_history` des entrées concernées.",
+    "changes": [
+      {
+        "category": "hunters",
+        "id": "sung-il-hwan",
+        "change": "Category Changed Tier 1 (Buff Duration Extended / New Effect Added) When Dark Finale or Apocalyptic Might hit they apply the [Marked] effect on the target [Mark"
+      },
+      {
+        "category": "hunters",
+        "id": "charlotte",
+        "change": "Category Changed Meeh! (Basic Attack) Based on Lv.10 (Damage Multiplier Increased) Stage 1 Damage : 573% 1261.5% of the user’s Defense Stage 2 Damage : 591% 130"
+      },
+      {
+        "category": "hunters",
+        "id": "harper",
+        "change": "Category Changed Tier 4 (New Effect Added) For every Dark ally in the party, Dark team members’ Critical Hit damage increases by 3% Tier 5 (New Effect Added) [P"
+      }
+    ]
   }
 ]

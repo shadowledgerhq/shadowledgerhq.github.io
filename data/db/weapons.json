@@ -1348,7 +1348,7 @@
         "tier": 2,
         "text": {
           "fr": "",
-          "en": "The user's HP increases by 12%. When the user uses their Ultimate Skill it increases their team members' Dark damage by 12% for 30 second(s). Increases the user's Attack, Defense, and HP by 15%."
+          "en": "The user's HP increases by 30%. When the user uses their Ultimate Skill it increases their team members' Dark damage by 12% for 60 second(s) (stacks up to 4 times). Increases the user's Attack, Defense, and HP by 15%."
         }
       }
     ],
@@ -1358,7 +1358,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Mischievous",
     "wiki_revid": 8214,
     "wiki_timestamp": "2025-02-14T21:00:51Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-19",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter. Nom FR lu dans le Codex du jeu (capture d'Alexis, 15/11/2026, client FR) ; rapprochement avec le nom EN du wiki par traduction littérale, à vérifier.",
     "max_level": {
@@ -1367,7 +1367,16 @@
       "patch": "2026-07-02"
     },
     "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
-    "icon_source": "Fandom wiki, fichier « Mischievous Icon.png » (CC BY-SA), récupéré le 2026-11-17"
+    "icon_source": "Fandom wiki, fichier « Mischievous Icon.png » (CC BY-SA), récupéré le 2026-11-17",
+    "patch_adjustments": [
+      {
+        "patch": "2026-11-19",
+        "source": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "summary": "Valeurs « Based on Tier 5 » de la notice reportées au palier 2 de la fiche",
+        "wiki_reflects_patch": false,
+        "note": "Lecture manuelle ; non vérifié en jeu."
+      }
+    ]
   },
   {
     "id": "nice-to-meet-you",
@@ -1640,7 +1649,7 @@
         "tier": 2,
         "text": {
           "fr": "",
-          "en": "Increases the user's Defense by 12%. Increases the Critical Hit Rate and Critical Hit damage of Take This!, Harper! We Are One!, and Harper! Help! by 24%. Increases the user's Attack, Defense, and HP by 15%."
+          "en": "Increases the user's Defense by 30%. Increases the Critical Hit Rate and Critical Hit damage of Take This!, Harper! We Are One!, and Harper! Help! by 24%. Increases the user's Attack, Defense, and HP by 15%."
         }
       }
     ],
@@ -1650,7 +1659,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Prankster",
     "wiki_revid": 8207,
     "wiki_timestamp": "2025-02-14T20:58:55Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-19",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter. Nom FR lu dans le Codex du jeu (capture d'Alexis, 15/11/2026, client FR) ; rapprochement avec le nom EN du wiki par traduction littérale, à vérifier.",
     "max_level": {
@@ -1659,7 +1668,16 @@
       "patch": "2026-07-02"
     },
     "name_ja_source": "https://gamewith.jp/sololeveling/448453 (site tiers ; rapproché par chasseur+élément+rareté ; vérifié le 2026-11-15, à vérifier en jeu)",
-    "icon_source": "Fandom wiki, fichier « Prankster Icon.png » (CC BY-SA), récupéré le 2026-11-17"
+    "icon_source": "Fandom wiki, fichier « Prankster Icon.png » (CC BY-SA), récupéré le 2026-11-17",
+    "patch_adjustments": [
+      {
+        "patch": "2026-11-19",
+        "source": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "summary": "Valeurs « Based on Tier 5 » de la notice reportées au palier 2 de la fiche",
+        "wiki_reflects_patch": false,
+        "note": "Lecture manuelle ; non vérifié en jeu."
+      }
+    ]
   },
   {
     "id": "purple-butterflys-dream",
@@ -2603,7 +2621,7 @@
         "tier": 2,
         "text": {
           "fr": "",
-          "en": "Increases the user's Attack by 30% Increases the user's Critical Hit damage by 30% Increases the user's Attack, Defense, and HP by 15%"
+          "en": "Increases the user's Attack by 30% Increases the user's Critical Hit damage by 40% Increases the user's Attack, Defense, and HP by 15%"
         }
       }
     ],
@@ -2613,7 +2631,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Unbreakable_Will",
     "wiki_revid": 13776,
     "wiki_timestamp": "2026-01-31T23:35:11Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-19",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter. Nom FR lu dans le Codex du jeu (capture d'Alexis, 15/11/2026, client FR) ; rapprochement avec le nom EN du wiki par traduction littérale, à vérifier.",
     "max_level": {
@@ -2621,7 +2639,16 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "icon_source": "Fandom wiki, fichier « Unbreakable Will Icon.png » (CC BY-SA), récupéré le 2026-11-17"
+    "icon_source": "Fandom wiki, fichier « Unbreakable Will Icon.png » (CC BY-SA), récupéré le 2026-11-17",
+    "patch_adjustments": [
+      {
+        "patch": "2026-11-19",
+        "source": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "summary": "Valeurs « Based on Tier 5 » de la notice reportées au palier 2 de la fiche",
+        "wiki_reflects_patch": false,
+        "note": "Lecture manuelle ; non vérifié en jeu."
+      }
+    ]
   },
   {
     "id": "unexpected-luck",

@@ -2117,7 +2117,7 @@
         "tier": 0,
         "text": {
           "fr": "",
-          "en": "When the user uses Dash that Dash becomes a charging skill and the direction it goes can be controlled. When this Dash attack mode is active the user gains a [Shield] equal to 20% of Charlotte's Defense as long as the Dash is active. Take This! becomes available after using Tier 3 Basic Attack 2 time(s) instead of following the normal rules of charging the Power Gauge using skills and having no cooldown. (Cooldown: 40 second(s)) When the user uses Take This! it increases the damage of Harper! Help! by 50%) for 10 second(s). The user's Critical Hit damage stat increases equal to 20% of the increased damage stat In [Team Fight] mode, increases damage dealt by 30%"
+          "en": "When the user uses Dash that Dash becomes a charging skill and the direction it goes can be controlled. When this Dash attack mode is active the user gains a [Shield] equal to 20% of Charlotte's Defense as long as the Dash is active. Take This! becomes available after using Tier 3 Basic Attack 2 time(s) instead of following the normal rules of charging the Power Gauge using skills and having no cooldown. (Cooldown: 40 second(s)) When the user uses Take This! it increases the damage of Harper! Help! by 50%) for 10 second(s). The user's Critical Hit damage stat increases equal to 50% of the increased damage stat In [Team Fight] mode, increases damage dealt by 30%"
         }
       }
     ],
@@ -2140,14 +2140,14 @@
         "tier": 1,
         "text": {
           "fr": "",
-          "en": "When the user uses Tier 3 Basic Attack 1 time(s), Take This! becomes available. (Cooldown: 20 second(s)). When the user uses Isla's Dance★, it increases the Dark damage by 30% for 20 second(s)."
+          "en": "When the user uses Tier 3 Basic Attack 1 time(s), Take This! becomes available. (Cooldown: 20 second(s)). When the user uses Isla's Dance★, it increases the Dark damage by 50% for 20 second(s)."
         }
       },
       {
         "tier": 2,
         "text": {
           "fr": "",
-          "en": "Increase the user's Defense by 20%."
+          "en": "Increase the user's Defense by 30%."
         }
       },
       {
@@ -2161,14 +2161,14 @@
         "tier": 4,
         "text": {
           "fr": "",
-          "en": "Basic Attacks become faster and their damage is increased by 120%."
+          "en": "Basic Attacks become faster and their damage is increased by 120%. For every Dark ally in the party, the user's Dark damage increases by 20%."
         }
       },
       {
         "tier": 5,
         "text": {
           "fr": "",
-          "en": "When the user uses their Basic Attack, it activates the [Doll's Gratitude] effect. [Doll's Gratitude] Increases damage of Harper! We Are One! and Harper! Help! by 8% Duration: Infinite (Stacking up to 15 times)"
+          "en": "When the user uses their Basic Attack, it activates the [Doll's Gratitude] effect. [Doll's Gratitude] Increases Defense by 6%. Increases damage of Harper! We Are One! and Harper! Help! by 8% Duration: Infinite (Stacking up to 15 times)"
         }
       }
     ],
@@ -2176,7 +2176,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Charlotte",
     "wiki_revid": 16173,
     "wiki_timestamp": "2026-03-21T06:01:10Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-19",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
@@ -2194,9 +2194,144 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/94122",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nBefore\n\nChanged\n\nIsla’s Dance★\n\n(Basic Skill 1)\n\nWhen the doll explodes it deals additional damage equal to 350% of Charlotte’s Defense\n\nWhen the doll explodes it deals additional damage equal to 1050% of Charlotte’s Defense\n\nTricked Ya!\n\n(Support Skill)\n\nWhen the doll explodes it deals additional damage equal to 350% of Charlotte’s Defense\n\nWhen the doll explodes it deals additional damage equal to 1050% of Charlotte’s Defense\n\nAdvancement Tier 0\n\nThe user’s Critical Hit damage stat increases equal to 10% of the increased damage stat\n\nThe user’s Critical Hit damage stat increases equal to 20% of the increased damage stat\n\nIn [Team Fight] mode, increases damage dealt by 30%.\n\nAdvancement Tier 2\n\nIncreases the user’s Defense by 16%\n\nIncreases the user’s Defense by 20%\n\nAdvancement Tier 4\n\nBasic Attacks become faster and their damage increases by 60%.\n\nBasic Attacks become faster and their damage increases by 120%."
+      },
+      {
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nMeeh!\n(Basic Attack)\nBased on Lv.10\n\n(Damage Multiplier Increased)\n\nStage 1 Damage : 573% 1261.5% of the user’s Defense\nStage 2 Damage : 591% 1300% of the user’s Defense\nStage 3 Damage : 615% 1353% of the user’s Defense\n\nTwinkle☆\n(Core Attack)\nBased on Lv.10\n\n(Damage Multiplier Increased)\n\nDamage : 2232% 2658% of the user’s Defense\n\nIsla’s Dance★\n(Basic Skill 1)\nBased on Lv.10\n\n(Damage Multiplier Increased)\n\nDamage : 2286% 4059% of the user’s Defense\n\nHarper! Help!\n(Basic Skill 2)\nBased on Lv.10\n\n(Damage Multiplier Increased)\n\nDamage : 4840.5% 5460% of the user’s Defense\n\nTake This!\n(Ultimate Skill)\nBased on Lv.10\n\n(Damage Multiplier Increased)\n\nDamage : 6846% 8175% of the user’s Defense\n\nPassive\n\n(Values Increased)\n\nThe user’s Critical Hit damage stat increases equal to 20% 50% of the increased damage stat\n\nTier 1\n\n(New Effect Added / Values Increased)\n\nUsing Stage 3 Basic Attacks or [Core Attacks] 1 time(s) makes Take This! available. (Cooldown: 20 second(s))\nWhen Isla’s Dance★ is used, it increases Dark damage by 30% 50% for 20 second(s)\n\nTier 2\n\n(Values Increased)\n\nIncreases the user’s Defense by 20% 30%\n\nTier 4\n\n(New Effect Added)\n\nFor every Dark ally in the party, the user’s Dark damage increases by 20%\n\nTier 5\n\n(New Effect Added on Doll’s Gratitude)\n\nUsing the Basic Attack activates the [Doll’s Gratitude] effect\n\n[Doll’s Gratitude]\n\nIncreases Defense by 6%\nIncreases the damage of Harper! We Are One! and Harper! Help! by 8%\nDuration: Infinite(Stacking up to 15 times)\n\nPrankster\n〈Charlotte’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased)\n\nIncreases the user’s Defense by 12% 30%"
       }
     ],
-    "balance_changes": []
+    "balance_changes": [
+      {
+        "line": "Stage 1 Damage : 573% 1261.5% of the user’s Defense",
+        "old": "573",
+        "new": "1261.5",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "a_verifier",
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-19 : multiplicateur Lv.10 de la notice ; la fiche (wiki) donne une plage Lv.1-Lv.10 dont le minimum après patch est inconnu : valeurs dans patch_adjustments."
+      },
+      {
+        "line": "Stage 2 Damage : 591% 1300% of the user’s Defense",
+        "old": "591",
+        "new": "1300",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "a_verifier",
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-19 : multiplicateur Lv.10 de la notice ; la fiche (wiki) donne une plage Lv.1-Lv.10 dont le minimum après patch est inconnu : valeurs dans patch_adjustments."
+      },
+      {
+        "line": "Stage 3 Damage : 615% 1353% of the user’s Defense",
+        "old": "615",
+        "new": "1353",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "a_verifier",
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-19 : multiplicateur Lv.10 de la notice ; la fiche (wiki) donne une plage Lv.1-Lv.10 dont le minimum après patch est inconnu : valeurs dans patch_adjustments."
+      },
+      {
+        "line": "Damage : 2232% 2658% of the user’s Defense",
+        "old": "2232",
+        "new": "2658",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "a_verifier",
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-19 : multiplicateur Lv.10 de la notice ; la fiche (wiki) donne une plage Lv.1-Lv.10 dont le minimum après patch est inconnu : valeurs dans patch_adjustments."
+      },
+      {
+        "line": "Damage : 2286% 4059% of the user’s Defense",
+        "old": "2286",
+        "new": "4059",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "a_verifier",
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-19 : multiplicateur Lv.10 de la notice ; la fiche (wiki) donne une plage Lv.1-Lv.10 dont le minimum après patch est inconnu : valeurs dans patch_adjustments."
+      },
+      {
+        "line": "Damage : 4840.5% 5460% of the user’s Defense",
+        "old": "4840.5",
+        "new": "5460",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "a_verifier",
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-19 : multiplicateur Lv.10 de la notice ; la fiche (wiki) donne une plage Lv.1-Lv.10 dont le minimum après patch est inconnu : valeurs dans patch_adjustments."
+      },
+      {
+        "line": "Damage : 6846% 8175% of the user’s Defense",
+        "old": "6846",
+        "new": "8175",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "a_verifier",
+        "verif": "fiche_anterieure_au_patch",
+        "verif_note": "2026-11-19 : multiplicateur Lv.10 de la notice ; la fiche (wiki) donne une plage Lv.1-Lv.10 dont le minimum après patch est inconnu : valeurs dans patch_adjustments."
+      },
+      {
+        "line": "The user’s Critical Hit damage stat increases equal to 20% 50% of the increased damage stat",
+        "old": "20",
+        "new": "50",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-19 : valeur de la notice 110996 reportée dans le texte de la fiche (lecture manuelle)."
+      },
+      {
+        "line": "When Isla’s Dance★ is used, it increases Dark damage by 30% 50% for 20 second(s)",
+        "old": "30",
+        "new": "50",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-19 : valeur de la notice 110996 reportée dans le texte de la fiche (lecture manuelle)."
+      },
+      {
+        "line": "Increases the user’s Defense by 20% 30%",
+        "old": "20",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-19 : valeur de la notice 110996 reportée dans le texte de la fiche (lecture manuelle)."
+      },
+      {
+        "line": "Increases the user’s Defense by 12% 30%",
+        "old": "12",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "deja_applique"
+      }
+    ],
+    "patch_adjustments": [
+      {
+        "patch": "2026-11-19",
+        "source": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "summary": "Multiplicateurs Lv.10 (% de la Défense) : attaque de base 573/591/615 → 1261,5/1300/1353 ; attaque de noyau 2232 → 2658 ; Isla's Dance★ 2286 → 4059 ; Harper! Help! 4840,5 → 5460 ; Take This! 6846 → 8175",
+        "wiki_reflects_patch": false,
+        "note": "Valeurs après patch = celles de l'avis Netmarble (niveau 10). Le texte de la fiche garde l'ancienne plage (minimum Lv.1 après patch inconnu)."
+      }
+    ]
   },
   {
     "id": "choi-jong-in",
@@ -5754,14 +5889,14 @@
         "tier": 4,
         "text": {
           "fr": "",
-          "en": "All team member's Defense and HP increase by 8%."
+          "en": "All team member's Defense and HP increase by 8%. For every Dark ally in the party, Dark team members' Critical Hit damage increases by 3%."
         }
       },
       {
         "tier": 5,
         "text": {
           "fr": "",
-          "en": "[Porkchopped] is enhanced [Super Magic Booster] becomes [Twin Super Magic Booster] [Porkchopped] Ultimate Skill damage taken from Dark hunters by 2% (Stacks up to 32 times) Duration: 30 second(s) [Twin Super Magic Booster] When the user uses Hammer Drift! it increases their Critical Hit Rate and Critical Hit Damage by 6% (Stacks up to 7 times). Duration: Infinite"
+          "en": "[Porkchopped] Increases Dark damage taken by 1%. is enhanced [Super Magic Booster] becomes [Twin Super Magic Booster] [Porkchopped] Ultimate Skill damage taken from Dark hunters by 2% (Stacks up to 32 times) Duration: 40 second(s) [Twin Super Magic Booster] When the user uses Hammer Drift! it increases their Critical Hit Rate and Critical Hit Damage by 6% (Stacks up to 7 times). Duration: Infinite"
         }
       }
     ],
@@ -5769,7 +5904,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Harper",
     "wiki_revid": 15771,
     "wiki_timestamp": "2026-03-17T20:25:10Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-19",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
@@ -5793,9 +5928,54 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 3\n\n(New effect added)\n\n[London Drift]\n\nGrants [Super Armor] while the effect is active"
+      },
+      {
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 4\n\n(New Effect Added)\n\nFor every Dark ally in the party, Dark team members’ Critical Hit damage increases by  3%\n\nTier 5\n\n(New Effect Added)\n\n[Porkchopped]\n\nIncreases Dark damage taken by 1%\nIncreases Dark Ultimate Skill damage taken by 2% (stacks up to 32 times)\n\nDuration : 30 40 second(s)\n\nMischievous\n〈Harper’s Exclusive Weapon〉\nBased on Tier 5\n\n(New Effect Added / Values Increased)\n\nThe user’s HP increases by 12% 30%\n\nUsing the Ultimate Skill increases team members’ Dark damage by 12% for 30 60 second(s)(stacks up to 4 times)"
       }
     ],
-    "balance_changes": []
+    "balance_changes": [
+      {
+        "line": "Duration : 30 40 second(s)",
+        "old": "30",
+        "new": "40",
+        "unit": "second(s)",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "applique"
+      },
+      {
+        "line": "The user’s HP increases by 12% 30%",
+        "old": "12",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-19 : valeur de la notice 110996 reportée dans le texte de la fiche (lecture manuelle)."
+      },
+      {
+        "line": "Using the Ultimate Skill increases team members’ Dark damage by 12% for 30 60 second(s)(stacks up to 4 times)",
+        "old": "30",
+        "new": "60",
+        "unit": "",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "deja_applique"
+      }
+    ],
+    "patch_adjustments": [
+      {
+        "patch": "2026-11-19",
+        "source": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "summary": "Palier 4 : +3 % de dégâts critiques des membres Dark par allié Dark ; palier 5 : [Porkchopped] +1 % de dégâts Dark subis, durée 30→40 s ; arme : PV 12→30 %, +12 % de dégâts Dark 30→60 s (cumul 4)",
+        "wiki_reflects_patch": false,
+        "note": "Texte de la fiche mis à jour à partir de l'avis Netmarble (lecture manuelle) ; non vérifié en jeu."
+      }
+    ]
   },
   {
     "id": "holy-guardian-barrier-go-gunhee",
@@ -13823,7 +14003,7 @@
         "tier": 1,
         "text": {
           "fr": "",
-          "en": "Using the Basic Attack or Core Attack decreases the cooldown of Phantom Slash by 1 second(s). Using Apocalyptic Might resets the duration of the user's active buffs (Cooldown: 30 second(s)) Dark damage increases by 150% for 15 second(s) when the user [tags in] in [Hunter Mode] (When tagging in during [Hunter Mode], allies' QTE skills cannot be auto-used for 15 second(s)) When Dark Finale or Apocalyptic Might hit they apply the [Marked] effect on the target. When Apocalyptic Might hits and the target is [Suppressed], the duration of the [Suppressed] effect is refreshed. [Marked] Increases damage taken from Sung Il-Hwan by 35%. If the target is successfully placed in the [Break] state, the effect becomes the [Suppressed] effect. Duration: 30 second(s) [Suppressed] Increases damage taken from Sung Il-Hwan by 50%. Increases Dark Ultimate Skill damage taken by 20%. Duration: 30 second(s)"
+          "en": "Using the Basic Attack or Core Attack decreases the cooldown of Phantom Slash by 1 second(s). Using Apocalyptic Might resets the duration of the user's active buffs (Cooldown: 30 second(s)) Dark damage increases by 150% for 15 second(s) when the user [tags in] in [Hunter Mode] (When tagging in during [Hunter Mode], allies' QTE skills cannot be auto-used for 15 second(s)) When Dark Finale or Apocalyptic Might hit they apply the [Marked] effect on the target. When Apocalyptic Might hits and the target is [Suppressed], the duration of the [Suppressed] effect is refreshed. [Marked] Increases damage taken from Sung Il-Hwan by 35%. If the target is successfully placed in the [Break] state, the effect becomes the [Suppressed] effect. Duration: 60 second(s) [Suppressed] Increases damage taken from Sung Il-Hwan by 50%. Increases Dark Ultimate Skill damage taken by 20%. Duration: 60 second(s)"
         }
       },
       {
@@ -13844,7 +14024,7 @@
         "tier": 4,
         "text": {
           "fr": "",
-          "en": "For every Dark ally in the party, Dark team members' Attack increases by 10%. For every Dark Breaker ally on the team, Sung Il-Hwan's Attack increases by 5%."
+          "en": "For every Dark ally in the party, Dark team members' Attack increases by 10%. For every Dark Breaker ally on the team, Sung Il-Hwan's Attack increases by 30%."
         }
       },
       {
@@ -13859,7 +14039,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Sung_Il-Hwan",
     "wiki_revid": 17834,
     "wiki_timestamp": "2026-10-25T01:49:41Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-19",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; page possiblement antérieure aux rééquilibrages récents (cf. patches.json). Nom FR et icône à compléter. Noms de compétences copiés tels quels (certains en français sur le wiki). Nom FR : slagate.com (13/11/2026).",
     "name_fr_source": "https://slagate.com/builds (pages FR, lecture automatisée autorisée par Alexis le 13/11/2026)",
@@ -13870,9 +14050,69 @@
         "url": "https://forum.netmarble.com/slv_en/view/32/107226",
         "section": "Hunter Balance Adjustment",
         "text_en": "Category\n\nChanged\n\nTier 3\n\n(New effect added)\n\nWhen Dark Finale or Apocalyptic Might hits a target in a [Break] state it activates the [Suppressed] effect\n\nTier 4\n\n(New effect added)\n\nFor every Dark Breaker ally on the team, Sung Il-Hwan’s Attack increases by 5%"
+      },
+      {
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "section": "Hunter Balance Adjustment",
+        "text_en": "Category\n\nChanged\n\nTier 1\n\n(Buff Duration Extended / New Effect Added)\n\nWhen Dark Finale or Apocalyptic Might hit they apply the [Marked] effect on the target\n\n[Marked]\nIncreases damage taken from Sung Il-Hwan by 35%\nIf the target is successfully placed in the [Break] state, the effect becomes the [Suppressed] effect\nDuration : 30 60 second(s)\n\n[Suppressed]\nIncrease damage taken from Sung Il-Hwan by 50%\nIncrease Dark Ultimate Skill damage taken by 20%\nWhen the effect ends, it becomes the [Marked] effect.\nDuration : 30 60 second(s)\n\nTier 4\n\n(Values Increased)\n\nFor every Dark ally in the party, Dark team members’ Attack increases by 10%\nFor every Dark Breaker ally on the team, Sung Il-Hwan’s Attack increases by 5% 30%\n\nUnbreakable Will\n〈Sung Il-Hwan’s Exclusive Weapon〉\nBased on Tier 5\n\n(Values Increased)\n\nIncreases the user’s Critical Hit damage by 30% 40%"
       }
     ],
-    "balance_changes": []
+    "balance_changes": [
+      {
+        "line": "Duration : 30 60 second(s)",
+        "old": "30",
+        "new": "60",
+        "unit": "second(s)",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-19 : valeur de la notice 110996 reportée dans le texte de la fiche (lecture manuelle)."
+      },
+      {
+        "line": "Duration : 30 60 second(s)",
+        "old": "30",
+        "new": "60",
+        "unit": "second(s)",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-19 : valeur de la notice 110996 reportée dans le texte de la fiche (lecture manuelle)."
+      },
+      {
+        "line": "For every Dark Breaker ally on the team, Sung Il-Hwan’s Attack increases by 5% 30%",
+        "old": "5",
+        "new": "30",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-19 : valeur de la notice 110996 reportée dans le texte de la fiche (lecture manuelle)."
+      },
+      {
+        "line": "Increases the user’s Critical Hit damage by 30% 40%",
+        "old": "30",
+        "new": "40",
+        "unit": "%",
+        "date": "2026-11-19",
+        "url": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "status": "applique",
+        "verif": "applique_manuel",
+        "verif_note": "2026-11-19 : valeur de la notice 110996 reportée dans le texte de la fiche (lecture manuelle)."
+      }
+    ],
+    "patch_adjustments": [
+      {
+        "patch": "2026-11-19",
+        "source": "https://forum.netmarble.com/slv_en/view/32/110996",
+        "summary": "Palier 1 : durées de [Marked]/[Suppressed] 30→60 s (reportées en texte pour le palier 1 ; le [Suppressed] du palier 3 n'est pas cité par la notice) ; palier 4 : +5→+30 % d'Attaque par allié Dark Breaker ; arme : dégâts critiques 30→40 % (palier 5)",
+        "wiki_reflects_patch": false,
+        "note": "Texte de la fiche mis à jour à partir de l'avis Netmarble (lecture manuelle) ; non vérifié en jeu."
+      }
+    ]
   },
   {
     "id": "sung-jinah",

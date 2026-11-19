@@ -1,5 +1,5 @@
-# Rapport de contrôle de la base — 2026-11-17
-Total : 1324 entrées, **0 erreur(s)**, 2001 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
+# Rapport de contrôle de la base — 2026-11-19
+Total : 1330 entrées, **0 erreur(s)**, 2011 avertissement(s). Généré par `pipeline/check_db.py` (écrasé à chaque exécution).
 
 | Fichier | Entrées | Erreurs | Avertissements |
 | --- | ---: | ---: | ---: |
@@ -10,8 +10,8 @@ Total : 1324 entrées, **0 erreur(s)**, 2001 avertissement(s). Généré par `pi
 | gems | 19 | 0 | 44 |
 | hunters | 66 | 0 | 0 |
 | mode_rewards | 15 | 0 | 30 |
-| netmarble_notes | 686 | 0 | 1372 |
-| patches | 35 | 0 | 68 |
+| netmarble_notes | 691 | 0 | 1382 |
+| patches | 36 | 0 | 68 |
 | proof_modifiers | 17 | 0 | 34 |
 | rates | 12 | 0 | 12 |
 | remnant_powers | 4 | 0 | 8 |
@@ -24,7 +24,7 @@ Total : 1324 entrées, **0 erreur(s)**, 2001 avertissement(s). Généré par `pi
 | weapons | 115 | 0 | 11 |
 
 Avertissements par type (à suivre dans le temps) :
-- 927 × icône absente (null)
-- 776 × name.fr vide
+- 932 × icône absente (null)
+- 781 × name.fr vide
 - 92 × source non URL (capture ou texte)
 - 60 × pierre sans effets
