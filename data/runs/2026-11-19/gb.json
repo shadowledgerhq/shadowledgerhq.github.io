@@ -1,0 +1,43 @@
+[
+  {
+    "run_id": "gb-2026-11-19-TrtWBScRocs",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "player": "Ahmad1195",
+    "channel": "Ahmad1195",
+    "video_id": "TrtWBScRocs",
+    "video_ids": [
+      "TrtWBScRocs"
+    ],
+    "published_at": "2026-11-19T13:11:38+01:00",
+    "lang": "en",
+    "score": {
+      "total": 201,
+      "runs": [
+        201
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 201 rc; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "TrtWBScRocs",
+        "published_at": "2026-11-19T13:11:38+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": 78000000000000,
+        "damage_exact": false,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  }
+]

@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "video_id": "TrtWBScRocs",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-19T12:11:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 78000000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 201,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : 201 rc"
+    ]
+  }
+]
