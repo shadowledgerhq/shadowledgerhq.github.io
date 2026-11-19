@@ -1,4 +1,4 @@
-# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-19 02:46 (Paris)
+# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-19 20:11 (Paris)
 
 - Top 10 couvert : oui (0 vidéo candidate au top 10 restante)
 - **Passage complet : oui**
@@ -6,7 +6,6 @@
 - Erreurs bloquantes : aucune
 - Durée du passage : 0 min
 - Critère de gel n° 3 : 2/2 passage(s) planifié(s) de suite avec top 10 couvert — atteint (reste à décider `pc.geler`)
-- Type : relance automatique (ne compte pas pour le critère de gel n° 3)
 
 - Semaine : 0 en cours (dont 0 pour le PC), 0 terminée(s), 0 rejetée(s)
 - Classements : aucun
