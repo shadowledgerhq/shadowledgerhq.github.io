@@ -809,13 +809,13 @@
     "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
     "published_at": "2026-11-12T13:50:20Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-13",
-    "last_tri": 1,
+    "updated_at": "2026-11-19",
+    "last_tri": 4,
     "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
     "pc": {
       "image_taille": [
@@ -833,7 +833,10 @@
       ],
       "tri3": "fait",
       "date": "2026-11-16",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait",
+      "rotation": "fait",
+      "rotation_version": 11
     }
   },
   "_b2EP6Cy4mk": {
