@@ -632,7 +632,8 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None, duree_s=None):
     v12 : le HUD GB (lectures sans score) ne remplace rien ; ses lectures sont regroupées par run
     (`ocr_ecrans.regrouper_hud`). Les lectures de l'écran Results sont regroupées en écrans, la plus complète est
     gardée et contrôlée (`ocr_ecrans.fusionner_results`)."""
-    modes = {l["mode"] for l in nouvelles if l.get("score") is not None and not chrono_bot.echec_controle_bot(l)}     # v35 : un écran BOT en échec de contrôle ne remplace rien
+    modes = {l["mode"] for l in nouvelles if l.get("score") is not None and not chrono_bot.echec_controle_bot(l)
+             and not (l.get("detail") or {}).get("borne_basse")}     # v35 : un écran BOT en échec de contrôle ne remplace rien ; v36 : ni une borne basse (phases incomplètes)
     reste = [l for l in lectures if not (l["video_id"] == vid and l["mode"] in modes and est_texte(l))]
     ecran = [l for l in reste + nouvelles if l["video_id"] == vid and _est_ecran(l)]
     # v29 : contexte de l'exception « RC lu sur la dernière image » (SPEC §3.1) : RC du titre / de la description et durée de la
@@ -664,6 +665,7 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None, duree_s=None):
     # v35 : écran BOT en échec de contrôle = jamais un score (`detail.sans_score`), gardé avec sa note ; les lectures de texte de la vidéo restent
     texte_bot = [l for l in lectures if l["video_id"] == vid and l["mode"] == "bot" and est_texte(l)]
     chrono_bot.appliquer_echecs_ecran(ecran + texte_bot)
+    chrono_bot.appliquer_phases_incompletes(ecran, config)      # v36 : phases incomplètes sans Play Time = borne basse (`detail.sans_score`), jamais un score
     valides = [l for l in ecran if l["mode"] == "bot" and l.get("score") is not None and not (l.get("detail") or {}).get("sans_score")]
     restaurer = [] if valides else [l for l in texte_bot if not any(l is x for x in autres)]
     return autres + restaurer + ecran

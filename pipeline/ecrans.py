@@ -77,6 +77,9 @@ def lecture_bot(meta, ecran, config, source="video-complete"):
         lec["notes"] += [p if p == NOTE_BOT_TEMPS_NON_LU else f"contrôle BOT : {p}" for p in pb]
     else:
         lec["notes"] += [f"contrôle BOT : {p}" for p in pb]
+    if via_zones:        # v36 : phases incomplètes sans Play Time = borne basse, jamais un score
+        import chrono_bot
+        chrono_bot.marquer_borne_basse(lec, config)
     lec["bot_season_week"] = lire_saison_semaine(meta.get("title"), config)
     if titre_challenge(meta.get("title"), config):  # v10 : ancien mode supprimé
         lec["notes"].append(NOTE_CHALLENGE)

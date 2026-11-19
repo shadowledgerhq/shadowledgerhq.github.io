@@ -128,21 +128,61 @@ def ligne(r, mode, nb_videos, gele=False):
     return d
 
 
-def ordre(runs):
-    """Classés par rang ; puis les autres triés par score (BOT : temps croissant, autres : score décroissant)."""
-    def cle(r):
-        sc = r.get("score") or {}
-        total = sc.get("total")
-        valeur = float("inf") if total is None else (total if sc.get("unit") == "seconds" else -total)
-        return (r.get("rank") is None, r.get("rank") or 0, valeur, str(r.get("player") or ""))
-    return sorted(runs, key=cle)
+def _valeur(r):
+    """Clé de tri d'une ligne. BOT « rang prudent » (chrono incomplet : `19.5s`) : borne haute de l'intervalle (19.599), comme `classement.ordonner`."""
+    sc = r.get("score") or {}
+    total = sc.get("total")
+    if total is not None and sc.get("unit") == "seconds":
+        notes = r.get("notes") or ""
+        if "chrono incomplet : rang prudent" in notes:
+            try:
+                import chrono_bot
+                prin = [x for x in chrono_bot.lectures_de_la_run({"notes": notes.split("; "), "score": total, "score_source": None}) if x.get("principale")]
+                if prin:
+                    return prin[0]["hi"]
+            except Exception:
+                pass
+        return total
+    return float("inf") if total is None else -total
 
 
-def lignes_mode(runs, mode=None, gele=False):
-    """Liste de lignes (dictionnaires) dans l'ordre d'affichage (sans la ligne de séparation « À vérifier »)."""
+def ordre(runs, couvert=True):
+    """Top 10 couvert : classés par rang ; puis les autres triés par score (BOT : temps croissant, autres : score décroissant).
+    v36, Top 10 NON couvert : lignes sûres ET provisoires dans l'ordre de tri commun (la valeur), le rang officiel n'y décide pas."""
+    if not couvert:
+        return sorted(runs, key=lambda r: (_valeur(r), r.get("rank") is None, r.get("rank") or 0, str(r.get("player") or "")))
+    return sorted(runs, key=lambda r: (r.get("rank") is None, r.get("rank") or 0, _valeur(r), str(r.get("player") or "")))
+
+
+def lignes_mode(runs, mode=None, gele=False, couvert=True):
+    """Liste de lignes (dictionnaires) dans l'ordre d'affichage (sans la ligne de séparation « À vérifier »). v36 : Top 10 non couvert -> ordre commun,
+    et le rang officiel n'est affiché que s'aucune ligne provisoire (non sûre) ne le précède : « 1er » jamais devant un meilleur provisoire."""
     mode = mode or (runs[0].get("mode") if runs else "poc")
     nb = max([len(r.get("video_ids") or [1]) for r in runs] + [1])
-    return [ligne(r, mode, nb, gele) for r in ordre(runs)]
+    ordonnees = ordre(runs, couvert)
+    lignes = [ligne(r, mode, nb, gele) for r in ordonnees]
+    if not couvert:
+        provisoire_vu = False
+        for r, d in zip(ordonnees, lignes):
+            if r.get("confidence") != "sur":
+                provisoire_vu = True
+                d["Rang"] = None
+            elif provisoire_vu:
+                d["Rang"] = None
+            d["_commun"] = True
+    return lignes
+
+
+def top10_couvert(semaine, racine=RACINE):
+    """« Top 10 couvert » (ordre_pc) : plus aucune vidéo candidate au top 10 en attente du PC. Inconnu (erreur de lecture) : False (on montre
+    aussi les provisoires)."""
+    try:
+        import ordre_pc
+        from donnees import Donnees
+        d = Donnees(racine)
+        return ordre_pc.candidates_restantes(d, semaine, d.processed()) == 0
+    except Exception:
+        return False
 
 
 # --- lecture des données ---------------------------------------------------------------------------------------------
@@ -216,6 +256,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
     donnees = charger(semaine, racine)
     meta = _json(racine / "data" / "runs" / semaine / "_meta.json", {})
     gele = bool(meta.get("frozen"))
+    couvert = top10_couvert(semaine, racine)      # v36
     rejetees = _json(racine / "data" / "rejected" / f"{semaine}.json", [])
     chaines = {c.get("channel_id"): c.get("name") or c.get("title") for c in _json(racine / "data" / "channels.json", []) if isinstance(c, dict)}
     fond = lambda c: PatternFill("solid", fgColor=c)
@@ -263,6 +304,9 @@ def exporter(semaine, sortie=None, racine=RACINE):
         for c in range(2, 6):
             accueil.cell(r_, c).fill = fond("B91C1C")
         accueil.row_dimensions[r_].height = 22
+    if not couvert:
+        r_ += 1
+        fusionne_centre(accueil, r_, 2, 5, "Top 10 non couvert : lignes sûres et provisoires dans l'ordre commun (« à vérifier »)", police(AMBRE, 10, True))
     texte_bot = _texte_bot(semaine, racine)
     if texte_bot:
         r_ += 1
@@ -298,7 +342,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
         larg = [L.get(c, L["Vidéo"] if c.startswith("Vidéo") else 20) for c in cols]
         marge = max(3, (CIBLE - sum(larg)) / 2)
         n = len(cols) + 2
-        lignes = lignes_mode(runs, mode, gele)
+        lignes = lignes_mode(runs, mode, gele, couvert)
         peindre(ws, len(lignes) + 40, 30)
         banniere(ws, n, _nom_onglet(cle), _semaine_txt(semaine) + ("   ·   ESSAI — non publié" if semaine in SEMAINES_ESSAI else ""))
         ws.column_dimensions["A"].width = ws.column_dimensions[lettre(n)].width = marge
@@ -316,7 +360,7 @@ def exporter(semaine, sortie=None, racine=RACINE):
         separe = False
         classes = 0
         for d in lignes:
-            if d["Rang"] is None and not separe:
+            if d["Rang"] is None and not separe and not d.get("_commun"):
                 separe = True
                 fusionne_centre(ws, k, 2, n - 1, "À vérifier", police(AMBRE, 12, True))
                 for c in range(2, n):

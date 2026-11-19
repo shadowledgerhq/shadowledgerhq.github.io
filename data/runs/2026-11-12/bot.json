@@ -52,27 +52,27 @@
     "published_at": "2026-11-17T06:43:48+01:00",
     "lang": "ko",
     "score": {
-      "total": 14.515,
+      "total": 19.517,
       "runs": [
-        14.515
+        19.517
       ],
       "unit": "seconds"
     },
-    "score_source": "debut-fin",
+    "score_source": "titre",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "boss non contrôlé; BOT ja : temps de jeu non lu",
+    "notes": "score provisoire (titre) : 19.517s; borne basse de l'écran 14.515 : compatible; boss non contrôlé",
     "bot_season_week": null,
     "player_ingame": null,
     "runs_detail": [
       {
         "video_id": "YSJFLd_OXww",
         "published_at": "2026-11-17T06:43:48+01:00",
-        "t": 38,
+        "t": null,
         "stage": null,
         "team": null,
-        "score_source": "debut-fin",
+        "score_source": "titre",
         "exact": false
       }
     ]
@@ -312,45 +312,6 @@
     ]
   },
   {
-    "run_id": "bot-2026-11-12-nwP8dSSfo1o",
-    "week": "2026-11-12",
-    "mode": "bot",
-    "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
-    "player": "MOBgame",
-    "channel": "MOBgame",
-    "video_id": "nwP8dSSfo1o",
-    "video_ids": [
-      "nwP8dSSfo1o"
-    ],
-    "published_at": "2026-11-15T03:21:12+01:00",
-    "lang": "ja",
-    "score": {
-      "total": 20.331,
-      "runs": [
-        20.331
-      ],
-      "unit": "seconds"
-    },
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "boss non contrôlé; BOT ja : temps de jeu non lu",
-    "bot_season_week": null,
-    "player_ingame": null,
-    "runs_detail": [
-      {
-        "video_id": "nwP8dSSfo1o",
-        "published_at": "2026-11-15T03:21:12+01:00",
-        "t": 182,
-        "stage": null,
-        "team": null,
-        "score_source": "debut-fin",
-        "exact": false
-      }
-    ]
-  },
-  {
     "run_id": "bot-2026-11-12-tOzRUlmZ2JI",
     "week": "2026-11-12",
     "mode": "bot",
@@ -385,6 +346,45 @@
         "stage": null,
         "team": null,
         "score_source": "titre",
+        "exact": false
+      }
+    ]
+  },
+  {
+    "run_id": "bot-2026-11-12-77pbAyrW6no",
+    "week": "2026-11-12",
+    "mode": "bot",
+    "channel_id": "UCxh6JiQJrR7B7vCWZETe08A",
+    "player": "MOBgame",
+    "channel": "MOBgame",
+    "video_id": "77pbAyrW6no",
+    "video_ids": [
+      "77pbAyrW6no"
+    ],
+    "published_at": "2026-11-16T05:36:58+01:00",
+    "lang": "ja",
+    "score": {
+      "total": 23.0,
+      "runs": [
+        23.0
+      ],
+      "unit": "seconds"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 23秒; autres candidats : 00:23.416; description non relue (règles v3); chrono incomplet : rang prudent; boss non contrôlé",
+    "bot_season_week": null,
+    "player_ingame": null,
+    "runs_detail": [
+      {
+        "video_id": "77pbAyrW6no",
+        "published_at": "2026-11-16T05:36:58+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
         "exact": false
       }
     ]

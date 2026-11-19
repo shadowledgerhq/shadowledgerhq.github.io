@@ -191,7 +191,7 @@ def appliquer_echecs_ecran(lectures):
         if echec_controle_bot(l):
             d["sans_score"] = True
             echecs.append(l)
-        else:
+        elif not d.get("borne_basse"):          # v36 : une borne basse reste `sans_score`
             d.pop("sans_score", None)
     for l in echecs:
         phases = [p for p in l["detail"].get("phases") or [] if isinstance(p, (int, float))]
@@ -233,3 +233,88 @@ def noter_virgule_miniature(lectures, note="miniature : virgule lue comme point"
             l.setdefault("notes", []).append(note)
             n += 1
     return n
+
+
+# --- v36 : lecture de secours incomplète = borne basse, jamais un score -------------------------------------------------------------------
+
+NOTE_BORNE_COMPATIBLE = "borne basse de l'écran {valeur} : compatible"
+NOTE_PROVISOIRE_SOUS_BORNE = "provisoire inférieur à la borne basse de l'écran"
+
+
+def _nom(texte):
+    import unicodedata
+    return re.sub(r"\s+", "", "".join(c for c in unicodedata.normalize("NFD", texte or "") if unicodedata.category(c) != "Mn")).lower()
+
+
+def phases_du_boss(stage, config):
+    """Nombre de phases du RESULT BOT du boss `stage` (`config.bot.phases_par_boss`, comparaison sans accents ni espaces) ; boss inconnu ou
+    non lu : `defaut` (3)."""
+    table = ((config or {}).get("bot") or {}).get("phases_par_boss") or {}
+    defaut = int(table.get("defaut", 3))
+    n = _nom(stage)
+    if n:
+        for cle, v in table.items():
+            if not cle.startswith("_") and cle != "defaut" and _nom(cle) and _nom(cle) in n:
+                return int(v)
+    return defaut
+
+
+def _phases_lues(l):
+    return [p for p in ((l.get("detail") or {}).get("phases") or []) if isinstance(p, (int, float))]
+
+
+def _note_phases(n_lues, n_boss, valeur):
+    return f"phases incomplètes ({n_lues}/{n_boss}) : borne basse {valeur}"
+
+
+def marquer_borne_basse(l, config):
+    """Lecture d'écran BOT SANS Play Time dont le nombre de phases lues est inférieur à celui du boss : le dernier temps lu n'est pas le chrono, c'est une
+    BORNE BASSE (`detail.borne_basse`), jamais un score (`detail.sans_score`, `a_verifier`, note `phases incomplètes (2/3) : borne basse 14.515`).
+    Idempotent ; retire la marque si la lecture est devenue complète. Une lecture complète (3/3) sans Play Time reste `a_verifier`, inchangée.
+    Retourne True si la lecture est une borne basse."""
+    if l.get("mode") != "bot" or l.get("score_source") in SOURCES or _est_texte(l):
+        return False
+    d = l.setdefault("detail", {})
+    phases = _phases_lues(l)
+    n_boss = phases_du_boss(l.get("stage"), config)
+    if phases and d.get("play_time") is None and len(phases) < n_boss:
+        d["borne_basse"] = round(phases[-1], 3)
+        d["sans_score"] = True
+        l["confidence"], l["exact"] = "a_verifier", False
+        note = _note_phases(len(phases), n_boss, d["borne_basse"])
+        l["notes"] = [n for n in l.get("notes", []) if not n.startswith("phases incomplètes (")] + [note]
+        return True
+    if "borne_basse" in d:
+        d.pop("borne_basse")
+        l["notes"] = [n for n in l.get("notes", []) if not n.startswith("phases incomplètes (")]
+    return False
+
+
+def appliquer_phases_incompletes(lectures, config):
+    """`marquer_borne_basse` sur les lectures stockées (idempotent). À appeler APRÈS `appliquer_echecs_ecran` (qui retire `sans_score`
+    quand le contrôle n'a pas échoué). Retourne les lectures qui sont des bornes basses."""
+    return [l for l in lectures if marquer_borne_basse(l, config)]
+
+
+def appliquer_bornes_basses(runs, lectures):
+    """Contrôle seulement : une borne basse ne remplace JAMAIS une lecture de texte ou de miniature. Pour chaque run BOT provisoire de texte d'une
+    vidéo qui a une borne basse : lecture < borne -> `a_verifier`, note `provisoire inférieur à la borne basse de l'écran` ; sinon note
+    `borne basse de l'écran 14.515 : compatible`. Idempotent. Retourne les runs contredites."""
+    bornes = {}
+    for l in lectures:
+        b = (l.get("detail") or {}).get("borne_basse")
+        if l.get("mode") == "bot" and b is not None:
+            bornes[l["video_id"]] = max(b, bornes.get(l["video_id"], 0))
+    contredites = []
+    for r in runs:
+        b = bornes.get(r.get("video_id"))
+        if b is None or r.get("mode") != "bot" or not est_provisoire_texte(r) or r.get("score") is None:
+            continue
+        r["notes"] = [n for n in r["notes"] if not n.startswith("borne basse de l'écran") and n != NOTE_PROVISOIRE_SOUS_BORNE]
+        if r["score"] < b:
+            r["confidence"], r["exact"] = "a_verifier", False
+            r["notes"].append(NOTE_PROVISOIRE_SOUS_BORNE)
+            contredites.append(r)
+        else:
+            r["notes"].append(NOTE_BORNE_COMPATIBLE.format(valeur=b))
+    return contredites

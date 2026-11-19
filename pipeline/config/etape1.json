@@ -73,6 +73,7 @@
     "semaines_calcul": 1,
     "reset_boss_heures": 6,
     "boss_alias": {},
+    "phases_par_boss": {"_doc": "v36 : nombre de phases du RESULT BOT par boss (clé = nom normalisé sans accents ni espaces) ; boss inconnu ou non lu (lecture par zone) = defaut. Baruka = 3 [À VÉRIFIER : capture §3.1 v4 et Lt84IhMjBvM].", "defaut": 3, "baruka": 3},
     "_reset_boss_heures": "SPEC v34 §4.5 : vidéo BOT publiée moins de 6 h après le reset et dont le boss lu (écran Results) diffère du boss de référence de la semaine (≥ 3 vidéos) = semaine précédente (rejet) ; boss identique = note « semaine précédente ? » retirée. `boss_alias` : {nom lu: identifiant commun} comme `gb.boss_alias` (noms de boss BOT dans d'autres langues), vide tant qu'aucun nom n'est connu.",
     "challenge": ["challenge", "チャレンジ", "챌린지"],
     "libelles": {
