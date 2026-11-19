@@ -36,7 +36,8 @@
         "damage": 78000000000000,
         "damage_exact": false,
         "element": null,
-        "element_source": null
+        "element_source": null,
+        "hud_rage_count": 145
       }
     ]
   }

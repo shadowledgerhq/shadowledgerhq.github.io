@@ -1,0 +1,36 @@
+{
+  "spec": 1,
+  "video_id": "TrtWBScRocs",
+  "week": "2026-11-19",
+  "mode": "gb",
+  "gate": null,
+  "run_id": "gb-2026-11-19-TrtWBScRocs",
+  "runs": [
+    {
+      "run_index": 1,
+      "run_start_t": 313.5,
+      "run_end_t": 326.5,
+      "duration_s": 13.0,
+      "events": [
+        {
+          "t": 321.5,
+          "t_run": 8.0,
+          "hunter": "inconnu",
+          "slot": "skill_2",
+          "skill_id": null,
+          "trigger": null,
+          "cooldown_read": 7.0,
+          "t_game": null,
+          "source": "hud-recharge",
+          "confidence": "a_verifier"
+        }
+      ],
+      "limites": [
+        "bornes-incertaines",
+        "essais-precedents",
+        "chasseurs-inconnus"
+      ],
+      "sans_hud_s": 0.5
+    }
+  ]
+}

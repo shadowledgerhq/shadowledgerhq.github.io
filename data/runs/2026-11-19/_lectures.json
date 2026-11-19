@@ -25,5 +25,201 @@
     "notes": [
       "score provisoire (titre) : 201 rc"
     ]
+  },
+  {
+    "video_id": "TrtWBScRocs",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-19T12:11:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 60,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 12180771086257,
+      "hud_rage_count": 17,
+      "separateur_perdu": false,
+      "elements_hud": [
+        null,
+        null,
+        "water"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "TrtWBScRocs",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-19T12:11:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 80,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": null,
+      "chrono_hud": 107,
+      "separateur_perdu": false,
+      "hud_rage_count": 145,
+      "elements_hud": [
+        null,
+        "water",
+        null
+      ],
+      "t_debut": 8,
+      "t_fin": 80,
+      "elements_hud_par_t": {
+        "8": [
+          null,
+          null,
+          null
+        ],
+        "20": [
+          "water",
+          "water",
+          null
+        ],
+        "80": [
+          null,
+          "water",
+          null
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x145, chrono 107"
+    ]
+  },
+  {
+    "video_id": "5KJWOPBY7No",
+    "channel_id": "UCzUtZ2vuuA86Yw2VLm2Y_1g",
+    "channel_title": "BcsX",
+    "published_at": "2026-11-19T10:51:25Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 570,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 498899230021,
+      "hud_rage_count": 67,
+      "separateur_perdu": false,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "5KJWOPBY7No",
+    "channel_id": "UCzUtZ2vuuA86Yw2VLm2Y_1g",
+    "channel_title": "BcsX",
+    "published_at": "2026-11-19T10:51:25Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 650,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": null,
+      "chrono_hud": 3.63,
+      "separateur_perdu": false,
+      "hud_rage_count": 73,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ],
+      "t_debut": 450,
+      "t_fin": 650,
+      "elements_hud_par_t": {
+        "450": [
+          null,
+          null,
+          null
+        ],
+        "480": [
+          null,
+          null,
+          null
+        ],
+        "520": [
+          null,
+          null,
+          null
+        ],
+        "540": [
+          null,
+          null,
+          null
+        ],
+        "590": [
+          null,
+          null,
+          null
+        ],
+        "630": [
+          null,
+          null,
+          null
+        ],
+        "650": [
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x73, chrono 3.63"
+    ]
   }
 ]

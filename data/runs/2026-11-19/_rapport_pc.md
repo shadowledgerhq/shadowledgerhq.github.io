@@ -82,3 +82,19 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Erreurs bloquantes : aucune
 - Durée du passage : 0 min
 - Critère de gel n° 3 : 2/2 passage(s) planifié(s) de suite avec top 10 couvert — atteint (reste à décider `pc.geler`)
+
+<!-- passage-pc pc-daily 2026-11-19T20:12:10.574422+00:00 -->
+## Passage pc-daily — 2026-11-19 21:12 (Paris)
+
+- Top 10 couvert : non (2 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 13 · en_cours restantes : 11 (dont 2 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 59 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Résumé GB : TrtWBScRocs · Ahmad1195 · aucun Results lu · 201 RC à vérifier · score provisoire (titre) : 201 rc
+- Résumé GB : lKnkiCvMwSM · aucun Results lu · pas classée
+- Résumé GB : 5KJWOPBY7No · Results lu (650-728 s) · pas classée
+- Résumé GB : TjnPwCk_VSc · aucun Results lu · pas classée
+- Résumé GB : Lo3sHrW18Vg · aucun Results lu · pas classée
