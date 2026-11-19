@@ -1,4 +1,4 @@
-# Rapport — semaine 2026-11-12 — passage pc-weekly — 2026-11-19 02:18 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-weekly — 2026-11-19 02:19 (Paris)
 
 - Top 10 couvert : non (89 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (vidéos restantes à traiter)
