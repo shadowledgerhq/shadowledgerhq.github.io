@@ -7,6 +7,13 @@
   - NON ÉVALUABLE : ≥ 1 événement par chasseur actif identifié (actifs identifiés [], avec événement [])
   - OK : aucune recharge relancée trop tôt (ok)
   - OK : t_game croissant, ≤ chrono, phases dans la fenêtre (7 lecture(s) 1.969→19.37 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable))
+- bot · Bi5TrN5d1_E · run 1 : 13 événement(s), 13 à vérifier, durée 37.8 s, limites : chasseurs-inconnus, recharges-entamees : 9
+  - OK : durée ≥ chrono − 0,5 s (durée 37.8 s, chrono 28.349 s (×1.3))
+  - NON ÉVALUABLE : fin avant la composition (fin 56.8 s, composition None s)
+  - OK : ≥ 1 événement SJW (5 événement(s))
+  - NON ÉVALUABLE : ≥ 1 événement par chasseur actif identifié (actifs identifiés [], avec événement [])
+  - OK : aucune recharge relancée trop tôt (ok)
+  - OK : t_game croissant, ≤ chrono, phases dans la fenêtre (10 lecture(s) 3.212→28.349 s ; croissant True ; dernier ≤ chrono True ; phases [12.391, 21.382, 28.349] (True))
 - bot · Lt84IhMjBvM · run 1 : 23 événement(s), 23 à vérifier, durée 93.5 s, limites : chasseurs-inconnus
   - ÉCHEC : durée = chrono ± 0,5 s (durée 93.5 s, chrono 18.754 s, écart +74.75 s)
   - ÉCHEC : fin avant la composition (fin 102.0 s, composition 0 s)

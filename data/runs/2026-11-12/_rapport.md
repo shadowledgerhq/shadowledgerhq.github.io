@@ -2,9 +2,9 @@
 
 - Top 10 couvert : non (89 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (vidéos restantes à traiter)
-- Vidéos traitées ce passage : 0 · en_cours restantes : 123 (dont 89 à traiter par le PC)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 123 (dont 89 à traiter par le PC)
 - Erreurs bloquantes : aucune
-- Durée du passage : 0 min
+- Durée du passage : 3 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 
 - Semaine : 123 en cours (dont 106 pour le PC), 42 terminée(s), 15 rejetée(s)

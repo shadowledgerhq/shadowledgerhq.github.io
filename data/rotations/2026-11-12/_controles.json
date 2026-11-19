@@ -158,5 +158,37 @@
       false,
       "7 lecture(s) 2.912→18.433 s ; croissant True ; dernier ≤ chrono False ; phases [9.373, 14.515] (True)"
     ]
+  ],
+  "Bi5TrN5d1_E": [
+    [
+      "durée ≥ chrono − 0,5 s",
+      true,
+      "durée 37.8 s, chrono 28.349 s (×1.3)"
+    ],
+    [
+      "fin avant la composition",
+      null,
+      "fin 56.8 s, composition None s"
+    ],
+    [
+      "≥ 1 événement SJW",
+      true,
+      "5 événement(s)"
+    ],
+    [
+      "≥ 1 événement par chasseur actif identifié",
+      null,
+      "actifs identifiés [], avec événement []"
+    ],
+    [
+      "aucune recharge relancée trop tôt",
+      true,
+      "ok"
+    ],
+    [
+      "t_game croissant, ≤ chrono, phases dans la fenêtre",
+      true,
+      "10 lecture(s) 3.212→28.349 s ; croissant True ; dernier ≤ chrono True ; phases [12.391, 21.382, 28.349] (True)"
+    ]
   ]
 }
