@@ -42,6 +42,7 @@
   - NON ÉVALUABLE : ≥ 1 événement par chasseur actif identifié (actifs identifiés [], avec événement [])
   - OK : aucune recharge relancée trop tôt (ok)
   - OK : t_game croissant, ≤ chrono, phases dans la fenêtre (5 lecture(s) 2.262→18.268 s ; croissant True ; dernier ≤ chrono True ; phases [] (non évaluable))
+- gb · Oj_-5x6700s · run 2 : 46 événement(s), 46 à vérifier, durée 215.0 s, limites : chasseurs-inconnus, recharges-entamees : 78
 - gb · T5dR6iJAn-Y · run 1 : 69 événement(s), 69 à vérifier, durée 215.0 s, limites : chasseurs-inconnus, recharges-entamees : 54
 - poc · 1pGA1EBZrDw · run 1 : 0 événement(s), 0 à vérifier, durée None s, limites : format
 - poc · 2AJljDc_nN4 · run 1 : 37 événement(s), 37 à vérifier, durée 135.0 s, limites : bornes-incertaines, essais-precedents, chasseurs-inconnus, recharges-entamees : 56

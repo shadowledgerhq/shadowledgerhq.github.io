@@ -645,7 +645,7 @@
     "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
     "published_at": "2026-11-12T18:10:15Z",
     "first_seen": "2026-11-13",
-    "updated_at": "2026-11-15",
+    "updated_at": "2026-11-19",
     "last_tri": 4,
     "status": "termine",
     "modes": [
@@ -669,7 +669,10 @@
       ],
       "tri3": "fait",
       "date": "2026-11-15",
-      "tri4": "fait"
+      "tri4": "fait",
+      "tri2": "fait",
+      "rotation": "fait",
+      "rotation_version": 11
     }
   },
   "JFiZ6LgqIkM": {

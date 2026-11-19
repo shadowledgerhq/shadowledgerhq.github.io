@@ -367,3 +367,13 @@ error: The following untracked working tree files would be overwritten by checko
 - Erreurs bloquantes : aucune
 - Durée du passage : 13 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-weekly 2026-11-19T18:33:10.238165+00:00 -->
+## Passage pc-weekly — 2026-11-19 19:33 (Paris)
+
+- Top 10 couvert : non (89 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 123 (dont 89 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 14 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
