@@ -9,6 +9,7 @@
 - Cartes de chasseurs de tenues alternatives : attendent le rejeu PC `pc.py builds --semaine 2026-11-12 --refaire` (recadrages encore en 96 px au 19/11).
 - Noms EN : Overshadow, Power Unlocked, Commander's Authority à vérifier en jeu.
 ## À faire
+- 19/11 : recherche de sources — wiki Fandom : page Thalia De Rossi inexistante (404), aucune fiche chiffrée en ligne ; seulement des vidéos (YouTube/Reddit, aperçus sans valeurs). À relancer à la prochaine veille.
 - Compléter Thalia De Rossi, Kamish's Wrath/Roar, Rosa Nera (compétences, paliers, stats) dès qu'une source existe (wiki Fandom, notes Netmarble) ; nom FR de Rosa Nera, type d'arme de Kamish's Roar.
 - Règles du POC par paliers (durée, nombre de paliers, récompenses) : non publiées ; Dargo (boss de guilde) et Vulcan (DCZ) : pas de fiche.
 - 15 `a_verifier` anciens (12 `fiche_anterieure_au_patch`, 3 `palier_non_stocke`) + 8 du 19/11 (Charlotte, valeurs Lv.10 déjà dans `patch_adjustments`).
