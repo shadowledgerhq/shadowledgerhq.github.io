@@ -1,21 +1,21 @@
 [
   {
-    "run_id": "gb-2026-11-19-TrtWBScRocs",
+    "run_id": "gb-2026-11-19-FLCbZ5tzf_8",
     "week": "2026-11-19",
     "mode": "gb",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "player": "Ahmad1195",
-    "channel": "Ahmad1195",
-    "video_id": "TrtWBScRocs",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "FLCbZ5tzf_8",
     "video_ids": [
-      "TrtWBScRocs"
+      "FLCbZ5tzf_8"
     ],
-    "published_at": "2026-11-19T13:11:38+01:00",
+    "published_at": "2026-11-20T19:54:38+01:00",
     "lang": "en",
     "score": {
-      "total": 201,
+      "total": 381,
       "runs": [
-        201
+        381
       ],
       "unit": "rage_count"
     },
@@ -23,21 +23,143 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 201 rc; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : RC: 381; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
-        "video_id": "TrtWBScRocs",
-        "published_at": "2026-11-19T13:11:38+01:00",
+        "video_id": "FLCbZ5tzf_8",
+        "published_at": "2026-11-20T19:54:38+01:00",
         "t": null,
         "stage": null,
         "team": null,
         "score_source": "titre",
         "exact": false,
-        "damage": 78000000000000,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-vt47IaCcMQg",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "player": "Ahmad1195",
+    "channel": "Ahmad1195",
+    "video_id": "vt47IaCcMQg",
+    "video_ids": [
+      "vt47IaCcMQg"
+    ],
+    "published_at": "2026-11-20T18:40:50+01:00",
+    "lang": "en",
+    "score": {
+      "total": 205,
+      "runs": [
+        205
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 205 rc; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "vt47IaCcMQg",
+        "published_at": "2026-11-20T18:40:50+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": 94000000000000,
         "damage_exact": false,
         "element": null,
-        "element_source": null,
-        "hud_rage_count": 145
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-XVzx3w07JPo",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+    "player": "Eden(이든)",
+    "channel": "Eden(이든)",
+    "video_id": "XVzx3w07JPo",
+    "video_ids": [
+      "XVzx3w07JPo"
+    ],
+    "published_at": "2026-11-20T13:43:29+01:00",
+    "lang": "ko",
+    "score": {
+      "total": 177,
+      "runs": [
+        177
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : Rage 177; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "XVzx3w07JPo",
+        "published_at": "2026-11-20T13:43:29+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-DdbMYl54aZU",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCj01oba-0Kuz8yj3dwC_ZXw",
+    "player": "creative joker",
+    "channel": "creative joker",
+    "video_id": "DdbMYl54aZU",
+    "video_ids": [
+      "DdbMYl54aZU"
+    ],
+    "published_at": "2026-11-20T14:45:30+01:00",
+    "lang": "en",
+    "score": {
+      "total": 75,
+      "runs": [
+        75
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 75 rage; autres candidats : 74 rage, 149 Rage; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "DdbMYl54aZU",
+        "published_at": "2026-11-20T14:45:30+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
       }
     ]
   }
