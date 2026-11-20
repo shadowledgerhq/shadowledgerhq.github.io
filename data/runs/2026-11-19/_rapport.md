@@ -1,17 +1,12 @@
-# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-19 21:12 (Paris)
+# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-20 05:31 (Paris)
 
 - Top 10 couvert : non (2 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
-- Vidéos traitées ce passage : 13 · en_cours restantes : 11 (dont 2 à traiter par le PC)
+- Vidéos traitées ce passage : 2 · en_cours restantes : 11 (dont 2 à traiter par le PC)
 - Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
-- Durée du passage : 59 min
-- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Durée du passage : 0 min
+- Relance automatique : 20/11/2026 07:31 (une seule fois par soir)
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
-- Résumé GB : TrtWBScRocs · Ahmad1195 · aucun Results lu · 201 RC à vérifier · score provisoire (titre) : 201 rc
-- Résumé GB : lKnkiCvMwSM · aucun Results lu · pas classée
-- Résumé GB : 5KJWOPBY7No · Results lu (650-728 s) · pas classée
-- Résumé GB : TjnPwCk_VSc · aucun Results lu · pas classée
-- Résumé GB : Lo3sHrW18Vg · aucun Results lu · pas classée
 
 - Semaine : 11 en cours (dont 2 pour le PC), 1 terminée(s), 3 rejetée(s)
 - Classements : gb 1
@@ -29,12 +24,9 @@
 - semaine de calcul (S20) : 0 vidéo(s) BOT à vérifier (run de la semaine précédente ?)
 
 ## Erreurs et alertes
-- UdZzAAXYLIo : 429 / anti-bot YouTube, reportée au prochain passage
+- quck1v-c7nc : 429 / anti-bot YouTube, reportée au prochain passage
 - 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
 - quck1v-c7nc : durée PT44M42S hors limite (30 min), images non traitées
 - lFJbOusY26o : durée PT32M10S hors limite (30 min), images non traitées
-- lKnkiCvMwSM : libellés hi inconnus (aucun écran GB reconnu)
-- TjnPwCk_VSc : libellés pt-BR inconnus (aucun écran GB reconnu)
-- Lo3sHrW18Vg : libellés pt-BR inconnus (aucun écran GB reconnu)
 - 11 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- passage incomplet : anti-bot ; relance : 20/11/2026 07:31 (une seule fois par soir)

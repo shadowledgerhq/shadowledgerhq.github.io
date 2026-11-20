@@ -98,3 +98,14 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Résumé GB : 5KJWOPBY7No · Results lu (650-728 s) · pas classée
 - Résumé GB : TjnPwCk_VSc · aucun Results lu · pas classée
 - Résumé GB : Lo3sHrW18Vg · aucun Results lu · pas classée
+
+<!-- passage-pc pc-daily 2026-11-20T04:31:33.304014+00:00 -->
+## Passage pc-daily — 2026-11-20 05:31 (Paris)
+
+- Top 10 couvert : non (2 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 2 · en_cours restantes : 11 (dont 2 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 0 min
+- Relance automatique : 20/11/2026 07:31 (une seule fois par soir)
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert

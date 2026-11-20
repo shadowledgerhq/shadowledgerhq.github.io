@@ -3583,19 +3583,22 @@
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "published_at": "2026-11-19T18:00:36Z",
     "first_seen": "2026-11-19",
-    "updated_at": "2026-11-19",
+    "updated_at": "2026-11-20",
     "last_tri": 1,
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18
+    "regles": 18,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "lFJbOusY26o": {
     "week": "2026-11-19",
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "published_at": "2026-11-19T16:09:16Z",
     "first_seen": "2026-11-19",
-    "updated_at": "2026-11-19",
+    "updated_at": "2026-11-20",
     "last_tri": 1,
     "status": "en_cours",
     "modes": [],
