@@ -120,3 +120,14 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Durée du passage : 0 min
 - Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-daily 2026-11-20T19:30:06.430938+00:00 -->
+## Passage pc-daily — 2026-11-20 20:30 (Paris)
+
+- Top 10 couvert : non (2 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 2 · en_cours restantes : 11 (dont 2 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 0 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert

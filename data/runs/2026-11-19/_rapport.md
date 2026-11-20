@@ -1,4 +1,4 @@
-# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-20 13:59 (Paris)
+# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-20 20:30 (Paris)
 
 - Top 10 couvert : non (2 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
