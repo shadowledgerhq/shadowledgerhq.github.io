@@ -1,0 +1,36 @@
+{
+  "spec": 1,
+  "video_id": "vt47IaCcMQg",
+  "week": "2026-11-19",
+  "mode": "gb",
+  "gate": null,
+  "run_id": "gb-2026-11-19-vt47IaCcMQg",
+  "runs": [
+    {
+      "run_index": 1,
+      "run_start_t": 330.0,
+      "run_end_t": 331.0,
+      "duration_s": 1.0,
+      "events": [
+        {
+          "t": 330.5,
+          "t_run": 0.5,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": null,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        }
+      ],
+      "limites": [
+        "bornes-incertaines",
+        "essais-precedents",
+        "chasseurs-inconnus"
+      ],
+      "sans_hud_s": 0
+    }
+  ]
+}

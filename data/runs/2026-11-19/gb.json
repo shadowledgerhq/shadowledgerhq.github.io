@@ -1,46 +1,5 @@
 [
   {
-    "run_id": "gb-2026-11-19-FLCbZ5tzf_8",
-    "week": "2026-11-19",
-    "mode": "gb",
-    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
-    "player": "SNG",
-    "channel": "SNG",
-    "video_id": "FLCbZ5tzf_8",
-    "video_ids": [
-      "FLCbZ5tzf_8"
-    ],
-    "published_at": "2026-11-20T19:54:38+01:00",
-    "lang": "en",
-    "score": {
-      "total": 381,
-      "runs": [
-        381
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : RC: 381; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "FLCbZ5tzf_8",
-        "published_at": "2026-11-20T19:54:38+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false,
-        "damage": null,
-        "damage_exact": null,
-        "element": null,
-        "element_source": null
-      }
-    ]
-  },
-  {
     "run_id": "gb-2026-11-19-vt47IaCcMQg",
     "week": "2026-11-19",
     "mode": "gb",
@@ -77,7 +36,65 @@
         "damage": 94000000000000,
         "damage_exact": false,
         "element": null,
-        "element_source": null
+        "element_source": null,
+        "hud_rage_count": 157
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-FLCbZ5tzf_8",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "FLCbZ5tzf_8",
+    "video_ids": [
+      "FLCbZ5tzf_8"
+    ],
+    "published_at": "2026-11-20T19:54:38+01:00",
+    "lang": "en",
+    "score": {
+      "total": 192,
+      "runs": [
+        189,
+        3
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score 40893206680101 hors de [Points HUD 30916695595019 ; × 1.02]; contrôle sans Hunter Rank : Player's Score illisible; contrôle sans Hunter Rank : Play Time illisible; contrôle sans Hunter Rank : Final Score 2312 hors de [Points HUD 30916695595019 ; × 1.02]; élément associé titre + chasseurs; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "FLCbZ5tzf_8",
+        "published_at": "2026-11-20T19:54:38+01:00",
+        "t": 217,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": false,
+        "damage": 40893206680101,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 163
+      },
+      {
+        "video_id": "FLCbZ5tzf_8",
+        "published_at": "2026-11-20T19:54:38+01:00",
+        "t": 225,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": false,
+        "damage": 2312,
+        "damage_exact": true,
+        "element": "dark",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 163
       }
     ]
   },
@@ -156,10 +173,12 @@
         "team": null,
         "score_source": "description",
         "exact": false,
-        "damage": null,
-        "damage_exact": null,
+        "damage": 186171442922,
+        "damage_exact": false,
         "element": null,
-        "element_source": null
+        "element_source": null,
+        "hud_rage_count": 57,
+        "damage_source": "hud"
       }
     ]
   }

@@ -250,31 +250,6 @@
     ]
   },
   {
-    "video_id": "FLCbZ5tzf_8",
-    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
-    "channel_title": "SNG",
-    "published_at": "2026-11-20T18:54:38Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 381,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : RC: 381"
-    ]
-  },
-  {
     "video_id": "DdbMYl54aZU",
     "channel_id": "UCj01oba-0Kuz8yj3dwC_ZXw",
     "channel_title": "creative joker",
@@ -348,6 +323,676 @@
     "detail": {},
     "notes": [
       "score provisoire (description) : Rage 177"
+    ]
+  },
+  {
+    "video_id": "FLCbZ5tzf_8",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-20T18:54:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 20,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 1564873713975,
+      "hud_rage_count": 76,
+      "separateur_perdu": true,
+      "elements_hud": [
+        "fire",
+        "fire",
+        "fire"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "FLCbZ5tzf_8",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-20T18:54:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 30916695595019,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 190,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": 30916695595019,
+      "chrono_hud": 0.94,
+      "separateur_perdu": false,
+      "hud_rage_count": 163,
+      "elements_hud": [
+        "fire",
+        "fire",
+        "fire"
+      ],
+      "t_debut": 10,
+      "t_fin": 480,
+      "elements_hud_par_t": {
+        "10": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "60": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "90": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "100": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "190": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "300": [
+          null,
+          null,
+          null
+        ],
+        "310": [
+          "dark",
+          null,
+          null
+        ],
+        "390": [
+          null,
+          null,
+          "dark"
+        ],
+        "400": [
+          "water",
+          "water",
+          "water"
+        ],
+        "420": [
+          "water",
+          null,
+          "dark"
+        ],
+        "430": [
+          null,
+          "water",
+          null
+        ],
+        "460": [
+          "water",
+          "dark",
+          "dark"
+        ],
+        "480": [
+          "water",
+          "dark",
+          "water"
+        ],
+        "211": [
+          "fire",
+          "fire",
+          "fire"
+        ]
+      },
+      "damage_exact": false,
+      "damage_source": "hud",
+      "points_deduits": {
+        "t": 192,
+        "points": 37659550761968,
+        "separateur_perdu": true
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x163, chrono 0.94"
+    ]
+  },
+  {
+    "video_id": "FLCbZ5tzf_8",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-20T18:54:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 40893206680101,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 217,
+    "stage": null,
+    "team": null,
+    "score": 189,
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": false,
+      "player_score": null,
+      "hunter_ranks": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "hunter_ranks_lus": 0,
+      "n_images": 1,
+      "successor_score": null,
+      "successeur_present": false,
+      "rc_texte": [
+        381
+      ],
+      "duree_video_s": 612,
+      "votes": {
+        "final_score": [
+          [
+            40893206680101,
+            1
+          ]
+        ],
+        "rage_count": [
+          [
+            189,
+            1
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            1
+          ]
+        ]
+      },
+      "rc_images": 1,
+      "final_images": 1,
+      "rc_t": {
+        "189": 217
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            217,
+            189
+          ]
+        ],
+        "final_score": [
+          [
+            217,
+            40893206680101
+          ]
+        ]
+      },
+      "par_t": [
+        [
+          217,
+          {
+            "final_score": 40893206680101,
+            "rage_count": 189,
+            "play_time": "03:00"
+          }
+        ]
+      ],
+      "t_debut": 217,
+      "t_fin": 217,
+      "elements_hud_images": [
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        [
+          "fire",
+          "fire",
+          "fire"
+        ]
+      ],
+      "elements_hud": [
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire",
+        "fire"
+      ],
+      "hud_rage_count": 163
+    },
+    "notes": [
+      "contrôle sans Hunter Rank : boss illisible",
+      "contrôle sans Hunter Rank : Rage Count lu sur une seule image",
+      "contrôle sans Hunter Rank : Final Score 40893206680101 hors de [Points HUD 30916695595019 ; × 1.02]",
+      "contrôle sans Hunter Rank : Player's Score illisible"
+    ]
+  },
+  {
+    "video_id": "FLCbZ5tzf_8",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-20T18:54:38Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 2312,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 225,
+    "stage": null,
+    "team": null,
+    "score": 3,
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": null,
+      "new_record": false,
+      "player_score": null,
+      "hunter_ranks": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "hunter_ranks_lus": 0,
+      "n_images": 1,
+      "successor_score": null,
+      "successeur_present": false,
+      "rc_texte": [
+        381
+      ],
+      "duree_video_s": 612,
+      "votes": {
+        "final_score": [
+          [
+            2312,
+            1
+          ]
+        ],
+        "rage_count": [
+          [
+            3,
+            1
+          ]
+        ]
+      },
+      "rc_images": 1,
+      "final_images": 1,
+      "rc_t": {
+        "3": 225
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            225,
+            3
+          ]
+        ],
+        "final_score": [
+          [
+            225,
+            2312
+          ]
+        ]
+      },
+      "par_t": [
+        [
+          225,
+          {
+            "final_score": 2312,
+            "rage_count": 3
+          }
+        ]
+      ],
+      "t_debut": 225,
+      "t_fin": 225,
+      "hud_rage_count": 163
+    },
+    "notes": [
+      "contrôle sans Hunter Rank : boss illisible",
+      "contrôle sans Hunter Rank : Play Time illisible",
+      "contrôle sans Hunter Rank : Rage Count lu sur une seule image",
+      "contrôle sans Hunter Rank : Final Score 2312 hors de [Points HUD 30916695595019 ; × 1.02]",
+      "contrôle sans Hunter Rank : Player's Score illisible"
+    ]
+  },
+  {
+    "video_id": "vt47IaCcMQg",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-20T17:40:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 10,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 205118224990,
+      "hud_rage_count": 55,
+      "separateur_perdu": false,
+      "elements_hud": [
+        "water",
+        "water",
+        "water"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "vt47IaCcMQg",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-20T17:40:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 190,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": 75475270345130,
+      "chrono_hud": 21.2,
+      "separateur_perdu": false,
+      "hud_rage_count": 157,
+      "elements_hud": [
+        "water",
+        "water",
+        "water"
+      ],
+      "t_debut": 6,
+      "t_fin": 190,
+      "elements_hud_par_t": {
+        "6": [
+          null,
+          "water",
+          "water"
+        ],
+        "8": [
+          "water",
+          null,
+          "water"
+        ],
+        "60": [
+          "water",
+          null,
+          null
+        ],
+        "110": [
+          "water",
+          "water",
+          null
+        ],
+        "190": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x157, chrono 21.2"
+    ]
+  },
+  {
+    "video_id": "DdbMYl54aZU",
+    "channel_id": "UCj01oba-0Kuz8yj3dwC_ZXw",
+    "channel_title": "creative joker",
+    "published_at": "2026-11-20T13:45:30Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 110,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 50078691140,
+      "hud_rage_count": 35,
+      "separateur_perdu": true,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "DdbMYl54aZU",
+    "channel_id": "UCj01oba-0Kuz8yj3dwC_ZXw",
+    "channel_title": "creative joker",
+    "published_at": "2026-11-20T13:45:30Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 186171442922,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 240,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": 186171442922,
+      "chrono_hud": 0.69,
+      "separateur_perdu": false,
+      "hud_rage_count": 57,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ],
+      "t_debut": 90,
+      "t_fin": 493,
+      "elements_hud_par_t": {
+        "90": [
+          null,
+          null,
+          null
+        ],
+        "130": [
+          null,
+          null,
+          null
+        ],
+        "140": [
+          null,
+          null,
+          null
+        ],
+        "150": [
+          null,
+          null,
+          null
+        ],
+        "160": [
+          null,
+          null,
+          null
+        ],
+        "170": [
+          null,
+          null,
+          null
+        ],
+        "200": [
+          null,
+          null,
+          null
+        ],
+        "230": [
+          null,
+          null,
+          null
+        ],
+        "240": [
+          null,
+          null,
+          null
+        ],
+        "280": [
+          null,
+          null,
+          null
+        ],
+        "400": [
+          null,
+          null,
+          null
+        ],
+        "410": [
+          null,
+          null,
+          null
+        ],
+        "430": [
+          null,
+          null,
+          null
+        ],
+        "493": [
+          null,
+          null,
+          null
+        ]
+      },
+      "damage_exact": false,
+      "damage_source": "hud",
+      "points_deduits": {
+        "t": 242,
+        "points": 185638111082,
+        "separateur_perdu": false
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x57, chrono 0.69"
     ]
   }
 ]

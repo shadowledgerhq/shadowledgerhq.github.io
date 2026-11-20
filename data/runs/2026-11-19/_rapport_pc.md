@@ -131,3 +131,18 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Durée du passage : 0 min
 - Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-daily 2026-11-20T22:16:26.746948+00:00 -->
+## Passage pc-daily — 2026-11-20 23:16 (Paris)
+
+- Top 10 couvert : non (20 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 9 · en_cours restantes : 30 (dont 20 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 97 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Résumé GB : vt47IaCcMQg · Ahmad1195 · aucun Results lu · 205 RC à vérifier · score provisoire (titre) : 205 rc
+- Résumé GB : FLCbZ5tzf_8 · SNG · Results lu (190-277 s) · 192 RC à vérifier · fire · contrôle sans Hunter Rank : boss illisible
+- Résumé GB : DdbMYl54aZU · creative joker · Results lu (505-511 s) · 75 RC à vérifier · score provisoire (description) : 75 rage
+- Résumé GB : XVzx3w07JPo · Eden(이든) · aucun Results lu · 177 RC à vérifier · score provisoire (description) : Rage 177
