@@ -197,9 +197,9 @@
     "whisper_cmd": null,
     "whisper_model": "small",
     "whisper_max_minutes": 15,
-    "max_videos": 300,
+    "max_videos": 8,
     "budget_minutes": 180,
-    "pause_s": 5,
+    "pause_s": 20,
     "yt_dlp_options": [],
     "_yt_dlp_options": "Options ajoutées à chaque appel de yt-dlp, ex. [\"--impersonate\", \"chrome\"] (nécessite yt-dlp[default,curl-cffi]) si YouTube répond 429.",
     "geler": false,
@@ -227,7 +227,7 @@
       "tri3_pas_s": 2,
       "tri3_ocr_complet": true,
       "tri4_pas_s": 10,
-      "max_videos": 15,
+      "max_videos": 6,
       "max_minutes": 30
     }
   },
