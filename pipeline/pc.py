@@ -728,6 +728,7 @@ def _ocr_image(outils, png, langs, cfg, st, complet=False, collecte=False):
             petit = outils.reduire(png, cfg.get("ocr_largeur_rapide", 960))
             rapide = outils.ocr(petit, langs, cfg.get("ocr_psm_rapide", 11), cfg.get("ocr_timeout_rapide_s", 40))
             Path(petit).unlink(missing_ok=True)
+            st["rapide_rejete"] = rapide      # diagnostic (--garder-ocr) : texte de l'image écartée par le filtre rapide
             if not ressemble_ecran(rapide) and not (collecte and libelles_inconnus.ressemble_score(rapide)):
                 return ""                      # v24 : `collecte` laisse passer un écran de score à libellés inconnus (autre langue)
         st["candidates"] += 1
@@ -993,7 +994,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                             if type_img == "bot":
                                 zones = {"armes_sjw_vides": zone_armes_bot(png, config), "bot": zb}
                         vus[h] = (texte, zones)
-                        _garder(ocr_debug, vid, f"tri{tri}", t, texte, png)
+                        _garder(ocr_debug, vid, f"tri{tri}", t, texte or st.pop("rapide_rejete", ""), png)
                     if ocr_ecrans.detecter(texte) in RESULTATS_TYPES:
                         detectes.append(t)
                     nl = ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
