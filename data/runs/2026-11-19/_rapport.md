@@ -1,10 +1,10 @@
-# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-21 00:58 (Paris)
+# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-21 01:31 (Paris)
 
 - Top 10 couvert : non (20 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (vidéos restantes à traiter)
 - Vidéos traitées ce passage : 2 · en_cours restantes : 30 (dont 20 à traiter par le PC)
 - Erreurs bloquantes : aucune
-- Durée du passage : 18 min
+- Durée du passage : 19 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Résumé GB : XVzx3w07JPo · Eden(이든) · aucun Results lu · 177 RC à vérifier · score provisoire (description) : Rage 177
 
