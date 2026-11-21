@@ -4205,7 +4205,7 @@
     "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
     "published_at": "2026-11-20T12:43:29Z",
     "first_seen": "2026-11-20",
-    "updated_at": "2026-11-20",
+    "updated_at": "2026-11-21",
     "last_tri": 4,
     "status": "en_cours",
     "modes": [
@@ -4215,8 +4215,17 @@
     "regles": 18,
     "pc": {
       "sous_titres": "absent",
-      "date": "2026-11-20",
+      "date": "2026-11-21",
       "tri2": "fait",
+      "hauteurs": [
+        144,
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080
+      ],
       "image_taille": [
         1920,
         1080
