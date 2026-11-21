@@ -717,7 +717,8 @@ def langues_ocr(meta, cfg):
 
 def ressemble_ecran(texte):
     bas = ocr_ecrans.normaliser(texte).lower()
-    return any(m in bas for m in MARQUEURS_ECRAN) or "phase1" in ocr_ecrans.compact(texte) or ("points" in bas and "boss rage" in bas)
+    return (any(m in bas for m in MARQUEURS_ECRAN) or "phase1" in ocr_ecrans.compact(texte) or ("points" in bas and "boss rage" in bas)
+            or ocr_ecrans.langue_hud(texte) is not None)      # v37 : HUD du combat GB dans toute langue de `config.gb.libelles` (ko : POINT + 보스 격노 횟수)
 
 
 def _ocr_image(outils, png, langs, cfg, st, complet=False, collecte=False):

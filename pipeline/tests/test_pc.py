@@ -207,3 +207,10 @@ if __name__ == "__main__":
     for nom, fn in list(globals().items()):
         if nom.startswith("test_"):
             fn(); print("ok", nom)
+
+
+def test_filtre_rapide_laisse_passer_le_hud_gb_coreen():
+    """XVzx3w07JPo (ko) : le HUD `POINT` + `보스 격노 횟수` était écarté par le filtre rapide du tri 4 (38 images, 0 retenue)."""
+    texte = "Lv.150 창 해 의 물 다르고\n© 13.58)\nPOINT\n보스 격노 횟수\n죽 음 을 거 부 하며 격 노 합니다\n22 HITS"
+    assert pc.ressemble_ecran(texte)
+    assert not pc.ressemble_ecran("헌터 관리국 정밀도 99% 방어력 85.69%")
