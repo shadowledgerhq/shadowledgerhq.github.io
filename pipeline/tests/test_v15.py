@@ -309,3 +309,12 @@ def test_v38_zone_amputee_remplacee_par_le_texte_entier():
 def test_v38_variantes_compteurs_configurees():
     v = CONFIG["gb"]["zones_ocr"]
     assert len(v["variantes_compteurs"]) > len(v["variantes"]) and {"echelle": 4, "seuil": 140} in v["variantes_compteurs"]
+
+
+def test_v38_rc_apres_le_final_score_en_coreen():
+    """XVzx3w07JPo (ko) : pas de libellé « Rage Count » lisible ; `20,271,045,215,627 177` -> 177 recoupe une zone « 77 »."""
+    assert ocr_ecrans.rc_apres_final("‘20,271,045,215,627 177 5 Y") == 177
+    assert ocr_ecrans.rc_apres_final("20,271,045,215,627") is None and ocr_ecrans.rc_apres_final("") is None
+    e = {"rage_count": None, "rage_count_texte": 177}
+    ocr_ecrans._appliquer_zones(e, {"format_ok": True, "rage": "77"}, CONFIG)
+    assert e["rage_count"] == 177
