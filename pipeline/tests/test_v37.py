@@ -1,6 +1,7 @@
 """SPEC_ETAPE1 v37 : actualités probables (tri 1), ordre du PC, décision du tri 3 sur l'image, libellés inconnus."""
 import sys
 import tempfile
+import pytest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -14,6 +15,12 @@ from test_tri34 import GB_RESULTS, HUD_228, OutilsImages, meta
 from test_v29 import SEM
 
 CONFIG = charger_config()
+
+
+@pytest.fixture(autouse=True)
+def _racine_temporaire(tmp_path, monkeypatch):
+    """`libelles_inconnus.garder` écrit sous `pc.RACINE` : jamais dans le vrai dépôt (docs/essais/ocr/libelles_inconnus)."""
+    monkeypatch.setattr(pc, "RACINE", tmp_path)
 FORUM = "forum.netmarble.com\nOFFICIAL CHANNELS\nEnter Redeem Code\nNotices\nNew SSR Hunter & Exclusive Weapon Added\n11/19 Update Content Preview"
 BATALHA = "Categoria de Batalha\nPoder Total 3,301,661\nHabilidade de Luta Max. 14,016,128\nPoder Total 2,462,079\nPoder Total 2,457,762"
 T_LKN = "🚨 SOLO LEVELING ARISE BEYOND – IMPORTANT LAST UPDATE! 🔥 NEW SSR WEAPONS, THALIA & GUILD BOSS UPDATE!"
