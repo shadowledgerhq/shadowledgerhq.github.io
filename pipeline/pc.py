@@ -763,10 +763,12 @@ def lire_zones_results(outils, png, config, type_ecran="gb_results", texte=None,
     if taille and taille[1] and abs(taille[0] / taille[1] - 16 / 9) > gb_cfg.get("format_tolerance", 0.02):
         return {"format_ok": False}
     sortie = {"format_ok": True}
-    variantes = (gb_cfg.get("zones_ocr") or {}).get("variantes") or [{"echelle": 3, "seuil": None}]
+    zocr = gb_cfg.get("zones_ocr") or {}
+    variantes = zocr.get("variantes") or [{"echelle": 3, "seuil": None}]
     for nom, zone in zones.items():
         textes = []
-        for v in variantes:          # plusieurs prétraitements (seuil / agrandissement) puis vote : un chiffre mal lu est écarté
+        # v38 : les compteurs (un « 1 » étroit se perd selon l'échelle) sont lus sous plus de prétraitements (`variantes_compteurs`)
+        for v in (zocr.get("variantes_compteurs") or variantes) if nom in ocr_ecrans.ZONES_COMPTEURS else variantes:          # plusieurs prétraitements (seuil / agrandissement) puis vote : un chiffre mal lu est écarté
             try:
                 petit = outils.recadrer(png, zone, v.get("echelle", 3), v.get("seuil"))
                 chiffres = None if nom in ZONES_TEXTE else ["-c", "tessedit_char_whitelist=0123456789,.:"]

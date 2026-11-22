@@ -435,6 +435,9 @@ def _appliquer_zones(ecran, zones, config):
         if z[champ] is None:
             continue
         image = ecran.get(champ)
+        if (champ == "rage_count" and isinstance(image, int) and image > z[champ] and str(image).endswith(str(z[champ]))):
+            notes.append("RC de la zone amputé du 1er chiffre : texte entier retenu")      # v38 : « 7 » / « 77 » dans la zone, « 177 » dans le texte
+            continue
         if image is not None and image != z[champ] and (champ != "stage" or boss_connu(image, config)):
             notes.append(f"écart OCR zone/image : {champ}")
         ecran[champ] = z[champ]
@@ -586,11 +589,14 @@ def zone_valide(nom, texte, config=None):
     return bool(t.strip())
 
 
+ZONES_COMPTEURS = ("rage", "g1_rc", "g2_rc", "challenge", "total_rage", "hud_rage")
+
+
 def consensus_zone(nom, textes, config=None):
     """Lectures d'une même zone sous plusieurs prétraitements -> la plus fréquente parmi les lectures plausibles ; à égalité,
     la première variante ; sans lecture plausible, la première lecture non vide."""
     valides = [t for t in textes if zone_valide(nom, t, config)]
-    if nom in ("rage", "g1_rc", "g2_rc", "challenge", "total_rage", "hud_rage") and len(valides) > 1:
+    if nom in ZONES_COMPTEURS and len(valides) > 1:
         # v37 : un compteur dont le 1er chiffre étroit (« 1 ») est perdu donne une lecture plus courte (177 lu 7 à l'échelle 2) :
         # une lecture dont les chiffres sont la FIN d'une autre lecture plus longue est écartée (l'OCR perd des chiffres, il n'en répète pas)
         chiffres = {t: str(_entier_court(t, 4)) for t in valides}
@@ -754,6 +760,12 @@ def fusionner_results(lectures, config=None):
                 anciens.append(l)                      # lecture fusionnée avant v23 (sans `par_t`), seule de son écran : votes gardés tels quels
             else:
                 par_t[l["t"] or 0] = {c: v for c, v in _valeurs_results(l).items() if v is not None}
+        # v38 : un Rage Count lu sur une image est écarté s'il est la FIN d'un RC plus long lu sur une autre image (l'OCR perd le « 1 » étroit, il n'en ajoute pas)
+        lus_rc = {v["rage_count"] for v in par_t.values() if v.get("rage_count") is not None}
+        lus_rc |= {int(k) for l in anciens for k in ((l.get("detail") or {}).get("rc_t") or {}) if str(k).isdigit()}
+        amputes = {v for v in lus_rc if any(w > v and str(w).endswith(str(v)) for w in lus_rc)}
+        if amputes:
+            par_t = {t_i: {c: x for c, x in vals.items() if not (c == "rage_count" and x in amputes)} for t_i, vals in par_t.items()}
         votes = {}
         for vals in par_t.values():
             for champ, v in vals.items():

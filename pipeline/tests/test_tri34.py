@@ -523,7 +523,7 @@ def test_v13_zones_ecart_et_format():
     o = O((1280, 720))
     z = pc.lire_zones_results(o, "x.png", CONFIG)
     nb = len(CONFIG["gb"]["zones_ocr"]["variantes"])
-    assert z["format_ok"] and set(CONFIG["gb"]["zones"]) <= set(z) and len(o.appels) == len(CONFIG["gb"]["zones"]) * nb      # une lecture par variante
+    assert z["format_ok"] and set(CONFIG["gb"]["zones"]) <= set(z) and len(o.appels) == sum(len(CONFIG["gb"]["zones_ocr"].get("variantes_compteurs", []) if n in ocr_ecrans.ZONES_COMPTEURS else range(nb)) for n in CONFIG["gb"]["zones"])      # une lecture par variante (v38 : plus pour les compteurs)
     assert {"boss", "joueur", "final", "rage", "temps", *[f"rang_{k}" for k in range(1, 7)]} == set(CONFIG["gb"]["zones"])
     assert pc.lire_zones_results(O((1080, 1920)), "x.png", CONFIG) == {"format_ok": False}      # Short vertical
     assert pc.lire_zones_results(O((1440, 1080)), "x.png", CONFIG) == {"format_ok": False}      # 4:3

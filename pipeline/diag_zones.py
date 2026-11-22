@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ocr_ecrans                          # noqa: E402
 import pc                                   # noqa: E402
 from donnees import charger_config          # noqa: E402
 
@@ -31,7 +32,7 @@ def main(argv):
             print(f"zone inconnue : {nom}")
             continue
         print(f"\n== zone {nom} {zone}")
-        for i, v in enumerate((gb.get("zones_ocr") or {}).get("variantes") or [{"echelle": 3, "seuil": None}]):
+        for i, v in enumerate(((gb.get("zones_ocr") or {}).get("variantes_compteurs") if nom in ocr_ecrans.ZONES_COMPTEURS else None) or (gb.get("zones_ocr") or {}).get("variantes") or [{"echelle": 3, "seuil": None}]):
             petit = outils.recadrer(image, zone, v.get("echelle", 3), v.get("seuil"))
             copie = sortie / f"{image.stem}_{nom}_v{i}.png"
             shutil.copyfile(petit, copie)

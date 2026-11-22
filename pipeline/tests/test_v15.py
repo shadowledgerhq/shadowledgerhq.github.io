@@ -287,3 +287,25 @@ if __name__ == "__main__":
             f()
             print("ok", nom)
 
+
+
+def test_v38_rc_amputé_du_premier_chiffre_ecarte_entre_images():
+    """XVzx3w07JPo : la zone lit 7, 7, 7, 77, 77 (vrai 177) ; une image lit 177 : les fins de 177 sont écartées, pas de conflit."""
+    res = _un_ecran([img(218, 177), img(219, 7), img(220, 7), img(221, 77), img(222, 77)])
+    assert res["score"] == 177 and not any(n.startswith(("conflit de lecture : rage", "RC discordant")) for n in res["notes"])
+
+
+def test_v38_zone_amputee_remplacee_par_le_texte_entier():
+    """Zone `rage` « 7 » mais texte entier « Rage Count 177 » : le texte entier est gardé (note) ; zone plus longue ou différente : la zone prime."""
+    for zone, attendu in (("7", 177), ("77", 177), ("177", 177), ("188", 188)):
+        e = {"rage_count": 177}
+        ocr_ecrans._appliquer_zones(e, {"format_ok": True, "rage": zone}, CONFIG)
+        assert e["rage_count"] == attendu
+    e = {"rage_count": 177}
+    ocr_ecrans._appliquer_zones(e, {"format_ok": True, "rage": "7"}, CONFIG)
+    assert "RC de la zone amputé du 1er chiffre : texte entier retenu" in e["notes_extra"]
+
+
+def test_v38_variantes_compteurs_configurees():
+    v = CONFIG["gb"]["zones_ocr"]
+    assert len(v["variantes_compteurs"]) > len(v["variantes"]) and {"echelle": 4, "seuil": 140} in v["variantes_compteurs"]
