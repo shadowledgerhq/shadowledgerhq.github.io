@@ -225,3 +225,11 @@ def test_v37_rc_du_results_inferieur_au_hud_n_est_pas_sur():
     assert r["confidence"] == "a_verifier" and not r["exact"] and "un compteur ne décroît pas" in r["notes"][-1]
     assert gb.rc_contredit_par_hud({**run, "score": 177})["confidence"] == "sur"
     assert gb.rc_contredit_par_hud({**run, "detail": {}})["confidence"] == "sur"
+
+
+def test_v37_consensus_rage_ecarte_la_lecture_amputee_du_premier_chiffre():
+    """XVzx3w07JPo : variante échelle 2 + seuil 140 lit `7`, échelle 3 lit `177` ; à égalité la 1re variante gagnait (RC 7 sûr, faux)."""
+    import ocr_ecrans as oe
+    assert oe.consensus_zone("rage", ["re", "7", "177"], {}) == "177"
+    assert oe.consensus_zone("rage", ["177", "7", "7"], {}) == "177"
+    assert oe.consensus_zone("rage", ["7", "7", "7"], {}) == "7"

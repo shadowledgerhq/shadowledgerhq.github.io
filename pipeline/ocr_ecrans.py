@@ -590,6 +590,11 @@ def consensus_zone(nom, textes, config=None):
     """Lectures d'une même zone sous plusieurs prétraitements -> la plus fréquente parmi les lectures plausibles ; à égalité,
     la première variante ; sans lecture plausible, la première lecture non vide."""
     valides = [t for t in textes if zone_valide(nom, t, config)]
+    if nom in ("rage", "g1_rc", "g2_rc", "challenge", "total_rage", "hud_rage") and len(valides) > 1:
+        # v37 : un compteur dont le 1er chiffre étroit (« 1 ») est perdu donne une lecture plus courte (177 lu 7 à l'échelle 2) :
+        # une lecture dont les chiffres sont la FIN d'une autre lecture plus longue est écartée (l'OCR perd des chiffres, il n'en répète pas)
+        chiffres = {t: str(_entier_court(t, 4)) for t in valides}
+        valides = [t for t in valides if not any(len(c) > len(chiffres[t]) and c.endswith(chiffres[t]) for c in chiffres.values())]
     if valides:
         normalises = [re.sub(r"\s+", " ", t.strip()) for t in valides]
         return max(dict.fromkeys(normalises), key=normalises.count)
