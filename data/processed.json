@@ -4211,7 +4211,7 @@
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
     "pc": {
       "sous_titres": "absent",
