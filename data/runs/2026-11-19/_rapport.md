@@ -1,4 +1,8 @@
-# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-21 01:31 (Paris)
+# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-21 02:04 (Paris)
+
+- **Passage complet : non** (passage interrompu (PC éteint, fenêtre fermée ou processus tué : aucune erreur enregistrée))
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : passage interrompu (PC éteint, fenêtre fermée ou processus tué : aucune erreur enregistrée)
 
 - Top 10 couvert : non (20 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (vidéos restantes à traiter)

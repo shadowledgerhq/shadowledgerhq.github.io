@@ -4211,33 +4211,11 @@
     "modes": [
       "gb"
     ],
-    "pc_needed": false,
+    "pc_needed": true,
     "regles": 18,
     "pc": {
       "sous_titres": "absent",
-      "date": "2026-11-21",
-      "tri2": "fait",
-      "hauteurs": [
-        144,
-        180,
-        240,
-        360,
-        480,
-        720,
-        1080
-      ],
-      "image_taille": [
-        1920,
-        1080
-      ],
-      "libelles_inconnus": "ko",
-      "hud_suite": [],
-      "results_lus": [],
-      "hud_amont": [],
-      "tri3": "fait",
-      "tri4": "fait",
-      "rotation": "fait",
-      "rotation_version": 11
+      "date": "2026-11-21"
     }
   },
   "ofbxuWCxT7U": {

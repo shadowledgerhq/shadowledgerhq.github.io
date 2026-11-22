@@ -168,3 +168,10 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Durée du passage : 19 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Résumé GB : XVzx3w07JPo · Eden(이든) · aucun Results lu · 177 RC à vérifier · score provisoire (description) : Rage 177
+
+<!-- passage-pc pc-daily 2026-11-21T01:04:50.438571+00:00 -->
+## Passage pc-daily — 2026-11-21 02:04 (Paris)
+
+- **Passage complet : non** (passage interrompu (PC éteint, fenêtre fermée ou processus tué : aucune erreur enregistrée))
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : passage interrompu (PC éteint, fenêtre fermée ou processus tué : aucune erreur enregistrée)
