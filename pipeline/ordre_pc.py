@@ -65,16 +65,35 @@ def candidate(info, vid):
     return True if vid not in info else info[vid][0]
 
 
-def ordonner(d, week, ids):
-    """`ids` (ordre d'origine conservé à égalité) -> (liste ordonnée, ensemble des candidates)."""
+def derniers(d, week, processed, ids, max_minutes=30):
+    """v37 §6 : vidéos traitées APRÈS toutes les autres et jamais comptées dans « Top 10 couvert » : `processed.hors_sujet_probable`, ou
+    durée > `max_minutes` (30) sans score dans le texte (titre, description, sous-titres). Vidéo dont le tri 3 a vu un écran de jeu : non."""
+    import tri1
+    from pc import duree_minutes
+    videos, lectures = d.videos(week), d.lectures(week)
+    sortie = set()
+    for v in ids:
+        p = processed.get(v) or {}
+        if (p.get("pc") or {}).get("ecran_jeu"):
+            continue
+        minutes = duree_minutes((videos.get(v) or {}).get("duration"))
+        if p.get("hors_sujet_probable") or (minutes is not None and minutes > max_minutes and not tri1.score_dans_le_texte(lectures, v)):
+            sortie.add(v)
+    return sortie
+
+
+def ordonner(d, week, ids, processed=None, max_minutes=30):
+    """`ids` (ordre d'origine conservé à égalité) -> (liste ordonnée, ensemble des candidates). v37 : avec `processed`, les vidéos
+    `derniers` passent après toutes les autres et ne sont jamais candidates."""
     info = analyser(d, week)
-    cand = {v for v in ids if candidate(info, v)}
+    fin = derniers(d, week, processed, ids, max_minutes) if processed is not None else set()
+    cand = {v for v in ids if candidate(info, v) and v not in fin}
     grand = 10 ** 9
 
     def cle(i_v):
         i, v = i_v
         rang = info.get(v, (False, None))[1]
-        return (0 if v in cand else 1, grand if rang is None else rang, i)
+        return (1 if v in fin else 0, 0 if v in cand else 1, grand if rang is None else rang, i)
     return [v for _, v in sorted(enumerate(ids), key=cle)], cand
 
 
@@ -88,7 +107,8 @@ def candidates_restantes(d, week, processed):
     """Nombre de vidéos candidates au top 10 encore en attente du PC."""
     ids = en_attente(processed, week)
     info = analyser(d, week)
-    return sum(1 for v in ids if candidate(info, v))
+    fin = derniers(d, week, processed, ids)         # v37 : hors sujet probable et vidéos longues sans score : jamais comptées
+    return sum(1 for v in ids if candidate(info, v) and v not in fin)
 
 
 def ligne_top10(n):

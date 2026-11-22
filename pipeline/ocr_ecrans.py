@@ -206,6 +206,20 @@ def manual_sans_titre(texte, config=None):
     return "manual" in cp and not _titre_bot_lu(cp, config)
 
 
+def page_web(texte, config=None):
+    """v37 : le texte porte un marqueur de `config.pages_web.marqueurs` (forum, site officiel filmés dans le navigateur) : jamais un écran de jeu."""
+    cp = compact(texte)
+    return any(compact(m) in cp for m in ((config or _config()).get("pages_web") or {}).get("marqueurs") or [])
+
+
+def ecran_de_jeu(texte, config=None):
+    """v37 (tri 3, §3) : l'image est-elle un écran de jeu du mode ? Écran RECONNU : `detecter` (Results / RESULT, Personal Record, HUD de combat,
+    RESULT BOT par ses temps), HUD du BOT (`MANUAL`), composition ou fiche (`config.ecrans_exclus`). Une page web filmée ne l'est jamais."""
+    if not texte or page_web(texte, config):
+        return False
+    return bool(ecran_exclu(texte, config) or manual_sans_titre(texte, config) or detecter(texte, config) is not None)
+
+
 def detecter(texte, config=None):
     """Type d'écran d'après ses libellés, ou None. `gb_record` avant `gb_results` ; HOTM avant POC. v29 : écran exclu -> None."""
     if ecran_exclu(texte, config):

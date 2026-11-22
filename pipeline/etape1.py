@@ -21,7 +21,7 @@ from semaine import (PARIS, bornes, dans_creneau, id_semaine, iso_utc, maintenan
 from bot_saison import NOTE_CHALLENGE, lire_saison_semaine, titre_challenge
 from hotm_ecran import lire_porte
 import scores
-from tri1 import candidats_en_chapitres, lectures_texte, remplacer_lectures
+from tri1 import candidats_en_chapitres, lectures_texte, marquer_hors_sujet, remplacer_lectures
 from youtube import ApiYouTube, recherche
 
 JEUDI = 3
@@ -79,6 +79,7 @@ def passage_recherche(d, config, week, debut, fin, gelee, instant):
                               "updated_at": jour, "last_tri": 1, "status": "en_cours",
                               "modes": m["mode_guess"], "pc_needed": True,
                               "regles": config.get("tri1_version")}
+            marquer_hors_sujet(processed[vid], m, lectures, config)      # v37 §2.3 : marquage seulement, jamais un rejet
             resume["nouvelles"] += 1
     d.ecrire(f"runs/{week}/_videos.json", videos)
     d.ecrire(f"runs/{week}/_lectures.json", lectures)

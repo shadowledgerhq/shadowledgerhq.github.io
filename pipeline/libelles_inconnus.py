@@ -17,6 +17,8 @@ def ressemble_score(texte):
     if not texte:
         return False
     import ocr_ecrans
+    if ocr_ecrans.page_web(texte):                  # v37 : page web filmée (forum) : jamais un écran de jeu, jamais collectée
+        return False
     if ocr_ecrans.ecran_exclu(texte) or ocr_ecrans.manual_sans_titre(texte):         # v29 : écrans exclus (composition, fiche de chasseur…) jamais collectés
         return False
     if _CHRONO.search(texte):

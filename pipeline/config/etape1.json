@@ -73,7 +73,7 @@
     "semaines_calcul": 1,
     "reset_boss_heures": 6,
     "boss_alias": {},
-    "phases_par_boss": {"_doc": "v36 : nombre de phases du RESULT BOT par boss (clé = nom normalisé sans accents ni espaces) ; boss inconnu ou non lu (lecture par zone) = defaut. Baruka = 3 [À VÉRIFIER : capture §3.1 v4 et Lt84IhMjBvM].", "defaut": 3, "baruka": 3},
+    "phases_par_boss": {"_doc": "v36 : nombre de phases du RESULT BOT par boss (clé = nom normalisé sans accents ni espaces) ; boss inconnu ou non lu (lecture par zone) = defaut. Baruka = 3 (v37, vu sur la capture §3.1 v4 et sur Lt84IhMjBvM).", "defaut": 3, "baruka": 3},
     "_reset_boss_heures": "SPEC v34 §4.5 : vidéo BOT publiée moins de 6 h après le reset et dont le boss lu (écran Results) diffère du boss de référence de la semaine (≥ 3 vidéos) = semaine précédente (rejet) ; boss identique = note « semaine précédente ? » retirée. `boss_alias` : {nom lu: identifiant commun} comme `gb.boss_alias` (noms de boss BOT dans d'autres langues), vide tant qu'aucun nom n'est connu.",
     "challenge": ["challenge", "チャレンジ", "챌린지"],
     "libelles": {
@@ -172,6 +172,14 @@
     "results_fin_max_s": 60,
     "_doc": "SPEC §4.7 (v7) : marge sur le moment estimé de la capture du Personal Record, selon la plus petite unité de Time Left in Season : heures -> 60 min ; jours seulement -> 24 h ; minutes -> 1 min."
   },
+  "hors_sujet_mots": {
+    "_doc": "SPEC v37 §2.3 : un titre contenant un de ces mots (comparés sans accents ni casse, en MOT ENTIER ; les mots coréens, japonais et chinois : sous-chaîne) ET aucun score lu dans le texte (titre, description, sous-titres) -> `processed.hors_sujet_probable` (marquage seulement, jamais un rejet sur le titre seul). Mots de départ [À VÉRIFIER sur les titres des semaines].",
+    "mots": ["update", "patch notes", "codes", "live", "news", "leak", "resumo", "atualização", "atualizacao", "novidades", "업데이트", "패치노트", "쿠폰", "アップデート", "生放送"]
+  },
+  "pages_web": {
+    "_doc": "SPEC v37 §3 : marqueurs d'une page web filmée (forum Netmarble, site officiel). Un seul suffit : l'image n'est jamais un écran de jeu (ni compte pour le tri 3, ni collectée dans libelles_inconnus). Comparés sans accents, casse ni espaces.",
+    "marqueurs": ["netmarble.com", "OFFICIAL CHANNELS", "Combined Search", "https://", "http://"]
+  },
   "tri1_version": 18,
   "reset_alerte_heures": 3,
   "_reset_alerte_heures": "Décision de la discussion 1 : 3 h, à réajuster après 3 semaines de données (début décembre 2026).",
@@ -228,7 +236,9 @@
       "tri3_ocr_complet": true,
       "tri4_pas_s": 10,
       "max_videos": 6,
-      "max_minutes": 30
+      "max_minutes": 30,
+      "decision_max_minutes": 240,
+      "_decision": "SPEC v37 §3 : vidéo marquée hors sujet ou de plus de max_minutes SANS score dans le texte : tri 3 seul (téléchargée jusqu'à decision_max_minutes), rejetée « actualités : aucun écran de jeu » si aucune image du début ni de la fin n'est un écran de jeu ; au-delà de decision_max_minutes, laissée en dernier [À VÉRIFIER : durée du téléchargement]."
     }
   },
   "_a_confirmer": [

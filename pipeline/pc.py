@@ -40,6 +40,7 @@ import hunters_results
 import ordre_pc
 import rapport_pc
 import relectures
+import tri1
 from tri1 import lectures_texte
 
 
@@ -938,7 +939,11 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
     v33 : `apres(chemin, tmp)` est appelée une fois les tris faits, sur la vidéo DÉJÀ téléchargée (relevé de rotation, SPEC_ROTATION §1)."""
     cfg = config["pc"]["images"]
     minutes = duree_minutes(meta.get("duration"))
-    if minutes is None or minutes > cfg["max_minutes"]:
+    # v37 §3 : décision sur l'image pour une vidéo marquée hors sujet ou longue, SANS score dans le texte (jamais si un écran de jeu a déjà été vu)
+    sans_texte = not tri1.score_dans_le_texte(lectures, vid)
+    longue = minutes is not None and minutes > cfg["max_minutes"]
+    decision = sans_texte and not pc.get("ecran_jeu") and (longue or tri1.mot_hors_sujet(meta.get("title"), config) is not None)
+    if minutes is None or (longue and not (decision and minutes <= cfg.get("decision_max_minutes", 240))):
         return lectures, f"{vid} : durée {meta.get('duration')} hors limite ({cfg['max_minutes']} min), images non traitées", False
     langs = langues_ocr(meta, cfg)
     fin = horloge() + cfg.get("budget_video_min", 15) * 60
@@ -960,6 +965,7 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                     continue
                 source = "debut-fin" if tri == 3 else "video-complete"
                 nouvelles, st, complet, vus, detectes = [], {"images": 0, "doublons": 0, "candidates": 0, "lentes": 0}, True, {}, []
+                jeu_vu = False
                 t0 = horloge()
                 hauteur = cfg.get("tri4_hauteur", 720) if tri == 4 else None      # v15 : tri 3 et Results en 1080p, tri 4 en 720p
                 for t, png in outils.images(chemin, segments_tri(tri, minutes * 60, cfg), tmp, hauteur=hauteur):
@@ -1000,10 +1006,23 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         _garder(ocr_debug, vid, f"tri{tri}", t, texte or st.pop("rapide_rejete", ""), png)
                     if ocr_ecrans.detecter(texte) in RESULTATS_TYPES:
                         detectes.append(t)
+                    if tri == 3 and not jeu_vu and ocr_ecrans.ecran_de_jeu(texte, config):
+                        jeu_vu = True
                     nl = ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
                     _elements_hud(png, config, nl)
                     nouvelles += nl
                     Path(png).unlink(missing_ok=True)
+                if tri == 3 and complet:
+                    if jeu_vu or nouvelles:
+                        pc["ecran_jeu"] = True                       # v37 : un écran de jeu vu : plus jamais « hors sujet probable »
+                    elif decision:
+                        pc["rejet"], pc["tri3"], pc["tri4"], pc["date"] = "actualites", "fait", "inutile", jour
+                        journal("  aucun écran de jeu au tri 3 : actualités, vidéo rejetée")
+                        return lectures, None, False
+                    if longue:                                       # vidéo > max_minutes : tri 3 seul, pas de tri 4
+                        pc["tri3"], pc["tri4"], pc["date"] = "fait", "inutile", jour
+                        lectures = fusionner_ecrans(lectures, vid, nouvelles, config, duree_s=minutes * 60)
+                        return lectures, f"{vid} : durée {meta.get('duration')} hors limite ({cfg['max_minutes']} min), tri 4 non fait", False
                 lectures = fusionner_ecrans(lectures, vid, nouvelles, config, duree_s=minutes * 60)
                 # v21 : HUD de fin de run (chrono lu ≤ 5 s) -> les 2 images suivantes (1 img/s) : le HUD y a souvent un chrono illisible
                 # mais des Points plus récents (SPEC v19 : chrono HUD déduit) ; les tri 3 sautent une image sur deux
@@ -1167,6 +1186,20 @@ def passage_rotation(vid, week, outils, chemin, tmp, meta, d, journal):
 def builds_db():
     import builds as B
     return B.charger_db(RACINE)
+
+
+def rejeter_actualites(d, week, vid, processed, lectures, jour):
+    """v37 §3 : le tri 3 n'a vu aucun écran de jeu dans une vidéo marquée hors sujet ou longue sans score : rejected `actualites`
+    (détail « actualités : aucun écran de jeu »), `processed.status` = `rejete`. Les lectures de la vidéo (miniature) sont retirées.
+    Retourne les lectures restantes."""
+    p, rejected, m = processed[vid], d.rejected(week), d.videos(week).get(vid, {})
+    ajouter_rejet(rejected, {"video_id": vid, "channel_id": p["channel_id"], "title": m.get("title", ""),
+                             "published_at": p["published_at"], "mode_guess": "/".join(p.get("modes", [])) or None,
+                             "reason": "actualites", "detail": "actualités : aucun écran de jeu", "last_tri": 3, "date": jour})
+    p.update(status="rejete", updated_at=jour, pc_needed=False, last_tri=max(p.get("last_tri", 0), 3))
+    p.pop("hors_sujet_probable", None)
+    d.ecrire(f"rejected/{week}.json", rejected)
+    return [l for l in lectures if l["video_id"] != vid]
 
 
 def rejeter_sans_score(d, week, jour):
@@ -1406,7 +1439,9 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
 
         a_faire = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours"
                    and (not seulement or v in seulement) and p.get("pc_needed") and (p.get("pc") or {}).get("sous_titres") not in ("fait", "absent")]
-        a_faire = ordre_pc.ordonner(d, week, a_faire)[0]          # v29 : candidates au top 10 d'abord
+        tri1.marquer_hors_sujet_semaine(processed, videos, lectures, week, config)       # v37 §2.3 : actualités probables (titre sans score)
+        sauver()
+        a_faire = ordre_pc.ordonner(d, week, a_faire, processed, pc_cfg["images"]["max_minutes"])[0]          # v29 : candidates au top 10 d'abord ; v37 : hors sujet en dernier
         limite = maximum or pc_cfg["max_videos"]
         if len(a_faire) > limite:
             alertes.append(f"{len(a_faire) - limite} vidéo(s) reportée(s) au prochain passage (limite {limite})")
@@ -1455,7 +1490,8 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             a_images = [v for v, p in processed.items() if p.get("week") == week and v in videos and (not seulement or v in seulement)
                         and ((p["status"] == "en_cours" and p.get("pc_needed") and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile"))
                              or v in a_rotation)]
-            a_images = ordre_pc.ordonner(d, week, a_images)[0]       # v29 : idem pour les images (anti-bot : on s'arrête quand on peut)
+            tri1.marquer_hors_sujet_semaine(processed, videos, lectures, week, config)       # v37 : les sous-titres peuvent avoir donné un score
+            a_images = ordre_pc.ordonner(d, week, a_images, processed, cfg_img["max_minutes"])[0]       # v29 : idem pour les images (anti-bot : on s'arrête quand on peut)
             places = [i for i, v in enumerate(a_images) if v in a_rotation]      # v36 : entre elles, les vidéos de rotation passent BOT, POC, GB, HOTM
             for i, v in zip(places, sorted((a_images[i] for i in places), key=ordre_rotation.index)):
                 a_images[i] = v
@@ -1496,6 +1532,14 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                     if etat:
                         processed[vid]["pc"] = etat
                         processed[vid]["updated_at"] = jour
+                    if etat.get("rejet") == "actualites":
+                        lectures = rejeter_actualites(d, week, vid, processed, lectures, jour)
+                        alertes.append(f"{vid} : actualités : aucun écran de jeu, vidéo rejetée")
+                        sauver()
+                        if n < len(lot):
+                            dormir(pause)
+                        continue
+                    tri1.marquer_hors_sujet(processed[vid], videos[vid], lectures, config)
                     if etat.get("tri3") == "fait":
                         processed[vid]["last_tri"] = max(processed[vid].get("last_tri", 0), 3)
                     if etat.get("tri4") in ("fait", "inutile"):

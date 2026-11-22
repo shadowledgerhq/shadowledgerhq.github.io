@@ -2,6 +2,7 @@
 Référence : docs/SPEC_ETAPE1.md §2. Tout score trouvé ici est provisoire :
 exact false, confidence a_verifier ; la vidéo continue aux tris suivants."""
 import re
+import unicodedata
 
 from hotm_ecran import lire_porte
 from scores import NON_GERE, degats_gb, extraire
@@ -119,3 +120,58 @@ def candidats_en_chapitres(lec):
             t = [int(x) for x in b.strip().split(":")]
             secondes.append(sum(v * 60 ** i for i, v in enumerate(reversed(t))))
     return len(secondes) >= 2 and secondes == sorted(secondes) and len(set(secondes)) == len(secondes)
+
+
+NOTE_HORS_SUJET = "actualités probables (titre)"
+
+
+def _sans_accents_minuscules(texte):
+    """Minuscules, sans signes diacritiques (NFD sans les marques, puis NFC : le coréen reste composé)."""
+    nfd = unicodedata.normalize("NFD", texte or "")
+    return unicodedata.normalize("NFC", "".join(c for c in nfd if unicodedata.category(c) != "Mn")).lower()
+
+
+def mot_hors_sujet(titre, config):
+    """v37 §2.3 : premier mot de `config.hors_sujet_mots.mots` trouvé dans le titre (sans accents ni casse ; mot entier pour les mots
+    latins, sous-chaîne pour le coréen, le japonais et le chinois), ou None."""
+    t = _sans_accents_minuscules(titre)
+    for mot in (config.get("hors_sujet_mots") or {}).get("mots") or []:
+        m = _sans_accents_minuscules(mot)
+        if m and _mot_entier(m, t):
+            return mot
+    return None
+
+
+def score_dans_le_texte(lectures, video_id):
+    """Une lecture de la vidéo issue du titre, de la description ou des sous-titres porte un score."""
+    return any(l.get("video_id") == video_id and l.get("score") is not None and l.get("score_source") in SOURCES_TEXTE for l in lectures)
+
+
+def titre_hors_sujet_probable(meta, lectures, config):
+    """v37 §2.3 : titre avec un mot de `hors_sujet_mots` ET aucun score lu dans le texte. Marquage seulement."""
+    return bool(mot_hors_sujet(meta.get("title"), config)) and not score_dans_le_texte(lectures, meta.get("video_id"))
+
+
+def marquer_hors_sujet(entree, meta, lectures, config):
+    """Pose ou retire `entree["hors_sujet_probable"]` (entrée de processed.json) et sa note. Une vidéo dont le tri 3 a vu un écran de jeu
+    (`pc.ecran_jeu`) n'est plus jamais marquée. Retourne True si le marquage a changé."""
+    vu = bool((entree.get("pc") or {}).get("ecran_jeu"))
+    marque = not vu and entree.get("status") == "en_cours" and titre_hors_sujet_probable(meta, lectures, config)
+    avant = bool(entree.get("hors_sujet_probable"))
+    notes = [n for n in entree.get("notes", []) if n != NOTE_HORS_SUJET]
+    if marque:
+        entree["hors_sujet_probable"] = True
+        notes.append(NOTE_HORS_SUJET)
+    else:
+        entree.pop("hors_sujet_probable", None)
+    if notes:
+        entree["notes"] = notes
+    else:
+        entree.pop("notes", None)
+    return marque != avant
+
+
+def marquer_hors_sujet_semaine(processed, videos, lectures, week, config):
+    """Applique `marquer_hors_sujet` à toutes les vidéos de la semaine ; retourne le nombre de marquages changés."""
+    return sum(marquer_hors_sujet(p, videos[v], lectures, config) for v, p in processed.items()
+               if p.get("week") == week and v in videos)

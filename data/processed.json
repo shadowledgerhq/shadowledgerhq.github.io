@@ -3615,7 +3615,7 @@
     "first_seen": "2026-11-19",
     "updated_at": "2026-11-22",
     "last_tri": 4,
-    "status": "en_cours",
+    "status": "rejete",
     "modes": [
       "gb",
       "poc"
@@ -3638,13 +3638,13 @@
         1658,
         1080
       ],
-      "libelles_inconnus": "hi",
       "hud_suite": [],
       "results_lus": [],
       "hud_amont": [],
       "tri3": "fait",
       "date": "2026-11-22",
-      "tri4": "fait"
+      "tri4": "fait",
+      "rejet": "actualites"
     }
   },
   "cRWVzdEK7Hc": {
