@@ -187,3 +187,14 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Conflit git résolu automatiquement
 - Résumé GB : XVzx3w07JPo · Eden(이든) · Results lu (190-278 s) · 7 RC sûr · fire
+
+<!-- passage-pc pc-daily 2026-11-22T16:15:42.963409+00:00 -->
+## Passage pc-daily — 2026-11-22 17:15 (Paris)
+
+- Top 10 couvert : non (40 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (vidéos restantes à traiter)
+- Vidéos traitées ce passage : 2 · en_cours restantes : 49 (dont 40 à traiter par le PC)
+- Erreurs bloquantes : aucune
+- Durée du passage : 11 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Résumé GB : XVzx3w07JPo · Results lu (190-278 s) · pas classée
