@@ -182,6 +182,48 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-19-09bNKPXg-pc",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "player": "RaidenShadow",
+    "channel": "RaidenShadow",
+    "video_id": "09bNKPXg-pc",
+    "video_ids": [
+      "09bNKPXg-pc"
+    ],
+    "published_at": "2026-11-20T02:22:36+01:00",
+    "lang": "pt-BR",
+    "score": {
+      "total": 168,
+      "runs": [
+        168
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "lecture fusionnée (7 images); conflit de lecture : hunter_rank_1; élément du titre contredit par l'écran; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "09bNKPXg-pc",
+        "published_at": "2026-11-20T02:22:36+01:00",
+        "t": 230,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": false,
+        "damage": 11526652998055,
+        "damage_exact": true,
+        "element": "water",
+        "element_source": "ecran",
+        "hud_rage_count": 140
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-19-DdbMYl54aZU",
     "week": "2026-11-19",
     "mode": "gb",
