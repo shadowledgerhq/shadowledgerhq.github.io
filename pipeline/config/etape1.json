@@ -215,7 +215,7 @@
     "whisper_max_minutes": 15,
     "max_videos": 8,
   "regle_sous_titres": true,
-    "budget_minutes": 180,
+    "budget_minutes": 100,
     "pause_s": 20,
     "yt_dlp_options": [],
     "_yt_dlp_options": "Options ajoutées à chaque appel de yt-dlp, ex. [\"--impersonate\", \"chrome\"] (nécessite yt-dlp[default,curl-cffi]) si YouTube répond 429.",
