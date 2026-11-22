@@ -141,6 +141,47 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-19-COUTSymqqS0",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "player": "SlayOnLow",
+    "channel": "SlayOnLow",
+    "video_id": "COUTSymqqS0",
+    "video_ids": [
+      "COUTSymqqS0"
+    ],
+    "published_at": "2026-11-22T13:55:56+01:00",
+    "lang": "en",
+    "score": {
+      "total": 187,
+      "runs": [
+        187
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 187RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "COUTSymqqS0",
+        "published_at": "2026-11-22T13:55:56+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-19-orJG2Lk9VNo",
     "week": "2026-11-19",
     "mode": "gb",
@@ -182,44 +223,43 @@
     ]
   },
   {
-    "run_id": "gb-2026-11-19-09bNKPXg-pc",
+    "run_id": "gb-2026-11-19-8HpHEFHClpQ",
     "week": "2026-11-19",
     "mode": "gb",
     "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
     "player": "RaidenShadow",
     "channel": "RaidenShadow",
-    "video_id": "09bNKPXg-pc",
+    "video_id": "8HpHEFHClpQ",
     "video_ids": [
-      "09bNKPXg-pc"
+      "8HpHEFHClpQ"
     ],
-    "published_at": "2026-11-20T02:22:36+01:00",
+    "published_at": "2026-11-22T14:24:43+01:00",
     "lang": "pt-BR",
     "score": {
-      "total": 168,
+      "total": 167,
       "runs": [
-        168
+        167
       ],
       "unit": "rage_count"
     },
-    "score_source": "video-complete",
+    "score_source": "titre",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "lecture fusionnée (7 images); conflit de lecture : hunter_rank_1; élément du titre contredit par l'écran; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : Rage: 167; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
-        "video_id": "09bNKPXg-pc",
-        "published_at": "2026-11-20T02:22:36+01:00",
-        "t": 230,
+        "video_id": "8HpHEFHClpQ",
+        "published_at": "2026-11-22T14:24:43+01:00",
+        "t": null,
         "stage": null,
         "team": null,
-        "score_source": "video-complete",
+        "score_source": "titre",
         "exact": false,
-        "damage": 11526652998055,
-        "damage_exact": true,
-        "element": "water",
-        "element_source": "ecran",
-        "hud_rage_count": 140
+        "damage": 11000000000000,
+        "damage_exact": false,
+        "element": null,
+        "element_source": null
       }
     ]
   },
