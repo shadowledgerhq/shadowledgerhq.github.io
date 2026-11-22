@@ -189,13 +189,54 @@ def test_v371_entete_du_rapport_donne_la_duree_de_telechargement():
     assert any("TjnPwCk_VSc 25.2 min → 130 s" in x for x in l)
 
 
-def test_v37_2_mots_et_shorts_sans_score_marques_hors_sujet():
-    """v37.2 : « Mecharashi », « Unstable », … et les vidéos de 61 s ou moins sans score sont marquées (marquage seulement)."""
-    v = lambda titre, duree="PT9M": {"video_id": "v", "title": titre, "duration": duree}
+def test_v37_2_mots_marques_hors_sujet():
+    v = lambda titre, duree="PT9M", modes=(): {"video_id": "v", "title": titre, "duration": duree, "mode_guess": list(modes)}
     assert tri1.titre_hors_sujet_probable(v('"MECHARASHI" F2P GUIDE: B.C. COVERT PHANTOM'), [], CONFIG)
     assert tri1.titre_hors_sujet_probable(v('"SOLO LEVELING ARISE" F2P GUIDE: UNSTABLE "TIER 49"'), [], CONFIG)
-    assert tri1.titre_hors_sujet_probable(v("Your Shadow Army Is Ready", "PT35S"), [], CONFIG)
-    assert not tri1.titre_hors_sujet_probable(v("Fire team Guild Boss", "PT4M"), [], CONFIG)
-    assert not tri1.titre_hors_sujet_probable(v("Fire team Guild Boss", None), [], CONFIG)
-    score = [{"video_id": "v", "score": {"total": 1}, "score_source": "titre"}]
-    assert not tri1.titre_hors_sujet_probable(v("Your Shadow Army Is Ready", "PT35S"), score, CONFIG)
+    assert not tri1.titre_hors_sujet_probable(v("Fire team Guild Boss"), [], CONFIG)
+
+
+def test_v38_court_marque_seulement_apres_tri2_sans_score_et_sans_mode():
+    v = lambda modes=(): {"video_id": "v", "title": "Your Shadow Army Is Ready", "duration": "PT35S", "mode_guess": list(modes)}
+    fait = {"pc": {"tri2": "fait"}}
+    assert not tri1.titre_hors_sujet_probable(v(), [], CONFIG)                          # entrée inconnue : tri 2 inconnu
+    assert not tri1.titre_hors_sujet_probable(v(), [], CONFIG, {})                      # tri 2 pas fait
+    assert tri1.titre_hors_sujet_probable(v(), [], CONFIG, fait)
+    assert not tri1.titre_hors_sujet_probable(v(("bot",)), [], CONFIG, fait)            # mode deviné : jamais sur la durée
+    assert not tri1.titre_hors_sujet_probable(v(), [lecture("v", 5, "miniature")], CONFIG, fait)
+    assert not tri1.titre_hors_sujet_probable(v(), [lecture("v", 5)], CONFIG, fait)
+
+
+def test_v38_wJ9CwjKwyco_jamais_marquee():
+    import json
+    vids = json.loads((Path(__file__).resolve().parents[2] / "data" / "runs" / "2026-11-12" / "_videos.json").read_text(encoding="utf-8"))
+    m = vids["wJ9CwjKwyco"] if isinstance(vids, dict) else next(x for x in vids if x["video_id"] == "wJ9CwjKwyco")
+    court = {**m, "duration": "PT48S"}
+    assert not tri1.titre_hors_sujet_probable(court, [], CONFIG, {"pc": {"tri2": "fait"}})
+    court["mode_guess"] = []                                                             # même sans mode deviné : le score de la miniature l'écarte
+    assert not tri1.titre_hors_sujet_probable(court, [lecture("wJ9CwjKwyco", 19.926, "miniature")], CONFIG, {"pc": {"tri2": "fait"}})
+
+
+def test_v38_rejet_titre_mecharashi_sauf_si_sla():
+    t = tri1.mot_rejet_titre
+    assert t('"MECHARASHI" F2P GUIDE: B.C. COVERT PHANTOM', CONFIG) == "mecharashi"
+    assert t('MECHARASHI vs Solo Leveling', CONFIG) is None and t("Mecharashi 나혼렙", CONFIG) is None
+    assert t('UNSTABLE TIER 49 F2P GUIDE', CONFIG) is None and t("Your Shadow Army", CONFIG) is None
+
+
+def test_v38_regle_sous_titres(tmp_path):
+    import json
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Donnees(Path(tmp))
+        vids = {"a": video("a", '"MECHARASHI" F2P GUIDE'), "b": video("b", "Guild Boss 150 RC"), "c": video("c", "Guild Boss Update"),
+                "d": video("d", "Fire team clear"), "e": video("e", "Miniature avec score")}
+        proc = {k: {"week": SEM, "channel_id": "c", "published_at": "2026-11-19T00:00:00Z", "status": "en_cours", "pc_needed": True, "modes": ["gb"]} for k in vids}
+        lect = [lecture("b", 150), lecture("e", 7, "miniature")]
+        lect, r = pc.regle_sous_titres(d, SEM, proc, vids, lect, CONFIG, "2026-11-22")
+        assert proc["a"]["status"] == "rejete" and d.rejected(SEM)[0]["reason"] == "hors_sujet_titre"
+        etat = {k: (proc[k].get("pc") or {}).get("sous_titres") for k in "bcde"}
+        assert etat == {"b": "inutile", "c": "inutile", "d": None, "e": "inutile"}
+        assert r == {"avant": 5, "apres": 1, "inutiles": 3, "rejets": 1}
+        lect = [l for l in lect if l["video_id"] != "b"]                                  # le score disparaît : sous-titres rétablis
+        lect, r = pc.regle_sous_titres(d, SEM, proc, vids, lect, CONFIG, "2026-11-22")
+        assert "sous_titres" not in (proc["b"].get("pc") or {}) and r["apres"] == 2

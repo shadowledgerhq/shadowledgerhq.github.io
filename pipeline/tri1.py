@@ -10,6 +10,7 @@ from bot_saison import NOTE_CHALLENGE, lire_saison_semaine, titre_challenge
 from semaine import bornes, parse_iso, semaine_de
 
 SOURCES_TEXTE = ("titre", "description", "sous-titres")
+SOURCES_AVANT_SOUS_TITRES = ("titre", "description", "miniature")
 
 
 def lecture_vide(meta, mode):
@@ -148,15 +149,27 @@ def score_dans_le_texte(lectures, video_id):
     return any(l.get("video_id") == video_id and l.get("score") is not None and l.get("score_source") in SOURCES_TEXTE for l in lectures)
 
 
-def titre_hors_sujet_probable(meta, lectures, config):
-    """v37 §2.3 : titre avec un mot de `hors_sujet_mots` ET aucun score lu dans le texte. Marquage seulement."""
-    if score_dans_le_texte(lectures, meta.get("video_id")):
+def score_avant_sous_titres(lectures, video_id):
+    """v38 §6 : une lecture de la vidéo issue du titre, de la description ou de la miniature porte un score (sous-titres inutiles)."""
+    return any(l.get("video_id") == video_id and l.get("score") is not None and l.get("score_source") in SOURCES_AVANT_SOUS_TITRES for l in lectures)
+
+
+def titre_hors_sujet_probable(meta, lectures, config, entree=None):
+    """v37 §2.3 : titre avec un mot de `hors_sujet_mots` ET aucun score lu dans le texte. Marquage seulement.
+    v38 : une vidéo de `duree_max_s` (61) s ou moins n'est marquée que si son `mode_guess` est VIDE ET son tri 2 (miniature) est fait sans
+    aucun score (les runs BOT durent 46 à 50 s : `entree` = entrée de processed.json, absente = tri 2 inconnu = jamais marquée)."""
+    vid = meta.get("video_id")
+    if score_dans_le_texte(lectures, vid):
         return False
     if mot_hors_sujet(meta.get("title"), config):
         return True
     court = (config.get("hors_sujet_mots") or {}).get("duree_max_s")          # v37.2 : shorts (61 s ou moins) sans score
     sec = _duree_s(meta.get("duration"))
-    return bool(court and sec is not None and sec <= court)
+    if not (court and sec is not None and sec <= court):
+        return False
+    if meta.get("mode_guess") or entree is None or (entree.get("pc") or {}).get("tri2") not in ("fait", "absent"):
+        return False
+    return not score_avant_sous_titres(lectures, vid)
 
 
 def _duree_s(iso):
@@ -164,11 +177,21 @@ def _duree_s(iso):
     return None if not m else sum(int(x or 0) * f for x, f in zip(m.groups(), (3600, 60, 1)))
 
 
+def mot_rejet_titre(titre, config):
+    """v38 §2.3 : mot de `config.rejet_titre.mots` (« mecharashi », autre jeu) dans le titre ET aucun mot de `config.sla_mots` (Solo Leveling,
+    Arise, …) dans le même titre -> ce mot (rejet `hors_sujet_titre`), sinon None. Jamais sur la durée ; les autres mots restent un marquage."""
+    t = _sans_accents_minuscules(titre)
+    trouve = next((m for m in (config.get("rejet_titre") or {}).get("mots") or [] if _mot_entier(_sans_accents_minuscules(m), t)), None)
+    if trouve and any(_mot_entier(_sans_accents_minuscules(m), t) for m in config.get("sla_mots") or [] if m):
+        return None
+    return trouve
+
+
 def marquer_hors_sujet(entree, meta, lectures, config):
     """Pose ou retire `entree["hors_sujet_probable"]` (entrée de processed.json) et sa note. Une vidéo dont le tri 3 a vu un écran de jeu
     (`pc.ecran_jeu`) n'est plus jamais marquée. Retourne True si le marquage a changé."""
     vu = bool((entree.get("pc") or {}).get("ecran_jeu"))
-    marque = not vu and entree.get("status") == "en_cours" and titre_hors_sujet_probable(meta, lectures, config)
+    marque = not vu and entree.get("status") == "en_cours" and titre_hors_sujet_probable(meta, lectures, config, entree)
     avant = bool(entree.get("hors_sujet_probable"))
     notes = [n for n in entree.get("notes", []) if n != NOTE_HORS_SUJET]
     notes = [n for n in notes if n != NOTE_ECRAN_SCORE]

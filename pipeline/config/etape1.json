@@ -179,6 +179,11 @@
     "mots": ["update", "patch notes", "codes", "live", "news", "leak", "resumo", "atualização", "atualizacao", "novidades", "업데이트", "패치노트", "쿠폰", "アップデート", "生放送", "mecharashi", "unstable", "summon", "gamba", "review", "hunter archive", "dev note", "experimento", "shorts", "#shorts", "capitulo", "chapter"],
     "duree_max_s": 61
   },
+  "rejet_titre": {
+    "_doc": "SPEC v38 §2.3 : seul rejet sur le titre (raison hors_sujet_titre, sans sous-titres ni images) : un de ces mots ET aucun mot de sla_mots dans le titre.",
+    "mots": ["mecharashi"]
+  },
+  "sla_mots": ["solo leveling", "arise", "나혼렙", "나 혼자만 레벨업", "俺だけレベルアップ", "我獨自升級"],
   "pages_web": {
     "_doc": "SPEC v37 §3 : marqueurs d'une page web filmée (forum Netmarble, site officiel). Un seul suffit : l'image n'est jamais un écran de jeu (ni compte pour le tri 3, ni collectée dans libelles_inconnus). Comparés sans accents, casse ni espaces.",
     "marqueurs": ["netmarble.com", "OFFICIAL CHANNELS", "Combined Search", "https://", "http://"]
@@ -209,6 +214,7 @@
     "whisper_model": "small",
     "whisper_max_minutes": 15,
     "max_videos": 8,
+  "regle_sous_titres": true,
     "budget_minutes": 180,
     "pause_s": 20,
     "yt_dlp_options": [],

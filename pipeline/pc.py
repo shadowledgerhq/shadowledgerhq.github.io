@@ -1213,6 +1213,49 @@ def rejeter_actualites(d, week, vid, processed, lectures, jour):
     return [l for l in lectures if l["video_id"] != vid]
 
 
+def rejeter_titre(d, week, vid, processed, lectures, jour, mot):
+    """v38 §2.3 : titre avec un mot de `config.rejet_titre.mots` (« mecharashi », autre jeu) et sans mot de `config.sla_mots` : rejected
+    `hors_sujet_titre`, sans sous-titres ni images. Retourne les lectures restantes."""
+    p, rejected, m = processed[vid], d.rejected(week), d.videos(week).get(vid, {})
+    ajouter_rejet(rejected, {"video_id": vid, "channel_id": p["channel_id"], "title": m.get("title", ""),
+                             "published_at": p["published_at"], "mode_guess": "/".join(p.get("modes", [])) or None,
+                             "reason": "hors_sujet_titre", "detail": f"titre : « {mot} » (autre jeu)", "last_tri": 1, "date": jour})
+    p.update(status="rejete", updated_at=jour, pc_needed=False)
+    p.pop("hors_sujet_probable", None)
+    d.ecrire(f"rejected/{week}.json", rejected)
+    return [l for l in lectures if l["video_id"] != vid]
+
+
+def regle_sous_titres(d, week, processed, videos, lectures, config, jour, seulement=None):
+    """v38 §6 : allègement des sous-titres. Parmi les vidéos en attente de sous-titres : (1) rejet `hors_sujet_titre` ; (2) marquage hors sujet
+    refait ; (3) `pc.sous_titres` = `inutile` si la vidéo est marquée hors sujet OU a un score dans le titre, la description ou la miniature
+    (rétabli si ces conditions disparaissent). Retourne (lectures, {avant, apres, inutiles, rejets}) : en attente avant / après la règle."""
+    def attente():
+        return [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours" and p.get("pc_needed")
+                and (not seulement or v in seulement) and (p.get("pc") or {}).get("sous_titres") not in ("fait", "absent")]
+    avant = len([v for v in attente() if (processed[v].get("pc") or {}).get("sous_titres") != "inutile"])
+    rejets = 0
+    for v in attente():
+        mot = tri1.mot_rejet_titre((videos.get(v) or {}).get("title"), config)
+        if mot:
+            lectures = rejeter_titre(d, week, v, processed, lectures, jour, mot)
+            rejets += 1
+    tri1.marquer_hors_sujet_semaine(processed, videos, lectures, week, config)
+    inutiles = 0
+    for v in attente():
+        if config["pc"].get("regle_sous_titres", True) is False:           # interrupteur (tests de l'ancien comportement)
+            break
+        if processed[v].get("hors_sujet_probable") or tri1.score_avant_sous_titres(lectures, v):
+            processed[v].setdefault("pc", {})["sous_titres"] = "inutile"
+            inutiles += 1
+        elif (processed[v].get("pc") or {}).get("sous_titres") == "inutile":
+            processed[v]["pc"].pop("sous_titres")
+            if not processed[v]["pc"]:
+                processed[v].pop("pc")
+    apres = len([v for v in attente() if (processed[v].get("pc") or {}).get("sous_titres") != "inutile"])
+    return lectures, {"avant": avant, "apres": apres, "inutiles": inutiles, "rejets": rejets}
+
+
 def rejeter_sans_score(d, week, jour):
     """Au gel (SPEC §6) : vidéo sans aucun score après le tri 4 -> rejected `pas_de_score`."""
     processed, lectures, rejected, titres = d.processed(), d.lectures(week), d.rejected(week), d.videos(week)
@@ -1427,6 +1470,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     journal(f"Passage PC {passage} — semaine {week}")
 
     traitees, images_traitees, antibot, bloquantes = 0, 0, False, []
+    regle_st = None
     relectures_posees = []
     if meta.get("frozen"):
         alertes.append(f"semaine {week} déjà gelée : rien à traiter")
@@ -1451,9 +1495,9 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         def titre(vid):
             return (videos.get(vid, {}).get("title") or "")[:50]
 
+        lectures, regle_st = regle_sous_titres(d, week, processed, videos, lectures, config, jour, seulement)      # v38 : rejet titre, marquage, sous-titres inutiles
         a_faire = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours"
-                   and (not seulement or v in seulement) and p.get("pc_needed") and (p.get("pc") or {}).get("sous_titres") not in ("fait", "absent")]
-        tri1.marquer_hors_sujet_semaine(processed, videos, lectures, week, config)       # v37 §2.3 : actualités probables (titre sans score)
+                   and (not seulement or v in seulement) and p.get("pc_needed") and (p.get("pc") or {}).get("sous_titres") not in ("fait", "absent", "inutile")]
         sauver()
         a_faire = ordre_pc.ordonner(d, week, a_faire, processed, pc_cfg["images"]["max_minutes"])[0]          # v29 : candidates au top 10 d'abord ; v37 : hors sujet en dernier
         limite = maximum or pc_cfg["max_videos"]
@@ -1612,6 +1656,9 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                              (horloge() - debut_passage) / 60, top10_n, gel3,
                              [(v, p["pc"]["decision_tri3"]) for v, p in d.processed().items()
                               if p.get("week") == week and (p.get("pc") or {}).get("decision_tri3") and (p.get("pc") or {}).get("date") == jour])
+        if regle_st:
+            lignes.append(f"- Sous-titres en attente : {regle_st['avant']} avant la règle → {regle_st['apres']} après ({regle_st['inutiles']} inutiles : hors sujet ou score déjà lu ; "
+                          f"{regle_st['rejets']} rejetée(s) sur le titre)")
         if relance:
             lignes.append("- Type : relance automatique (ne compte pas pour le critère de gel n° 3)")
         if git is not None and getattr(git, "conflit_resolu", False):

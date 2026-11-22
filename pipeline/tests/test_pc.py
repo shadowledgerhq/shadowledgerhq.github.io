@@ -25,6 +25,7 @@ JEUDI = datetime(2026, 11, 19, 0, 15, tzinfo=timezone.utc)      # jeudi 01:15 Pa
 def config_sans_images():
     config = charger_config()
     config["pc"]["images"]["actif"] = False   # tris 3-4 testés dans test_images
+    config["pc"]["regle_sous_titres"] = False   # v38 testée dans test_v37 (ici : ancien comportement, `d` a un score de titre)
     return config
 
 
