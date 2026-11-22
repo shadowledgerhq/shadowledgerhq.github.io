@@ -220,3 +220,16 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Durée du passage : 7 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Résumé GB : XVzx3w07JPo · Eden(이든) · Results lu (190-278 s) · 177 RC sûr · fire
+
+<!-- passage-pc pc-daily 2026-11-22T18:21:32.948091+00:00 -->
+## Passage pc-daily — 2026-11-22 19:21 (Paris)
+
+- Top 10 couvert : non (40 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 49 (dont 40 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 3 min
+- Relance automatique : 22/11/2026 21:21 (une seule fois par soir)
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Résumé GB : lKnkiCvMwSM · aucun Results lu · pas classée
+- Résumé GB : XVzx3w07JPo · Eden(이든) · Results lu (190-278 s) · 177 RC sûr · fire

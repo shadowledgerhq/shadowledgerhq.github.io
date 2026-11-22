@@ -3613,7 +3613,7 @@
     "channel_id": "UCzdt9f_FEQ_0doVC10vbXKg",
     "published_at": "2026-11-19T04:59:07Z",
     "first_seen": "2026-11-19",
-    "updated_at": "2026-11-19",
+    "updated_at": "2026-11-22",
     "last_tri": 4,
     "status": "en_cours",
     "modes": [
@@ -3624,6 +3624,16 @@
     "regles": 18,
     "pc": {
       "tri2": "fait",
+      "hauteurs": [
+        144,
+        180,
+        240,
+        360,
+        480,
+        720,
+        1080,
+        1440
+      ],
       "image_taille": [
         1658,
         1080
@@ -3633,7 +3643,7 @@
       "results_lus": [],
       "hud_amont": [],
       "tri3": "fait",
-      "date": "2026-11-19",
+      "date": "2026-11-22",
       "tri4": "fait"
     }
   },
