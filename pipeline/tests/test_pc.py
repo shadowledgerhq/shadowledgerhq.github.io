@@ -214,3 +214,14 @@ def test_filtre_rapide_laisse_passer_le_hud_gb_coreen():
     texte = "Lv.150 창 해 의 물 다르고\n© 13.58)\nPOINT\n보스 격노 횟수\n죽 음 을 거 부 하며 격 노 합니다\n22 HITS"
     assert pc.ressemble_ecran(texte)
     assert not pc.ressemble_ecran("헌터 관리국 정밀도 99% 방어력 85.69%")
+
+
+def test_v37_rc_du_results_inferieur_au_hud_n_est_pas_sur():
+    """XVzx3w07JPo : Results lu 7 (vrai 177) sur 5 images, HUD à 148 : un compteur ne décroît pas -> à vérifier."""
+    from pipeline import gb
+    run = {"video_id": "v", "score_source": "video-complete", "score": 7, "confidence": "sur", "exact": True,
+           "detail": {"hud_rage_count": 148}, "notes": []}
+    r = gb.rc_contredit_par_hud(run)
+    assert r["confidence"] == "a_verifier" and not r["exact"] and "un compteur ne décroît pas" in r["notes"][-1]
+    assert gb.rc_contredit_par_hud({**run, "score": 177})["confidence"] == "sur"
+    assert gb.rc_contredit_par_hud({**run, "detail": {}})["confidence"] == "sur"

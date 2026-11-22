@@ -76,6 +76,21 @@ def _rc_confirme_par_record(run, records):
     return {**run, "confidence": "sur", "exact": False, "detail": d, "notes": notes + [NOTE_RC_CONFIRME]}
 
 
+NOTE_RC_HUD = "RC du Results ({rc}) < RC du HUD ({hud}) : un compteur ne décroît pas, lecture à vérifier"
+
+
+def rc_contredit_par_hud(run):
+    """v37 : un Rage Count ne décroît pas. Un Results `sûr` dont le RC est inférieur au RC lu dans le HUD (`detail.hud_rage_count`,
+    maximum des HUD de la vidéo) est rétrogradé `a_verifier` (cas XVzx3w07JPo : Results lu 7 sur 5 images, vrai 177, HUD 148).
+    Le HUD ne corrige jamais la valeur : seul le doute est signalé."""
+    d = run.get("detail") or {}
+    hud = d.get("hud_rage_count")
+    if run.get("confidence") != "sur" or not _est_results(run) or hud is None or run.get("score") is None or hud <= run["score"]:
+        return run
+    return {**run, "confidence": "a_verifier", "exact": False,
+            "notes": list(run.get("notes", [])) + [NOTE_RC_HUD.format(rc=run["score"], hud=hud)]}
+
+
 def attribuer_groupes(runs):
     """SPEC v30 §4.7 : le Personal Record ne classe plus aucune run. Il sert seulement à attribuer un groupe (`team`) à une run
     `Results` de la MÊME vidéo : si le RC du Results est égal au RC d'UN SEUL groupe du Personal Record contrôlé (`sûr`), ce groupe
@@ -86,6 +101,7 @@ def attribuer_groupes(runs):
     for r in runs:
         if r.get("score_source") == "record":
             continue
+        r = rc_contredit_par_hud(r)
         if _est_results(r) and r.get("team") is None:
             memes = [x for x in records if x["video_id"] == r["video_id"] and x.get("team") in (1, 2)
                      and x.get("confidence") == "sur" and x["score"] == r["score"]]
