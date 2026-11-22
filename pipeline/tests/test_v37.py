@@ -140,3 +140,43 @@ def test_rejeter_actualites_ecrit_rejected_et_processed():
 def test_baruka_trois_phases_sans_a_verifier():
     doc = CONFIG["bot"]["phases_par_boss"]["_doc"]
     assert "À VÉRIFIER" not in doc and CONFIG["bot"]["phases_par_boss"]["baruka"] == 3
+
+
+# ---- v37.1 : garde contre le rejet à tort
+SCORE_INCONNU = "결과\n12,345,678,901\n12,345,678,902\n12,345,678,903"
+
+
+def test_v371_classement_de_puissance_n_est_pas_un_ecran_de_jeu():
+    assert not ocr_ecrans.ecran_de_jeu(BATALHA, CONFIG) and not libelles_inconnus.ressemble_score(BATALHA)
+    assert ocr_ecrans.ecran_de_jeu("Total Power\nFormTeam", CONFIG)                      # fiche / composition : écran de jeu
+    # TjnPwCk_VSc : seuls ces écrans de puissance au début et à la fin -> rejetée
+    o, etat, lect, avert, reporte = lancer_tri3("TjnPwCk_VSc", T_TJN, {t: BATALHA for t in list(range(0, 10, 2)) + list(range(1480, 1520, 2))}, "PT25M14S")
+    assert etat["rejet"] == "actualites" and etat["decision_tri3"]["video_min"] == 25.2 and "telechargement_s" in etat["decision_tri3"]
+
+
+def test_v371_ecran_de_score_non_reconnu_pas_de_rejet_note_et_tri4():
+    o, etat, lect, avert, reporte = lancer_tri3("uptd", "Guild Boss Update", {0: FORUM, 2: SCORE_INCONNU, 4: FORUM}, "PT8M")
+    assert "rejet" not in etat and etat["ecran_score_non_reconnu"] is True and "ecran_jeu" not in etat
+    assert etat["tri3"] == "fait" and etat.get("tri4") != "inutile"                         # passe au tri 4
+    e = {"status": "en_cours", "pc": etat}
+    tri1.marquer_hors_sujet(e, video("uptd", "Guild Boss Update"), lect, CONFIG)
+    assert e["hors_sujet_probable"] is True and tri1.NOTE_ECRAN_SCORE in e["notes"] and tri1.NOTE_HORS_SUJET in e["notes"]
+    # toujours en dernier dans l'ordre du PC
+    with tempfile.TemporaryDirectory() as tmp:
+        d, vids, proc = monde(tmp)
+        proc["normale"]["status"] = "en_cours"
+        proc["lKnkiCvMwSM"].update(e)
+        assert ordre_pc.ordonner(d, SEM, ["lKnkiCvMwSM", "normale"], proc)[0] == ["normale", "lKnkiCvMwSM"]
+    # le forum seul (page web) n'est jamais un écran de score : rejetée
+    _, etat2, _, _, _ = lancer_tri3("uptd2", "Guild Boss Update", {0: FORUM, 2: FORUM + "\n12,345,678,901\n12,345,678,902\n12,345,678,903"}, "PT8M")
+    assert etat2["rejet"] == "actualites"
+
+
+def test_v371_video_longue_ecran_de_score_non_reconnu_tri3_seul():
+    _, etat, _, avert, _ = lancer_tri3("longue", "Stream guild boss", {0: SCORE_INCONNU}, "PT3H")
+    assert "rejet" not in etat and etat["ecran_score_non_reconnu"] and etat["tri4"] == "inutile" and "tri 4 non fait" in avert
+
+
+def test_v371_entete_du_rapport_donne_la_duree_de_telechargement():
+    l = pc.entete_etat(True, 1, 0, 0, [], decisions=[("TjnPwCk_VSc", {"video_min": 25.2, "telechargement_s": 130})])
+    assert any("TjnPwCk_VSc 25.2 min → 130 s" in x for x in l)

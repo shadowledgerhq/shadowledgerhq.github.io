@@ -123,6 +123,7 @@ def candidats_en_chapitres(lec):
 
 
 NOTE_HORS_SUJET = "actualités probables (titre)"
+NOTE_ECRAN_SCORE = "écran de score non reconnu : à vérifier"
 
 
 def _sans_accents_minuscules(texte):
@@ -159,9 +160,12 @@ def marquer_hors_sujet(entree, meta, lectures, config):
     marque = not vu and entree.get("status") == "en_cours" and titre_hors_sujet_probable(meta, lectures, config)
     avant = bool(entree.get("hors_sujet_probable"))
     notes = [n for n in entree.get("notes", []) if n != NOTE_HORS_SUJET]
+    notes = [n for n in notes if n != NOTE_ECRAN_SCORE]
     if marque:
         entree["hors_sujet_probable"] = True
         notes.append(NOTE_HORS_SUJET)
+        if (entree.get("pc") or {}).get("ecran_score_non_reconnu"):          # v37.1 : un écran de score sans libellé reconnu a empêché le rejet
+            notes.append(NOTE_ECRAN_SCORE)
     else:
         entree.pop("hors_sujet_probable", None)
     if notes:

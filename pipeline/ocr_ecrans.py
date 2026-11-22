@@ -217,6 +217,9 @@ def ecran_de_jeu(texte, config=None):
     RESULT BOT par ses temps), HUD du BOT (`MANUAL`), composition ou fiche (`config.ecrans_exclus`). Une page web filmée ne l'est jamais."""
     if not texte or page_web(texte, config):
         return False
+    cp = compact(texte)
+    if any(compact(m) in cp for m in ((config or _config()).get("ecrans_exclus") or {}).get("non_mode") or []):
+        return False          # v37.1 : classement de puissance (pt-BR) : écran du jeu, pas du mode
     return bool(ecran_exclu(texte, config) or manual_sans_titre(texte, config) or detecter(texte, config) is not None)
 
 

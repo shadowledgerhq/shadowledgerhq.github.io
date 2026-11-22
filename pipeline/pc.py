@@ -959,13 +959,16 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                 except Exception as e:
                     journal(f"  formats non lus : {e}")
             journal("  téléchargement…")
+            t_dl = horloge()
             chemin = outils.telecharger(vid, tmp)
+            if decision:                              # v37.1 : durée réelle du téléchargement d'une vidéo décidée au tri 3 (bloc du rapport)
+                pc["decision_tri3"] = {"video_min": round(minutes, 1), "telechargement_s": int(horloge() - t_dl)}
             for tri in (3, 4):
                 if pc.get(f"tri{tri}") == "fait":
                     continue
                 source = "debut-fin" if tri == 3 else "video-complete"
                 nouvelles, st, complet, vus, detectes = [], {"images": 0, "doublons": 0, "candidates": 0, "lentes": 0}, True, {}, []
-                jeu_vu = False
+                jeu_vu = ressemble = False
                 t0 = horloge()
                 hauteur = cfg.get("tri4_hauteur", 720) if tri == 4 else None      # v15 : tri 3 et Results en 1080p, tri 4 en 720p
                 for t, png in outils.images(chemin, segments_tri(tri, minutes * 60, cfg), tmp, hauteur=hauteur):
@@ -1008,13 +1011,21 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         detectes.append(t)
                     if tri == 3 and not jeu_vu and ocr_ecrans.ecran_de_jeu(texte, config):
                         jeu_vu = True
+                    if tri == 3 and not ressemble and libelles_inconnus.ressemble_score(texte):
+                        ressemble = True                 # v37.1 : écran de score sans libellé reconnu (même test que la collecte, page web exclue)
                     nl = ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, zones)
                     _elements_hud(png, config, nl)
                     nouvelles += nl
                     Path(png).unlink(missing_ok=True)
+                if tri == 4 and complet and nouvelles:       # v37.1 : le tri 4 a lu un écran : plus d'écran de score « non reconnu »
+                    pc["ecran_jeu"] = True
+                    pc.pop("ecran_score_non_reconnu", None)
                 if tri == 3 and complet:
                     if jeu_vu or nouvelles:
                         pc["ecran_jeu"] = True                       # v37 : un écran de jeu vu : plus jamais « hors sujet probable »
+                    elif decision and ressemble:
+                        pc["ecran_score_non_reconnu"] = True       # v37.1 : jamais de rejet : la vidéo reste marquée, tri 4 (si ≤ max_minutes), toujours en dernier
+                        journal("  écran de score non reconnu au tri 3 : pas de rejet, à vérifier")
                     elif decision:
                         pc["rejet"], pc["tri3"], pc["tri4"], pc["date"] = "actualites", "fait", "inutile", jour
                         journal("  aucun écran de jeu au tri 3 : actualités, vidéo rejetée")
@@ -1348,7 +1359,7 @@ def resume_gb(d, semaine, jour, maximum=5):
     return sortie[:maximum] + ([f"- Résumé GB : … et {len(sortie) - maximum} autre(s) vidéo(s)"] if len(sortie) > maximum else [])
 
 
-def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None, duree_min=None, top10=None, gel3=None):
+def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None, duree_min=None, top10=None, gel3=None, decisions=None):
     """Lignes placées en tête du rapport poussé (SPEC §6, critère de gel n° 3). v29 : `top10` = nombre de vidéos candidates au
     top 10 encore en attente (ligne « Top 10 couvert », en tête) ; `gel3` = texte du critère de gel n° 3 (passages couverts)."""
     l = [ordre_pc.ligne_top10(top10)] if top10 is not None else []
@@ -1362,6 +1373,9 @@ def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=Non
         l.append(f"- Relance automatique : {relance}")
     if gel3:
         l.append(f"- Critère de gel n° 3 : {gel3}")
+    if decisions:
+        l.append("- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : "
+                 + " ; ".join(f"{v} {x['video_min']} min → {x['telechargement_s']} s" for v, x in decisions))
     return l
 
 
@@ -1595,7 +1609,9 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     def rapport():
         gel3 = rapport_pc.critere_gel3(d, week, f"pc-{passage}", instant, top10_n, etat["bloquantes"], relance=bool(relance))
         lignes = entete_etat(etat["complet"], etat["traitees"], restantes, a_traiter, etat["bloquantes"], texte_relance,
-                             (horloge() - debut_passage) / 60, top10_n, gel3)
+                             (horloge() - debut_passage) / 60, top10_n, gel3,
+                             [(v, p["pc"]["decision_tri3"]) for v, p in d.processed().items()
+                              if p.get("week") == week and (p.get("pc") or {}).get("decision_tri3") and (p.get("pc") or {}).get("date") == jour])
         if relance:
             lignes.append("- Type : relance automatique (ne compte pas pour le critère de gel n° 3)")
         if git is not None and getattr(git, "conflit_resolu", False):
