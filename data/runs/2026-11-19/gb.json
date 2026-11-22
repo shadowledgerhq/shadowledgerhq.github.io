@@ -1,5 +1,47 @@
 [
   {
+    "run_id": "gb-2026-11-19-XVzx3w07JPo",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+    "player": "Eden(이든)",
+    "channel": "Eden(이든)",
+    "video_id": "XVzx3w07JPo",
+    "video_ids": [
+      "XVzx3w07JPo"
+    ],
+    "published_at": "2026-11-20T13:43:29+01:00",
+    "lang": "ko",
+    "score": {
+      "total": 177,
+      "runs": [
+        177
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": true,
+    "confidence": "sur",
+    "rank": 1,
+    "notes": "RC de la zone amputé du 1er chiffre : texte entier retenu; lecture fusionnée (5 images); une seule run; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "XVzx3w07JPo",
+        "published_at": "2026-11-20T13:43:29+01:00",
+        "t": 218,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": true,
+        "damage": 20271045215627,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 148
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-19-vt47IaCcMQg",
     "week": "2026-11-19",
     "mode": "gb",
@@ -131,47 +173,6 @@
         "stage": null,
         "team": null,
         "score_source": "titre",
-        "exact": false,
-        "damage": null,
-        "damage_exact": null,
-        "element": null,
-        "element_source": null
-      }
-    ]
-  },
-  {
-    "run_id": "gb-2026-11-19-nWhYblu3xJc",
-    "week": "2026-11-19",
-    "mode": "gb",
-    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
-    "player": "Eden(이든)",
-    "channel": "Eden(이든)",
-    "video_id": "nWhYblu3xJc",
-    "video_ids": [
-      "nWhYblu3xJc"
-    ],
-    "published_at": "2026-11-20T13:51:27+01:00",
-    "lang": "ko",
-    "score": {
-      "total": 169,
-      "runs": [
-        169
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (description) : Rage 169; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "nWhYblu3xJc",
-        "published_at": "2026-11-20T13:51:27+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "description",
         "exact": false,
         "damage": null,
         "damage_exact": null,

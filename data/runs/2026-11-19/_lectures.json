@@ -1075,10 +1075,10 @@
     "damage": 20271045215627,
     "gate": null,
     "hunter_mode": null,
-    "t": 221,
+    "t": 218,
     "stage": null,
     "team": null,
-    "score": 77,
+    "score": 177,
     "score_source": "video-complete",
     "exact": true,
     "confidence": "sur",
@@ -1111,6 +1111,12 @@
           [
             20271045215627,
             5
+          ]
+        ],
+        "rage_count": [
+          [
+            177,
+            2
           ]
         ],
         "play_time": [
@@ -1166,29 +1172,24 @@
             161607720718,
             3
           ]
-        ],
-        "rage_count": [
-          [
-            77,
-            2
-          ]
         ]
       },
       "rc_images": 2,
       "final_images": 5,
       "rc_t": {
-        "7": 218,
+        "177": 218,
+        "7": 219,
         "77": 221
       },
       "sequence": {
         "rage_count": [
           [
-            221,
-            77
+            218,
+            177
           ],
           [
             222,
-            77
+            177
           ]
         ],
         "final_score": [
@@ -1220,6 +1221,7 @@
           {
             "player_score": 6365792760107,
             "final_score": 20271045215627,
+            "rage_count": 177,
             "play_time": "03:00",
             "hunter_rank_3": 10212522598640,
             "hunter_rank_5": 979979097865
@@ -1253,7 +1255,6 @@
           {
             "player_score": 6365792760107,
             "final_score": 20271045215627,
-            "rage_count": 77,
             "play_time": "03:00",
             "hunter_rank_1": 10212522538640,
             "hunter_rank_2": 1986265212679,
@@ -1268,7 +1269,7 @@
           {
             "player_score": 6365792760107,
             "final_score": 20271045215627,
-            "rage_count": 77,
+            "rage_count": 177,
             "play_time": "03:00",
             "hunter_rank_1": 10212522538640,
             "hunter_rank_2": 1986265212673,
@@ -1312,6 +1313,7 @@
       "hud_rage_count": 148
     },
     "notes": [
+      "RC de la zone amputé du 1er chiffre : texte entier retenu",
       "lecture fusionnée (5 images)"
     ]
   }
