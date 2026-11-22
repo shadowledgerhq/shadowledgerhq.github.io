@@ -176,7 +176,8 @@
   },
   "hors_sujet_mots": {
     "_doc": "SPEC v37 §2.3 : un titre contenant un de ces mots (comparés sans accents ni casse, en MOT ENTIER ; les mots coréens, japonais et chinois : sous-chaîne) ET aucun score lu dans le texte (titre, description, sous-titres) -> `processed.hors_sujet_probable` (marquage seulement, jamais un rejet sur le titre seul). Mots de départ [À VÉRIFIER sur les titres des semaines].",
-    "mots": ["update", "patch notes", "codes", "live", "news", "leak", "resumo", "atualização", "atualizacao", "novidades", "업데이트", "패치노트", "쿠폰", "アップデート", "生放送"]
+    "mots": ["update", "patch notes", "codes", "live", "news", "leak", "resumo", "atualização", "atualizacao", "novidades", "업데이트", "패치노트", "쿠폰", "アップデート", "生放送", "mecharashi", "unstable", "summon", "gamba", "review", "hunter archive", "dev note", "experimento", "shorts", "#shorts", "capitulo", "chapter"],
+    "duree_max_s": 61
   },
   "pages_web": {
     "_doc": "SPEC v37 §3 : marqueurs d'une page web filmée (forum Netmarble, site officiel). Un seul suffit : l'image n'est jamais un écran de jeu (ni compte pour le tri 3, ni collectée dans libelles_inconnus). Comparés sans accents, casse ni espaces.",

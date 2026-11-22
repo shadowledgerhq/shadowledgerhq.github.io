@@ -187,3 +187,15 @@ def test_v371_video_longue_ecran_de_score_non_reconnu_tri3_seul():
 def test_v371_entete_du_rapport_donne_la_duree_de_telechargement():
     l = pc.entete_etat(True, 1, 0, 0, [], decisions=[("TjnPwCk_VSc", {"video_min": 25.2, "telechargement_s": 130})])
     assert any("TjnPwCk_VSc 25.2 min → 130 s" in x for x in l)
+
+
+def test_v37_2_mots_et_shorts_sans_score_marques_hors_sujet():
+    """v37.2 : « Mecharashi », « Unstable », … et les vidéos de 61 s ou moins sans score sont marquées (marquage seulement)."""
+    v = lambda titre, duree="PT9M": {"video_id": "v", "title": titre, "duration": duree}
+    assert tri1.titre_hors_sujet_probable(v('"MECHARASHI" F2P GUIDE: B.C. COVERT PHANTOM'), [], CONFIG)
+    assert tri1.titre_hors_sujet_probable(v('"SOLO LEVELING ARISE" F2P GUIDE: UNSTABLE "TIER 49"'), [], CONFIG)
+    assert tri1.titre_hors_sujet_probable(v("Your Shadow Army Is Ready", "PT35S"), [], CONFIG)
+    assert not tri1.titre_hors_sujet_probable(v("Fire team Guild Boss", "PT4M"), [], CONFIG)
+    assert not tri1.titre_hors_sujet_probable(v("Fire team Guild Boss", None), [], CONFIG)
+    score = [{"video_id": "v", "score": {"total": 1}, "score_source": "titre"}]
+    assert not tri1.titre_hors_sujet_probable(v("Your Shadow Army Is Ready", "PT35S"), score, CONFIG)

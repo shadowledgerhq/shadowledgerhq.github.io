@@ -150,7 +150,18 @@ def score_dans_le_texte(lectures, video_id):
 
 def titre_hors_sujet_probable(meta, lectures, config):
     """v37 §2.3 : titre avec un mot de `hors_sujet_mots` ET aucun score lu dans le texte. Marquage seulement."""
-    return bool(mot_hors_sujet(meta.get("title"), config)) and not score_dans_le_texte(lectures, meta.get("video_id"))
+    if score_dans_le_texte(lectures, meta.get("video_id")):
+        return False
+    if mot_hors_sujet(meta.get("title"), config):
+        return True
+    court = (config.get("hors_sujet_mots") or {}).get("duree_max_s")          # v37.2 : shorts (61 s ou moins) sans score
+    sec = _duree_s(meta.get("duration"))
+    return bool(court and sec is not None and sec <= court)
+
+
+def _duree_s(iso):
+    m = re.fullmatch(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", iso or "")
+    return None if not m else sum(int(x or 0) * f for x, f in zip(m.groups(), (3600, 60, 1)))
 
 
 def marquer_hors_sujet(entree, meta, lectures, config):
