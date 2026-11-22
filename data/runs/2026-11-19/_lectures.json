@@ -27,6 +27,109 @@
     ]
   },
   {
+    "video_id": "vt47IaCcMQg",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-20T17:40:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 94000000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 205,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : 205 rc"
+    ]
+  },
+  {
+    "video_id": "DdbMYl54aZU",
+    "channel_id": "UCj01oba-0Kuz8yj3dwC_ZXw",
+    "channel_title": "creative joker",
+    "published_at": "2026-11-20T13:45:30Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 75,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (description) : 75 rage",
+      "autres candidats : 74 rage, 149 Rage"
+    ]
+  },
+  {
+    "video_id": "nWhYblu3xJc",
+    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+    "channel_title": "Eden(이든)",
+    "published_at": "2026-11-20T12:51:27Z",
+    "lang": "ko",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 169,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (description) : Rage 169"
+    ]
+  },
+  {
+    "video_id": "orJG2Lk9VNo",
+    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
+    "channel_title": "MOCANBHAYA ",
+    "published_at": "2026-11-21T06:54:27Z",
+    "lang": "hi",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 171,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 171 RC"
+    ]
+  },
+  {
     "video_id": "TrtWBScRocs",
     "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
     "channel_title": "Ahmad1195",
@@ -220,84 +323,6 @@
     },
     "notes": [
       "HUD : Boss Rage Count x73, chrono 3.63"
-    ]
-  },
-  {
-    "video_id": "vt47IaCcMQg",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "channel_title": "Ahmad1195",
-    "published_at": "2026-11-20T17:40:50Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 94000000000000,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 205,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "damage_exact": false
-    },
-    "notes": [
-      "score provisoire (titre) : 205 rc"
-    ]
-  },
-  {
-    "video_id": "DdbMYl54aZU",
-    "channel_id": "UCj01oba-0Kuz8yj3dwC_ZXw",
-    "channel_title": "creative joker",
-    "published_at": "2026-11-20T13:45:30Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 75,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : 75 rage",
-      "autres candidats : 74 rage, 149 Rage"
-    ]
-  },
-  {
-    "video_id": "nWhYblu3xJc",
-    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
-    "channel_title": "Eden(이든)",
-    "published_at": "2026-11-20T12:51:27Z",
-    "lang": "ko",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 169,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : Rage 169"
     ]
   },
   {
@@ -577,25 +602,9 @@
           "fire",
           "fire",
           "fire"
-        ],
-        [
-          "fire",
-          "fire",
-          "fire"
-        ],
-        [
-          "fire",
-          "fire",
-          "fire"
         ]
       ],
       "elements_hud": [
-        "fire",
-        "fire",
-        "fire",
-        "fire",
-        "fire",
-        "fire",
         "fire",
         "fire",
         "fire",
@@ -971,31 +980,6 @@
     ]
   },
   {
-    "video_id": "orJG2Lk9VNo",
-    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
-    "channel_title": "MOCANBHAYA ",
-    "published_at": "2026-11-21T06:54:27Z",
-    "lang": "hi",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 171,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 171 RC"
-    ]
-  },
-  {
     "video_id": "XVzx3w07JPo",
     "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
     "channel_title": "Eden(이든)",
@@ -1345,8 +1329,8 @@
       "hud_rage_count": 148
     },
     "notes": [
-      "lecture fusionnée (5 images)",
-      "écart titre/écran : titre 177"
+      "écart titre/écran : titre 177",
+      "lecture fusionnée (5 images)"
     ]
   }
 ]
