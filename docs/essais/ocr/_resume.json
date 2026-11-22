@@ -1,381 +1,29 @@
 {
  "semaine": "2026-11-19",
  "alertes": [
-  "49 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])"
+  "lKnkiCvMwSM : 429 / anti-bot YouTube, reportée au prochain passage",
+  "429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)",
+  "lKnkiCvMwSM : libellés hi inconnus (aucun écran GB reconnu)",
+  "49 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])",
+  "passage incomplet : anti-bot ; relance : 22/11/2026 21:21 (une seule fois par soir)"
  ],
- "lectures": [
-  {
-   "video_id": "XVzx3w07JPo",
-   "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
-   "channel_title": "Eden(이든)",
-   "published_at": "2026-11-20T12:43:29Z",
-   "lang": "ko",
-   "mode": "gb",
-   "regles": 18,
-   "bot_season_week": null,
-   "player_ingame": null,
-   "damage": null,
-   "gate": null,
-   "hunter_mode": null,
-   "t": 50,
-   "stage": null,
-   "team": null,
-   "score": null,
-   "score_source": null,
-   "exact": false,
-   "confidence": "a_verifier",
-   "detail": {
-    "ecran": "combat_sans_chrono",
-    "hud_points": 2574906850072,
-    "hud_rage_count": 87,
-    "separateur_perdu": false,
-    "elements_hud": [
-     "fire",
-     "fire",
-     "fire"
-    ]
-   },
-   "notes": []
-  },
-  {
-   "video_id": "XVzx3w07JPo",
-   "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
-   "channel_title": "Eden(이든)",
-   "published_at": "2026-11-20T12:43:29Z",
-   "lang": "ko",
-   "mode": "gb",
-   "regles": 18,
-   "bot_season_week": null,
-   "player_ingame": null,
-   "damage": null,
-   "gate": null,
-   "hunter_mode": null,
-   "t": 190,
-   "stage": null,
-   "team": null,
-   "score": null,
-   "score_source": null,
-   "exact": false,
-   "confidence": "a_verifier",
-   "detail": {
-    "ecran": "combat",
-    "hud_points": 17062272234625,
-    "chrono_hud": 13.98,
-    "separateur_perdu": false,
-    "hud_rage_count": 148,
-    "elements_hud": [
-     "fire",
-     "fire",
-     "fire"
-    ],
-    "t_debut": 140,
-    "t_fin": 190,
-    "elements_hud_par_t": {
-     "140": [
-      "fire",
-      "fire",
-      "fire"
-     ],
-     "190": [
-      "fire",
-      "fire",
-      "fire"
-     ]
-    }
-   },
-   "notes": [
-    "HUD : Boss Rage Count x148, chrono 13.98"
-   ]
-  },
-  {
-   "video_id": "XVzx3w07JPo",
-   "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
-   "channel_title": "Eden(이든)",
-   "published_at": "2026-11-20T12:43:29Z",
-   "lang": "ko",
-   "mode": "gb",
-   "regles": 18,
-   "bot_season_week": null,
-   "player_ingame": null,
-   "damage": 20271045215627,
-   "gate": null,
-   "hunter_mode": null,
-   "t": 218,
-   "stage": null,
-   "team": null,
-   "score": 7,
-   "score_source": "video-complete",
-   "exact": true,
-   "confidence": "sur",
-   "detail": {
-    "damage_exact": true,
-    "play_time": "03:00",
-    "new_record": false,
-    "player_score": 6365792760107,
-    "hunter_ranks": [
-     10212522538640,
-     1986265212673,
-     879279037867,
-     483113417264,
-     182464528358,
-     161607720718
-    ],
-    "hunter_ranks_lus": 6,
-    "n_images": 5,
-    "successor_score": null,
-    "successeur_present": false,
-    "rc_texte": [
-     177
-    ],
-    "duree_video_s": 382,
-    "votes": {
-     "player_score": [
-      [
-       6365792760107,
-       5
-      ]
-     ],
-     "final_score": [
-      [
-       20271045215627,
-       5
-      ]
-     ],
-     "rage_count": [
-      [
-       7,
-       5
-      ]
-     ],
-     "play_time": [
-      [
-       "03:00",
-       5
-      ]
-     ],
-     "hunter_rank_3": [
-      [
-       10212522598640,
-       2
-      ],
-      [
-       879279037867,
-       3
-      ]
-     ],
-     "hunter_rank_5": [
-      [
-       979979097865,
-       1
-      ],
-      [
-       182464528358,
-       3
-      ]
-     ],
-     "hunter_rank_1": [
-      [
-       10212522538640,
-       3
-      ]
-     ],
-     "hunter_rank_2": [
-      [
-       1986265212673,
-       2
-      ],
-      [
-       1986265212679,
-       1
-      ]
-     ],
-     "hunter_rank_4": [
-      [
-       483113417264,
-       3
-      ]
-     ],
-     "hunter_rank_6": [
-      [
-       161607720718,
-       3
-      ]
-     ]
-    },
-    "rc_images": 5,
-    "final_images": 5,
-    "rc_t": {
-     "7": 218
-    },
-    "sequence": {
-     "rage_count": [
-      [
-       218,
-       7
-      ],
-      [
-       219,
-       7
-      ],
-      [
-       220,
-       7
-      ],
-      [
-       221,
-       7
-      ],
-      [
-       222,
-       7
-      ]
-     ],
-     "final_score": [
-      [
-       218,
-       20271045215627
-      ],
-      [
-       219,
-       20271045215627
-      ],
-      [
-       220,
-       20271045215627
-      ],
-      [
-       221,
-       20271045215627
-      ],
-      [
-       222,
-       20271045215627
-      ]
-     ]
-    },
-    "par_t": [
-     [
-      218,
-      {
-       "player_score": 6365792760107,
-       "final_score": 20271045215627,
-       "rage_count": 7,
-       "play_time": "03:00",
-       "hunter_rank_3": 10212522598640,
-       "hunter_rank_5": 979979097865
-      }
-     ],
-     [
-      219,
-      {
-       "player_score": 6365792760107,
-       "final_score": 20271045215627,
-       "rage_count": 7,
-       "play_time": "03:00",
-       "hunter_rank_3": 10212522598640
-      }
-     ],
-     [
-      220,
-      {
-       "player_score": 6365792760107,
-       "final_score": 20271045215627,
-       "rage_count": 7,
-       "play_time": "03:00",
-       "hunter_rank_1": 10212522538640,
-       "hunter_rank_2": 1986265212673,
-       "hunter_rank_3": 879279037867,
-       "hunter_rank_4": 483113417264,
-       "hunter_rank_5": 182464528358,
-       "hunter_rank_6": 161607720718
-      }
-     ],
-     [
-      221,
-      {
-       "player_score": 6365792760107,
-       "final_score": 20271045215627,
-       "rage_count": 7,
-       "play_time": "03:00",
-       "hunter_rank_1": 10212522538640,
-       "hunter_rank_2": 1986265212679,
-       "hunter_rank_3": 879279037867,
-       "hunter_rank_4": 483113417264,
-       "hunter_rank_5": 182464528358,
-       "hunter_rank_6": 161607720718
-      }
-     ],
-     [
-      222,
-      {
-       "player_score": 6365792760107,
-       "final_score": 20271045215627,
-       "rage_count": 7,
-       "play_time": "03:00",
-       "hunter_rank_1": 10212522538640,
-       "hunter_rank_2": 1986265212673,
-       "hunter_rank_3": 879279037867,
-       "hunter_rank_4": 483113417264,
-       "hunter_rank_5": 182464528358,
-       "hunter_rank_6": 161607720718
-      }
-     ]
-    ],
-    "t_debut": 218,
-    "t_fin": 222,
-    "elements_hud_images": [
-     [
-      "fire",
-      "fire",
-      "fire"
-     ],
-     [
-      "fire",
-      "fire",
-      "fire"
-     ],
-     [
-      "fire",
-      "fire",
-      "fire"
-     ]
-    ],
-    "elements_hud": [
-     "fire",
-     "fire",
-     "fire",
-     "fire",
-     "fire",
-     "fire",
-     "fire",
-     "fire",
-     "fire"
-    ],
-    "hud_rage_count": 148
-   },
-   "notes": [
-    "écart titre/écran : titre 177",
-    "lecture fusionnée (5 images)"
-   ]
-  }
- ],
+ "lectures": [],
  "processed": {
-  "XVzx3w07JPo": {
+  "lKnkiCvMwSM": {
    "week": "2026-11-19",
-   "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
-   "published_at": "2026-11-20T12:43:29Z",
-   "first_seen": "2026-11-20",
-   "updated_at": "2026-11-21",
+   "channel_id": "UCzdt9f_FEQ_0doVC10vbXKg",
+   "published_at": "2026-11-19T04:59:07Z",
+   "first_seen": "2026-11-19",
+   "updated_at": "2026-11-22",
    "last_tri": 4,
-   "status": "termine",
+   "status": "en_cours",
    "modes": [
-    "gb"
+    "gb",
+    "poc"
    ],
    "pc_needed": false,
    "regles": 18,
    "pc": {
-    "sous_titres": "absent",
-    "date": "2026-11-22",
     "tri2": "fait",
     "hauteurs": [
      144,
@@ -384,24 +32,20 @@
      360,
      480,
      720,
-     1080
+     1080,
+     1440
     ],
     "image_taille": [
-     1920,
+     1658,
      1080
     ],
+    "libelles_inconnus": "hi",
     "hud_suite": [],
-    "results_lus": [
-     [
-      190,
-      278
-     ]
-    ],
+    "results_lus": [],
     "hud_amont": [],
     "tri3": "fait",
-    "tri4": "fait",
-    "rotation": "fait",
-    "rotation_version": 11
+    "date": "2026-11-22",
+    "tri4": "fait"
    }
   }
  },
@@ -895,6 +539,78 @@
   "awb-GlVIa7Q_tri4_70_gb_combat.txt",
   "awb-GlVIa7Q_tri4_80_gb_combat_incertain.txt",
   "awb-GlVIa7Q_tri4_90_gb_combat_incertain.txt",
+  "lKnkiCvMwSM_tri3_0.txt",
+  "lKnkiCvMwSM_tri3_2.txt",
+  "lKnkiCvMwSM_tri3_4.txt",
+  "lKnkiCvMwSM_tri3_492.txt",
+  "lKnkiCvMwSM_tri3_494.txt",
+  "lKnkiCvMwSM_tri3_496.txt",
+  "lKnkiCvMwSM_tri3_498.txt",
+  "lKnkiCvMwSM_tri3_500.txt",
+  "lKnkiCvMwSM_tri3_502.txt",
+  "lKnkiCvMwSM_tri3_504.txt",
+  "lKnkiCvMwSM_tri3_506.txt",
+  "lKnkiCvMwSM_tri3_508.txt",
+  "lKnkiCvMwSM_tri3_510.txt",
+  "lKnkiCvMwSM_tri3_512.txt",
+  "lKnkiCvMwSM_tri3_514.txt",
+  "lKnkiCvMwSM_tri3_516.txt",
+  "lKnkiCvMwSM_tri3_518.txt",
+  "lKnkiCvMwSM_tri3_520.txt",
+  "lKnkiCvMwSM_tri3_6.txt",
+  "lKnkiCvMwSM_tri3_8.txt",
+  "lKnkiCvMwSM_tri4_0.txt",
+  "lKnkiCvMwSM_tri4_10.txt",
+  "lKnkiCvMwSM_tri4_100.txt",
+  "lKnkiCvMwSM_tri4_110.txt",
+  "lKnkiCvMwSM_tri4_120.txt",
+  "lKnkiCvMwSM_tri4_130.txt",
+  "lKnkiCvMwSM_tri4_140.txt",
+  "lKnkiCvMwSM_tri4_150.txt",
+  "lKnkiCvMwSM_tri4_160.txt",
+  "lKnkiCvMwSM_tri4_170.txt",
+  "lKnkiCvMwSM_tri4_180.txt",
+  "lKnkiCvMwSM_tri4_190.txt",
+  "lKnkiCvMwSM_tri4_20.txt",
+  "lKnkiCvMwSM_tri4_200.txt",
+  "lKnkiCvMwSM_tri4_210.txt",
+  "lKnkiCvMwSM_tri4_220.txt",
+  "lKnkiCvMwSM_tri4_230.txt",
+  "lKnkiCvMwSM_tri4_240.txt",
+  "lKnkiCvMwSM_tri4_250.txt",
+  "lKnkiCvMwSM_tri4_260.txt",
+  "lKnkiCvMwSM_tri4_270.txt",
+  "lKnkiCvMwSM_tri4_280.txt",
+  "lKnkiCvMwSM_tri4_290.txt",
+  "lKnkiCvMwSM_tri4_30.txt",
+  "lKnkiCvMwSM_tri4_300.txt",
+  "lKnkiCvMwSM_tri4_310.txt",
+  "lKnkiCvMwSM_tri4_320.txt",
+  "lKnkiCvMwSM_tri4_330.txt",
+  "lKnkiCvMwSM_tri4_340.txt",
+  "lKnkiCvMwSM_tri4_350.txt",
+  "lKnkiCvMwSM_tri4_360.txt",
+  "lKnkiCvMwSM_tri4_370.txt",
+  "lKnkiCvMwSM_tri4_380.txt",
+  "lKnkiCvMwSM_tri4_390.txt",
+  "lKnkiCvMwSM_tri4_40.txt",
+  "lKnkiCvMwSM_tri4_400.txt",
+  "lKnkiCvMwSM_tri4_410.txt",
+  "lKnkiCvMwSM_tri4_420.txt",
+  "lKnkiCvMwSM_tri4_430.txt",
+  "lKnkiCvMwSM_tri4_440.txt",
+  "lKnkiCvMwSM_tri4_450.txt",
+  "lKnkiCvMwSM_tri4_460.txt",
+  "lKnkiCvMwSM_tri4_470.txt",
+  "lKnkiCvMwSM_tri4_480.txt",
+  "lKnkiCvMwSM_tri4_490.txt",
+  "lKnkiCvMwSM_tri4_50.txt",
+  "lKnkiCvMwSM_tri4_500.txt",
+  "lKnkiCvMwSM_tri4_510.txt",
+  "lKnkiCvMwSM_tri4_60.txt",
+  "lKnkiCvMwSM_tri4_70.txt",
+  "lKnkiCvMwSM_tri4_80.txt",
+  "lKnkiCvMwSM_tri4_90.txt",
   "nh2D7xZ7dOQ_tri3_0.txt",
   "nh2D7xZ7dOQ_tri3_283.txt",
   "nh2D7xZ7dOQ_tri3_285.txt",
