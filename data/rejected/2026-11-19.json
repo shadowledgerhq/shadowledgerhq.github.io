@@ -163,5 +163,27 @@
     "detail": "actualités : aucun écran de jeu",
     "last_tri": 3,
     "date": "2026-11-22"
+  },
+  {
+    "video_id": "Iy-JM7addu4",
+    "channel_id": "UCg0EJpyNQPiCgJlmNDHlX9Q",
+    "title": "Solo Leveling:Arise",
+    "published_at": "2026-11-21T17:30:43Z",
+    "mode_guess": "poc",
+    "reason": "live",
+    "detail": "",
+    "last_tri": 0,
+    "date": "2026-11-22"
+  },
+  {
+    "video_id": "jKBVCbt4MVM",
+    "channel_id": "UC73W669EY1QLPwF45jhHokg",
+    "title": "SOLO LEVELING NEW UPDATE! 🔥 NEW KAMISH WEAPONS & INSANE CONTENT!",
+    "published_at": "2026-11-21T23:21:55Z",
+    "mode_guess": "gb/poc",
+    "reason": "live",
+    "detail": "",
+    "last_tri": 0,
+    "date": "2026-11-22"
   }
 ]

@@ -141,6 +141,47 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-19-COUTSymqqS0",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "player": "SlayOnLow",
+    "channel": "SlayOnLow",
+    "video_id": "COUTSymqqS0",
+    "video_ids": [
+      "COUTSymqqS0"
+    ],
+    "published_at": "2026-11-22T13:55:56+01:00",
+    "lang": "en",
+    "score": {
+      "total": 187,
+      "runs": [
+        187
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 187RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "COUTSymqqS0",
+        "published_at": "2026-11-22T13:55:56+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-19-orJG2Lk9VNo",
     "week": "2026-11-19",
     "mode": "gb",
@@ -176,6 +217,47 @@
         "exact": false,
         "damage": null,
         "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-8HpHEFHClpQ",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "player": "RaidenShadow",
+    "channel": "RaidenShadow",
+    "video_id": "8HpHEFHClpQ",
+    "video_ids": [
+      "8HpHEFHClpQ"
+    ],
+    "published_at": "2026-11-22T14:24:43+01:00",
+    "lang": "pt-BR",
+    "score": {
+      "total": 167,
+      "runs": [
+        167
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : Rage: 167; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "8HpHEFHClpQ",
+        "published_at": "2026-11-22T14:24:43+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": 11000000000000,
+        "damage_exact": false,
         "element": null,
         "element_source": null
       }
