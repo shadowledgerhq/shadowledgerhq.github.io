@@ -1,0 +1,24 @@
+{
+  "week": "2026-11-19",
+  "modes": {
+    "poc": null,
+    "bot": null,
+    "gb": {
+      "sjw": true,
+      "deduit": {
+        "source": "écrans",
+        "video_ids": [
+          "XVzx3w07JPo"
+        ],
+        "elements": {
+          "sjw": true
+        },
+        "date": "2026-11-22"
+      },
+      "source": "écrans"
+    },
+    "hotm": null
+  },
+  "verified_at": "2026-11-22",
+  "notes": "null = règles du mode pas encore fournies ; blocs déduits des écrans (SPEC v24)."
+}
