@@ -244,7 +244,7 @@
       "tri3_pas_s": 2,
       "tri3_ocr_complet": true,
       "tri4_pas_s": 10,
-      "max_videos": 6,
+      "max_videos": 25,
       "max_minutes": 30,
       "decision_max_minutes": 240,
       "_decision": "SPEC v37 §3 : vidéo marquée hors sujet ou de plus de max_minutes SANS score dans le texte : tri 3 seul (téléchargée jusqu'à decision_max_minutes), rejetée « actualités : aucun écran de jeu » si aucune image du début ni de la fin n'est un écran de jeu ; au-delà de decision_max_minutes, laissée en dernier [À VÉRIFIER : durée du téléchargement]."
