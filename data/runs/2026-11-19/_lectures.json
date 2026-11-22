@@ -1113,12 +1113,6 @@
             5
           ]
         ],
-        "rage_count": [
-          [
-            77,
-            2
-          ]
-        ],
         "play_time": [
           [
             "03:00",
@@ -1172,6 +1166,12 @@
             161607720718,
             3
           ]
+        ],
+        "rage_count": [
+          [
+            77,
+            2
+          ]
         ]
       },
       "rc_images": 2,
@@ -1182,18 +1182,6 @@
       },
       "sequence": {
         "rage_count": [
-          [
-            218,
-            7
-          ],
-          [
-            219,
-            7
-          ],
-          [
-            220,
-            7
-          ],
           [
             221,
             77
@@ -1232,7 +1220,6 @@
           {
             "player_score": 6365792760107,
             "final_score": 20271045215627,
-            "rage_count": 7,
             "play_time": "03:00",
             "hunter_rank_3": 10212522598640,
             "hunter_rank_5": 979979097865
@@ -1243,7 +1230,6 @@
           {
             "player_score": 6365792760107,
             "final_score": 20271045215627,
-            "rage_count": 7,
             "play_time": "03:00",
             "hunter_rank_3": 10212522598640
           }
@@ -1253,7 +1239,6 @@
           {
             "player_score": 6365792760107,
             "final_score": 20271045215627,
-            "rage_count": 7,
             "play_time": "03:00",
             "hunter_rank_1": 10212522538640,
             "hunter_rank_2": 1986265212673,
@@ -1327,8 +1312,7 @@
       "hud_rage_count": 148
     },
     "notes": [
-      "lecture fusionnée (5 images)",
-      "compteur animé"
+      "lecture fusionnée (5 images)"
     ]
   }
 ]

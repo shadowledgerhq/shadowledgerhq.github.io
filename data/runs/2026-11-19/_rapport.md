@@ -1,10 +1,10 @@
-# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-22 17:15 (Paris)
+# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-22 17:46 (Paris)
 
 - Top 10 couvert : non (40 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (vidéos restantes à traiter)
 - Vidéos traitées ce passage : 2 · en_cours restantes : 49 (dont 40 à traiter par le PC)
 - Erreurs bloquantes : aucune
-- Durée du passage : 11 min
+- Durée du passage : 7 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Résumé GB : XVzx3w07JPo · Results lu (190-278 s) · pas classée
 
