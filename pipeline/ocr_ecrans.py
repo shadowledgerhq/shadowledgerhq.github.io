@@ -419,6 +419,13 @@ def interpreter_zones(zones, config):
             "play_time": _temps_zone(zones.get("temps"))}
 
 
+def rc_apres_final(texte):
+    """v38 : Final Score (≥ 4 groupes de milliers) suivi d'un entier de 1 à 3 chiffres sur la même ligne (`20,271,045,215,627 177`) -> cet
+    entier (Rage Count), sinon None. Sert seulement à recouper une zone dont le « 1 » étroit est perdu ; jamais seul."""
+    m = re.search(r"\d{1,3}(?:[.,]\d{3}){3,}\s+(\d{1,3})(?!\d)", texte or "")
+    return int(m.group(1)) if m else None
+
+
 def _appliquer_zones(ecran, zones, config):
     """v13 : la valeur d'une zone ciblée prime sur celle de l'image entière ; si les deux diffèrent, note
     `écart OCR zone/image : <champ>`. Format non 16:9 : zones non appliquées, note `format non standard`."""
@@ -435,8 +442,11 @@ def _appliquer_zones(ecran, zones, config):
         if z[champ] is None:
             continue
         image = ecran.get(champ)
+        if champ == "rage_count" and image is None:
+            image = ecran.get("rage_count_texte")
         if (champ == "rage_count" and isinstance(image, int) and image > z[champ] and str(image).endswith(str(z[champ]))):
             notes.append("RC de la zone amputé du 1er chiffre : texte entier retenu")      # v38 : « 7 » / « 77 » dans la zone, « 177 » dans le texte
+            ecran["rage_count"] = image
             continue
         if image is not None and image != z[champ] and (champ != "stage" or boss_connu(image, config)):
             notes.append(f"écart OCR zone/image : {champ}")
@@ -521,7 +531,12 @@ def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
     if type_ecran in ("gb_results", "gb_results_partiel"):
         ecran["stage"] = _boss_du_hud(texte, config) or ecran["stage"]     # v12 : nom normalisé si le boss est connu
         if zones is not None:
+            if ecran.get("rage_count") is None:      # v38 : libellés illisibles (coréen) : RC = entier juste après le Final Score
+                ecran["rage_count_texte"] = rc_apres_final(texte)
             _appliquer_zones(ecran, zones, config)
+            if ecran.get("rage_count_texte") is not None and ecran.get("rage_count") is None:
+                ecran["rage_count"] = ecran["rage_count_texte"]
+            ecran.pop("rage_count_texte", None)
         type_ecran = "gb_results"
     if type_ecran == "gb_combat_incertain":
         if zones is not None:
