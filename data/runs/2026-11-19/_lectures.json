@@ -105,56 +105,6 @@
     ]
   },
   {
-    "video_id": "orJG2Lk9VNo",
-    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
-    "channel_title": "MOCANBHAYA ",
-    "published_at": "2026-11-21T06:54:27Z",
-    "lang": "hi",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 171,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 171 RC"
-    ]
-  },
-  {
-    "video_id": "COUTSymqqS0",
-    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
-    "channel_title": "SlayOnLow",
-    "published_at": "2026-11-22T12:55:56Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 187,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 187RC"
-    ]
-  },
-  {
     "video_id": "U3ea-4abBQ8",
     "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
     "channel_title": "SlayOnLow",
@@ -1887,5 +1837,752 @@
       "damage_source": "record"
     },
     "notes": []
+  },
+  {
+    "video_id": "COUTSymqqS0",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "channel_title": "SlayOnLow",
+    "published_at": "2026-11-22T12:55:56Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 0,
+    "stage": null,
+    "team": 1,
+    "score": 17,
+    "score_source": "record",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false,
+      "damage_step": null,
+      "total_score": 20174140432238,
+      "total_rage_count": 77,
+      "challenge_count": 1,
+      "time_left": "3d 12h"
+    },
+    "notes": [
+      "contrôle Personal Record : Total Rage Count ≠ somme des RC des groupes joués (ou illisible)"
+    ]
+  },
+  {
+    "video_id": "COUTSymqqS0",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "channel_title": "SlayOnLow",
+    "published_at": "2026-11-22T12:55:56Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 90,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 5848497818078,
+      "hud_rage_count": 113,
+      "separateur_perdu": false,
+      "elements_hud": [
+        "water",
+        "water",
+        "water"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "COUTSymqqS0",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "channel_title": "SlayOnLow",
+    "published_at": "2026-11-22T12:55:56Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 36267165068179,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 259,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": 36267165068179,
+      "chrono_hud": 0.54,
+      "separateur_perdu": false,
+      "hud_rage_count": 162,
+      "elements_hud": [
+        null,
+        "water",
+        "water"
+      ],
+      "t_debut": 140,
+      "t_fin": 259,
+      "elements_hud_par_t": {
+        "140": [
+          "water",
+          "dark",
+          "water"
+        ],
+        "150": [
+          "water",
+          "water",
+          "water"
+        ],
+        "160": [
+          "water",
+          "water",
+          "water"
+        ],
+        "210": [
+          "water",
+          "water",
+          "water"
+        ],
+        "220": [
+          "water",
+          "dark",
+          "water"
+        ],
+        "256": [
+          "water",
+          "water",
+          "water"
+        ],
+        "257": [
+          "water",
+          "water",
+          "water"
+        ],
+        "258": [
+          "water",
+          "water",
+          "water"
+        ],
+        "259": [
+          null,
+          "water",
+          "water"
+        ]
+      },
+      "damage_exact": false,
+      "damage_source": "hud"
+    },
+    "notes": [
+      "HUD : Boss Rage Count x162, chrono 0.54"
+    ]
+  },
+  {
+    "video_id": "COUTSymqqS0",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "channel_title": "SlayOnLow",
+    "published_at": "2026-11-22T12:55:56Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 36277039667150,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 260,
+    "stage": null,
+    "team": null,
+    "score": 187,
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": true,
+      "player_score": 11050263742843,
+      "hunter_ranks": [
+        22850253017558,
+        605350995578,
+        545220599123,
+        44504927917,
+        347849013309,
+        769172933594
+      ],
+      "hunter_ranks_lus": 6,
+      "n_images": 3,
+      "successor_score": null,
+      "successeur_present": false,
+      "duree_video_s": 284,
+      "votes": {
+        "player_score": [
+          [
+            11050263742843,
+            3
+          ]
+        ],
+        "final_score": [
+          [
+            36277039667150,
+            3
+          ]
+        ],
+        "rage_count": [
+          [
+            187,
+            3
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            3
+          ]
+        ],
+        "hunter_rank_1": [
+          [
+            22850253017558,
+            2
+          ],
+          [
+            72650253017558,
+            1
+          ]
+        ],
+        "hunter_rank_2": [
+          [
+            605350995578,
+            1
+          ],
+          [
+            805350935578,
+            1
+          ],
+          [
+            605350935578,
+            1
+          ]
+        ],
+        "hunter_rank_3": [
+          [
+            545220599123,
+            1
+          ],
+          [
+            945220599123,
+            1
+          ],
+          [
+            45220599123,
+            1
+          ]
+        ],
+        "hunter_rank_4": [
+          [
+            44504927917,
+            2
+          ],
+          [
+            544504927917,
+            1
+          ]
+        ],
+        "hunter_rank_5": [
+          [
+            347849013309,
+            2
+          ]
+        ],
+        "hunter_rank_6": [
+          [
+            769172933594,
+            2
+          ]
+        ]
+      },
+      "rc_images": 3,
+      "final_images": 3,
+      "rc_t": {
+        "187": 260
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            260,
+            187
+          ],
+          [
+            264,
+            187
+          ],
+          [
+            265,
+            187
+          ]
+        ],
+        "final_score": [
+          [
+            260,
+            36277039667150
+          ],
+          [
+            264,
+            36277039667150
+          ],
+          [
+            265,
+            36277039667150
+          ]
+        ]
+      },
+      "par_t": [
+        [
+          260,
+          {
+            "player_score": 11050263742843,
+            "final_score": 36277039667150,
+            "rage_count": 187,
+            "play_time": "03:00",
+            "hunter_rank_1": 22850253017558,
+            "hunter_rank_2": 605350995578,
+            "hunter_rank_3": 545220599123,
+            "hunter_rank_4": 44504927917,
+            "hunter_rank_5": 347849013309
+          }
+        ],
+        [
+          264,
+          {
+            "player_score": 11050263742843,
+            "final_score": 36277039667150,
+            "rage_count": 187,
+            "play_time": "03:00",
+            "hunter_rank_1": 22850253017558,
+            "hunter_rank_2": 805350935578,
+            "hunter_rank_3": 945220599123,
+            "hunter_rank_4": 544504927917,
+            "hunter_rank_5": 347849013309,
+            "hunter_rank_6": 769172933594
+          }
+        ],
+        [
+          265,
+          {
+            "player_score": 11050263742843,
+            "final_score": 36277039667150,
+            "rage_count": 187,
+            "play_time": "03:00",
+            "hunter_rank_1": 72650253017558,
+            "hunter_rank_2": 605350935578,
+            "hunter_rank_3": 45220599123,
+            "hunter_rank_4": 44504927917,
+            "hunter_rank_6": 769172933594
+          }
+        ]
+      ],
+      "t_debut": 260,
+      "t_fin": 265,
+      "rc_texte": [
+        187
+      ],
+      "elements_hud_images": [
+        [
+          "water",
+          "water",
+          "water"
+        ],
+        [
+          "water",
+          "dark",
+          "water"
+        ],
+        [
+          "water",
+          "water",
+          "water"
+        ],
+        [
+          "water",
+          "water",
+          "water"
+        ],
+        [
+          "water",
+          "water",
+          "water"
+        ],
+        [
+          "water",
+          "dark",
+          "water"
+        ],
+        [
+          "water",
+          "water",
+          "water"
+        ],
+        [
+          "water",
+          "water",
+          "water"
+        ],
+        [
+          "water",
+          "water",
+          "water"
+        ],
+        [
+          null,
+          "water",
+          "water"
+        ]
+      ],
+      "elements_hud": [
+        "water",
+        "water",
+        "water",
+        "water",
+        "dark",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "dark",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water"
+      ],
+      "hud_rage_count": 162
+    },
+    "notes": [
+      "écart OCR zone/image : player_score",
+      "écart OCR zone/image : final_score",
+      "écart OCR zone/image : rage_count",
+      "lecture fusionnée (3 images)",
+      "conflit de lecture : hunter_rank_2",
+      "conflit de lecture : hunter_rank_3"
+    ]
+  },
+  {
+    "video_id": "orJG2Lk9VNo",
+    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
+    "channel_title": "MOCANBHAYA ",
+    "published_at": "2026-11-21T06:54:27Z",
+    "lang": "hi",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 380,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 26665790067,
+      "hud_rage_count": 25,
+      "separateur_perdu": false,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "orJG2Lk9VNo",
+    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
+    "channel_title": "MOCANBHAYA ",
+    "published_at": "2026-11-21T06:54:27Z",
+    "lang": "hi",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 554,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": null,
+      "chrono_hud": 0,
+      "separateur_perdu": false,
+      "hud_rage_count": 137,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ],
+      "t_debut": 470,
+      "t_fin": 554,
+      "elements_hud_par_t": {
+        "532": [
+          null,
+          null,
+          null
+        ],
+        "537": [
+          null,
+          null,
+          null
+        ],
+        "551": [
+          null,
+          null,
+          null
+        ],
+        "470": [
+          null,
+          null,
+          null
+        ],
+        "520": [
+          null,
+          null,
+          null
+        ],
+        "554": [
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x137, chrono 0"
+    ]
+  },
+  {
+    "video_id": "orJG2Lk9VNo",
+    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
+    "channel_title": "MOCANBHAYA ",
+    "published_at": "2026-11-21T06:54:27Z",
+    "lang": "hi",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 14297392476417,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 562,
+    "stage": null,
+    "team": null,
+    "score": 1,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": true,
+      "player_score": 7,
+      "hunter_ranks": [
+        null,
+        1019992046,
+        634258640039,
+        null,
+        null,
+        null
+      ],
+      "hunter_ranks_lus": 2,
+      "n_images": 2,
+      "successor_score": null,
+      "successeur_present": false,
+      "duree_video_s": 570,
+      "votes": {
+        "final_score": [
+          [
+            14297392476417,
+            1
+          ]
+        ],
+        "rage_count": [
+          [
+            1,
+            1
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            2
+          ]
+        ],
+        "hunter_rank_2": [
+          [
+            1019992046,
+            2
+          ]
+        ],
+        "hunter_rank_3": [
+          [
+            634258640039,
+            1
+          ],
+          [
+            634258640,
+            1
+          ]
+        ],
+        "player_score": [
+          [
+            7,
+            1
+          ]
+        ]
+      },
+      "rc_images": 1,
+      "final_images": 1,
+      "rc_t": {
+        "1": 562,
+        "171": 562,
+        "7": 563
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            562,
+            1
+          ],
+          [
+            563,
+            7
+          ]
+        ],
+        "final_score": [
+          [
+            562,
+            14297392476417
+          ]
+        ]
+      },
+      "par_t": [
+        [
+          562,
+          {
+            "final_score": 14297392476417,
+            "rage_count": 1,
+            "play_time": "03:00",
+            "hunter_rank_2": 1019992046,
+            "hunter_rank_3": 634258640039
+          }
+        ],
+        [
+          563,
+          {
+            "player_score": 7,
+            "rage_count": 7,
+            "play_time": "03:00",
+            "hunter_rank_2": 1019992046,
+            "hunter_rank_3": 634258640
+          }
+        ]
+      ],
+      "t_debut": 562,
+      "t_fin": 563,
+      "rc_texte": [
+        171
+      ],
+      "elements_hud_images": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "water",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "elements_hud": [
+        "water"
+      ],
+      "hud_rage_count": 137
+    },
+    "notes": [
+      "lecture fusionnée (2 images)",
+      "conflit de lecture : rage_count",
+      "conflit de lecture : hunter_rank_3"
+    ]
   }
 ]

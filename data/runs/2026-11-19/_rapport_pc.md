@@ -248,3 +248,20 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Résumé GB : lKnkiCvMwSM · aucun Results lu · pas classée
 - Résumé GB : XVzx3w07JPo · Eden(이든) · Results lu (190-278 s) · 177 RC sûr · fire
 - Résumé GB : orJG2Lk9VNo · MOCANBHAYA  · aucun Results lu · 171 RC à vérifier · score provisoire (titre) : 171 RC
+
+<!-- passage-pc pc-daily 2026-11-22T21:12:34.085014+00:00 -->
+## Passage pc-daily — 2026-11-22 22:12 (Paris)
+
+- Top 10 couvert : non (39 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 7 · en_cours restantes : 68 (dont 54 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 29 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Sous-titres en attente : 62 avant la règle → 44 après (18 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Résumé GB : lKnkiCvMwSM · aucun Results lu · pas classée
+- Résumé GB : XVzx3w07JPo · Eden(이든) · Results lu (190-278 s) · 177 RC sûr · fire
+- Résumé GB : orJG2Lk9VNo · MOCANBHAYA  · Results lu (562-568 s) · 1 RC à vérifier · fire · conflit de lecture : rage_count
+- Résumé GB : COUTSymqqS0 · SlayOnLow · Results lu (264-282 s) · 187 RC à vérifier · water · conflit de lecture : hunter_rank_2
+- Résumé GB : 8HpHEFHClpQ · aucun Results lu · pas classée
