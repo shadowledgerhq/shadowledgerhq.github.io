@@ -215,6 +215,8 @@ class Outils:
 
     def __init__(self, config_pc, executer=subprocess.run):
         self.cfg, self.executer = config_pc, executer
+        self.horloge = time.monotonic
+        self.date_limite = None        # horloge() au-delà de laquelle un 2e essai ffmpeg n'est plus tenté (fin du budget du passage)
 
     def _lancer(self, cmd, timeout, env=None):
         if shutil.which(cmd[0]) is None and self.executer is subprocess.run:
@@ -271,7 +273,11 @@ class Outils:
             except subprocess.TimeoutExpired:      # essai du 14/11 : ffmpeg bloqué 900 s sur une vidéo ; une seule nouvelle tentative
                 for f in Path(dossier).glob(f"{prefixe}{k}_*.png"):
                     f.unlink(missing_ok=True)
-                self._lancer(cmd, delai)
+                if self.date_limite is not None and self.horloge() > self.date_limite:
+                    raise                          # 23/11 : budget du passage épuisé, pas de 2e essai (138 min au lieu de 100)
+                # 23/11 (gsMwZUzrekM, TrXpeT16Fwc : 300 s dépassés à chaque passage, 2 × 300 s perdus par vidéo) : le décodage
+                # complet est trop lent ; le 2e essai ne décode que les images clés (`-skip_frame nokey`), t approché à qq s près [À CONFIRMER]
+                self._lancer([cmd[0], *cmd[1:4], "-skip_frame", "nokey", *cmd[4:]], delai)
             trouvees += [(debut + i * pas, f) for i, f in enumerate(sorted(Path(dossier).glob(f"{prefixe}{k}_*.png")))]
         return trouvees
 
@@ -1466,6 +1472,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     pc_cfg = config["pc"]
     debut_passage = horloge()
     fin_passage = debut_passage + pc_cfg.get("budget_minutes", 180) * 60
+    outils.horloge, outils.date_limite = horloge, fin_passage
     pause = pc_cfg.get("pause_s", 5)
     journal(f"Passage PC {passage} — semaine {week}")
 

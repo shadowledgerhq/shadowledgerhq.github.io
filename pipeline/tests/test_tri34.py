@@ -837,3 +837,31 @@ if __name__ == "__main__":
     for nom, fn in list(globals().items()):
         if nom.startswith("test_"):
             fn(); print("ok", nom)
+
+
+def test_ffmpeg_2e_essai_images_cles_et_pas_de_2e_essai_hors_budget():
+    import subprocess
+    import tempfile
+
+    def monter(date_limite):
+        appels = []
+
+        def faux(cmd, **kw):
+            appels.append(cmd)
+            if len(appels) == 1:
+                raise subprocess.TimeoutExpired(cmd, kw["timeout"])
+            return subprocess.CompletedProcess(cmd, 0, stdout="", stderr="")
+        o = pc.Outils(CONFIG["pc"], executer=faux)
+        o.horloge, o.date_limite = (lambda: 100), date_limite
+        return o, appels
+    with tempfile.TemporaryDirectory() as tmp:
+        o, appels = monter(1000)
+        o.images(Path(tmp) / "v.mp4", [(0, 10, 2)], tmp)
+        assert "-skip_frame" not in appels[0] and appels[1][appels[1].index("-skip_frame") + 1] == "nokey"
+        assert appels[1].index("-skip_frame") < appels[1].index("-i")            # option d'entrée
+        o, appels = monter(50)                                                   # budget du passage épuisé
+        try:
+            o.images(Path(tmp) / "v.mp4", [(0, 10, 2)], tmp)
+            assert False
+        except subprocess.TimeoutExpired:
+            assert len(appels) == 1
