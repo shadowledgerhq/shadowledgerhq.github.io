@@ -295,6 +295,7 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Relance automatique : 23/11/2026 21:30 (une seule fois par soir)
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Sous-titres en attente : 19 avant la règle → 19 après (13 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
-- Résumé GB : GSA-KI-ELE8 · Son Titan · Results lu (590-615 s) · 188 RC à vérifier · fire · contrôle sans Hunter Rank : boss illisible
+- Conflit git résolu automatiquement
+- Résumé GB : GSA-KI-ELE8 · Results lu (590-615 s) · pas classée
 - Résumé GB : ENeKS5q6u1Q · aucun Results lu · pas classée
-- Résumé GB : Xri8bvS4Kkg · Black Thunder X · Results lu (6-65 s) · 19 RC à vérifier · format non standard
+- Résumé GB : Xri8bvS4Kkg · Results lu (6-65 s) · pas classée
