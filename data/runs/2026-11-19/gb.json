@@ -142,6 +142,47 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-19-ypLEjrcd6VI",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
+    "player": "Yuta",
+    "channel": "Yuta",
+    "video_id": "ypLEjrcd6VI",
+    "video_ids": [
+      "ypLEjrcd6VI"
+    ],
+    "published_at": "2026-11-20T05:33:39+01:00",
+    "lang": "en",
+    "score": {
+      "total": 197,
+      "runs": [
+        197
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 197 RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "ypLEjrcd6VI",
+        "published_at": "2026-11-20T05:33:39+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-19-FLCbZ5tzf_8",
     "week": "2026-11-19",
     "mode": "gb",
@@ -195,6 +236,47 @@
         "element": "dark",
         "element_source": "titre+ecran",
         "hud_rage_count": 163
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-i6S0xrpiTvI",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
+    "player": "MOCANBHAYA ",
+    "channel": "MOCANBHAYA ",
+    "video_id": "i6S0xrpiTvI",
+    "video_ids": [
+      "i6S0xrpiTvI"
+    ],
+    "published_at": "2026-11-23T11:43:19+01:00",
+    "lang": "hi",
+    "score": {
+      "total": 178,
+      "runs": [
+        178
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 178 RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "i6S0xrpiTvI",
+        "published_at": "2026-11-23T11:43:19+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
       }
     ]
   },
@@ -364,48 +446,6 @@
         "element_source": null,
         "hud_rage_count": 57,
         "damage_source": "hud"
-      }
-    ]
-  },
-  {
-    "run_id": "gb-2026-11-19-orJG2Lk9VNo",
-    "week": "2026-11-19",
-    "mode": "gb",
-    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
-    "player": "MOCANBHAYA ",
-    "channel": "MOCANBHAYA ",
-    "video_id": "orJG2Lk9VNo",
-    "video_ids": [
-      "orJG2Lk9VNo"
-    ],
-    "published_at": "2026-11-21T07:54:27+01:00",
-    "lang": "hi",
-    "score": {
-      "total": 1,
-      "runs": [
-        1
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "lecture fusionnée (2 images); conflit de lecture : rage_count; conflit de lecture : hunter_rank_3; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "orJG2Lk9VNo",
-        "published_at": "2026-11-21T07:54:27+01:00",
-        "t": 562,
-        "stage": null,
-        "team": null,
-        "score_source": "debut-fin",
-        "exact": false,
-        "damage": 14297392476417,
-        "damage_exact": true,
-        "element": "fire",
-        "element_source": "titre",
-        "hud_rage_count": 137
       }
     ]
   }
