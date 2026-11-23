@@ -4453,5 +4453,631 @@
       "lecture fusionnée (5 images)",
       "conflit de lecture : hunter_rank_3"
     ]
+  },
+  {
+    "video_id": "GSA-KI-ELE8",
+    "channel_id": "UCQddimMporJcQnifNpSJIgg",
+    "channel_title": "Son Titan",
+    "published_at": "2026-11-22T17:00:36Z",
+    "lang": "es",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 38938927675868,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 590,
+    "stage": null,
+    "team": null,
+    "score": 188,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": false,
+      "player_score": 7500433522966,
+      "hunter_ranks": [
+        3763225959557,
+        null,
+        null,
+        2156516450261,
+        null,
+        null
+      ],
+      "hunter_ranks_lus": 2,
+      "n_images": 1,
+      "successor_score": null,
+      "successeur_present": false,
+      "duree_video_s": 616,
+      "votes": {
+        "player_score": [
+          [
+            7500433522966,
+            1
+          ]
+        ],
+        "final_score": [
+          [
+            38938927675868,
+            1
+          ]
+        ],
+        "rage_count": [
+          [
+            188,
+            1
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            1
+          ]
+        ],
+        "hunter_rank_1": [
+          [
+            3763225959557,
+            1
+          ]
+        ],
+        "hunter_rank_4": [
+          [
+            2156516450261,
+            1
+          ]
+        ]
+      },
+      "rc_images": 1,
+      "final_images": 1,
+      "rc_t": {
+        "188": 590
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            590,
+            188
+          ]
+        ],
+        "final_score": [
+          [
+            590,
+            38938927675868
+          ]
+        ]
+      },
+      "par_t": [
+        [
+          590,
+          {
+            "player_score": 7500433522966,
+            "final_score": 38938927675868,
+            "rage_count": 188,
+            "play_time": "03:00",
+            "hunter_rank_1": 3763225959557,
+            "hunter_rank_4": 2156516450261
+          }
+        ]
+      ],
+      "t_debut": 590,
+      "t_fin": 590
+    },
+    "notes": [
+      "contrôle sans Hunter Rank : boss illisible",
+      "contrôle sans Hunter Rank : Rage Count lu sur une seule image",
+      "contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run",
+      "contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run)"
+    ]
+  },
+  {
+    "video_id": "Xri8bvS4Kkg",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "channel_title": "Black Thunder X",
+    "published_at": "2026-11-22T10:21:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 87366,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 6,
+    "stage": null,
+    "team": null,
+    "score": 19,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": false,
+      "player_score": null,
+      "hunter_ranks": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "hunter_ranks_lus": 0,
+      "n_images": 2,
+      "successor_score": null,
+      "successeur_present": false,
+      "duree_video_s": 523,
+      "votes": {
+        "final_score": [
+          [
+            87366,
+            1
+          ]
+        ],
+        "rage_count": [
+          [
+            19,
+            1
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            2
+          ]
+        ]
+      },
+      "rc_images": 1,
+      "final_images": 1,
+      "rc_t": {
+        "19": 6,
+        "5": 7
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            6,
+            19
+          ],
+          [
+            7,
+            5
+          ]
+        ],
+        "final_score": [
+          [
+            6,
+            87366
+          ]
+        ]
+      },
+      "par_t": [
+        [
+          6,
+          {
+            "final_score": 87366,
+            "rage_count": 19,
+            "play_time": "03:00"
+          }
+        ],
+        [
+          7,
+          {
+            "rage_count": 5,
+            "play_time": "03:00"
+          }
+        ]
+      ],
+      "t_debut": 6,
+      "t_fin": 7
+    },
+    "notes": [
+      "format non standard",
+      "lecture fusionnée (2 images)",
+      "conflit de lecture : rage_count"
+    ]
+  },
+  {
+    "video_id": "Xri8bvS4Kkg",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "channel_title": "Black Thunder X",
+    "published_at": "2026-11-22T10:21:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 360,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 23047762108427,
+      "hud_rage_count": 15,
+      "separateur_perdu": false,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "Xri8bvS4Kkg",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "channel_title": "Black Thunder X",
+    "published_at": "2026-11-22T10:21:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 49609198090204,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 500,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": 49609198090204,
+      "chrono_hud": 0.67,
+      "separateur_perdu": false,
+      "hud_rage_count": 163,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ],
+      "t_debut": 200,
+      "t_fin": 504,
+      "elements_hud_par_t": {
+        "200": [
+          null,
+          null,
+          null
+        ],
+        "230": [
+          null,
+          null,
+          null
+        ],
+        "240": [
+          null,
+          null,
+          null
+        ],
+        "270": [
+          null,
+          null,
+          null
+        ],
+        "280": [
+          null,
+          null,
+          null
+        ],
+        "290": [
+          null,
+          null,
+          null
+        ],
+        "300": [
+          null,
+          null,
+          null
+        ],
+        "320": [
+          null,
+          null,
+          null
+        ],
+        "370": [
+          null,
+          null,
+          null
+        ],
+        "380": [
+          null,
+          null,
+          null
+        ],
+        "390": [
+          null,
+          null,
+          null
+        ],
+        "470": [
+          null,
+          null,
+          null
+        ],
+        "480": [
+          null,
+          null,
+          null
+        ],
+        "490": [
+          null,
+          null,
+          null
+        ],
+        "500": [
+          null,
+          null,
+          null
+        ],
+        "495": [
+          null,
+          null,
+          null
+        ],
+        "503": [
+          null,
+          null,
+          null
+        ],
+        "504": [
+          null,
+          null,
+          null
+        ],
+        "502": [
+          null,
+          null,
+          null
+        ]
+      },
+      "damage_exact": false,
+      "damage_source": "hud"
+    },
+    "notes": [
+      "HUD : Boss Rage Count x163, chrono 0.67"
+    ]
+  },
+  {
+    "video_id": "Xri8bvS4Kkg",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "channel_title": "Black Thunder X",
+    "published_at": "2026-11-22T10:21:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 7,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 515,
+    "stage": null,
+    "team": null,
+    "score": 4,
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": true,
+      "play_time": "03:00",
+      "new_record": false,
+      "player_score": 955567100383,
+      "hunter_ranks": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "hunter_ranks_lus": 0,
+      "n_images": 3,
+      "successor_score": null,
+      "successeur_present": false,
+      "duree_video_s": 523,
+      "votes": {
+        "player_score": [
+          [
+            955567100383,
+            1
+          ]
+        ],
+        "final_score": [
+          [
+            7,
+            1
+          ],
+          [
+            187306,
+            1
+          ]
+        ],
+        "rage_count": [
+          [
+            4,
+            1
+          ]
+        ],
+        "play_time": [
+          [
+            "03:00",
+            2
+          ]
+        ]
+      },
+      "rc_images": 1,
+      "final_images": 1,
+      "rc_t": {
+        "4": 515
+      },
+      "sequence": {
+        "rage_count": [
+          [
+            515,
+            4
+          ]
+        ],
+        "final_score": [
+          [
+            515,
+            7
+          ],
+          [
+            518,
+            187306
+          ]
+        ]
+      },
+      "par_t": [
+        [
+          512,
+          {}
+        ],
+        [
+          515,
+          {
+            "player_score": 955567100383,
+            "final_score": 7,
+            "rage_count": 4,
+            "play_time": "03:00"
+          }
+        ],
+        [
+          518,
+          {
+            "final_score": 187306,
+            "play_time": "03:00"
+          }
+        ]
+      ],
+      "t_debut": 512,
+      "t_fin": 518,
+      "elements_hud_images": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "elements_hud": [],
+      "hud_rage_count": 163
+    },
+    "notes": [
+      "format non standard",
+      "lecture fusionnée (3 images)",
+      "conflit de lecture : final_score"
+    ]
   }
 ]

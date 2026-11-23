@@ -283,3 +283,18 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Résumé GB : nWhYblu3xJc · aucun Results lu · pas classée
 - Résumé GB : XVzx3w07JPo · Eden(이든) · Results lu (190-278 s) · 177 RC sûr · fire
 - Résumé GB : … et 13 autre(s) vidéo(s)
+
+<!-- passage-pc pc-daily 2026-11-23T18:30:15.173265+00:00 -->
+## Passage pc-daily — 2026-11-23 19:30 (Paris)
+
+- Top 10 couvert : non (4 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 12 · en_cours restantes : 62 (dont 19 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot) ; gsMwZUzrekM : images : Command '['ffmpeg', '-nostdin', '-v', 'error', '-ss', '0', '-t', '1051', '-i', 'C:\\Users\\moniq\\AppData\\Local\\Temp\\tmp_4m8rlil\\gsMwZUzrekM.mp4', '-vf', 'fps=1/10,scale=-2:720', '-q:v', '2', 'C:\\Users\\moniq\\AppData\\Local\\Temp\\tmp_4m8rlil/f0_%04d.png']' timed out after 300 seconds ; TrXpeT16Fwc : images : Command '['ffmpeg', '-nostdin', '-v', 'error', '-ss', '0', '-t', '1249', '-i', 'C:\\Users\\moniq\\AppData\\Local\\Temp\\tmp7ynj5swf\\TrXpeT16Fwc.mp4', '-vf', 'fps=1/10,scale=-2:720', '-q:v', '2', 'C:\\Users\\moniq\\AppData\\Local\\Temp\\tmp7ynj5swf/f0_%04d.png']' timed out after 300 seconds
+- Durée du passage : 101 min
+- Relance automatique : 23/11/2026 21:30 (une seule fois par soir)
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Sous-titres en attente : 19 avant la règle → 19 après (13 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Résumé GB : GSA-KI-ELE8 · Son Titan · Results lu (590-615 s) · 188 RC à vérifier · fire · contrôle sans Hunter Rank : boss illisible
+- Résumé GB : ENeKS5q6u1Q · aucun Results lu · pas classée
+- Résumé GB : Xri8bvS4Kkg · Black Thunder X · Results lu (6-65 s) · 19 RC à vérifier · format non standard
