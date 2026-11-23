@@ -265,3 +265,21 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Résumé GB : orJG2Lk9VNo · MOCANBHAYA  · Results lu (562-568 s) · 1 RC à vérifier · fire · conflit de lecture : rage_count
 - Résumé GB : COUTSymqqS0 · SlayOnLow · Results lu (264-282 s) · 187 RC à vérifier · water · conflit de lecture : hunter_rank_2
 - Résumé GB : 8HpHEFHClpQ · aucun Results lu · pas classée
+
+<!-- passage-pc pc-daily 2026-11-22T22:30:04.667568+00:00 -->
+## Passage pc-daily — 2026-11-22 23:30 (Paris)
+
+- Top 10 couvert : non (16 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 23 · en_cours restantes : 64 (dont 31 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot) ; gsMwZUzrekM : images : Command '['ffmpeg', '-nostdin', '-v', 'error', '-ss', '0', '-t', '1051', '-i', 'C:\\Users\\moniq\\AppData\\Local\\Temp\\tmpelcx_7rc\\gsMwZUzrekM.mp4', '-vf', 'fps=1/10,scale=-2:720', '-q:v', '2', 'C:\\Users\\moniq\\AppData\\Local\\Temp\\tmpelcx_7rc/f0_%04d.png']' timed out after 300 seconds ; TrXpeT16Fwc : images : Command '['ffmpeg', '-nostdin', '-v', 'error', '-ss', '0', '-t', '1249', '-i', 'C:\\Users\\moniq\\AppData\\Local\\Temp\\tmpc726l_uj\\TrXpeT16Fwc.mp4', '-vf', 'fps=1/10,scale=-2:720', '-q:v', '2', 'C:\\Users\\moniq\\AppData\\Local\\Temp\\tmpc726l_uj/f0_%04d.png']' timed out after 300 seconds
+- Durée du passage : 138 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Sous-titres en attente : 40 avant la règle → 40 après (15 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Résumé GB : lKnkiCvMwSM · aucun Results lu · pas classée
+- Résumé GB : Hm1ES8T6fFU · aucun Results lu · pas classée
+- Résumé GB : gsMwZUzrekM · aucun Results lu · pas classée
+- Résumé GB : nWhYblu3xJc · aucun Results lu · pas classée
+- Résumé GB : XVzx3w07JPo · Eden(이든) · Results lu (190-278 s) · 177 RC sûr · fire
+- Résumé GB : … et 13 autre(s) vidéo(s)

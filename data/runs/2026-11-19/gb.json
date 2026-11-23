@@ -42,6 +42,64 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-19-COUTSymqqS0",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "player": "SlayOnLow",
+    "channel": "SlayOnLow",
+    "video_id": "COUTSymqqS0",
+    "video_ids": [
+      "COUTSymqqS0",
+      "U3ea-4abBQ8"
+    ],
+    "published_at": "2026-11-22T13:55:56+01:00",
+    "lang": "en",
+    "score": {
+      "total": 364,
+      "runs": [
+        187,
+        177
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "écart OCR zone/image : player_score; écart OCR zone/image : final_score; écart OCR zone/image : rage_count; lecture fusionnée (3 images); conflit de lecture : hunter_rank_2; conflit de lecture : hunter_rank_3; élément du titre contredit par l'écran; RC de la zone amputé du 1er chiffre : texte entier retenu; lecture fusionnée (5 images); élément associé titre + chasseurs; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "COUTSymqqS0",
+        "published_at": "2026-11-22T13:55:56+01:00",
+        "t": 260,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": false,
+        "damage": 36277039667150,
+        "damage_exact": true,
+        "element": "water",
+        "element_source": "ecran",
+        "hud_rage_count": 162
+      },
+      {
+        "video_id": "U3ea-4abBQ8",
+        "published_at": "2026-11-22T13:38:15+01:00",
+        "t": 281,
+        "stage": null,
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": false,
+        "damage": 20174140432238,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 152
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-19-vt47IaCcMQg",
     "week": "2026-11-19",
     "mode": "gb",
@@ -141,48 +199,6 @@
     ]
   },
   {
-    "run_id": "gb-2026-11-19-COUTSymqqS0",
-    "week": "2026-11-19",
-    "mode": "gb",
-    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
-    "player": "SlayOnLow",
-    "channel": "SlayOnLow",
-    "video_id": "COUTSymqqS0",
-    "video_ids": [
-      "COUTSymqqS0"
-    ],
-    "published_at": "2026-11-22T13:55:56+01:00",
-    "lang": "en",
-    "score": {
-      "total": 187,
-      "runs": [
-        187
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "video-complete",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "écart OCR zone/image : player_score; écart OCR zone/image : final_score; écart OCR zone/image : rage_count; lecture fusionnée (3 images); conflit de lecture : hunter_rank_2; conflit de lecture : hunter_rank_3; élément du titre contredit par l'écran; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "COUTSymqqS0",
-        "published_at": "2026-11-22T13:55:56+01:00",
-        "t": 260,
-        "stage": null,
-        "team": null,
-        "score_source": "video-complete",
-        "exact": false,
-        "damage": 36277039667150,
-        "damage_exact": true,
-        "element": "water",
-        "element_source": "ecran",
-        "hud_rage_count": 162
-      }
-    ]
-  },
-  {
     "run_id": "gb-2026-11-19-09bNKPXg-pc",
     "week": "2026-11-19",
     "mode": "gb",
@@ -221,6 +237,90 @@
         "element": "water",
         "element_source": "ecran",
         "hud_rage_count": 140
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-CEk1TZAsUVY",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCf2mudjqYhmDcsuM8LXIQCQ",
+    "player": "TemuWesker",
+    "channel": "TemuWesker",
+    "video_id": "CEk1TZAsUVY",
+    "video_ids": [
+      "CEk1TZAsUVY"
+    ],
+    "published_at": "2026-11-21T03:23:39+01:00",
+    "lang": "en",
+    "score": {
+      "total": 142,
+      "runs": [
+        142
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "écart OCR zone/image : final_score; écart OCR zone/image : player_score; écart OCR zone/image : rage_count; lecture fusionnée (4 images); conflit de lecture : hunter_rank_3; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "CEk1TZAsUVY",
+        "published_at": "2026-11-21T03:23:39+01:00",
+        "t": 560,
+        "stage": "Bes ew alk",
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": false,
+        "damage": 2269904289326,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "ecran",
+        "hud_rage_count": 125
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-ofbxuWCxT7U",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+    "player": "HS Retro Gaming",
+    "channel": "HS Retro Gaming",
+    "video_id": "ofbxuWCxT7U",
+    "video_ids": [
+      "ofbxuWCxT7U"
+    ],
+    "published_at": "2026-11-20T13:00:32+01:00",
+    "lang": "en-US",
+    "score": {
+      "total": 94,
+      "runs": [
+        94
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "lecture fusionnée (3 images); contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "ofbxuWCxT7U",
+        "published_at": "2026-11-20T13:00:32+01:00",
+        "t": 249,
+        "stage": null,
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": false,
+        "damage": 7699767333,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "ecran",
+        "hud_rage_count": 23
       }
     ]
   },

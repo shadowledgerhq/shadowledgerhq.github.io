@@ -5368,11 +5368,25 @@
     "published_at": "2026-11-22T06:00:38Z",
     "first_seen": "2026-11-22",
     "updated_at": "2026-11-22",
-    "last_tri": 1,
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-22",
+      "tri4": "fait"
+    }
   },
   "S8EHMzNFOVI": {
     "week": "2026-11-19",
@@ -5392,11 +5406,25 @@
     "published_at": "2026-11-22T02:00:13Z",
     "first_seen": "2026-11-22",
     "updated_at": "2026-11-22",
-    "last_tri": 1,
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [],
-    "pc_needed": true,
-    "regles": 18
+    "pc_needed": false,
+    "regles": 18,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-22",
+      "tri4": "fait"
+    }
   },
   "4y8_OHlKrVk": {
     "week": "2026-11-19",
