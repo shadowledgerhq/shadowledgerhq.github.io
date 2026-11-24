@@ -9,8 +9,8 @@
     {
       "run_index": 1,
       "run_start_t": 9.5,
-      "run_end_t": 209.0,
-      "duration_s": 199.5,
+      "run_end_t": 218.0,
+      "duration_s": 208.5,
       "events": [
         {
           "t": 10.0,
@@ -758,10 +758,9 @@
         }
       ],
       "limites": [
-        "bornes-incertaines",
         "chasseurs-inconnus"
       ],
-      "sans_hud_s": 28.0,
+      "sans_hud_s": 36.5,
       "recharges_entamees": 120
     }
   ]

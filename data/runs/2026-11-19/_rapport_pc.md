@@ -399,3 +399,22 @@ ERROR: [youtube] vZrdTHYl1Zo: Requested format is not available. Use --list-form
 - Résumé GB : ArbQ34JwHFE · aucun Results lu · pas classée
 - Résumé GB : 8qH8akEGaOg · Willian · aucun Results lu · 205 RC à vérifier · score provisoire (titre) : 205RC
 - Résumé GB : … et 1 autre(s) vidéo(s)
+
+<!-- passage-pc pc-daily 2026-11-24T22:30:04.398176+00:00 -->
+## Passage pc-daily — 2026-11-24 23:30 (Paris)
+
+- Top 10 couvert : oui (0 vidéo candidate au top 10 restante)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 25 · en_cours restantes : 105 (dont 9 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 87 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 1/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : quck1v-c7nc 44.7 min → 80 s ; lFJbOusY26o 32.2 min → 103 s ; FVJbWPJYo6Q 4.1 min → 30 s ; 17ZeQo49yAY 40.1 min → 104 s ; c3q6woLKyyY 27.4 min → 121 s ; 2nVLdAFgLgc 10.0 min → 25 s ; BmzqTsMGOZg 6.5 min → 23 s ; z8YuUROu1bA 2.7 min → 15 s ; pBwKumwlfSU 2.9 min → 35 s ; OMbh7AiCgKI 5.1 min → 71 s ; kyePxECGxcU 5.0 min → 57 s ; FFzvoemSIIw 1.0 min → 14 s ; 89krbTek-_g 16.3 min → 42 s ; S8EHMzNFOVI 41.9 min → 58 s ; R7Uo0eYYAWM 1.9 min → 10 s ; nf3sPkhUqEA 1.0 min → 6 s ; vZrdTHYl1Zo 0.3 min → 7 s ; THxs2Y7QFI0 31.6 min → 115 s
+- Sous-titres en attente : 20 avant la règle → 20 après (24 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Résumé GB : 2nVLdAFgLgc · aucun Results lu · pas classée
+- Résumé GB : 89krbTek-_g · aucun Results lu · pas classée
+- Résumé GB : qWAOYGouWeA · DEFQI GAMES · Results lu (888-909 s) · 194 RC à vérifier · water · conflit de lecture : hunter_rank_1
+- Résumé GB : CnFBmHEzZww · Results lu (480-503 s) · pas classée
+- Résumé GB : Fp4PYcT4UE0 · aucun Results lu · pas classée
+- Résumé GB : … et 6 autre(s) vidéo(s)
