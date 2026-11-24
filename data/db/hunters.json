@@ -15716,22 +15716,200 @@
     "role": "supporter",
     "type_en": "elemental overload supporter",
     "element": "dark",
-    "class": null,
+    "class": "Mage",
     "weapon_type": null,
     "exclusive_weapon": "Rosa Nera",
     "release_date_en": "19 November 2026",
-    "skills": [],
-    "passives": [],
-    "base_stats": null,
-    "advancement": [],
+    "skills": [
+      {
+        "type": "basic_attack",
+        "name": {
+          "fr": "",
+          "en": "Valzer di Spine",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Thalia draws an arc with her staff as if dancing, attacking enemies ahead with thorny vines."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Stage 1 Damage: 186-279% of the user's Max HP Stage 2 Damage: 185-277.5% of the user's Max HP Stage 3 Damage: 196-294% of the user's Max HP ・Deals Dark elemental damage.",
+        "values_by_level": {}
+      },
+      {
+        "type": "core_attack",
+        "name": {
+          "fr": "",
+          "en": "Innesto",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Lead by butterflies, Thalia approaches the enemy and conjures a single flower blossom."
+        },
+        "cooldown": null,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 923-1384.5% of the user's Max HP ・Deals Dark elemental damage.",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_1",
+        "name": {
+          "fr": "",
+          "en": "Paradiso",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Thalia unfurls a beautiful garden, welcoming enemies to their doom with a swirling dance of thorns and butterflies."
+        },
+        "cooldown": 8.0,
+        "mp_cost": "150-198",
+        "effects": [],
+        "effects_text_en": "Damage: 961-1441.5% of the user's Max HP Cooldown: 8 sec MP Consumption: 150-198 ・Deals Dark elemental damage. ・When the final hit lands it inflicts the [Airborne] effect on the target.",
+        "values_by_level": {}
+      },
+      {
+        "type": "skill_2",
+        "name": {
+          "fr": "",
+          "en": "Ribalta",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "With elegance, the enfolded flower bud bursts into full bloom."
+        },
+        "cooldown": 12.0,
+        "mp_cost": "200-264",
+        "effects": [],
+        "effects_text_en": "Damage: 1878-2817% of the user's Max HP Cooldown: 12 sec MP Consumption: 200-264 ・Deals Dark elemental damage.",
+        "values_by_level": {}
+      },
+      {
+        "type": "support",
+        "name": {
+          "fr": "",
+          "en": "Giardino d'Incanto",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "Thalia creates a garden of flowers and butterflies, protecting allies and attacking enemies."
+        },
+        "cooldown": 25.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 784-1611.56% of the user's Max HP Cooldown: 25 sec ・Deals Dark elemental damage ・When the final hit lands, it inflicts [Airborne] ・If the entire team, excluding Sung Jinwoo, are Dark members, Sung Jinwoo's DarkOverload damage increases by 15% ・Using this skill activates [Polline] on the entire team [Polline] Increases DarkCore Attack damage by 15% Increases DarkBasic Skill damage by 15% Gains a [Shield] equal to 30% of Thalia De Rossi's Max HP Removes debuffs from all team members. Duration: 30 second(s)",
+        "values_by_level": {}
+      },
+      {
+        "type": "qte",
+        "name": {
+          "fr": "",
+          "en": "Roveto",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "When Thalia flicks her fingertips, it causes the dormant thorns to surge forward."
+        },
+        "cooldown": 20.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 960-1440% of the user's Max HP Cooldown: 20 sec Usage Condition: Extreme Evasion, Core Attack, Ultimate Skill, skills that inflict the [Stun] or [Bind] effects, or a Shadow Skill ・Deals Dark elemental damage",
+        "values_by_level": {}
+      },
+      {
+        "type": "ultimate",
+        "name": {
+          "fr": "",
+          "en": "Estremo Fiore",
+          "ko": ""
+        },
+        "text": {
+          "fr": "",
+          "en": "The moment the final flower blooms, Thalia brings a spectacular finale to the enemy."
+        },
+        "cooldown": 45.0,
+        "mp_cost": null,
+        "effects": [],
+        "effects_text_en": "Damage: 3817-5725.5% of the user's Max HP Cooldown: 45 sec Power Gauge Consumption: 100% ・Deals Dark elemental damage ・When this skill hits it inflicts the [Airborne] effect",
+        "values_by_level": {}
+      }
+    ],
+    "passives": [
+      {
+        "tier": 0,
+        "text": {
+          "fr": "",
+          "en": "Using [Paradiso] restores 100% of the user's Core Gauge. Using [Paradiso] activates the [Serra] effect on the entire team. Using [Estremo Fiore] activates the [Fioritura] effect on the entire team. When [Innesto] hits it inflicts 2 [Infestation] instances. [Serra] Gains a [Shield] equal to 30% of Thalia De Rossi's Max HP. Removes debuffs from all team members. Duration: 20 second(s) [Fioritura] Increases Dark damage by 20%. Increases DarkBasic Skill damage by 20%. Increases DarkOverload damage by 10%. Duration: 20 second(s) [Infestation] Deals damage equal to 50% of the user's Max HP every 3 seconds. Duration: 30 second(s) (stacks up to 10 times)"
+        }
+      }
+    ],
+    "base_stats": {
+      "lv1": {
+        "hp": "2,554",
+        "attack": "1,155",
+        "defense": "1,164",
+        "total_power": "220,958"
+      },
+      "max": {
+        "hp": "27,141",
+        "attack": "11,257",
+        "defense": "11,351",
+        "total_power": "790,909"
+      }
+    },
+    "advancement": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "Upon entering a stage, activates [Venerata] on a single Dark Elemental Buster team member with the highest Total Power. When [Innesto] hits, it activates [Fatale] on the target. Using [Ribalta] activates the [Applauso] effect on Sung Jinwoo and Dark team members. Using [Estremo Fiore] activates [Devozione] on the team member designated as [Venerata]. [Venerata] Increases Attack by 20%. Using the Basic Skill charges Thalia De Rossi's Power Gauge by 10% and decreases [Estremo Fiore] cooldown by 3 second(s) (Cooldown: 1 second(s)). Duration: Infinite [Fatale] Increases damage taken by 10%. Increases the chance of receiving Critical Hit damage by 10%. Increases Critical Hit damage received by 10%. Duration: 20 second(s) [Applauso] Increases Critical Hit Rate by 10%. Increases Critical Hit Damage by 20%. Duration: 20 second(s) [Devozione] Increases DarkBasic Skill damage by 20%. Increases Burst damage by 10%. Duration: 20 second(s)"
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "For every Dark ally in the party, the entire team's Dark damage increases by 3%. 50% of the damage taken by the team member designated as Venerata is instead taken by Thalia De Rossi (Excludes continuous damage or damage from certain effects.)"
+        }
+      },
+      {
+        "tier": 3,
+        "text": {
+          "fr": "",
+          "en": "[Serra and Fioritura] are enhanced. When [Innesto] hits, it now applies 5 instances of the [Infestation] effect on the target. [Serra] Gains a [Shield] equal to 30% of Thalia De Rossi's Max HP. Every 3 second(s), the team recovers 2% of their HP and 5% of their MP. Removes debuffs from all team members. Duration: 40 second(s) [Fioritura] Increases Dark damage by 25%. Increases DarkBasic Skill damage by 40%. Increases DarkOverload damage by 20%. Duration: 40 second(s) [Infestation] Deals damage equal to 50% of Max HP every 3 seconds. Duration: 30 second(s) (stacks up to 10 times)"
+        }
+      },
+      {
+        "tier": 4,
+        "text": {
+          "fr": "",
+          "en": "The entire team's DarkOverload damage is increased by 5% for every Dark ally. Increases the team member designated as [Venerata]'s DarkOverload damage by 15% for 20 second(s) when any ally successfully inflicts DarkOverload."
+        }
+      },
+      {
+        "tier": 5,
+        "text": {
+          "fr": "",
+          "en": "[Fatale], [Applauso], [Devozione] are enhanced. If the team member designated as [Venerata] has 1 or less HP, they become [Immortal] for 2 second(s). When the [Immortal] effect ends, recovers HP equal to 30% of Thalia De Rossi's Max HP. This effect is triggered only once during battle. [Fatale] Increases damage taken by 20%. Increases the chance of receiving Critical Hit damage by 20%. Increases Critical Hit damage received by 20%. Duration: 40 second(s) [Applauso] Increases Critical Hit Rate by 25%. Increases Critical Hit Damage by 40%. Duration: 40 second(s) [Devozione] Increases DarkBasic Skill damage by 40%. Increases Burst damage by 40%. Slightly increases Burst damage accumulation rate. Duration: 40 second(s)"
+        }
+      }
+    ],
     "icon": "data/icons/hunters/thalia-de-rossi.png",
-    "source": "https://forum.netmarble.com/slv_en/view/14/110997",
-    "verified_at": "2026-11-19",
+    "source": "https://forum.netmarble.com/slv_en/view/14/110997 ; https://solo-leveling-arise.fandom.com/wiki/Thalia_De_Rossi",
+    "verified_at": "2026-11-24",
     "game_version": null,
-    "notes": "Ajout du patch du 19/11/2026. Aucune fiche wiki ni valeur chiffrée disponible à cette date : compétences, paliers et statistiques à compléter (null/vides), rien d'inventé. Non vérifié en jeu. Supporter Dark « Overload » de la guilde Rivera (Developer Note 13/110809) : boucliers et soins, buff Overload, hausse des dégâts critiques subis par l'ennemi, augmente les dégâts d'attaque de noyau de SJW ; synergie avec Agnes Rivera. Rôle « supporter » : fiche officielle du 19/11. Nom FR (identique) et portrait : API slagate (id 80). Obtenable par Rate Up Draw.",
+    "notes": "Fiche complétée le 24/11/2026 depuis le wiki Fandom (page créée après le 19/11) : compétences, passif, paliers 1-5, stats Lv.1 (0★) et max (Lv.170, 5★ + 5 paliers dimensionnels). Dégâts exprimés en % des PV max (non de l'Attaque) : à confirmer en jeu. Classe « Mage » = catégorie du wiki (Mages), à vérifier. Paliers dimensionnels 1-5 : +3 % Attaque/Défense/PV chacun (non stockés). Wiki communautaire, non vérifié en jeu ; wiki_revid/timestamp non relevés. Supporter Dark « Overload » de la guilde Rivera (Developer Note 13/110809). Nom FR (identique) et portrait : API slagate (id 80). Obtenable par Rate Up Draw. Le wiki écrit « Thalia De Roosi » dans l'introduction (faute de frappe). Noms FR des compétences à relever.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "icon_source": "API slagate (hunter-portrait), récupérée le 2026-11-19",
     "balance_history": [],
-    "balance_changes": []
+    "balance_changes": [],
+    "wiki_source": "https://solo-leveling-arise.fandom.com/wiki/Thalia_De_Rossi"
   }
 ]

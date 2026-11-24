@@ -9409,7 +9409,7 @@
     "rarity": "ssr",
     "skills": [],
     "effects": [],
-    "verified_at": "2026-11-19",
+    "verified_at": "2026-11-24",
     "game_version": null,
     "id": "rosa-nera",
     "name": {
@@ -9422,10 +9422,29 @@
     "exclusive_hunter_en": "Thalia De Rossi",
     "element": "dark",
     "weapon_type": null,
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "stat_type": "HP",
+      "hp": "850-6680",
+      "total_power": "601-5297"
+    },
+    "passive": [
+      {
+        "tier": 1,
+        "text": {
+          "fr": "",
+          "en": "The user's HP increases by 8%. All Dark team members' DarkUltimate Skill damage, including the user's, is increased by 3%."
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "",
+          "en": "The user's HP increases by 50%. All Dark team members' DarkUltimate Skill damage, including the user's, is increased by 20%. The user's Attack, Defense, and HP are increased by 15%."
+        }
+      }
+    ],
     "icon": null,
-    "source": "https://forum.netmarble.com/slv_en/view/14/110997",
-    "notes": "Ajout du patch du 19/11/2026. Aucune fiche wiki ni valeur chiffrée disponible à cette date : compétences, paliers et statistiques à compléter (null/vides), rien d'inventé. Non vérifié en jeu. Arme exclusive de Thalia De Rossi, obtenable par fabrication (Crafting) ou événements. Absente de l'API slagate au 19/11 : nom FR et icône à compléter."
+    "source": "https://solo-leveling-arise.fandom.com/wiki/Rosa_Nera ; https://forum.netmarble.com/slv_en/view/14/110997",
+    "notes": "Complétée le 24/11/2026 depuis le wiki Fandom (CC BY-SA), non vérifié en jeu : Total Power 601-5297, PV 850-6680 (plage Lv.1 à max ; une plage « Précision 0-4000 » du wiki, probablement un champ par défaut, non stockée). Palier 1 = ✧ (non évolué), palier 2 = 5★ + 5 paliers dimensionnels. Wiki_revid/timestamp non relevés. Arme exclusive de Thalia De Rossi, obtenable par fabrication (Crafting) ou événements. Absente de l'API slagate au 19/11 : nom FR et icône à compléter."
   }
 ]
