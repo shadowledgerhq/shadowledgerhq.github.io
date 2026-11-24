@@ -299,3 +299,10 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Résumé GB : GSA-KI-ELE8 · Results lu (590-615 s) · pas classée
 - Résumé GB : ENeKS5q6u1Q · aucun Results lu · pas classée
 - Résumé GB : Xri8bvS4Kkg · Results lu (6-65 s) · pas classée
+
+<!-- passage-pc pc-daily 2026-11-23T20:30:03.552907+00:00 -->
+## Passage pc-daily — 2026-11-23 21:30 (Paris)
+
+- **Passage complet : non** (passage interrompu (PC éteint, fenêtre fermée ou processus tué : aucune erreur enregistrée))
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : passage interrompu (PC éteint, fenêtre fermée ou processus tué : aucune erreur enregistrée)
