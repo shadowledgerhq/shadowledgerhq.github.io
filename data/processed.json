@@ -6321,15 +6321,25 @@
     "published_at": "2026-11-23T11:15:39Z",
     "first_seen": "2026-11-23",
     "updated_at": "2026-11-24",
-    "last_tri": 1,
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
     "pc": {
-      "tri2": "fait"
+      "tri2": "fait",
+      "image_taille": [
+        608,
+        1080
+      ],
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-24",
+      "tri4": "fait"
     }
   },
   "wWySgU0_sIQ": {

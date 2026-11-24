@@ -369,3 +369,15 @@ ERROR: [youtube] vZrdTHYl1Zo: Requested format is not available. Use --list-form
 - Durée du passage : 20 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Sous-titres en attente : 20 avant la règle → 20 après (15 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+
+<!-- passage-pc pc-daily 2026-11-24T19:13:54.662684+00:00 -->
+## Passage pc-daily — 2026-11-24 20:13 (Paris)
+
+- Top 10 couvert : non (6 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 83 (dont 23 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 0 min
+- Relance automatique : 24/11/2026 22:13 (une seule fois par soir)
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Sous-titres en attente : 1 avant la règle → 1 après (0 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
