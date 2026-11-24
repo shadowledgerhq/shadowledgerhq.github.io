@@ -306,3 +306,66 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - **Passage complet : non** (passage interrompu (PC éteint, fenêtre fermée ou processus tué : aucune erreur enregistrée))
 - Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
 - Erreurs bloquantes : passage interrompu (PC éteint, fenêtre fermée ou processus tué : aucune erreur enregistrée)
+
+<!-- passage-pc pc-daily 2026-11-24T18:31:53.183785+00:00 -->
+## Passage pc-daily — 2026-11-24 19:31 (Paris)
+
+- Top 10 couvert : non (7 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (3LDdZgkO8L8 : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] 3LDdZgkO8L8: Requested format is not available. Use --list-formats for a list of available formats)
+- Vidéos traitées ce passage : 8 · en_cours restantes : 83 (dont 24 à traiter par le PC)
+- Erreurs bloquantes : 3LDdZgkO8L8 : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] 3LDdZgkO8L8: Requested format is not available. Use --list-formats for a list of available formats ; wWySgU0_sIQ : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] wWySgU0_sIQ: Requested format is not available. Use --list-formats for a list of available formats ; D17_XCjiQ8k : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] D17_XCjiQ8k: Requested format is not available. Use --list-formats for a list of available formats ; Jtkk4Qm_aag : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] Jtkk4Qm_aag: Requested format is not available. Use --list-formats for a list of available formats ; qWAOYGouWeA : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] qWAOYGouWeA: Requested format is not available. Use --list-formats for a list of available formats ; CnFBmHEzZww : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] CnFBmHEzZww: Requested format is not available. Use --list-formats for a list of available formats ; Fp4PYcT4UE0 : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] Fp4PYcT4UE0: Requested format is not available. Use --list-formats for a list of available formats ; XVzx3w07JPo : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] XVzx3w07JPo: Requested format is not available. Use --list-formats for a list of available formats ; quck1v-c7nc : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] quck1v-c7nc: Requested format is not available. Use --list-formats for a list of available formats ; lFJbOusY26o : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] lFJbOusY26o: Requested format is not available. Use --list-formats for a list of available formats ; FVJbWPJYo6Q : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] FVJbWPJYo6Q: Requested format is not available. Use --list-formats for a list of available formats ; 17ZeQo49yAY : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] 17ZeQo49yAY: Requested format is not available. Use --list-formats for a list of available formats ; c3q6woLKyyY : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] c3q6woLKyyY: Requested format is not available. Use --list-formats for a list of available formats ; 2nVLdAFgLgc : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] 2nVLdAFgLgc: Requested format is not available. Use --list-formats for a list of available formats ; BmzqTsMGOZg : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] BmzqTsMGOZg: Requested format is not available. Use --list-formats for a list of available formats ; z8YuUROu1bA : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] z8YuUROu1bA: Requested format is not available. Use --list-formats for a list of available formats ; pBwKumwlfSU : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] pBwKumwlfSU: Requested format is not available. Use --list-formats for a list of available formats ; OMbh7AiCgKI : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] OMbh7AiCgKI: Requested format is not available. Use --list-formats for a list of available formats ; kyePxECGxcU : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] kyePxECGxcU: Requested format is not available. Use --list-formats for a list of available formats ; FFzvoemSIIw : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] FFzvoemSIIw: Requested format is not available. Use --list-formats for a list of available formats ; 89krbTek-_g : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] 89krbTek-_g: Requested format is not available. Use --list-formats for a list of available formats ; S8EHMzNFOVI : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] S8EHMzNFOVI: Requested format is not available. Use --list-formats for a list of available formats ; R7Uo0eYYAWM : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] R7Uo0eYYAWM: Requested format is not available. Use --list-formats for a list of available formats ; nf3sPkhUqEA : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] nf3sPkhUqEA: Requested format is not available. Use --list-formats for a list of available formats ; vZrdTHYl1Zo : images : yt-dlp code 1 : ils
+WARNING: Only images are available for download. use --list-formats to see them
+ERROR: [youtube] vZrdTHYl1Zo: Requested format is not available. Use --list-formats for a list of available formats
+- Durée du passage : 20 min
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Sous-titres en attente : 20 avant la règle → 20 après (15 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)

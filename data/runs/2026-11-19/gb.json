@@ -240,43 +240,43 @@
     ]
   },
   {
-    "run_id": "gb-2026-11-19-i6S0xrpiTvI",
+    "run_id": "gb-2026-11-19-GSA-KI-ELE8",
     "week": "2026-11-19",
     "mode": "gb",
-    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
-    "player": "MOCANBHAYA ",
-    "channel": "MOCANBHAYA ",
-    "video_id": "i6S0xrpiTvI",
+    "channel_id": "UCQddimMporJcQnifNpSJIgg",
+    "player": "Son Titan",
+    "channel": "Son Titan",
+    "video_id": "GSA-KI-ELE8",
     "video_ids": [
-      "i6S0xrpiTvI"
+      "GSA-KI-ELE8"
     ],
-    "published_at": "2026-11-23T11:43:19+01:00",
-    "lang": "hi",
+    "published_at": "2026-11-22T18:00:36+01:00",
+    "lang": "es",
     "score": {
-      "total": 178,
+      "total": 188,
       "runs": [
-        178
+        188
       ],
       "unit": "rage_count"
     },
-    "score_source": "titre",
+    "score_source": "debut-fin",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 178 RC; une seule run trouvée; boss non contrôlé",
+    "notes": "contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
-        "video_id": "i6S0xrpiTvI",
-        "published_at": "2026-11-23T11:43:19+01:00",
-        "t": null,
+        "video_id": "GSA-KI-ELE8",
+        "published_at": "2026-11-22T18:00:36+01:00",
+        "t": 590,
         "stage": null,
         "team": null,
-        "score_source": "titre",
+        "score_source": "debut-fin",
         "exact": false,
-        "damage": null,
-        "damage_exact": null,
-        "element": null,
-        "element_source": null
+        "damage": 38938927675868,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre"
       }
     ]
   },
@@ -446,6 +446,105 @@
         "element_source": null,
         "hud_rage_count": 57,
         "damage_source": "hud"
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-Xri8bvS4Kkg",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "player": "Black Thunder X",
+    "channel": "Black Thunder X",
+    "video_id": "Xri8bvS4Kkg",
+    "video_ids": [
+      "Xri8bvS4Kkg"
+    ],
+    "published_at": "2026-11-22T11:21:50+01:00",
+    "lang": "en",
+    "score": {
+      "total": 19,
+      "runs": [
+        19
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "format non standard; lecture fusionnée (2 images); conflit de lecture : rage_count; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "Xri8bvS4Kkg",
+        "published_at": "2026-11-22T11:21:50+01:00",
+        "t": 6,
+        "stage": null,
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": false,
+        "damage": 87366,
+        "damage_exact": true,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-i6S0xrpiTvI",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
+    "player": "MOCANBHAYA ",
+    "channel": "MOCANBHAYA ",
+    "video_id": "i6S0xrpiTvI",
+    "video_ids": [
+      "i6S0xrpiTvI",
+      "orJG2Lk9VNo"
+    ],
+    "published_at": "2026-11-23T11:43:19+01:00",
+    "lang": "hi",
+    "score": {
+      "total": 5,
+      "runs": [
+        4,
+        1
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "miniature",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "contrôle GB : écran GB illisible (Player's Score, Hunter Rank ou Final Score); lecture fusionnée (2 images); conflit de lecture : rage_count; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Dark / Fire); boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "i6S0xrpiTvI",
+        "published_at": "2026-11-23T11:43:19+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "miniature",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": "dark",
+        "element_source": "titre",
+        "hud_rage_count": 135
+      },
+      {
+        "video_id": "orJG2Lk9VNo",
+        "published_at": "2026-11-21T07:54:27+01:00",
+        "t": 562,
+        "stage": null,
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": false,
+        "damage": 14297392476417,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre",
+        "hud_rage_count": 137
       }
     ]
   }
