@@ -5535,7 +5535,15 @@
    "titre": "11/20 (Fri) Patch & Recommended Build Update Notice (Completed)",
    "date": null,
    "vu_le": "2026-11-20"
+  },
+  "111242": {
+   "id": "111242",
+   "board": "32",
+   "url": "https://forum.netmarble.com/slv_en/view/32/111242",
+   "titre": "11/24 (Tue) data Patch Notice (Completed)",
+   "date": null,
+   "vu_le": "2026-11-24"
   }
  },
- "derniere_verification": "2026-11-23"
+ "derniere_verification": "2026-11-24"
 }
