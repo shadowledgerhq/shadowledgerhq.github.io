@@ -2496,5 +2496,81 @@
         "change": "notice 32/111028 : images affichées anormalement après la mise à jour du 19/11, cause en cours d'analyse (contournement : Reset Data ou options graphiques)"
       }
     ]
+  },
+  {
+    "id": "2026-11-20",
+    "version": null,
+    "date": "2026-11-20",
+    "name": {
+      "fr": "Correctifs et mise à jour recommandée du 20/11/2026",
+      "en": "11/20 (Fri) Patch & Recommended Build Update Notice"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/111083",
+    "extra_urls": [],
+    "source": "https://forum.netmarble.com/slv_en/view/32/111083",
+    "verified_at": "2026-11-24",
+    "game_version": null,
+    "notes": "Correctifs seulement (aucune valeur de jeu). Mise à jour recommandée du client (AOS, PC/GPG, iOS après validation App Store) ; numéro de version non indiqué. Texte modifié le 24/11 09:15 UTC (données manquantes des ressources Standard ajoutées). Non vérifié en jeu.",
+    "changes": [
+      {
+        "category": "general",
+        "id": "standard-resources",
+        "change": "correctifs : animation et effet de l'arme Kamish's Wrath (obtention, écran de tirage) avec les ressources Standard ; images mal affichées avec les ressources Standard ; contournement : Reset Data ou Options > Graphics"
+      },
+      {
+        "category": "general",
+        "id": "workshop-of-brilliant-light",
+        "change": "correctifs : étape « Slaughterhouse of Remorse » parfois non validée après le boss ; compétences de Kamish's Wrath qui ne touchent pas à « Sealed Primordial Lungs » (client)"
+      },
+      {
+        "category": "general",
+        "id": "shop",
+        "change": "l'objet « Hunters Association Special Certificate » n'apparaissait pas dans Boutique > Échange > Celebration Coin Exchange (corrigé)"
+      },
+      {
+        "category": "general",
+        "id": "gate-mining",
+        "change": "récompenses non réclamables sur les emplacements de minage de Gate envoyés avant la mise à jour du 19/11 (corrigé)"
+      },
+      {
+        "category": "general",
+        "id": "hunter-team-fight",
+        "change": "effet Burst affiché à tort après passage à un Buster contrôlé par l'IA ; bouton « Apply All » de la formation recommandée équipant une autre compétence ; interface du Guild Boss (corrigé, client)"
+      }
+    ]
+  },
+  {
+    "id": "2026-11-24",
+    "version": null,
+    "date": "2026-11-24",
+    "name": {
+      "fr": "Patchs de données du 24/11/2026",
+      "en": "11/24 (Tue) data Patch Notices (Completed / 2)"
+    },
+    "url": "https://forum.netmarble.com/slv_en/view/32/111242",
+    "extra_urls": [
+      "https://forum.netmarble.com/slv_en/view/32/111252"
+    ],
+    "source": "https://forum.netmarble.com/slv_en/view/32/111242",
+    "verified_at": "2026-11-24",
+    "game_version": null,
+    "notes": "Correctifs seulement (aucune valeur de jeu). Deux patchs de données : 05:35 UTC (notice 111242) et 09:15 UTC (notice 111252, ressources Standard). Non vérifié en jeu.",
+    "changes": [
+      {
+        "category": "general",
+        "id": "achievements",
+        "change": "nombre de succès accomplis affiché sur le Profil inférieur au réel pour certains chasseurs après la mise à jour de novembre (corrigé)"
+      },
+      {
+        "category": "general",
+        "id": "gate-mining",
+        "change": "écran de minage de Gate anormal et récompenses non réclamables pour les emplacements possédés avant le 19/11 (corrigé)"
+      },
+      {
+        "category": "general",
+        "id": "standard-resources",
+        "change": "écran noir à l'entrée de certaines étapes de l'histoire ; compétence de Kamish's Wrath qui ne touche pas à « Sealed Primordial Lungs » (corrigés pour les ressources Standard)"
+      }
+    ]
   }
 ]
