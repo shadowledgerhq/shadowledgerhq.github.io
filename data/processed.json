@@ -6523,5 +6523,657 @@
       "sous_titres": "inutile",
       "tri2": "fait"
     }
+  },
+  "lcjS5XLKMHI": {
+    "week": "2026-11-19",
+    "channel_id": "UCXANO2YRN5IJUTrEBWHPOQA",
+    "published_at": "2026-11-24T19:00:10Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": false
+  },
+  "MHc2auKADIU": {
+    "week": "2026-11-19",
+    "channel_id": "UCwULhmJhgzOihBUbZkRJbQw",
+    "published_at": "2026-11-24T14:43:16Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": false
+  },
+  "fDI5tD_dbec": {
+    "week": "2026-11-19",
+    "channel_id": "UCwULhmJhgzOihBUbZkRJbQw",
+    "published_at": "2026-11-24T12:10:33Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": false
+  },
+  "fXXdEZ312Fk": {
+    "week": "2026-11-19",
+    "channel_id": "UCwULhmJhgzOihBUbZkRJbQw",
+    "published_at": "2026-11-24T07:34:18Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": false
+  },
+  "Rg6LNu0elqs": {
+    "week": "2026-11-19",
+    "channel_id": "UCwULhmJhgzOihBUbZkRJbQw",
+    "published_at": "2026-11-24T06:46:38Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": false
+  },
+  "4SHtnXmIkuk": {
+    "week": "2026-11-19",
+    "channel_id": "UC1DZZDtNsqcdM-3v-U3RfLQ",
+    "published_at": "2026-11-23T22:46:02Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": false
+  },
+  "7E2d3ncyJ_A": {
+    "week": "2026-11-19",
+    "channel_id": "UC1DZZDtNsqcdM-3v-U3RfLQ",
+    "published_at": "2026-11-23T10:59:33Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": false
+  },
+  "FvW2sK5ZqXg": {
+    "week": "2026-11-19",
+    "channel_id": "UC73W669EY1QLPwF45jhHokg",
+    "published_at": "2026-11-23T22:45:18Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "gb",
+      "poc"
+    ],
+    "pc_needed": false
+  },
+  "5zP-YvfMZYk": {
+    "week": "2026-11-19",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "published_at": "2026-11-24T14:25:53Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "wttdaj09cMU": {
+    "week": "2026-11-19",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "published_at": "2026-11-23T20:06:23Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "LZWdAskPvY4": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-24T18:00:16Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "FpO9KXiq4Yw": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-24T14:00:27Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "b1i29e_jXD0": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-24T10:00:34Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "0bVlYEpKUhU": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-24T06:00:08Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "IoXzMsgoGPw": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-24T02:00:29Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "tOGYzrN2eqo": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-23T22:00:23Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "THxs2Y7QFI0": {
+    "week": "2026-11-19",
+    "channel_id": "UCQddimMporJcQnifNpSJIgg",
+    "published_at": "2026-11-24T17:00:10Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "J4wa5scr2Uc": {
+    "week": "2026-11-19",
+    "channel_id": "UCEh16HmZdAIpgvz0fH6W_Hg",
+    "published_at": "2026-11-24T14:01:00Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "cNIuOYknYg8": {
+    "week": "2026-11-19",
+    "channel_id": "UCEkQRPKU3grukJv1d5zDwWg",
+    "published_at": "2026-11-24T10:52:57Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "9BrduWR4aSY": {
+    "week": "2026-11-19",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "published_at": "2026-11-24T05:00:22Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "ArbQ34JwHFE": {
+    "week": "2026-11-19",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "published_at": "2026-11-24T00:01:58Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb",
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "GEc_9GDK-Vw": {
+    "week": "2026-11-19",
+    "channel_id": "UCeNkVWqFDou4NWrRtzKWl4g",
+    "published_at": "2026-11-23T21:59:01Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "9-bCwkYklbI": {
+    "week": "2026-11-19",
+    "channel_id": "UClZodS-B2lDnUg6ifhkqnAA",
+    "published_at": "2026-11-23T21:56:35Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "bMtzYuLZrS4": {
+    "week": "2026-11-19",
+    "channel_id": "UC8oZ6KYPUMrhgnOJ7kufnsw",
+    "published_at": "2026-11-23T19:57:24Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "ic0tLvgkCBk": {
+    "week": "2026-11-19",
+    "channel_id": "UC9n-kB5-Gt5sHmHlX9B_RTA",
+    "published_at": "2026-11-23T19:33:28Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "qCT-_gW6-QY": {
+    "week": "2026-11-19",
+    "channel_id": "UCcSPu4HGvbapXo7WWWDb6HQ",
+    "published_at": "2026-11-23T19:21:44Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "ly_tZDQlR6Y": {
+    "week": "2026-11-19",
+    "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
+    "published_at": "2026-11-23T14:22:58Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "XyIB7lEm5Qo": {
+    "week": "2026-11-19",
+    "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
+    "published_at": "2026-11-23T14:24:10Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "UItSn-P0d4Q": {
+    "week": "2026-11-19",
+    "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
+    "published_at": "2026-11-23T14:23:09Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "yJ31zkuHSE4": {
+    "week": "2026-11-19",
+    "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
+    "published_at": "2026-11-23T14:24:00Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "xF3f1h5dtQ8": {
+    "week": "2026-11-19",
+    "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
+    "published_at": "2026-11-23T14:24:21Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "AZYpIr9qjg4": {
+    "week": "2026-11-19",
+    "channel_id": "UCAuU4g7n2KxO1jGmMzC3ZKA",
+    "published_at": "2026-11-23T11:45:19Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "ZzZxa4INfQc": {
+    "week": "2026-11-19",
+    "channel_id": "UCAuU4g7n2KxO1jGmMzC3ZKA",
+    "published_at": "2026-11-23T11:40:36Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "CUhXvlpLXr4": {
+    "week": "2026-11-19",
+    "channel_id": "UCAuU4g7n2KxO1jGmMzC3ZKA",
+    "published_at": "2026-11-23T11:30:05Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "doJYAt4-8io": {
+    "week": "2026-11-19",
+    "channel_id": "UCAuU4g7n2KxO1jGmMzC3ZKA",
+    "published_at": "2026-11-23T11:15:26Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "HAY4fnfWgWk": {
+    "week": "2026-11-19",
+    "channel_id": "UCAuU4g7n2KxO1jGmMzC3ZKA",
+    "published_at": "2026-11-23T11:00:15Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "khDW5ls5eq4": {
+    "week": "2026-11-19",
+    "channel_id": "UCzNMf1d2UPomOCzckYG_hfA",
+    "published_at": "2026-11-24T12:07:42Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "cFAY1-nQKO4": {
+    "week": "2026-11-19",
+    "channel_id": "UCzNMf1d2UPomOCzckYG_hfA",
+    "published_at": "2026-11-24T12:07:51Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "vtfFvPizduY": {
+    "week": "2026-11-19",
+    "channel_id": "UCRWWTw5V05f9u4o0jCWyKJg",
+    "published_at": "2026-11-24T18:25:12Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "bot"
+    ],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "8qH8akEGaOg": {
+    "week": "2026-11-19",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "published_at": "2026-11-24T17:40:15Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "KyHrk8tglbE": {
+    "week": "2026-11-19",
+    "channel_id": "UCXxANzHYCEVCN8R0qnAyYsA",
+    "published_at": "2026-11-24T15:10:03Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 18,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "2nswH_35iFE": {
+    "week": "2026-11-19",
+    "channel_id": "UC2CC-xlvVb2ZrNEUhcxjiHQ",
+    "published_at": "2026-11-24T15:00:20Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "NJpWOJSvMzo": {
+    "week": "2026-11-19",
+    "channel_id": "UCzgKoTpqwzHnU9MB_a3MVCQ",
+    "published_at": "2026-11-24T04:02:00Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "U3C-egZnGPE": {
+    "week": "2026-11-19",
+    "channel_id": "UCTkimV5zcyVi7xELcCSziHQ",
+    "published_at": "2026-11-24T00:13:22Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 18
+  },
+  "2yqUBuiC0C8": {
+    "week": "2026-11-19",
+    "channel_id": "UC8_J1WiVqloIG-XWwmHq1Gg",
+    "published_at": "2026-11-20T03:30:38Z",
+    "first_seen": "2026-11-24",
+    "updated_at": "2026-11-24",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 18
   }
 }

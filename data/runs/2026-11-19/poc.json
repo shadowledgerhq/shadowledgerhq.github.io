@@ -1,0 +1,41 @@
+[
+  {
+    "run_id": "poc-2026-11-19-ArbQ34JwHFE",
+    "week": "2026-11-19",
+    "mode": "poc",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "player": "Willian",
+    "channel": "Willian",
+    "video_id": "ArbQ34JwHFE",
+    "video_ids": [
+      "ArbQ34JwHFE"
+    ],
+    "published_at": "2026-11-24T01:01:58+01:00",
+    "lang": "en",
+    "score": {
+      "total": 80000000000000,
+      "runs": [
+        80000000000000
+      ],
+      "unit": "damage"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 80T; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "ArbQ34JwHFE",
+        "published_at": "2026-11-24T01:01:58+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  }
+]

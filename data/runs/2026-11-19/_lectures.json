@@ -5968,5 +5968,112 @@
     "notes": [
       "contrôle Personal Record : Total Score 173470767137754 incohérent avec les dégâts des groupes"
     ]
+  },
+  {
+    "video_id": "ArbQ34JwHFE",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "channel_title": "Willian",
+    "published_at": "2026-11-24T00:01:58Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 80000000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 202,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (description) : 202RC"
+    ]
+  },
+  {
+    "video_id": "ArbQ34JwHFE",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "channel_title": "Willian",
+    "published_at": "2026-11-24T00:01:58Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 80000000000000,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (description) : 80T"
+    ]
+  },
+  {
+    "video_id": "8qH8akEGaOg",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "channel_title": "Willian",
+    "published_at": "2026-11-24T17:40:15Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 95500000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 205,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : 205RC",
+      "description : 206 RC"
+    ]
+  },
+  {
+    "video_id": "NJpWOJSvMzo",
+    "channel_id": "UCzgKoTpqwzHnU9MB_a3MVCQ",
+    "channel_title": "Mestizo",
+    "published_at": "2026-11-24T04:02:00Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 80680000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 202,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : RC 202"
+    ]
   }
 ]

@@ -100,6 +100,47 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-19-8qH8akEGaOg",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "player": "Willian",
+    "channel": "Willian",
+    "video_id": "8qH8akEGaOg",
+    "video_ids": [
+      "8qH8akEGaOg"
+    ],
+    "published_at": "2026-11-24T18:40:15+01:00",
+    "lang": "en",
+    "score": {
+      "total": 205,
+      "runs": [
+        205
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 205RC; description : 206 RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "8qH8akEGaOg",
+        "published_at": "2026-11-24T18:40:15+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": 95500000000000,
+        "damage_exact": false,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-19-vt47IaCcMQg",
     "week": "2026-11-19",
     "mode": "gb",
@@ -138,6 +179,47 @@
         "element": null,
         "element_source": null,
         "hud_rage_count": 157
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-NJpWOJSvMzo",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCzgKoTpqwzHnU9MB_a3MVCQ",
+    "player": "Mestizo",
+    "channel": "Mestizo",
+    "video_id": "NJpWOJSvMzo",
+    "video_ids": [
+      "NJpWOJSvMzo"
+    ],
+    "published_at": "2026-11-24T05:02:00+01:00",
+    "lang": "en",
+    "score": {
+      "total": 202,
+      "runs": [
+        202
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : RC 202; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "NJpWOJSvMzo",
+        "published_at": "2026-11-24T05:02:00+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": 80680000000000,
+        "damage_exact": false,
+        "element": null,
+        "element_source": null
       }
     ]
   },
