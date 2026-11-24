@@ -1,0 +1,84 @@
+{
+  "spec": 1,
+  "video_id": "ArbQ34JwHFE",
+  "week": "2026-11-19",
+  "mode": "poc",
+  "gate": null,
+  "run_id": "poc-2026-11-19-ArbQ34JwHFE",
+  "runs": [
+    {
+      "run_index": 1,
+      "run_start_t": 393.5,
+      "run_end_t": 419.0,
+      "duration_s": 25.5,
+      "events": [
+        {
+          "t": 395.5,
+          "t_run": 2.0,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": null,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 403.0,
+          "t_run": 9.5,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": null,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 407.0,
+          "t_run": 13.5,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": null,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 411.0,
+          "t_run": 17.5,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": null,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        },
+        {
+          "t": 415.5,
+          "t_run": 22.0,
+          "hunter": "inconnu",
+          "slot": "tag",
+          "skill_id": null,
+          "trigger": "inconnu",
+          "cooldown_read": null,
+          "t_game": null,
+          "source": "portrait",
+          "confidence": "a_verifier"
+        }
+      ],
+      "limites": [
+        "bornes-incertaines",
+        "essais-precedents",
+        "chasseurs-inconnus"
+      ],
+      "sans_hud_s": 8.5
+    }
+  ]
+}

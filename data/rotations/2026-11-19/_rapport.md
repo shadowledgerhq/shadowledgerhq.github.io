@@ -4,3 +4,4 @@
 - gb · TrtWBScRocs · run 1 : 1 événement(s), 1 à vérifier, durée 13.0 s, limites : bornes-incertaines, essais-precedents, chasseurs-inconnus
 - gb · vt47IaCcMQg · run 1 : 1 événement(s), 1 à vérifier, durée 1.0 s, limites : bornes-incertaines, essais-precedents, chasseurs-inconnus
 - gb · XVzx3w07JPo · run 1 : 62 événement(s), 62 à vérifier, durée 199.5 s, limites : bornes-incertaines, chasseurs-inconnus, recharges-entamees : 120
+- poc · ArbQ34JwHFE · run 1 : 5 événement(s), 5 à vérifier, durée 25.5 s, limites : bornes-incertaines, essais-precedents, chasseurs-inconnus

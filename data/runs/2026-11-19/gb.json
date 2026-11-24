@@ -202,24 +202,25 @@
       ],
       "unit": "rage_count"
     },
-    "score_source": "titre",
+    "score_source": "video-complete",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : RC 202; une seule run trouvée; boss non contrôlé",
+    "notes": "écart OCR zone/image : player_score; contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "NJpWOJSvMzo",
         "published_at": "2026-11-24T05:02:00+01:00",
-        "t": null,
+        "t": 219,
         "stage": null,
-        "team": null,
-        "score_source": "titre",
+        "team": 1,
+        "score_source": "video-complete",
         "exact": false,
-        "damage": 80680000000000,
-        "damage_exact": false,
-        "element": null,
-        "element_source": null
+        "damage": 80688779082416,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 169
       }
     ]
   },
@@ -261,6 +262,48 @@
         "damage_exact": null,
         "element": null,
         "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-19-qWAOYGouWeA",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCEnZSic9jYjDfGLyfRy7UgA",
+    "player": "DEFQI GAMES",
+    "channel": "DEFQI GAMES",
+    "video_id": "qWAOYGouWeA",
+    "video_ids": [
+      "qWAOYGouWeA"
+    ],
+    "published_at": "2026-11-23T07:02:53+01:00",
+    "lang": "en",
+    "score": {
+      "total": 194,
+      "runs": [
+        194
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "écart OCR zone/image : rage_count; écart OCR zone/image : final_score; écart OCR zone/image : player_score; lecture fusionnée (3 images); conflit de lecture : hunter_rank_1; élément du titre contredit par l'écran; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "qWAOYGouWeA",
+        "published_at": "2026-11-23T07:02:53+01:00",
+        "t": 820,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": false,
+        "damage": 2666468411848,
+        "damage_exact": true,
+        "element": "water",
+        "element_source": "ecran",
+        "hud_rage_count": 167
       }
     ]
   },

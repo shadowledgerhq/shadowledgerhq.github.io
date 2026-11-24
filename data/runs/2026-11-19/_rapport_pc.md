@@ -381,3 +381,21 @@ ERROR: [youtube] vZrdTHYl1Zo: Requested format is not available. Use --list-form
 - Relance automatique : 24/11/2026 22:13 (une seule fois par soir)
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Sous-titres en attente : 1 avant la règle → 1 après (0 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+
+<!-- passage-pc pc-daily 2026-11-24T20:30:03.530013+00:00 -->
+## Passage pc-daily — 2026-11-24 21:30 (Paris)
+
+- Top 10 couvert : non (6 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 25 · en_cours restantes : 116 (dont 33 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 101 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Sous-titres en attente : 56 avant la règle → 42 après (27 inutiles : hors sujet ou score déjà lu ; 2 rejetée(s) sur le titre)
+- Résumé GB : qWAOYGouWeA · DEFQI GAMES · Results lu (888-909 s) · 194 RC à vérifier · water · conflit de lecture : hunter_rank_1
+- Résumé GB : CnFBmHEzZww · Results lu (480-503 s) · pas classée
+- Résumé GB : Fp4PYcT4UE0 · aucun Results lu · pas classée
+- Résumé GB : ArbQ34JwHFE · aucun Results lu · pas classée
+- Résumé GB : 8qH8akEGaOg · Willian · aucun Results lu · 205 RC à vérifier · score provisoire (titre) : 205RC
+- Résumé GB : … et 1 autre(s) vidéo(s)
