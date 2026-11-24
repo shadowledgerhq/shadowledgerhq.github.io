@@ -1,0 +1,5 @@
+Double-clique sur un fichier .bat (aucune commande a taper).
+1_mettre_a_jour.bat      : git pull + mise a jour de yt-dlp (a faire de temps en temps, et si YouTube refuse les telechargements)
+2_passage_une_video.bat  : test sur une seule video
+3_passage_complet.bat    : passage quotidien complet a la main
+4_journal.bat            : dernieres lignes de logs\pc.log (a coller a Code en cas de probleme)
