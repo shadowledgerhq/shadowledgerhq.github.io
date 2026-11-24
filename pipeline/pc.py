@@ -1422,9 +1422,9 @@ def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=Non
         l.append(f"- Relance automatique : {relance}")
     if gel3:
         l.append(f"- Critère de gel n° 3 : {gel3}")
-    if decisions:
+    if decisions is not None:       # [] = aucune vidéo concernée ce jour (ligne écrite quand même : absence ≠ oubli)
         l.append("- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : "
-                 + " ; ".join(f"{v} {x['video_min']} min → {x['telechargement_s']} s" for v, x in decisions))
+                 + (" ; ".join(f"{v} {x['video_min']} min → {x['telechargement_s']} s" for v, x in decisions) or "aucun"))
     return l
 
 
