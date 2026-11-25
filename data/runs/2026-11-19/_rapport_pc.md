@@ -418,3 +418,17 @@ ERROR: [youtube] vZrdTHYl1Zo: Requested format is not available. Use --list-form
 - Résumé GB : CnFBmHEzZww · Results lu (480-503 s) · pas classée
 - Résumé GB : Fp4PYcT4UE0 · aucun Results lu · pas classée
 - Résumé GB : … et 6 autre(s) vidéo(s)
+
+<!-- passage-pc pc-daily 2026-11-25T18:30:05.422670+00:00 -->
+## Passage pc-daily — 2026-11-25 19:30 (Paris)
+
+- Top 10 couvert : oui (0 vidéo candidate au top 10 restante)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 9 · en_cours restantes : 98 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 25 min
+- Relance automatique : 25/11/2026 21:30 (une seule fois par soir)
+- Critère de gel n° 3 : 2/2 passage(s) planifié(s) de suite avec top 10 couvert — atteint (reste à décider `pc.geler`)
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : ic0tLvgkCBk 13.0 min → 38 s ; qCT-_gW6-QY 11.8 min → 51 s ; ly_tZDQlR6Y 33.5 min → 199 s ; XyIB7lEm5Qo 4.9 min → 47 s ; UItSn-P0d4Q 9.6 min → 87 s ; yJ31zkuHSE4 11.8 min → 61 s ; xF3f1h5dtQ8 9.9 min → 78 s ; vtfFvPizduY 3.1 min → 29 s ; KyHrk8tglbE 17.6 min → 210 s
+- Sous-titres en attente : 11 avant la règle → 11 après (9 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Résumé GB : KyHrk8tglbE · aucun Results lu · pas classée

@@ -3605,10 +3605,7 @@
       "tri3": "fait",
       "tri4": "inutile",
       "date": "2026-11-24"
-    },
-    "notes": [
-      "actualités probables (titre)"
-    ]
+    }
   },
   "lFJbOusY26o": {
     "week": "2026-11-19",
@@ -4110,9 +4107,6 @@
     "modes": [],
     "pc_needed": false,
     "regles": 18,
-    "notes": [
-      "actualités probables (titre)"
-    ],
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -4305,9 +4299,6 @@
     ],
     "pc_needed": false,
     "regles": 18,
-    "notes": [
-      "actualités probables (titre)"
-    ],
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -4998,9 +4989,6 @@
     ],
     "pc_needed": false,
     "regles": 18,
-    "notes": [
-      "actualités probables (titre)"
-    ],
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -5089,9 +5077,6 @@
     ],
     "pc_needed": false,
     "regles": 18,
-    "notes": [
-      "actualités probables (titre)"
-    ],
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -5830,9 +5815,6 @@
     ],
     "pc_needed": false,
     "regles": 18,
-    "notes": [
-      "actualités probables (titre)"
-    ],
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -6153,9 +6135,6 @@
     "modes": [],
     "pc_needed": false,
     "regles": 18,
-    "notes": [
-      "actualités probables (titre)"
-    ],
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -6783,9 +6762,6 @@
     ],
     "pc_needed": false,
     "regles": 18,
-    "notes": [
-      "actualités probables (titre)"
-    ],
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -7317,20 +7293,33 @@
     "channel_id": "UC9n-kB5-Gt5sHmHlX9B_RTA",
     "published_at": "2026-11-23T19:33:28Z",
     "first_seen": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-25",
+    "last_tri": 3,
+    "status": "rejete",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
-    "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
     ],
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "decision_tri3": {
+        "video_min": 13.0,
+        "telechargement_s": 38
+      },
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "libelles_inconnus": [],
+      "rejet": "actualites",
+      "tri3": "fait",
+      "tri4": "inutile",
+      "date": "2026-11-25"
     }
   },
   "qCT-_gW6-QY": {
@@ -7338,20 +7327,32 @@
     "channel_id": "UCcSPu4HGvbapXo7WWWDb6HQ",
     "published_at": "2026-11-23T19:21:44Z",
     "first_seen": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "last_tri": 1,
+    "updated_at": "2026-11-25",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ],
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "decision_tri3": {
+        "video_min": 11.8,
+        "telechargement_s": 51
+      },
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-25",
+      "tri4": "fait"
     }
   },
   "ly_tZDQlR6Y": {
@@ -7359,20 +7360,33 @@
     "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
     "published_at": "2026-11-23T14:22:58Z",
     "first_seen": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-25",
+    "last_tri": 3,
+    "status": "rejete",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
-    "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
     ],
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "decision_tri3": {
+        "video_min": 33.5,
+        "telechargement_s": 199
+      },
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "libelles_inconnus": [],
+      "rejet": "actualites",
+      "tri3": "fait",
+      "tri4": "inutile",
+      "date": "2026-11-25"
     }
   },
   "XyIB7lEm5Qo": {
@@ -7380,20 +7394,33 @@
     "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
     "published_at": "2026-11-23T14:24:10Z",
     "first_seen": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-25",
+    "last_tri": 3,
+    "status": "rejete",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
-    "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
     ],
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "decision_tri3": {
+        "video_min": 4.9,
+        "telechargement_s": 47
+      },
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "libelles_inconnus": [],
+      "rejet": "actualites",
+      "tri3": "fait",
+      "tri4": "inutile",
+      "date": "2026-11-25"
     }
   },
   "UItSn-P0d4Q": {
@@ -7401,20 +7428,33 @@
     "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
     "published_at": "2026-11-23T14:23:09Z",
     "first_seen": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-25",
+    "last_tri": 3,
+    "status": "rejete",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
-    "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
     ],
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "decision_tri3": {
+        "video_min": 9.6,
+        "telechargement_s": 87
+      },
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "libelles_inconnus": [],
+      "rejet": "actualites",
+      "tri3": "fait",
+      "tri4": "inutile",
+      "date": "2026-11-25"
     }
   },
   "yJ31zkuHSE4": {
@@ -7422,20 +7462,33 @@
     "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
     "published_at": "2026-11-23T14:24:00Z",
     "first_seen": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-25",
+    "last_tri": 3,
+    "status": "rejete",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
-    "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
     ],
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "decision_tri3": {
+        "video_min": 11.8,
+        "telechargement_s": 61
+      },
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "libelles_inconnus": [],
+      "rejet": "actualites",
+      "tri3": "fait",
+      "tri4": "inutile",
+      "date": "2026-11-25"
     }
   },
   "xF3f1h5dtQ8": {
@@ -7443,20 +7496,33 @@
     "channel_id": "UC9rwFYDtQtXCjlP4di1_yUA",
     "published_at": "2026-11-23T14:24:21Z",
     "first_seen": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-25",
+    "last_tri": 3,
+    "status": "rejete",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
-    "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
     ],
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "decision_tri3": {
+        "video_min": 9.9,
+        "telechargement_s": 78
+      },
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "libelles_inconnus": [],
+      "rejet": "actualites",
+      "tri3": "fait",
+      "tri4": "inutile",
+      "date": "2026-11-25"
     }
   },
   "AZYpIr9qjg4": {
@@ -7655,20 +7721,32 @@
     "channel_id": "UCRWWTw5V05f9u4o0jCWyKJg",
     "published_at": "2026-11-24T18:25:12Z",
     "first_seen": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "last_tri": 1,
+    "updated_at": "2026-11-25",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [
       "bot"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ],
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "decision_tri3": {
+        "video_min": 3.1,
+        "telechargement_s": 29
+      },
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-25",
+      "tri4": "fait"
     }
   },
   "8qH8akEGaOg": {
@@ -7706,20 +7784,33 @@
     "channel_id": "UCXxANzHYCEVCN8R0qnAyYsA",
     "published_at": "2026-11-24T15:10:03Z",
     "first_seen": "2026-11-24",
-    "updated_at": "2026-11-24",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-25",
+    "last_tri": 3,
+    "status": "rejete",
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 18,
-    "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
     ],
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "decision_tri3": {
+        "video_min": 17.6,
+        "telechargement_s": 210
+      },
+      "image_taille": [
+        2340,
+        1080
+      ],
+      "libelles_inconnus": [],
+      "rejet": "actualites",
+      "tri3": "fait",
+      "tri4": "inutile",
+      "date": "2026-11-25"
     }
   },
   "2nswH_35iFE": {
