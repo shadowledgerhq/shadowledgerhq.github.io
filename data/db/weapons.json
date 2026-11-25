@@ -9674,14 +9674,89 @@
       {
         "tier": 0,
         "text": {
-          "fr": "L'utilisation de la compétence Chute du dragon de feu restaure 100 % de la jauge de noyau de l'utilisateur et active l'effet Incarnation du dragon de feu. Lorsque la compétence Chute du dragon de feu touche sa cible, elle lui applique l'effet [Brûlure]. Augmente les dégâts des compétences qui appliquent l'effet d'[Accumulation élémentaire] de [Feu] de 30 %.",
+          "fr": "L'utilisation de la compétence Chute du dragon de feu restaure 100 % de la jauge de noyau de l'utilisateur et active l'effet Incarnation du dragon de feu. Lorsque la compétence Chute du dragon de feu touche sa cible, elle lui applique l'effet [Brûlure]. Augmente les dégâts des compétences qui appliquent l'effet d'[Accumulation élémentaire] de [Feu] de 30 %. [Incarnation du dragon de feu] Augmente les dégâts de feu de 10 %. Augmente la Pénétration de défense de 15 %. Durée : 30 seconde(s). [Brûlure] Inflige des dégâts équivalents à 175 % de l'Attaque toutes les 3 seconde(s). Durée : 30 seconde(s).",
+          "en": ""
+        }
+      },
+      {
+        "tier": 1,
+        "text": {
+          "fr": "Équiper uniquement des armes de feu active l'effet [Souffle du dragon de feu]. L'utilisation d'une compétence d'arme de feu active l'effet [Fureur du dragon de feu]. L'utilisation de la compétence Chute du dragon de feu confère un [Bouclier]. [Souffle du dragon de feu] Augmente l'effet d'[Accumulation élémentaire] de [Feu] de 20 %. Augmente les dégâts de Surcharge de Feu de 20 %. Durée : illimitée. [Fureur du dragon de feu] Augmente les dégâts infligés aux boss de 3 %. Augmente les dégâts de compétence d'arme de feu de 5 %. Durée : 30 seconde(s) (cumulable jusqu'à 4 fois). [Bouclier] Confère un [Bouclier] équivalent à 10 % des PV max. Durée : 10 seconde(s).",
+          "en": ""
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "Augmente les dégâts de feu de l'utilisateur de 10 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 3,
+        "text": {
+          "fr": "Lorsque l'attaque de noyau du Rugissement de Kamish touche sa cible, elle lui applique l'effet [Brûlure]. Active l'effet [Rugissement du dragon de feu] à l'arrivée dans un niveau. [Rugissement du dragon de feu] Augmente les dégâts de compétence d'arme de feu de 30 % en infligeant des dégâts à des cibles affectées par l'effet [Brûlure]. L'utilisation d'une compétence d'arme de feu redonne 50 PM à l'utilisateur. Durée : illimitée.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 4,
+        "text": {
+          "fr": "Le temps de rechargement de la compétence Chute du dragon de feu diminue de 20 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 5,
+        "text": {
+          "fr": "Les effets [Incarnation du dragon de feu et Fureur du dragon de feu] sont améliorés. [Incarnation du dragon de feu] Augmente les dégâts de feu de 10 %. Augmente les dégâts de Surcharge de Feu de 30 %. Augmente la Pénétration de défense de 30 %. Durée : 30 seconde(s). [Fureur du dragon de feu] Augmente les dégâts infligés aux boss de 6 %. Augmente les dégâts de compétence d'arme de feu de 15 %. Augmente les Dégâts de coup critique des compétences d'arme de feu de 10 %. Durée : 30 seconde(s) (cumulable jusqu'à 4 fois).",
+          "en": ""
+        }
+      },
+      {
+        "tier": 6,
+        "label": "5 étoiles +1",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 7,
+        "label": "5 étoiles +2",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 8,
+        "label": "5 étoiles +3",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 9,
+        "label": "5 étoiles +4",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 10,
+        "label": "5 étoiles +5",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
           "en": ""
         }
       }
     ],
     "icon": "data/icons/weapons/kamish-roar.png",
     "source": "capture du Codex d'armes en jeu (client FR), envoyée par Alexis le 2026-11-25",
-    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Type « Polearm » = « Arme d'hast » confirmé en jeu.",
+    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Type « Polearm » = « Arme d'hast » confirmé en jeu. Passif complet relevé (base + paliers 1 à 5 étoiles, captures Niv. 1 et Niv. 130). Paliers 5★+1 à +5 (tier 6 à 10) : +3 % Attaque/Défense/PV chacun ; paliers 3 à 5★ confirmés par un 2e jeu de captures Niv. 130.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "icon_source": "API slagate (GSWeapon_KamishLance_PortraitBig), récupérée le 2026-11-19",
     "max_level": {
