@@ -9507,11 +9507,51 @@
           "fr": "L'effet [Inferno] est amélioré. L'utilisation de la compétence Armageddon active l'effet [Explosion de magma]. Lorsque les compétences Entaille de la fureur, Armageddon ou Apocalypse touchent leur cible, elles restaurent des PV à hauteur de 0.7 % de l'Attaque de l'utilisateur. [Apocalypse] L'utilisateur effectue une entaille rapide vers le haut, puis assène une puissante frappe vers le bas. Cette compétence inflige des dégâts élémentaires de feu équivalents à 600 % des dégâts de la compétence Entaille de la fureur. La compétence redevient Entaille de la fureur après l'utilisation. Elle compte comme une compétence de base. [Inferno] (amélioré) Toutes les attaques de Sung Jinwoo comptent comme des attaques dans le dos. Les Taux de coup critique des compétences Entaille de la fureur, Armageddon et Apocalypse augmentent de 30 %. Les Dégâts de coup critique des compétences Entaille de la fureur, Armageddon et Apocalypse augmentent de 36 %. Confère [Super armure]. Durée : 15 seconde(s). [Explosion de magma] Restaure 100 % de la jauge de noyau. L'attaque de noyau de Courroux de Kamish devient Oculus, ce qui augmente les dégâts de la compétence de 20 %. L'utilisation de la compétence Oculus transforme Entaille de la fureur en Apocalypse. Augmente les dégâts de Surcharge de Feu de la compétence Apocalypse de 20 %. Durée : 10 seconde(s).",
           "en": ""
         }
+      },
+      {
+        "tier": 6,
+        "label": "5 étoiles +1",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 7,
+        "label": "5 étoiles +2",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 8,
+        "label": "5 étoiles +3",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 9,
+        "label": "5 étoiles +4",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 10,
+        "label": "5 étoiles +5",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
       }
     ],
     "icon": "data/icons/weapons/kamish-wrath.png",
     "source": "capture du Codex d'armes en jeu (client FR), envoyée par Alexis le 2026-11-25",
-    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Passif complet relevé (base + paliers 1 à 5 étoiles, `tier` = nombre d'étoiles) ; « Armagedonde » (faute du jeu) normalisé ; Passif identique à Niv. 1 et Niv. 130 5★ (deux jeux de captures) ; Ignis Omnia ★1 dit « PV max » dans le jeu (relevé deux fois).",
+    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Passif complet relevé (base + paliers 1 à 5 étoiles, `tier` = nombre d'étoiles) ; « Armagedonde » (faute du jeu) normalisé ; Passif identique à Niv. 1 et Niv. 130 5★ (deux jeux de captures) ; Ignis Omnia ★1 dit « PV max » dans le jeu (relevé deux fois). Paliers au-delà de 5★ (« 5 étoiles +1 » à « +5 », stockés en tier 6 à 10) : +3 % Attaque/Défense/PV chacun (cumul non vérifié, 15 % max si cumulatif).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "icon_source": "API slagate (GSWeapon_KamishWrath_PortraitBig), récupérée le 2026-11-19",
     "max_level": {
