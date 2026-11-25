@@ -9469,14 +9469,49 @@
       {
         "tier": 0,
         "text": {
-          "fr": "Le fait de n'équiper que des armes de Feu active l'effet [Ignis Rex]. L'utilisation d'Entaille de la fureur restaure 100 % de la jauge de noyau de l'utilisateur. Lorsque la compétence Entaille de la fureur touche sa cible, elle active l'effet [Frisson de terreur]. L'utilisation d'une attaque de noyau transforme Entaille de la fureur en Armageddon, ce qui augmente ses dégâts de … (texte tronqué sur la capture ; suite non relevée : à vérifier).",
+          "fr": "Le fait de n'équiper que des armes de Feu active l'effet [Ignis Rex]. L'utilisation d'Entaille de la fureur restaure 100 % de la jauge de noyau de l'utilisateur. Lorsque la compétence Entaille de la fureur touche sa cible, elle active l'effet [Frisson de terreur]. L'utilisation d'une attaque de noyau transforme Entaille de la fureur en Armageddon, ce qui augmente ses dégâts de 100 %. L'utilisation de la compétence Armageddon 1 fois retransforme la compétence en Entaille de la fureur. [Ignis Rex] Augmente l'Attaque de 10 % par tranche de 1000 PM max de Sung Jinwoo (jusqu'à 20 %). Augmente les dégâts des attaques dans le dos de 10 %. Augmente les dégâts de feu des compétences Entaille de la fureur et Armageddon de 10 %. Durée : illimitée. [Frisson de terreur] Réduit l'Attaque de 10 %. Augmente les dégâts de feu subis de 25 %. Augmente le Taux de coup critique de feu appliqué de 5 %. Augmente les Dégâts de coup critique subis de feu de 5 %. Durée : illimitée.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 1,
+        "text": {
+          "fr": "Lorsque Sung Jinwoo ou un allié parvient à mettre la cible en [Surcharge] de [Feu], l'effet [Inferno] est activé. L'utilisation d'une attaque de noyau transforme Entaille de la fureur en Armageddon, ce qui augmente les dégâts de la compétence de 100 %. L'utilisation de la compétence Armageddon 2 fois retransforme la compétence en Entaille de la fureur. L'effet [Ignis Rex] devient [Ignis Omnia]. [Inferno] Toutes les attaques de Sung Jinwoo comptent comme des attaques dans le dos. Augmente le Taux de coup critique des compétences Entaille de la fureur et Armageddon de 20 %. Augmente les Dégâts de coup critique des compétences Entaille de la fureur et Armageddon de 24 %. Confère [Super armure]. Durée : 15 seconde(s). [Ignis Omnia] Augmente les dégâts des attaques dans le dos de 15 %. Augmente l'Attaque de 10 % par tranche de 1000 PV max de Sung Jinwoo (jusqu'à 60 %) [« PV » lu sur la capture, « PM » pour Ignis Rex : à vérifier]. Augmente les dégâts de feu des compétences Entaille de la fureur et Armageddon de 15 %. Augmente les dégâts de Surcharge de Feu des compétences Entaille de la fureur et Armageddon de 10 %. Durée : illimitée.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 2,
+        "text": {
+          "fr": "Les dégâts de feu infligés à une cible affectée par [Brûlure] augmentent de 20 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 3,
+        "text": {
+          "fr": "L'effet [Ignis Omnia] est améliorée. [Ignis Omnia] Augmente les dégâts des attaques dans le dos de 20 %. Augmente l'Attaque de 10 % par tranche de 500 PM max de Sung Jinwoo (jusqu'à 120 %). Augmente les dégâts de feu des compétences Entaille de la fureur et Armageddon de 20 %. Augmente les dégâts de Surcharge de Feu des compétences Entaille de la fureur et Armageddon de 20 %. Durée : illimitée.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 4,
+        "text": {
+          "fr": "Les dégâts de Surcharge de Feu augmentent de 10 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 5,
+        "text": {
+          "fr": "L'effet [Inferno] est amélioré. L'utilisation de la compétence Armageddon active l'effet [Explosion de magma]. Lorsque les compétences Entaille de la fureur, Armageddon ou Apocalypse touchent leur cible, elles restaurent des PV à hauteur de 0.7 % de l'Attaque de l'utilisateur. [Apocalypse] L'utilisateur effectue une entaille rapide vers le haut, puis assène une puissante frappe vers le bas. Cette compétence inflige des dégâts élémentaires de feu équivalents à 600 % des dégâts de la compétence Entaille de la fureur. La compétence redevient Entaille de la fureur après l'utilisation. Elle compte comme une compétence de base. [Inferno] (amélioré) Toutes les attaques de Sung Jinwoo comptent comme des attaques dans le dos. Les Taux de coup critique des compétences Entaille de la fureur, Armageddon et Apocalypse augmentent de 30 %. Les Dégâts de coup critique des compétences Entaille de la fureur, Armageddon et Apocalypse augmentent de 36 %. Confère [Super armure]. Durée : 15 seconde(s). [Explosion de magma] Restaure 100 % de la jauge de noyau. L'attaque de noyau de Courroux de Kamish devient Oculus, ce qui augmente les dégâts de la compétence de 20 %. L'utilisation de la compétence Oculus transforme Entaille de la fureur en Apocalypse. Augmente les dégâts de Surcharge de Feu de la compétence Apocalypse de 20 %. Durée : 10 seconde(s).",
           "en": ""
         }
       }
     ],
     "icon": "data/icons/weapons/kamish-wrath.png",
     "source": "capture du Codex d'armes en jeu (client FR), envoyée par Alexis le 2026-11-25",
-    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Passif : texte tronqué sur les captures (fin non relevée).",
+    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Passif complet relevé (base + paliers 1 à 5 étoiles, `tier` = nombre d'étoiles) ; « Armagedonde » (faute du jeu) normalisé ; Ignis Omnia ★1 : « PV max » lu, à vérifier.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "icon_source": "API slagate (GSWeapon_KamishWrath_PortraitBig), récupérée le 2026-11-19",
     "max_level": {
