@@ -99,6 +99,11 @@
     "_zone_armes_sjw": "SPEC v25 §4.5, calée le 16/11/2026 sur 2 captures RESULT du BOT (client JA) : docs/essais/composition/bot_results_ja.png (5 cases pleines) et bot_results_sans_sjw_ja.png (3 chasseurs seulement). Le bandeau est ALIGNÉ À DROITE : sans armes de SJW, les 3 icônes de chasseurs glissent dans les 3 cases de droite et les 2 cases de GAUCHE (x 0,236-0,332) restent vides (écart-type 3 contre 60-76 quand elles sont pleines). Zone vide (`regles_deduites.zone_vide`, seuil 8) = pas d'armes de SJW = SJW absent. Le pipeline ne lit pas encore l'écran RESULT du BOT (lu par le titre) : `detail.armes_sjw_vides` à renseigner lors de cette lecture ; ≥ 5 runs sûres de 5 chaînes requises pour conclure."
   },
   "doublon_modes": ["poc"],
+  "poc_refonte": {
+    "_doc": "Refonte du POC du 19/11/2026 (patches.json « 2026-11-19 ») : paliers (Tier), équipes 1 et 2 qui partagent les PV du boss, plus de restriction d'élément, classement en top %. Dès `semaine_debut` : l'élément ne distingue plus les équipes ni ne contredit le titre ; le numéro d'équipe lu à l'écran (« Tier N Team M ») prime sur un chasseur commun ; deux lignes identiques d'équipes différentes ne sont pas des doublons ; une ligne POC n'est `sûr` que si `classement_sur` est vrai. Durée, nombre de paliers, barème et score de classement (Total Contribution ? Rank Score ? top % ?) NON publiés : à vérifier.",
+    "semaine_debut": "2026-11-19",
+    "classement_sur": false
+  },
   "modes_classement": ["poc", "bot", "gb", "hotm"],
   "rage_count_mots": ["rage"],
   "_rage_count_mots": "Libellés du Rage Count en plus de « RC » et « Rage Count » : « rage » (v22 : `Rage: 159`, `159 Rage`, jamais `Boss Rage`) ; coréen et japonais [À CONFIRMER] sur capture (SPEC §2.2).",

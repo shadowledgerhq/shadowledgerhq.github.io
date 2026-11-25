@@ -794,6 +794,7 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
 
 
 NOTE_COMMUN = "chasseur commun aux 2 runs : "
+NOTE_COMMUN_REFONTE = " (interdit avant la refonte du POC du 19/11, règle actuelle non publiée : à vérifier)"
 
 
 def controler_chasseurs_communs(builds):
@@ -813,7 +814,7 @@ def controler_chasseurs_communs(builds):
                 communs = sorted({h["id"] for h in a["hunters"] if h.get("id")} & {h["id"] for h in b["hunters"] if h.get("id")})
                 for ident in communs:
                     for x in (a, b):
-                        note = NOTE_COMMUN + ident
+                        note = NOTE_COMMUN + ident + (NOTE_COMMUN_REFONTE if x.get("mode") == "poc" and (x.get("week") or "") >= "2026-11-19" else "")
                         if note not in x["notes"].split("; "):
                             x["notes"] = "; ".join(n for n in (x["notes"], note) if n)
                             x["confidence"] = "a_verifier"

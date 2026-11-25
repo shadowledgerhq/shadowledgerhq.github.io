@@ -64,7 +64,10 @@ def dedoublonner(runs, config):
     groupes = defaultdict(list)
     for r in runs:
         if r["exact"] and r["mode"] in modes:
-            groupes[(r["_cle"], r["score"])].append(r)
+            # POC refonte : un boss vaincu donne le même total à chaque palier, deux équipes (1 et 2 lues à l'écran) peuvent donc
+            # égaler leur score : l'équipe entre dans la clé (le doublon reste la même run, même équipe, publiée deux fois)
+            equipe = r["team"] if r["mode"] == "poc" and r.get("_refonte") and r["team"] in (1, 2) else None
+            groupes[(r["_cle"], r["score"], equipe)].append(r)
     retires, doublons = set(), []
     # v3 : hors `doublon_modes` (BOT, HOTM), rien n'est retiré : simple note « doublon possible »
     possibles = defaultdict(list)
@@ -216,6 +219,9 @@ def ligne_joueur(runs_j, cle, config):
         notes.append("porte HOTM illisible")
         ok = False
     sur = ok and all(r["confidence"] == "sur" for r in choix) and not any(r.get("_contradiction") for r in choix)
+    if mode == "poc" and choix and any(r.get("_refonte") for r in choix) and not (config.get("poc_refonte") or {}).get("classement_sur"):
+        sur = False          # POC refonte : score de classement, somme des 2 équipes, paliers non publiés
+        notes.append(NOTE_POC_REFONTE)
     return choix, sur, notes
 
 
@@ -288,6 +294,7 @@ def construire_ligne(choix, sur, notes_ligne, cle, week):
     return ligne
 
 
+NOTE_POC_REFONTE = "POC refonte 19/11 : paliers, barème et total des 2 équipes non publiés : à vérifier"
 NOTE_EGALITE_DEGAT = "égalité départagée par un dégât non contrôlé"
 
 
@@ -380,6 +387,8 @@ def calculer(week, d=None, config=None, horloge=None):
             continue
         r = {**lec, "notes": list(lec.get("notes", []))}
         r["_cle"] = cle_classement(r, config)
+        if r["mode"] == "poc" and elements.refonte_poc(week, config):
+            r["_refonte"] = True            # POC refonte du 19/11/2026 : règles de `config.poc_refonte`
         runs.append(r)
     videos_avant = {r["video_id"] for r in runs}
 

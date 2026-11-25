@@ -101,8 +101,10 @@ def annoter(runs, titres, config, hunters, builds=None):
         if r["mode"] in ("gb", "poc") and _filmee(r):
             par_video.setdefault(r["video_id"], []).append(r)
     for vid, rs in par_video.items():
-        tit = elements_du_titre(titres.get(vid, ""), config)
+        tit_video = elements_du_titre(titres.get(vid, ""), config)
+        tit = tit_video
         for r in rs:
+            tit = [] if _poc_refonte(r) else tit_video      # POC refonte : le titre ne donne plus l'élément de la run ni ne le contredit
             ids = ids_du_build(builds, r) or (r.get("detail") or {}).get("hunter_ids")
             if ids:
                 r["detail"] = {**(r.get("detail") or {}), "hunter_ids": list(ids)}
@@ -115,6 +117,8 @@ def annoter(runs, titres, config, hunters, builds=None):
                         r["notes"].append(NOTE_CONTRADICTION)
                 elif tit:
                     r["element_source"] = "titre+ecran"
+        tit = tit_video
+        rs = [r for r in rs if not _poc_refonte(r)]
         libres = [r for r in rs if r["element"] is None]
         if len(tit) == 1 and len(rs) == 1 and libres:
             libres[0]["element"], libres[0]["element_source"] = tit[0], "titre"
@@ -125,6 +129,16 @@ def annoter(runs, titres, config, hunters, builds=None):
                 libres[0]["element_source"] = "titre+ecran"
 
 
+def refonte_poc(week, config):
+    """Refonte du POC (19/11/2026) : vrai pour la semaine `config.poc_refonte.semaine_debut` et les suivantes (dates ISO comparées en texte)."""
+    debut = ((config or {}).get("poc_refonte") or {}).get("semaine_debut")
+    return bool(debut and week and week >= debut)
+
+
+def _poc_refonte(r):
+    return r.get("mode") == "poc" and bool(r.get("_refonte"))
+
+
 def hunters_de(r):
     return set((r.get("detail") or {}).get("hunter_ids") or [])
 
@@ -133,9 +147,18 @@ def distinctes(a, b):
     """Deux runs d'un même joueur sont-elles de groupes / équipes différents ? `oui`, `non` ou `peut` (une équipe connue, l'autre non :
     additionnées mais ligne `a_verifier`, comportement v18 inchangé). Un chasseur commun vu à l'écran = même groupe, sans exception."""
     ha, hb = hunters_de(a), hunters_de(b)
+    ta, tb = a.get("team"), b.get("team")
+    if _poc_refonte(a) and _poc_refonte(b):
+        # POC après la refonte du 19/11 : plus de restriction d'élément, donc ni l'élément ni le titre ne distinguent les équipes. Le
+        # numéro d'équipe lu à l'écran (« Tier N Team M ») tranche, même avec un chasseur commun (alerte à part, `builds`) ; équipes
+        # non lues : un chasseur commun = même équipe (prudent), une seule équipe lue = « peut ».
+        if ta in (1, 2) and tb in (1, 2):
+            return "oui" if ta != tb else "non"
+        if ha & hb:
+            return "non"
+        return "peut" if (ta in (1, 2)) != (tb in (1, 2)) else "non"
     if ha & hb:
         return "non"
-    ta, tb = a.get("team"), b.get("team")
     if ta in (1, 2) and tb in (1, 2):
         return "oui" if ta != tb else "non"
     ea, eb = a.get("element"), b.get("element")
