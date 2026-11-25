@@ -1,0 +1,608 @@
+{
+  "spec": 3,
+  "run_id": "poc-2026-11-12-2AJljDc_nN4",
+  "run_index": 1,
+  "week": "2026-11-12",
+  "mode": "poc",
+  "gate": null,
+  "hunter_mode": null,
+  "rank": null,
+  "line_provisional": true,
+  "provisional_rank": 3,
+  "player": "SNG",
+  "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+  "video_id": "2AJljDc_nN4",
+  "t_result": null,
+  "t_composition": [
+    232,
+    542
+  ],
+  "team": null,
+  "element": null,
+  "rules": {
+    "week": "2026-11-12",
+    "sjw": null,
+    "sjw_skills": null,
+    "blessings": null,
+    "shadows": true,
+    "successor": null
+  },
+  "status": "build_partiel",
+  "confidence": "a_verifier",
+  "sjw": {
+    "weapons": [
+      {
+        "id": null,
+        "level": null
+      },
+      {
+        "id": null,
+        "level": null
+      }
+    ],
+    "artifacts": [
+      {
+        "slot": "helmet",
+        "set_id": "set-of-the-architects-blue-poison",
+        "level": null
+      },
+      {
+        "slot": "chestplate",
+        "set_id": "set-of-the-architects-blue-poison",
+        "level": null
+      },
+      {
+        "slot": "gloves",
+        "set_id": "set-of-the-architects-blue-poison",
+        "level": null
+      },
+      {
+        "slot": "boots",
+        "set_id": "set-of-the-architects-blue-poison",
+        "level": null
+      },
+      {
+        "slot": "necklace",
+        "set_id": "set-of-burning-greed",
+        "level": null
+      },
+      {
+        "slot": "bracelet",
+        "set_id": "set-of-the-architects-blue-poison",
+        "level": null
+      },
+      {
+        "slot": "ring",
+        "set_id": "set-of-the-architects-blue-poison",
+        "level": null
+      },
+      {
+        "slot": "earrings",
+        "set_id": "set-of-chaotic-desire",
+        "level": null
+      }
+    ],
+    "cores": [
+      {
+        "slot": "mind",
+        "id": "ferocious-protectors-desire",
+        "level": null
+      },
+      {
+        "slot": "body",
+        "id": "arrogant-rulers-will",
+        "level": null
+      },
+      {
+        "slot": "spirit",
+        "id": "teeth-of-the-watcher",
+        "level": null
+      }
+    ],
+    "stats": {},
+    "skills": [
+      {
+        "slot": "skill_1",
+        "id": null,
+        "level": null
+      },
+      {
+        "slot": "skill_2",
+        "id": null,
+        "level": null
+      },
+      {
+        "slot": "ultimate",
+        "id": null,
+        "level": null
+      },
+      {
+        "slot": "qte_1",
+        "id": null,
+        "level": null
+      },
+      {
+        "slot": "qte_2",
+        "id": null,
+        "level": null
+      },
+      {
+        "slot": "qte_3",
+        "id": null,
+        "level": null
+      }
+    ],
+    "blessings": [
+      {
+        "id": null,
+        "level": null
+      },
+      {
+        "id": null,
+        "level": null
+      },
+      {
+        "id": null,
+        "level": null
+      },
+      {
+        "id": null,
+        "level": null
+      },
+      {
+        "id": null,
+        "level": null
+      },
+      {
+        "id": null,
+        "level": null
+      },
+      {
+        "id": null,
+        "level": null
+      },
+      {
+        "id": null,
+        "level": null
+      }
+    ]
+  },
+  "hunters": [
+    {
+      "position": 1,
+      "team_slot": null,
+      "id": "jung-yerim",
+      "weapon": {
+        "id": "prankster",
+        "level": null
+      },
+      "artifacts": [
+        {
+          "slot": "helmet",
+          "set_id": "set-of-noble-flesh",
+          "level": null
+        },
+        {
+          "slot": "chestplate",
+          "set_id": "set-of-noble-flesh",
+          "level": null
+        },
+        {
+          "slot": "gloves",
+          "set_id": "set-of-noble-flesh",
+          "level": null
+        },
+        {
+          "slot": "boots",
+          "set_id": "set-of-noble-flesh",
+          "level": null
+        },
+        {
+          "slot": "necklace",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "bracelet",
+          "set_id": "set-of-noble-flesh",
+          "level": null
+        },
+        {
+          "slot": "ring",
+          "set_id": "set-of-noble-flesh",
+          "level": null
+        },
+        {
+          "slot": "earrings",
+          "set_id": "set-of-noble-flesh",
+          "level": null
+        }
+      ],
+      "cores": [
+        {
+          "slot": "mind",
+          "id": "ferocious-protectors-desire",
+          "level": null
+        },
+        {
+          "slot": "body",
+          "id": "nameless-demons-horn",
+          "level": null
+        },
+        {
+          "slot": "spirit",
+          "id": "ancient-wraiths-mana-power",
+          "level": null
+        }
+      ],
+      "stats": {}
+    },
+    {
+      "position": 2,
+      "team_slot": null,
+      "id": "christopher-reed",
+      "weapon": {
+        "id": "melody-of-iron-and-blood",
+        "level": null
+      },
+      "artifacts": [
+        {
+          "slot": "helmet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "chestplate",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "gloves",
+          "set_id": "set-of-glorious-arrogance",
+          "level": null
+        },
+        {
+          "slot": "boots",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "necklace",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "bracelet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "ring",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "earrings",
+          "set_id": "set-of-kamishs-obession",
+          "level": null
+        }
+      ],
+      "cores": [
+        {
+          "slot": "mind",
+          "id": "ferocious-protectors-desire",
+          "level": null
+        },
+        {
+          "slot": "body",
+          "id": "nameless-demons-horn",
+          "level": null
+        },
+        {
+          "slot": "spirit",
+          "id": "teeth-of-the-watcher",
+          "level": null
+        }
+      ],
+      "stats": {}
+    },
+    {
+      "position": 3,
+      "team_slot": null,
+      "id": null,
+      "weapon": {
+        "id": "prankster",
+        "level": null
+      },
+      "artifacts": [
+        {
+          "slot": "helmet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "chestplate",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "gloves",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "boots",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "necklace",
+          "set_id": "set-of-glorious-arrogance",
+          "level": null
+        },
+        {
+          "slot": "bracelet",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "ring",
+          "set_id": null,
+          "level": null
+        },
+        {
+          "slot": "earrings",
+          "set_id": null,
+          "level": null
+        }
+      ],
+      "cores": [
+        {
+          "slot": "mind",
+          "id": "ferocious-protectors-desire",
+          "level": null
+        },
+        {
+          "slot": "body",
+          "id": "nameless-demons-horn",
+          "level": null
+        },
+        {
+          "slot": "spirit",
+          "id": "ancient-wraiths-mana-power",
+          "level": null
+        }
+      ],
+      "stats": {}
+    }
+  ],
+  "set_bonuses": {
+    "sjw": [
+      {
+        "set_id": "set-of-burning-greed",
+        "pieces": 1,
+        "tiers": []
+      },
+      {
+        "set_id": "set-of-chaotic-desire",
+        "pieces": 1,
+        "tiers": []
+      },
+      {
+        "set_id": "set-of-the-architects-blue-poison",
+        "pieces": 6,
+        "tiers": [
+          4
+        ]
+      }
+    ],
+    "hunter_1": [
+      {
+        "set_id": "set-of-noble-flesh",
+        "pieces": 7,
+        "tiers": [
+          4
+        ]
+      }
+    ],
+    "hunter_2": [
+      {
+        "set_id": "set-of-glorious-arrogance",
+        "pieces": 1,
+        "tiers": []
+      },
+      {
+        "set_id": "set-of-kamishs-obession",
+        "pieces": 1,
+        "tiers": []
+      }
+    ],
+    "hunter_3": [
+      {
+        "set_id": "set-of-glorious-arrogance",
+        "pieces": 1,
+        "tiers": []
+      }
+    ]
+  },
+  "shadows": [
+    {
+      "position": 1,
+      "id": "beste"
+    },
+    {
+      "position": 2,
+      "id": "cerbie"
+    },
+    {
+      "position": 3,
+      "id": "greed"
+    }
+  ],
+  "successor": {
+    "id": null,
+    "level": null,
+    "stats": {}
+  },
+  "subjugation_support": null,
+  "proof": null,
+  "statues": null,
+  "gems": null,
+  "found": {
+    "sjw": true,
+    "sjw_weapons": null,
+    "sjw_artifacts": true,
+    "sjw_cores": true,
+    "sjw_stats": null,
+    "sjw_skills": null,
+    "blessings": null,
+    "hunters": false,
+    "weapons": true,
+    "artifacts": false,
+    "cores": true,
+    "stats": null,
+    "shadows": true,
+    "successor": null,
+    "subjugation_support": null,
+    "proof": null,
+    "successor_stats": null,
+    "statues": null,
+    "gems": null
+  },
+  "counts": {
+    "sjw_weapons": "0/2",
+    "sjw_artifacts": "8/8",
+    "sjw_cores": "3/3",
+    "sjw_stats": "0/15",
+    "sjw_skills": "0/6",
+    "blessings": "0/8",
+    "hunters": "2/3",
+    "weapons": "3/3",
+    "artifacts": "10/24",
+    "cores": "9/9",
+    "stats": "0/45",
+    "shadows": "3/3"
+  },
+  "found_at": {},
+  "unmatched": [
+    {
+      "element": "sjw_weapons",
+      "owner": "sjw",
+      "slot": 0,
+      "best_id": "radiru-clans-double-edged-spear",
+      "score": 0.637,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_sjw_weapons_sjw_0.jpg"
+    },
+    {
+      "element": "sjw_weapons",
+      "owner": "sjw",
+      "slot": 1,
+      "best_id": "moonshadow",
+      "score": 0.649,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_sjw_weapons_sjw_1.jpg"
+    },
+    {
+      "element": "successor",
+      "owner": "successor",
+      "slot": null,
+      "best_id": "myro",
+      "score": 0.489,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_successor_successor.jpg"
+    },
+    {
+      "element": "hunters",
+      "owner": "hunter_3",
+      "slot": null,
+      "best_id": "han-song-yi",
+      "score": 0.615,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_hunters_hunter_3.jpg"
+    },
+    {
+      "element": "sjw_skills",
+      "owner": "sjw",
+      "slot": "ultimate",
+      "best_id": "sonic-stream--magnifying-slashes",
+      "score": 0.386,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_sjw_skills_sjw_ultimate.jpg"
+    },
+    {
+      "element": "sjw_skills",
+      "owner": "sjw",
+      "slot": "skill_2",
+      "best_id": "vital-strike--hone-in",
+      "score": 0.407,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_sjw_skills_sjw_skill_2.jpg"
+    },
+    {
+      "element": "sjw_skills",
+      "owner": "sjw",
+      "slot": "skill_1",
+      "best_id": "sonic-stream--sonic-explosion",
+      "score": 0.427,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_sjw_skills_sjw_skill_1.jpg"
+    },
+    {
+      "element": "sjw_skills",
+      "owner": "sjw",
+      "slot": "qte_3",
+      "best_id": "qte--extinction",
+      "score": 0.454,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_sjw_skills_sjw_qte_3.jpg"
+    },
+    {
+      "element": "sjw_skills",
+      "owner": "sjw",
+      "slot": "qte_2",
+      "best_id": "qte--eviction",
+      "score": 0.48,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_sjw_skills_sjw_qte_2.jpg"
+    },
+    {
+      "element": "sjw_skills",
+      "owner": "sjw",
+      "slot": "qte_1",
+      "best_id": "qte--foulee-de-lombre",
+      "score": 0.548,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_sjw_skills_sjw_qte_1.jpg"
+    },
+    {
+      "element": "blessings",
+      "owner": "sjw",
+      "slot": 1,
+      "best_id": "life",
+      "score": 0.436,
+      "crop": "data/builds/2026-11-12/poc/_crops/poc-2026-11-12-2AJljDc_nN4-1_blessings_sjw_1.jpg"
+    }
+  ],
+  "attendus": {
+    "sjw": "fac",
+    "sjw_weapons": "fac",
+    "sjw_artifacts": "fac",
+    "sjw_cores": "fac",
+    "sjw_stats": "fac",
+    "sjw_skills": "fac",
+    "blessings": "fac",
+    "hunters": true,
+    "weapons": true,
+    "artifacts": true,
+    "cores": true,
+    "stats": "fac",
+    "shadows": true,
+    "successor": "fac",
+    "subjugation_support": "fac"
+  },
+  "plafonds": [],
+  "erreurs": [],
+  "notes": "ligne non classée (score provisoire); hunter_1 reconnu par sa carte, icône lue : aucune (118 correspondances); hunter_2 reconnu par sa carte, icône lue : aucune (134 correspondances); shadow_2 reconnu par sa carte, icône lue : kaisel (66 correspondances); shadow_3 reconnu par sa carte, icône lue : brute (87 correspondances); pièce isolée : necklace (sjw); pièce isolée : earrings (sjw); conflit : artifacts; conflit : blessings; arme d'un autre chasseur; reconnaissance faible : shadows; reconnaissance faible : weapons; reconnaissance faible : sjw_artifacts; reconnaissance faible : artifacts",
+  "sources": [
+    {
+      "type": "video",
+      "video_id": "2AJljDc_nN4",
+      "t": [
+        232,
+        542
+      ]
+    }
+  ],
+  "dossier": "poc"
+}

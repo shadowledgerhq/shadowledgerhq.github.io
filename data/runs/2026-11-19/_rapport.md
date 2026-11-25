@@ -1,4 +1,8 @@
-# Rapport — semaine 2026-11-19 — passage daily — 2026-11-25 20:50 (Paris)
+# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-25 21:30 (Paris)
+
+- **Passage complet : non** (passage refusé : un autre passage PC tourne déjà (builds (PID 12156, depuis 23 min)))
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà (builds (PID 12156, depuis 23 min))
 
 Dernier passage du PC (`_rapport_pc.md`, recopié) :
 
