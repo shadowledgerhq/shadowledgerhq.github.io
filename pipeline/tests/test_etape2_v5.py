@@ -181,3 +181,16 @@ def test_build_d_une_run_disparue_de_la_ligne_est_supprime(tmp_path):
     ancien.write_text("{}", encoding="utf-8")
     B.calculer("2026-11-12", racine=tmp_path, cfg=CFG, banque=object())
     assert len(ligne["runs_detail"]) == 1 and not ancien.exists() and (dossier / f"{ligne['run_id']}-1.json").exists()
+
+
+def test_crops_orphelins_supprimes(tmp_path):
+    import json
+    import builds as B
+    base = tmp_path / "data" / "builds" / "2026-11-12" / "bot"
+    (base / "_crops").mkdir(parents=True)
+    garde, orphelin = base / "_crops" / "a.jpg", base / "_crops" / "vieux.jpg"
+    garde.write_bytes(b"x")
+    orphelin.write_bytes(b"x")
+    (base / "bot-1.json").write_text(json.dumps({"unmatched": [{"crop": "data/builds/2026-11-12/bot/_crops/a.jpg"}]}), encoding="utf-8")
+    assert [p.name for p in B.supprimer_crops_orphelins("2026-11-12", tmp_path)] == ["vieux.jpg"]
+    assert garde.exists() and not orphelin.exists()

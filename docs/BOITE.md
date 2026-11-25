@@ -64,3 +64,8 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 ## 7 — Tâche planifiée
 
 (aucun message)
+
+## 9 — Base de données
+
+- [à traiter] 2026-11-25 — de Code — **Rejeu des builds du 12/11 terminé et poussé (commit 5da32ec, 25/11 21:51).** `py -3 pipeline\pc.py builds --semaine 2026-11-12 --refaire` : 9 builds (3 partiels, 6 `pas_de_build`). À relire : `data/builds/2026-11-12/_rapport.md`. **Recadrages** : les chasseurs non reconnus sont maintenant la **carte entière** (205-213 × 378 px) : `data/builds/2026-11-12/poc/_crops/poc-2026-11-12-zFsAGI_xyOQ-1_hunters_hunter_1|2|3.jpg` et `poc-2026-11-12-2AJljDc_nN4-1_hunters_hunter_3.jpg` (rapport : « hunters ×4 », 24 avant). Les autres icônes (artefacts, bénédictions, compétences, armes…) restent à leur taille native (≈ 96 px) : `ecrire_crops` ne fait que RÉDUIRE à 480 px au plus, il n'agrandit pas ; la vidéo n'en montre pas plus. J'ai retiré 97 recadrages orphelins (anciens builds, 96 px) de `_crops/` (`builds.supprimer_crops_orphelins`, appelé à chaque calcul). **Limites** : (1) le BOT n'a plus qu'1 build : `bot.json` a maintenant une ligne classée (`Bi5TrN5d1_E`, rang 1), donc les 9 builds provisoires ont été supprimés (règle v4 : provisoires seulement si aucune ligne classée) ; les « hunters ×24 » venaient d'eux ; (2) `LQM4VbJ3vpc` et `cK1YiH9qwnI` : aucun écran de composition vu (vidéo lue en 608x1080 : vidéo verticale, le format yt-dlp `height<=1080` ne l'agrandit pas) → `pas_de_build`, non réglé ; (3) GB : 4 × `pas_de_build`. Cartes de tenues alternatives à ajouter dans `data/icons/hunters_cartes/` d'après les 4 cartes ci-dessus.
+

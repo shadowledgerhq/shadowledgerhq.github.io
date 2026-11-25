@@ -705,6 +705,24 @@ def supprimer_provisoires(week, attendus, racine=RACINE):
                     (Path(racine) / u["crop"]).unlink(missing_ok=True)
             f.unlink()
             supprimes.append(f)
+    supprimer_crops_orphelins(week, racine)
+    return supprimes
+
+
+def supprimer_crops_orphelins(week, racine=RACINE):
+    """Retire de `_crops/` les recadrages que plus aucun build de la semaine ne référence (`unmatched[].crop`) : restes d'anciens builds
+    (96 px) mêlés aux recadrages courants (480 px). Retourne les fichiers supprimés."""
+    base = Path(racine) / "data" / "builds" / week
+    utilises = set()
+    for f in base.glob("*/*.json"):
+        for u in (_json(f, None) or {}).get("unmatched") or []:
+            if u.get("crop"):
+                utilises.add((Path(racine) / u["crop"]).resolve())
+    supprimes = []
+    for c in sorted(base.glob("*/_crops/*.jpg")):
+        if c.resolve() not in utilises:
+            c.unlink()
+            supprimes.append(c)
     return supprimes
 
 
