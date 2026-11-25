@@ -7,13 +7,14 @@
 - Outil `tools/apply_balance_notes.py` : option `--depuis AAAA-MM-JJ` (sans elle il écrase les vérifications manuelles et réécrit `patches.json`).
 - 24/11 (session 12) : veille = 3 notices de correctifs (20/11 patch + mise à jour recommandée du client ; 24/11 patchs de données ×2), intégrées (`netmarble_notes.json` 694 notes, `patches.json` fiches 2026-11-20 et 2026-11-24, aucune valeur de jeu) ; `a_traiter.md` vidé ; check_db OK. Rejeu PC du 12/11 : pas fait (recadrages 96 px ; yt-dlp périmé côté PC jusqu'au 24/11, mis à jour par Alexis).
 - 24/11 (session 13) : veille = rien de nouveau. Wiki Fandom : pages Thalia De Rossi et Rosa Nera apparues (21-23/11) → fiches complétées (7 compétences, passif, paliers 1-5, stats Lv.1/max ; Rosa Nera : 2 paliers, PV/puissance). Kamish's Wrath : page wiki 404. Rejeu PC du 12/11 toujours pas fait (rapport 12/11 inchangé). check_db OK ; 17 tests pipeline en échec avant comme après (hors base).
+- 25/11 (session 13) : captures d'Alexis du nouveau POC (paliers 1-9, Résultats, classement, soutien et maîtrise de conquête, guide d'Ennio) → `game_rules.json` `power-of-calamity.tiered_system` + `updates` ; message à la discussion 1 dans `docs/BOITE.md` ; les règles POC « non publiées » sont donc en grande partie relevées (reste : récompenses, paliers > 9, limite de temps exacte).
 ## En cours
 - Cartes de chasseurs de tenues alternatives : attendent le rejeu PC `pc.py builds --semaine 2026-11-12 --refaire` (recadrages encore en 96 px au 24/11 ; Code doit relancer après la mise à jour de yt-dlp).
 - Noms EN : Overshadow, Power Unlocked, Commander's Authority à vérifier en jeu.
 ## À faire
 - 19/11 : recherche de sources — wiki Fandom : page Thalia De Rossi inexistante (404), aucune fiche chiffrée en ligne ; seulement des vidéos (YouTube/Reddit, aperçus sans valeurs). À relancer à la prochaine veille.
 - Compléter Kamish's Wrath/Roar dès qu'une source existe ; noms FR des compétences de Thalia et de Rosa Nera, icône de Rosa Nera, classe (« Mage » = catégorie du wiki) et paliers dimensionnels de Thalia à vérifier ; type d'arme de Kamish's Roar.
-- Règles du POC par paliers (durée, nombre de paliers, récompenses) : non publiées ; Dargo (boss de guilde) et Vulcan (DCZ) : pas de fiche.
+- Règles du POC par paliers : récompenses de succès/paliers, effets de maîtrise par points, onglet armes de SJW, rangs de saison au-delà de A, paliers > 9 à compléter (captures) ; Dargo (boss de guilde) et Vulcan (DCZ) : pas de fiche.
 - 15 `a_verifier` anciens (12 `fiche_anterieure_au_patch`, 3 `palier_non_stocke`) + 8 du 19/11 (Charlotte, valeurs Lv.10 déjà dans `patch_adjustments`).
 - Vides sans source publique : amplification paliers 4-5, bonus d'enregistrement des runes, noms des matériaux de noyau, noms FR d'armes de chasseurs, JA/KO de gemmes.
 ## Besoin d'Alexis
