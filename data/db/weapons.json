@@ -9712,11 +9712,51 @@
           "fr": "Les effets [Incarnation du dragon de feu et Fureur du dragon de feu] sont améliorés. [Incarnation du dragon de feu] Augmente les dégâts de feu de 10 %. Augmente les dégâts de Surcharge de Feu de 30 %. Augmente la Pénétration de défense de 30 %. Durée : 30 seconde(s). [Fureur du dragon de feu] Augmente les dégâts infligés aux boss de 6 %. Augmente les dégâts de compétence d'arme de feu de 15 %. Augmente les Dégâts de coup critique des compétences d'arme de feu de 10 %. Durée : 30 seconde(s) (cumulable jusqu'à 4 fois).",
           "en": ""
         }
+      },
+      {
+        "tier": 6,
+        "label": "5 étoiles +1",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 7,
+        "label": "5 étoiles +2",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 8,
+        "label": "5 étoiles +3",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 9,
+        "label": "5 étoiles +4",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
+      },
+      {
+        "tier": 10,
+        "label": "5 étoiles +5",
+        "text": {
+          "fr": "Augmente l'Attaque, la Défense et les PV de l'utilisateur de 3 %.",
+          "en": ""
+        }
       }
     ],
     "icon": "data/icons/weapons/kamish-roar.png",
     "source": "capture du Codex d'armes en jeu (client FR), envoyée par Alexis le 2026-11-25",
-    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Type « Polearm » = « Arme d'hast » confirmé en jeu. Passif complet relevé (base + paliers 1 à 5 étoiles, captures Niv. 1 et Niv. 130). Paliers 5★+1 à +5 non capturés pour cette arme.",
+    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Type « Polearm » = « Arme d'hast » confirmé en jeu. Passif complet relevé (base + paliers 1 à 5 étoiles, captures Niv. 1 et Niv. 130). Paliers 5★+1 à +5 (tier 6 à 10) : +3 % Attaque/Défense/PV chacun ; paliers 3 à 5★ confirmés par un 2e jeu de captures Niv. 130.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
     "icon_source": "API slagate (GSWeapon_KamishLance_PortraitBig), récupérée le 2026-11-19",
     "max_level": {
