@@ -1,16 +1,14 @@
-# SUIVI — 2 Builds — 2026-11-17
+# SUIVI — 2 Builds — 2026-11-26
 ## Fait
-- SPEC_ETAPE2 v5 : cartes de référence prioritaires (nom > carte > icône), élément de la run, chasseur commun entre 2 runs = a_verifier, règle null = inconnu, zones tirées des images extraites par le pipeline
-- Contrôle des builds 2026-11-12 (générés le 15/11, avant les cartes) : BOT 8 partiel + 1 pas_de_build (provisoires), POC 1 + 1, GB 4 pas_de_build (composition GB non décrite) ; aucun id introuvable, aucun interdit
-- Constat : 0 chasseur identifié sur 33 ; armes des chasseurs « icône absente » partout ; successeur jamais reconnu ; ombre 01 = beste sur 6 BOT
+- SPEC_ETAPE2 v1 à v6 codées ; v7 : plusieurs cartes par chasseur (<id>--tenue<N>.png)
+- Relance 12/11 faite sur le PC : images auto POC disponibles (2AJljDc_nN4, zFsAGI_xyOQ) ; 4 cartes de chasseurs POC non identifiées (écran 編成固定 masque le nom)
 ## En cours
-- Pas de relevé manuel : rotation = relevé automatique (data/rotations/, discussions 3 et 8)
-- Relance des builds 2026-11-12 sur le PC (v5 codée, 303 tests)
-- Discussion 9 : cartes de tous les chasseurs et des successeurs, icônes des armes de chasseurs
+- Discussion 8 : coder les cartes de tenue (v7)
 ## À faire
-- Définir les zones POC (onglets 2-5), HOTM, GB sur les images auto/
-- Recontrôler les builds après relance
+- Définir les zones POC onglets 2-5 à partir de docs/essais/composition/auto/poc/
+- Recontrôler les builds (BOT : 1 seul build Bi5TrN5d1_E, partiel ; GB : 4 pas_de_build, composition GB non décrite)
+- Recaler min_corr_remanentes sur vidéos 1080p
 ## Besoin d'Alexis
-- Transmettre les messages aux discussions 8 et 9
+- Transmettre le message v7 à la discussion 8
 ## Demandes de modif du skill
-- Format Build → SPEC_ETAPE2 §1.2 ; checklist « éléments interdits » : seulement règle false (null = inconnu) ; « un PowerPoint par vidéo et par langue »
+- Transmises à la discussion 6 (BOITE §6)
