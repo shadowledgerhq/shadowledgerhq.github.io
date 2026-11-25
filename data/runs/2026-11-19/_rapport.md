@@ -1,22 +1,17 @@
-# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-24 23:30 (Paris)
+# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-25 19:30 (Paris)
 
 - Top 10 couvert : oui (0 vidéo candidate au top 10 restante)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
-- Vidéos traitées ce passage : 25 · en_cours restantes : 105 (dont 9 à traiter par le PC)
+- Vidéos traitées ce passage : 9 · en_cours restantes : 98 (dont 0 à traiter par le PC)
 - Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
-- Durée du passage : 87 min
-- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
-- Critère de gel n° 3 : 1/2 passage(s) planifié(s) de suite avec top 10 couvert
-- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : quck1v-c7nc 44.7 min → 80 s ; lFJbOusY26o 32.2 min → 103 s ; FVJbWPJYo6Q 4.1 min → 30 s ; 17ZeQo49yAY 40.1 min → 104 s ; c3q6woLKyyY 27.4 min → 121 s ; 2nVLdAFgLgc 10.0 min → 25 s ; BmzqTsMGOZg 6.5 min → 23 s ; z8YuUROu1bA 2.7 min → 15 s ; pBwKumwlfSU 2.9 min → 35 s ; OMbh7AiCgKI 5.1 min → 71 s ; kyePxECGxcU 5.0 min → 57 s ; FFzvoemSIIw 1.0 min → 14 s ; 89krbTek-_g 16.3 min → 42 s ; S8EHMzNFOVI 41.9 min → 58 s ; R7Uo0eYYAWM 1.9 min → 10 s ; nf3sPkhUqEA 1.0 min → 6 s ; vZrdTHYl1Zo 0.3 min → 7 s ; THxs2Y7QFI0 31.6 min → 115 s
-- Sous-titres en attente : 20 avant la règle → 20 après (24 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
-- Résumé GB : 2nVLdAFgLgc · aucun Results lu · pas classée
-- Résumé GB : 89krbTek-_g · aucun Results lu · pas classée
-- Résumé GB : qWAOYGouWeA · DEFQI GAMES · Results lu (888-909 s) · 194 RC à vérifier · water · conflit de lecture : hunter_rank_1
-- Résumé GB : CnFBmHEzZww · Results lu (480-503 s) · pas classée
-- Résumé GB : Fp4PYcT4UE0 · aucun Results lu · pas classée
-- Résumé GB : … et 6 autre(s) vidéo(s)
+- Durée du passage : 25 min
+- Relance automatique : 25/11/2026 21:30 (une seule fois par soir)
+- Critère de gel n° 3 : 2/2 passage(s) planifié(s) de suite avec top 10 couvert — atteint (reste à décider `pc.geler`)
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : ic0tLvgkCBk 13.0 min → 38 s ; qCT-_gW6-QY 11.8 min → 51 s ; ly_tZDQlR6Y 33.5 min → 199 s ; XyIB7lEm5Qo 4.9 min → 47 s ; UItSn-P0d4Q 9.6 min → 87 s ; yJ31zkuHSE4 11.8 min → 61 s ; xF3f1h5dtQ8 9.9 min → 78 s ; vtfFvPizduY 3.1 min → 29 s ; KyHrk8tglbE 17.6 min → 210 s
+- Sous-titres en attente : 11 avant la règle → 11 après (9 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Résumé GB : KyHrk8tglbE · aucun Results lu · pas classée
 
-- Semaine : 105 en cours (dont 21 pour le PC), 20 terminée(s), 44 rejetée(s)
+- Semaine : 98 en cours (dont 12 pour le PC), 20 terminée(s), 51 rejetée(s)
 - Classements : gb 15, poc 1
 
 ## À vérifier (15)
@@ -47,24 +42,15 @@
 - semaine de calcul (S20) : 0 vidéo(s) BOT à vérifier (run de la semaine précédente ?)
 
 ## Erreurs et alertes
-- 12 vidéo(s) reportée(s) au prochain passage (limite 8)
+- 3 vidéo(s) reportée(s) au prochain passage (limite 8)
 - kZOUlFDdjRI : 429 / anti-bot YouTube, reportée au prochain passage
 - 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
-- 9 vidéo(s) reportée(s) pour les images (limite 25)
-- 2nswH_35iFE : libellés de-DE inconnus (aucun écran GB reconnu)
-- U3C-egZnGPE : libellés es inconnus (aucun écran GB reconnu)
-- 2yqUBuiC0C8 : libellés hi inconnus (aucun écran GB reconnu)
-- quck1v-c7nc : actualités : aucun écran de jeu, vidéo rejetée
-- lFJbOusY26o : actualités : aucun écran de jeu, vidéo rejetée
-- 17ZeQo49yAY : actualités : aucun écran de jeu, vidéo rejetée
-- c3q6woLKyyY : actualités : aucun écran de jeu, vidéo rejetée
-- 2nVLdAFgLgc : libellés ta inconnus (aucun écran GB reconnu)
-- FFzvoemSIIw : actualités : aucun écran de jeu, vidéo rejetée
-- 89krbTek-_g : actualités : aucun écran de jeu, vidéo rejetée
-- S8EHMzNFOVI : actualités : aucun écran de jeu, vidéo rejetée
-- R7Uo0eYYAWM : actualités : aucun écran de jeu, vidéo rejetée
-- nf3sPkhUqEA : actualités : aucun écran de jeu, vidéo rejetée
-- vZrdTHYl1Zo : actualités : aucun écran de jeu, vidéo rejetée
-- THxs2Y7QFI0 : actualités : aucun écran de jeu, vidéo rejetée
-- 105 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- ic0tLvgkCBk : actualités : aucun écran de jeu, vidéo rejetée
+- ly_tZDQlR6Y : actualités : aucun écran de jeu, vidéo rejetée
+- XyIB7lEm5Qo : actualités : aucun écran de jeu, vidéo rejetée
+- UItSn-P0d4Q : actualités : aucun écran de jeu, vidéo rejetée
+- yJ31zkuHSE4 : actualités : aucun écran de jeu, vidéo rejetée
+- xF3f1h5dtQ8 : actualités : aucun écran de jeu, vidéo rejetée
+- KyHrk8tglbE : actualités : aucun écran de jeu, vidéo rejetée
+- 98 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- passage incomplet : anti-bot ; relance : 25/11/2026 21:30 (une seule fois par soir)
