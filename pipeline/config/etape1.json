@@ -121,7 +121,8 @@
     "images_min": 2,
     "zones_max_images": 12,
     "suite_avant_s": 3,
-    "suite_apres_s": 8
+    "suite_apres_s": 8,
+    "suite_max_lectures": 4
   },
   "modes_classement": ["poc", "bot", "gb", "hotm"],
   "rage_count_mots": ["rage"],

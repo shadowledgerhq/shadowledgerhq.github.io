@@ -942,6 +942,17 @@ def _garder(ocr_debug, vid, etiquette, t, texte, png):
         pass
 
 
+def palier_confirme(lectures, images_min=2):
+    """v40 : vrai si des lectures `poc_palier` `sûres` identiques (palier, équipe, Total Contribution, Rank Score) viennent de ≥ `images_min`
+    images distinctes : inutile (15 à 35 s l'image) de relire les suivantes."""
+    groupes = {}
+    for l in lectures:
+        d = l.get("detail") or {}
+        if d.get("v40") and d.get("v40_sur") and l.get("t") is not None:
+            groupes.setdefault((d.get("tier"), l.get("team"), d.get("total_contribution"), l["score"]), set()).add(l["t"])
+    return any(len(v) >= images_min for v in groupes.values())
+
+
 def lire_palier(outils, png, config, texte, st, journal=lambda m: None):
     """v40 : valeurs de l'écran de palier du POC refonte (`poc_palier.lire`) ou None (illisible, ou plus de `poc_refonte.zones_max_images` images
     déjà lues pour cette vidéo : les lectures par ancres sont chères). Retourne {"palier": valeurs}."""
@@ -983,14 +994,16 @@ def lire_palier_suite(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs
         if cle(l):
             stables.setdefault(cle(l), set()).add(l.get("t"))
     images = sorted(outils.images(chemin, [(debut, fenetre, 1)], tmp, prefixe=f"p{int(t0)}_"), key=lambda x: (abs(x[0] - t0), x[0]))
+    lues, lues_max = 0, rc.get("suite_max_lectures", 4)
     for k, (t, png) in enumerate(images):
-        if t == int(t0) or any(len(v) >= images_min for v in stables.values()):
+        if t == int(t0) or lues >= lues_max or any(len(v) >= images_min for v in stables.values()):
             Path(png).unlink(missing_ok=True)
             continue
         n += 1
         texte = _ocr_image(outils, png, langs, cfg, st, complet=True)
         if ocr_ecrans.detecter(texte) == "poc_palier":
             _garder(ocr_debug, vid, "palier", t, texte, png)
+            lues += 1
             ls = ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, lire_palier(outils, png, config, texte, st, journal))
             lectures += ls
             for l in ls:
@@ -1111,7 +1124,8 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                             journal(f"  écran de score sans libellé reconnu gardé à t={t} s (docs/essais/ocr/libelles_inconnus)")
                         zones = lire_zones_results(outils, png, config, type_img, texte, langs) if type_img in ZONES_TYPES else None
                         if type_img == "poc_palier":          # v40 : écran de palier du POC refonte, valeurs lues par ancres
-                            zones = lire_palier(outils, png, config, texte, st, journal)
+                            zones = None if palier_confirme(nouvelles, (config.get("poc_refonte") or {}).get("images_min", 2)) \
+                                else lire_palier(outils, png, config, texte, st, journal)
                         if type_img == "bot" or (type_img is None and ocr_ecrans.candidat_bot(texte, config)):
                             zb = None
                             if type_img is None or not _bot_texte_complet(texte, config):      # v27 : texte entier insuffisant -> zones

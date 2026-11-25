@@ -220,14 +220,14 @@ def test_texte_seul_ne_classe_pas():
 # --- bout en bout : vidéo synthétique (capture réelle de palier immobile) dans `pc.traiter_images` ----------------------
 
 class OutilsVideoFixe(pc.Outils):
-    """Vrai tesseract et vrai ffmpeg ; le « téléchargement » fabrique une vidéo de 20 s à partir d'une capture."""
+    """Vrai tesseract et vrai ffmpeg ; le « téléchargement » fabrique une vidéo de 12 s à partir d'une capture."""
     def __init__(self, config_pc, capture):
         super().__init__(config_pc)
         self.capture = capture
 
     def telecharger(self, video_id, dossier):
         sortie = Path(dossier) / f"{video_id}.mp4"
-        subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-loop", "1", "-i", str(self.capture), "-t", "20", "-r", "10",
+        subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-loop", "1", "-i", str(self.capture), "-t", "12", "-r", "10",
                         "-vf", "scale=trunc(iw/2)*2:trunc(ih/2)*2,format=yuv420p", str(sortie)], check=True)
         return sortie
 
@@ -237,7 +237,7 @@ class OutilsVideoFixe(pc.Outils):
 
 @pytest.mark.skipif(not OUTILS_OK, reason="tesseract et ffmpeg requis")
 def test_bout_en_bout_video_de_palier():
-    meta = {**META, "video_id": "9BrduWR4aSY", "title": "TIER 17 POC 100% FIRE + WATER BUILD", "duration": "PT20S", "mode_guess": ["poc"]}
+    meta = {**META, "video_id": "9BrduWR4aSY", "title": "TIER 17 POC 100% FIRE + WATER BUILD", "duration": "PT12S", "mode_guess": ["poc"]}
     etat = {}
     outils = OutilsVideoFixe(CONFIG["pc"], CAPT / "9BrduWR4aSY_354.jpg")
     lectures, avert, reporte = pc.traiter_images("9BrduWR4aSY", meta, outils, CONFIG, [], etat, "2026-11-25")

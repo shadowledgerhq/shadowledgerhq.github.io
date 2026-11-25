@@ -15,9 +15,13 @@ from itertools import product
 from pathlib import Path
 
 REF_CONTRIBUTION = 134.0           # largeur du mot « Contribution » à 900 px de haut
-VARIANTES = ((3, 140), (3, 170), (3, None))                      # 1er étage (contributions)
-VARIANTES_PLUS = ((4, 120), (3, 100), (3, 190), (3, 210), (2, 150), (3, 160, True), (3, 200, True))   # 2e étage si un contrôle échoue
-VARIANTES_BAS = VARIANTES + VARIANTES_PLUS + ((2, None), (2, 130), (2, 170))      # bloc du bas : tous (les petits chiffres préfèrent l'échelle 2)
+VARIANTES = ((3, 140), (3, 170), (3, None))                      # 1er étage (contributions) : chiffres tels que lus
+# 2e étage si un contrôle échoue : prétraitements de plus, dont des lectures « nettoyées » (4e valeur : ne garder que les composantes de
+# la hauteur d'un chiffre ; le portrait clair derrière un nombre brouille l'OCR brut, mais le nettoyage abîme parfois un nombre
+# lu sans souci : les deux séries sont donc gardées, l'union des candidats est départagée par le contrôle c)
+VARIANTES_PLUS = ((3, 140, False, True), (3, 170, False, True), (3, 190, False, True), (4, 150, False, True),
+                  (4, 120), (3, 100), (3, 190), (3, 210), (2, 150), (3, 160, True), (3, 200, True))
+VARIANTES_BAS = VARIANTES + VARIANTES_PLUS[4:] + ((2, None), (2, 130), (2, 170))      # Rank Score / objectif : sans nettoyage (les petits chiffres préfèrent l'échelle 2)
 CHIFFRES = ["-c", "tessedit_char_whitelist=0123456789,."]
 CHIFFRES_POURCENT = ["-c", "tessedit_char_whitelist=0123456789,.%"]
 CHIFFRES_TEMPS = ["-c", "tessedit_char_whitelist=0123456789:"]
@@ -59,12 +63,40 @@ def pourcentage(texte):
     return v if 0 <= v <= 100 else None
 
 
+def _nettoyer(png):
+    """Garde les composantes connexes de la hauteur d'un chiffre (texte noir sur blanc après seuil) : retire portrait, cadre, points isolés.
+    Sans opencv : image inchangée. Modifie le fichier en place."""
+    try:
+        import cv2
+        import numpy as np
+    except ImportError:
+        return
+    im = cv2.imread(str(png), cv2.IMREAD_GRAYSCALE)
+    if im is None:
+        return
+    _, b = cv2.threshold(im, 127, 255, cv2.THRESH_BINARY_INV)
+    n, lab, st, _ = cv2.connectedComponentsWithStats(b, 8)
+    haut = im.shape[0]
+    cand = [(i, st[i]) for i in range(1, n) if 0.28 * haut <= st[i][3] <= 0.95 * haut]
+    if not cand:
+        return
+    hs = sorted(int(c[1][3]) for c in cand)
+    mode = hs[len(hs) // 2]
+    garde = np.zeros_like(b)
+    for i, c in cand:
+        if 0.7 * mode <= c[3] <= 1.35 * mode and c[2] <= 1.1 * c[3]:
+            garde[lab == i] = 255
+    cv2.imwrite(str(png), cv2.copyMakeBorder(255 - garde, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=255))
+
+
 def _lire_zone(outils, png, x, y, largeur, hauteur, extra, psm=7, variantes=VARIANTES, langues="eng", timeout=40):
     """Textes d'une zone (pixels) sous chaque prétraitement ; "" si une lecture échoue."""
     textes = []
     for echelle, seuil, *reste in variantes:
         try:
             petit = outils.recadrer_px(png, x, y, largeur, hauteur, echelle, seuil, bool(reste and reste[0]))
+            if len(reste) > 1 and reste[1] and seuil:
+                _nettoyer(petit)
             textes.append(outils.ocr(petit, langues, psm, timeout, extra) or "")
             Path(petit).unlink(missing_ok=True)
         except Exception:      # OcrTropLent, RuntimeError : lecture perdue, jamais bloquante
@@ -190,7 +222,7 @@ def lire(outils, png, texte=None):
     if successeur:
         lignes.append(("successor", y_p + dec["successor"] * u + 40 * u))
     lignes += [(f"hunter_{k}", y_chasseur + (44 + 68.5 * (k - 1)) * u) for k in (1, 2, 3)]
-    zones = {nom: (x_l + 193 * u, y - 2 * u, 195 * u, 62 * u, CHIFFRES) for nom, y in lignes}
+    zones = {nom: (x_l + 190 * u, y - 2 * u, 198 * u, 62 * u, CHIFFRES) for nom, y in lignes}
     zones["total"] = (x_l - 4 * u, y_total + 25 * u, 345 * u, 75 * u, CHIFFRES)
     lt = _ligne_team(mots, hauteur_img)           # bloc du bas : Rank Score, Goal Progress, Team 1 %, Team 2 %
     if lt:
