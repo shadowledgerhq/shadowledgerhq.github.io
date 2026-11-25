@@ -3563,7 +3563,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -3686,7 +3686,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -3713,7 +3713,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -3744,7 +3744,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -3767,11 +3767,9 @@
     "updated_at": "2026-11-19",
     "last_tri": 4,
     "status": "en_cours",
-    "modes": [
-      "bot"
-    ],
+    "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -3798,7 +3796,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -3832,7 +3830,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -3864,7 +3862,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -3988,7 +3986,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "hud_suite": [],
@@ -4053,7 +4051,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4135,7 +4133,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4162,7 +4160,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4188,7 +4186,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4214,7 +4212,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4241,7 +4239,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4270,7 +4268,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4407,7 +4405,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4435,7 +4433,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -4568,7 +4566,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4596,7 +4594,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4699,7 +4697,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -4730,7 +4728,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4755,7 +4753,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4781,7 +4779,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -4812,7 +4810,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -4843,7 +4841,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -4874,7 +4872,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -4905,7 +4903,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4933,7 +4931,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -4961,7 +4959,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5015,11 +5013,9 @@
     "updated_at": "2026-11-22",
     "last_tri": 4,
     "status": "en_cours",
-    "modes": [
-      "bot"
-    ],
+    "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5047,7 +5043,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5107,7 +5103,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5175,7 +5171,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5251,7 +5247,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5279,7 +5275,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5413,7 +5409,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -5440,7 +5436,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5465,7 +5461,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5491,7 +5487,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5517,7 +5513,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5571,7 +5567,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5597,7 +5593,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5624,7 +5620,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5651,7 +5647,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5678,7 +5674,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5705,7 +5701,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5732,7 +5728,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5759,7 +5755,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5786,7 +5782,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5845,7 +5841,7 @@
       "poc"
     ],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5907,7 +5903,7 @@
       "gb"
     ],
     "pc_needed": true,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -5977,7 +5973,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6005,7 +6001,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6108,7 +6104,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6201,7 +6197,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -6228,7 +6224,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6253,7 +6249,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6278,7 +6274,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6304,7 +6300,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6329,7 +6325,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6354,7 +6350,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6381,7 +6377,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6408,7 +6404,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6436,7 +6432,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6464,7 +6460,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6491,7 +6487,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6518,7 +6514,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6545,7 +6541,7 @@
       "bot"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6572,7 +6568,7 @@
       "bot"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6669,7 +6665,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6704,7 +6700,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6895,7 +6891,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6921,7 +6917,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6970,7 +6966,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -6996,7 +6992,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7021,7 +7017,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7047,7 +7043,7 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7104,7 +7100,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7131,7 +7127,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7158,7 +7154,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7187,7 +7183,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -7219,7 +7215,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7246,7 +7242,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7273,7 +7269,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7334,7 +7330,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -7537,7 +7533,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7564,7 +7560,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7591,7 +7587,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7618,7 +7614,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7645,7 +7641,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7672,7 +7668,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7700,7 +7696,7 @@
       "poc"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7728,7 +7724,7 @@
       "bot"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -7761,7 +7757,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "sous_titres": "inutile",
       "tri2": "fait",
@@ -7825,7 +7821,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7889,7 +7885,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7917,7 +7913,7 @@
       "gb"
     ],
     "pc_needed": false,
-    "regles": 18,
+    "regles": 19,
     "pc": {
       "tri2": "fait",
       "image_taille": [
@@ -7932,5 +7928,395 @@
       "date": "2026-11-24",
       "tri4": "fait"
     }
+  },
+  "jsZc3xPhUaM": {
+    "week": "2026-11-19",
+    "channel_id": "UCOIjPYkWmxIyUKCk7Q64W7A",
+    "published_at": "2026-11-20T02:15:04Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": false
+  },
+  "NGR1AwD8ksk": {
+    "week": "2026-11-19",
+    "channel_id": "UCiat1xO0z2Dj1BpyHxqTXDA",
+    "published_at": "2026-11-25T05:09:49Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 0,
+    "status": "rejete",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": false
+  },
+  "wFSmxxhAcJw": {
+    "week": "2026-11-19",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "published_at": "2026-11-25T15:56:46Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "h14pV7WMV9U": {
+    "week": "2026-11-19",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "published_at": "2026-11-25T15:29:43Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "yUJhkLS9KbQ": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-25T18:00:33Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "LSokAIcuvq8": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-25T14:00:24Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 19,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "fQNMahYr2I4": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-25T10:00:14Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 19,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "wGIOV3ZSN1A": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-25T06:00:28Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 19,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "H79gE873dkg": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-25T03:30:29Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "BV_30CoeC4M": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-25T02:00:30Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 19,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "1wrf2OneYtA": {
+    "week": "2026-11-19",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "published_at": "2026-11-24T22:00:17Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 19,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "pC9dVb8-tRQ": {
+    "week": "2026-11-19",
+    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+    "published_at": "2026-11-25T01:41:34Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "xdh5gUFAJvA": {
+    "week": "2026-11-19",
+    "channel_id": "UChQ74OK6FGrn69TOtVAnUbw",
+    "published_at": "2026-11-25T06:29:44Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "JNxjYjZ7ikg": {
+    "week": "2026-11-19",
+    "channel_id": "UCrQKC1beb8P4R9OQuoEcQyA",
+    "published_at": "2026-11-24T22:16:32Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "bot",
+      "gb",
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 19,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "xjXmiVMxrQY": {
+    "week": "2026-11-19",
+    "channel_id": "UCrQKC1beb8P4R9OQuoEcQyA",
+    "published_at": "2026-11-24T22:14:52Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "bot",
+      "gb",
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 19,
+    "hors_sujet_probable": true,
+    "notes": [
+      "actualités probables (titre)"
+    ]
+  },
+  "zU0ezozQQ_4": {
+    "week": "2026-11-19",
+    "channel_id": "UCydEgise21vDqYw_ysdiCSg",
+    "published_at": "2026-11-25T11:05:29Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "oftCxfe77-4": {
+    "week": "2026-11-19",
+    "channel_id": "UCCFbL_KJ1LseA3WYp72jqBQ",
+    "published_at": "2026-11-25T01:20:50Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "n6XM2lq7QV4": {
+    "week": "2026-11-19",
+    "channel_id": "UChQ74OK6FGrn69TOtVAnUbw",
+    "published_at": "2026-11-21T16:44:56Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "1CvG1JEPGwo": {
+    "week": "2026-11-19",
+    "channel_id": "UC4pwblmjhCuDVpnsQ0cJHAA",
+    "published_at": "2026-11-19T13:30:09Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "poc"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "rup2CJYZU2w": {
+    "week": "2026-11-19",
+    "channel_id": "UC0RIvGREetq1pjuj_trdC5Q",
+    "published_at": "2026-11-25T13:00:17Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "bot"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "4dBSZE47fyI": {
+    "week": "2026-11-19",
+    "channel_id": "UCT4oJLgv1SAqGbrkfU00ptA",
+    "published_at": "2026-11-24T22:26:12Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "jv0qMEKUFrw": {
+    "week": "2026-11-19",
+    "channel_id": "UC8gbNszxQfR7nVvaLSCO8UQ",
+    "published_at": "2026-11-24T21:30:02Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "dDMN78TXLbo": {
+    "week": "2026-11-19",
+    "channel_id": "UCvCQXgEaXxj_heI1ajbqT8g",
+    "published_at": "2026-11-24T20:41:20Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "MtzHDxrdve8": {
+    "week": "2026-11-19",
+    "channel_id": "UCZ9gbw4Sb9wyLiq82VZrkXQ",
+    "published_at": "2026-11-24T15:18:56Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "5gLRtObbkPo": {
+    "week": "2026-11-19",
+    "channel_id": "UC65ycEOrjAr8rJngV-AS_rg",
+    "published_at": "2026-11-23T18:46:01Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "K-IHgTmPU64": {
+    "week": "2026-11-19",
+    "channel_id": "UCOmJAwYFnYhb_twpvwux7OQ",
+    "published_at": "2026-11-23T04:35:04Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 19
+  },
+  "EAzHBsIhr4U": {
+    "week": "2026-11-19",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "published_at": "2026-11-22T17:12:04Z",
+    "first_seen": "2026-11-25",
+    "updated_at": "2026-11-25",
+    "last_tri": 1,
+    "status": "en_cours",
+    "modes": [
+      "gb"
+    ],
+    "pc_needed": true,
+    "regles": 19
   }
 }

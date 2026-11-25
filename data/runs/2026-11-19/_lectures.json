@@ -105,60 +105,6 @@
     ]
   },
   {
-    "video_id": "8HpHEFHClpQ",
-    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
-    "channel_title": "RaidenShadow",
-    "published_at": "2026-11-22T13:24:43Z",
-    "lang": "pt-BR",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 11000000000000,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 167,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "damage_exact": false
-    },
-    "notes": [
-      "score provisoire (titre) : Rage: 167"
-    ]
-  },
-  {
-    "video_id": "pQTmvvSm2LU",
-    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
-    "channel_title": "RaidenShadow",
-    "published_at": "2026-11-22T23:02:54Z",
-    "lang": "pt-BR",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 11500000000000,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 167,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "damage_exact": false
-    },
-    "notes": [
-      "score provisoire (titre) : Rage: 167"
-    ]
-  },
-  {
     "video_id": "ypLEjrcd6VI",
     "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
     "channel_title": "Yuta",
@@ -269,114 +215,6 @@
     },
     "notes": [
       "HUD : Boss Rage Count x145, chrono 107"
-    ]
-  },
-  {
-    "video_id": "5KJWOPBY7No",
-    "channel_id": "UCzUtZ2vuuA86Yw2VLm2Y_1g",
-    "channel_title": "BcsX",
-    "published_at": "2026-11-19T10:51:25Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 570,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat_sans_chrono",
-      "hud_points": 498899230021,
-      "hud_rage_count": 67,
-      "separateur_perdu": false,
-      "elements_hud": [
-        null,
-        null,
-        null
-      ]
-    },
-    "notes": []
-  },
-  {
-    "video_id": "5KJWOPBY7No",
-    "channel_id": "UCzUtZ2vuuA86Yw2VLm2Y_1g",
-    "channel_title": "BcsX",
-    "published_at": "2026-11-19T10:51:25Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 650,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat",
-      "hud_points": null,
-      "chrono_hud": 3.63,
-      "separateur_perdu": false,
-      "hud_rage_count": 73,
-      "elements_hud": [
-        null,
-        null,
-        null
-      ],
-      "t_debut": 450,
-      "t_fin": 650,
-      "elements_hud_par_t": {
-        "450": [
-          null,
-          null,
-          null
-        ],
-        "480": [
-          null,
-          null,
-          null
-        ],
-        "520": [
-          null,
-          null,
-          null
-        ],
-        "540": [
-          null,
-          null,
-          null
-        ],
-        "590": [
-          null,
-          null,
-          null
-        ],
-        "630": [
-          null,
-          null,
-          null
-        ],
-        "650": [
-          null,
-          null,
-          null
-        ]
-      }
-    },
-    "notes": [
-      "HUD : Boss Rage Count x73, chrono 3.63"
     ]
   },
   {
@@ -1747,94 +1585,6 @@
     ]
   },
   {
-    "video_id": "yH8N5MQtFYs",
-    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
-    "channel_title": "RaidenShadow",
-    "published_at": "2026-11-19T19:57:14Z",
-    "lang": "pt-BR",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 8,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat_sans_chrono",
-      "hud_points": 1335313223,
-      "hud_rage_count": 0,
-      "separateur_perdu": false,
-      "elements_hud": [
-        "fire",
-        "fire",
-        "fire"
-      ]
-    },
-    "notes": []
-  },
-  {
-    "video_id": "yH8N5MQtFYs",
-    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
-    "channel_title": "RaidenShadow",
-    "published_at": "2026-11-19T19:57:14Z",
-    "lang": "pt-BR",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 170,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat",
-      "hud_points": null,
-      "chrono_hud": 20.72,
-      "separateur_perdu": false,
-      "hud_rage_count": 139,
-      "elements_hud": [
-        "fire",
-        "fire",
-        null
-      ],
-      "t_debut": 110,
-      "t_fin": 170,
-      "elements_hud_par_t": {
-        "110": [
-          "fire",
-          "fire",
-          "fire"
-        ],
-        "160": [
-          "fire",
-          "fire",
-          "fire"
-        ],
-        "170": [
-          "fire",
-          "fire",
-          null
-        ]
-      }
-    },
-    "notes": [
-      "HUD : Boss Rage Count x139, chrono 20.72"
-    ]
-  },
-  {
     "video_id": "yp-TsS-ILXY",
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "channel_title": "LATOYA Gaming",
@@ -3123,121 +2873,6 @@
       "lecture fusionnée (3 images)",
       "contrôle sans Hunter Rank : boss illisible",
       "contrôle sans Hunter Rank : Rage Count lu sur une seule image"
-    ]
-  },
-  {
-    "video_id": "xNErmf50018",
-    "channel_id": "UC4-vDpVtOyhu4Hre_9y_sWg",
-    "channel_title": "GFWS YT",
-    "published_at": "2026-11-21T06:39:16Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 150,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat_sans_chrono",
-      "hud_points": 482289930837,
-      "hud_rage_count": 67,
-      "separateur_perdu": false,
-      "elements_hud": [
-        null,
-        null,
-        null
-      ]
-    },
-    "notes": []
-  },
-  {
-    "video_id": "xNErmf50018",
-    "channel_id": "UC4-vDpVtOyhu4Hre_9y_sWg",
-    "channel_title": "GFWS YT",
-    "published_at": "2026-11-21T06:39:16Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 120171046003,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 256,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat",
-      "hud_points": 120171046003,
-      "chrono_hud": 1.75,
-      "separateur_perdu": false,
-      "hud_rage_count": 81,
-      "elements_hud": [
-        null,
-        null,
-        null
-      ],
-      "t_debut": 60,
-      "t_fin": 256,
-      "elements_hud_par_t": {
-        "60": [
-          null,
-          null,
-          null
-        ],
-        "110": [
-          null,
-          null,
-          null
-        ],
-        "170": [
-          null,
-          null,
-          null
-        ],
-        "220": [
-          null,
-          null,
-          null
-        ],
-        "250": [
-          null,
-          null,
-          null
-        ],
-        "252": [
-          null,
-          null,
-          null
-        ],
-        "256": [
-          null,
-          null,
-          null
-        ]
-      },
-      "damage_exact": false,
-      "damage_source": "hud",
-      "points_deduits": {
-        "t": 257,
-        "points": 1200673616511,
-        "separateur_perdu": false
-      }
-    },
-    "notes": [
-      "HUD : Boss Rage Count x81, chrono 1.75"
     ]
   },
   {
@@ -5371,89 +5006,6 @@
     ]
   },
   {
-    "video_id": "b3JkwSi5Dw8",
-    "channel_id": "UCXeHUviylBa-oaWln1cGBXQ",
-    "channel_title": "The Phoenix Domain",
-    "published_at": "2026-11-22T07:26:33Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 70,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat_sans_chrono",
-      "hud_points": 57736082851,
-      "hud_rage_count": 4,
-      "separateur_perdu": true,
-      "elements_hud": [
-        null,
-        null,
-        "water"
-      ]
-    },
-    "notes": []
-  },
-  {
-    "video_id": "b3JkwSi5Dw8",
-    "channel_id": "UCXeHUviylBa-oaWln1cGBXQ",
-    "channel_title": "The Phoenix Domain",
-    "published_at": "2026-11-22T07:26:33Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 200,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat",
-      "hud_points": null,
-      "chrono_hud": 45,
-      "separateur_perdu": false,
-      "hud_rage_count": 78,
-      "elements_hud": [
-        null,
-        null,
-        null
-      ],
-      "t_debut": 60,
-      "t_fin": 200,
-      "elements_hud_par_t": {
-        "60": [
-          null,
-          null,
-          null
-        ],
-        "200": [
-          null,
-          null,
-          null
-        ]
-      }
-    },
-    "notes": [
-      "HUD : Boss Rage Count x78, chrono 45"
-    ]
-  },
-  {
     "video_id": "r7zRMwAToOk",
     "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
     "channel_title": "Ahmad1195",
@@ -5967,86 +5519,6 @@
     },
     "notes": [
       "contrôle Personal Record : Total Score 173470767137754 incohérent avec les dégâts des groupes"
-    ]
-  },
-  {
-    "video_id": "ArbQ34JwHFE",
-    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
-    "channel_title": "Willian",
-    "published_at": "2026-11-24T00:01:58Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 80000000000000,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 202,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "damage_exact": false
-    },
-    "notes": [
-      "score provisoire (description) : 202RC"
-    ]
-  },
-  {
-    "video_id": "ArbQ34JwHFE",
-    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
-    "channel_title": "Willian",
-    "published_at": "2026-11-24T00:01:58Z",
-    "lang": "en",
-    "mode": "poc",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 80000000000000,
-    "score_source": "description",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (description) : 80T"
-    ]
-  },
-  {
-    "video_id": "8qH8akEGaOg",
-    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
-    "channel_title": "Willian",
-    "published_at": "2026-11-24T17:40:15Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 95500000000000,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 205,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "damage_exact": false
-    },
-    "notes": [
-      "score provisoire (titre) : 205RC",
-      "description : 206 RC"
     ]
   },
   {
@@ -6946,6 +6418,647 @@
     ]
   },
   {
+    "video_id": "1CvG1JEPGwo",
+    "channel_id": "UC4pwblmjhCuDVpnsQ0cJHAA",
+    "channel_title": "Jackson Habib",
+    "published_at": "2026-11-19T13:30:09Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 24000000,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 25
+    },
+    "notes": [
+      "palier du titre : rang prudent"
+    ]
+  },
+  {
+    "video_id": "EAzHBsIhr4U",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "channel_title": "Black Thunder X",
+    "published_at": "2026-11-22T17:12:04Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 185,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 185 RC"
+    ]
+  },
+  {
+    "video_id": "5KJWOPBY7No",
+    "channel_id": "UCzUtZ2vuuA86Yw2VLm2Y_1g",
+    "channel_title": "BcsX",
+    "published_at": "2026-11-19T10:51:25Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 570,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 498899230021,
+      "hud_rage_count": 67,
+      "separateur_perdu": false,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "5KJWOPBY7No",
+    "channel_id": "UCzUtZ2vuuA86Yw2VLm2Y_1g",
+    "channel_title": "BcsX",
+    "published_at": "2026-11-19T10:51:25Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 650,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": null,
+      "chrono_hud": 3.63,
+      "separateur_perdu": false,
+      "hud_rage_count": 73,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ],
+      "t_debut": 450,
+      "t_fin": 650,
+      "elements_hud_par_t": {
+        "450": [
+          null,
+          null,
+          null
+        ],
+        "480": [
+          null,
+          null,
+          null
+        ],
+        "520": [
+          null,
+          null,
+          null
+        ],
+        "540": [
+          null,
+          null,
+          null
+        ],
+        "590": [
+          null,
+          null,
+          null
+        ],
+        "630": [
+          null,
+          null,
+          null
+        ],
+        "650": [
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x73, chrono 3.63"
+    ]
+  },
+  {
+    "video_id": "yH8N5MQtFYs",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "channel_title": "RaidenShadow",
+    "published_at": "2026-11-19T19:57:14Z",
+    "lang": "pt-BR",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 8,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 1335313223,
+      "hud_rage_count": 0,
+      "separateur_perdu": false,
+      "elements_hud": [
+        "fire",
+        "fire",
+        "fire"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "yH8N5MQtFYs",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "channel_title": "RaidenShadow",
+    "published_at": "2026-11-19T19:57:14Z",
+    "lang": "pt-BR",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 170,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": null,
+      "chrono_hud": 20.72,
+      "separateur_perdu": false,
+      "hud_rage_count": 139,
+      "elements_hud": [
+        "fire",
+        "fire",
+        null
+      ],
+      "t_debut": 110,
+      "t_fin": 170,
+      "elements_hud_par_t": {
+        "110": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "160": [
+          "fire",
+          "fire",
+          "fire"
+        ],
+        "170": [
+          "fire",
+          "fire",
+          null
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x139, chrono 20.72"
+    ]
+  },
+  {
+    "video_id": "3y8yRhcSq4Y",
+    "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+    "channel_title": "HS Retro Gaming",
+    "published_at": "2026-11-20T14:00:38Z",
+    "lang": "en-US",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 0,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 1
+    },
+    "notes": [
+      "palier du titre : rang prudent"
+    ]
+  },
+  {
+    "video_id": "Hm1ES8T6fFU",
+    "channel_id": "UCjNngJRDRC7QSyZ76FlvKfQ",
+    "channel_title": "Akihiro",
+    "published_at": "2026-11-20T00:19:52Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 0,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 1
+    },
+    "notes": [
+      "palier du titre : rang prudent"
+    ]
+  },
+  {
+    "video_id": "xNErmf50018",
+    "channel_id": "UC4-vDpVtOyhu4Hre_9y_sWg",
+    "channel_title": "GFWS YT",
+    "published_at": "2026-11-21T06:39:16Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 150,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 482289930837,
+      "hud_rage_count": 67,
+      "separateur_perdu": false,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "xNErmf50018",
+    "channel_id": "UC4-vDpVtOyhu4Hre_9y_sWg",
+    "channel_title": "GFWS YT",
+    "published_at": "2026-11-21T06:39:16Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 120171046003,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 256,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": 120171046003,
+      "chrono_hud": 1.75,
+      "separateur_perdu": false,
+      "hud_rage_count": 81,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ],
+      "t_debut": 60,
+      "t_fin": 256,
+      "elements_hud_par_t": {
+        "60": [
+          null,
+          null,
+          null
+        ],
+        "110": [
+          null,
+          null,
+          null
+        ],
+        "170": [
+          null,
+          null,
+          null
+        ],
+        "220": [
+          null,
+          null,
+          null
+        ],
+        "250": [
+          null,
+          null,
+          null
+        ],
+        "252": [
+          null,
+          null,
+          null
+        ],
+        "256": [
+          null,
+          null,
+          null
+        ]
+      },
+      "damage_exact": false,
+      "damage_source": "hud",
+      "points_deduits": {
+        "t": 257,
+        "points": 1200673616511,
+        "separateur_perdu": false
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x81, chrono 1.75"
+    ]
+  },
+  {
+    "video_id": "8HpHEFHClpQ",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "channel_title": "RaidenShadow",
+    "published_at": "2026-11-22T13:24:43Z",
+    "lang": "pt-BR",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 11000000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 167,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : Rage: 167"
+    ]
+  },
+  {
+    "video_id": "b3JkwSi5Dw8",
+    "channel_id": "UCXeHUviylBa-oaWln1cGBXQ",
+    "channel_title": "The Phoenix Domain",
+    "published_at": "2026-11-22T07:26:33Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 70,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 57736082851,
+      "hud_rage_count": 4,
+      "separateur_perdu": true,
+      "elements_hud": [
+        null,
+        null,
+        "water"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "b3JkwSi5Dw8",
+    "channel_id": "UCXeHUviylBa-oaWln1cGBXQ",
+    "channel_title": "The Phoenix Domain",
+    "published_at": "2026-11-22T07:26:33Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 200,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": null,
+      "chrono_hud": 45,
+      "separateur_perdu": false,
+      "hud_rage_count": 78,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ],
+      "t_debut": 60,
+      "t_fin": 200,
+      "elements_hud_par_t": {
+        "60": [
+          null,
+          null,
+          null
+        ],
+        "200": [
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x78, chrono 45"
+    ]
+  },
+  {
+    "video_id": "pQTmvvSm2LU",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "channel_title": "RaidenShadow",
+    "published_at": "2026-11-22T23:02:54Z",
+    "lang": "pt-BR",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 11500000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 167,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : Rage: 167"
+    ]
+  },
+  {
+    "video_id": "bTzektegBnQ",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-23T14:54:27Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 16000000,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 17
+    },
+    "notes": [
+      "palier du titre : rang prudent"
+    ]
+  },
+  {
+    "video_id": "0StXki5N0Lg",
+    "channel_id": "UCEkQRPKU3grukJv1d5zDwWg",
+    "channel_title": "SLA",
+    "published_at": "2026-11-23T12:59:12Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 16000000,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 17
+    },
+    "notes": [
+      "palier du titre : rang prudent"
+    ]
+  },
+  {
+    "video_id": "wWySgU0_sIQ",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "channel_title": "Black Thunder X",
+    "published_at": "2026-11-23T08:47:07Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 16000000,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 17
+    },
+    "notes": [
+      "palier du titre : rang prudent"
+    ]
+  },
+  {
     "video_id": "CnFBmHEzZww",
     "channel_id": "UCV8dcbMS_vO0TxBKLRGiXNA",
     "channel_title": "BlackPjll",
@@ -7036,6 +7149,89 @@
     },
     "notes": [
       "HUD : Boss Rage Count x158, chrono 4.05"
+    ]
+  },
+  {
+    "video_id": "cNIuOYknYg8",
+    "channel_id": "UCEkQRPKU3grukJv1d5zDwWg",
+    "channel_title": "SLA",
+    "published_at": "2026-11-24T10:52:57Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 16000000,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 17
+    },
+    "notes": [
+      "palier du titre : rang prudent"
+    ]
+  },
+  {
+    "video_id": "ArbQ34JwHFE",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "channel_title": "Willian",
+    "published_at": "2026-11-24T00:01:58Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 80000000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 202,
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (description) : 202RC"
+    ]
+  },
+  {
+    "video_id": "8qH8akEGaOg",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "channel_title": "Willian",
+    "published_at": "2026-11-24T17:40:15Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 95500000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 205,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : 205RC",
+      "description : 206 RC"
     ]
   }
 ]

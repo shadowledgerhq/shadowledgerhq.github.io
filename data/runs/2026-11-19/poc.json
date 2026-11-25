@@ -1,38 +1,251 @@
 [
   {
-    "run_id": "poc-2026-11-19-ArbQ34JwHFE",
+    "run_id": "poc-2026-11-19-1CvG1JEPGwo",
     "week": "2026-11-19",
     "mode": "poc",
-    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
-    "player": "Willian",
-    "channel": "Willian",
-    "video_id": "ArbQ34JwHFE",
+    "channel_id": "UC4pwblmjhCuDVpnsQ0cJHAA",
+    "player": "Jackson Habib",
+    "channel": "Jackson Habib",
+    "video_id": "1CvG1JEPGwo",
     "video_ids": [
-      "ArbQ34JwHFE"
+      "1CvG1JEPGwo"
     ],
-    "published_at": "2026-11-24T01:01:58+01:00",
+    "published_at": "2026-11-19T14:30:09+01:00",
     "lang": "en",
     "score": {
-      "total": 80000000000000,
-      "runs": [
-        80000000000000
-      ],
-      "unit": "damage"
+      "total": 24000000,
+      "runs": [],
+      "unit": "rank_score"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "palier du titre : rang prudent",
+    "runs_detail": [
+      {
+        "video_id": "1CvG1JEPGwo",
+        "published_at": "2026-11-19T14:30:09+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "tier": 25,
+        "total_contribution": null,
+        "goal_progress": null,
+        "team_pct": null,
+        "play_time": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "poc-2026-11-19-wWySgU0_sIQ",
+    "week": "2026-11-19",
+    "mode": "poc",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "player": "Black Thunder X",
+    "channel": "Black Thunder X",
+    "video_id": "wWySgU0_sIQ",
+    "video_ids": [
+      "wWySgU0_sIQ"
+    ],
+    "published_at": "2026-11-23T09:47:07+01:00",
+    "lang": "en",
+    "score": {
+      "total": 16000000,
+      "runs": [],
+      "unit": "rank_score"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "palier du titre : rang prudent",
+    "runs_detail": [
+      {
+        "video_id": "wWySgU0_sIQ",
+        "published_at": "2026-11-23T09:47:07+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "tier": 17,
+        "total_contribution": null,
+        "goal_progress": null,
+        "team_pct": null,
+        "play_time": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "poc-2026-11-19-0StXki5N0Lg",
+    "week": "2026-11-19",
+    "mode": "poc",
+    "channel_id": "UCEkQRPKU3grukJv1d5zDwWg",
+    "player": "SLA",
+    "channel": "SLA",
+    "video_id": "0StXki5N0Lg",
+    "video_ids": [
+      "0StXki5N0Lg"
+    ],
+    "published_at": "2026-11-23T13:59:12+01:00",
+    "lang": "en",
+    "score": {
+      "total": 16000000,
+      "runs": [],
+      "unit": "rank_score"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "palier du titre : rang prudent",
+    "runs_detail": [
+      {
+        "video_id": "0StXki5N0Lg",
+        "published_at": "2026-11-23T13:59:12+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "tier": 17,
+        "total_contribution": null,
+        "goal_progress": null,
+        "team_pct": null,
+        "play_time": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "poc-2026-11-19-bTzektegBnQ",
+    "week": "2026-11-19",
+    "mode": "poc",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "bTzektegBnQ",
+    "video_ids": [
+      "bTzektegBnQ"
+    ],
+    "published_at": "2026-11-23T15:54:27+01:00",
+    "lang": "en",
+    "score": {
+      "total": 16000000,
+      "runs": [],
+      "unit": "rank_score"
     },
     "score_source": "description",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 80T; une seule run trouvée; boss non contrôlé",
+    "notes": "palier du titre : rang prudent",
     "runs_detail": [
       {
-        "video_id": "ArbQ34JwHFE",
-        "published_at": "2026-11-24T01:01:58+01:00",
+        "video_id": "bTzektegBnQ",
+        "published_at": "2026-11-23T15:54:27+01:00",
         "t": null,
         "stage": null,
         "team": null,
         "score_source": "description",
         "exact": false,
+        "tier": 17,
+        "total_contribution": null,
+        "goal_progress": null,
+        "team_pct": null,
+        "play_time": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "poc-2026-11-19-Hm1ES8T6fFU",
+    "week": "2026-11-19",
+    "mode": "poc",
+    "channel_id": "UCjNngJRDRC7QSyZ76FlvKfQ",
+    "player": "Akihiro",
+    "channel": "Akihiro",
+    "video_id": "Hm1ES8T6fFU",
+    "video_ids": [
+      "Hm1ES8T6fFU"
+    ],
+    "published_at": "2026-11-20T01:19:52+01:00",
+    "lang": "en",
+    "score": {
+      "total": 0,
+      "runs": [],
+      "unit": "rank_score"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "palier du titre : rang prudent",
+    "runs_detail": [
+      {
+        "video_id": "Hm1ES8T6fFU",
+        "published_at": "2026-11-20T01:19:52+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false,
+        "tier": 1,
+        "total_contribution": null,
+        "goal_progress": null,
+        "team_pct": null,
+        "play_time": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "poc-2026-11-19-3y8yRhcSq4Y",
+    "week": "2026-11-19",
+    "mode": "poc",
+    "channel_id": "UCGRy-kFkHOuk5nf5qsuFY5w",
+    "player": "HS Retro Gaming",
+    "channel": "HS Retro Gaming",
+    "video_id": "3y8yRhcSq4Y",
+    "video_ids": [
+      "3y8yRhcSq4Y"
+    ],
+    "published_at": "2026-11-20T15:00:38+01:00",
+    "lang": "en-US",
+    "score": {
+      "total": 0,
+      "runs": [],
+      "unit": "rank_score"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "palier du titre : rang prudent",
+    "runs_detail": [
+      {
+        "video_id": "3y8yRhcSq4Y",
+        "published_at": "2026-11-20T15:00:38+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "tier": 1,
+        "total_contribution": null,
+        "goal_progress": null,
+        "team_pct": null,
+        "play_time": null,
         "element": null,
         "element_source": null
       }

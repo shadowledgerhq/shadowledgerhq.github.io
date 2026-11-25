@@ -406,6 +406,47 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-19-EAzHBsIhr4U",
+    "week": "2026-11-19",
+    "mode": "gb",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "player": "Black Thunder X",
+    "channel": "Black Thunder X",
+    "video_id": "EAzHBsIhr4U",
+    "video_ids": [
+      "EAzHBsIhr4U"
+    ],
+    "published_at": "2026-11-22T18:12:04+01:00",
+    "lang": "en",
+    "score": {
+      "total": 185,
+      "runs": [
+        185
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 185 RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "EAzHBsIhr4U",
+        "published_at": "2026-11-22T18:12:04+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-19-09bNKPXg-pc",
     "week": "2026-11-19",
     "mode": "gb",
@@ -513,7 +554,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "lecture fusionnée (3 images); contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; une seule run trouvée; boss non contrôlé",
+    "notes": "lecture fusionnée (3 images); contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; une seule run trouvée; boss non contrôlé; écart improbable : à confirmer par l'écran",
     "runs_detail": [
       {
         "video_id": "ofbxuWCxT7U",
@@ -555,7 +596,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 75 rage; autres candidats : 74 rage, 149 Rage; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (description) : 75 rage; autres candidats : 74 rage, 149 Rage; une seule run trouvée; boss non contrôlé; écart improbable : à confirmer par l'écran",
     "runs_detail": [
       {
         "video_id": "DdbMYl54aZU",
@@ -571,47 +612,6 @@
         "element_source": null,
         "hud_rage_count": 57,
         "damage_source": "hud"
-      }
-    ]
-  },
-  {
-    "run_id": "gb-2026-11-19-Xri8bvS4Kkg",
-    "week": "2026-11-19",
-    "mode": "gb",
-    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
-    "player": "Black Thunder X",
-    "channel": "Black Thunder X",
-    "video_id": "Xri8bvS4Kkg",
-    "video_ids": [
-      "Xri8bvS4Kkg"
-    ],
-    "published_at": "2026-11-22T11:21:50+01:00",
-    "lang": "en",
-    "score": {
-      "total": 19,
-      "runs": [
-        19
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "debut-fin",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "format non standard; lecture fusionnée (2 images); conflit de lecture : rage_count; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "Xri8bvS4Kkg",
-        "published_at": "2026-11-22T11:21:50+01:00",
-        "t": 6,
-        "stage": null,
-        "team": null,
-        "score_source": "debut-fin",
-        "exact": false,
-        "damage": 87366,
-        "damage_exact": true,
-        "element": null,
-        "element_source": null
       }
     ]
   },
@@ -641,7 +641,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "contrôle GB : écran GB illisible (Player's Score, Hunter Rank ou Final Score); lecture fusionnée (2 images); conflit de lecture : rage_count; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Dark / Fire); boss non contrôlé",
+    "notes": "contrôle GB : écran GB illisible (Player's Score, Hunter Rank ou Final Score); lecture fusionnée (2 images); conflit de lecture : rage_count; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Dark / Fire); boss non contrôlé; écart improbable : à confirmer par l'écran",
     "runs_detail": [
       {
         "video_id": "i6S0xrpiTvI",
