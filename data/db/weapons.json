@@ -9359,9 +9359,88 @@
   },
   {
     "rarity": "ssr",
-    "skills": [],
+    "skills": [
+      {
+        "type": "basic_attack",
+        "name": {
+          "fr": "Attaque de base",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "Jinwoo mouline rapidement avec ses dagues pour attaquer.",
+          "en": ""
+        },
+        "effects_text_fr": "Dégâts des niveaux 1, 2, 3 : 174 %, 198 %, 235 % (Niv. 1) ; 215,23 %, 244,91 %, 290,68 % (Niv. 10) de l'Attaque. Dégâts de feu. La dernière attaque applique [En l'air].",
+        "effects": [],
+        "values_by_level": {
+          "1": {
+            "degats_pct": [
+              174,
+              198,
+              235
+            ]
+          },
+          "10": {
+            "degats_pct": [
+              215.23,
+              244.91,
+              290.68
+            ]
+          }
+        }
+      },
+      {
+        "type": "core_attack",
+        "name": {
+          "fr": "Attaque de noyau",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "Jinwoo tournoie rapidement en mettant des coups de dague.",
+          "en": ""
+        },
+        "effects_text_fr": "Dégâts : 815 % (Niv. 1) ; 1008,1 % (Niv. 10) de l'Attaque de Jinwoo. Dégâts de feu. La dernière attaque [renverse] la cible.",
+        "effects": [],
+        "values_by_level": {
+          "1": {
+            "degats_pct": 815
+          },
+          "10": {
+            "degats_pct": 1008.1
+          }
+        }
+      },
+      {
+        "type": "skill",
+        "name": {
+          "fr": "Entaille de la fureur",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "Jinwoo frappe violemment avec le Courroux de Kamish pour déclencher une décharge d'énergie qui jaillit de l'épée.",
+          "en": ""
+        },
+        "effects_text_fr": "Dégâts : 490 % (Niv. 1) ; 749,7 % (Niv. 10) de l'Attaque de Jinwoo. Recharge 25 s. PM 200 (Niv. 1) ; 229 (Niv. 10). Dégâts de feu.",
+        "effects": [],
+        "values_by_level": {
+          "1": {
+            "degats_pct": 490,
+            "recharge_s": 25,
+            "pm": 200
+          },
+          "10": {
+            "degats_pct": 749.7,
+            "recharge_s": 25,
+            "pm": 229
+          }
+        }
+      }
+    ],
     "effects": [],
-    "verified_at": "2026-11-19",
+    "verified_at": "2026-11-25",
     "game_version": null,
     "id": "kamish-wrath",
     "name": {
@@ -9374,19 +9453,124 @@
     "exclusive_hunter_en": null,
     "element": "fire",
     "weapon_type": "Dagger",
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "niveau_1": {
+        "attaque": 400,
+        "pv": 400
+      },
+      "niveau_130_5_etoiles": {
+        "attaque": 3370,
+        "pv": 5100,
+        "precision": 4000
+      },
+      "source": "captures du Codex d'armes en jeu (client FR), envoyées par Alexis le 2026-11-25 ; compétences à Niv. 1 et Niv. 10 ; arme Niv. 1 et Niv. 130 à 5 étoiles"
+    },
+    "passive": [
+      {
+        "tier": 0,
+        "text": {
+          "fr": "Le fait de n'équiper que des armes de Feu active l'effet [Ignis Rex]. L'utilisation d'Entaille de la fureur restaure 100 % de la jauge de noyau de l'utilisateur. Lorsque la compétence Entaille de la fureur touche sa cible, elle active l'effet [Frisson de terreur]. L'utilisation d'une attaque de noyau transforme Entaille de la fureur en Armageddon, ce qui augmente ses dégâts de … (texte tronqué sur la capture ; suite non relevée : à vérifier).",
+          "en": ""
+        }
+      }
+    ],
     "icon": "data/icons/weapons/kamish-wrath.png",
-    "source": "https://forum.netmarble.com/slv_en/view/14/110997",
-    "notes": "Ajout du patch du 19/11/2026. Aucune fiche wiki ni valeur chiffrée disponible à cette date : compétences, paliers et statistiques à compléter (null/vides), rien d'inventé. Non vérifié en jeu. Type « Dagger » : dagues jumelles en prise inversée, spécialisée dégâts Fire (Developer Note 13/110809). Nom FR et icône : API slagate (id 38, image client-maj-2026-11-19). Obtenable par Custom Draw, Weapon Custom Draw et Special Summons ; échangeable contre Kamish's Roar pendant l'événement (Essence Stones).",
+    "source": "capture du Codex d'armes en jeu (client FR), envoyée par Alexis le 2026-11-25",
+    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Passif : texte tronqué sur les captures (fin non relevée).",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "icon_source": "API slagate (GSWeapon_KamishWrath_PortraitBig), récupérée le 2026-11-19"
+    "icon_source": "API slagate (GSWeapon_KamishWrath_PortraitBig), récupérée le 2026-11-19",
+    "max_level": {
+      "value": 130,
+      "source": "captures du Codex d'armes en jeu (client FR), envoyées par Alexis le 2026-11-25 ; compétences à Niv. 1 et Niv. 10 ; arme Niv. 1 et Niv. 130 à 5 étoiles",
+      "patch": "2026-11-19"
+    },
+    "description_fr": "Dagues faites à partir des reliques de Kamish, la première calamité surnaturelle qu'ait connue l'humanité. Guidées par le destin, elles se retrouvent entre les mains de la mort.",
+    "weapon_type_fr": "Dague"
   },
   {
     "rarity": "ssr",
-    "skills": [],
+    "skills": [
+      {
+        "type": "basic_attack",
+        "name": {
+          "fr": "Attaque de base",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "Jinwoo attaque avec la pointe de sa lance.",
+          "en": ""
+        },
+        "effects_text_fr": "Dégâts des niveaux 1, 2, 3 : 174 %, 198 %, 235 % (Niv. 1) ; 215,23 %, 244,91 %, 290,68 % (Niv. 10) de l'Attaque de Jinwoo. Dégâts de feu. Accumulation élémentaire légère. La dernière attaque applique [En l'air].",
+        "effects": [],
+        "values_by_level": {
+          "1": {
+            "degats_pct": [
+              174,
+              198,
+              235
+            ]
+          },
+          "10": {
+            "degats_pct": [
+              215.23,
+              244.91,
+              290.68
+            ]
+          }
+        }
+      },
+      {
+        "type": "core_attack",
+        "name": {
+          "fr": "Attaque de noyau",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "Jinwoo exécute une violente frappe vers le bas avec une lance.",
+          "en": ""
+        },
+        "effects_text_fr": "Dégâts : 815 % (Niv. 1) ; 1008,1 % (Niv. 10) de l'Attaque de Jinwoo. Dégâts de feu. Accumulation élémentaire moyenne. La compétence [renverse] la cible.",
+        "effects": [],
+        "values_by_level": {
+          "1": {
+            "degats_pct": 815
+          },
+          "10": {
+            "degats_pct": 1008.1
+          }
+        }
+      },
+      {
+        "type": "skill",
+        "name": {
+          "fr": "Chute du dragon de feu",
+          "en": "",
+          "ko": ""
+        },
+        "text": {
+          "fr": "Jinwoo déchaîne l'énergie d'un dragon de feu pour asséner un coup puissant.",
+          "en": ""
+        },
+        "effects_text_fr": "Dégâts : 1465 % (Niv. 1) ; 2241,45 % (Niv. 10) de l'Attaque de Jinwoo. Recharge 25 s. PM 200 (Niv. 1) ; 229 (Niv. 10). Dégâts de feu. Accumulation élémentaire lourde. La compétence applique [En l'air].",
+        "effects": [],
+        "values_by_level": {
+          "1": {
+            "degats_pct": 1465,
+            "recharge_s": 25,
+            "pm": 200
+          },
+          "10": {
+            "degats_pct": 2241.45,
+            "recharge_s": 25,
+            "pm": 229
+          }
+        }
+      }
+    ],
     "effects": [],
-    "verified_at": "2026-11-19",
+    "verified_at": "2026-11-25",
     "game_version": null,
     "id": "kamish-roar",
     "name": {
@@ -9399,13 +9583,39 @@
     "exclusive_hunter_en": null,
     "element": "fire",
     "weapon_type": "Polearm",
-    "base_stats": {},
-    "passive": [],
+    "base_stats": {
+      "niveau_1": {
+        "attaque": 400,
+        "pv": 400
+      },
+      "niveau_130_5_etoiles": {
+        "attaque": 3370,
+        "pv": 5100,
+        "precision": 4000
+      },
+      "source": "captures du Codex d'armes en jeu (client FR), envoyées par Alexis le 2026-11-25 ; compétences à Niv. 1 et Niv. 10 ; arme Niv. 1 et Niv. 130 à 5 étoiles"
+    },
+    "passive": [
+      {
+        "tier": 0,
+        "text": {
+          "fr": "L'utilisation de la compétence Chute du dragon de feu restaure 100 % de la jauge de noyau de l'utilisateur et active l'effet Incarnation du dragon de feu. Lorsque la compétence Chute du dragon de feu touche sa cible, elle lui applique l'effet [Brûlure]. Augmente les dégâts des compétences qui appliquent l'effet d'[Accumulation élémentaire] de [Feu] de 30 %.",
+          "en": ""
+        }
+      }
+    ],
     "icon": "data/icons/weapons/kamish-roar.png",
-    "source": "https://forum.netmarble.com/slv_en/view/14/110997",
-    "notes": "Ajout du patch du 19/11/2026. Aucune fiche wiki ni valeur chiffrée disponible à cette date : compétences, paliers et statistiques à compléter (null/vides), rien d'inventé. Non vérifié en jeu. Type « Polearm » = hypothèse (attaques d'estoc ; image « GSWeapon_KamishLance »), à vérifier en jeu. Spécialisée accumulation d'éléments Fire (Developer Note 13/110809). Nom FR et icône : API slagate (id 39).",
+    "source": "capture du Codex d'armes en jeu (client FR), envoyée par Alexis le 2026-11-25",
+    "notes": "Relevé en jeu le 25/11/2026 (captures d'Alexis, arme non possédée). Type d'arme confirmé en jeu. Valeurs de compétences : Niv. 1 et Niv. 10 seulement (intermédiaires non relevés). Notice d'origine : https://forum.netmarble.com/slv_en/view/14/110997. Noms EN des compétences à vérifier. Nom FR : API slagate. Type « Polearm » = « Arme d'hast » confirmé en jeu.",
     "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026)",
-    "icon_source": "API slagate (GSWeapon_KamishLance_PortraitBig), récupérée le 2026-11-19"
+    "icon_source": "API slagate (GSWeapon_KamishLance_PortraitBig), récupérée le 2026-11-19",
+    "max_level": {
+      "value": 130,
+      "source": "captures du Codex d'armes en jeu (client FR), envoyées par Alexis le 2026-11-25 ; compétences à Niv. 1 et Niv. 10 ; arme Niv. 1 et Niv. 130 à 5 étoiles",
+      "patch": "2026-11-19"
+    },
+    "description_fr": "Lance fabriquée avec des cristaux de mana chauffés par les flammes du dragon Kamish. Elle rappelle le rugissement de la calamité.",
+    "weapon_type_fr": "Arme d'hast"
   },
   {
     "rarity": "ssr",
