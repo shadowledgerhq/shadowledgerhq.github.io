@@ -16,7 +16,7 @@
 - Noms EN : Overshadow, Power Unlocked, Commander's Authority à vérifier en jeu.
 ## À faire
 - 19/11 : recherche de sources — wiki Fandom : page Thalia De Rossi inexistante (404), aucune fiche chiffrée en ligne ; seulement des vidéos (YouTube/Reddit, aperçus sans valeurs). À relancer à la prochaine veille.
-- Kamish : Ignis Omnia ★1 « PV max » vs « PM max » à vérifier ; noms EN des compétences Kamish à vérifier ; noms FR des compétences de Thalia et de Rosa Nera, icône de Rosa Nera, classe (« Mage » = catégorie du wiki) et paliers dimensionnels de Thalia à vérifier ; type d'arme de Kamish's Roar.
+- Kamish : noms EN des compétences Kamish à vérifier ; noms FR des compétences de Thalia et de Rosa Nera, icône de Rosa Nera, classe (« Mage » = catégorie du wiki) et paliers dimensionnels de Thalia à vérifier ; type d'arme de Kamish's Roar.
 - Règles du POC par paliers : noms des objets de récompense : abandonnés (décision d'Alexis 25/11 : ressources du jeu, hors objectif, descriptions conservées) ; Dargo (boss de guilde) et Vulcan (DCZ) : pas de fiche.
 - 15 `a_verifier` anciens (12 `fiche_anterieure_au_patch`, 3 `palier_non_stocke`) + 8 du 19/11 (Charlotte, valeurs Lv.10 déjà dans `patch_adjustments`).
 - Vides sans source publique : amplification paliers 4-5, bonus d'enregistrement des runes, noms des matériaux de noyau, noms FR d'armes de chasseurs, JA/KO de gemmes.
