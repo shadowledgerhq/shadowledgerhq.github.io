@@ -347,7 +347,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée",
+    "notes": "écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; écart improbable : à confirmer par l'écran",
     "runs_detail": [
       {
         "video_id": "lGDbzyIJcjY",
@@ -389,7 +389,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "écart OCR zone/image : player_score; lecture fusionnée (12 images); conflit de lecture : rage_count; une seule run trouvée",
+    "notes": "écart OCR zone/image : player_score; lecture fusionnée (12 images); conflit de lecture : rage_count; une seule run trouvée; écart improbable : à confirmer par l'écran",
     "runs_detail": [
       {
         "video_id": "xoycsD2CqSc",

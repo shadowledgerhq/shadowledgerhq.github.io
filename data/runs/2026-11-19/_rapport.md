@@ -1,27 +1,18 @@
-# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-25 21:30 (Paris)
+# Rapport — semaine 2026-11-19 — passage pc-daily — 2026-11-25 21:56 (Paris)
 
-- **Passage complet : non** (passage refusé : un autre passage PC tourne déjà (builds (PID 12156, depuis 23 min)))
-- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
-- Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà (builds (PID 12156, depuis 23 min))
-
-Dernier passage du PC (`_rapport_pc.md`, recopié) :
-
-## Passage pc-daily — 2026-11-25 19:30 (Paris)
-
-- Top 10 couvert : oui (0 vidéo candidate au top 10 restante)
+- Top 10 couvert : non (24 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
-- Vidéos traitées ce passage : 9 · en_cours restantes : 98 (dont 0 à traiter par le PC)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 121 (dont 30 à traiter par le PC)
 - Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
-- Durée du passage : 25 min
-- Relance automatique : 25/11/2026 21:30 (une seule fois par soir)
-- Critère de gel n° 3 : 2/2 passage(s) planifié(s) de suite avec top 10 couvert — atteint (reste à décider `pc.geler`)
+- Durée du passage : 0 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : ic0tLvgkCBk 13.0 min → 38 s ; qCT-_gW6-QY 11.8 min → 51 s ; ly_tZDQlR6Y 33.5 min → 199 s ; XyIB7lEm5Qo 4.9 min → 47 s ; UItSn-P0d4Q 9.6 min → 87 s ; yJ31zkuHSE4 11.8 min → 61 s ; xF3f1h5dtQ8 9.9 min → 78 s ; vtfFvPizduY 3.1 min → 29 s ; KyHrk8tglbE 17.6 min → 210 s
-- Sous-titres en attente : 11 avant la règle → 11 après (9 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Sous-titres en attente : 44 avant la règle → 30 après (10 inutiles : hors sujet ou score déjà lu ; 5 rejetée(s) sur le titre)
+- Relectures posées (règles plus anciennes, top 10 provisoire sans Results lu) : vt47IaCcMQg (gb), ypLEjrcd6VI (gb), 3y8yRhcSq4Y (manuelle), 9BrduWR4aSY (manuelle), PJqW-zrX8qM (manuelle), cNIuOYknYg8 (manuelle), wWySgU0_sIQ (manuelle), THxs2Y7QFI0 (manuelle), TjnPwCk_VSc (manuelle), Lo3sHrW18Vg (manuelle)
 - Résumé GB : KyHrk8tglbE · aucun Results lu · pas classée
 
-- Quota : 1806 unités
-- Ce passage : 25 vidéo(s) nouvelle(s), 2 rejetée(s), 2 score(s) provisoire(s)
-- Semaine : 123 en cours (dont 37 pour le PC), 20 terminée(s), 53 rejetée(s)
+- Semaine : 121 en cours (dont 42 pour le PC), 18 terminée(s), 57 rejetée(s)
 - Classements : gb 15, poc 6
 
 ## À vérifier (20)
@@ -57,5 +48,9 @@ Dernier passage du PC (`_rapport_pc.md`, recopié) :
 - semaine de calcul (S20) : 0 vidéo(s) BOT à vérifier (run de la semaine précédente ?)
 
 ## Erreurs et alertes
-- tri 1 relu (règles v19) : 10 vidéo(s) modifiée(s) sur 98
-- semaine 2026-11-12 en attente de gel (passage PC hebdomadaire)
+- 46 vidéo(s) reportée(s) au prochain passage (limite 8)
+- 5MI-RLj7FSk : 429 / anti-bot YouTube, reportée au prochain passage
+- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
+- semaine 2026-11-12 : 106 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- 121 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- passage incomplet : anti-bot ; relance : aucune (une relance a déjà été programmée ce soir) : prochain passage normal

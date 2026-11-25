@@ -1,13 +1,19 @@
-# Rapport — semaine 2026-11-12 — passage pc-weekly — 2026-11-19 19:50 (Paris)
+# Rapport — semaine 2026-11-12 — passage pc-daily — 2026-11-25 21:56 (Paris)
 
-- Top 10 couvert : non (89 vidéos candidates au top 10 restantes)
-- **Passage complet : non** (vidéos restantes à traiter)
-- Vidéos traitées ce passage : 1 · en_cours restantes : 123 (dont 89 à traiter par le PC)
-- Erreurs bloquantes : aucune
-- Durée du passage : 17 min
+- Top 10 couvert : non (55 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 106 (dont 72 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 0 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
+- Semaine écoulée non gelée (traitée avec la semaine 2026-11-19 : candidates top 10 d'abord, budget partagé)
+- Sous-titres en attente : 117 avant la règle → 56 après (33 inutiles : hors sujet ou score déjà lu ; 28 rejetée(s) sur le titre)
+- Relectures posées (règles plus anciennes, top 10 provisoire sans Results lu) : YSJFLd_OXww (bot), a-923ClD9Rc (bot), znpyCNWml3I (bot), Lt84IhMjBvM (bot), wJ9CwjKwyco (bot), 2oendtlUxUE (bot), 5MI-RLj7FSk (bot), tOzRUlmZ2JI (bot), MJ2iz5TFmvM (gb), trinzgj3FV4 (gb), lGDbzyIJcjY (gb)
+- Résumé GB : MJ2iz5TFmvM · Eden(이든) · aucun Results lu · 322 RC à vérifier · light · contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262
 
-- Semaine : 123 en cours (dont 106 pour le PC), 42 terminée(s), 15 rejetée(s)
+- Semaine : 106 en cours (dont 89 pour le PC), 31 terminée(s), 43 rejetée(s)
 - Classements : bot 17, gb 9, hotm-gate-inconnue 5, poc 5
 
 ## À vérifier (33)
@@ -16,8 +22,8 @@
 - gb · Sohoven · 185 · qySXyOxUehE · score provisoire (titre) : 185 RC; une seule run trouvée
 - gb · mitchell leveling · 177 · trinzgj3FV4 · score provisoire (titre) : 177 RC; une seule run trouvée
 - gb · SNG · 176 · OPcjwjYkuME · écart OCR zone/image : final_score; écart OCR zone/image : rage_count; contrôle GB : somme 30263550677307 ≠ Final Score 30458500980570; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; une seule run trouvée
-- gb · HS Retro Gaming · 19 · lGDbzyIJcjY · écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée
-- gb · RAVANPLAYZ · 2 · xoycsD2CqSc · écart OCR zone/image : player_score; lecture fusionnée (12 images); conflit de lecture : rage_count; une seule run trouvée
+- gb · HS Retro Gaming · 19 · lGDbzyIJcjY · écart OCR zone/image : player_score; écart OCR zone/image : final_score; lecture fusionnée (2 images); contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; écart improbable : à confirmer par l'écran
+- gb · RAVANPLAYZ · 2 · xoycsD2CqSc · écart OCR zone/image : player_score; lecture fusionnée (12 images); conflit de lecture : rage_count; une seule run trouvée; écart improbable : à confirmer par l'écran
 - hotm-gate-inconnue · OhchiGameS · 94000 · RVkSt2bWn_U · score provisoire (titre) : 94000; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · RAVANPLAYZ · 91500 · 8qqgrjiYhck · score provisoire (titre) : 91500; porte HOTM illisible; boss non contrôlé
 - hotm-gate-inconnue · SNG · 85000 · SdiCUFy5FbE · score provisoire (titre) : 85k; porte HOTM illisible; boss non contrôlé
@@ -57,5 +63,9 @@
 - rien
 
 ## Erreurs et alertes
-- 123 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- semaine 2026-11-12 NON gelée (pc.geler = false : tris 3-4 non gérés)
+- 46 vidéo(s) reportée(s) au prochain passage (limite 8)
+- 5MI-RLj7FSk : 429 / anti-bot YouTube, reportée au prochain passage
+- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
+- semaine 2026-11-12 : 106 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- 121 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- passage incomplet : anti-bot ; relance : aucune (une relance a déjà été programmée ce soir) : prochain passage normal

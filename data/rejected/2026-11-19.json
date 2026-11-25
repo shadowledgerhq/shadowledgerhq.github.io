@@ -473,17 +473,6 @@
     "date": "2026-11-24"
   },
   {
-    "video_id": "THxs2Y7QFI0",
-    "channel_id": "UCQddimMporJcQnifNpSJIgg",
-    "title": "¡CONSIGUE RECOMPENSAS TIER S+! NUEVO PODER DE LA CALAMIDAD | Solo Leveling ARISE",
-    "published_at": "2026-11-24T17:00:10Z",
-    "mode_guess": "poc",
-    "reason": "actualites",
-    "detail": "actualités : aucun écran de jeu",
-    "last_tri": 3,
-    "date": "2026-11-24"
-  },
-  {
     "video_id": "ic0tLvgkCBk",
     "channel_id": "UC9n-kB5-Gt5sHmHlX9B_RTA",
     "title": "Solo Leveling Arise Gameplay 91 Side Chapter 30-2 Inevitable Victory",
@@ -580,6 +569,61 @@
     "reason": "live",
     "detail": "",
     "last_tri": 0,
+    "date": "2026-11-25"
+  },
+  {
+    "video_id": "LSokAIcuvq8",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "title": "\"MECHARASHI\" F2P GUIDE: B.C. COVERT PHANTOM: \"ALERT LEVEL 5 PROTOCOL 5 CORPORATE MERC\" (INFERNO)",
+    "published_at": "2026-11-25T14:00:24Z",
+    "mode_guess": null,
+    "reason": "hors_sujet_titre",
+    "detail": "titre : « mecharashi » (autre jeu)",
+    "last_tri": 1,
+    "date": "2026-11-25"
+  },
+  {
+    "video_id": "fQNMahYr2I4",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "title": "\"MECHARASHI\" F2P GUIDE: B.C. COVERT PHANTOM: \"ALERT LEVEL 5 PROTOCOL 5 \"FRONTIER ARENA 1\" (1ST MAP)",
+    "published_at": "2026-11-25T10:00:14Z",
+    "mode_guess": null,
+    "reason": "hors_sujet_titre",
+    "detail": "titre : « mecharashi » (autre jeu)",
+    "last_tri": 1,
+    "date": "2026-11-25"
+  },
+  {
+    "video_id": "wGIOV3ZSN1A",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "title": "\"MECHARASHI\" F2P GUIDE: B.C. COVERT PHANTOM: \"ALERT LEVEL 5 PROTOCOL 5 SKYSWEEP-LEVEL 3\" (PULSE)",
+    "published_at": "2026-11-25T06:00:28Z",
+    "mode_guess": null,
+    "reason": "hors_sujet_titre",
+    "detail": "titre : « mecharashi » (autre jeu)",
+    "last_tri": 1,
+    "date": "2026-11-25"
+  },
+  {
+    "video_id": "BV_30CoeC4M",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "title": "\"MECHARASHI\" F2P GUIDE: B.C. COVERT PHANTOM: \"ALERT LEVEL 5 PROTOCOL 5 NDF REMNANTS\" (EX) (3RD MAP)",
+    "published_at": "2026-11-25T02:00:30Z",
+    "mode_guess": null,
+    "reason": "hors_sujet_titre",
+    "detail": "titre : « mecharashi » (autre jeu)",
+    "last_tri": 1,
+    "date": "2026-11-25"
+  },
+  {
+    "video_id": "1wrf2OneYtA",
+    "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
+    "title": "\"MECHARASHI\" F2P GUIDE: B.C. COVERT PHANTOM: \"ALERT LEVEL 5 PROTOCOL 5 SKY-LEVEL 2\" (OBLITERATION)",
+    "published_at": "2026-11-24T22:00:17Z",
+    "mode_guess": null,
+    "reason": "hors_sujet_titre",
+    "detail": "titre : « mecharashi » (autre jeu)",
+    "last_tri": 1,
     "date": "2026-11-25"
   }
 ]

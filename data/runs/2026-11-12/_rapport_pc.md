@@ -387,3 +387,19 @@ error: The following untracked working tree files would be overwritten by checko
 - Erreurs bloquantes : aucune
 - Durée du passage : 17 min
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+
+<!-- passage-pc pc-daily 2026-11-25T20:56:36.384181+00:00 -->
+## Passage pc-daily — 2026-11-25 21:56 (Paris)
+
+- Top 10 couvert : non (55 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 1 · en_cours restantes : 106 (dont 72 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 0 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
+- Semaine écoulée non gelée (traitée avec la semaine 2026-11-19 : candidates top 10 d'abord, budget partagé)
+- Sous-titres en attente : 117 avant la règle → 56 après (33 inutiles : hors sujet ou score déjà lu ; 28 rejetée(s) sur le titre)
+- Relectures posées (règles plus anciennes, top 10 provisoire sans Results lu) : YSJFLd_OXww (bot), a-923ClD9Rc (bot), znpyCNWml3I (bot), Lt84IhMjBvM (bot), wJ9CwjKwyco (bot), 2oendtlUxUE (bot), 5MI-RLj7FSk (bot), tOzRUlmZ2JI (bot), MJ2iz5TFmvM (gb), trinzgj3FV4 (gb), lGDbzyIJcjY (gb)
+- Résumé GB : MJ2iz5TFmvM · Eden(이든) · aucun Results lu · 322 RC à vérifier · light · contrôle GB : somme 12423132386262 ≠ Final Score 12859482380262
