@@ -218,7 +218,7 @@ def _p(**kw):
 
 def test_relecture_automatique_top_10_provisoire(tmp_path):
     lignes = [_l("wJ9"), _l("sure", "sur"), _l("lue"), _l("recente"), _l("deja"), _l("encours")] + [_l(f"x{i}") for i in range(10)]
-    processed = {"wJ9": _p(), "sure": _p(), "lue": _p(pc={"results_lus": [[10, 20]]}), "recente": _p(regles=18), "deja": _p(relecture_auto=18),
+    processed = {"wJ9": _p(), "sure": _p(), "lue": _p(pc={"results_lus": [[10, 20]]}), "recente": _p(regles=CONFIG["tri1_version"]), "deja": _p(relecture_auto=CONFIG["tri1_version"]),
                  "encours": _p(status="en_cours"), "x9": _p()}
     d, processed = _monde(tmp_path, lignes, processed)
     posees = relectures.poser(d, W, CONFIG, processed, "2026-11-17")
