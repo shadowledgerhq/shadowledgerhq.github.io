@@ -25,6 +25,6 @@ Total : 1340 entrées, **0 erreur(s)**, 2043 avertissement(s). Généré par `pi
 
 Avertissements par type (à suivre dans le temps) :
 - 936 × icône absente (null)
-- 785 × name.fr vide
-- 92 × source non URL (capture ou texte)
+- 783 × name.fr vide
+- 94 × source non URL (capture ou texte)
 - 60 × pierre sans effets
