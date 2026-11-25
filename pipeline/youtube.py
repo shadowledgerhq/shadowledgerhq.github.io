@@ -64,6 +64,23 @@ def deviner_modes(texte, config):
     return modes
 
 
+def retirer_faux_bot(modes, texte, config):
+    """v39 §3 : « Battlefield of Infinity », « Battlefield of Chaos », « 無限の戦場 » ne sont pas le BOT (« Battlefield of Time ») : `bot` est
+    retiré des modes d'une vidéo (aussi trouvée par la requête du BOT) dont le texte cite l'un de ces mots (`config.faux_bot.mots`) sans
+    aucun mot du vrai BOT (`config.mode_keywords.bot`). Retourne les modes (nouvel ensemble)."""
+    if "bot" not in modes:
+        return set(modes)
+    t = (texte or "").lower()
+    faux = (config.get("faux_bot") or {}).get("mots") or []
+    vrais = (config.get("mode_keywords") or {}).get("bot") or []
+
+    def present(mot):
+        return re.search(rf"(?<![a-z0-9]){re.escape(mot.lower())}(?![a-z0-9])", t) is not None if mot.isascii() else mot.lower() in t
+    if any(present(m) for m in faux) and not any(present(m) for m in vrais):
+        return set(modes) - {"bot"}
+    return set(modes)
+
+
 def _miniature(snippet):
     t = snippet.get("thumbnails", {})
     for cle in ("maxres", "high", "medium", "default"):
@@ -145,7 +162,8 @@ def recherche(api, debut, fin, config, channels, deja_vus):
             vid = it["id"]
             if sn.get("liveBroadcastContent", "none") != "none":
                 continue  # live en cours ou à venir : revu au prochain passage
-            modes = trouves[vid] | deviner_modes(sn.get("title", "") + "\n" + sn.get("description", ""), config)
+            texte_v = sn.get("title", "") + "\n" + sn.get("description", "")
+            modes = retirer_faux_bot(trouves[vid] | deviner_modes(texte_v, config), texte_v, config)      # v39 §3
             meta = {
                 "video_id": vid,
                 "channel_id": sn["channelId"],

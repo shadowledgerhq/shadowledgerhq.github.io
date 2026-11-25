@@ -6,7 +6,7 @@ import builds as B
 import classement as C
 import elements
 
-CFG = {"fichier_hotm_porte_inconnue": "x", "doublon_modes": ["poc"], "poc_refonte": {"semaine_debut": "2026-11-19", "classement_sur": False}, "elements_titre": {"fire": ["fire"], "water": ["water"]}}
+CFG = {"fichier_hotm_porte_inconnue": "x", "doublon_modes": ["poc"], "poc_refonte": {"semaine_debut": "2026-11-19", "classement_sur": True}, "elements_titre": {"fire": ["fire"], "water": ["water"]}}
 
 
 def run(vid, team, score, element=None, refonte=True, hunters=(), t=10):
@@ -59,20 +59,12 @@ def test_doublon_meme_score_equipes_differentes_gardes():
     assert len(gardees) == 1
 
 
-def test_ligne_poc_refonte_jamais_sure():
-    choix, sur, notes = C.ligne_joueur([run("v", 1, 5), run("v", 2, 4)], "c1", CFG)
-    assert len(choix) == 2 and not sur and C.NOTE_POC_REFONTE in notes
-    cfg2 = {**CFG, "poc_refonte": {**CFG["poc_refonte"], "classement_sur": True}}
-    _, sur, notes = C.ligne_joueur([run("v", 1, 5), run("v", 2, 4)], "c1", cfg2)
-    assert sur and C.NOTE_POC_REFONTE not in notes
-
-
 def test_note_chasseur_commun_poc_refonte():
     def b(i, week):
         return {"mode": "poc", "run_id": "L", "run_index": i, "week": week, "dossier": "poc", "notes": "", "confidence": "sur", "hunters": [{"id": "x"}]}
     nouveaux = [b(1, "2026-11-19"), b(2, "2026-11-19")]
     B.controler_chasseurs_communs(nouveaux)
-    assert "règle actuelle non publiée" in nouveaux[0]["notes"] and nouveaux[0]["confidence"] == "a_verifier"
+    assert "règle actuelle non publiée" in nouveaux[0]["notes"] and nouveaux[0]["confidence"] == "sur"      # v40 : note seule
     anciens = [b(1, "2026-11-12"), b(2, "2026-11-12")]
     B.controler_chasseurs_communs(anciens)
     assert anciens[0]["notes"] == "chasseur commun aux 2 runs : x"

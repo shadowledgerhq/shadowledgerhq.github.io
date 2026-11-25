@@ -817,7 +817,8 @@ def controler_chasseurs_communs(builds):
                         note = NOTE_COMMUN + ident + (NOTE_COMMUN_REFONTE if x.get("mode") == "poc" and (x.get("week") or "") >= "2026-11-19" else "")
                         if note not in x["notes"].split("; "):
                             x["notes"] = "; ".join(n for n in (x["notes"], note) if n)
-                            x["confidence"] = "a_verifier"
+                            if not (x.get("mode") == "poc" and (x.get("week") or "") >= "2026-11-19"):   # v40 §6 : POC refonte = note seule
+                                x["confidence"] = "a_verifier"
                             if x not in modifies:
                                 modifies.append(x)
     return modifies

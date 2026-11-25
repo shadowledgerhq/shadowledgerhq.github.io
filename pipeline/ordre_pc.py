@@ -77,7 +77,7 @@ def derniers(d, week, processed, ids, max_minutes=30):
         if (p.get("pc") or {}).get("ecran_jeu"):
             continue
         minutes = duree_minutes((videos.get(v) or {}).get("duration"))
-        if p.get("hors_sujet_probable") or (minutes is not None and minutes > max_minutes and not tri1.score_dans_le_texte(lectures, v)):
+        if p.get("hors_sujet_probable") or p.get("relecture_dernier") or (minutes is not None and minutes > max_minutes and not tri1.score_dans_le_texte(lectures, v)):
             sortie.add(v)
     return sortie
 

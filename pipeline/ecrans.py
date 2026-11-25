@@ -86,6 +86,31 @@ def lecture_bot(meta, ecran, config, source="video-complete"):
     return lec
 
 
+NOTE_PALIER_INSTABLE = "palier : lu sur une seule image ou lectures différentes (animation ?)"
+
+
+def lecture_poc_palier(meta, ecran, config, source="video-complete"):
+    """SPEC v40 : Results du POC refonte. Score classant = Rank Score (jamais Total Contribution). Les contrôles (a)(b)(c) (`poc_palier.controles`)
+    décident du `sûr` (`detail.v40_sur`), confirmé sur ≥ 2 images par `ocr_ecrans.dedoublonner_lectures`. Un contrôle en échec : écran sans score
+    (`detail.sans_score`, comme le BOT en v35), gardé avec ses notes. Sans Rank Score lu : aucune lecture."""
+    import poc_palier
+    if ecran.get("rank_score") is None:
+        return None
+    ok, notes = poc_palier.controles(ecran)
+    lec = lecture_vide(meta, "poc")
+    lec["notes"] += notes_alerte_reset(meta, config)
+    detail = {"ecran": "poc_palier", "tier": ecran.get("tier"), "total_contribution": ecran.get("total_contribution"),
+              "goal_progress": ecran.get("goal_progress"), "team_pct": ecran.get("team_pct"), "play_time": ecran.get("play_time"),
+              "player": ecran.get("player"), "successor": ecran.get("successor"), "hunters": ecran.get("hunters"),
+              "v40": True, "v40_sur": bool(ok), "par_t": [ecran["t"]] if ecran.get("t") is not None else []}
+    lec.update(score=ecran["rank_score"], score_source=source, exact=False, confidence="a_verifier", stage=None,
+               t=ecran.get("t"), team=ecran.get("team"), detail=detail)
+    lec["notes"] += notes
+    if not ok:
+        detail["sans_score"] = True
+    return lec
+
+
 def controle_gb_results(player_score, hunter_ranks, final_score, successor=0, successeur_present=False):
     """v5 : `Player's Score` + les 6 `Hunter Rank` = `Final Score`. Avec la ligne « Successor Score » (v15, vue en
     coréen) elle entre dans la somme. Le RC n'a pas de contrôle arithmétique."""

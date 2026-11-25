@@ -54,3 +54,38 @@ def lignes_rapport(posees):
         return []
     return ["- Relectures posées (règles plus anciennes, top 10 provisoire sans Results lu) : "
             + ", ".join(f"{vid} ({mode})" for vid, mode in posees)]
+
+
+def poser_manuelles(d, week, config, processed, jour):
+    """v39 §4 / v40 §8 : relectures explicites de `config.relectures_manuelles` pour la semaine `week`, une fois par version. Remet la vidéo
+    `en_cours` (`pc_needed`), tris demandés à refaire (`results_lus` vidé) ; `leve_rejet` la sort de `data/rejected` ; `forcer_tri4` et
+    `dernier` posent `pc.forcer_tri4` / `relecture_dernier`. Retourne [(video_id, "manuelle")] ; `processed` modifié en place."""
+    cfg = config.get("relectures_manuelles") or {}
+    version, posees = cfg.get("version", 1), []
+    rejetees = None
+    for v in cfg.get("videos") or []:
+        vid = v["id"]
+        p = processed.get(vid)
+        if not p or v.get("semaine") != week or p.get("week") != week or p.get("relecture_manuelle") == version:
+            continue
+        p.update(status="en_cours", pc_needed=True, relecture=jour, relecture_manuelle=version, updated_at=jour)
+        pc = p.setdefault("pc", {})
+        pc.pop("rejet", None)
+        pc.update(results_lus=[], palier_suite=[])
+        tris = v.get("tris", [3, 4])
+        pc["tri3"] = "a_faire" if 3 in tris else "fait"
+        pc["tri4"] = "a_faire" if 4 in tris else pc.get("tri4", "a_faire")
+        if v.get("forcer_tri4"):
+            pc["forcer_tri4"] = True
+        if v.get("dernier"):
+            p["relecture_dernier"] = True
+        if v.get("leve_rejet"):
+            if rejetees is None:
+                rejetees = d.rejected(week)
+            restant = [r for r in rejetees if r.get("video_id") != vid]
+            if len(restant) != len(rejetees):
+                d.ecrire(f"rejected/{week}.json", restant)
+                rejetees = restant
+        posees.append((vid, "manuelle"))
+    return posees
+

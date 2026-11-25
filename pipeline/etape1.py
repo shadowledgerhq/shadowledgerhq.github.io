@@ -22,7 +22,7 @@ from bot_saison import NOTE_CHALLENGE, lire_saison_semaine, titre_challenge
 from hotm_ecran import lire_porte
 import scores
 from tri1 import candidats_en_chapitres, lectures_texte, marquer_hors_sujet, remplacer_lectures
-from youtube import ApiYouTube, recherche
+from youtube import ApiYouTube, recherche, retirer_faux_bot
 
 JEUDI = 3
 
@@ -123,6 +123,12 @@ def relire(d, config, week, api=None, ids=None):
         textes = [("titre", videos[vid]["title"])]
         if vid in descriptions:
             textes.append(("description", descriptions[vid]))
+        modes_v = retirer_faux_bot(set(videos[vid].get("mode_guess") or []), " ".join(t for _, t in textes), config)      # v39 §3
+        if modes_v != set(videos[vid].get("mode_guess") or []):
+            videos[vid]["mode_guess"] = sorted(modes_v)
+            if vid in processed:
+                processed[vid]["modes"] = sorted(modes_v)
+            res["modes_corriges"] = res.get("modes_corriges", 0) + 1
         nouvelles, _ = lectures_texte(videos[vid], textes, config)
         avant = [l for l in lectures if l["video_id"] == vid]
         modes_nouveaux = {n["mode"] for n in nouvelles}

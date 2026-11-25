@@ -219,9 +219,6 @@ def ligne_joueur(runs_j, cle, config):
         notes.append("porte HOTM illisible")
         ok = False
     sur = ok and all(r["confidence"] == "sur" for r in choix) and not any(r.get("_contradiction") for r in choix)
-    if mode == "poc" and choix and any(r.get("_refonte") for r in choix) and not (config.get("poc_refonte") or {}).get("classement_sur"):
-        sur = False          # POC refonte : score de classement, somme des 2 équipes, paliers non publiés
-        notes.append(NOTE_POC_REFONTE)
     return choix, sur, notes
 
 
@@ -298,8 +295,85 @@ NOTE_POC_REFONTE = "POC refonte 19/11 : paliers, barème et total des 2 équipes
 NOTE_EGALITE_DEGAT = "égalité départagée par un dégât non contrôlé"
 
 
+NOTE_RANG_PLUS_HAUT = "score plus haut non confirmé : "
+
+
+def ligne_poc_refonte(runs_j, config, week):
+    """SPEC v40 §2 : ligne d'un joueur au POC refonte = SON MEILLEUR Rank Score de la semaine (`score.unit: rank_score`). Meilleur Rank Score
+    `sûr` s'il existe (un score plus haut non confirmé est signalé en note), sinon le meilleur écran `a_verifier`, sinon le plancher du texte.
+    `runs_detail` = les Results du palier de ce Rank Score (Team 1 et Team 2) ; `score.runs` = Total Contribution par équipe (information,
+    jamais additionnée en score). `sûr` seulement si `poc_refonte.classement_sur` est vrai ET que les contrôles (a)(b)(c) + 2 images sont passés."""
+    ecrans_ = [r for r in runs_j if (r.get("detail") or {}).get("v40")]
+    textes = [r for r in runs_j if (r.get("detail") or {}).get("poc_texte")]
+    sures = [r for r in ecrans_ if r["confidence"] == "sur"]
+    par_score = lambda r: (r["score"], -(_pub(r).timestamp() if hasattr(_pub(r), "timestamp") else 0))
+    base = max(sures, key=par_score) if sures else (max(ecrans_, key=par_score) if ecrans_ else max(textes, key=par_score))
+    plus_hauts = [r for r in ecrans_ + [t for t in textes if t["detail"].get("poc_texte") == "rank_score"] if r["score"] > base["score"]]
+    notes = []
+    for r in [base]:
+        notes += [n for n in r["notes"] if n not in notes]
+    if plus_hauts:
+        h = max(plus_hauts, key=lambda r: r["score"])
+        notes.append(f"{NOTE_RANG_PLUS_HAUT}{h['score']} ({h['video_id']})")
+    if not (config.get("poc_refonte") or {}).get("classement_sur"):
+        notes.append(NOTE_POC_REFONTE)
+    detail = []
+    if base in ecrans_:
+        palier = base["detail"].get("tier")
+        pool = [r for r in ecrans_ if r["detail"].get("tier") == palier and r.get("team") in (1, 2)] or [base]
+        for equipe in (1, 2):
+            c = [r for r in pool if r.get("team") == equipe]
+            if c:
+                detail.append(max(c, key=lambda r: (r["confidence"] == "sur", r["score"])))
+        detail = detail or [base]
+    else:
+        detail = [base]
+    runs_detail = []
+    for r in detail:
+        d = r.get("detail") or {}
+        item = {"video_id": r["video_id"], "published_at": iso_paris(r["published_at"]), "t": r["t"], "stage": None, "team": r["team"],
+                "score_source": r["score_source"], "exact": r["exact"], "tier": d.get("tier", d.get("palier")),
+                "total_contribution": d.get("total_contribution"), "goal_progress": d.get("goal_progress"),
+                "team_pct": d.get("team_pct"), "play_time": d.get("play_time"),
+                "element": r.get("element"), "element_source": r.get("element_source")}
+        runs_detail.append(item)
+    sur = bool(base in ecrans_ and base["confidence"] == "sur" and (config.get("poc_refonte") or {}).get("classement_sur"))
+    ligne = {
+        "run_id": f"poc-{week}-{base['video_id']}", "week": week, "mode": "poc", "channel_id": base["channel_id"],
+        "player": base["channel_title"], "channel": base["channel_title"], "video_id": base["video_id"],
+        "video_ids": sorted({r["video_id"] for r in detail}, key=lambda v: v != base["video_id"]),
+        "published_at": iso_paris(base["published_at"]), "lang": base.get("lang"),
+        "score": {"total": base["score"], "runs": [x["total_contribution"] for x in runs_detail if x["total_contribution"] is not None],
+                  "unit": "rank_score"},
+        "score_source": base["score_source"], "exact": bool(base["exact"]), "confidence": "sur" if sur else "a_verifier",
+        "rank": None, "notes": "; ".join(notes), "runs_detail": runs_detail,
+    }
+    ligne["_fin"] = _pub(base)
+    return ligne
+
+
+def _ordonner_poc_refonte(lignes):
+    """v40 : tri décroissant du Rank Score ; égalité = ex aequo (même rang, 1-1-3), aucun départage inventé (l'ordre du fichier entre
+    ex aequo suit la date de publication, sans effet sur le rang)."""
+    cle = lambda l: (-l["score"]["total"], l["_fin"], l["channel_id"])
+    classees = sorted((l for l in lignes if l["confidence"] == "sur"), key=cle)
+    autres = sorted((l for l in lignes if l["confidence"] != "sur"), key=cle)
+    prec = None
+    for i, l in enumerate(classees, 1):
+        if prec is not None and l["score"]["total"] == prec["score"]["total"]:
+            l["rank"] = prec["rank"]
+        else:
+            l["rank"] = i
+        prec = l
+    for l in classees + autres:
+        del l["_fin"]
+    return classees + autres
+
+
 def ordonner(lignes, mode):
     """Runs classées par rang, puis runs rank null (§4.2, §5.1). GB : à RC égal, somme des dégâts (§4.1)."""
+    if mode == "poc" and lignes and all(l["score"].get("unit") == "rank_score" for l in lignes):
+        return _ordonner_poc_refonte(lignes)      # v40
     signe = 1 if mode == "bot" else -1
 
     def cle(l):
@@ -317,11 +391,11 @@ def ordonner(lignes, mode):
                     if not l.get("_degats_exacts"):
                         l["confidence"] = "a_verifier"
                         l["notes"] = "; ".join(n for n in (l["notes"], NOTE_EGALITE_DEGAT) if n)
-    if mode == "bot":       # v35 : écart improbable (< 70 % de la médiane des scores provisoires, ≥ 5 lignes) : hors du top 10 provisoire
+    if mode in ("bot", "gb"):   # v35 : écart improbable (< 70 % de la médiane des scores provisoires, ≥ 5 lignes) : hors du top 10 provisoire ; v39 : GB aussi (RC)
         prov = [l for l in lignes if l["confidence"] != "sur"]
         limite = chrono_bot.ecart_improbable([l["score"]["total"] for l in prov])
         for l in prov:
-            if limite is not None and l["score_source"] in chrono_bot.SOURCES_TEXTE and l["score"]["total"] < limite:
+            if limite is not None and (l["score_source"] in chrono_bot.SOURCES_TEXTE or mode == "gb") and l["score"]["total"] < limite:
                 if chrono_bot.NOTE_ECART_IMPROBABLE not in l["notes"]:
                     l["notes"] = "; ".join(n for n in (l["notes"], chrono_bot.NOTE_ECART_IMPROBABLE) if n)
     classees = sorted((l for l in lignes if l["confidence"] == "sur"), key=cle)
@@ -388,6 +462,8 @@ def calculer(week, d=None, config=None, horloge=None):
         r = {**lec, "notes": list(lec.get("notes", []))}
         r["_cle"] = cle_classement(r, config)
         if r["mode"] == "poc" and elements.refonte_poc(week, config):
+            if r["score_source"] in ("titre", "description", "sous-titres") and not (r.get("detail") or {}).get("poc_texte"):
+                continue                    # v40 : ancienne lecture de dégâts du texte, plus un score (relire la semaine la remplace)
             r["_refonte"] = True            # POC refonte du 19/11/2026 : règles de `config.poc_refonte`
         runs.append(r)
     videos_avant = {r["video_id"] for r in runs}
@@ -446,6 +522,9 @@ def calculer(week, d=None, config=None, horloge=None):
     for cle, joueurs in par_cle.items():
         lignes = []
         for runs_j in joueurs.values():
+            if cle == "poc" and any(r.get("_refonte") for r in runs_j):
+                lignes.append(ligne_poc_refonte(runs_j, config, week))      # v40 : Rank Score, pas de somme des 2 équipes
+                continue
             choix, sur, notes = ligne_joueur(runs_j, cle, config)
             if cle in non_controle:
                 notes.append("boss non contrôlé")

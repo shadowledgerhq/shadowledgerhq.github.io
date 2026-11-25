@@ -9,6 +9,7 @@ import re
 import unicodedata
 
 import ecrans
+import poc_palier
 
 _ENT = r"(\d{1,3}(?:[,.   ]\d{3})+|\d+)"        # 15 763 121 797 048 | 94,600 | 165
 _SEP = r"[^\d\n]{0,8}"                                        # bruit entre le libellé et le nombre
@@ -232,6 +233,8 @@ def detecter(texte, config=None):
     if "personal record" in bas and ("total rage count" in bas or "group 1" in bas or "total score" in bas
                                      or "challenge count" in bas or "time left in season" in bas):
         return "gb_record"      # salon Guild Boss ; v14 : tolère un OCR abîmé (« Total Rage Gount », « Group? »)
+    if poc_palier.detecter(t):
+        return "poc_palier"     # v40 : Results du POC refonte (Tier N Team M), valeurs lues par ancres (`pc.lire_palier`)
     if "final score" in bas and ("hunter rank" in bas or "your points have been registered" in bas):
         return "gb_results"
     cp0 = compact(t)
@@ -549,6 +552,12 @@ def lectures_depuis_texte(texte, meta, config, source, t=None, zones=None):
         type_ecran = "bot"          # v27 : reconnu par la lecture par zone (≥ 2 phases lues dans les zones des temps)
     if type_ecran is None:
         return []
+    if type_ecran == "poc_palier":          # v40 : valeurs lues par ancres (`pc.lire_palier`) ; sans elles, rien (écran reconnu mais illisible)
+        e = (zones or {}).get("palier")
+        lec = ecrans.lecture_poc_palier(meta, {**(e or {}), "t": t}, config, source) if e else None
+        if lec:
+            lec["regles"] = config.get("tri1_version")
+        return [lec] if lec else []
     ecran = {**(lire_gb_combat(texte, config) if type_ecran in ("gb_combat", "gb_combat_incertain") else lire_bot(texte, config, zb) if type_ecran == "bot" else LECTEURS[type_ecran](texte)), "t": t}
     if type_ecran in ("gb_results", "gb_results_partiel"):
         ecran["stage"] = _boss_du_hud(texte, config) or ecran["stage"]     # v12 : nom normalisé si le boss est connu
@@ -1003,10 +1012,43 @@ def _repetition_bot_v27(lectures):
     return [l for l in lectures if id(l) not in ecartees]
 
 
+def _repetition_palier(lectures):
+    """v40 (anti-animation) : les lectures `poc_palier` d'un même écran (vidéo, palier, équipe, Total Contribution) sont comptées par image
+    distincte (`detail.par_t`, idempotent). Le Rank Score retenu est le plus voté ; `sûr` seulement si ses contrôles passent (`v40_sur`) ET
+    s'il est lu à l'identique sur ≥ 2 images (`poc_refonte.images_min`) ; sinon `a_verifier` + note. Les autres lectures du même écran sont
+    écartées. Retourne la liste complète."""
+    v40 = [l for l in lectures if l.get("mode") == "poc" and (l.get("detail") or {}).get("v40")]
+    if not v40:
+        return lectures
+    groupes = {}
+    for l in v40:
+        d = l["detail"]
+        groupes.setdefault((l["video_id"], d.get("tier"), l.get("team"), d.get("total_contribution")), []).append(l)
+    ecartees = set()
+    for lecs in groupes.values():
+        votes = {}
+        for l in lecs:
+            votes.setdefault(l["score"], set()).update(set(l["detail"].get("par_t") or []) | ({l["t"]} if l.get("t") is not None else set()))
+        gagnant = max(votes, key=lambda sc: (len(votes[sc]), any(x["score"] == sc and x["detail"].get("v40_sur") for x in lecs), sc))
+        egalite = sum(1 for sc in votes if len(votes[sc]) == len(votes[gagnant])) > 1
+        garde = next((x for x in sorted(lecs, key=lambda x: (x.get("t") is None, x.get("t") or 0)) if x["score"] == gagnant), lecs[0])
+        garde["detail"]["par_t"] = sorted(votes[gagnant])
+        stable = bool(garde["detail"].get("v40_sur")) and len(votes[gagnant]) >= 2 and not egalite
+        garde["notes"][:] = [n for n in garde["notes"] if n != ecrans.NOTE_PALIER_INSTABLE]
+        if stable:
+            garde["confidence"], garde["exact"] = "sur", True
+        else:
+            garde["confidence"], garde["exact"] = "a_verifier", False
+            if garde["detail"].get("v40_sur"):
+                garde["notes"].append(ecrans.NOTE_PALIER_INSTABLE)
+        ecartees |= {id(x) for x in lecs if x is not garde}
+    return [l for l in lectures if id(l) not in ecartees]
+
+
 def dedoublonner_lectures(lectures):
     """Une même image d'écran est lue à plusieurs instants (1 image / 2 s) : une seule lecture par
     (vidéo, mode, groupe/équipe, score, dégâts) ; la plus tôt dans la vidéo est gardée."""
-    lectures = _repetition_bot_v27(lectures)
+    lectures = _repetition_palier(_repetition_bot_v27(lectures))
     vues, sortie, gardees = set(), [], {}
     for l in sorted(lectures, key=lambda l: (l.get("t") is None, l.get("t") or 0)):
         cle = (l["video_id"], l["mode"], l.get("team"), l["score"], l.get("damage"), l["score_source"] == "record",

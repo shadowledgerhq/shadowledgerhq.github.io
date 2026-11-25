@@ -33,6 +33,7 @@ import libelles_inconnus
 import miniature
 import chrono_bot
 import ocr_ecrans
+import poc_palier
 import rotation
 import elements
 import elements_hud
@@ -305,6 +306,40 @@ class Outils:
         self._lancer([self.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-y", "-i", str(png), "-vf", filtre,
                       "-frames:v", "1", str(sortie)], 60)
         return sortie
+
+    def recadrer_px(self, png, x, y, largeur, hauteur, echelle=3, seuil=None, normaliser=False):
+        """Zone en PIXELS (v40 : écran de palier du POC, positions relatives aux libellés lus), mêmes traitements que `recadrer`."""
+        taille = self.dimensions(png)
+        if taille:
+            x, y = max(0, min(int(x), taille[0] - 2)), max(0, min(int(y), taille[1] - 2))
+            largeur, hauteur = max(2, min(int(largeur), taille[0] - x)), max(2, min(int(hauteur), taille[1] - y))
+        sortie = Path(png).with_name(Path(png).stem + "_zp.png")
+        filtre = f"crop={int(largeur)}:{int(hauteur)}:{int(x)}:{int(y)},scale=iw*{echelle}:-1,format=gray"
+        if normaliser:          # écran assombri (fenêtre de récompense) : étire le contraste avant le seuil
+            filtre += ",normalize=smoothing=0"
+        if seuil:
+            filtre += f",lutyuv=y='if(gt(val,{int(seuil)}),255,0)',negate"
+        self._lancer([self.cfg["images"]["ffmpeg"], "-nostdin", "-v", "error", "-y", "-i", str(png), "-vf", filtre,
+                      "-frames:v", "1", str(sortie)], 60)
+        return sortie
+
+    def boites(self, png, langues="eng", timeout=90):
+        """Mots de l'image entière avec leurs boîtes : [(texte, gauche, haut, largeur, hauteur)] (tesseract `tsv`, mode clairsemé)."""
+        cfg = self.cfg["images"]
+        try:
+            sortie = self._lancer([cfg["tesseract"], str(png), "stdout", "-l", langues, "--psm", "11", "tsv"], timeout,
+                                  env={**os.environ, "OMP_THREAD_LIMIT": "1"}) or ""
+        except subprocess.TimeoutExpired:
+            raise OcrTropLent(f"tesseract > {timeout} s")
+        mots = []
+        for ligne in sortie.splitlines()[1:]:
+            c = ligne.split("\t")
+            if len(c) >= 12 and c[11].strip():
+                try:
+                    mots.append((c[11].strip(), int(c[6]), int(c[7]), int(c[8]), int(c[9])))
+                except ValueError:
+                    continue
+        return mots
 
     def empreinte(self, png):
         return hashlib.md5(Path(png).read_bytes()).hexdigest()
@@ -640,7 +675,7 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None, duree_s=None):
     (`ocr_ecrans.regrouper_hud`). Les lectures de l'écran Results sont regroupées en écrans, la plus complète est
     gardée et contrôlée (`ocr_ecrans.fusionner_results`)."""
     modes = {l["mode"] for l in nouvelles if l.get("score") is not None and not chrono_bot.echec_controle_bot(l)
-             and not (l.get("detail") or {}).get("borne_basse")}     # v35 : un écran BOT en échec de contrôle ne remplace rien ; v36 : ni une borne basse (phases incomplètes)
+             and not (l.get("detail") or {}).get("borne_basse") and not (l.get("detail") or {}).get("sans_score")}     # v35 : un écran BOT en échec de contrôle ne remplace rien ; v36 : ni une borne basse (phases incomplètes)
     reste = [l for l in lectures if not (l["video_id"] == vid and l["mode"] in modes and est_texte(l))]
     ecran = [l for l in reste + nouvelles if l["video_id"] == vid and _est_ecran(l)]
     # v29 : contexte de l'exception « RC lu sur la dernière image » (SPEC §3.1) : RC du titre / de la description et durée de la
@@ -675,6 +710,21 @@ def fusionner_ecrans(lectures, vid, nouvelles, config=None, duree_s=None):
     chrono_bot.appliquer_phases_incompletes(ecran, config)      # v36 : phases incomplètes sans Play Time = borne basse (`detail.sans_score`), jamais un score
     valides = [l for l in ecran if l["mode"] == "bot" and l.get("score") is not None and not (l.get("detail") or {}).get("sans_score")]
     restaurer = [] if valides else [l for l in texte_bot if not any(l is x for x in autres)]
+    # v39 §2 : GB, un Rage Count en conflit de lecture n'est JAMAIS un score (comme l'écran BOT en échec, v35) : écran sans score, gardé avec ses
+    # notes ; le score du texte reste, note `écran en conflit : RC lu N`
+    conflits_gb = [l for l in ecran if l["mode"] == "gb" and l.get("score") is not None and l["score_source"] in SOURCES_RESULTATS
+                   and "conflit de lecture : rage_count" in l["notes"]]
+    for l in conflits_gb:
+        l.setdefault("detail", {})["sans_score"] = True
+    valides_gb = [l for l in ecran if l["mode"] == "gb" and l.get("score") is not None and l["score_source"] in SOURCES_RESULTATS
+                  and not (l.get("detail") or {}).get("sans_score")]
+    if conflits_gb and not valides_gb:
+        rc = conflits_gb[0]["score"]
+        for x in [l for l in lectures if l["video_id"] == vid and l["mode"] == "gb" and est_texte(l) and l.get("score") is not None]:
+            if not any(x is y for y in autres + restaurer):
+                restaurer.append(x)
+            note = f"écran en conflit : RC lu {rc}"
+            x["notes"][:] = [n for n in x["notes"] if not n.startswith("écran en conflit : RC lu")] + [note]
     return autres + restaurer + ecran
 
 
@@ -703,7 +753,7 @@ def suffisant(lectures, vid, modes):
     return all(len([l for l in sures if l["mode"] == m]) >= (2 if m in ("poc", "gb") else 1) for m in modes)
 
 
-MARQUEURS_ECRAN = ("results", "phase 1", "phase1", "play time", "進行時間", "rage count", "personal record", "final score", "hunter rank",
+MARQUEURS_ECRAN = ("contribution", "goal progress", "rank score", "results", "phase 1", "phase1", "play time", "進行時間", "rage count", "personal record", "final score", "hunter rank",
                    "your points have been registered", "warning", "합산", "증명", "클리어", "이번", "플레이어 스코어", "계승자")
 
 
@@ -892,6 +942,44 @@ def _garder(ocr_debug, vid, etiquette, t, texte, png):
         pass
 
 
+def lire_palier(outils, png, config, texte, st, journal=lambda m: None):
+    """v40 : valeurs de l'écran de palier du POC refonte (`poc_palier.lire`) ou None (illisible, ou plus de `poc_refonte.zones_max_images` images
+    déjà lues pour cette vidéo : les lectures par ancres sont chères). Retourne {"palier": valeurs}."""
+    cfg = config.get("poc_refonte") or {}
+    if st.get("paliers", 0) >= cfg.get("zones_max_images", 12):
+        return None
+    st["paliers"] = st.get("paliers", 0) + 1
+    try:
+        e = poc_palier.lire(outils, png, texte)
+    except OcrTropLent:
+        st["lentes"] = st.get("lentes", 0) + 1
+        return None
+    except (RuntimeError, OSError) as ex:
+        journal(f"  écran de palier : lecture impossible ({str(ex)[:80]})")
+        return None
+    e.pop("_candidats", None)
+    return {"palier": e} if e else None
+
+
+def lire_palier_suite(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, journal, ocr_debug, source):
+    """v40 (anti-animation, vote ≥ 2 images) : images voisines d'un écran de palier déjà vu à `t0`, à 1 image/s, de `t0 - avant` à
+    `t0 + apres` (`poc_refonte.suite_avant_s` = 3, `suite_apres_s` = 8). Retourne (lectures de palier, nombre d'images lues)."""
+    cfg, rc = config["pc"]["images"], config.get("poc_refonte") or {}
+    debut = max(0, int(t0) - rc.get("suite_avant_s", 3))
+    fenetre = int(min(duree_s - debut, int(t0) - debut + rc.get("suite_apres_s", 8)))
+    if fenetre <= 0:
+        return [], 0
+    st, n, lectures = {"candidates": 0, "lentes": 0}, 0, []
+    for t, png in outils.images(chemin, [(debut, fenetre, 1)], tmp, prefixe=f"p{int(t0)}_"):
+        n += 1
+        texte = _ocr_image(outils, png, langs, cfg, st, complet=True)
+        if ocr_ecrans.detecter(texte) == "poc_palier":
+            _garder(ocr_debug, vid, "palier", t, texte, png)
+            lectures += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, lire_palier(outils, png, config, texte, st, journal))
+        Path(png).unlink(missing_ok=True)
+    return lectures, n
+
+
 def lire_results_gb(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, journal, ocr_debug, source, cherche):
     """v11-v12 : lit les images à 1 image/s à partir de `t0`. `cherche` : `t0` est un HUD de fin de run (chrono ≤ 15 s),
     l'écran Results est cherché dans les `gb.recherche_results_s` (30) secondes ; sinon `t0` est une image déjà
@@ -947,8 +1035,9 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
     minutes = duree_minutes(meta.get("duration"))
     # v37 §3 : décision sur l'image pour une vidéo marquée hors sujet ou longue, SANS score dans le texte (jamais si un écran de jeu a déjà été vu)
     sans_texte = not tri1.score_dans_le_texte(lectures, vid)
-    longue = minutes is not None and minutes > cfg["max_minutes"]
-    decision = sans_texte and not pc.get("ecran_jeu") and (longue or tri1.mot_hors_sujet(meta.get("title"), config) is not None)
+    forcer = bool(pc.get("forcer_tri4"))          # v40 §8 : tri 4 complet demandé (vidéo longue) : ni limite de durée ni décision « actualités »
+    longue = minutes is not None and minutes > cfg["max_minutes"] and not forcer
+    decision = sans_texte and not pc.get("ecran_jeu") and not forcer and (longue or tri1.mot_hors_sujet(meta.get("title"), config) is not None)
     if minutes is None or (longue and not (decision and minutes <= cfg.get("decision_max_minutes", 240))):
         return lectures, f"{vid} : durée {meta.get('duration')} hors limite ({cfg['max_minutes']} min), images non traitées", False
     langs = langues_ocr(meta, cfg)
@@ -1001,6 +1090,8 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                             inconnus.append(t)
                             journal(f"  écran de score sans libellé reconnu gardé à t={t} s (docs/essais/ocr/libelles_inconnus)")
                         zones = lire_zones_results(outils, png, config, type_img, texte, langs) if type_img in ZONES_TYPES else None
+                        if type_img == "poc_palier":          # v40 : écran de palier du POC refonte, valeurs lues par ancres
+                            zones = lire_palier(outils, png, config, texte, st, journal)
                         if type_img == "bot" or (type_img is None and ocr_ecrans.candidat_bot(texte, config)):
                             zb = None
                             if type_img is None or not _bot_texte_complet(texte, config):      # v27 : texte entier insuffisant -> zones
@@ -1061,6 +1152,17 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                         suite += [l for l in ls if (l.get("detail") or {}).get("ecran") in ("combat", "combat_sans_chrono")]
                         Path(png_s).unlink(missing_ok=True)
                     st["images"] += 2
+                    lectures = fusionner_ecrans(lectures, vid, suite, config, duree_s=minutes * 60)
+                # v40 : écran de palier (POC refonte) : images voisines à 1 img/s (vote ≥ 2 images), une fois par écran
+                suivis_p = pc.setdefault("palier_suite", [])
+                for t_p in sorted({int(l["t"]) for l in nouvelles + [x for x in lectures if x["video_id"] == vid]
+                                   if (l.get("detail") or {}).get("v40") and l.get("t") is not None}):
+                    if any(abs(t_p - x) <= (config.get("poc_refonte") or {}).get("suite_apres_s", 8) for x in suivis_p) or horloge() > fin:
+                        continue
+                    suivis_p.append(t_p)
+                    suite, n_img = lire_palier_suite(vid, meta, outils, config, chemin, tmp, t_p, minutes * 60, langs, journal, ocr_debug, source)
+                    st["images"] += n_img
+                    journal(f"  écran de palier à {t_p} s : {n_img} image(s) voisines, {len(suite)} lecture(s)")
                     lectures = fusionner_ecrans(lectures, vid, suite, config, duree_s=minutes * 60)
                 # v12 : écran Results lu jusqu'à la fin de la vidéo ; chrono HUD ≤ 15 s -> on cherche l'écran qui suit
                 lus = pc.setdefault("results_lus", [])            # [[début, fin]] déjà lus (aucune relecture au tri 4)
@@ -1476,48 +1578,80 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     pause = pc_cfg.get("pause_s", 5)
     journal(f"Passage PC {passage} — semaine {week}")
 
-    traitees, images_traitees, antibot, bloquantes = 0, 0, False, []
-    regle_st = None
-    relectures_posees = []
-    if meta.get("frozen"):
-        alertes.append(f"semaine {week} déjà gelée : rien à traiter")
-    else:
-        processed, videos, lectures = d.processed(), d.videos(week), d.lectures(week)
+    antibot, bloquantes = False, []
+    cfg_img = pc_cfg["images"]
+    # v39 §1 : un passage daily traite aussi la semaine écoulée non gelée (au plus une) : candidates top 10 de la semaine écoulée, candidates de la
+    # semaine en cours, puis les autres (semaine écoulée d'abord) ; budget et limites partagés. Une semaine N-2 non gelée n'est plus traitée.
+    ecoulee = None
+    if passage == "daily" and not seulement:
+        ecoulee, alerte_n2 = semaine_ecoulee_ouverte(d, courante)
+        if alerte_n2:
+            alertes.append(alerte_n2)
+    semaines = ([ecoulee] if ecoulee else []) + [week]
+    metas = {week: meta}
+    for w in semaines:
+        metas.setdefault(w, ouvrir_semaine(d, w))
+    cpt = {w: {"st": 0, "img": 0} for w in semaines}             # sous-titres et images traités, par semaine
+    regles_st, posees = {w: None for w in semaines}, {w: [] for w in semaines}
+    ctx = {"st": maximum or pc_cfg["max_videos"],
+           "img": min(maximum, cfg_img["max_videos"]) if maximum else cfg_img["max_videos"], "budget": False, "arret": False}
+    ouvertes = [w for w in semaines if not metas[w].get("frozen")]
+    for w in semaines:
+        if metas[w].get("frozen"):
+            alertes.append(f"semaine {w} déjà gelée : rien à traiter")
+    for w in ouvertes:
+        processed, videos, lectures = d.processed(), d.videos(w), d.lectures(w)
         if not seulement:           # v34 : relecture automatique du top 10 provisoire (règles plus anciennes, aucun Results lu)
-            relectures_posees = relectures.poser(d, week, config, processed, jour)
-            if relectures_posees:
-                journal("Relectures posées : " + ", ".join(f"{v} ({m})" for v, m in relectures_posees))
+            posees[w] = relectures.poser(d, w, config, processed, jour) + relectures.poser_manuelles(d, w, config, processed, jour)       # v34 + v39 §4 / v40 §8
+            if posees[w]:
+                journal(f"Relectures posées ({w}) : " + ", ".join(f"{v} ({m})" for v, m in posees[w]))
                 d.ecrire("processed.json", processed)
-        if refaire:  # diagnostic : la vidéo choisie est retraitée comme si rien n'avait été fait
+        if refaire and w == week:  # diagnostic : la vidéo choisie est retraitée comme si rien n'avait été fait
             for v in (seulement or ()):
                 if v in processed:
                     processed[v].pop("pc", None)
                     processed[v].update(status="en_cours", pc_needed=True)
                     lectures = [l for l in lectures if not (l["video_id"] == v and _est_ecran(l))]
+        lectures, regles_st[w] = regle_sous_titres(d, w, processed, videos, lectures, config, jour, seulement)      # v38 : rejet titre, marquage, sous-titres inutiles
+        d.ecrire(f"runs/{w}/_lectures.json", lectures)
+        d.ecrire("processed.json", processed)
+
+    def phase(w, genre):
+        """Une semaine, une partie de la file : `genre` None = tout (une seule semaine), "cand" = candidates au top 10, "autres" = le reste."""
+        nonlocal antibot
+        if ctx["arret"] or antibot:
+            return
+        processed, videos, lectures = d.processed(), d.videos(w), d.lectures(w)
+        etiquette = f" [{w}]" if len(semaines) > 1 else ""
 
         def sauver():
-            d.ecrire(f"runs/{week}/_lectures.json", lectures)
+            d.ecrire(f"runs/{w}/_lectures.json", lectures)
             d.ecrire("processed.json", processed)
 
         def titre(vid):
             return (videos.get(vid, {}).get("title") or "")[:50]
 
-        lectures, regle_st = regle_sous_titres(d, week, processed, videos, lectures, config, jour, seulement)      # v38 : rejet titre, marquage, sous-titres inutiles
-        a_faire = [v for v, p in processed.items() if p.get("week") == week and p["status"] == "en_cours"
+        def garde(ordre, cand):
+            return [v for v in ordre if genre is None or (v in cand) == (genre == "cand")]
+
+        a_faire = [v for v, p in processed.items() if p.get("week") == w and p["status"] == "en_cours"
                    and (not seulement or v in seulement) and p.get("pc_needed") and (p.get("pc") or {}).get("sous_titres") not in ("fait", "absent", "inutile")]
-        sauver()
-        a_faire = ordre_pc.ordonner(d, week, a_faire, processed, pc_cfg["images"]["max_minutes"])[0]          # v29 : candidates au top 10 d'abord ; v37 : hors sujet en dernier
-        limite = maximum or pc_cfg["max_videos"]
+        ordre, cand = ordre_pc.ordonner(d, w, a_faire, processed, cfg_img["max_minutes"])          # v29 : candidates au top 10 d'abord ; v37 : hors sujet en dernier
+        a_faire = garde(ordre, cand)
+        limite = ctx["st"]
         if len(a_faire) > limite:
-            alertes.append(f"{len(a_faire) - limite} vidéo(s) reportée(s) au prochain passage (limite {limite})")
-        lot = a_faire[:limite]
-        journal(f"Sous-titres : {len(lot)} vidéo(s)")
+            alertes.append(f"{len(a_faire) - limite} vidéo(s) reportée(s) au prochain passage (limite {maximum or pc_cfg['max_videos']})")
+        lot = a_faire[:max(limite, 0)]
+        journal(f"Sous-titres{etiquette} : {len(lot)} vidéo(s)")
         try:
             for n, vid in enumerate(lot, 1):
                 if horloge() > fin_passage:
-                    alertes.append(f"budget de temps du passage atteint ({pc_cfg.get('budget_minutes', 180)} min) : "
-                                   f"{len(lot) - n + 1} vidéo(s) de sous-titres reportée(s)")
+                    if not ctx["budget"]:
+                        alertes.append(f"budget de temps du passage atteint ({pc_cfg.get('budget_minutes', 180)} min) : "
+                                       f"{len(lot) - n + 1} vidéo(s) de sous-titres reportée(s)")
+                    ctx["budget"] = True
                     break
+                ctx["st"] -= 1
                 journal(f"[{n}/{len(lot)}] {vid} « {titre(vid)} » : sous-titres…")
                 if vid not in videos:
                     alertes.append(f"{vid} : métadonnées absentes de _videos.json")
@@ -1536,99 +1670,113 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                 processed[vid].setdefault("pc", {}).update(sous_titres=etat, date=jour)
                 processed[vid]["updated_at"] = jour
                 processed[vid]["last_tri"] = max(processed[vid].get("last_tri", 0), 1)
-                traitees += 1
+                cpt[w]["st"] += 1
                 sauver()
                 if n < len(lot):
                     dormir(pause)
         except OutilAbsent as e:
             alertes.append(str(e))
             bloquantes.append(f"outil absent : {e}")
-        cfg_img = pc_cfg["images"]
-        if cfg_img["actif"] if images is None else images:
-            try:        # v33 : rotations (SPEC_ROTATION) : top 3 du BOT, vidéo déjà téléchargée par les tris 3-4 (ou seulement pour la rotation)
-                rotation_cfg = rotation.charger_config()
-                ordre_rotation = rotation.a_traiter(week, processed, RACINE, rotation_cfg)      # BOT d'abord, puis POC, GB, HOTM
-                a_rotation = set(ordre_rotation)
-            except Exception as e:
-                ordre_rotation, a_rotation, rotation_cfg = [], set(), {"version": 1}
-                alertes.append(f"rotation : sélection impossible ({e})")
-            a_images = [v for v, p in processed.items() if p.get("week") == week and v in videos and (not seulement or v in seulement)
-                        and ((p["status"] == "en_cours" and p.get("pc_needed") and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile"))
-                             or v in a_rotation)]
-            tri1.marquer_hors_sujet_semaine(processed, videos, lectures, week, config)       # v37 : les sous-titres peuvent avoir donné un score
-            a_images = ordre_pc.ordonner(d, week, a_images, processed, cfg_img["max_minutes"])[0]       # v29 : idem pour les images (anti-bot : on s'arrête quand on peut)
-            places = [i for i, v in enumerate(a_images) if v in a_rotation]      # v36 : entre elles, les vidéos de rotation passent BOT, POC, GB, HOTM
-            for i, v in zip(places, sorted((a_images[i] for i in places), key=ordre_rotation.index)):
-                a_images[i] = v
-            lim_img = min(maximum, cfg_img["max_videos"]) if maximum else cfg_img["max_videos"]  # --max limite aussi les images
-            if len(a_images) > lim_img:
-                alertes.append(f"{len(a_images) - lim_img} vidéo(s) reportée(s) pour les images (limite {lim_img})")
-            lot = a_images[:lim_img]
-            journal(f"Images (tris 3-4) : {len(lot)} vidéo(s)")
-            try:
-                for n, vid in enumerate(lot, 1):
-                    if horloge() > fin_passage:
+            ctx["arret"] = True
+        if antibot or ctx["arret"] or not (cfg_img["actif"] if images is None else images):
+            return
+        try:        # v33 : rotations (SPEC_ROTATION) : top 3 du BOT, vidéo déjà téléchargée par les tris 3-4 (ou seulement pour la rotation)
+            rotation_cfg = rotation.charger_config()
+            ordre_rotation = rotation.a_traiter(w, processed, RACINE, rotation_cfg)      # BOT d'abord, puis POC, GB, HOTM
+            a_rotation = set(ordre_rotation)
+        except Exception as e:
+            ordre_rotation, a_rotation, rotation_cfg = [], set(), {"version": 1}
+            alertes.append(f"rotation : sélection impossible ({e})")
+        a_images = [v for v, p in processed.items() if p.get("week") == w and v in videos and (not seulement or v in seulement)
+                    and ((p["status"] == "en_cours" and p.get("pc_needed") and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile"))
+                         or v in a_rotation)]
+        tri1.marquer_hors_sujet_semaine(processed, videos, lectures, w, config)       # v37 : les sous-titres peuvent avoir donné un score
+        ordre, cand = ordre_pc.ordonner(d, w, a_images, processed, cfg_img["max_minutes"])       # v29 : idem pour les images (anti-bot : on s'arrête quand on peut)
+        a_images = garde(ordre, cand)
+        places = [i for i, v in enumerate(a_images) if v in a_rotation]      # v36 : entre elles, les vidéos de rotation passent BOT, POC, GB, HOTM
+        for i, v in zip(places, sorted((a_images[i] for i in places), key=ordre_rotation.index)):
+            a_images[i] = v
+        lim_img = ctx["img"]                                                  # --max limite aussi les images
+        if len(a_images) > lim_img:
+            alertes.append(f"{len(a_images) - lim_img} vidéo(s) reportée(s) pour les images (limite {min(maximum, cfg_img['max_videos']) if maximum else cfg_img['max_videos']})")
+        lot = a_images[:max(lim_img, 0)]
+        journal(f"Images (tris 3-4){etiquette} : {len(lot)} vidéo(s)")
+        try:
+            for n, vid in enumerate(lot, 1):
+                if horloge() > fin_passage:
+                    if not ctx["budget"]:
                         alertes.append(f"budget de temps du passage atteint ({pc_cfg.get('budget_minutes', 180)} min) : "
                                        f"{len(lot) - n + 1} vidéo(s) d'images reportée(s)")
-                        break
-                    journal(f"[{n}/{len(lot)}] {vid} « {titre(vid)} » : images ({', '.join(videos[vid].get('mode_guess', []))})")
-                    etat = dict(processed[vid].get("pc") or {})
-                    t0 = horloge()
-                    apres = None
-                    if vid in a_rotation:
-                        def apres(chemin, tmp, vid=vid, etat=etat):
-                            etat["rotation"] = passage_rotation(vid, week, outils, chemin, tmp, videos[vid], d, journal)
-                            etat["rotation_version"] = rotation_cfg.get("version", 1)
-                    try:
-                        lectures = traiter_miniature(vid, videos[vid], outils, config, lectures, etat, journal)       # v34 : tri 2
-                    except OutilAbsent:
-                        raise
-                    except Exception as e:
-                        journal(f"  miniature : {e}")
-                    lectures, avert, reporte = traiter_images(vid, videos[vid], outils, config, lectures, etat, jour,
-                                                              journal, ocr_debug, horloge, apres)
-                    journal(f"  → {int(horloge() - t0)} s" + (f" — {avert}" if avert else ""))
-                    if avert:
-                        alertes.append(avert)
-                        if bloquante(avert):
-                            bloquantes.append(avert)
-                    if not reporte and not (avert and bloquante(avert)):
-                        images_traitees += 1
-                    if etat:
-                        processed[vid]["pc"] = etat
-                        processed[vid]["updated_at"] = jour
-                    if etat.get("rejet") == "actualites":
-                        lectures = rejeter_actualites(d, week, vid, processed, lectures, jour)
-                        alertes.append(f"{vid} : actualités : aucun écran de jeu, vidéo rejetée")
-                        sauver()
-                        if n < len(lot):
-                            dormir(pause)
-                        continue
-                    tri1.marquer_hors_sujet(processed[vid], videos[vid], lectures, config)
-                    if etat.get("tri3") == "fait":
-                        processed[vid]["last_tri"] = max(processed[vid].get("last_tri", 0), 3)
-                    if etat.get("tri4") in ("fait", "inutile"):
-                        processed[vid]["last_tri"] = 4 if etat["tri4"] == "fait" else processed[vid]["last_tri"]
-                        processed[vid]["pc_needed"] = False
-                        if any(l["video_id"] == vid and l.get("score") is not None for l in lectures) and not etat.get("libelles_inconnus"):
-                            processed[vid]["status"] = "termine"
+                    ctx["budget"] = True
+                    break
+                ctx["img"] -= 1
+                journal(f"[{n}/{len(lot)}] {vid} « {titre(vid)} » : images ({', '.join(videos[vid].get('mode_guess', []))})")
+                etat = dict(processed[vid].get("pc") or {})
+                t0 = horloge()
+                apres = None
+                if vid in a_rotation:
+                    def apres(chemin, tmp, vid=vid, etat=etat):
+                        etat["rotation"] = passage_rotation(vid, w, outils, chemin, tmp, videos[vid], d, journal)
+                        etat["rotation_version"] = rotation_cfg.get("version", 1)
+                try:
+                    lectures = traiter_miniature(vid, videos[vid], outils, config, lectures, etat, journal)       # v34 : tri 2
+                except OutilAbsent:
+                    raise
+                except Exception as e:
+                    journal(f"  miniature : {e}")
+                lectures, avert, reporte = traiter_images(vid, videos[vid], outils, config, lectures, etat, jour,
+                                                          journal, ocr_debug, horloge, apres)
+                journal(f"  → {int(horloge() - t0)} s" + (f" — {avert}" if avert else ""))
+                if avert:
+                    alertes.append(avert)
+                    if bloquante(avert):
+                        bloquantes.append(avert)
+                if not reporte and not (avert and bloquante(avert)):
+                    cpt[w]["img"] += 1
+                if etat:
+                    processed[vid]["pc"] = etat
+                    processed[vid]["updated_at"] = jour
+                if etat.get("rejet") == "actualites":
+                    lectures = rejeter_actualites(d, w, vid, processed, lectures, jour)
+                    alertes.append(f"{vid} : actualités : aucun écran de jeu, vidéo rejetée")
                     sauver()
-                    if reporte:
-                        antibot = True
-                        alertes.append("429 / anti-bot YouTube : images arrêtées pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)")
-                        break
                     if n < len(lot):
                         dormir(pause)
-            except OutilAbsent as e:
-                alertes.append(str(e))
-                bloquantes.append(f"outil absent : {e}")
+                    continue
+                tri1.marquer_hors_sujet(processed[vid], videos[vid], lectures, config)
+                if etat.get("tri3") == "fait":
+                    processed[vid]["last_tri"] = max(processed[vid].get("last_tri", 0), 3)
+                if etat.get("tri4") in ("fait", "inutile"):
+                    processed[vid]["last_tri"] = 4 if etat["tri4"] == "fait" else processed[vid]["last_tri"]
+                    processed[vid]["pc_needed"] = False
+                    if any(l["video_id"] == vid and l.get("score") is not None for l in lectures) and not etat.get("libelles_inconnus"):
+                        processed[vid]["status"] = "termine"
+                sauver()
+                if reporte:
+                    antibot = True
+                    alertes.append("429 / anti-bot YouTube : images arrêtées pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)")
+                    break
+                if n < len(lot):
+                    dormir(pause)
+        except OutilAbsent as e:
+            alertes.append(str(e))
+            bloquantes.append(f"outil absent : {e}")
+            ctx["arret"] = True
         sauver()
-        restantes = sum(1 for p in processed.values() if p.get("week") == week and p["status"] == "en_cours")
-        if restantes:
-            alertes.append(f"{restantes} vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])")
-        journal(f"Terminé en {int((horloge() - debut_passage) // 60)} min : {traitees} vidéo(s) de sous-titres, {restantes} en_cours")
 
-    res = classement.calculer(week, d, config, instant)
+    plan = [(w, None) for w in ouvertes] if len(ouvertes) < 2 else [(ecoulee, "cand"), (week, "cand"), (ecoulee, "autres"), (week, "autres")]
+    for w, genre in plan:
+        phase(w, genre)
+    for w in ouvertes:
+        restantes_w = sum(1 for p in d.processed().values() if p.get("week") == w and p["status"] == "en_cours")
+        if restantes_w:
+            alertes.append(("" if w == week else f"semaine {w} : ") + f"{restantes_w} vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])")
+    if ouvertes:
+        journal(f"Terminé en {int((horloge() - debut_passage) // 60)} min : {sum(c['st'] for c in cpt.values())} vidéo(s) de sous-titres, "
+                f"{sum(1 for p in d.processed().values() if p.get('week') in ouvertes and p['status'] == 'en_cours')} en_cours")
+
+    resultats = {w: classement.calculer(w, d, config, instant) for w in semaines}
+    res = resultats[week]
     if passage == "weekly" and not meta.get("frozen"):
         lignes, provisoires = sum(res["fichiers"].values()), len(res["a_verifier"]) if not res.get("gelee") else 0
         if not config["pc"].get("geler"):
@@ -1641,9 +1789,6 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             meta["frozen"], meta["frozen_at"] = True, iso_utc(instant)
             d.ecrire(f"runs/{week}/_meta.json", meta)
             alertes.append(f"semaine {week} gelée ({n} vidéo(s) rejetée(s) pas_de_score)")
-    proc = [p for p in d.processed().values() if p.get("week") == week]
-    restantes = sum(1 for p in proc if p["status"] == "en_cours")
-    a_traiter = sum(1 for p in proc if p["status"] == "en_cours" and p.get("pc_needed") and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile"))
     texte_relance = None
     if antibot:
         bloquantes.insert(0, "anti-bot YouTube (passage incomplet : anti-bot)")
@@ -1652,29 +1797,40 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         else:
             texte_relance = programmer_relance(instant, jour, planifier, fichier_relance)
         alertes.append(f"passage incomplet : anti-bot ; relance : {texte_relance}")
-    complet = not bloquantes and a_traiter == 0
-    top10_n = ordre_pc.candidates_restantes(d, week, d.processed())      # v29 : après le classement du passage
-    etat = dict(complet=complet, traitees=traitees + images_traitees, restantes=restantes, a_traiter=a_traiter, bloquantes=list(bloquantes),
-                relance=texte_relance)
+    etats = {}
+    for w in semaines:
+        proc = [p for p in d.processed().values() if p.get("week") == w]
+        restantes = sum(1 for p in proc if p["status"] == "en_cours")
+        a_traiter = sum(1 for p in proc if p["status"] == "en_cours" and p.get("pc_needed") and (p.get("pc") or {}).get("tri4") not in ("fait", "inutile"))
+        top10_n = ordre_pc.candidates_restantes(d, w, d.processed())      # v29 : après le classement du passage
+        etats[w] = dict(complet=not bloquantes and a_traiter == 0, traitees=cpt[w]["st"] + cpt[w]["img"], restantes=restantes, a_traiter=a_traiter,
+                        bloquantes=list(bloquantes), relance=texte_relance, top10_n=top10_n)
+    etat = {k: v for k, v in etats[week].items() if k != "top10_n"}
 
     def rapport():
-        gel3 = rapport_pc.critere_gel3(d, week, f"pc-{passage}", instant, top10_n, etat["bloquantes"], relance=bool(relance))
-        lignes = entete_etat(etat["complet"], etat["traitees"], restantes, a_traiter, etat["bloquantes"], texte_relance,
-                             (horloge() - debut_passage) / 60, top10_n, gel3,
-                             [(v, p["pc"]["decision_tri3"]) for v, p in d.processed().items()
-                              if p.get("week") == week and (p.get("pc") or {}).get("decision_tri3") and (p.get("pc") or {}).get("date") == jour])
-        if regle_st:
-            lignes.append(f"- Sous-titres en attente : {regle_st['avant']} avant la règle → {regle_st['apres']} après ({regle_st['inutiles']} inutiles : hors sujet ou score déjà lu ; "
-                          f"{regle_st['rejets']} rejetée(s) sur le titre)")
-        if relance:
-            lignes.append("- Type : relance automatique (ne compte pas pour le critère de gel n° 3)")
-        if git is not None and getattr(git, "conflit_resolu", False):
-            lignes.append("- Conflit git résolu automatiquement")
-        lignes += lignes_exports_deplaces(git)
-        lignes += relectures.lignes_rapport(relectures_posees)
-        lignes += resume_gb(d, week, jour)
-        rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)      # v26 : bloc daté, jamais effacé, propre au PC
-        ecrire_rapport(d, week, f"pc-{passage}", instant, None, res, alertes, lignes)
+        for w in semaines:                    # v39 §1 : un bloc par semaine travaillée ; critère de gel n° 3 compté par semaine
+            e = etats[w]
+            e["bloquantes"] = list(etat["bloquantes"]) if w == week else e["bloquantes"]
+            gel3 = rapport_pc.critere_gel3(d, w, f"pc-{passage}", instant, e["top10_n"], e["bloquantes"], relance=bool(relance))
+            lignes = entete_etat(e["complet"] if w != week else etat["complet"], e["traitees"], e["restantes"], e["a_traiter"], e["bloquantes"], texte_relance,
+                                 (horloge() - debut_passage) / 60, e["top10_n"], gel3,
+                                 [(v, p["pc"]["decision_tri3"]) for v, p in d.processed().items()
+                                  if p.get("week") == w and (p.get("pc") or {}).get("decision_tri3") and (p.get("pc") or {}).get("date") == jour])
+            if w != week:
+                lignes.append(f"- Semaine écoulée non gelée (traitée avec la semaine {week} : candidates top 10 d'abord, budget partagé)")
+            if regles_st[w]:
+                r = regles_st[w]
+                lignes.append(f"- Sous-titres en attente : {r['avant']} avant la règle → {r['apres']} après ({r['inutiles']} inutiles : hors sujet ou score déjà lu ; "
+                              f"{r['rejets']} rejetée(s) sur le titre)")
+            if relance:
+                lignes.append("- Type : relance automatique (ne compte pas pour le critère de gel n° 3)")
+            if git is not None and getattr(git, "conflit_resolu", False):
+                lignes.append("- Conflit git résolu automatiquement")
+            lignes += lignes_exports_deplaces(git)
+            lignes += relectures.lignes_rapport(posees[w])
+            lignes += resume_gb(d, w, jour)
+            rapport_pc.ecrire_bloc(d, w, f"pc-{passage}", instant, lignes)      # v26 : bloc daté, jamais effacé, propre au PC
+            ecrire_rapport(d, w, f"pc-{passage}", instant, None, resultats[w], alertes, lignes)
     rapport()
     if git:
         conflit_avant = git.conflit_resolu
@@ -1689,7 +1845,25 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             alertes.append(f"git : {e}")
             rapport()
             raise
-    return {"week": week, "traitees": traitees, "alertes": alertes, **etat}
+    return {"week": week, "traitees": cpt[week]["st"], "alertes": alertes, **etat}
+
+
+def semaine_ecoulee_ouverte(d, courante):
+    """v39 §1 : (semaine écoulée à traiter | None, alerte | None). La semaine précédente (N-1) est traitée par les passages daily tant qu'elle n'est
+    pas gelée et qu'il lui reste des vidéos `en_cours` ; AU PLUS UNE semaine écoulée ouverte : une semaine N-2 non gelée n'est plus traitée
+    et reçoit l'alerte « semaine non gelée »."""
+    prec = semaine_precedente(courante)
+    avant = semaine_precedente(prec)
+    alerte = None
+    m_avant = d.meta(avant)
+    if m_avant and not m_avant.get("frozen"):
+        alerte = f"semaine {avant} non gelée : plus traitée (au plus une semaine écoulée ouverte : {prec})"
+    m_prec = d.meta(prec)
+    if not m_prec or m_prec.get("frozen"):
+        return None, alerte
+    if not any(p.get("week") == prec and p.get("status") == "en_cours" for p in d.processed().values()):
+        return None, alerte
+    return prec, alerte
 
 
 def publier_essai(outils, source, destination, git=None, maximum=8, resume=None, nom_resume="_resume.json"):

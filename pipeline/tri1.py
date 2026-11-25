@@ -4,6 +4,7 @@ exact false, confidence a_verifier ; la vidéo continue aux tris suivants."""
 import re
 import unicodedata
 
+import poc_palier
 from hotm_ecran import lire_porte
 from scores import NON_GERE, degats_gb, extraire
 from bot_saison import NOTE_CHALLENGE, lire_saison_semaine, titre_challenge
@@ -63,6 +64,11 @@ def lectures_texte(meta, textes, config):
     lectures, non_geres = [], []
     for mode in meta.get("mode_guess", []):
         lec = None
+        if mode == "poc" and poc_palier.semaine_refonte(meta, config):      # v40 : POC refonte, règles de texte propres
+            lec = poc_palier.lecture_texte(meta, textes, config, lecture_vide, notes_alerte_reset(meta, config))
+            if lec:
+                lectures.append(lec)
+            continue
         for source, texte in textes:
             r = extraire(texte, mode, config, source)
             if r == NON_GERE:
