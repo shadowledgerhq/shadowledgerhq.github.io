@@ -234,6 +234,11 @@ def detecter(texte, config=None):
         return "gb_record"      # salon Guild Boss ; v14 : tolère un OCR abîmé (« Total Rage Gount », « Group? »)
     if "final score" in bas and ("hunter rank" in bas or "your points have been registered" in bas):
         return "gb_results"
+    cp0 = compact(t)
+    if "hunterrank" in cp0 and ("playersscore" in cp0 or "successorscore" in cp0):
+        # v37.2 : « Final Score » masqué par le bandeau « New Record Achieved! » (CnFBmHEzZww, nouveau boss Dargo, ligne
+        # Successor Score) : Results reconnu par ses autres libellés, valeurs lues par zones (jamais `sûr` sans le Final Score).
+        return "gb_results_partiel"
     if "your points have been registered" in bas or ("rage rewards" in bas and "tap the screen to continue" in bas):
         return "gb_results_partiel"   # v12 : écran Results en animation ; « Rage Rewards » seul = bouton du salon (v14)
     if langue_hud(t):
