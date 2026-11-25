@@ -1620,7 +1620,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     # semaine en cours, puis les autres (semaine écoulée d'abord) ; budget et limites partagés. Une semaine N-2 non gelée n'est plus traitée.
     ecoulee = None
     if passage == "daily" and not seulement:
-        ecoulee, alerte_n2 = semaine_ecoulee_ouverte(d, courante)
+        ecoulee, alerte_n2 = semaine_ecoulee_ouverte(d, courante, config)
         if alerte_n2:
             alertes.append(alerte_n2)
     semaines = ([ecoulee] if ecoulee else []) + [week]
@@ -1884,13 +1884,16 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     return {"week": week, "traitees": cpt[week]["st"], "alertes": alertes, **etat}
 
 
-def semaine_ecoulee_ouverte(d, courante):
+def semaine_ecoulee_ouverte(d, courante, config=None):
     """v39 §1 : (semaine écoulée à traiter | None, alerte | None). La semaine précédente (N-1) est traitée par les passages daily tant qu'elle n'est
     pas gelée et qu'il lui reste des vidéos `en_cours` ; AU PLUS UNE semaine écoulée ouverte : une semaine N-2 non gelée n'est plus traitée
     et reçoit l'alerte « semaine non gelée »."""
     prec = semaine_precedente(courante)
     avant = semaine_precedente(prec)
     alerte = None
+    # v41 : `pc.semaine_ecoulee` false (défaut, décision d'Alexis 25/11) = coupure nette au reset : les daily ne traitent plus la semaine passée
+    if config is not None and not config.get("pc", {}).get("semaine_ecoulee", True):
+        return None, None
     m_avant = d.meta(avant)
     if m_avant and not m_avant.get("frozen"):
         alerte = f"semaine {avant} non gelée : plus traitée (au plus une semaine écoulée ouverte : {prec})"

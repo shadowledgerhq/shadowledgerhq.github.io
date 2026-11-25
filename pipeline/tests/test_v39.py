@@ -10,6 +10,7 @@ import youtube
 
 RACINE = Path(__file__).resolve().parents[2]
 CONFIG = json.loads((RACINE / "pipeline/config/etape1.json").read_text(encoding="utf-8"))
+CONFIG["pc"]["semaine_ecoulee"] = True   # v39 testée avec l'interrupteur v41 activé ; la coupure nette est testée plus bas
 META = {"video_id": "orJG", "channel_id": "c1", "channel_title": "J", "published_at": "2026-11-20T10:00:00Z", "mode_guess": ["gb"]}
 
 
@@ -69,6 +70,12 @@ def test_faux_bot():
 
 # --- v39 §1 : semaine écoulée non gelée traitée par le daily ---------------------------------------------------
 
+def cfg_v39(T):
+    c = T.config_sans_images()
+    c["pc"]["semaine_ecoulee"] = True      # v41 : interrupteur activé pour tester la v39
+    return c
+
+
 def monde_deux_semaines(tmp, gelee=False):
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import test_pc as T
@@ -101,7 +108,7 @@ def test_daily_traite_la_semaine_ecoulee_dans_l_ordre():
     with tempfile.TemporaryDirectory() as tmp:
         d, T, instant = monde_deux_semaines(tmp)
         o = T.FauxOutils({})
-        r = pc.lancer("daily", instant, d, T.config_sans_images(), o)
+        r = pc.lancer("daily", instant, d, cfg_v39(T), o)
         assert o.appels == ["pa", "ca", "pz", "cz"]              # candidates écoulée, candidates courante, puis les autres (écoulée d'abord)
         assert r["week"] == "2026-11-19"
         assert any("semaine 2026-11-05 non gelée" in a for a in r["alertes"])      # N-2 : plus traitée, alerte
@@ -115,7 +122,7 @@ def test_daily_budget_et_limite_partages():
     with tempfile.TemporaryDirectory() as tmp:
         d, T, instant = monde_deux_semaines(tmp)
         o = T.FauxOutils({})
-        pc.lancer("daily", instant, d, T.config_sans_images(), o, maximum=3)
+        pc.lancer("daily", instant, d, cfg_v39(T), o, maximum=3)
         assert o.appels == ["pa", "ca", "pz"]                    # limite 3 partagée entre les deux semaines
 
 
@@ -124,7 +131,7 @@ def test_semaine_ecoulee_gelee_non_traitee():
     with tempfile.TemporaryDirectory() as tmp:
         d, T, instant = monde_deux_semaines(tmp, gelee=True)
         o = T.FauxOutils({})
-        pc.lancer("daily", instant, d, T.config_sans_images(), o)
+        pc.lancer("daily", instant, d, cfg_v39(T), o)
         assert o.appels == ["ca", "cz"]
 
 
@@ -134,7 +141,7 @@ def test_weekly_inchange():
         d, T, _ = monde_deux_semaines(tmp)
         from datetime import datetime, timezone
         o = T.FauxOutils({})
-        r = pc.lancer("weekly", datetime(2026, 11, 26, 0, 30, tzinfo=timezone.utc), d, T.config_sans_images(), o)
+        r = pc.lancer("weekly", datetime(2026, 11, 26, 0, 30, tzinfo=timezone.utc), d, cfg_v39(T), o)
         assert r["week"] == "2026-11-19" and set(o.appels) == {"ca", "cz"}
 
 
@@ -174,3 +181,16 @@ def test_relecture_dernier_jamais_candidate():
         p = {"a": {"week": "2026-11-19"}, "b": {"week": "2026-11-19", "relecture_dernier": True}}
         ordre, cand = ordre_pc.ordonner(d, "2026-11-19", ["b", "a"], p, 30)
         assert ordre == ["a", "b"] and cand == {"a"}
+
+
+def test_v41_coupure_nette_par_defaut():
+    """v41 : `pc.semaine_ecoulee` false -> aucune semaine écoulée traitée par les daily (même ouverte avec des vidéos en_cours)."""
+    cfg = json.loads(json.dumps(CONFIG))
+    cfg["pc"]["semaine_ecoulee"] = False
+    assert json.loads((RACINE / "pipeline/config/etape1.json").read_text(encoding="utf-8"))["pc"]["semaine_ecoulee"] is False
+    class D:
+        def meta(self, w): return {"frozen": False}
+        def processed(self): return {"x": {"week": pc.semaine_precedente("2026-11-26"), "status": "en_cours"}}
+    assert pc.semaine_ecoulee_ouverte(D(), "2026-11-26", cfg) == (None, None)
+    cfg["pc"]["semaine_ecoulee"] = True
+    assert pc.semaine_ecoulee_ouverte(D(), "2026-11-26", cfg)[0] == pc.semaine_precedente("2026-11-26")
