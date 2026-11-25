@@ -3614,7 +3614,7 @@
   {
     "id": "demon-kings-longsword",
     "name": {
-      "fr": "",
+      "fr": "Glaive du roi des démons",
       "en": "Demon King's Longsword",
       "ko": ""
     },
@@ -3693,7 +3693,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Demon_King%27s_Longsword",
     "wiki_revid": 10483,
     "wiki_timestamp": "2025-03-25T21:00:06Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-25",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
     "max_level": {
@@ -3722,7 +3722,8 @@
       }
     ],
     "balance_changes": [],
-    "icon_source": "Fandom wiki, fichier « Demon King's Longsword Icon.png » (CC BY-SA), récupéré le 2026-11-17"
+    "icon_source": "Fandom wiki, fichier « Demon King's Longsword Icon.png » (CC BY-SA), récupéré le 2026-11-17",
+    "name_fr_source": "capture du Codex en jeu (client FR), envoyée par Alexis le 2026-11-25"
   },
   {
     "id": "demon-knights-spear",
@@ -3847,7 +3848,7 @@
   {
     "id": "demonic-plum-flower-sword",
     "name": {
-      "fr": "Epée démoniaque : Fleur de prunier",
+      "fr": "Épée démoniaque : Fleur de prunier",
       "en": "Demonic Plum Flower Sword",
       "ko": ""
     },
@@ -3954,10 +3955,10 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Demonic_Plum_Flower_Sword",
     "wiki_revid": 12099,
     "wiki_timestamp": "2025-04-27T20:47:20Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-25",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "name_fr_source": "capture du Codex en jeu (client FR), envoyée par Alexis le 2026-11-25",
     "max_level": {
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
@@ -7356,7 +7357,7 @@
   {
     "id": "secured-marlin-surfboard",
     "name": {
-      "fr": "",
+      "fr": "Planche de surf de marlin gelé",
       "en": "Secured Marlin Surfboard",
       "ko": ""
     },
@@ -7463,7 +7464,7 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Secured_Marlin_Surfboard",
     "wiki_revid": 10477,
     "wiki_timestamp": "2025-03-25T20:57:11Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-25",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
     "max_level": {
@@ -7471,7 +7472,8 @@
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
       "patch": "2026-07-02"
     },
-    "icon_source": "Fandom wiki, fichier « Secured Marlin Surfboard Icon.png » (CC BY-SA), récupéré le 2026-11-17"
+    "icon_source": "Fandom wiki, fichier « Secured Marlin Surfboard Icon.png » (CC BY-SA), récupéré le 2026-11-17",
+    "name_fr_source": "capture du Codex en jeu (client FR), envoyée par Alexis le 2026-11-25"
   },
   {
     "id": "shadow-scythe",
@@ -8381,7 +8383,7 @@
   {
     "id": "transfiguration-key",
     "name": {
-      "fr": "Clé de Transfiguration",
+      "fr": "Clé de transfiguration",
       "en": "Transfiguration Key",
       "ko": ""
     },
@@ -8467,10 +8469,10 @@
     "source": "https://solo-leveling-arise.fandom.com/wiki/Transfiguration_Key",
     "wiki_revid": 15049,
     "wiki_timestamp": "2026-02-28T23:08:27Z",
-    "verified_at": "2026-11-13",
+    "verified_at": "2026-11-25",
     "game_version": null,
     "notes": "Texte EN du wiki Fandom (CC BY-SA), non vérifié en jeu ; possiblement antérieur aux rééquilibrages récents. Nom FR et icône à compléter.",
-    "name_fr_source": "https://api.slagate.com/api/references (route GET publique ; accord d'Alexis 13/11/2026 : routes GET publiques seulement)",
+    "name_fr_source": "capture du Codex en jeu (client FR), envoyée par Alexis le 2026-11-25",
     "max_level": {
       "value": 130,
       "source": "https://forum.netmarble.com/slv_en/view/14/107225",
