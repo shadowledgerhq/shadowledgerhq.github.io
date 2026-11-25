@@ -1,4 +1,4 @@
-# SUIVI — 9 Base de données — 2026-11-25 (session 14) (détail des sessions 1 à 11 : suivi/archives/base-de-donnees_2026-11-19_detail.md et _2026-11-16_detail.md)
+# SUIVI — 9 Base de données — 2026-11-25 (session 15) (détail des sessions 1 à 11 : suivi/archives/base-de-donnees_2026-11-19_detail.md et _2026-11-16_detail.md)
 ## Fait
 - Base : 18 fichiers dans `data/db/` (118 armes, 67 chasseurs), icônes de toutes les armes, cartes d'ombres (15), de chasseurs (58) et de puissances rémanentes (4) ; `check_db` OK, 0 erreur (19/11).
 - Veille Netmarble : `tools/veille_netmarble.py` + tâche planifiée (07:43 UTC). 19/11 : 5 notes du patch intégrées (`netmarble_notes.json`, 691 notes), `a_traiter.md` vidé.
@@ -11,8 +11,9 @@
 - 25/11 (session 14) : veille = rien de nouveau (`a_traiter.md` vide). Rejeu PC du 12/11 toujours pas fait (recadrages 96 px, rapport inchangé depuis le 22/11) : cartes de tenues alternatives impossibles. Wiki Fandom (API `api.php`, le HTML renvoie 403) : pages Kamish's Wrath/Roar toujours absentes (recherche, création récente : seulement Rosa Nera et Thalia le 20/11). Slagate `/api/references` : aucun nom d'objet de récompense ; boss de guilde = 5 entrées (Dargo, Fachtna, Manticore, Reines des Fourmis, Statue géante) sans valeurs, pas de fichier db. check_db OK, aucune donnée modifiée.
 - 25/11 (session 14) : captures du Codex d'Alexis (armes de SJW, client FR) : 56 des 57 armes SJW concordent (nom FR, rareté, élément) ; noms FR ajoutés à `demon-kings-longsword` (Glaive du roi des démons) et `secured-marlin-surfboard` (Planche de surf de marlin gelé), accents/casse corrigés (`demonic-plum-flower-sword`, `transfiguration-key`) ; `heros-sword` absente du Codex : Alexis ne possède pas cette arme (donnée wiki conservée, non vérifiée en jeu, rien à faire) ; Courroux/Rugissement de Kamish : noms et Fire confirmés, type d'arme non visible. Les captures ne montrent pas les étoiles.
 - 25/11 (session 14) : fiches `kamish-wrath` (Dagger) et `kamish-roar` (Polearm = « Arme d'hast », confirmé) complétées depuis le Codex d'armes en jeu : PV/Attaque Niv. 1 et Niv. 130 à 5★ (3370/5100/préc. 4000), 3 compétences chacune à Niv. 1 et 10, passif de Roar complet (base + ★1 à ★5, captures 25/11 soir ) ; passif de Wrath relevé en entier (base + ★1 à ★5 + paliers 5★+1 à +5 = +3 % Att/Déf/PV chacun, captures d'Alexis 25/11 soir). Niveaux de compétence intermédiaires non relevés.
+- 25/11 (session 15) : veille = rien de nouveau. Rejeu PC du 12/11 fait (commit 5da32ec) : 4 cartes de chasseurs non reconnues (`poc/_crops/*_hunters_hunter_N.jpg`, tenues alternatives, écran « 編成固定 », nom masqué). Identification impossible sans invention : 3 blondes (bikini léopard, visière jaune, manteau léopard) ne correspondent à aucun costume wiki testé (Cha Hae-In Scorching Sun/Roadster) ; la 4e carte = elfe aux cheveux turquoise, Feu (Esil Radiru ? à vérifier, son costume wiki est violet). Aucune carte ajoutée (bibliothèque = 1 fichier `<id>.png` par chasseur, un 2e costume écraserait l'identifiant). Wiki Kamish's Wrath/Roar : toujours absentes (API). check_db inchangé.
 ## En cours
-- Cartes de chasseurs de tenues alternatives : attendent le rejeu PC `pc.py builds --semaine 2026-11-12 --refaire` (recadrages encore en 96 px au 24/11 ; Code doit relancer après la mise à jour de yt-dlp).
+- Cartes de tenues alternatives : 4 cartes non identifiées (voir session 15) ; nécessite que Code accepte plusieurs cartes par chasseur (`<id>--tenueN.png`) ET une identification sûre (nom en jeu, source wiki/slagate).
 - Noms EN : Overshadow, Power Unlocked, Commander's Authority à vérifier en jeu.
 ## À faire
 - 19/11 : recherche de sources — wiki Fandom : page Thalia De Rossi inexistante (404), aucune fiche chiffrée en ligne ; seulement des vidéos (YouTube/Reddit, aperçus sans valeurs). À relancer à la prochaine veille.
@@ -21,6 +22,6 @@
 - 15 `a_verifier` anciens (12 `fiche_anterieure_au_patch`, 3 `palier_non_stocke`) + 8 du 19/11 (Charlotte, valeurs Lv.10 déjà dans `patch_adjustments`).
 - Vides sans source publique : amplification paliers 4-5, bonus d'enregistrement des runes, noms des matériaux de noyau, noms FR d'armes de chasseurs, JA/KO de gemmes.
 ## Besoin d'Alexis
-- Rien (le rejeu PC du 12/11 est à lancer par Code).
+- Rien.
 ## Demandes de modif du skill
 - rien
