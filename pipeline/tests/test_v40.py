@@ -215,3 +215,35 @@ def test_texte_seul_ne_classe_pas():
     r["confidence"], r["score_source"] = "a_verifier", "titre"
     l = C.ligne_poc_refonte([r], CONFIG, "2026-11-19")
     assert l["confidence"] == "a_verifier" and l["score"]["total"] == 4_000_000 and l["rank"] is None
+
+
+# --- bout en bout : vidéo synthétique (capture réelle de palier immobile) dans `pc.traiter_images` ----------------------
+
+class OutilsVideoFixe(pc.Outils):
+    """Vrai tesseract et vrai ffmpeg ; le « téléchargement » fabrique une vidéo de 20 s à partir d'une capture."""
+    def __init__(self, config_pc, capture):
+        super().__init__(config_pc)
+        self.capture = capture
+
+    def telecharger(self, video_id, dossier):
+        sortie = Path(dossier) / f"{video_id}.mp4"
+        subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-loop", "1", "-i", str(self.capture), "-t", "20", "-r", "10",
+                        "-vf", "scale=trunc(iw/2)*2:trunc(ih/2)*2,format=yuv420p", str(sortie)], check=True)
+        return sortie
+
+    def hauteurs(self, video_id):
+        return [720]
+
+
+@pytest.mark.skipif(not OUTILS_OK, reason="tesseract et ffmpeg requis")
+def test_bout_en_bout_video_de_palier():
+    meta = {**META, "video_id": "9BrduWR4aSY", "title": "TIER 17 POC 100% FIRE + WATER BUILD", "duration": "PT20S", "mode_guess": ["poc"]}
+    etat = {}
+    outils = OutilsVideoFixe(CONFIG["pc"], CAPT / "9BrduWR4aSY_354.jpg")
+    lectures, avert, reporte = pc.traiter_images("9BrduWR4aSY", meta, outils, CONFIG, [], etat, "2026-11-25")
+    paliers = [l for l in lectures if (l.get("detail") or {}).get("v40")]
+    assert not reporte and len(paliers) == 1, [l["notes"] for l in lectures]
+    l = paliers[0]
+    assert l["score"] == 17_000_000 and l["team"] == 1 and l["detail"]["tier"] == 17 and l["detail"]["total_contribution"] == 12_624_959_951_349
+    assert l["confidence"] == "sur" and l["exact"] and len(l["detail"]["par_t"]) >= 2          # vote sur ≥ 2 images
+    assert not l["detail"].get("sans_score")

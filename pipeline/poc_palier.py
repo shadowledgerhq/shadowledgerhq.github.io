@@ -232,7 +232,7 @@ def lire(outils, png, texte=None):
 
     # 1er étage, 2e étage (plus de prétraitements) : chiffres tels que lus ; 3e étage : sans 1 à 3 chiffres de tête (portrait, cadre),
     # jamais `sûr` (une somme fausse mais cohérente est possible : `via_expansion` fait échouer le contrôle c)
-    BAS = ("rank_score", "goal", "t1", "t2")        # bloc du bas : toujours tous les prétraitements (un chiffre mal lu reste cohérent : 48,79 / 48,75)
+    BAS = ("rank_score", "goal")        # Rank Score et objectif : toujours tous les prétraitements (t1, t2 : par étage) (un chiffre mal lu reste cohérent : 48,79 / 48,75)
     for k, etage in enumerate((VARIANTES, VARIANTES_PLUS)):
         for nom, (x, y, w, h, extra) in zones.items():
             if nom in BAS:

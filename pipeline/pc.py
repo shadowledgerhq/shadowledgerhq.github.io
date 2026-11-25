@@ -961,21 +961,41 @@ def lire_palier(outils, png, config, texte, st, journal=lambda m: None):
     return {"palier": e} if e else None
 
 
-def lire_palier_suite(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, journal, ocr_debug, source):
+def lire_palier_suite(vid, meta, outils, config, chemin, tmp, t0, duree_s, langs, journal, ocr_debug, source, deja=()):
     """v40 (anti-animation, vote ≥ 2 images) : images voisines d'un écran de palier déjà vu à `t0`, à 1 image/s, de `t0 - avant` à
-    `t0 + apres` (`poc_refonte.suite_avant_s` = 3, `suite_apres_s` = 8). Retourne (lectures de palier, nombre d'images lues)."""
+    `t0 + apres` (`poc_refonte.suite_avant_s` = 3, `suite_apres_s` = 8), des plus proches de `t0` aux plus lointaines. S'ARRÊTE dès que
+    `poc_refonte.images_min` (2) lectures `sûres` identiques (palier, équipe, Total Contribution, Rank Score) sont réunies, `deja` comprises
+    (une lecture par ancres coûte environ 15 s). Retourne (lectures de palier, nombre d'images lues)."""
     cfg, rc = config["pc"]["images"], config.get("poc_refonte") or {}
     debut = max(0, int(t0) - rc.get("suite_avant_s", 3))
     fenetre = int(min(duree_s - debut, int(t0) - debut + rc.get("suite_apres_s", 8)))
     if fenetre <= 0:
         return [], 0
     st, n, lectures = {"candidates": 0, "lentes": 0}, 0, []
-    for t, png in outils.images(chemin, [(debut, fenetre, 1)], tmp, prefixe=f"p{int(t0)}_"):
+    images_min = rc.get("images_min", 2)
+
+    def cle(l):
+        d = l.get("detail") or {}
+        return (l["video_id"], d.get("tier"), l.get("team"), d.get("total_contribution"), l["score"]) if d.get("v40_sur") else None
+
+    stables = {}
+    for l in deja:
+        if cle(l):
+            stables.setdefault(cle(l), set()).add(l.get("t"))
+    images = sorted(outils.images(chemin, [(debut, fenetre, 1)], tmp, prefixe=f"p{int(t0)}_"), key=lambda x: (abs(x[0] - t0), x[0]))
+    for k, (t, png) in enumerate(images):
+        if t == int(t0) or any(len(v) >= images_min for v in stables.values()):
+            Path(png).unlink(missing_ok=True)
+            continue
         n += 1
         texte = _ocr_image(outils, png, langs, cfg, st, complet=True)
         if ocr_ecrans.detecter(texte) == "poc_palier":
             _garder(ocr_debug, vid, "palier", t, texte, png)
-            lectures += ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, lire_palier(outils, png, config, texte, st, journal))
+            ls = ocr_ecrans.lectures_depuis_texte(texte, meta, config, source, t, lire_palier(outils, png, config, texte, st, journal))
+            lectures += ls
+            for l in ls:
+                if cle(l):
+                    stables.setdefault(cle(l), set()).add(t)
         Path(png).unlink(missing_ok=True)
     return lectures, n
 
@@ -1160,7 +1180,9 @@ def traiter_images(vid, meta, outils, config, lectures, pc, jour, journal=lambda
                     if any(abs(t_p - x) <= (config.get("poc_refonte") or {}).get("suite_apres_s", 8) for x in suivis_p) or horloge() > fin:
                         continue
                     suivis_p.append(t_p)
-                    suite, n_img = lire_palier_suite(vid, meta, outils, config, chemin, tmp, t_p, minutes * 60, langs, journal, ocr_debug, source)
+                    suite, n_img = lire_palier_suite(vid, meta, outils, config, chemin, tmp, t_p, minutes * 60, langs, journal, ocr_debug, source,
+                                                     deja=[x for x in nouvelles + lectures if (x.get("detail") or {}).get("v40") and x.get("t") is not None
+                                                           and abs(x["t"] - t_p) <= 1])
                     st["images"] += n_img
                     journal(f"  écran de palier à {t_p} s : {n_img} image(s) voisines, {len(suite)} lecture(s)")
                     lectures = fusionner_ecrans(lectures, vid, suite, config, duree_s=minutes * 60)
