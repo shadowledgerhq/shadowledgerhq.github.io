@@ -91,27 +91,42 @@ def dossier_cartes(icones_dir):
 DOSSIER_OMBRES = "shadows_cartes"      # v33 : cartes d'ombres (recadrages des zones `shadows`), fournies par la base de données (discussion 9)
 
 
+def identifiant(nom):
+    """v7 §2.1 : `<id>.png` et `<id>--tenue<N>.png` (tenues alternatives) désignent le même chasseur : identifiant = partie avant « -- »."""
+    return str(nom).split("--", 1)[0]
+
+
+def _liste(v):
+    return list(v) if isinstance(v, (list, tuple)) else [v]
+
+
 def charger_cartes(icones_dir, sous_dossier=None):
-    """Cartes `<id>.png` de `data/icons/<sous_dossier>` (défaut : `hunters_cartes`)."""
+    """Cartes de `data/icons/<sous_dossier>` (défaut : `hunters_cartes`), regroupées par identifiant : {id: [image, ...]}
+    (`<id>.png`, `<id>--tenue<N>.png`)."""
     from PIL import Image
     sortie = {}
     d = Path(icones_dir) / sous_dossier if sous_dossier else dossier_cartes(icones_dir)
     for f in sorted(d.glob("*.png")) if d.exists() else []:
         try:
             with Image.open(f) as im:
-                sortie[f.stem] = im.convert("RGB").copy()
+                sortie.setdefault(identifiant(f.stem), []).append(im.convert("RGB").copy())
         except OSError:
             continue
     return sortie
 
 
+def meilleures_correspondances(image, bibliotheque):
+    """{id: meilleur nombre de correspondances parmi les cartes de l'id} ; `bibliotheque` = {id: image | [images]}."""
+    return {k: max(correspondances(image, ref) for ref in _liste(refs)) for k, refs in bibliotheque.items()}
+
+
 def apparier_cartes(cartes_vues, bibliotheque, cfg, cle_min="min_corr_biblio", defaut_min=40):
-    """`cartes_vues` = {position: image} ; `bibliotheque` = {id: image}. Retourne ({position: id}, matrice {position: {id: n}}).
+    """`cartes_vues` = {position: image} ; `bibliotheque` = {id: image | [images]} (plusieurs tenues par chasseur : meilleur score retenu, jamais de comparaison entre deux cartes du même chasseur). Retourne ({position: id}, matrice {position: {id: n}}).
     Un couple (position, id) est retenu si n ≥ `min_corr_biblio` (défaut 40 : le bruit atteint ~30 avec une seule carte connue)
     et n ≥ `rapport` × le meilleur des autres : autre chasseur de la bibliothèque sur cette carte, même chasseur sur une autre carte."""
     c = cfg.get("portraits") or {}
     mini, rapport = c.get(cle_min, defaut_min), c.get("rapport", 2)
-    m = {p: {k: correspondances(im, ref) for k, ref in bibliotheque.items()} for p, im in cartes_vues.items()}
+    m = {p: meilleures_correspondances(im, bibliotheque) for p, im in cartes_vues.items()}
     sortie = {}
     for p, ligne in m.items():
         for k, n in ligne.items():

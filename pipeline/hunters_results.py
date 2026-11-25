@@ -72,7 +72,7 @@ def apprendre(racine, ids_build, crops, cartes, cfg):
         return 0
     n_appris = 0
     for cr in crops:
-        ligne = {k: portraits.correspondances(carte, cr) for k, carte in cartes.items()}
+        ligne = {k: max(portraits.correspondances(c, cr) for c in (carte if isinstance(carte, (list, tuple)) else [carte])) for k, carte in cartes.items()}
         best = max(ligne, key=ligne.get)
         if ligne[best] >= mini and ligne[best] >= rapport * max([v for k, v in ligne.items() if k != best] + [1]):
             d = dossier(racine)

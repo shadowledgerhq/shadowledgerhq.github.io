@@ -347,7 +347,7 @@ def identifier_portrait(image, cartes, cfg):
     if not cartes:
         return "inconnu"
     import portraits as P
-    notes = {k: P.correspondances(image, ref) for k, ref in cartes.items()}
+    notes = P.meilleures_correspondances(image, cartes)
     ordre = sorted(notes, key=lambda k: -notes[k])
     meilleur, second = notes[ordre[0]], (notes[ordre[1]] if len(ordre) > 1 else 0)
     mini = (cfg.get("portraits") or {}).get("min_corr", 25)
