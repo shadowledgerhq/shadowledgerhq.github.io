@@ -8550,7 +8550,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "9y17tXt160Q": {
     "week": "2026-11-26",
@@ -8564,7 +8567,10 @@
       "gb"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "80DbcO_om18": {
     "week": "2026-11-26",
@@ -8578,7 +8584,10 @@
       "gb"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "2GHkSqtGLvw": {
     "week": "2026-11-26",
@@ -8590,7 +8599,11 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "absent",
+      "date": "2026-11-26"
+    }
   },
   "chUQ0kGTvT8": {
     "week": "2026-11-26",
@@ -8602,7 +8615,11 @@
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "absent",
+      "date": "2026-11-26"
+    }
   },
   "KheaGCgUje4": {
     "week": "2026-11-26",
@@ -8688,7 +8705,10 @@
       "gb"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "yDUAJ8PQqw8": {
     "week": "2026-11-26",
@@ -8702,7 +8722,10 @@
       "gb"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "Pj6QzXQ81jQ": {
     "week": "2026-11-26",
@@ -8717,7 +8740,10 @@
       "poc"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "MyrHd2LS3J8": {
     "week": "2026-11-26",
@@ -8815,7 +8841,10 @@
       "gb"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "MowlbyeKBJo": {
     "week": "2026-11-26",
@@ -8829,6 +8858,9 @@
       "gb"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   }
 }
