@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Shadow Ledger — Classements</title>
+<style>
+:root{--bg:#0B0D17;--panel:#131628;--line:#252a42;--ink:#EDEBFF;--mute:#9a97b8;--acc:#7C5CFF;--acc2:#4FD1FF;--warn:#f2b84b;--gold:#e8c46a;--silver:#c3c9d6;--bronze:#d08b5b;
+--light:#f5e27a;--fire:#ff7a59;--water:#5aa8ff;--wind:#5ad69a;--dark:#b07cff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--line);background:#0e1020}
+.logo{display:flex;align-items:center;gap:10px}.logo svg{width:32px;height:32px;border-radius:6px}
+.top{display:flex;align-items:center;gap:16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:18px}
+.logo span{color:var(--acc)}
+.sp{flex:1}
+select,button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit;cursor:pointer}
+button[aria-pressed=true]{border-color:var(--acc);color:#fff;background:#1d1a3a}
+nav.modes{display:flex;gap:4px;flex-wrap:wrap;padding-bottom:10px}
+nav.modes button{border-radius:8px 8px 0 0;border-bottom:none}
+.gates{display:flex;gap:6px;margin:14px 0 0}
+.banner{margin:16px 0;padding:10px 14px;border:1px solid #4a3d1c;background:#1d1910;color:var(--warn);border-radius:8px;font-size:14px}
+h1{font-size:22px;margin:18px 0 2px}.sub{color:var(--mute);font-size:14px;margin:0 0 12px}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:600}
+tr:last-child td{border-bottom:none}
+td.rk{width:52px;font-weight:800;font-size:18px;text-align:center}
+tr.r1 td.rk{color:var(--gold)}tr.r2 td.rk{color:var(--silver)}tr.r3 td.rk{color:var(--bronze)}
+td.sc{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.small{font-size:13px;color:var(--mute)}
+.el{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;font-weight:600;margin:0 4px 2px 0;border:1px solid currentColor}
+.el.light{color:var(--light)}.el.fire{color:var(--fire)}.el.water{color:var(--water)}.el.wind{color:var(--wind)}.el.dark{color:var(--dark)}.el.none{color:var(--mute)}
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:4px;background:#2a2410;color:var(--warn);margin-left:6px;vertical-align:middle}
+details{margin:22px 0}summary{cursor:pointer;color:var(--mute)}
+details table{margin-top:10px;opacity:.85}
+.empty{padding:28px;text-align:center;color:var(--mute);background:var(--panel);border:1px dashed var(--line);border-radius:10px}
+footer{margin-top:40px;border-top:1px solid var(--line);padding:20px 0 40px;color:var(--mute);font-size:13px}
+footer .soc{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+@media (max-width:640px){.hide-m{display:none}th,td{padding:8px}td.sc{white-space:normal}td.sc .tag{display:table;margin:4px 0 0}td.rk{width:36px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top">
+    <div class="logo"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4FD1FF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient></defs><rect width="512" height="512" fill="#0B0D17"/><polygon points="256,56 429,156 429,356 256,456 83,356 83,156" fill="none" stroke="url(#g)" stroke-width="22" stroke-linejoin="round"/><path d="M330 178 H210 Q176 178 176 212 V226 Q176 256 210 256 H302 Q336 256 336 290 V302 Q336 336 302 336 H182" fill="none" stroke="#EDEBFF" stroke-width="40" stroke-linecap="square" stroke-linejoin="round"/><rect x="330" y="158" width="40" height="40" fill="#7C5CFF"/></svg><div>Shadow <span>Ledger</span></div></div>
+    <div class="sp"></div>
+    <label><span data-t="week"></span> <select id="week"></select></label>
+    <button id="lang" aria-label="Language">EN</button>
+  </div>
+  <nav class="modes" id="modes"></nav>
+</div></header>
+
+<main class="wrap">
+  <div class="banner" id="banner" hidden></div>
+  <h1 id="title"></h1>
+  <p class="sub" id="sub"></p>
+  <div id="gates" class="gates" hidden></div>
+  <div id="board"></div>
+  <details id="pending" hidden><summary id="pendingSum"></summary><div id="pendingBody"></div></details>
+</main>
+
+<footer><div class="wrap">
+  <div class="soc">
+    <a href="https://www.youtube.com/@shadowledger_hq">YouTube</a>
+    <a href="https://www.tiktok.com/@shadowledger_hq">TikTok</a>
+    <a href="https://x.com/shadowledger_hq">X</a>
+    <a href="https://www.instagram.com/shadowledger_hq">Instagram</a>
+    <span>Discord</span>
+  </div>
+  <p data-t="credit"></p>
+  <p data-t="removal"></p>
+  <p data-t="legal"></p>
+</div></footer>
+
+<script>
+const I18N={
+ fr:{week:"Semaine",modes:{poc:"Power Of Calamity",bot:"Battlefield Of Time",gb:"Guild Boss",hotm:"Hall Of The Monarchs"},
+  gate:"Porte",rank:"Rang",player:"Joueur",score:"Score",runs:"Runs",video:"Vidéo",published:"Publiée",
+  provisional:"Semaine en cours : classement provisoire, mis à jour chaque soir. Figé le jeudi à 01h00 (heure de Paris).",
+  frozen:"Classement définitif, figé le ",
+  unfrozen:"Semaine terminée : classement encore provisoire (pas encore figé).",
+  crit:{poc:"Rank Score le plus élevé",bot:"Chrono le plus court",gb:"Rage Count le plus élevé (2 groupes)",hotm:"Points les plus élevés, par porte"},
+  empty:"Aucune run vérifiée pour l'instant.",pending:n=>`${n} run(s) en cours de vérification (non classées)`,
+  oneRun:"une seule run",prov:"provisoire",rounded:"arrondi",watch:"voir",
+  credit:"Chaque score renvoie à la vidéo de son auteur. Shadow Ledger n'est pas affilié à Netmarble.",
+  removal:"Vous voulez retirer une de vos vidéos ? Contactez-nous sur Discord.",
+  legal:"Mentions légales · Solo Leveling: Arise © Netmarble. Visuels : fan kit officiel ou créations originales.",
+  week_of:w=>`Semaine du ${fmtDate(w)}`},
+ en:{week:"Week",modes:{poc:"Power Of Calamity",bot:"Battlefield Of Time",gb:"Guild Boss",hotm:"Hall Of The Monarchs"},
+  gate:"Gate",rank:"Rank",player:"Player",score:"Score",runs:"Runs",video:"Video",published:"Published",
+  provisional:"Current week: provisional ranking, updated every evening. Frozen on Thursday at 01:00 (Paris time).",
+  frozen:"Final ranking, frozen on ",
+  unfrozen:"Week over: ranking still provisional (not frozen yet).",
+  crit:{poc:"Highest Rank Score",bot:"Fastest time",gb:"Highest Rage Count (2 groups)",hotm:"Highest points, per gate"},
+  empty:"No verified run yet.",pending:n=>`${n} run(s) being verified (not ranked)`,
+  oneRun:"one run only",prov:"provisional",rounded:"rounded",watch:"watch",
+  credit:"Every score links to its author's video. Shadow Ledger is not affiliated with Netmarble.",
+  removal:"Want one of your videos removed? Contact us on Discord.",
+  legal:"Legal notice · Solo Leveling: Arise © Netmarble. Visuals: official fan kit or original artwork.",
+  week_of:w=>`Week of ${fmtDate(w)}`}
+};
+const MODES=["poc","bot","gb","hotm"], ELN={fr:{light:"Lumière",fire:"Feu",water:"Eau",wind:"Vent",dark:"Ténèbres"},en:{light:"Light",fire:"Fire",water:"Water",wind:"Wind",dark:"Dark"}};
+const BASE=window.SL_DATA_BASE||"../data/runs/";
+let LS=null;try{LS=localStorage.getItem("sl_lang")}catch(e){}
+const S={lang:(LS||(navigator.language||"fr").slice(0,2))==="en"?"en":"fr",week:null,mode:"bot",gate:null,index:null,cache:{}};
+try{const h=new URLSearchParams(location.hash.slice(1));if(h.get("lang"))S.lang=h.get("lang");if(h.get("mode"))S.mode=h.get("mode");if(h.get("week"))S.week=h.get("week");if(h.get("gate"))S.gate=+h.get("gate")}catch(e){}
+const t=k=>I18N[S.lang][k];
+function fmtDate(w){const d=new Date(w+"T12:00:00");return d.toLocaleDateString(S.lang==="fr"?"fr-FR":"en-GB",{day:"numeric",month:"long",year:"numeric"})}
+function fmtNum(n,dec){return n.toLocaleString(S.lang==="fr"?"fr-FR":"en-US",{maximumFractionDigits:dec,minimumFractionDigits:dec})}
+function fmtScore(v,unit){
+ if(v==null)return"—";
+ if(unit==="seconds"){const m=Math.floor(v/60),s=v-m*60;return (m?m+":":"")+(m&&s<10?"0":"")+fmtNum(s,3)+(m?"":" s")}
+ if(unit==="damage"){for(const[d,u]of[[1e12,"T"],[1e9,"B"],[1e6,"M"]])if(v>=d)return fmtNum(v/d,2)+" "+u;return fmtNum(v,0)}
+ return fmtNum(v,0);
+}
+async function getJSON(p){if(window.SL_DATA)return window.SL_DATA[p]??null;
+ if(p in S.cache)return S.cache[p];try{const r=await fetch(BASE+p,{cache:"no-store"});S.cache[p]=r.ok?await r.json():null}catch(e){S.cache[p]=null}return S.cache[p]}
+async function loadIndex(){
+ // index.json (généré par le pipeline) : {"weeks":[{"week","frozen","boards":["poc","bot","gb","hotm-gate-1",...]}]}
+ let idx=await getJSON("index.json");
+ if(!idx)idx={weeks:[]};
+ idx.weeks.sort((a,b)=>b.week.localeCompare(a.week));return idx;
+}
+function boardsOf(wk){return (S.index.weeks.find(w=>w.week===wk)||{boards:[]}).boards.filter(b=>b!=="hotm-gate-inconnue")}
+function render(){
+ document.documentElement.lang=S.lang;
+ document.querySelectorAll("[data-t]").forEach(e=>e.textContent=t(e.dataset.t));
+ document.getElementById("lang").textContent=S.lang==="fr"?"EN":"FR";
+ const ws=document.getElementById("week");ws.innerHTML=S.index.weeks.map(w=>`<option value="${w.week}" ${w.week===S.week?"selected":""}>${fmtDate(w.week)}</option>`).join("");
+ const bs=boardsOf(S.week);
+ document.getElementById("modes").innerHTML=MODES.map(m=>`<button data-m="${m}" aria-pressed="${m===S.mode}">${m.toUpperCase()}</button>`).join("");
+ const gates=bs.filter(b=>b.startsWith("hotm-gate-")).map(b=>+b.split("-")[2]).sort();
+ const gEl=document.getElementById("gates");
+ if(S.mode==="hotm"&&gates.length){if(!gates.includes(S.gate))S.gate=gates[0];gEl.hidden=false;gEl.innerHTML=gates.map(g=>`<button data-g="${g}" aria-pressed="${g===S.gate}">${t("gate")} ${g}</button>`).join("")}else gEl.hidden=true;
+ const wk=S.index.weeks.find(w=>w.week===S.week)||{};
+ const bn=document.getElementById("banner");bn.hidden=false;const latest=S.week===S.index.weeks[0].week;bn.textContent=wk.frozen?t("frozen")+fmtDate(wk.frozen_at?wk.frozen_at.slice(0,10):S.week):(latest?t("provisional"):t("unfrozen"));
+ bn.style.color=wk.frozen?"var(--acc2)":"";
+ document.getElementById("title").textContent=t("modes")[S.mode]+(S.mode==="hotm"&&gEl.hidden===false?` — ${t("gate")} ${S.gate}`:"");
+ document.getElementById("sub").textContent=t("week_of")(S.week)+" · "+t("crit")[S.mode];
+ const file=S.mode==="hotm"?(gEl.hidden?null:`hotm-gate-${S.gate}`):S.mode;
+ location.hash=`lang=${S.lang}&week=${S.week}&mode=${S.mode}`+(S.mode==="hotm"&&S.gate?`&gate=${S.gate}`:"");
+ drawBoard(file&&bs.includes(file)?file:null);
+}
+async function drawBoard(file){
+ const rows=file?(await getJSON(`${S.week}/${file}.json`))||[]:[];
+ const ranked=rows.filter(r=>r.confidence==="sur"&&r.rank!=null).sort((a,b)=>a.rank-b.rank);
+ const pend=rows.filter(r=>!(r.confidence==="sur"&&r.rank!=null));
+ const B=document.getElementById("board");
+ B.innerHTML=ranked.length?table(ranked,true):`<div class="empty">${t("empty")}</div>`;
+ const P=document.getElementById("pending");P.hidden=!pend.length;
+ document.getElementById("pendingSum").textContent=t("pending")(pend.length);
+ document.getElementById("pendingBody").innerHTML=pend.length?table(pend,false):"";
+}
+function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function table(rows,ranked){
+ const multi=S.mode==="gb";
+ return `<table><thead><tr>${ranked?`<th>${t("rank")}</th>`:""}<th>${t("player")}</th><th>${t("score")}</th>${multi?`<th class="hide-m">${t("runs")}</th>`:""}<th class="hide-m">${t("published")}</th><th>${t("video")}</th></tr></thead><tbody>`+
+ rows.map(r=>{
+  const u=r.score.unit, rd=r.runs_detail||[];
+  const one=(r.notes||"").includes("une seule run")&&ranked?`<span class="tag">${t("oneRun")}</span>`:"";
+  const prov=!r.exact?`<span class="tag">${t(ranked?"rounded":"prov")}</span>`:"";
+  const runs=multi?`<td class="hide-m">${rd.map((d,i)=>`<span class="el ${d.element||"none"}">${d.element?ELN[S.lang][d.element]:"?"}</span>${fmtScore(r.score.runs[i],u)}`).join("<br>")}</td>`:"";
+  const vids=(r.video_ids&&r.video_ids.length?r.video_ids:[r.video_id]).map((v,i)=>`<a href="https://www.youtube.com/watch?v=${esc(v)}" target="_blank" rel="noopener">${t("watch")}${r.video_ids&&r.video_ids.length>1?" "+(i+1):""}</a>`).join(" · ");
+  const ingame=r.player_ingame?`<div class="small">${esc(r.player_ingame)}</div>`:"";
+  return `<tr class="r${r.rank||0}">${ranked?`<td class="rk">${r.rank}</td>`:""}<td><a href="https://www.youtube.com/channel/${esc(r.channel_id)}" target="_blank" rel="noopener">${esc(r.player)}</a>${ingame}</td><td class="sc" title="${esc(r.score.total)}">${fmtScore(r.score.total,u)}${one}${prov}</td>${runs}<td class="hide-m small">${new Date(r.published_at).toLocaleDateString(S.lang==="fr"?"fr-FR":"en-GB",{day:"numeric",month:"short"})}</td><td>${vids}</td></tr>`}).join("")+"</tbody></table>";
+}
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+ if(b.id==="lang"){S.lang=S.lang==="fr"?"en":"fr";try{localStorage.setItem("sl_lang",S.lang)}catch(x){}}
+ else if(b.dataset.m)S.mode=b.dataset.m;else if(b.dataset.g)S.gate=+b.dataset.g;else return;render()});
+document.getElementById("week").addEventListener("change",e=>{S.week=e.target.value;render()});
+(async()=>{S.index=await loadIndex();if(!S.index.weeks.length){document.getElementById("board").innerHTML=`<div class="empty">—</div>`;return}
+ if(!S.index.weeks.some(w=>w.week===S.week))S.week=S.index.weeks[0].week;render()})();
+</script>
+</body>
+</html>
