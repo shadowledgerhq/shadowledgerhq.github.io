@@ -1,0 +1,403 @@
+{
+ "gabarit": 1,
+ "week": "2026-11-12",
+ "mode": "bot",
+ "boss": "Baruka",
+ "season_week": "S20-4",
+ "status": "essai-interne",
+ "badge": {
+  "fr": "ESSAI INTERNE · DONNÉES PROVISOIRES",
+  "en": "INTERNAL TEST · PROVISIONAL DATA"
+ },
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "scenes": [
+  {
+   "id": "intro",
+   "type": "intro",
+   "duration": 2,
+   "subtitle": {
+    "fr": "BOT · Semaine du 12/11",
+    "en": "BOT · Week of 11/12"
+   },
+   "narration": [],
+   "storyboard": "Intro 2 s (RESEAUX.md §4) : l'hexagone du logo se trace, le « S » apparaît, puis « SHADOW LEDGER » et le bandeau du mode.",
+   "sources": []
+  },
+  {
+   "id": "titre",
+   "type": "titre",
+   "duration": 4,
+   "title": {
+    "fr": "Battlefield of Time",
+    "en": "Battlefield of Time"
+   },
+   "subtitle": {
+    "fr": "Baruka · S20-4 · semaine du 12/11/2026",
+    "en": "Baruka · S20-4 · week of 2026-11-12"
+   },
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "BOT Baruka, S20-4 : comment passer sous les 20 secondes ?",
+     "en": "BOT Baruka, S20-4: how do you clear it in under 20 seconds?"
+    }
+   ],
+   "storyboard": "Titre : mode, boss et semaine, question du guide en sous-titre.",
+   "sources": []
+  },
+  {
+   "id": "classement",
+   "type": "classement",
+   "duration": 9,
+   "title": {
+    "fr": "Top 5 provisoire",
+    "en": "Provisional top 5"
+   },
+   "rows": [
+    {
+     "player": "홀맨",
+     "video_id": "YSJFLd_OXww",
+     "time": "19.517",
+     "note": {
+      "fr": "titre",
+      "en": "title"
+     }
+    },
+    {
+     "player": "aaaaaaaaaaaa",
+     "video_id": "a-923ClD9Rc",
+     "time": "19.558",
+     "note": {
+      "fr": "titre · guide 0,5×",
+      "en": "title · 0.5× guide"
+     }
+    },
+    {
+     "player": "크리스",
+     "video_id": "znpyCNWml3I",
+     "time": "19.5xx",
+     "note": {
+      "fr": "titre · millièmes non lus",
+      "en": "title · ms not read"
+     }
+    },
+    {
+     "player": "Rui ルイ",
+     "video_id": "Lt84IhMjBvM",
+     "time": "19.754",
+     "note": {
+      "fr": "titre",
+      "en": "title"
+     }
+    },
+    {
+     "player": "X SLA",
+     "video_id": "wJ9CwjKwyco",
+     "time": "19.926",
+     "note": {
+      "fr": "miniature · semaine ?",
+      "en": "thumbnail · week?"
+     }
+    }
+   ],
+   "footnote": {
+    "fr": "Seule run confirmée sur l'écran Results : LATOYA Gaming, 28,349 s.",
+    "en": "Only run confirmed on the Results screen: LATOYA Gaming, 28.349 s."
+   },
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Le top 5 provisoire tient en 0,4 seconde. Aucun de ces chronos n'est encore confirmé sur l'écran Results.",
+     "en": "The provisional top 5 fits within 0.4 seconds. None of these times is confirmed on the Results screen yet."
+    }
+   ],
+   "storyboard": "Tableau 5 lignes : rang, joueur, chrono, origine du chrono. Étiquette « à vérifier » sur chaque ligne. Note en bas : seule run sûre.",
+   "sources": [
+    "data/runs/2026-11-12/bot.json (passage du 26/11/2026)"
+   ]
+  },
+  {
+   "id": "phases",
+   "type": "phases",
+   "duration": 10,
+   "title": {
+    "fr": "Les 3 phases du combat",
+    "en": "The 3 phases of the fight"
+   },
+   "rows": [
+    {
+     "player": "홀맨",
+     "phases": [
+      9.373,
+      14.515,
+      19.517
+     ],
+     "note": {
+      "fr": "phases 1-2 : Results ; fin : titre",
+      "en": "phases 1-2: Results; end: title"
+     }
+    },
+    {
+     "player": "Rui ルイ",
+     "phases": [
+      9.341,
+      14.792,
+      19.754
+     ],
+     "note": {
+      "fr": "phases 1-2 : Results ; fin : titre",
+      "en": "phases 1-2: Results; end: title"
+     }
+    }
+   ],
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Le combat a 3 phases. Les deux runs lues finissent la phase 1 vers 9,35 s : l'écart se fait en phase 2 (0,3 s).",
+     "en": "The fight has 3 phases. Both runs read end phase 1 around 9.35 s: the gap is made in phase 2 (0.3 s)."
+    }
+   ],
+   "storyboard": "Barres horizontales empilées (phase 1, 2, 3) pour 2 runs, durées écrites dans chaque bloc. Écart de la phase 2 souligné.",
+   "sources": [
+    "data/rotations/2026-11-12/_rapport.md (phases du Results)",
+    "data/runs/2026-11-12/bot.json"
+   ]
+  },
+  {
+   "id": "timeline",
+   "type": "timeline",
+   "duration": 21,
+   "title": {
+    "fr": "Rotation : ce que montrent les 3 meilleures runs",
+    "en": "Rotation: what the top 3 runs show"
+   },
+   "axis_max": 20,
+   "phase_marks": [
+    9.373,
+    14.515
+   ],
+   "rows": [
+    {
+     "player": "홀맨",
+     "sub": "YSJFLd_OXww · 19.517",
+     "file": "data/rotations/2026-11-12/bot/YSJFLd_OXww.json"
+    },
+    {
+     "player": "aaaaaaaaaaaa",
+     "sub": {
+      "fr": "a-923ClD9Rc · 19.558 · guide 0,5×",
+      "en": "a-923ClD9Rc · 19.558 · 0.5× guide"
+     },
+     "file": "data/rotations/2026-11-12/bot/a-923ClD9Rc.json"
+    },
+    {
+     "player": "크리스",
+     "sub": "znpyCNWml3I · 19.5",
+     "file": "data/rotations/2026-11-12/bot/znpyCNWml3I.json"
+    }
+   ],
+   "legend": {
+    "fr": [
+     "SJW",
+     "Chasseur actif",
+     "Changement de chasseur",
+     "Marqueur creux = instant estimé (chrono non lu)"
+    ],
+    "en": [
+     "SJW",
+     "Active hunter",
+     "Hunter swap",
+     "Hollow marker = estimated time (timer not read)"
+    ]
+   },
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Chaque marqueur est une compétence relevée automatiquement, placée sur le chrono du jeu.",
+     "en": "Each marker is a skill detected automatically, placed on the in-game timer."
+    },
+    {
+     "t": 7.0,
+     "fr": "Chez 홀맨 et 크리스, les changements de chasseur tombent aux mêmes instants : 12,8 s, 15,4 s et 18,3 s, à 0,25 s près.",
+     "en": "For 홀맨 and 크리스, hunter swaps land at the same moments: 12.8 s, 15.4 s and 18.3 s, within 0.25 s."
+    },
+    {
+     "t": 15.0,
+     "fr": "Le guide ralenti suit un autre ordre : on ne s'en sert qu'en appui.",
+     "en": "The slowed-down guide follows another order: it is only used as support."
+    }
+   ],
+   "storyboard": "Timeline 0-20 s, une ligne par run. Losanges violets = SJW, ronds bleus = chasseur, triangles ambre = changement. Lignes pointillées aux fins de phase 1 et 2. Curseur qui avance au rythme du chrono, les marqueurs apparaissent à son passage.",
+   "sources": [
+    "data/rotations/2026-11-12/bot/*.json (SPEC_ROTATION v2.2, passage PC du 19/11/2026)"
+   ]
+  },
+  {
+   "id": "points",
+   "type": "points",
+   "duration": 13,
+   "title": {
+    "fr": "Ce qu'on retient",
+    "en": "Key takeaways"
+   },
+   "points": [
+    {
+     "fr": "Ouverture : une compétence de SJW dans les 2,5 premières secondes (3 runs sur 3).",
+     "en": "Opener: an SJW skill within the first 2.5 seconds (3 runs out of 3)."
+    },
+    {
+     "fr": "Changements de chasseur à 12,8 s, à 15,4 s (juste après la fin de la phase 2, 14,5 s) et à 18,3 s (홀맨 et 크리스).",
+     "en": "Hunter swaps at 12.8 s, at 15.4 s (right after phase 2 ends, 14.5 s) and at 18.3 s (홀맨 and 크리스)."
+    },
+    {
+     "fr": "Ultime du chasseur à 15,9 s, dès le début de la phase 3 (홀맨).",
+     "en": "Hunter ultimate at 15.9 s, as soon as phase 3 starts (홀맨)."
+    },
+    {
+     "fr": "Ultime de SJW une seule fois, vers 13,7 s (estimation : chrono non lu).",
+     "en": "SJW ultimate used once, around 13.7 s (estimate: timer not read)."
+    }
+   ],
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Quatre repères à retenir, tirés des runs réelles. Le dernier est une estimation.",
+     "en": "Four markers to remember, taken from real runs. The last one is an estimate."
+    }
+   ],
+   "storyboard": "4 cartes numérotées qui apparaissent une à une (2,5 s chacune). La carte estimée porte l'étiquette « estimation ».",
+   "estimates": [
+    "points[3]"
+   ],
+   "sources": [
+    "data/rotations/2026-11-12/bot/YSJFLd_OXww.json",
+    "data/rotations/2026-11-12/bot/znpyCNWml3I.json",
+    "data/rotations/2026-11-12/bot/a-923ClD9Rc.json"
+   ]
+  },
+  {
+   "id": "build",
+   "type": "build",
+   "duration": 9,
+   "title": {
+    "fr": "Le seul build lu cette semaine",
+    "en": "The only build read this week"
+   },
+   "subtitle": {
+    "fr": "LATOYA Gaming · 28,349 s (confirmé) · build partiel",
+    "en": "LATOYA Gaming · 28.349 s (confirmed) · partial build"
+   },
+   "columns": [
+    {
+     "head": {
+      "fr": "Sung Jin Woo",
+      "en": "Sung Jin Woo"
+     },
+     "items": [
+      {
+       "fr": "Set : Poison bleu du Concepteur (7 pièces lues sur 8)",
+       "en": "Set: The Architect's Blue Poison (7 of 8 pieces read)"
+      },
+      {
+       "fr": "QTE 1 : Foulée de l'ombre",
+       "en": "QTE 1: Shadow Step"
+      },
+      {
+       "fr": "Bénédictions : Posture de fer, Défense agressive, Acrobate, Ténacité",
+       "en": "Blessings: Iron Stance, Aggressive Defense, Acrobat, Tenacity"
+      },
+      {
+       "fr": "Armes, compétences, noyaux : non lus",
+       "en": "Weapons, skills, cores: not read"
+      }
+     ]
+    },
+    {
+     "head": {
+      "fr": "Chasseur 1 (non identifié)",
+      "en": "Hunter 1 (not identified)"
+     },
+     "items": [
+      {
+       "fr": "Set : Chair noble (6 pièces lues sur 8)",
+       "en": "Set: Noble Flesh (6 of 8 pieces read)"
+      },
+      {
+       "fr": "Arme, noyaux : non lus",
+       "en": "Weapon, cores: not read"
+      }
+     ]
+    }
+   ],
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Les builds du top 3 ne sont pas encore lus. Voici le seul build relevé, sur une run confirmée plus lente.",
+     "en": "The top 3 builds are not read yet. Here is the only build captured, from a slower confirmed run."
+    }
+   ],
+   "storyboard": "Deux colonnes (SJW, chasseur 1), une ligne par élément. Les éléments non lus en gris.",
+   "sources": [
+    "data/builds/2026-11-12/bot/bot-2026-11-12-Bi5TrN5d1_E-1.json",
+    "noms : data/db/artifact_sets.json, sjw_skills.json, blessings.json"
+   ]
+  },
+  {
+   "id": "limites",
+   "type": "points",
+   "duration": 8,
+   "title": {
+    "fr": "Ce que cet essai ne dit pas encore",
+    "en": "What this test does not tell yet"
+   },
+   "points": [
+    {
+     "fr": "Chasseurs non identifiés : la meilleure équipe théorique n'est pas établie.",
+     "en": "Hunters not identified: the best theoretical team is not established."
+    },
+    {
+     "fr": "Aucun chrono du top 5 confirmé sur l'écran Results.",
+     "en": "No top 5 time confirmed on the Results screen."
+    },
+    {
+     "fr": "Gain de temps possible : non calculé.",
+     "en": "Possible time gain: not calculated."
+    }
+   ],
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Prochaine version : chasseurs identifiés, équipe théorique et gain estimé.",
+     "en": "Next version: identified hunters, theoretical team and estimated gain."
+    }
+   ],
+   "storyboard": "3 lignes avec icône « en attente ».",
+   "sources": []
+  },
+  {
+   "id": "outro",
+   "type": "outro",
+   "duration": 5,
+   "title": {
+    "fr": "Shadow Ledger",
+    "en": "Shadow Ledger"
+   },
+   "subtitle": {
+    "fr": "@shadowledger_hq · shadowledgerhq.github.io · Classement complet sur le site",
+    "en": "@shadowledger_hq · shadowledgerhq.github.io · Full ranking on the website"
+   },
+   "credits": {
+    "fr": "Runs : 홀맨, aaaaaaaaaaaa, 크리스, Rui ルイ, X SLA, LATOYA Gaming (YouTube). Merci à eux.",
+    "en": "Runs: 홀맨, aaaaaaaaaaaa, 크리스, Rui ルイ, X SLA, LATOYA Gaming (YouTube). Thanks to them."
+   },
+   "narration": [],
+   "storyboard": "Outro 5 s (RESEAUX.md §4) : logo à gauche, 2 emplacements vides à droite pour l'écran de fin YouTube, comptes et site en bas, crédits des joueurs.",
+   "sources": []
+  }
+ ],
+ "logo": "docs/reseaux/logo-b-sceau.svg"
+}
