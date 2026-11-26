@@ -6,9 +6,12 @@ $bat = Join-Path $PSScriptRoot "lancer_pc.bat"
 $reglages = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries `
   -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Hours 6)
 
+# 21:15, puis 23:15 et 01:15 (répétition toutes les 2 h pendant 5 h, v42)
+$declencheurQuotidien = New-ScheduledTaskTrigger -Daily -At 21:15
+$declencheurQuotidien.Repetition = (New-ScheduledTaskTrigger -Once -At 21:15 -RepetitionInterval (New-TimeSpan -Hours 2) -RepetitionDuration (New-TimeSpan -Hours 5)).Repetition
 Register-ScheduledTask -TaskName "ShadowLedger PC quotidien" -Force -Settings $reglages `
   -Action (New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$bat`" daily") `
-  -Trigger (New-ScheduledTaskTrigger -Daily -At 21:15) | Out-Null
+  -Trigger $declencheurQuotidien | Out-Null
 
 Register-ScheduledTask -TaskName "ShadowLedger PC hebdomadaire" -Force -Settings $reglages `
   -Action (New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$bat`" weekly") `

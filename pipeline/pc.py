@@ -1659,7 +1659,9 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     if passage == "weekly":
         ouvrir_semaine(d, courante)
     lancement = lancement_du_passage(relance, planifie, seulement)
-    if passage == "daily" and lancement != "manuel" and meta.get("passages", {}).get("daily") != jour:
+    # v42.1 : la répétition de 01:15 (après minuit) n'attend pas de passage GitHub « du jour » : celui de la veille au soir est déjà fait.
+    if (passage == "daily" and lancement != "manuel" and instant.astimezone(PARIS).hour >= 6
+            and meta.get("passages", {}).get("daily") != jour):
         return passage_reporte(d, week, passage, instant, jour, meta, lancement, git, planifier, fichier_report)      # v42 : le passage GitHub du jour n'est pas fait
     pc_cfg = config["pc"]
     debut_passage = horloge()

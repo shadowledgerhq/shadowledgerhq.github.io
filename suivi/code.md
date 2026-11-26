@@ -3,6 +3,7 @@
 - Détail archivé : `suivi/archives/code_2026-11-15_a_20.md` (sessions 4-19 du 15–20/11) et `suivi/archives/code_2026-11-22_a_26.md` (sessions 12-16 du 22–26/11 : v37 à v42, rotation, anti-bot, yt-dlp, POC refonte, tenues multiples).
 - (26/11 nuit, session 17) **Specs réécrites en « état actuel »** (point 2 de la discussion 6) : `docs/SPEC_ETAPE1.md` 120 → 64 Ko, **v42** (règles en vigueur, §6 : PC 21:15, coupure nette v41, ligne « Lancement », garde-fou « passage GitHub du jour », semaine vide, critère de gel n° 3 corrigé ; §8 sans liste ; **§9 = POC refonte**, l'ancien §9.1 v39 réparti en §1.4/§3.1/§4.1/§6) ; `docs/SPEC_ETAPE2.md` v7, 44 → 42 Ko (en-tête d'historique remplacé, §5 allégé). Historiques intacts dans `docs/archives/SPEC_ETAPE*_historique.md`. BOITE : messages dans §1 et §2, message « Réponse à vos points 1 à 8 » (§6) en attente de leur lecture. Aucun code modifié.
 - Écart relevé : SPEC_ETAPE2 dit `spec: 5` dans le JSON des builds, `builds.py:376` écrit `spec: 3` (question posée à la discussion 2, BOITE §2).
+- (26/11 nuit, session 17) **Répétition de la tâche PC rétablie** (Alexis : « comme avant ») : 21:15, 23:15, 01:15 (toutes les 2 h pendant 5 h). Mon `6_horaire_21h15.bat` avait écrasé la répétition (déclencheur quotidien simple). `outils-pc\7_repetition_21h15.bat` (à lancer une fois), `installer_taches.ps1` et `installer.bat` mis à jour, PC_ALEXIS.md. **v42.1** : le garde-fou « passage GitHub du jour » ne s'applique plus avant 06:00 Paris (sinon la répétition de 01:15 aurait été reportée à tort) ; test `test_repetition_apres_minuit_jamais_reportee`. Jeudi 01:15 : le daily répété (semaine courante vide) coexiste avec le weekly (verrou).
 ## En cours
 - Premier traitement réel de la v42 (daily PC 21:15 du 27/11 ; `outils-pc\6_horaire_21h15.bat` à lancer par Alexis après `git pull origin main`) : écrire le bilan v39/v40 dans BOITE §1 (lignes POC 2026-11-19, contrôles a/b/c) et vérifier les 28 rejets « mecharashi » de 2026-11-12 (`pc.semaine_ecoulee` false : ils ne seront traités que par un weekly ou si `true`).
 - À confirmer au passage réel (voir archive) : durée < 120 min, gsMwZUzrekM/TrXpeT16Fwc lus, yt-dlp 2026.11.23, relances de nuit (piste : ne pas programmer une relance de nuit si le PC est souvent éteint).
@@ -11,7 +12,7 @@
 - Relire `3y8yRhcSq4Y`, `9BrduWR4aSY`, `PJqW-zrX8qM`, `cNIuOYknYg8`, `wWySgU0_sIQ`, `THxs2Y7QFI0`, `TjnPwCk_VSc`, `Lo3sHrW18Vg` (relectures posées, jamais faites) ; 6 vidéos GB de test (critère de gel n° 1) ; zones GB 1080p (critère n° 2).
 - Subjugation POC (`v0tuXJNxudk` avec `--garder-ocr`), armes (icônes : discussion 9), compétences POC, RESULT BOT japonais en 720p, vidéos verticales 608x1080.
 ## Besoin d'Alexis
-- Lancer `outils-pc\6_horaire_21h15.bat` (après `git pull origin main`).
+- Fait : `6_horaire_21h15.bat`. Reste : `outils-pc\7_repetition_21h15.bat` (après `git pull origin main`).
 - « gèle » ou non pour la semaine 2026-11-19 ; « weekly aussi » ou « weekly inchangé » (le weekly doit-il aussi cesser de traiter N-1 ?) ; accord pour les vidéos verticales 608x1080.
 - `claude/BOITE.md` (côté Projet) : à écrire par lui ou la discussion 6 (hors dépôt).
 ## Demandes de modif du skill

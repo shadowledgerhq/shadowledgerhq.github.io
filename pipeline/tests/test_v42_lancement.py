@@ -69,3 +69,13 @@ def test_passage_github_absent_reporte_puis_abandonne_apres_2_relances():
         assert all(p["status"] == "en_cours" for p in d.processed().values())       # rien n'a été traité
         # un passage manuel n'est pas bloqué
         assert not lancer(d, tmp, INSTANT + timedelta(hours=3)).get("reporte")
+
+
+def test_repetition_apres_minuit_jamais_reportee():
+    """v42.1 : le passage de 01:15 (répétition de la tâche de 21:15) ne dépend pas du passage GitHub « du jour »."""
+    with tempfile.TemporaryDirectory() as tmp:
+        d = monde(tmp)                                       # aucun passage GitHub du jour
+        nuit = INSTANT.replace(hour=0, minute=15) + timedelta(days=1)      # 01:15 Paris le lendemain (INSTANT est en UTC)
+        r = pc.lancer("daily", nuit, d, config_sans_images(), FauxOutils({v: VTT for v in "abcd"}), planifie=True,
+                      fichier_report=Path(tmp) / "report.json", planifier=lambda quand, bat: None)
+        assert not r.get("reporte")

@@ -14,7 +14,7 @@ Le script `pipeline/pc.py` tourne sur le PC d'Alexis : sous-titres (yt-dlp), Whi
 **Raccourci (étapes 5 et 6) : double-cliquer sur `pipeline\pc\installer.bat`** (remise à zéro de `data`, `git pull`, création des tâches, passage de test, message « tâches créées, prochain passage : … »). Non testé sous Windows.
 5. Avant de créer les tâches : `git checkout -- data` (jette les résultats des essais `--no-git`, sinon le premier `git pull` automatique échoue), puis `git pull origin main`.
 6. Créer les tâches : PowerShell, dans le dossier du dépôt : `powershell -ExecutionPolicy Bypass -File pipeline\pc\installer_taches.ps1` (la commande affiche l'heure du prochain passage de chaque tâche).
-   - quotidien 21:15 (après le passage GitHub de 20h ; le PC reporte et relance 2 fois à 30 min si GitHub n'a pas fini), hebdomadaire jeudi 01:15, « exécuter dès que possible si l'heure est manquée » ;
+   - quotidien 21:15, répété à 23:15 et 01:15 (`outils-pc\7_repetition_21h15.bat` si la répétition manque ; après le passage GitHub de 20h ; le PC reporte et relance 2 fois à 30 min si GitHub n'a pas fini), hebdomadaire jeudi 01:15, « exécuter dès que possible si l'heure est manquée » ;
    - journal : `logs\pc.log` (non versionné).
 
 ## Après la création des tâches
