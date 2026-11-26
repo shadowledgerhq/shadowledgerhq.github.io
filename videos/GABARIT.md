@@ -6,8 +6,8 @@ Demandeur : discussion 3 (Theorycraft & vidéos). Code : discussion 8. Vidéos 1
 | Fichier | Rôle |
 | --- | --- |
 | `video.json` | **Source unique** : scènes, durées, texte FR/EN, storyboard, sources, estimations. Écrit par la discussion 3. |
-| `script.md` | Généré depuis `video.json` (`videos/_prototype/script_md.py`, à reprendre par Code dans `pipeline/`) : minutage, storyboard, narration FR/EN côte à côte. Jamais modifié à la main. |
-| `<mode>-<semaine>-<fr|en>.mp4` | Rendu (`videos/_prototype/rendu_video.py`, idem). **Pas dans le dépôt** (poids) : gardé sur le PC ; envoi YouTube en « Privé » seulement avant le lancement. |
+| `script.md` | Généré depuis `video.json` (`pipeline/video/script_md.py`) : minutage, storyboard, narration FR/EN côte à côte. Jamais modifié à la main. |
+| `<mode>-<semaine>-<fr|en>.mp4` | Rendu (`pipeline/video/rendu.py`). **Pas dans le dépôt** (poids) : gardé sur le PC ; envoi YouTube en « Privé » seulement avant le lancement. |
 
 HOTM : `<mode>` = `hotm-gate-<n>`.
 

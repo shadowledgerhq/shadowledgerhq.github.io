@@ -1,7 +1,7 @@
 """Rendu d'une vidéo Shadow Ledger (schémas seulement, sans voix) à partir de video.json.
 
-Usage : python rendu_video.py <video.json> <racine_depot> <fr|en> <sortie.mp4> [--images dossier]
-Gabarit : docs/GABARIT_VIDEO.md. Aucune image de tiers : tout est dessiné.
+Usage : python3 pipeline/video/rendu.py <video.json> <racine_depot> <fr|en> <sortie.mp4> [--images dossier]
+Gabarit : videos/GABARIT.md. Aucune image de tiers : tout est dessiné.
 """
 import io, json, os, re, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFont

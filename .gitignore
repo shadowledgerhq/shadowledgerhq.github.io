@@ -4,3 +4,4 @@ __pycache__/
 logs/
 pipeline/config/pc_local.json
 exports/_local/
+exports/*/x/
