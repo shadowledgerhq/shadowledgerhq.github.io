@@ -1,6 +1,6 @@
 """Passages du PC d'Alexis — docs/SPEC_ETAPE1.md §6 et §2.1.
 
-  python3 pipeline/pc.py daily  [--no-git] [--whisper] [--max N] [--garder-ocr]   (planificateur, 21:15, après le passage GitHub de 20h)
+  python3 pipeline/pc.py daily  [--no-git] [--whisper] [--max N] [--garder-ocr]   (planificateur 19:30, 21:30, 23:30, après le passage GitHub de 19h)
   python3 pipeline/pc.py weekly [--no-git] [--whisper] [--max N]   (planificateur, jeudi 01:15)
 
 Chaque passage : git pull --rebase -> sous-titres (yt-dlp) [+ Whisper] sur les vidéos `en_cours`
