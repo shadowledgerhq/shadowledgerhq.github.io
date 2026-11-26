@@ -17,7 +17,7 @@ import elements
 import gb
 import regles_deduites
 from bot_saison import controler_semaine_bot
-from donnees import Donnees, ajouter_rejet, charger_config
+from donnees import Donnees, ajouter_rejet, charger_config, mettre_a_jour_index
 from semaine import bornes, id_semaine, iso_paris, maintenant, parse_iso, semaine_precedente
 
 UNITES = {"poc": "damage", "bot": "seconds", "gb": "rage_count", "hotm": "points"}
@@ -447,6 +447,7 @@ def calculer(week, d=None, config=None, horloge=None):
     instant = horloge or maintenant()
     meta = d.meta(week)
     if meta and meta.get("frozen"):
+        mettre_a_jour_index(d)
         return {"gelee": True, "week": week}
 
     rejetes = d.tous_rejetes()
@@ -563,6 +564,7 @@ def calculer(week, d=None, config=None, horloge=None):
                     for cle in sorted(non_controle)]
     alertes_boss += [f"{r['_cle']} : {r['video_id']} boss différent ({r['stage']})"
                      for r in runs if any(n.startswith("boss différent") for n in r["notes"])]
+    mettre_a_jour_index(d)
     return {"gelee": False, "week": week, "fichiers": {c: len(l) for c, l in fichiers.items()},
             "a_verifier": a_verifier, "rejets": nouveaux_rejets, "boss": boss,
             "alertes_boss": alertes_boss, "alertes_semaine_bot": alertes_semaine_bot,
