@@ -30,12 +30,12 @@ Photos de profil (piste B) prêtes dans `profil/` : `profil-youtube-800.png`, `p
 **YouTube** (≤ 1 000 car.)
 > FR — Chaque semaine, Shadow Ledger recense les meilleures runs YouTube de Solo Leveling: Arise sur 4 modes (Power Of Calamity, Battlefield Of Time, Guild Boss, Hall Of The Monarchs), analyse les builds du top 10 et publie un guide théorique par mode. Chaque vidéo existe en français et en anglais (piste audio au choix).
 > Classements complets et builds : shadowledgerhq.github.io
-> Les runs citées sont créditées et liées à leur auteur ; demande de retrait possible depuis le site.
+> Les runs citées sont créditées et liées à leur auteur ; demande de retrait : shadowledgerhq.github.io/site/retrait.html
 > Projet de fan, non affilié à Netmarble. Voix de synthèse.
 >
 > EN — Every week, Shadow Ledger tracks the best Solo Leveling: Arise runs on YouTube across 4 modes (Power Of Calamity, Battlefield Of Time, Guild Boss, Hall Of The Monarchs), breaks down the top 10 builds and publishes a theorycraft guide per mode. Every video is available in English and French (audio track selector).
 > Full rankings and builds: shadowledgerhq.github.io
-> Featured runs are credited and linked to their creators; removal requests via the website.
+> Featured runs are credited and linked to their creators; removal requests: shadowledgerhq.github.io/site/retrait.html
 > Fan project, not affiliated with Netmarble. Synthetic voice.
 
 **X** (≤ 160) : `Classements hebdo Solo Leveling: Arise (POC·BOT·GB·HOTM), builds du top 10 et guides. Weekly rankings, top 10 builds & guides. FR/EN · fan project` (146)
@@ -112,6 +112,6 @@ Mercredi 22h30 : après le passage PC de 21h15 et son contrôle, 2 h 30 avant le
 1. Créer le lien d'invitation Discord permanent (section 3) et le mettre dans le site.
 2. Photo de profil (piste retenue) sur les 5 comptes.
 3. Descriptions (section 3) et lien du site.
-4. Discord : salons `annonces`, `classement-de-la-semaine`, `builds`, `discussion-fr`, `discussion-en`, `retrait` (demandes de retrait) ; description du serveur.
+4. Discord : salons `annonces`, `classement-de-la-semaine`, `builds`, `discussion-fr`, `discussion-en`, `retrait` (demandes de retrait : preuve = mot « ShadowLedger » dans la description de la chaîne, retrait sous 7 jours, règles de `site/retrait.html`) ; description du serveur.
 5. YouTube : bannière, cocher « contenu modifié ou synthétique » sur chaque vidéo, piste audio FR + EN.
 6. Premier post X le mercredi suivant le lancement.
