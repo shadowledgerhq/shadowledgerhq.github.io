@@ -195,7 +195,7 @@ Les discussions 8 et 9 se font dans Claude Code (claude.ai/code), **ouvertes dir
 Toutes les discussions (1 à 9) écrivent elles-mêmes dans le dépôt, **chacune dans sa zone** :
 - **Accès** : une discussion du Projet (1 à 7) demande l'accès en écriture au dépôt (`add_repo`, accès `push`) la première fois qu'elle doit écrire ; Alexis accepte une fois par session. Discussions 8 et 9 : ouvertes sur le dépôt.
 - **Méthode** : clone superficiel, `git pull origin main`, branche `claude/<discussion>-<sujet>`, commit court en français, push. Le workflow `auto-merge-claude.yml` fusionne dans `main`. Pas de pull request. Rien laissé non poussé.
-- **Hors de sa zone** : ne rien modifier ; écrire un message au propriétaire de la zone (`claude/BOITE.md`, ou message prêt à coller pour 8 et 9).
+- **Hors de sa zone** : ne rien modifier ; écrire un message au propriétaire de la zone (`claude/BOITE.md` pour 1 à 7, `docs/BOITE.md` §8 ou §9 pour 8 et 9).
 - Les documents de travail du Projet (`claude/site/`, `claude/SPEC_SITE.md`, `claude/reseaux/`…) sont déplacés dans le dépôt par leur discussion, puis retirés du Projet. Le Projet ne garde que `CONTEXTE.md`, `BOITE.md` et `PROMPTS_DISCUSSIONS.md`.
 
 | Discussion | Zone d'écriture |
@@ -262,7 +262,7 @@ En continu :
 - Connexions aux comptes (réseaux, GitHub) et secrets GitHub.
 - Actions sur son PC (installer, lancer des scripts, horaires du Planificateur de tâches).
 - Ouvrir les discussions 8 et 9 sur le dépôt ; accepter l'accès en écriture au dépôt (`add_repo`, push) dans les discussions 1 à 7, une fois par session.
-- Modifier les instructions du Projet ; enregistrer les propositions de skill ; transmettre les messages vers les discussions 8 et 9 et vers une discussion neuve.
+- Modifier les instructions du Projet ; enregistrer les propositions de skill ; dire « lis ta boîte » aux discussions 8 et 9 quand un message les attend ; coller le message de démarrage d'une discussion neuve.
 - Refuser un choix par défaut proposé par une discussion, s'il n'est pas d'accord.
 
 Repris par les discussions (plus demandé à Alexis, 15/11/2026) :

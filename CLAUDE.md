@@ -28,7 +28,7 @@ Les discussions **8 — Code** et **9 — Base de données** s'ouvrent directeme
 6. Source principale des données et builds : slagate.com (autorisation de Sohoven obtenue). Autres sites seulement si l'info y manque ou est douteuse.
 7. Si une demande contredit `docs/CONTEXTE.md`, signale-le et demande avant d'agir.
 8. Une règle du skill à changer → section « Demandes de modif du skill » du SUIVI, sans modifier le skill toi-même.
-9. Si une demande relève d'une autre discussion (tableau « Aiguillage » de `docs/CONTEXTE.md`, section 7), ne la traite pas : indique la discussion à ouvrir et donne un seul message prêt à coller : d'abord la ligne de rôle de la discussion cible (`docs/PROMPTS_DISCUSSIONS.md`), puis la demande avec le contexte utile. Fais de même quand la session devient trop longue : conseille d'en ouvrir une neuve et fournis le prompt de démarrage + le dernier SUIVI.
+9. Si une demande relève d'une autre discussion (tableau « Aiguillage » de `docs/CONTEXTE.md`, section 7), ne la traite pas : écris le message dans la boîte du destinataire (`docs/BOITE.md`, section du destinataire) avec le contexte utile, et dis seulement à Alexis « Message de <discussion> pour <discussion> dans docs/BOITE.md ». Ne recopie jamais le message. Quand la session devient trop longue : conseille d'en ouvrir une neuve et fournis le prompt de démarrage + le dernier SUIVI.
 10. Au 15e message d'Alexis dans une session (puis à chaque nouveau message), signale-le en tête de réponse et recommande d'ouvrir une nouvelle session. Donne un seul message prêt à coller : la ligne de rôle de la discussion (`docs/PROMPTS_DISCUSSIONS.md`), le SUIVI à jour, et la prochaine action précise.
 
 ## Git
