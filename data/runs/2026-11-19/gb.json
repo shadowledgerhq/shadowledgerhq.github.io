@@ -67,7 +67,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "écart OCR zone/image : player_score; écart OCR zone/image : final_score; écart OCR zone/image : rage_count; lecture fusionnée (3 images); conflit de lecture : hunter_rank_2; conflit de lecture : hunter_rank_3; élément du titre contredit par l'écran; RC de la zone amputé du 1er chiffre : texte entier retenu; lecture fusionnée (5 images); élément associé titre + chasseurs; boss non contrôlé",
+    "notes": "écart OCR zone/image : player_score; écart OCR zone/image : final_score; écart OCR zone/image : rage_count; lecture fusionnée (3 images); conflit de lecture : hunter_rank_2; conflit de lecture : hunter_rank_3; élément du titre contredit par l'écran; RC de la zone amputé du 1er chiffre : texte entier retenu; lecture fusionnée (5 images); élément associé titre + chasseurs; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "COUTSymqqS0",
@@ -123,7 +123,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 205RC; description : 206 RC; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : 205RC; description : 206 RC; une seule run trouvée; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "8qH8akEGaOg",
@@ -164,7 +164,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 205 rc; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : 205 rc; une seule run trouvée; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "vt47IaCcMQg",
@@ -206,7 +206,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "écart OCR zone/image : player_score; contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée; boss non contrôlé",
+    "notes": "écart OCR zone/image : player_score; contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); contrôle sans Hunter Rank : Player's Score + Hunter Rank lus ≥ Final Score; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; groupe 1 d'après le Personal Record (RC égal); une seule run trouvée; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "NJpWOJSvMzo",
@@ -248,7 +248,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 197 RC; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : 197 RC; une seule run trouvée; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "ypLEjrcd6VI",
@@ -289,7 +289,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "écart OCR zone/image : rage_count; écart OCR zone/image : final_score; écart OCR zone/image : player_score; lecture fusionnée (3 images); conflit de lecture : hunter_rank_1; élément du titre contredit par l'écran; une seule run trouvée; boss non contrôlé",
+    "notes": "écart OCR zone/image : rage_count; écart OCR zone/image : final_score; écart OCR zone/image : player_score; lecture fusionnée (3 images); conflit de lecture : hunter_rank_1; élément du titre contredit par l'écran; une seule run trouvée; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "qWAOYGouWeA",
@@ -332,7 +332,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score 40893206680101 hors de [Points HUD 30916695595019 ; × 1.02]; contrôle sans Hunter Rank : Player's Score illisible; contrôle sans Hunter Rank : Play Time illisible; contrôle sans Hunter Rank : Final Score 2312 hors de [Points HUD 30916695595019 ; × 1.02]; élément associé titre + chasseurs; boss non contrôlé",
+    "notes": "contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score 40893206680101 hors de [Points HUD 30916695595019 ; × 1.02]; contrôle sans Hunter Rank : Player's Score illisible; contrôle sans Hunter Rank : Play Time illisible; contrôle sans Hunter Rank : Final Score 2312 hors de [Points HUD 30916695595019 ; × 1.02]; élément associé titre + chasseurs; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "FLCbZ5tzf_8",
@@ -388,7 +388,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); une seule run trouvée; boss non contrôlé",
+    "notes": "contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 2 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); une seule run trouvée; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "GSA-KI-ELE8",
@@ -429,7 +429,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 185 RC; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : 185 RC; une seule run trouvée; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "EAzHBsIhr4U",
@@ -470,7 +470,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "lecture fusionnée (7 images); conflit de lecture : hunter_rank_1; élément du titre contredit par l'écran; une seule run trouvée; boss non contrôlé",
+    "notes": "lecture fusionnée (7 images); conflit de lecture : hunter_rank_1; élément du titre contredit par l'écran; une seule run trouvée; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "09bNKPXg-pc",
@@ -512,7 +512,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "écart OCR zone/image : final_score; écart OCR zone/image : player_score; écart OCR zone/image : rage_count; lecture fusionnée (4 images); conflit de lecture : hunter_rank_3; une seule run trouvée; boss non contrôlé",
+    "notes": "écart OCR zone/image : final_score; écart OCR zone/image : player_score; écart OCR zone/image : rage_count; lecture fusionnée (4 images); conflit de lecture : hunter_rank_3; une seule run trouvée; boss non contrôlé; non vérifié",
     "runs_detail": [
       {
         "video_id": "CEk1TZAsUVY",
@@ -554,7 +554,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "lecture fusionnée (3 images); contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; une seule run trouvée; boss non contrôlé; écart improbable : à confirmer par l'écran",
+    "notes": "lecture fusionnée (3 images); contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; une seule run trouvée; boss non contrôlé; écart improbable : à confirmer par l'écran; non vérifié",
     "runs_detail": [
       {
         "video_id": "ofbxuWCxT7U",
@@ -596,7 +596,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 75 rage; autres candidats : 74 rage, 149 Rage; une seule run trouvée; boss non contrôlé; écart improbable : à confirmer par l'écran",
+    "notes": "score provisoire (description) : 75 rage; autres candidats : 74 rage, 149 Rage; une seule run trouvée; boss non contrôlé; écart improbable : à confirmer par l'écran; non vérifié",
     "runs_detail": [
       {
         "video_id": "DdbMYl54aZU",
@@ -641,7 +641,7 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "contrôle GB : écran GB illisible (Player's Score, Hunter Rank ou Final Score); lecture fusionnée (2 images); conflit de lecture : rage_count; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Dark / Fire); boss non contrôlé; écart improbable : à confirmer par l'écran",
+    "notes": "contrôle GB : écran GB illisible (Player's Score, Hunter Rank ou Final Score); lecture fusionnée (2 images); conflit de lecture : rage_count; conflit de lecture : hunter_rank_3; groupes distingués par le titre (Dark / Fire); boss non contrôlé; écart improbable : à confirmer par l'écran; non vérifié",
     "runs_detail": [
       {
         "video_id": "i6S0xrpiTvI",
