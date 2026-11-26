@@ -23,7 +23,7 @@ Trois pistes (dans `docs/reseaux/` : `logo-a-registre.svg`, `logo-b-sceau.svg`, 
 
 **Choix par défaut : B** pour la photo de profil (seule piste nette en rond de 48 px) ; A ou C réutilisables en bannière. Alexis peut refuser.
 
-Formats à exporter le jour J (depuis le SVG, `rsvg-convert -w <taille>`) : 800 × 800 (YouTube), 400 × 400 (X), 320 × 320 (Instagram), 200 × 200 (TikTok), 512 × 512 (Discord). Bannières (piste B) : `banniere-youtube.svg/.png` (2560 × 1440, texte dans la zone sûre 1546 × 423, vérifié) et `banniere-x.svg/.png` (1500 × 500, texte à droite car la photo de profil recouvre le bas à gauche). À refaire si Alexis choisit une autre piste.
+Photos de profil (piste B) prêtes dans `profil/` : `profil-youtube-800.png`, `profil-x-400.png`, `profil-instagram-320.png`, `profil-tiktok-200.png`, `profil-discord-512.png` (export `rsvg-convert -w <taille>` ; à refaire si une autre piste est choisie). Bannières (piste B) : `banniere-youtube.svg/.png` (2560 × 1440, texte dans la zone sûre 1546 × 423, vérifié) et `banniere-x.svg/.png` (1500 × 500, texte à droite car la photo de profil recouvre le bas à gauche). À refaire si Alexis choisit une autre piste.
 
 ## 3. Descriptions des comptes
 
