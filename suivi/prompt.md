@@ -1,18 +1,18 @@
-# SUIVI — Prompt — 2026-11-14
+# SUIVI — Prompt — 2026-11-27
 ## Fait
-- CONTEXTE.md + skill alignés sur SPEC_ETAPE1 v16 (une seule run classée ; GB : Personal Record prioritaire, No history, Total Score = Final Score, damage_source, notes normalisées)
-- PC installé ; essai pc.py dans docs/essais/
+- 19/11 au 26/11 : CONTEXTE, PROMPTS_DISCUSSIONS, boîtes allégées, règle « Rien de public », estimation d'avancement (~35 %)
+- 27/11 : « Droit de pousser » par zone (CONTEXTE §7, CLAUDE.md, skill du dépôt)
+- 27/11 : messages entre discussions annoncés en une ligne, jamais recopiés ; boîtes de 8 et 9 = docs/BOITE.md §8/§9
+- 27/11 : CONTEXTE identique dans le Projet (claude/CONTEXTE.md) et le dépôt (docs/CONTEXTE.md)
 ## En cours
-- rien
+- Attente de la réponse de Code (docs/BOITE.md §6)
 ## À faire
-- Garder CONTEXTE (projet/dépôt) et skill (dépôt/compte) identiques
-- TikTok : nom « Shadow Ledger » à partir du 19/11/2026
-- Partie 6 du PC (tâches automatiques) après les corrections de la discussion 8
+- Vérifier que le site ne répond plus après la coupure de Pages
+- Vérifier le déplacement des fichiers du Projet par Site et Réseaux
 ## Besoin d'Alexis
-- Enregistrer la proposition de skill v16 (carte)
-- Ouvrir une nouvelle discussion Prompt (15 messages dépassés)
-- Revérifier l'exemple « BOT sans SJW » du 05/11 ; boss chaque jeudi pour POC/GB/HOTM ?
+- Couper GitHub Pages (Settings → Pages)
+- Instructions du Projet : remplacer la règle 9, ajouter la règle 12
+- Enregistrer la 2e carte du skill ; supprimer claude/SPEC_ROTATION.md
+- Échantillon de voix ; nom TikTok
 ## Demandes de modif du skill
-- rien
-
-Prochaine action : attendre les demandes de modification remontées par les autres discussions.
+- Skill du compte : droit de pousser + annonce en une ligne (§2), avec la 2e carte
