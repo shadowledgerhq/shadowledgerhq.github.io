@@ -10,6 +10,7 @@
 - (27/11, session 18) Boîte §8 traitée : 4 .whl retirés ; Pages encore actif (200, robots.txt Disallow) : à revérifier après la coupure par Alexis.
 - (27/11, session 19) **`data/runs/index.json`** (demande de Site, BOITE §8) : `donnees.mettre_a_jour_index`, appelé par `classement.calculer` (y compris semaine gelée) ; test `test_index_runs.py` ; 487 tests OK. Daily PC du 27/11 pas encore passé : bilan v42 à faire après 23:30.
 - (27/11) Pages coupé par Alexis : site 404 (/, /robots.txt, /site/). Point BOITE §8 n° 4 clos.
+- (27/11) Accord d'Alexis pour les vidéos verticales 608x1080 : à régler sur une vraie vidéo (aucune dans les lectures), message dans BOITE §1.
 ## En cours
 - Premier traitement réel de la v42 (daily PC du 27/11 ; `outils-pc\7_horaire_19h30_21h30_23h30.bat` à lancer par Alexis après `git pull origin main`) : écrire le bilan v39/v40 dans BOITE §1 (lignes POC 2026-11-19, contrôles a/b/c) et vérifier les 28 rejets « mecharashi » de 2026-11-12 (`pc.semaine_ecoulee` false : ils ne seront traités que par un weekly ou si `true`).
 - À confirmer au passage réel (voir archive) : durée < 120 min, gsMwZUzrekM/TrXpeT16Fwc lus, yt-dlp 2026.11.23, relances de nuit (piste : ne pas programmer une relance de nuit si le PC est souvent éteint).
@@ -19,7 +20,7 @@
 - Subjugation POC (`v0tuXJNxudk` avec `--garder-ocr`), armes (icônes : discussion 9), compétences POC, RESULT BOT japonais en 720p, vidéos verticales 608x1080.
 ## Besoin d'Alexis
 - Fait : `6_horaire_21h15.bat`. Reste : `outils-pc\7_horaire_19h30_21h30_23h30.bat` (après `git pull origin main`).
-- « gèle » ou non pour la semaine 2026-11-19 ; « weekly aussi » ou « weekly inchangé » (le weekly doit-il aussi cesser de traiter N-1 ?) ; accord pour les vidéos verticales 608x1080.
+- « gèle » ou non pour la semaine 2026-11-19 ; « weekly aussi » ou « weekly inchangé » (le weekly doit-il aussi cesser de traiter N-1 ?) .
 - `claude/BOITE.md` (côté Projet) : à écrire par lui ou la discussion 6 (hors dépôt).
 ## Demandes de modif du skill
 - `.claude/skills/shadow-ledger/SKILL.md` et `docs/CONTEXTE.md` décrivent encore BOT « deux classements » (`bot-season`/`bot-challenge`, `bot-variante-inconnue`) : à aligner sur la v10 (discussion 1).
