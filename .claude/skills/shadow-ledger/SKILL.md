@@ -1,6 +1,6 @@
 ---
 name: "shadow-ledger"
-description: "Conventions du Projet SLA (Shadow Ledger, Solo Leveling: Arise) : glossaire, formats JSON, SUIVI.md, économie de crédits et checklists. À utiliser dans toute discussion du Projet SLA."
+description: "Conventions du Projet SLA (Shadow Ledger, Solo Leveling: Arise) : glossaire, formats JSON (runs, builds, rotations, base), SUIVI.md, règles de discussion et checklists de contrôle."
 ---
 
 # Shadow Ledger — conventions du Projet SLA
@@ -13,7 +13,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 | --- | --- |
 | POC | Power Of Calamity. Classement : dégâts max ; une run = une équipe, total = équipe 1 + équipe 2. |
 | BOT | Battlefield Of Time. Chrono le plus court (secondes) = dernière phase de l'écran `Results`. **Un seul classement** par semaine (Challenge retiré du jeu en mai 2026). Saison = 4 semaines de jeu (1 boss/semaine) + 1 semaine de calcul sans classement ; semaine de saison notée `S<n>-<w>`. |
-| GB | Guild Boss. Classement : Rage Count le plus élevé ; une run = un groupe (6 chasseurs + SJW), total = groupe 1 + groupe 2 ; égalité départagée par la somme des dégâts. Seules les runs FILMÉES (écran Results lu) sont classées (v30) : le `Personal Record` ne classe plus aucune run, il attribue seulement un groupe à un Results de même RC. |
+| GB | Guild Boss. Classement : Rage Count le plus élevé ; **seules les runs filmées (écran Results) comptent** ; une run = un groupe (6 chasseurs + SJW), total = meilleure run filmée de chaque groupe ; égalité départagée par la somme des dégâts. Le `Personal Record` sert seulement à identifier le groupe. |
 | HOTM | Hall Of The Monarchs. Un classement **par porte** (제 n관문 / 第n関門) : points les plus élevés. 1 run par porte. |
 | RC | Rage Count, unité de score du GB. |
 | SJW | Sung Jin Woo. |
@@ -26,10 +26,10 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 ## 2. Fichiers et dossiers
 
 - Les documents du dépôt (`docs/`, `data/`, `suivi/`) ne ressortent pas dans la recherche du Projet SLA : dans une discussion claude.ai, les lire en clonant le dépôt public `https://github.com/shadowledgerhq/shadowledgerhq.github.io` (ou via la source GitHub synchronisée du projet).
-- Arborescence décrite dans CONTEXTE.md (section 6). Les specs du dépôt (`docs/SPEC_ETAPE1.md`, `SPEC_ETAPE2.md`…) font seules foi : état actuel court ; l'historique des versions est dans `docs/archives/`.
-- Toute spécification est poussée dans `docs/` du dépôt **avant** d'être envoyée à la discussion Code. Chaque discussion (1 à 9) pousse elle-même, **seulement dans sa zone** (`docs/CONTEXTE.md` §7, « Droit de pousser »), sur une branche `claude/<discussion>-<sujet>` (fusion automatique dans `main`) ; hors de sa zone, message au propriétaire. Les discussions 1 à 7 demandent l'accès avec `add_repo` (push).
-- **Boîte** : vers 1 à 7 → `claude/BOITE.md` du Projet ; vers 8 et 9 → `docs/BOITE.md` §8 ou §9 du dépôt ; depuis 8 et 9 → `docs/BOITE.md`, section du destinataire. Format `- [à traiter] AAAA-MM-JJ — de <discussion> — message` ; le destinataire le passe en `[traité AAAA-MM-JJ]`. Un message traité est retiré de `claude/BOITE.md` ; pour `docs/BOITE.md`, Code l'archive dans `docs/archives/BOITE.md` au plus tard 7 jours après. Le message n'est **jamais recopié** à Alexis : une seule ligne « Message de <X> pour <Y> dans <boîte> ». Exception : session sans accès au dépôt → message prêt à coller pour 8 ou 9.
-- **Aucun relevé manuel** : ne jamais écrire « à relever à la main » ; une donnée non relevée reste `null` ou « à vérifier ».
+- Arborescence décrite dans CONTEXTE.md (section 6). Spécifications détaillées : `docs/SPEC_ETAPE1.md`, `docs/SPEC_ETAPE2.md`, `docs/SPEC_ROTATION.md` du dépôt (seules à faire foi ; plus de copie dans le Projet). Chaque spec = état actuel court ; l'historique des versions est dans `docs/archives/`, à ne lire qu'en cas de besoin.
+- Toute spécification est poussée dans `docs/` du dépôt **avant** d'être envoyée à la discussion Code. Chaque discussion (1 à 9) pousse elle-même, **seulement dans sa zone** (CONTEXTE §7, « Droit de pousser »), sur une branche `claude/<discussion>-<sujet>` (fusion automatique dans `main`) ; accès par `add_repo` (push) ; hors de sa zone, message au propriétaire.
+- Messages entre discussions : vers 1 à 7 → `claude/BOITE.md` du Projet ; vers 8 et 9 → `docs/BOITE.md` §8 ou §9 du dépôt ; depuis 8 et 9 → `docs/BOITE.md`, section du destinataire. Le message n'est **jamais recopié** à Alexis : une seule ligne « Message de <X> pour <Y> dans <boîte> » (exception : session sans accès au dépôt → message prêt à coller pour 8 ou 9). Message traité : retiré de `claude/BOITE.md` (la décision est dans la SPEC, CONTEXTE ou le SUIVI du destinataire) ; dans `docs/BOITE.md`, archivé par Code dans `docs/archives/`.
+- Aucun relevé manuel : scores, builds, éléments autorisés et rotations sont relevés par le pipeline ; ne jamais écrire « à relever à la main ».
 - Noms de fichiers en minuscules, sans accents ni espaces, mots séparés par `-`.
 - Codes de mode dans les fichiers : `poc`, `bot`, `gb`, `hotm`.
 - Dates au format AAAA-MM-JJ ; heures en heure de Paris, sauf dans les workflows (UTC).
@@ -65,9 +65,8 @@ Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 
 - `channel_id` = clé du joueur. `video_id` = vidéo de la meilleure run ; `video_ids` = toutes les vidéos utilisées (les 2 runs POC/GB peuvent venir de 2 vidéos).
 - `rank` : seulement pour les lignes `confidence: sur` ; sinon `null`. POC et GB : une seule run `sur` suffit pour être classé (note `une seule run`) ; la 2e run, trouvée plus tard, complète le total.
-- Notes normalisées (champ `notes`) : `une seule run`, `compteur animé` (valeurs croissantes d'une animation, seule la finale compte), `groupe N d'après le Personal Record (RC égal)`, `groupes distingués par les chasseurs`, `groupes distingués par le titre (Light / Fire)`, `élément associé titre + chasseurs`, `élément du titre contredit par l'écran` (v30).
-- Le `Personal Record` du GB n'est jamais une run publiée : il est lu et contrôlé, et sert seulement à attribuer le groupe d'un Results de même RC. Seul l'écran RESULT donne un score sûr, sans exception.
-- GB et POC (v30) : `runs_detail[i].element` (`light|fire|water|wind|dark|null`) et `element_source` (`ecran|titre|titre+ecran`). L'élément d'une run sert à distinguer 2 runs d'un même joueur quand le groupe / l'équipe n'est pas lu ; le titre PEUT citer un élément (config `elements_titre`), l'écran prime sur le titre.
+- Notes normalisées (champ `notes`) : `une seule run`, `compteur animé` (valeurs croissantes d'une animation, seule la finale compte).
+- Seul l'écran RESULT donne un score sûr, **sans exception** (GB : le `Personal Record` identifie le groupe, il ne classe jamais une run non filmée). Détail : `docs/SPEC_ETAPE1.md` du dépôt (v30 au 17/11/2026).
 
 Champs supplémentaires :
 - `"gate"` (HOTM uniquement) : numéro de la porte, **entier** (`3` pour 제 3관문 / 第3関門).
@@ -77,10 +76,10 @@ Champs supplémentaires :
 - `"runs_detail"` : liste d'un objet par run, dans le même ordre que `score.runs`. Champs communs :
   `{"video_id": "", "published_at": "", "t": 0, "stage": "", "team": null, "score_source": "", "exact": true}`
   (`t` = secondes dans la vidéo ; `stage` = libellé du boss ou du stage lu à l'écran ; `team` = POC : équipe 1, 2 ou `null` ; GB : groupe 1, 2 ou `null`).
+  - POC et GB, en plus : `{"element": "light | fire | water | wind | dark | null", "element_source": ""}` — lu sur les chasseurs à l'écran, sinon dans le titre ; distingue les équipes/groupes quand `team` est inconnu. Deux runs d'une même ligne n'ont jamais de chasseur commun (sinon `a_verifier`). L'Excel affiche l'élément au lieu de « Groupe/Équipe 1/2 ».
   - POC, en plus : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
   - HOTM, en plus : `{"clear": 0, "proof_bonus": 0, "proof_level": null}` ; contrôle : clear + proof_bonus = score.
-  - GB, en plus : `{"damage": 0, "damage_exact": true, "damage_source": "results | hud"}` (`damage` = `Final Score` ; `damage_exact` = `false` si le contrôle de somme échoue ou est sauté, si le dégât est arrondi (titre, HUD) et `null` si aucun dégât lu ; `team` = groupe attribué par le Personal Record, ou `null`) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score`. Un dégât non contrôlé ne départage jamais une égalité de RC.
-  - POC et GB, en plus : `{"element": "light | fire | water | wind | dark | null", "element_source": "ecran | titre | titre+ecran | null"}`.
+  - GB, en plus : `{"damage": 0, "damage_exact": true, "damage_source": "results | record | hud"}` (`damage` = `Final Score` ; `damage_exact` = `false` si arrondi — `Personal Record` 17.28T, titre ou HUD — et `null` si aucun dégât lu ; `damage_source: record` = `Total Score` du Personal Record quand un seul groupe a joué ; `team` = groupe, connu aussi par `No history`) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; contrôle Personal Record : `Total Rage Count` = RC groupe 1 + RC groupe 2.
 - Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition. Jamais le score de l'écran de composition, quel que soit le mode.
 
 ### Autres fichiers de l'étape 1 (détail : SPEC_ETAPE1.md §5)
@@ -93,29 +92,24 @@ Champs supplémentaires :
 | `data/runs/<semaine>/_meta.json` | `{week, start_utc, end_utc, frozen, frozen_at}` |
 | `data/runs/<semaine>/_boss.json` | Boss / stage de référence déduit (mode, gate, libellé, nombre de vidéos) |
 | `data/runs/<semaine>/_rapport.md` | Rapport du dernier passage (quota, vidéos, `a_verifier`, alertes, erreurs) |
-| `data/processed.json` | Par video_id : état du traitement ; `pc.sous_titres` = `fait` \| `absent` \| `erreur` |
+| `data/processed.json` | Par video_id : état du traitement ; `pc.sous_titres` et `pc.rotation` = `fait` \| `absent` \| `erreur` |
 | `data/channels.json` | `{channel_id, name, uploads_playlist, added_at, source: manuel \| auto}` |
 
 ### Build (data/builds/<semaine>/<mode>/<run_id>-<n>.json)
 
-Format complet (champs, statuts `build_complet | build_partiel | pas_de_build`, `found`, `counts`, `element`, `unmatched`, notes) : **`docs/SPEC_ETAPE2.md` §1.2**. Les identifiants (`id`, `weapon`…) sont ceux de la base de données. Un élément non lu reste `null` ou « non trouvé » : jamais complété à la main. `element` du build = `runs_detail[i].element` de l'étape 1.
+Format complet : `docs/SPEC_ETAPE2.md` §1.2 du dépôt (fait foi ; v5 au 17/11/2026). Points clés :
+- un build = une run (`runs_detail[i]` → `<run_id>-<i+1>.json`) ; HOTM : `<mode>` = `hotm-gate-<n>` ;
+- `status` : `build_complet | build_partiel | pas_de_build` ; `confidence` : `sur | a_verifier` ;
+- identifiants = `id` de la base ; élément non reconnu = `null` ou `unmatched`, jamais inventé ni complété à la main ;
+- POC et GB : `element` repris de la run ;
+- `sjw.skills` : 6 emplacements `skill_1`, `skill_2`, `ultimate`, `qte_1`, `qte_2`, `qte_3` (`level` peut rester `null`) ;
+- stats facultatives (jamais comptées dans le statut).
 
 ### Rotation (data/rotations/<semaine>/<mode>/<video_id>.json)
 
-Format **provisoire**, non codé : la spécification (`docs/SPEC_ROTATION.md`, avec un exemple réel) viendra de la discussion 3.
+Relevé automatique de l'ordre des compétences (passage en recharge des boutons du HUD), fait sur le PC après les tris 3-4 ; top 3, BOT d'abord. Aucun relevé manuel.
 
-```json
-{
-  "video_id": "dQw4w9WgXcQ",
-  "week": "2026-11-12",
-  "mode": "poc",
-  "run_start_t": 0,
-  "events": [{"t": 0, "hunter": "id-base", "slot": "skill_1", "source": "", "confidence": "sur | a_verifier"}],
-  "limites": ""
-}
-```
-
-Relevée automatiquement (jamais à la main) ; `t` en secondes depuis `run_start_t` ; un événement non relevé n'est pas écrit.
+Format complet : `docs/SPEC_ROTATION.md` §3 du dépôt (fait foi ; v1 au 17/11/2026). Points clés : un objet par run dans `runs[]` (`run_start_t`, `run_end_t`, `duration_s`, `events`, `limites`) ; chaque événement a `t` (vidéo) et `t_run` (depuis le début de la run), `hunter` (`sjw`, id de la base ou `inconnu`), `slot`, `source`, `confidence` (`sur` | `a_verifier`). Rapport : `data/rotations/<semaine>/_rapport.md`.
 
 ### Objet de la base (data/db/<categorie>.json, liste)
 
@@ -140,7 +134,7 @@ Champs propres à chaque catégorie : voir `data/db/_schema.md` dans le dépôt,
 
 ## 4. SUIVI.md
 
-Le suivi de la discussion (30 lignes maximum) est tenu à jour dans `suivi/<discussion>.md` du dépôt et poussé à chaque étape de travail. Il **n'est pas affiché** à Alexis en fin de réponse ; il ne lui est donné qu'au message n = 15, dans le message prêt à coller pour la nouvelle discussion (27/11/2026). Au-delà de 30 lignes, déplacer les anciennes lignes « Fait » dans `suivi/archives/<discussion>.md`. Format :
+Le suivi de la discussion (30 lignes maximum) est tenu à jour dans `suivi/<discussion>.md` du dépôt et poussé à chaque étape. Il **n'est pas affiché** à Alexis en fin de réponse ; il ne lui est donné qu'au message n = 15, dans le message prêt à coller pour la nouvelle discussion. Au-delà de 30 lignes, déplacer les anciennes lignes « Fait » dans `suivi/archives/<discussion>.md` et ne garder que les plus récentes :
 
 ```
 # SUIVI — <discussion> — AAAA-MM-JJ
@@ -156,24 +150,21 @@ Le suivi de la discussion (30 lignes maximum) est tenu à jour dans `suivi/<disc
 - (vide si rien)
 ```
 
-Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'état actuel. Au-delà de 30 lignes, les anciennes lignes « Fait » vont dans `suivi/archives/<discussion>.md`.
+Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'état actuel. « Besoin d'Alexis » = seulement ce qu'Alexis seul peut faire (CONTEXTE.md §9).
 
 ## 5. Reprise d'une discussion
 
-1. Ouvrir une discussion neuve quand l'actuelle devient longue.
+1. Compteur : chaque réponse commence par « Message n/15 » (n = numéro de la réponse précédente + 1). À partir de n = 15 : « ⚠ Discussion longue » et un seul message prêt à coller (ligne de rôle, SUIVI lu dans `suivi/<discussion>.md`, prochaine action).
 2. Envoyer le prompt de démarrage de la discussion (PROMPTS_DISCUSSIONS.md) + le dernier SUIVI.md.
 3. Reprendre à « En cours », sans refaire « Fait ».
-4. **Compteur** : commencer chaque réponse par « Message n/15 » (n = numéro de la réponse précédente + 1). À n = 15, ajouter « ⚠ Discussion longue » et donner un seul message prêt à coller : ligne de rôle (PROMPTS_DISCUSSIONS.md), SUIVI à jour, prochaine action précise.
 
 ## 6. Économie de crédits
 
 - Réponses courtes. Pas de reformulation de la demande, pas de résumé de ce qui vient d'être fait.
 - Pas de recherche web si l'information est dans le projet, le dépôt ou la base.
-- Lire seulement les fichiers et la partie de la base utiles à la tâche.
-- Ne jamais lire `docs/archives/` ni `suivi/archives/` sans besoin précis.
+- Lire seulement les fichiers et la partie de la base utiles à la tâche ; jamais les archives (`docs/archives/`, `suivi/archives/`) sauf besoin précis.
 - Ce qui se répète se code (Python, GitHub Actions) au lieu d'être fait à la main par Claude.
-- Une question à Alexis seulement si la réponse change ce qu'on fait.
-- **Autonomie** : ne jamais demander à Alexis une information trouvable soi-même (dépôt, slagate.com, forum Netmarble, vidéos YouTube, recherche web). Introuvable : hypothèse la plus prudente, marquée « à vérifier » avec sa source, et on continue. Décision : proposer son choix par défaut et avancer. « Besoin d'Alexis » = seulement ce que lui seul peut faire (CONTEXTE.md, section 9).
+- Autonomie : ne jamais demander à Alexis une information trouvable (dépôt, Projet, slagate.com, forum Netmarble, vidéos via le pipeline, web). Introuvable → hypothèse la plus prudente, marquée « à vérifier » avec sa source. Décision → proposer un choix par défaut et avancer ; Alexis peut refuser.
 
 ## 7. Checklists de contrôle
 
@@ -181,10 +172,10 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - [ ] Toutes les vidéos ont une date de publication postérieure au dernier reset.
 - [ ] Le boss / la saison visible correspond à la semaine (GB `Personal Record` : `Time Left in Season` cohérent avec la date de publication ; BOT : `S<n>-<w>` du titre = semaine attendue, aucune run classée en semaine de calcul).
 - [ ] Une seule ligne par chaîne (HOTM : par porte) ; pas de ré-upload en double.
-- [ ] POC et GB : total = meilleure run de chaque groupe / équipe / élément (2 au plus ; GB : runs filmées seulement) ; une seule run sûre est classée avec la note `une seule run`.
+- [ ] POC et GB : total = somme des runs (POC : une run par équipe ; GB : une run par groupe) ; une seule run sûre est classée avec la note `une seule run`.
+- [ ] GB : chaque run classée a un écran Results filmé. POC et GB : `element` renseigné ou `null` ; aucun chasseur commun entre les deux runs d'une ligne.
 - [ ] POC : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
-- [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` (écran Results).
-- [ ] GB : seules les runs filmées sont classées (le Personal Record n'attribue que le groupe) ; chaque run POC / GB porte `element` et `element_source` (`null` si inconnu).
+- [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; `Total Rage Count` = groupe 1 + groupe 2.
 - [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas (GB : égalité de RC départagée par les dégâts).
 - [ ] Les scores `exact: false` ou `a_verifier` sont signalés.
 - [ ] Aucun écart improbable (ex. score 10 fois au-dessus du 2e) sans vérification.
@@ -193,9 +184,9 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - [ ] 10 builds par mode (×2 runs pour POC et GB) ou raison de l'absence.
 - [ ] Chaque identifiant existe dans la base de données.
 - [ ] Statut cohérent avec le champ `found`.
-- [ ] Éléments interdits dans le mode absents (interdit = règle `false` seulement ; `null` = inconnu, jamais interdit).
-- [ ] Un PowerPoint par vidéo du top 10 et par langue (FR et EN).
-- [ ] Aucun élément complété à la main : un élément non lu reste `null` / « non trouvé ».
+- [ ] Éléments interdits absents (interdit = règle `false` ; `null` = inconnu, jamais interdit).
+- [ ] Un PowerPoint par vidéo du top 10 et par langue (FR, EN).
+- [ ] Aucun élément complété à la main.
 
 ### Base de données (étape 3a)
 - [ ] Nom FR et EN renseignés.
