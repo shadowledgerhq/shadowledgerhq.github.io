@@ -468,3 +468,16 @@ ERROR: [youtube] vZrdTHYl1Zo: Requested format is not available. Use --list-form
 - Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : ic0tLvgkCBk 13.0 min → 38 s ; qCT-_gW6-QY 11.8 min → 51 s ; ly_tZDQlR6Y 33.5 min → 199 s ; XyIB7lEm5Qo 4.9 min → 47 s ; UItSn-P0d4Q 9.6 min → 87 s ; yJ31zkuHSE4 11.8 min → 61 s ; xF3f1h5dtQ8 9.9 min → 78 s ; vtfFvPizduY 3.1 min → 29 s ; KyHrk8tglbE 17.6 min → 210 s
 - Sous-titres en attente : 30 avant la règle → 30 après (10 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
 - Résumé GB : KyHrk8tglbE · aucun Results lu · pas classée
+
+<!-- passage-pc pc-weekly 2026-11-26T00:15:03.433711+00:00 -->
+## Passage pc-weekly — 2026-11-26 01:15 (Paris)
+
+- Top 10 couvert : non (24 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 121 (dont 30 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Durée du passage : 0 min
+- Relance automatique : 26/11/2026 03:15 (une seule fois par soir)
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
+- Sous-titres en attente : 30 avant la règle → 30 après (10 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
