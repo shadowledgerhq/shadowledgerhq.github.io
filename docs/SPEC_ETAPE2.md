@@ -1,6 +1,6 @@
 # Spécification — Étape 2 : builds du top 10 et PowerPoint
 
-**Version 7 — 26/11/2026 — état actuel.** Discussion 2 (Builds). Destinataire : discussion 8 (Code). Ce document donne les règles **en vigueur**, sans l'historique des décisions ; l'historique complet (v1 à v7, essais, captures) est dans `docs/archives/SPEC_ETAPE2_historique.md` (copie intacte). Un « (vN) » après une règle = version qui l'a introduite.
+**Version 8 — 27/11/2026 — état actuel.** (v8 : top 10 mixte classé + provisoire ; champ `spec` = numéro de version de la spec.) Discussion 2 (Builds). Destinataire : discussion 8 (Code). Ce document donne les règles **en vigueur**, sans l'historique des décisions ; l'historique complet (v1 à v7, essais, captures) est dans `docs/archives/SPEC_ETAPE2_historique.md` (copie intacte). Un « (vN) » après une règle = version qui l'a introduite.
 Sources des positions et écrans : captures BOT et POC (client JA, `docs/essais/composition/*_ja.png`), capture HOTM de SJW (13/11/2026), images de composition extraites automatiquement (`docs/essais/composition/auto/`).
 Références : `docs/CONTEXTE.md` §4 (étape 2), `docs/SPEC_ETAPE1.md`, `docs/REFERENCE_ECRANS_*.md`, `data/db/_schema.md`, `data/rules/<semaine>.json`, `pipeline/sjw.py`, `pipeline/hotm_ecran.py`, `pipeline/export_excel.py`.
 Marqueurs (mêmes sens qu'à l'étape 1) : **[À CONFIRMER]** = hypothèse codée en paramètre dans `pipeline/config/etape2.json` ; **[EN ATTENTE]** = info manquante, à coder en « non géré » propre (élément `null` + note, jamais une valeur inventée).
@@ -10,7 +10,7 @@ Marqueurs (mêmes sens qu'à l'étape 1) : **[À CONFIRMER]** = hypothèse codé
 ## 0. Principes
 
 - **Builds analysés** : les lignes `rank` 1 à 10 (`confidence: sur`) de `data/runs/<semaine>/<mode>.json` (`poc`, `bot`, `gb`, `hotm-gate-<n>`). Une ligne `rank: null` n'a pas de build.
-- **Classement provisoire (v4)** : si un mode n'a **aucune** ligne `rank` 1 à 10, on prend les `config.top` premières lignes `a_verifier` triées par score provisoire (même ordre que le classement : BOT du plus court au plus long, autres du plus haut au plus bas). Paramètre `config.builds_provisoires = true`. Ces builds portent `"line_provisional": true`, `rank: null`, `provisional_rank` (1 à 10), `confidence: a_verifier`, note `ligne non classée (score provisoire)`. PowerPoint : bandeau `CLASSEMENT PROVISOIRE` sur la slide de titre et rang affiché `~n`. Dès qu'une ligne du mode devient classée, on revient au §0 normal et les builds provisoires du mode sont supprimés au passage suivant.
+- **Top 10 mixte (v8)** : les builds portent sur les `config.top` premières lignes du mode dans l'ordre du classement **en mêlant** les lignes classées (`rank`) et les lignes `a_verifier` (score provisoire), triées ensemble par score (BOT du plus court au plus long, autres du plus haut au plus bas). Une ligne `a_verifier` reçoit `"line_provisional": true`, `rank: null`, `provisional_rank` (sa place dans cet ordre), `confidence: a_verifier`, note `ligne non classée (score provisoire)` ; PowerPoint : bandeau `CLASSEMENT PROVISOIRE` et rang `~n`. Un build provisoire disparaît seulement si sa ligne sort de ce top 10 ou est rejetée — plus quand une autre ligne du mode devient classée (remplace la règle v4). Cas : BOT 2026-11-12, top 3 provisoire YSJFLd_OXww, a-923ClD9Rc, znpyCNWml3I devant la seule ligne classée Bi5TrN5d1_E.
 - **Un build = une run** : un objet de `runs_detail[i]` donne un build `<run_id>-<i+1>.json`. POC et GB : 2 runs = 2 builds, éventuellement dans 2 vidéos différentes.
 - **Où chercher** : dans la vidéo `runs_detail[i].video_id`, l'écran de composition (onglets) **avant** l'écran RESULT de la run (`t`). Si la vidéo contient 2 runs, on prend la composition située entre le RESULT précédent et celui de la run.
 - **Reconnaissance** : par icône (OpenCV, comparaison avec `data/icons/<categorie>/`). Sur l'écran de composition, aucun nom n'est écrit ; les noms écrits des écrans hors composition sont lus par OCR (v3, §1.4 et §2.1), ainsi que les chiffres (niveaux, stats).
@@ -57,7 +57,7 @@ Ce format remplace l'exemple du skill §3 (« Build »). Pour le HOTM, `<mode>` 
 
 ```json
 {
-  "spec": 5,
+  "spec": 8,
   "run_id": "poc-2026-11-12-XXXXXXXXXXX",
   "run_index": 1,
   "week": "2026-11-12",
@@ -288,6 +288,7 @@ Puis, une seule fois en fin de fichier : **Sources** (voir §3.4).
 - Vidéo : titre, chaîne, lien, date de publication, horodatages utilisés.
 - Données du jeu : `data/db` (Shadow Ledger), sources de la base : slagate.com (autorisation de Sohoven), wiki Fandom (CC BY-SA), forum Netmarble ; version du jeu (`patches.json`, dernière version).
 - Crédits des icônes : contenu de `data/icons/CREDITS.md`, résumé.
+- Champ `spec` : numéro de version de cette spec appliqué par le code (lu dans `config.spec_version`, pas écrit en dur).
 - Mention : « Build relevé automatiquement à partir de la vidéo ; éléments non trouvés signalés. » / « Build read automatically from the video; missing elements are flagged. »
 - Date de génération, `spec` = 5 (le code écrit encore 3 : `builds.py`, à aligner).
 
