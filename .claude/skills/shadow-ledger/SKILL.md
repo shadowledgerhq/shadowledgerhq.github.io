@@ -154,7 +154,7 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 
 ## 5. Reprise d'une discussion
 
-1. Compteur : chaque réponse commence par « Message n/15 » (n = numéro de la réponse précédente + 1). À partir de n = 15 : « ⚠ Discussion longue » et un seul message prêt à coller (ligne de rôle, SUIVI lu dans `suivi/<discussion>.md`, prochaine action).
+1. Compteur : chaque réponse commence par « Message n/15 » (n = numéro de la réponse précédente + 1). À partir de n = 15 : « ⚠ Discussion longue » et un seul message prêt à coller (ligne de rôle, qui dit d'emblée à la nouvelle discussion qu'elle a le droit de pousser dans sa zone avec `add_repo` (push) ; SUIVI lu dans `suivi/<discussion>.md` ; prochaine action).
 2. Envoyer le prompt de démarrage de la discussion (PROMPTS_DISCUSSIONS.md) + le dernier SUIVI.md.
 3. Reprendre à « En cours », sans refaire « Fait ».
 
