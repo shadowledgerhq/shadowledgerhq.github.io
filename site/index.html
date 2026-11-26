@@ -86,7 +86,7 @@ const I18N={
   unfrozen:"Semaine terminée : classement encore provisoire (pas encore figé).",
   crit:{poc:"Rank Score le plus élevé",bot:"Chrono le plus court",gb:"Rage Count le plus élevé (2 groupes)",hotm:"Points les plus élevés, par porte"},
   empty:"Aucune run vérifiée pour l'instant.",pending:n=>`${n} run(s) en cours de vérification (non classées)`,
-  oneRun:"une seule run",prov:"provisoire",rounded:"arrondi",watch:"voir",
+  oneRun:"une seule run",prov:"provisoire",rounded:"arrondi",watch:"voir",build:"build",
   credit:"Chaque score renvoie à la vidéo de son auteur. Shadow Ledger n'est pas affilié à Netmarble.",
   removal:"Vous voulez retirer une de vos vidéos ?",removalLink:"Demande de retrait",
   legal:"Solo Leveling: Arise © Netmarble. Visuels : fan kit officiel ou créations originales.",legalLink:"Mentions légales",
@@ -98,7 +98,7 @@ const I18N={
   unfrozen:"Week over: ranking still provisional (not frozen yet).",
   crit:{poc:"Highest Rank Score",bot:"Fastest time",gb:"Highest Rage Count (2 groups)",hotm:"Highest points, per gate"},
   empty:"No verified run yet.",pending:n=>`${n} run(s) being verified (not ranked)`,
-  oneRun:"one run only",prov:"provisional",rounded:"rounded",watch:"watch",
+  oneRun:"one run only",prov:"provisional",rounded:"rounded",watch:"watch",build:"build",
   credit:"Every score links to its author's video. Shadow Ledger is not affiliated with Netmarble.",
   removal:"Want one of your videos removed?",removalLink:"Removal request",
   legal:"Solo Leveling: Arise © Netmarble. Visuals: official fan kit or original artwork.",legalLink:"Legal notice",
@@ -158,14 +158,14 @@ async function drawBoard(file){
 }
 function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
 function table(rows,ranked){
- const multi=S.mode==="gb";
+ const multi=S.mode==="gb", board=S.mode==="hotm"?`hotm-gate-${S.gate}`:S.mode;
  return `<table><thead><tr>${ranked?`<th>${t("rank")}</th>`:""}<th>${t("player")}</th><th>${t("score")}</th>${multi?`<th class="hide-m">${t("runs")}</th>`:""}<th class="hide-m">${t("published")}</th><th>${t("video")}</th></tr></thead><tbody>`+
  rows.map(r=>{
   const u=r.score.unit, rd=r.runs_detail||[];
   const one=(r.notes||"").includes("une seule run")&&ranked?`<span class="tag">${t("oneRun")}</span>`:"";
   const prov=!r.exact?`<span class="tag">${t(ranked?"rounded":"prov")}</span>`:"";
   const runs=multi?`<td class="hide-m">${rd.map((d,i)=>`<span class="el ${d.element||"none"}">${d.element?ELN[S.lang][d.element]:"?"}</span>${fmtScore(r.score.runs[i],u)}`).join("<br>")}</td>`:"";
-  const vids=(r.video_ids&&r.video_ids.length?r.video_ids:[r.video_id]).map((v,i)=>`<a href="https://www.youtube.com/watch?v=${esc(v)}" target="_blank" rel="noopener">${t("watch")}${r.video_ids&&r.video_ids.length>1?" "+(i+1):""}</a>`).join(" · ");
+  const vids=(r.video_ids&&r.video_ids.length?r.video_ids:[r.video_id]).map((v,i)=>`<a href="https://www.youtube.com/watch?v=${esc(v)}" target="_blank" rel="noopener">${t("watch")}${r.video_ids&&r.video_ids.length>1?" "+(i+1):""}</a>`).join(" · ")+(ranked&&r.rank<=10&&r.run_id?` · <a href="build.html#week=${S.week}&board=${board}&run=${encodeURIComponent(r.run_id)}&lang=${S.lang}">${t("build")}</a>`:"");
   const ingame=r.player_ingame?`<div class="small">${esc(r.player_ingame)}</div>`:"";
   return `<tr class="r${r.rank||0}">${ranked?`<td class="rk">${r.rank}</td>`:""}<td><a href="https://www.youtube.com/channel/${esc(r.channel_id)}" target="_blank" rel="noopener">${esc(r.player)}</a>${ingame}</td><td class="sc" title="${esc(r.score.total)}">${fmtScore(r.score.total,u)}${one}${prov}</td>${runs}<td class="hide-m small">${new Date(r.published_at).toLocaleDateString(S.lang==="fr"?"fr-FR":"en-GB",{day:"numeric",month:"short"})}</td><td>${vids}</td></tr>`}).join("")+"</tbody></table>";
 }

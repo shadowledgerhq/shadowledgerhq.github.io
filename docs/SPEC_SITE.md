@@ -1,6 +1,6 @@
 # SPEC_SITE — Site Shadow Ledger (étape 5)
 
-État actuel : **v1.2 — 2026-11-27** (discussion 5 — Site). Historique : `docs/archives/` quand il y aura une v2.
+État actuel : **v2 — 2026-11-27** (discussion 5 — Site). Historique : `docs/archives/` quand il y aura une v2.
 
 ## 1. Principe
 
@@ -17,7 +17,7 @@ Charte commune (`docs/reseaux/RESEAUX.md` §1-2, discussion 4) : fond `#0B0D17`,
 | Page | Contenu | Version |
 | --- | --- | --- |
 | Classement | Onglets POC / BOT / GB / HOTM ; HOTM : un onglet par porte ; sélecteur de semaine (archives) | **v1 (fait)** |
-| Build du joueur | Depuis une ligne du top 10 : build (`data/builds/`), PowerPoint, vidéo source | v2 (après étape 2) |
+| Build du joueur | `site/build.html#week=…&board=…&run=<run_id>` : lit `data/builds/<semaine>/<board>/<run_id>-1.json` et `-2.json` (POC/GB : un onglet par run, avec l'élément) ; noms FR/EN et icônes de `data/db/` ; SJW (armes, sets, noyaux, compétences, bénédictions), 3 chasseurs (arme, sets, noyaux), ombres, successeur ; éléments non reconnus regroupés (« n non reconnus ») ; bandeau si `build_partiel` ou `a_verifier`. Lien « build » sur les lignes classées du top 10 | **v2 (fait)** |
 | Base de données | Fiches chasseurs, armes, artefacts… (`data/db/`), FR/EN | v3 |
 | Vidéos | Guides de la semaine par mode | v3 |
 | Demande de retrait | `site/retrait.html` : ce qui est retiré, demande dans le salon Discord #retrait, preuve = mot « ShadowLedger » dans la description de la chaîne, retrait sous 7 jours (choix par défaut) ; lien depuis le pied de page | **v1.1 (fait)** |
