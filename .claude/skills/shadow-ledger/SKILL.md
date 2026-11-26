@@ -27,7 +27,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 
 - Les documents du dépôt (`docs/`, `data/`, `suivi/`) ne ressortent pas dans la recherche du Projet SLA : dans une discussion claude.ai, les lire en clonant le dépôt public `https://github.com/shadowledgerhq/shadowledgerhq.github.io` (ou via la source GitHub synchronisée du projet).
 - Arborescence décrite dans CONTEXTE.md (section 6). Les specs du dépôt (`docs/SPEC_ETAPE1.md`, `SPEC_ETAPE2.md`…) font seules foi : état actuel court ; l'historique des versions est dans `docs/archives/`.
-- Toute spécification est poussée dans `docs/` du dépôt **avant** d'être envoyée à la discussion Code. Code pousse toujours sur une branche `claude/…` (fusion automatique dans `main`).
+- Toute spécification est poussée dans `docs/` du dépôt **avant** d'être envoyée à la discussion Code. Chaque discussion (1 à 9) pousse elle-même, **seulement dans sa zone** (`docs/CONTEXTE.md` §7, « Droit de pousser »), sur une branche `claude/<discussion>-<sujet>` (fusion automatique dans `main`) ; hors de sa zone, message au propriétaire. Les discussions 1 à 7 demandent l'accès avec `add_repo` (push).
 - **Boîte** : un message des discussions 8 ou 9 vers les discussions 1 à 7 s'écrit dans `docs/BOITE.md`, section du destinataire, format `- [à traiter] AAAA-MM-JJ — de Code — message` ; le destinataire le passe en `[traité AAAA-MM-JJ]`. Un message traité est retiré de `claude/BOITE.md` ; pour `docs/BOITE.md`, Code l'archive dans `docs/archives/BOITE.md` au plus tard 7 jours après.
 - **Aucun relevé manuel** : ne jamais écrire « à relever à la main » ; une donnée non relevée reste `null` ou « à vérifier ».
 - Noms de fichiers en minuscules, sans accents ni espaces, mots séparés par `-`.

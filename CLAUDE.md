@@ -16,7 +16,7 @@ Ce dépôt contient tout le projet Shadow Ledger d'Alexis : classements hebdomad
 - `docs/PROMPTS_DISCUSSIONS.md` : rôle de chaque discussion.
 - `suivi/<discussion>.md` : où en est chaque discussion. Reprendre à « En cours ».
 
-Les sessions Claude Code sur ce dépôt servent surtout aux discussions **8 — Code** et **9 — Base de données**, qui doivent écrire des fichiers. Les autres discussions se font dans le Projet SLA sur claude.ai.
+Les discussions **8 — Code** et **9 — Base de données** s'ouvrent directement sur ce dépôt. Les discussions 1 à 7 se font dans le Projet SLA sur claude.ai et peuvent aussi pousser ici (accès `add_repo` en push, accepté par Alexis une fois par session). **Chaque discussion n'écrit que dans sa zone** (tableau « Droit de pousser », `docs/CONTEXTE.md` §7) ; hors de sa zone, elle écrit un message au propriétaire.
 
 ## Règles permanentes
 
