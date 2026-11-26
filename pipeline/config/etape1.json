@@ -244,7 +244,7 @@
     "pause_s": 20,
     "yt_dlp_options": [],
     "_yt_dlp_options": "Options ajoutées à chaque appel de yt-dlp, ex. [\"--impersonate\", \"chrome\"] (nécessite yt-dlp[default,curl-cffi]) si YouTube répond 429.",
-    "geler": false,
+    "geler": true,
     "semaine_ecoulee": false,
     "_semaine_ecoulee": "v41 : false = coupure nette au reset, les passages daily ne traitent plus la semaine passée (le classement sert de tuto : pas de modification après coup). true = v39 (semaine écoulée non gelée traitée avec la courante).",
     "images": {
