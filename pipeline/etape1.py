@@ -7,6 +7,7 @@
                                                                    puis recalcule (descriptions : clé API requise)
 
 Hors créneau (heure de Paris) ou passage du jour déjà fait : sort sans rien faire (sauf --force).
+Passage « midi » (v43) : même travail que daily à 12:00 Paris (liste des vidéos du matin) ; ne marque PAS passages.daily (le garde-fou du PC reste sur le passage de 19:00).
 Tri 2 (miniatures) : recadrages OCR [EN ATTENTE], les vidéos restent en_cours avec pc_needed.
 Le commit est fait par le workflow, pas par ce script.
 """
@@ -219,21 +220,21 @@ def ecrire_rapport(d, week, passage, instant, resume, res, alertes, entete=None)
 def lancer(passage, instant, force=False, semaine=None, d=None, config=None):
     d, config = d or Donnees(), config or charger_config()
     alertes, resume = [], None
-    if passage in ("daily", "weekly"):
+    if passage in ("daily", "midi", "weekly"):
         cr = config["creneaux"][passage]
         jour = JEUDI if passage == "weekly" else None
         if not force and not dans_creneau(instant, cr["debut"], cr["fin"], jour):
             print(f"{passage} : hors créneau, rien à faire.")
             return
         courante = id_semaine(instant)
-        week = courante if passage == "daily" else semaine_precedente(courante)
+        week = courante if passage != "weekly" else semaine_precedente(courante)
         meta = ouvrir_semaine(d, week)
         aujourd_hui = instant.astimezone(PARIS).date().isoformat()
         if not force and meta.get("passages", {}).get(passage) == aujourd_hui:
             print(f"{passage} : déjà fait aujourd'hui.")
             return
         debut, fin_semaine = bornes(week)
-        fin = instant if passage == "daily" else fin_semaine
+        fin = instant if passage != "weekly" else fin_semaine
         resume = passage_recherche(d, config, week, debut, fin, meta.get("frozen"), instant)
         a_refaire = [] if meta.get("frozen") else a_relire(d, config, week)
         if a_refaire and os.environ.get("YOUTUBE_API_KEY"):
@@ -242,7 +243,7 @@ def lancer(passage, instant, force=False, semaine=None, d=None, config=None):
             alertes.append(f"tri 1 relu (règles v{config.get('tri1_version')}) : {r['changees']} vidéo(s) modifiée(s) sur {len(a_refaire)}")
             alertes += r["erreurs"]
             meta = d.meta(week)
-        if passage == "daily":
+        if passage != "weekly":
             prec = d.meta(semaine_precedente(week))
             if prec and not prec.get("frozen"):
                 alertes.append(f"semaine {prec['week']} en attente de gel (passage PC hebdomadaire)")
@@ -268,7 +269,7 @@ def lancer(passage, instant, force=False, semaine=None, d=None, config=None):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("passage", choices=["daily", "weekly", "classement", "relire"])
+    ap.add_argument("passage", choices=["daily", "midi", "weekly", "classement", "relire"])
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--maintenant", help="instant simulé, ISO 8601 (tests)")
     ap.add_argument("--semaine")

@@ -1,0 +1,47 @@
+# Passage de midi de l'étape 1 (v43) : 12h heure de Paris, même travail que le daily (recherche + tri 1 + classement), sans toucher au garde-fou du PC (passages.daily). Deux crons UTC (été 10:00Z, hiver 11:00Z) ; le script vérifie le créneau Paris (12:00-15:59).
+name: Passage de midi
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Ignorer le créneau et le passage déjà fait"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: etape1-donnees
+  cancel-in-progress: false
+
+jobs:
+  midi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Passage de midi
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          if [ "$FORCE" = "true" ]; then python3 pipeline/etape1.py midi --force
+          else python3 pipeline/etape1.py midi; fi
+      - name: Commit et push des données
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then echo "Rien à enregistrer."; exit 0; fi
+          git commit -m "données: passage midi $(date -u +%Y-%m-%d)"
+          python3 pipeline/pousser_github.py
