@@ -1,4 +1,8 @@
-# Rapport — semaine 2026-11-19 — passage pc-weekly — 2026-11-26 01:15 (Paris)
+# Rapport — semaine 2026-11-19 — passage weekly — 2026-11-26 01:46 (Paris)
+
+Dernier passage du PC (`_rapport_pc.md`, recopié) :
+
+## Passage pc-weekly — 2026-11-26 01:15 (Paris)
 
 - Top 10 couvert : non (24 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
@@ -10,7 +14,9 @@
 - Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
 - Sous-titres en attente : 30 avant la règle → 30 après (10 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
 
-- Semaine : 121 en cours (dont 42 pour le PC), 18 terminée(s), 57 rejetée(s)
+- Quota : 1806 unités
+- Ce passage : 2 vidéo(s) nouvelle(s), 0 rejetée(s), 0 score(s) provisoire(s)
+- Semaine : 123 en cours (dont 44 pour le PC), 18 terminée(s), 57 rejetée(s)
 - Classements : gb 15, poc 6
 
 ## À vérifier (20)
@@ -46,9 +52,4 @@
 - semaine de calcul (S20) : 0 vidéo(s) BOT à vérifier (run de la semaine précédente ?)
 
 ## Erreurs et alertes
-- 22 vidéo(s) reportée(s) au prochain passage (limite 8)
-- kZOUlFDdjRI : 429 / anti-bot YouTube, reportée au prochain passage
-- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
-- 121 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- semaine 2026-11-19 NON gelée (pc.geler = false : tris 3-4 non gérés)
-- passage incomplet : anti-bot ; relance : 26/11/2026 03:15 (une seule fois par soir)
+- tri 1 relu (règles v19) : 2 vidéo(s) modifiée(s) sur 3

@@ -27,33 +27,6 @@
     ]
   },
   {
-    "video_id": "vt47IaCcMQg",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "channel_title": "Ahmad1195",
-    "published_at": "2026-11-20T17:40:50Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": 94000000000000,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 205,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "damage_exact": false
-    },
-    "notes": [
-      "score provisoire (titre) : 205 rc"
-    ]
-  },
-  {
     "video_id": "DdbMYl54aZU",
     "channel_id": "UCj01oba-0Kuz8yj3dwC_ZXw",
     "channel_title": "creative joker",
@@ -102,31 +75,6 @@
     "detail": {},
     "notes": [
       "score provisoire (description) : Rage 169"
-    ]
-  },
-  {
-    "video_id": "ypLEjrcd6VI",
-    "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
-    "channel_title": "Yuta",
-    "published_at": "2026-11-20T04:33:39Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 197,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {},
-    "notes": [
-      "score provisoire (titre) : 197 RC"
     ]
   },
   {
@@ -621,104 +569,6 @@
       "contrôle sans Hunter Rank : Rage Count lu sur une seule image",
       "contrôle sans Hunter Rank : Final Score 2312 hors de [Points HUD 30916695595019 ; × 1.02]",
       "contrôle sans Hunter Rank : Player's Score illisible"
-    ]
-  },
-  {
-    "video_id": "vt47IaCcMQg",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "channel_title": "Ahmad1195",
-    "published_at": "2026-11-20T17:40:50Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 10,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat_sans_chrono",
-      "hud_points": 205118224990,
-      "hud_rage_count": 55,
-      "separateur_perdu": false,
-      "elements_hud": [
-        "water",
-        "water",
-        "water"
-      ]
-    },
-    "notes": []
-  },
-  {
-    "video_id": "vt47IaCcMQg",
-    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
-    "channel_title": "Ahmad1195",
-    "published_at": "2026-11-20T17:40:50Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 190,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat",
-      "hud_points": 75475270345130,
-      "chrono_hud": 21.2,
-      "separateur_perdu": false,
-      "hud_rage_count": 157,
-      "elements_hud": [
-        "water",
-        "water",
-        "water"
-      ],
-      "t_debut": 6,
-      "t_fin": 190,
-      "elements_hud_par_t": {
-        "6": [
-          null,
-          "water",
-          "water"
-        ],
-        "8": [
-          "water",
-          null,
-          "water"
-        ],
-        "60": [
-          "water",
-          null,
-          null
-        ],
-        "110": [
-          "water",
-          "water",
-          null
-        ],
-        "190": [
-          "water",
-          "water",
-          "water"
-        ]
-      }
-    },
-    "notes": [
-      "HUD : Boss Rage Count x157, chrono 21.2"
     ]
   },
   {
@@ -4738,154 +4588,6 @@
     ]
   },
   {
-    "video_id": "ypLEjrcd6VI",
-    "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
-    "channel_title": "Yuta",
-    "published_at": "2026-11-20T04:33:39Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 7,
-    "score_source": "miniature",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "texte_miniature": true,
-      "votes_miniature": 3,
-      "brut_miniature": "7 RC"
-    },
-    "notes": [
-      "score provisoire (miniature) : 7 RC",
-      "miniature, autres valeurs lues : 197"
-    ]
-  },
-  {
-    "video_id": "ypLEjrcd6VI",
-    "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
-    "channel_title": "Yuta",
-    "published_at": "2026-11-20T04:33:39Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 50,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat_sans_chrono",
-      "hud_points": 7856742180355,
-      "hud_rage_count": 126,
-      "separateur_perdu": false,
-      "elements_hud": [
-        null,
-        null,
-        null
-      ]
-    },
-    "notes": []
-  },
-  {
-    "video_id": "ypLEjrcd6VI",
-    "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
-    "channel_title": "Yuta",
-    "published_at": "2026-11-20T04:33:39Z",
-    "lang": "en",
-    "mode": "gb",
-    "regles": 18,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": 150,
-    "stage": null,
-    "team": null,
-    "score": null,
-    "score_source": null,
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "ecran": "combat",
-      "hud_points": null,
-      "chrono_hud": 47,
-      "separateur_perdu": false,
-      "hud_rage_count": 160,
-      "elements_hud": [
-        null,
-        null,
-        null
-      ],
-      "t_debut": 0,
-      "t_fin": 150,
-      "elements_hud_par_t": {
-        "0": [
-          null,
-          null,
-          null
-        ],
-        "2": [
-          null,
-          null,
-          null
-        ],
-        "8": [
-          null,
-          null,
-          null
-        ],
-        "10": [
-          null,
-          null,
-          null
-        ],
-        "20": [
-          null,
-          null,
-          null
-        ],
-        "70": [
-          null,
-          null,
-          null
-        ],
-        "80": [
-          null,
-          null,
-          null
-        ],
-        "120": [
-          null,
-          null,
-          null
-        ],
-        "150": [
-          null,
-          null,
-          null
-        ]
-      }
-    },
-    "notes": [
-      "HUD : Boss Rage Count x160, chrono 47"
-    ]
-  },
-  {
     "video_id": "i6S0xrpiTvI",
     "channel_id": "UC2vGEuWg9a-zh7RNF-G6qJQ",
     "channel_title": "MOCANBHAYA ",
@@ -7232,6 +6934,304 @@
     "notes": [
       "score provisoire (titre) : 205RC",
       "description : 206 RC"
+    ]
+  },
+  {
+    "video_id": "vt47IaCcMQg",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-20T17:40:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 10,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 205118224990,
+      "hud_rage_count": 55,
+      "separateur_perdu": false,
+      "elements_hud": [
+        "water",
+        "water",
+        "water"
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "vt47IaCcMQg",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-20T17:40:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 190,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": 75475270345130,
+      "chrono_hud": 21.2,
+      "separateur_perdu": false,
+      "hud_rage_count": 157,
+      "elements_hud": [
+        "water",
+        "water",
+        "water"
+      ],
+      "t_debut": 6,
+      "t_fin": 190,
+      "elements_hud_par_t": {
+        "6": [
+          null,
+          "water",
+          "water"
+        ],
+        "8": [
+          "water",
+          null,
+          "water"
+        ],
+        "60": [
+          "water",
+          null,
+          null
+        ],
+        "110": [
+          "water",
+          "water",
+          null
+        ],
+        "190": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x157, chrono 21.2"
+    ]
+  },
+  {
+    "video_id": "vt47IaCcMQg",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "channel_title": "Ahmad1195",
+    "published_at": "2026-11-20T17:40:50Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 94000000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 205,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : 205 rc"
+    ]
+  },
+  {
+    "video_id": "ypLEjrcd6VI",
+    "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
+    "channel_title": "Yuta",
+    "published_at": "2026-11-20T04:33:39Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 7,
+    "score_source": "miniature",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "texte_miniature": true,
+      "votes_miniature": 3,
+      "brut_miniature": "7 RC"
+    },
+    "notes": [
+      "score provisoire (miniature) : 7 RC",
+      "miniature, autres valeurs lues : 197"
+    ]
+  },
+  {
+    "video_id": "ypLEjrcd6VI",
+    "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
+    "channel_title": "Yuta",
+    "published_at": "2026-11-20T04:33:39Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 50,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat_sans_chrono",
+      "hud_points": 7856742180355,
+      "hud_rage_count": 126,
+      "separateur_perdu": false,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ]
+    },
+    "notes": []
+  },
+  {
+    "video_id": "ypLEjrcd6VI",
+    "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
+    "channel_title": "Yuta",
+    "published_at": "2026-11-20T04:33:39Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 18,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": 150,
+    "stage": null,
+    "team": null,
+    "score": null,
+    "score_source": null,
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "ecran": "combat",
+      "hud_points": null,
+      "chrono_hud": 47,
+      "separateur_perdu": false,
+      "hud_rage_count": 160,
+      "elements_hud": [
+        null,
+        null,
+        null
+      ],
+      "t_debut": 0,
+      "t_fin": 150,
+      "elements_hud_par_t": {
+        "0": [
+          null,
+          null,
+          null
+        ],
+        "2": [
+          null,
+          null,
+          null
+        ],
+        "8": [
+          null,
+          null,
+          null
+        ],
+        "10": [
+          null,
+          null,
+          null
+        ],
+        "20": [
+          null,
+          null,
+          null
+        ],
+        "70": [
+          null,
+          null,
+          null
+        ],
+        "80": [
+          null,
+          null,
+          null
+        ],
+        "120": [
+          null,
+          null,
+          null
+        ],
+        "150": [
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "notes": [
+      "HUD : Boss Rage Count x160, chrono 47"
+    ]
+  },
+  {
+    "video_id": "ypLEjrcd6VI",
+    "channel_id": "UCRyghiMbSKcN8axMkaIBSjg",
+    "channel_title": "Yuta",
+    "published_at": "2026-11-20T04:33:39Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 197,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 197 RC"
     ]
   }
 ]
