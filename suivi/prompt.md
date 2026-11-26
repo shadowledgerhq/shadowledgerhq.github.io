@@ -1,17 +1,16 @@
 # SUIVI — Prompt — 2026-11-27
 ## Fait
-- 19/11 au 26/11 : CONTEXTE, PROMPTS_DISCUSSIONS, boîtes allégées, règle « Rien de public », estimation d'avancement (~35 %)
-- 27/11 : « Droit de pousser » par zone (CONTEXTE §7, CLAUDE.md, skill du dépôt)
-- 27/11 : messages entre discussions annoncés en une ligne, jamais recopiés ; boîtes de 8 et 9 = docs/BOITE.md §8/§9
-- 27/11 : CONTEXTE identique dans le Projet (claude/CONTEXTE.md) et le dépôt (docs/CONTEXTE.md)
-- 27/11 : GitHub Pages dépublié, source = GitHub Actions ; site vérifié hors ligne (404)
+- 26-27/11 : règles « Rien de public », droit de pousser par zone, messages annoncés en une ligne, SUIVI silencieux ; CONTEXTE identique Projet/dépôt
+- 27/11 : Pages dépublié (source GitHub Actions, site en 404) ; règles 9 et 12 des instructions ; 2e carte du skill enregistrée ; Projet réduit à CONTEXTE, BOITE, PROMPTS_DISCUSSIONS
 ## En cours
-- Attente de la réponse de Code (docs/BOITE.md §6)
+- rien
 ## À faire
-- Vérifier le déplacement des fichiers du Projet par Site et Réseaux
+- Deux copies de PROMPTS_DISCUSSIONS (Projet et docs/) : les rendre identiques comme CONTEXTE
+- Skill du compte : carte §2 (droit de pousser, annonce en une ligne) et §4 (SUIVI silencieux) proposée le 27/11 ; vérifier l'enregistrement
+- Lire la réponse de Code (docs/BOITE.md §6)
 ## Besoin d'Alexis
-- Instructions du Projet : remplacer la règle 9, ajouter la règle 12
-- Enregistrer la 2e carte du skill ; supprimer claude/SPEC_ROTATION.md
+- Règle 4 des instructions du Projet (SUIVI silencieux)
+- Enregistrer la carte du skill du 27/11
 - Échantillon de voix ; nom TikTok
 ## Demandes de modif du skill
-- Skill du compte : droit de pousser + annonce en une ligne (§2), avec la 2e carte
+- rien (carte du 27/11 envoyée)

@@ -23,7 +23,7 @@ Les discussions **8 — Code** et **9 — Base de données** s'ouvrent directeme
 1. Réponds en français. Le contenu public (site, vidéos, posts) existe en français et en anglais.
 2. Gratuit d'abord : tout ce qu'un outil ou un site gratuit peut faire (Python, GitHub Actions, yt-dlp, OCR…) se fait hors de Claude. Claude écrit le code, vérifie et rédige.
 3. Économise les crédits : réponses courtes, pas de reformulation, pas de récapitulatif, recherche web seulement si nécessaire, ne lis que les fichiers utiles.
-4. Chaque session de travail se termine par la mise à jour de `suivi/<discussion>.md` (format du skill, 30 lignes max).
+4. Tiens `suivi/<discussion>.md` à jour et pousse-le à chaque étape (format du skill, 30 lignes max). **Ne l'affiche pas** à Alexis en fin de réponse : il n'est donné qu'au message 15, dans le message prêt à coller pour la nouvelle session.
 5. Ne présente jamais une estimation comme un fait vérifié. Chaque donnée de jeu cite sa source et sa date de vérification.
 6. Source principale des données et builds : slagate.com (autorisation de Sohoven obtenue). Autres sites seulement si l'info y manque ou est douteuse.
 7. Si une demande contredit `docs/CONTEXTE.md`, signale-le et demande avant d'agir.

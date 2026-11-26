@@ -140,7 +140,7 @@ Champs propres à chaque catégorie : voir `data/db/_schema.md` dans le dépôt,
 
 ## 4. SUIVI.md
 
-Chaque réponse de travail se termine par le suivi de la discussion, 30 lignes maximum, enregistré dans `suivi/<discussion>.md` :
+Le suivi de la discussion (30 lignes maximum) est tenu à jour dans `suivi/<discussion>.md` du dépôt et poussé à chaque étape de travail. Il **n'est pas affiché** à Alexis en fin de réponse ; il ne lui est donné qu'au message n = 15, dans le message prêt à coller pour la nouvelle discussion (27/11/2026). Au-delà de 30 lignes, déplacer les anciennes lignes « Fait » dans `suivi/archives/<discussion>.md`. Format :
 
 ```
 # SUIVI — <discussion> — AAAA-MM-JJ
