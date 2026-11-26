@@ -1,0 +1,40 @@
+# Déploiement du site sur GitHub Pages : DÉSACTIVÉ jusqu'au lancement (CONTEXTE §2 « Rien de public avant le lancement »).
+# Déclenchement à la main uniquement (aucun push, aucun cron). Alexis coupe aussi Pages (Settings → Pages) :
+# ce workflow ne publie rien tant que Pages n'est pas réactivé (Source : GitHub Actions).
+# Avant le lancement : le contrôle exige noindex + robots.txt « Disallow: / ». Au lancement : retirer les deux, puis lancer avec lancement = true.
+name: Déployer le site (manuel)
+
+on:
+  workflow_dispatch:
+    inputs:
+      lancement:
+        description: "Feu vert d'Alexis donné : le site peut être public (noindex et robots.txt déjà retirés)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deployer:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Contrôle site privé (hors lancement)
+        if: ${{ !inputs.lancement }}
+        run: python3 pipeline/check_site.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4

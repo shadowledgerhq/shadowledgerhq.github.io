@@ -19,6 +19,7 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 | Domaine | `shadowledgerhq.github.io` au début ; domaine personnel plus tard si le projet marche. |
 | Autonomie | Claude ne demande à Alexis que ce que lui seul peut faire (section 9). Information introuvable : hypothèse la plus prudente, marquée « à vérifier » avec sa source. Décision : choix par défaut proposé, et on avance. |
 | Aucun relevé manuel | Jamais « à relever à la main » : une donnée non relevée reste `null` ou « à vérifier ». |
+| Rien de public avant le lancement | Décision d'Alexis du 26/11/2026 : site, réseaux et vidéos se **préparent**, rien n'est publié avant son feu vert. GitHub Pages coupé (Settings → Pages) ; déploiement du site seulement par `deployer-site.yml` (manuel) ; toutes les pages en `<meta name="robots" content="noindex">` + `site/robots.txt` « Disallow: / » (contrôle : `pipeline/check_site.py`, test `test_prive_avant_lancement.py`), à retirer au lancement ; aucun script ne publie sur X, Discord, TikTok ou YouTube (test YouTube seulement en « Privé »). |
 
 ## 3. Les 4 modes
 
@@ -110,6 +111,7 @@ Règles :
 | X | Top 3 de chaque classement en image (HOTM : par porte), **chaque mercredi** | FR + EN |
 | Instagram Reels | Optionnel, réutilise les verticaux | EN + sous-titres FR |
 
+- **Avant le lancement : rien n'est publié** (voir §2) ; un envoi de test sur YouTube se fait seulement en « Privé ».
 - Même pseudo, même description, même photo de profil partout. Création des comptes : par Alexis.
 - Intro et outro ≤ 5 s, renvoyant vers les autres comptes et le site.
 - Classements publiés le **mercredi** (quasi définitifs avant le reset du jeudi 01h).
@@ -118,6 +120,8 @@ Règles :
 - Cocher « contenu modifié ou synthétique » sur YouTube (voix clonée), par prudence.
 
 ### Étape 5 — Site web
+
+- **Avant le lancement : site non public** (Pages coupé, `noindex`, `robots.txt` « Disallow: / », déploiement manuel `deployer-site.yml`). Au lancement : retirer `noindex` et `robots.txt`, réactiver Pages (Source : GitHub Actions), lancer le workflow avec `lancement` = true.
 
 - Site statique sur GitHub Pages, FR + EN, qui lit les JSON du dépôt.
 - Pages : classement par mode (HOTM : **une page par porte**) → page build du joueur → fiches de la base de données → liens vers les réseaux (sur toutes les pages) → vidéos.
@@ -134,6 +138,8 @@ Règles :
 | Jeudi 01h00 | Passage final : classement de la semaine figé et archivé, nouvelle semaine ouverte | GitHub Actions + PC d'Alexis |
 | Mercredi | Posts du classement (X, Discord) ; vidéos de la semaine | Alexis / outil de programmation |
 | Après chaque passage | Contrôle des résultats + rapport court | Tâche planifiée Claude |
+
+Avant le lancement, les lignes « Mercredi : posts » et « mise à jour du site » sont préparées mais non publiées (§2). Passages GitHub : `midi.yml` 12h00 (v43) + `daily.yml` 19h00 ; PC 19h30, 21h30, 23h30.
 
 Note technique : les horaires GitHub Actions sont en UTC ; gérer le passage heure d'été / heure d'hiver.
 
@@ -215,11 +221,13 @@ Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la t
 5. **Étape 2** : builds du top 10 + PowerPoint + pages builds.
 6. **Réseaux** : comptes, logo, échantillon de voix, premières vidéos (discussions 3 et 4).
 7. **Tâche planifiée** de contrôle (discussion 7).
+8. **Lancement** : feu vert d'Alexis, puis retrait de `noindex`/`robots.txt`, Pages, premières publications (§2).
 
 ## 9. Ce qu'Alexis seul peut faire
 
 - [ ] Échantillon de voix (1 à 2 min, propre, sans bruit).
 - [ ] Trace écrite de l'autorisation de Sohoven (à conserver).
+- [ ] Couper GitHub Pages (Settings → Pages), puis donner le feu vert du lancement.
 - [ ] Passer le nom TikTok en « Shadow Ledger » le 19/11/2026.
 - Ouvrir les discussions 8 et 9 sur le dépôt (Claude Code).
 - En continu : connexions et comptes, secrets (clés, GitHub), manipulations sur son PC (Planificateur de tâches, essais `pc.py`), mise à jour des instructions du Projet SLA, messages vers les discussions 8 et 9 (celles-ci n'ont pas de boîte : Alexis colle la demande).
@@ -230,3 +238,4 @@ Tout le reste (images de référence, libellés, listes d'éléments, données d
 
 - Le boss change-t-il chaque jeudi ? **Oui pour le BOT** (1 boss par semaine, source Netmarble). Une vidéo-guide BOT publiée le mercredi ne sert donc qu'un jour : la publier en début de semaine (vendredi ou samedi). POC par saison, GB par mise à jour régulière, HOTM toutes les 2 semaines (à vérifier) : boss déduit des données par la discussion 1.
 - Déclaration des revenus (statut micro-entrepreneur) quand les plateformes paieront.
+- Alignement complet sur `claude/CONTEXTE.md` du Projet (version du 26/11) : fichier absent du dépôt, §2 ci-dessus seule mise à jour faite ; à coller dans `docs/` pour finir (BOITE §6).
