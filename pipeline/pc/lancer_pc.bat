@@ -5,5 +5,5 @@ cd /d "%~dp0\..\.."
 if not exist logs mkdir logs
 set PYTHONIOENCODING=utf-8
 echo ===== %date% %time% passage %1 %2 >> logs\pc.log
-py -3 pipeline\pc.py %1 %2 >> logs\pc.log 2>&1
+py -3 pipeline\pc.py %1 %2 --planifie >> logs\pc.log 2>&1
 exit /b %errorlevel%

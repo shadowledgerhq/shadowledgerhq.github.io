@@ -14,13 +14,13 @@ Le script `pipeline/pc.py` tourne sur le PC d'Alexis : sous-titres (yt-dlp), Whi
 **Raccourci (étapes 5 et 6) : double-cliquer sur `pipeline\pc\installer.bat`** (remise à zéro de `data`, `git pull`, création des tâches, passage de test, message « tâches créées, prochain passage : … »). Non testé sous Windows.
 5. Avant de créer les tâches : `git checkout -- data` (jette les résultats des essais `--no-git`, sinon le premier `git pull` automatique échoue), puis `git pull origin main`.
 6. Créer les tâches : PowerShell, dans le dossier du dépôt : `powershell -ExecutionPolicy Bypass -File pipeline\pc\installer_taches.ps1` (la commande affiche l'heure du prochain passage de chaque tâche).
-   - quotidien 20:30, hebdomadaire jeudi 01:15, « exécuter dès que possible si l'heure est manquée » ;
+   - quotidien 21:15 (après le passage GitHub de 20h ; le PC reporte et relance 2 fois à 30 min si GitHub n'a pas fini), hebdomadaire jeudi 01:15, « exécuter dès que possible si l'heure est manquée » ;
    - journal : `logs\pc.log` (non versionné).
 
 ## Après la création des tâches
 - **Passage bloqué (« anti-bot YouTube », 0 vidéo traitée) → lancer `outils-pc\5_test_antibot.bat`** (met yt-dlp à jour, trouve les réglages qui passent, les enregistre dans `pc_local.json`), puis `outils-pc\3_passage_complet.bat`.
 - Test immédiat : PowerShell, `Start-ScheduledTask -TaskName 'ShadowLedger PC quotidien'`, puis ouvrir `logs\pc.log` (le passage dure quelques minutes à une heure ; il affiche une ligne par vidéo). Un passage manuel ne se lance pas deux fois en même temps.
-- Les tâches tournent **session ouverte**, sous ton compte (Git, yt-dlp, Tesseract). PC éteint ou verrouillé à 20h30 : le passage part dès que possible. PC en veille jeudi à 01h15 : il ne se réveille pas tout seul.
+- Les tâches tournent **session ouverte**, sous ton compte (Git, yt-dlp, Tesseract). PC éteint ou verrouillé à 21h15 : le passage part dès que possible. PC en veille jeudi à 01h15 : il ne se réveille pas tout seul.
 - Chaque passage fait `git pull`, traite les vidéos, puis `git push` des seuls fichiers `data/`. En cas de conflit ou d'erreur réseau, il s'arrête, l'écrit dans `logs\pc.log` (« ERREUR git ») et reprend au passage suivant.
 - Le gel de la semaine (`pc.geler`) reste désactivé (`false`) tant que la discussion 1 n'a pas validé l'OCR : le passage du jeudi traite les vidéos mais ne gèle pas.
 - Pour arrêter : `Unregister-ScheduledTask -TaskName 'ShadowLedger PC*' -Confirm:$false`.

@@ -8,7 +8,7 @@ $reglages = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatt
 
 Register-ScheduledTask -TaskName "ShadowLedger PC quotidien" -Force -Settings $reglages `
   -Action (New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$bat`" daily") `
-  -Trigger (New-ScheduledTaskTrigger -Daily -At 20:30) | Out-Null
+  -Trigger (New-ScheduledTaskTrigger -Daily -At 21:15) | Out-Null
 
 Register-ScheduledTask -TaskName "ShadowLedger PC hebdomadaire" -Force -Settings $reglages `
   -Action (New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$bat`" weekly") `

@@ -4,3 +4,5 @@ Double-clique sur un fichier .bat (aucune commande a taper).
 3_passage_complet.bat    : passage quotidien complet a la main
 4_journal.bat            : dernieres lignes de logs\pc.log (a coller a Code en cas de probleme)
 5_test_antibot.bat       : si un passage dit "anti-bot YouTube" (0 video traitee) : cherche les reglages yt-dlp qui passent et les enregistre
+6_horaire_21h15.bat       : une seule fois : passe la tache planifiee quotidienne a 21h15 (apres le passage GitHub de 20h)
+Le passage quotidien du PC attend le passage GitHub du jour : sinon il se reporte et se relance 30 min plus tard (2 fois au plus).

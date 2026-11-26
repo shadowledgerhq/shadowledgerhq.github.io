@@ -43,6 +43,9 @@ def test_antibot_relance_unique_par_soir():
         assert any("anti-bot" in l and l.startswith("- Erreurs bloquantes") for l in tete)
         assert any(l.startswith("- Durée du passage : ") and l.endswith(" min") for l in rapport(d).split("\n")[:12])
         # 2e blocage le même soir : pas de nouvelle relance ; la relance elle-même n'en programme pas non plus
+        meta = pc.ouvrir_semaine(d, SEM)
+        meta.setdefault("passages", {})["daily"] = "2026-11-13"        # v42 : la relance exige le passage GitHub du jour
+        d.ecrire(f"runs/{SEM}/_meta.json", meta)
         o2 = FauxOutils({}, erreurs=["b"], erreurs_msg={"b": "HTTP Error 429: Too Many Requests"})
         pc.lancer("daily", INSTANT, d, config, o2, planifier=lambda q, bat: planifiees.append(q), fichier_relance=fichier)
         pc.lancer("daily", INSTANT, d, config, o2, planifier=lambda q, bat: planifiees.append(q), fichier_relance=Path(tmp) / "autre.json", relance=True)

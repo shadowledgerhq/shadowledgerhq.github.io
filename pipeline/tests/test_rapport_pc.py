@@ -25,6 +25,9 @@ def test_un_bloc_par_passage_jamais_efface():
     config = config_sans_images()
     with tempfile.TemporaryDirectory() as tmp:
         d = monde(tmp)
+        meta = pc.ouvrir_semaine(d, SEM)
+        meta.setdefault("passages", {})["daily"] = "2026-11-13"       # v42 : la relance exige le passage GitHub du jour
+        d.ecrire(f"runs/{SEM}/_meta.json", meta)
         pc.lancer("daily", INSTANT, d, config, FauxOutils({v: VTT for v in "abcd"}), fichier_relance=Path(tmp) / "r.json")
         pc.lancer("daily", INSTANT + timedelta(hours=2), d, config, FauxOutils({}), fichier_relance=Path(tmp) / "r.json", relance=True)
         b = rapport_pc.blocs(fichier(d))

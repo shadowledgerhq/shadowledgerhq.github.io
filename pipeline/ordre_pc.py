@@ -111,5 +111,7 @@ def candidates_restantes(d, week, processed):
     return sum(1 for v in ids if candidate(info, v) and v not in fin)
 
 
-def ligne_top10(n):
+def ligne_top10(n, vide=False):
+    if vide:      # v42 : semaine sans aucune vidéo non rejetée : « couvert » n'a pas de sens (le critère de gel n° 3 ne compte pas ce passage)
+        return "- Top 10 couvert : semaine vide (aucune vidéo candidate)"
     return f"- Top 10 couvert : {'oui' if n == 0 else 'non'} ({n} vidéo{'s' if n > 1 else ''} candidate{'s' if n > 1 else ''} au top 10 restante{'s' if n > 1 else ''})"

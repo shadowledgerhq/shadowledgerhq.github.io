@@ -1,6 +1,6 @@
 """Passages du PC d'Alexis — docs/SPEC_ETAPE1.md §6 et §2.1.
 
-  python3 pipeline/pc.py daily  [--no-git] [--whisper] [--max N] [--garder-ocr]   (planificateur, 20:30)
+  python3 pipeline/pc.py daily  [--no-git] [--whisper] [--max N] [--garder-ocr]   (planificateur, 21:15, après le passage GitHub de 20h)
   python3 pipeline/pc.py weekly [--no-git] [--whisper] [--max N]   (planificateur, jeudi 01:15)
 
 Chaque passage : git pull --rebase -> sous-titres (yt-dlp) [+ Whisper] sur les vidéos `en_cours`
@@ -1483,13 +1483,13 @@ def lignes_exports_deplaces(git):
     return [f"- Exports du PC déplacés dans exports/_local/ pour le pull (git) : {len(f)} fichier(s) : " + ", ".join(f[:5])] if f else []
 
 
-def signaler_echec(passage, instant, cause, d=None, git=None, conflit_resolu=False):
+def signaler_echec(passage, instant, cause, d=None, git=None, conflit_resolu=False, lancement=None):
     """Un passage qui n'aboutit pas (anti-bot, conflit git, JSON abîmé, crash, verrou refusé, passage interrompu) écrit quand même
     son bloc « Passage complet : non » + la cause dans `_rapport_pc.md` (jamais effacé) ; poussé si possible (v26, critère de gel
     n° 3). Retourne le bloc. Ne lève jamais : un échec de l'écriture ou du push ne masque pas l'erreur d'origine."""
     d = d or Donnees()
     week = semaine_du_passage(passage, instant)
-    lignes = entete_etat(False, 0, 0, 0, [cause[:300]])
+    lignes = entete_etat(False, 0, 0, 0, [cause[:300]], lancement=lancement)
     if conflit_resolu or (git is not None and getattr(git, "conflit_resolu", False)):
         lignes.append("- Conflit git résolu automatiquement")
     lignes += lignes_exports_deplaces(git)
@@ -1546,14 +1546,16 @@ def resume_gb(d, semaine, jour, maximum=5):
     return sortie[:maximum] + ([f"- Résumé GB : … et {len(sortie) - maximum} autre(s) vidéo(s)"] if len(sortie) > maximum else [])
 
 
-def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None, duree_min=None, top10=None, gel3=None, decisions=None):
+def entete_etat(complet, traitees, restantes, a_traiter, bloquantes, relance=None, duree_min=None, top10=None, gel3=None, decisions=None, lancement=None, vide=False):
     """Lignes placées en tête du rapport poussé (SPEC §6, critère de gel n° 3). v29 : `top10` = nombre de vidéos candidates au
     top 10 encore en attente (ligne « Top 10 couvert », en tête) ; `gel3` = texte du critère de gel n° 3 (passages couverts)."""
-    l = [ordre_pc.ligne_top10(top10)] if top10 is not None else []
+    l = [ordre_pc.ligne_top10(top10, vide)] if top10 is not None else []
     l += [f"- **Passage complet : {'oui' if complet else 'non'}**"
          + ("" if complet else " (" + (" ; ".join(b.split(" : ")[0] if b.startswith("anti-bot") else b for b in bloquantes[:1]) if bloquantes else "vidéos restantes à traiter") + ")"),
          f"- Vidéos traitées ce passage : {traitees} · en_cours restantes : {restantes} (dont {a_traiter} à traiter par le PC)",
          "- Erreurs bloquantes : " + (" ; ".join(bloquantes) if bloquantes else "aucune")]
+    if lancement:       # v42 : planificateur | manuel | relance (seul « planificateur » compte pour le critère de gel n° 3)
+        l.append(f"- Lancement : {lancement}")
     if duree_min is not None:       # durée réelle du passage (horloge monotone, hors push final) ; budget : `pc.budget_minutes`
         l.append(f"- Durée du passage : {int(duree_min)} min")
     if relance:
@@ -1590,9 +1592,58 @@ def passage_builds(semaine, outils, git=None, journal=None, force=False, pptx=Tr
     return liste
 
 
+def lancement_du_passage(relance, planifie, seulement=None):
+    """v42 : « relance » (tâche ponctuelle `daily relance`) | « planificateur » (`lancer_pc.bat`, option `--planifie`) | « manuel » (.bat d'Alexis,
+    `--video`, ligne de commande)."""
+    if relance:
+        return "relance"
+    return "planificateur" if planifie and not seulement else "manuel"
+
+
+def semaine_vide(d, week):
+    """v42 : la semaine ne contient aucune vidéo non rejetée (début de semaine) : « Top 10 couvert » n'a alors pas de sens."""
+    return not any(p.get("week") == week and p.get("status") != "rejete" for p in d.processed().values())
+
+
+FICHIER_REPORT = RACINE / "logs" / "report.json"
+
+
+def programmer_report(instant, jour, planifier=None, fichier=None, delai_min=30, maximum=2):
+    """v42 : passage daily lancé avant le passage GitHub du jour : relance 30 min plus tard, 2 fois au plus par soir. Retourne le texte du bloc."""
+    fichier = Path(fichier or FICHIER_REPORT)
+    try:
+        etat = json.loads(fichier.read_text(encoding="utf-8")) if fichier.exists() else {}
+    except (OSError, ValueError):
+        etat = {}
+    n = etat.get("n", 0) if etat.get("jour") == jour else 0
+    if n >= maximum:
+        return f"aucune ({maximum} relances déjà programmées ce soir) : prochain passage normal"
+    quand = (instant.astimezone(PARIS) + timedelta(minutes=delai_min)).replace(tzinfo=None, second=0, microsecond=0)
+    err = (planifier or planifier_windows)(quand, RACINE / "pipeline" / "pc" / "lancer_pc.bat")
+    if err:
+        return f"non programmée ({err})"
+    fichier.parent.mkdir(parents=True, exist_ok=True)
+    fichier.write_text(json.dumps({"jour": jour, "n": n + 1, "a": quand.isoformat()}), encoding="utf-8")
+    return f"{quand:%d/%m/%Y %H:%M} (relance {n + 1} sur {maximum})"
+
+
+def passage_reporte(d, week, passage, instant, jour, meta, lancement, git, planifier, fichier_report):
+    """v42 (discussion 7) : un passage PC daily planifié ou de relance vérifie que le passage GitHub du jour est fait (`_meta.json`,
+    `passages.daily` = date du jour). Sinon : bloc « Passage reporté », aucun traitement, relance 30 min plus tard (2 fois au plus)."""
+    relance = programmer_report(instant, jour, planifier, fichier_report)
+    lignes = [f"- Lancement : {lancement}", "- **Passage reporté : passage GitHub du jour absent**",
+              f"- Dernier passage GitHub daily : {meta.get('passages', {}).get('daily') or 'aucun'} (attendu : {jour})",
+              "- Aucune vidéo traitée", f"- Relance automatique : {relance}"]
+    rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, lignes)
+    if git:
+        git.pousser(f"données: passage PC {passage} {jour} reporté (GitHub absent)")
+    return {"week": week, "traitees": 0, "alertes": ["passage reporté : passage GitHub du jour absent"], "reporte": True,
+            "complet": False, "restantes": 0, "a_traiter": 0, "bloquantes": []}
+
+
 def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper=False, maximum=None, images=None,
            journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None, seulement=None, refaire=False,
-           relance=False, planifier=None, fichier_relance=None):
+           relance=False, planifier=None, fichier_relance=None, planifie=False, fichier_report=None):
     """`journal(ligne)` : progression (print en production) ; `dormir(s)` : pause entre vidéos (time.sleep en
     production). Les deux sont inertes par défaut (tests). `_lectures.json` et `processed.json` sont écrits après
     chaque vidéo : un arrêt (PC éteint, Ctrl+C) ne perd que la vidéo en cours."""
@@ -1607,6 +1658,9 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     meta = ouvrir_semaine(d, week)
     if passage == "weekly":
         ouvrir_semaine(d, courante)
+    lancement = lancement_du_passage(relance, planifie, seulement)
+    if passage == "daily" and lancement != "manuel" and meta.get("passages", {}).get("daily") != jour:
+        return passage_reporte(d, week, passage, instant, jour, meta, lancement, git, planifier, fichier_report)      # v42 : le passage GitHub du jour n'est pas fait
     pc_cfg = config["pc"]
     debut_passage = horloge()
     fin_passage = debut_passage + pc_cfg.get("budget_minutes", 180) * 60
@@ -1847,11 +1901,14 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         for w in semaines:                    # v39 §1 : un bloc par semaine travaillée ; critère de gel n° 3 compté par semaine
             e = etats[w]
             e["bloquantes"] = list(etat["bloquantes"]) if w == week else e["bloquantes"]
-            gel3 = rapport_pc.critere_gel3(d, w, f"pc-{passage}", instant, e["top10_n"], e["bloquantes"], relance=bool(relance))
+            vide = semaine_vide(d, w)
+            gel3 = rapport_pc.critere_gel3(d, w, f"pc-{passage}", instant, e["top10_n"], e["bloquantes"], relance=bool(relance),
+                                           planifie=(lancement == "planificateur"), vide=vide)
             lignes = entete_etat(e["complet"] if w != week else etat["complet"], e["traitees"], e["restantes"], e["a_traiter"], e["bloquantes"], texte_relance,
                                  (horloge() - debut_passage) / 60, e["top10_n"], gel3,
                                  [(v, p["pc"]["decision_tri3"]) for v, p in d.processed().items()
-                                  if p.get("week") == w and (p.get("pc") or {}).get("decision_tri3") and (p.get("pc") or {}).get("date") == jour])
+                                  if p.get("week") == w and (p.get("pc") or {}).get("decision_tri3") and (p.get("pc") or {}).get("date") == jour],
+                                 lancement, vide)
             if w != week:
                 lignes.append(f"- Semaine écoulée non gelée (traitée avec la semaine {week} : candidates top 10 d'abord, budget partagé)")
             if regles_st[w]:
@@ -2006,6 +2063,7 @@ def _echec_bloc(a, cause):
         return
     try:
         signaler_echec(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(), cause,
+                       lancement=lancement_du_passage(a.relance, a.planifie, a.video),
                        git=None if (a.no_git or cause.startswith(("git", "fichier"))) else Git())
     except Exception:
         pass
@@ -2022,6 +2080,7 @@ if __name__ == "__main__":
     ap.add_argument("--profil", help="avec ytdlp-profil : dossier du profil Chrome du compte secondaire (ex. \"Profile 1\")")
     ap.add_argument("--no-git", action="store_true", help="pas de pull/push (essai local)")
     ap.add_argument("--relance", action="store_true", help="passage de relance (anti-bot) : pas de nouvelle relance programmée")
+    ap.add_argument("--planifie", action="store_true", help="passage lancé par le Planificateur de tâches (lancer_pc.bat l'ajoute) : compte pour le critère de gel n° 3")
     ap.add_argument("--whisper", action="store_true", help="active Whisper (config pc.whisper_cmd requis)")
     ap.add_argument("--max", type=int, help="limite les vidéos traitées, sous-titres ET images")
     ap.add_argument("--video", action="append", help="ne traite que cette vidéo (identifiant YouTube ; répétable)")
@@ -2132,7 +2191,7 @@ if __name__ == "__main__":
         config["pc"]["images"]["format_video"] = f"bv*[height<={a.resolution}]/b[height<={a.resolution}]"
     try:
         r = lancer(a.passage, parse_iso(a.maintenant) if a.maintenant else maintenant(), config=config,
-                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max, seulement=set(a.video or []), refaire=a.refaire, relance=a.relance,
+                   git=None if a.no_git else Git(), whisper=a.whisper, maximum=a.max, seulement=set(a.video or []), refaire=a.refaire, relance=a.relance, planifie=a.planifie,
                    journal=lambda m: print(m, flush=True), dormir=time.sleep,
                    ocr_debug=(RACINE / "logs" / "ocr") if (a.garder_ocr or a.publier_essai) else None)
     except GitErreur as e:
