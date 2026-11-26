@@ -4,5 +4,7 @@
   "end_utc": "2026-12-03T00:00:00Z",
   "frozen": false,
   "frozen_at": null,
-  "passages": {}
+  "passages": {
+    "daily": "2026-11-26"
+  }
 }

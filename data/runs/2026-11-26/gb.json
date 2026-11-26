@@ -1,0 +1,248 @@
+[
+  {
+    "run_id": "gb-2026-11-26-ebIR4sYw8m8",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "ebIR4sYw8m8",
+    "video_ids": [
+      "ebIR4sYw8m8"
+    ],
+    "published_at": "2026-11-26T07:27:29+01:00",
+    "lang": "en",
+    "score": {
+      "total": 383,
+      "runs": [
+        383
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : RC: 383; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "ebIR4sYw8m8",
+        "published_at": "2026-11-26T07:27:29+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-Pj6QzXQ81jQ",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "player": "Willian",
+    "channel": "Willian",
+    "video_id": "Pj6QzXQ81jQ",
+    "video_ids": [
+      "Pj6QzXQ81jQ"
+    ],
+    "published_at": "2026-11-26T14:02:59+01:00",
+    "lang": "ko",
+    "score": {
+      "total": 204,
+      "runs": [
+        204
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : 204 RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "Pj6QzXQ81jQ",
+        "published_at": "2026-11-26T14:02:59+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-80DbcO_om18",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
+    "player": "Ahmad1195",
+    "channel": "Ahmad1195",
+    "video_id": "80DbcO_om18",
+    "video_ids": [
+      "80DbcO_om18"
+    ],
+    "published_at": "2026-11-26T03:12:26+01:00",
+    "lang": "en",
+    "score": {
+      "total": 203,
+      "runs": [
+        203
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 203 rc; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "80DbcO_om18",
+        "published_at": "2026-11-26T03:12:26+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": 84800000000000,
+        "damage_exact": false,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-MowlbyeKBJo",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCEhHNuc4TzD33XrXVgG7aiQ",
+    "player": "Heartful Harry",
+    "channel": "Heartful Harry",
+    "video_id": "MowlbyeKBJo",
+    "video_ids": [
+      "MowlbyeKBJo"
+    ],
+    "published_at": "2026-11-26T03:04:48+01:00",
+    "lang": "en",
+    "score": {
+      "total": 203,
+      "runs": [
+        203
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 203 RC; description : 204RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "MowlbyeKBJo",
+        "published_at": "2026-11-26T03:04:48+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-9y17tXt160Q",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCNe8_0XrSUudDCXWSxJk2VQ",
+    "player": "SlayOnLow",
+    "channel": "SlayOnLow",
+    "video_id": "9y17tXt160Q",
+    "video_ids": [
+      "9y17tXt160Q"
+    ],
+    "published_at": "2026-11-26T11:39:17+01:00",
+    "lang": "en",
+    "score": {
+      "total": 183,
+      "runs": [
+        183
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 183 RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "9y17tXt160Q",
+        "published_at": "2026-11-26T11:39:17+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-RqEV5DJVPxM",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
+    "player": "Eden(이든)",
+    "channel": "Eden(이든)",
+    "video_id": "RqEV5DJVPxM",
+    "video_ids": [
+      "RqEV5DJVPxM"
+    ],
+    "published_at": "2026-11-26T10:59:37+01:00",
+    "lang": "ko",
+    "score": {
+      "total": 178,
+      "runs": [
+        178
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "description",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (description) : Rage 178; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "RqEV5DJVPxM",
+        "published_at": "2026-11-26T10:59:37+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "description",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  }
+]
