@@ -233,7 +233,7 @@ GitHub Actions fonctionne en UTC et peut avoir du retard : chaque workflow a **2
 | Passage | Où | Créneau Paris | Rôle |
 | --- | --- | --- | --- |
 | `daily.yml` | Actions | 20:00 (accepté jusqu'à 23:59) | Ouvrir la semaine si besoin → recherche (§1) → tri 1 → tri 2 (miniatures) → `processed`/`rejected` → `classement.py` → rapport → commit → site |
-| PC quotidien | PC d'Alexis (Planificateur, « exécuter dès que possible si l'heure est manquée ») | **21:15** (v42, après le passage GitHub de 20:00) | `git pull` → sous-titres (yt-dlp) + Whisper → tris 3-4 des vidéos `pc_needed` et `en_cours` → `classement.py` → rapport → `git push` |
+| PC quotidien | PC d'Alexis (Planificateur, « exécuter dès que possible si l'heure est manquée ») | **19:30, 21:30, 23:30** (choix d'Alexis 26/11 : répétition toutes les 2 h pendant 5 h ; 21:15 avait été proposé en v42 pour passer après GitHub 20:00 ; le passage de 19:30 est donc reporté par le garde-fou) | `git pull` → sous-titres (yt-dlp) + Whisper → tris 3-4 des vidéos `pc_needed` et `en_cours` → `classement.py` → rapport → `git push` |
 | `weekly.yml` | Actions | jeudi 01:00 (accepté jusqu'à 04:59) | Dernière recherche avec `fin` = reset → tris 1-2 → commit. **Ne gèle pas.** |
 | PC hebdomadaire | PC | jeudi 01:15 | Tris 3-4 de la semaine écoulée → `classement.py` → **gel** (`frozen: true`) → ouverture de la nouvelle semaine → `git push` |
 

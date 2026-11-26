@@ -22,7 +22,7 @@ echo.
 for /f "delims=" %%i in ('powershell -NoProfile -Command "(Get-ScheduledTaskInfo -TaskName 'ShadowLedger PC hebdomadaire').NextRunTime.ToString('dddd dd/MM/yyyy HH:mm')"') do set HEBDO=%%i
 echo ========================================================================
 echo  Tâches créées. Test lancé maintenant.
-echo  Passages quotidiens : tous les soirs à 21:15, 23:15 et 01:15 (PC allumé, session ouverte).
+echo  Passages quotidiens : tous les soirs à 19:30, 21:30 et 23:30 (PC allumé, session ouverte).
 echo  Prochain passage hebdomadaire : %HEBDO%
 echo  Journal : logs\pc.log    Rapport poussé : data\runs\^<semaine^>\_rapport.md
 echo ========================================================================
