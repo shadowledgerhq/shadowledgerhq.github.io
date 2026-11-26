@@ -27,13 +27,13 @@ Photos de profil (piste B) prêtes dans `profil/` : `profil-youtube-800.png`, `p
 
 ## 3. Descriptions des comptes
 
-**YouTube** (≤ 1 000 car.)
-> FR — Chaque semaine, Shadow Ledger recense les meilleures runs YouTube de Solo Leveling: Arise sur 4 modes (Power Of Calamity, Battlefield Of Time, Guild Boss, Hall Of The Monarchs), analyse les builds du top 10 et publie un guide théorique par mode. Chaque vidéo existe en français et en anglais (piste audio au choix).
+**YouTube** (≤ 1 000 car. ; 928 au 27/11)
+> FR — Chaque semaine, Shadow Ledger classe les meilleures runs YouTube de Solo Leveling: Arise (Power Of Calamity, Battlefield Of Time, Guild Boss, Hall Of The Monarchs), analyse les builds du top 10 et publie un guide par mode. Pistes audio français et anglais.
 > Classements complets et builds : shadowledgerhq.github.io
 > Les runs citées sont créditées et liées à leur auteur ; demande de retrait : shadowledgerhq.github.io/site/retrait.html
 > Projet de fan, non affilié à Netmarble. Voix de synthèse.
 >
-> EN — Every week, Shadow Ledger tracks the best Solo Leveling: Arise runs on YouTube across 4 modes (Power Of Calamity, Battlefield Of Time, Guild Boss, Hall Of The Monarchs), breaks down the top 10 builds and publishes a theorycraft guide per mode. Every video is available in English and French (audio track selector).
+> EN — Every week, Shadow Ledger ranks the best Solo Leveling: Arise runs on YouTube (POC, BOT, GB, HOTM), breaks down the top 10 builds and publishes a guide per mode. English and French audio tracks.
 > Full rankings and builds: shadowledgerhq.github.io
 > Featured runs are credited and linked to their creators; removal requests: shadowledgerhq.github.io/site/retrait.html
 > Fan project, not affiliated with Netmarble. Synthetic voice.
