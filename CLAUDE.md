@@ -5,7 +5,7 @@
 - **Compteur** : commence chaque réponse par « Message n/15 » (n = numéro de ta réponse précédente + 1). À partir de n = 15, ajoute « ⚠ Discussion longue » et donne un seul message prêt à coller pour une nouvelle discussion : ligne de rôle (PROMPTS_DISCUSSIONS.md), SUIVI à jour, prochaine action précise.
 - **Autonomie** : ne demande jamais à Alexis une information que tu peux trouver toi-même (dépôt, slagate.com, forum Netmarble, vidéos YouTube, recherche web). Si c'est introuvable : hypothèse la plus prudente, marquée « à vérifier » avec sa source, et continue. Pour une décision : propose ton choix par défaut et avance. « Besoin d'Alexis » = seulement ce que lui seul peut faire (CONTEXTE.md, section 9).
 - **Aucun relevé manuel** : ne jamais écrire « à relever à la main » ; une donnée non relevée reste `null` ou « à vérifier ».
-- **Boîte** : pour un message vers les discussions 1 à 7, écris-le dans `docs/BOITE.md` (section du destinataire, format « - [à traiter] AAAA-MM-JJ — de Code — message »).
+- **Boîte** : pour un message vers les discussions 1 à 7, écris-le dans `docs/BOITE.md` (section du destinataire, format « - [à traiter] AAAA-MM-JJ — de Code — message »). Au démarrage, lis aussi `docs/BOITE.md` (sections 8-9) ; Code archive les messages traités dans `docs/archives/BOITE.md` au plus tard 7 jours après.
 
 Ce dépôt contient tout le projet Shadow Ledger d'Alexis : classements hebdomadaires, builds, base de données du jeu, theorycraft, vidéos et site web pour *Solo Leveling: Arise* (modes POC, BOT, GB, HOTM).
 
@@ -42,10 +42,12 @@ Les sessions Claude Code sur ce dépôt servent surtout aux discussions **8 — 
 
 ## Commandes
 
+- Avant pytest : `pip install opencv-python-headless` (sans OpenCV, 17 tests échouent à tort).
 - Contrôle de la base : `python3 pipeline/check_db.py` (ajouter `--verbose` pour lister tous les avertissements). Code de sortie 1 s'il y a une erreur bloquante ; écrase `data/db/_rapport.md`. Lancé aussi par `.github/workflows/check-db.yml` à chaque push touchant `data/db/` ou `data/icons/`.
 - Tests : `python3 -m pytest -q pipeline/tests` (ou chaque fichier `python3 pipeline/tests/test_<x>.py`).
 - Pipeline étape 1 (stdlib, Python ≥ 3.9) : `python3 pipeline/etape1.py daily|weekly [--force] [--maintenant ISO]` (recherche YouTube + tri 1 + classement + rapport ; clé dans la variable `YOUTUBE_API_KEY`) ; `python3 pipeline/etape1.py classement [--semaine AAAA-MM-JJ]` ; `python3 pipeline/etape1.py relire [--semaine …]` (rejoue le tri 1 avec les règles actuelles, puis recalcule) ou `python3 pipeline/classement.py [AAAA-MM-JJ]` (recalcul seul).
 - Paramètres de l'étape 1 : `pipeline/config/etape1.json` (requêtes, plages plausibles, quota, créneaux).
+- pc.py (2000+ lignes) : le scinder en modules quand une spec touche ce fichier, sans changer son comportement, tests verts.
 - Étape 2 (builds, SPEC_ETAPE2) : `python3 pipeline/builds.py [AAAA-MM-JJ] [--force]` (écrit `data/builds/<semaine>/…` + `_rapport.md`) puis `python3 pipeline/export_pptx.py [semaine] [--mode] [--sortie]` (`exports/<semaine>/builds/`, `pip install python-pptx opencv-python-headless`). Sur le PC : `python3 pipeline/pc.py builds [--semaine …] | [--video ID --mode bot]` (images de composition, `pipeline/composition.py`). Réglages (seuils par catégorie, masques, onglets, zones, extraction) : `pipeline/config/etape2.json`. Tests : `python3 pipeline/tests/test_etape2.py`.
 - Rotation BOT (SPEC_ROTATION v2) : `py -3 pipeline\pc.py daily --video <ID>` relève la rotation des vidéos du top 3 BOT (`pipeline/config/rotation.json`, `version` à augmenter pour refaire) → `data/rotations/<semaine>/bot/<ID>.json` + `_rapport.md` ; diagnostic OCR dans `_crops/<ID>_ocr.json`. Tests : `python3 pipeline/tests/test_rotation.py`.
 - Analyse porte × mode HOTM : `python3 pipeline/analyse_porte_mode.py`.

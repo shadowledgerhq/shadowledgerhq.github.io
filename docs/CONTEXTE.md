@@ -69,7 +69,7 @@ Règles :
 - Vidéo publiée moins de 3 h après le reset : note d'alerte « semaine précédente ? », jamais un rejet.
 - Légendes ajoutées par l'auteur de la vidéo (titre, texte incrusté) : au mieux un score provisoire, à confirmer sur l'écran RESULT.
 - HOTM : une ligne par joueur **et par porte** ; porte illisible (écran et titre) → `hotm-gate-inconnue.json`, jamais publié.
-- *Décisions d'Alexis des 13 et 14/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` (v33 au 17/11/2026, aussi dans les documents du Projet SLA).
+- *Décisions d'Alexis des 13 et 14/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` (état actuel ; historique dans `docs/archives/`).
 
 ### Étape 2 — Builds du top 10 (automatisée en grande partie)
 
@@ -180,7 +180,9 @@ shadowledgerhq.github.io/
 
 Les discussions d'étape décident **quoi** faire ; la discussion Code décide **comment** le coder. Chaque spécification est poussée dans `docs/` du dépôt avant d'être envoyée à Code ; Code pousse toujours sur une branche `claude/…` (fusion automatique dans `main`).
 
-Les discussions 8 et 9 se font dans Claude Code (claude.ai/code), sur le dépôt `shadowledgerhq/shadowledgerhq.github.io` : elles lisent `CLAUDE.md` et le skill du dépôt. Les autres se font dans le Projet SLA sur claude.ai.
+Les discussions 8 et 9 s'ouvrent directement sur le dépôt `shadowledgerhq/shadowledgerhq.github.io` dans Claude Code (claude.ai/code ; sinon `add_repo` en push) : elles lisent `CLAUDE.md` et le skill du dépôt. Les autres se font dans le Projet SLA sur claude.ai.
+
+**Boîtes** : chaque discussion lit `claude/BOITE.md` et `docs/BOITE.md` au démarrage. Un message traité est retiré de `claude/BOITE.md` ; pour `docs/BOITE.md`, Code l'archive dans `docs/archives/BOITE.md` au plus tard 7 jours après son traitement.
 
 ### Aiguillage : quelle discussion pour quelle demande
 
@@ -219,6 +221,7 @@ Règle de renvoi : si une demande relève d'une autre discussion, Claude ne la t
 - [ ] Échantillon de voix (1 à 2 min, propre, sans bruit).
 - [ ] Trace écrite de l'autorisation de Sohoven (à conserver).
 - [ ] Passer le nom TikTok en « Shadow Ledger » le 19/11/2026.
+- Ouvrir les discussions 8 et 9 sur le dépôt (Claude Code).
 - En continu : connexions et comptes, secrets (clés, GitHub), manipulations sur son PC (Planificateur de tâches, essais `pc.py`), mise à jour des instructions du Projet SLA, messages vers les discussions 8 et 9 (celles-ci n'ont pas de boîte : Alexis colle la demande).
 
 Tout le reste (images de référence, libellés, listes d'éléments, données du jeu, recherches) est cherché par Claude lui-même (voir « Autonomie », section 7).

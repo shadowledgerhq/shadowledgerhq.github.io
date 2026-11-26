@@ -26,9 +26,9 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 ## 2. Fichiers et dossiers
 
 - Les documents du dépôt (`docs/`, `data/`, `suivi/`) ne ressortent pas dans la recherche du Projet SLA : dans une discussion claude.ai, les lire en clonant le dépôt public `https://github.com/shadowledgerhq/shadowledgerhq.github.io` (ou via la source GitHub synchronisée du projet).
-- Arborescence décrite dans CONTEXTE.md (section 6). Spécification détaillée de l'étape 1 : SPEC_ETAPE1.md (projet et `docs/` du dépôt).
+- Arborescence décrite dans CONTEXTE.md (section 6). Les specs du dépôt (`docs/SPEC_ETAPE1.md`, `SPEC_ETAPE2.md`…) font seules foi : état actuel court ; l'historique des versions est dans `docs/archives/`.
 - Toute spécification est poussée dans `docs/` du dépôt **avant** d'être envoyée à la discussion Code. Code pousse toujours sur une branche `claude/…` (fusion automatique dans `main`).
-- **Boîte** : un message des discussions 8 ou 9 vers les discussions 1 à 7 s'écrit dans `docs/BOITE.md`, section du destinataire, format `- [à traiter] AAAA-MM-JJ — de Code — message` ; le destinataire le passe en `[traité AAAA-MM-JJ]`.
+- **Boîte** : un message des discussions 8 ou 9 vers les discussions 1 à 7 s'écrit dans `docs/BOITE.md`, section du destinataire, format `- [à traiter] AAAA-MM-JJ — de Code — message` ; le destinataire le passe en `[traité AAAA-MM-JJ]`. Un message traité est retiré de `claude/BOITE.md` ; pour `docs/BOITE.md`, Code l'archive dans `docs/archives/BOITE.md` au plus tard 7 jours après.
 - **Aucun relevé manuel** : ne jamais écrire « à relever à la main » ; une donnée non relevée reste `null` ou « à vérifier ».
 - Noms de fichiers en minuscules, sans accents ni espaces, mots séparés par `-`.
 - Codes de mode dans les fichiers : `poc`, `bot`, `gb`, `hotm`.
@@ -156,7 +156,7 @@ Chaque réponse de travail se termine par le suivi de la discussion, 30 lignes m
 - (vide si rien)
 ```
 
-Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'état actuel.
+Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'état actuel. Au-delà de 30 lignes, les anciennes lignes « Fait » vont dans `suivi/archives/<discussion>.md`.
 
 ## 5. Reprise d'une discussion
 
@@ -170,6 +170,7 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - Réponses courtes. Pas de reformulation de la demande, pas de résumé de ce qui vient d'être fait.
 - Pas de recherche web si l'information est dans le projet, le dépôt ou la base.
 - Lire seulement les fichiers et la partie de la base utiles à la tâche.
+- Ne jamais lire `docs/archives/` ni `suivi/archives/` sans besoin précis.
 - Ce qui se répète se code (Python, GitHub Actions) au lieu d'être fait à la main par Claude.
 - Une question à Alexis seulement si la réponse change ce qu'on fait.
 - **Autonomie** : ne jamais demander à Alexis une information trouvable soi-même (dépôt, slagate.com, forum Netmarble, vidéos YouTube, recherche web). Introuvable : hypothèse la plus prudente, marquée « à vérifier » avec sa source, et on continue. Décision : proposer son choix par défaut et avancer. « Besoin d'Alexis » = seulement ce que lui seul peut faire (CONTEXTE.md, section 9).

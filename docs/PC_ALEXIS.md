@@ -18,6 +18,7 @@ Le script `pipeline/pc.py` tourne sur le PC d'Alexis : sous-titres (yt-dlp), Whi
    - journal : `logs\pc.log` (non versionné).
 
 ## Après la création des tâches
+- **Passage bloqué (« anti-bot YouTube », 0 vidéo traitée) → lancer `outils-pc\5_test_antibot.bat`** (met yt-dlp à jour, trouve les réglages qui passent, les enregistre dans `pc_local.json`), puis `outils-pc\3_passage_complet.bat`.
 - Test immédiat : PowerShell, `Start-ScheduledTask -TaskName 'ShadowLedger PC quotidien'`, puis ouvrir `logs\pc.log` (le passage dure quelques minutes à une heure ; il affiche une ligne par vidéo). Un passage manuel ne se lance pas deux fois en même temps.
 - Les tâches tournent **session ouverte**, sous ton compte (Git, yt-dlp, Tesseract). PC éteint ou verrouillé à 20h30 : le passage part dès que possible. PC en veille jeudi à 01h15 : il ne se réveille pas tout seul.
 - Chaque passage fait `git pull`, traite les vidéos, puis `git push` des seuls fichiers `data/`. En cas de conflit ou d'erreur réseau, il s'arrête, l'écrit dans `logs\pc.log` (« ERREUR git ») et reprend au passage suivant.
