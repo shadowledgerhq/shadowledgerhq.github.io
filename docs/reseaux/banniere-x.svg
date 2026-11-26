@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" font-family="Inter, sans-serif">
+<!-- Bannière X 1500x500 ; la photo de profil recouvre le bas à gauche : texte à droite -->
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4FD1FF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient><linearGradient id="h" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4FD1FF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient><pattern id="l" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M0 79.5 H80" stroke="#EDEBFF" stroke-opacity=".04"/></pattern></defs>
+<rect width="1500" height="500" fill="#0B0D17"/><rect width="1500" height="500" fill="url(#l)"/>
+<rect x="0" y="490" width="1500" height="10" fill="url(#h)"/>
+<g transform="translate(470,95) scale(0.42)"><polygon points="256,56 429,156 429,356 256,456 83,356 83,156" fill="none" stroke="url(#g)" stroke-width="22" stroke-linejoin="round"/><path d="M330 178 H210 Q176 178 176 212 V226 Q176 256 210 256 H302 Q336 256 336 290 V302 Q336 336 302 336 H182" fill="none" stroke="#EDEBFF" stroke-width="40" stroke-linecap="square" stroke-linejoin="round"/><rect x="330" y="158" width="40" height="40" fill="#7C5CFF"/></g>
+<text x="720" y="230" fill="#EDEBFF" font-size="68" font-weight="800" letter-spacing="2">SHADOW LEDGER</text>
+<text x="722" y="290" fill="#4FD1FF" font-size="28">Solo Leveling: Arise · POC · BOT · GB · HOTM</text>
+<text x="722" y="336" fill="#EDEBFF" fill-opacity=".7" font-size="24">Classements hebdo · Weekly rankings · FR/EN</text>
+</svg>

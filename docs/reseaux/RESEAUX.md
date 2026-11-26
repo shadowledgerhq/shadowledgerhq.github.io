@@ -1,6 +1,6 @@
 # Réseaux — kit de lancement (discussion 4)
 
-Version 2 — 2026-11-27 (v1 du 26/11 ; v2 : son de l'intro retiré, emplacements de l'écran de fin, lien Discord). **Rien n'est publié ni posé avant le feu vert d'Alexis** (CONTEXTE §2). Ce kit se pose le jour du lancement, dans l'ordre de la section 7.
+Version 2 — 2026-11-27 (v1 du 26/11 ; v2 : son de l'intro retiré, emplacements de l'écran de fin, lien Discord ; 27/11 : bannières). **Rien n'est publié ni posé avant le feu vert d'Alexis** (CONTEXTE §2). Ce kit se pose le jour du lancement, dans l'ordre de la section 7.
 
 Limites de caractères : connues au 26/11/2026, **à revérifier** au moment de poser (les plateformes les changent).
 
@@ -23,7 +23,7 @@ Trois pistes (dans `docs/reseaux/` : `logo-a-registre.svg`, `logo-b-sceau.svg`, 
 
 **Choix par défaut : B** pour la photo de profil (seule piste nette en rond de 48 px) ; A ou C réutilisables en bannière. Alexis peut refuser.
 
-Formats à exporter le jour J (depuis le SVG, `rsvg-convert -w <taille>`) : 800 × 800 (YouTube), 400 × 400 (X), 320 × 320 (Instagram), 200 × 200 (TikTok), 512 × 512 (Discord). Bannières : YouTube 2560 × 1440 (zone sûre 1546 × 423), X 1500 × 500 — à produire après validation de la piste.
+Formats à exporter le jour J (depuis le SVG, `rsvg-convert -w <taille>`) : 800 × 800 (YouTube), 400 × 400 (X), 320 × 320 (Instagram), 200 × 200 (TikTok), 512 × 512 (Discord). Bannières (piste B) : `banniere-youtube.svg/.png` (2560 × 1440, texte dans la zone sûre 1546 × 423, vérifié) et `banniere-x.svg/.png` (1500 × 500, texte à droite car la photo de profil recouvre le bas à gauche). À refaire si Alexis choisit une autre piste.
 
 ## 3. Descriptions des comptes
 
