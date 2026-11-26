@@ -73,7 +73,7 @@ footer .soc{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
     <span>Discord</span>
   </div>
   <p data-t="credit"></p>
-  <p data-t="removal"></p>
+  <p><span data-t="removal"></span> <a href="retrait.html" data-t="removalLink"></a></p>
   <p data-t="legal"></p>
 </div></footer>
 
@@ -88,7 +88,7 @@ const I18N={
   empty:"Aucune run vérifiée pour l'instant.",pending:n=>`${n} run(s) en cours de vérification (non classées)`,
   oneRun:"une seule run",prov:"provisoire",rounded:"arrondi",watch:"voir",
   credit:"Chaque score renvoie à la vidéo de son auteur. Shadow Ledger n'est pas affilié à Netmarble.",
-  removal:"Vous voulez retirer une de vos vidéos ? Contactez-nous sur Discord.",
+  removal:"Vous voulez retirer une de vos vidéos ?",removalLink:"Demande de retrait",
   legal:"Mentions légales · Solo Leveling: Arise © Netmarble. Visuels : fan kit officiel ou créations originales.",
   week_of:w=>`Semaine du ${fmtDate(w)}`},
  en:{week:"Week",modes:{poc:"Power Of Calamity",bot:"Battlefield Of Time",gb:"Guild Boss",hotm:"Hall Of The Monarchs"},
@@ -100,7 +100,7 @@ const I18N={
   empty:"No verified run yet.",pending:n=>`${n} run(s) being verified (not ranked)`,
   oneRun:"one run only",prov:"provisional",rounded:"rounded",watch:"watch",
   credit:"Every score links to its author's video. Shadow Ledger is not affiliated with Netmarble.",
-  removal:"Want one of your videos removed? Contact us on Discord.",
+  removal:"Want one of your videos removed?",removalLink:"Removal request",
   legal:"Legal notice · Solo Leveling: Arise © Netmarble. Visuals: official fan kit or original artwork.",
   week_of:w=>`Week of ${fmtDate(w)}`}
 };
