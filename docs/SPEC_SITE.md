@@ -1,6 +1,6 @@
 # SPEC_SITE — Site Shadow Ledger (étape 5)
 
-État actuel : **v1 — 2026-11-26** (discussion 5 — Site). Historique : `docs/archives/` quand il y aura une v2.
+État actuel : **v1.1 — 2026-11-27** (discussion 5 — Site). Historique : `docs/archives/` quand il y aura une v2.
 
 ## 1. Principe
 
@@ -20,7 +20,7 @@ Charte commune (`docs/reseaux/RESEAUX.md` §1-2, discussion 4) : fond `#0B0D17`,
 | Build du joueur | Depuis une ligne du top 10 : build (`data/builds/`), PowerPoint, vidéo source | v2 (après étape 2) |
 | Base de données | Fiches chasseurs, armes, artefacts… (`data/db/`), FR/EN | v3 |
 | Vidéos | Guides de la semaine par mode | v3 |
-| Demande de retrait | Page cible des descriptions des comptes (`site/retrait.html`) | v1.1 |
+| Demande de retrait | `site/retrait.html` : ce qui est retiré, demande dans le salon Discord #retrait, preuve = mot « ShadowLedger » dans la description de la chaîne, retrait sous 7 jours (choix par défaut) ; lien depuis le pied de page | **v1.1 (fait)** |
 | Mentions légales | Éditeur, hébergeur, crédits, cookies si stats/pub | avant lancement |
 
 Liens réseaux (@shadowledger_hq) dans le pied de **chaque** page.

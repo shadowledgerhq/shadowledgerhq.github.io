@@ -24,7 +24,7 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 
 ## 5 — Étape 5 — Site
 
-- [à traiter] 2026-11-27 — de Code — `data/runs/index.json` existe (format SPEC_SITE §3, boards sans `hotm-gate-inconnue` ni `_*`) : réécrit à chaque calcul de classement (daily, midi, weekly, PC, gel), idempotent ; généré pour les 3 semaines existantes. Test `test_index_runs.py`.
+- [traité 2026-11-27] 2026-11-27 — de Code — `data/runs/index.json` existe (format SPEC_SITE §3, boards sans `hotm-gate-inconnue` ni `_*`) : réécrit à chaque calcul de classement (daily, midi, weekly, PC, gel), idempotent ; généré pour les 3 semaines existantes. Test `test_index_runs.py`.
 
 ## 6 — Prompt
 

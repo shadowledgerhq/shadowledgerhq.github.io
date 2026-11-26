@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Shadow Ledger — Demande de retrait</title>
+<style>
+:root{--bg:#0B0D17;--panel:#131628;--line:#252a42;--ink:#EDEBFF;--mute:#9a97b8;--acc:#7C5CFF;--acc2:#4FD1FF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--line);background:#0e1020}
+.top{display:flex;align-items:center;gap:16px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:18px;color:var(--ink)}
+.logo svg{width:32px;height:32px;border-radius:6px}.logo span{color:var(--acc)}
+.sp{flex:1}
+button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit;cursor:pointer}
+h1{font-size:26px;margin:28px 0 8px}h2{font-size:18px;margin:26px 0 6px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px}
+ol,ul{padding-left:20px}li{margin:4px 0}
+.mute{color:var(--mute)}
+footer{margin-top:40px;border-top:1px solid var(--line);padding:20px 0 40px;color:var(--mute);font-size:13px}
+footer .soc{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+[lang-only]{display:none}html[lang=fr] [lang-only=fr],html[lang=en] [lang-only=en]{display:block}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="top">
+  <a class="logo" href="./"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4FD1FF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient></defs><rect width="512" height="512" fill="#0B0D17"/><polygon points="256,56 429,156 429,356 256,456 83,356 83,156" fill="none" stroke="url(#g)" stroke-width="22" stroke-linejoin="round"/><path d="M330 178 H210 Q176 178 176 212 V226 Q176 256 210 256 H302 Q336 256 336 290 V302 Q336 336 302 336 H182" fill="none" stroke="#EDEBFF" stroke-width="40" stroke-linecap="square" stroke-linejoin="round"/><rect x="330" y="158" width="40" height="40" fill="#7C5CFF"/></svg><div>Shadow <span>Ledger</span></div></a>
+  <div class="sp"></div>
+  <button id="lang">EN</button>
+</div></div></header>
+
+<main class="wrap">
+<section lang-only="fr">
+  <h1>Demande de retrait</h1>
+  <p>Shadow Ledger classe les runs publiées sur YouTube et renvoie toujours vers la vidéo et la chaîne de leur auteur. Si vous êtes l'auteur d'une vidéo et ne souhaitez pas y figurer, nous la retirons.</p>
+  <h2>Ce qui est retiré</h2>
+  <ul>
+    <li>votre ligne dans les classements (semaine en cours et archives) ;</li>
+    <li>les builds et analyses tirés de vos vidéos ;</li>
+    <li>tout lien vers votre chaîne. Vos vidéos ne sont plus analysées ensuite.</li>
+  </ul>
+  <h2>Comment faire</h2>
+  <div class="box"><ol>
+    <li>Rejoignez le serveur Discord Shadow Ledger <span class="discord mute">(lien en bas de page)</span>.</li>
+    <li>Écrivez dans le salon <b>#retrait</b> le lien de votre chaîne ou de la vidéo concernée.</li>
+    <li>Pour prouver que la chaîne est à vous, ajoutez le mot « ShadowLedger » à la description de la chaîne le temps de la vérification.</li>
+  </ol></div>
+  <p class="mute">Retrait sous 7 jours après vérification.</p>
+</section>
+
+<section lang-only="en">
+  <h1>Removal request</h1>
+  <p>Shadow Ledger ranks runs published on YouTube and always links to the author's video and channel. If you are the author of a video and do not want to be listed, we will remove it.</p>
+  <h2>What is removed</h2>
+  <ul>
+    <li>your row in the rankings (current week and archives);</li>
+    <li>the builds and analyses taken from your videos;</li>
+    <li>every link to your channel. Your videos are no longer analysed afterwards.</li>
+  </ul>
+  <h2>How to ask</h2>
+  <div class="box"><ol>
+    <li>Join the Shadow Ledger Discord server <span class="discord mute">(link at the bottom of the page)</span>.</li>
+    <li>Post the link to your channel or the video in the <b>#retrait</b> channel.</li>
+    <li>To show the channel is yours, add the word "ShadowLedger" to your channel description while we check.</li>
+  </ol></div>
+  <p class="mute">Removed within 7 days after verification.</p>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="soc">
+    <a href="https://www.youtube.com/@shadowledger_hq">YouTube</a>
+    <a href="https://www.tiktok.com/@shadowledger_hq">TikTok</a>
+    <a href="https://x.com/shadowledger_hq">X</a>
+    <a href="https://www.instagram.com/shadowledger_hq">Instagram</a>
+    <span>Discord</span>
+  </div>
+  <p><a href="./" id="back">Classements</a></p>
+</div></footer>
+
+<script>
+{
+let lang=null;try{lang=localStorage.getItem("sl_lang")}catch(e){}
+if(!lang)lang=(navigator.language||"fr").slice(0,2)==="en"?"en":"fr";
+const set=l=>{lang=l;document.documentElement.lang=l;document.getElementById("lang").textContent=l==="fr"?"EN":"FR";document.getElementById("back").textContent=l==="fr"?"Classements":"Rankings";try{localStorage.setItem("sl_lang",l)}catch(e){}};
+document.getElementById("lang").addEventListener("click",()=>set(lang==="fr"?"en":"fr"));
+set(lang);
+}
+</script>
+</body>
+</html>
