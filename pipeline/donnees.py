@@ -96,6 +96,21 @@ class Donnees:
         return self.lire(f"runs/{week}/_boss.json", [])
 
 
+def mettre_a_jour_index(d):
+    """data/runs/index.json (SPEC_SITE §3) : semaines présentes, gel, fichiers de classement.
+    Jamais `hotm-gate-inconnue` ni les fichiers `_*`. Appelé à chaque calcul de classement."""
+    semaines = []
+    for dossier in sorted(d.data.glob("runs/*/")):
+        meta = d.meta(dossier.name)
+        if not meta:
+            continue
+        boards = sorted(p.stem for p in dossier.glob("*.json")
+                        if not p.stem.startswith("_") and p.stem != "hotm-gate-inconnue")
+        semaines.append({"week": dossier.name, "frozen": bool(meta.get("frozen")),
+                         "frozen_at": meta.get("frozen_at"), "boards": boards})
+    return d.ecrire("runs/index.json", {"weeks": semaines})
+
+
 def ajouter_rejet(liste, entree):
     """Ajoute un rejet s'il n'y est pas déjà (clé video_id). Retourne True si ajouté."""
     if any(r["video_id"] == entree["video_id"] for r in liste):

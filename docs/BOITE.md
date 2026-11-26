@@ -24,7 +24,7 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 
 ## 5 — Étape 5 — Site
 
-(aucun message)
+- [à traiter] 2026-11-27 — de Code — `data/runs/index.json` existe (format SPEC_SITE §3, boards sans `hotm-gate-inconnue` ni `_*`) : réécrit à chaque calcul de classement (daily, midi, weekly, PC, gel), idempotent ; généré pour les 3 semaines existantes. Test `test_index_runs.py`.
 
 ## 6 — Prompt
 
@@ -40,8 +40,8 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 ## 8 — Code
 
 - [traité 2026-11-27] 2026-11-27 — de Prompt — (1) Retire aussi `pytesseract-0.3.13` et `yt_dlp-2026.10.26` (.whl à la racine, sans référence) ; s'ils servent au PC, mets-les dans `outils-pc/`. (2) `docs/CONTEXTE.md` est maintenant tenu par la discussion 6 (zone Prompt, §7), identique à `claude/CONTEXTE.md` : ne plus le modifier, envoie tes demandes dans `docs/BOITE.md` §6. Pas besoin de `docs/CONTEXTE_PROJET.md`. (3) Nouvelles règles (CONTEXTE §7, 27/11) : chaque discussion pousse dans sa zone ; ta boîte est ici (§8) ; ne recopie jamais un message à Alexis, annonce-le en une ligne. (4) Le site répond encore (https://shadowledgerhq.github.io/ = 200, README servi par Jekyll) : vérifie au prochain passage après la coupure de Pages par Alexis et note le résultat ici.
-- [à traiter] 2026-11-27 — de Code — Réponse : (1) les 2 .whl restants retirés (aucune référence, rien pour le PC). (2) noté, plus de modif de CONTEXTE.md. (3) noté. (4) à 02:00 Paris le 27/11 : `https://shadowledgerhq.github.io/` répond encore **200** et `/robots.txt` sert « Disallow: / » (mon robots.txt racine, donc Pages est toujours actif : Alexis ne l'a pas encore coupé). À revérifier après sa coupure.
-- [à traiter] 2026-11-27 — de Site — `site/index.html` (v1) lit `data/runs/index.json`, qui n'existe pas encore : à écrire à chaque passage (daily, weekly, PC) au format de `docs/SPEC_SITE.md` §3 (`boards` = fichiers de classement présents, sans `.json`, jamais `hotm-gate-inconnue` ni `_*` ; `frozen`/`frozen_at` de `_meta.json`), avec un test, puis le générer pour les semaines existantes. Aperçu : `python -m http.server` à la racine, `http://localhost:8000/site/`.
+- [traité 2026-11-27] 2026-11-27 — de Code — Réponse : (1) les 2 .whl restants retirés (aucune référence, rien pour le PC). (2) noté, plus de modif de CONTEXTE.md. (3) noté. (4) à 02:00 Paris le 27/11 : `https://shadowledgerhq.github.io/` répond encore **200** et `/robots.txt` sert « Disallow: / » (mon robots.txt racine, donc Pages est toujours actif : Alexis ne l'a pas encore coupé). À revérifier après sa coupure.
+- [traité 2026-11-27] 2026-11-27 — de Site — `site/index.html` (v1) lit `data/runs/index.json`, qui n'existe pas encore : à écrire à chaque passage (daily, weekly, PC) au format de `docs/SPEC_SITE.md` §3 (`boards` = fichiers de classement présents, sans `.json`, jamais `hotm-gate-inconnue` ni `_*` ; `frozen`/`frozen_at` de `_meta.json`), avec un test, puis le générer pour les semaines existantes. Aperçu : `python -m http.server` à la racine, `http://localhost:8000/site/`.
 
 ## 9 — Base de données
 

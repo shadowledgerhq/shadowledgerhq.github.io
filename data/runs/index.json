@@ -1,0 +1,31 @@
+{
+  "weeks": [
+    {
+      "week": "2026-11-12",
+      "frozen": false,
+      "frozen_at": null,
+      "boards": [
+        "bot",
+        "gb",
+        "poc"
+      ]
+    },
+    {
+      "week": "2026-11-19",
+      "frozen": true,
+      "frozen_at": "2026-11-26T21:56:13Z",
+      "boards": [
+        "gb",
+        "poc"
+      ]
+    },
+    {
+      "week": "2026-11-26",
+      "frozen": false,
+      "frozen_at": null,
+      "boards": [
+        "gb"
+      ]
+    }
+  ]
+}

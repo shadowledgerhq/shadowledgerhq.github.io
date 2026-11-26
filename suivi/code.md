@@ -1,4 +1,4 @@
-# SUIVI — 8 Code — 2026-11-26 (nuit, session 17)
+# SUIVI — 8 Code — 2026-11-27 (session 19)
 ## Fait
 - Détail archivé : `suivi/archives/code_2026-11-15_a_20.md` (sessions 4-19 du 15–20/11) et `suivi/archives/code_2026-11-22_a_26.md` (sessions 12-16 du 22–26/11 : v37 à v42, rotation, anti-bot, yt-dlp, POC refonte, tenues multiples).
 - (26/11 nuit, session 17) **Specs réécrites en « état actuel »** (point 2 de la discussion 6) : `docs/SPEC_ETAPE1.md` 120 → 64 Ko, **v42** (règles en vigueur, §6 : PC 21:15, coupure nette v41, ligne « Lancement », garde-fou « passage GitHub du jour », semaine vide, critère de gel n° 3 corrigé ; §8 sans liste ; **§9 = POC refonte**, l'ancien §9.1 v39 réparti en §1.4/§3.1/§4.1/§6) ; `docs/SPEC_ETAPE2.md` v7, 44 → 42 Ko (en-tête d'historique remplacé, §5 allégé). Historiques intacts dans `docs/archives/SPEC_ETAPE*_historique.md`. BOITE : messages dans §1 et §2, message « Réponse à vos points 1 à 8 » (§6) en attente de leur lecture. Aucun code modifié.
@@ -8,6 +8,7 @@
 - (26/11, session 18) **v43 : passage GitHub de midi** (`midi.yml`, crons 10:00Z/11:00Z, `creneaux.midi` 12:00-15:59, `etape1.py midi`, `passages.midi` ; ne touche pas `passages.daily`). Test `test_v43_midi.py`, 482 tests OK. Gain limité : le PC ne traite qu'à partir de 19:30. Mesure à faire les 27-29/11 : « restantes » à 23:30, sous-titres (8/passage), passages PC réellement lancés.
 - (26/11, session 18) **Rien de public avant le lancement** : `deployer-site.yml` manuel, `site/robots.txt` + racine, `check_site.py`, test `test_prive_avant_lancement.py`, 2 .whl retirés (restent pytesseract, yt_dlp), CONTEXTE §2/4/5/8/9/10 alignés sur la décision ; alignement complet attend `claude/CONTEXTE.md` (hors dépôt). Réponse dans BOITE §6.
 - (27/11, session 18) Boîte §8 traitée : 4 .whl retirés ; Pages encore actif (200, robots.txt Disallow) : à revérifier après la coupure par Alexis.
+- (27/11, session 19) **`data/runs/index.json`** (demande de Site, BOITE §8) : `donnees.mettre_a_jour_index`, appelé par `classement.calculer` (y compris semaine gelée) ; test `test_index_runs.py` ; 487 tests OK. Daily PC du 27/11 pas encore passé : bilan v42 à faire après 23:30.
 ## En cours
 - Premier traitement réel de la v42 (daily PC du 27/11 ; `outils-pc\7_horaire_19h30_21h30_23h30.bat` à lancer par Alexis après `git pull origin main`) : écrire le bilan v39/v40 dans BOITE §1 (lignes POC 2026-11-19, contrôles a/b/c) et vérifier les 28 rejets « mecharashi » de 2026-11-12 (`pc.semaine_ecoulee` false : ils ne seront traités que par un weekly ou si `true`).
 - À confirmer au passage réel (voir archive) : durée < 120 min, gsMwZUzrekM/TrXpeT16Fwc lus, yt-dlp 2026.11.23, relances de nuit (piste : ne pas programmer une relance de nuit si le PC est souvent éteint).
