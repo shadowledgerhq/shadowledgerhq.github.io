@@ -4,6 +4,7 @@
 - Gabarit vidéo v1 (`videos/GABARIT.md`) ; `video.json` = source unique ; `script.md` généré ; prototype de rendu (`videos/_prototype/`)
 - Essai BOT 2026-11-12 (Baruka S20-4) : 81 s, FR + EN, sans voix, intro 2 s et outro 5 s (charte Réseaux, logo B), estimations signalées
 - Constats : changements de chasseur à 12,8 / 15,4 / 18,3 s (홀맨, 크리스) ; écart en phase 2 (0,309 s) ; ouverture SJW avant 2,5 s (3/3)
+- Clip vertical 1080 × 1920 (intro 2 s, timeline, outro 3 s, zone sûre) dans le rendu (`--vertical`), demande de Réseaux
 ## En cours
 - Code : reprise du prototype dans pipeline/video/, contrôle « phases incomplètes » (docs/BOITE.md §8)
 ## À faire

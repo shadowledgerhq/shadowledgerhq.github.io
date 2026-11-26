@@ -399,5 +399,14 @@
    "sources": []
   }
  ],
- "logo": "docs/reseaux/logo-b-sceau.svg"
+ "logo": "docs/reseaux/logo-b-sceau.svg",
+ "vertical": {
+  "scenes": [
+   "intro",
+   "timeline",
+   "outro"
+  ],
+  "outro_duration": 3,
+  "note": "Clip vertical 1080 × 1920 (TikTok, Shorts, Reels) : intro 2 s, timeline, outro 3 s ; zone sûre RESEAUX.md §4."
+ }
 }
