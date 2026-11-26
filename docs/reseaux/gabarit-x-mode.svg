@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="Inter, sans-serif">
+<!-- Gabarit post X du mercredi : 1 image par classement (POC, BOT, GB). Champs {{...}} remplis par le script (discussion 8). -->
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4FD1FF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient></defs>
+<rect width="1600" height="900" fill="#0B0D17"/>
+<rect x="0" y="0" width="1600" height="10" fill="url(#g)"/>
+<g transform="translate(80,70) scale(0.19)"><polygon points="256,56 429,156 429,356 256,456 83,356 83,156" fill="none" stroke="url(#g)" stroke-width="22"/><path d="M330 178 H210 Q176 178 176 212 V226 Q176 256 210 256 H302 Q336 256 336 290 V302 Q336 336 302 336 H182" fill="none" stroke="#EDEBFF" stroke-width="40"/></g>
+<text x="190" y="118" fill="#EDEBFF" font-size="40" font-weight="700">SHADOW LEDGER</text>
+<text x="1520" y="105" fill="#EDEBFF" fill-opacity=".6" font-size="30" text-anchor="end">{{semaine_fr}} · {{semaine_en}}</text>
+<text x="80" y="250" fill="#EDEBFF" font-size="96" font-weight="800">{{mode}}</text>
+<text x="80" y="305" fill="#4FD1FF" font-size="34">{{mode_nom}} · {{critere_fr}} / {{critere_en}}</text>
+<g font-size="52" fill="#EDEBFF">
+<text x="80" y="450" font-weight="800" fill="url(#g)">1</text><text x="160" y="450">{{p1}}</text><text x="1520" y="450" text-anchor="end" font-weight="700">{{s1}}</text>
+<rect x="80" y="480" width="1440" height="2" fill="#EDEBFF" fill-opacity=".12"/>
+<text x="80" y="580" font-weight="800" fill-opacity=".8">2</text><text x="160" y="580">{{p2}}</text><text x="1520" y="580" text-anchor="end" font-weight="700">{{s2}}</text>
+<rect x="80" y="610" width="1440" height="2" fill="#EDEBFF" fill-opacity=".12"/>
+<text x="80" y="710" font-weight="800" fill-opacity=".6">3</text><text x="160" y="710">{{p3}}</text><text x="1520" y="710" text-anchor="end" font-weight="700">{{s3}}</text>
+</g>
+<text x="80" y="840" fill="#EDEBFF" fill-opacity=".55" font-size="28">{{statut_fr}} · {{statut_en}}</text>
+<text x="1520" y="840" fill="#EDEBFF" fill-opacity=".55" font-size="28" text-anchor="end">@shadowledger_hq · {{site}}</text>
+</svg>
