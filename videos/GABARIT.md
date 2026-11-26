@@ -7,9 +7,11 @@ Demandeur : discussion 3 (Theorycraft & vidéos). Code : discussion 8. Vidéos 1
 | --- | --- |
 | `video.json` | **Source unique** : scènes, durées, texte FR/EN, storyboard, sources, estimations. Écrit par la discussion 3. |
 | `script.md` | Généré depuis `video.json` (`videos/_prototype/script_md.py`, à reprendre par Code dans `pipeline/`) : minutage, storyboard, narration FR/EN côte à côte. Jamais modifié à la main. |
-| `<mode>-<semaine>-<fr|en>.mp4` | Rendu (`videos/_prototype/rendu_video.py`, idem). **Pas dans le dépôt** (poids) : gardé sur le PC ; envoi YouTube en « Privé » seulement avant le lancement. |
+| `<mode>-<semaine>-<fr|en>[-vertical].mp4` | Rendu (`videos/_prototype/rendu_video.py`, idem). **Pas dans le dépôt** (poids) : gardé sur le PC ; envoi YouTube en « Privé » seulement avant le lancement. |
 
 HOTM : `<mode>` = `hotm-gate-<n>`.
+
+**Clip vertical** (TikTok, Shorts, Reels ; `--vertical`) : 1080 × 1920, scènes listées dans `video.json["vertical"]["scenes"]` (par défaut intro 2 s, timeline, outro 3 s). Zone sûre (`docs/reseaux/RESEAUX.md` §4) : rien dans les 20 % du bas ni le long du bord droit ; titre, bandeau et sources en haut, sous-titres juste au-dessus de la zone du bas. Intro sans son, la voix commence après l'intro.
 
 ## 2. Structure type (≈ 75-90 s pour le BOT, jusqu'à 3 min pour POC/GB/HOTM)
 | # | Scène (`type`) | Durée | Contenu |
@@ -23,7 +25,7 @@ HOTM : `<mode>` = `hotm-gate-<n>`.
 | 6 | `build` | 8-12 s | Composition et stuff (`data/builds/`) ; non lu = grisé, jamais complété |
 | 7 | `team` (à venir) | 15-30 s | Meilleure équipe théorique : chaque choix justifié, gain estimé et calcul cité |
 | 8 | `points` (limites) | 5-8 s | Ce que la vidéo ne dit pas encore |
-| 9 | `outro` | 5 s exactement | Support de l'écran de fin YouTube : logo à gauche, 2 emplacements vides à droite, comptes et site, crédits des joueurs (RESEAUX.md §4) |
+| 9 | `outro` | 5 s exactement | Support de l'écran de fin YouTube : logo à gauche, 2 emplacements vides de 420 × 236 px à droite (x 900 et 1380, y 230 ; à vérifier dans l'éditeur YouTube au 1er envoi en « Privé »), comptes et site, crédits des joueurs (RESEAUX.md §4) |
 
 ## 3. Règles
 - Narration FR et EN de **même contenu**, au plus ≈ 15 caractères par seconde de scène (lisible en sous-titres, à dire en voix).

@@ -1,12 +1,13 @@
 """Rendu d'une vidéo Shadow Ledger (schémas seulement, sans voix) à partir de video.json.
 
-Usage : python rendu_video.py <video.json> <racine_depot> <fr|en> <sortie.mp4> [--images dossier]
+Usage : python rendu_video.py <video.json> <racine_depot> <fr|en> <sortie.mp4> [--images dossier] [--vertical]
 Gabarit : docs/GABARIT_VIDEO.md. Aucune image de tiers : tout est dessiné.
 """
 import io, json, os, re, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFont
 
 W, H, FPS = 1920, 1080, 30
+VERT = False  # format vertical 1080 × 1920 (TikTok, Shorts, Reels) : zone sûre = rien dans les 20 % du bas ni le bord droit
 BG = (11, 13, 23); PANEL = (22, 24, 40); LINE = (48, 50, 72)  # charte RESEAUX.md §1
 TXT = (237, 235, 255); MUTED = (146, 146, 176); WARN = (248, 113, 113)
 SJW = (124, 92, 255); HUN = (79, 209, 255); TAG = (245, 158, 11); OK = (74, 222, 128)
@@ -83,14 +84,25 @@ def base(video, scene, lang, t):
     b = L(video["badge"], lang)
     f = font(22, "SemiBold")
     tw = d.textlength(b, font=f)
-    d.rounded_rectangle((W - tw - 80, 36, W - 40, 80), 10, outline=WARN, width=2)
-    d.text((W - tw - 60, 45), b, font=f, fill=WARN)
+    bx = 60 if VERT else W - tw - 80
+    by = 100 if VERT else 36
+    d.rounded_rectangle((bx, by, bx + tw + 40, by + 44), 10, outline=WARN, width=2)
+    d.text((bx + 20, by + 9), b, font=f, fill=WARN)
     d.text((60, 44), "SHADOW LEDGER", font=font(24, "Bold"), fill=MUTED)
     if scene["type"] not in ("intro", "titre", "outro"):
         title = L(scene["title"], lang)
-        d.text((60, 110), title, font=tf(title, 56, "Bold"), fill=TXT)
-    # sources
-    if scene.get("sources"):
+        if VERT:
+            ft = tf(title, 52, "Bold")
+            for i, ln in enumerate(wrap(d, title, ft, W - 200)):
+                d.text((60, 180 + 64 * i), ln, font=ft, fill=TXT)
+        else:
+            d.text((60, 110), title, font=tf(title, 56, "Bold"), fill=TXT)
+    # sources (vertical : sous le titre, hors de la zone du bas)
+    if scene.get("sources") and VERT:
+        s = ("Sources : " if lang == "fr" else "Sources: ") + " · ".join(scene["sources"])
+        for i, ln in enumerate(wrap(d, s, font(18), W - 200)[:2]):
+            d.text((60, 330 + 24 * i), ln, font=font(18), fill=MUTED)
+    elif scene.get("sources"):
         s = ("Sources : " if lang == "fr" else "Sources: ") + " · ".join(scene["sources"])
         d.text((60, H - 205), s, font=font(18), fill=MUTED)
     # narration (sous-titres, en attendant la voix)
@@ -101,12 +113,15 @@ def base(video, scene, lang, t):
     if cur:
         txt = L(cur, lang)
         f = tf(txt, 36, "Regular")
-        lines = wrap(d, txt, f, W - 240)
-        y0 = H - 60 - 48 * len(lines)
-        d.rectangle((0, y0 - 24, W, H), fill=(6, 8, 12))
+        maxw = W - 260 if VERT else W - 240
+        lines = wrap(d, txt, f, maxw)
+        bas = int(H * 0.8) - 30 if VERT else H - 12
+        y0 = bas - 48 * len(lines)
+        d.rectangle((0, y0 - 24, W, bas + 18 if VERT else H), fill=(6, 8, 12))
+        cx = (W - 100) / 2 if VERT else W / 2
         for i, ln in enumerate(lines):
             lw = d.textlength(ln, font=f)
-            d.text(((W - lw) / 2, y0 + 48 * i), ln, font=f, fill=TXT)
+            d.text((cx - lw / 2, y0 + 48 * i), ln, font=f, fill=TXT)
     return im, d
 
 
@@ -122,7 +137,7 @@ def s_intro(video, sc, lang, t, ctx):
     """Intro 2 s : hexagone qui se trace (0-0,6 s), « S » (0,6-1,2 s), nom + bandeau du mode (1,2-2 s)."""
     im = Image.new("RGB", (W, H), BG)
     hexa, lettre = logo_layers(video["logo"], 420)
-    cx, cy = W // 2 - 210, 170
+    cx, cy = W // 2 - 210, (560 if VERT else 170)
     a = ease(t / 0.6)
     mask = Image.new("L", hexa.size, 0)
     ImageDraw.Draw(mask).pieslice((-200, -200, 620, 620), -90, -90 + 360 * a, fill=255)
@@ -137,10 +152,10 @@ def s_intro(video, sc, lang, t, ctx):
     if c > 0:
         col = lambda rgb: tuple(int(v * c + BG[i] * (1 - c)) for i, v in enumerate(rgb))
         f = font(84, "Bold"); s = "SHADOW LEDGER"; w = d.textlength(s, font=f)
-        d.text(((W - w) / 2, 640), s, font=f, fill=col(TXT))
+        d.text(((W - w) / 2, cy + 470), s, font=f, fill=col(TXT))
         s = L(sc["subtitle"], lang); f = font(36, "SemiBold"); w = d.textlength(s, font=f)
-        d.rounded_rectangle(((W - w) / 2 - 24, 770, (W + w) / 2 + 24, 830), 10, fill=col(SJW))
-        d.text(((W - w) / 2, 778), s, font=f, fill=col(TXT))
+        d.rounded_rectangle(((W - w) / 2 - 24, cy + 600, (W + w) / 2 + 24, cy + 660), 10, fill=col(SJW))
+        d.text(((W - w) / 2, cy + 608), s, font=f, fill=col(TXT))
     return im
 
 
@@ -156,6 +171,17 @@ def s_outro(video, sc, lang, t, ctx):
     """Outro 5 s (RESEAUX.md §4) : support de l'écran de fin YouTube."""
     im, d = base(video, sc, lang, t)
     hexa, lettre = logo_layers(video["logo"], 380)
+    if VERT:  # 3 s, texte en haut (zone sûre), pas d'écran de fin YouTube
+        for layer in (hexa, lettre):
+            im.paste(layer, ((W - 380) // 2 - 50, 300), layer)
+        y = 720
+        for txt, size, col, wt in (("SHADOW LEDGER", 64, TXT, "Bold"), (L(sc["subtitle"], lang), 34, TXT, "SemiBold"), (L(sc["credits"], lang), 26, MUTED, "Regular")):
+            f = tf(txt, size, wt)
+            for ln in wrap(d, txt, f, W - 260):
+                d.text(((W - 100 - d.textlength(ln, font=f)) / 2, y), ln, font=f, fill=col)
+                y += int(size * 1.35)
+            y += 30
+        return im
     for layer in (hexa, lettre):
         im.paste(layer, (170, 200), layer)
     d.text((170, 600), "SHADOW LEDGER", font=font(56, "Bold"), fill=TXT)
@@ -268,9 +294,12 @@ def marker(d, x, y, kind, est, r=16):
 
 def s_timeline(video, sc, lang, t, ctx):
     im, d = base(video, sc, lang, t)
-    x0, x1, vmax = 470, 1820, float(sc["axis_max"])
+    vmax = float(sc["axis_max"])
+    if VERT:
+        x0, x1, top, rh = 80, W - 150, 470, 240
+    else:
+        x0, x1, top, rh = 470, 1820, 250, 165
     X = lambda v: x0 + (x1 - x0) * v / vmax
-    top, rh = 250, 165
     rows = sc["rows"]
     yb = top + rh * len(rows)
     for k in range(0, int(vmax) + 1, 2):
@@ -285,9 +314,14 @@ def s_timeline(video, sc, lang, t, ctx):
     for i, r in enumerate(rows):
         y = top + rh * i
         d.rounded_rectangle((40, y, x1 + 40, y + rh - 30), 12, fill=PANEL)
-        d.text((70, y + 22), r["player"], font=tf(r["player"], 36, "Bold"), fill=TXT)
-        d.text((70, y + 78), L(r["sub"], lang), font=font(20), fill=MUTED)
-        ym = y + (rh - 30) / 2
+        if VERT:
+            d.text((70, y + 12), r["player"], font=tf(r["player"], 34, "Bold"), fill=TXT)
+            d.text((70 + d.textlength(r["player"], font=tf(r["player"], 34, "Bold")) + 20, y + 24), L(r["sub"], lang), font=font(20), fill=MUTED)
+            ym = y + 130
+        else:
+            d.text((70, y + 22), r["player"], font=tf(r["player"], 36, "Bold"), fill=TXT)
+            d.text((70, y + 78), L(r["sub"], lang), font=font(20), fill=MUTED)
+            ym = y + (rh - 30) / 2
         d.line((x0, ym, x1, ym), fill=LINE, width=2)
         evs = ctx["events"][i]
         for e in evs:
@@ -300,11 +334,13 @@ def s_timeline(video, sc, lang, t, ctx):
     d.text((X(play) - 120, yb + 4), f"{play:5.2f} s", font=font(24, "Bold"), fill=TXT)
     # légende
     lg = L(sc["legend"], lang)
-    lx, ly = 60, yb + 50
+    lx, ly = 60, yb + (45 if VERT else 50)
     for kind, txt in zip(("sjw", "hun", "tag"), lg[:3]):
         marker(d, lx + 14, ly + 14, kind, False, r=12)
         d.text((lx + 36, ly), txt, font=font(24), fill=TXT)
         lx += 60 + d.textlength(txt, font=font(24))
+    if VERT:
+        lx, ly = 60, ly + 44
     marker(d, lx + 14, ly + 14, "hun", True, r=12)
     d.text((lx + 36, ly), lg[3], font=font(24), fill=TAG)
     return im
@@ -365,8 +401,17 @@ SCENES = {"intro": s_intro, "titre": s_titre, "outro": s_outro, "classement": s_
 ANIM = {"intro": 2.1, "titre": 0.0, "classement": 3.5, "phases": 5.5, "points": None, "build": 2.0, "outro": 0.0, "timeline": None}
 
 
-def render(video_path, root, lang, out, images=None):
+def render(video_path, root, lang, out, images=None, vertical=False):
+    global W, H, VERT
     video = json.load(open(video_path, encoding="utf-8"))
+    if vertical:  # clip vertical : scènes choisies dans video.json["vertical"], outro raccourcie
+        W, H, VERT = 1080, 1920, True
+        v = video["vertical"]
+        scenes = [dict(s) for s in video["scenes"] if s["id"] in v["scenes"]]
+        for s in scenes:
+            if s["type"] == "outro":
+                s["duration"] = v.get("outro_duration", 3)
+        video["scenes"] = scenes
     for base_dir in (root, os.getcwd()):
         cand = os.path.join(base_dir, video.get("logo", ""))
         if video.get("logo") and os.path.exists(cand):
@@ -426,4 +471,4 @@ if __name__ == "__main__":
     img = a[a.index("--images") + 1] if "--images" in a else None
     if img:
         os.makedirs(img, exist_ok=True)
-    render(a[0], a[1], a[2], a[3], img)
+    render(a[0], a[1], a[2], a[3], img, vertical="--vertical" in a)
