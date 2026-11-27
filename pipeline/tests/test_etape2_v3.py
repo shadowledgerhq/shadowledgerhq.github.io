@@ -39,7 +39,7 @@ def test_build_v3_statues_gemmes_stats_successeur():
     o = T.obs_hunters(statues=STATUES, gems=GEMS)
     o["successor"] = {"id": T.SUCC, "level": None, "stats": {"attack": 1000}}
     b = T.build(T.ctx("bot"), o, T.REGLES_TOUT)
-    assert b["spec"] == 3 and len(b["statues"]) == 5 and len(b["gems"]["colors"]) == 5
+    assert b["spec"] == 8 and len(b["statues"]) == 5 and len(b["gems"]["colors"]) == 5
     assert b["successor"]["stats"] == {"attack": 1000}
     assert b["found"]["statues"] and b["found"]["gems"] and b["found"]["successor_stats"]
 

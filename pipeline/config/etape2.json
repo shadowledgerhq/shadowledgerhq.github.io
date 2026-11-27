@@ -1,6 +1,6 @@
 {
- "spec": 3,
- "_spec": "docs/SPEC_ETAPE2.md v2. Tout ce qui est [À CONFIRMER] se règle ici, pas dans le code.",
+ "spec_version": 8,
+ "_spec": "docs/SPEC_ETAPE2.md : `spec_version` = numéro de version de la spec, écrit dans le champ `spec` de chaque build. Tout ce qui est [À CONFIRMER] se règle ici, pas dans le code.",
  "top": 10,
  "builds_provisoires": true,
  "seuil_icone": {

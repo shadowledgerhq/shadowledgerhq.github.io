@@ -46,9 +46,10 @@ def test_18_bot_sans_ligne_classee_builds_provisoires():
     assert {"a-923ClD9Rc", "Lt84IhMjBvM", "wJ9CwjKwyco", "5MI-RLj7FSk"} <= {b["video_id"] for b in prov}      # l'ordre suit bot.json (change à chaque classement)
     assert all(b["line_provisional"] and b["rank"] is None and b["confidence"] == "a_verifier"
                and "ligne non classée (score provisoire)" in b["notes"] for b in prov)
-    # GB a des lignes classées : inchangé, aucun provisoire ; POC (aucune ligne classée) suit la même règle §0
+    # v8 (top 10 mixte) : GB mêle ses lignes classées (rang gardé) et des provisoires (rank null) ; POC (aucune ligne classée) : tout provisoire
     gb = [b for b in res if b["mode"] == "gb"]
-    assert gb and not any(b["line_provisional"] for b in gb) and all(b["rank"] in (1, 2, 3) for b in gb)
+    assert gb and any(not b["line_provisional"] and b["rank"] in (1, 2, 3) for b in gb)
+    assert all(b["rank"] is None for b in gb if b["line_provisional"])
     assert all(b["line_provisional"] for b in res if b["mode"] == "poc")
     fichiers = P.exporter(SEM, racine=t, cfg=cfg)
     v1 = prov[0]["video_id"]
@@ -59,16 +60,17 @@ def test_18_bot_sans_ligne_classee_builds_provisoires():
     en = _pptx_textes(t / "exports" / SEM / "builds" / "bot" / f"p01-{v1}-en.pptx")
     assert any("PROVISIONAL RANKING" in x for x in en)
 
-    # une ligne du mode devient classée : builds et PowerPoint provisoires supprimés au passage suivant
+    # v8 : une ligne du mode devient classée -> elle perd son statut provisoire (build classé, PowerPoint `01-`), les autres provisoires RESTENT
     ligne = next(r for r in bot if r["video_id"] == v1)
     ligne["rank"], ligne["confidence"] = 1, "sur"
     (t / f"data/runs/{SEM}/bot.json").write_text(json.dumps(bot, ensure_ascii=False), encoding="utf-8")
     res = B.calculer(SEM, racine=t, cfg=cfg, banque=object())
-    assert [b["rank"] for b in res if b["mode"] == "bot"] == [1] and not any(b["line_provisional"] for b in res if b["mode"] != "poc")
-    assert not [f for f in (t / f"data/builds/{SEM}/bot").glob("*.json") if json.loads(f.read_text(encoding="utf-8")).get("line_provisional")]
+    bots = [b for b in res if b["mode"] == "bot"]
+    assert [b["video_id"] for b in bots if b["rank"] == 1] == [v1] and sum(1 for b in bots if b["line_provisional"]) == len(prov) - 1
     P.exporter(SEM, racine=t, cfg=cfg)
-    assert not list((t / "exports" / SEM / "builds" / "bot").glob("p*.pptx"))
     assert (t / "exports" / SEM / "builds" / "bot" / f"01-{v1}-fr.pptx").exists()
+    assert not list((t / "exports" / SEM / "builds" / "bot").glob(f"p*-{v1}-*.pptx"))
+    assert len(list((t / "exports" / SEM / "builds" / "bot").glob("p*-fr.pptx"))) == len(prov) - 1
 
 
 def test_provisoire_desactive():

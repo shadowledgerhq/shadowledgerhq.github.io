@@ -373,7 +373,7 @@ def construire_build(ctx, obs, regles, cfg, db):
             notes.insert(0, "ligne non classée (score provisoire)")
 
     return {
-        "spec": 3, "run_id": ctx["run_id"], "run_index": ctx["run_index"], "week": ctx["week"], "mode": mode,
+        "spec": cfg["spec_version"], "run_id": ctx["run_id"], "run_index": ctx["run_index"], "week": ctx["week"], "mode": mode,
         "gate": ctx.get("gate"), "hunter_mode": hunter_mode, "rank": ctx.get("rank"),
         "line_provisional": bool(ctx.get("line_provisional")), "provisional_rank": ctx.get("provisional_rank"), "player": ctx.get("player"),
         "channel_id": ctx.get("channel_id"), "video_id": ctx.get("video_id"), "t_result": ctx.get("t_result"),
@@ -667,10 +667,10 @@ def observer(images, mode, cfg, banque, db=None, ctx_note=None):
 # --- lecture des classements, calcul, rapport ------------------------------------------------------------------------------
 
 def modes_du_top(week, racine=RACINE, cfg=None):
-    """[(dossier_mode, ligne)] des lignes rank 1..top des fichiers poc, bot, gb et hotm-gate-<n> (jamais `inconnue`).
-    v4 : un mode sans aucune ligne classée (et `config.builds_provisoires`) donne ses `top` premières lignes `a_verifier`
-    par score provisoire (BOT du plus court au plus long, autres du plus haut au plus bas) : copies avec
-    `line_provisional` true, `rank` null, `provisional_rank` 1..top."""
+    """[(dossier_mode, ligne)] des `top` premières lignes des fichiers poc, bot, gb et hotm-gate-<n> (jamais `inconnue`).
+    v8 « top 10 mixte » : lignes classées (`rank`) ET lignes `a_verifier` (score provisoire, `config.builds_provisoires`) triées ensemble par
+    score (BOT du plus court au plus long, autres du plus haut au plus bas ; égalité : ordre du fichier). Une ligne `a_verifier` est copiée avec
+    `line_provisional` true, `rank` null, `provisional_rank` = sa place dans cet ordre ; une ligne classée garde son `rank`."""
     cfg = cfg or charger_config()
     cfg_top = cfg["top"]
     dossier = Path(racine) / "data" / "runs" / week
@@ -680,15 +680,15 @@ def modes_du_top(week, racine=RACINE, cfg=None):
         if nom.startswith("_") or nom == "hotm-gate-inconnue" or not (nom in ("poc", "bot", "gb") or nom.startswith("hotm-gate-")):
             continue
         lignes = [r for r in _json(f, []) if isinstance(r, dict)]
-        classees = [r for r in lignes if r.get("rank") is not None and r["rank"] <= cfg_top]
-        if classees:
-            sortie += [(nom, r) for r in classees]
-        elif cfg.get("builds_provisoires"):
-            cand = [r for r in lignes if r.get("confidence") == "a_verifier" and isinstance((r.get("score") or {}).get("total"), (int, float))
-                    and "écart improbable" not in (r.get("notes") or "")]       # v35 : jamais dans le top 10 provisoire avant confirmation par l'écran
-            # v34 : l'ordre du fichier fait foi (`classement.ordonner`, rang prudent des chronos BOT incomplets) : pas de nouveau tri par score
-            for i, r in enumerate(cand[:cfg_top], 1):
-                sortie.append((nom, dict(r, rank=None, line_provisional=True, provisional_rank=i)))
+        total = lambda r: (r.get("score") or {}).get("total")
+        candidats = [r for r in lignes if r.get("rank") is not None and isinstance(total(r), (int, float))]
+        if cfg.get("builds_provisoires"):
+            candidats += [r for r in lignes if r.get("rank") is None and r.get("confidence") == "a_verifier" and isinstance(total(r), (int, float))
+                          and "écart improbable" not in (r.get("notes") or "")]       # v35 : jamais dans le top 10 provisoire avant confirmation par l'écran
+        signe = 1 if nom == "bot" else -1
+        candidats.sort(key=lambda r: signe * total(r))                                  # tri stable : égalité = ordre du fichier
+        for i, r in enumerate(candidats[:cfg_top], 1):
+            sortie.append((nom, r if r.get("rank") is not None else dict(r, rank=None, line_provisional=True, provisional_rank=i)))
     return sortie
 
 
