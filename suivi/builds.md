@@ -9,6 +9,6 @@
 - Recontrôler les builds 12/11 après relance (BOT, POC ; GB : composition non décrite)
 - Recaler min_corr_remanentes sur vidéos 1080p
 ## Besoin d'Alexis
-- Lancer la relance PC des builds quand Code aura poussé v8
+- Lancer la relance PC des builds quand Code aura poussé v9 (py -3 pipeline\pc.py builds --semaine 2026-11-12)
 ## Demandes de modif du skill
 - Format Build (SPEC_ETAPE2 §1.2) ; checklist « éléments interdits » seulement si règle false
