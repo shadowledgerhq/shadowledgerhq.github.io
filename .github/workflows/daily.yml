@@ -1,12 +1,12 @@
-# Passage quotidien de l'étape 1 : 19h heure de Paris (choix d'Alexis 26/11 : avant l'allumage du PC et le passage PC de 19h30) (docs/SPEC_ETAPE1.md §6).
-# Actions tourne en UTC : deux crons (heure d'été 17:00Z, heure d'hiver 18:00Z). Le script vérifie
-# le créneau Paris (19:00-23:59) et le passage du jour (_meta.json) : l'autre cron sort sans rien faire.
+# Passage quotidien de l'étape 1 : 18h heure de Paris (27/11 : Actions peut démarrer avec ~45 min de retard ; il doit précéder le passage PC de 19h30) (docs/SPEC_ETAPE1.md §6).
+# Actions tourne en UTC : deux crons (heure d'été 16:00Z, heure d'hiver 17:00Z). Le script vérifie
+# le créneau Paris (18:00-23:59) et le passage du jour (_meta.json) : l'autre cron sort sans rien faire.
 name: Passage quotidien
 
 on:
   schedule:
+    - cron: "0 16 * * *"
     - cron: "0 17 * * *"
-    - cron: "0 18 * * *"
   workflow_dispatch:
     inputs:
       force:

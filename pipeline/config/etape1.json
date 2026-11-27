@@ -228,7 +228,7 @@
   "fichier_hotm_porte_inconnue": "hotm-gate-inconnue",
   "ecrans_non_geres": ["bot", "gb"],
   "creneaux": {
-    "daily": {"debut": "19:00", "fin": "23:59"},
+    "daily": {"debut": "18:00", "fin": "23:59"},
     "midi": {"debut": "12:00", "fin": "15:59"},
     "weekly": {"debut": "01:00", "fin": "04:59"}
   },

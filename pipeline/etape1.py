@@ -7,7 +7,7 @@
                                                                    puis recalcule (descriptions : clé API requise)
 
 Hors créneau (heure de Paris) ou passage du jour déjà fait : sort sans rien faire (sauf --force).
-Passage « midi » (v43) : même travail que daily à 12:00 Paris (liste des vidéos du matin) ; ne marque PAS passages.daily (le garde-fou du PC reste sur le passage de 19:00).
+Passage « midi » (v43) : même travail que daily à 12:00 Paris (liste des vidéos du matin) ; ne marque PAS passages.daily (le garde-fou du PC reste sur le passage de 18:00).
 Tri 2 (miniatures) : recadrages OCR [EN ATTENTE], les vidéos restent en_cours avec pc_needed.
 Le commit est fait par le workflow, pas par ce script.
 """

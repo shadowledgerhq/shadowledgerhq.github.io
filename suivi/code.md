@@ -13,6 +13,7 @@
 - (27/11) Accord d'Alexis pour les vidéos verticales 608x1080 : à régler sur une vraie vidéo (aucune dans les lectures), message dans BOITE §1.
 - (27/11) **`pipeline/post_x.py`** (Réseaux : images du post X, texte, alt ; `.gitignore` exports/*/x/) ; **rendu vidéo** repris dans `pipeline/video/` (Theorycraft) ; **rotation** : mention « phases incomplètes » (critère 6). Tests ajoutés : test_post_x, test_rotation_phases_incompletes, test_video_script_md.
 - (27/11) **SPEC_ETAPE2 v8** : top 10 mixte (`builds.modes_du_top`), `config.spec_version` 8 ; 500 tests OK. Relance PC des builds 2026-11-12 à faire par Alexis.
+- (27/11 soir) Passage PC 19:30 : reporté (GitHub de 19:00 démarré à 19:46 : retard d'Actions) ; relance 20:00 : 0 vidéo, anti-bot YouTube, 48 restantes. **Passage GitHub avancé à 18:00** (`daily.yml` 16:00Z/17:00Z, `creneaux.daily` 18:00). Prochains PC : 21:30, 23:30.
 ## En cours
 - Premier traitement réel de la v42 (daily PC du 27/11 ; `outils-pc\7_horaire_19h30_21h30_23h30.bat` à lancer par Alexis après `git pull origin main`) : écrire le bilan v39/v40 dans BOITE §1 (lignes POC 2026-11-19, contrôles a/b/c) et vérifier les 28 rejets « mecharashi » de 2026-11-12 (`pc.semaine_ecoulee` false : ils ne seront traités que par un weekly ou si `true`).
 - À confirmer au passage réel (voir archive) : durée < 120 min, gsMwZUzrekM/TrXpeT16Fwc lus, yt-dlp 2026.11.23, relances de nuit (piste : ne pas programmer une relance de nuit si le PC est souvent éteint).
