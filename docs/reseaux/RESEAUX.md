@@ -102,10 +102,10 @@ Génération des images : `python3 pipeline/post_x.py [semaine]` (Code, 27/11) �
 | Dimanche | 18h00 | Vidéo POC ou GB (selon changement de boss) | YouTube |
 | Lundi | 18h00 | Clip vertical de la vidéo de dimanche | TikTok, Shorts |
 | Mardi | 18h00 | Vidéo HOTM ou mode restant | YouTube |
-| Mercredi | 23h30 | Post X top 3 + Discord | X, Discord |
+| Mercredi | 23h45 | Post X top 3 + Discord | X, Discord |
 | Mercredi | 18h00 | 4e vidéo de la semaine | YouTube |
 
-Mercredi 23h30 (Tâche planifiée, 27/11) : le passage PC de 21h15 peut être relancé jusqu'à ~22h15 ; contrôle du mercredi de 23h00 à 23h15, post à 23h30, avant le reset de 01h. Contrôle en erreur → post retenu, Alexis prévenu. Heure révisable quand Code aura donné la durée maximale d'un passage. Heures de vidéo = choix par défaut, à ajuster selon les statistiques après 4 semaines.
+Mercredi 23h45 (Tâche planifiée, 27/11) : un passage PC dure jusqu'à ~115 min et celui du soir finit au plus tard vers 23h25 ; contrôle à 23h30, post à 23h45 avec l'état du classement à l'heure du contrôle, avant le reset de 01h. Contrôle en erreur → post retenu, Alexis prévenu. Heures de vidéo = choix par défaut, à ajuster selon les statistiques après 4 semaines.
 
 ## 7. Jour du lancement — ordre de pose
 
