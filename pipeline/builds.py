@@ -787,6 +787,9 @@ def calculer(week, racine=RACINE, cfg=None, banque=None, fournisseur=None, force
                 apprendre_cartes(obs, images, cfg, banque, cle_cfg)
             if extra.get("t_composition"):
                 obs["t_composition"] = extra["t_composition"]
+            for n in extra.get("notes") or []:
+                if n not in obs["notes"]:
+                    obs["notes"].append(n)
             if extra.get("erreur"):
                 obs["notes"].append(f"images de composition non disponibles : {extra['erreur']}")
             elif not images:
