@@ -140,7 +140,7 @@ def test_tester_ytdlp_prend_le_premier_reglage_qui_passe():
         return R(1, "", "Sign in to confirm you're not a bot")
     msgs = []
     opts = pc.tester_ytdlp({"yt_dlp": "yt-dlp"}, "abc", executer=executer, journal=msgs.append)
-    assert opts[-2:] == ["--cookies-from-browser", "edge"] and len(appels) == 4
+    assert opts[-2:] == ["--cookies-from-browser", "edge"] and len(appels) == 5          # 4 listes de formats + les sous-titres du réglage retenu
     assert any("RÉUSSI cookies de edge" in m for m in msgs)
     assert pc.tester_ytdlp({"yt_dlp": "yt-dlp"}, "abc", executer=lambda c, **k: R(1, "", "x"), journal=lambda m: None) is None
     import donnees
@@ -162,3 +162,18 @@ def test_format_video_ignore_les_vignettes():
     vignettes = "sb0 mhtml 160x90 1 | storyboard\nsb1 mhtml 320x180 1 | storyboard"
     assert not pc.a_format_video(vignettes)
     assert pc.a_format_video(vignettes + "\n137 mp4 1920x1080 30 | video only")
+
+
+def test_tester_ytdlp_ecarte_un_reglage_dont_les_sous_titres_font_429():
+    class R:
+        def __init__(s, code, out="", err=""):
+            s.returncode, s.stdout, s.stderr = code, out, err
+
+    def executer(cmd, **kw):
+        if "--write-auto-subs" in cmd:
+            return R(1, "", "HTTP Error 429: Too Many Requests") if "--cookies-from-browser" not in cmd else R(0)
+        return R(0, "137 mp4 1920x1080 30 | video only")
+    msgs = []
+    opts = pc.tester_ytdlp({"yt_dlp": "yt-dlp"}, "abc", executer=executer, journal=msgs.append)
+    assert opts[-2:] == ["--cookies-from-browser", "firefox"]
+    assert any("sous-titres refusés" in m for m in msgs[:2])

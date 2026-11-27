@@ -169,10 +169,20 @@ def tester_ytdlp(cfg_pc, video_id, executer=subprocess.run, journal=print):
         except (RuntimeError, subprocess.TimeoutExpired, OutilAbsent) as e:
             journal(f"  ÉCHEC  {nom} : {str(e)[:150]}")
             continue
-        if a_format_video(sortie):
-            journal(f"  RÉUSSI {nom}")
-            return opts
-        journal(f"  ÉCHEC  {nom} : aucun format vidéo listé")
+        if not a_format_video(sortie):
+            journal(f"  ÉCHEC  {nom} : aucun format vidéo listé")
+            continue
+        # 27/11 : la liste des formats peut passer alors que les SOUS-TITRES (autre point d'accès YouTube) répondent 429 : on les essaie aussi
+        with tempfile.TemporaryDirectory() as tmp:
+            try:
+                o._lancer([cfg_pc["yt_dlp"], *opts, "--skip-download", "--write-auto-subs", "--sub-langs", cfg_pc.get("sous_titres_langues", "en.*,fr.*,ko.*,ja.*"),
+                           "--sub-format", "vtt", "-o", f"{tmp}/t.%(ext)s", f"https://www.youtube.com/watch?v={video_id}"], 180)
+            except (RuntimeError, subprocess.TimeoutExpired, OutilAbsent) as e:
+                if est_429(e) or isinstance(e, subprocess.TimeoutExpired):
+                    journal(f"  ÉCHEC  {nom} : formats lus, mais sous-titres refusés ({str(e)[:100]})")
+                    continue
+        journal(f"  RÉUSSI {nom}")
+        return opts
     return None
 
 
