@@ -1,14 +1,14 @@
-# SUIVI — 2 Builds — 2026-11-26
+# SUIVI — 2 Builds — 2026-11-27
 ## Fait
-- SPEC_ETAPE2 v1 à v6 codées ; v7 : plusieurs cartes par chasseur (<id>--tenue<N>.png)
-- Relance 12/11 faite sur le PC : images auto POC disponibles (2AJljDc_nN4, zFsAGI_xyOQ) ; 4 cartes de chasseurs POC non identifiées (écran 編成固定 masque le nom)
+- SPEC_ETAPE2 v8 : top 10 mixte (classé + provisoire), champ spec = version de la spec ; demande à Code dans docs/BOITE.md §8
+- v7 (cartes de tenue) ; images auto POC disponibles (2AJljDc_nN4, zFsAGI_xyOQ)
 ## En cours
-- Discussion 8 : coder les cartes de tenue (v7)
+- Code : v7 et v8 ; puis relance PC des builds 2026-11-12 (top 3 BOT provisoire pour Theorycraft)
 ## À faire
-- Définir les zones POC onglets 2-5 à partir de docs/essais/composition/auto/poc/
-- Recontrôler les builds (BOT : 1 seul build Bi5TrN5d1_E, partiel ; GB : 4 pas_de_build, composition GB non décrite)
+- Zones POC onglets 2-5 à partir de docs/essais/composition/auto/poc/
+- Recontrôler les builds 12/11 après relance (BOT, POC ; GB : composition non décrite)
 - Recaler min_corr_remanentes sur vidéos 1080p
 ## Besoin d'Alexis
-- Transmettre le message v7 à la discussion 8
+- Lancer la relance PC des builds quand Code aura poussé v8
 ## Demandes de modif du skill
-- Transmises à la discussion 6 (BOITE §6)
+- Format Build (SPEC_ETAPE2 §1.2) ; checklist « éléments interdits » seulement si règle false

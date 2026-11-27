@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Shadow Ledger — Build</title>
+<style>
+:root{--bg:#0B0D17;--panel:#131628;--line:#252a42;--ink:#EDEBFF;--mute:#9a97b8;--acc:#7C5CFF;--acc2:#4FD1FF;--warn:#f2b84b;
+--light:#f5e27a;--fire:#ff7a59;--water:#5aa8ff;--wind:#5ad69a;--dark:#b07cff}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--line);background:#0e1020}
+.top{display:flex;align-items:center;gap:16px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:18px;color:var(--ink)}
+.logo svg{width:32px;height:32px;border-radius:6px}.logo span{color:var(--acc)}
+.sp{flex:1}
+button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit;cursor:pointer}
+button[aria-pressed=true]{border-color:var(--acc);background:#1d1a3a}
+h1{font-size:24px;margin:22px 0 4px}h2{font-size:16px;margin:0 0 10px;display:flex;gap:8px;align-items:baseline}
+h2 small{color:var(--mute);font-weight:400;font-size:13px}
+.sub{color:var(--mute);margin:0 0 12px}
+.banner{margin:14px 0;padding:10px 14px;border:1px solid #4a3d1c;background:#1d1910;color:var(--warn);border-radius:8px;font-size:14px}
+.runs{display:flex;gap:6px;margin:8px 0 4px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.items{display:flex;flex-wrap:wrap;gap:8px}
+.it{display:flex;align-items:center;gap:8px;background:#0f1222;border:1px solid var(--line);border-radius:8px;padding:4px 8px 4px 4px;font-size:13px;max-width:100%}
+.it img,.it .ph{width:34px;height:34px;border-radius:6px;object-fit:cover;background:#1a1e33;flex:none}
+.ph{display:grid;place-items:center;color:var(--mute);font-weight:700}
+.it.unk{color:var(--mute);border-style:dashed}
+.lab{color:var(--mute);font-size:12px;margin:10px 0 4px}
+.hero{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.hero img,.hero .ph{width:48px;height:48px;border-radius:8px}
+.el{display:inline-block;padding:1px 8px;border-radius:99px;font-size:12px;font-weight:600;border:1px solid currentColor}
+.el.light{color:var(--light)}.el.fire{color:var(--fire)}.el.water{color:var(--water)}.el.wind{color:var(--wind)}.el.dark{color:var(--dark)}
+.empty{padding:28px;text-align:center;color:var(--mute);background:var(--panel);border:1px dashed var(--line);border-radius:10px;margin-top:16px}
+footer{margin-top:40px;border-top:1px solid var(--line);padding:20px 0 40px;color:var(--mute);font-size:13px}
+footer .soc{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="top">
+  <a class="logo" href="./"><svg viewBox="0 0 512 512" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4FD1FF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient></defs><rect width="512" height="512" fill="#0B0D17"/><polygon points="256,56 429,156 429,356 256,456 83,356 83,156" fill="none" stroke="url(#g)" stroke-width="22" stroke-linejoin="round"/><path d="M330 178 H210 Q176 178 176 212 V226 Q176 256 210 256 H302 Q336 256 336 290 V302 Q336 336 302 336 H182" fill="none" stroke="#EDEBFF" stroke-width="40" stroke-linecap="square" stroke-linejoin="round"/><rect x="330" y="158" width="40" height="40" fill="#7C5CFF"/></svg><div>Shadow <span>Ledger</span></div></a>
+  <div class="sp"></div>
+  <button id="lang">EN</button>
+</div></div></header>
+
+<main class="wrap">
+  <h1 id="title"></h1>
+  <p class="sub" id="sub"></p>
+  <div class="runs" id="runs"></div>
+  <div class="banner" id="banner" hidden></div>
+  <div id="body"></div>
+</main>
+
+<footer><div class="wrap">
+  <div class="soc">
+    <a href="https://www.youtube.com/@shadowledger_hq">YouTube</a>
+    <a href="https://www.tiktok.com/@shadowledger_hq">TikTok</a>
+    <a href="https://x.com/shadowledger_hq">X</a>
+    <a href="https://www.instagram.com/shadowledger_hq">Instagram</a>
+    <span>Discord</span>
+  </div>
+  <p><a href="./" id="back"></a> · <a href="retrait.html" id="rm"></a> · <a href="mentions-legales.html" id="legal"></a></p>
+</div></footer>
+
+<script>
+{
+const T={
+ fr:{back:"Classements",rm:"Demande de retrait",legal:"Mentions légales",rank:"Rang",run:"Run",week:"Semaine du",video:"Voir la vidéo",
+  partial:"Build partiel : certains éléments ne sont pas encore reconnus (cases « ? »).",verify:"Build en cours de vérification.",none:"Pas encore de build pour cette run.",
+  sjw:"Sung Jin Woo",weapons:"Armes",artifacts:"Artefacts",cores:"Noyaux",skills:"Compétences",blessings:"Bénédictions",hunters:"Chasseurs",shadows:"Ombres",successor:"Successeur",
+  sets:"Sets",unknown:"non reconnu",hunter:"Chasseur",pieces:"pièces",modes:{poc:"Power Of Calamity",bot:"Battlefield Of Time",gb:"Guild Boss",hotm:"Hall Of The Monarchs"},gate:"Porte",
+  slots:{skill_1:"Compétence 1",skill_2:"Compétence 2",ultimate:"Ultime",qte_1:"QTE 1",qte_2:"QTE 2",qte_3:"QTE 3",mind:"Esprit",body:"Corps",spirit:"Âme"}},
+ en:{back:"Rankings",rm:"Removal request",legal:"Legal notice",rank:"Rank",run:"Run",week:"Week of",video:"Watch the video",
+  partial:"Partial build: some items are not recognised yet (\"?\" boxes).",verify:"Build being verified.",none:"No build yet for this run.",
+  sjw:"Sung Jinwoo",weapons:"Weapons",artifacts:"Artifacts",cores:"Cores",skills:"Skills",blessings:"Blessings",hunters:"Hunters",shadows:"Shadows",successor:"Successor",
+  sets:"Sets",unknown:"not recognised",hunter:"Hunter",pieces:"pieces",modes:{poc:"Power Of Calamity",bot:"Battlefield Of Time",gb:"Guild Boss",hotm:"Hall Of The Monarchs"},gate:"Gate",
+  slots:{skill_1:"Skill 1",skill_2:"Skill 2",ultimate:"Ultimate",qte_1:"QTE 1",qte_2:"QTE 2",qte_3:"QTE 3",mind:"Mind",body:"Body",spirit:"Spirit"}}
+};
+const ROOT=window.SL_ROOT||"../";
+const ELN={fr:{light:"Lumière",fire:"Feu",water:"Eau",wind:"Vent",dark:"Ténèbres"},en:{light:"Light",fire:"Fire",water:"Water",wind:"Wind",dark:"Dark"}};
+const eln=e=>ELN[lang][e]||e;
+const CATS=["hunters","weapons","artifact_sets","cores","sjw_skills","blessings","shadows","successors"];
+let lang=null;try{lang=localStorage.getItem("sl_lang")}catch(e){}
+const h=new URLSearchParams(location.hash.slice(1));
+if(h.get("lang"))lang=h.get("lang");
+if(!lang)lang=(navigator.language||"fr").slice(0,2)==="en"?"en":"fr";
+const Q={week:h.get("week"),board:h.get("board"),run:h.get("run")};
+const S={db:{},builds:[],cur:0};
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+async function get(p){if(window.SL_DATA)return window.SL_DATA[p]??null;try{const r=await fetch(ROOT+p,{cache:"no-store"});return r.ok?await r.json():null}catch(e){return null}}
+const name=id=>{const e=S.db[id];return e?(e.name[lang]||e.name.en||e.name.fr||id):id};
+function item(id,label){
+ const t=T[lang];
+ if(!id)return `<span class="it unk"><span class="ph">?</span>${label?esc(label)+" · ":""}${t.unknown}</span>`;
+ const e=S.db[id];const img=e&&e.icon?`<img src="${ROOT+esc(e.icon)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'·'}))">`:`<span class="ph">·</span>`;
+ return `<span class="it">${img}${label?`<span class="mute">${esc(label)}</span> `:""}${esc(name(id))}</span>`;
+}
+function list(arr,lab){const ok=arr.filter(x=>x&&x.id),n=arr.length-ok.length;return ok.map(x=>item(x.id,lab?lab(x):"")).join("")+(n?`<span class="it unk"><span class="ph">?</span>${n} ${T[lang].unknown}${n>1&&lang==="fr"?"s":""}</span>`:"")}
+const cnt=(b,k)=>b.counts&&b.counts[k]?` <small>${esc(b.counts[k])}</small>`:"";
+function sets(list){return (list||[]).map(s=>item(s.set_id,`${s.pieces} ${T[lang].pieces}`)).join("")}
+function render(){
+ const t=T[lang];document.documentElement.lang=lang;
+ document.getElementById("lang").textContent=lang==="fr"?"EN":"FR";
+ for(const k of["back","rm","legal"])document.getElementById(k).textContent=t[k];
+ const b=S.builds[S.cur];const B=document.getElementById("body"),bn=document.getElementById("banner");
+ document.getElementById("runs").innerHTML=S.builds.length>1?S.builds.map((x,i)=>`<button data-i="${i}" aria-pressed="${i===S.cur}">${t.run} ${i+1}${x.element?` · <span class="el ${esc(x.element)}">${esc(eln(x.element))}</span>`:""}</button>`).join(""):"";
+ if(!b){document.getElementById("title").textContent="Build";document.getElementById("sub").textContent="";bn.hidden=true;B.innerHTML=`<div class="empty">${t.none}</div>`;return}
+ const mode=t.modes[b.mode]+(b.gate?` — ${t.gate} ${b.gate}`:"");
+ document.getElementById("title").textContent=b.player+(b.rank?` — ${t.rank} ${b.rank}`:"");
+ const d=new Date(b.week+"T12:00:00").toLocaleDateString(lang==="fr"?"fr-FR":"en-GB",{day:"numeric",month:"long",year:"numeric"});
+ document.getElementById("sub").innerHTML=`${esc(mode)} · ${t.week} ${esc(d)} · <a href="https://www.youtube.com/watch?v=${esc(b.video_id)}${b.t_composition?"&t="+(+b.t_composition[0]||0):""}" target="_blank" rel="noopener">${t.video}</a>`;
+ const msg=[];if(b.status!=="build_complet")msg.push(t.partial);if(b.confidence!=="sur")msg.push(t.verify);
+ bn.hidden=!msg.length;bn.textContent=msg.join(" ");
+ const s=b.sjw||{},cards=[];
+ if(s&&Object.keys(s).length){
+  cards.push(`<div class="card"><h2>${t.sjw}</h2>
+   <div class="lab">${t.weapons}${cnt(b,"sjw_weapons")}</div><div class="items">${list(s.weapons||[])}</div>
+   <div class="lab">${t.sets}${cnt(b,"sjw_artifacts")}</div><div class="items">${sets(b.set_bonuses&&b.set_bonuses.sjw)||item(null)}</div>
+   <div class="lab">${t.cores}${cnt(b,"sjw_cores")}</div><div class="items">${list(s.cores||[],c=>t.slots[c.slot])}</div>
+   <div class="lab">${t.skills}${cnt(b,"sjw_skills")}</div><div class="items">${list(s.skills||[],k=>t.slots[k.slot])}</div>
+   <div class="lab">${t.blessings}${cnt(b,"blessings")}</div><div class="items">${list(s.blessings||[])}</div></div>`);
+ }
+ (b.hunters||[]).forEach((hu,i)=>{
+  const e=S.db[hu.id];const img=e&&e.icon?`<img src="${ROOT+esc(e.icon)}" alt="">`:`<span class="ph">?</span>`;
+  cards.push(`<div class="card"><div class="hero">${img}<h2 style="margin:0">${hu.id?esc(name(hu.id)):`${t.hunter} ${hu.position||i+1} · ${t.unknown}`}${e&&e.element?` <span class="el ${esc(e.element)}">${esc(eln(e.element))}</span>`:""}</h2></div>
+   <div class="lab">${t.weapons}</div><div class="items">${list([hu.weapon||{}])}</div>
+   <div class="lab">${t.sets}</div><div class="items">${sets(b.set_bonuses&&b.set_bonuses["hunter_"+(hu.position||i+1)])||item(null)}</div>
+   <div class="lab">${t.cores}</div><div class="items">${list(hu.cores||[],c=>t.slots[c.slot])}</div></div>`);
+ });
+ const extra=[];
+ if(b.shadows&&b.shadows.length)extra.push(`<div class="lab">${t.shadows}${cnt(b,"shadows")}</div><div class="items">${list(b.shadows)}</div>`);
+ if(b.successor)extra.push(`<div class="lab">${t.successor}</div><div class="items">${list([b.successor])}</div>`);
+ if(extra.length)cards.push(`<div class="card"><h2>${t.shadows} · ${t.successor}</h2>${extra.join("")}</div>`);
+ B.innerHTML=`<div class="grid">${cards.join("")}</div>`;
+}
+document.addEventListener("click",e=>{const x=e.target.closest("button");if(!x)return;
+ if(x.id==="lang"){lang=lang==="fr"?"en":"fr";try{localStorage.setItem("sl_lang",lang)}catch(_){}}
+ else if(x.dataset.i)S.cur=+x.dataset.i;else return;render()});
+(async()=>{
+ const dbs=await Promise.all(CATS.map(c=>get(`data/db/${c}.json`)));
+ dbs.forEach(l=>{(Array.isArray(l)?l:[]).forEach(e=>{S.db[e.id]=e})});
+ if(Q.week&&Q.board&&Q.run){
+  for(let n=1;n<=2;n++){const b=await get(`data/builds/${Q.week}/${Q.board}/${Q.run}-${n}.json`);if(b)S.builds.push(b)}
+ }
+ render();
+})();
+}
+</script>
+</body>
+</html>
