@@ -24,7 +24,8 @@
       "frozen": false,
       "frozen_at": null,
       "boards": [
-        "gb"
+        "gb",
+        "poc"
       ]
     }
   ]

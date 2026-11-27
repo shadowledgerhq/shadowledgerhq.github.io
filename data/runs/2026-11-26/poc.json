@@ -1,0 +1,44 @@
+[
+  {
+    "run_id": "poc-2026-11-26-q_nKTRM6Z7s",
+    "week": "2026-11-26",
+    "mode": "poc",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "q_nKTRM6Z7s",
+    "video_ids": [
+      "q_nKTRM6Z7s"
+    ],
+    "published_at": "2026-11-27T08:00:32+01:00",
+    "lang": "en",
+    "score": {
+      "total": 16000000,
+      "runs": [],
+      "unit": "rank_score"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "palier du titre : rang prudent",
+    "runs_detail": [
+      {
+        "video_id": "q_nKTRM6Z7s",
+        "published_at": "2026-11-27T08:00:32+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "tier": 17,
+        "total_contribution": null,
+        "goal_progress": null,
+        "team_pct": null,
+        "play_time": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  }
+]

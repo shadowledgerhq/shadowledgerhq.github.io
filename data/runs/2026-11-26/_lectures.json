@@ -178,5 +178,58 @@
       "score provisoire (titre) : 203 RC",
       "description : 204RC"
     ]
+  },
+  {
+    "video_id": "q_nKTRM6Z7s",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-27T07:00:32Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 16000000,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 17
+    },
+    "notes": [
+      "palier du titre : rang prudent"
+    ]
+  },
+  {
+    "video_id": "ieFMbvQguUw",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "channel_title": "Black Thunder X",
+    "published_at": "2026-11-27T08:54:15Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 193,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 193 RC"
+    ]
   }
 ]

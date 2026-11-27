@@ -164,6 +164,47 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-26-ieFMbvQguUw",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "player": "Black Thunder X",
+    "channel": "Black Thunder X",
+    "video_id": "ieFMbvQguUw",
+    "video_ids": [
+      "ieFMbvQguUw"
+    ],
+    "published_at": "2026-11-27T09:54:15+01:00",
+    "lang": "en",
+    "score": {
+      "total": 193,
+      "runs": [
+        193
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 193 RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "ieFMbvQguUw",
+        "published_at": "2026-11-27T09:54:15+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-26-9y17tXt160Q",
     "week": "2026-11-26",
     "mode": "gb",
