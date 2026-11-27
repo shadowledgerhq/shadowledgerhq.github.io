@@ -154,20 +154,22 @@ def texte(titre):
 
 def test_texte_palier_borne_basse():
     l = texte("TIER 17 POC 100% WITH WATER TEAM RUN")
-    assert l["score"] == 16_000_000 and l["confidence"] == "a_verifier" and not l["exact"] and "palier du titre : rang prudent" in l["notes"]
+    assert l["score"] == 17_000_000 and l["confidence"] == "a_verifier" and not l["exact"] and "palier et % du titre" in l["notes"]       # v43 : palier + %
+    l = texte("TIER 17 POC water team run")
+    assert l["score"] == 16_000_000 and "palier du titre : rang prudent" in l["notes"]
     assert texte("Power of Calamity T12 Team 1")["score"] == 11_000_000
     assert texte("POC palier 3 guide")["score"] == 2_000_000
 
 
 def test_texte_clear_et_rank_score():
-    assert texte("Tier 5 clear")["score"] == 5_000_000
+    assert texte("POC Tier 5 clear")["score"] == 5_000_000
     assert texte("POC Rank Score 15,962,022")["score"] == 15_962_022
-    assert "palier du titre : clear" in texte("Tier 5 clear")["notes"]
+    assert "palier du titre : clear" in texte("POC Tier 5 clear")["notes"]
 
 
 def test_texte_degats_ne_sont_plus_un_score():
     assert texte("PoC 19R 80T 12,000,000,000,000 damage") is None
-    l = texte("Tier 5 clear 12,624,959,951,349 damage")
+    l = texte("POC Tier 5 clear 12,624,959,951,349 damage")
     assert l["score"] == 5_000_000 and "dégâts du texte : information" in l["notes"]
 
 
