@@ -12,4 +12,4 @@
 ## Besoin d'Alexis
 - Lancer la relance PC des builds quand Code aura poussé v10 (py -3 pipeline\pc.py builds --semaine 2026-11-12)
 ## Demandes de modif du skill
-- Format Build (SPEC_ETAPE2 §1.2) ; checklist « éléments interdits » seulement si règle false
+- rien
