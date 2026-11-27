@@ -670,7 +670,8 @@ def modes_du_top(week, racine=RACINE, cfg=None):
     """[(dossier_mode, ligne)] des `top` premières lignes des fichiers poc, bot, gb et hotm-gate-<n> (jamais `inconnue`).
     v8 « top 10 mixte » : lignes classées (`rank`) ET lignes `a_verifier` (score provisoire, `config.builds_provisoires`) triées ensemble par
     score (BOT du plus court au plus long, autres du plus haut au plus bas ; égalité : ordre du fichier). Une ligne `a_verifier` est copiée avec
-    `line_provisional` true, `rank` null, `provisional_rank` = sa place dans cet ordre ; une ligne classée garde son `rank`."""
+    `line_provisional` true, `rank` null, `provisional_rank` = sa place dans cet ordre ; une ligne classée garde son `rank`.
+    v9 : une ligne classée de rang 1..top garde toujours son build (ajoutée après le top mixte si les provisoires l'ont repoussée)."""
     cfg = cfg or charger_config()
     cfg_top = cfg["top"]
     dossier = Path(racine) / "data" / "runs" / week
@@ -687,7 +688,10 @@ def modes_du_top(week, racine=RACINE, cfg=None):
                           and "écart improbable" not in (r.get("notes") or "")]       # v35 : jamais dans le top 10 provisoire avant confirmation par l'écran
         signe = 1 if nom == "bot" else -1
         candidats.sort(key=lambda r: signe * total(r))                                  # tri stable : égalité = ordre du fichier
-        for i, r in enumerate(candidats[:cfg_top], 1):
+        retenues = candidats[:cfg_top]
+        # v9 : une ligne classée (rank 1..top) garde TOUJOURS son build, même repoussée au-delà de la `top`-ième place par des provisoires
+        retenues += [r for r in candidats[cfg_top:] if r.get("rank") is not None and r["rank"] <= cfg_top]
+        for i, r in enumerate(retenues, 1):
             sortie.append((nom, r if r.get("rank") is not None else dict(r, rank=None, line_provisional=True, provisional_rank=i)))
     return sortie
 

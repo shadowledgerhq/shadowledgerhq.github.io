@@ -130,7 +130,7 @@ def svg_hotm(gabarit, par_porte, semaine, meta):
         x = x0 + k * (larg + ecart)
         lignes = par_porte[n]
         cols.append(f'<rect x="{x}" y="360" width="{larg}" height="385" rx="16" fill="#EDEBFF" fill-opacity=".05"/>'
-                    f'<text x="{x + 24}" y="410" fill="#4FD1FF" font-size="36" font-weight="700">Gate {n}</text>')
+                    f'<text x="{x + 24}" y="410" fill="#4FD1FF" font-size="36" font-weight="700">Porte {n} · Gate {n}</text>')
         for i in range(3):
             l = lignes[i] if i < len(lignes) else None
             y = 480 + i * 100
@@ -180,19 +180,27 @@ def rendre(svg_path, png_path):
 
 
 def generer(semaine, d=None, sortie=None):
+    """Un classement sans aucune ligne sûre n'a PAS d'image (ni ligne d'alt) ; HOTM : image si au moins une porte a une ligne sûre.
+    Aucune image du tout : aucun fichier écrit, retourne (None, [])."""
     d = d or Donnees()
     sortie = Path(sortie) if sortie else d.data.parent / "exports" / semaine / "x"
-    sortie.mkdir(parents=True, exist_ok=True)
     meta = d.meta(semaine) or {}
     gabarit = GABARIT.read_text(encoding="utf-8")
     images, alts = {}, []
     for mode in ("poc", "bot", "gb"):
         lignes = top3(charger(d, semaine, mode))
-        images[mode] = svg_mode(gabarit, mode, lignes, semaine, meta)
-        alts.append((mode, alt_mode(mode, lignes, semaine)))
+        if lignes:
+            images[mode] = svg_mode(gabarit, mode, lignes, semaine, meta)
+            alts.append((mode, alt_mode(mode, lignes, semaine)))
     par_porte = portes(d, semaine)
-    images["hotm"] = svg_hotm(gabarit, par_porte, semaine, meta)
-    alts.append(("hotm", alt_hotm(par_porte, semaine)))
+    if any(par_porte.values()):
+        images["hotm"] = svg_hotm(gabarit, par_porte, semaine, meta)
+        alts.append(("hotm", alt_hotm(par_porte, semaine)))
+    if not images:
+        return None, []
+    sortie.mkdir(parents=True, exist_ok=True)
+    for ancien in sortie.glob("*.png"):     # une image d'un passage précédent ne doit pas survivre à un classement devenu vide
+        ancien.unlink()
     rendus = []
     for mode, svg in images.items():
         p = sortie / f"{mode}.svg"
@@ -211,4 +219,6 @@ def generer(semaine, d=None, sortie=None):
 if __name__ == "__main__":
     semaine = sys.argv[1] if len(sys.argv) > 1 else id_semaine(maintenant())
     dossier, rendus = generer(semaine)
+    if dossier is None:
+        sys.exit(f"{semaine} : aucune ligne sûre dans aucun classement, aucune image générée")
     print(f"{semaine} -> {dossier} : " + ", ".join(rendus) + ", texte.txt, alt.txt")

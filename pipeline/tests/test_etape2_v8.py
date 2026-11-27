@@ -49,4 +49,12 @@ def test_porte_inconnue_ignoree():
 
 def test_champ_spec_vient_de_la_config():
     cfg = builds.charger_config()
-    assert cfg["spec_version"] == 8 and "spec" not in cfg
+    assert cfg["spec_version"] == 10 and "spec" not in cfg
+
+
+def test_v9_ligne_classee_repoussee_garde_son_build():
+    lignes = [_ligne("Bi5", 28.349, 1, "sur")] + [_ligne(f"p{i}", 19 + i / 10) for i in range(10)]
+    sel = _selection("bot", lignes, top=10)
+    assert [l["video_id"] for _, l in sel][-1] == "Bi5" and len(sel) == 11
+    assert sel[-1][1]["rank"] == 1 and not sel[-1][1].get("line_provisional")
+    assert [l["provisional_rank"] for _, l in sel[:10]] == list(range(1, 11))

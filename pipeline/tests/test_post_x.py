@@ -45,7 +45,7 @@ def test_generation_complete():
     try:
         sortie, rendus = post_x.generer(w, d)
         assert sortie == Path(tmp) / "exports" / w / "x"
-        assert len(rendus) == 4
+        assert len(rendus) == 4                                          # POC, BOT, GB, HOTM (porte 2 a une ligne sûre)
         alt = (sortie / "alt.txt").read_text(encoding="utf-8")
         assert "POC top 3, semaine du 12 novembre 2026 : 1 Ann & <Bob> 1 234 567" in alt
         assert "Cy" not in alt and "Dee" not in alt                      # a_verifier / sans rang : jamais affichés
@@ -68,10 +68,27 @@ def test_svg_valide_et_echappe():
     assert "Ann &amp; &lt;Bob&gt;" in svg and not re.search(r"\{\{\w+\}\}", svg)
     hotm = post_x.svg_hotm(g, post_x.portes(d, w), w, {})
     xml.dom.minidom.parseString(hotm)
-    assert "Gate 2" in hotm and not re.search(r"\{\{\w+\}\}", hotm)
+    assert "Porte 2 · Gate 2" in hotm and not re.search(r"\{\{\w+\}\}", hotm)
 
 
 def test_gele_et_noms_longs():
     _, d, w = _jeu()
     assert post_x.statut({"frozen": True})[0] == "Classement définitif"
     assert len(post_x.nom_txt({"channel": "x" * 60})) == post_x.NOM_MAX
+
+
+def test_classement_sans_ligne_sure_pas_d_image_et_tout_vide():
+    tmp = tempfile.mkdtemp()
+    try:
+        d = Donnees(tmp)
+        w = "2026-11-12"
+        d.ecrire(f"runs/{w}/_meta.json", {"week": w})
+        d.ecrire(f"runs/{w}/bot.json", [_l(1, "Eve", 19.5, "seconds")])
+        d.ecrire(f"runs/{w}/poc.json", [_l(None, "Zed", 5, "rank_score", "a_verifier")])
+        sortie, rendus = post_x.generer(w, d)
+        assert [r.split(".")[0] for r in rendus] == ["bot"] and not (sortie / "poc.png").exists()
+        assert (sortie / "alt.txt").read_text(encoding="utf-8").count("\n") == 1
+        d.ecrire(f"runs/{w}/bot.json", [])
+        assert post_x.generer(w, Donnees(tempfile.mkdtemp())) == (None, [])
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
