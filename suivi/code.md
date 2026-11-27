@@ -16,4 +16,4 @@
 ## Besoin d'Alexis
 - Attendre 1 à 2 h puis relancer `outils-pc\5_test_antibot.bat` (Firefox ouvert sur YouTube, connecté), puis `3_passage_complet.bat`.
 ## Demandes de modif du skill
-- `SKILL.md` décrit encore BOT « deux classements » : à aligner sur la v10 (discussion 1).
+(aucune)
