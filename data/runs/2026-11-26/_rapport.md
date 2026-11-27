@@ -1,12 +1,12 @@
-# Rapport — semaine 2026-11-26 — passage pc-daily — 2026-11-27 20:18 (Paris)
+# Rapport — semaine 2026-11-26 — passage pc-daily — 2026-11-27 21:30 (Paris)
 
 - Top 10 couvert : non (35 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
 - Vidéos traitées ce passage : 0 · en_cours restantes : 48 (dont 48 à traiter par le PC)
 - Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
-- Lancement : manuel
+- Lancement : planificateur
 - Durée du passage : 0 min
-- Relance automatique : 27/11/2026 22:18 (une seule fois par soir)
+- Relance automatique : 27/11/2026 23:30 (une seule fois par soir)
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
 - Sous-titres en attente : 23 avant la règle → 23 après (23 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
@@ -39,4 +39,4 @@
 - KheaGCgUje4 : 429 / anti-bot YouTube, reportée au prochain passage
 - 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
 - 48 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : 27/11/2026 22:18 (une seule fois par soir)
+- passage incomplet : anti-bot ; relance : 27/11/2026 23:30 (une seule fois par soir)
