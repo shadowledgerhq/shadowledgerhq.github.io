@@ -1,9 +1,9 @@
 # SUIVI — 2 Builds — 2026-11-27
 ## Fait
-- SPEC_ETAPE2 v8 : top 10 mixte (classé + provisoire), champ spec = version de la spec ; demande à Code dans docs/BOITE.md §8
+- SPEC_ETAPE2 v9 : ligne classée garde toujours son build ; v8 (top 10 mixte, champ spec) codée par Code
 - v7 (cartes de tenue) ; images auto POC disponibles (2AJljDc_nN4, zFsAGI_xyOQ)
 ## En cours
-- Code : v7 et v8 ; puis relance PC des builds 2026-11-12 (top 3 BOT provisoire pour Theorycraft)
+- Code : coder v9, puis relance PC des builds 2026-11-12
 ## À faire
 - Zones POC onglets 2-5 à partir de docs/essais/composition/auto/poc/
 - Recontrôler les builds 12/11 après relance (BOT, POC ; GB : composition non décrite)
