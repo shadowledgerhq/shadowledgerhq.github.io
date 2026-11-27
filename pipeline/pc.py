@@ -1458,9 +1458,13 @@ def programmer_relance(instant, jour, planifier=None, fichier=None, delai_h=2):
     rapport : heure de la relance, ou la raison pour laquelle il n'y en a pas."""
     fichier = Path(fichier or FICHIER_RELANCE)
     try:
-        deja = json.loads(fichier.read_text(encoding="utf-8")).get("jour") if fichier.exists() else None
+        etat = json.loads(fichier.read_text(encoding="utf-8")) if fichier.exists() else {}
     except (OSError, ValueError):
-        deja = None
+        etat = {}
+    # BOITE 27/11 (Tâche planifiée) : seule une relance programmée par un passage du SOIR (dès 18:00 Paris) compte dans la limite ;
+    # celle du weekly de 01:15 (relance 03:15) ne doit pas empêcher la relance du soir du même jour.
+    deja = etat.get("jour") if etat.get("soir") else None
+    soir = instant.astimezone(PARIS).hour >= 18
     if deja == jour:
         return "aucune (une relance a déjà été programmée ce soir) : prochain passage normal"
     quand = (instant.astimezone(PARIS) + timedelta(hours=delai_h)).replace(tzinfo=None, second=0, microsecond=0)
@@ -1468,8 +1472,28 @@ def programmer_relance(instant, jour, planifier=None, fichier=None, delai_h=2):
     if err:
         return f"non programmée ({err})"
     fichier.parent.mkdir(parents=True, exist_ok=True)
-    fichier.write_text(json.dumps({"jour": jour, "a": quand.isoformat()}), encoding="utf-8")
+    fichier.write_text(json.dumps({"jour": jour, "a": quand.isoformat(), "soir": soir}), encoding="utf-8")
     return f"{quand:%d/%m/%Y %H:%M} (une seule fois par soir)"
+
+
+def relance_manquee(instant, fichiers, max_h=2):
+    """Relance (tâche ponctuelle) lancée trop longtemps après son heure (PC éteint, relance de nuit) : texte du bloc « Relance annulée », sinon None.
+    L'heure prévue = la plus récente des heures programmées (`a`, heure de Paris) antérieure à l'instant, dans `relance.json` / `report.json`."""
+    maintenant_ = instant.astimezone(PARIS).replace(tzinfo=None)
+    prevues = []
+    for f in fichiers:
+        try:
+            a = datetime.fromisoformat(json.loads(Path(f).read_text(encoding="utf-8")).get("a"))
+        except (OSError, ValueError, TypeError):
+            continue
+        if a <= maintenant_:
+            prevues.append(a)
+    if not prevues:
+        return None
+    a = max(prevues)
+    if maintenant_ - a > timedelta(hours=max_h):
+        return f"prévue à {a:%d/%m %H:%M}, lancée à {maintenant_:%d/%m %H:%M} (plus de {max_h} h de retard)"
+    return None
 
 
 def semaine_du_passage(passage, instant):
@@ -1659,6 +1683,15 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     if passage == "weekly":
         ouvrir_semaine(d, courante)
     lancement = lancement_du_passage(relance, planifie, seulement)
+    if relance and passage == "daily":       # relance manquée de plus de 2 h (PC éteint, relance de nuit) : annulée, rien n'est traité
+        manquee = relance_manquee(instant, (fichier_relance or FICHIER_RELANCE, fichier_report or FICHIER_REPORT))
+        if manquee:
+            rapport_pc.ecrire_bloc(d, week, f"pc-{passage}", instant, [f"- Lancement : {lancement}", f"- **Relance annulée : heure manquée** ({manquee})",
+                                                                      "- Aucune vidéo traitée"])
+            if git:
+                git.pousser(f"données: relance PC {passage} {jour} annulée (heure manquée)")
+            return {"week": week, "traitees": 0, "alertes": ["relance annulée : heure manquée"], "reporte": True,
+                    "complet": False, "restantes": 0, "a_traiter": 0, "bloquantes": []}
     # v42.1 : la répétition de 01:15 (après minuit) n'attend pas de passage GitHub « du jour » : celui de la veille au soir est déjà fait.
     if (passage == "daily" and lancement != "manuel" and instant.astimezone(PARIS).hour >= 6
             and meta.get("passages", {}).get("daily") != jour):
