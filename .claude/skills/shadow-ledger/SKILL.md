@@ -11,7 +11,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 
 | Terme | Sens |
 | --- | --- |
-| POC | Power Of Calamity. Classement : dégâts max ; une run = une équipe, total = équipe 1 + équipe 2. |
+| POC | Power Of Calamity. Depuis la refonte du 19/11/2026 : paliers, classement au **Rank Score** = 1 000 000 × (palier − 1 + progression), les 2 équipes partagent les PV du boss (le score cumule les deux), égalité = ex aequo, plus d'élément imposé (SPEC_ETAPE1 §9). Avant : dégâts max, une run = une équipe, total = équipe 1 + équipe 2. |
 | BOT | Battlefield Of Time. Chrono le plus court (secondes) = dernière phase de l'écran `Results`. **Un seul classement** par semaine (Challenge retiré du jeu en mai 2026). Saison = 4 semaines de jeu (1 boss/semaine) + 1 semaine de calcul sans classement ; semaine de saison notée `S<n>-<w>`. |
 | GB | Guild Boss. Classement : Rage Count le plus élevé ; **seules les runs filmées (écran Results) comptent** ; une run = un groupe (6 chasseurs + SJW), total = meilleure run filmée de chaque groupe ; égalité départagée par la somme des dégâts. Le `Personal Record` sert seulement à identifier le groupe. |
 | HOTM | Hall Of The Monarchs. Un classement **par porte** (제 n관문 / 第n関門) : points les plus élevés. 1 run par porte. |
@@ -61,7 +61,7 @@ Fichiers : `poc.json`, `gb.json`, `bot.json`, `hotm-gate-<n>.json`.
 }
 ```
 
-Unités : `damage` (POC), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
+Unités : `rank_score` (POC depuis le 19/11/2026 ; `damage` avant), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
 
 - `channel_id` = clé du joueur. `video_id` = vidéo de la meilleure run ; `video_ids` = toutes les vidéos utilisées (les 2 runs POC/GB peuvent venir de 2 vidéos).
 - `rank` : seulement pour les lignes `confidence: sur` ; sinon `null`. POC et GB : une seule run `sur` suffit pour être classé (note `une seule run`) ; la 2e run, trouvée plus tard, complète le total.

@@ -1,6 +1,6 @@
 # Projet SLA — Shadow Ledger : contexte de référence
 
-Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Une seule version : `claude/CONTEXTE.md` du Projet et `docs/CONTEXTE.md` du dépôt sont identiques (la discussion 6 met à jour les deux). Mis à jour le 27/11/2026 (commande « message ? » et annonce de chaque message envoyé, §7 ; droit de pousser rappelé dans chaque message de démarrage, §7 ; SUIVI silencieux, §2 ; messages entre discussions annoncés en une ligne, plus recopiés ; boîtes de 8 et 9 dans `docs/BOITE.md`). Avant : 26/11/2026 (droit de pousser pour toutes les discussions, §7 ; rien de public avant le lancement ; boîtes : messages traités retirés ou archivés ; specs : seul le dépôt fait foi). Précédentes mises à jour : 19/11/2026 (discussions 8 et 9 ouvertes directement sur le dépôt) ; 17/11/2026 (alignement sur SPEC_ETAPE1 v30, aucun relevé manuel, `data/rotations/`).
+Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Une seule version : `claude/CONTEXTE.md` du Projet et `docs/CONTEXTE.md` du dépôt sont identiques (la discussion 6 met à jour les deux). Mis à jour le 27/11/2026 (POC refonte au Rank Score, §3-4 ; commande « message ? » et annonce de chaque message envoyé, §7 ; droit de pousser rappelé dans chaque message de démarrage, §7 ; SUIVI silencieux, §2 ; messages entre discussions annoncés en une ligne, plus recopiés ; boîtes de 8 et 9 dans `docs/BOITE.md`). Avant : 26/11/2026 (droit de pousser pour toutes les discussions, §7 ; rien de public avant le lancement ; boîtes : messages traités retirés ou archivés ; specs : seul le dépôt fait foi). Précédentes mises à jour : 19/11/2026 (discussions 8 et 9 ouvertes directement sur le dépôt) ; 17/11/2026 (alignement sur SPEC_ETAPE1 v30, aucun relevé manuel, `data/rotations/`).
 
 ## 1. Le projet en une phrase
 
@@ -28,7 +28,7 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 
 | Mode | Nom complet | Critère de classement | Runs |
 | --- | --- | --- | --- |
-| POC | Power Of Calamity | Dégâts max. Une run = une équipe : total = meilleure run de l'équipe 1 + meilleure run de l'équipe 2 | 2 (une par équipe) |
+| POC | Power Of Calamity | **Depuis la refonte du 19/11/2026** : paliers ; classement au **Rank Score** = 1 000 000 × (palier − 1 + progression), les 2 équipes partageant les PV du boss (le score cumule les deux) ; égalité = ex aequo ; plus d'élément imposé (`docs/SPEC_ETAPE1.md` §9). Avant le 19/11 : dégâts max, total = meilleure run de l'équipe 1 + meilleure run de l'équipe 2 | Depuis le 19/11 : 1 (meilleur Rank Score de la semaine) ; avant : 2 (une par équipe) |
 | BOT | Battlefield Of Time | Chrono le plus court, **un seul classement par semaine** (le mode Challenge a été retiré du jeu en mai 2026, source forum Netmarble). Saison = 4 semaines de jeu (1 boss par semaine) + 1 semaine de calcul sans classement | 1 |
 | GB | Guild Boss | Rage Count (RC) le plus élevé. **Seules les runs filmées (écran Results) comptent.** Une run = un groupe (6 chasseurs, équipes A + B, + SJW) : total = meilleure run filmée de chaque groupe (toutes vidéos de la semaine). Égalité de RC : départage par la somme des dégâts. Le *Personal Record* sert seulement à identifier le groupe ; il ne classe jamais une run non filmée | 2 (une par groupe) |
 | HOTM | Hall Of The Monarchs | Points les plus élevés, **par porte** : un classement par porte (제 n관문 / 第n関門), pas de classement HOTM global | 1 par porte |
@@ -53,7 +53,7 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 Règles :
 - **Joueur = chaîne YouTube** (`channel_id`) ; le pseudo en jeu n'est pas la clé (au BOT, il est seulement noté dans `player_ingame`). Une ligne par joueur (HOTM : par porte), toutes vidéos de la semaine confondues.
 - Shorts inclus ; lives et rediffusions de live exclus.
-- POC et GB : somme des 2 meilleures runs distinctes, qui peuvent venir de **2 vidéos différentes** (POC : équipe 1 + équipe 2 ; GB : groupe 1 + groupe 2 ; jamais deux runs de la même équipe ou du même groupe). Une seule run `sur` : le joueur est **classé** (total = cette run, note « une seule run ») ; une 2e run trouvée plus tard dans la semaine, dans la même vidéo ou une autre, complète le total. Une seule run provisoire : `a_verifier`.
+- POC (avant le 19/11/2026 seulement ; depuis : Rank Score, §3) et GB : somme des 2 meilleures runs distinctes, qui peuvent venir de **2 vidéos différentes** (POC : équipe 1 + équipe 2 ; GB : groupe 1 + groupe 2 ; jamais deux runs de la même équipe ou du même groupe). Une seule run `sur` : le joueur est **classé** (total = cette run, note « une seule run ») ; une 2e run trouvée plus tard dans la semaine, dans la même vidéo ou une autre, complète le total. Une seule run provisoire : `a_verifier`.
 - POC et GB, groupe/équipe inconnu : les runs sont distinguées par leur **élément** (`runs_detail[i].element` : light / fire / water / wind / dark, ou `null`, avec `element_source`), lu sur les chasseurs à l'écran, sinon dans le titre. Deux groupes/équipes n'ont jamais de chasseur commun (un chasseur commun → `a_verifier`). L'Excel affiche l'élément au lieu de « Groupe/Équipe 1/2 ». (L'ancienne règle « le groupe n'est jamais déduit du titre » est levée.)
 - Égalité : la vidéo publiée en premier passe devant (GB : d'abord la somme des dégâts).
 - Score arrondi (« 2.1B ») : provisoire ; on garde la valeur exacte dès qu'elle est lue à l'image.
@@ -66,7 +66,7 @@ Règles :
 - POC et HOTM : le score retenu est « 이번 기록 » (score de cette run) de l'écran RESULT, **jamais** « 기존 기록 » (ancien record) ni le score de l'écran de composition.
 - BOT : score = chrono de la dernière phase de l'écran `Results` (= chrono du bandeau du bas). Un seul classement (`bot.json`). Titre `S<n>-<w>` de la semaine précédente → `rejected` (`semaine_precedente`) ; vidéo BOT publiée pendant la semaine de calcul → `a_verifier`.
 - Contrôles de cohérence :
-  - POC : total = SJW + successeur + 3 chasseurs ;
+  - POC : total = SJW + successeur + 3 chasseurs (avant le 19/11) ; depuis la refonte : Rank Score = 1e6 × (palier − 1 + progression) et progression = Team 1 % + Team 2 % (SPEC_ETAPE1 §9) ;
   - HOTM : total = 클리어 (clear) + 증명 보너스 (bonus de preuve) ;
   - BOT : phases cumulées croissantes, dernière phase = chrono du bandeau = `Play Time` tronqué à la seconde ;
   - GB : `Player's Score` + les 6 `Hunter Rank` = `Final Score` (écran Results).
