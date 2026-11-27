@@ -1,5 +1,6 @@
 # SUIVI — Réseaux — 2026-11-27
 ## Fait
+- Post X + Discord du mercredi fixé à 23h30 (réponse de Tâche planifiée) ; RESEAUX.md §6 à jour
 - post_x.py (Code) contrôlé sur 2026-11-12 : conforme ; RESEAUX.md §5 à jour
 - Description YouTube raccourcie (1107 → 928 car.) ; lien de retrait site/retrait.html repris (message de Site traité)
 - Demande à Code : générateur des images du post X (docs/BOITE.md §8)
