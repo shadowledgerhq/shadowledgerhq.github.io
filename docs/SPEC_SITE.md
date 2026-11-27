@@ -1,6 +1,6 @@
 # SPEC_SITE — Site Shadow Ledger (étape 5)
 
-État actuel : **v2 — 2026-11-27** (discussion 5 — Site). Historique : `docs/archives/` quand il y aura une v2.
+État actuel : **v2.1 — 2026-11-27** (discussion 5 — Site). Historique : `docs/archives/` quand il y aura une v2.
 
 ## 1. Principe
 
@@ -48,6 +48,8 @@ Un site statique ne peut pas lister un dossier : le pipeline écrit `data/runs/i
 - BOT : `player_ingame` sous le nom de la chaîne s'il est lu.
 - Joueur = lien vers la chaîne (`channel_id`) ; Vidéo = lien vers chaque `video_ids`.
 - Les `notes` techniques ne sont **jamais** affichées (seulement les étiquettes ci-dessus).
+- Semaine d'essai (2026-11-12, SPEC_ETAPE1 §6 ; champ `essai` de `index.json` prioritaire s'il existe) : « (essai) » dans le sélecteur et bandeau « Semaine d'essai du pipeline : non publiée, chiffres non fiables ». **Au lancement : les semaines d'essai sont retirées du sélecteur.**
+- POC 2026-11-19 : lignes fausses tirées des titres (« Unstable Dungeon », scores à 0), correction attendue de Code (SPEC_ETAPE1 v43). Rien de public d'ici là ; ne pas les citer en exemple.
 - Bandeau : semaine en cours → « provisoire, mis à jour chaque soir, figé le jeudi 01h00 » ; semaine passée non figée → « encore provisoire » ; `frozen` → « définitif, figé le … ».
 - Langue : FR par défaut, EN si le navigateur est en anglais ; bouton FR/EN ; choix mémorisé.
 - Semaine par défaut : la plus récente.

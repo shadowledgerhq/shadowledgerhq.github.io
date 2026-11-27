@@ -84,6 +84,7 @@ const I18N={
   provisional:"Semaine en cours : classement provisoire, mis à jour chaque soir. Figé le jeudi à 01h00 (heure de Paris).",
   frozen:"Classement définitif, figé le ",
   unfrozen:"Semaine terminée : classement encore provisoire (pas encore figé).",
+  trial:"Semaine d'essai du pipeline : non publiée, chiffres non fiables.",
   crit:{poc:"Rank Score le plus élevé",bot:"Chrono le plus court",gb:"Rage Count le plus élevé (2 groupes)",hotm:"Points les plus élevés, par porte"},
   empty:"Aucune run vérifiée pour l'instant.",pending:n=>`${n} run(s) en cours de vérification (non classées)`,
   oneRun:"une seule run",prov:"provisoire",rounded:"arrondi",watch:"voir",build:"build",
@@ -96,6 +97,7 @@ const I18N={
   provisional:"Current week: provisional ranking, updated every evening. Frozen on Thursday at 01:00 (Paris time).",
   frozen:"Final ranking, frozen on ",
   unfrozen:"Week over: ranking still provisional (not frozen yet).",
+  trial:"Pipeline test week: not published, figures not reliable.",
   crit:{poc:"Highest Rank Score",bot:"Fastest time",gb:"Highest Rage Count (2 groups)",hotm:"Highest points, per gate"},
   empty:"No verified run yet.",pending:n=>`${n} run(s) being verified (not ranked)`,
   oneRun:"one run only",prov:"provisional",rounded:"rounded",watch:"watch",build:"build",
@@ -106,6 +108,9 @@ const I18N={
 };
 const MODES=["poc","bot","gb","hotm"], ELN={fr:{light:"Lumière",fire:"Feu",water:"Eau",wind:"Vent",dark:"Ténèbres"},en:{light:"Light",fire:"Fire",water:"Water",wind:"Wind",dark:"Dark"}};
 const BASE=window.SL_DATA_BASE||"../data/runs/";
+// Semaines d'essai (SPEC_ETAPE1 §6) : jamais publiées. Le champ « essai » de index.json, s'il existe, est prioritaire.
+const TRIAL_WEEKS=["2026-11-12"];
+const isTrial=w=>w.essai!=null?!!w.essai:TRIAL_WEEKS.includes(w.week);
 let LS=null;try{LS=localStorage.getItem("sl_lang")}catch(e){}
 const S={lang:(LS||(navigator.language||"fr").slice(0,2))==="en"?"en":"fr",week:null,mode:"bot",gate:null,index:null,cache:{}};
 try{const h=new URLSearchParams(location.hash.slice(1));if(h.get("lang"))S.lang=h.get("lang");if(h.get("mode"))S.mode=h.get("mode");if(h.get("week"))S.week=h.get("week");if(h.get("gate"))S.gate=+h.get("gate")}catch(e){}
@@ -131,14 +136,14 @@ function render(){
  document.documentElement.lang=S.lang;
  document.querySelectorAll("[data-t]").forEach(e=>e.textContent=t(e.dataset.t));
  document.getElementById("lang").textContent=S.lang==="fr"?"EN":"FR";
- const ws=document.getElementById("week");ws.innerHTML=S.index.weeks.map(w=>`<option value="${w.week}" ${w.week===S.week?"selected":""}>${fmtDate(w.week)}</option>`).join("");
+ const ws=document.getElementById("week");ws.innerHTML=S.index.weeks.map(w=>`<option value="${w.week}" ${w.week===S.week?"selected":""}>${fmtDate(w.week)}${isTrial(w)?(S.lang==="fr"?" (essai)":" (test)"):""}</option>`).join("");
  const bs=boardsOf(S.week);
  document.getElementById("modes").innerHTML=MODES.map(m=>`<button data-m="${m}" aria-pressed="${m===S.mode}">${m.toUpperCase()}</button>`).join("");
  const gates=bs.filter(b=>b.startsWith("hotm-gate-")).map(b=>+b.split("-")[2]).sort();
  const gEl=document.getElementById("gates");
  if(S.mode==="hotm"&&gates.length){if(!gates.includes(S.gate))S.gate=gates[0];gEl.hidden=false;gEl.innerHTML=gates.map(g=>`<button data-g="${g}" aria-pressed="${g===S.gate}">${t("gate")} ${g}</button>`).join("")}else gEl.hidden=true;
  const wk=S.index.weeks.find(w=>w.week===S.week)||{};
- const bn=document.getElementById("banner");bn.hidden=false;const latest=S.week===S.index.weeks[0].week;bn.textContent=wk.frozen?t("frozen")+fmtDate(wk.frozen_at?wk.frozen_at.slice(0,10):S.week):(latest?t("provisional"):t("unfrozen"));
+ const bn=document.getElementById("banner");bn.hidden=false;const latest=S.week===S.index.weeks[0].week;bn.textContent=isTrial(wk)?t("trial"):wk.frozen?t("frozen")+fmtDate(wk.frozen_at?wk.frozen_at.slice(0,10):S.week):(latest?t("provisional"):t("unfrozen"));
  bn.style.color=wk.frozen?"var(--acc2)":"";
  document.getElementById("title").textContent=t("modes")[S.mode]+(S.mode==="hotm"&&gEl.hidden===false?` — ${t("gate")} ${S.gate}`:"");
  document.getElementById("sub").textContent=t("week_of")(S.week)+" · "+t("crit")[S.mode];
