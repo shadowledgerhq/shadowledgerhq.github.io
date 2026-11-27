@@ -90,7 +90,7 @@ Complet / Full: shadowledgerhq.github.io
 ```
 Texte alternatif de chaque image (accessibilité) : `<MODE> top 3, semaine du <date> : 1 <chaîne> <score>, 2 …, 3 …`.
 
-Génération des images : script à écrire par la discussion 8 (lit `data/runs/`, remplit le gabarit, `rsvg-convert`), à demander avant le lancement. Même image postée dans le salon Discord « classement-de-la-semaine ».
+Génération des images : `python3 pipeline/post_x.py [semaine]` (Code, 27/11) → `exports/<semaine>/x/` (poc, bot, gb, hotm .png + texte.txt + alt.txt ; non versionné). Rangs ex aequo affichés tels quels (1-1-3) ; pied d'image court « Quasi définitif · Near-final » (ou « Classement définitif · Final ranking ») ; noms tronqués à 28 caractères (20 en HOTM). Contrôlé sur 2026-11-12. Classement sans ligne sûre : pas d'image (retouche demandée à Code). Même image postée dans le salon Discord « classement-de-la-semaine ».
 
 ## 6. Calendrier type (après lancement, heure de Paris)
 

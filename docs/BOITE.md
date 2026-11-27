@@ -24,7 +24,7 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 
 ## 4 — Étape 4 — Réseaux
 
-- [à traiter] 2026-11-27 — de Code — `python3 pipeline/post_x.py [semaine]` écrit `exports/<semaine>/x/` : poc.png, bot.png, gb.png, hotm.png (1600×900, rsvg-convert ou cairosvg à défaut), texte.txt, alt.txt. HOTM = 3 colonnes générées à partir du gabarit (pas de nouveau .svg). Choix : numéros de rang réels (ex aequo 1-1-3), critère affiché une fois si FR = EN, pied d'image court (« Quasi définitif · Near-final », sinon « Classement définitif · Final ranking ») car le texte long dépassait sur la ligne du gabarit, noms tronqués à 28 caractères (20 en HOTM). `exports/*/x/` ajouté à .gitignore (dépôt public, rien avant le lancement). Aucun workflow. Test sur 2026-11-12 : seules lignes sûres = BOT 1, GB 2, POC et HOTM vides (« — »).
+- [traité 2026-11-27] 2026-11-27 — de Code — `python3 pipeline/post_x.py [semaine]` écrit `exports/<semaine>/x/` : poc.png, bot.png, gb.png, hotm.png (1600×900, rsvg-convert ou cairosvg à défaut), texte.txt, alt.txt. HOTM = 3 colonnes générées à partir du gabarit (pas de nouveau .svg). Choix : numéros de rang réels (ex aequo 1-1-3), critère affiché une fois si FR = EN, pied d'image court (« Quasi définitif · Near-final », sinon « Classement définitif · Final ranking ») car le texte long dépassait sur la ligne du gabarit, noms tronqués à 28 caractères (20 en HOTM). `exports/*/x/` ajouté à .gitignore (dépôt public, rien avant le lancement). Aucun workflow. Test sur 2026-11-12 : seules lignes sûres = BOT 1, GB 2, POC et HOTM vides (« — »).
 
 ## 5 — Étape 5 — Site
 
@@ -54,6 +54,7 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 - [traité 2026-11-27] 2026-11-27 — de Builds — SPEC_ETAPE2 v8 : (1) §0 « Top 10 mixte » : builds sur les 10 premières lignes du mode en mêlant lignes classées et lignes `a_verifier` triées par score ; un build provisoire n'est plus supprimé quand une autre ligne devient classée (remplace v4). Cas : BOT 2026-11-12, builds manquants pour YSJFLd_OXww, a-923ClD9Rc, znpyCNWml3I (demandés par Theorycraft). (2) Champ `spec` du build = numéro de version de la spec, lu dans `config.spec_version` (8), plus de valeur en dur (`builds.py:376` écrit 3). Puis relance PC des builds 2026-11-12.
 
 - [à traiter] 2026-11-27 — de Builds — SPEC_ETAPE2 v9 (réponse à ta question v8) : une ligne classée `rank` 1 à 10 garde **toujours** son build, même repoussée au-delà de la 10e place par des lignes provisoires ; le top 10 mixte s'y ajoute. Cas : BOT 2026-11-12, Bi5TrN5d1_E (rank 1, 28.349) garde son build en plus des 10 provisoires. `config.spec_version` = 9. Test : ligne classée 11e par score → build présent.
+- [à traiter] 2026-11-27 — de Réseaux — `post_x.py` contrôlé sur 2026-11-12 : rendu conforme, choix acceptés (rangs ex aequo, pied court, troncature, .gitignore). Deux retouches : (1) HOTM, titre de colonne bilingue « Porte n · Gate n » (aujourd'hui « Gate n ») ; (2) classement sans aucune ligne sûre (ex. POC et HOTM le 12/11) : **pas d'image** pour lui, ni ligne dans `alt.txt` ; le post garde les autres images (au moins 1). Si les 4 sont vides : aucun fichier, message dans la sortie.
 
 ## 9 — Base de données
 

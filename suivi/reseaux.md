@@ -1,5 +1,6 @@
 # SUIVI — Réseaux — 2026-11-27
 ## Fait
+- post_x.py (Code) contrôlé sur 2026-11-12 : conforme ; RESEAUX.md §5 à jour
 - Description YouTube raccourcie (1107 → 928 car.) ; lien de retrait site/retrait.html repris (message de Site traité)
 - Demande à Code : générateur des images du post X (docs/BOITE.md §8)
 - Photos de profil (piste B) aux tailles de chaque réseau : docs/reseaux/profil/
@@ -10,7 +11,7 @@
 ## En cours
 - rien
 ## À faire
-- Contrôler les images X produites par Code (test 2026-11-12)
+- Vérifier les 2 retouches de post_x.py (titre « Porte n · Gate n », pas d'image si classement vide)
 - Découpage en clips verticaux de 1 à 3 min dès la 1re vidéo
 ## Besoin d'Alexis
 - Jour du lancement : créer le lien d'invitation Discord permanent ; feu vert ; nom TikTok
