@@ -97,7 +97,7 @@ Champs supplémentaires :
 
 ### Build (data/builds/<semaine>/<mode>/<run_id>-<n>.json)
 
-Format complet : `docs/SPEC_ETAPE2.md` §1.2 du dépôt (fait foi ; v5 au 17/11/2026). Points clés :
+Format complet : `docs/SPEC_ETAPE2.md` §1.2 du dépôt (fait foi ; version courante en tête du fichier). Points clés :
 - un build = une run (`runs_detail[i]` → `<run_id>-<i+1>.json`) ; HOTM : `<mode>` = `hotm-gate-<n>` ;
 - `status` : `build_complet | build_partiel | pas_de_build` ; `confidence` : `sur | a_verifier` ;
 - identifiants = `id` de la base ; élément non reconnu = `null` ou `unmatched`, jamais inventé ni complété à la main ;
@@ -109,7 +109,7 @@ Format complet : `docs/SPEC_ETAPE2.md` §1.2 du dépôt (fait foi ; v5 au 17/11/
 
 Relevé automatique de l'ordre des compétences (passage en recharge des boutons du HUD), fait sur le PC après les tris 3-4 ; top 3, BOT d'abord. Aucun relevé manuel.
 
-Format complet : `docs/SPEC_ROTATION.md` §3 du dépôt (fait foi ; v1 au 17/11/2026). Points clés : un objet par run dans `runs[]` (`run_start_t`, `run_end_t`, `duration_s`, `events`, `limites`) ; chaque événement a `t` (vidéo) et `t_run` (depuis le début de la run), `hunter` (`sjw`, id de la base ou `inconnu`), `slot`, `source`, `confidence` (`sur` | `a_verifier`). Rapport : `data/rotations/<semaine>/_rapport.md`.
+Format complet : `docs/SPEC_ROTATION.md` §3 du dépôt (fait foi ; version courante en tête du fichier). Points clés : un objet par run dans `runs[]` (`run_start_t`, `run_end_t`, `duration_s`, `events`, `limites`) ; chaque événement a `t` (vidéo) et `t_run` (depuis le début de la run), `hunter` (`sjw`, id de la base ou `inconnu`), `slot`, `source`, `confidence` (`sur` | `a_verifier`). Rapport : `data/rotations/<semaine>/_rapport.md`.
 
 ### Objet de la base (data/db/<categorie>.json, liste)
 
@@ -172,13 +172,16 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - [ ] Toutes les vidéos ont une date de publication postérieure au dernier reset.
 - [ ] Le boss / la saison visible correspond à la semaine (GB `Personal Record` : `Time Left in Season` cohérent avec la date de publication ; BOT : `S<n>-<w>` du titre = semaine attendue, aucune run classée en semaine de calcul).
 - [ ] Une seule ligne par chaîne (HOTM : par porte) ; pas de ré-upload en double.
-- [ ] POC et GB : total = somme des runs (POC : une run par équipe ; GB : une run par groupe) ; une seule run sûre est classée avec la note `une seule run`.
+- [ ] GB (et POC avant le 19/11/2026) : total = somme des runs (GB : une run par groupe ; POC : une run par équipe) ; une seule run sûre est classée avec la note `une seule run`.
+- [ ] POC depuis le 19/11/2026 : Rank Score sûr seulement si les contrôles a/b/c passent (Rank Score = 1e6 × (palier − 1 + progression) à ±100 ; progression = Team 1 % + Team 2 % ; contributions = `Total Contribution`) ; « Tier N » d'un texte compte seulement avec une marque POC ; l'élément est informatif.
 - [ ] GB : chaque run classée a un écran Results filmé. POC et GB : `element` renseigné ou `null` ; aucun chasseur commun entre les deux runs d'une ligne.
-- [ ] POC : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
+- [ ] POC avant le 19/11 : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
 - [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; `Total Rage Count` = groupe 1 + groupe 2.
 - [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas (GB : égalité de RC départagée par les dégâts).
+- [ ] BOT et GB : un écran au contrôle échoué ne donne jamais un score ; chrono incomplet = intervalle, phases incomplètes = borne basse, jamais un chrono. GB : un dégât non contrôlé ne départage jamais une égalité de RC.
+- [ ] Rejets : une actualité n'est rejetée que sans écran de jeu ; un rejet sur le titre seulement pour un autre jeu.
 - [ ] Les scores `exact: false` ou `a_verifier` sont signalés.
-- [ ] Aucun écart improbable (ex. score 10 fois au-dessus du 2e) sans vérification.
+- [ ] Aucun écart improbable sans vérification (BOT, GB : score provisoire < 70 % de la médiane des provisoires, dès 5 lignes ; ailleurs : ex. score 10 fois au-dessus du 2e).
 
 ### Builds (étape 2)
 - [ ] 10 builds par mode (×2 runs pour POC et GB) ou raison de l'absence.
@@ -197,7 +200,8 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 ### Vidéos (étape 3b)
 - [ ] Chaque choix justifié ; les estimations signalées comme telles.
 - [ ] Script FR et EN de même contenu.
-- [ ] Intro et outro de 5 s max.
+- [ ] Intro 2 s et outro 5 s exactement (écran de fin) ; clip vertical : outro 3 s.
+- [ ] `video.json` = source unique ; `script.md` en est généré, jamais modifié à la main.
 - [ ] Contenu différent des vidéos des semaines précédentes.
 
 ### Site (étape 5)

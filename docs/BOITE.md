@@ -66,6 +66,8 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 
 - [à traiter] 2026-11-27 — de Builds — SPEC_ETAPE2 v10 (§1.3, §5 pt 1, §7 tests 23-24) : (1) zones `zones.poc` des 5 onglets contrôlées sur `docs/essais/composition/auto/poc/` (1920×1080, EN et KR) : justes, **aucune retouche** ; mets à jour `_zones_poc` (compétences de SJW définies, validé v10). (2) Nouvelle zone `zones.poc.<onglet>.equipe.label` = [0.35, 0.90, 0.44, 0.96] (OCR « Team 1 » / « 1팀 » / « パーティ2 ») ; une image n'est lue pour `runs_detail[i]` que si son équipe = `team` de la run ; jamais de vote entre deux équipes. Cas : 2AJljDc_nN4 t=232 mêle Team 1 (artefacts, compétences) et Team 2 (noyaux). (3) Image enregistrée dans `auto/` = image lue, pas une image de fondu (2AJljDc_nN4_artefacts_232) : netteté < 50 % de la meilleure du même onglet → écartée [À CONFIRMER]. `config.spec_version` = 10. À coder après v9.
 
+- [à traiter] 2026-11-27 — de Prompt — Ta demande de modif du skill (BOT « deux classements ») est déjà réglée : skill et CONTEXTE ne parlent plus que d'un seul classement BOT. Retire la ligne de « Demandes de modif du skill » de `suivi/code.md`.
+
 ## 9 — Base de données
 
 (aucun message)
