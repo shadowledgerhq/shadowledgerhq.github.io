@@ -1714,6 +1714,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
     journal(f"Passage PC {passage} — semaine {week}")
 
     antibot, bloquantes = False, []
+    st_429 = img_429 = False        # 27/11 : sous-titres refusés (429) n'arrêtent plus les images (autre point d'accès, formats souvent OK)
     cfg_img = pc_cfg["images"]
     # v39 §1 : un passage daily traite aussi la semaine écoulée non gelée (au plus une) : candidates top 10 de la semaine écoulée, candidates de la
     # semaine en cours, puis les autres (semaine écoulée d'abord) ; budget et limites partagés. Une semaine N-2 non gelée n'est plus traitée.
@@ -1753,8 +1754,8 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
 
     def phase(w, genre):
         """Une semaine, une partie de la file : `genre` None = tout (une seule semaine), "cand" = candidates au top 10, "autres" = le reste."""
-        nonlocal antibot
-        if ctx["arret"] or antibot:
+        nonlocal antibot, st_429, img_429
+        if ctx["arret"] or img_429:
             return
         processed, videos, lectures = d.processed(), d.videos(w), d.lectures(w)
         etiquette = f" [{w}]" if len(semaines) > 1 else ""
@@ -1776,8 +1777,8 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
         limite = ctx["st"]
         if len(a_faire) > limite:
             alertes.append(f"{len(a_faire) - limite} vidéo(s) reportée(s) au prochain passage (limite {maximum or pc_cfg['max_videos']})")
-        lot = a_faire[:max(limite, 0)]
-        journal(f"Sous-titres{etiquette} : {len(lot)} vidéo(s)")
+        lot = [] if st_429 else a_faire[:max(limite, 0)]
+        journal(f"Sous-titres{etiquette} : " + (f"ignorés (429 plus tôt dans ce passage)" if st_429 else f"{len(lot)} vidéo(s)"))
         try:
             for n, vid in enumerate(lot, 1):
                 if horloge() > fin_passage:
@@ -1799,8 +1800,8 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                     if bloquante(avert):
                         bloquantes.append(avert)
                 if etat == "reporte":  # 429 : on s'arrête, YouTube limite le débit de cette adresse
-                    antibot = True
-                    alertes.append("429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)")
+                    antibot = st_429 = True
+                    alertes.append("429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h) ; les images continuent")
                     break
                 processed[vid].setdefault("pc", {}).update(sous_titres=etat, date=jour)
                 processed[vid]["updated_at"] = jour
@@ -1813,7 +1814,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             alertes.append(str(e))
             bloquantes.append(f"outil absent : {e}")
             ctx["arret"] = True
-        if antibot or ctx["arret"] or not (cfg_img["actif"] if images is None else images):
+        if img_429 or ctx["arret"] or not (cfg_img["actif"] if images is None else images):
             return
         try:        # v33 : rotations (SPEC_ROTATION) : top 3 du BOT, vidéo déjà téléchargée par les tris 3-4 (ou seulement pour la rotation)
             rotation_cfg = rotation.charger_config()
@@ -1888,7 +1889,7 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
                         processed[vid]["status"] = "termine"
                 sauver()
                 if reporte:
-                    antibot = True
+                    antibot = img_429 = True
                     alertes.append("429 / anti-bot YouTube : images arrêtées pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)")
                     break
                 if n < len(lot):

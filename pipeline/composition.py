@@ -136,6 +136,85 @@ def choisir_stables(images_t, cfg):
     return sortie
 
 
+# --- v10 : équipe de l'écran de composition et images de fondu (POC) --------------------------------------------------
+
+def numero_equipe(texte):
+    """Numéro d'équipe (1 ou 2) lu dans le libellé « Team 1 » / « 1팀 » / « パーティ2 » ; None si illisible ou ambigu."""
+    t = texte or ""
+    m = re.search(r"(?:team|party|パーティ|チーム|팀)\s*([12])\b", t, re.I) or re.search(r"\b([12])\s*(?:팀|team)", t, re.I)
+    if m:
+        return int(m.group(1))
+    chiffres = set(re.findall(r"[0-9]", t))
+    return int(chiffres.pop()) if len(chiffres) == 1 and chiffres <= {"1", "2"} else None
+
+
+def lire_equipe(outils, image, cfg, onglet, mode="poc", dossier=None):
+    """Équipe (1, 2 ou None) de l'image d'un onglet : OCR de `zones.<mode>.<onglet>.equipe.label`. Sans zone ni OCR : None."""
+    zone = (((cfg.get("zones") or {}).get(mode) or {}).get(onglet) or {}).get("equipe", {}).get("label")
+    if not zone or not hasattr(outils, "recadrer") or not hasattr(outils, "ocr"):
+        return None
+    with tempfile.TemporaryDirectory(dir=dossier) as tmp:
+        png = Path(tmp) / "equipe.png"
+        image.convert("RGB").save(png)
+        langues = cfg["extraction"].get("equipe_langues")
+        for seuil in (170, None, 140):
+            try:
+                n = numero_equipe(outils.ocr(outils.recadrer(png, zone, 3, seuil), langues, 7, 20))
+            except Exception:                       # OCR indisponible : équipe non lue, jamais d'échec du build
+                return None
+            if n:
+                return n
+    return None
+
+
+def nettete(image, zone=(0.10, 0.10, 0.95, 0.88)):
+    """Netteté d'une image : variance du laplacien (niveaux de gris) sur la zone (fractions x0, y0, x1, y1). Un fondu la fait chuter."""
+    np = _np()
+    g = np.asarray(image.convert("L")).astype(float)
+    h, w = g.shape
+    g = g[int(zone[1] * h):int(zone[3] * h), int(zone[0] * w):int(zone[2] * w)]
+    if g.shape[0] < 3 or g.shape[1] < 3:
+        return 0.0
+    lap = g[:-2, 1:-1] + g[2:, 1:-1] + g[1:-1, :-2] + g[1:-1, 2:] - 4 * g[1:-1, 1:-1]
+    return float(lap.var())
+
+
+def ecarter_fondus(images, cfg):
+    """`images` = {onglet: [PIL]}. Écarte, par onglet, les images dont la netteté < `nettete_rapport_min` × la meilleure du même
+    onglet (image prise en plein fondu). Retourne {onglet: [images]} ; au moins une image est gardée par onglet."""
+    e = cfg["extraction"]
+    rapport = e.get("nettete_rapport_min", 0.5)
+    zone = e.get("nettete_zone") or (0.10, 0.10, 0.95, 0.88)
+    sortie = {}
+    for o, ims in images.items():
+        if len(ims) < 2:
+            sortie[o] = list(ims)
+            continue
+        n = [nettete(im, zone) for im in ims]
+        meilleur = max(n)
+        sortie[o] = [im for im, v in zip(ims, n) if v >= rapport * meilleur]
+    return sortie
+
+
+def filtrer_par_equipe(images, equipes, team):
+    """`images` = {onglet: [PIL]}, `equipes` = {onglet: [1|2|None par image]}. Une image n'est gardée que si son équipe = `team`
+    (jamais de vote entre équipes). Illisible : gardée seulement si aucune image n'a d'équipe lue (sinon écartée).
+    `team` None -> tout, note « équipe de la run inconnue ». Retourne (images, notes)."""
+    if team is None:
+        return images, ["équipe de la run inconnue"]
+    lues = [q for l in equipes.values() for q in l if q]
+    sortie, notes = {}, []
+    for o, ims in images.items():
+        eq = equipes.get(o) or [None] * len(ims)
+        sortie[o] = [im for im, q in zip(ims, eq) if (q == team if lues else True)]
+    if not lues and any(images.values()):
+        notes.append("équipe de la composition non lue")
+    elif any(q is None for l in equipes.values() for q in l) and lues:
+        notes.append("équipe de la composition non lue")
+    return sortie, notes
+
+
+
 def _lire_hors_composition(outils, cfg, autres, journal, ocr_debug, vid, toutes=None):
     """OCR rapide d'une image sur `hors_compo.pas` des images qui ne sont pas la composition ; écran reconnu -> OCR complet.
     Retourne [(ecran, texte)] (2 par type au plus ; `hors_compo.ocr_max` appels rapides au plus). Erreur d'OCR : image ignorée."""
@@ -441,7 +520,7 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
     from PIL import Image
     journal = journal or (lambda m: None)
     e = cfg["extraction"]
-    cache, traces = {}, {}
+    cache, traces, equipes = {}, {}, {}
 
     def lire(ctx):
         vid, t_fin = ctx["video_id"], ctx.get("t_result")
@@ -472,6 +551,11 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
                         if fin:                                  # onglet absent à 0,5 s : on garde le choix à pas_s
                             cache[cle] = ({**cache[cle][0], **fin}, fenetre, None, ecrans)
                             traces[cle]["affinage"] = dict(getattr(_affiner, "temps", {}) or {})
+                    if ctx.get("mode") == "poc" and (cfg.get("zones") or {}).get("poc"):       # v10 : fondus écartés, équipe lue par image
+                        cache[cle] = (ecarter_fondus(cache[cle][0], cfg), *cache[cle][1:])
+                        if hasattr(outils, "ocr") and hasattr(outils, "recadrer"):
+                            equipes[cle] = {o: [lire_equipe(outils, im, cfg, o) for im in ims] for o, ims in cache[cle][0].items()}
+                            journal(f"  composition {vid} : équipes lues {json.dumps(equipes[cle])}")
                     ecrans.extend(_positions_portraits(cache[cle][0], ecrans, ctx, cfg, journal))
                     try:         # v5 : images gardées pour que la discussion 2 définisse les zones (échec sans conséquence)
                         from donnees import RACINE
@@ -492,6 +576,9 @@ def fournisseur_pc(outils, cfg, journal=None, ocr_debug=None):
             except Exception as ex:                      # 429, ffmpeg, vidéo privée : build `pas_de_build`, raison notée
                 cache[cle] = ({}, None, str(ex)[:160], [])
         images, t, err, ecrans = cache[cle]
+        notes = []
+        if cle in equipes:                               # v10 : seules les images de l'équipe de la run servent au build
+            images, notes = filtrer_par_equipe(images, equipes[cle], ctx.get("team"))
         return images, {"t_composition": t, "erreur": err, "ecrans": ecrans, "ocr_resume": list(getattr(_lire_hors_composition, "resume", [])),
-                        "trace_images": traces.get(cle)}
+                        "trace_images": traces.get(cle), "notes": notes}
     return lire
