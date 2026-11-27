@@ -7,12 +7,13 @@
 - 27/11 : commande « message ? » et annonce de chaque message envoyé (CONTEXTE §7, CLAUDE.md, skill §2, règle 9 des instructions)
 - 27/11 : POC refonte (Rank Score) dans CONTEXTE §3-4 et skill §1/§3 (demande de Classements)
 - 27/11 : demandes de modif du skill de Builds, Classements, Theorycraft appliquées (§3 Build/Rotation, §7 checklists)
+- 27/11 : règle GB v32 (Personal Record) ajoutée à la checklist du skill (réponse de Classements)
 ## En cours
 - rien
 ## À faire
 - Garder identiques : CONTEXTE, PROMPTS_DISCUSSIONS et skill (compte = dépôt) à chaque changement
 ## Besoin d'Alexis
-- Carte du skill du 27/11 soir (§3, §7)
+- Carte du skill du 27/11, règle v32 (§7)
 - Échantillon de voix ; nom TikTok
 ## Demandes de modif du skill
 - rien
