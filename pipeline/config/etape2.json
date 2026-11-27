@@ -141,6 +141,14 @@
       0.6719,
       0.6944
      ]
+    },
+    "equipe": {
+     "label": [
+      0.35,
+      0.9,
+      0.44,
+      0.96
+     ]
     }
    },
    "artefacts": {
@@ -381,6 +389,14 @@
       0.9375,
       0.6
      ]
+    },
+    "equipe": {
+     "label": [
+      0.35,
+      0.9,
+      0.44,
+      0.96
+     ]
     }
    },
    "noyaux": {
@@ -501,6 +517,14 @@
       0.9375,
       0.6
      ]
+    },
+    "equipe": {
+     "label": [
+      0.35,
+      0.9,
+      0.44,
+      0.96
+     ]
     }
    },
    "benedictions": {
@@ -585,6 +609,14 @@
       0.9375,
       0.6
      ]
+    },
+    "equipe": {
+     "label": [
+      0.35,
+      0.9,
+      0.44,
+      0.96
+     ]
     }
    },
    "competences": {
@@ -656,6 +688,14 @@
       0.1667,
       0.9375,
       0.6
+     ]
+    },
+    "equipe": {
+     "label": [
+      0.35,
+      0.9,
+      0.44,
+      0.96
      ]
     }
    }
@@ -1627,10 +1667,19 @@
    "rayon": 0.0276,
    "seuil_blanc": 0.08,
    "rapport_2e": 1.5
-  }
+  },
+  "equipe_langues": "eng+kor+jpn",
+  "nettete_rapport_min": 0.5,
+  "nettete_zone": [
+   0.1,
+   0.1,
+   0.95,
+   0.88
+  ],
+  "_equipe": "v10 (POC) : OCR du libellé d'équipe (zones.poc.<onglet>.equipe.label) ; image gardée seulement si équipe = team de la run. Fondu : image écartée si netteté (variance du laplacien de nettete_zone) < nettete_rapport_min × la meilleure du même onglet [À CONFIRMER]."
  },
  "_extraction": "[À CONFIRMER] détection de l'écran de composition sur les images de la vidéo (capture BOT JA 1158×651) : bouton jaune d'entrée (bas droite) = écran présent ; onglet actif = icône de la colonne de gauche la plus blanche (≥ 8 % de pixels blancs et ≥ 1,5 × la 2e). Sans ces deux signes, l'image est ignorée. Fenêtre d'analyse : de 0 à `t_result` (max `fenetre_max_s` s), 1 image / `pas_s` s, `max_par_onglet` images gardées par onglet.",
- "_zones_poc": "POC (écran `プレイヤーチームファイトモード`, client JA) : personnages calibré le 14/11 ; artefacts, noyaux, bénédictions mesurés le 15/11 sur les images 1600×900 de la vidéo v0tuXJNxudk (`docs/essais/builds/v0tuXJNxudk_ocr/*_compo_*.jpg`), vérifiés à l'œil ; **compétences et subjugation : zones non définies (onglet non filmé)**. Ombres et successeur recadrés le 15/11 sur la même image (cartes à x 1127-1307 et 1322-1502 sur 1600).",
+ "_zones_poc": "POC (écran `プレイヤーチームファイトモード`, client JA) : personnages calibré le 14/11 ; artefacts, noyaux, bénédictions mesurés le 15/11 sur les images 1600×900 de la vidéo v0tuXJNxudk (`docs/essais/builds/v0tuXJNxudk_ocr/*_compo_*.jpg`), vérifiés à l'œil ; **compétences et subjugation : zones non définies (onglet non filmé)**. Ombres et successeur recadrés le 15/11 sur la même image (cartes à x 1127-1307 et 1322-1502 sur 1600). v10 (27/11) : les zones des 5 onglets sont validées sans retouche sur les images auto 1920×1080 (EN et KR) ; compétences de SJW définies ; zone equipe.label [0.35, 0.90, 0.44, 0.96] (« Team 1 », « 1팀 », « パーティ2 »).",
  "seuil_nom": 0.9,
  "ecrans": {
   "_ecrans": "[À CONFIRMER] libellés lus sur les captures POC JA (docs/essais/composition/poc_*_ja.png) ; un écran est reconnu avec au moins 2 libellés. Autres langues [EN ATTENTE].",
