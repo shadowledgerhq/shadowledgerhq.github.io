@@ -13,7 +13,6 @@
 ## À faire
 - Garder identiques : CONTEXTE, PROMPTS_DISCUSSIONS et skill (compte = dépôt) à chaque changement
 ## Besoin d'Alexis
-- Carte du skill du 27/11, règle v32 (§7)
 - Échantillon de voix ; nom TikTok
 ## Demandes de modif du skill
 - rien
