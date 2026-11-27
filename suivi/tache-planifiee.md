@@ -4,10 +4,10 @@
 - Mercredi : contrôle 23:30, post 23:45 (budget passage PC ≤ 115 min, réponse de Code)
 - Bug relance corrigé par Code (relances du soir seules ; relance manquée > 2 h annulée)
 ## En cours
-- Horaire réel du Planificateur (19:30/21:30/23:30 ou 21:15 ?) → Code
+- Horaire cible : PC 19:30 / 21:30 / 23:30, GitHub 18:00 ; à vérifier dans le rapport du 28/11 (tâche 21:15 restée en double ?)
 - 27/11 : 48 vidéos en_cours, anti-bot à 20:18 (manuel), relance prévue 22:18
 ## À faire
-- Contrôle du passage du 27/11 21:15 (relance, 22 vidéos en_cours)
+- Contrôle du 28/11 (23:50) : blocs planificateur 19:30/21:30/23:30, pas de 21:15, vidéos en_cours
 - Créer le contrôle régulier après chaque passage (CONTEXTE §5), rapports dans docs/controle/
 ## Besoin d'Alexis
 - Si l'anti-bot bloque encore : 5_test_antibot.bat puis 3_passage_complet.bat
