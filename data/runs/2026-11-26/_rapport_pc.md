@@ -69,3 +69,12 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
 - Sous-titres en attente : 12 avant la règle → 12 après (8 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+
+<!-- passage-pc pc-daily 2026-11-27T18:30:04.215496+00:00 -->
+## Passage pc-daily — 2026-11-27 19:30 (Paris)
+
+- Lancement : planificateur
+- **Passage reporté : passage GitHub du jour absent**
+- Dernier passage GitHub daily : 2026-11-26 (attendu : 2026-11-27)
+- Aucune vidéo traitée
+- Relance automatique : 27/11/2026 20:00 (relance 1 sur 2)
