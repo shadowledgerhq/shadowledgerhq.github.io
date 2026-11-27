@@ -15,8 +15,4 @@
 ## Besoin d'Alexis
 - Décider : relire YSJFLd_OXww (semaine d'essai) à la main ou non
 ## Demandes de modif du skill
-- Glossaire POC : Rank Score (unité rank_score) depuis le 19/11 ; avant : dégâts équipe 1 + équipe 2
-- Checklist POC refonte : contrôles a/b/c (v40) ; texte « Tier N » seulement avec marque POC (v43) ; élément informatif
-- Checklist BOT/GB : écran au contrôle échoué jamais un score (v35, RC GB v39) ; écart < 70 % de la médiane (BOT v35, GB v39) ; chrono incomplet = intervalle (v34) ; phases incomplètes = borne basse (v36)
-- Checklist Classements : actualités rejetées seulement sans écran de jeu (v37) ; rejet sur le titre seulement pour un autre jeu (v38)
-- Checklist GB : RC sûr par le Personal Record (v32) ; dégât non contrôlé ne départage jamais (v33)
+- Checklist GB : règle v32 reformulée pour Prompt (Personal Record contrôlé confirme le RC d'un Results filmé en conflit), en attente
