@@ -16,5 +16,4 @@
 ## Besoin d'Alexis
 - Avis sur la vidéo d'essai (rythme, lisibilité)
 ## Demandes de modif du skill
-- §3 Rotation : « fait foi ; v1 au 17/11 » → « v2.2 au 18/11 »
-- Checklist Vidéos : « intro 2 s, outro 5 s exactement (écran de fin) » ; « video.json = source unique, script.md généré »
+- rien
