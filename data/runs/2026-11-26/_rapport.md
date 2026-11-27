@@ -1,18 +1,18 @@
-# Rapport — semaine 2026-11-26 — passage daily — 2026-11-27 19:46 (Paris)
+# Rapport — semaine 2026-11-26 — passage pc-daily — 2026-11-27 20:00 (Paris)
 
-Dernier passage du PC (`_rapport_pc.md`, recopié) :
+- Top 10 couvert : non (35 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 48 (dont 48 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Lancement : relance
+- Durée du passage : 0 min
+- Relance automatique : aucune (c'était déjà la relance) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
+- Sous-titres en attente : 41 avant la règle → 23 après (23 inutiles : hors sujet ou score déjà lu ; 3 rejetée(s) sur le titre)
+- Type : relance automatique (ne compte pas pour le critère de gel n° 3)
 
-## Passage pc-daily — 2026-11-27 19:30 (Paris)
-
-- Lancement : planificateur
-- **Passage reporté : passage GitHub du jour absent**
-- Dernier passage GitHub daily : 2026-11-26 (attendu : 2026-11-27)
-- Aucune vidéo traitée
-- Relance automatique : 27/11/2026 20:00 (relance 1 sur 2)
-
-- Quota : 1706 unités
-- Ce passage : 14 vidéo(s) nouvelle(s), 0 rejetée(s), 1 score(s) provisoire(s)
-- Semaine : 51 en cours (dont 51 pour le PC), 0 terminée(s), 5 rejetée(s)
+- Semaine : 48 en cours (dont 48 pour le PC), 0 terminée(s), 8 rejetée(s)
 - Classements : gb 7, poc 1
 
 ## À vérifier (8)
@@ -36,4 +36,8 @@ Dernier passage du PC (`_rapport_pc.md`, recopié) :
 - rien
 
 ## Erreurs et alertes
-- rien
+- 15 vidéo(s) reportée(s) au prochain passage (limite 8)
+- KheaGCgUje4 : 429 / anti-bot YouTube, reportée au prochain passage
+- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
+- 48 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
+- passage incomplet : anti-bot ; relance : aucune (c'était déjà la relance) : prochain passage normal

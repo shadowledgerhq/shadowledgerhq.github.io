@@ -78,3 +78,18 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Dernier passage GitHub daily : 2026-11-26 (attendu : 2026-11-27)
 - Aucune vidéo traitée
 - Relance automatique : 27/11/2026 20:00 (relance 1 sur 2)
+
+<!-- passage-pc pc-daily 2026-11-27T19:00:09.410334+00:00 -->
+## Passage pc-daily — 2026-11-27 20:00 (Paris)
+
+- Top 10 couvert : non (35 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 48 (dont 48 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Lancement : relance
+- Durée du passage : 0 min
+- Relance automatique : aucune (c'était déjà la relance) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
+- Sous-titres en attente : 41 avant la règle → 23 après (23 inutiles : hors sujet ou score déjà lu ; 3 rejetée(s) sur le titre)
+- Type : relance automatique (ne compte pas pour le critère de gel n° 3)

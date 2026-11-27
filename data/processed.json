@@ -8907,14 +8907,10 @@
     "first_seen": "2026-11-27",
     "updated_at": "2026-11-27",
     "last_tri": 1,
-    "status": "en_cours",
+    "status": "rejete",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ]
+    "pc_needed": false,
+    "regles": 19
   },
   "f9amFMYyuZQ": {
     "week": "2026-11-26",
@@ -8942,7 +8938,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "Jt9L2qQMbTY": {
     "week": "2026-11-26",
@@ -8970,7 +8969,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "q_nKTRM6Z7s": {
     "week": "2026-11-26",
@@ -8984,7 +8986,10 @@
       "poc"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "37a7wBIeiBA": {
     "week": "2026-11-26",
@@ -9096,7 +9101,10 @@
       "gb"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "Qw5lA9B97c8": {
     "week": "2026-11-26",
@@ -9120,14 +9128,10 @@
     "first_seen": "2026-11-27",
     "updated_at": "2026-11-27",
     "last_tri": 1,
-    "status": "en_cours",
+    "status": "rejete",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ]
+    "pc_needed": false,
+    "regles": 19
   },
   "2wUcC888x1c": {
     "week": "2026-11-26",
@@ -9136,14 +9140,10 @@
     "first_seen": "2026-11-27",
     "updated_at": "2026-11-27",
     "last_tri": 1,
-    "status": "en_cours",
+    "status": "rejete",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ]
+    "pc_needed": false,
+    "regles": 19
   },
   "JelxJBF7_hM": {
     "week": "2026-11-26",
@@ -9161,7 +9161,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "V6V5Ri62eFA": {
     "week": "2026-11-26",
@@ -9179,7 +9182,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "626Mq-Ccmxk": {
     "week": "2026-11-26",
@@ -9197,7 +9203,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "Fqg-y1Jh2Y8": {
     "week": "2026-11-26",
@@ -9215,7 +9224,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "zRpyNZBUIUs": {
     "week": "2026-11-26",
@@ -9233,7 +9245,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "8TLr-WcOM2Q": {
     "week": "2026-11-26",
@@ -9251,7 +9266,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "QP1q7i-tzL4": {
     "week": "2026-11-26",
@@ -9269,7 +9287,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "mGIN_m2IMS0": {
     "week": "2026-11-26",
@@ -9287,7 +9308,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "lEsplX9jI68": {
     "week": "2026-11-26",
@@ -9305,7 +9329,10 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "qm5AzGdKrow": {
     "week": "2026-11-26",
@@ -9334,7 +9361,10 @@
       "poc"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "UbSotwy18tk": {
     "week": "2026-11-26",
@@ -9352,6 +9382,9 @@
     "hors_sujet_probable": true,
     "notes": [
       "actualités probables (titre)"
-    ]
+    ],
+    "pc": {
+      "sous_titres": "inutile"
+    }
   }
 }
