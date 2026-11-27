@@ -1,4 +1,5 @@
-"""Écrit script.md (minutage, storyboard, texte FR/EN, sources) à partir de video.json."""
+"""Écrit script.md (minutage, storyboard, texte FR/EN, sources) à partir de video.json.
+Usage : python3 pipeline/video/script_md.py <video.json> <script.md>"""
 import json, sys
 v = json.load(open(sys.argv[1], encoding="utf-8"))
 L = lambda x, l: x.get(l, "") if isinstance(x, dict) else (x or "")

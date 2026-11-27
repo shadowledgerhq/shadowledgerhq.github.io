@@ -599,7 +599,8 @@ def controles_bot(fich, chrono_s=None, t_composition=None, phases=(), db=None, t
         phases_ok = all(tg[0] <= p <= chrono_s + 0.5 for p in ph) if ph else None
         ok = croissant and borne and (phases_ok is not False)
         sortie.append(("t_game croissant, ≤ chrono, phases dans la fenêtre", ok,
-                       f"{len(tg)} lecture(s) {tg[0]}→{tg[-1]} s ; croissant {croissant} ; dernier ≤ chrono {borne} ; phases {ph} ({'non évaluable' if phases_ok is None else phases_ok})"))
+                       f"{len(tg)} lecture(s) {tg[0]}→{tg[-1]} s ; croissant {croissant} ; dernier ≤ chrono {borne} ; phases {ph} ({'non évaluable' if phases_ok is None else phases_ok})"
+                       + (f" ; phases incomplètes ({len(ph)} lue(s) sur 3) : chrono de contrôle = score de la ligne" if 0 < len(ph) < 3 else "")))
     return sortie
 
 
