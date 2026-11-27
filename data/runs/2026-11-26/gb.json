@@ -41,17 +41,17 @@
     ]
   },
   {
-    "run_id": "gb-2026-11-26-Pj6QzXQ81jQ",
+    "run_id": "gb-2026-11-26-jfwIDAe-rNs",
     "week": "2026-11-26",
     "mode": "gb",
     "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
     "player": "Willian",
     "channel": "Willian",
-    "video_id": "Pj6QzXQ81jQ",
+    "video_id": "jfwIDAe-rNs",
     "video_ids": [
-      "Pj6QzXQ81jQ"
+      "jfwIDAe-rNs"
     ],
-    "published_at": "2026-11-26T14:02:59+01:00",
+    "published_at": "2026-11-27T15:56:04+01:00",
     "lang": "ko",
     "score": {
       "total": 204,
@@ -60,22 +60,22 @@
       ],
       "unit": "rage_count"
     },
-    "score_source": "description",
+    "score_source": "titre",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : 204 RC; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : 204RC; description : 205 RC; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
-        "video_id": "Pj6QzXQ81jQ",
-        "published_at": "2026-11-26T14:02:59+01:00",
+        "video_id": "jfwIDAe-rNs",
+        "published_at": "2026-11-27T15:56:04+01:00",
         "t": null,
         "stage": null,
         "team": null,
-        "score_source": "description",
+        "score_source": "titre",
         "exact": false,
-        "damage": null,
-        "damage_exact": null,
+        "damage": 92800000000000,
+        "damage_exact": false,
         "element": null,
         "element_source": null
       }

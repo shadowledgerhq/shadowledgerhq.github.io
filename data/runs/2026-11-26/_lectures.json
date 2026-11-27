@@ -231,5 +231,33 @@
     "notes": [
       "score provisoire (titre) : 193 RC"
     ]
+  },
+  {
+    "video_id": "jfwIDAe-rNs",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "channel_title": "Willian",
+    "published_at": "2026-11-27T14:56:04Z",
+    "lang": "ko",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 92800000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 204,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : 204RC",
+      "description : 205 RC"
+    ]
   }
 ]
