@@ -356,10 +356,18 @@ def controles(e):
 
 # --- texte (titre, description, sous-titres) : SPEC v40 §4 ------------------------------------------------
 
-_PALIER_MOTS = r"(?:tier|palier|단계|\bt)"
+_PALIER_MOTS = r"(?:tier|round|palier|단계|\bt)"
 _CLEAR = re.compile(rf"(?:{_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}})\s*(?:clear(?:ed)?|terminé|완료|クリア)|clear(?:ed)?\s*(?:the\s*)?{_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}}))", re.IGNORECASE)
 _PALIER = re.compile(rf"(?<![a-z0-9]){_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}})(?!\d)", re.IGNORECASE)
 _RANK_TEXTE = re.compile(r"rank\s*score\D{0,12}(\d{1,3}(?:[.,]\d{3}){2}|\d{7,8})(?!\d)", re.IGNORECASE)
+# v43 : intervalle (« Tier 1–5 », « T1-T5 », « tier 1 to 5 » : le plus grand), palier + pourcentage (« Tier 17 100% », « Round 17 (100%) », « TIER 17 POC 100% »)
+_INTERVALLE = re.compile(rf"(?<![a-z0-9]){_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}})\s*(?:[-–—~]|to|à)\s*(?:{_PALIER_MOTS}\s*[-:#]?\s*)?(\d{{1,2}})(?!\d)", re.IGNORECASE)
+_PALIER_POURCENT = re.compile(rf"(?<![a-z0-9]){_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}})(?!\d)[^\d%]{{0,14}}?(\d{{1,3}}(?:[.,]\d+)?)\s*%", re.IGNORECASE)
+MARQUES_POC = ("power of calamity", "calamity", "calamidad", "puissance de la calamité", "calamité")
+_MARQUE_POC = re.compile(r"(?<![a-z0-9])poc(?![a-z0-9])|" + "|".join(re.escape(m) for m in MARQUES_POC), re.IGNORECASE)
+_MARQUE_AUTRE = re.compile(r"unstable dungeon|(?<![a-z])instance(?![a-z])|(?<![a-z])encore(?![a-z])|simulation gate|battlefield|guild boss|"
+                           r"hall of (?:the )?monarchs", re.IGNORECASE)
+NOTE_PALIER_POURCENT = "palier et % du titre"
 NOTE_PALIER_TITRE = "palier du titre : rang prudent"
 NOTE_PALIER_CLEAR = "palier du titre : clear"
 NOTE_DEGATS_INFO = "dégâts du texte : information"
@@ -373,6 +381,7 @@ def lecture_texte(meta, textes, config, lecture_vide, notes_reset=()):
     (jamais seul : sans palier ni Rank Score, aucune lecture). [À VÉRIFIER : mots coréen et japonais]"""
     from scores import extraire
     info = False
+    zero = None
     for source, texte in textes:
         t = texte or ""
         if config.get("plausible", {}).get("poc") and extraire(t, "poc", config, source) not in (None, False, {}, []):
@@ -383,14 +392,22 @@ def lecture_texte(meta, textes, config, lecture_vide, notes_reset=()):
             v = int(re.sub(r"[.,]", "", m.group(1)))
             if 1_000_000 <= v < 100_000_000:
                 trouve = (v, "rank_score", f"Rank Score du texte : {m.group(1)}", None)
-        if trouve is None:
+        # v43 : Tier / T / palier / Round / 단계 ne donnent un score POC que si le même texte porte une marque POC et aucune marque d'un autre mode
+        if trouve is None and _MARQUE_POC.search(t) and not _MARQUE_AUTRE.search(t):
             n = [int(a or b) for a, b in _CLEAR.findall(t)]
             if n:
                 trouve = (max(n) * UNITE_RANK_SCORE, "clear", NOTE_PALIER_CLEAR, max(n))
-        if trouve is None:
-            n = [int(x) for x in _PALIER.findall(t) if 1 <= int(x) <= 99]
-            if n:
-                trouve = ((max(n) - 1) * UNITE_RANK_SCORE, "palier", NOTE_PALIER_TITRE, max(n))
+            if trouve is None:
+                paliers = [int(x) for x in _PALIER.findall(t) if 1 <= int(x) <= 99]
+                paliers += [int(b) for _a, b in _INTERVALLE.findall(t) if 1 <= int(b) <= 99 and int(b) > int(_a)]
+                candidats = [((p - 1) * UNITE_RANK_SCORE, NOTE_PALIER_TITRE, p) for p in paliers]
+                for a, pct in _PALIER_POURCENT.findall(t):
+                    p, pc_ = int(a), float(pct.replace(",", "."))
+                    if 1 <= p <= 99 and 0 < pc_ <= 100:
+                        candidats.append((round(UNITE_RANK_SCORE * (p - 1 + pc_ / 100)), NOTE_PALIER_POURCENT, p))
+                if candidats:
+                    v, note, p = max(candidats, key=lambda c: c[0])
+                    trouve = (v, "palier", note, p)
         if trouve:
             lec = lecture_vide(meta, "poc")
             lec["notes"] += list(notes_reset)
@@ -399,8 +416,10 @@ def lecture_texte(meta, textes, config, lecture_vide, notes_reset=()):
             lec["notes"].append(trouve[2])
             if info:
                 lec["notes"].append(NOTE_DEGATS_INFO)
-            return lec
-    return None
+            if trouve[0] > 0:
+                return lec
+            zero = zero or lec         # v43 : borne basse 0 = jamais un score : une autre source peut mieux dire ; gardée seulement si rien d'autre
+    return zero
 
 
 def semaine_refonte(meta, config):

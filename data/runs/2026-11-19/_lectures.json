@@ -6120,34 +6120,6 @@
     ]
   },
   {
-    "video_id": "1CvG1JEPGwo",
-    "channel_id": "UC4pwblmjhCuDVpnsQ0cJHAA",
-    "channel_title": "Jackson Habib",
-    "published_at": "2026-11-19T13:30:09Z",
-    "lang": "en",
-    "mode": "poc",
-    "regles": 19,
-    "bot_season_week": null,
-    "player_ingame": null,
-    "damage": null,
-    "gate": null,
-    "hunter_mode": null,
-    "t": null,
-    "stage": null,
-    "team": null,
-    "score": 24000000,
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "detail": {
-      "poc_texte": "palier",
-      "palier": 25
-    },
-    "notes": [
-      "palier du titre : rang prudent"
-    ]
-  },
-  {
     "video_id": "EAzHBsIhr4U",
     "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
     "channel_title": "Black Thunder X",
@@ -6384,17 +6356,15 @@
     "t": null,
     "stage": null,
     "team": null,
-    "score": 0,
+    "score": 4000000,
     "score_source": "titre",
     "exact": false,
     "confidence": "a_verifier",
     "detail": {
       "poc_texte": "palier",
-      "palier": 1
+      "palier": 5
     },
-    "notes": [
-      "palier du titre : rang prudent"
-    ]
+    "notes": []
   },
   {
     "video_id": "Hm1ES8T6fFU",
@@ -6869,7 +6839,7 @@
     "t": null,
     "stage": null,
     "team": null,
-    "score": 16000000,
+    "score": 17000000,
     "score_source": "titre",
     "exact": false,
     "confidence": "a_verifier",
@@ -6878,7 +6848,7 @@
       "palier": 17
     },
     "notes": [
-      "palier du titre : rang prudent"
+      "palier et % du titre"
     ]
   },
   {
@@ -7232,6 +7202,34 @@
     "detail": {},
     "notes": [
       "score provisoire (titre) : 197 RC"
+    ]
+  },
+  {
+    "video_id": "9BrduWR4aSY",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "channel_title": "Black Thunder X",
+    "published_at": "2026-11-24T05:00:22Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 17000000,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 17
+    },
+    "notes": [
+      "palier et % du titre"
     ]
   }
 ]

@@ -8358,13 +8358,13 @@
     "channel_id": "UC4pwblmjhCuDVpnsQ0cJHAA",
     "published_at": "2026-11-19T13:30:09Z",
     "first_seen": "2026-11-25",
-    "updated_at": "2026-11-25",
+    "updated_at": "2026-11-27",
     "last_tri": 1,
-    "status": "en_cours",
+    "status": "rejete",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 19,
     "pc": {
       "sous_titres": "inutile"

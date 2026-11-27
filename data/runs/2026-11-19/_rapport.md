@@ -53,3 +53,5 @@ Dernier passage du PC (`_rapport_pc.md`, recopié) :
 
 ## Erreurs et alertes
 - tri 1 relu (règles v19) : 2 vidéo(s) modifiée(s) sur 3
+
+- Correction POC v43 après gel (2026-11-27) : 2 lecture(s) de titre corrigée(s) (3y8yRhcSq4Y, cNIuOYknYg8), 1 ajoutée(s) (9BrduWR4aSY), 1 retirée(s) (1CvG1JEPGwo), 1 vidéo(s) rejetée(s) hors_sujet (1CvG1JEPGwo) ; lignes classées inchangées ; descriptions non rejouées hors ligne.

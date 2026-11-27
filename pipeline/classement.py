@@ -465,6 +465,8 @@ def calculer(week, d=None, config=None, horloge=None):
         if r["mode"] == "poc" and elements.refonte_poc(week, config):
             if r["score_source"] in ("titre", "description", "sous-titres") and not (r.get("detail") or {}).get("poc_texte"):
                 continue                    # v40 : ancienne lecture de dégâts du texte, plus un score (relire la semaine la remplace)
+            if (r.get("detail") or {}).get("poc_texte") and not r["score"]:
+                continue                    # v43 : borne basse 0 (« Tier 1 » sans %) : jamais un score ni une ligne (gardée dans _lectures.json)
             r["_refonte"] = True            # POC refonte du 19/11/2026 : règles de `config.poc_refonte`
         runs.append(r)
     videos_avant = {r["video_id"] for r in runs}
