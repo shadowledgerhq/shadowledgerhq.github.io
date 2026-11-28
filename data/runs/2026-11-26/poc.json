@@ -1,5 +1,47 @@
 [
   {
+    "run_id": "poc-2026-11-26-Pj6QzXQ81jQ",
+    "week": "2026-11-26",
+    "mode": "poc",
+    "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
+    "player": "Willian",
+    "channel": "Willian",
+    "video_id": "Pj6QzXQ81jQ",
+    "video_ids": [
+      "Pj6QzXQ81jQ"
+    ],
+    "published_at": "2026-11-26T14:02:59+01:00",
+    "lang": "ko",
+    "score": {
+      "total": 18354000,
+      "runs": [],
+      "unit": "rank_score"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "palier et % du titre",
+    "runs_detail": [
+      {
+        "video_id": "Pj6QzXQ81jQ",
+        "published_at": "2026-11-26T14:02:59+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "tier": 19,
+        "total_contribution": null,
+        "goal_progress": null,
+        "team_pct": null,
+        "play_time": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "poc-2026-11-26-q_nKTRM6Z7s",
     "week": "2026-11-26",
     "mode": "poc",
