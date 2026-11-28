@@ -1,6 +1,6 @@
 # SUIVI — 2 Builds — 2026-11-27
 ## Fait
-- SPEC_ETAPE2 v11 : HOTM retiré (décision d'Alexis 28/11) ; POC refonte : chasseur commun = note seulement
+- SPEC_ETAPE2 v11 : HOTM retiré (décision d'Alexis 28/11) ; POC refonte : chasseur commun = note seulement ; top 10 POC dans l'ordre palier / Goal Progress / Rank Score
 - SPEC_ETAPE2 v10 : zones POC 5 onglets validées (aucune retouche) sur auto/poc 1920×1080 EN+KR ; zone numéro d'équipe ; images d'une seule équipe par build ; image de fondu écartée
 - v9 : ligne classée garde toujours son build ; v8 (top 10 mixte, champ spec) codée par Code
 ## En cours
@@ -12,6 +12,6 @@
 - Zones GB, POC subjugation : dès que auto/<mode>/ a des images
 - Recaler min_corr_remanentes sur des vidéos 1080p
 ## Besoin d'Alexis
-- Lancer la relance PC des builds (py -3 pipeline\pc.py builds --semaine 2026-11-12)
+- Lancer la relance PC des builds (py -3 pipeline\pc.py builds --semaine 2026-11-12) quand l'anti-bot YouTube sera levé
 ## Demandes de modif du skill
 - rien
