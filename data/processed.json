@@ -8759,13 +8759,24 @@
     "published_at": "2026-11-26T11:07:16Z",
     "first_seen": "2026-11-26",
     "updated_at": "2026-11-28",
-    "last_tri": 1,
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 19,
     "pc": {
-      "tri2": "fait"
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
     }
   },
   "rIlqeaVQeSY": {
@@ -8773,36 +8784,80 @@
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "published_at": "2026-11-26T09:58:29Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "K33H2Y8QXvU": {
     "week": "2026-11-26",
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "published_at": "2026-11-26T06:00:07Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "THMo5ElAwN8": {
     "week": "2026-11-26",
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "published_at": "2026-11-26T02:00:33Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "RqEV5DJVPxM": {
     "week": "2026-11-26",
@@ -8846,16 +8901,29 @@
     "channel_id": "UCZr5C4ca28DdwZ262h2UBYw",
     "published_at": "2026-11-26T09:54:16Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 19,
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
     }
   },
   "Pj6QzXQ81jQ": {
@@ -8863,17 +8931,37 @@
     "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
     "published_at": "2026-11-26T13:02:59Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "gb",
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 19,
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [
+        [
+          180,
+          239
+        ]
+      ],
+      "hud_amont": [
+        180
+      ],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
     }
   },
   "MyrHd2LS3J8": {
@@ -8881,84 +8969,182 @@
     "channel_id": "UCyi3EZ7s0zIHw5Glw2DAvVQ",
     "published_at": "2026-11-26T01:09:24Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "XiNQOIfRQ5w": {
     "week": "2026-11-26",
     "channel_id": "UCyi3EZ7s0zIHw5Glw2DAvVQ",
     "published_at": "2026-11-26T01:06:22Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "VwzBGMt86kQ": {
     "week": "2026-11-26",
     "channel_id": "UCyi3EZ7s0zIHw5Glw2DAvVQ",
     "published_at": "2026-11-26T01:05:15Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "jXzVZQ7Jk80": {
     "week": "2026-11-26",
     "channel_id": "UCyi3EZ7s0zIHw5Glw2DAvVQ",
     "published_at": "2026-11-26T01:05:48Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "Vj1AvHRIawA": {
     "week": "2026-11-26",
     "channel_id": "UCyi3EZ7s0zIHw5Glw2DAvVQ",
     "published_at": "2026-11-26T01:05:22Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
     "status": "en_cours",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "8rDrTUPGn5w": {
     "week": "2026-11-26",
     "channel_id": "UChqCYAZP2w_iKd76U9HfAwg",
     "published_at": "2026-11-26T14:04:42Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-28",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [
+        211
+      ],
+      "palier_suite": [],
+      "results_lus": [
+        [
+          221,
+          247
+        ],
+        [
+          220,
+          247
+        ]
+      ],
+      "hud_amont": [
+        222
+      ],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "ebIR4sYw8m8": {
     "week": "2026-11-26",
@@ -9091,12 +9277,15 @@
     "channel_id": "UCxWr6z4N0E0g6dNJ3gl4Anw",
     "published_at": "2026-11-27T06:00:12Z",
     "first_seen": "2026-11-27",
-    "updated_at": "2026-11-27",
+    "updated_at": "2026-11-28",
     "last_tri": 1,
     "status": "en_cours",
     "modes": [],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "tri2": "fait"
+    }
   },
   "vxPNCwzhTxI": {
     "week": "2026-11-26",
@@ -9630,14 +9819,10 @@
     "first_seen": "2026-11-28",
     "updated_at": "2026-11-28",
     "last_tri": 1,
-    "status": "en_cours",
+    "status": "rejete",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ]
+    "pc_needed": false,
+    "regles": 19
   },
   "5ci0VTzEydA": {
     "week": "2026-11-26",
@@ -9646,14 +9831,10 @@
     "first_seen": "2026-11-28",
     "updated_at": "2026-11-28",
     "last_tri": 1,
-    "status": "en_cours",
+    "status": "rejete",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ]
+    "pc_needed": false,
+    "regles": 19
   },
   "SZ1MXgPS_C4": {
     "week": "2026-11-26",
@@ -9662,14 +9843,10 @@
     "first_seen": "2026-11-28",
     "updated_at": "2026-11-28",
     "last_tri": 1,
-    "status": "en_cours",
+    "status": "rejete",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ]
+    "pc_needed": false,
+    "regles": 19
   },
   "bTOylL89T5g": {
     "week": "2026-11-26",
@@ -9678,14 +9855,10 @@
     "first_seen": "2026-11-28",
     "updated_at": "2026-11-28",
     "last_tri": 1,
-    "status": "en_cours",
+    "status": "rejete",
     "modes": [],
-    "pc_needed": true,
-    "regles": 19,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ]
+    "pc_needed": false,
+    "regles": 19
   },
   "_zl4GIpVhXY": {
     "week": "2026-11-26",
@@ -9699,7 +9872,10 @@
       "poc"
     ],
     "pc_needed": true,
-    "regles": 19
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile"
+    }
   },
   "tQzZ6v36r2M": {
     "week": "2026-11-26",
@@ -9791,13 +9967,34 @@
     "published_at": "2026-11-28T11:13:05Z",
     "first_seen": "2026-11-28",
     "updated_at": "2026-11-28",
-    "last_tri": 1,
-    "status": "en_cours",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
-    "regles": 19
+    "pc_needed": false,
+    "regles": 19,
+    "pc": {
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [
+        [
+          210,
+          269
+        ]
+      ],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-28",
+      "tri4": "fait"
+    }
   },
   "_sSa-AmtHNo": {
     "week": "2026-11-26",

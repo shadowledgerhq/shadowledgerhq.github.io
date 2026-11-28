@@ -1,43 +1,84 @@
 [
   {
-    "run_id": "gb-2026-11-26-jfwIDAe-rNs",
+    "run_id": "gb-2026-11-26-IRM97CdAa_0",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UC_8QmRbvacNZzfcba8wzfJA",
+    "player": "Arise Nexus",
+    "channel": "Arise Nexus",
+    "video_id": "IRM97CdAa_0",
+    "video_ids": [
+      "IRM97CdAa_0"
+    ],
+    "published_at": "2026-11-28T12:13:05+01:00",
+    "lang": "en",
+    "score": {
+      "total": 199,
+      "runs": [
+        199
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": true,
+    "confidence": "sur",
+    "rank": 1,
+    "notes": "écart OCR zone/image : player_score; écart OCR zone/image : final_score; écart OCR zone/image : rage_count; lecture fusionnée (3 images); groupe 1 d'après le Personal Record (RC égal); une seule run; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "IRM97CdAa_0",
+        "published_at": "2026-11-28T12:13:05+01:00",
+        "t": 210,
+        "stage": null,
+        "team": 1,
+        "score_source": "video-complete",
+        "exact": true,
+        "damage": 68918150070784,
+        "damage_exact": true,
+        "element": "water",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 168
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-Pj6QzXQ81jQ",
     "week": "2026-11-26",
     "mode": "gb",
     "channel_id": "UCkLBHBaIjBkSPu2M45s0LsA",
     "player": "Willian",
     "channel": "Willian",
-    "video_id": "jfwIDAe-rNs",
+    "video_id": "Pj6QzXQ81jQ",
     "video_ids": [
-      "jfwIDAe-rNs"
+      "Pj6QzXQ81jQ"
     ],
-    "published_at": "2026-11-27T15:56:04+01:00",
+    "published_at": "2026-11-26T14:02:59+01:00",
     "lang": "ko",
     "score": {
-      "total": 204,
+      "total": 280,
       "runs": [
-        204
+        280
       ],
       "unit": "rage_count"
     },
-    "score_source": "titre",
+    "score_source": "video-complete",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 204RC; description : 205 RC; une seule run trouvée; boss non contrôlé",
+    "notes": "lecture fusionnée (3 images); RC discordant écarté : 220 (t=185); contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Final Score illisible; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : 1 Hunter Rank lu(s) (3 au moins sans HUD de fin de run); une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
-        "video_id": "jfwIDAe-rNs",
-        "published_at": "2026-11-27T15:56:04+01:00",
-        "t": null,
+        "video_id": "Pj6QzXQ81jQ",
+        "published_at": "2026-11-26T14:02:59+01:00",
+        "t": 180,
         "stage": null,
         "team": null,
-        "score_source": "titre",
+        "score_source": "video-complete",
         "exact": false,
-        "damage": 92800000000000,
-        "damage_exact": false,
+        "damage": null,
+        "damage_exact": null,
         "element": null,
-        "element_source": null,
-        "hud_rage_count": 164
+        "element_source": null
       }
     ]
   },
@@ -112,47 +153,6 @@
       {
         "video_id": "MowlbyeKBJo",
         "published_at": "2026-11-26T03:04:48+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false,
-        "damage": null,
-        "damage_exact": null,
-        "element": null,
-        "element_source": null
-      }
-    ]
-  },
-  {
-    "run_id": "gb-2026-11-26-IRM97CdAa_0",
-    "week": "2026-11-26",
-    "mode": "gb",
-    "channel_id": "UC_8QmRbvacNZzfcba8wzfJA",
-    "player": "Arise Nexus",
-    "channel": "Arise Nexus",
-    "video_id": "IRM97CdAa_0",
-    "video_ids": [
-      "IRM97CdAa_0"
-    ],
-    "published_at": "2026-11-28T12:13:05+01:00",
-    "lang": "en",
-    "score": {
-      "total": 199,
-      "runs": [
-        199
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : 199 RC; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "IRM97CdAa_0",
-        "published_at": "2026-11-28T12:13:05+01:00",
         "t": null,
         "stage": null,
         "team": null,
@@ -330,6 +330,48 @@
         "element": "fire",
         "element_source": "titre+ecran",
         "hud_rage_count": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-8rDrTUPGn5w",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UChqCYAZP2w_iKd76U9HfAwg",
+    "player": "Apm Gaming",
+    "channel": "Apm Gaming",
+    "video_id": "8rDrTUPGn5w",
+    "video_ids": [
+      "8rDrTUPGn5w"
+    ],
+    "published_at": "2026-11-26T15:04:42+01:00",
+    "lang": "ko",
+    "score": {
+      "total": 36,
+      "runs": [
+        36
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "debut-fin",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "écart OCR zone/image : rage_count; écart OCR zone/image : player_score; écart OCR zone/image : hunter_rank_3; lecture fusionnée (13 images); conflit de lecture : hunter_rank_1; conflit de lecture : hunter_rank_4; une seule run trouvée; boss non contrôlé; écart improbable : à confirmer par l'écran",
+    "runs_detail": [
+      {
+        "video_id": "8rDrTUPGn5w",
+        "published_at": "2026-11-26T15:04:42+01:00",
+        "t": 222,
+        "stage": null,
+        "team": null,
+        "score_source": "debut-fin",
+        "exact": false,
+        "damage": 9075976393,
+        "damage_exact": true,
+        "element": null,
+        "element_source": null,
+        "hud_rage_count": 24
       }
     ]
   },
