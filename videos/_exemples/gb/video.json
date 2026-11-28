@@ -1,0 +1,297 @@
+{
+ "gabarit": 2,
+ "week": "2099-01-01",
+ "mode": "gb",
+ "status": "exemple-fictif",
+ "badge": {
+  "fr": "EXEMPLE FICTIF · NE PAS PUBLIER",
+  "en": "FICTIONAL EXAMPLE · DO NOT PUBLISH"
+ },
+ "logo": "docs/reseaux/logo-b-sceau.svg",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "boss": "Boss de guilde fictif",
+ "scenes": [
+  {
+   "id": "intro",
+   "type": "intro",
+   "duration": 2,
+   "subtitle": {
+    "fr": "GB · Semaine du 01/01",
+    "en": "GB · Week of 01/01"
+   },
+   "narration": [],
+   "storyboard": "Intro 2 s.",
+   "sources": []
+  },
+  {
+   "id": "titre",
+   "type": "titre",
+   "duration": 4,
+   "title": {
+    "fr": "Guild Boss",
+    "en": "Guild Boss"
+   },
+   "subtitle": {
+    "fr": "Boss fictif · attributs de la semaine : non lus",
+    "en": "Fictional boss · weekly attributes: not read"
+   },
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "GB : comment monter le Rage Count avec deux groupes ?",
+     "en": "GB: how to push Rage Count with two groups?"
+    }
+   ],
+   "storyboard": "Titre.",
+   "sources": []
+  },
+  {
+   "id": "classement",
+   "type": "tableau",
+   "duration": 11,
+   "title": {
+    "fr": "Top 5",
+    "en": "Top 5"
+   },
+   "columns": [
+    {
+     "key": "joueur",
+     "head": {
+      "fr": "Joueur",
+      "en": "Player"
+     },
+     "fmt": "texte"
+    },
+    {
+     "key": "rc",
+     "head": {
+      "fr": "RC total",
+      "en": "Total RC"
+     },
+     "fmt": "rc",
+     "accent": true
+    },
+    {
+     "key": "g1",
+     "head": {
+      "fr": "Groupe 1",
+      "en": "Group 1"
+     },
+     "fmt": "rc"
+    },
+    {
+     "key": "g2",
+     "head": {
+      "fr": "Groupe 2",
+      "en": "Group 2"
+     },
+     "fmt": "rc"
+    },
+    {
+     "key": "degats",
+     "head": {
+      "fr": "Dégâts",
+      "en": "Damage"
+     },
+     "fmt": "degats"
+    }
+   ],
+   "rows": [
+    {
+     "rang": 1,
+     "joueur": "Joueur A",
+     "rc": 332,
+     "g1": 167,
+     "g2": 165,
+     "degats": 17280000000000.0,
+     "etat": "sur"
+    },
+    {
+     "rang": 2,
+     "joueur": "Joueur B",
+     "rc": 320,
+     "g1": 160,
+     "g2": 160,
+     "degats": 16900000000000.0,
+     "etat": "sur"
+    },
+    {
+     "rang": 3,
+     "joueur": "Joueur C",
+     "rc": 177,
+     "g1": 177,
+     "g2": null,
+     "degats": null,
+     "etat": "a_verifier",
+     "note": {
+      "fr": "une seule run",
+      "en": "one run only"
+     }
+    }
+   ],
+   "footnote": {
+    "fr": "Seules les runs filmées (écran Results) comptent.",
+    "en": "Only filmed runs (Results screen) count."
+   },
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Le RC total additionne les deux groupes ; les dégâts départagent les égalités.",
+     "en": "Total RC adds both groups; damage breaks ties."
+    }
+   ],
+   "storyboard": "Tableau ; RC total mis en avant.",
+   "sources": [
+    "data/runs/<semaine>/gb.json"
+   ]
+  },
+  {
+   "id": "rc",
+   "type": "barres",
+   "duration": 10,
+   "title": {
+    "fr": "Rage Count par groupe",
+    "en": "Rage Count per group"
+   },
+   "axis_max": 340,
+   "unit": "rc",
+   "rows": [
+    {
+     "label": "Joueur A",
+     "segments": [
+      {
+       "value": 167,
+       "label": {
+        "fr": "Groupe 1",
+        "en": "Group 1"
+       },
+       "color": "sjw"
+      },
+      {
+       "value": 165,
+       "label": {
+        "fr": "Groupe 2",
+        "en": "Group 2"
+       },
+       "color": "hun"
+      }
+     ],
+     "total": {
+      "fr": "332 RC",
+      "en": "332 RC"
+     }
+    },
+    {
+     "label": "Joueur B",
+     "segments": [
+      {
+       "value": 160,
+       "label": {
+        "fr": "Groupe 1",
+        "en": "Group 1"
+       },
+       "color": "sjw"
+      },
+      {
+       "value": 160,
+       "label": {
+        "fr": "Groupe 2",
+        "en": "Group 2"
+       },
+       "color": "hun"
+      }
+     ],
+     "total": {
+      "fr": "320 RC",
+      "en": "320 RC"
+     }
+    }
+   ],
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Les meilleurs équilibrent leurs deux groupes.",
+     "en": "Top players balance both groups."
+    }
+   ],
+   "storyboard": "Barres empilées par joueur.",
+   "sources": [
+    "data/runs/<semaine>/gb.json"
+   ]
+  },
+  {
+   "id": "build",
+   "type": "build",
+   "duration": 10,
+   "title": {
+    "fr": "Les deux groupes",
+    "en": "Both groups"
+   },
+   "subtitle": {
+    "fr": "Joueur A · exemple fictif",
+    "en": "Player A · fictional example"
+   },
+   "columns": [
+    {
+     "head": {
+      "fr": "Groupe 1",
+      "en": "Group 1"
+     },
+     "items": [
+      {
+       "fr": "6 chasseurs + SJW : non lus",
+       "en": "6 hunters + SJW: not read"
+      }
+     ]
+    },
+    {
+     "head": {
+      "fr": "Groupe 2",
+      "en": "Group 2"
+     },
+     "items": [
+      {
+       "fr": "6 chasseurs + SJW : non lus",
+       "en": "6 hunters + SJW: not read"
+      }
+     ]
+    }
+   ],
+   "narration": [],
+   "storyboard": "2 colonnes.",
+   "sources": []
+  },
+  {
+   "id": "outro",
+   "type": "outro",
+   "duration": 5,
+   "title": {
+    "fr": "Shadow Ledger",
+    "en": "Shadow Ledger"
+   },
+   "subtitle": {
+    "fr": "@shadowledger_hq · shadowledgerhq.github.io · Classement complet sur le site",
+    "en": "@shadowledger_hq · shadowledgerhq.github.io · Full ranking on the website"
+   },
+   "credits": {
+    "fr": "Runs : Joueur A, Joueur B, Joueur C (YouTube).",
+    "en": "Runs: Player A, Player B, Player C (YouTube)."
+   },
+   "narration": [],
+   "storyboard": "Outro 5 s.",
+   "sources": []
+  }
+ ],
+ "vertical": {
+  "scenes": [
+   "intro",
+   "rc",
+   "outro"
+  ],
+  "outro_duration": 3
+ }
+}
