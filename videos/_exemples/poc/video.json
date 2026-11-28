@@ -1,0 +1,406 @@
+{
+ "gabarit": 2,
+ "week": "2099-01-01",
+ "mode": "poc",
+ "status": "exemple-fictif",
+ "badge": {
+  "fr": "EXEMPLE FICTIF · NE PAS PUBLIER",
+  "en": "FICTIONAL EXAMPLE · DO NOT PUBLISH"
+ },
+ "logo": "docs/reseaux/logo-b-sceau.svg",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "boss": "Boss fictif",
+ "scenes": [
+  {
+   "id": "intro",
+   "type": "intro",
+   "duration": 2,
+   "subtitle": {
+    "fr": "POC · Semaine du 01/01",
+    "en": "POC · Week of 01/01"
+   },
+   "narration": [],
+   "storyboard": "Intro 2 s.",
+   "sources": []
+  },
+  {
+   "id": "titre",
+   "type": "titre",
+   "duration": 4,
+   "title": {
+    "fr": "Power of Calamity",
+    "en": "Power of Calamity"
+   },
+   "subtitle": {
+    "fr": "Boss fictif · palier record : 19",
+    "en": "Fictional boss · top tier: 19"
+   },
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "POC : qui va le plus loin dans les paliers ?",
+     "en": "POC: who climbs the furthest?"
+    }
+   ],
+   "storyboard": "Titre.",
+   "sources": []
+  },
+  {
+   "id": "classement",
+   "type": "tableau",
+   "duration": 11,
+   "title": {
+    "fr": "Top 5",
+    "en": "Top 5"
+   },
+   "columns": [
+    {
+     "key": "joueur",
+     "head": {
+      "fr": "Joueur",
+      "en": "Player"
+     },
+     "fmt": "texte"
+    },
+    {
+     "key": "palier",
+     "head": {
+      "fr": "Palier",
+      "en": "Tier"
+     },
+     "fmt": "entier",
+     "accent": true
+    },
+    {
+     "key": "goal",
+     "head": {
+      "fr": "Goal Progress",
+      "en": "Goal Progress"
+     },
+     "fmt": "pct"
+    },
+    {
+     "key": "rank_score",
+     "head": {
+      "fr": "Rank Score",
+      "en": "Rank Score"
+     },
+     "fmt": "rank_score"
+    }
+   ],
+   "rows": [
+    {
+     "rang": 1,
+     "joueur": "Joueur A",
+     "palier": 19,
+     "goal": 35.4,
+     "rank_score": 18354000,
+     "etat": "sur"
+    },
+    {
+     "rang": 2,
+     "joueur": "Joueur B",
+     "palier": 19,
+     "goal": 16.3,
+     "rank_score": 18163097,
+     "etat": "sur"
+    },
+    {
+     "rang": 3,
+     "joueur": "Joueur C",
+     "palier": 18,
+     "goal": 92.1,
+     "rank_score": 17921000,
+     "etat": "a_verifier",
+     "note": {
+      "fr": "titre",
+      "en": "title"
+     }
+    },
+    {
+     "rang": 4,
+     "joueur": "Joueur D",
+     "palier": 17,
+     "goal": 100.0,
+     "rank_score": 17000000,
+     "etat": "a_verifier"
+    },
+    {
+     "rang": 4,
+     "joueur": "Joueur E",
+     "palier": 17,
+     "goal": 100.0,
+     "rank_score": 17000000,
+     "etat": "a_verifier",
+     "note": {
+      "fr": "ex aequo",
+      "en": "tied"
+     }
+    }
+   ],
+   "footnote": {
+    "fr": "Ordre : palier, puis Goal Progress, puis Rank Score.",
+    "en": "Order: tier, then Goal Progress, then Rank Score."
+   },
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Le classement se fait d'abord au palier, puis au pourcentage du boss.",
+     "en": "Ranking goes by tier first, then by boss percentage."
+    }
+   ],
+   "storyboard": "Tableau 5 lignes, colonne palier mise en avant ; ex aequo au même rang.",
+   "sources": [
+    "data/runs/<semaine>/poc.json"
+   ]
+  },
+  {
+   "id": "pv",
+   "type": "barres",
+   "duration": 10,
+   "title": {
+    "fr": "Qui fait tomber le boss",
+    "en": "Who takes the boss down"
+   },
+   "axis_max": 100,
+   "unit": "%",
+   "rows": [
+    {
+     "label": "Joueur A",
+     "sub": {
+      "fr": "palier 19",
+      "en": "tier 19"
+     },
+     "segments": [
+      {
+       "value": 20.1,
+       "label": {
+        "fr": "Équipe 1",
+        "en": "Team 1"
+       },
+       "color": "sjw"
+      },
+      {
+       "value": 15.3,
+       "label": {
+        "fr": "Équipe 2",
+        "en": "Team 2"
+       },
+       "color": "hun"
+      },
+      {
+       "value": 64.6,
+       "label": {
+        "fr": "reste",
+        "en": "left"
+       },
+       "color": "muted"
+      }
+     ],
+     "total": {
+      "fr": "35,40 %",
+      "en": "35.40%"
+     }
+    },
+    {
+     "label": "Joueur B",
+     "sub": {
+      "fr": "palier 19",
+      "en": "tier 19"
+     },
+     "segments": [
+      {
+       "value": 16.3,
+       "label": {
+        "fr": "Équipe 1",
+        "en": "Team 1"
+       },
+       "color": "sjw"
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "fr": "Équipe 2",
+        "en": "Team 2"
+       },
+       "color": "hun"
+      },
+      {
+       "value": 83.7,
+       "label": {
+        "fr": "reste",
+        "en": "left"
+       },
+       "color": "muted"
+      }
+     ],
+     "total": {
+      "fr": "16,30 %",
+      "en": "16.30%"
+     }
+    }
+   ],
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "Les deux équipes se partagent les PV du boss : la 2e équipe fait souvent la différence.",
+     "en": "Both teams share the boss HP: the second team often makes the difference."
+    }
+   ],
+   "storyboard": "Barres empilées 0-100 % par joueur : équipe 1 violet, équipe 2 bleu, reste gris.",
+   "sources": [
+    "data/runs/<semaine>/poc.json (runs_detail : team_pct)"
+   ]
+  },
+  {
+   "id": "contrib",
+   "type": "barres",
+   "duration": 10,
+   "title": {
+    "fr": "Contributions de l'équipe 1 (Joueur B)",
+    "en": "Team 1 contributions (Player B)"
+   },
+   "axis_max": 13271447531057,
+   "unit": "degats",
+   "rows": [
+    {
+     "label": {
+      "fr": "Équipe 1",
+      "en": "Team 1"
+     },
+     "segments": [
+      {
+       "value": 6825874526264,
+       "label": {
+        "fr": "SJW",
+        "en": "SJW"
+       },
+       "color": "sjw"
+      },
+      {
+       "value": 1737769011489,
+       "label": {
+        "fr": "Successeur",
+        "en": "Successor"
+       },
+       "color": "tag"
+      },
+      {
+       "value": 1977042172398,
+       "label": {
+        "fr": "Chasseur 1",
+        "en": "Hunter 1"
+       },
+       "color": "hun"
+      },
+      {
+       "value": 1925229149652,
+       "label": {
+        "fr": "Chasseur 2",
+        "en": "Hunter 2"
+       },
+       "color": "hun"
+      },
+      {
+       "value": 805532671254,
+       "label": {
+        "fr": "Chasseur 3",
+        "en": "Hunter 3"
+       },
+       "color": "hun"
+      }
+     ],
+     "total": {
+      "fr": "13,27 T",
+      "en": "13,27 T"
+     }
+    }
+   ],
+   "narration": [
+    {
+     "t": 0.3,
+     "fr": "SJW fait à lui seul plus de la moitié des dégâts de l'équipe.",
+     "en": "SJW alone deals over half of the team's damage."
+    }
+   ],
+   "storyboard": "Une barre empilée = Total Contribution ; omise si les contributions ne sont pas lues.",
+   "sources": [
+    "cas de test SPEC_ETAPE1 §9 (valeurs reprises comme exemple)"
+   ]
+  },
+  {
+   "id": "build",
+   "type": "build",
+   "duration": 10,
+   "title": {
+    "fr": "Les deux équipes",
+    "en": "Both teams"
+   },
+   "subtitle": {
+    "fr": "Joueur A · exemple fictif",
+    "en": "Player A · fictional example"
+   },
+   "columns": [
+    {
+     "head": {
+      "fr": "Équipe 1",
+      "en": "Team 1"
+     },
+     "items": [
+      {
+       "fr": "Chasseurs : non lus",
+       "en": "Hunters: not read"
+      }
+     ]
+    },
+    {
+     "head": {
+      "fr": "Équipe 2",
+      "en": "Team 2"
+     },
+     "items": [
+      {
+       "fr": "Chasseurs : non lus",
+       "en": "Hunters: not read"
+      }
+     ]
+    }
+   ],
+   "narration": [],
+   "storyboard": "2 colonnes.",
+   "sources": []
+  },
+  {
+   "id": "outro",
+   "type": "outro",
+   "duration": 5,
+   "title": {
+    "fr": "Shadow Ledger",
+    "en": "Shadow Ledger"
+   },
+   "subtitle": {
+    "fr": "@shadowledger_hq · shadowledgerhq.github.io · Classement complet sur le site",
+    "en": "@shadowledger_hq · shadowledgerhq.github.io · Full ranking on the website"
+   },
+   "credits": {
+    "fr": "Runs : Joueur A, Joueur B, Joueur C (YouTube).",
+    "en": "Runs: Player A, Player B, Player C (YouTube)."
+   },
+   "narration": [],
+   "storyboard": "Outro 5 s.",
+   "sources": []
+  }
+ ],
+ "vertical": {
+  "scenes": [
+   "intro",
+   "pv",
+   "outro"
+  ],
+  "outro_duration": 3
+ }
+}
