@@ -182,3 +182,12 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Dernier passage GitHub daily : 2026-11-27 (attendu : 2026-11-28)
 - Aucune vidéo traitée
 - Relance automatique : 28/11/2026 13:46 (relance 2 sur 2)
+
+<!-- passage-pc pc-daily 2026-11-28T12:46:04.433263+00:00 -->
+## Passage pc-daily — 2026-11-28 13:46 (Paris)
+
+- Lancement : relance
+- **Passage reporté : passage GitHub du jour absent**
+- Dernier passage GitHub daily : 2026-11-27 (attendu : 2026-11-28)
+- Aucune vidéo traitée
+- Relance automatique : aucune (2 relances déjà programmées ce soir) : prochain passage normal
