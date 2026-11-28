@@ -3165,5 +3165,58 @@
     "notes": [
       "HUD : Boss Rage Count x106, chrono 71"
     ]
+  },
+  {
+    "video_id": "_zl4GIpVhXY",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "channel_title": "SNG",
+    "published_at": "2026-11-28T04:32:08Z",
+    "lang": "en",
+    "mode": "poc",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 16000000,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "poc_texte": "palier",
+      "palier": 17
+    },
+    "notes": [
+      "palier du titre : rang prudent"
+    ]
+  },
+  {
+    "video_id": "IRM97CdAa_0",
+    "channel_id": "UC_8QmRbvacNZzfcba8wzfJA",
+    "channel_title": "Arise Nexus",
+    "published_at": "2026-11-28T11:13:05Z",
+    "lang": "en",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": null,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 199,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {},
+    "notes": [
+      "score provisoire (titre) : 199 RC"
+    ]
   }
 ]

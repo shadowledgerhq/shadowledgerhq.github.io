@@ -125,6 +125,47 @@
     ]
   },
   {
+    "run_id": "gb-2026-11-26-IRM97CdAa_0",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UC_8QmRbvacNZzfcba8wzfJA",
+    "player": "Arise Nexus",
+    "channel": "Arise Nexus",
+    "video_id": "IRM97CdAa_0",
+    "video_ids": [
+      "IRM97CdAa_0"
+    ],
+    "published_at": "2026-11-28T12:13:05+01:00",
+    "lang": "en",
+    "score": {
+      "total": 199,
+      "runs": [
+        199
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "score provisoire (titre) : 199 RC; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "IRM97CdAa_0",
+        "published_at": "2026-11-28T12:13:05+01:00",
+        "t": null,
+        "stage": null,
+        "team": null,
+        "score_source": "titre",
+        "exact": false,
+        "damage": null,
+        "damage_exact": null,
+        "element": null,
+        "element_source": null
+      }
+    ]
+  },
+  {
     "run_id": "gb-2026-11-26-ebIR4sYw8m8",
     "week": "2026-11-26",
     "mode": "gb",
