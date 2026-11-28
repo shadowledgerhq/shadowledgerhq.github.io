@@ -1476,14 +1476,14 @@ def programmer_relance(instant, jour, planifier=None, fichier=None, delai_h=2):
     deja = etat.get("jour") if etat.get("soir") else None
     soir = instant.astimezone(PARIS).hour >= 18
     if deja == jour:
-        return "aucune (une relance a déjà été programmée ce soir) : prochain passage normal"
+        return "aucune (une relance anti-bot a déjà été programmée aujourd'hui) : prochain passage normal"
     quand = (instant.astimezone(PARIS) + timedelta(hours=delai_h)).replace(tzinfo=None, second=0, microsecond=0)
     err = (planifier or planifier_windows)(quand, RACINE / "pipeline" / "pc" / "lancer_pc.bat")
     if err:
         return f"non programmée ({err})"
     fichier.parent.mkdir(parents=True, exist_ok=True)
     fichier.write_text(json.dumps({"jour": jour, "a": quand.isoformat(), "soir": soir}), encoding="utf-8")
-    return f"{quand:%d/%m/%Y %H:%M} (une seule fois par soir)"
+    return f"{quand:%d/%m/%Y %H:%M} (relance anti-bot, 2 h après le passage ; une par jour)"
 
 
 def relance_manquee(instant, fichiers, max_h=2):
