@@ -164,3 +164,12 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Résumé GB : RqEV5DJVPxM · Eden(이든) · Results lu (200-285 s) · 178 RC à vérifier · fire · contrôle GB : somme 11284203054077 ≠ Final Score 21364972852753
 - Résumé GB : MowlbyeKBJo · Heartful Harry · Results lu (210-269 s) · 203 RC à vérifier · score provisoire (titre) : 203 RC
 - Résumé GB : ieFMbvQguUw · Black Thunder X · Results lu (524-545 s) · 2 RC à vérifier · format non standard
+
+<!-- passage-pc pc-daily 2026-11-28T11:46:09.780416+00:00 -->
+## Passage pc-daily — 2026-11-28 12:46 (Paris)
+
+- Lancement : relance
+- **Passage reporté : passage GitHub du jour absent**
+- Dernier passage GitHub daily : 2026-11-27 (attendu : 2026-11-28)
+- Aucune vidéo traitée
+- Relance automatique : 28/11/2026 13:16 (relance 1 sur 2)
