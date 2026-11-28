@@ -257,6 +257,10 @@ def detecter(texte, config=None):
         return "hotm"
     if "이번" in t and ("플레이어 스코어" in t or "계승자 스코어" in t):
         return "poc"
+    if t.count("기여도") >= 2:
+        # Results du POC refonte en coréen (« 재앙의 권좌 19단계 2팀 », 플레이어/헌터/총 기여도) : jamais un Results GB, dont les signaux
+        # coréens (진행 시간, 신기록 달성, 다시하기) figurent aussi sur cet écran (Pj6QzXQ81jQ, classé GB à tort le 28/11)
+        return "poc_palier"
     if langue_results(t):
         return "gb_results_partiel"   # v15 : écran Results portugais, coréen… (libellés en configuration) ; valeurs lues par zones
     return None

@@ -8935,7 +8935,6 @@
     "last_tri": 4,
     "status": "termine",
     "modes": [
-      "gb",
       "poc"
     ],
     "pc_needed": false,
