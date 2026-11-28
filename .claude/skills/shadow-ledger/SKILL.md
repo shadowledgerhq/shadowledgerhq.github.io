@@ -14,7 +14,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 | POC | Power Of Calamity. Depuis la refonte du 19/11/2026 : paliers, classement au **Rank Score** = 1 000 000 × (palier − 1 + progression), les 2 équipes partagent les PV du boss (le score cumule les deux), égalité = ex aequo, plus d'élément imposé (SPEC_ETAPE1 §9). Avant : dégâts max, une run = une équipe, total = équipe 1 + équipe 2. |
 | BOT | Battlefield Of Time. Chrono le plus court (secondes) = dernière phase de l'écran `Results`. **Un seul classement** par semaine (Challenge retiré du jeu en mai 2026). Saison = 4 semaines de jeu (1 boss/semaine) + 1 semaine de calcul sans classement ; semaine de saison notée `S<n>-<w>`. |
 | GB | Guild Boss. Classement : Rage Count le plus élevé ; **seules les runs filmées (écran Results) comptent** ; une run = un groupe (6 chasseurs + SJW), total = meilleure run filmée de chaque groupe ; égalité départagée par la somme des dégâts. Le `Personal Record` sert seulement à identifier le groupe. |
-| HOTM | Hall Of The Monarchs. **Arrêté définitivement le 28/11/2026** (décision d'Alexis) : plus de classement, builds, vidéo, page ni post. Les champs et fichiers HOTM ci-dessous ne servent plus qu'aux archives (2026-11-12). |
+| HOTM | Hall Of The Monarchs. **Arrêté définitivement le 28/11/2026** (décision d'Alexis) : plus de classement, builds, vidéo, page ni post ; vidéo HOTM → `rejected` (`mode_arrete`). Données de 2026-11-12 gardées en archive. |
 | RC | Rage Count, unité de score du GB. |
 | SJW | Sung Jin Woo. |
 | Joueur | Une chaîne YouTube, identifiée par `channel_id`. |
@@ -31,14 +31,14 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 - Messages entre discussions : vers 1 à 7 → `claude/BOITE.md` du Projet ; vers 8 et 9 → `docs/BOITE.md` §8 ou §9 du dépôt ; depuis 8 et 9 → `docs/BOITE.md`, section du destinataire. **Chaque** message posé est annoncé à Alexis dans la même réponse, sans exception, mais **jamais recopié** : une seule ligne « Message de <X> pour <Y> dans <boîte> ». Commande « message ? » d'Alexis : relire les deux boîtes, traiter ce qui est adressé à la discussion, puis lister ses messages envoyés (destinataire, date, sujet en quelques mots, « en attente » ou « traité ») ; rien → « Aucun message » (exception : session sans accès au dépôt → message prêt à coller pour 8 ou 9). Message traité : retiré de `claude/BOITE.md` (la décision est dans la SPEC, CONTEXTE ou le SUIVI du destinataire) ; dans `docs/BOITE.md`, archivé par Code dans `docs/archives/`.
 - Aucun relevé manuel : scores, builds, éléments autorisés et rotations sont relevés par le pipeline ; ne jamais écrire « à relever à la main ».
 - Noms de fichiers en minuscules, sans accents ni espaces, mots séparés par `-`.
-- Codes de mode dans les fichiers : `poc`, `bot`, `gb`, `hotm`.
+- Codes de mode dans les fichiers : `poc`, `bot`, `gb`.
 - Dates au format AAAA-MM-JJ ; heures en heure de Paris, sauf dans les workflows (UTC).
 
 ## 3. Formats JSON
 
 ### Run (data/runs/<semaine>/<classement>.json, liste)
 
-Fichiers : `poc.json`, `gb.json`, `bot.json`, `hotm-gate-<n>.json`.
+Fichiers : `poc.json`, `gb.json`, `bot.json`.
 
 ```json
 {
@@ -61,7 +61,7 @@ Fichiers : `poc.json`, `gb.json`, `bot.json`, `hotm-gate-<n>.json`.
 }
 ```
 
-Unités : `rank_score` (POC depuis le 19/11/2026 ; `damage` avant), `seconds` (BOT), `rage_count` (GB), `points` (HOTM).
+Unités : `rank_score` (POC depuis le 19/11/2026 ; `damage` avant), `seconds` (BOT), `rage_count` (GB).
 
 - `channel_id` = clé du joueur. `video_id` = vidéo de la meilleure run ; `video_ids` = toutes les vidéos utilisées (les 2 runs POC/GB peuvent venir de 2 vidéos).
 - `rank` : seulement pour les lignes `confidence: sur` ; sinon `null`. POC et GB : une seule run `sur` suffit pour être classé (note `une seule run`) ; la 2e run, trouvée plus tard, complète le total.
@@ -69,8 +69,6 @@ Unités : `rank_score` (POC depuis le 19/11/2026 ; `damage` avant), `seconds` (B
 - Seul l'écran RESULT donne un score sûr, **sans exception** (GB : le `Personal Record` identifie le groupe, il ne classe jamais une run non filmée). Détail : `docs/SPEC_ETAPE1.md` du dépôt (v30 au 17/11/2026).
 
 Champs supplémentaires :
-- `"gate"` (HOTM uniquement) : numéro de la porte, **entier** (`3` pour 제 3관문 / 第3関門).
-- `"hunter_mode"` (HOTM uniquement) : `false`, `true` (run sans SJW) ou `null`.
 - `"bot_season_week"` (BOT uniquement) : semaine de saison lue dans le titre (`"S20-4"`) ou `null`.
 - `"player_ingame"` (BOT uniquement) : pseudo en jeu lu dans le bandeau du bas, à titre d'information.
 - `"runs_detail"` : liste d'un objet par run, dans le même ordre que `score.runs`. Champs communs :
@@ -78,15 +76,13 @@ Champs supplémentaires :
   (`t` = secondes dans la vidéo ; `stage` = libellé du boss ou du stage lu à l'écran ; `team` = POC : équipe 1, 2 ou `null` ; GB : groupe 1, 2 ou `null`).
   - POC et GB, en plus : `{"element": "light | fire | water | wind | dark | null", "element_source": ""}` — lu sur les chasseurs à l'écran, sinon dans le titre ; distingue les équipes/groupes quand `team` est inconnu. Deux runs d'une même ligne n'ont jamais de chasseur commun (sinon `a_verifier`). L'Excel affiche l'élément au lieu de « Groupe/Équipe 1/2 ».
   - POC, en plus : `{"sjw": 0, "successor": 0, "hunters": [0, 0, 0]}` ; contrôle : somme = score de la run.
-  - HOTM, en plus : `{"clear": 0, "proof_bonus": 0, "proof_level": null}` ; contrôle : clear + proof_bonus = score.
   - GB, en plus : `{"damage": 0, "damage_exact": true, "damage_source": "results | record | hud"}` (`damage` = `Final Score` ; `damage_exact` = `false` si arrondi — `Personal Record` 17.28T, titre ou HUD — et `null` si aucun dégât lu ; `damage_source: record` = `Total Score` du Personal Record quand un seul groupe a joué ; `team` = groupe, connu aussi par `No history`) ; contrôle Results : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; contrôle Personal Record : `Total Rage Count` = RC groupe 1 + RC groupe 2.
-- Score POC et HOTM = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition. Jamais le score de l'écran de composition, quel que soit le mode.
+- Score POC = « 이번 기록 » de l'écran RESULT, jamais « 기존 기록 » ni l'écran de composition. Jamais le score de l'écran de composition, quel que soit le mode.
 
 ### Autres fichiers de l'étape 1 (détail : SPEC_ETAPE1.md §5)
 
 | Fichier | Contenu |
 | --- | --- |
-| `data/runs/<semaine>/hotm-gate-inconnue.json` | Runs dont la porte HOTM est illisible ; `rank: null`, **jamais publié** |
 | `data/runs/<semaine>/_lectures.json` | Toutes les lectures de score des tris, chacune avec `regles` (version des règles du tri 1 ; une lecture plus ancienne est refaite) ; entrée de `classement.py` |
 | `data/runs/<semaine>/_videos.json` | Par vidéo : titre, chaîne, miniature, durée, `mode_guess` |
 | `data/runs/<semaine>/_meta.json` | `{week, start_utc, end_utc, frozen, frozen_at}` |
