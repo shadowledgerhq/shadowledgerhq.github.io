@@ -12,7 +12,7 @@
 - Équipe théorique + gain estimé dès que chasseurs identifiés (discussion 9) et builds du top 3 relus (discussion 2)
 - Scène `team` dans le rendu ; vidéo BOT S21-1 (semaine du 26/11) dès que son classement existe
 - Voix FR/EN quand l'échantillon d'Alexis sera fourni (CONTEXTE §9)
-- Gabarits POC (Rank Score par paliers depuis le 19/11, SPEC_ETAPE1 §9) / GB / HOTM
+- Gabarits POC (Rank Score par paliers depuis le 19/11, SPEC_ETAPE1 §9) / GB (HOTM arrêté le 28/11)
 ## Besoin d'Alexis
 - Avis sur la vidéo d'essai (rythme, lisibilité)
 ## Demandes de modif du skill

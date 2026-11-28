@@ -9,11 +9,11 @@ Demandeur : discussion 3 (Theorycraft & vidéos). Code : discussion 8. Vidéos 1
 | `script.md` | Généré depuis `video.json` (`pipeline/video/script_md.py`) : minutage, storyboard, narration FR/EN côte à côte. Jamais modifié à la main. |
 | `<mode>-<semaine>-<fr|en>[-vertical].mp4` | Rendu (`pipeline/video/rendu.py`). **Pas dans le dépôt** (poids) : gardé sur le PC ; envoi YouTube en « Privé » seulement avant le lancement. |
 
-HOTM : `<mode>` = `hotm-gate-<n>`.
+Modes : `poc`, `bot`, `gb` (HOTM arrêté le 28/11/2026, décision d'Alexis : plus de vidéo HOTM).
 
 **Clip vertical** (TikTok, Shorts, Reels ; `--vertical`) : 1080 × 1920, scènes listées dans `video.json["vertical"]["scenes"]` (par défaut intro 2 s, timeline, outro 3 s). Zone sûre (`docs/reseaux/RESEAUX.md` §4) : rien dans les 20 % du bas ni le long du bord droit ; titre, bandeau et sources en haut, sous-titres juste au-dessus de la zone du bas. Intro sans son, la voix commence après l'intro.
 
-## 2. Structure type (≈ 75-90 s pour le BOT, jusqu'à 3 min pour POC/GB/HOTM)
+## 2. Structure type (≈ 75-90 s pour le BOT, jusqu'à 3 min pour POC/GB)
 | # | Scène (`type`) | Durée | Contenu |
 | --- | --- | --- | --- |
 | 1 | `intro` | 2 s | Logo B qui se trace + bandeau du mode (`docs/reseaux/RESEAUX.md` §4) |
