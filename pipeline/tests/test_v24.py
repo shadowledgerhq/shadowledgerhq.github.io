@@ -10,7 +10,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import libelles_inconnus as LI
 import regles_deduites as R
 from classement import calculer
-from donnees import Donnees, charger_config
+from donnees import Donnees, charger_config as _charger_config
+
+
+def charger_config():
+    c = _charger_config()
+    c["modes_classement"] = ["poc", "bot", "gb", "hotm"]      # 28/11 : HOTM arrêté en production, code testé
+    return c
 from test_classement import HORLOGE, T, W, lec, lire, preparer
 
 

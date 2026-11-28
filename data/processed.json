@@ -9596,26 +9596,5 @@
       "rotation": "fait",
       "rotation_version": 11
     }
-  },
-  "UbSotwy18tk": {
-    "week": "2026-11-26",
-    "channel_id": "UCVQGCRMJgcp8SL8or2gSzQQ",
-    "published_at": "2026-11-27T18:16:58Z",
-    "first_seen": "2026-11-27",
-    "updated_at": "2026-11-27",
-    "last_tri": 1,
-    "status": "en_cours",
-    "modes": [
-      "hotm"
-    ],
-    "pc_needed": true,
-    "regles": 19,
-    "hors_sujet_probable": true,
-    "notes": [
-      "actualités probables (titre)"
-    ],
-    "pc": {
-      "sous_titres": "inutile"
-    }
   }
 }

@@ -191,6 +191,14 @@ def _json(f, defaut):
     return json.loads(Path(f).read_text(encoding="utf-8")) if Path(f).exists() else defaut
 
 
+def _hotm_actif():
+    try:
+        from donnees import charger_config
+        return "hotm" in (charger_config().get("modes_actifs") or ["hotm"])
+    except Exception:
+        return True
+
+
 def charger(semaine, racine=RACINE):
     """{onglet: runs}. HOTM : un onglet par porte (`hotm-gate-<n>.json`, jamais `inconnue`) ; onglet `hotm` vide sans donnée."""
     dossier = Path(racine) / "data" / "runs" / semaine
@@ -200,7 +208,7 @@ def charger(semaine, racine=RACINE):
             portes = sorted(p for p in dossier.glob("hotm-gate-*.json") if "inconnue" not in p.stem and _json(p, []))
             for p in portes:
                 out[p.stem.replace("-", " ")] = _json(p, [])
-            if not portes:
+            if not portes and _hotm_actif():          # 28/11 : HOTM arrêté, pas d'onglet vide
                 out["hotm"] = []
         else:
             out[mode] = _json(dossier / f"{mode}.json", [])

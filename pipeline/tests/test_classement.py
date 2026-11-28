@@ -10,6 +10,7 @@ from donnees import Donnees, charger_config
 W = "2026-11-12"
 T = 10**12
 CONFIG = charger_config()
+CONFIG["modes_classement"] = ["poc", "bot", "gb", "hotm"]       # 28/11 : HOTM arrêté en production ; le code reste testé (réactivation possible)
 HORLOGE = datetime(2026, 11, 14, 19, 0, tzinfo=timezone.utc)
 
 

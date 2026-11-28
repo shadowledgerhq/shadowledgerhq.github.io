@@ -45,6 +45,20 @@ class ApiYouTube:
             raise RuntimeError(f"API {ressource} HTTP {e.code}: {corps[:200]}") from None
 
 
+def modes_actifs(config):
+    """Modes suivis (`config.modes_actifs`) ; sans la clé, tous les modes (None)."""
+    return set(config["modes_actifs"]) if config.get("modes_actifs") else None
+
+
+def filtrer_modes_actifs(modes, config):
+    """(modes actifs seulement, True si la vidéo n'a QUE des modes arrêtés : à rejeter, raison `mode_arrete`)."""
+    actifs = modes_actifs(config)
+    if actifs is None:
+        return set(modes), False
+    gardes = {m for m in modes if m in actifs}
+    return gardes, bool(modes) and not gardes
+
+
 def deviner_modes(texte, config):
     """Indices de mode d'après les mots-clés de config.mode_keywords."""
     texte = (texte or "").lower()
@@ -123,6 +137,8 @@ def recherche(api, debut, fin, config, channels, deja_vus):
     for mode, requetes in config["queries"].items():
         if arret:
             break
+        if modes_actifs(config) is not None and mode not in modes_actifs(config):          # 28/11 : mode arrêté (HOTM), aucune requête
+            continue
         for q in requetes:
             jeton = None
             try:
@@ -164,6 +180,7 @@ def recherche(api, debut, fin, config, channels, deja_vus):
                 continue  # live en cours ou à venir : revu au prochain passage
             texte_v = sn.get("title", "") + "\n" + sn.get("description", "")
             modes = retirer_faux_bot(trouves[vid] | deviner_modes(texte_v, config), texte_v, config)      # v39 §3
+            modes, mode_arrete = filtrer_modes_actifs(modes, config)
             meta = {
                 "video_id": vid,
                 "channel_id": sn["channelId"],
@@ -180,6 +197,8 @@ def recherche(api, debut, fin, config, channels, deja_vus):
             raison = None
             if it.get("liveStreamingDetails", {}).get("actualStartTime"):
                 raison = "live"
+            elif mode_arrete:
+                raison = "mode_arrete"
             elif not (debut <= pub < fin):
                 raison = "hors_fenetre"
             if raison:

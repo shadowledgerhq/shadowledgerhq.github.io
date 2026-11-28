@@ -60,7 +60,7 @@ def test_fichier():
         r.mkdir()
         (r / "2026-11-12.json").write_text(json.dumps([{"video_id": "abc", "channel_id": "UC1", "title": "Titre", "reason": "live", "detail": "d"}]), encoding="utf-8")
         wb = openpyxl.load_workbook(ex.exporter("2026-11-12", racine=tmp))
-        assert wb.sheetnames == ["Shadow Ledger", "POC", "BOT", "GB", "HOTM", "Rejetées"]
+        assert wb.sheetnames == ["Shadow Ledger", "POC", "BOT", "GB", "Rejetées"]
         poc_ws = wb["POC"]
         assert poc_ws["D6"].value == 20 * 10**12 and poc_ws["D6"].number_format == "#,##0" and poc_ws["E6"].value.startswith("? :")      # entier complet
         valeurs = [poc_ws.cell(k, 2).value for k in range(6, 22)]
@@ -68,7 +68,7 @@ def test_fichier():
         assert poc_ws["B6"].fill.fgColor.rgb.endswith(ex.TOP10) and not poc_ws["B16"].fill.fgColor.rgb.endswith(ex.TOP10)   # Top 10 marqué (10 lignes)
         bot_ws = wb["BOT"]
         assert bot_ws["C7"].value == "B (Pseudo)" and bot_ws["D7"].number_format == "mm:ss.000" and "boss non contrôlé" not in bot_ws["I7"].value
-        assert wb["HOTM"]["B7"].value.startswith("Aucune run") and wb["Rejetées"]["B6"].value == "Titre" and wb["Rejetées"]["B6"].hyperlink.target.endswith("abc")
+        assert "HOTM" not in wb.sheetnames and wb["Rejetées"]["B6"].value == "Titre" and wb["Rejetées"]["B6"].hyperlink.target.endswith("abc")
         garde = [str(c.value) for row in wb["Shadow Ledger"].iter_rows() for c in row if c.value]
         assert any("ESSAI — non publié" in t for t in garde) and any("Provisoire" in t for t in garde) and any(ex.CREDIT == t for t in garde)
         assert any(t.startswith("BOT : ") for t in garde)

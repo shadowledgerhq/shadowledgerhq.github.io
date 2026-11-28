@@ -124,7 +124,9 @@
     "suite_apres_s": 8,
     "suite_max_lectures": 4
   },
-  "modes_classement": ["poc", "bot", "gb", "hotm"],
+  "modes_actifs": ["poc", "bot", "gb"],
+  "_modes_actifs": "28/11 (décision d'Alexis) : HOTM arrêté (aucune recherche, aucune lecture, aucun classement ni export). Pour le réactiver : ajouter \"hotm\" ici et dans modes_classement. Les données de 2026-11-12 restent archivées.",
+  "modes_classement": ["poc", "bot", "gb"],
   "rage_count_mots": ["rage"],
   "_rage_count_mots": "Libellés du Rage Count en plus de « RC » et « Rage Count » : « rage » (v22 : `Rage: 159`, `159 Rage`, jamais `Boss Rage`) ; coréen et japonais [À CONFIRMER] sur capture (SPEC §2.2).",
   "gb": {
