@@ -1,6 +1,6 @@
 # Projet SLA — Shadow Ledger : contexte de référence
 
-Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Une seule version : `claude/CONTEXTE.md` du Projet et `docs/CONTEXTE.md` du dépôt sont identiques (la discussion 6 met à jour les deux). Mis à jour le 28/11/2026 (HOTM arrêté définitivement, §2-4 ; ordre du classement POC : palier, Goal Progress, Rank Score, §3). Avant : 27/11/2026 (POC refonte au Rank Score, §3-4 ; commande « message ? » et annonce de chaque message envoyé, §7 ; droit de pousser rappelé dans chaque message de démarrage, §7 ; SUIVI silencieux, §2 ; messages entre discussions annoncés en une ligne, plus recopiés ; boîtes de 8 et 9 dans `docs/BOITE.md`). Avant : 26/11/2026 (droit de pousser pour toutes les discussions, §7 ; rien de public avant le lancement ; boîtes : messages traités retirés ou archivés ; specs : seul le dépôt fait foi). Précédentes mises à jour : 19/11/2026 (discussions 8 et 9 ouvertes directement sur le dépôt) ; 17/11/2026 (alignement sur SPEC_ETAPE1 v30, aucun relevé manuel, `data/rotations/`).
+Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Une seule version : `claude/CONTEXTE.md` du Projet et `docs/CONTEXTE.md` du dépôt sont identiques (la discussion 6 met à jour les deux). Mis à jour le 28/11/2026 (HOTM arrêté définitivement, §2-4 ; ordre du classement POC : palier, Goal Progress, Rank Score, §3 ; calendrier réel, §5). Avant : 27/11/2026 (POC refonte au Rank Score, §3-4 ; commande « message ? » et annonce de chaque message envoyé, §7 ; droit de pousser rappelé dans chaque message de démarrage, §7 ; SUIVI silencieux, §2 ; messages entre discussions annoncés en une ligne, plus recopiés ; boîtes de 8 et 9 dans `docs/BOITE.md`). Avant : 26/11/2026 (droit de pousser pour toutes les discussions, §7 ; rien de public avant le lancement ; boîtes : messages traités retirés ou archivés ; specs : seul le dépôt fait foi). Précédentes mises à jour : 19/11/2026 (discussions 8 et 9 ouvertes directement sur le dépôt) ; 17/11/2026 (alignement sur SPEC_ETAPE1 v30, aucun relevé manuel, `data/rotations/`).
 
 ## 1. Le projet en une phrase
 
@@ -134,12 +134,14 @@ Règles :
 
 | Quand | Quoi | Où |
 | --- | --- | --- |
-| Tous les jours 20h00 | Nouvelles vidéos : tris 1-2, puis tris 3-4, builds du top 10, relevé de rotation, mise à jour du site | GitHub Actions (tris 1-2, site) + PC d'Alexis (tris 3-4, builds, rotations : YouTube bloque le téléchargement depuis le cloud) |
-| Jeudi 01h00 | Passage final : classement de la semaine figé et archivé, nouvelle semaine ouverte | GitHub Actions + PC d'Alexis |
-| Mercredi (après lancement) | Posts du classement (X, Discord) ; vidéos de la semaine | Alexis / outil de programmation |
-| Après chaque passage | Contrôle des résultats + rapport court | Tâche planifiée Claude |
+| Tous les jours 18h00 | Passage GitHub (`daily.yml`, crons 16:00Z / 17:00Z) : recherche YouTube, tris 1-2, classement, mise à jour du site | GitHub Actions |
+| Tous les jours 19h30, 21h30, 23h30 | Passage PC : tris 3-4, builds du top 10, relevé de rotation (YouTube bloque le téléchargement depuis le cloud) | PC d'Alexis (Planificateur, vérifié le 27/11/2026) |
+| Après un anti-bot | Relance ponctuelle 2 h plus tard, une par jour ; manquée de plus de 2 h = annulée | PC d'Alexis |
+| Jeudi 01h00 (GitHub) puis 01h15 (PC) | Passage final : classement de la semaine figé et archivé, nouvelle semaine ouverte | GitHub Actions + PC d'Alexis |
+| Tous les jours 08h21 | Contrôle des résultats : rapport `docs/controle/AAAA-MM-JJ.md` (points : `docs/controle/README.md`) | Tâche planifiée Claude |
+| Mercredi (après lancement) | Contrôle 23h30, posts du classement (X, Discord) 23h45 ; vidéos de la semaine | Tâche planifiée Claude / Alexis |
 
-Note technique : les horaires GitHub Actions sont en UTC ; gérer le passage heure d'été / heure d'hiver. Le passage PC doit suivre le passage GitHub (ordre à confirmer par la discussion 7, 26/11/2026).
+Note technique : les horaires GitHub Actions sont en UTC ; gérer le passage heure d'été / heure d'hiver. Le passage PC suit le passage GitHub du jour (garde-fou : sans passage GitHub du jour, le passage PC est reporté de 30 min, 2 fois au plus). Calendrier confirmé par la discussion 7 le 28/11/2026.
 
 ## 6. Structure du dépôt GitHub
 

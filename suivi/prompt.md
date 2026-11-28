@@ -7,6 +7,7 @@
 - 28/11 : carte du skill enregistrée, vérifié : skill du compte = skill du dépôt (corps identique)
 - 28/11 : boîtes lues ; claude/BOITE.md vide ; docs/BOITE.md §6 : dernier message de Code passé en traité
 - 28/11 : ordre POC (palier, Goal Progress, Rank Score) dans CONTEXTE §3 et skill §1/§7 (message de Code) ; anti-bot transmis à Code, réponse lue
+- 28/11 : CONTEXTE §5 calendrier réel (message de Tâche planifiée) ; boîte : statuts §8/§9 inversés par Base de données, corrigés
 ## En cours
 - rien
 ## À faire
