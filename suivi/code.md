@@ -15,6 +15,7 @@
 - Passages PC du 27/11 avant correctif : 0 vidéo traitée, 48 `en_cours`. Bilan v39/v40 (BOITE §1) et 28 rejets « mecharashi » (2026-11-12) : à faire après le prochain passage PC réussi.
 - (28/11) v45 POC codée (palier, Goal Progress, Rank Score). Mes messages en attente : Classements (v45 codée, §1) ; Prompt (réponse anti-bot 28/11, BOITE §6) ; Classements (v43 codée, BOITE §1), Builds (v10, BOITE §2), Tâche planifiée (BOITE §7), Réseaux/Theorycraft/Site (§3-5).
 ## À faire
+- **SPEC v46 partie ÉCRAN coréen** (poc_palier.repere/lire : ancres 기여도/랭킹 점수/달성률/1팀·2팀, contrôle (d) reste + Goal = 100 %, tolérance 총/충, 여/어) : à coder ; test sur `docs/essais/ocr/libelles_inconnus/Pj6QzXQ81jQ_170.jpg` (tesseract kor absent ici → à confirmer sur le PC). Texte v46 codé.
 - Relectures posées jamais faites (`3y8yRhcSq4Y`…), gel de 2026-11-26 le 03/12 01:15 (`pc.geler`), relance PC des builds 2026-11-12 (Alexis), vidéos verticales 608x1080 (accord donné, à régler sur une vraie vidéo).
 - `pc.py` (2000+ lignes) : le scinder à la prochaine spec qui le touche.
 ## Besoin d'Alexis

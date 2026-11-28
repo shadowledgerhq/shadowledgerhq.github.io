@@ -13,5 +13,11 @@ def test_ronde_pourcent():
     assert round(P.UNITE_RANK_SCORE * (19 - 1 + 35.4 / 100)) == 18_354_000
 
 
+
+def test_marque_coreen_et_suffixes():
+    assert P._MARQUE_POC.search("권좌 19단계 35.4퍼센트")
+    assert [int(x) for x in P._PALIER_SUFFIXE.findall("15,17,19R 19라운드 20단계")] == [19, 19, 20]
+    assert [(int(a), float(b.replace(",", "."))) for a, b in P._RONDE_POURCENT.findall("19단계 35,4퍼센트")] == [(19, 35.4)]
+
 if __name__ == "__main__":
-    test_ronde_pourcent(); print("OK")
+    test_ronde_pourcent(); test_marque_coreen_et_suffixes(); print("OK")

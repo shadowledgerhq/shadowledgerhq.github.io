@@ -168,7 +168,8 @@ def test_texte_clear_et_rank_score():
 
 
 def test_texte_degats_ne_sont_plus_un_score():
-    assert texte("PoC 19R 80T 12,000,000,000,000 damage") is None
+    # v46 : « 19R » est un palier (borne basse 18 M, rang prudent) ; les dégâts du texte ne donnent jamais le score
+    assert texte("PoC 19R 80T 12,000,000,000,000 damage")["score"] == 18_000_000
     l = texte("POC Tier 5 clear 12,624,959,951,349 damage")
     assert l["score"] == 5_000_000 and "dégâts du texte : information" in l["notes"]
 

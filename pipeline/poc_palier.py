@@ -359,14 +359,15 @@ def controles(e):
 _PALIER_MOTS = r"(?:tier|round|palier|단계|\bt)"
 _CLEAR = re.compile(rf"(?:{_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}})\s*(?:clear(?:ed)?|terminé|완료|クリア)|clear(?:ed)?\s*(?:the\s*)?{_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}}))", re.IGNORECASE)
 _PALIER = re.compile(rf"(?<![a-z0-9]){_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}})(?!\d)", re.IGNORECASE)
+_PALIER_SUFFIXE = re.compile(r"(?<![a-z0-9])(\d{1,2})\s*(?:R|라운드|단계)(?![a-z0-9])", re.IGNORECASE)
 _RANK_TEXTE = re.compile(r"rank\s*score\D{0,12}(\d{1,3}(?:[.,]\d{3}){2}|\d{7,8})(?!\d)", re.IGNORECASE)
 # v43 : intervalle (« Tier 1–5 », « T1-T5 », « tier 1 to 5 » : le plus grand), palier + pourcentage (« Tier 17 100% », « Round 17 (100%) », « TIER 17 POC 100% »)
 _INTERVALLE = re.compile(rf"(?<![a-z0-9]){_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}})\s*(?:[-–—~]|to|à)\s*(?:{_PALIER_MOTS}\s*[-:#]?\s*)?(\d{{1,2}})(?!\d)", re.IGNORECASE)
 _PALIER_POURCENT = re.compile(rf"(?<![a-z0-9]){_PALIER_MOTS}\s*[-:#]?\s*(\d{{1,2}})(?!\d)[^\d%]{{0,14}}?(\d{{1,3}}(?:[.,]\d+)?)\s*%", re.IGNORECASE)
 # « 19R 35.4% » / « 19라운드 35.4퍼» = palier 19 à 35,4 % (28/11, Alexis ; Pj6QzXQ81jQ)
-_RONDE_POURCENT = re.compile(r"(?<![a-z0-9])(\d{1,2})\s*(?:R|라운드)(?![a-z0-9])[^\d%]{0,14}?(\d{1,3}(?:[.,]\d+)?)\s*(?:%|퍼)", re.IGNORECASE)
+_RONDE_POURCENT = re.compile(r"(?<![a-z0-9])(\d{1,2})\s*(?:R|라운드|단계)(?![a-z0-9])[^\d%]{0,14}?(\d{1,3}(?:[.,]\d+)?)\s*(?:%|퍼센트|퍼)", re.IGNORECASE)
 MARQUES_POC = ("power of calamity", "calamity", "calamidad", "puissance de la calamité", "calamité")
-_MARQUE_POC = re.compile(r"(?<![a-z0-9])poc(?![a-z0-9])|" + "|".join(re.escape(m) for m in MARQUES_POC), re.IGNORECASE)
+_MARQUE_POC = re.compile(r"(?<![a-z0-9])poc(?![a-z0-9])|권좌|" + "|".join(re.escape(m) for m in MARQUES_POC), re.IGNORECASE)
 _MARQUE_AUTRE = re.compile(r"unstable dungeon|(?<![a-z])instance(?![a-z])|(?<![a-z])encore(?![a-z])|simulation gate|battlefield|guild boss|"
                            r"hall of (?:the )?monarchs", re.IGNORECASE)
 NOTE_PALIER_POURCENT = "palier et % du titre"
@@ -401,6 +402,7 @@ def lecture_texte(meta, textes, config, lecture_vide, notes_reset=()):
                 trouve = (max(n) * UNITE_RANK_SCORE, "clear", NOTE_PALIER_CLEAR, max(n))
             if trouve is None:
                 paliers = [int(x) for x in _PALIER.findall(t) if 1 <= int(x) <= 99]
+                paliers += [int(x) for x in _PALIER_SUFFIXE.findall(t) if 1 <= int(x) <= 99]
                 paliers += [int(b) for _a, b in _INTERVALLE.findall(t) if 1 <= int(b) <= 99 and int(b) > int(_a)]
                 candidats = [((p - 1) * UNITE_RANK_SCORE, NOTE_PALIER_TITRE, p) for p in paliers]
                 for a, pct in _PALIER_POURCENT.findall(t):
