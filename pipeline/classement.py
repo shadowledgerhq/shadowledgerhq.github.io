@@ -352,15 +352,31 @@ def ligne_poc_refonte(runs_j, config, week):
     return ligne
 
 
+def cle_poc_v45(l):
+    """SPEC v45 §9 point 2 : (palier, Goal Progress, Rank Score), tous décroissants. Texte sans % : Goal Progress déduit du Rank Score
+    (palier du titre → 0 %, « Tier N clear » → 100 %) ; palier absent : déduit du Rank Score (1e6 × (palier − 1 + Goal %/100))."""
+    total = l["score"]["total"] or 0
+    rd = (l.get("runs_detail") or [{}])[0]
+    palier = rd.get("tier")
+    if not isinstance(palier, (int, float)) or palier < 1:
+        palier = int(total // 1_000_000) + 1
+    buts = [r.get("goal_progress") for r in (l.get("runs_detail") or []) if r.get("tier") == palier and isinstance(r.get("goal_progress"), (int, float))]
+    if buts:
+        but = max(buts)
+    else:
+        but = max(0.0, min(100.0, (total / 1_000_000 - (palier - 1)) * 100))
+    return (palier, but, total)
+
+
 def _ordonner_poc_refonte(lignes):
-    """v40 : tri décroissant du Rank Score ; égalité = ex aequo (même rang, 1-1-3), aucun départage inventé (l'ordre du fichier entre
-    ex aequo suit la date de publication, sans effet sur le rang)."""
-    cle = lambda l: (-l["score"]["total"], l["_fin"], l["channel_id"])
+    """v45 : tri décroissant (palier, Goal Progress, Rank Score) ; égalité sur les trois = ex aequo (même rang, 1-1-3), aucun 4e critère
+    (l'ordre du fichier entre ex aequo suit la date de publication, sans effet sur le rang). `sûr` devant `a_verifier`."""
+    cle = lambda l: tuple(-x for x in cle_poc_v45(l)) + (l["_fin"], l["channel_id"])
     classees = sorted((l for l in lignes if l["confidence"] == "sur"), key=cle)
     autres = sorted((l for l in lignes if l["confidence"] != "sur"), key=cle)
     prec = None
     for i, l in enumerate(classees, 1):
-        if prec is not None and l["score"]["total"] == prec["score"]["total"]:
+        if prec is not None and cle_poc_v45(l) == cle_poc_v45(prec):
             l["rank"] = prec["rank"]
         else:
             l["rank"] = i

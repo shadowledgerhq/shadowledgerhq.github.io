@@ -13,7 +13,7 @@
 - (27/11, s.20) **pc.py : sous-titres 429 n'arrêtent plus les images** (`st_429`/`img_429`) ; un 429 au téléchargement arrête toujours les images ; `test_soustitres_429_images.py`. 523 tests OK.
 - (28/11) Passage manuel 23:20 du 27/11 : premier passage avec le correctif 429 : **5 vidéos traitées** (images continuent), 44 `en_cours` (31 candidates top 10) ; mais durée **666 min** (PC en veille en pleine vidéo, budget 100 min jamais vu) → `pc.empecher_veille()` (Windows, SetThreadExecutionState) ajouté ; actif après `git pull` sur le PC. Passages 21:30 (anti-bot, 0 vidéo) et 23:30 (refusé : verrou, passage manuel en cours).
 - Passages PC du 27/11 avant correctif : 0 vidéo traitée, 48 `en_cours`. Bilan v39/v40 (BOITE §1) et 28 rejets « mecharashi » (2026-11-12) : à faire après le prochain passage PC réussi.
-- Mes messages en attente : Prompt (réponse anti-bot 28/11, BOITE §6) ; Classements (v43 codée, BOITE §1), Builds (v10, BOITE §2), Tâche planifiée (BOITE §7), Réseaux/Theorycraft/Site (§3-5).
+- (28/11) v45 POC codée (palier, Goal Progress, Rank Score). Mes messages en attente : Classements (v45 codée, §1) ; Prompt (réponse anti-bot 28/11, BOITE §6) ; Classements (v43 codée, BOITE §1), Builds (v10, BOITE §2), Tâche planifiée (BOITE §7), Réseaux/Theorycraft/Site (§3-5).
 ## À faire
 - Relectures posées jamais faites (`3y8yRhcSq4Y`…), gel de 2026-11-26 le 03/12 01:15 (`pc.geler`), relance PC des builds 2026-11-12 (Alexis), vidéos verticales 608x1080 (accord donné, à régler sur une vraie vidéo).
 - `pc.py` (2000+ lignes) : le scinder à la prochaine spec qui le touche.
