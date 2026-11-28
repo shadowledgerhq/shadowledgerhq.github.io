@@ -1,21 +1,17 @@
-# SUIVI — Prompt — 2026-11-27
+# SUIVI — Prompt — 2026-11-28
 ## Fait
-- 26-27/11 : règles « Rien de public », droit de pousser par zone, messages annoncés en une ligne, SUIVI silencieux ; CONTEXTE identique Projet/dépôt
-- 27/11 : Pages dépublié (site en 404) ; règles 4, 9 et 12 des instructions en place ; carte du skill du 27/11 enregistrée (§2, §4, §5 vérifiés) ; Projet réduit à CONTEXTE, BOITE, PROMPTS_DISCUSSIONS
-- 27/11 : droit de pousser rappelé dans chaque message de démarrage (PROMPTS 1-9, CONTEXTE §7, CLAUDE.md, skill §5, règle 10 des instructions)
-- 27/11 : PROMPTS_DISCUSSIONS du dépôt = version du Projet ; skill du dépôt = skill du compte ; réponse de Code (§8) lue ; demande BOT « deux classements » de Code déjà réglée (skill et CONTEXTE à un seul classement)
-- 27/11 : commande « message ? » et annonce de chaque message envoyé (CONTEXTE §7, CLAUDE.md, skill §2, règle 9 des instructions)
-- 27/11 : POC refonte (Rank Score) dans CONTEXTE §3-4 et skill §1/§3 (demande de Classements)
-- 27/11 : demandes de modif du skill de Builds, Classements, Theorycraft appliquées (§3 Build/Rotation, §7 checklists)
-- 27/11 : règle GB v32 (Personal Record) ajoutée à la checklist du skill (réponse de Classements)
-- 28/11 : HOTM arrêté dans CONTEXTE, skill, PROMPTS, CLAUDE.md (message de Code)
-- 28/11 : messages HOTM de Réseaux, Builds, Classements traités (skill §3, §7 POC chasseur commun)
+- 26-27/11 : rien de public, droit de pousser par zone, SUIVI silencieux, messages annoncés en une ligne ; CONTEXTE/PROMPTS/skill identiques Projet-dépôt-compte
+- 27/11 : droit de pousser dans chaque ligne de rôle ; commande « message ? » (instructions 9-10, CONTEXTE §7, CLAUDE.md, skill)
+- 27/11 : POC au Rank Score (CONTEXTE §3-4, skill) ; demandes de skill de Builds, Classements, Theorycraft appliquées ; règle GB v32 (Personal Record)
+- 28/11 : HOTM arrêté partout (CONTEXTE, PROMPTS, CLAUDE.md, instructions, skill) ; POC chasseur commun = note depuis le 19/11
+- 28/11 : carte du skill enregistrée, vérifié : skill du compte = skill du dépôt (corps identique)
+- 28/11 : boîtes lues ; claude/BOITE.md vide ; docs/BOITE.md §6 : dernier message de Code passé en traité
 ## En cours
 - rien
 ## À faire
-- Garder identiques : CONTEXTE, PROMPTS_DISCUSSIONS et skill (compte = dépôt) à chaque changement
+- Garder identiques CONTEXTE, PROMPTS_DISCUSSIONS et skill (compte = dépôt) à chaque changement
+- SPEC_ETAPE1/2 : retrait des mentions HOTM par Classements et Builds (leur zone, déjà prévenus par Code)
 ## Besoin d'Alexis
-- Carte du skill du 28/11 (Build sans hotm-gate, POC chasseur commun)
 - Échantillon de voix ; nom TikTok
 ## Demandes de modif du skill
 - rien
