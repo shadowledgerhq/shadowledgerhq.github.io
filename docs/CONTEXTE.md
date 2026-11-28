@@ -38,7 +38,7 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 - Une **semaine** est identifiée par la date du jeudi où elle commence (ex. `2026-11-12`).
 - BOT, cycle de saison (dates **calculées**, à vérifier sur les vidéos) : S20 a commencé le 22/10/2026 ; semaine de calcul le 19/11/2026 ; S21 le 26/11/2026. Le titre `S<n>-<w>` (saison n, semaine w) sert de contrôle de semaine.
 - Rythme des boss (SPEC_ETAPE1 v24 §4.5, sources Netmarble via dotgg.gg, **à vérifier sur les données**) : BOT change chaque jeudi ; POC à chaque saison ; GB à la mise à jour régulière suivante (attributs variables changés chaque semaine).
-- Éléments autorisés (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : ils peuvent changer chaque semaine. Ils sont **déduits des écrans par le pipeline** et enregistrés dans `data/rules/<semaine>.json`, un bloc par classement (`poc`, `bot`, `gb`, `hotm`), avec source et date : `true` dès qu'une run sûre montre l'élément ; `false` seulement si au moins 5 runs sûres de 5 chaînes le montrent absent ; sinon `null` (= inconnu, jamais « interdit »).
+- Éléments autorisés (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : ils peuvent changer chaque semaine. Ils sont **déduits des écrans par le pipeline** et enregistrés dans `data/rules/<semaine>.json`, un bloc par classement (`poc`, `bot`, `gb`), avec source et date : `true` dès qu'une run sûre montre l'élément ; `false` seulement si au moins 5 runs sûres de 5 chaînes le montrent absent ; sinon `null` (= inconnu, jamais « interdit »).
 
 ## 4. Les étapes
 
