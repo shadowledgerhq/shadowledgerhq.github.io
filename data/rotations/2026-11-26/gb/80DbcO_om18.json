@@ -1,0 +1,22 @@
+{
+  "spec": 1,
+  "video_id": "80DbcO_om18",
+  "week": "2026-11-26",
+  "mode": "gb",
+  "gate": null,
+  "run_id": "gb-2026-11-26-80DbcO_om18",
+  "runs": [
+    {
+      "run_index": 1,
+      "run_start_t": 306.0,
+      "run_end_t": 314.5,
+      "duration_s": 8.5,
+      "events": [],
+      "limites": [
+        "bornes-incertaines",
+        "essais-precedents"
+      ],
+      "sans_hud_s": 1.5
+    }
+  ]
+}

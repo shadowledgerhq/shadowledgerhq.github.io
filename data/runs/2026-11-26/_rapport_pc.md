@@ -121,3 +121,28 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
 - Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
 - Sous-titres en attente : 23 avant la règle → 23 après (23 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+
+<!-- passage-pc pc-daily 2026-11-27T22:20:20.688915+00:00 -->
+## Passage pc-daily — 2026-11-27 23:20 (Paris)
+
+- Top 10 couvert : non (31 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 5 · en_cours restantes : 44 (dont 44 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Lancement : manuel
+- Durée du passage : 666 min
+- Relance automatique : aucune (une relance a déjà été programmée ce soir) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
+- Sous-titres en attente : 23 avant la règle → 23 après (23 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Résumé GB : 80DbcO_om18 · Ahmad1195 · Results lu (200-272 s) · 203 RC à vérifier · water · conflit de lecture : player_score
+- Résumé GB : ebIR4sYw8m8 · SNG · Results lu (210-269 s) · 190 RC à vérifier · fire · contrôle sans Hunter Rank : boss illisible
+- Résumé GB : MowlbyeKBJo · Heartful Harry · aucun Results lu · 203 RC à vérifier · publiée juste après le reset : semaine précédente ?
+- Résumé GB : jfwIDAe-rNs · Willian · aucun Results lu · 204 RC à vérifier · score provisoire (titre) : 204RC
+
+<!-- passage-pc pc-daily 2026-11-27T22:30:50.790763+00:00 -->
+## Passage pc-daily — 2026-11-27 23:30 (Paris)
+
+- **Passage complet : non** (passage refusé : un autre passage PC tourne déjà (daily (PID 14768, depuis 11 min)))
+- Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
+- Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà (daily (PID 14768, depuis 11 min))

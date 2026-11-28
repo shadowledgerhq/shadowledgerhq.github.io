@@ -8577,16 +8577,38 @@
     "channel_id": "UCuKvtm3f62VN1_katl-WtsA",
     "published_at": "2026-11-26T02:12:26Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-27",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 19,
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [
+        200
+      ],
+      "palier_suite": [],
+      "results_lus": [
+        [
+          200,
+          272
+        ]
+      ],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-27",
+      "tri4": "fait",
+      "rotation": "fait",
+      "rotation_version": 11
     }
   },
   "2GHkSqtGLvw": {
@@ -8834,16 +8856,36 @@
     "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
     "published_at": "2026-11-26T06:27:29Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
-    "status": "en_cours",
+    "updated_at": "2026-11-27",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "gb"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 19,
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [
+        [
+          210,
+          269
+        ]
+      ],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-27",
+      "tri4": "fait",
+      "rotation": "fait",
+      "rotation_version": 11
     }
   },
   "MowlbyeKBJo": {
@@ -8851,8 +8893,8 @@
     "channel_id": "UCEhHNuc4TzD33XrXVgG7aiQ",
     "published_at": "2026-11-26T02:04:48Z",
     "first_seen": "2026-11-26",
-    "updated_at": "2026-11-26",
-    "last_tri": 1,
+    "updated_at": "2026-11-27",
+    "last_tri": 3,
     "status": "en_cours",
     "modes": [
       "gb"
@@ -8860,7 +8902,22 @@
     "pc_needed": true,
     "regles": 19,
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "libelles_inconnus": [],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-27",
+      "essais": 1,
+      "tri4": "partiel"
     }
   },
   "bt6cZe9GCBM": {
@@ -8980,15 +9037,32 @@
     "published_at": "2026-11-27T07:00:32Z",
     "first_seen": "2026-11-27",
     "updated_at": "2026-11-27",
-    "last_tri": 1,
-    "status": "en_cours",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 19,
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "palier_suite": [
+        350
+      ],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-27",
+      "tri4": "fait",
+      "rotation": "fait",
+      "rotation_version": 11
     }
   },
   "37a7wBIeiBA": {
@@ -9354,16 +9428,31 @@
     "published_at": "2026-11-27T14:56:04Z",
     "first_seen": "2026-11-27",
     "updated_at": "2026-11-27",
-    "last_tri": 1,
-    "status": "en_cours",
+    "last_tri": 4,
+    "status": "termine",
     "modes": [
       "gb",
       "poc"
     ],
-    "pc_needed": true,
+    "pc_needed": false,
     "regles": 19,
     "pc": {
-      "sous_titres": "inutile"
+      "sous_titres": "inutile",
+      "tri2": "fait",
+      "image_taille": [
+        1920,
+        1080
+      ],
+      "ecran_jeu": true,
+      "hud_suite": [],
+      "palier_suite": [],
+      "results_lus": [],
+      "hud_amont": [],
+      "tri3": "fait",
+      "date": "2026-11-27",
+      "tri4": "fait",
+      "rotation": "fait",
+      "rotation_version": 11
     }
   },
   "UbSotwy18tk": {

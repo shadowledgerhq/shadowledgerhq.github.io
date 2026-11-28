@@ -1,46 +1,5 @@
 [
   {
-    "run_id": "gb-2026-11-26-ebIR4sYw8m8",
-    "week": "2026-11-26",
-    "mode": "gb",
-    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
-    "player": "SNG",
-    "channel": "SNG",
-    "video_id": "ebIR4sYw8m8",
-    "video_ids": [
-      "ebIR4sYw8m8"
-    ],
-    "published_at": "2026-11-26T07:27:29+01:00",
-    "lang": "en",
-    "score": {
-      "total": 383,
-      "runs": [
-        383
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : RC: 383; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "ebIR4sYw8m8",
-        "published_at": "2026-11-26T07:27:29+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false,
-        "damage": null,
-        "damage_exact": null,
-        "element": null,
-        "element_source": null
-      }
-    ]
-  },
-  {
     "run_id": "gb-2026-11-26-jfwIDAe-rNs",
     "week": "2026-11-26",
     "mode": "gb",
@@ -77,7 +36,8 @@
         "damage": 92800000000000,
         "damage_exact": false,
         "element": null,
-        "element_source": null
+        "element_source": null,
+        "hud_rage_count": 164
       }
     ]
   },
@@ -101,24 +61,25 @@
       ],
       "unit": "rage_count"
     },
-    "score_source": "titre",
+    "score_source": "video-complete",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 203 rc; une seule run trouvée; boss non contrôlé",
+    "notes": "écart OCR zone/image : player_score; lecture fusionnée (2 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_5; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "80DbcO_om18",
         "published_at": "2026-11-26T03:12:26+01:00",
-        "t": null,
+        "t": 212,
         "stage": null,
         "team": null,
-        "score_source": "titre",
+        "score_source": "video-complete",
         "exact": false,
-        "damage": 84800000000000,
-        "damage_exact": false,
-        "element": null,
-        "element_source": null
+        "damage": 84853491783234,
+        "damage_exact": true,
+        "element": "water",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 160
       }
     ]
   },
@@ -159,7 +120,8 @@
         "damage": null,
         "damage_exact": null,
         "element": null,
-        "element_source": null
+        "element_source": null,
+        "hud_rage_count": 158
       }
     ]
   },
@@ -201,6 +163,48 @@
         "damage_exact": null,
         "element": null,
         "element_source": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-ebIR4sYw8m8",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCW2lmUISysdDSCucfjG0E_A",
+    "player": "SNG",
+    "channel": "SNG",
+    "video_id": "ebIR4sYw8m8",
+    "video_ids": [
+      "ebIR4sYw8m8"
+    ],
+    "published_at": "2026-11-26T07:27:29+01:00",
+    "lang": "en",
+    "score": {
+      "total": 190,
+      "runs": [
+        190
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; contrôle sans Hunter Rank : Final Score lu sur une seule image, sans HUD de fin de run; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "ebIR4sYw8m8",
+        "published_at": "2026-11-26T07:27:29+01:00",
+        "t": 210,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": false,
+        "damage": 41841422720681,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 162
       }
     ]
   },
