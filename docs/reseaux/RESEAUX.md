@@ -27,18 +27,18 @@ Photos de profil (piste B) prêtes dans `profil/` : `profil-youtube-800.png`, `p
 
 ## 3. Descriptions des comptes
 
-**YouTube** (≤ 1 000 car. ; 928 au 27/11)
-> FR — Chaque semaine, Shadow Ledger classe les meilleures runs YouTube de Solo Leveling: Arise (Power Of Calamity, Battlefield Of Time, Guild Boss, Hall Of The Monarchs), analyse les builds du top 10 et publie un guide par mode. Pistes audio français et anglais.
+**YouTube** (≤ 1 000 car. ; 900 au 28/11)
+> FR — Chaque semaine, Shadow Ledger classe les meilleures runs YouTube de Solo Leveling: Arise (Power Of Calamity, Battlefield Of Time, Guild Boss), analyse les builds du top 10 et publie un guide par mode. Pistes audio français et anglais.
 > Classements complets et builds : shadowledgerhq.github.io
 > Les runs citées sont créditées et liées à leur auteur ; demande de retrait : shadowledgerhq.github.io/site/retrait.html
 > Projet de fan, non affilié à Netmarble. Voix de synthèse.
 >
-> EN — Every week, Shadow Ledger ranks the best Solo Leveling: Arise runs on YouTube (POC, BOT, GB, HOTM), breaks down the top 10 builds and publishes a guide per mode. English and French audio tracks.
+> EN — Every week, Shadow Ledger ranks the best Solo Leveling: Arise runs on YouTube (POC, BOT, GB), breaks down the top 10 builds and publishes a guide per mode. English and French audio tracks.
 > Full rankings and builds: shadowledgerhq.github.io
 > Featured runs are credited and linked to their creators; removal requests: shadowledgerhq.github.io/site/retrait.html
 > Fan project, not affiliated with Netmarble. Synthetic voice.
 
-**X** (≤ 160) : `Classements hebdo Solo Leveling: Arise (POC·BOT·GB·HOTM), builds du top 10 et guides. Weekly rankings, top 10 builds & guides. FR/EN · fan project` (146)
+**X** (≤ 160) : `Classements hebdo Solo Leveling: Arise (POC·BOT·GB), builds du top 10 et guides. Weekly rankings, top 10 builds & guides. FR/EN · fan project` (141)
 
 **Instagram** (≤ 150) : `Weekly Solo Leveling: Arise rankings, top 10 builds & guides 🇬🇧` / `Classements hebdo, builds et guides 🇫🇷` / `Fan project` (114, sur 3 lignes)
 
@@ -76,21 +76,21 @@ Génération : script ffmpeg à écrire par la discussion 8 quand la 1re vidéo 
 
 ## 5. Post X du mercredi
 
-**Contenu** : 4 images dans un seul post (maximum autorisé par X) — POC, BOT, GB, HOTM. Image HOTM : 3 colonnes, une par porte (un classement par porte, CONTEXTE §3). Gabarit : `gabarit-x-mode.svg` (1600 × 900, champs `{{…}}`), aperçu `apercu-post-x.png` (données fictives).
+**Contenu** : 3 images dans un seul post — POC, BOT, GB (HOTM arrêté définitivement, décision d'Alexis du 28/11/2026). Gabarit : `gabarit-x-mode.svg` (1600 × 900, champs `{{…}}`), aperçu `apercu-post-x.png` (données fictives).
 
-**Données** : seulement les lignes `confidence: sur` avec un `rank` (data/runs/<semaine>/). Moins de 3 lignes sûres → « — » à la place. Nom affiché = nom de la chaîne YouTube (crédit). Unités : POC = Rank Score (SPEC_ETAPE1 v42 §9), BOT = chrono `m:ss.mmm`, GB = RC, HOTM = points. Pas de score `a_verifier` dans l'image.
+**Données** : seulement les lignes `confidence: sur` avec un `rank` (data/runs/<semaine>/). Moins de 3 lignes sûres → « — » à la place. Nom affiché = nom de la chaîne YouTube (crédit). Unités : POC = Rank Score (SPEC_ETAPE1 v42 §9), BOT = chrono `m:ss.mmm`, GB = RC. Pas de score `a_verifier` dans l'image.
 
-**Texte** (223 car. sur 280 ; URL comptée 23) :
+**Texte** (216 car. sur 280 ; URL comptée 23) :
 ```
 🏆 Classement de la semaine · Weekly ranking — Solo Leveling: Arise
-Top 3 POC · BOT · GB · HOTM 👇
+Top 3 POC · BOT · GB 👇
 Quasi définitif, reset jeudi 01h (Paris) · Final at Thursday reset
 Complet / Full: shadowledgerhq.github.io
 #SoloLevelingArise
 ```
 Texte alternatif de chaque image (accessibilité) : `<MODE> top 3, semaine du <date> : 1 <chaîne> <score>, 2 …, 3 …`.
 
-Génération des images : `python3 pipeline/post_x.py [semaine]` (Code, 27/11) → `exports/<semaine>/x/` (poc, bot, gb, hotm .png + texte.txt + alt.txt ; non versionné). Rangs ex aequo affichés tels quels (1-1-3) ; pied d'image court « Quasi définitif · Near-final » (ou « Classement définitif · Final ranking ») ; noms tronqués à 28 caractères (20 en HOTM). Contrôlé sur 2026-11-12. Classement sans ligne sûre : pas d'image (retouche demandée à Code). Même image postée dans le salon Discord « classement-de-la-semaine ».
+Génération des images : `python3 pipeline/post_x.py [semaine]` (Code, 27/11) → `exports/<semaine>/x/` (poc, bot, gb .png + texte.txt + alt.txt ; non versionné). Rangs ex aequo affichés tels quels (1-1-3) ; pied d'image court « Quasi définitif · Near-final » (ou « Classement définitif · Final ranking ») ; noms tronqués à 28 caractères. Contrôlé sur 2026-11-12. Classement sans ligne sûre : pas d'image (retouche demandée à Code). Même image postée dans le salon Discord « classement-de-la-semaine ».
 
 ## 6. Calendrier type (après lancement, heure de Paris)
 
@@ -99,11 +99,10 @@ Génération des images : `python3 pipeline/post_x.py [semaine]` (Code, 27/11) �
 | Jeudi | 01h00 | Reset, classement figé | pipeline |
 | Vendredi | 18h00 | Vidéo BOT (refaite chaque semaine) | YouTube |
 | Samedi | 18h00 | Clip vertical BOT (1-3 min) | TikTok, Shorts, (Reels) |
-| Dimanche | 18h00 | Vidéo POC ou GB (selon changement de boss) | YouTube |
+| Dimanche | 18h00 | Vidéo POC | YouTube |
 | Lundi | 18h00 | Clip vertical de la vidéo de dimanche | TikTok, Shorts |
-| Mardi | 18h00 | Vidéo HOTM ou mode restant | YouTube |
+| Mardi | 18h00 | Vidéo GB | YouTube |
 | Mercredi | 23h45 | Post X top 3 + Discord | X, Discord |
-| Mercredi | 18h00 | 4e vidéo de la semaine | YouTube |
 
 Mercredi 23h45 (Tâche planifiée, 27/11) : un passage PC dure jusqu'à ~115 min et celui du soir finit au plus tard vers 23h25 ; contrôle à 23h30, post à 23h45 avec l'état du classement à l'heure du contrôle, avant le reset de 01h. Contrôle en erreur → post retenu, Alexis prévenu. Heures de vidéo = choix par défaut, à ajuster selon les statistiques après 4 semaines.
 
