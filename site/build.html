@@ -73,12 +73,12 @@ const T={
  fr:{back:"Classements",rm:"Demande de retrait",legal:"Mentions légales",rank:"Rang",run:"Run",week:"Semaine du",video:"Voir la vidéo",
   partial:"Build partiel : certains éléments ne sont pas encore reconnus (cases « ? »).",verify:"Build en cours de vérification.",none:"Pas encore de build pour cette run.",
   sjw:"Sung Jin Woo",weapons:"Armes",artifacts:"Artefacts",cores:"Noyaux",skills:"Compétences",blessings:"Bénédictions",hunters:"Chasseurs",shadows:"Ombres",successor:"Successeur",
-  sets:"Sets",unknown:"non reconnu",hunter:"Chasseur",pieces:"pièces",modes:{poc:"Power Of Calamity",bot:"Battlefield Of Time",gb:"Guild Boss",hotm:"Hall Of The Monarchs"},gate:"Porte",
+  sets:"Sets",unknown:"non reconnu",hunter:"Chasseur",pieces:"pièces",modes:{poc:"Power Of Calamity",bot:"Battlefield Of Time",gb:"Guild Boss"},
   slots:{skill_1:"Compétence 1",skill_2:"Compétence 2",ultimate:"Ultime",qte_1:"QTE 1",qte_2:"QTE 2",qte_3:"QTE 3",mind:"Esprit",body:"Corps",spirit:"Âme"}},
  en:{back:"Rankings",rm:"Removal request",legal:"Legal notice",rank:"Rank",run:"Run",week:"Week of",video:"Watch the video",
   partial:"Partial build: some items are not recognised yet (\"?\" boxes).",verify:"Build being verified.",none:"No build yet for this run.",
   sjw:"Sung Jinwoo",weapons:"Weapons",artifacts:"Artifacts",cores:"Cores",skills:"Skills",blessings:"Blessings",hunters:"Hunters",shadows:"Shadows",successor:"Successor",
-  sets:"Sets",unknown:"not recognised",hunter:"Hunter",pieces:"pieces",modes:{poc:"Power Of Calamity",bot:"Battlefield Of Time",gb:"Guild Boss",hotm:"Hall Of The Monarchs"},gate:"Gate",
+  sets:"Sets",unknown:"not recognised",hunter:"Hunter",pieces:"pieces",modes:{poc:"Power Of Calamity",bot:"Battlefield Of Time",gb:"Guild Boss"},
   slots:{skill_1:"Skill 1",skill_2:"Skill 2",ultimate:"Ultimate",qte_1:"QTE 1",qte_2:"QTE 2",qte_3:"QTE 3",mind:"Mind",body:"Body",spirit:"Spirit"}}
 };
 const ROOT=window.SL_ROOT||"../";
@@ -110,7 +110,7 @@ function render(){
  const b=S.builds[S.cur];const B=document.getElementById("body"),bn=document.getElementById("banner");
  document.getElementById("runs").innerHTML=S.builds.length>1?S.builds.map((x,i)=>`<button data-i="${i}" aria-pressed="${i===S.cur}">${t.run} ${i+1}${x.element?` · <span class="el ${esc(x.element)}">${esc(eln(x.element))}</span>`:""}</button>`).join(""):"";
  if(!b){document.getElementById("title").textContent="Build";document.getElementById("sub").textContent="";bn.hidden=true;B.innerHTML=`<div class="empty">${t.none}</div>`;return}
- const mode=t.modes[b.mode]+(b.gate?` — ${t.gate} ${b.gate}`:"");
+ const mode=t.modes[b.mode]||b.mode;
  document.getElementById("title").textContent=b.player+(b.rank?` — ${t.rank} ${b.rank}`:"");
  const d=new Date(b.week+"T12:00:00").toLocaleDateString(lang==="fr"?"fr-FR":"en-GB",{day:"numeric",month:"long",year:"numeric"});
  document.getElementById("sub").innerHTML=`${esc(mode)} · ${t.week} ${esc(d)} · <a href="https://www.youtube.com/watch?v=${esc(b.video_id)}${b.t_composition?"&t="+(+b.t_composition[0]||0):""}" target="_blank" rel="noopener">${t.video}</a>`;

@@ -1,5 +1,6 @@
 # SUIVI — Site — 2026-11-27
 ## Fait
+- v2.2 : HOTM retiré du site (onglet, portes, textes), arrêt décidé le 28/11
 - v2.1 : semaine d'essai 2026-11-12 affichée « essai, non publiée » (réponse de Classements)
 - v2 : site/build.html (page build FR/EN), lien « build » depuis le top 10 ; testé sur LATOYA BOT 12/11
 - Site v1, page classement : site/index.html (FR/EN, noindex, robots.txt, charte et logo B) ; testé en local avec data/runs/index.json (Code)

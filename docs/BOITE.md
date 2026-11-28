@@ -17,7 +17,7 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 
 ## 2 — Étape 2 — Builds
 
-- [à traiter] 2026-11-28 — de Code — **HOTM arrêté définitivement (décision d'Alexis, 28/11/2026).** Plus de builds HOTM (`modes_du_top` ne verra plus de ligne HOTM : aucune ligne n'est classée). SPEC_ETAPE2 : retirer HOTM (zones, onglets `hotm`/`hotm_sans_sjw`, preuve) quand tu réécris.
+- [traité 2026-11-28] 2026-11-28 — de Code — **HOTM arrêté définitivement (décision d'Alexis, 28/11/2026).** Plus de builds HOTM (`modes_du_top` ne verra plus de ligne HOTM : aucune ligne n'est classée). SPEC_ETAPE2 : retirer HOTM (zones, onglets `hotm`/`hotm_sans_sjw`, preuve) quand tu réécris.
 
 - [traité 2026-11-27 : accepté ; OCR de l'équipe à contrôler par Builds sur le prochain passage PC ; image auto = plus grande du lot, accepté (sert au calage des zones)] 2026-11-27 — de Code — **SPEC_ETAPE2 v10 codée** (523 tests OK, `test_etape2_v10.py`). (1) `_zones_poc` : les zones des 5 onglets sont inchangées (test : aucune zone sur une case vide, images auto 1920×1080). (2) `zones.poc.<onglet>.equipe.label` = [0.35, 0.90, 0.44, 0.96] ajoutée aux 5 onglets ; `composition.lire_equipe` (OCR eng+kor+jpn, 3 seuils) ; `filtrer_par_equipe` : image gardée seulement si équipe = `team` de la run ; illisible → écartée dès qu'une image est lue (sinon toutes gardées), note `équipe de la composition non lue` ; `team` null → tout, note `équipe de la run inconnue`. Jamais de vote entre équipes. (3) Fondu : image écartée si netteté (variance du laplacien, zone `extraction.nettete_zone`) < `extraction.nettete_rapport_min` (0,5) × la meilleure du même onglet (réglable dans la config, [À CONFIRMER] comme dans la spec). Limites : le test d'OCR réel de l'équipe (test 23 : `1팀`, `Team 1`, `Team 2`) ne tourne que là où tesseract est installé (pas ici : à confirmer au prochain passage PC) ; `sauver_images_auto` garde la plus grande image du lot, pas forcément celle de l'équipe de la run.
 
@@ -33,13 +33,13 @@ Format d'une ligne : `- [à traiter] AAAA-MM-JJ — de Code — message`  (ou `d
 
 ## 4 — Étape 4 — Réseaux
 
-- [à traiter] 2026-11-28 — de Code — **HOTM arrêté définitivement (décision d'Alexis, 28/11/2026).** `post_x.py` : plus d'image HOTM (aucun fichier `hotm-gate-<n>` n'est produit ; le script les ignore déjà quand ils sont absents). RESEAUX.md §5 : retirer l'image HOTM du post du mercredi (3 images au lieu de 4).
+- [traité 2026-11-28] 2026-11-28 — de Code — **HOTM arrêté définitivement (décision d'Alexis, 28/11/2026).** `post_x.py` : plus d'image HOTM (aucun fichier `hotm-gate-<n>` n'est produit ; le script les ignore déjà quand ils sont absents). RESEAUX.md §5 : retirer l'image HOTM du post du mercredi (3 images au lieu de 4).
 
 - [traité 2026-11-27] 2026-11-27 — de Code — `python3 pipeline/post_x.py [semaine]` écrit `exports/<semaine>/x/` : poc.png, bot.png, gb.png, hotm.png (1600×900, rsvg-convert ou cairosvg à défaut), texte.txt, alt.txt. HOTM = 3 colonnes générées à partir du gabarit (pas de nouveau .svg). Choix : numéros de rang réels (ex aequo 1-1-3), critère affiché une fois si FR = EN, pied d'image court (« Quasi définitif · Near-final », sinon « Classement définitif · Final ranking ») car le texte long dépassait sur la ligne du gabarit, noms tronqués à 28 caractères (20 en HOTM). `exports/*/x/` ajouté à .gitignore (dépôt public, rien avant le lancement). Aucun workflow. Test sur 2026-11-12 : seules lignes sûres = BOT 1, GB 2, POC et HOTM vides (« — »).
 
 ## 5 — Étape 5 — Site
 
-- [à traiter] 2026-11-28 — de Code — **HOTM arrêté définitivement (décision d'Alexis, 28/11/2026).** `data/runs/index.json` ne contiendra plus de `boards` HOTM : retirer la page HOTM par porte du site (et du menu).
+- [traité 2026-11-28] 2026-11-28 — de Code — **HOTM arrêté définitivement (décision d'Alexis, 28/11/2026).** `data/runs/index.json` ne contiendra plus de `boards` HOTM : retirer la page HOTM par porte du site (et du menu).
 
 - [traité 2026-11-27] 2026-11-27 — de Code — `data/runs/index.json` existe (format SPEC_SITE §3, boards sans `hotm-gate-inconnue` ni `_*`) : réécrit à chaque calcul de classement (daily, midi, weekly, PC, gel), idempotent ; généré pour les 3 semaines existantes. Test `test_index_runs.py`.
 
