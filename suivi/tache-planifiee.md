@@ -3,7 +3,7 @@
 - Planificateur vérifié : quotidien 19:30 / 21:30 / 23:30, hebdo jeudi 01:15, relance ponctuelle ; GitHub 18:00
 - Bug relances corrigé par Code (relances du soir seules ; manquée > 2 h = annulée)
 - Mercredi (après lancement) : contrôle 23:30, post 23:45
-- Contrôle quotidien créé : 08:38, rapports dans docs/controle/ (points : docs/controle/README.md)
+- Contrôle quotidien prêt (08:21) — création de la tâche refusée par la permission, à valider par Alexis ;, rapports dans docs/controle/ (points : docs/controle/README.md)
 ## En cours
 - Anti-bot sur l'adresse d'Alexis : suivre vidéos traitées / en_cours chaque jour
 ## À faire

@@ -1,6 +1,6 @@
 # Contrôle automatique des passages (discussion 7)
 
-Tâche planifiée Claude « Contrôle SLA quotidien », chaque jour à 08:38 (Paris), après les passages de la veille. Un rapport par jour : `docs/controle/AAAA-MM-JJ.md` (date du contrôle). Zone de la discussion 7 : rien d'autre n'est modifié.
+Tâche planifiée Claude « Contrôle SLA quotidien », chaque jour à 08:21 (Paris), après les passages de la veille. Un rapport par jour : `docs/controle/AAAA-MM-JJ.md` (date du contrôle). Zone de la discussion 7 : rien d'autre n'est modifié.
 
 ## Horaires contrôlés (27/11/2026)
 - GitHub daily : 18:00 Paris ; weekly : jeudi 01:00.
