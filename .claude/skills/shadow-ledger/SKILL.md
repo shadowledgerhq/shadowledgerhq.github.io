@@ -98,7 +98,7 @@ Champs supplémentaires :
 ### Build (data/builds/<semaine>/<mode>/<run_id>-<n>.json)
 
 Format complet : `docs/SPEC_ETAPE2.md` §1.2 du dépôt (fait foi ; version courante en tête du fichier). Points clés :
-- un build = une run (`runs_detail[i]` → `<run_id>-<i+1>.json`) ; HOTM : `<mode>` = `hotm-gate-<n>` ;
+- un build = une run (`runs_detail[i]` → `<run_id>-<i+1>.json`) ;
 - `status` : `build_complet | build_partiel | pas_de_build` ; `confidence` : `sur | a_verifier` ;
 - identifiants = `id` de la base ; élément non reconnu = `null` ou `unmatched`, jamais inventé ni complété à la main ;
 - POC et GB : `element` repris de la run ;
@@ -174,7 +174,7 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - [ ] Une seule ligne par chaîne ; pas de ré-upload en double.
 - [ ] GB (et POC avant le 19/11/2026) : total = somme des runs (GB : une run par groupe ; POC : une run par équipe) ; une seule run sûre est classée avec la note `une seule run`.
 - [ ] POC depuis le 19/11/2026 : Rank Score sûr seulement si les contrôles a/b/c passent (Rank Score = 1e6 × (palier − 1 + progression) à ±100 ; progression = Team 1 % + Team 2 % ; contributions = `Total Contribution`) ; « Tier N » d'un texte compte seulement avec une marque POC ; l'élément est informatif.
-- [ ] GB : chaque run classée a un écran Results filmé. POC et GB : `element` renseigné ou `null` ; aucun chasseur commun entre les deux runs d'une ligne.
+- [ ] GB : chaque run classée a un écran Results filmé. POC et GB : `element` renseigné ou `null` ; aucun chasseur commun entre les deux runs d'une ligne (GB ; POC avant le 19/11 seulement : depuis, un chasseur commun aux 2 équipes = note seulement).
 - [ ] POC avant le 19/11 : chaque run = SJW + successeur + 3 chasseurs.
 - [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; `Total Rage Count` = groupe 1 + groupe 2.
 - [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas (GB : égalité de RC départagée par les dégâts).
