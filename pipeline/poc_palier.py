@@ -32,10 +32,29 @@ _STRICT = re.compile(r"(?<![\d.,])\d{1,3}(?:[.,]\d{3})*(?![\d.,])")
 _TITRE = re.compile(r"t[il1]er\s*(\d{1,2})\s*team\s*([12])", re.IGNORECASE)
 
 
+_TITRE_KO = re.compile(r"(?:권좌)?(\d{1,2})단계([12])팀")
+_KO_CONTRIB = re.compile(r"[기끼][여어]도")           # 기여도 ; 여/어 confondus
+_KO_SIGNAUX = ("재앙의권좌", "랭킹점수", "달성률")
+REF_HAUTEUR = 900.0                # hauteur de l'image de référence (`REF_CONTRIBUTION`, `DECALAGES`) : u = hauteur / 900 sans mot anglais lu
+
+
+def sans_espaces(texte):
+    return re.sub(r"\s+", "", texte or "")
+
+
+def detecter_coreen(texte):
+    """(v46) Écran de palier en coréen : `기여도` ≥ 2 fois (espaces ignorés, 여/어 confondus) ou `재앙의 권좌` / `랭킹 점수` / `달성률` lu."""
+    t = sans_espaces(texte)
+    if len(_KO_CONTRIB.findall(t)) >= 2:
+        return True
+    ancien = "이번" in t and "스코어" in t        # Results du POC d'avant la refonte (« 재앙의 권좌 », 플레이어/계승자 스코어, 이번 기록) : pas un palier
+    return not ancien and any(k in t for k in _KO_SIGNAUX)
+
+
 def detecter(texte):
-    """Écran de palier (client anglais) : ≥ 2 libellés « Contribution » (OCR abîmé toléré) et un signal propre au mode."""
+    """Écran de palier : client anglais (≥ 2 libellés « Contribution », OCR abîmé toléré, et un signal propre au mode) ou coréen (v46)."""
     b = re.sub(r"[^a-z]", "", (texte or "").lower())
-    return b.count("contribut") >= 2 and any(k in b for k in ("tier", "goalprog", "ranksc", "calam"))
+    return (b.count("contribut") >= 2 and any(k in b for k in ("tier", "goalprog", "ranksc", "calam"))) or detecter_coreen(texte)
 
 
 # --- lecture des valeurs -----------------------------------------------------------------------
@@ -118,12 +137,12 @@ def _candidats(valeurs, maximum=2):
 # Décalage vertical (unités de référence) des libellés de la colonne gauche par rapport à « Player Contribution », selon la mise en page.
 DECALAGES = {"successeur": {"player": 0, "successor": 124, "hunter": 245, "total": 565},
              "standard": {"player": 0, "hunter": 125, "total": 442}}
-_ROLES = (("player", re.compile(r"(?i)^pla[yv]")), ("successor", re.compile(r"(?i)^succ")), ("hunter", re.compile(r"(?i)^hunt")),
-          ("total", re.compile(r"(?i)^tota")))
+_ROLES = (("player", re.compile(r"(?i)^pla[yv]|^플레이")), ("successor", re.compile(r"(?i)^succ|^계승")), ("hunter", re.compile(r"(?i)^hunt|^헌터")),
+          ("total", re.compile(r"(?i)^tota|^[총충]$")))
 LARGEUR_ROLE = {"player": 65.0, "successor": 102.0, "hunter": 74.0, "total": 52.0}      # largeur du mot à l'échelle de référence
 
 
-def repere(mots, largeur_img):
+def repere(mots, largeur_img, hauteur_img=None):
     """(mise en page, x gauche, y de « Player Contribution », unité) d'après les libellés de la colonne gauche, ou None.
     Les mots Player / Successor / Hunter / Total et les « Contribution » (sans nom) donnent chacun un y de « Player » implicite
     dans chaque mise en page ; la mise en page retenue est celle où ces y concordent le mieux (≥ 2 libellés)."""
@@ -136,7 +155,9 @@ def repere(mots, largeur_img):
                 break
     contribs = [m for m in gauche if m[0].lower().startswith(("contri", "contr1"))]
     echelles = [m[3] / REF_CONTRIBUTION for m in contribs if m[0].lower().startswith("contribution")] + \
-               [m[3] / LARGEUR_ROLE[r] for r, m in nommes]
+               [m[3] / LARGEUR_ROLE[r] for r, m in nommes if r in LARGEUR_ROLE and m[0].isascii()]
+    if not echelles and hauteur_img and nommes:      # v46 : libellés coréens (largeurs de mots non étalonnées) : la mise en page suit la hauteur de la vidéo
+        echelles = [hauteur_img / REF_HAUTEUR]
     if not echelles:
         return None
     u = max(0.3, statistics.median(echelles))
@@ -170,9 +191,10 @@ def repere(mots, largeur_img):
     return nom, x_l, y_p, u
 
 
-def _ligne_team(mots, hauteur_image):
+def _ligne_team(mots, hauteur_image, largeur_image=None):
     """(mots Team, y de la ligne) lus sur la ligne du bas, ou None. Team 2 est à 249 unités de Team 1 ; un seul mot lu suffit."""
-    c = [m for m in mots if re.fullmatch(r"(?i)team\s*[12]?", m[0]) and m[2] > 0.55 * hauteur_image]
+    c = [m for m in mots if re.fullmatch(r"(?i)team\s*[12]?|[12]\s*팀", m[0]) and m[2] > 0.55 * hauteur_image
+         and (not largeur_image or not m[0].endswith("팀") or m[1] < 0.72 * largeur_image)]      # v46 : « 2팀 도전 » (bouton, à droite) écarté
     if not c:
         return None
     c.sort(key=lambda m: m[1])
@@ -203,18 +225,26 @@ def lire(outils, png, texte=None):
         return {}
     largeur_img, hauteur_img = taille
     mots = outils.boites(png)
-    r = repere(mots, largeur_img)
+    r = repere(mots, largeur_img, hauteur_img)
+    if not r:
+        try:                                   # v46 : libellés coréens (non lus par le tesseract anglais)
+            mots = outils.boites(png, "kor+eng")
+        except TypeError:
+            return {}
+        r = repere(mots, largeur_img, hauteur_img)
     if not r:
         return {}
     layout, x_l, y_p, u = r
+    coreen = any(re.search(r"[가-힣]", m[0]) for m in mots)
+    langues = "kor+eng" if coreen else "eng"
     dec = DECALAGES[layout]
     successeur = layout == "successeur"
     y_total, y_chasseur = y_p + dec["total"] * u, y_p + dec["hunter"] * u
     e = {"layout": layout, "echelle": round(u, 3)}
     # titre : « Tier N Team M » (le titre peut être plus à gauche que la colonne des cartes)
-    tit = _lire_zone(outils, png, x_l - 160 * u, y_p - 70 * u, 660 * u, 62 * u, None, psm=7, variantes=((3, None), (3, 140)))
+    tit = _lire_zone(outils, png, x_l - 160 * u, y_p - 70 * u, 660 * u, 62 * u, None, psm=7, variantes=((3, None), (3, 140)), langues=langues)
     tit.append(texte or "")
-    paires = [(int(m.group(1)), int(m.group(2))) for t in tit for m in [_TITRE.search(t)] if m]
+    paires = [(int(m.group(1)), int(m.group(2))) for t in tit for m in [_TITRE.search(t) or _TITRE_KO.search(sans_espaces(t))] if m]
     pal = _candidats(paires, 1)
     e["tier"], e["team"] = (pal[0] if pal else (None, None))
     # lignes de contributions : joueur, [successeur], chasseurs 1 à 3
@@ -224,11 +254,12 @@ def lire(outils, png, texte=None):
     lignes += [(f"hunter_{k}", y_chasseur + (44 + 68.5 * (k - 1)) * u) for k in (1, 2, 3)]
     zones = {nom: (x_l + 190 * u, y - 2 * u, 198 * u, 62 * u, CHIFFRES) for nom, y in lignes}
     zones["total"] = (x_l - 4 * u, y_total + 25 * u, 345 * u, 75 * u, CHIFFRES)
-    lt = _ligne_team(mots, hauteur_img)           # bloc du bas : Rank Score, Goal Progress, Team 1 %, Team 2 %
+    lt = _ligne_team(mots, hauteur_img, largeur_img)           # bloc du bas : Rank Score, Goal Progress, Team 1 %, Team 2 %
     if lt:
         c, y_team = lt
-        x1 = next((m[1] for m in c if m[0].lower().endswith("1")), None)
-        x2 = next((m[1] for m in c if m[0].lower().endswith("2")), None)
+        ko = any("팀" in m[0] for m in c)
+        x1 = next((m[1] for m in c if re.search(r"1", m[0]) and (ko == ("팀" in m[0]))), None)
+        x2 = next((m[1] for m in c if re.search(r"2", m[0]) and (ko == ("팀" in m[0]))), None)
         if x1 is None and x2 is not None:
             x1 = x2 - 249 * u
         if x1 is None:                       # « Team » seul : le plus à gauche est Team 1
@@ -236,11 +267,18 @@ def lire(outils, png, texte=None):
         if x2 is None:
             x2 = x1 + 249 * u
         top = y_team - 122 * u
-        zones["rank_score"] = (x1 - 50 * u, top, 265 * u, 70 * u, CHIFFRES)
-        zones["goal"] = (x1 + 265 * u, top, 185 * u, 70 * u, CHIFFRES_POURCENT)
-        zones["t1"] = (x1 + 82 * u, y_team - 12 * u, 95 * u, 40 * u, CHIFFRES_POURCENT)
-        zones["t2"] = (x2 + 82 * u, y_team - 12 * u, 95 * u, 40 * u, CHIFFRES_POURCENT)
-    pt = next((m for m in mots if m[0].lower() == "time" and m[2] < 0.2 * hauteur_img), None)
+        if ko:        # v46 : « 1팀 » est dans la pastille, valeur plus près du libellé ; reste de la barre à droite (100 − Goal Progress)
+            zones["rank_score"] = (x1 - 70 * u, top, 265 * u, 70 * u, CHIFFRES)
+            zones["goal"] = (x1 + 235 * u, top, 185 * u, 70 * u, CHIFFRES_POURCENT)
+            zones["t1"] = (x1 + 38 * u, y_team - 12 * u, 95 * u, 40 * u, CHIFFRES_POURCENT)
+            zones["t2"] = (x2 + 38 * u, y_team - 12 * u, 95 * u, 40 * u, CHIFFRES_POURCENT)
+            zones["reste"] = (x2 + 215 * u, y_team - 12 * u, 95 * u, 40 * u, CHIFFRES_POURCENT)
+        else:
+            zones["rank_score"] = (x1 - 50 * u, top, 265 * u, 70 * u, CHIFFRES)
+            zones["goal"] = (x1 + 265 * u, top, 185 * u, 70 * u, CHIFFRES_POURCENT)
+            zones["t1"] = (x1 + 82 * u, y_team - 12 * u, 95 * u, 40 * u, CHIFFRES_POURCENT)
+            zones["t2"] = (x2 + 82 * u, y_team - 12 * u, 95 * u, 40 * u, CHIFFRES_POURCENT)
+    pt = next((m for m in mots if m[0].lower() in ("time", "시간") and m[2] < 0.2 * hauteur_img), None)
     if pt:                                   # temps de jeu : à droite du mot « Time » (mm:ss, secondes < 60)
         zones["play_time"] = (pt[1] + pt[3] + 5 * u, pt[2] - 8 * u, 150 * u, 38 * u, CHIFFRES_TEMPS)
     brut = {nom: [] for nom in zones}
@@ -250,8 +288,9 @@ def lire(outils, png, texte=None):
         cand = {n: _candidats(_un_nombre(brut[n], elargi=elargi), 8) for n in noms_contrib}
         if "rank_score" in zones:
             cand["rank_score"] = _candidats(_un_nombre(brut["rank_score"]), 8)
-            for k in ("goal", "t1", "t2"):
-                cand[k] = _candidats([pourcentage(t) for t in brut[k]], 4)
+            for k in ("goal", "t1", "t2", "reste"):
+                if k in brut:
+                    cand[k] = _candidats([pourcentage(t) for t in brut[k]], 4)
         horloges = []
         for t in brut.get("play_time", []):
             m = re.search(r"(\d{1,2}):(\d{2})(?!\d)", t)
@@ -269,9 +308,9 @@ def lire(outils, png, texte=None):
         for nom, (x, y, w, h, extra) in zones.items():
             if nom in BAS:
                 if k == 0:
-                    brut[nom] += _lire_zone(outils, png, x, y, w, h, extra, variantes=VARIANTES_BAS)
+                    brut[nom] += _lire_zone(outils, png, x, y, w, h, extra, variantes=VARIANTES_BAS, langues=langues)
                 continue
-            brut[nom] += _lire_zone(outils, png, x, y, w, h, extra, variantes=etage)
+            brut[nom] += _lire_zone(outils, png, x, y, w, h, extra, variantes=etage, langues=langues)
         if calculer(False):
             return e
     e["via_expansion"] = False
@@ -321,6 +360,9 @@ def _choisir(cand, successeur, tier=None):
     if pris is None:
         pris = (rangs[0], buts[0], t1s[0], t2s[0])
     sortie["rank_score"], sortie["goal_progress"], sortie["team_pct"] = pris[0], pris[1], [pris[2], pris[3]]
+    restes = cand.get("reste")
+    if restes:       # v46 : reste de la barre (coréen) : la lecture la plus proche de 100 − Goal Progress
+        sortie["reste"] = min(restes, key=lambda r: abs(r + pris[1] - 100)) if pris[1] is not None else restes[0]
     return sortie
 
 
@@ -347,6 +389,9 @@ def controles(e):
         notes.append(NOTE_PREFIXE + "c : contribution illisible")
     elif sum(parts) != total:
         notes.append(NOTE_PREFIXE + f"c : somme {sum(parts)} ≠ Total Contribution {total}")
+    reste = e.get("reste")
+    if reste is not None and goal is not None and abs(reste + goal - 100) > TOLERANCE_POURCENT + 1e-9:       # (d) v46, si le reste de la barre est lu
+        notes.append(NOTE_PREFIXE + f"d : reste {reste} % + Goal Progress {goal} % ≠ 100 %")
     if e.get("via_expansion"):
         notes.append(NOTE_PREFIXE + "c : chiffres de tête écartés pour passer le contrôle (lecture non fiable)")
     if e.get("team") not in (1, 2):
