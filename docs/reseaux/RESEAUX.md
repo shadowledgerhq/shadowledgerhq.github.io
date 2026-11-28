@@ -78,7 +78,7 @@ Génération : script ffmpeg à écrire par la discussion 8 quand la 1re vidéo 
 
 **Contenu** : 3 images dans un seul post — POC, BOT, GB (HOTM arrêté définitivement, décision d'Alexis du 28/11/2026). Gabarit : `gabarit-x-mode.svg` (1600 × 900, champs `{{…}}`), aperçu `apercu-post-x.png` (données fictives).
 
-**Données** : seulement les lignes `confidence: sur` avec un `rank` (data/runs/<semaine>/). Moins de 3 lignes sûres → « — » à la place. Nom affiché = nom de la chaîne YouTube (crédit). Unités : POC = Rank Score (SPEC_ETAPE1 v42 §9), BOT = chrono `m:ss.mmm`, GB = RC. Pas de score `a_verifier` dans l'image.
+**Données** : seulement les lignes `confidence: sur` avec un `rank` (data/runs/<semaine>/). Moins de 3 lignes sûres → « — » à la place. Nom affiché = nom de la chaîne YouTube (crédit). Unités : POC = « Palier N · X,X % » (palier atteint et Goal Progress, ordre du classement du 28/11, CONTEXTE §3), Rank Score en petit à côté ; BOT = chrono `m:ss.mmm`, GB = RC. Pas de score `a_verifier` dans l'image.
 
 **Texte** (216 car. sur 280 ; URL comptée 23) :
 ```

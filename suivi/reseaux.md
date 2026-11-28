@@ -1,5 +1,6 @@
 # SUIVI — Réseaux — 2026-11-27
 ## Fait
+- POC du post X : « Palier N · X,X % » + Rank Score (RESEAUX.md §5) ; demande à Code (docs/BOITE.md §8)
 - HOTM arrêté (Alexis, 28/11) : retiré de RESEAUX.md (descriptions, post X à 3 images, calendrier à 3 vidéos) et des bannières
 - Post X + Discord du mercredi fixé à 23h45, contrôle à 23h30 (Tâche planifiée) ; RESEAUX.md §6 à jour
 - post_x.py (Code) contrôlé sur 2026-11-12 : conforme ; RESEAUX.md §5 à jour
@@ -13,6 +14,7 @@
 ## En cours
 - rien
 ## À faire
+- Contrôler l'image POC de post_x.py après la retouche de Code
 - Découpage en clips verticaux de 1 à 3 min dès la 1re vidéo
 ## Besoin d'Alexis
 - Jour du lancement : créer le lien d'invitation Discord permanent ; feu vert ; nom TikTok
