@@ -1,15 +1,15 @@
-# SUIVI — Tâche planifiée — 2026-11-27
+# SUIVI — Tâche planifiée — 2026-11-28
 ## Fait
-- Planificateur vérifié (27/11) : quotidien 19:30 toutes les 2 h (21:30, 23:30), hebdomadaire jeudi 01:15, relance ponctuelle ; aucune tâche 21:15
-- Ordre PC/GitHub corrigé (v42, PC à 21:15) et vérifié sur le passage réel du 26/11
-- Mercredi : contrôle 23:30, post 23:45 (budget passage PC ≤ 115 min, réponse de Code)
-- Bug relance corrigé par Code (relances du soir seules ; relance manquée > 2 h annulée)
+- Planificateur vérifié : quotidien 19:30 / 21:30 / 23:30, hebdo jeudi 01:15, relance ponctuelle ; GitHub 18:00
+- Bug relances corrigé par Code (relances du soir seules ; manquée > 2 h = annulée)
+- Mercredi (après lancement) : contrôle 23:30, post 23:45
+- Contrôle quotidien créé : 08:38, rapports dans docs/controle/ (points : docs/controle/README.md)
 ## En cours
-- 27/11 : 48 vidéos en_cours, anti-bot à 20:18 (manuel), relance prévue 22:18
+- Anti-bot sur l'adresse d'Alexis : suivre vidéos traitées / en_cours chaque jour
 ## À faire
-- Contrôle du 28/11 (23:50) : blocs planificateur 19:30/21:30/23:30, pas de 21:15, vidéos en_cours
-- Créer le contrôle régulier après chaque passage (CONTEXTE §5), rapports dans docs/controle/
+- Vérifier le 1er rapport (29/11) et le gel du 03/12 (lignes provisoires possibles)
+- Contrôle du mercredi 23:30 à créer au lancement public
 ## Besoin d'Alexis
-- Si l'anti-bot bloque encore : 5_test_antibot.bat puis 3_passage_complet.bat
+- Lancer 3_passage_complet.bat une fois (git pull du correctif « sous-titres 429 »)
 ## Demandes de modif du skill
 - rien
