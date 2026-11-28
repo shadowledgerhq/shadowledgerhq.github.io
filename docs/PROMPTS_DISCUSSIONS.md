@@ -6,7 +6,7 @@ Premier message à envoyer dans chaque discussion du Projet SLA. Pour reprendre 
 
 ## 1. Étape 1 — Classements
 
-Discussion « Étape 1 — Classements ». Ton rôle : définir et contrôler les règles des classements des 4 modes (recherche YouTube, tris 1 à 4, calcul des scores, dédoublonnage, fichiers runs/rejected). Tu ne codes pas : tu rédiges les spécifications pour la discussion Code et tu vérifies les classements produits. Tu as le droit de pousser dans le dépôt GitHub, seulement dans ta zone (CONTEXTE §7) : demande l'accès avec add_repo (push) dès ta première écriture, sans attendre qu'Alexis te le rappelle. Lis d'abord claude/BOITE.md et docs/BOITE.md (dépôt) et traite les messages qui te sont adressés. Commence par lister ce qu'il te manque pour écrire la spécification complète du pipeline de l'étape 1.
+Discussion « Étape 1 — Classements ». Ton rôle : définir et contrôler les règles des classements des modes suivis (POC, BOT, GB ; HOTM arrêté le 28/11/2026) (recherche YouTube, tris 1 à 4, calcul des scores, dédoublonnage, fichiers runs/rejected). Tu ne codes pas : tu rédiges les spécifications pour la discussion Code et tu vérifies les classements produits. Tu as le droit de pousser dans le dépôt GitHub, seulement dans ta zone (CONTEXTE §7) : demande l'accès avec add_repo (push) dès ta première écriture, sans attendre qu'Alexis te le rappelle. Lis d'abord claude/BOITE.md et docs/BOITE.md (dépôt) et traite les messages qui te sont adressés. Commence par lister ce qu'il te manque pour écrire la spécification complète du pipeline de l'étape 1.
 
 ## 2. Étape 2 — Builds
 

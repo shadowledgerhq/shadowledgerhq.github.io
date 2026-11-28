@@ -14,11 +14,11 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 | POC | Power Of Calamity. Depuis la refonte du 19/11/2026 : paliers, classement au **Rank Score** = 1 000 000 × (palier − 1 + progression), les 2 équipes partagent les PV du boss (le score cumule les deux), égalité = ex aequo, plus d'élément imposé (SPEC_ETAPE1 §9). Avant : dégâts max, une run = une équipe, total = équipe 1 + équipe 2. |
 | BOT | Battlefield Of Time. Chrono le plus court (secondes) = dernière phase de l'écran `Results`. **Un seul classement** par semaine (Challenge retiré du jeu en mai 2026). Saison = 4 semaines de jeu (1 boss/semaine) + 1 semaine de calcul sans classement ; semaine de saison notée `S<n>-<w>`. |
 | GB | Guild Boss. Classement : Rage Count le plus élevé ; **seules les runs filmées (écran Results) comptent** ; une run = un groupe (6 chasseurs + SJW), total = meilleure run filmée de chaque groupe ; égalité départagée par la somme des dégâts. Le `Personal Record` sert seulement à identifier le groupe. |
-| HOTM | Hall Of The Monarchs. Un classement **par porte** (제 n관문 / 第n関門) : points les plus élevés. 1 run par porte. |
+| HOTM | Hall Of The Monarchs. **Arrêté définitivement le 28/11/2026** (décision d'Alexis) : plus de classement, builds, vidéo, page ni post. Les champs et fichiers HOTM ci-dessous ne servent plus qu'aux archives (2026-11-12). |
 | RC | Rage Count, unité de score du GB. |
 | SJW | Sung Jin Woo. |
 | Joueur | Une chaîne YouTube, identifiée par `channel_id`. |
-| Reset | Jeudi 01h00, heure de Paris, pour les 4 modes. |
+| Reset | Jeudi 01h00, heure de Paris, pour les modes suivis (POC, BOT, GB). |
 | Semaine | Identifiée par la date du jeudi où elle commence : AAAA-MM-JJ. |
 | Tri 1 à 4 | 1 titre/description/sous-titres · 2 miniature · 3 début (10 s) et fin (30 s), 1 img/2 s · 4 vidéo entière, 1 img/10 s. |
 | Top 10 | Les 10 premiers de chaque mode, seuls analysés à l'étape 2. |
@@ -171,11 +171,11 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 ### Classements (étape 1)
 - [ ] Toutes les vidéos ont une date de publication postérieure au dernier reset.
 - [ ] Le boss / la saison visible correspond à la semaine (GB `Personal Record` : `Time Left in Season` cohérent avec la date de publication ; BOT : `S<n>-<w>` du titre = semaine attendue, aucune run classée en semaine de calcul).
-- [ ] Une seule ligne par chaîne (HOTM : par porte) ; pas de ré-upload en double.
+- [ ] Une seule ligne par chaîne ; pas de ré-upload en double.
 - [ ] GB (et POC avant le 19/11/2026) : total = somme des runs (GB : une run par groupe ; POC : une run par équipe) ; une seule run sûre est classée avec la note `une seule run`.
 - [ ] POC depuis le 19/11/2026 : Rank Score sûr seulement si les contrôles a/b/c passent (Rank Score = 1e6 × (palier − 1 + progression) à ±100 ; progression = Team 1 % + Team 2 % ; contributions = `Total Contribution`) ; « Tier N » d'un texte compte seulement avec une marque POC ; l'élément est informatif.
 - [ ] GB : chaque run classée a un écran Results filmé. POC et GB : `element` renseigné ou `null` ; aucun chasseur commun entre les deux runs d'une ligne.
-- [ ] POC avant le 19/11 : chaque run = SJW + successeur + 3 chasseurs. HOTM : clear + bonus de preuve = score.
+- [ ] POC avant le 19/11 : chaque run = SJW + successeur + 3 chasseurs.
 - [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; `Total Rage Count` = groupe 1 + groupe 2.
 - [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas (GB : égalité de RC départagée par les dégâts).
 - [ ] BOT et GB : un écran au contrôle échoué ne donne jamais un score ; chrono incomplet = intervalle, phases incomplètes = borne basse, jamais un chrono. GB : un dégât non contrôlé ne départage jamais une égalité de RC. GB : un Personal Record contrôlé (Total Rage Count = groupe 1 + groupe 2) prime sur un Results **filmé** de la même vidéo dont le RC est en conflit : il confirme le RC de ce groupe ; il ne classe jamais une run non filmée (SPEC_ETAPE1 §4.7).
