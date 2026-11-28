@@ -7,7 +7,7 @@
 - **Aucun relevé manuel** : ne jamais écrire « à relever à la main » ; une donnée non relevée reste `null` ou « à vérifier ».
 - **Boîte** : pour un message vers les discussions 1 à 7, écris-le dans `docs/BOITE.md` (section du destinataire, format « - [à traiter] AAAA-MM-JJ — de Code — message »). Au démarrage, lis aussi `docs/BOITE.md` (sections 8-9 : messages des autres discussions pour toi ; Alexis te dit « lis ta boîte ») ; un message pour une autre discussion n'est **jamais recopié** à Alexis : annonce **chaque** message posé, dans la même réponse, en une ligne (« Message de Code pour Classements dans docs/BOITE.md ») ; quand Alexis écrit « message ? » : relis `docs/BOITE.md`, traite ce qui t'est adressé, puis liste tes messages envoyés (destinataire, date, sujet en quelques mots, « en attente » ou « traité »), ou « Aucun message » ; Code archive les messages traités dans `docs/archives/BOITE.md` au plus tard 7 jours après.
 
-Ce dépôt contient tout le projet Shadow Ledger d'Alexis : classements hebdomadaires, builds, base de données du jeu, theorycraft, vidéos et site web pour *Solo Leveling: Arise* (modes POC, BOT, GB, HOTM).
+Ce dépôt contient tout le projet Shadow Ledger d'Alexis : classements hebdomadaires, builds, base de données du jeu, theorycraft, vidéos et site web pour *Solo Leveling: Arise* (modes POC, BOT, GB ; HOTM arrêté le 28/11/2026, `docs/CONTEXTE.md` §2).
 
 ## À lire en premier
 

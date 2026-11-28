@@ -1,10 +1,10 @@
 # Projet SLA — Shadow Ledger : contexte de référence
 
-Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Une seule version : `claude/CONTEXTE.md` du Projet et `docs/CONTEXTE.md` du dépôt sont identiques (la discussion 6 met à jour les deux). Mis à jour le 27/11/2026 (POC refonte au Rank Score, §3-4 ; commande « message ? » et annonce de chaque message envoyé, §7 ; droit de pousser rappelé dans chaque message de démarrage, §7 ; SUIVI silencieux, §2 ; messages entre discussions annoncés en une ligne, plus recopiés ; boîtes de 8 et 9 dans `docs/BOITE.md`). Avant : 26/11/2026 (droit de pousser pour toutes les discussions, §7 ; rien de public avant le lancement ; boîtes : messages traités retirés ou archivés ; specs : seul le dépôt fait foi). Précédentes mises à jour : 19/11/2026 (discussions 8 et 9 ouvertes directement sur le dépôt) ; 17/11/2026 (alignement sur SPEC_ETAPE1 v30, aucun relevé manuel, `data/rotations/`).
+Document de référence du projet. Toute discussion du Projet SLA s'y fie. En cas de contradiction avec une discussion, ce document fait foi. Une seule version : `claude/CONTEXTE.md` du Projet et `docs/CONTEXTE.md` du dépôt sont identiques (la discussion 6 met à jour les deux). Mis à jour le 28/11/2026 (HOTM arrêté définitivement, §2-4). Avant : 27/11/2026 (POC refonte au Rank Score, §3-4 ; commande « message ? » et annonce de chaque message envoyé, §7 ; droit de pousser rappelé dans chaque message de démarrage, §7 ; SUIVI silencieux, §2 ; messages entre discussions annoncés en une ligne, plus recopiés ; boîtes de 8 et 9 dans `docs/BOITE.md`). Avant : 26/11/2026 (droit de pousser pour toutes les discussions, §7 ; rien de public avant le lancement ; boîtes : messages traités retirés ou archivés ; specs : seul le dépôt fait foi). Précédentes mises à jour : 19/11/2026 (discussions 8 et 9 ouvertes directement sur le dépôt) ; 17/11/2026 (alignement sur SPEC_ETAPE1 v30, aucun relevé manuel, `data/rotations/`).
 
 ## 1. Le projet en une phrase
 
-**Shadow Ledger** recense chaque semaine les meilleures runs YouTube de *Solo Leveling: Arise* sur 4 modes, analyse les builds du top 10, publie un guide théorique par mode et diffuse le tout sur un site et sur les réseaux, en français et en anglais.
+**Shadow Ledger** recense chaque semaine les meilleures runs YouTube de *Solo Leveling: Arise* sur 3 modes (POC, BOT, GB ; HOTM arrêté le 28/11/2026), analyse les builds du top 10, publie un guide théorique par mode et diffuse le tout sur un site et sur les réseaux, en français et en anglais.
 
 ## 2. Décisions prises
 
@@ -22,21 +22,22 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 | Rien de public avant le lancement | Site, réseaux et vidéos se **préparent** dès maintenant, rien n'est publié avant le feu vert d'Alexis. GitHub Pages coupé (Settings → Pages) ; déploiement du site seulement par `deployer-site.yml` (manuel) ; toutes les pages en `<meta name="robots" content="noindex">` + `site/robots.txt` « Disallow: / » (contrôle : `pipeline/check_site.py`), à retirer au lancement ; aucun script ne publie sur X, Discord, TikTok ou YouTube (test YouTube seulement en « Privé ») ; profils des comptes inchangés. Le dépôt reste public (Actions gratuites) mais n'est lié nulle part. Décision du 26/11/2026. |
 | Lectures légères | Les spécifications ne sont que dans `docs/` du dépôt (plus de copie dans le Projet) : un **état actuel** court, l'historique des versions dans `docs/archives/`. Les archives (`docs/archives/`, `suivi/archives/`) ne se lisent qu'en cas de besoin précis. Décision du 26/11/2026. |
 | Droit de pousser | Toutes les discussions peuvent écrire dans le dépôt, chacune dans sa zone (section 7). Décision du 26/11/2026. |
+| HOTM arrêté | Décision d'Alexis du 28/11/2026 : HOTM n'est plus suivi (ni classement, ni builds, ni vidéo, ni page, ni post X). Données de 2026-11-12 gardées en archive. Côté code : `modes_actifs` = [poc, bot, gb] et `modes_classement` sans hotm (`pipeline/config/etape1.json`) ; vidéo à indices HOTM seuls rejetée `mode_arrete`. Réactivation : remettre `hotm` aux deux endroits. |
 | SUIVI silencieux | Chaque discussion tient son SUIVI à jour dans `suivi/<discussion>.md` du dépôt (poussé à chaque étape), mais **ne l'affiche plus** à Alexis en fin de réponse. Il n'apparaît que dans le message prêt à coller du message n = 15. Décision du 27/11/2026. |
 
-## 3. Les 4 modes
+## 3. Les modes suivis (POC, BOT, GB)
 
 | Mode | Nom complet | Critère de classement | Runs |
 | --- | --- | --- | --- |
 | POC | Power Of Calamity | **Depuis la refonte du 19/11/2026** : paliers ; classement au **Rank Score** = 1 000 000 × (palier − 1 + progression), les 2 équipes partageant les PV du boss (le score cumule les deux) ; égalité = ex aequo ; plus d'élément imposé (`docs/SPEC_ETAPE1.md` §9). Avant le 19/11 : dégâts max, total = meilleure run de l'équipe 1 + meilleure run de l'équipe 2 | Depuis le 19/11 : 1 (meilleur Rank Score de la semaine) ; avant : 2 (une par équipe) |
 | BOT | Battlefield Of Time | Chrono le plus court, **un seul classement par semaine** (le mode Challenge a été retiré du jeu en mai 2026, source forum Netmarble). Saison = 4 semaines de jeu (1 boss par semaine) + 1 semaine de calcul sans classement | 1 |
 | GB | Guild Boss | Rage Count (RC) le plus élevé. **Seules les runs filmées (écran Results) comptent.** Une run = un groupe (6 chasseurs, équipes A + B, + SJW) : total = meilleure run filmée de chaque groupe (toutes vidéos de la semaine). Égalité de RC : départage par la somme des dégâts. Le *Personal Record* sert seulement à identifier le groupe ; il ne classe jamais une run non filmée | 2 (une par groupe) |
-| HOTM | Hall Of The Monarchs | Points les plus élevés, **par porte** : un classement par porte (제 n관문 / 第n関門), pas de classement HOTM global | 1 par porte |
+| HOTM | Hall Of The Monarchs | **Arrêté définitivement le 28/11/2026** (§2). Ancienne règle, pour les archives : points, un classement par porte | — |
 
 - Reset de tous les modes : **jeudi 01h00, heure de Paris**.
 - Une **semaine** est identifiée par la date du jeudi où elle commence (ex. `2026-11-12`).
 - BOT, cycle de saison (dates **calculées**, à vérifier sur les vidéos) : S20 a commencé le 22/10/2026 ; semaine de calcul le 19/11/2026 ; S21 le 26/11/2026. Le titre `S<n>-<w>` (saison n, semaine w) sert de contrôle de semaine.
-- Rythme des boss (SPEC_ETAPE1 v24 §4.5, sources Netmarble via dotgg.gg, **à vérifier sur les données**) : BOT change chaque jeudi ; POC à chaque saison ; GB à la mise à jour régulière suivante (attributs variables changés chaque semaine) ; HOTM toutes les 2 semaines (3 portes, boss tirés au hasard).
+- Rythme des boss (SPEC_ETAPE1 v24 §4.5, sources Netmarble via dotgg.gg, **à vérifier sur les données**) : BOT change chaque jeudi ; POC à chaque saison ; GB à la mise à jour régulière suivante (attributs variables changés chaque semaine).
 - Éléments autorisés (ombres, successeur, Sung Jin Woo, compétences, bénédictions) : ils peuvent changer chaque semaine. Ils sont **déduits des écrans par le pipeline** et enregistrés dans `data/rules/<semaine>.json`, un bloc par classement (`poc`, `bot`, `gb`, `hotm`), avec source et date : `true` dès qu'une run sûre montre l'élément ; `false` seulement si au moins 5 runs sûres de 5 chaînes le montrent absent ; sinon `null` (= inconnu, jamais « interdit »).
 
 ## 4. Les étapes
@@ -51,7 +52,7 @@ Document de référence du projet. Toute discussion du Projet SLA s'y fie. En ca
 6. Vidéo sans score après le tri 4 → liste `rejected` (identifiant + raison), jamais réanalysée.
 
 Règles :
-- **Joueur = chaîne YouTube** (`channel_id`) ; le pseudo en jeu n'est pas la clé (au BOT, il est seulement noté dans `player_ingame`). Une ligne par joueur (HOTM : par porte), toutes vidéos de la semaine confondues.
+- **Joueur = chaîne YouTube** (`channel_id`) ; le pseudo en jeu n'est pas la clé (au BOT, il est seulement noté dans `player_ingame`). Une ligne par joueur, toutes vidéos de la semaine confondues.
 - Shorts inclus ; lives et rediffusions de live exclus.
 - POC (avant le 19/11/2026 seulement ; depuis : Rank Score, §3) et GB : somme des 2 meilleures runs distinctes, qui peuvent venir de **2 vidéos différentes** (POC : équipe 1 + équipe 2 ; GB : groupe 1 + groupe 2 ; jamais deux runs de la même équipe ou du même groupe). Une seule run `sur` : le joueur est **classé** (total = cette run, note « une seule run ») ; une 2e run trouvée plus tard dans la semaine, dans la même vidéo ou une autre, complète le total. Une seule run provisoire : `a_verifier`.
 - POC et GB, groupe/équipe inconnu : les runs sont distinguées par leur **élément** (`runs_detail[i].element` : light / fire / water / wind / dark, ou `null`, avec `element_source`), lu sur les chasseurs à l'écran, sinon dans le titre. Deux groupes/équipes n'ont jamais de chasseur commun (un chasseur commun → `a_verifier`). L'Excel affiche l'élément au lieu de « Groupe/Équipe 1/2 ». (L'ancienne règle « le groupe n'est jamais déduit du titre » est levée.)
@@ -63,16 +64,14 @@ Règles :
 - Champ `confiance` : `sur` ou `a_verifier`.
 - Compteurs animés (RC, Final Score) : seule la valeur finale compte ; les valeurs croissantes lues avant sont des étapes de l'animation (note « compteur animé »).
 - Seul l'écran RESULT donne un score sûr, **sans exception** (GB : le Personal Record identifie le groupe, il ne donne jamais le score classé).
-- POC et HOTM : le score retenu est « 이번 기록 » (score de cette run) de l'écran RESULT, **jamais** « 기존 기록 » (ancien record) ni le score de l'écran de composition.
+- POC : le score retenu est « 이번 기록 » (score de cette run) de l'écran RESULT, **jamais** « 기존 기록 » (ancien record) ni le score de l'écran de composition.
 - BOT : score = chrono de la dernière phase de l'écran `Results` (= chrono du bandeau du bas). Un seul classement (`bot.json`). Titre `S<n>-<w>` de la semaine précédente → `rejected` (`semaine_precedente`) ; vidéo BOT publiée pendant la semaine de calcul → `a_verifier`.
 - Contrôles de cohérence :
   - POC : total = SJW + successeur + 3 chasseurs (avant le 19/11) ; depuis la refonte : Rank Score = 1e6 × (palier − 1 + progression) et progression = Team 1 % + Team 2 % (SPEC_ETAPE1 §9) ;
-  - HOTM : total = 클리어 (clear) + 증명 보너스 (bonus de preuve) ;
   - BOT : phases cumulées croissantes, dernière phase = chrono du bandeau = `Play Time` tronqué à la seconde ;
   - GB : `Player's Score` + les 6 `Hunter Rank` = `Final Score` (écran Results).
 - Vidéo publiée moins de 3 h après le reset : note d'alerte « semaine précédente ? », jamais un rejet.
 - Légendes ajoutées par l'auteur de la vidéo (titre, texte incrusté) : au mieux un score provisoire, à confirmer sur l'écran RESULT.
-- HOTM : une ligne par joueur **et par porte** ; porte illisible (écran et titre) → `hotm-gate-inconnue.json`, jamais publié.
 - *Décisions d'Alexis à partir du 13/11/2026 (discussion 1 — Classements).* Détail complet : `docs/SPEC_ETAPE1.md` du dépôt (état actuel, fait foi ; historique dans `docs/archives/`).
 
 ### Étape 2 — Builds du top 10 (automatisée en grande partie)
@@ -94,7 +93,7 @@ Règles :
 
 ### Étape 3b — Theorycraft et vidéos
 
-- **4 vidéos par semaine**, une par mode, version **compte au maximum** uniquement (pas de F2P). Un guide POC, GB ou HOTM peut servir plusieurs semaines tant que le boss ne change pas ; la vidéo BOT est refaite chaque semaine et publiée en début de semaine.
+- **3 vidéos par semaine**, une par mode suivi, version **compte au maximum** uniquement (pas de F2P). Un guide POC ou GB peut servir plusieurs semaines tant que le boss ne change pas ; la vidéo BOT est refaite chaque semaine et publiée en début de semaine.
 - Alexis ne joue pas : vidéos **100 % schémas** (composition, stuff, rotation sur une timeline, timings, estimation des dégâts). Aucun extrait de gameplay de tiers.
 - Base de départ : les meilleures runs réelles du classement, améliorées ou remplacées par une équipe nouvelle.
 - **Rotation** : vient du relevé automatique `data/rotations/` (`docs/SPEC_ROTATION.md` : compétences détectées par le passage en recharge des boutons du HUD ; top 3, BOT d'abord ; passage PC, la vidéo étant déjà téléchargée). Aucun relevé manuel.
@@ -108,24 +107,24 @@ Règles :
 
 | Réseau | Format | Langue |
 | --- | --- | --- |
-| YouTube | 4 vidéos/semaine, une chaîne, 2 pistes audio (FR + EN) | FR + EN |
+| YouTube | 3 vidéos/semaine, une chaîne, 2 pistes audio (FR + EN) | FR + EN |
 | YouTube Shorts | Extraits verticaux | EN + sous-titres FR |
 | TikTok | Clips verticaux de **1 à 3 min** (rémunération > 1 min) | Voix EN + sous-titres FR |
 | Discord | Serveur communautaire, salon « classement de la semaine » | FR + EN |
-| X | Top 3 de chaque classement en image (HOTM : par porte), **chaque mercredi** | FR + EN |
+| X | Top 3 de chaque classement en image (POC, BOT, GB), **chaque mercredi** | FR + EN |
 | Instagram Reels | Optionnel, réutilise les verticaux | EN + sous-titres FR |
 
 - Même pseudo, même description, même photo de profil partout. Création des comptes : par Alexis.
 - Intro et outro ≤ 5 s, renvoyant vers les autres comptes et le site.
 - Classements publiés le **mercredi** (quasi définitifs avant le reset du jeudi 01h), **à partir du lancement** (section 2).
-- Risque connu : 4 vidéos/semaine au même gabarit = risque de démonétisation pour contenu « produit en série ». Chaque vidéo doit apporter une analyse réellement différente.
+- Risque connu : 3 vidéos/semaine au même gabarit = risque de démonétisation pour contenu « produit en série ». Chaque vidéo doit apporter une analyse réellement différente.
 - Seuils de monétisation : YouTube 1 000 abonnés + 4 000 h (8 000 h pour les candidatures dès le 01/02/2027) ou Shorts ; TikTok Creator Rewards 10 000 abonnés + 100 000 vues/30 j.
 - Cocher « contenu modifié ou synthétique » sur YouTube (voix clonée), par prudence.
 
 ### Étape 5 — Site web
 
 - Site statique sur GitHub Pages, FR + EN, qui lit les JSON du dépôt. Pages coupé et `noindex` jusqu'au lancement (section 2).
-- Pages : classement par mode (HOTM : **une page par porte**) → page build du joueur → fiches de la base de données → liens vers les réseaux (sur toutes les pages) → vidéos.
+- Pages : classement par mode (POC, BOT, GB) → page build du joueur → fiches de la base de données → liens vers les réseaux (sur toutes les pages) → vidéos.
 - Archives des semaines passées.
 - Crédit et lien vers la vidéo source de chaque joueur ; moyen de demander le retrait.
 - Mentions légales ; consentement cookies si statistiques ou publicité.
@@ -150,8 +149,7 @@ shadowledgerhq.github.io/
 │   ├── db/                  base de données du jeu (un JSON par catégorie) + patches.json
 │   ├── icons/<categorie>/   banque d'icônes
 │   ├── rules/<semaine>.json éléments autorisés par classement, déduits des écrans (true / false / null)
-│   ├── runs/<semaine>/      classements publiés : poc.json, gb.json, bot.json, hotm-gate-<n>.json
-│   │                        non publié (rank: null) : hotm-gate-inconnue.json
+│   ├── runs/<semaine>/      classements publiés : poc.json, gb.json, bot.json (hotm-gate-<n>.json : archive 2026-11-12 seulement)
 │   │                        internes : _lectures.json (lectures de score des tris, champ `regles`, entrée de classement.py), _videos.json (titre, chaîne, miniature, durée, mode_guess),
 │   │                        _meta.json (fenêtre, gel), _boss.json (boss déduit), _rapport.md (rapport du passage)
 │   ├── channels.json        chaînes YouTube suivies (channel_id, nom, playlist d'uploads, ajout manuel ou auto)
@@ -276,7 +274,7 @@ Repris par les discussions (plus demandé à Alexis, 15/11/2026) :
 
 ## 10. Points ouverts
 
-- Rythme des boss POC, GB et HOTM : réponse provisoire en section 3 (sources Netmarble via dotgg.gg), à confirmer sur les données par la discussion 1.
+- Rythme des boss POC et GB : réponse provisoire en section 3 (sources Netmarble via dotgg.gg), à confirmer sur les données par la discussion 1.
 - Poids du dépôt (`.git` 178 Mo au 26/11/2026) : tout est gardé ; on en reparle à 500 Mo.
 - Dépôt public avant le lancement : les données et docs sont lisibles par qui trouve le dépôt (non lié, non annoncé). Alternative si Alexis le veut : dépôt privé jusqu'au lancement (Actions gratuites dans la limite de 2 000 min/mois, à vérifier ; Pages indisponible en privé sur le plan gratuit ; la source GitHub du Projet devra être réautorisée).
 - Déclaration des revenus (statut micro-entrepreneur) quand les plateformes paieront.
