@@ -4429,5 +4429,32 @@
     "notes": [
       "palier et % du titre"
     ]
+  },
+  {
+    "video_id": "xyMfaWbZVgs",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "channel_title": "RaidenShadow",
+    "published_at": "2026-11-28T13:30:48Z",
+    "lang": "pt-BR",
+    "mode": "gb",
+    "regles": 19,
+    "bot_season_week": null,
+    "player_ingame": null,
+    "damage": 11100000000000,
+    "gate": null,
+    "hunter_mode": null,
+    "t": null,
+    "stage": null,
+    "team": null,
+    "score": 167,
+    "score_source": "titre",
+    "exact": false,
+    "confidence": "a_verifier",
+    "detail": {
+      "damage_exact": false
+    },
+    "notes": [
+      "score provisoire (titre) : Rage: 167"
+    ]
   }
 ]

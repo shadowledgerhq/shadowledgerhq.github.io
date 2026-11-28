@@ -1,4 +1,8 @@
-# Rapport — semaine 2026-11-26 — passage pc-daily — 2026-11-28 15:51 (Paris)
+# Rapport — semaine 2026-11-26 — passage daily — 2026-11-28 18:36 (Paris)
+
+Dernier passage du PC (`_rapport_pc.md`, recopié) :
+
+## Passage pc-daily — 2026-11-28 15:51 (Paris)
 
 - Top 10 couvert : non (18 vidéos candidates au top 10 restantes)
 - **Passage complet : non** (anti-bot YouTube (passage incomplet)
@@ -18,7 +22,9 @@
 - Résumé GB : MowlbyeKBJo · Heartful Harry · Results lu (210-269 s) · 203 RC à vérifier · score provisoire (titre) : 203 RC
 - Résumé GB : … et 2 autre(s) vidéo(s)
 
-- Semaine : 43 en cours (dont 31 pour le PC), 13 terminée(s), 14 rejetée(s)
+- Quota : 1307 unités
+- Ce passage : 9 vidéo(s) nouvelle(s), 1 rejetée(s), 1 score(s) provisoire(s)
+- Semaine : 52 en cours (dont 40 pour le PC), 13 terminée(s), 15 rejetée(s)
 - Classements : gb 10, poc 2
 
 ## À vérifier (11)
@@ -45,11 +51,4 @@
 - rien
 
 ## Erreurs et alertes
-- 10 vidéo(s) reportée(s) au prochain passage (limite 8)
-- f9amFMYyuZQ : 429 / anti-bot YouTube, reportée au prochain passage
-- 429 / anti-bot YouTube : sous-titres arrêtés pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h) ; les images continuent
-- 7 vidéo(s) reportée(s) pour les images (limite 25)
-- Pj6QzXQ81jQ : 429 / anti-bot YouTube (téléchargement), reportée au prochain passage
-- 429 / anti-bot YouTube : images arrêtées pour ce passage, les vidéos restantes sont reportées (réessayer dans 1 à 2 h)
-- 43 vidéo(s) restent en_cours (tris 3-4 : OCR sur l'image entière, recadrages [EN ATTENTE])
-- passage incomplet : anti-bot ; relance : aucune (c'était déjà la relance) : prochain passage normal
+- tri 1 relu (règles v19) : 0 vidéo(s) modifiée(s) sur 1
