@@ -11,7 +11,7 @@ Le contexte complet (décisions, étapes, calendrier) est dans le document CONTE
 
 | Terme | Sens |
 | --- | --- |
-| POC | Power Of Calamity. Depuis la refonte du 19/11/2026 : paliers, classement au **Rank Score** = 1 000 000 × (palier − 1 + progression), les 2 équipes partagent les PV du boss (le score cumule les deux), égalité = ex aequo, plus d'élément imposé (SPEC_ETAPE1 §9). Avant : dégâts max, une run = une équipe, total = équipe 1 + équipe 2. |
+| POC | Power Of Calamity. Depuis la refonte du 19/11/2026 : paliers, Rank Score = 1 000 000 × (palier − 1 + progression), les 2 équipes partagent les PV du boss (le score cumule les deux) ; ordre (28/11/2026) : palier, puis Goal Progress, puis Rank Score, égalité sur les trois = ex aequo ; score d'une équipe = son Total Contribution (jamais un critère) ; plus d'élément imposé (SPEC_ETAPE1 §9). Avant : dégâts max, une run = une équipe, total = équipe 1 + équipe 2. |
 | BOT | Battlefield Of Time. Chrono le plus court (secondes) = dernière phase de l'écran `Results`. **Un seul classement** par semaine (Challenge retiré du jeu en mai 2026). Saison = 4 semaines de jeu (1 boss/semaine) + 1 semaine de calcul sans classement ; semaine de saison notée `S<n>-<w>`. |
 | GB | Guild Boss. Classement : Rage Count le plus élevé ; **seules les runs filmées (écran Results) comptent** ; une run = un groupe (6 chasseurs + SJW), total = meilleure run filmée de chaque groupe ; égalité départagée par la somme des dégâts. Le `Personal Record` sert seulement à identifier le groupe. |
 | HOTM | Hall Of The Monarchs. **Arrêté définitivement le 28/11/2026** (décision d'Alexis) : plus de classement, builds, vidéo, page ni post ; vidéo HOTM → `rejected` (`mode_arrete`). Données de 2026-11-12 gardées en archive. |
@@ -173,7 +173,7 @@ Une section vide s'écrit `- rien`. Ne pas recopier l'historique : seulement l'�
 - [ ] GB : chaque run classée a un écran Results filmé. POC et GB : `element` renseigné ou `null` ; aucun chasseur commun entre les deux runs d'une ligne (GB ; POC avant le 19/11 seulement : depuis, un chasseur commun aux 2 équipes = note seulement).
 - [ ] POC avant le 19/11 : chaque run = SJW + successeur + 3 chasseurs.
 - [ ] BOT : phases croissantes, dernière phase = chrono du bandeau = `Play Time`. GB : `Player's Score` + 6 `Hunter Rank` = `Final Score` ; `Total Rage Count` = groupe 1 + groupe 2.
-- [ ] BOT trié du plus court au plus long ; les autres du plus haut au plus bas (GB : égalité de RC départagée par les dégâts).
+- [ ] BOT trié du plus court au plus long ; POC (depuis le 19/11) : palier, puis Goal Progress, puis Rank Score ; les autres du plus haut au plus bas (GB : égalité de RC départagée par les dégâts).
 - [ ] BOT et GB : un écran au contrôle échoué ne donne jamais un score ; chrono incomplet = intervalle, phases incomplètes = borne basse, jamais un chrono. GB : un dégât non contrôlé ne départage jamais une égalité de RC. GB : un Personal Record contrôlé (Total Rage Count = groupe 1 + groupe 2) prime sur un Results **filmé** de la même vidéo dont le RC est en conflit : il confirme le RC de ce groupe ; il ne classe jamais une run non filmée (SPEC_ETAPE1 §4.7).
 - [ ] Rejets : une actualité n'est rejetée que sans écran de jeu ; un rejet sur le titre seulement pour un autre jeu.
 - [ ] Les scores `exact: false` ou `a_verifier` sont signalés.
