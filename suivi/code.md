@@ -1,4 +1,4 @@
-# SUIVI — 8 Code — 2026-11-28 (fin session 20, message 15)
+# SUIVI — 8 Code — 2026-11-28 (session 22)
 ## Fait
 - Détail archivé : `suivi/archives/code_2026-11-15_a_20.md`, `code_2026-11-22_a_26.md`, `code_2026-11-26_a_27.md` (sessions 17-19 : specs « état actuel » v42, horaires PC 19:30/21:30/23:30, gel 2026-11-19, midi v43, site privé).
 - (27/11) `data/runs/index.json` (`donnees.mettre_a_jour_index`) ; Pages coupé (site 404) ; `pipeline/post_x.py` (Réseaux ; pas d'image sans ligne sûre) ; rendu vidéo dans `pipeline/video/` ; rotation : « phases incomplètes ».
@@ -15,9 +15,10 @@
 - Passages PC du 27/11 avant correctif : 0 vidéo traitée, 48 `en_cours`. Bilan v39/v40 (BOITE §1) et 28 rejets « mecharashi » (2026-11-12) : à faire après le prochain passage PC réussi.
 - (28/11) v45 POC codée (palier, Goal Progress, Rank Score). Mes messages en attente : Classements (v45 codée, §1) ; Prompt (réponse anti-bot 28/11, BOITE §6) ; Classements (v43 codée, BOITE §1), Builds (v10, BOITE §2), Tâche planifiée (BOITE §7), Réseaux/Theorycraft/Site (§3-5).
 ## À faire
-- **SPEC v46 partie ÉCRAN coréen** (poc_palier.repere/lire : ancres 기여도/랭킹 점수/달성률/1팀·2팀, contrôle (d) reste + Goal = 100 %, tolérance 총/충, 여/어) : à coder ; test sur `docs/essais/ocr/libelles_inconnus/Pj6QzXQ81jQ_170.jpg` (tesseract kor absent ici → à confirmer sur le PC). Texte v46 codé.
+- (28/11, s.22) **SPEC v46 écran coréen codée** (`poc_palier`, `test_poc_palier_coreen_v46.py`, faux OCR) ; tesseract kor réel à confirmer sur le PC, puis relire Pj6QzXQ81jQ. `pc.py` : `pc_planif.py` extrait (relances, veille). 537 tests OK, 1 échec : `test_video_script_md` (exemple GB de Théorycraft sans `season_week`).
+- **À coder** : Builds SPEC_ETAPE2 v11 (HOTM retiré de etape2.json/code/PowerPoint, chasseur commun POC = note, top 10 mixte POC) ; Théorycraft gabarit vidéo v2 (`tableau`, `barres`, `run_index` dans `pipeline/video/rendu.py`).
 - Relectures posées jamais faites (`3y8yRhcSq4Y`…), gel de 2026-11-26 le 03/12 01:15 (`pc.geler`), relance PC des builds 2026-11-12 (Alexis), vidéos verticales 608x1080 (accord donné, à régler sur une vraie vidéo).
-- `pc.py` (2000+ lignes) : le scinder à la prochaine spec qui le touche.
+- `pc.py` (~2190 lignes) : scission à poursuivre (rapports/rejets, lecture d'images).
 ## Besoin d'Alexis
 - Attendre 1 à 2 h puis relancer `outils-pc\5_test_antibot.bat` (Firefox ouvert sur YouTube, connecté), puis `3_passage_complet.bat`.
 ## Demandes de modif du skill
