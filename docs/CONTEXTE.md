@@ -168,7 +168,7 @@ shadowledgerhq.github.io/
 ├── videos/<semaine>/<mode>/ scripts FR/EN, storyboard
 ├── site/                    site statique
 ├── suivi/                   un SUIVI.md par discussion (anciennes lignes « Fait » dans suivi/archives/)
-└── .github/workflows/       daily.yml (20h), weekly.yml (jeudi 01h), auto-merge-claude.yml, deployer-site.yml (manuel)…
+└── .github/workflows/       daily.yml (18h), weekly.yml (jeudi 01h), auto-merge-claude.yml, deployer-site.yml (manuel)…
 ```
 
 Format de `data/rotations/…/<video_id>.json` : voir `docs/SPEC_ROTATION.md` §3 (fait foi ; un objet par run dans `runs[]`, événements horodatés `t` / `t_run`).
