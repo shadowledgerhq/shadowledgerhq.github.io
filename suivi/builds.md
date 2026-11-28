@@ -9,7 +9,7 @@
 - Prochain passage PC : vérifier la lecture de l'équipe (1팀 / Team 1 / Team 2, test 23) et les images écartées pour fondu
 - Recontrôler les builds 12/11 après relance (BOT, POC ; GB : composition non décrite)
 - Builds POC 19/11 (refonte) : 2 builds par ligne, un par équipe, à contrôler au premier passage
-- Zones HOTM (avec/sans SJW), GB, POC subjugation : dès que auto/<mode>/ a des images
+- Zones GB, POC subjugation : dès que auto/<mode>/ a des images
 - Recaler min_corr_remanentes sur des vidéos 1080p
 ## Besoin d'Alexis
 - Lancer la relance PC des builds (py -3 pipeline\pc.py builds --semaine 2026-11-12)
