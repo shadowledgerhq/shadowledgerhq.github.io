@@ -1717,7 +1717,8 @@ def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper
             return {"week": week, "traitees": 0, "alertes": ["relance annulée : heure manquée"], "reporte": True,
                     "complet": False, "restantes": 0, "a_traiter": 0, "bloquantes": []}
     # v42.1 : la répétition de 01:15 (après minuit) n'attend pas de passage GitHub « du jour » : celui de la veille au soir est déjà fait.
-    if (passage == "daily" and lancement != "manuel" and instant.astimezone(PARIS).hour >= 6
+    # 28/11 : idem avant 18:00 (le passage GitHub du jour n'a lieu qu'à partir de 18:00 : une relance de jour, ex. 12:46, ne l'attend pas).
+    if (passage == "daily" and lancement != "manuel" and instant.astimezone(PARIS).hour >= 18
             and meta.get("passages", {}).get("daily") != jour):
         return passage_reporte(d, week, passage, instant, jour, meta, lancement, git, planifier, fichier_report)      # v42 : le passage GitHub du jour n'est pas fait
     pc_cfg = config["pc"]

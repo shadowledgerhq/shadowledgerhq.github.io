@@ -79,3 +79,17 @@ def test_repetition_apres_minuit_jamais_reportee():
         r = pc.lancer("daily", nuit, d, config_sans_images(), FauxOutils({v: VTT for v in "abcd"}), planifie=True,
                       fichier_report=Path(tmp) / "report.json", planifier=lambda quand, bat: None)
         assert not r.get("reporte")
+
+
+def test_relance_de_jour_avant_18h_jamais_reportee():
+    """28/11 : une relance à 12:46 Paris n'attend pas le passage GitHub de 18:00 ; à 19:30 il est exigé."""
+    with tempfile.TemporaryDirectory() as tmp:
+        d = monde(tmp)                                       # aucun passage GitHub du jour
+        midi = INSTANT.replace(hour=11, minute=46) + timedelta(days=1)      # 12:46 Paris le lendemain
+        r = pc.lancer("daily", midi, d, config_sans_images(), FauxOutils({v: VTT for v in "abcd"}), planifie=True,
+                      fichier_report=Path(tmp) / "report.json", planifier=lambda quand, bat: None)
+        assert not r.get("reporte")
+        soir = INSTANT.replace(hour=18, minute=30) + timedelta(days=1)      # 19:30 Paris
+        r = pc.lancer("daily", soir, d, config_sans_images(), FauxOutils({}), planifie=True,
+                      fichier_report=Path(tmp) / "report2.json", planifier=lambda quand, bat: None)
+        assert r.get("reporte")
