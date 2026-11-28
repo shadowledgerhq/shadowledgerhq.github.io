@@ -211,3 +211,24 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - Résumé GB : Pj6QzXQ81jQ · Willian · Results lu (180-239 s) · 280 RC à vérifier · RC discordant écarté : 220 (t=185)
 - Résumé GB : 8rDrTUPGn5w · Apm Gaming · Results lu (221-247 s) · 36 RC à vérifier · conflit de lecture : hunter_rank_1
 - Résumé GB : … et 3 autre(s) vidéo(s)
+
+<!-- passage-pc pc-daily 2026-11-28T14:51:04.934915+00:00 -->
+## Passage pc-daily — 2026-11-28 15:51 (Paris)
+
+- Top 10 couvert : non (18 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 0 · en_cours restantes : 43 (dont 31 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Lancement : relance
+- Durée du passage : 0 min
+- Relance automatique : aucune (c'était déjà la relance) : prochain passage normal
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
+- Sous-titres en attente : 18 avant la règle → 18 après (13 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Type : relance automatique (ne compte pas pour le critère de gel n° 3)
+- Résumé GB : 9y17tXt160Q · SlayOnLow · Results lu (244-268 s) · 183 RC à vérifier · water · conflit de lecture : player_score
+- Résumé GB : RqEV5DJVPxM · Eden(이든) · Results lu (200-285 s) · 178 RC à vérifier · fire · contrôle GB : somme 11284203054077 ≠ Final Score 21364972852753
+- Résumé GB : yDUAJ8PQqw8 · aucun Results lu · pas classée
+- Résumé GB : 8rDrTUPGn5w · Apm Gaming · Results lu (221-247 s) · 36 RC à vérifier · conflit de lecture : hunter_rank_1
+- Résumé GB : MowlbyeKBJo · Heartful Harry · Results lu (210-269 s) · 203 RC à vérifier · score provisoire (titre) : 203 RC
+- Résumé GB : … et 2 autre(s) vidéo(s)
