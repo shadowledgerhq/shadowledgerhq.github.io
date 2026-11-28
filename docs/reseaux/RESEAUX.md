@@ -78,7 +78,7 @@ Génération : script ffmpeg à écrire par la discussion 8 quand la 1re vidéo 
 
 **Contenu** : 3 images dans un seul post — POC, BOT, GB (HOTM arrêté définitivement, décision d'Alexis du 28/11/2026). Gabarit : `gabarit-x-mode.svg` (1600 × 900, champs `{{…}}`), aperçu `apercu-post-x.png` (données fictives).
 
-**Données** : seulement les lignes `confidence: sur` avec un `rank` (data/runs/<semaine>/). Moins de 3 lignes sûres → « — » à la place. Nom affiché = nom de la chaîne YouTube (crédit). Unités : POC = Rank Score (SPEC_ETAPE1 v42 §9), BOT = chrono `m:ss.mmm`, GB = RC. Pas de score `a_verifier` dans l'image.
+**Données** : seulement les lignes `confidence: sur` avec un `rank` (data/runs/<semaine>/). Moins de 3 lignes sûres → « — » à la place. Nom affiché = nom de la chaîne YouTube (crédit). Unités : POC = « Palier N · X,X % » (palier atteint et Goal Progress, ordre du classement du 28/11, CONTEXTE §3), Rank Score en petit à côté ; BOT = chrono `m:ss.mmm`, GB = RC. Pas de score `a_verifier` dans l'image.
 
 **Texte** (216 car. sur 280 ; URL comptée 23) :
 ```
@@ -104,7 +104,7 @@ Génération des images : `python3 pipeline/post_x.py [semaine]` (Code, 27/11) �
 | Mardi | 18h00 | Vidéo GB | YouTube |
 | Mercredi | 23h45 | Post X top 3 + Discord | X, Discord |
 
-Mercredi 23h45 (Tâche planifiée, 27/11) : un passage PC dure jusqu'à ~115 min et celui du soir finit au plus tard vers 23h25 ; contrôle à 23h30, post à 23h45 avec l'état du classement à l'heure du contrôle, avant le reset de 01h. Contrôle en erreur → post retenu, Alexis prévenu. Heures de vidéo = choix par défaut, à ajuster selon les statistiques après 4 semaines.
+Mercredi 23h45 (Tâche planifiée, 27-28/11) : contrôle à 23h30, post à 23h45 avec l'état du classement à 23h30 ; le passage PC de 23h30 continue après le post, avant le reset de 01h. Contrôle en erreur → post retenu, Alexis prévenu. Heures de vidéo = choix par défaut, à ajuster selon les statistiques après 4 semaines.
 
 ## 7. Jour du lancement — ordre de pose
 
