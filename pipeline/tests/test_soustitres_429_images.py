@@ -63,3 +63,8 @@ if __name__ == "__main__":
     test_sous_titres_429_puis_images_traitees()
     test_telechargement_429_arrete_les_images()
     print("OK")
+
+
+def test_empecher_veille_sans_effet_hors_windows():
+    import os
+    assert pc.empecher_veille() is False or os.name == "nt"

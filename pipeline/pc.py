@@ -1675,6 +1675,20 @@ def passage_reporte(d, week, passage, instant, jour, meta, lancement, git, plani
             "complet": False, "restantes": 0, "a_traiter": 0, "bloquantes": []}
 
 
+def empecher_veille():
+    """28/11 : le passage du 27/11 a duré 666 min (PC en veille au milieu d'une vidéo : l'horloge continue, le budget de 100 min ne
+    s'applique qu'au réveil). Windows : demande au système de ne pas se mettre en veille tant que le processus tourne (l'écran peut
+    s'éteindre) ; levée automatiquement à la fin du processus. Sans effet ailleurs. Retourne True si la demande est faite."""
+    if os.name != "nt":
+        return False
+    try:
+        import ctypes
+        ES_CONTINUOUS, ES_SYSTEM_REQUIRED = 0x80000000, 0x00000001
+        return bool(ctypes.windll.kernel32.SetThreadExecutionState(ES_CONTINUOUS | ES_SYSTEM_REQUIRED))
+    except Exception:
+        return False
+
+
 def lancer(passage, instant, d=None, config=None, outils=None, git=None, whisper=False, maximum=None, images=None,
            journal=None, dormir=None, horloge=time.monotonic, ocr_debug=None, seulement=None, refaire=False,
            relance=False, planifier=None, fichier_relance=None, planifie=False, fichier_report=None):
@@ -2153,6 +2167,7 @@ if __name__ == "__main__":
         sys.exit(3)
     import atexit
     atexit.register(verrou.liberer)
+    empecher_veille()
     if verrou.perime and a.passage in ("daily", "weekly") and (verrou.perime.get("passage") or "").split(" ")[0] in ("daily", "weekly"):
         try:      # v26 : le passage précédent est mort sans rien écrire (PC éteint, fenêtre fermée, arrêt brutal) : on le dit
             debut = verrou.perime.get("debut")
