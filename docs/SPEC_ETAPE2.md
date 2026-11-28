@@ -1,15 +1,15 @@
 # Spécification — Étape 2 : builds du top 10 et PowerPoint
 
-**Version 10 — 27/11/2026 — état actuel.** (v10 : zones POC des 5 onglets validées sur les images auto 1920×1080, zone du numéro d'équipe, images d'une seule équipe par build ; v9 : une ligne classée rang 1-10 garde toujours son build ; v8 : top 10 mixte, champ `spec` = version de la spec.) Discussion 2 (Builds). Destinataire : discussion 8 (Code). Ce document donne les règles **en vigueur**, sans l'historique des décisions ; l'historique complet (v1 à v7, essais, captures) est dans `docs/archives/SPEC_ETAPE2_historique.md` (copie intacte). Un « (vN) » après une règle = version qui l'a introduite.
-Sources des positions et écrans : captures BOT et POC (client JA, `docs/essais/composition/*_ja.png`), capture HOTM de SJW (13/11/2026), images de composition extraites automatiquement (`docs/essais/composition/auto/`).
-Références : `docs/CONTEXTE.md` §4 (étape 2), `docs/SPEC_ETAPE1.md`, `docs/REFERENCE_ECRANS_*.md`, `data/db/_schema.md`, `data/rules/<semaine>.json`, `pipeline/sjw.py`, `pipeline/hotm_ecran.py`, `pipeline/export_excel.py`.
+**Version 11 — 28/11/2026 — état actuel.** (v11 : HOTM arrêté définitivement, décision d'Alexis du 28/11/2026 : mode, zones, onglets `hotm`/`hotm_sans_sjw`, preuve d'entraînement et tests retirés, numéros des tests gardés ; POC refonte : chasseur commun aux 2 équipes = note seulement ; v10 : zones POC des 5 onglets validées sur les images auto 1920×1080, zone du numéro d'équipe, images d'une seule équipe par build ; v9 : une ligne classée rang 1-10 garde toujours son build ; v8 : top 10 mixte, champ `spec` = version de la spec.) Discussion 2 (Builds). Destinataire : discussion 8 (Code). Ce document donne les règles **en vigueur**, sans l'historique des décisions ; l'historique complet (v1 à v7, essais, captures) est dans `docs/archives/SPEC_ETAPE2_historique.md` (copie intacte). Un « (vN) » après une règle = version qui l'a introduite.
+Sources des positions et écrans : captures BOT et POC (client JA, `docs/essais/composition/*_ja.png`), capture de SJW du 13/11/2026, images de composition extraites automatiquement (`docs/essais/composition/auto/`).
+Références : `docs/CONTEXTE.md` §4 (étape 2), `docs/SPEC_ETAPE1.md`, `docs/REFERENCE_ECRANS_*.md`, `data/db/_schema.md`, `data/rules/<semaine>.json`, `pipeline/sjw.py`, `pipeline/export_excel.py`.
 Marqueurs (mêmes sens qu'à l'étape 1) : **[À CONFIRMER]** = hypothèse codée en paramètre dans `pipeline/config/etape2.json` ; **[EN ATTENTE]** = info manquante, à coder en « non géré » propre (élément `null` + note, jamais une valeur inventée).
 
 ---
 
 ## 0. Principes
 
-- **Builds analysés** : les lignes `rank` 1 à 10 (`confidence: sur`) de `data/runs/<semaine>/<mode>.json` (`poc`, `bot`, `gb`, `hotm-gate-<n>`). Une ligne `rank: null` n'a pas de build.
+- **Builds analysés** : les lignes `rank` 1 à 10 (`confidence: sur`) de `data/runs/<semaine>/<mode>.json` (`poc`, `bot`, `gb`). Une ligne `rank: null` n'a pas de build.
 - **Top 10 mixte (v8)** : les builds portent sur les `config.top` premières lignes du mode dans l'ordre du classement **en mêlant** les lignes classées (`rank`) et les lignes `a_verifier` (score provisoire), triées ensemble par score (BOT du plus court au plus long, autres du plus haut au plus bas). Une ligne `a_verifier` reçoit `"line_provisional": true`, `rank: null`, `provisional_rank` (sa place dans cet ordre), `confidence: a_verifier`, note `ligne non classée (score provisoire)` ; PowerPoint : bandeau `CLASSEMENT PROVISOIRE` et rang `~n`. **Ligne classée prioritaire (v9)** : toute ligne `rank` 1 à 10 a toujours son build, même si des lignes provisoires de meilleur score la repoussent au-delà de la 10e place ; le top 10 mixte s'y ajoute (au plus 10 + nombre de lignes classées ainsi repoussées). Un build provisoire disparaît seulement si sa ligne sort de ce top 10 ou est rejetée — plus quand une autre ligne du mode devient classée (remplace la règle v4). Cas : BOT 2026-11-12, top 3 provisoire YSJFLd_OXww, a-923ClD9Rc, znpyCNWml3I devant la seule ligne classée Bi5TrN5d1_E.
 - **Un build = une run** : un objet de `runs_detail[i]` donne un build `<run_id>-<i+1>.json`. POC et GB : 2 runs = 2 builds, éventuellement dans 2 vidéos différentes.
 - **Où chercher** : dans la vidéo `runs_detail[i].video_id`, l'écran de composition (onglets) **avant** l'écran RESULT de la run (`t`). Si la vidéo contient 2 runs, on prend la composition située entre le RESULT précédent et celui de la run.
@@ -23,37 +23,34 @@ Marqueurs (mêmes sens qu'à l'étape 1) : **[À CONFIRMER]** = hypothèse codé
 ### 1.1 Éléments attendus
 « oui » = attendu et compté dans le statut ; « règle » = dépend de `data/rules/<semaine>.json` ; « fac. » = facultatif (affiché s'il est trouvé, jamais compté) ; « — » = sans objet (clé `null`, pas de slide).
 
-| Élément | Quantité | POC | BOT | GB | HOTM avec SJW | HOTM sans SJW |
-| --- | --- | --- | --- | --- | --- | --- |
-| SJW présent | 1 | règle | règle | règle | oui | — |
-| Armes de SJW | 2 | règle | règle | règle | oui | — |
-| Artefacts de SJW | 8 pièces | règle | règle | règle | oui | — |
-| Noyaux de SJW | 3 | règle | règle | règle | oui | — |
-| Stats de SJW | 10 + 5 | fac. | fac. | fac. | fac. | — |
-| Compétences de SJW | 6 emplacements | règle | règle | règle | oui | — |
-| Bénédictions | 8 | règle | règle | règle | oui | — |
-| Chasseurs | 3 (GB : 6) | oui | oui | oui (A1-3, B1-3) | oui | oui |
-| Arme de chaque chasseur | 1 par chasseur | oui | oui | oui | oui | oui |
-| Artefacts | 8 pièces par chasseur | oui | oui | oui | oui | oui |
-| Noyaux | 3 par chasseur | oui | oui | oui | oui | oui |
-| Stats | 10 + 5 par chasseur | fac. | fac. | fac. | fac. | fac. |
-| Ombres | 3 | règle | règle | règle | oui | oui |
-| Successeur | 1 | règle | règle | règle | oui | oui |
-| Soutien de subjugation | 3 choix (1 par colonne) | fac. | — | — | — | — |
-| Preuve d'entraînement | niveau + handicaps | — | — | — | fac. | fac. |
-| Stats du successeur | 10 | fac. | fac. | fac. | fac. | fac. |
-| Statues (v3) | 5 statues × 3 options | fac. | fac. | fac. | fac. | fac. |
-| Gemmes (v3) | 5 couleurs + bonus | fac. | fac. | fac. | fac. | fac. |
+| Élément | Quantité | POC | BOT | GB |
+| --- | --- | --- | --- | --- |
+| SJW présent | 1 | règle | règle | règle |
+| Armes de SJW | 2 | règle | règle | règle |
+| Artefacts de SJW | 8 pièces | règle | règle | règle |
+| Noyaux de SJW | 3 | règle | règle | règle |
+| Stats de SJW | 10 + 5 | fac. | fac. | fac. |
+| Compétences de SJW | 6 emplacements | règle | règle | règle |
+| Bénédictions | 8 | règle | règle | règle |
+| Chasseurs | 3 (GB : 6) | oui | oui | oui (A1-3, B1-3) |
+| Arme de chaque chasseur | 1 par chasseur | oui | oui | oui |
+| Artefacts | 8 pièces par chasseur | oui | oui | oui |
+| Noyaux | 3 par chasseur | oui | oui | oui |
+| Stats | 10 + 5 par chasseur | fac. | fac. | fac. |
+| Ombres | 3 | règle | règle | règle |
+| Successeur | 1 | règle | règle | règle |
+| Soutien de subjugation | 3 choix (1 par colonne) | fac. | — | — |
+| Stats du successeur | 10 | fac. | fac. | fac. |
+| Statues (v3) | 5 statues × 3 options | fac. | fac. | fac. |
+| Gemmes (v3) | 5 couleurs + bonus | fac. | fac. | fac. |
 
 - **Règles de la semaine** : SJW, compétences et bénédictions sont attendus si `rules.<mode>.sjw` (et `sjw_skills`, `blessings`) valent `true`. Ombres : `shadows`. Successeur : `successor`. Bloc du mode `null` → **[EN ATTENTE]** (§5). Pour le BOT, lire `modes.bot` (v10 de l'étape 1 : un seul classement).
-- **HOTM** : `hunter_mode` vient de la run, c'est le booléen déjà codé par `hotm_ecran.py`. `false` = avec SJW, `true` = sans SJW, `null` = inconnu. On ne cherche SJW que si `rules.hotm.sjw == true` **et** `hunter_mode == false`.
-  - Si `hunter_mode` vaut `null`, on le déduit de la composition : 4 onglets sans bénédictions → `true` ; 5 onglets, ou un personnage à gauche des 3 chasseurs → `false`. Note : `hunter_mode déduit`. Sinon il reste `null` (§2.2).
 - **Stats** : les 15 lignes `required: true` de `data/db/stats.json`, soit 10 stats et 5 attributs. La puissance de combat est facultative (info). Elles sont lisibles seulement si l'écran de stats du personnage est filmé (`REFERENCE_ECRANS_STATS.md`). **Décision d'Alexis (v2, 14/11/2026) : facultatives**, `config.stats_obligatoires = false`. Elles sont cherchées et affichées si l'écran est filmé, jamais comptées dans le statut. La puissance de combat de chaque personnage (onglet personnages) n'est pas une stat du build. **v3 : confirmé, toujours facultatives**, maintenant que l'écran de stats est connu (§1.4) : il n'apparaît que si le joueur l'ouvre.
 - **Statues et gemmes (v3)** : **valables dans tous les modes** (confirmé par Alexis le 15/11/2026). Lues dans tout mode si l'écran est filmé, toujours facultatives, jamais comptées dans le statut.
 - **Hors build pour l'instant** : les 8 icônes de compétences de chaque chasseur (décision d'Alexis v2 : « plus tard »), les stats principales et secondaires des pièces d'artefact, et le sens des pastilles de set. Voir §5.
 
 ### 1.2 Format JSON — `data/builds/<semaine>/<mode>/<run_id>-<n>.json`
-Ce format remplace l'exemple du skill §3 (« Build »). Pour le HOTM, `<mode>` = `hotm-gate-<n>`.
+Ce format remplace l'exemple du skill §3 (« Build »).
 
 ```json
 {
@@ -63,7 +60,6 @@ Ce format remplace l'exemple du skill §3 (« Build »). Pour le HOTM, `<mode>` 
   "week": "2026-11-12",
   "mode": "poc",
   "gate": null,
-  "hunter_mode": null,
   "rank": 1,
   "line_provisional": false,
   "provisional_rank": null,
@@ -93,14 +89,13 @@ Ce format remplace l'exemple du skill §3 (« Build »). Pour le HOTM, `<mode>` 
   "shadows": [{"position": 1, "id": "…"}],
   "successor": {"id": "…", "category": "successors | remnant_powers", "level": null, "stats": {}},
   "subjugation_support": null,
-  "proof": null,
   "statues": [{"position": 1, "grade": "D", "options": [{"text_read": "…", "lang": "ja", "grade": "S", "id": null}]}],
   "gems": {"colors": [{"position": 1, "color": null, "level": 10}],
            "bonuses": [{"stat": "attack", "unit": "percent", "value": 12.0}]},
   "found": {"sjw": true, "sjw_weapons": true, "sjw_artifacts": false, "sjw_cores": true, "sjw_stats": false,
             "sjw_skills": true, "blessings": true, "hunters": true, "weapons": true, "artifacts": false,
             "cores": true, "stats": false, "shadows": true, "successor": true,
-            "subjugation_support": null, "proof": null,
+            "subjugation_support": null,
             "successor_stats": null, "statues": null, "gems": null},
   "counts": {"artifacts": "22/24", "cores": "9/9"},
   "found_at": {"hunters": {"tri": "tri-3", "t": [4, 6]}},
@@ -111,7 +106,7 @@ Ce format remplace l'exemple du skill §3 (« Build »). Pour le HOTM, `<mode>` 
 ```
 
 Règles du format :
-- **Identifiants** = `id` de la base (`hunters`, `weapons`, `artifact_sets`, `cores`, `shadows`, `successors`, `sjw_skills`, `blessings`, `subjugation_support`, `proof_modifiers`). Un `id` absent de la base est une erreur de contrôle.
+- **Identifiants** = `id` de la base (`hunters`, `weapons`, `artifact_sets`, `cores`, `shadows`, `successors`, `sjw_skills`, `blessings`, `subjugation_support`). Un `id` absent de la base est une erreur de contrôle.
 - **Emplacements d'artefact** (8, dans cet ordre) : `helmet`, `chestplate`, `gloves`, `boots`, `necklace`, `bracelet`, `ring`, `earrings`. La pièce est reconnue par son icône `data/icons/artifact_pieces/<set_id>--<slot>.png`, d'où `set_id`. Un emplacement vide à l'écran donne `"set_id": null` avec la note `emplacement vide`, ce qui est différent de « non reconnu ».
 - **Noyaux** : emplacements `mind`, `body`, `spirit` (champ `slot` de `cores.json`). Niveau lu si visible (`25`), sinon `null`.
 - **Compétences de SJW** : 6 emplacements, déjà codés dans `pipeline/sjw.py` (`skill_1`, `skill_2`, `ultimate`, `qte_1`, `qte_2`, `qte_3`) ; `level` vaut `null` si aucun niveau n'est affiché.
@@ -121,7 +116,6 @@ Règles du format :
 - **GB** : `hunters` contient 6 entrées, `team_slot` vaut `"A1"` à `"B3"`, et `team` = groupe 1/2 de la run (repris de l'étape 1).
 - **`set_bonuses`** : calculé par le code à partir des 8 pièces (nombre de pièces par set), jamais lu. Les paliers d'effet (2/4/8) viennent de `artifact_sets.json`.
 - **POC** : `subjugation_support` = liste de 3 `id` (colonnes 1 à 3) ou `null`.
-- **HOTM** : `proof` = `{"level": 931, "modifiers": [{"id": "…", "level": 5}]}` ou `null`. Contrôle : somme des coûts = `level` ; sinon note `contrôle preuve`.
 - **Statues (v3)** : 5 objets dans l'ordre de l'écran ; `grade` de la statue et de chaque option = lettre lue (`E`, `D`, `C`, `B`, `A`, `S`). Le texte de l'option est gardé tel qu'il est lu (`text_read`, `lang`) ; `id` reste `null` tant que la base n'a pas de catégorie statues (§5). Jamais de traduction.
 - **Gemmes (v3)** : `colors` = 5 objets (`position` 1 à 5 dans l'ordre de l'écran, `color` = nom de couleur seulement si la base le définit, sinon `null`, `level` lu). `bonuses` = bonus totaux affichés, `stat` = `id` de `stats.json` (ATQ % → `attack`, PV % → `hp`, DEF % → `defense`, pénétration → `defense-penetration`, mana → `mana`), `unit` = `percent` ou `flat` selon l'affichage.
 - **Successeur / puissance rémanente (v6)** : l'emplacement affiché `残影の力` à droite de la composition. Au BOT, c'est une **puissance rémanente** : `category: remnant_powers`, `id` dans `remnant_powers.json`, reconnue par sa carte (`data/icons/remnant_powers_cartes/`, seuil `portraits.min_corr_remanentes` = 12 **[À CONFIRMER]** : bruit mesuré ≤ 6, bonne carte à 7 seulement sur une capture 720p, à revoir sur vraies vidéos 1080p). Autres modes : `category: successors` tant qu'aucune capture ne montre le contraire **[À CONFIRMER]**. La slide 7 s'intitule « Puissance rémanente / Remnant Power » quand `category` = `remnant_powers`.
@@ -133,17 +127,16 @@ Règles du format :
 
 L'écran de composition (`編成` en JA, titre de mode `プレイヤーモード` / `플레이어 모드` / `ハンターモード`) est le même pour tous les modes vus. Les **onglets** sont les icônes de la colonne verticale à gauche. Chaque onglet change le contenu des colonnes des personnages ; **ombres** (`影の権能`, 01 en grand, 02 et 03 en bandeau) et **successeur** (`残影の力`, niveau et puissance) restent visibles à droite sur tous les onglets.
 
-| Onglet (clé config) | Contenu par personnage | BOT (vu) | POC | HOTM avec SJW | HOTM sans SJW | GB |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 `personnages` | Carte du personnage (illustration pleine carte, élément, SSR, niveau, puissance) ; armes : SJW 2 cartes, chasseur 1 carte | oui | oui (doc) | oui (doc) | oui (doc) | [EN ATTENTE] |
-| 2 `artefacts` | 8 pièces (grille 2 × 4) ; pastilles de chiffre au-dessus des 2 colonnes | oui | oui (doc) | oui (doc) | oui (doc) | [EN ATTENTE] |
-| 3 `competences` | SJW : 6 icônes ; chasseur : 8 icônes hexagonales (1re = « i ») | oui | oui (doc) | oui (doc) | oui (doc) | [EN ATTENTE] |
-| 4 `benedictions` | SJW : 8 icônes `+n` | oui | oui (doc) | oui (doc) | **absent** | [EN ATTENTE] |
-| 5 `noyaux` | 3 noyaux (haut → bas : `mind`, `body`, `spirit`) | oui | oui (doc) | oui (doc) | oui (doc) | [EN ATTENTE] |
+| Onglet (clé config) | Contenu par personnage | BOT (vu) | POC | GB |
+| --- | --- | --- | --- | --- |
+| 1 `personnages` | Carte du personnage (illustration pleine carte, élément, SSR, niveau, puissance) ; armes : SJW 2 cartes, chasseur 1 carte | oui | oui (doc) | [EN ATTENTE] |
+| 2 `artefacts` | 8 pièces (grille 2 × 4) ; pastilles de chiffre au-dessus des 2 colonnes | oui | oui (doc) | [EN ATTENTE] |
+| 3 `competences` | SJW : 6 icônes ; chasseur : 8 icônes hexagonales (1re = « i ») | oui | oui (doc) | [EN ATTENTE] |
+| 4 `benedictions` | SJW : 8 icônes `+n` | oui | oui (doc) | [EN ATTENTE] |
+| 5 `noyaux` | 3 noyaux (haut → bas : `mind`, `body`, `spirit`) | oui | oui (doc) | [EN ATTENTE] |
 
-- « oui (doc) » = mêmes onglets d'après `REFERENCE_ECRANS_POC.md` et `REFERENCE_ECRANS_HOTM.md`, **zones à calibrer** sur des captures du mode (§5, point 1). Les clés d'onglet sont les mêmes dans tous les modes ; `config.onglets.<mode>` = cette liste (remplace les listes par personnage de la v1).
-- **HOTM sans SJW** : 4 onglets, sans `benedictions`, et pas de colonne SJW ; les 3 chasseurs se décalent vers la gauche. Ordre supposé personnages, artefacts, compétences, noyaux **[À CONFIRMER]**. Config : `config.onglets.hotm_sans_sjw` et `zones.hotm_sans_sjw…` (clé de mode distincte de `hotm`, car les colonnes ne sont pas au même endroit).
-- **Fenêtres hors onglets** (facultatives) : POC `토벌 정비` → soutien de subjugation ; HOTM `증명 설정` → preuve d'entraînement. Clés d'onglet `subjugation` et `proof`.
+- « oui (doc) » = mêmes onglets d'après `REFERENCE_ECRANS_POC.md`, **zones à calibrer** sur des captures du mode (§5, point 1). Les clés d'onglet sont les mêmes dans tous les modes ; `config.onglets.<mode>` = cette liste (remplace les listes par personnage de la v1).
+- **Fenêtres hors onglets** (facultatives) : POC `토벌 정비` → soutien de subjugation. Clé d'onglet `subjugation`.
 - **GB** : écran non vu (Team A / Team B, 6 chasseurs). Aucune zone, statut selon §2.2 et §5.
 - **Zones POC (v10)** : les zones actuelles de `zones.poc` (personnages calé le 14/11, artefacts, compétences de SJW, bénédictions et noyaux calés le 15/11 sur du JA 1600×900) **tombent juste, sans retouche**, sur les 9 images auto 1920×1080 de `docs/essais/composition/auto/poc/` (2AJljDc_nN4, client EN, 5 onglets ; zFsAGI_xyOQ, client KR, 4 onglets sans noyaux) : 8 pièces × 4, 6 compétences de SJW, 8 bénédictions, 3 noyaux × 4, armes, visages, ombres 01-03, successeur. Contrôle à l'œil par Builds (cadres tracés sur les images). Les fractions valent pour tout écran 16:9 ; autre format → note `format non standard`, pas de lecture. Compétences des chasseurs : non lues (§5, « plus tard »). Subjugation : zones toujours non définies (aucune image).
 - **Numéro d'équipe (v10, POC)** : libellé en bas de l'écran, à gauche du score (`Team 1` EN, `1팀` KR, `パーティ2` JA). Zone `zones.poc.<onglet>.equipe.label` = **[0,35 ; 0,90 ; 0,44 ; 0,96]** sur chaque onglet (même place partout), lu par OCR : chiffre 1 ou 2, sinon `null`. Règle : une image de composition n'est gardée pour le build de `runs_detail[i]` que si son équipe lue = `runs_detail[i].team` ; équipe illisible → image gardée seulement si toutes les images retenues pour ce build sont aussi illisibles (sinon écartée), note `équipe de la composition non lue`. Les votes (§2.1) ne mélangent jamais des images de deux équipes. Cas réel : 2AJljDc_nN4, images classées sous t = 232 : artefacts et compétences en `Team 1`, noyaux en `Team 2` (autre successeur) : l'extraction a mélangé les deux équipes. Depuis la refonte (19/11), `runs_detail` contient les Results Team 1 et Team 2 du palier (SPEC_ETAPE1 §9) : 2 builds par ligne, un par équipe, chacun avec les images de son équipe. `team` du run `null` → toutes les images, note `équipe de la run inconnue`.
@@ -159,7 +152,7 @@ L'écran de composition (`編成` en JA, titre de mode `プレイヤーモード
 | 4 | `boots` | `earrings` |
 
   Chaque tuile porte un cadre jaune, `+20`, un cadenas et `Lv.120` en bas : ces zones sont masquées pour la comparaison (§2.1). Pastilles `1` / `2` au-dessus des colonnes : sens non interprété, non lues.
-- **Compétences de SJW, 6 icônes en 2 colonnes** sur l'illustration de SJW (capture HOTM du 13/11 avec les libellés SKILL / ULTIMATE / QTE, et capture BOT : même disposition) :
+- **Compétences de SJW, 6 icônes en 2 colonnes** sur l'illustration de SJW (capture du 13/11 avec les libellés SKILL / ULTIMATE / QTE, et capture BOT : même disposition) :
 
 | Position | Colonne gauche (sur le corps) | Colonne droite (grandes icônes) |
 | --- | --- | --- |
@@ -210,16 +203,14 @@ On compare avec les icônes actuelles de `data/icons/` (pas de banque de variant
 4. **`pas_de_build`** : aucun élément trouvé après le tri 4, ou vidéo illisible (supprimée, privée, bloquée), ou écran de composition jamais vu dans la vidéo (note `composition non filmée`). Note : la raison.
 5. **Plafonds à `build_partiel`** (même si tout le reste est trouvé), avec la note entre parenthèses :
    - règles du mode inconnues, bloc `null` (`règles <mode> inconnues`). Ombres, successeur et SJW sont alors traités comme facultatifs ;
-   - HOTM avec `hunter_mode` à `null` après déduction (`hunter_mode inconnu`). SJW est traité comme facultatif ;
    - vidéo pas encore passée au tri 4 (`analyse en cours`).
-6. **Jamais de `pas_de_build` à cause de l'absence de SJW** quand il n'est pas attendu. HOTM avec `hunter_mode: true` : `"sjw": null`, clés `sjw*` et `blessings` à `null` ; les 3 chasseurs complets suffisent pour `build_complet`.
+6. **Jamais de `pas_de_build` à cause de l'absence de SJW** quand il n'est pas attendu (règle `sjw: false`).
 
 ### 2.3 Confiance et alertes
 - `confidence: a_verifier` dans les cas suivants, avec la note entre parenthèses ; le statut n'est pas modifié :
   - élément interdit par les règles mais détecté (`élément interdit détecté : <élément>`) — **seulement si la règle vaut `false`** ; `null` = inconnu, jamais interdit (v5, `data/rules` déduit des écrans, SPEC_ETAPE1 v24 §4.5) ;
-  - (v5) POC et GB : deux builds de la même ligne (2 groupes ou 2 équipes) qui ont un chasseur en commun (`chasseur commun aux 2 runs : <id>`) — le jeu l'interdit, c'est donc une erreur de rattachement ou de lecture ;
+  - (v5) POC et GB : deux builds de la même ligne (2 groupes ou 2 équipes) qui ont un chasseur en commun (`chasseur commun aux 2 runs : <id>`) — le jeu l'interdit, c'est donc une erreur de rattachement ou de lecture ; ; **POC depuis la refonte (semaines ≥ 2026-11-19, v11)** : note seulement, jamais `a_verifier` (règle du jeu actuelle non publiée, SPEC_ETAPE1 §9.6)
   - (v5) `element` du build différent de l'élément majoritaire des chasseurs reconnus (`élément de la run incohérent`).
-  - HOTM `hunter_mode: true` mais SJW vu (`SJW vu en mode sans SJW`) ;
   - chasseur en double dans l'équipe (`doublon : <id>`) ;
   - arme exclusive portée par un autre chasseur que le sien (`weapons.hunter_id` ≠ `id`, `arme d'un autre chasseur`).
 - Sinon : `sur`.
@@ -237,12 +228,12 @@ Pour chaque build du fichier :
 
 | # | Slide | Contenu |
 | --- | --- | --- |
-| 1 | Titre du build | Mode + nom complet ; semaine ; rang (pastille or/argent/bronze pour 1-3) ; joueur ; score (même format que l'Excel) ; run n/2 et équipe/groupe (POC/GB) ; porte et « avec SJW / sans SJW » (HOTM) ; badge de statut ; lien vers la vidéo à `t_composition` |
+| 1 | Titre du build | Mode + nom complet ; semaine ; rang (pastille or/argent/bronze pour 1-3) ; joueur ; score (même format que l'Excel) ; run n/2 et équipe/groupe (POC/GB) ; badge de statut ; lien vers la vidéo à `t_composition` |
 | 2 | Sung Jin Woo | 2 armes, 8 pièces d'artefact (grille 4 × 2) + bonus de sets, 3 noyaux, tableau des stats |
 | 3-5 | Chasseur 1, 2, 3 (GB : 6 slides, A1 à B3) | Portrait + nom + élément + rôle ; arme ; 8 pièces + bonus de sets ; 3 noyaux ; tableau des stats |
 | 8 | Compétences de SJW | Grille 3 + 3 (`sjw.GRILLE_SLIDE`) : compétences en haut, QTE en bas, niveau `+n` |
 | 9 | Bénédictions | Grille 4 × 2, niveau `+n` |
-| 10 | Soutien de subjugation (POC) / Preuve d'entraînement (HOTM) | Seulement si trouvé. POC : 3 colonnes, choix sélectionné mis en avant. HOTM : niveau de preuve + tableau des handicaps (nom, niveau choisi / max, coût) |
+| 10 | Soutien de subjugation (POC) | Seulement si trouvé : 3 colonnes, choix sélectionné mis en avant |
 | 11 | Statues (v3) | Seulement si trouvé. 5 cartes (grade en grand) ; sous chacune, 3 options : grade + texte. Texte de la base s'il existe, sinon texte lu en italique avec la marque `(JA)` / `(KO)` |
 | 12 | Gemmes (v3) | Seulement si trouvé. 5 pastilles de couleur avec niveau ; tableau des bonus totaux (stat, valeur) |
 
@@ -255,14 +246,12 @@ Puis, une seule fois en fin de fichier : **Sources** (voir §3.4).
 | --- | --- | --- |
 | BOT | 9 à 11 | titre + SJW + 3 chasseurs + ombres + successeur + compétences + bénédictions, + statues et gemmes si trouvées |
 | POC | 9 à 12 | idem, + subjugation, statues et gemmes si trouvées |
-| HOTM avec SJW | 9 à 12 | idem, + preuve, statues et gemmes si trouvées |
-| HOTM sans SJW | 6 à 9 | titre + 3 chasseurs + ombres + successeur, + preuve, statues et gemmes si trouvées |
 | GB | 12 | titre + SJW + 6 chasseurs + ombres + successeur + compétences + bénédictions, si les règles GB les permettent ([EN ATTENTE]) |
 
 ### 3.3 Mise en page (16:9, 13,333 × 7,5 pouces)
 - **Charte = celle de l'Excel** : importer les constantes de `export_excel.py`, ne pas les recopier.
   - Fond : `NUIT` 0B0E1A. Panneaux : `PANNEAU` 121830 / `PANNEAU2` 181F3D. En-tête : `ENTETE` 1E1B4B. Texte : `TEXTE` E5E9F5. Texte secondaire : `SOURD` 7F88A8.
-  - Couleur du mode : POC EF4444, BOT `BLEU` 38BDF8, GB `OR` F5C542, HOTM `VIOLET` 7C3AED.
+  - Couleur du mode : POC EF4444, BOT `BLEU` 38BDF8, GB `OR` F5C542.
   - Statut : complet `VERT`, partiel `AMBRE`, pas de build `ROUGE`. Podium : `OR` / `ARGENT` / `BRONZE`.
   - Police : Segoe UI.
 - **Bandeau haut** (0 à 0,9 in) :
@@ -299,14 +288,14 @@ Puis, une seule fois en fin de fichier : **Sources** (voir §3.4).
 
 | Donnée | Source | Qui la remplit |
 | --- | --- | --- |
-| Top 10, `video_id`, `t`, équipe/groupe, `gate`, `hunter_mode` | `data/runs/` (étape 1) | Pipeline étape 1 (discussions 1 et 8) |
-| Éléments autorisés par mode et par semaine | `data/rules/<semaine>.json` | Alexis via la discussion 2 (POC, BOT, HOTM) et la discussion 1 |
+| Top 10, `video_id`, `t`, équipe/groupe | `data/runs/` (étape 1) | Pipeline étape 1 (discussions 1 et 8) |
+| Éléments autorisés par mode et par semaine | `data/rules/<semaine>.json` | Alexis via la discussion 2 (POC, BOT) et la discussion 1 |
 | Identité des objets du build (persos, armes, pièces, noyaux, ombres, successeur, compétences, bénédictions, subjugation, handicaps) | Images de la vidéo (tris 2 à 4, écran de composition), comparées à la banque d'icônes | Pipeline étape 2 (discussion 8) |
-| Niveaux, stats, niveau de preuve, grades des statues, niveaux et bonus des gemmes | OCR des chiffres et lettres sur les images | Pipeline étape 2 (discussion 8) |
+| Niveaux, stats, grades des statues, niveaux et bonus des gemmes | OCR des chiffres et lettres sur les images | Pipeline étape 2 (discussion 8) |
 | Noms écrits (armes, personnages) | OCR, comparés aux noms de la base | Pipeline étape 2 (discussion 8) ; noms JA/KO : discussion 9 |
 | Noms FR/EN/KO, rareté, élément, rôle, effets, paliers de set, coûts des handicaps | `data/db/*.json` (slagate.com, routes GET publiques autorisées ; wiki Fandom ; forum Netmarble) | Discussion 9 (Base de données) |
 | Icônes | `data/icons/` | Discussion 9 |
-| Bonus de sets actifs, contrôle de la preuve | Calculés | Pipeline étape 2 |
+| Bonus de sets actifs | Calculés | Pipeline étape 2 |
 | Mise en page, libellés FR/EN | Cette spec + `config.libelles` | Discussion 8 |
 | Contrôle des builds produits | Checklist du skill + §6 | Discussion 2 |
 
@@ -320,7 +309,7 @@ Réglés et retirés de ce tableau : stats facultatives (`stats_obligatoires = f
 
 | # | Manque | Ce que le code fait en attendant | Qui débloque |
 | --- | --- | --- | --- |
-| 1 | **Zones des onglets** : BOT et POC (5 onglets, v10) calibrés ; HOTM avec et sans SJW, GB, POC subjugation à calibrer | Zones absentes → note `zones <mode>/<onglet> non définies` | Le pipeline enregistre les images de composition extraites des vidéos du top 10 dans `docs/essais/composition/auto/<mode>/<video_id>_<onglet>_<t>.png` (1 par onglet, meilleure résolution) ; la discussion 2 y définit les zones, la discussion 8 les code. Aucune capture demandée à Alexis. |
+| 1 | **Zones des onglets** : BOT et POC (5 onglets, v10) calibrés ; GB, POC subjugation à calibrer | Zones absentes → note `zones <mode>/<onglet> non définies` | Le pipeline enregistre les images de composition extraites des vidéos du top 10 dans `docs/essais/composition/auto/<mode>/<video_id>_<onglet>_<t>.png` (1 par onglet, meilleure résolution) ; la discussion 2 y définit les zones, la discussion 8 les code. Aucune capture demandée à Alexis. |
 | 2 | **Seuils et masques par catégorie** | `seuil_icone.<categorie>` 0,55, `seuil_sur` +0,10, `ecart_icone` 0,05, `masques` [À CONFIRMER] | Essai sur les captures BOT puis 3 vidéos ; résultats à la discussion 2 |
 | 3 | **Règles POC et GB** (`modes.poc` et `modes.gb` à `null`) | SJW, ombres, successeur traités comme facultatifs ; statut plafonné `build_partiel`, note `règles <mode> inconnues` | Alexis |
 | 4 | **Écrans de composition GB** (Team A/B, 6 chasseurs, SJW ?) : non décrits | Mode `gb` reconnu, aucun élément cherché, note `composition GB non décrite`, `pas_de_build` | Images extraites des vidéos GB du classement (`auto/gb/`, ci-dessus), puis discussion 2 |
@@ -350,17 +339,16 @@ Checklist de la discussion 2 :
 - [ ] Un build par run du top 10 (×2 runs pour POC et GB) ou la raison de l'absence.
 - [ ] Chaque `id` existe dans la base.
 - [ ] `status` cohérent avec `found` et les plafonds (§2.2).
-- [ ] HOTM : `sjw` à `null` si `hunter_mode: true` ; aucun `build_partiel` dû à la seule absence de SJW.
 - [ ] Aucun élément interdit par les règles.
 - [ ] Un PowerPoint par vidéo et par langue ; nombre de slides conforme au §3.2.
 - [ ] Noms FR/EN conformes (aucun nom inventé).
 
 ## 7. Tests demandés
 
-1. HOTM `hunter_mode: true`, 3 chasseurs complets → `build_complet`, `sjw: null`, 7 slides par fichier (6 pour le build + Sources).
-2. HOTM `hunter_mode: false`, SJW absent → `build_partiel`.
-3. HOTM `hunter_mode: true` et SJW vu → `confidence: a_verifier`.
-4. HOTM `hunter_mode: null` non déduit → plafond `build_partiel`.
+1. (retiré v11 : HOTM arrêté)
+2. (retiré v11 : HOTM arrêté)
+3. (retiré v11 : HOTM arrêté)
+4. (retiré v11 : HOTM arrêté)
 5. POC avec règles `null` et tout trouvé → `build_partiel` (`règles poc inconnues`).
 6. Aucun élément → `pas_de_build` avec raison.
 7. Vidéo à 2 runs → 1 fichier, 2 builds, slide Sources unique.
@@ -369,7 +357,7 @@ Checklist de la discussion 2 :
 10. (v2) Build BOT sans aucune stat, tout le reste trouvé → `build_complet`.
 11. (v2) Captures BOT `docs/essais/composition/` : noyaux des 4 personnages reconnus ; positions des 8 pièces conformes au tableau du §1.3 ; 6 compétences de SJW rattachées aux bons emplacements (`qte_1` sans niveau).
 12. (v2) Score entre le seuil et `seuil_sur` → élément gardé, `confidence: a_verifier`, note `reconnaissance faible`.
-13. (v2) HOTM sans SJW : `config.onglets.hotm_sans_sjw` sans `benedictions` ; aucun recadrage SJW.
+13. (retiré v11 : HOTM arrêté)
 14. (v3) `poc_stats_chasseur_1_ja.png` : écran `stats` reconnu, nom `クリストファー・リード` lu, 10 stats lues (`accuracy` = 88.32 % / 28905, `cooldown-reduction` = 0 % / 0), rattachées au bon chasseur si `name.ja` existe, sinon `unmatched` + stats gardées sous `unmatched`.
 15. (v3) `poc_sjw_ja.png` : fiche de SJW reconnue ; 6 compétences rattachées par leur libellé ; attributs `strength` 19, `vitality` 10, `agility` 10, `intelligence` 1335, `perception` 10 ; 2 noms d'armes lus.
 16. (v3) Build sans statues ni gemmes → aucune slide 11-12, statut inchangé.
