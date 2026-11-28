@@ -107,53 +107,11 @@
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "publiée juste après le reset : semaine précédente ?; score provisoire (titre) : 203 RC; description : 204RC; une seule run trouvée; boss non contrôlé",
+    "notes": "score provisoire (titre) : 203 RC; description : 204RC; écran en conflit : RC lu 903; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "MowlbyeKBJo",
         "published_at": "2026-11-26T03:04:48+01:00",
-        "t": null,
-        "stage": null,
-        "team": null,
-        "score_source": "titre",
-        "exact": false,
-        "damage": null,
-        "damage_exact": null,
-        "element": null,
-        "element_source": null,
-        "hud_rage_count": 158
-      }
-    ]
-  },
-  {
-    "run_id": "gb-2026-11-26-ieFMbvQguUw",
-    "week": "2026-11-26",
-    "mode": "gb",
-    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
-    "player": "Black Thunder X",
-    "channel": "Black Thunder X",
-    "video_id": "ieFMbvQguUw",
-    "video_ids": [
-      "ieFMbvQguUw"
-    ],
-    "published_at": "2026-11-27T09:54:15+01:00",
-    "lang": "en",
-    "score": {
-      "total": 193,
-      "runs": [
-        193
-      ],
-      "unit": "rage_count"
-    },
-    "score_source": "titre",
-    "exact": false,
-    "confidence": "a_verifier",
-    "rank": null,
-    "notes": "score provisoire (titre) : 193 RC; une seule run trouvée; boss non contrôlé",
-    "runs_detail": [
-      {
-        "video_id": "ieFMbvQguUw",
-        "published_at": "2026-11-27T09:54:15+01:00",
         "t": null,
         "stage": null,
         "team": null,
@@ -228,24 +186,25 @@
       ],
       "unit": "rage_count"
     },
-    "score_source": "titre",
+    "score_source": "video-complete",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (titre) : 183 RC; une seule run trouvée; boss non contrôlé",
+    "notes": "écart OCR zone/image : play_time; écart OCR zone/image : player_score; écart OCR zone/image : final_score; écart OCR zone/image : rage_count; lecture fusionnée (6 images); conflit de lecture : player_score; conflit de lecture : hunter_rank_6; conflit de lecture : hunter_rank_2; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "9y17tXt160Q",
         "published_at": "2026-11-26T11:39:17+01:00",
-        "t": null,
+        "t": 240,
         "stage": null,
         "team": null,
-        "score_source": "titre",
+        "score_source": "video-complete",
         "exact": false,
-        "damage": null,
-        "damage_exact": null,
-        "element": null,
-        "element_source": null
+        "damage": 28950468380758,
+        "damage_exact": true,
+        "element": "water",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 158
       }
     ]
   },
@@ -269,24 +228,109 @@
       ],
       "unit": "rage_count"
     },
-    "score_source": "description",
+    "score_source": "video-complete",
     "exact": false,
     "confidence": "a_verifier",
     "rank": null,
-    "notes": "score provisoire (description) : Rage 178; une seule run trouvée; boss non contrôlé",
+    "notes": "lecture fusionnée (2 images); contrôle GB : somme 11284203054077 ≠ Final Score 21364972852753; contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Hunter Rank lus non décroissants; une seule run trouvée; boss non contrôlé",
     "runs_detail": [
       {
         "video_id": "RqEV5DJVPxM",
         "published_at": "2026-11-26T10:59:37+01:00",
-        "t": null,
+        "t": 225,
         "stage": null,
         "team": null,
-        "score_source": "description",
+        "score_source": "video-complete",
         "exact": false,
-        "damage": null,
-        "damage_exact": null,
+        "damage": 21364972852753,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre+ecran",
+        "hud_rage_count": 153
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-2GHkSqtGLvw",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCek52UDOpFxyg8a62k3sbHQ",
+    "player": "RaidenShadow",
+    "channel": "RaidenShadow",
+    "video_id": "2GHkSqtGLvw",
+    "video_ids": [
+      "2GHkSqtGLvw"
+    ],
+    "published_at": "2026-11-26T15:24:17+01:00",
+    "lang": "pt-BR",
+    "score": {
+      "total": 173,
+      "runs": [
+        173
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "lecture fusionnée (2 images); conflit de lecture : hunter_rank_4; une seule run trouvée; boss non contrôlé",
+    "runs_detail": [
+      {
+        "video_id": "2GHkSqtGLvw",
+        "published_at": "2026-11-26T15:24:17+01:00",
+        "t": 210,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": false,
+        "damage": 15997390086635,
+        "damage_exact": true,
+        "element": "fire",
+        "element_source": "titre+ecran",
+        "hud_rage_count": null
+      }
+    ]
+  },
+  {
+    "run_id": "gb-2026-11-26-ieFMbvQguUw",
+    "week": "2026-11-26",
+    "mode": "gb",
+    "channel_id": "UCZdD_hZZGOctL2QuGrL0RPg",
+    "player": "Black Thunder X",
+    "channel": "Black Thunder X",
+    "video_id": "ieFMbvQguUw",
+    "video_ids": [
+      "ieFMbvQguUw"
+    ],
+    "published_at": "2026-11-27T09:54:15+01:00",
+    "lang": "en",
+    "score": {
+      "total": 2,
+      "runs": [
+        2
+      ],
+      "unit": "rage_count"
+    },
+    "score_source": "video-complete",
+    "exact": false,
+    "confidence": "a_verifier",
+    "rank": null,
+    "notes": "format non standard; lecture fusionnée (2 images); contrôle sans Hunter Rank : boss illisible; contrôle sans Hunter Rank : Rage Count lu sur une seule image; une seule run trouvée; boss non contrôlé; écart improbable : à confirmer par l'écran",
+    "runs_detail": [
+      {
+        "video_id": "ieFMbvQguUw",
+        "published_at": "2026-11-27T09:54:15+01:00",
+        "t": 520,
+        "stage": null,
+        "team": null,
+        "score_source": "video-complete",
+        "exact": false,
+        "damage": 49256324367637,
+        "damage_exact": true,
         "element": null,
-        "element_source": null
+        "element_source": null,
+        "hud_rage_count": 164
       }
     ]
   }

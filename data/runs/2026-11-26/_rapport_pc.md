@@ -146,3 +146,21 @@ Un bloc par passage PC, le plus récent en bas, jamais effacé. Le passage GitHu
 - **Passage complet : non** (passage refusé : un autre passage PC tourne déjà (daily (PID 14768, depuis 11 min)))
 - Vidéos traitées ce passage : 0 · en_cours restantes : 0 (dont 0 à traiter par le PC)
 - Erreurs bloquantes : passage refusé : un autre passage PC tourne déjà (daily (PID 14768, depuis 11 min))
+
+<!-- passage-pc pc-daily 2026-11-28T09:46:03.039601+00:00 -->
+## Passage pc-daily — 2026-11-28 10:46 (Paris)
+
+- Top 10 couvert : non (23 vidéos candidates au top 10 restantes)
+- **Passage complet : non** (anti-bot YouTube (passage incomplet)
+- Vidéos traitées ce passage : 8 · en_cours restantes : 39 (dont 36 à traiter par le PC)
+- Erreurs bloquantes : anti-bot YouTube (passage incomplet : anti-bot)
+- Lancement : manuel
+- Durée du passage : 67 min
+- Relance automatique : 28/11/2026 12:46 (une seule fois par soir)
+- Critère de gel n° 3 : 0/2 passage(s) planifié(s) de suite avec top 10 couvert
+- Téléchargements de décision (tri 3, vidéos hors sujet ou > 30 min) : aucun
+- Sous-titres en attente : 23 avant la règle → 23 après (19 inutiles : hors sujet ou score déjà lu ; 0 rejetée(s) sur le titre)
+- Résumé GB : 9y17tXt160Q · SlayOnLow · Results lu (244-268 s) · 183 RC à vérifier · water · conflit de lecture : player_score
+- Résumé GB : RqEV5DJVPxM · Eden(이든) · Results lu (200-285 s) · 178 RC à vérifier · fire · contrôle GB : somme 11284203054077 ≠ Final Score 21364972852753
+- Résumé GB : MowlbyeKBJo · Heartful Harry · Results lu (210-269 s) · 203 RC à vérifier · score provisoire (titre) : 203 RC
+- Résumé GB : ieFMbvQguUw · Black Thunder X · Results lu (524-545 s) · 2 RC à vérifier · format non standard
